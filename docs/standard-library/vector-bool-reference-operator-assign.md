@@ -1,5 +1,5 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference::operator = | Microsoft Docs'
+title: 'vektor&lt;bool&gt;:: reference::operator = | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965612"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vektor&lt;bool&gt;:: reference::operator =
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-`Right` Odkaz na element, jehož hodnota je přiřazen bitu.
+*Doprava*  
+ Odkaz prvku, jehož hodnota má být přiřazena k bitu.
 
-`Val` Logická hodnota pro přiřazení ke bitu.
+*Val*  
+ Logická hodnota, která má být přiřazena k bitu.
 
 ## <a name="example"></a>Příklad
 
@@ -123,9 +125,9 @@ The original value of the 3rd element still stored in a bool: false
 
 **Záhlaví:** \<vektoru >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[vektor\<bool >:: odkazovat – třída](../standard-library/vector-bool-reference-class.md)<br/>
+[vektor\<bool >:: reference – třída](../standard-library/vector-bool-reference-class.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

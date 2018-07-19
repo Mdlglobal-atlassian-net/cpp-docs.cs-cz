@@ -1,5 +1,5 @@
 ---
-title: is_trivially_copy_constructible – třída | Microsoft Docs
+title: is_trivially_copy_constructible – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963664"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible – třída
 
-Testy, pokud má typ trivial kopírovacího konstruktoru.
+Testuje, zda je typ má konstruktor kopie triviální.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,20 +36,20 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je třída, která má trivial kopírovacího konstruktoru, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je třída, která má triviální kopírovací konstruktor, jinak má hodnotu false.
 
-Kopírovací konstruktor pro třídu `T` je jednoduchá, pokud je implicitně deklarovaná, třída `T` nemá žádné virtuální funkce nebo virtuální základů, všechny přímé základů třídy `T` mít trivial kopírovací konstruktory, třídy všechny nestatickou datové členy typu třídy trivial kopie konstruktorů a třídy všechny členy nestatické datové pole typu třídy trivial kopírovací konstruktory.
+Kopírovací konstruktor pro třídu *T* je jednoduché, pokud je implicitně deklarován, třída *T* nemá žádné virtuální funkce a virtuálních základních tříd, všechny báze s přímým přístupem třídy *T* mají triviální kopírovací konstruktory tříd všechny nestatické datové členy typu třídy musí mít triviální kopírovací konstruktory a třídy nestatických datových členů typu pole třídy musí mít triviální kopírovací konstruktory.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

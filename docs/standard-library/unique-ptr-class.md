@@ -1,5 +1,5 @@
 ---
-title: unique_ptr – třída | Microsoft Docs
+title: unique_ptr – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862004"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961552"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr – třída
 
-Ukládá ukazatel na vlastní objekt nebo pole. Objekt nebo pole vlastní žádná jiná `unique_ptr`. Objekt nebo pole zničen při `unique_ptr` zničena.
+Uchovává ukazatel na vlastní objekt nebo pole. Objekt nebo pole je ve vlastnictví žádné jiné `unique_ptr`. Objekt nebo pole je zničen při `unique_ptr` zničen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -104,29 +104,33 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Right` A `unique_ptr`.
+*Doprava*  
+ A `unique_ptr`.
 
-`Nptr` `rvalue` Typu `std::nullptr_t`.
+*Nptr*  
+ `rvalue` Typu `std::nullptr_t`.
 
-`Ptr` A `pointer`.
+*PTR*  
+ A `pointer`.
 
-`Deleter` A `deleter` funkce, která je vázána `unique_ptr`.
+*Odstraňovač*  
+ A `deleter` funkce, která je vázána na `unique_ptr`.
 
 ## <a name="exceptions"></a>Výjimky
 
-Žádné výjimky generované `unique_ptr`.
+Podle nejsou generovány žádné výjimky `unique_ptr`.
 
 ## <a name="remarks"></a>Poznámky
 
-`unique_ptr` Třída nahrazuje `auto_ptr`a může sloužit jako element standardní knihovna C++ kontejnerů.
+`unique_ptr` Třídy nahrazuje `auto_ptr`a může sloužit jako element kontejnery standardní knihovny C++.
 
-Použití [make_unique](../standard-library/memory-functions.md#make_unique) pomocné funkce efektivně vytvoření nové instance třídy `unique_ptr`.
+Použití [make_unique](../standard-library/memory-functions.md#make_unique) pomocnou funkci k efektivnímu vytvoření nových instancí `unique_ptr`.
 
-`unique_ptr` spravuje jednoznačně prostředku. Každý `unique_ptr` objekt ukazatel na objekt, vlastní nebo ukládá ukazatele null. Prostředek může být vlastněn více než jeden `unique_ptr` objektu;  Když `unique_ptr` zničena objektu, který vlastní určitý prostředek, prostředek je uvolněno. A `unique_ptr` objektu může být přesunuta, ale nebylo možné zkopírovat;  Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+`unique_ptr` jednoznačně spravuje prostředky. Každý `unique_ptr` ukládá ukazatel na objekt, který je vlastníkem, nebo uchovává ukazatel s hodnotou null. Prostředek může být vlastněn maximálně jedním `unique_ptr` objektu  Když `unique_ptr` objekt, který vlastní určitý prostředek, zničen, prostředek je uvolněn. A `unique_ptr` objekt může být přesunuta, ale nikoli kopírovat;  Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Prostředek je uvolněno voláním uložené `deleter` objektu typu `Del` který zná přidělování prostředků pro konkrétní `unique_ptr`. Výchozí hodnota `deleter` `default_delete<T>` předpokládá, že prostředek na kterou odkazuje `ptr` je přiřazen `new`, a může být uvolněno voláním `delete _Ptr`. (Částečná specializace `unique_ptr<T[]>`spravuje pole objektů, kterým je přiřazen `new[]`, a má výchozí `deleter` `default_delete<T[]>`, specializované volání delete [] – `ptr`.)
+Prostředek je uvolněn voláním uloženého `deleter` objekt typu `Del` , které ví, jak jsou prostředky přidělené pro konkrétní `unique_ptr`. Výchozí hodnota `deleter` `default_delete<T>` předpokládá, že prostředek odkazované `ptr` přidělená k `new`, a lze jej uvolnit voláním `delete _Ptr`. (Částečná specializace `unique_ptr<T[]>`spravuje objekty pole přiřazené s `new[]`, a má výchozí `deleter` `default_delete<T[]>`specializované na delete [] `ptr`.)
 
-Uložené ukazatel na prostředek vlastní `stored_ptr` má typ `pointer`. Je `Del::pointer` -li definována, a `T *` není-li. Uložených `deleter` objekt `stored_deleter` nezabírá prostor v objektu, pokud `deleter` je bezstavové. Všimněte si, že `Del` může být odkazového typu.
+Uložený ukazatel na vlastní prostředek, `stored_ptr` má typ `pointer`. Je `Del::pointer` -li definována, a `T *` Pokud tomu tak není. Uložený `deleter` objekt `stored_deleter` nezabírá žádný prostor v objektu, pokud `deleter` jsou bezstavové. Všimněte si, že `Del` může být typ odkazu.
 
 ## <a name="members"></a>Členové
 
@@ -134,7 +138,7 @@ Uložené ukazatel na prostředek vlastní `stored_ptr` má typ `pointer`. Je `D
 
 |Konstruktor|Popis|
 |-|-|
-|[unique_ptr](#unique_ptr)|Existují sedm konstruktory pro `unique_ptr`.|
+|[unique_ptr](#unique_ptr)|Existuje sedm konstruktorů pro `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -142,7 +146,7 @@ Uložené ukazatel na prostředek vlastní `stored_ptr` má typ `pointer`. Je `D
 |-|-|
 |[deleter_type](#deleter_type)|Synonymum pro parametr šablony `Del`.|
 |[element_type](#element_type)|Synonymum pro parametr šablony `T`.|
-|[Ukazatele](#pointer)|Synonymum pro `Del::pointer` -li definována, jinak `T *`.|
+|[Ukazatel](#pointer)|Synonymum pro `Del::pointer` li definováno, jinak `T *`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -150,24 +154,24 @@ Uložené ukazatel na prostředek vlastní `stored_ptr` má typ `pointer`. Je `D
 |-|-|
 |[get](#get)|Vrátí `stored_ptr`.|
 |[get_deleter](#get_deleter)|Vrátí odkaz na `stored_deleter`.|
-|[Verze](#release)|ukládá `pointer()` v `stored_ptr` a vrátí jeho předchozí obsah.|
-|[Resetování](#reset)|Uvolní aktuálně vlastněný prostředek a přijme nový prostředek.|
-|[Swap](#swap)|Výměny prostředků a `deleter` poskytnutým `unique_ptr`.|
+|[Vydání verze](#release)|ukládá `pointer()` v `stored_ptr` a vrátí jeho předchozí obsah.|
+|[Resetovat](#reset)|Uvolní aktuálně vlastněný prostředek a přijme nový prostředek.|
+|[Prohození](#swap)|Vymění prostředek a `deleter` za poskytnutý `unique_ptr`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|`operator bool`|Vrátí hodnotu typu, který je převést na operátor `bool`. Výsledek převodu na `bool` je `true` při `get() != pointer()`, jinak `false`.|
-|`operator->`|Členské funkce vrátí hodnotu `stored_ptr`.|
-|`operator*`|Členské funkce vrátí hodnotu `*stored_ptr`.|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|Přiřadí hodnota `unique_ptr` (nebo `pointer-type`) na aktuální `unique_ptr`.|
+|**bool – operátor**|Operátor vrátí hodnotu typu, který lze převést na **bool**. Výsledek převodu na **bool** je **true** při `get() != pointer()`, jinak **false**.|
+|`operator->`|Členská funkce vrátí `stored_ptr`.|
+|`operator*`|Členská funkce vrátí `*stored_ptr`.|
+|[unique_ptr operator=](#unique_ptr_operator_eq)|Přiřadí hodnotu `unique_ptr` (nebo `pointer-type`) na aktuální `unique_ptr`.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<paměti >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="deleter_type"></a>  deleter_type
 
@@ -203,7 +207,7 @@ pointer get() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `stored_ptr`.
+Členská funkce vrátí `stored_ptr`.
 
 ## <a name="get_deleter"></a>  unique_ptr::get_deleter
 
@@ -221,7 +225,7 @@ const Del& get_deleter() const;
 
 ## <a name="unique_ptr_operator_eq"></a>  unique_ptr operator =
 
-Adresa poskytnutého `unique_ptr` do stávající.
+Přiřadí adresu poskytnutého `unique_ptr` do aktuálního.
 
 ```cpp
 unique_ptr& operator=(unique_ptr&& right);
@@ -232,15 +236,15 @@ unique_ptr& operator=(pointer-type);
 
 ### <a name="parameters"></a>Parametry
 
-A `unique_ptr` odkaz sloužící k přidělování hodnotu aktuální `unique_ptr`.
+A `unique_ptr` odkaz lze přiřadit hodnotu na aktuální `unique_ptr`.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce volání `reset(right.release())` a přesuňte `right.stored_deleter` k `stored_deleter`, pak vrátí `*this`.
+Členské funkce volání `reset(right.release())` a přesunout `right.stored_deleter` k `stored_deleter`a pak se vrátit `*this`.
 
-## <a name="pointer"></a>  Ukazatele
+## <a name="pointer"></a>  Ukazatel
 
-Synonymum pro `Del::pointer` -li definována, jinak `Type *`.
+Synonymum pro `Del::pointer` li definováno, jinak `Type *`.
 
 ```cpp
 typedef T1 pointer;
@@ -248,11 +252,11 @@ typedef T1 pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `Del::pointer` -li definována, jinak `Type *`.
+Typ je synonymum pro `Del::pointer` li definováno, jinak `Type *`.
 
 ## <a name="release"></a>  unique_ptr::Release
 
-Uvolní vlastnictví vrácený uložené ukazatele na volajícího a nastaví hodnotu uloženou ukazatel na `nullptr`.
+Uvolní vlastnictví objektu vráceného uložený ukazatel volajícímu a nastaví hodnotu uložený ukazatel **nullptr**.
 
 ```cpp
 pointer release();
@@ -260,11 +264,11 @@ pointer release();
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `release` převzít vlastnictví nezpracovaná ukazatele uložené `unique_ptr`. Volající zodpovídá za odstranění vrácený ukazatele. `unique-ptr` Nastavena na prázdnou sestavený výchozí stav. Můžete přiřadit jinou ukazatel kompatibilní typ `unique_ptr` po volání `release`.
+Použití `release` převzít vlastnictví nezpracovaný ukazatel uložené `unique_ptr`. Volající zodpovídá za odstranění vrácenému ukazateli. `unique-ptr` Je nastavena na prázdný stav vytvořené s výchozím nastavením. Můžete přiřadit jinému ukazateli kompatibilní typ `unique_ptr` po volání `release`.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak je zodpovědná za objekt vrácený volající verze:
+Tento příklad ukazuje, jak je zodpovědný za objekt vrácený volající verze:
 
 ```cpp
 // stl_release_unique.cpp
@@ -315,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::Reset
 
-Vlastníkem parametru ukazatele a poté se odstraní původní uložené ukazatele. Pokud je nový ukazatel stejný jako původní uložené ukazatele `reset` odstraní ukazatele a nastaví uložené ukazatele na `nullptr`.
+Převezme vlastnictví parametr ukazatele a poté odstraní původní uložený ukazatel. Pokud je nový ukazatel stejný jako původní uložený ukazatel `reset` odstraní ukazatel a nastaví uložený ukazatel na **nullptr**.
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -326,17 +330,17 @@ void reset(nullptr_t ptr);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na prostředek, který převzít vlastnictví.|
+|*ptr*|Ukazatel na prostředek, který chcete převzít vlastnictví.|
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `reset` změnit uložené [ukazatel](#pointer) vlastníkem `unique_ptr` k `ptr` a pak odstraňte původní uložené ukazatele. Pokud `unique_ptr` nebyla prázdná, `reset` vyvolá metoda odstranění funkce vrácený [get_deleter –](#get_deleter) na původní uložené ukazatele.
+Použití `reset` změnit uloženou [ukazatel](#pointer) vlastněné `unique_ptr` k *ptr* a pak odstraňte původní uložený ukazatel. Pokud `unique_ptr` nebyla prázdná, `reset` vyvolá funkci deleter vrácený [get_deleter –](#get_deleter) na původní uložený ukazatel.
 
-Protože `reset` nejprve ukládá nové ukazatele `ptr`a poté se odstraní původní uložené ukazatele, je možné, `reset` okamžitě odstranit `ptr` Pokud je stejný jako původní uložené ukazatele.
+Protože `reset` nejdřív uloží nový ukazatel *ptr*a poté odstraní původní uložený ukazatel, je možné, `reset` okamžitě odstranit *ptr* Pokud je stejný jako původní uložený ukazatel.
 
 ## <a name="swap"></a>  unique_ptr::swap
 
-Výměny ukazatele mezi dvěma `unique_ptr` objekty.
+Vymění ukazatelů mezi dvěma `unique_ptr` objekty.
 
 ```cpp
 void swap(unique_ptr& right);
@@ -344,15 +348,16 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` A `unique_ptr` použít se Prohodit ukazatele.
+*doprava*  
+ A `unique_ptr` používají k přehazování ukazatele.
 
 ### <a name="remarks"></a>Poznámky
 
-Prohození – členská funkce `stored_ptr` s `right.stored_ptr` a `stored_deleter` s `right.stored_deleter`.
+Členská funkce Zamění `stored_ptr` s `right.stored_ptr` a `stored_deleter` s `right.stored_deleter`.
 
 ## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
 
-Existují sedm konstruktory pro `unique_ptr`.
+Existuje sedm konstruktorů pro `unique_ptr`.
 
 ```cpp
 unique_ptr();
@@ -377,19 +382,19 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na prostředek přiřazení `unique_ptr.`|
-|`_Deleter`|A `deleter` přiřazení `unique_ptr`.|
-|`right`|`rvalue reference` k `unique_ptr` ze kterého `unique_ptr` pole jsou přesunutí přiřazenou nově vytvořený `unique_ptr`.|
+|*ptr*|Ukazatel na prostředek, který má být přiřazená `unique_ptr.`|
+|*_Deleter*|A `deleter` přiřazení `unique_ptr`.|
+|*doprava*|`rvalue reference` k `unique_ptr` odkud `unique_ptr` pole jsou přiřazené do nově vytvořeného přesunout `unique_ptr`.|
 
 ### <a name="remarks"></a>Poznámky
 
-První dva konstruktory vytvořit objekt, který spravuje žádný prostředek. Třetí úložiště konstruktor `ptr` v `stored_ptr`. Čtvrtý úložiště konstruktor `ptr` v `stored_ptr` a `deleter` v `stored_deleter`.
+První dva konstruktory vytvořit objekt, který spravuje žádný prostředek. Třetí konstruktor ukládá *ptr* v `stored_ptr`. Čtvrtý konstruktor ukládá *ptr* v `stored_ptr` a `deleter` v `stored_deleter`.
 
-Páté úložiště konstruktor `ptr` v `stored_ptr` a přesune `deleter` do `stored_deleter`. Úložiště šesté a sedmého konstruktory `right.release()` v `stored_ptr` a přesune `right.get_deleter()` do `stored_deleter`.
+Pátý konstruktor ukládá *ptr* v `stored_ptr` a přesune `deleter` do `stored_deleter`. Šestý a sedmý konstruktor úložiště `right.release()` v `stored_ptr` a přesune `right.get_deleter()` do `stored_deleter`.
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~ unique_ptr
 
-Destruktor pro `unique_ptr`, zničí `unique_ptr` objektu.
+Destruktor `unique_ptr`, odstraní `unique_ptr` objektu.
 
 ```cpp
 ~unique_ptr();
@@ -399,6 +404,6 @@ Destruktor pro `unique_ptr`, zničí `unique_ptr` objektu.
 
 Volání destruktoru `get_deleter()(stored_ptr)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<paměť >](../standard-library/memory.md)<br/>

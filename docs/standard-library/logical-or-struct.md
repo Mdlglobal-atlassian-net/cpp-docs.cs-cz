@@ -1,5 +1,5 @@
 ---
-title: logical_or – struktura | Microsoft Docs
+title: logical_or – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961503"
 ---
 # <a name="logicalor-struct"></a>logical_or – struktura
 
-Předdefinované funkce objekt, který provede operaci logické disjunkce ( `operator||`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace logická disjunkce ( `operator||`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator||` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator||` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand logické disjunkce operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand logická disjunkce operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand logické disjunkce operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand logická disjunkce operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left || Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator||`.
+Výsledek `Left || Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator||`.
 
 ## <a name="remarks"></a>Poznámky
 
-Uživatelem definované typy není v žádné krátká smyčka operand vyhodnocení. Oba argumenty vyhodnocují podle `operator||`.
+Pro typy definované uživatelem neexistuje žádné krátký cyklus vyhodnocení operand. Oba argumenty jsou vyhodnocovány pomocí `operator||`.
 
 ## <a name="example"></a>Příklad
 
@@ -127,9 +127,9 @@ The deque which is the disjuction of d1 & d2 is:
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

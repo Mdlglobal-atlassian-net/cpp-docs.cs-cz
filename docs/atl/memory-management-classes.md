@@ -1,5 +1,5 @@
 ---
-title: Třídy pro správu paměti (ATL) | Microsoft Docs
+title: Třídy správy paměti (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,58 +14,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6849327d796afd1f500102167b82b08b9c60be18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b7b66989b140b7c93abefdd8075adb640b04b6f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356505"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961094"
 ---
-# <a name="memory-management-classes"></a>Třídy pro správu paměti
-Tyto třídy poskytují podporu pro haldy ukazatele, chytré ukazatele a jiné rutiny přidělení paměti.  
+# <a name="memory-management-classes"></a>Třídy správy paměti
+Tyto třídy poskytují podporu pro ukazatele haldy, inteligentní ukazatele a jiné rutiny přidělení paměti.  
   
--   [CAutoPtr](../atl/reference/cautoptr-class.md) Tato třída reprezentuje objekt chytré ukazatele.  
+-   [CAutoPtr](../atl/reference/cautoptr-class.md) Tato třída reprezentuje objekt inteligentního ukazatele.  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole chytré ukazatele.  
+-   [Cautoptrarray –](../atl/reference/cautoptrarray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu chytré ukazatele.  
+-   [Cautoptrlist –](../atl/reference/cautoptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.  
   
--   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) Tato třída reprezentuje objekt chytré ukazatele pomocí vektor – nový a odstranění operátory.  
+-   [Cautovectorptr –](../atl/reference/cautovectorptr-class.md) Tato třída reprezentuje objekt inteligentního ukazatele pomocí vektor – nový a odstranění operátory.  
   
--   [CComAllocator](../atl/reference/ccomallocator-class.md) Tato třída poskytuje metody pro správu paměti pomocí rutiny paměti COM.  
+-   [Ccomallocator –](../atl/reference/ccomallocator-class.md) Tato třída poskytuje metody pro správu paměti používá rutiny COM paměti.  
   
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) Tato třída poskytuje metody pro práci s ukazatele rozhraní a globální rozhraní tabulku (GIT).  
+-   [Ccomgitptr –](../atl/reference/ccomgitptr-class.md) Tato třída poskytuje metody pro práci s ukazatele rozhraní a tabulky globálního rozhraní (GIT).  
   
--   [CComHeap](../atl/reference/ccomheap-class.md) Tato třída implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) pomocí funkce přidělení paměti COM.  
+-   [Ccomheap –](../atl/reference/ccomheap-class.md) Tato třída implementuje [iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) pomocí funkcí přidělení paměti COM.  
   
--   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) třídu chytré ukazatele pro správu haldy ukazatele.  
+-   [Ccomheapptr –](../atl/reference/ccomheapptr-class.md) třídu inteligentních ukazatelů pro správu haldy ukazatele.  
   
--   [CComPtr](../atl/reference/ccomptr-class.md) třídu chytré ukazatele pro správu ukazatele rozhraní COM.  
+-   [CComPtr](../atl/reference/ccomptr-class.md) třídu inteligentních ukazatelů pro správu ukazatele rozhraní modelu COM.  
   
--   [CComPtrBase](../atl/reference/ccomptrbase-class.md) Tato třída poskytuje základ pro inteligentní ukazatel třídy pomocí rutiny založené na modelu COM paměti.  
+-   [Ccomptrbase –](../atl/reference/ccomptrbase-class.md) Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny založené na modelu COM. paměti.  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) třídu chytré ukazatele pro správu ukazatele rozhraní COM.  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) třídu inteligentních ukazatelů pro správu ukazatele rozhraní modelu COM.  
   
--   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) Tato třída poskytuje metody pro správu paměti pomocí rutiny CRT paměti.  
+-   [Ccrtallocator –](../atl/reference/ccrtallocator-class.md) Tato třída poskytuje metody pro správu paměti používá rutiny paměti CRT.  
   
--   [CCRTHeap](../atl/reference/ccrtheap-class.md) Tato třída implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) používání haldy funkcí CRT.  
+-   [Ccrtheap –](../atl/reference/ccrtheap-class.md) Tato třída implementuje [iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) pomocí funkcí haldy CRT.  
   
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) Tato třída implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) pomocí funkcí globální haldy Win32.  
+-   [Cglobalheap –](../atl/reference/cglobalheap-class.md) Tato třída implementuje [iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) pomocí funkce globální haldy Win32.  
   
--   [CHandle](../atl/reference/chandle-class.md) Tato třída poskytuje metody pro vytváření a používání objekt popisovače.  
+-   [Chandle –](../atl/reference/chandle-class.md) Tato třída poskytuje metody pro vytváření a používání popisovač objektu.  
   
--   [CHeapPtr](../atl/reference/cheapptr-class.md) třídu chytré ukazatele pro správu haldy ukazatele.  
+-   [Cheapptr –](../atl/reference/cheapptr-class.md) třídu inteligentních ukazatelů pro správu haldy ukazatele.  
   
--   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) Tato třída je základem pro několik inteligentní haldy ukazatel třídy.  
+-   [Cheapptrbase –](../atl/reference/cheapptrbase-class.md) Tato třída je základem pro několik inteligentní ukazatel třídy haldy.  
   
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu haldy ukazatele.  
+-   [Cheapptrlist –](../atl/reference/cheapptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu haldy ukazatele.  
   
--   [CLocalHeap](../atl/reference/clocalheap-class.md) Tato třída implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) pomocí funkcí lokální haldy Win32.  
+-   [Clocalheap –](../atl/reference/clocalheap-class.md) Tato třída implementuje [iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) pomocí funkcí lokální haldy Win32.  
   
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) Tato třída implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) pomocí funkce přidělení haldy Win32.  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) Tato třída implementuje [iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) pomocí funkcí přidělení haldy Win32.  
   
--   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) Tato třída reprezentuje rozhraní pro správce paměti.  
+-   [Iatlmemmgr –](../atl/reference/iatlmemmgr-class.md) Tato třída reprezentuje rozhraní pro správce paměti.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

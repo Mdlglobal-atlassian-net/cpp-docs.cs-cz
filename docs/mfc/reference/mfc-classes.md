@@ -1,5 +1,5 @@
 ---
-title: MFC – třídy | Microsoft Docs
+title: MFC – třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,169 +15,169 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378745"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027810"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
-Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation Class (MFC).  
+Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation Class (MFC).  
   
 > [!TIP]
->  Informace o [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou společné pro programování MFC a knihovna ATL, najdete v části [třídy sdílí MFC a knihovny ATL](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md).  
+>  Informace o [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou společné pro programování knihovny MFC a ATL naleznete v tématu [třídy sdílené mezi MFC a ATL](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md).  
   
 > [!IMPORTANT]
->  Třídy MFC a jejich členové nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Třídy knihovny MFC a jejich členy nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [CAccelerateDecelerateTransition – třída](../../mfc/reference/cacceleratedeceleratetransition-class1.md)  
- Implementuje accelerate-zpomalení přechodu.  
+ [Cacceleratedeceleratetransition – třída](../../mfc/reference/cacceleratedeceleratetransition-class1.md)  
+ Implementuje zrychlení-zpomalení přechodu.  
   
  [CAnimateCtrl – třída](../../mfc/reference/canimatectrl-class.md)  
- Poskytuje funkce Windows běžné ovládacího prvku animace.  
+ Poskytuje funkce pro Windows běžný ovládací prvek animace.  
   
  [CAnimationBaseObject – třída](../../mfc/reference/canimationbaseobject-class.md)  
  Základní třída pro všechny objekty animace.  
   
  [CAnimationColor – třída](../../mfc/reference/canimationcolor-class.md)  
- Implementuje funkce barvu, která může být animovaný jejichž červené, zelené a modré součásti.  
+ Implementuje funkce barev, jejichž komponenty červené, zelené a modré lze animovat.  
   
  [CAnimationController – třída](../../mfc/reference/canimationcontroller-class.md)  
- Implementuje animace řadiči, který poskytuje centrální rozhraní pro vytváření a správa animace.  
+ Implementuje řadič animace, který poskytuje centrální rozhraní pro vytváření a správu animací.  
   
  [CAnimationGroup – třída](../../mfc/reference/canimationgroup-class.md)  
- Implementuje animace řadiči, který poskytuje centrální rozhraní pro vytváření a správa animace.  
+ Implementuje řadič animace, který poskytuje centrální rozhraní pro vytváření a správu animací.  
   
  [CAnimationManagerEventHandler – třída](../../mfc/reference/canimationmanagereventhandler-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav správce animace.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace při změně stavu Správce animace.  
   
  [CAnimationPoint – třída](../../mfc/reference/canimationpoint-class.md)  
- Implementuje funkce, které může být animovaný jejichž souřadnice bodu.  
+ Implementuje funkci bodu, jehož souřadnice lze animovat.  
   
  [CAnimationRect – třída](../../mfc/reference/canimationrect-class.md)  
- Implementuje funkce obdélníku, jehož strany může být animace.  
+ Implementuje funkci obdélníku, jehož strany lze animovat.  
   
  [CAnimationSize – třída](../../mfc/reference/canimationsize-class.md)  
- Implementuje funkce velikost objektu může být animovaný jejíž dimenze.  
+ Implementuje funkci objektu s rozměry, jehož rozměry lze animovat.  
   
  [CAnimationStoryboardEventHandler – třída](../../mfc/reference/canimationstoryboardeventhandler-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav storyboard nebo se aktualizuje scénáře.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace při změně stavu objektu storyboard nebo aktualizaci scénáře.  
   
  [CAnimationTimerEventHandler – třída](../../mfc/reference/canimationtimereventhandler-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace, když dojde k událostem časování.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace při výskytu události časování.  
   
  [CAnimationValue – třída](../../mfc/reference/canimationvalue-class.md)  
- Implementuje funkce animace objektu, který má jednu hodnotu.  
+ Implementuje funkci objektu animace, který má jednu hodnotu.  
   
  [CAnimationVariable – třída](../../mfc/reference/canimationvariable-class.md)  
  Představuje proměnnou animace.  
   
  [CAnimationVariableChangeHandler – třída](../../mfc/reference/canimationvariablechangehandler-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace při změně hodnoty proměnné animace.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace při změně hodnoty proměnné animace.  
   
  [CAnimationVariableIntegerChangeHandler – třída](../../mfc/reference/canimationvariableintegerchangehandler-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace při změně hodnoty proměnné animace.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace při změně hodnoty proměnné animace.  
   
  [CArchive – třída](../../mfc/reference/carchive-class.md)  
- Umožňuje uložit nejsložitějších sítí objektů v trvalé binárního formátu (obvykle úložiště disku), která je uchována po odstranění těchto objektů.  
+ Umožňuje uložit složitou síť objektů v trvalém binárním formátu (obvykle úložiště na disku), který bude zachován po odstranění těchto objektů.  
   
  [CArchiveException – třída](../../mfc/reference/carchiveexception-class.md)  
- Představuje podmínku výjimka serializace.  
+ Představuje podmínku výjimky serializace.  
   
  [CArray – třída](../../mfc/reference/carray-class.md)  
- Podporuje pole, které se podobají C pole, ale můžete dynamicky snížit a růst podle potřeby.  
+ Podporuje pole, které se podobá polím jazyka C, ale můžete dynamicky zmenšit nebo zvětšit podle potřeby.  
   
  [CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)  
- Poskytuje funkce pro použití asynchronní monikery v ovládacích prvcích ActiveX (dříve OLE prvky).  
+ Poskytuje funkce pro používání asynchronních zástupných názvů v ovládacích prvcích ActiveX (dříve ovládací prvky OLE).  
   
  [CAsyncSocket – třída](../../mfc/reference/casyncsocket-class.md)  
- Představuje soket Windows, což je koncový bod síťové komunikace.  
+ Představuje Windows Socket, což je koncový bod komunikace v síti.  
   
  [CAutoHideDockSite – třída](../../mfc/reference/cautohidedocksite-class.md)  
- Rozšiřuje [CDockSite třída](../../mfc/reference/cdocksite-class.md) implementovat ukotvení automatické skrytí podokna.  
+ Rozšiřuje [cdocksite – třída](../../mfc/reference/cdocksite-class.md) k implementaci automatického schovávání panelu ukotvení.  
   
  [CBaseKeyFrame – třída](../../mfc/reference/cbasekeyframe-class.md)  
- Implementuje základních funkcí klíčový snímek.  
+ Implementuje základní funkce keyframe.  
   
  [CBasePane – třída](../../mfc/reference/cbasepane-class.md)  
- Základní třída pro všechny podokna.  
+ Základní třída pro všechna podokna.  
   
  [CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)  
- Rozšiřuje funkce [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) pro podporu vytváření záložkách windows.  
+ Rozšiřuje funkce [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) pro podporu vytváření oken s kartami.  
   
  [CBaseTransition – třída](../../mfc/reference/cbasetransition-class.md)  
  Představuje základní přechod.  
   
  [CBitmap – třída](../../mfc/reference/cbitmap-class.md)  
- Zapouzdří grafiky zařízení rozhraní GDI rastrového obrázku a poskytuje členské funkce k manipulaci s bitové mapy.  
+ Zapouzdřuje bitmapy rozhraní GDI systému Windows grafiky zařízení a poskytuje členské funkce pro manipulaci s rastrového obrázku.  
   
  [CBitmapButton – třída](../../mfc/reference/cbitmapbutton-class.md)  
- Vytvoří uzavření tlačítkem ovládací prvky označený verzí rastrových obrázků místo textu.  
+ Vytvoří kontrolní prvky stisknutelných tlačítek označené rastrovými obrázky místo textu.  
   
  [CBitmapRenderTarget – třída](../../mfc/reference/cbitmaprendertarget-class.md)  
  Obálka pro `ID2D1BitmapRenderTarget`.  
   
  [CBrush – třída](../../mfc/reference/cbrush-class.md)  
- Zapouzdří štětce Windows zařízení grafické rozhraní (GDI).  
+ Zapouzdřuje štětec rozhraní GDI systému Windows grafiky zařízení.  
   
  [CButton – třída](../../mfc/reference/cbutton-class.md)  
- Poskytuje funkce Windows ovládacích prvků.  
+ Poskytuje funkce pro ovládací prvky tlačítka Windows.  
   
  [CByteArray – třída](../../mfc/reference/cbytearray-class.md)  
  Podporuje dynamická pole bajtů.  
   
  [CCachedDataPathProperty – třída](../../mfc/reference/ccacheddatapathproperty-class.md)  
- Vlastnost asynchronně přenáší a uložené v mezipaměti v paměti soubor ovládacího prvku implementuje OLE.  
+ Implementuje ovládacího prvku OLE asynchronně převedený a uložili do mezipaměti v paměti souboru vlastnost.  
   
  [CCheckListBox – třída](../../mfc/reference/cchecklistbox-class.md)  
- Poskytuje funkci Windows kontrolní seznam pole.  
+ Poskytuje funkce pro pole kontrolní seznam Windows.  
   
  [CClientDC – třída](../../mfc/reference/cclientdc-class.md)  
- Volání funkcí Windows zpracovává [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) během vytváření a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) během odstraňování.  
+ Zpracovává volání funkce Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) v době konstrukce a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) v době zničení.  
   
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)  
- Základní třída pro architekturu map zpráv Microsoft Foundation Class Library.  
+ Základní třída architektury zpráva – mapa knihovny Microsoft Foundation Class.  
   
  [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)  
- Použít pouze uvnitř `ON_UPDATE_COMMAND_UI` obslužné rutiny v `CCmdTarget`-odvozené třídy.  
+ Použít pouze v rámci `ON_UPDATE_COMMAND_UI` obslužné rutiny v `CCmdTarget`-odvozené třídy.  
   
  [CColorDialog – třída](../../mfc/reference/ccolordialog-class.md)  
- Umožňuje začlenit dialogové okno Výběr barev do vaší aplikace.  
+ Umožňuje začlenit do vaší aplikace dialogové okno Výběr barvy.  
   
  [CComboBox – třída](../../mfc/reference/ccombobox-class.md)  
- Poskytuje funkci Windows pole se seznamem.  
+ Poskytuje funkce pro pole se seznamem Windows.  
   
  [CComboBoxEx – třída](../../mfc/reference/ccomboboxex-class.md)  
- Rozšiřuje ovládacího prvku pole se seznamem se tím, že poskytuje podporu pro seznamy obrázků.  
+ Poskytnutím podpory pro seznamy obrázků rozšiřuje ovládací prvek pole se seznamem.  
   
  [CCommandLineInfo – třída](../../mfc/reference/ccommandlineinfo-class.md)  
- Pomůcek při analýze příkazového řádku při spuštění aplikace.  
+ Pomáhá při analýze příkazového řádku při spuštění aplikace.  
   
  [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)  
- Základní třída pro třídy, které zapouzdřují funkce společná dialogová okna Windows.  
+ Základní třída pro třídy, které zapouzdřují funkce běžných dialogových oken Windows.  
   
  [CConnectionPoint – třída](../../mfc/reference/cconnectionpoint-class.md)  
- Definuje speciální typ rozhraní používaný ke komunikaci s jinými objekty OLE, označovaný jako "bod připojení".  
+ Definuje speciální typ rozhraní, které slouží ke komunikaci s další objekty OLE, nazývaný "bod připojení".  
   
  [CConstantTransition – třída](../../mfc/reference/cconstanttransition-class.md)  
- Zapouzdří konstantní přechod.  
+ Zapouzdřuje konstantní přechod.  
   
  [CContextMenuManager – třída](../../mfc/reference/ccontextmenumanager-class.md)  
  Spravuje místní nabídky, také známé jako kontextové nabídky.  
   
  [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)  
- Základní třída pro třídy ovládacích pruhů [cstatusbar – třída](../../mfc/reference/cstatusbar-class.md), [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), [CDialogBar – třída](../../mfc/reference/cdialogbar-class.md), [CReBar – třída](../../mfc/reference/crebar-class.md)a [ Třída COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
+ Základní třída pro třídy ovládacích pruhů [cstatusbar – třída](../../mfc/reference/cstatusbar-class.md), [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), [CDialogBar – třída](../../mfc/reference/cdialogbar-class.md), [crebar – třída](../../mfc/reference/crebar-class.md)a [ Coleresizebar – třída](../../mfc/reference/coleresizebar-class.md).  
   
  [CCriticalSection – třída](../../mfc/reference/ccriticalsection-class.md)  
- Reprezentuje "kritické oddíl", který je na synchronizační objekt, který umožňuje jedno vlákno najednou k přístupu k prostředku nebo části kódu.  
+ Představuje "kritický oddíl", což je synchronizační objekt umožňující vždy jednomu vláknu postupně, aby přístup k prostředku nebo části kódu.  
   
  [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)  
- Přizpůsobení zobrazení dokumentu architekturu pro běžné ovládací prvky, které podporuje verze Windows 98 a systému Windows NT 3.51 a novější.  
+ Přizpůsobí architekturu document / view pro běžné ovládací prvky, které podporuje Windows 98 a Windows NT verze 3.51 a vyšší.  
   
  [CCubicTransition – třída](../../mfc/reference/ccubictransition-class.md)  
- Zapouzdří krychlový přechod.  
+ Zapouzdřuje kubický přechod.  
   
  [CCustomInterpolator – třída](../../mfc/reference/ccustominterpolator-class.md)  
  Implementuje základní interpolator.  
@@ -207,7 +207,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Obálka pro `ID2D1GeometrySink`.  
   
  [CD2DGradientBrush – třída](../../mfc/reference/cd2dgradientbrush-class.md)  
- Základní třídu `CD2DLinearGradientBrush` a `CD2DRadialGradientBrush` třídy.  
+ Základní třída `CD2DLinearGradientBrush` a `CD2DRadialGradientBrush` třídy.  
   
  [CD2DLayer – třída](../../mfc/reference/cd2dlayer-class.md)  
  Obálka pro `ID2D1Layer`.  
@@ -237,7 +237,7 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Obálka pro `D2D1_RECT_U`.  
   
  [CD2DResource – třída](../../mfc/reference/cd2dresource-class.md)  
- Abstraktní třída, která poskytuje rozhraní pro vytváření a správa `D2D` prostředkům, například štětce, vrstvy a texty.  
+ Abstraktní třídu, která poskytuje rozhraní pro vytváření a správu `D2D` prostředky, jako jsou štětce, vrstvy a texty.  
   
  [CD2DRoundedRect – třída](../../mfc/reference/cd2droundedrect-class.md)  
  Obálka pro `D2D1_ROUNDED_RECT`.  
@@ -258,49 +258,49 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Obálka pro `IDWriteTextLayout`.  
   
  [CDaoDatabase – třída](../../mfc/reference/cdaodatabase-class.md)  
- Reprezentuje připojení k databázi, pomocí kterého lze provozovat na data.  
+ Představuje připojení k databázi, pomocí které můžete pracovat s daty.  
   
  [CDaoException – třída](../../mfc/reference/cdaoexception-class.md)  
- Představuje podmínku vzniklých třídami databází MFC podle dat přístup k objektům (DAO).  
+ Představuje podmínku výjimky vyplývající z databázových tříd MFC založených na datový přístup k objektům (DAO).  
   
  [CDaoFieldExchange – třída](../../mfc/reference/cdaofieldexchange-class.md)  
- Podporuje rutiny výměna pole záznamu exchange (DFX) používá databázové třídy DAO.  
+ Podporuje rutiny (DFX) systému exchange pole záznamu DAO používané databázové třídy DAO.  
   
  [CDaoQueryDef – třída](../../mfc/reference/cdaoquerydef-class.md)  
- Představuje definici dotazu, nebo "querydef", obvykle 1, které jsou uloženy v databázi.  
+ Představuje definici dotazu, nebo "querydef", obvykle jeden uložený v databázi.  
   
  [CDaoRecordset – třída](../../mfc/reference/cdaorecordset-class.md)  
- Představuje sadu záznamy ze zdroje dat vybraná.  
+ Představuje sadu záznamů ze zdroje dat vybrané.  
   
  [CDaoRecordView – třída](../../mfc/reference/cdaorecordview-class.md)  
  Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
   
  [CDaoTableDef – třída](../../mfc/reference/cdaotabledef-class.md)  
- Představuje definici uložené na základní tabulku nebo připojené tabulky.  
+ Představuje uloženou definici základní tabulky nebo připojené tabulky.  
   
  [CDaoWorkspace – třída](../../mfc/reference/cdaoworkspace-class.md)  
- Spravuje relaci databáze s názvem, chráněný heslem z přihlášení a odhlášení, jedním uživatelem.  
+ Spravuje relace s názvem databáze chráněné heslem od přihlášení po odhlášení jednoho uživatele.  
   
  [CDatabase – třída](../../mfc/reference/cdatabase-class.md)  
- Reprezentuje připojení ke zdroji dat, pomocí kterého lze provozovat na datovém zdroji.  
+ Reprezentuje připojení ke zdroji dat, pomocí kterého můžete pracovat ve zdroji dat.  
   
  [CDataExchange – třída](../../mfc/reference/cdataexchange-class.md)  
- Podporuje výměna dialogových dat (DDX) a používá třídy Microsoft Foundation rutiny ověření (DDV) dat dialogového okna.  
+ Podporuje výměna dat dialogových oken (DDX) a rutiny (DDV) ověřování dat dialogového okna používané v rámci tříd Microsoft Foundation.  
   
  [CDataPathProperty – třída](../../mfc/reference/cdatapathproperty-class.md)  
- Implementuje OLE řídit vlastnost, která mohou být načteny asynchronně.  
+ Implementuje ovládacího prvku OLE vlastnost, která lze načíst asynchronně.  
   
  [CDataRecoveryHandler – třída](../../mfc/reference/cdatarecoveryhandler-class.md)  
- Autosaves dokumenty a obnoví je, pokud neočekávaně ukončí aplikaci.  
+ Automaticky ukládá dokumenty a obnoví je, pokud se aplikace neočekávaně ukončí.  
   
  [CDateTimeCtrl – třída](../../mfc/reference/cdatetimectrl-class.md)  
- Zapouzdřuje funkce ovládacího prvku pro výběr data a času.  
+ Zapouzdřuje funkce ovládací prvek pro výběr data a času.  
   
  [CDBException – třída](../../mfc/reference/cdbexception-class.md)  
- Představuje podmínku vzniklých databázové třídy.  
+ Představuje podmínku výjimky vyplývající z databázových tříd.  
   
  [CDBVariant – třída](../../mfc/reference/cdbvariant-class.md)  
- Představuje je odlišný datový typ pro třídy MFC rozhraní ODBC.  
+ Představuje je odlišný datový typ pro třídy knihovny MFC rozhraní ODBC.  
   
  [CDC – třída](../../mfc/reference/cdc-class.md)  
  Definuje třídu objektů kontextu zařízení.  
@@ -309,346 +309,346 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Obálka pro `ID2D1DCRenderTarget`.  
   
  [CDHtmlDialog – třída](../../mfc/reference/cdhtmldialog-class.md)  
- Umožňuje vytvořit dialogových oken, které používají HTML místo prostředky dialogu implementovat jejich uživatelské rozhraní.  
+ Použít k vytváření dialogových oken používající HTML namísto zdrojů dialogového okna k provedení jejich uživatelské rozhraní.  
   
  [CDialog – třída](../../mfc/reference/cdialog-class.md)  
- Základní třída používaná pro zobrazování dialogových oken na obrazovce.  
+ Základní třída pro zobrazování dialogových oken na obrazovce.  
   
  [CDialogBar – třída](../../mfc/reference/cdialogbar-class.md)  
- Poskytuje funkci Windows nemodální dialogového okna v ovládacím panelu.  
+ Poskytuje funkce pro nemodální dialogovému oknu Windows na ovládacím panelu.  
   
  [CDialogEx – třída](../../mfc/reference/cdialogex-class.md)  
- Určuje barvu pozadí a obrázku pozadí dialogového okna.  
+ Určuje barvu pozadí a obrázek pozadí dialogového okna.  
   
  [CDiscreteTransition – třída](../../mfc/reference/cdiscretetransition-class.md)  
- Zapouzdří diskrétní přechod.  
+ Zapouzdřuje diskrétní přechod.  
   
  [CDocItem – třída](../../mfc/reference/cdocitem-class.md)  
- Základní třída pro položky dokumentů, které jsou součástí data dokumentu.  
+ Základní třída pro položky dokumentu, které jsou součástí dat dokumentu.  
   
  [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)  
- Implementuje podokně, která se dá buď ukotven v lokalitě ukotvení nebo zahrnuté v záložkách podokně.  
+ Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.  
   
  [CDockablePaneAdapter – třída](../../mfc/reference/cdockablepaneadapter-class.md)  
- Poskytuje ukotvení podporu pro `CWnd`-odvozené podokna.  
+ Poskytuje podporu dokování pro `CWnd`-odvozené podoken.  
   
  [CDockingManager – třída](../../mfc/reference/cdockingmanager-class.md)  
- Implementuje základní funkce, které řídí ukotvení rozložení v okně s rámečkem hlavní.  
+ Implementuje základní funkce, které řídí dokovací rozložení v rámci hlavního okna.  
   
  [CDockingPanesRow – třída](../../mfc/reference/cdockingpanesrow-class.md)  
- Spravuje seznam podokna, které se nacházejí ve stejném vodorovné nebo svislé řádku (sloupec) lokality ukotvení.  
+ Spravuje seznam podoken, které se nacházejí ve stejném vodorovném nebo svislém řádku (sloupec) dokovacího webu.  
   
  [CDockSite – třída](../../mfc/reference/cdocksite-class.md)  
- Poskytuje funkce pro uspořádání podokna, které jsou odvozeny od [CPane třída](../../mfc/reference/cpane-class.md) do sady řádků.  
+ Poskytuje funkce pro uspořádání podoken, které jsou odvozeny z [cpane – třída](../../mfc/reference/cpane-class.md) do sady řádků.  
   
  [CDockState – třída](../../mfc/reference/cdockstate-class.md)  
- Serializovaný seznam `CObject` třídu, která načte, zrušeno jeho zavedení nebo vymaže stavu jednoho nebo více ukotvení ovládacího prvku panely v trvalé paměti (soubor).  
+ Serializovaný seznam `CObject` panely třídu, která načte, uvolní nebo vymaže stav jednoho nebo více prvků ukotvení v trvalé paměti (soubor).  
   
  [CDocObjectServer – třída](../../mfc/reference/cdocobjectserver-class.md)  
- Implementuje rozhraní OLE další potřebné ke změně normální `COleDocument` serveru do celého serveru DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.  
+ Implementuje další rozhraní OLE potřebná k normálního `COleDocument` server do úplné zcela DocObject server: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.  
   
  [CDocObjectServerItem – třída](../../mfc/reference/cdocobjectserveritem-class.md)  
- Implementuje server OLE příkazy speciálně pro DocObject servery.  
+ Příkazy Implements OLE servere speciálně pro servery DocObject.  
   
  [CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)  
- Abstraktní základní třída, která definuje základní funkce pro šablony dokumentu.  
+ Abstraktní základní třída definující základní funkčnost pro šablony dokumentů.  
   
  [CDocument – třída](../../mfc/reference/cdocument-class.md)  
- Poskytuje základní funkce pro třídy dokumentů definovaný uživatelem.  
+ Poskytuje základní funkce pro třídy dokumentu definované uživatelem.  
   
  [CDragListBox – třída](../../mfc/reference/cdraglistbox-class.md)  
- Kromě zajištění funkce Windows pole se seznamem `CDragListBox` třída umožňuje uživateli přesunout položky seznamu pole, jako jsou názvy souborů, v rámci pole se seznamem.  
+ Kromě zajištění funkcí seznamu Windows, `CDragListBox` třída umožňuje uživateli seznam položek pole, jako jsou názvy souborů, přesouvat v rámci pole se seznamem.  
   
  [CDrawingManager – třída](../../mfc/reference/cdrawingmanager-class.md)  
- Implementuje komplexní kreslení algoritmy.  
+ Implementuje složité algoritmy kreslení.  
   
  [CDumpContext – třída](../../mfc/reference/cdumpcontext-class.md)  
- Výstup diagnostiky podporuje orientované datového proudu ve formě čitelný text.  
+ Diagnostický výstup orientovaný na stream podporuje ve formě čitelné textu.  
   
  [CDWordArray – třída](../../mfc/reference/cdwordarray-class.md)  
- Podporuje pole doublewords 32-bit.  
+ Podporuje pole s 32bitovými dvojitými slovy.  
   
  [CEdit – třída](../../mfc/reference/cedit-class.md)  
- Poskytuje funkce ovládacích prvků pro úpravy Windows.  
+ Poskytuje funkce pro Windows textové pole.  
   
  [CEditView – třída](../../mfc/reference/ceditview-class.md)  
- Typ třídy zobrazení, který poskytuje funkci Windows ovládacích prvků pro úpravy a lze použít k implementaci funkce jednoduchého textového editoru.  
+ Typ třídy zobrazení, která poskytuje funkce pro Windows ovládacích prvků pro úpravy a slouží k implementaci funkcí jednoduchého textového editoru.  
   
  [CEvent – třída](../../mfc/reference/cevent-class.md)  
- Představuje "událost", který je na synchronizační objekt, který umožňuje jedno vlákno oznámit jiné, který došlo k události.  
+ Představuje "událost", což je synchronizační objekt umožňující vždy jednomu vláknu upozornit jiné, že došlo k události.  
   
  [CException – třída](../../mfc/reference/cexception-class.md)  
- Základní třída pro všechny výjimky v knihovny Microsoft Foundation Class.  
+ Základní třída pro všechny výjimky knihovny Microsoft Foundation Class.  
   
  [CFieldExchange – třída](../../mfc/reference/cfieldexchange-class.md)  
- Podporuje pole záznamu (exchange – RFX) a rutiny exchange (Bulk RFX) pole záznamu hromadné používá databázové třídy.  
+ Podporuje výměna pole záznamu (RFX) a Hromadná pole záznamu exchange (Bulk RFX) rutiny používané v rámci tříd databáze.  
   
  [CFile – třída](../../mfc/reference/cfile-class.md)  
- Základní třída pro třídy Microsoft Foundation Class souborů.  
+ Základní třída pro třídy souborů Microsoft Foundation Class.  
   
  [CFileDialog – třída](../../mfc/reference/cfiledialog-class.md)  
- Zapouzdří dialogové okno běžné soubor pro systém Windows.  
+ Zapouzdřuje dialogové okno běžné soubor pro Windows.  
   
  [CFileException – třída](../../mfc/reference/cfileexception-class.md)  
- Představuje podmínku výjimky související s souboru.  
+ Představuje podmínku výjimky vztahující se k souboru.  
   
  [CFileFind – třída](../../mfc/reference/cfilefind-class.md)  
- Provede vyhledávání místního souboru a je základní třídou pro [CGopherFileFind třída](../../mfc/reference/cgopherfilefind-class.md) a [CFtpFileFind třída](../../mfc/reference/cftpfilefind-class.md), které provádí hledání souborů Internetu.  
+ Provede vyhledávání místních souborů a je základní třídou pro [cgopherfilefind – třída](../../mfc/reference/cgopherfilefind-class.md) a [cftpfilefind – třída](../../mfc/reference/cftpfilefind-class.md), které provádí hledání internetových souborů.  
   
  [CFindReplaceDialog – třída](../../mfc/reference/cfindreplacedialog-class.md)  
- Umožňuje implementovat standardní řetězec vyhledání a nahrazení dialogových oken v aplikaci.  
+ Umožňuje implementovat dialogová okna Najít a nahradit standardní řetězec ve vaší aplikaci.  
   
  [CFolderPickerDialog – třída](../../mfc/reference/cfolderpickerdialog-class.md)  
- Implementuje CFileDialog v režimu výběr složky.  
+ Implementuje CFileDialog v režimu pro výběr složky.  
   
  [CFont – třída](../../mfc/reference/cfont-class.md)  
- Zapouzdří písmo Windows zařízení grafické rozhraní (GDI) a poskytuje členské funkce pro manipulaci s písmo.  
+ Zapouzdřuje písmo rozhraní GDI systému Windows grafiky zařízení a poskytuje členské funkce pro manipulaci s písmem.  
   
  [CFontDialog – třída](../../mfc/reference/cfontdialog-class.md)  
- Umožňuje začlenit dialogové okno Výběr písma do vaší aplikace.  
+ Umožňuje začlenit do vaší aplikace dialogové okno Výběr písma.  
   
  [CFontHolder – třída](../../mfc/reference/cfontholder-class.md)  
- Implementuje uložených vlastností písma a zapouzdřuje funkce Windows objektu písma a `IFont` rozhraní.  
+ Implementuje vlastnost běžného písma a zapouzdřuje funkce objektu písma Windows a `IFont` rozhraní.  
   
  [CFormView – třída](../../mfc/reference/cformview-class.md)  
- Základní třída používaná pro zobrazení formuláře.  
+ Základní třída použitá pro zobrazení formuláře.  
   
  [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)  
- Poskytuje funkci Windows jednotlivý dokument (SDI rozhraní) překryté nebo oken s rámečkem automaticky otevírané okno, společně s členů pro správu okna.  
+ Poskytuje funkce pro Windows rozhraní jednoho dokumentu (SDI) překrytého nebo místního okna rámce, spolu se členy pro správu okna.  
   
  [CFrameWndEx – třída](../../mfc/reference/cframewndex-class.md)  
- Implementuje jeden dokument (SDI rozhraní) překryté nebo oken s rámečkem místní funkci systému Windows a poskytuje členy pro správu okna. Ji rozšiřuje [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md) třídy.  
+ Implementuje jednotné rozhraní dokumentu (SDI) překrytého nebo místního okna rámce funkcí Windows a poskytuje členy pro správu okna. Rozšiřuje [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md) třídy.  
   
  [CFtpConnection – třída](../../mfc/reference/cftpconnection-class.md)  
- Spravuje připojení k serveru FTP na Internet server a umožňuje přímé manipulaci adresářů a souborů na tomto serveru.  
+ Spravuje FTP připojení k internetovému serveru a umožňuje přímou manipulaci s adresářů a souborů na tomto serveru.  
   
  [CFtpFileFind – třída](../../mfc/reference/cftpfilefind-class.md)  
- Usnadňuje hledání souborů Internetu serverů FTP.  
+ Pomáhá při hledání internetových souborů na serverech FTP.  
   
  [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)  
- Poskytuje základní třídu pro různé druhy Windows grafické objekty rozhraní GDI zařízení například rastrové obrázky, oblasti, štětce, pera, palety a písem.  
+ Poskytuje základní třídu pro různé druhy grafiky Windows objekty rozhraní GDI systému zařízení, jako je například rastrové obrázky, oblasti, štětce, pera, palety a písma.  
   
  [CGopherConnection – třída](../../mfc/reference/cgopherconnection-class.md)  
- Spravuje vaše připojení k serveru Internet gopher.  
+ Spravuje připojení k gopher serveru Internet.  
   
  [CGopherFile – třída](../../mfc/reference/cgopherfile-class.md)  
- Poskytuje funkce pro vyhledání a přečtení souborů na gopher serveru.  
+ Poskytuje funkce pro hledání a čtení souborů na gopher serveru.  
   
  [CGopherFileFind – třída](../../mfc/reference/cgopherfilefind-class.md)  
- Usnadňuje hledání souborů Internetu gopher serverů.  
+ Pomáhá při hledání internetových souborů na serverech gopher.  
   
  [CGopherLocator – třída](../../mfc/reference/cgopherlocator-class.md)  
- Získá gopher "Lokátor" ze serveru gopher, určuje typ lokátoru a zpřístupní Lokátor [CGopherFileFind třída](../../mfc/reference/cgopherfilefind-class.md).  
+ Získá gopher "Lokátor" ze serveru gopher, určí typ lokátoru a zpřístupní Lokátor [cgopherfilefind – třída](../../mfc/reference/cgopherfilefind-class.md).  
   
  [CHeaderCtrl – třída](../../mfc/reference/cheaderctrl-class.md)  
- Poskytuje funkci ovládacím prvku Windows běžné záhlaví.  
+ Poskytuje funkce pro Windows běžný ovládací prvek záhlaví.  
   
  [CHotKeyCtrl – třída](../../mfc/reference/chotkeyctrl-class.md)  
- Poskytuje funkci běžné aktivní klíče ovládacího prvku Windows.  
+ Poskytuje funkce ovládacího prvku Windows běžné výměně klíče.  
   
  [CHtmlEditCtrl – třída](../../mfc/reference/chtmleditctrl-class.md)  
- Poskytuje funkce ovládacího prvku WebBrowser ActiveX v okně knihovny MFC.  
+ Poskytuje funkce pro ovládací prvek WebBrowser ActiveX v okně MFC.  
   
  [CHtmlEditCtrlBase – třída](../../mfc/reference/chtmleditctrlbase-class.md)  
- Představuje komponentu úprav HTML.  
+ Představuje součást úprav jazyka HTML.  
   
  [CHtmlEditDoc – třída](../../mfc/reference/chtmleditdoc-class.md)  
- S [CHtmlEditView Class](../../mfc/reference/chtmleditview-class.md), poskytuje funkci platformou WebBrowser úpravy v kontextu architektury MFC zobrazení dokumentu.  
+ S [CHtmlEditView – třída](../../mfc/reference/chtmleditview-class.md), poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury zobrazení dokumentu MFC.  
   
  [CHtmlEditView – třída](../../mfc/reference/chtmleditview-class.md)  
- Poskytuje funkci platformou WebBrowser úpravy v kontextu na MFC document/view – architektura.  
+ Poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.  
   
  [CHtmlView – třída](../../mfc/reference/chtmlview-class.md)  
- Poskytuje funkce ovládacího prvku WebBrowser v kontextu na MFC document/view – architektura.  
+ Poskytuje funkce ovládání prvku WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.  
   
  [CHttpConnection – třída](../../mfc/reference/chttpconnection-class.md)  
  Spravuje připojení k serveru HTTP.  
   
  [CHttpFile – třída](../../mfc/reference/chttpfile-class.md)  
- Poskytuje funkce pro žádosti a číst soubory na serveru HTTP.  
+ Poskytuje funkce pro vyžádání a čtení souborů na HTTP server.  
   
  [CHwndRenderTarget – třída](../../mfc/reference/chwndrendertarget-class.md)  
  Obálka pro `ID2D1HwndRenderTarget`.  
   
  [CImageList – třída](../../mfc/reference/cimagelist-class.md)  
- Poskytuje funkci Windows ovládací prvek běžné seznamu obrázků.  
+ Poskytuje funkce pro Windows běžné ovládací prvek seznamu obrázků.  
   
  [CInstantaneousTransition – třída](../../mfc/reference/cinstantaneoustransition-class.md)  
- Zapouzdří okamžitou přechodu.  
+ Zapouzdřuje okamžitý přechod.  
   
  [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)  
- Spravuje připojení k internetového serveru.  
+ Spravuje připojení k internetovému serveru.  
   
  [CInternetException – třída](../../mfc/reference/cinternetexception-class.md)  
- Představuje podmínku výjimky související s operace Internetu.  
+ Představuje podmínku výjimky vztahující se k Internetu operaci.  
   
  [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)  
- Umožňuje přístup k souborům na vzdálené systémy, které používají internetové protokoly.  
+ Umožňuje přístup k souborům ve vzdálených systémech, které používají protokoly sítě Internet.  
   
  [CInternetSession – třída](../../mfc/reference/cinternetsession-class.md)  
- Vytvoří a inicializuje jeden nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.  
+ Vytvoří a inicializuje jednu nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.  
   
  [CInterpolatorBase – třída](../../mfc/reference/cinterpolatorbase-class.md)  
- Implementuje zpětné volání, která je volána rozhraním API animace, když má k výpočtu novou hodnotu proměnné animace.  
+ Implementuje zpětné volání, které je voláno rozhraním API animace, když má vypočítat nové hodnoty proměnné animace.  
   
  [CInvalidArgException – třída](../../mfc/reference/cinvalidargexception-class.md)  
- Tato třída reprezentuje podmínku neplatný argument.  
+ Tato třída představuje podmínku výjimky neplatný argument.  
   
  [CIPAddressCtrl – třída](../../mfc/reference/cipaddressctrl-class.md)  
- Poskytuje funkci ovládacím prvku Windows běžné adres IP.  
+ Poskytuje funkce pro Windows běžný ovládací prvek adresy IP.  
   
  [CJumpList – třída](../../mfc/reference/cjumplist-class.md)  
- Seznam zástupců zobrazených po klikněte pravým tlačítkem na ikonu na hlavním panelu.  
+ Seznam zástupců zobrazených po klepnutí pravým tlačítkem myši na ikonu na hlavním panelu.  
   
  [CKeyboardManager – třída](../../mfc/reference/ckeyboardmanager-class.md)  
- Spravuje zástupce klíče tabulky hlavního rámce okna a okna s rámečkem podřízené.  
+ Spravuje tabulky klávesových zkratek pro hlavní okno rámce a podřízených oken rámce.  
   
  [CKeyFrame – třída](../../mfc/reference/ckeyframe-class.md)  
  Představuje klíčový snímek animace.  
   
  [CLinearTransition – třída](../../mfc/reference/clineartransition-class.md)  
- Zapouzdří lineárního přechodu.  
+ Zapouzdřuje lineární přechod.  
   
  [CLinearTransitionFromSpeed – třída](../../mfc/reference/clineartransitionfromspeed-class.md)  
- Zapouzdří lineární rychlost přechodu.  
+ Zapouzdřuje přechod lineární rychlostí.  
   
  [CLinkCtrl – třída](../../mfc/reference/clinkctrl-class.md)  
- Poskytuje funkci běžné SysLink ovládacího prvku Windows.  
+ Poskytuje funkce pro Windows běžný ovládací prvek SysLink.  
   
  [CList – třída](../../mfc/reference/clist-class.md)  
- Podporuje seřazené seznamy nejedinečný objekty přístupné postupně nebo podle hodnoty.  
+ Podporuje seřazené seznam nejedinečných objektů dostupných postupně sekvenčně nebo podle hodnoty.  
   
  [CListBox – třída](../../mfc/reference/clistbox-class.md)  
- Poskytuje funkci pole se seznamem systému Windows.  
+ Poskytuje funkce pro pole se seznamem Windows.  
   
  [CListCtrl – třída](../../mfc/reference/clistctrl-class.md)  
- Zapouzdřuje funkce ovládacího prvku"seznamu zobrazení," obsahující kolekce položek, každý se skládá z ikonu (ze seznamu obrázků) a štítek.  
+ Zapouzdřuje funkce ovládacího prvku"seznam zobrazení," které zobrazuje kolekci položek, z nichž každá se skládá z ikony (ze seznamu obrázků) a popisek.  
   
  [CListView – třída](../../mfc/reference/clistview-class.md)  
- Zjednodušuje použití ovládacího prvku seznam, [CListCtrl – třída](../../mfc/reference/clistctrl-class.md), třídu, která zapouzdřuje funkce ovládací prvek seznamu, s architekturou MFC na zobrazení dokumentu.  
+ Zjednodušuje použití ovládacího prvku seznam a [třídě CListCtrl](../../mfc/reference/clistctrl-class.md), třídy, která zapouzdřuje funkce ovládacího prvku seznam architektuře document / view knihovny MFC.  
   
  [CLongBinary – třída](../../mfc/reference/clongbinary-class.md)  
- Zjednodušuje pracovat s objekty velké binární data (často říká objektů BLOB, nebo "binární rozsáhlé objekty") v databázi.  
+ Zjednodušuje práci s velmi velkými binárními datovými objekty (často nazývané objekty BLOB nebo "binární rozsáhlé objekty") v databázi.  
   
  [CMap – třída](../../mfc/reference/cmap-class.md)  
- Třída kolekce slovník, který mapuje klíče jedinečné hodnoty.  
+ Třída kolekce slovníku, která mapuje jedinečné klíče na hodnoty.  
   
  [CMapPtrToPtr – třída](../../mfc/reference/cmapptrtoptr-class.md)  
- Podporuje mapy neplatné ukazatele s klíči neplatné ukazatele.  
+ Podporuje mapy ukazatelů typu void označenými pomocí ukazatelů typu void.  
   
  [CMapPtrToWord – třída](../../mfc/reference/cmapptrtoword-class.md)  
- Podporuje mapy slova 16 bitů s klíči neplatné ukazatele.  
+ Podporuje mapy s 16bitovými slovy označenými pomocí ukazatelů typu void.  
   
  [CMapStringToOb – třída](../../mfc/reference/cmapstringtoob-class.md)  
- Třídy kolekce slovník, který je přiřazen jedinečný `CString` objekty ke `CObject` ukazatele.  
+ Třída kolekce slovníku, která mapuje jedinečné `CString` objektů `CObject` ukazatele.  
   
  [CMapStringToPtr – třída](../../mfc/reference/cmapstringtoptr-class.md)  
- Podporuje mapy neplatné ukazatele s klíči `CString` objekty.  
+ Podporuje mapy ukazatelů typu void označenými pomocí `CString` objekty.  
   
  [CMapStringToString – třída](../../mfc/reference/cmapstringtostring-class.md)  
- Podporuje mapy `CString` objekty s klíči `CString` objekty.  
+ Podporuje mapy `CString` označenými pomocí objektů `CString` objekty.  
   
  [CMapWordToOb – třída](../../mfc/reference/cmapwordtoob-class.md)  
- Podporuje mapy `CObject` ukazatele s klíči 16bitové slova.  
+ Podporuje mapy `CObject` ukazatele označenými pomocí 16bitových slov.  
   
  [CMapWordToPtr – třída](../../mfc/reference/cmapwordtoptr-class.md)  
- Podporuje mapy neplatné ukazatele s klíči 16bitové slova.  
+ Podporuje mapy ukazatelů typu void označenými pomocí 16bitových slov.  
   
  [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md)  
- Poskytuje funkci Windows více okna podřízené rozhraní (MDI) dokumentu, společně s členů pro správu okna.  
+ Poskytuje funkce pro Windows více dokumentů (MDI) interface podřízené okno, spolu se členy pro správu okna.  
   
  [CMDIChildWndEx – třída](../../mfc/reference/cmdichildwndex-class.md)  
- Poskytuje funkci Windows více dokumentů (MDI) rozhraní podřízeného okna. Ji rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tato třída, pokud aplikace MDI používá některých tříd MFC.  
+ Poskytuje více dokumentů (MDI) interface podřízené okno funkce Windows. Rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tuto třídu, pokud aplikace MDI používá určité třídy MFC.  
   
  [CMDIFrameWnd – třída](../../mfc/reference/cmdiframewnd-class.md)  
- Poskytuje funkci Windows více okna rámce rozhraní (MDI) dokumentu, společně s členů pro správu okna.  
+ Poskytuje funkce Windows více dokumentů (MDI) rozhraní okna rámce spolu se členy pro správu okna.  
   
  [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)  
- Rozšiřuje funkce [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md), okně s rámečkem Windows rozhraní více dokumentů (MDI).  
+ Rozšiřuje funkce [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md), okna rámce Windows rozhraní více dokumentů (MDI).  
   
  [CMDITabInfo – třída](../../mfc/reference/cmditabinfo-class.md)  
- Umožňuje předat parametry do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metoda. – Skupiny se záložkami sadu členů této třídy pro řízení chování MDI.  
+ Slouží k předání parametrů do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metody. – Skupiny se záložkami nastavení členů této třídy můžete řídit chování MDI.  
   
  [CMemFile – třída](../../mfc/reference/cmemfile-class.md)  
- [Cfile – třída](../../mfc/reference/cfile-class.md)-odvozené třídy, která podporuje soubory paměti.  
+ [Cfile – třída](../../mfc/reference/cfile-class.md)-odvozené třídy, která podporuje soubory z paměti.  
   
  [CMemoryException – třída](../../mfc/reference/cmemoryexception-class.md)  
- Představuje podmínku nedostatku paměti.  
+ Představuje podmínku výjimky na více instancí z důvodu nedostatku paměti.  
   
  [CMenu – třída](../../mfc/reference/cmenu-class.md)  
- Zapouzdření Windows `HMENU`.  
+ Zapouzdření nabídky Windows `HMENU`.  
   
  [CMenuTearOffManager – třída](../../mfc/reference/cmenutearoffmanager-class.md)  
- Spravuje úplné vypnutí nabídky. Úplné vypnutí nabídky je nabídky v řádku nabídek. Uživatele můžete odebrat z nabídky úplné vypnutí v nabídce panelu způsobuje v nabídce úplné vypnutí float.  
+ Spravuje odnímatelné nabídky. Odnímatelná nabídka je nabídka na panelu nabídek. Uživatel může odebrat odnímatelnou nabídku z řádku nabídek, způsobí odnímatelná nabídka uvolnění.  
   
  [CMetaFileDC – třída](../../mfc/reference/cmetafiledc-class.md)  
- Implementuje WMF, který obsahuje posloupnost grafiky zařízení rozhraní GDI příkazy, které můžete přehráním vytvořit požadovanou image nebo text.  
+ Implementuje metasoubor systému Windows, který obsahuje posloupnost grafiky zařízení (GDI) příkazy, které můžete zopakovat pro vytvoření požadovaného obrázku nebo textu.  
   
  [CMFCAcceleratorKey – třída](../../mfc/reference/cmfcacceleratorkey-class.md)  
- Pomocná třída, která implementuje virtuální klíče mapování a formátování.  
+ Pomocná třída, která implementuje virtuální mapování kláves a formátování.  
   
  [CMFCAcceleratorKeyAssignCtrl – třída](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)  
- Rozšiřuje [CEdit třída](../../mfc/reference/cedit-class.md) pro podporu tlačítka další systémové například ALT, řízení a SHIFT.  
+ Rozšiřuje [cedit – třída](../../mfc/reference/cedit-class.md) k podpoře dalších systémových tlačítek, jako například ALT, SHIFT a CONTROL.  
   
  [CMFCAutoHideButton – třída](../../mfc/reference/cmfcautohidebutton-class.md)  
- Tlačítko, které zobrazí nebo skryje [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) nakonfigurovaný skrýt.  
+ Tlačítko, které zobrazí nebo skryje odkaz [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) , který je nakonfigurovaný pro skrytí.  
   
  [CMFCBaseTabCtrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)  
- Implementuje základní funkce pro záložkách windows.  
+ Implementuje základní funkce pro okna s kartami.  
   
  [CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)  
- Přidá funkce [CButton třída](../../mfc/reference/cbutton-class.md) třída například zarovnání text tlačítka, kombinace text tlačítka a bitovou kopii, vyberete kurzoru a zadat popis tlačítka.  
+ Přidá funkce, které [CButton – třída](../../mfc/reference/cbutton-class.md) třídy, jako je například zarovnání textu tlačítka, kombinaci textu a obrázku, výběr kurzoru a zadání popisku tlačítka.  
   
  [CMFCCaptionBar – třída](../../mfc/reference/cmfccaptionbar-class.md)  
- Ovládací prvek panel, který může zobrazit tři prvky: tlačítko, štítek text a rastrový obrázek. Současně se může zobrazit pouze jeden element každého typu. Každý prvek levé nebo pravé hrany ovládací prvek nebo k centru můžete zarovnat. Styl ploché nebo 3D může platit taky pro horní a dolní ohraničení panelu titulek.  
+ Ovládací panel, který se může zobrazit tři prvky: tlačítko, textový popisek a rastrový obrázek. Současně může zobrazit pouze jeden prvek každého typu. Je možné zarovnat každý prvek do levého či pravého okraje ovládacího prvku nebo na střed. Můžete také použít styl ploché nebo 3D na horní a dolní ohraničení záhlaví.  
   
  [CMFCCaptionButton – třída](../../mfc/reference/cmfccaptionbutton-class.md)  
- Implementuje tlačítko, které se zobrazí na panelu popisek pro ukotvené podokno nebo zkrácená rámce okna. Obvykle rozhraní popisek tlačítka automaticky vytvoří.  
+ Implementuje tlačítko, které se zobrazí v záhlaví pro ukotvené podokno nebo okno s minirámcem. Obvykle rozhraní vytvoří titulek tlačítka automaticky.  
   
  [CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)  
- Představuje ukotvení ovládacích pruhů, které můžete vybrat barvy v dokumentu nebo aplikace.  
+ Představuje dokovací panel ovládacího prvku, který umožňuje vybírat barvy v dokumentu nebo aplikace.  
   
  [CMFCColorButton – třída](../../mfc/reference/cmfccolorbutton-class.md)  
- `CMFCColorButton` a [CMFCColorBar třída](../../mfc/reference/cmfccolorbar-class.md) třídy se společně používají k implementaci ovládacího prvku pro výběr barev.  
+ `CMFCColorButton` a [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md) třídy se používají společně k implementaci ovládacího prvku pro výběr barvy.  
   
  [CMFCColorDialog – třída](../../mfc/reference/cmfccolordialog-class.md)  
- Představuje dialogové okno Výběr barev.  
+ Představuje dialogové okno Výběr barvy.  
   
  [CMFCColorMenuButton – třída](../../mfc/reference/cmfccolormenubutton-class.md)  
- Podporuje příkazu nabídky nebo tlačítka panelu nástrojů, která se spouští dialogové okno pro výběr barev.  
+ Podporuje příkaz nabídky nebo tlačítko panelu nástrojů, které spustí dialogové okno Výběr barvy.  
   
  [CMFCColorPickerCtrl – třída](../../mfc/reference/cmfccolorpickerctrl-class.md)  
- Poskytuje funkce pro ovládací prvek, který slouží k výběru barvy.  
+ Poskytuje funkce pro ovládací prvek, který se používá pro výběr barvy.  
   
  [CMFCDesktopAlertDialog – třída](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
- Použít v kombinaci s [CMFCDesktopAlertWnd třída](../../mfc/reference/cmfcdesktopalertwnd-class.md) zobrazíte dialogové okno Vlastní v automaticky otevíraném okně.  
+ Použít v kombinaci s [cmfcdesktopalertwnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md) k zobrazení vlastního dialogu v místním okně.  
   
  [CMFCDesktopAlertWnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md)  
- Implementuje funkce nemodální dialogové okno, které se zobrazí na obrazovce informovat uživatele o události.  
+ Implementuje funkce nemodálního dialogového okno, které se zobrazí na obrazovce a informuje uživatele o události.  
   
  [CMFCDesktopAlertWndInfo – třída](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
- Používá se [CMFCDesktopAlertWnd třída](../../mfc/reference/cmfcdesktopalertwnd-class.md). Určuje ovládacích prvků, které se zobrazí, pokud se objeví okně upozornění na ploše.  
+ Používá se [cmfcdesktopalertwnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md). Určuje ovládací prvky, které se zobrazí, pokud se otevře okno výstrah plochy.  
   
  [CMFCDragFrameImpl – třída](../../mfc/reference/cmfcdragframeimpl-class.md)  
- Kreslení obdélníku přetažení, který se zobrazí, když uživatel nastavuje tažením podokno v režimu standardní ukotvení.  
+ Vykresluje obdélník, který se zobrazí, když uživatel přetáhne podokno v režimu standardního ukotvení.  
   
  [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
- Panel nástrojů, který se zobrazí, když uživatel stiskne a obsahuje tlačítka panelu nástrojů nejvyšší úrovně.  
+ Panel nástrojů, který se zobrazí, když uživatel stiskne a podrží tlačítko panelu nástrojů nejvyšší úrovně.  
   
  [CMFCDropDownToolbarButton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
- Typ tlačítka panelu nástrojů, který se chová jako regulární tlačítko po klepnutí. Ale, otevře se panel nástrojů rozevíracího seznamu ([CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskem tlačítka a obsahuje tlačítka panelu nástrojů.  
+ Typ tlačítka panelu nástrojů, který se při kliknutí chová jako běžné tlačítko. Otevře však rozevírací seznam nástrojů ([CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskne a podrží tlačítko panelu nástrojů.  
   
  [CMFCDynamicLayout – třída](../../mfc/reference/cmfcdynamiclayout-class.md)  
- Určuje, jak jsou ovládací prvky v okně přesunout a po změně velikosti jako uživatel změní velikost okna.  
+ Určuje, jak přesunout a změně velikosti jako uživatel zmenší okno pod ovládacích prvků v okně.  
   
  [CMFCEditBrowseCtrl – třída](../../mfc/reference/cmfceditbrowsectrl-class.md)  
- Podporuje řízení procházet úpravy, které je upravitelné textové pole, které volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládacího prvku provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeče souboru nebo složky prohlížeče.  
+ Podporuje textové pole procházení, což je upravitelné textové pole, který volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.  
   
  [CMFCFilterChunkValueImpl – třída](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
- Zjednodušuje bloku i pro vlastnost hodnota pár logiku.  
+ Zjednodušuje logiku párování hodnot bloku dat a vlastnosti.  
   
  [CMFCFontComboBox – třída](../../mfc/reference/cmfcfontcombobox-class.md)  
- Vytvoří prvek pole se seznamem, který obsahuje seznam písem.  
+ Vytvoří ovládací prvek pole se seznamem, který obsahuje seznam písem.  
   
  [CMFCFontInfo – třída](../../mfc/reference/cmfcfontinfo-class.md)  
  Popisuje název a další atributy písma.  
@@ -657,100 +657,100 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Podporuje řazení více sloupců v ovládacím prvku hlavička.  
   
  [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md)  
- Podporuje dialogové okno editor bitové kopie.  
+ Podporuje dialogové okno editor s bitové kopie.  
   
  [CMFCKeyMapDialog – třída](../../mfc/reference/cmfckeymapdialog-class.md)  
  Podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.  
   
  [CMFCLinkCtrl – třída](../../mfc/reference/cmfclinkctrl-class.md)  
- Zobrazí tlačítko jako hypertextový odkaz a vyvolá na odkaz cíl při kliknutí na tlačítko.  
+ Zobrazí tlačítko jako hypertextový odkaz a po kliknutí na tlačítko vyvolá cíl odkazu.  
   
  [CMFCListCtrl – třída](../../mfc/reference/cmfclistctrl-class.md)  
- Rozšiřuje funkce [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třída díky podpoře funkce ovládacího prvku rozšířené hlavičky [CMFCHeaderCtrl třída](../../mfc/reference/cmfcheaderctrl-class.md).  
+ Rozšiřuje funkce [třídě CListCtrl](../../mfc/reference/clistctrl-class.md) třídy díky podpoře funkcionality kontroly rozšířené hlavičky z [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md).  
   
  [CMFCMaskedEdit – třída](../../mfc/reference/cmfcmaskededit-class.md)  
- Podporuje ovládací prvek maskované pole, která ověří vstup uživatele s maskou a zobrazí výsledky ověřené podle šablony.  
+ Podporuje maskovaného ovládacího prvku, který ověřuje vstup uživatele v porovnání s maskou a zobrazí ověřené výsledky podle šablony.  
   
  [CMFCMenuBar – třída](../../mfc/reference/cmfcmenubar-class.md)  
- Panel nabídek, který implementuje ukotvení.  
+ Panel nabídek, který implementuje dokování.  
   
  [CMFCMenuButton – třída](../../mfc/reference/cmfcmenubutton-class.md)  
- Tlačítko, které se zobrazí místní nabídka a sestavy v nabídce výběry uživatele.  
+ Tlačítko, které zobrazí místní nabídku, informuje o možnosti nabídky uživatele.  
   
  [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)  
- Podokno s kartami s vzhled **navigačním podokně** v aplikaci Microsoft Outlook 2000 nebo 2003 aplikace Outlook. `CMFCOutlookBar` Objekt obsahuje [CMFCOutlookBarTabCtrl třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objekt a řadu karty. Karty může být buď [CMFCOutlookBarPane třída](../../mfc/reference/cmfcoutlookbarpane-class.md) objekty nebo `CWnd`-odvozené objekty. Pro uživatele se zobrazí na panelu aplikace Outlook jako řadu tlačítek a zobrazení oblasti. Když uživatel klikne na tlačítko, se zobrazí tlačítko podokna nebo odpovídající ovládacího prvku.  
+ Podokno s kartami s vzhled **navigačním podokně** v aplikaci Microsoft Outlook 2000 nebo Outlook 2003. `CMFCOutlookBar` Obsahuje objekt [cmfcoutlookbartabctrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objektu a řadu karet. Karty mohou být buď [cmfcoutlookbarpane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md) objekty nebo `CWnd`-odvozené objekty. Pro uživatele panel aplikace Outlook zobrazí jako řada tlačítek a zobrazení plochy. Když uživatel klikne na tlačítko, zobrazí se odpovídající ovládací prvek nebo podokno tlačítek.  
   
  [CMFCOutlookBarPane – třída](../../mfc/reference/cmfcoutlookbarpane-class.md)  
- Ovládací prvek odvozen od [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md) , lze vložit do panel aplikace Outlook ([CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)). V podokně panelu Outlook obsahuje sloupec velké tlačítek. Uživatel lze posunout nahoru a dolů seznam tlačítek, pokud je větší než v podokně. Když uživatel odpojí podokně panelu aplikace Outlook z panelu aplikace Outlook, dokáže float nebo ukotvení v hlavním okně rámce.  
+ Ovládací prvek odvozený z [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md) lze vložit do panel aplikace Outlook ([CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)). Podokno panelu aplikace Outlook obsahuje sloupec velkých tlačítek. Uživatel může posunout nahoru nebo dolů seznam tlačítek, pokud je větší než podokno. Když uživatel odpojí podokno panelu Outlook z panelu aplikace Outlook, může uvolnit nebo ukotvit v hlavním okně rámce.  
   
  [CMFCOutlookBarTabCtrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
- Ovládacího prvku karta, která má vzhled **navigačním podokně** v aplikaci Microsoft Outlook.  
+ Ovládací prvek karty, která má vzhled **navigačním podokně** v aplikaci Microsoft Outlook.  
   
  [CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)  
- Implementuje místní nabídky funkce Windows a rozšiřuje přidáním funkce, jako je úplné vypnutí nabídky a popisy.  
+ Implementuje funkce rozbalovací nabídky Windows a rozšiřuje jej přidáním funkce, jako je odtrhnout nabídky a popisy tlačítek.  
   
  [CMFCPopupMenuBar – třída](../../mfc/reference/cmfcpopupmenubar-class.md)  
- Panel nabídek vkládat do místní nabídky.  
+ Panel nabídek vložený do místní nabídky.  
   
  [CMFCPreviewCtrlImpl – třída](../../mfc/reference/cmfcpreviewctrlimpl-class.md)  
- Implementuje a okno, které je umístěn na hostitelské okno poskytuje prostředí pro verzi Preview formátováním.  
+ Implementuje okno, které se umístí do hostitelského okna poskytnutého shellem pro náhled ve formátu RTF.  
   
  [CMFCPropertyGridColorProperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
- Podporuje položka ovládací prvek seznamu vlastnosti, které se otevře dialogové okno Výběr barev.  
+ Podporuje položku ovládacího prvku seznamu vlastností, které se otevře dialogové okno Výběr barvy.  
   
  [CMFCPropertyGridCtrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md)  
- Podporuje řízení mřížky upravovat vlastnost, která může zobrazovat vlastnosti v abecedním nebo hierarchické pořadí.  
+ Podporuje ovládací prvek upravovat vlastnost mřížky, která můžete zobrazit vlastnosti v abecedním nebo hierarchickém pořadí.  
   
  [CMFCPropertyGridFileProperty – třída](../../mfc/reference/cmfcpropertygridfileproperty-class.md)  
- Podporuje vlastnost řízení položky seznamu, které se otevře dialogové okno Výběr souboru.  
+ Podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr souboru.  
   
  [CMFCPropertyGridFontProperty – třída](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
- Podporuje ovládací prvek položky seznamu vlastnosti, které se otevře dialogové okno Výběr písma.  
+ Podporuje položku ovládacího prvku seznamu vlastností, které se otevře dialogové okno Výběr písma.  
   
  [CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)  
- Reprezentuje položku seznamu v ovládacím prvku seznamu vlastností.  
+ Představuje položku ovládacího prvku seznamu vlastností.  
   
  [CMFCPropertyPage – třída](../../mfc/reference/cmfcpropertypage-class.md)  
- Podporuje zobrazení místní nabídky na stránku vlastností.  
+ Podporuje zobrazení místních nabídek na stránce vlastností.  
   
  [CMFCPropertySheet – třída](../../mfc/reference/cmfcpropertysheet-class.md)  
- Podporuje seznam vlastností, kde každé stránce vlastnost je označený jako kartu stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položku seznamu.  
+ Podporuje seznam vlastností, kde každou stránku vlastností označuje symbolem karty stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položka seznamu.  
   
  [CMFCReBar – třída](../../mfc/reference/cmfcrebar-class.md)  
- Ovládací prvek panel, který poskytuje informace o stavu pro ovládací prvky matrice, rozložení a trvalost.  
+ Ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.  
   
  [CMFCRibbonApplicationButton – třída](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
- Implementuje speciální tlačítko nachází v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevření nabídky, která obvykle obsahuje běžné **soubor** příkazy jako **otevřete**, **Uložit**, a **ukončení**.  
+ Implementuje speciální tlačítko umístěné v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevře nabídku, která obvykle obsahuje běžné **souboru** příkazy jako **otevřít**, **Uložit**, a **ukončovací**.  
   
  [CMFCRibbonBaseElement – třída](../../mfc/reference/cmfcribbonbaseelement-class.md)  
- Základní třída pro všechny elementy, které můžete přidat do [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md). Příklad prvků pásu karet jsou pásu karet tlačítek, zaškrtněte políčka pásu karet a pásu karet pole se seznamem.  
+ Základní třída pro všechny elementy, které můžete přidat [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md). Příklady prvků pásu karet pás karet tlačítka, zaškrtávací políčka a pásu karet se seznamem.  
   
  [CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)  
- Implementuje tlačítka, který můžete umístit na pásu karet panelu prvky, jako jsou například panelů, panely nástrojů Rychlý přístup a místní nabídky.  
+ Implementuje tlačítka, které můžete umístit na prvky panelu pásu karet, jako je například panely, panely nástrojů Rychlý přístup a místní nabídky.  
   
  [CMFCRibbonButtonsGroup – třída](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)  
- Umožňuje uspořádat sadu tlačítek pásu karet do skupiny. Všechny tlačítka ve skupině jsou přímo vedle sebe vodorovně a vložen do ohraničení.  
+ Umožňuje uspořádat sadu tlačítek na pásu karet do skupiny. Všechna tlačítka ve skupině jsou přímo vedle sebe ve vodorovném směru a uzavřena do ohraničení.  
   
  [CMFCRibbonCategory – třída](../../mfc/reference/cmfcribboncategory-class.md)  
- Implementuje kartu pásu karet, která obsahuje skupinu [CMFCRibbonPanel třída](../../mfc/reference/cmfcribbonpanel-class.md).  
+ Implementuje kartu pásu karet, která obsahuje skupinu [cmfcribbonpanel – třída](../../mfc/reference/cmfcribbonpanel-class.md).  
   
  [CMFCRibbonCheckBox – třída](../../mfc/reference/cmfcribboncheckbox-class.md)  
- Implementuje zaškrtávací políčko, které můžete přidat k nabídce panelu, panel nástrojů Rychlý přístup nebo automaticky otevíraného okna pásu karet.  
+ Implementuje zaškrtávací políčko, které můžete přidat do nabídky pásu karet panelu, v panelu nástrojů Rychlý přístup nebo automaticky otevíraného okna.  
   
  [CMFCRibbonColorButton – třída](../../mfc/reference/cmfcribboncolorbutton-class.md)  
- Implementuje tlačítko barev, které můžete přidat na pásu karet na řádek. Na pásu karet tlačítko barev zobrazí rozevírací nabídce, která obsahuje jeden nebo více palety barev.  
+ Implementuje barevné tlačítko, které můžete přidat na panel pásu karet. Tlačítko Barva pásu karet zobrazí rozevírací nabídku, která obsahuje jeden nebo více palet barev.  
   
  [CMFCRibbonComboBox – třída](../../mfc/reference/cmfcribboncombobox-class.md)  
- Implementuje prvek pole se seznamem, který můžete přidat na panel pásu karet, panel pásu karet nebo místní nabídky pásu karet.  
+ Implementuje ovládací prvek pole se seznamem, který lze přidat na panel pásu karet, panel pásu karet nebo nabídky pásu karet.  
   
  [CMFCRibbonContextCaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md)  
- Implementuje barevnou popisek, který se zobrazí v horní části pásu karet nebo kategorie kontextu.  
+ Implementuje barevný titulek, který se zobrazí v horní části pásu karet nebo kategorii kontextu.  
   
  [CMFCRibbonEdit – třída](../../mfc/reference/cmfcribbonedit-class.md)  
  Implementuje ovládací prvek úprav, který je umístěn na pásu karet.  
   
  [CMFCRibbonFontComboBox – třída](../../mfc/reference/cmfcribbonfontcombobox-class.md)  
- Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na pásu karet panelu.  
+ Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na panel pásu karet.  
   
  [CMFCRibbonGallery – třída](../../mfc/reference/cmfcribbongallery-class.md)  
  Implementuje Galerie pásu karet Office 2007-style.  
@@ -759,133 +759,133 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Implementuje tlačítko nabídky pásu karet, které obsahuje Galerie pásu karet.  
   
  [CMFCRibbonLabel – třída](../../mfc/reference/cmfcribbonlabel-class.md)  
- Implementuje nelze klepnout textový popisek pro pásu karet.  
+ Implementuje neklikatelné textový popisek pro pás karet.  
   
  [CMFCRibbonLinkCtrl – třída](../../mfc/reference/cmfcribbonlinkctrl-class.md)  
- Implementuje hypertextový odkaz, který je umístěn na pásu karet. Po kliknutí na tlačítko se otevře hypertextový odkaz na webové stránce.  
+ Implementuje hypertextový odkaz, který je umístěn na pásu karet. Hypertextový odkaz otevře webovou stránku, po kliknutí.  
   
  [CMFCRibbonMainPanel – třída](../../mfc/reference/cmfcribbonmainpanel-class.md)  
- Implementuje panely pásu karet, která se zobrazí po kliknutí na tlačítko [CMFCRibbonApplicationButton třída](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
+ Implementuje panel pásu karet, který se zobrazí po kliknutí [cmfcribbonapplicationbutton – třída](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
   
  [CMFCRibbonMiniToolBar – třída](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
- Implementuje kontextové místní panel nástrojů.  
+ Implementuje kontextovou nabídku nástrojů.  
   
  [CMFCRibbonPanel – třída](../../mfc/reference/cmfcribbonpanel-class.md)  
- Implementuje panel, který obsahuje sadu elementů pásu karet. Při sestavování panelu zobrazí tolik elementy jako nejlépe, velikost panelu.  
+ Implementuje panel, který obsahuje sadu prvků pásu karet. Při vykreslení panelu zobrazí tolik elementů nejvíce dané velikosti panelu.  
   
  [CMFCRibbonProgressBar – třída](../../mfc/reference/cmfcribbonprogressbar-class.md)  
- Implementuje ovládací prvek, který označuje vizuálně průběh operace může trvat dlouho.  
+ Implementuje ovládací prvek, který vizuálně označuje průběh déletrvající operace.  
   
  [CMFCRibbonSlider – třída](../../mfc/reference/cmfcribbonslider-class.md)  
- Implementuje ovládací prvek typu jezdec, který můžete přidat na pásu karet řádek nebo pásu karet stavový řádek. V ovládacím prvku posuvník pásu karet se podobá posuvníků zvětšení, které se zobrazují v aplikacích Office 2007.  
+ Implementuje ovládací prvek posuvník, můžete přidat na stavový panel pásu karet nebo panel pásu karet. V ovládacím prvku posuvník pásu karet se podobá posuvníkům pro zvětšení, které se zobrazují v aplikacích sady Office 2007.  
   
  [CMFCRibbonStatusBar – třída](../../mfc/reference/cmfcribbonstatusbar-class.md)  
- Implementuje ovládacích prvků na panelu stavu, která může zobrazovat prvky pásu karet.  
+ Implementuje ovládací prvek panel stav, který dokáže zobrazit prvky pásu.  
   
  [CMFCRibbonStatusBarPane – třída](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
- Implementuje na pásu karet element, který můžete přidat do stavového řádku pásu karet.  
+ Implementuje prvek pásu karet, který lze přidat na stavový panel pásu karet.  
   
  [CMFCRibbonUndoButton – třída](../../mfc/reference/cmfcribbonundobutton-class.md)  
- Implementuje tlačítko rozdělení, malé tlačítko s klesající polohovací trojúhelník na pravého okraje na hlavní tlačítko. Mohou uživatelé kliknout na trojúhelník zobrazíte rozevírací seznam jejich naposledy provedené akce. Uživatelé pak můžete vybrat jednu nebo více akcí z rozevíracího seznamu. Ale pokud uživatel klikne na tlačítko pouze poslední (naposledy přidanou) akce v rozevíracím seznamu se vrátit zpět. Jako uživatel provádí, je, by měl naplnění seznamu s akcemi.  
+ Implementuje tlačítko rozdělení, malé tlačítko s klesající polohovací trojúhelník na části úplně vpravo okraji hlavního tlačítka. Uživatelé mohou klepnutím na trojúhelník zobrazit rozevírací seznam jejich naposledy provedených akcí. Uživatelé pak mohou vybrat jednu nebo více akcí z rozevíracího seznamu. Nicméně když uživatel klikne na tlačítko, pouze poslední (naposledy přidanou) akci v rozevíracím seznamu se vrátit zpět. Byste vyvolat seznam s akcemi, jako je uživatel vykoná.  
   
  [CMFCShellListCtrl – třída](../../mfc/reference/cmfcshelllistctrl-class.md)  
- Poskytuje funkce ovládací prvek seznamu Windows a rozbalí zahrnutím možnost zobrazit seznam položek prostředí.  
+ Poskytuje funkce pro řízení seznamu Windows a umožňuje jeho rozšíření tím včetně možnost zobrazit seznam položek prostředí.  
   
  [CMFCShellTreeCtrl – třída](../../mfc/reference/cmfcshelltreectrl-class.md)  
- Rozšiřuje [CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
+ Rozšiřuje [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
   
  [CMFCSpinButtonCtrl – třída](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
- Podporuje visual správce, který se vykreslí ovládací prvek typu číselník tlačítko.  
+ Podporuje vizuálního správce, který vykreslí ovládací prvek číselníku.  
   
  [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md)  
- Implementuje podobná stavového řádku `CStatusBar` třídy. Ale `CMFCStatusBar` třída má funkce není služeb `CStatusBar` třídy, například možnost zobrazit obrázky, animace a indikátory průběhu; a schopnost reagovat na myši poklikáním.  
+ Implementuje stavový řádek podobný `CStatusBar` třídy. Ale `CMFCStatusBar` třída obsahuje funkce, které nejsou nabízeny třídou `CStatusBar` třídy, jako je schopnost zobrazit obrázky, animace a indikátory; a schopnost reagovat na poklepání myši.  
   
  [CMFCTabCtrl – třída](../../mfc/reference/cmfctabctrl-class.md)  
- Poskytuje funkce pro ovládacího prvku karta. Ovládacího prvku karta zobrazí okno lze ukotvit ploché nebo trojrozměrné karty v její horní nebo dolní. Karet můžete zobrazit text a bitovou kopii a můžete změnit barvu, když je aktivní.  
+ Poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.  
   
  [CMFCTabToolTipInfo – struktura](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
- Poskytuje informace o kartě MDI, který uživatel ukazatele myši.  
+ Poskytuje informace o kartě MDI, která je uživatel najede myší.  
   
  [CMFCTasksPane – třída](../../mfc/reference/cmfctaskspane-class.md)  
- Implementuje seznam položek, můžete kliknout (úlohy).  
+ Implementuje seznam klikatelných položek (úkoly).  
   
  [CMFCTasksPaneTask – třída](../../mfc/reference/cmfctaskspanetask-class.md)  
- Pomocná třída, která představuje úlohy pro ovládací prvek podokna úloh ([CMFCTasksPane třída](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ([CMFCTasksPaneTaskGroup třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klikne na úlohy a ikonu, která se zobrazí vlevo od název úlohy.  
+ Pomocná třída, která představuje úkoly pro podokno úloh ovládacího prvku ([cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ([cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klepne na úlohu a ikonu, která se zobrazí vlevo od názvu úkolu.  
   
  [CMFCTasksPaneTaskGroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
- Pomocná třída používané [CMFCTasksPane třída](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupina úkolů*. Skupiny úloh je seznam položek, které zobrazuje rozhraní samostatné pole, která obsahuje tlačítko Sbalit. Pole může mít volitelné popisek (název skupiny). Pokud skupina sbalena, seznam úloh není viditelná.  
+ Pomocná třída používá [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupiny úloh*. Skupina úloh je seznam položek, které zobrazí rozhraní v rámci samostatného pole, které má tlačítko Sbalit. Pole může mít nepovinný titulek (název skupiny). Pokud je skupina sbalena, seznam úkolů není viditelný.  
   
  [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)  
- Podobá [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale nabízí další podporu pro funkce uživatelského rozhraní. Patří ploché panely nástrojů, panely nástrojů s aktivní obrázky, ikony. velké ikony, tlačítka stránkování, uzamčení panely nástrojů, ovládací prvky matrice, text v rámci bitové kopie, obrázky na pozadí a na kartách panely nástrojů. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro uživatele přizpůsobení panelů nástrojů a nabídky, přetažení myší mezi panely nástrojů a nabídky, tlačítek pole se seznamem, upravit pole tlačítka, výběr barvy a souhrnné tlačítka.  
+ Se podobá [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.  
   
  [CMFCToolBarImages – třída](../../mfc/reference/cmfctoolbarimages-class.md)  
- Spravuje nástrojů obrázky načtené z prostředky aplikace nebo soubory.  
+ Spravuje obrázky panelu nástrojů načtené ze zdrojů aplikace nebo ze souborů.  
   
  [CMFCToolBarInfo – třída](../../mfc/reference/cmfctoolbarinfo-class.md)  
- Obsahuje ID obrázků panelu nástrojů v různé stavy prostředků. `CMFCToolBarInfo` je pomocná třída, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda.  
+ Obsahuje ID obrázků panelu nástrojů v různých stavech prostředků. `CMFCToolBarInfo` je pomocnou třídu, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.  
   
  [CMFCToolBarMenuButton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
- Tlačítka panelu nástrojů, který obsahuje místní nabídky.  
+ Tlačítka panelu nástrojů, který obsahuje místní nabídku.  
   
  [CMFCToolBarsCustomizeDialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)  
- Dialogové okno nemodální karta ([cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)), který umožňuje uživateli upravit panely nástrojů, nabídek, klávesové zkratky, uživatelem definované nástroje a vizuální styl v aplikaci. Obvykle se uživatel přistoupí k tohoto dialogového okna tak, že vyberete **přizpůsobit** z **nástroje** nabídky.  
+ Dialogové okno nemodální karty ([cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)), která umožňuje uživateli přizpůsobovat panely nástrojů, nabídky, klávesové zkratky, uživatelské nástroje a vizuální styl v aplikaci. Obvykle uživatel přistupuje k dialogovému oknu výběrem **vlastní** z **nástroje** nabídky.  
   
  [CMFCToolTipCtrl – třída](../../mfc/reference/cmfctooltipctrl-class.md)  
- Na základě implementace rozšířených popisek [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md). Na základě popisek `CMFCToolTipCtrl` třída může zobrazit ikony, popisek a popis. Pomocí přechodu výplně, vlastní text a barvy ohraničení, tučně, zaoblenými hranami nebo bublinách styl můžete přizpůsobit její vzhled.  
+ Implementace rozšířeného popisku na základě [ctooltipctrl – třída](../../mfc/reference/ctooltipctrl-class.md). Popisek na základě `CMFCToolTipCtrl` třída může zobrazit ikonu, popisek a popis. Můžete upravit jeho vzhled pomocí přechodové výplně, vlastní text a barvy ohraničení, tučným písmem, zaoblených rohů nebo stylu bublin.  
   
  [CMFCToolTipInfo – třída](../../mfc/reference/cmfctooltipinfo-class.md)  
- Obsahuje informace o vzhled popisů tlačítek.  
+ Ukládá informace o vzhled popisů tlačítek.  
   
  [CMFCVisualManager – třída](../../mfc/reference/cmfcvisualmanager-class.md)  
- Poskytuje podporu pro Změna vzhledu vaší aplikace na globální úrovni. `CMFCVisualManager` Třídy funguje nejlépe společně s třídu, která obsahuje pokyny k vykreslení ovládacích prvků grafického uživatelského rozhraní aplikace pomocí konzistentní styl. Tyto další třídy jsou označovány jako visual správci a dědí z `CMFCBaseVisualManager`.  
+ Poskytuje podporu pro změnu vzhledu aplikace na globální úrovni. `CMFCVisualManager` Třídy spolupracuje se třídou, která poskytuje pokyny pro vykreslení ovládacích prvků GUI ve vaší aplikaci v jednotném stylu. Tyto třídy jsou označovány jako vizuální vedoucí a dědí z `CMFCBaseVisualManager`.  
   
  [CMFCVisualManagerOffice2003 – třída](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
- Poskytuje aplikace Microsoft Office 2003 vzhled.  
+ Poskytuje vzhled aplikace Microsoft Office 2003 aplikace.  
   
  [CMFCVisualManagerOffice2007 – třída](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)  
- Poskytuje aplikace Microsoft Office 2007 vzhled.  
+ Poskytuje vzhled aplikace Microsoft Office 2007 aplikace.  
   
  [CMFCVisualManagerVS2005 – třída](../../mfc/reference/cmfcvisualmanagervs2005-class.md)  
- Poskytuje aplikaci Microsoft Visual Studio 2005 vzhled.  
+ Poskytuje vzhled aplikace Microsoft Visual Studio 2005 aplikace.  
   
  [CMFCVisualManagerWindows – třída](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
- Napodobuje vzhled Microsoft Windows XP nebo Microsoft Vista, když uživatel vybere Windows XP nebo Vista motivu.  
+ Napodobuje vzhled systému Microsoft Windows XP nebo Microsoft Vista, když uživatel vybere na Windows XP nebo Vista motiv.  
   
  [CMFCVisualManagerWindows7 – třída](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Poskytuje aplikaci vzhled [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace.  
+ Poskytuje vzhled aplikace [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace.  
   
  [CMFCWindowsManagerDialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
- Umožňuje uživatelům spravovat podřízených oken MDI v aplikaci MDI.  
+ Umožňuje uživateli spravovat podřízená okna MDI v aplikaci MDI.  
   
  [CMiniFrameWnd – třída](../../mfc/reference/cminiframewnd-class.md)  
- Představuje okně s rámečkem poloviční výškou zpravidla se zobrazí kolem plovoucí panely nástrojů.  
+ Představuje okno rámce poloviční výšky obvykle viděné okolo plovoucích panelů nástrojů.  
   
  [CMonikerFile – třída](../../mfc/reference/cmonikerfile-class.md)  
- Představuje datový proud ([IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Představuje datový proud ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
   
  [CMonthCalCtrl – třída](../../mfc/reference/cmonthcalctrl-class.md)  
  Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
   
  [CMouseManager – třída](../../mfc/reference/cmousemanager-class.md)  
- Umožní uživateli přidružit jiné příkazy na konkrétní [CView – třída](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř tohoto zobrazení.  
+ Umožňuje uživateli přidružit různé příkazy ke konkrétním [CView Class](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř daného zobrazení.  
   
  [CMultiDocTemplate – třída](../../mfc/reference/cmultidoctemplate-class.md)  
  Definuje šablonu dokumentu, který implementuje rozhraní více dokumentů (MDI).  
   
  [CMultiLock – třída](../../mfc/reference/cmultilock-class.md)  
- Představuje mechanismus řízení přístupu používá při řízení přístupu k prostředkům v programu s více vlákny.  
+ Představuje mechanismus řízení přístupu, který se používá při řízení přístupu k prostředkům ve vícevláknovém programu.  
   
  [CMultiPageDHtmlDialog – třída](../../mfc/reference/cmultipagedhtmldialog-class.md)  
- Vícestránkové dialogové okno zobrazí více stránek HTML postupně a zpracovává události z každé stránce.  
+ Vícestránkové dialogové okno zobrazí postupně několik stránek HTML a zpracovává události z každé stránky.  
   
  [CMultiPaneFrameWnd – třída](../../mfc/reference/cmultipaneframewnd-class.md)  
- Rozšiřuje [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jedné embedded popisovač pro ovládacích pruhů `CMultiPaneFrameWnd` obsahuje [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objekt, který umožňuje uživatelům ukotvení jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více plovoucí, – záložkami Windows.  
+ Rozšiřuje [cpaneframewnd – třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jednoho popisovače vloženého na ovládací panel `CMultiPaneFrameWnd` obsahuje [cpanecontainermanager – třída](../../mfc/reference/cpanecontainermanager-class.md) objektu, který umožňuje uživateli Dokovat jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více s plovoucí desetinnou čárkou, s kartami systém Windows.  
   
  [CMutex – třída](../../mfc/reference/cmutex-class.md)  
- Představuje objekt mutex, který je na synchronizační objekt, který umožňuje jedno vlákno vzájemně se vylučuje přístupu k prostředku.  
+ Představuje mutex, což je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.  
   
  [CNetAddressCtrl – třída](../../mfc/reference/cnetaddressctrl-class.md)  
- `CNetAddressCtrl` Třída reprezentuje ovládací prvek adresy sítě, který můžete použít k vstup a ověření formát IPv4 a IPv6, adresy s názvem DNS.  
+ `CNetAddressCtrl` Třída reprezentuje ovládacího prvku síťové adresy, které můžete použít k zadání a ověření formátu protokolu IPv4, IPv6 a pojmenovaných adres DNS.  
   
  [CNotSupportedException – třída](../../mfc/reference/cnotsupportedexception-class.md)  
  Představuje výjimku, která je výsledkem požadavku nepodporované funkce.  
@@ -897,49 +897,49 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Hlavní základní třída pro knihovny Microsoft Foundation Class.  
   
  [CObList – třída](../../mfc/reference/coblist-class.md)  
- Podporuje seřazené seznamy jedinečný `CObject` ukazatele přístupné postupně nebo ukazatel hodnotu.  
+ Podporuje seřazené seznam nejedinečné `CObject` ukazatele přístupné sekvenčně nebo podle hodnoty ukazatele.  
   
  [COccManager – třída](../../mfc/reference/coccmanager-class.md)  
- Spravuje různých lokalit vlastního ovládacího prvku; implementované `COleControlContainer` a `COleControlSite` objekty.  
+ Spravuje různé vlastní ovládací prvky stránky; implementované `COleControlContainer` a `COleControlSite` objekty.  
   
  [COleBusyDialog – třída](../../mfc/reference/colebusydialog-class.md)  
- Použít pro dialogových oken OLE serveru neodpovídá nebo zaneprázdněný Server.  
+ Používá se pro dialogová okna Server OLE neodpovídá nebo Server je zaneprázdněn.  
   
  [COleChangeIconDialog – třída](../../mfc/reference/colechangeicondialog-class.md)  
- Používá se pro dialogové okno OLE změnit ikonu.  
+ Používá se pro dialogové okno změny ikony OLE.  
   
  [COleChangeSourceDialog – třída](../../mfc/reference/colechangesourcedialog-class.md)  
- Používá se pro dialogové okno OLE změnit zdroj.  
+ Používá se pro dialogové okno změny zdroje OLE.  
   
  [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)  
- Definuje rozhraní kontejner pro OLE – položky.  
+ Definuje rozhraní kontejneru položek OLE.  
   
  [COleCmdUI – třída](../../mfc/reference/colecmdui-class.md)  
- Implementuje metodu pro MFC aktualizovat stav objektů uživatelského rozhraní související s `IOleCommandTarget`-řízené funkce vaší aplikace.  
+ Implementuje metodu knihovny MFC pro aktualizaci stavu objektů uživatelského rozhraní související s `IOleCommandTarget`-driven funkce vaší aplikace.  
   
  [COleControl – třída](../../mfc/reference/colecontrol-class.md)  
- Efektivní základní třída pro vývoj ovládací prvky OLE.  
+ Výkonná základní třída pro vývoj ovládacích prvků OLE.  
   
  [COleControlContainer – třída](../../mfc/reference/colecontrolcontainer-class.md)  
- Funguje jako kontejneru ovládacího prvku pro ovládací prvky ActiveX.  
+ Funguje jako kontejner ovládacího prvku pro ovládací prvky ActiveX.  
   
  [COleControlModule – třída](../../mfc/reference/colecontrolmodule-class.md)  
- Základní třída, ze kterého odvodíte objekt OLE řízení modulu.  
+ Základní třída, ze které odvozujete objekt ovládacího prvku modulu OLE.  
   
  [COleControlSite – třída](../../mfc/reference/colecontrolsite-class.md)  
  Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
   
  [COleConvertDialog – třída](../../mfc/reference/coleconvertdialog-class.md)  
- Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
   
  [COleCurrency – třída](../../mfc/reference/colecurrency-class.md)  
- Zapouzdří `CURRENCY` datový typ automatizace OLE.  
+ Zapouzdřuje `CURRENCY` datovým typem automatizace OLE.  
   
  [COleDataObject – třída](../../mfc/reference/coledataobject-class.md)  
- Používá se v přenosech souborů pro načítání dat v různých formátech ze schránky, prostřednictvím přetažení, nebo z vložené položky OLE.  
+ Používáno v přenosech dat pro načtení dat v různých formátech ze schránky pomocí přetažení, nebo z vložené položky OLE.  
   
  [COleDataSource – třída](../../mfc/reference/coledatasource-class.md)  
- Jednání jako mezipaměť, do které aplikace umístí data, která nabízí během data přenášet operace, např. schránku nebo operací přetažení myší.  
+ Slouží jako mezipaměť, do které aplikace umístí data, která bude nabízet během data transfer operace, jako je například schránky nebo operace přetažení myší.  
   
  [COleDBRecordView – třída](../../mfc/reference/coledbrecordview-class.md)  
  Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -948,160 +948,160 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Poskytuje funkce, které jsou společné pro dialogová okna pro OLE.  
   
  [COleDispatchDriver – třída](../../mfc/reference/coledispatchdriver-class.md)  
- Implementuje OLE – automatizace na straně klienta.  
+ implementuje na straně klienta automatizaci OLE.  
   
  [COleDispatchException – třída](../../mfc/reference/coledispatchexception-class.md)  
  Zpracovává výjimky, které jsou specifické pro OLE `IDispatch` rozhraní, které je klíčovou součástí automatizace OLE.  
   
  [COleDocObjectItem – třída](../../mfc/reference/coledocobjectitem-class.md)  
- Obsahování pro aktivní dokument implementuje.  
+ Implementuje Active document containment.  
   
  [COleDocument – třída](../../mfc/reference/coledocument-class.md)  
- Základní třída pro OLE dokumenty, které podporují úpravy s náhledem.  
+ Základní třída pro dokumenty OLE, které podporují vizuální úpravy.  
   
  [COleDropSource – třída](../../mfc/reference/coledropsource-class.md)  
- Umožňuje data přetáhnout do cíle přetažení.  
+ Umožňuje dat přetáhnout do cíle přetažení.  
   
  [COleDropTarget – třída](../../mfc/reference/coledroptarget-class.md)  
- Poskytuje mechanismus komunikace mezi okno a knihoven OLE.  
+ Poskytuje mechanismus pro komunikaci mezi oknem a knihovnami OLE.  
   
  [COleException – třída](../../mfc/reference/coleexception-class.md)  
- Představuje podmínku výjimky související s operace OLE.  
+ Představuje podmínku výjimky vztahující se k operaci OLE.  
   
  [COleInsertDialog – třída](../../mfc/reference/coleinsertdialog-class.md)  
- Používá se pro dialogové okno Vložit objekt OLE.  
+ Používá se pro dialogové okno vložení objektu OLE.  
   
  [COleIPFrameWnd – třída](../../mfc/reference/coleipframewnd-class.md)  
  Základ pro úpravy okna aplikace na místě.  
   
  [COleIPFrameWndEx – třída](../../mfc/reference/coleipframewndex-class.md)  
- Implementuje kontejner OLE, který podporuje MFC. Musí být třídy oken s rámečkem na místě pro vaši aplikaci z `COleIPFrameWndEx` tříd, namísto odvozování z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) třídy.  
+ Implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) třídy.  
   
  [COleLinkingDoc – třída](../../mfc/reference/colelinkingdoc-class.md)  
- Základní třída pro dokumenty kontejneru OLE, které podporují propojování vložené položky, které obsahují.  
+ Základní třída pro kontejnerové dokumenty OLE, které podporují propojování na vložené položky, které obsahují.  
   
  [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)  
- Používá se pro dialogové okno OLE upravit propojení.  
+ Používá se pro dialogové okno úpravy odkazů OLE.  
   
  [COleMessageFilter – třída](../../mfc/reference/colemessagefilter-class.md)  
- Spravuje souběžnosti vyžaduje interakci aplikace rozhraní OLE.  
+ Spravují souběžnost vyžadovanou pro interakci aplikací OLE.  
   
  [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)  
- Implementuje OLE třídy factory, který vytvoří objekty OLE například servery, objekty automatizace a dokumenty.  
+ Implementuje OLE třídy factory, která vytváří objekty OLE, jako jsou servery, automatizační objekty a dokumenty.  
   
  [COlePasteSpecialDialog – třída](../../mfc/reference/colepastespecialdialog-class.md)  
- Používá se pro dialogové okno OLE Vložit jinak.  
+ Používá se pro dialogové okno zvláštní vložení OLE.  
   
  [COlePropertiesDialog – třída](../../mfc/reference/colepropertiesdialog-class.md)  
- Zapouzdří dialogové okno Vlastnosti objektu OLE systému Windows běžné.  
+ Zapouzdřuje dialogové okno Vlastnosti objektu OLE Windows běžné.  
   
  [COlePropertyPage – třída](../../mfc/reference/colepropertypage-class.md)  
- Slouží k zobrazení vlastností vlastního ovládacího prvku v grafickém rozhraní, podobně jako dialogové okno.  
+ Slouží k zobrazení vlastností vlastního ovládacího prvku v grafickém rozhraní, podobnému dialogovému oknu.  
   
  [COleResizeBar – třída](../../mfc/reference/coleresizebar-class.md)  
- Typ ovládacího prvku panel, který podporuje změnu velikosti na místě OLE – položky.  
+ Typ ovládací panel, který podporuje změnu velikosti ve umístěných položek OLE.  
   
  [COleSafeArray – třída](../../mfc/reference/colesafearray-class.md)  
- Třída pro práci s poli libovolného typu a dimenze.  
+ Třída pro práci s poli libovolného typu a rozměru.  
   
  [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)  
- Základní třída pro OLE – dokumenty na serveru.  
+ Základní třída pro dokumenty OLE na serveru.  
   
  [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)  
- Poskytuje rozhraní serveru položkám OLE.  
+ Poskytuje rozhraní serveru pro položky OLE.  
   
  [COleStreamFile – třída](../../mfc/reference/colestreamfile-class.md)  
- Představuje datový proud (`IStream`) v souboru složené jako součást OLE strukturovaných úložiště.  
+ Představuje datový proud (`IStream`) ve složeném souboru jako součást strukturovaného úložiště OLE.  
   
  [COleTemplateServer – třída](../../mfc/reference/coletemplateserver-class.md)  
- Použít pro OLE visual úpravy servery, automatizační servery a kontejnery odkaz (aplikace, které podporují odkazy na vložené části).  
+ Používá se pro OLE vizuálních úprav servery, automatizační servery a propojení kontejnerů (aplikace, které podporují odkazy na vložené části).  
   
  [COleUpdateDialog – třída](../../mfc/reference/coleupdatedialog-class.md)  
- Použít pro ve speciálním případě dialogových oken OLE upravit propojení, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
+ Používá pro zvláštní případ dialogového okna upravení odkazů OLE, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
   
  [COleVariant – třída](../../mfc/reference/colevariant-class.md)  
- Zapouzdří [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) datového typu.  
+ Zapouzdřuje [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) datového typu.  
   
  [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)  
- `CPagerCtrl` Třída zabalí řízení pager Windows, které můžete přejděte do zobrazení obsažené okno, které nebudou vyhovovat obsahující okno.  
+ `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.  
   
  [CPageSetupDialog – třída](../../mfc/reference/cpagesetupdialog-class.md)  
- Zapouzdří služeb poskytovaných běžných nastavení stránky OLE dialogové okno s dodatečnou podporou pro nastavení a úprava tisku okraje.  
+ Zapouzdřuje služby poskytované dialogovým oknem běžných nastavení stránky OLE Windows s další podporou nastavení a úprav okrajů tisku.  
   
  [CPaintDC – třída](../../mfc/reference/cpaintdc-class.md)  
- Odvozené třídy kontextu zařízení z [třída CDC](../../mfc/reference/cdc-class.md).  
+ Kontext zařízení třída odvozená z [třída CDC](../../mfc/reference/cdc-class.md).  
   
  [CPalette – třída](../../mfc/reference/cpalette-class.md)  
- Zapouzdří palety barev systému Windows.  
+ Zapouzdřuje barevnou paletu barev Windows.  
   
  [CPane – třída](../../mfc/reference/cpane-class.md)  
- Vylepšení [ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md). Pokud provádíte upgrade existujícího projektu knihovny MFC, budete muset nahraďte všechny výskyty `CControlBar` s `CPane`.  
+ Rozšíření [ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md). Pokud provádíte upgrade existujícího projektu knihovny MFC, je třeba nahradit všechny výskyty `CControlBar` s `CPane`.  
   
  [CPaneContainer – třída](../../mfc/reference/cpanecontainer-class.md)  
- Základní součásti implementované MFC ukotvení modelu. Tato třída objektu ukládá ukazatele na dvě podokna ukotvení nebo na dvě instance `CPaneContainer.` ukládá také ukazatel na oddělovač, který odděluje podokny (nebo kontejnery). Pomocí vnoření kontejnery uvnitř kontejnery můžete vytvořit rozhraní binárního stromu, který představuje komplexní ukotvení rozložení. Kořenové binárního stromu je uložen v [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objektu.  
+ Základní komponenta dokovacího modelu implementovaná pomocí knihovny MFC. Objekt této třídy ukládá ukazatele do dvou ukotvitelných podoken nebo dvou instancí `CPaneContainer.` také ukládá ukazatel k oddělovači, který odděluje podokna (nebo kontejnery). Díky vnořování kontejnerů uvnitř kontejnerů umožňuje rozhraní vytvořit binární strom, který představuje komplexní dokovací rozložení. Kořen binárního stromu je uložen v [cpanecontainermanager – třída](../../mfc/reference/cpanecontainermanager-class.md) objektu.  
   
  [CPaneContainerManager – třída](../../mfc/reference/cpanecontainermanager-class.md)  
- Spravuje úložiště a zobrazení aktuální ukotvení rozložení.  
+ Spravuje úložiště a zobrazení aktuálního dokovacího rozložení.  
   
  [CPaneDialog – třída](../../mfc/reference/cpanedialog-class.md)  
- Podporuje nemodální, lze ukotvit dialogové okno.  
+ Podporuje nemodální ukotvitelné dialogové.  
   
  [CPaneDivider – třída](../../mfc/reference/cpanedivider-class.md)  
- Rozdělí dvě podokna, rozdělí dvě skupiny podokna nebo odděluje skupinu podokna z klientské oblasti hlavního okna rámce.  
+ Rozdělí dvě podokna, rozdělí dvě skupiny podoken nebo oddělí skupinu podoken od klientské oblasti okna hlavního rámce.  
   
  [CPaneFrameWnd – třída](../../mfc/reference/cpaneframewnd-class.md)  
- Implementuje zkrácená rámec okna, který obsahuje jeden podokně. V podokně doplní klientské oblasti okna.  
+ Implementuje okno s minirámcem, který obsahuje jedno podokno. Podokno vyplní klientské oblasti okna.  
   
  [CParabolicTransitionFromAcceleration – třída](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
- Zapouzdří parabolická akcelerace přechod.  
+ Zapouzdřuje přechod parabolickým.  
   
  [CPen – třída](../../mfc/reference/cpen-class.md)  
- Zapouzdří pera Windows zařízení grafické rozhraní (GDI).  
+ Zapouzdřuje pero rozhraní GDI systému Windows grafiky zařízení.  
   
  [CPictureHolder – třída](../../mfc/reference/cpictureholder-class.md)  
- Implementuje vlastnosti obrázku, která umožňuje uživateli zobrazit obrázek v vlastního ovládacího prvku.  
+ Implementuje vlastnost obrázku, který umožňuje uživateli zobrazit obrázek v ovládacím prvku.  
   
  [CPoint – třída](../../atl-mfc-shared/reference/cpoint-class.md)  
- Podobně jako Windows `POINT` struktura.  
+ Podobně jako Windows `POINT` struktury.  
   
  [CPrintDialog – třída](../../mfc/reference/cprintdialog-class.md)  
- Zapouzdří služeb poskytovaných běžné dialogové okno pro tisk.  
+ Zapouzdřuje služby poskytované běžným dialogovým oknem Windows pro tisk.  
   
  [CPrintDialogEx – třída](../../mfc/reference/cprintdialogex-class.md)  
- Zapouzdří služeb poskytovaných vlastností Tisk systému Windows.  
+ Zapouzdřuje služby poskytované seznamem vlastností tisku Windows.  
   
  [CProgressCtrl – třída](../../mfc/reference/cprogressctrl-class.md)  
- Poskytuje funkce ovládacího panelu Windows běžné průběh.  
+ Poskytuje funkce pro ovládací prvek panelu průběhu běžné Windows.  
   
  [CPropertyPage – třída](../../mfc/reference/cpropertypage-class.md)  
- Představuje jednotlivých stránek vlastností známé jako dialogové okno karty.  
+ Představuje jednotlivé stránky seznamu vlastností, jinak známé jako dialogové okno Karta.  
   
  [CPropertySheet – třída](../../mfc/reference/cpropertysheet-class.md)  
- Představuje seznam vlastností, také známé jako dialogová okna karet.  
+ Představuje seznam vlastností, označovaný také jako dialogová okna Karta.  
   
  [CPropExchange – třída](../../mfc/reference/cpropexchange-class.md)  
- Podporuje provádění trvalosti pro vaše ovládací prvky OLE.  
+ Podporuje implementaci persistence pro ovládací prvky OLE.  
   
  [CPtrArray – třída](../../mfc/reference/cptrarray-class.md)  
- Podporuje pole neplatné ukazatele.  
+ Podporuje pole ukazatelů typu void.  
   
  [CPtrList – třída](../../mfc/reference/cptrlist-class.md)  
- Podporuje seznamy neplatné ukazatele.  
+ Podporuje seznamy ukazatelů void.  
   
  [CReBar – třída](../../mfc/reference/crebar-class.md)  
- Ovládací prvek panel, který poskytuje informace o stavu pro ovládací prvky matrice, rozložení a trvalost.  
+ Ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.  
   
  [CReBarCtrl – třída](../../mfc/reference/crebarctrl-class.md)  
- Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízeného okna.  
+ Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízené okno.  
   
  [CRecentDockSiteInfo – třída](../../mfc/reference/crecentdocksiteinfo-class.md)  
- Pomocná třída, která ukládá nejnovější informace o stavu pro [CPane třída](../../mfc/reference/cpane-class.md).  
+ Pomocná třída, která obsahuje nejnovější informace o stavu [cpane – třída](../../mfc/reference/cpane-class.md).  
   
  [CRecentFileList – třída](../../mfc/reference/crecentfilelist-class.md)  
- Podporuje ovládací prvek seznamu naposledy použitých souborů (naposledy použitých).  
+ Podporuje ovládací prvek ze seznamu naposledy použitých souborů (MRU).  
   
  [CRecordset – třída](../../mfc/reference/crecordset-class.md)  
- Představuje sadu záznamy ze zdroje dat vybraná.  
+ Představuje sadu záznamů ze zdroje dat vybrané.  
   
  [CRecordView – třída](../../mfc/reference/crecordview-class.md)  
  Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -1110,109 +1110,109 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Podobně jako Windows [Rect – struktura](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).  
   
  [CRectTracker – třída](../../mfc/reference/crecttracker-class.md)  
- Umožňuje položku, kterou chcete zobrazit, přesunout a změnit různé způsoby.  
+ Umožňuje položku, která má být zobrazen, přesouvat a různými způsoby se změněnou velikostí.  
   
  [CRenderTarget – třída](../../mfc/reference/crendertarget-class.md)  
  Obálka pro `ID2D1RenderTarget`.  
   
  [CResourceException – třída](../../mfc/reference/cresourceexception-class.md)  
- Generovány, pokud systém Windows nemůže najít nebo přidělit požadovaný prostředek.  
+ Vygeneruje, když Windows nemůže najít nebo přidělit požadovaný prostředek.  
   
  [CReversalTransition – třída](../../mfc/reference/creversaltransition-class.md)  
- Zapouzdří stornovací přechod.  
+ Zapouzdřuje opačný přechod.  
   
  [CRgn – třída](../../mfc/reference/crgn-class.md)  
- Zapouzdří oblast Windows zařízení grafické rozhraní (GDI).  
+ Zapouzdřuje oblast rozhraní GDI systému Windows grafiky zařízení.  
   
  [CRichEditCntrItem – třída](../../mfc/reference/cricheditcntritem-class.md)  
- S [cricheditview – třída](../../mfc/reference/cricheditview-class.md) a [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
+ S [cricheditview – třída](../../mfc/reference/cricheditview-class.md) a [cricheditdoc – třída](../../mfc/reference/cricheditdoc-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.  
   
  [CRichEditCtrl – třída](../../mfc/reference/cricheditctrl-class.md)  
- Poskytuje funkce ovládacího prvku RichEdit.  
+ Poskytuje funkce pro ovládací prvek RichEdit.  
   
  [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)  
- S [cricheditview – třída](../../mfc/reference/cricheditview-class.md) a [CRichEditCntrItem třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
+ S [cricheditview – třída](../../mfc/reference/cricheditview-class.md) a [cricheditcntritem – třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.  
   
  [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)  
- S [CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
+ S [cricheditdoc – třída](../../mfc/reference/cricheditdoc-class.md) a [cricheditcntritem – třída](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.  
   
  [CScrollBar – třída](../../mfc/reference/cscrollbar-class.md)  
- Poskytuje funkce ovládacího prvku Windows posuvníku.  
+ Poskytuje funkce pro ovládací prvek posuvníku Windows.  
   
  [CScrollView – třída](../../mfc/reference/cscrollview-class.md)  
- A [CView – třída](../../mfc/reference/cview-class.md) s možností posouvání.  
+ A [CView Class](../../mfc/reference/cview-class.md) s možností posouvání.  
   
  [CSemaphore – třída](../../mfc/reference/csemaphore-class.md)  
- Představuje "semafor", který je na synchronizační objekt, který umožňuje omezený počet vláken v jedné nebo více procesech pro přístup k aMaintains počet vláken, na které se právě používají zadaný prostředek.  
+ Představuje "semafor", což je synchronizační objekt, který umožňuje omezenému počtu vláken v jednom nebo více procesech pro přístup k aMaintains počet vláken právě používají zadaný prostředek.  
   
  [CSettingsStore – třída](../../mfc/reference/csettingsstore-class.md)  
- Zabalí funkcí rozhraní API systému Windows, poskytnutím objektově orientované rozhraní, které používáte pro přístup k registru.  
+ Zalomí funkce rozhraní API Windows, poskytuje objektově orientovaného rozhraní, které používáte pro přístup k registru.  
   
  [CSettingsStoreSP – třída](../../mfc/reference/csettingsstoresp-class.md)  
- Pomocná třída, která můžete použít k vytvoření instance [CSettingsStore třída](../../mfc/reference/csettingsstore-class.md).  
+ Pomocná třída, která můžete použít k vytvoření instance [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).  
   
  [CSharedFile – třída](../../mfc/reference/csharedfile-class.md)  
- [CMemFile třída](../../mfc/reference/cmemfile-class.md)-odvozené třídy, který podporuje sdílené paměti soubory.  
+ [Cmemfile – třída](../../mfc/reference/cmemfile-class.md)-odvozenou třídu, která podporuje sdílené soubory z paměti.  
   
  [CShellManager – třída](../../mfc/reference/cshellmanager-class.md)  
- Implementuje několik metod, které umožňují pracovat s odkazy na identifikátor seznamy (PIDLs).  
+ Implementuje několik metod, které vám umožní pracovat s odkazy na seznamy identifikátorů (PIDLs).  
   
  [CSimpleException – třída](../../mfc/reference/csimpleexception-class.md)  
- Tato třída je základní třídu pro kritické prostředků MFC – výjimky.  
+ Tato třída je základní třída pro výjimky kritických zdrojů MFC.  
   
  [CSingleDocTemplate – třída](../../mfc/reference/csingledoctemplate-class.md)  
- Definuje šablonu dokumentu, který implementuje rozhraní s jedním dokumentem (SDI).  
+ Definuje šablonu dokumentu, která implementuje rozhraní jednoho dokumentu (SDI).  
   
  [CSingleLock – třída](../../mfc/reference/csinglelock-class.md)  
- Představuje mechanismus řízení přístupu používá při řízení přístupu k prostředku v programu s více vlákny.  
+ Představuje mechanismus řízení přístupu, který se používá při řízení přístupu k prostředku v programu s více vlákny.  
   
  [CSinusoidalTransitionFromRange – třída](../../mfc/reference/csinusoidaltransitionfromrange-class.md)  
- Zapouzdří vlnovitě rozsah přechodu, který má zadaný rozsah kývání.  
+ Zapouzdřuje přechod se sinusovým rozsahem, který má daný rozsah oscilace.  
   
  [CSinusoidalTransitionFromVelocity – třída](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)  
- Zapouzdří vlnovitě rychlosti přechodu, který má amplitudě, který je určen podle počáteční rychlosti proměnné animace.  
+ Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.  
   
  [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)  
- Podobně jako Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozice.  
+ Podobně jako Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozici.  
   
  [CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)  
- Poskytuje funkci Windows posuvník běžné.  
+ Poskytuje funkce pro Windows běžný ovládací prvek posuvník.  
   
  [CSmartDockingInfo – třída](../../mfc/reference/csmartdockinginfo-class.md)  
- Definuje vzhled elementů inteligentní značky ukotvení.  
+ Definuje vzhled značek inteligentního dokování.  
   
  [CSmoothStopTransition – třída](../../mfc/reference/csmoothstoptransition-class.md)  
- Zapouzdří přechod smooth zastavit.  
+ Zapouzdřuje přechod s plynulým zastavením.  
   
  [CSocket – třída](../../mfc/reference/csocket-class.md)  
- Odvozená z `CAsyncSocket`a představuje vyšší úrovni abstrakce rozhraní Windows Sockets API.  
+ Je odvozen od `CAsyncSocket`a představuje vyšší úroveň abstrakce rozhraní Windows Sockets API.  
   
  [CSocketFile – třída](../../mfc/reference/csocketfile-class.md)  
- A `CFile` objekt používaný pro odesílání a příjmu dat přes síť pomocí rozhraní Windows Sockets.  
+ A `CFile` objektu se používá pro odesílání a přijímání dat přes síť prostřednictvím rozhraní Windows Sockets.  
   
  [CSpinButtonCtrl – třída](../../mfc/reference/cspinbuttonctrl-class.md)  
- Poskytuje funkci ovládacím prvku tlačítko typu číselník běžné Windows.  
+ Poskytuje funkce pro Windows běžné tlačítko číselníku.  
   
  [CSplitButton – třída](../../mfc/reference/csplitbutton-class.md)  
- Reprezentuje ovládací prvek tlačítko rozdělení. Ovládací prvek tlačítko rozdělení provede výchozí chování, když uživatel klikne na hlavní část tlačítko a zobrazí rozevírací nabídky, když uživatel klikne na šipku rozevíracího seznamu tlačítka.  
+ Představuje ovládací tlačítko rozdělení. Tlačítko rozdělení ovládání provede výchozí chování, když uživatel klikne na hlavní část tlačítka a zobrazí rozevírací nabídky po kliknutí tlačítko šipky rozevíracího seznamu.  
   
  [CSplitterWnd – třída](../../mfc/reference/csplitterwnd-class.md)  
- Poskytuje funkci rozděleném okně, které je okno, které obsahuje více podokna.  
+ Poskytuje funkce pro okno s rozdělovačem, což je okno, které obsahuje více podoken.  
   
  [CSplitterWndEx – třída](csplitterwndex-class.md)  
- Představuje vlastní rozděleném okně.  
+ Představuje vlastní dělící okno.  
   
  [CStatic – třída](../../mfc/reference/cstatic-class.md)  
- Poskytuje funkci statické ovládacího prvku Windows.  
+ Poskytuje funkce pro statický ovládací prvek Windows.  
   
  [CStatusBar – třída](../../mfc/reference/cstatusbar-class.md)  
- Ovládací prvek panel s řádek podokna výstup textu nebo "indikátory."  
+ Ovládací panel s řádkem podoken textového výstupu nebo "ukazatelů".  
   
  [CStatusBarCtrl – třída](../../mfc/reference/cstatusbarctrl-class.md)  
- Poskytuje funkce ovládacího panelu Windows běžné stavu.  
+ Poskytuje funkce pro Windows běžné stav panelu ovládacího prvku.  
   
  [CStdioFile – třída](../../mfc/reference/cstdiofile-class.md)  
- Představuje soubor datového proudu běhu C, jak otevřít funkce běhové [fopen –, _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md).  
+ Představuje běhový streamový soubor C jako otevřený pomocí běhové funkce [fopen _wfopen –](../../c-runtime-library/reference/fopen-wfopen.md).  
   
  [CStringArray – třída](../../mfc/reference/cstringarray-class.md)  
  Podporuje pole `CString` objekty.  
@@ -1221,98 +1221,98 @@ Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation
  Podporuje seznamy `CString` objekty.  
   
  [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)  
- Čistý virtuální třídu, která poskytuje funkce, které jsou společné pro objekty synchronizace v Win32.  
+ Čistě virtuální třída, která poskytuje funkčnost běžnou pro synchronizaci objektů v systému Win32.  
   
  [CTabbedPane – třída](../../mfc/reference/ctabbedpane-class.md)  
- Implementuje funkce podokně odpojitelných karty.  
+ Implementuje funkce podokna s odnímatelnými kartami.  
   
  [CTabCtrl – třída](../../mfc/reference/ctabctrl-class.md)  
- Poskytuje funkce Windows běžné ovládacího prvku karta.  
+ Poskytuje funkce pro ovládací prvek běžné karty Windows.  
   
  [CTabView – třída](../../mfc/reference/ctabview-class.md)  
- Zjednodušuje použití třídy ovládacího prvku karta ([CTabView třída](../../mfc/reference/ctabview-class.md)) v aplikacích používajících knihovny MFC document/view – architektura.  
+ Zjednodušuje použití třídy ovládacího prvku karta ([ctabview – třída](../../mfc/reference/ctabview-class.md)) v aplikacích, které používají architekturu document/view knihovny MFC.  
   
  [CTaskDialog – třída](../../mfc/reference/ctaskdialog-class.md)  
- Místní dialogové okno, který funguje jako okno se zprávou, ale můžete zobrazit další informace o uživateli. `CTaskDialog` Také zahrnuje funkce pro shromažďování informací o od uživatele.  
+ Místní dialogové okno, které funguje jako okno se zprávou, ale můžete zobrazit další informace pro uživatele. `CTaskDialog` Také zahrnuje funkce pro shromažďování informací od uživatele.  
   
  [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)  
- Ovládací pruhy, které mají řádek rastrové obrázky tlačítek a volitelné oddělovačů.  
+ Ovládací pruhy, které mají řádek tlačítek s rastrovými obrázky a volitelné oddělovače.  
   
  [CToolBarCtrl – třída](../../mfc/reference/ctoolbarctrl-class.md)  
- Poskytuje funkci Windows běžné ovládací prvek panelu nástrojů.  
+ Poskytuje funkce pro Windows nástrojů běžný ovládací prvek.  
   
  [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md)  
- Zapouzdřuje funkce ovládacího prvku"nástroj tip," malé místní okno, které zobrazuje jeden řádek textu popisující účel nástroj v aplikaci.  
+ Zapouzdřuje funkce ovládacího prvku"nástroj tip," malého vyskakovacího okna, která zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.  
   
  [CTooltipManager – třída](../../mfc/reference/ctooltipmanager-class.md)  
- Uchovává informace o běhu programu o tlačítkách. `CTooltipManager` Třída je instancí jednou na aplikaci.  
+ Udržuje běhové informace o popiscích. `CTooltipManager` Třída je instance jednou za každou aplikaci.  
   
  [CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md)  
- Poskytuje funkci běžné stromové zobrazení ovládacího prvku Windows.  
+ Poskytuje funkce pro ovládací prvek zobrazení stromové struktury běžné Windows.  
   
  [CTreeView – třída](../../mfc/reference/ctreeview-class.md)  
- Používání ovládacího prvku strom, zjednodušuje [CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md), třídu, která zapouzdřuje funkce ovládací prvek stromu s architekturou MFC na zobrazení dokumentu.  
+ Zjednodušuje použití ovládacího prvku strom a [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md), třídy, která zapouzdřuje funkce ovládacího prvku strom architektuře document / view knihovny MFC.  
   
  [CTypedPtrArray – třída](../../mfc/reference/ctypedptrarray-class.md)  
- Typově bezpečný "obálky" poskytuje pro objekty třídy `CPtrArray` nebo `CObArray`.  
+ Poskytuje typově "zabezpečenou obálku" pro objekty třídy `CPtrArray` nebo `CObArray`.  
   
  [CTypedPtrList – třída](../../mfc/reference/ctypedptrlist-class.md)  
- Typově bezpečný "obálky" poskytuje pro objekty třídy `CPtrList`.  
+ Poskytuje typově "zabezpečenou obálku" pro objekty třídy `CPtrList`.  
   
  [CTypedPtrMap – třída](../../mfc/reference/ctypedptrmap-class.md)  
- Poskytuje bezpečnost typů "obálky" pro objekty třídy map ukazatel `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  
+ Poskytuje typově zabezpečenou "obálku" pro objekty tříd ukazatel mapy `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  
   
  [CUIntArray – třída](../../mfc/reference/cuintarray-class.md)  
  Podporuje pole celých čísel bez znaménka.  
   
  [CUserException – třída](../../mfc/reference/cuserexception-class.md)  
- Došlo k ukončení operace koncového uživatele.  
+ Vyvoláno ukončení operace koncového uživatele.  
   
  [CUserTool – třída](../../mfc/reference/cusertool-class.md)  
- Položky nabídky, který spouští externí aplikací. **Nástroje** kartě **přizpůsobit** dialogové okno ([CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatele nástroje a zadejte název, argumenty, a Počáteční adresář pro každého uživatele nástroje.  
+ Položka nabídky, která spustí externí aplikaci. **Nástroje** karty **vlastní** dialogové okno ([cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatelské nástroje a zadejte název, příkaz, argumenty, a Počáteční adresář pro každý nástroj uživatele.  
   
  [CUserToolsManager – třída](../../mfc/reference/cusertoolsmanager-class.md)  
- Udržuje kolekci [CUserTool třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatele nástroje k aplikaci. Podporuje provádění příkazů související nástroje pro uživatele, a také ukládá informace o nástrojích uživatele do registru systému Windows.  
+ Udržuje kolekci [cusertool – třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Uživatelský nástroj je položka nabídky, která spustí externí aplikaci. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatelské nástroje do aplikace. Podporuje provádění příkazů přidružených s uživatelskými nástroji a také uloží informace o nástrojích pro uživatele v registru Windows.  
   
  [CView – třída](../../mfc/reference/cview-class.md)  
- Poskytuje základní funkce pro třídy uživatelem definované zobrazení.  
+ Poskytuje základní funkce pro třídy zobrazení definované uživatelem.  
   
  [CVSListBox – třída](../../mfc/reference/cvslistbox-class.md)  
- Podporuje ovládací prvek seznamu upravovat.  
+ Podporuje ovládací prvek upravovat seznam.  
   
  [CWaitCursor – třída](../../mfc/reference/cwaitcursor-class.md)  
- Poskytuje způsob jednořádkové čekání kurzor, který je obvykle zobrazený jako přesýpací hodiny, když provádíte časově náročná operace.  
+ Poskytuje jednořádkový způsob, jak zobrazit kurzor pro čekání, obvykle zobrazený jako přesýpací hodiny, zatímco provádíte dlouhotrvající operace.  
   
  [CWinApp – třída](../../mfc/reference/cwinapp-class.md)  
- Základní třída, ze kterého odvodíte objekt aplikace systému Windows.  
+ Základní třída, ze které odvozujete objekt aplikace Windows.  
   
  [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)  
- Zpracovává stavu aplikace, uloží stav do registru, načte stav z registru, inicializuje správci aplikace a poskytuje odkazy na tyto stejné správci aplikace.  
+ Zpracovává stav aplikace ukládá stav do registru, načítá stav z registru, inicializuje správce aplikace a poskytuje odkazy na ty stejné správce aplikace.  
   
  [CWindowDC – třída](../../mfc/reference/cwindowdc-class.md)  
- Odvozené z `CDC`.  
+ Odvozené od `CDC`.  
   
  [CWinFormsControl – třída](../../mfc/reference/cwinformscontrol-class.md)  
  Poskytuje základní funkce pro hostování ovládacího prvku Windows Forms.  
   
  [CWinFormsDialog – třída](../../mfc/reference/cwinformsdialog-class.md)  
- Obálka pro třídy dialogového okna knihovny MFC, který je hostitelem uživatelského ovládacího prvku Windows Forms.  
+ Obálka pro třídu dialogového okna knihovny MFC, který je hostitelem uživatelského ovládacího prvku Windows Forms.  
   
  [CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md)  
  Poskytuje obecné funkce pro hostování ovládacího prvku Windows Forms jako zobrazení MFC.  
   
  [CWinThread – třída](../../mfc/reference/cwinthread-class.md)  
- Představuje vlákno při provádění v rámci aplikace.  
+ Představuje vlákno provádění v rámci aplikace.  
   
  [CWnd – třída](../../mfc/reference/cwnd-class.md)  
- Poskytuje základní funkce všech tříd oken v knihovny Microsoft Foundation Class.  
+ Poskytuje základní funkce pro všechny třídy okna v knihovny Microsoft Foundation Class.  
   
  [CWordArray – třída](../../mfc/reference/cwordarray-class.md)  
- Podporuje pole 16bitové slova.  
+ Podporuje pole s 16bitovými slovy.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)  
- Obsahuje odkazy na témata týkající se třídy, globální funkce, globální proměnné a makra, která tvoří knihovny MFC.
+ Obsahuje odkazy na témata týkající se tříd, globálních funkcí, globálních proměnných a maker tvořících knihovnu MFC.
 
 
 

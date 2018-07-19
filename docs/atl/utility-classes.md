@@ -1,5 +1,5 @@
 ---
-title: Třídy nástrojů (ATL) | Microsoft Docs
+title: Třídy nástrojů (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450c22a6c31128204dcb9e2f5baf8aeb04439eab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c3803a3b78e5a5a1e08edf1e8b6ca7df0c257ee
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961773"
 ---
 # <a name="utility-classes"></a>Třídy nástrojů
 Následující třídy MFC nezávislé nástroje jsou k dispozici:  
   
--   [CImage](../atl-mfc-shared/reference/cimage-class.md) poskytuje rozšířenou podporu rastrového obrázku, včetně možnosti k načtení a uložení bitové kopie v JPEG, GIF, BMP, a formáty grafiky PNG (Portable Network).  
+-   [Cimage –](../atl-mfc-shared/reference/cimage-class.md) poskytuje rozšířenou podporu rastrový obrázek, včetně možnosti k načtení a uložení Image ve formátu GIF, JPEG, BMP, Portable Network Graphics (PNG) a formáty a.  
   
 -   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) poskytuje implementaci pro uložení párů souřadnic (x, y).  
   
--   [CRect](../atl-mfc-shared/reference/crect-class.md) poskytuje implementaci pro ukládání souřadnice obdélníkovou oblastí.  
+-   [Crect –](../atl-mfc-shared/reference/crect-class.md) poskytuje implementaci pro ukládání souřadnice obdélníkového oblastí.  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md) poskytuje implementaci pro ukládání vzdálenost, relativní umístění nebo spárované hodnoty.  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) poskytuje implementaci pro ukládání vzdálenost, relativní pozice nebo dvojice hodnot.  
   
--   [CString](../atl-mfc-shared/reference/cstringt-class.md) poskytuje implementaci pro ukládání řetězců znaků.  
+-   [CString –](../atl-mfc-shared/reference/cstringt-class.md) poskytuje implementaci pro uložení řetězce znaků.  
   
--   [CAdapt](../atl/reference/cadapt-class.md) jednoduchou šablonu slouží k zabalení třídy, které znovu definovat operátor adresy.  
+-   [CAdapt](../atl/reference/cadapt-class.md) jednoduchá šablona slouží k zabalení tříd, které mění definici operátoru address-of.  
   
--   [_U_RECT](../atl/reference/u-rect-class.md) třídu adaptér argument, který umožňuje buď `RECT` ukazatele nebo odkazy, které mají být předány funkci, která je implementovaná z hlediska ukazatele.  
+-   [_U_rect –](../atl/reference/u-rect-class.md) argument Třída adaptéru umožňující buď `RECT` ukazatele nebo odkazy, které se mají předat funkci, která je implementovaná jako ukazatele.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

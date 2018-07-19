@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: použití Windows 10 SDK v aplikaci Windows Desktop | Microsoft Docs'
+title: 'Postupy: použití Windows 10 SDK v desktopové aplikace Windows | Dokumentace Microsoftu'
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,58 +13,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882821"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034777"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v aplikaci Windows Desktop
-Vytváříte-li ve Visual Studio 2017 klasické pracovní plochy projektu pro Windows, můžete ho je nastavený ve výchozím nastavení k vytvoření s verzí Windows 10 SDK, která byla nainstalována při zatížení C++ plocha byla nainstalována nebo poslední aktualizace. Tato verze sady Windows SDK je kompatibilní s všechny poslední verze systému Windows. Pokud chcete zacílit starší verze sady SDK, můžete otevřít projekt | Vlastnosti a volbou z jiné k dispozici v rozevírací nabídce verze sady SDK Windows SDK verze.  
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v desktopové aplikaci Windows
+Při vytváření klasický desktopový projekt Windows v sadě Visual Studio 2017 je nastaven ve výchozím nastavení k sestavení s verzí Windows 10 SDK, která byla nainstalována při C++ Desktop workload byla nainstalována nebo naposledy aktualizována. Tato verze sady Windows SDK je kompatibilní s Windows 7 a novější. Zobrazit [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers) Další informace o cílení na konkrétní verze Windows.
+
+Pokud chcete cílit na starší verzi sady SDK, můžete otevřít **projektu | Vlastnosti** a vyberte si z dostupných v rozevíracím seznamu verzi sady SDK Windows SDK verze.
   
- Od verze Visual Studio 2015 a Windows 10 SDK, byl knihovny CRT rozdělené na dvě části, jedna (ucrtbase) obsahuje funkce, které jsou přijatelné pro použití v univerzálních aplikací pro Windows a ten, který obsahuje všechno ostatní (vcruntime140). Vzhledem k tomu, že Windows 10 SDK obsahuje nové funkce, jako je například mnoho funkcí C99, musíte provést následující kroky, aby bylo možné používat tyto funkce. V tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).  
+ Od verze Visual Studio 2015 a sada Windows 10 SDK, knihovny CRT se rozdělené na dvě části, jeden (ucrtbase), který obsahuje funkce, které jsou přijatelné pro univerzální aplikace pro Windows a ta, která obsahuje všechno ostatní (vcruntime140). Od Windows 10 SDK obsahuje nové funkce, jako je například mnoho funkcí C99, budete muset postupujte podle těchto kroků, aby bylo možné použít dané funkce. Zobrazit [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).  
   
-### <a name="to-target-the-windows-10-sdk"></a>Cíl Windows 10 SDK  
+### <a name="to-target-the-windows-10-sdk"></a>Na cíl Windows 10 SDK  
   
-1.  Zkontrolujte, zda že je nainstalovaná sada Windows 10 SDK. Windows 10 SDK je nainstalován jako součást **vývoj aplikací s jazykem C++** zatížení. Je k dispozici na samostatnou verzi [stáhne a nástroje pro Windows 10](https://developer.microsoft.com/windows/downloads).
+1.  Ujistěte se, že je nainstalovaná sada Windows 10 SDK. Windows 10 SDK je nainstalována jako součást **vývoj desktopových aplikací pomocí C++** pracovního vytížení. Je k dispozici na samostatnou verzi [soubory ke stažení a nástroje pro Windows 10](https://developer.microsoft.com/windows/downloads).
 
   
-2.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílový verze sady SDK**.  
+2.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílení verze sady SDK**.  
   
-     ![Změňte cíl verze sady SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
+     ![Výsledkem změny cílení verze SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
   
-     **Akce řešení zkontrolujte** otevře se dialogové okno.  
+     **Akce řešení zkontrolujte** se zobrazí dialogové okno.  
   
-     ![Kontrola akcí řešení](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
+     ![Zkontrolovat akce řešení](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  V **Cílová platforma verze** rozevíracího seznamu vyberte verzi Windows 10 SDK, kterou chcete cílit. Klepněte na tlačítko OK na použití změny.  
+3.  V **verze cílové platformy** rozevíracího seznamu vyberte verzi Windows 10 SDK, kterou chcete cílit. Klikněte na tlačítko OK na použití změny.  
   
-     Všimněte si, že 8.1 v tomto kontextu odkazuje na verzi sady Windows SDK, která je zpětně kompatibilní s Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 a Windows Vista.  
+     Všimněte si, že v tomto kontextu 8.1 odkazuje na verzi sady Windows SDK, která je zpětně kompatibilní s Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 a Windows Vista.  
   
-     Pokud tento krok úspěšný, zobrazí se v okně výstupu následující text:  
+     Pokud tento krok je úspěšná, v okně výstupu se zobrazí následující text:  
   
      `Retargeting End: 1 completed, 0 failed, 0 skipped`  
   
-4.  Otevřete vlastnosti projektu a v **konfigurační vlastnosti, Obecné** část, Všimněte si hodnot **Windows Cílová platforma verze**. Změna hodnoty zde má stejný účinek jako následujícího postupu. V tématu [Obecná stránka vlastností (projekt)](../ide/general-property-page-project.md).  
+4.  Otevřete vlastnosti projektu a **vlastnosti konfigurace, Obecné** části, Všimněte si, že hodnoty **verze cílové platformy Windows**. Změna hodnoty tady má stejný účinek jako tohoto postupu. Zobrazit [Obecná stránka vlastností (projekt)](../ide/general-property-page-project.md).  
   
-     ![Cílová verze platformy](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
+     ![Cílit na verzi platformy](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Tato akce změní hodnoty makra projektu, které zahrnují cesty hlavičkových souborů a soubory knihovny. Pokud chcete zobrazit, co se změnilo, v části Visual C++ adresáře v dialogovém okně Vlastnosti projektu zvolte jednu z vlastností, jako je například adresáře Include a potom vyberte otevřete rozevírací seznam a vyberte \<Upravit >. **Adresáře Include** otevře se dialogové okno.  
+     Tato akce změní hodnoty projektová makra, které zahrnují cesty k souborů hlaviček a soubory knihovny. Chcete-li zjistit, co změnil v sekci adresáře Visual C++ v dialogovém okně vlastností projektu zvolte jednu z vlastností, jako je například adresáře Include, zvolte otevřete rozevírací seznam a zvolte \<Upravit >. **Adresáře souborů k zahrnutí** se zobrazí dialogové okno.  
   
-     ![Zahrnuje dialog pro adresáře](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
+     ![Zahrnout adresáře dialogovému oknu](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     Vyberte **makra >>** tlačítko a přejděte dolů v seznamu makra a makra Windows SDK zobrazíte všechny nové hodnoty.  
+     Zvolte **makra >>** tlačítko a přejděte dolů na seznamu makra a makra sady Windows SDK zobrazíte všechny nové hodnoty.  
   
      ![Windows SDK makra](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   
-5.  Podle potřeby zopakujte pro další projekty a znovu sestavte řešení.  
+5.  Opakujte pro další projekty podle potřeby a znovu sestavte řešení.  
   
-### <a name="to-target-the-windows-81-sdk"></a>Cílovou sadu SDK Windows 8.1  
+### <a name="to-target-the-windows-81-sdk"></a>Cílení Windows 8.1 SDK  
   
-1.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílový verze sady SDK**.  
+1.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílení verze sady SDK**.  
   
-2.  V rozevíracím seznamu Cílová verze platformy zvolte 8.1.  
+2.  V rozevíracím seznamu verzi cílové platformy zvolte 8.1.  
   
 ## <a name="see-also"></a>Viz také  
- [Aplikace na ploše systému Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+ [Desktopové aplikace Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

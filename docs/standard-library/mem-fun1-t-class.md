@@ -1,5 +1,5 @@
 ---
-title: mem_fun1_t – třída | Microsoft Docs
+title: mem_fun1_t – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c90838bf4ae49e372b35ca2e9a2f0feede4eb9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963151"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t – třída
 
-Třídu adaptér, který umožňuje **non_const** – členská funkce, které přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem ukazatele.
+Třída adaptéru umožňující `non_const` členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem ukazatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,31 +44,31 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-`_Pm` Ukazatel na funkci člena třídy **typ** má být převeden na objekt funkce.
+*_Pm* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-`_Pleft` Objekt, `_Pm` – členská funkce je volána v.
+*_Pleft* objekt, který *_Pm* členská funkce je volána v.
 
-`right` Argument, který se na `_Pm`.
+*správné* argument, který je právě přiřazen k *_Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelné binární funkce.
+Přizpůsobitelnou binární funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie `_Pm`, která musí být ukazatel na funkci člena třídy **typu**, v objektu privátního člena. Definuje jeho – členská funkce `operator()` jako vrácení ( **_Pleft** -> \* `_Pm`) ( **správné**).
+Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( **_Pleft** -> \* `_Pm`) ( **správné**).
 
 ## <a name="example"></a>Příklad
 
-Konstruktoru `mem_fun1_t` se obvykle nepoužívá přímo; pomocné funkce `mem_fun` slouží k přizpůsobení členské funkce. V tématu [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad použití členské funkce adaptéry.
+Konstruktor třídy `mem_fun1_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

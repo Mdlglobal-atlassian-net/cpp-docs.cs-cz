@@ -1,5 +1,5 @@
 ---
-title: 'Ovládací prvky MFC ActiveX: Optimalizace | Microsoft Docs'
+title: 'MFC – ovládací prvky ActiveX: Optimalizace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,36 +24,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91f147637b53250f8d373af9950d6205c82d3e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355308"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028171"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC – ovládací prvky ActiveX: Optimalizace
-Tento článek vysvětluje techniky, které můžete použít k optimalizaci vaše ovládací prvky ActiveX pro dosažení vyššího výkonu.  
+Tento článek popisuje postupy, které vám umožní optimalizovat vaše ovládací prvky ActiveX pro zajištění lepšího výkonu.  
   
- Témata [zapnutí vypnout aktivovat při viditelné možnost](../mfc/turning-off-the-activate-when-visible-option.md) a [poskytování myši interakce při neaktivní](../mfc/providing-mouse-interaction-while-inactive.md) popisují ovládacích prvků, které nejsou vytvoření okna do aktivace. Téma [zajištění aktivace bez oken](../mfc/providing-windowless-activation.md) popisuje ovládací prvky, které nikdy vytvoření okna, i když se aktivuje.  
+ Témata [zapnutí vypnout the možnosti Activate When Visible](../mfc/turning-off-the-activate-when-visible-option.md) a [poskytuje myši interakce při neaktivní](../mfc/providing-mouse-interaction-while-inactive.md) diskutovat o ovládací prvky, které pro ně nevytvoříte časové období, dokud nebude aktivován. Téma [zajištění aktivace bez oken](../mfc/providing-windowless-activation.md) popisuje ovládací prvky, které nikdy vytvoření okna, i když jsou aktivované.  
   
- Windows mají dva hlavní nevýhody pro objekty OLE: brání tomu, aby objekty z transparentní nebo nepravoúhlý, když je aktivní a přidat velké nároky na vytváření instancí a zobrazení ovládacích prvků. Vytvoření okna obvykle trvá 60 procent času vytvoření ovládacího prvku. V jednom okně Sdílené (obvykle kontejneru) a některé odesílající kódu obdrží ovládacího prvku stejné okno služby, obecně bez ztráty výkonu. Okno je většinou nárokům pro objekt.  
+ Windows máte dvě hlavní nevýhody pro objekty OLE: brání tomu, aby objekty z je transparentní nebo vytvoření nepravoúhlého, pokud je aktivní a přidat velké nároky na vytváření instancí a zobrazení ovládacích prvků. Vytvoření časového období trvá obvykle 60 procent společností z žebříčku čas vytvoření ovládacího prvku. Jediné sdílené okno (obvykle kontejneru) a některých dispatching kód ovládací prvek dostane stejné okno služby obvykle bez ztráty výkonu. Okno je většinou zbytečnou režii pro objekt.  
   
- Některé optimalizace zlepšení nutně výkonu při vaší ovládacího prvku v určitých kontejnerech. Například kontejnery vydané před 1996 nepodporovaly aktivace bez oken, takže implementace tato funkce nebude poskytovat výhody v kontejnerech starší. Téměř každý kontejner však podporuje trvalost, takže optimalizace trvalosti kódu ovládacího prvku se pravděpodobně zvýší jeho výkon v kontejneru. Pokud vlastní ovládací prvek je určený speciálně pro použití s jeden konkrétní typ kontejneru, můžete pro zkoumání který optimalizace nepodporuje tohoto kontejneru. Obecně platí ale, pokuste se implementují jako mnoho z těchto postupů, jak se dají použít pro vaše konkrétní řízení Ujistěte se, že vlastní ovládací prvek provádí a také ho pravděpodobně můžete v široké škály kontejnerů.  
+ Některé optimalizace nevedou k lepšímu nutně výkon při použití ovládacího prvku v určitých kontejnery. Například kontejnery vydaný před 1996 nepodporovalo aktivace bez oken, takže implementaci této funkce, nebudou zajišťovat výhoda v starší kontejnery. Téměř každý kontejner však podporuje trvalost, tak optimalizace trvalosti kódu ovládacího prvku se pravděpodobně vylepšit výkon v kontejneru. Pokud váš ovládací prvek je určený speciálně pro použití s konkrétní typu kontejneru, můžete chtít prozkoumat které z těchto optimalizacích podporuje tohoto kontejneru. Obecně platí ale doporučujeme implementovat jako mnoho z následujících postupů, jak se dají použít pro konkrétní ovládací prvek Ujistěte se, že ovládací prvek funguje stejně dobře jako to pravděpodobně v široké škály kontejnerů.  
   
- Můžete implementovat řadu tyto optimalizace prostřednictvím [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md)na [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky.  
+ Můžete implementovat řadu těchto optimalizacích prostřednictvím [Průvodce ovládacím prvkem MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md)na [nastavení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky.  
   
-### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Možnosti optimalizace OLE Průvodce ovládacím prvkem ActiveX knihovny MFC  
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Možnosti optimalizace OLE průvodce ovládací prvek ActiveX knihovny MFC  
   
-|Ovládací prvek nastavení Průvodce ovládacím prvkem ActiveX knihovny MFC|Akce|Další informace|  
+|Nastavení ovládacího prvku v Průvodci ovládací prvek ActiveX knihovny MFC|Akce|Další informace|  
 |-------------------------------------------------------|------------|----------------------|  
-|**Aktivovat při viditelné** zaškrtávací políčko|Zrušte zaškrtnutí|[Vypnutí při aktivaci Visible – možnost](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**Aktivovat, když je viditelné** zaškrtávací políčko|Vymazat|[Vypnutí aktivován, když možnost viditelná](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**Aktivace bez oken** zaškrtávací políčko|Vyberte|[Zajišťování aktivace bez oken](../mfc/providing-windowless-activation.md)|  
 |**Neoříznutého kontextu zařízení** zaškrtávací políčko|Vyberte|[Použití neoříznutého kontextu zařízení](../mfc/using-an-unclipped-device-context.md)|  
-|**Bez blikání aktivace** zaškrtávací políčko|Vyberte|[Zajištění aktivace bez blikání](../mfc/providing-flicker-free-activation.md)|  
-|**Myš ukazatel oznámení o neaktivní** zaškrtávací políčko|Vyberte|[Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)|  
-|**Optimalizované kreslení kód** zaškrtávací políčko|Vyberte|[Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)|  
+|**Aktivace bez blikání** zaškrtávací políčko|Vyberte|[Zajištění aktivace bez blikání](../mfc/providing-flicker-free-activation.md)|  
+|**Myš ukazatel oznámení, pokud je neaktivní** zaškrtávací políčko|Vyberte|[Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Optimalizované vykreslení kódu** zaškrtávací políčko|Vyberte|[Optimalizace vykreslování ovládacích prvků](../mfc/optimizing-control-drawing.md)|  
   
- Podrobné informace o členské funkce, které implementují tyto optimalizace najdete v tématu [COleControl](../mfc/reference/colecontrol-class.md). Členské funkce jsou uvedeny podle použití, jako například [bez oken Operations](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) a [neaktivní ukazatel zpracování funkce](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Podrobné informace o členské funkce, které implementují tyto optimalizace najdete v tématu [COleControl](../mfc/reference/colecontrol-class.md). Členské funkce jsou seřazeny podle použití, jako například [bez oken operace](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) a [neaktivní ukazatele funkce zpracování](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
  Další informace naleznete v tématu:  
   
@@ -61,7 +61,7 @@ Tento článek vysvětluje techniky, které můžete použít k optimalizaci va�
   
 -   [Zajišťování aktivace bez oken](../mfc/providing-windowless-activation.md)  
   
--   [Vypnutí při aktivaci Visible – možnost](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [Vypnutí aktivován, když možnost viditelná](../mfc/turning-off-the-activate-when-visible-option.md)  
   
 -   [Zajištění interakce s myší v neaktivním stavu](../mfc/providing-mouse-interaction-while-inactive.md)  
   

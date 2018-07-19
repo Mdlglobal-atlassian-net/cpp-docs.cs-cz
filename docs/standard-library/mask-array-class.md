@@ -1,5 +1,5 @@
 ---
-title: mask_array – třída | Microsoft Docs
+title: mask_array – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852201"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962670"
 ---
 # <a name="maskarray-class"></a>mask_array – třída
 
-Třída interní, pomocného šablony, která podporuje objekty, které jsou podmnožiny nadřazené valarray – třídy, zadaný logický výraz, tím, že poskytuje operace mezi poli podmnožina.
+Třída interní, pomocné šablony, která podporuje objekty, které jsou podmnožinou tohoto nadřazeného valarrays zadaným logický výraz, tím, že poskytuje operace mezi podmnožinu polí.
 
 ## <a name="syntax"></a>Syntaxe
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt, který ukládá odkaz na objekt **va** třídy [valarray –](../standard-library/valarray-class.md)**\<typ >**, společně s objekt **ba**  třídy [valarray –\<bool >](../standard-library/valarray-bool-class.md), který popisuje pořadí prvků pro výběr **valarray –\<typ >** objektu.
+Tato třída popisuje objekt, který uchovává odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, spolu s objektem `ba` třídy [ valarray –\<bool >](../standard-library/valarray-bool-class.md), která popisuje řadu prvků, můžete vybírat z `valarray<Type>` objektu.
 
-Můžete vytvořit **mask_array\<typ >** objekt pouze napsáním výrazu ve formátu [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Členské funkce tříd mask_array pak chovat jako odpovídající funkce podpisy definované pro **valarray –\<typ >** kromě toho, že má vliv jenom pořadí vybraných elementů.
+Můžete vytvořit `mask_array<Type>` pouze v případě, že napíšeme výrazu v podobě [posouzení ohrožení zabezpečení&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Členské funkce třídy mask_array – potom chovají jako odpovídající funkce podpisy definované pro `valarray<Type>`, s tím rozdílem, že má vliv jenom pořadí vybraných elementů.
 
-Pořadí se skládá z maximálně **ba.size** elementy. Element *J* je zahrnuta pouze v případě **ba**[ *J*] hodnotu true. Proto existují libovolný počet elementů v pořadí true elementy v **ba**. Pokud `I` je index elementu nejnižší hodnotu true v **ba**, pak **va**[ `I`] je element nula ve zvolené sekvenci.
+Sekvence se skládá z maximálně `ba.size` elementy. Element *J* je zahrnuta, pouze pokud **ba**[ *J*] má hodnotu true. Proto existují libovolný počet prvků v sekvenci jsou true prvky v `ba`. Pokud `I` je index elementu nejnižší hodnota true v `ba`, pak **posouzení ohrožení zabezpečení**[ `I`] je element nula ve zvolené sekvenci.
 
 ## <a name="example"></a>Příklad
 
@@ -82,8 +82,8 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 **Záhlaví:** \<valarray – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

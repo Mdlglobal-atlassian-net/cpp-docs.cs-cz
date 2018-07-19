@@ -1,5 +1,5 @@
 ---
-title: deque – třída | Microsoft Docs
+title: deque – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -98,16 +98,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7718c7ed6069f2b799c1eb06e1cff1e6a95dcc19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963031"
 ---
 # <a name="deque-class"></a>deque – třída
 
-Uspořádá elementy daného typu v lineární uspořádání a jako vektor, umožňuje vysoká rychlost náhodného přístup k žádné elementu a efektivní vkládání a odstraňování za kontejnerem. Ale na rozdíl od vektor `deque` třída také podporuje efektivní vkládání a odstraňování vpředu kontejneru.
+Uspořádá prvky daného typu v lineární uspořádání a, podobně jako vektor, umožňuje rychlý náhodný přístup na libovolný element a efektivní vložení a odstranění zádi kontejneru. Ale na rozdíl od vektor `deque` třída také podporuje efektivní vkládání a odstranění do přední části kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -118,99 +118,99 @@ class deque
 
 ### <a name="parameters"></a>Parametry
 
-`Type` Datový typ elementu k uložení do deque.
+*Typ* typ dat prvku, který bude uložen do deque.
 
-`Allocator` Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o přidělení a zrušení přidělení paměti deque. Tento argument je volitelný a výchozí hodnota je **allocator\<typ > ***.*
+*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti deque. Tento argument je nepovinný a výchozí hodnota je **alokátoru\<typ > ***.*
 
 ## <a name="remarks"></a>Poznámky
 
-Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. [Vektory](../standard-library/vector-class.md) by měl být upřednostňovaný kontejneru pro správu sekvenci, když je náhodný přístup k libovolného elementu a vložení nebo odstranění elementů jsou pouze požadované na konci pořadí. Výkon kontejneru seznamu je nadřízená při efektivní vložení a odstranění (v čase konstantní) v libovolném umístění v rámci pořadí je třeba šetřit. Tyto operace uprostřed sekvenci vyžadují element kopie a přiřazení úměrná počet elementů v pořadí (lineární čas).
+Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. [Vektory](../standard-library/vector-class.md) by měl být upřednostňované kontejner pro správu sekvenci, když je náhodný přístup k libovolnému prvku v na úrovni premium a vložení nebo odstranění prvků jsou pouze požadované na konci sekvence. Výkon kontejneru seznamu je vynikající při efektivní vložení a odstranění (v konstantním čase) v libovolném umístění v rámci sekvence v na úrovni premium. Tyto operace uprostřed sekvence vyžadují kopie elementu a přiřazení úměrný počtu prvků v sekvenci (lineární čas).
 
-Deque přerozdělení dojde, pokud musíte vložit nebo Vymazat elementy sekvence členské funkce:
+Deque realokace dojde, pokud musíte vložit nebo Vymazat elementy sekvence členské funkce:
 
-- Pokud element budou vložena do prázdné sekvenci, nebo pokud chcete nechat prázdné sekvenci vymazáním element, pak iterátory dříve vrácený [začít](#begin) a [end](#end) zneplatní.
+- Pokud element je vložen do prázdné sekvenci, nebo pokud element se vymažou ponechte prázdné sekvenci, pak iterátory dříve vrácené [začít](#begin) a [end](#end) zneplatní.
 
-- Pokud je element vložit na první pozici deque, pak se všechny iterátory, ale žádné odkazy, které určit existující prvky se zneplatní.
+- Pokud element disku do mechaniky na první pozici deque, pak se všechny iterátory, ale žádné odkazy, které určují prvky stávající stanou neplatnými.
 
-- Pokud je element vložit na konci deque, pak [end](#end) a všechny iterátory, ale žádné odkazy, které určit existující prvky se zneplatní.
+- Pokud se element vloží na konci deque, pak [end](#end) a všech iterátorů, ale žádné odkazy, které určují stávající prvky, které se stanou neplatnými.
 
-- Pokud element vymazáním vpředu deque pouze zneplatní iterator a odkazy na vymazaných element.
+- Pokud element se vymažou do přední části deque pouze zneplatní iterátoru a odkazy na vymazaného prvek.
 
-- Pokud je posledním elementem vymazat z konce deque, pouze tento iterator do konečné elementu a odkazy na tento element vymazaných se zneplatní.
+- Pokud se vymažou poslední prvek od konce deque, pouze že iterátor, který má posledním prvkem a odkazy na vymazaného prvek stane neplatným.
 
-Vložení nebo vymazání element zruší, jinak hodnota všechny iterátory a odkazy.
+V opačném případě vložení nebo odstranění prvku zruší platnost všech iterátorů a odkazy.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[deque](#deque)|Vytvoří `deque.` několik konstruktorů jsou poskytnutý pro nastavení obsah nové `deque` různými způsoby: prázdný; načtená zadaný počet prázdné prvky; obsah přesunuté nebo zkopírované z jiného `deque`; obsahu nebo přesunout pomocí iterator; a jeden element zkopírují `deque` `count` časy. Některé z konstruktorů povolit pomocí vlastní `allocator` k vytváření prvků.|
+|[deque –](#deque)|Vytvoří `deque`. Jsou k dispozici několik konstruktorů nastavit obsah nového `deque` různými způsoby: prázdný; načtená zadaného počtu prvků prázdný; obsah přesunut nebo zkopírovaných z jiného `deque`; obsah zkopírovaný ani přesunutý pomocí iterátoru; a jeden element zkopírována `deque` `count` časy. Některé z konstruktorů povolení s využitím vlastní `allocator` k vytváření prvků.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type –](#allocator_type)|Typ, který reprezentuje `allocator` třídy pro `deque` objektu.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje iterator náhodný přístup, který může přistupovat a načítat elementů v `deque` jako `const`|
+|[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídy pro `deque` objektu.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může zobrazovat a číst prvky `deque` jako `const`|
 |[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek v `deque` jako `const.`|
-|[const_reference](#const_reference)|Typ, který obsahuje odkaz na element v `deque` pro čtení a další operace jako `const.`|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterator náhodný přístup, který může přistupovat a načítat elementů v `deque` jako `const`. Deque je zobrazit pozpátku. Další informace najdete v tématu [reverse_iterator – třída](../standard-library/reverse-iterator-class.md)|
-|[difference_type](#difference_type)|Typ, který poskytuje rozdíl mezi dvěma iterátory náhodný přístup, které odkazují na elementy ve stejné `deque`.|
-|[Iterator](#iterator)|Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v `deque`.|
-|[Ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v `deque`.|
-|[Referenční dokumentace](#reference)|Typ, který obsahuje odkaz na element uložené v `deque`.|
-|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje náhodný přístup iterator, které můžou číst nebo upravte element v `deque`. Deque je zobrazit v obráceném pořadí.|
-|[size_type](#size_type)|Typ, který udává počet elementů v `deque`.|
-|[value_type](#value_type)|Typ, který představuje typ data uložená v `deque`.|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek v `deque` pro čtení a další operace jako `const.`|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může zobrazovat a číst prvky `deque` jako **const**. V opačném pořadí zobrazení deque. Další informace najdete v tématu [reverse_iterator – třída](../standard-library/reverse-iterator-class.md)|
+|[difference_type](#difference_type)|Typ, který obsahuje rozdíl mezi dvěma iterátory s náhodným přístupem, které odkazují na prvky ve stejném `deque`.|
+|[iterátor](#iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v `deque`.|
+|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v `deque`.|
+|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `deque`.|
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat prvek v `deque`. V opačném pořadí zobrazení deque.|
+|[size_type](#size_type)|Typ, který vrátí počet prvků v `deque`.|
+|[value_type](#value_type)|Typ, který představuje typ dat uložených v `deque`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Vymaže elementy z `deque` a zkopíruje nové pořadí elementů k cíli `deque`.|
-|[at](#at)|Vrátí odkaz na element v zadaném umístění v `deque`.|
-|[zpět](#back)|Vrátí odkaz na poslední prvek `deque`.|
-|[Začátek](#begin)|Vrátí náhodným přístupem iterator adresování prvním elementem v `deque`.|
-|[cbegin –](#cbegin)|Vrátí const iterator prvním elementem v `deque`.|
-|[cend –](#cend)|Vrátí náhodný přístup `const` iterator, který odkazuje právě přesahuje za konec `deque`.|
-|[Zrušte zaškrtnutí](#clear)|Vymaže všechny elementy `deque`.|
-|[crbegin](#crbegin)|Vrátí const iterator náhodným přístupem na prvním elementem v `deque` zobrazit v obráceném pořadí.|
-|[crend –](#crend)|Vrátí const iterator náhodným přístupem na prvním elementem v `deque` zobrazit v obráceném pořadí.|
-|[emplace –](#emplace)|Vloží element sestavený na místě do `deque` na zadané pozici.|
-|[emplace_back –](#emplace_back)|Přidá element sestavený na místě na konec `deque`.|
-|[emplace_front –](#emplace_front)|Přidá element sestavený opatření ke spuštění `deque`.|
-|[prázdný](#empty)|Vrátí `true` Pokud `deque` obsahuje nulovým počtem elementů a `false` pokud obsahuje jeden či více elementů.|
-|[End](#end)|Vrátí náhodný přístup iterator této body právě přesahuje za konec `deque`.|
-|[vymazání](#erase)|Odebere element nebo rozsah elementů v `deque` ze zadaných pozic.|
-|[Přední](#front)|Vrátí odkaz na prvním elementem v `deque`.|
-|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objekt, který se používá pro konstrukci `deque`.|
-|[Vložení](#insert)|Vloží elementu, několik elementy nebo rozsahu prvků do `deque` na zadané pozici.|
-|[max_size](#max_size)|Vrátí maximální možné délku `deque`.|
-|[pop_back –](#pop_back)|Vymaže prvek na konec `deque`.|
-|[pop_front](#pop_front)|Vymaže prvek na začátek `deque`.|
-|[push_back –](#push_back)|Přidá prvek na konec `deque`.|
-|[push_front –](#push_front)|Přidá prvek na začátek `deque`.|
-|[rbegin –](#rbegin)|Vrátí iterator náhodný přístup na první prvek v odstínech `deque`.|
-|[rend –](#rend)|Vrátí iterator náhodný přístup tohoto body bezprostředně za posledním prvkem v odstínech `deque`.|
+|[přiřazení](#assign)|Odstraní prvky ze `deque` a zkopíruje novou posloupnost prvků k cíli `deque`.|
+|[at](#at)|Vrátí odkaz na prvek v zadaném umístění v `deque`.|
+|[Zpět](#back)|Vrátí odkaz na poslední prvek `deque`.|
+|[začít](#begin)|Vrátí iterátor náhodného přístupu adresující první prvek v `deque`.|
+|[cbegin](#cbegin)|Vrátí konstantní iterátor na první prvek `deque`.|
+|[cend](#cend)|Vrátí náhodným přístupem **const** iterátor, který ukazuje přesně za konec `deque`.|
+|[Vymazat](#clear)|Vymaže všechny prvky `deque`.|
+|[crbegin](#crbegin)|Vrátí konstantní iterátor náhodného přístupu na první prvek v `deque` zobrazit v obráceném pořadí.|
+|[crend –](#crend)|Vrátí konstantní iterátor náhodného přístupu na první prvek v `deque` zobrazit v obráceném pořadí.|
+|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `deque` na určené pozici.|
+|[emplace_back](#emplace_back)|Přidá prvek vytvořený v místě na konec objektu `deque`.|
+|[emplace_front –](#emplace_front)|Přidá prvek vytvořený v místě na začátek `deque`.|
+|[prázdný](#empty)|Vrátí **true** Pokud `deque` neobsahuje žádnou prvky a **false** pokud obsahuje jeden nebo více prvků.|
+|[ukončení](#end)|Vrátí iterátor náhodného přístupu, na kterou odkazuje přesně za konec `deque`.|
+|[vymazání](#erase)|Odebere prvek nebo rozsah prvků `deque` od zadané pozice.|
+|[Přední](#front)|Vrátí odkaz na první prvek v `deque`.|
+|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator` objekt, který se používá ke konstrukci `deque`.|
+|[Vložit](#insert)|Vloží prvek, několik prvků nebo rozsahu prvků do `deque` na určené pozici.|
+|[max_size](#max_size)|Vrátí maximální možná délka `deque`.|
+|[pop_back –](#pop_back)|Odstraní prvek na konec `deque`.|
+|[pop_front](#pop_front)|Odstraní prvek na začátku `deque`.|
+|[push_back](#push_back)|Přidá prvek na konec objektu `deque`.|
+|[push_front](#push_front)|Přidá prvek na začátku `deque`.|
+|[rbegin –](#rbegin)|Vrátí iterátor s náhodným přístupem na první prvek v obráceném objektu `deque`.|
+|[rend –](#rend)|Vrátí iterátor náhodného přístupu, který ukazuje za poslední prvek v obráceném objektu `deque`.|
 |[Změna velikosti](#resize)|Určuje novou velikost `deque`.|
-|[shrink_to_fit](#shrink_to_fit)|Zahození přebytečnou kapacitou.|
+|[shrink_to_fit](#shrink_to_fit)|Odstraní nadbytečnou kapacitu.|
 |[Velikost](#size)|Vrátí počet prvků v `deque`.|
-|[Swap](#swap)|Výměny dva elementy `deque`s.|
+|[Prohození](#swap)|Vymění prvky dvou `deque`s.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor&#91;&#93;](#op_at)|Vrátí odkaz na `deque` element na zadané pozici.|
-|[operátor =](#op_eq)|Nahradí prvků `deque` kopii jiného `deque`.|
+|[– operátor&#91;&#93;](#op_at)|Vrátí odkaz na `deque` prvek na zadané pozici.|
+|[operátor =](#op_eq)|Nahradí prvky objektu `deque` s kopií jiného `deque`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<deque >
+**Hlavička**: \<deque >
 
 ## <a name="allocator_type"></a>  deque::allocator_type
 
-Typ, který reprezentuje allocator – třída objektu deque.
+Typ, který představuje třídu alokátoru pro objekt deque.
 
 ```cpp
 typedef Allocator allocator_type;
@@ -218,15 +218,15 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-**allocator_type –** je synonymum pro parametr šablony **Allocator**.
+`allocator_type` je synonymum pro parametr šablony `Allocator`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_allocator –](#get_allocator).
+Podívejte se na příklad pro [get_allocator](#get_allocator).
 
 ## <a name="assign"></a>  deque::Assign
 
-Vymaže elementy z deque a zkopíruje novou sadu elementů deque cíl.
+Odstraní prvky z deque a zkopíruje novou sadu prvků do cílového deque.
 
 ```cpp
 template <class InputIterator>
@@ -243,19 +243,19 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-`First` Pozice první prvek v rozsahu elementy zkopírovány z argument deque.
+*První* pozice prvního prvku v rozsahu prvků, zkopírovány z argumentu deque.
 
-`Last` Pozice první prvek mimo rozsah elementy zkopírovány z argument deque.
+*Poslední* pozice prvního prvku mimo rozsah prvků zkopírovány z argumentu deque.
 
-`Count` Počet kopií vkládání do deque elementu.
+*Počet* počet kopií prvku vloženého do deque.
 
-`Val` Hodnota elementu vkládání do deque.
+*Val* hodnota prvku vloženého do deque.
 
-`IList` Initializer_list vkládání do deque.
+*IList* initializer_list vloženého do deque.
 
 ### <a name="remarks"></a>Poznámky
 
-Po existující prvky v cílové deque jsou vymazány, `assign` buď vloží zadaný rozsah elementů z původní deque nebo z některé jiné deque do cílové deque nebo vložení kopie nového elementu zadané hodnoty do deque cíl.
+Po jakýchkoli prvků v cílovém deque jsou vymazány, `assign` buď vložení zadaného rozsahu prvků z původního deque nebo z některé deque do cílové deque nebo vložení kopií nového prvku zadané hodnoty do cílového deque.
 
 ### <a name="example"></a>Příklad
 
@@ -315,7 +315,7 @@ d1 = 5678c1 =102030c1 =5060c1 =4444444
 
 ## <a name="at"></a>  deque::AT
 
-Vrátí odkaz na element v zadaném umístění deque.
+Vrátí odkaz na prvek v zadaném umístění deque.
 
 ```cpp
 reference at(size_type pos);
@@ -325,15 +325,15 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-`pos` Dolní index (nebo číslo pozice) elementu tak, aby odkazovaly v deque.
+*POS* dolní index (nebo číslo pozice) elementu odkazovat deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud `pos` je větší než velikost deque, **v** vyvolá výjimku.
+Pokud *pos* je větší než velikost deque, `at` vyvolá výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud vrátí hodnotu, která **v** je přiřazena k `const_reference`, deque objekt nelze změnit. Pokud vrátí hodnotu, která **v** je přiřazena k **odkaz**, deque objekt můžete upravit.
+Pokud návratová hodnota `at` je přiřazen `const_reference`, deque objekt nelze změnit. Pokud návratová hodnota `at` je přiřazen `reference`, deque objekt lze upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -365,7 +365,7 @@ The second element is 20
 
 ## <a name="back"></a>  deque::back
 
-Vrátí odkaz na posledním prvkem deque.
+Vrátí odkaz na poslední prvek deque.
 
 ```cpp
 reference back();
@@ -374,13 +374,13 @@ const_reference back() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Posledním prvkem deque. Pokud deque je prázdná, není definován návratovou hodnotu.
+Poslední prvek deque. Pokud deque je prázdný, návratová hodnota není definována.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrátí hodnotu, která **zpět** je přiřazena k `const_reference`, deque objekt nelze změnit. Pokud vrátí hodnotu, která **zpět** je přiřazena k **odkaz**, deque objekt můžete upravit.
+Pokud návratová hodnota `back` je přiřazen `const_reference`, deque objekt nelze změnit. Pokud návratová hodnota `back` je přiřazen `reference`, deque objekt lze upravit.
 
-Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definován jako 1 nebo 2, Chyba za běhu dojde při pokusu o přístup k elementu v prázdný deque.  V tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md) Další informace.
+Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, dojde k chybě při pokusu o přístup k prvku v prázdné deque.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
 
 ### <a name="example"></a>Příklad
 
@@ -414,7 +414,7 @@ The next-to-last integer of c1 is 10
 
 ## <a name="begin"></a>  deque::begin
 
-Vrátí iterator adresování prvním elementem v deque.
+Vrátí iterátor adresující první prvek deque.
 
 ```cpp
 const_iterator begin() const;
@@ -423,11 +423,11 @@ iterator begin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresování prvním elementem v deque nebo do umístění úspěšné prázdný deque iterator náhodný přístup.
+Iterátor pro náhodný přístup adresující první prvek deque nebo na umístění následující po prázdný deque.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrátí hodnotu, která **začít** je přiřazena k `const_iterator`, deque objekt nelze změnit. Pokud vrátí hodnotu, která **začít** je přiřazena k **iterator**, objekt deque je možné upravit.
+Pokud návratová hodnota `begin` je přiřazen `const_iterator`, deque objekt nelze změnit. Pokud návratová hodnota `begin` je přiřazena `iterator`, deque objekt lze upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -466,7 +466,7 @@ The first element of c1 is now 20
 
 ## <a name="cbegin"></a>  deque::cbegin
 
-Vrátí `const` iterator, která řeší prvním elementem v rozsahu.
+Vrátí **const** iterátor adresující první prvek v rozsahu.
 
 ```cpp
 const_iterator cbegin() const;
@@ -474,13 +474,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `const` iterator náhodný přístup, který odkazuje na první prvek rozsahu nebo umístění právě přesahuje za konec prázdného rozsahu (pro prázdného rozsahu, `cbegin() == cend()`).
+A **const** iterátor s náhodným přístupem, který ukazuje na první prvek rozsahu nebo na umístění hned za koncem prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin`, nemůže být upravena elementů v rozsahu.
+S návratovou hodnotou `cbegin`, nejde upravit prvky v rozsahu.
 
-Můžete použít tuto funkci člen místě `begin()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `begin()` a `cbegin()`.
+Můžete použít tuto členskou funkci místo `begin()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než `const`) kontejner jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -492,7 +492,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  deque::cend
 
-Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.
+Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
 ```cpp
 const_iterator cend() const;
@@ -504,9 +504,9 @@ Iterátor pro náhodný přístup, který ukazuje přesně za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.
+`cend` slouží k otestování, zda iterátor prošel konec rozsahu.
 
-Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.
+Můžete použít tuto členskou funkci místo `end()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner jakéhokoli druhu, který podporuje `end()` a `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -516,11 +516,11 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.
+Hodnota vrácená `cend` by neměla být dereferencována.
 
 ## <a name="clear"></a>  deque::clear
 
-Vymaže všechny elementy deque.
+Vymaže všechny prvky deque.
 
 ```cpp
 void clear();
@@ -556,7 +556,7 @@ The size of the deque after clearing is 0
 
 ## <a name="const_iterator"></a>  deque::const_iterator
 
-Typ, který poskytuje iterator náhodný přístup, který může přistupovat a načítat **const** element v deque.
+Typ, který poskytuje iterátor náhodného přístupu, který může zobrazovat a číst **const** prvek deque.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -564,7 +564,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_iterator` nelze použít k úpravě hodnota elementu.
+Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -572,7 +572,7 @@ Podívejte se na příklad pro [zpět](#back).
 
 ## <a name="const_pointer"></a>  deque::const_pointer
 
-Poskytuje odkazy `const` element v deque.
+Poskytuje ukazatel **const** element v deque.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -580,11 +580,11 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_pointer` nelze použít k úpravě hodnota elementu. [Iterator](#iterator) se běžně používá pro přístup deque elementu.
+Typ `const_pointer` nelze použít ke změně hodnoty prvku. [Iterátoru](#iterator) se běžněji používá pro přístup k prvku deque.
 
 ## <a name="const_reference"></a>  deque::const_reference
 
-Typ, který obsahuje odkaz na **const** element uložené v deque pro čtení a provádění **const** operace.
+Typ, který poskytuje odkaz na **const** prvek uložený v deque – pro čtení a provádění **const** operace.
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -592,7 +592,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reference` nelze použít k úpravě hodnota elementu.
+Typ `const_reference` nelze použít ke změně hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -628,7 +628,7 @@ The second element is 20
 
 ## <a name="const_reverse_iterator"></a>  deque::const_reverse_iterator
 
-Typ, který poskytuje iterator náhodný přístup, který může číst všechny **const** element v deque.
+Typ, který poskytuje iterátor náhodného přístupu, který může přečíst jakýkoli **const** prvek deque.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -636,15 +636,15 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reverse_iterator` nelze změnit hodnotu elementu a slouží k iteraci v rámci deque pozpátku.
+Typ `const_reverse_iterator` hodnotu prvku nelze změnit a slouží k iteraci v rámci deque – v opačném pořadí.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rbegin –](#rbegin) příklad toho, jak deklarace a pomocí iterace.
+Podívejte se na příklad pro [rbegin –](#rbegin) příklad toho, jak deklarovat a používat iterátor.
 
 ## <a name="crbegin"></a>  deque::crbegin
 
-Vrátí const iterator prvním elementem v invertovaných deque.
+Vrátí konstantní iterátor na první prvek v obráceném objektu deque.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -652,7 +652,7 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverse náhodný přístup iterator adresování prvním elementem v odstínech [deque](../standard-library/deque-class.md) nebo řešení, co je posledním prvkem v unreversed `deque`.
+Reverse konstantní iterátor adresující první prvek v obráceném objektu s náhodným přístupem [deque](../standard-library/deque-class.md) nebo co bylo posledním prvkem v neobráceném adresování `deque`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -693,7 +693,7 @@ The first element of the reversed deque is 2.
 
 ## <a name="crend"></a>  deque::crend
 
-Vrátí const iterator, která řeší úspěšné posledním prvkem v invertovaných deque umístění.
+Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu deque.
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -701,17 +701,17 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverse iterator náhodný přístup, která řeší umístění úspěšné posledním prvkem v odstínech [deque](../standard-library/deque-class.md) (umístění, které měl před prvním elementem v unreversed deque).
+Reverse konstantní iterátor s náhodným přístupem, který adresuje umístění následující po posledním prvku v obráceném objektu [deque](../standard-library/deque-class.md) (umístění, ke které došlo před první prvek v neobráceném deque).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend` se používá s odstínech `deque` stejně jako [array::cend](../standard-library/array-class-stl.md#cend) se používá s `deque`.
+`crend` se používá s obráceném objektu `deque` stejně jako [array::cend](../standard-library/array-class-stl.md#cend) se používá s `deque`.
 
-S návratovou hodnotou `crend` (vhodně odečte), `deque` objekt nelze změnit.
+S návratovou hodnotou `crend` (vhodně snížen), `deque` objekt nelze změnit.
 
-`crend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své deque.
+`crend` slouží k otestování pro Určuje, zda zpětný iterátor dosáhl konce jeho deque.
 
-Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.
+Hodnota vrácená `crend` by neměla být dereferencována.
 
 ### <a name="example"></a>Příklad
 
@@ -742,7 +742,7 @@ int main( )
 
 ## <a name="deque"></a>  deque::deque
 
-Vytvoří deque určité velikosti, nebo u elementů na určitou hodnotu, nebo s konkrétní přidělování nebo jako kopii všech nebo součástí některých jiných deque.
+Sestaví deque určité velikosti nebo s prvky určité hodnoty, nebo se zvláštní alokátory nebo jako kopii celé nebo části některé deque.
 
 ```cpp
 deque();
@@ -774,33 +774,33 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 |Parametr|Popis|
 |-|-|
-|`Al`|Třída alokátoru, která se má použít s tímto objektem.|
-|`Count`|Počet elementů v vytvořený deque.|
-|`Val`|Hodnota elementů v vytvořený deque.|
-|`Right`|Deque, které má být kopie vytvořený deque.|
-|`First`|Pozice první prvek v rozsahu elementy, které se mají zkopírovat.|
-|`Last`|Pozice první prvek mimo rozsah elementy, které se mají zkopírovat.|
-|`IList`|Initializer_list ke kopírování.|
+|*Al*|Třída alokátoru, která se má použít s tímto objektem.|
+|*Počet*|Počet prvků v konstruovaný deque.|
+|*Val*|Hodnota prvků v konstruovaný deque.|
+|*Doprava*|Deque –, který je vytvořený deque kopií.|
+|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
+|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
+|* IList.|Objekt initializer_list, které se mají zkopírovat.|
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory uložit objekt allocator ( `Al`) a inicializace deque.
+Všechny konstruktory ukládají objekt alokátoru (*Al*) a inicializovat deque.
 
-První dva konstruktory, zadejte prázdnou počáteční deque; druhý také určuje typ allocator ( `_Al`) má být použit.
+První dva konstruktory určují prázdný počáteční deque; pro druhou kolekci také určuje typ alokátoru (`_Al`) který se má použít.
 
-Třetí konstruktor určuje opakování určeného čísla ( `count`) elementů výchozí hodnota pro třídu `Type`.
+Třetí konstruktor určuje opakování zadaného počtu (`count`) prvků výchozí hodnoty pro třídu `Type`.
 
-Konstruktory čtvrté a páté zadejte opakování ( `Count`) elementy hodnoty `val`.
+Čtvrtý a pátý konstruktor určuje opakování (*počet*) prvků hodnoty `val`.
 
-Šesté konstruktor určuje kopii deque `Right`.
+Šestý konstruktor určuje kopii deque *vpravo*.
 
-Konstruktory sedmého a osmého zkopírujte rozsahu `[First, Last)` z deque.
+Sedmý a osmý konstruktory kopírují rozsah `[First, Last)` z deque.
 
-Sedmého konstruktor přesune deque `Right`.
+Sedmý konstruktor přesune deque *vpravo*.
 
-Osmého konstruktor zkopíruje obsah initializer_list.
+Osmý konstruktor zkopíruje obsah objektu initializer_list.
 
-Žádná z konstruktorů provést všechny dočasné přerozdělení.
+Žádné konstruktory neprovádí žádná prozatímní přerozdělení.
 
 ### <a name="example"></a>Příklad
 
@@ -1008,7 +1008,7 @@ int main( )
 
 ## <a name="difference_type"></a>  deque::difference_type
 
-Typ, který poskytuje rozdíl mezi dvěma iterátory, které odkazují na elementů v rámci stejné deque.
+Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejné deque.
 
 ```cpp
 typedef typename Allocator::difference_type difference_type;
@@ -1016,7 +1016,7 @@ typedef typename Allocator::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-A `difference_type` lze také popsat jako počet elementů mezi dvěma ukazatele.
+A `difference_type` lze popsat také jako počet prvků mezi dvěma ukazateli.
 
 ### <a name="example"></a>Příklad
 
@@ -1063,7 +1063,7 @@ The number '30' is in c1 collection 3 times.
 
 ## <a name="emplace"></a>  deque::emplace
 
-Vloží element sestavený na místě do deque na zadané pozici.
+Vloží vytvořený prvek na místo do deque na určené pozici.
 
 ```cpp
 iterator emplace(
@@ -1075,16 +1075,16 @@ iterator emplace(
 
 |Parametr|Popis|
 |-|-|
-|`_Where`|Pozice v [deque](../standard-library/deque-class.md) vloženy první prvek.|
-|`val`|Hodnota elementu vkládání do `deque`.|
+|*_Where*|Pozice v [deque](../standard-library/deque-class.md) vloženy první prvek.|
+|*Val*|Hodnota prvku vloženého do `deque`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Funkce vrátí hodnotu iterátor, který odkazuje na pozici, kde byl nového elementu vložit do deque.
+Vrátí iterátor, který odkazuje na místo, kde nový prvek vložila do deque.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny operace vložení může být nákladné naleznete v tématu `deque` diskuzi o `deque` výkonu.
+Všechny operace vložení může být nákladné, naleznete v tématu `deque` diskuzi o `deque` výkonu.
 
 ### <a name="example"></a>Příklad
 
@@ -1130,7 +1130,7 @@ vv1[0] = 10 20 30
 
 ## <a name="emplace_back"></a>  deque::emplace_back
 
-Přidá element v místě na konec deque zkonstruovat.
+Přidá prvek vytvořený v místě na konec objektu deque.
 
 ```cpp
 void emplace_back(Type&& val);
@@ -1140,7 +1140,7 @@ void emplace_back(Type&& val);
 
 |Parametr|Popis|
 |-|-|
-|`val`|Prvek přidán na konec [deque](../standard-library/deque-class.md).|
+|*Val*|Prvek přidán na konec objektu [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Příklad
 
@@ -1180,7 +1180,7 @@ Moved last element: 2
 
 ## <a name="emplace_front"></a>  deque::emplace_front
 
-Přidá element v místě na konec deque zkonstruovat.
+Přidá prvek vytvořený v místě na konec objektu deque.
 
 ```cpp
 void emplace_front(Type&& val);
@@ -1190,7 +1190,7 @@ void emplace_front(Type&& val);
 
 |Parametr|Popis|
 |-|-|
-|`val`|Element přidat na začátek [deque](../standard-library/deque-class.md).|
+|*Val*|Element přidá na začátek [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Příklad
 
@@ -1230,7 +1230,7 @@ Moved last element: 2
 
 ## <a name="empty"></a>  deque::Empty
 
-Testy, pokud deque je prázdný.
+Testuje, zda deque je prázdný.
 
 ```cpp
 bool empty() const;
@@ -1238,7 +1238,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque je prázdná. **false** Pokud deque není prázdná.
+**Hodnota TRUE** Pokud deque je prázdná. **false** Pokud deque není prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -1267,7 +1267,7 @@ The deque is not empty.
 
 ## <a name="end"></a>  deque::end
 
-Vrátí iterátor, který řeší úspěšné posledním prvkem v deque umístění.
+Vrátí iterátor adresující umístění následující po posledním prvku v deque.
 
 ```cpp
 const_iterator end() const;
@@ -1277,11 +1277,11 @@ iterator end();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator náhodný přístup, která řeší úspěšné posledním prvkem v deque umístění. Pokud deque je prázdný, deque::end == deque::begin.
+Iterátor s náhodným přístupem, který adresuje umístění následující po posledním prvku v deque. Pokud deque je prázdný, pak deque::end == deque::begin.
 
 ### <a name="remarks"></a>Poznámky
 
-**end** slouží k otestování, jestli iterovat dosáhne konce své deque.
+`end` slouží k otestování, zda iterátor dosáhl konce jeho deque.
 
 ### <a name="example"></a>Příklad
 
@@ -1327,7 +1327,7 @@ The deque is now: 10 400 30
 
 ## <a name="erase"></a>  deque::Erase
 
-Odebere element nebo rozsah elementů v deque ze zadaných pozic.
+Odebere prvek nebo rozsah prvků v deque od zadané pozice.
 
 ```cpp
 iterator erase(iterator _Where);
@@ -1337,19 +1337,19 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-`_Where` Pozice elementu, který má být odebrán z deque.
+*_Where* pozici elementu, který má být odebrán z deque.
 
-`first` Pozice první prvek odebrán z deque.
+*první* pozice prvního prvku odebrán deque.
 
-`last` Pozice bezprostředně za posledním elementem odebrán z deque.
+*poslední* pozice bezprostředně za posledním prvkem odebrán deque.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator náhodný přístup, který určuje první prvek zbývající nad rámec všechny elementy odebrána, nebo odkazy na konec deque, pokud neexistuje žádný takový prvek.
+Iterátor náhodného přístupu, který určuje první prvek zbývající za jakýmikoli odstraněnými prvky, nebo ukazatel na konci deque, pokud žádný takový prvek neexistuje.
 
 ### <a name="remarks"></a>Poznámky
 
-**Vymazat** nikdy vyvolá výjimku.
+`erase` nikdy nevyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
@@ -1397,7 +1397,7 @@ After erasing all elements but the first, deque becomes: 20
 
 ## <a name="front"></a>  deque::front
 
-Vrátí odkaz na prvním elementem v deque.
+Vrátí odkaz na první prvek v deque.
 
 ```cpp
 reference front();
@@ -1407,13 +1407,13 @@ const_reference front() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud deque je prázdná, návratový není definován.
+Pokud deque je prázdný, vrácení není definován.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrátí hodnotu, která `front` je přiřazena k `const_reference`, deque objekt nelze změnit. Pokud vrátí hodnotu, která `front` je přiřazena k **odkaz**, deque objekt můžete upravit.
+Pokud návratová hodnota `front` je přiřazen `const_reference`, deque objekt nelze změnit. Pokud návratová hodnota `front` je přiřazen `reference`, deque objekt lze upravit.
 
-Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definován jako 1 nebo 2, Chyba za běhu dojde při pokusu o přístup k elementu v prázdný deque.  V tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md) Další informace.
+Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, dojde k chybě při pokusu o přístup k prvku v prázdné deque.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
 
 ### <a name="example"></a>Příklad
 
@@ -1447,7 +1447,7 @@ The second integer of c1 is 11
 
 ## <a name="get_allocator"></a>  deque::get_allocator
 
-Vrátí kopii allocator objekt použitý k vytvoření deque.
+Vrátí kopii přidělování objektu používanou k vytvoření deque.
 
 ```cpp
 Allocator get_allocator() const;
@@ -1459,7 +1459,7 @@ Allocator používané deque.
 
 ### <a name="remarks"></a>Poznámky
 
-Alokátorů pro třídu deque zadejte, jak třída spravuje úložiště. Alokátorů výchozí součástí standardní knihovna C++ – třídy kontejnerů postačí pro většinu programovacích potřeb. Psaní a pomocí vlastní allocator – třída je rozšířená C++.
+Alokátory pro deque – Třída zadejte, jak spravuje třídu úložiště. Výchozí alokátorů součástí třídy kontejneru standardní knihovny C++ postačí pro většinu programovacích potřeb. Psaní a použití vlastní třídu alokátoru je rozšířená C++.
 
 ### <a name="example"></a>Příklad
 
@@ -1486,7 +1486,7 @@ int main( )
 
 ## <a name="insert"></a>  deque::Insert
 
-Vloží elementu nebo počet elementů nebo rozsah elementů do deque na zadané pozici.
+Vloží prvek nebo prvky, nebo rozsah prvků do deque na určené pozici.
 
 ```cpp
 iterator insert(
@@ -1517,24 +1517,24 @@ IList);
 
 |Parametr|Popis|
 |-|-|
-|`Where`|Pozice v deque cíl, kde je první prvek vložit.|
-|`Val`|Hodnota elementu vkládání do deque.|
-|`Count`|Počet elementů vkládání do deque.|
-|`First`|Pozice první prvek v rozsahu elementů v deque argument, který se má zkopírovat.|
-|`Last`|Pozice první prvek mimo rozsah elementů v deque argument, který se má zkopírovat.|
-|`IList`|Initializer_list elementů k vložení.|
+|*kde*|Pozice v cílové deque vloženy první prvek.|
+|*Val*|Hodnota prvku vloženého do deque.|
+|*Počet*|Počet prvků vloženého do deque.|
+|*první*|Pozice prvního prvku v rozsahu prvků v deque argumentů, které se mají zkopírovat.|
+|*poslední*|Pozice prvního prvku mimo rozsah prvků v deque argumentů, které se mají zkopírovat.|
+|*IList*|Objekt initializer_list elementy vložit.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dva vložení funkce vrátí iterátor, který odkazuje na pozici, kde byl nového elementu vložit do deque.
+Vložit první dvě funkce vrátí iterátor, který odkazuje na místo, kde nový prvek vložila do deque.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny operace vložení může být náročná.
+Všechny operace vložení může být nákladné.
 
 ## <a name="iterator"></a>  deque::iterator
 
-Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat libovolný element v deque.
+Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat libovolný prvek v deque.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1542,7 +1542,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ **iterator** lze upravit hodnotu elementu.
+Typ `iterator` lze použít ke změně hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -1550,7 +1550,7 @@ Podívejte se na příklad pro [začít](#begin).
 
 ## <a name="max_size"></a>  deque::max_size
 
-Vrátí maximální délka deque.
+Vrátí maximální délku objektu deque.
 
 ```cpp
 size_type max_size() const;
@@ -1558,7 +1558,7 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální možné délku deque.
+Maximální možná délka deque.
 
 ### <a name="example"></a>Příklad
 
@@ -1581,7 +1581,7 @@ int main( )
 
 ## <a name="op_at"></a>  deque::Operator]
 
-Vrátí odkaz na element deque na zadané pozici.
+Vrátí odkaz na element deque na určené pozici.
 
 ```cpp
 reference operator[](size_type pos);
@@ -1591,17 +1591,17 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-`pos` Pozice elementu deque bude odkazovat.
+*POS* pozice prvku deque má odkazovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na element, jejíž pozice je zadána v argumentu. Pokud je větší než velikost deque pozice zadána, výsledkem nedefinovaný.
+Odkaz na element, jehož pozice se zadaným v argumentu. Pokud zadané umístění je větší než velikost deque, výsledek není definován.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrátí hodnotu, která `operator[]` je přiřazena k `const_reference`, deque objekt nelze změnit. Pokud vrátí hodnotu, která `operator[]` je přiřazena k **odkaz**, deque objekt můžete upravit.
+Pokud návratová hodnota `operator[]` je přiřazen `const_reference`, deque objekt nelze změnit. Pokud návratová hodnota `operator[]` je přiřazen `reference`, deque objekt lze upravit.
 
-Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definován jako 1 nebo 2, Chyba za běhu dojde při pokusu o přístup k elementu mimo hranice deque.  V tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md) Další informace.
+Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, dojde k chybě při pokusu o přístup k prvku mimo hranice deque.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
 
 ### <a name="example"></a>Příklad
 
@@ -1632,7 +1632,7 @@ The second integer of c1 is 20
 
 ## <a name="op_eq"></a>  deque::Operator =
 
-Nahradí elementy tento deque pomocí elementů z jiné deque.
+Nahradí prvky objektu tohoto deque, konkrétně pomocí elementů z jiného deque.
 
 ```cpp
 deque& operator=(const deque& right);
@@ -1644,13 +1644,13 @@ deque& operator=(deque&& right);
 
 |Parametr|Popis|
 |-|-|
-|`right`|Deque, která poskytuje nový obsah.|
+|*doprava*|Deque –, který poskytuje nový obsah.|
 
 ### <a name="remarks"></a>Poznámky
 
-První přepsání zkopíruje prvky na této deque z `right`, zdroj přiřazení. Druhý přepsání přesune prvky na této deque z `right`.
+První přepsání zkopíruje prvky tohoto deque z *správné*, zdroj přiřazení. Druhý přepsání přesune prvky na této deque z *správné*.
 
-Elementy, které jsou součástí této deque před provedením operátor se odeberou.
+Elementy, které jsou součástí této deque před provedením operátor, který se odeberou.
 
 ### <a name="example"></a>Příklad
 
@@ -1715,7 +1715,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ **ukazatel** lze upravit hodnotu elementu. [Iterator](#iterator) se běžně používá pro přístup deque elementu.
+Typ `pointer` lze použít ke změně hodnoty prvku. [Iterátoru](#iterator) se běžněji používá pro přístup k prvku deque.
 
 ## <a name="pop_back"></a>  deque::pop_back
 
@@ -1727,7 +1727,7 @@ void pop_back();
 
 ### <a name="remarks"></a>Poznámky
 
-Posledním elementem nesmí být prázdný. `pop_back` nikdy vyvolá výjimku.
+Poslední prvek nesmí být prázdný. `pop_back` nikdy nevyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
@@ -1761,7 +1761,7 @@ After deleting the element at the end of the deque, the last element is: 1
 
 ## <a name="pop_front"></a>  deque::pop_front
 
-Odstraní prvek na začátek deque.
+Odstraní prvek na začátku deque.
 
 ```cpp
 void pop_front();
@@ -1769,7 +1769,7 @@ void pop_front();
 
 ### <a name="remarks"></a>Poznámky
 
-První prvek nesmí být prázdný. `pop_front` nikdy vyvolá výjimku.
+První prvek nesmí být prázdný. `pop_front` nikdy nevyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
@@ -1803,7 +1803,7 @@ After deleting the element at the beginning of the deque, the first element is: 
 
 ## <a name="push_back"></a>  deque::push_back
 
-Přidá prvek na konec deque.
+Přidá prvek na konec objektu deque.
 
 ```cpp
 void push_back(const Type& val);
@@ -1815,15 +1815,15 @@ void push_back(Type&& val);
 
 |Parametr|Popis|
 |-|-|
-|`val`|Prvek přidán na konec deque.|
+|*Val*|Prvek přidán na konec objektu deque.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vyvolána výjimka, je ponechán deque v nezměněném stavu a je znovu vyvolány výjimku.
+Pokud je vyvolána výjimka, deque zůstane beze změny a je znovu vyvolána výjimka.
 
 ## <a name="push_front"></a>  deque::push_front
 
-Přidá prvek na začátek deque.
+Přidá prvek na začátku deque.
 
 ```cpp
 void push_front(const Type& val);
@@ -1834,11 +1834,11 @@ void push_front(Type&& val);
 
 |Parametr|Popis|
 |-|-|
-|`val`|Prvek přidán na začátek deque.|
+|*Val*|Element přidá na začátek deque.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vyvolána výjimka, je ponechán deque v nezměněném stavu a je znovu vyvolány výjimku.
+Pokud je vyvolána výjimka, deque zůstane beze změny a je znovu vyvolána výjimka.
 
 ### <a name="example"></a>Příklad
 
@@ -1879,7 +1879,7 @@ Moved first element: a
 
 ## <a name="rbegin"></a>  deque::rbegin
 
-Vrátí iterovat prvním elementem v invertovaných deque.
+Vrátí iterátor na první prvek v obráceném objektu deque.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -1889,15 +1889,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zpětné iterator náhodný přístup adresování prvním elementem v invertovaných deque nebo řešení, co je posledním prvkem v unreversed deque.
+Zpětný iterátor náhodného přístupu adresující první prvek v obráceném objektu deque nebo adresování, co bylo posledním prvkem v neobráceném deque.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin` se používá s odstínech deque stejně jako [začít](#begin) se používá s deque.
+`rbegin` se používá s obrácený deque – stejně jako [začít](#begin) se používá s deque.
 
-Pokud vrátí hodnotu, která `rbegin` je přiřazena k `const_reverse_iterator`, deque objekt nelze změnit. Pokud vrátí hodnotu, která `rbegin` je přiřazena k `reverse_iterator`, je možné upravit objekt deque.
+Pokud návratová hodnota `rbegin` je přiřazen `const_reverse_iterator`, deque objekt nelze změnit. Pokud návratová hodnota `rbegin` je přiřazen `reverse_iterator`, deque objekt lze upravit.
 
-`rbegin` můžete použít k iteraci v rámci deque zpětné.
+`rbegin` můžete použít k iteraci v rámci deque zpětně.
 
 ### <a name="example"></a>Příklad
 
@@ -1955,7 +1955,7 @@ Last element in deque is now 40.
 
 ## <a name="reference"></a>  deque::Reference
 
-Typ, který obsahuje odkaz na element uložené v deque.
+Typ, který poskytuje odkaz na prvek uložený v deque.
 
 ```cpp
 typedef typename Allocator::reference reference;
@@ -1991,7 +1991,7 @@ The second element is 20
 
 ## <a name="rend"></a>  deque::rend
 
-Vrátí iterátor, který řeší úspěšné posledním prvkem v invertovaných deque umístění.
+Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu deque.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -2001,17 +2001,17 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zpětné iterator náhodný přístup, která řeší umístění úspěšné posledním prvkem v invertovaných deque (umístění, které měl před prvním elementem v unreversed deque).
+Zpětný iterátor náhodného přístupu, který adresuje umístění následující po posledním prvku v obráceném objektu deque (umístění, ke které došlo před první prvek v neobráceném deque).
 
 ### <a name="remarks"></a>Poznámky
 
-`rend` se používá s odstínech deque stejně jako [end](#end) se používá s deque.
+`rend` se používá s obrácený deque – stejně jako [end](#end) se používá s deque.
 
-Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, deque objekt nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, je možné upravit objekt deque.
+Pokud návratová hodnota `rend` je přiřazen `const_reverse_iterator`, deque objekt nelze změnit. Pokud návratová hodnota `rend` je přiřazen `reverse_iterator`, deque objekt lze upravit.
 
-`rend` slouží k ověření, zda zpětné iterator dosáhne konce své deque.
+`rend` slouží k ověření, zda zpětný iterátor dosáhl konce jeho deque.
 
-Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.
+Hodnota vrácená `rend` by neměla být dereferencována.
 
 ### <a name="example"></a>Příklad
 
@@ -2086,17 +2086,17 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-`_Newsize` Novou velikost deque.
+*_Newsize* novou velikost deque.
 
-`val` Hodnota nové prvky, které mají být přidány do deque, pokud nová velikost je větší, původní velikost. Pokud hodnota je vynechán, nové prvky přiřazené výchozí hodnota pro třídu.
+*Val* nové prvky, které mají být přidány do deque – Pokud je nová velikost větší hodnotu, která původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud deque velikost je menší než požadovaná velikost `_Newsize`, jsou přidány elementy na deque dokud nedosáhne požadované velikosti.
+Pokud deque velikost je menší než požadovaná velikost *_Newsize*, prvky jsou přidány do deque, dokud nedosáhne požadované velikosti.
 
-Pokud deque velikost je větší než požadovaná velikost, jsou elementy nejbližší na konec deque odstranit, dokud deque dosáhne velikosti `_Newsize`.
+Pokud deque velikost je větší než požadovaná velikost, prvky nejblíže konci deque jsou odstraněny, dokud deque dosáhne velikosti *_Newsize*.
 
-Pokud existuje velikost deque je stejný jako požadovaná velikost, nebyla provedena žádná akce.
+Pokud je k dispozici velikost deque je stejná jako požadovaná velikost, nedojde k žádné akci.
 
 [velikost](#size) odráží aktuální velikost deque.
 
@@ -2142,7 +2142,7 @@ The value of the last element is now 20
 
 ## <a name="reverse_iterator"></a>  deque::reverse_iterator
 
-Typ, který poskytuje iterator náhodný přístup, který může číst nebo upravovat element v invertovaných deque.
+Typ, který poskytuje iterátor náhodného přístupu, který může číst nebo upravovat prvek v obráceném objektu deque.
 
 ```cpp
 typedef std::reverse_iterator<iterator> reverse_iterator;
@@ -2150,7 +2150,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` je použít k iteraci v rámci deque.
+Typ `reverse_iterator` se používá k iteraci v rámci deque.
 
 ### <a name="example"></a>Příklad
 
@@ -2158,7 +2158,7 @@ Podívejte se na příklad pro rbegin –.
 
 ## <a name="shrink_to_fit"></a>  deque::shrink_to_fit
 
-Zahození přebytečnou kapacitou.
+Odstraní nadbytečnou kapacitu.
 
 ```cpp
 void shrink_to_fit();
@@ -2166,7 +2166,7 @@ void shrink_to_fit();
 
 ### <a name="remarks"></a>Poznámky
 
-Neexistuje žádný způsob přenosné k určení, zda `shrink_to_fit` snižuje úložiště používaný [deque](../standard-library/deque-class.md).
+Neexistuje žádný přenosný způsob, jak zjistit, jestli `shrink_to_fit` snižuje úložiště využitá službou [deque](../standard-library/deque-class.md).
 
 ### <a name="example"></a>Příklad
 
@@ -2240,7 +2240,7 @@ The deque length is now 2.
 
 ## <a name="size_type"></a>  deque::size_type
 
-Typ, který udává počet elementů v deque.
+Typ, který vrátí počet prvků v deque.
 
 ```cpp
 typedef typename Allocator::size_type size_type;
@@ -2252,7 +2252,7 @@ Podívejte se na příklad pro [velikost](#size).
 
 ## <a name="swap"></a>  deque::swap
 
-Elementy dvě deques výměny.
+Vymění prvky dvou deques.
 
 ```cpp
 void swap(deque<Type, Allocator>& right);
@@ -2263,9 +2263,9 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Deque poskytuje prvky, které mají být prohodily nebo deque, jehož elementy jsou k výměně s těmi deque `left`.
+*správné* deque poskytující prvky pro záměnu nebo deque, jehož prvky mají vyměnit s těmi deque `left`.
 
-`left` Deque, jehož elementy jsou k výměně s těmi deque `right`.
+*levé* deque, jehož prvky mají vyměnit s těmi deque *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -2324,7 +2324,7 @@ After swapping with c2, deque c1 is: 1 2 3
 
 ## <a name="value_type"></a>  deque::value_type
 
-Typ, který představuje typ data uložená v deque.
+Typ, který představuje datový typ uložený v deque.
 
 ```cpp
 typedef typename Allocator::value_type value_type;
@@ -2332,7 +2332,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type` je synonymum pro parametr šablony **typu**.
+`value_type` je synonymum pro parametr šablony `Type`.
 
 ### <a name="example"></a>Příklad
 
@@ -2354,7 +2354,7 @@ int main( )
 44
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

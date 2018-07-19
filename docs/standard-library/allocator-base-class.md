@@ -1,5 +1,5 @@
 ---
-title: allocator_base – třída | Microsoft Docs
+title: allocator_base – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,16 +48,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962450"
 ---
 # <a name="allocatorbase-class"></a>allocator_base – třída
 
-Definuje základní třídu a běžné funkce, které jsou nutné k vytvoření přidělení uživatelem definované z filtr synchronizace.
+Definuje základní třídu a běžné funkce potřebné k vytváření alokátorem definovaný uživatelem z filtru synchronizace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Type`|Typ elementů přidělené pomocí přidělujícího modulu.|
-|`Sync`|Zásady synchronizace pro přidělení, což je [sync_none – třída](../standard-library/sync-none-class.md), [sync_per_container – třída](../standard-library/sync-per-container-class.md), [sync_per_thread – třída](../standard-library/sync-per-thread-class.md), nebo [sync_shared Třída](../standard-library/sync-shared-class.md).|
+|*Typ*|Typ prvků přidělaná přidělujícího modulu.|
+|*Synchronizace*|Zásady synchronizace pro přidělování, což je [sync_none – třída](../standard-library/sync-none-class.md), [sync_per_container – třída](../standard-library/sync-per-container-class.md), [sync_per_thread – třída](../standard-library/sync-per-thread-class.md), nebo [sync_shared – Třída](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -85,34 +85,34 @@ class allocator_base
 |-|-|
 |[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
 |[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[difference_type](#difference_type)|Integrální typ se znaménkem představující rozdíl mezi hodnotami ukazatelé na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[Ukazatele](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[Referenční dokumentace](#reference)|Typ, který obsahuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[size_type](#size_type)|Typu bez znaménka integrální, představující Délka libovolného pořadí, které objekt třídy šablony `allocator_base` můžete přidělit.|
-|[value_type](#value_type)|Typ, který je spravován pomocí přidělujícího modulu.|
+|[difference_type](#difference_type)|Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.|
+|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
+|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
+|[size_type](#size_type)|Bez znaménka celočíselného typu, který může představovat Délka libovolného pořadí, které objekt třídy šablony `allocator_base` můžete přidělit.|
+|[value_type](#value_type)|Typ, který je spravovaný nástrojem přidělujícího modulu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[_Charalloc](#charalloc)|Přidělí úložiště pro pole typu `char`.|
-|[_Chardealloc –](#chardealloc)|Uvolní úložiště pro pole obsahující elementy typu `char`.|
-|[Adresa](#address)|Vyhledá objekt, jehož hodnota je zadána adresa.|
-|[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.|
-|[konstrukce](#construct)|Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
-|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|
-|[Destroy –](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uloží objekt.|
-|[max_size](#max_size)|Vrátí počet prvků typu `Type` , by mohly být přiděleny v objektu třídy allocator před použitím volné paměti.|
+|[_Charalloc](#charalloc)|Alokují prostor pro pole typu **char**.|
+|[_Chardealloc –](#chardealloc)|Uvolňuje úložiště pro pole obsahující prvky typu **char**.|
+|[Adresa](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
+|[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.|
+|[Konstrukce](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
+|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
+|[zrušení](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
+|[max_size](#max_size)|Vrátí počet prvků typu *typ* , které by mohly být přiděleny v objektu alokátoru třídy předtím, než se využilo volné paměti.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Přidělí úložiště pro pole typu `char`.
+Alokují prostor pro pole typu **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,19 +122,19 @@ char *_Charalloc(size_type count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`count`|Počet prvků v poli, která bude přidělena.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidělená.
+Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen používá kontejnery, když kompilujete s kompilátoru, která nelze kompilovat obnovení vazby. Implementuje `_Charalloc` pro uživatelem definované allocator vrácením výsledku volání `allocate` funkce filtru synchronizace.
+Tato členská funkce používá kontejnery při kompilaci s kompilátorem, který nejde zkompilovat obnovení vazby. Implementuje `_Charalloc` pro uživatelem definované allocator vrácením výsledku volání `allocate` funkce filtru synchronizace.
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Uvolní úložiště pro pole obsahující elementy typu `char`.
+Uvolňuje úložiště pro pole obsahující prvky typu **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,16 +144,16 @@ void _Chardealloc(void* ptr, size_type count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`count`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen používá kontejnery, když kompilujete s kompilátoru, která nelze kompilovat obnovení vazby. Implementuje `_Chardealloc` pro uživatelem definované allocator voláním `deallocate` funkce filtru synchronizace. Ukazatele ptr, aby byl dříve vrátil voláním `_Charalloc` allocator objektu, který porovnává rovna `*this`, přidělování objekt stejnou velikost a typ pole. `_Chardealloc` nikdy vyvolá výjimku.
+Tato členská funkce používá kontejnery při kompilaci s kompilátorem, který nejde zkompilovat obnovení vazby. Implementuje `_Chardealloc` pro uživatelem definované allocator voláním `deallocate` funkce filtru synchronizace. Ptr ukazatel musí byla předtím vrácena voláním `_Charalloc` pro objekt alokátoru, který při porovnání rovna `*this`, přidělení objektu array stejné velikosti a typu. `_Chardealloc` nikdy nevyvolá výjimku.
 
 ## <a name="address"></a>  allocator_base::Address
 
-Vyhledá objekt, jehož hodnota je zadána adresa.
+Vyhledá adresu objektu, jehož hodnota je určena.
 
 ```cpp
 pointer address(reference val);
@@ -163,19 +163,19 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametry
 
-`val` Const nebo nonconst hodnota objektu, jejíž adresa se hledají.
+*Val* const nebo nonconst hodnotu objektu, jehož adresu má být vyhledán pro.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnoty, respektive const nebo nonconst najít const nebo nonconst ukazatele na objekt.
+Najít hodnoty, resp. const nebo nonconst konstantní nebo nonconst ukazatel na objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce je implementována pro přidělování uživatelem definované vrácením `&val`.
+Tato členská funkce je implementován pro allocator definovaný uživatelem, tak, že vrací `&val`.
 
 ## <a name="allocate"></a>  allocator_base::allocate
 
-Přiděluje blok paměti dostatečně velký pro uložení alespoň některé zadaný počet elementů.
+Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.
 
 ```cpp
 template <class Other>
@@ -188,16 +188,16 @@ pointer allocate(size_type _Nx);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Nx`|Počet prvků v poli, která bude přidělena.|
-|`_Hint`|Tento parametr je ignorován.|
+|*_Nx*|Počet prvků v poli, které mají být přiděleny.|
+|*_Hint*|Tento parametr je ignorován.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidělená.
+Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce implementuje přidělení paměti pro přidělení uživatelem definované vrácením výsledku volání `allocate` funkce synchronizace filtru typu typ `*` Pokud `_Nx == 1`, jinak hodnota vrácením výsledku volání na `operator new(_Nx * sizeof(Type))` přetypování na typ `*`.
+Členská funkce implementuje přidělení paměti pro uživatelem definované allocator vrácením výsledku volání `allocate` funkce filtru typu typ, který synchronizace `*` Pokud `_Nx == 1`, jinak vrací výsledek volání za účelem `operator new(_Nx * sizeof(Type))` přetypování na typ `*`.
 
 ## <a name="allocator_base"></a>  allocator_base::allocator_base
 
@@ -214,11 +214,11 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|Objekt allocator ke kopírování.|
+|*doprava*|Objekt alokátoru, který má být zkopírován.|
 
 ### <a name="remarks"></a>Poznámky
 
-První konstrukce konstruktor [allocator_base](../standard-library/allocator-base-class.md) instance. Druhý konstruktor konstrukce `allocator_base` instanci, například, pro žádné `allocator_base<Type, _Sync>` instance `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
+První konstruktor zkonstruuje [allocator_base –](../standard-library/allocator-base-class.md) instance. Druhý konstruktor vytvoří `allocator_base` instance, které pro všechny `allocator_base<Type, _Sync>` instance `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
 
 ## <a name="const_pointer"></a>  allocator_base::const_pointer
 
@@ -238,7 +238,7 @@ typedef const Type& const_reference;
 
 ## <a name="construct"></a>  allocator_base::Construct
 
-Vytvoří určitý typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.
+Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.
 
 ```cpp
 void construct(pointer ptr, const Type& val);
@@ -248,16 +248,16 @@ void construct(pointer ptr, const Type& val);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na umístění, kde je objekt zkonstruovat.|
-|`val`|Hodnota, pomocí kterého je objekt vytvářen inicializovat.|
+|*ptr*|Ukazatel na umístění, kde má být vytvořen objekt.|
+|*Val*|Hodnota, pomocí kterého je inicializovat objekt vytváří.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce je implementována pro přidělování uživatelem definované voláním `new((void*)ptr Type(val)`.
+Tato členská funkce je implementován pro uživatelem definované allocator voláním `new((void*)ptr Type(val)`.
 
 ## <a name="deallocate"></a>  allocator_base::deallocate
 
-Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.
+Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
 
 ```cpp
 void deallocate(pointer ptr, size_type _Nx);
@@ -267,16 +267,16 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`_Nx`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*_Nx*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce je implementována pro přidělování uživatelem definované voláním `deallocate(ptr)` ve filtru synchronizace `Sync` Pokud `_Nx == 1`, jinak hodnota voláním `operator delete(_Nx * ptr)`.
+Tato členská funkce je implementován pro uživatelem definované allocator voláním `deallocate(ptr)` na filtr synchronizace `Sync` Pokud `_Nx == 1`, jinak voláním `operator delete(_Nx * ptr)`.
 
 ## <a name="destroy"></a>  allocator_base::Destroy
 
-Volá destruktor objekty bez rušení přidělení paměti uloží objekt.
+Volá destruktor objekty bez rušení přidělení paměti uložení objektu.
 
 ```cpp
 void destroy(pointer ptr);
@@ -286,15 +286,15 @@ void destroy(pointer ptr);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel určení adresu objekt, který má být způsobem zničena.|
+|*ptr*|Ukazatel s vyznačením adresu objektu, který se má zničit.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce je implementována pro přidělování uživatelem definované voláním `ptr->~Type()`.
+Tato členská funkce je implementován pro uživatelem definované allocator voláním `ptr->~Type()`.
 
 ## <a name="difference_type"></a>  allocator_base::difference_type
 
-Integrální typ se znaménkem představující rozdíl mezi hodnotami ukazatelé na typ objektu spravovaného pomocí přidělujícího modulu.
+Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.
 
 ```cpp
 typedef std::ptrdiff_t difference_type;
@@ -302,7 +302,7 @@ typedef std::ptrdiff_t difference_type;
 
 ## <a name="max_size"></a>  allocator_base::max_size
 
-Vrátí počet prvků typu `Type` , by mohly být přiděleny v objektu třídy allocator před použitím volné paměti.
+Vrátí počet prvků typu `Type` , které by mohly být přiděleny v objektu alokátoru třídy předtím, než se využilo volné paměti.
 
 ```cpp
 size_type max_size() const;
@@ -310,11 +310,11 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů, které by mohly být přiděleny.
+Počet prvků, které by mohly být přiděleny.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce je implementována pro přidělování uživatelem definované vrácením `(size_t)-1 / sizeof(Type)` Pokud `0 < (size_t)-1 / sizeof(Type)`, jinak `1`.
+Tato členská funkce je implementován pro allocator definovaný uživatelem, tak, že vrací `(size_t)-1 / sizeof(Type)` Pokud `0 < (size_t)-1 / sizeof(Type)`, jinak `1`.
 
 ## <a name="pointer"></a>  allocator_base::Pointer
 
@@ -326,7 +326,7 @@ typedef Type *pointer;
 
 ## <a name="reference"></a>  allocator_base::Reference
 
-Typ, který obsahuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.
+Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.
 
 ```cpp
 typedef Type& reference;
@@ -334,7 +334,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-Typu bez znaménka integrální, představující Délka libovolného pořadí, které objekt třídy šablony `allocator_base` můžete přidělit.
+Bez znaménka celočíselného typu, který může představovat Délka libovolného pořadí, které objekt třídy šablony `allocator_base` můžete přidělit.
 
 ```cpp
 typedef std::size_t size_type;
@@ -342,12 +342,12 @@ typedef std::size_t size_type;
 
 ## <a name="value_type"></a>  allocator_base::value_type
 
-Typ, který je spravován pomocí přidělujícího modulu.
+Typ, který je spravovaný nástrojem přidělujícího modulu.
 
 ```cpp
 typedef Type value_type;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

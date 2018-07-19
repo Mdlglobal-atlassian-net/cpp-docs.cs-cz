@@ -1,5 +1,5 @@
 ---
-title: is_array – třída | Microsoft Docs
+title: is_array – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f4594044ce135ed6927f9d0108863cca12845d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a368b9df930a3a72ba1e43c861663263175699d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844091"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963081"
 ---
 # <a name="isarray-class"></a>is_array – třída
 
-Testy, pokud je typ pole.
+Testuje, zda je typ pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_array;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` pole typu, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je typem pole, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -79,9 +79,9 @@ is_array<int[5]> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [extent – třída](../standard-library/extent-class.md)<br/>

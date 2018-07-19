@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Vytvoření a použití statické knihovny (C++) | Microsoft Docs'
+title: 'Návod: Vytvoření a použití statické knihovny (C++) | Dokumentace Microsoftu'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,119 +16,114 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bcbf5747b667615c96ced3488e16f2a8fc0ef2d
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891578"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034800"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
-Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) pro použití s aplikací C++. Použití statické knihovny je skvělým způsobem, jak kód opakovaně. Místo znovu implementace stejných rutin v každé aplikaci, která vyžaduje funkci, je napsat jednou v statické knihovny a pak na ni odkazujte z aplikací. Kód odkazované z statické knihovny stane součástí aplikace – nemusíte instalovat k použití kódu jiný soubor.  
+Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) pro použití s aplikací v jazyce C++. Použití statické knihovny je skvělým způsobem pro opětovné použití kódu. Místo aby byly stejné rutiny v každé aplikaci, která vyžaduje funkci pokaždé znova implementovány, je napsat jednou ve statické knihovně a potom na něj odkazovat z aplikací. Kód spojený ze statické knihovny se stane součástí vaší aplikace – není nutné instalovat jiný soubor pro použití kódu.  
   
- Tento názorný postup obsahuje tyto úlohy:  
+ Tento návod pokrývá následující úkoly:  
   
--   [Vytvoření projektu statické knihovny](#BKMK_CreateLibProject)  
+-   [Vytvoření projektu statické knihovny](#CreateLibProject)  
   
--   [Přidání třídy se statickou knihovnou](#BKMK_AddClassToLib)  
+-   [Přidání třídy do statické knihovny](#AddClassToLib)  
   
--   [Vytvoření konzolové aplikace C++, který odkazuje na statické knihovny](#BKMK_CreateAppToRefTheLib)  
+-   [Vytvoření konzolové aplikace jazyka C++, který odkazuje na statickou knihovnu](#CreateAppToRefTheLib)  
   
--   [Pomocí funkce ze statické knihovny v aplikaci](#BKMK_UseLibInApp)  
+-   [Pomocí funkcí ze statické knihovny v aplikaci](#UseLibInApp)  
   
--   [Spuštění aplikace](#BKMK_RunApp)  
+-   [Spuštění aplikace](#RunApp)  
   
 ## <a name="prerequisites"></a>Požadavky  
- Pochopení základy jazyka C++.  
+ Porozumění základům jazyka C++.  
   
-##  <a name="BKMK_CreateLibProject"></a> Vytvoření projektu statické knihovny  
+##  <a name="CreateLibProject"></a> Vytvoření projektu statické knihovny  
   
 #### <a name="to-create-a-static-library-project"></a>Vytvoření projektu statické knihovny  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu**.  
+1.  V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
   
-2.  V levém podokně **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, **šablony**, **Visual C++** a potom vyberte  **Win32**.  
+2. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno, Visual C++** a pak vyberte **Windows Desktop**.
   
-3.  V prostředním podokně vyberte **Konzolová aplikace Win32**.  
+3. V prostředním podokně vyberte **desktopový Průvodce pro Windows**.  
   
-4.  Zadejte název projektu – například **MathFuncsLib**– v **název** pole. Zadejte název pro řešení – například **StaticLibrary**– v **název řešení** pole. Vyberte **OK** tlačítko.  
+4.  Zadejte název projektu – například **MathFuncsLib**– v **název** pole. Zadejte název pro toto řešení – například **StaticLibrary**– v **název řešení** pole. Zvolte **OK** tlačítko.  
   
-5.  Na **přehled** stránky **Win32 – Průvodce aplikací** dialogovém okně vyberte **Další** tlačítko.  
+5. V části **typ aplikace**, vyberte statická knihovna (.lib).  
   
-6.  Na **nastavení aplikace** v části **typ aplikace**, vyberte **statické knihovny.**  
+6. V části **další možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
   
-7.  Na **nastavení aplikace** v části **další možnosti**, zrušte **předkompilované hlavičky** zaškrtávací políčko.  
+7. Zvolte **OK** pro vytvoření projektu.  
+ 
+##  <a name="AddClassToLib"></a> Přidání třídy do statické knihovny  
   
-8.  Vyberte **Dokončit** tlačítko pro vytvoření projektu.  
+#### <a name="to-add-a-class-to-the-static-library"></a>Přidání třídy do statické knihovny  
   
-##  <a name="BKMK_AddClassToLib"></a> Přidání třídy se statickou knihovnou  
+1.  Chcete-li vytvořit soubor hlaviček pro novou třídu, otevřete místní nabídku pro **MathFuncsLib** projekt **Průzkumníka řešení**a klikněte na tlačítko **přidat**, **nová položka** . V **přidat novou položku** dialogové okno, v levém podokně v části **Visual C++** vyberte **kód**. V prostředním podokně vyberte **soubor hlaviček (.h)**. Zadejte název souboru hlaviček, například **MathFuncsLib.h**– a klikněte na tlačítko **přidat** tlačítko. Zobrazí se prázdný soubor hlaviček.  
   
-#### <a name="to-add-a-class-to-the-static-library"></a>Přidání třídy se statickou knihovnou  
-  
-1.  Pokud chcete vytvořit soubor hlaviček pro novou třídu, otevřete místní nabídku pro **MathFuncsLib** projektu v **Průzkumníku řešení**a potom vyberte **přidat**, **novou položku** . V **přidat novou položku** dialogovém v levém podokně v části **Visual C++**, vyberte **kód**. V prostředním podokně vyberte **soubor (hlaviček)**. Zadejte název pro soubor hlaviček – například **MathFuncsLib.h**– a potom zvolte **přidat** tlačítko. Zobrazí se prázdný hlavičkový soubor.  
-  
-2.  Přidejte třídu s názvem **MyMathFuncs** na běžné matematické operace, jako je přidání, odčítání, násobení a dělení. Kód by měl vypadat takto:  
+2.  Přidejte třídu pojmenovanou **MyMathFuncs** pro běžné matematické operace, jako je například sčítání, odčítání, násobení a dělení. Kód by měl vypadat takto:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]  
   
-3.  Chcete-li vytvořit zdrojový soubor pro novou třídu, otevřete místní nabídku pro **MathFuncsLib** projektu v **Průzkumníku řešení**a potom zvolte **přidat**, **novou položku** . V **přidat novou položku** dialogovém v levém podokně v části **Visual C++**, vyberte **kód**. V prostředním podokně vyberte **soubor C++ ()**. Zadejte název zdrojového souboru – například **MathFuncsLib.cpp**– a potom zvolte **přidat** tlačítko. Zobrazí se prázdný zdrojového souboru.  
+3.  Chcete-li vytvořit zdrojový soubor pro novou třídu, otevřete místní nabídku **MathFuncsLib** projekt **Průzkumníku řešení**a klikněte na tlačítko **přidat**, **nová položka** . V **přidat novou položku** dialogové okno, v levém podokně v části **Visual C++** vyberte **kód**. V prostředním podokně vyberte **soubor C++ (.cpp)**. Zadejte název zdrojového souboru, například **MathFuncsLib.cpp**– a klikněte na tlačítko **přidat** tlačítko. Zobrazí se prázdný zdrojový soubor.  
   
-4.  Použít k implementaci funkce pro tento zdrojový soubor **MyMathFuncs**. Kód by měl vypadat takto:  
+4.  Použijte tento soubor k implementaci funkcionality pro **MyMathFuncs**. Kód by měl vypadat takto:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#110](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_2.cpp)]  
   
-5.  Zkompilujte se statickou knihovnou výběrem **sestavení**, **sestavit řešení** v řádku nabídek. Tím se vytvoří statickou knihovnu, kterou lze použít jiné programy.  
+5.  Zkompilujte statickou knihovnu tak, že vyberete **sestavení**, **sestavit řešení** na řádku nabídek. Tím se vytvoří statická knihovna, kterou můžete použít v jiných programech.  
   
     > [!NOTE]
-    >  Při sestavování v sadě Visual Studio příkazového řádku, musíte sestavit programu ve dvou krocích. Nejprve spustit **cl /c /EHsc MathFuncsLib.cpp** zkompilovat kód a vytvořte soubor objektu, který je pojmenován **MathFuncsLib.obj**. ( **Cl** příkaz vyvolá Kompilátor Cl.exe a **/c** možnost určuje kompilovat bez propojení. Další informace najdete v tématu [/c (Kompilovat bez propojení)](../build/reference/c-compile-without-linking.md).) Druhý, spusťte **lib MathFuncsLib.obj** k propojení kód a vytvořit se statickou knihovnou **MathFuncsLib.lib**. ( **Lib** příkaz vyvolá správce knihovny, Lib.exe. Další informace najdete v tématu [LIB odkaz](../build/reference/lib-reference.md).)  
+    >  Při sestavování v příkazovém řádku aplikace Visual Studio, je nutné vytvořit program ve dvou krocích. Nejprve spusťte **cl /c/EHsc MathFuncsLib.cpp** ke kompilaci kódu a vytvořte objektový soubor s názvem **MathFuncsLib.obj**. ( **Cl** příkazu vyvolá Kompilátor Cl.exe a **/c** možnost určí možnost kompilace bez propojení. Další informace najdete v tématu [/c (Kompilovat bez propojení)](../build/reference/c-compile-without-linking.md).) Za druhé, spusťte **lib MathFuncsLib.obj** propojení kódu a vytvoření statické knihovny **MathFuncsLib.lib**. ( **Lib** příkazu vyvolá správce knihovny Lib.exe. Další informace najdete v tématu [LIB Reference](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a> Vytvoření konzolové aplikace C++, který odkazuje na statické knihovny  
+##  <a name="CreateAppToRefTheLib"></a> Vytvoření konzolové aplikace jazyka C++, který odkazuje na statickou knihovnu  
   
-#### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>K vytvoření aplikace konzoly C++, která odkazuje na statické knihovny  
+#### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>K vytvoření konzolové aplikace jazyka C++, který odkazuje na statickou knihovnu  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu**.  
+1.  V panelu nabídky zvolte **souboru**, **nový**, **projektu**.  
   
-2.  V levém podokně v části **Visual C++**, vyberte **Win32**.  
+2. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno, Visual C++** a pak vyberte **Windows Desktop**.  
+
+3. V prostředním podokně vyberte **desktopový Průvodce pro Windows**.  
   
-3.  V prostředním podokně vyberte **Konzolová aplikace Win32**.  
+4.  Zadejte název projektu – například **MyExecRefsLib**– v **název** pole. V rozevíracího seznamu vedle položky **řešení**vyberte **přidat do řešení**. Tím přidáte nový projekt do řešení, které obsahuje statickou knihovnu. Zvolte **OK** tlačítko.  
+5. V části **typ aplikace**vyberte **Konzolová aplikace (.exe)**.
+
+6. V části **Additioal možnosti**, zrušte zaškrtnutí políčka **Předkompilovaná hlavička** zaškrtávací políčko.
+
+7. Zvolte **OK** pro vytvoření projektu.  
   
-4.  Zadejte název projektu – například **MyExecRefsLib**– v **název** pole. V rozevíracího seznamu vedle položky **řešení**, vyberte **přidat do řešení**. Tento postup přidá nový projekt na řešení, které obsahuje se statickou knihovnou. Vyberte **OK** tlačítko.  
+##  <a name="UseLibInApp"></a> Pomocí funkcí ze statické knihovny v aplikaci  
   
-5.  Na **přehled** stránky **Win32 – Průvodce aplikací** dialogovém okně vyberte **Další** tlačítko.  
+#### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Využití funkcí ze statické knihovny v aplikaci  
   
-6.  Na **nastavení aplikace** v části **typ aplikace**, vyberte **Konzolová aplikace**.  
+1.  Jakmile vytvoříte konzolovou aplikaci, je vytvořen prázdný program. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V tomto příkladu je pojmenována **MyExecRefsLib.cpp**.  
   
-7.  Na **nastavení aplikace** v části **další možnosti**, zrušte **předkompilované hlavičky** zaškrtávací políčko.  
+2.  Před použitím matematických rutin ze statické knihovny, je nutné je odkazovat. Chcete-li to provést, otevřete místní nabídku projektu MyExecRefsLib v podokně **Průzkumníka řešení**a klikněte na tlačítko **přidat, odkazovat**.  
   
-8.  Vyberte **Dokončit** tlačítko pro vytvoření projektu.  
+3.  **Přidat odkaz** dialogové okno obsahuje knihovny, které lze odkazovat. **Projekty** karta obsahuje seznam projektů v aktuálním řešení a všechny knihovny, které obsahují. Na **projekty** kartu, vyberte **MathFuncsLib** zaškrtněte políčko a klikněte na tlačítko **OK** tlačítko.  
   
-##  <a name="BKMK_UseLibInApp"></a> Pomocí funkce ze statické knihovny v aplikaci  
+4.  Odkaz **MathFuncsLib.h** soubor hlaviček, je třeba změnit cesty obsažených adresářů. V **stránky vlastností** dialogové okno pro **MyExecRefsLib**, rozbalte **vlastnosti konfigurace** uzlu, rozbalte **C/C++** uzel, a potom vyberte **Obecné**. Vedle položky **další adresáře souborů k zahrnutí**, zadejte cestu **MathFuncsLib** adresář nebo procházením vyhledejte ho.  
   
-#### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Chcete použít funkci z se statickou knihovnou v aplikaci  
+     Procházením vyhledejte cestu k adresáři otevřete rozevírací seznam hodnot vlastnost a klikněte na tlačítko **upravit**. V **další adresáře souborů k zahrnutí** dialogové okno, v textovém poli vyberte prázdný řádek a pak zvolte tlačítko se třemi tečkami (**...** ) na konci řádku. V **vybrat adresář** dialogové okno, vyberte **MathFuncsLib** adresář a klikněte na tlačítko **vybrat složku** tlačítko pro výběr uložte a zavřete dialogové okno. V **další adresáře souborů k zahrnutí** dialogového okna zvolte **OK** tlačítko a potom v **stránky vlastností** dialogového okna zvolte **OK**tlačítko uložte provedené změny do projektu.  
   
-1.  Po vytvoření konzolové aplikace se vytvoří prázdný program. Název zdrojového souboru je stejný jako název, který jste zvolili dříve. V tomto příkladu je název **MyExecRefsLib.cpp**.  
-  
-2.  Matematické rutiny můžete použít v statickou knihovnu, musí být uveden. K tomuto účelu otevřete místní nabídku pro **MyExecRefsLib** projektu v **Průzkumníku řešení**a potom zvolte **odkazy**. V **MyExecRefsLibProperty stránky** dialogové okno, rozbalte seznam **společných vlastností** uzlu, vyberte **Framework a odkazy na**a potom vyberte **přidat Nový odkaz** tlačítko. Další informace o **odkazy** dialogové okno, najdete v části [přidávání odkazů](../ide/adding-references-in-visual-cpp-projects.md).  
-  
-3.  **Přidat odkaz na** zobrazí dialogové okno knihovny, které lze odkazovat. **Projekty** karta Vypíše seznam projektů v aktuálním řešení a všechny knihovny, které obsahují. Na **projekty** vyberte **MathFuncsLib** zaškrtněte políčko a potom vyberte **OK** tlačítko.  
-  
-4.  Odkazy **MathFuncsLib.h** soubor hlaviček, je třeba změnit cesty zahrnuté adresáře. V **stránky vlastností** dialogové okno pro **MyExecRefsLib**, rozbalte **vlastnosti konfigurace** uzlu, rozbalte **C/C++** uzel, a potom vyberte **Obecné**. Vedle **další adresáře Include**, zadejte cestu **MathFuncsLib** adresáře nebo procházením vyhledejte ho.  
-  
-     Chcete-li procházet cestu k adresáři, otevřete seznam vlastností hodnota rozevíracího seznamu a poté zvolte **upravit**. V **další adresáře Include** dialogové okno, v textovém poli, vyberte prázdný řádek a potom zvolte tlačítko se třemi tečkami (**...** ) na konci řádku. V **vyberte adresář** dialogové okno, vyberte **MathFuncsLib** adresář a potom zvolte **vyberte složku** tlačítko výběr uložte a zavřete dialogové okno. V **další adresáře Include** dialogové okno, vyberte **OK** tlačítko a potom v **stránky vlastností** dialogovém okně vyberte **OK**tlačítko uložte změny do projektu.  
-  
-5.  Teď můžete použít **MyMathFuncs** – třída v této aplikaci. Chcete-li to provést, nahraďte obsah **MyExecRefsLib.cpp** s tímto kódem:  
+5.  Teď můžete použít **MyMathFuncs** třídy v této aplikaci. Chcete-li to provést, nahraďte obsah **MyExecRefsLib.cpp** s tímto kódem:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]  
   
-6.  Sestavení spustitelný soubor výběrem **sestavení**, **sestavit řešení** v řádku nabídek.  
+6.  Sestavte projekt výběrem **sestavení**, **sestavit řešení** na řádku nabídek.  
   
-##  <a name="BKMK_RunApp"></a> Spuštění aplikace  
+##  <a name="RunApp"></a> Spuštění aplikace  
   
 #### <a name="to-run-the-app"></a>Ke spuštění aplikace  
   
-1.  Ujistěte se, že **MyExecRefsLib** je vybraná jako výchozí projekt tak, že otevřete místní nabídku pro **MyExecRefsLib** v **Průzkumníku**a pak vyberete  **Nastavit jako spouštěný projekt**.  
+1.  Ujistěte se, že **MyExecRefsLib** je vybraná jako výchozí projekt tak, že otevřete místní nabídku pro **MyExecRefsLib** v **Průzkumníka řešení**a poté volbou  **Nastavit jako spouštěný projekt**.  
   
-2.  Chcete-li spustit projekt v řádku nabídek, zvolte **ladění**, **spustit bez ladění**. Výstup by měl vypadat takto:  
+2.  Chcete-li spustit projekt, na panelu nabídek, zvolte **ladění**, **spustit bez ladění**. Výstup by měl vypadat takto:  
   
     ```Output  
     a + b = 106.4  

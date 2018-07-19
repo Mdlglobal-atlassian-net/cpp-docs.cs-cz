@@ -1,5 +1,5 @@
 ---
-title: '&lt;fstream&gt; – definice TypeDef | Microsoft Docs'
+title: '&lt;fstream –&gt; – definice TypeDef | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,24 +13,24 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: fc87e3182e0ee1c8cb4079dd411f54dff0b4c993
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49c5af53c6d174e7f87f75ad8970726c526db714
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962972"
 ---
-# <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; – definice TypeDef
+# <a name="ltfstreamgt-typedefs"></a>&lt;fstream –&gt; – definice TypeDef
 
 ||||
 |-|-|-|
-|[filebuf](#filebuf)|[fstream](#fstream)|[ifstream](#ifstream)|
+|[filebuf](#filebuf)|[fstream –](#fstream)|[ifstream](#ifstream)|
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
 |[wifstream](#wifstream)|[wofstream](#wofstream)|
 
 ## <a name="filebuf"></a>  filebuf
 
-Typ `basic_filebuf` specializované na `char` parametry šablony.
+Typ `basic_filebuf` specializované na **char** parametry šablony.
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -38,11 +38,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_filebuf](../standard-library/basic-filebuf-class.md), specializované pro elementy typu `char` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_filebuf –](../standard-library/basic-filebuf-class.md)specializované pro prvky typu **char** s výchozí vlastností.
 
-## <a name="fstream"></a>  fstream
+## <a name="fstream"></a>  fstream –
 
-Typ `basic_fstream` specializované na `char` parametry šablony.
+Typ `basic_fstream` specializované na **char** parametry šablony.
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -50,13 +50,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_fstream](../standard-library/basic-fstream-class.md), specializované pro elementy typu `char` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_fstream –](../standard-library/basic-fstream-class.md)specializované pro prvky typu **char** s výchozí vlastností.
 
 ## <a name="ifstream"></a>  ifstream
 
-Definuje proud, který se má použít ke čtení dat znakovou sériově ze souboru. `ifstream` je typedef, který se specializuje šablony třídy `basic_ifstream` pro `char`.
+Definuje datový proud, který se má použít ke čtení dat jednobajtový znak sériově ze souboru. `ifstream` Definice TypeDef, která se specializuje na třídu šablony `basic_ifstream` pro **char**.
 
-K dispozici je také `wifstream`, typedef, který se specializuje `basic_ifstream` číst `wchar_t` dvojité šířce znaků. Další informace najdete v tématu [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+K dispozici je také `wifstream`, definice typedef, která se specializuje na `basic_ifstream` číst **wchar_t** dvojnásobně široké znaky. Další informace najdete v tématu [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -64,7 +64,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ifstream](../standard-library/basic-ifstream-class.md), specializované pro elementy znakový typ s vlastnostmi výchozí znak. Příkladem je
+Typ je synonymum pro šablony třídy [basic_ifstream –](../standard-library/basic-ifstream-class.md)specializované pro prvky typu char s výchozí vlastností. Příkladem je
 
 `using namespace std;`
 
@@ -84,7 +84,7 @@ Typ je synonymum pro třídu šablony [basic_ifstream](../standard-library/basic
 
 ## <a name="ofstream"></a>  ofstream
 
-Typ `basic_ofstream` specializované na `char` parametry šablony.
+Typ `basic_ofstream` specializované na **char** parametry šablony.
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -92,11 +92,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ofstream](../standard-library/basic-ofstream-class.md), specializované pro elementy typu `char` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_ofstream –](../standard-library/basic-ofstream-class.md)specializované pro prvky typu **char** s výchozí vlastností.
 
 ## <a name="wfstream"></a>  wfstream
 
-Typ `basic_fstream` specializované na `wchar_t` parametry šablony.
+Typ `basic_fstream` specializované na **wchar_t** parametry šablony.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -104,11 +104,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_fstream](../standard-library/basic-fstream-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_fstream –](../standard-library/basic-fstream-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
 ## <a name="wifstream"></a>  wifstream
 
-Typ `basic_ifstream` specializované na `wchar_t` parametry šablony.
+Typ `basic_ifstream` specializované na **wchar_t** parametry šablony.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -116,11 +116,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ifstream](../standard-library/basic-ifstream-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_ifstream –](../standard-library/basic-ifstream-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
 ## <a name="wofstream"></a>  wofstream
 
-Typ `basic_ofstream` specializované na `wchar_t` parametry šablony.
+Typ `basic_ofstream` specializované na **wchar_t** parametry šablony.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -128,11 +128,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ofstream](../standard-library/basic-ofstream-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_ofstream –](../standard-library/basic-ofstream-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-Typ `basic_filebuf` specializované na `wchar_t` parametry šablony.
+Typ `basic_filebuf` specializované na **wchar_t** parametry šablony.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -140,8 +140,8 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_filebuf](../standard-library/basic-filebuf-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_filebuf –](../standard-library/basic-filebuf-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<fstream >](../standard-library/fstream.md)<br/>
+[\<fstream – >](../standard-library/fstream.md)<br/>

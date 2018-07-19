@@ -1,5 +1,5 @@
 ---
-title: error_category – třída | Microsoft Docs
+title: error_category – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847699"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028226"
 ---
 # <a name="errorcategory-class"></a>error_category – třída
 
-Představuje abstraktní, běžné základ pro objekty, která popisuje kategorie kódy chyb.
+Představuje abstraktní, běžné základ pro objekty, které popisují kategorie kódů chyb.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,40 +45,40 @@ class error_category;
 
 ## <a name="remarks"></a>Poznámky
 
-Dva předdefinované objekty implementovat `error_category`: [generic_category](../standard-library/system-error-functions.md#generic_category) a [system_category](../standard-library/system-error-functions.md#system_category).
+Dvě předdefinované objekty, které implementují `error_category`: [generic_category](../standard-library/system-error-functions.md#generic_category) a [system_category](../standard-library/system-error-functions.md#system_category).
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[value_type](#value_type)|Typ, který představuje hodnotu kódu uložené chyby.|
+|[value_type](#value_type)|Typ představující uložený chybová hodnota kódu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[default_error_condition](#default_error_condition)|Ukládá hodnotu kódu chyby pro objekt podmínku chyby.|
-|[Ekvivalentní](#equivalent)|Vrátí hodnotu, která určuje, zda jsou ekvivalentní objekty chyby.|
+|[default_error_condition](#default_error_condition)|Uloží hodnotu Chyba kódu pro objekt chybová podmínka.|
+|[ekvivalent](#equivalent)|Vrátí hodnotu, která určuje, zda jsou ekvivalentní objekty chyby.|
 |[message](#message)|Vrací název zadané chybový kód.|
-|[Jméno](#name)|Vrací název kategorie.|
+|[Jméno](#name)|Vrátí název kategorie.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator==](#op_eq_eq)|Testování rovnosti mezi `error_category` objekty.|
-|[operator!=](#op_neq)|Testy nerovnost mezi `error_category` objekty.|
-|[operátor <](#op_lt)|Testuje, pokud [error_category](../standard-library/error-category-class.md) objekt je menší než `error_category` objekt předaná pro porovnání.|
+|[operator==](#op_eq_eq)|Ověřuje rovnost mezi `error_category` objekty.|
+|[operator!=](#op_neq)|Testy pro nerovnost mezi `error_category` objekty.|
+|[Operator <](#op_lt)|Testuje, zda [error_category](../standard-library/error-category-class.md) objekt je menší než `error_category` objekt předaný k porovnání.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<system_error – >
+**Záhlaví:** \<system_error >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="default_error_condition"></a>  error_category::default_error_condition
 
-Ukládá hodnotu kódu chyby pro objekt podmínku chyby.
+Uloží hodnotu Chyba kódu pro objekt chybová podmínka.
 
 ```cpp
 virtual error_condition default_error_condition(int _Errval) const;
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Errval`|Hodnotu kód chyby pro ukládání [error_condition](../standard-library/error-condition-class.md).|
+|*_Errval*|Hodnota kódu chyby k ukládání [error_condition –](../standard-library/error-condition-class.md).|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -112,19 +112,19 @@ virtual bool equivalent(const error_code& _Code,
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Errval`|Kód chyby se hodnoty k porovnání.|
-|`_Cond`|[Error_condition](../standard-library/error-condition-class.md) objekt k porovnání.|
-|`_Code`|[Error_code](../standard-library/error-code-class.md) objekt k porovnání.|
+|*_Errval*|Hodnota kódu chyby k porovnání.|
+|*_Cond*|[Error_condition –](../standard-library/error-condition-class.md) objekt k porovnání.|
+|*_Fragmenty*|[Error_code](../standard-library/error-code-class.md) objekt k porovnání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou kategorie a hodnota rovna; v opačném `false`.
+**Hodnota TRUE** Pokud kategorie a hodnota jsou stejné, jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí první členská funkce `*this == _Cond.category() && _Cond.value() == _Errval`.
+První členská funkce vrátí `*this == _Cond.category() && _Cond.value() == _Errval`.
 
-Vrátí druhou členská funkce `*this == _Code.category() && _Code.value() == _Errval`.
+Druhá členská funkce vrátí `*this == _Code.category() && _Code.value() == _Errval`.
 
 ## <a name="message"></a>  error_category::Message
 
@@ -138,17 +138,17 @@ virtual string message(error_code::value_type val) const = 0;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`val`|Hodnota kódu chyby k popisu.|
+|*Val*|Hodnota kódu chyby k popisu.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisný název kódu chyby `val` pro kategorii.
+Vrátí kód chyby: popisný název *val* kategorie.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="name"></a>  error_category::Name
 
-Vrací název kategorie.
+Vrátí název kategorie.
 
 ```cpp
 virtual const char *name() const = 0;
@@ -156,13 +156,13 @@ virtual const char *name() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací název kategorie jako řetězec bajtů ukončené hodnotou null.
+Vrátí název kategorie, jako řetězec zakončený hodnotou null bajtů.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="op_eq_eq"></a>  error_category::Operator ==
 
-Testování rovnosti mezi `error_category` objekty.
+Ověřuje rovnost mezi `error_category` objekty.
 
 ```cpp
 bool operator==(const error_category& right) const;
@@ -172,19 +172,19 @@ bool operator==(const error_category& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|Objekt, který má být testována rovnosti.|
+|*doprava*|Objekt, který chcete testovat rovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud objekty jsou stejné; **false** Pokud objekty nejsou stejné.
+**Hodnota TRUE** Pokud jsou objekty shodné; **false** Pokud objekty nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen operátor vrátí `this == &right`.
+Tento členský operátor vrátí `this == &right`.
 
 ## <a name="op_neq"></a>  error_category::Operator! =
 
-Testy nerovnost mezi `error_category` objekty.
+Testy pro nerovnost mezi `error_category` objekty.
 
 ```cpp
 bool operator!=(const error_category& right) const;
@@ -194,19 +194,19 @@ bool operator!=(const error_category& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|Objekt, který má být testována nerovnost.|
+|*doprava*|Objekt, který má být testována nerovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud `error_category` objekt není rovno `error_category` objekt předaný v `right`; v opačném případě **false**.
+**true** Pokud `error_category` není roven objektu `error_category` objekt předaný v *správné*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `(!*this == right)`.
+Členský operátor vrátí `(!*this == right)`.
 
 ## <a name="op_lt"></a>  error_category::Operator&lt;
 
-Testuje, pokud [error_category](../standard-library/error-category-class.md) objekt je menší než `error_category` objekt předaná pro porovnání.
+Testuje, zda [error_category](../standard-library/error-category-class.md) objekt je menší než `error_category` objekt předaný k porovnání.
 
 ```cpp
 bool operator<(const error_category& right) const;
@@ -216,19 +216,19 @@ bool operator<(const error_category& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|`error_category` Objekt, který má být porovnána.|
+|*doprava*|`error_category` Objekt k porovnání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud `error_category` objekt je menší než `error_category` objekt předaná pro porovnání; V opačném **false**.
+**Hodnota TRUE** Pokud `error_category` objekt je menší než `error_category` objekt předaný k porovnání; V opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `this < &right`.
+Členský operátor vrátí `this < &right`.
 
 ## <a name="value_type"></a>  error_category::value_type
 
-Typ, který představuje hodnotu kódu uložené chyby.
+Typ představující uložený chybová hodnota kódu.
 
 ```cpp
 typedef int value_type;
@@ -236,8 +236,8 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Definici tohoto typu se jedná o synonymum `int`.
+Tato definice typu je synonymum pro **int**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<system_error>](../standard-library/system-error.md)<br/>

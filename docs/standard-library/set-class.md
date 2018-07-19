@@ -1,5 +1,5 @@
 ---
-title: set – třída | Microsoft Docs
+title: set – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c22a260130d38a4ed1dfbf1a49bbc5d670357c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d549d3440de902bf9888fa399e5636b93001ca29
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964883"
 ---
 # <a name="set-class"></a>set – třída
 
-Sada standardní knihovna C++ kontejner – třída se používá pro ukládání a načítání dat z kolekce, ve kterém jsou jedinečné hodnoty elementů obsažených a slouží jako klíčové hodnoty, podle kterých automaticky řazení dat. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.
+Nastavení třídy kontejneru standardní knihovny C++ se používá pro ukládání a načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty, podle kterých jsou data automaticky uspořádávána. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -118,17 +118,17 @@ class set
 
 ### <a name="parameters"></a>Parametry
 
-`Key` Datový typ elementu k uložení do sady.
+*Klíč* typ dat prvku, který bude uložen do sady.
 
-`Traits` Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v sadě. Tento argument je volitelný a binární predikát **menší**  *\<klíč >* je výchozí hodnota.
+*Vlastnosti* typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v sadě. Tento argument je nepovinný a binární predikát **méně**  *\<klíč >* je výchozí hodnota.
 
-V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#sequence_containers)
+V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
-`Allocator` Typ, který představuje uložené allocator objekt, který zapouzdřuje informace o přidělení je sada a zrušení přidělení paměti. Tento argument je volitelný a výchozí hodnota je **allocator ***\<klíč >.*
+*Allocator* typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti v sadě. Tento argument je nepovinný a výchozí hodnota je **alokátoru ***\<klíče >.*
 
 ## <a name="remarks"></a>Poznámky
 
-Standardní knihovna C++ sada je:
+Je sada standardní knihovny jazyka C++:
 
 - Asociativní kontejner, což je kontejner proměnné velikosti, který podporuje efektivní načtení hodnoty prvku založené na přiřazené hodnotě klíče. Dále je to jednoduchý asociativní kontejner, protože jeho hodnoty prvku jsou jeho hodnoty klíče.
 
@@ -144,11 +144,11 @@ Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vklá
 
 Objekt sady (set) by měl být asociativní kontejner dle výběru, kdy jsou podmínky přiřazení hodnot k jejich klíčům splněny aplikací. Prvky sady jsou jedinečné a slouží jako vlastní klíče řazení. Model pro tento typ struktury je uspořádaný seznam slov, v němž se slova mohou vyskytovat pouze jednou. Pokud bylo povoleno více výskytů jednoho slova, je objekt multiset odpovídající strukturou kontejneru. Pokud hodnoty musí být připojeny k seznamu jedinečných klíčových slov, objekt map by byl vhodnou strukturou, který by měla tato data obsahovat. Pokud však klíče nejsou jedinečné, byl by zvoleným kontejnerem multimap.
 
-Sada řadí pořadí jimi řídí voláním funkce uložené objektu typu [key_compare –](#key_compare). Tento objekt uložené je porovnání funkce, která může získat přístup k voláním členské funkce [key_comp –](#key_comp). Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Predikát binární *f*( *x, y*) je objekt funkce, která má dva objekty argument *x* a *y* a návratová hodnota  **Hodnota TRUE,** nebo **false**. Řazení vynucená pro sadu je striktní weak řazení Pokud binární predikát je Nereflexivní, antisymetrického a přenositelné a pokud ekvivalenční přenositelné, kde dva objekty *x* a *y* jsou definovány jako ekvivalentní pokud obě *f*( *x, y*) a *f*( *y, x*) jsou false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
+Sada seřadí sekvence pomocí volání uloženého objektu funkce typu [key_compare](#key_compare). Tento uložený objekt je funkce porovnání, která může získat přístup k voláním členské funkce [key_comp](#key_comp). Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát *f*( *x, y*) je objekt funkce, který má dva objekty argumentu *x* a *y* a návratovou hodnotu  **Hodnota TRUE** nebo **false**. Na sadě je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde dva objekty *x* a *y* definovány jako v případě ekvivalentní obě *f*( *x, y*) a *f*( *y, x*) jsou false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
-V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#sequence_containers)
+V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
-Iterator poskytované set – třída je obousměrný iterator, ale členské funkce tříd [vložit](#insert) a [nastavit](#set) mají verze, které jako parametry šablony trvat slabší vstupní iterator, jejichž požadavky na funkce jsou minimální více než ty, které zaručit třídou iterátory obousměrné. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sadu funkcí, které, ale stačí mohli srozumitelně mluvit o rozsah iterátory [ `First`, `Last`) v kontextu třídy členské funkce.
+Iterátor poskytovaný třídou set je obousměrný iterátor, ale členské funkce třídy [vložit](#insert) a [nastavit](#set) mají verze, které jako parametry šablony berou slabší vstupní iterátor, jehož požadavky na funkce jsou minimálnější než ty zaručeny třídou obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sada funkcí, ale je dostatečná pro srozumitelnou komunikaci o rozsahu u iterátorů [ `First`, `Last`) v rámci členských funkcí třídy.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -160,16 +160,16 @@ Iterator poskytované set – třída je obousměrný iterator, ale členské fu
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type –](#allocator_type)|Typ, který reprezentuje `allocator` tříd pro objekt set.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrné iterator, který může číst `const` element v sadě.|
-|[const_pointer](#const_pointer)|Typ, který poskytuje odkazy `const` element v sadě.|
-|[const_reference](#const_reference)|Typ, který obsahuje odkaz na `const` element uložené v sadě pro čtení a provádění `const` operace.|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrné iterator, který může číst všechny `const` element v sadě.|
+|[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídy pro objekt set.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v sadě.|
+|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel **const** prvku v objektu set.|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** prvek uložený v objektu set pro čtení a provádění **const** operace.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v sadě.|
 |[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu set v rozsahu mezi prvky, na které odkazují iterátory.|
-|[Iterator](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu set.|
+|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu set.|
 |[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu set.|
 |[key_type](#key_type)|Typ popisuje objekt uložený jako prvek sady (objekt set) v jeho kapacitě jako klíč řazení.|
-|[Ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|
+|[Ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek v objektu set.|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v objektu set.|
 |[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu set.|
 |[size_type](#size_type)|Celočíselný typ bez znaménka představující počet prvků v objektu set.|
@@ -180,29 +180,29 @@ Iterator poskytované set – třída je obousměrný iterator, ale členské fu
 
 |Členská funkce|Popis|
 |-|-|
-|[Začátek](#begin)|Vrátí iterátor adresující první prvek v sadě.|
-|[cbegin –](#cbegin)|Vrátí iterátor const adresující první prvek v sadě.|
-|[cend –](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v objektu set.|
-|[Zrušte zaškrtnutí](#clear)|Odstraní všechny prvky objektu set.|
+|[začít](#begin)|Vrátí iterátor adresující první prvek v sadě.|
+|[cbegin](#cbegin)|Vrátí iterátor const adresující první prvek v sadě.|
+|[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v objektu set.|
+|[Vymazat](#clear)|Odstraní všechny prvky objektu set.|
 |[Počet](#count)|Vrátí počet prvků objektu set, jejichž klíč odpovídá klíči se zadaným parametrem.|
 |[crbegin](#rbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|
 |[crend –](#rend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
 |[emplace –](#emplace)|Vloží vytvořený prvek na místo do objektu set.|
 |[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu set.|
 |[prázdný](#empty)|Testuje, zda je objekt set prázdný.|
-|[End](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v objektu set.|
+|[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v objektu set.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů, respektive, na první prvek objektu set s klíčem, který je větší než zadaný klíč a na první prvek objektu set s klíčem, který je roven nebo větší než tento klíč.|
 |[vymazání](#erase)|Odebere prvek nebo rozsah prvků v objektu set od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.|
 |[Najít](#find)|Vrátí iterátor adresující umístění prvku v objektu set, který má klíč odpovídající zadanému klíči.|
-|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objekt použitý k vytvoření sady.|
-|[Vložení](#insert)|Vloží prvek nebo rozsah prvků do objektu set.|
+|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator` objekt použitý k vytvoření sady.|
+|[Vložit](#insert)|Vloží prvek nebo rozsah prvků do objektu set.|
 |[key_comp](#key_comp)|Načte kopii objektu porovnání, která je použita pro seřazení klíčů v objektu set.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu set.|
 |[rbegin –](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu set.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
 |[Velikost](#size)|Vrátí počet prvků v objektu set.|
-|[Swap](#swap)|Vymění prvky dvou sad.|
+|[Prohození](#swap)|Vymění prvky dvou sad.|
 |[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek objektu set s klíčem, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Získá kopii objektu porovnání použitého pro seřazení hodnot prvků objektu set.|
 
@@ -216,11 +216,11 @@ Iterator poskytované set – třída je obousměrný iterator, ale členské fu
 
 **Záhlaví:** \<nastavit >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="allocator_type"></a>  set::allocator_type
 
-Typ, který reprezentuje allocator – třída pro objekt set.
+Typ, který představuje třídu alokátoru pro objekt set.
 
 ```cpp
 typedef Allocator allocator_type;
@@ -228,15 +228,15 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-**allocator_type –** je synonymum pro parametr šablony [Allocator](../standard-library/set-class.md).
+`allocator_type` je synonymum pro parametr šablony [alokátoru](../standard-library/set-class.md).
 
-Vrátí objekt funkce využívající multimnožina pořadí jeho prvky, což je parametr šablony `Allocator`.
+Vrátí objekt funkce, která používá použita třída multiset k seřazení prvků, což je parametr šablony `Allocator`.
 
-Další informace o `Allocator`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Allocator`, najdete v části poznámky [nastavit třídy](../standard-library/set-class.md) tématu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_allocator –](#get_allocator) pro příklad, který používá `allocator_type`.
+Podívejte se na příklad pro [get_allocator](#get_allocator) příklad, který používá `allocator_type`.
 
 ## <a name="begin"></a>  set::begin
 
@@ -250,11 +250,11 @@ iterator begin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrné iterator, který adresování první prvek v sadě nebo umístění úspěšné prázdnou sadou.
+Obousměrný iterátor adresující první prvek v sadě nebo umístění následující po prázdnou sadou.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrátí hodnotu, která **začít** je přiřazena k `const_iterator`, nemůže být upravena elementy v objektu sady. Pokud vrátí hodnotu, která **začít** je přiřazena k **iterator**, mohou být upravena elementy v objektu sady.
+Pokud návratová hodnota `begin` přiřazen `const_iterator`, prvků v objektu set nelze upravit. Pokud návratová hodnota `begin` je přiřazena `iterator`, prvků v objektu set je možné upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -297,7 +297,7 @@ The first element of s1 is now 2
 
 ## <a name="cbegin"></a>  set::cbegin
 
-Vrátí `const` iterator, která řeší prvním elementem v rozsahu.
+Vrátí **const** iterátor adresující první prvek v rozsahu.
 
 ```cpp
 const_iterator cbegin() const;
@@ -305,13 +305,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `const` iterator obousměrného přístup, který odkazuje na první prvek rozsahu nebo umístění právě přesahuje za konec prázdného rozsahu (pro prázdného rozsahu, `cbegin() == cend()`).
+A **const** iterátor s obousměrným přístupem, který ukazuje na první prvek rozsahu nebo na umístění hned za koncem prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin`, nemůže být upravena elementů v rozsahu.
+S návratovou hodnotou `cbegin`, nejde upravit prvky v rozsahu.
 
-Můžete použít tuto funkci člen místě `begin()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `begin()` a `cbegin()`.
+Můžete použít tuto členskou funkci místo `begin()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -323,7 +323,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  set::cend
 
-Vrátí `const` iterator, která řeší umístění bezprostředně za posledním prvkem v rozsahu.
+Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
 ```cpp
 const_iterator cend() const;
@@ -331,13 +331,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `const` iterator obousměrného přístup, který odkazuje právě přesahuje za konec rozsahu.
+A **const** iterátor s obousměrným přístupem, který ukazuje přesně za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k ověření, zda iterovat uplynutí konec její rozsah.
+`cend` slouží k otestování, zda iterátor prošel konec rozsahu.
 
-Můžete použít tuto funkci člen místě `end()` – členská funkce zaručit, že je návratovou hodnotu `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) odvození – klíčové slovo, zadejte, jak je znázorněno v následujícím příkladu. V příkladu, vezměte v úvahu `Container` upravitelná (jinou hodnotu než `const`) kontejneru libovolného typu, který podporuje `end()` a `cend()`.
+Můžete použít tuto členskou funkci místo `end()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner jakéhokoli druhu, který podporuje `end()` a `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -347,7 +347,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Hodnoty vrácené `cend` by neměl být vyhodnoceny odkazy.
+Hodnota vrácená `cend` by neměla být dereferencována.
 
 ## <a name="clear"></a>  set::clear
 
@@ -389,7 +389,7 @@ The size of the set after clearing is 0.
 
 ## <a name="const_iterator"></a>  set::const_iterator
 
-Typ, který poskytuje obousměrné iterator, který může číst **const** element v sadě.
+Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v sadě.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -397,15 +397,15 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_iterator` nelze použít k úpravě hodnota elementu.
+Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [začít](#begin) pro příklad, který používá `const_iterator`.
+Podívejte se na příklad pro [začít](#begin) příklad, který používá `const_iterator`.
 
 ## <a name="const_pointer"></a>  set::const_pointer
 
-Typ, který poskytuje odkazy **const** element v sadě.
+Typ, který poskytuje ukazatel **const** prvku v objektu set.
 
 ```cpp
 typedef typename allocator_type::const_pointer const_pointer;
@@ -413,13 +413,13 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_pointer` nelze použít k úpravě hodnota elementu.
+Typ `const_pointer` nelze použít ke změně hodnoty prvku.
 
-Ve většině případů [const_iterator –](#const_iterator) se má použít pro přístup k elementům v const objekt set.
+Ve většině případů [const_iterator](#const_iterator) by měla sloužit pro přístup k prvkům v objektu set const.
 
 ## <a name="const_reference"></a>  set::const_reference
 
-Typ, který obsahuje odkaz na **const** element uložené v sadě pro čtení a provádění **const** operace.
+Typ, který poskytuje odkaz na **const** prvek uložený v objektu set pro čtení a provádění **const** operace.
 
 ```cpp
 typedef typename allocator_type::const_reference const_reference;
@@ -460,7 +460,7 @@ The first element in the set is 10.
 
 ## <a name="const_reverse_iterator"></a>  set::const_reverse_iterator
 
-Typ, který poskytuje obousměrné iterator, který může číst všechny **const** element v sadě.
+Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v sadě.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -468,11 +468,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reverse_iterator` nelze změnit hodnotu elementu a je použít k iteraci v rámci sady pozpátku.
+Typ `const_reverse_iterator` hodnotu prvku nelze změnit a použít k iteraci v rámci sady v opačném pořadí.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`.
+Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarovat a použít `const_reverse_iterator`.
 
 ## <a name="count"></a>  set::Count
 
@@ -484,11 +484,11 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-`key` Klíč elementy lze porovnat ze sady.
+*klíč* klíč prvky, které mají být porovnány ze sady.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-1, pokud sada obsahuje element, jehož klíč řazení shoduje s klíčem parametr. 0, pokud sada neobsahuje element s odpovídající klíč.
+1, pokud sada obsahuje element, jejichž řazení klíč odpovídá klíči parametru. 0, pokud sada neobsahuje prvek s odpovídajícím klíčem.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -498,7 +498,7 @@ size_type count(const Key& key) const;
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití set::count – členská funkce.
+Následující příklad ukazuje použití set::count členskou funkci.
 
 ```cpp
 // set_count.cpp
@@ -541,13 +541,13 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverse obousměrného iterator adresování první prvek v sadě odstínech nebo řešení, co je posledním prvkem v sadě unreversed.
+Konstantní reverzní obousměrný iterátor adresující první prvek v obráceném objektu set nebo adresování, co bylo posledním prvkem v neobráceném sady.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin` se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.
+`crbegin` se používá s obráceném objektu set stejně jako [začít](#begin) je součástí sady.
 
-S návratovou hodnotou `crbegin`, nemůže být upraven objekt set.
+S návratovou hodnotou `crbegin`, nelze upravit objekt set.
 
 ### <a name="example"></a>Příklad
 
@@ -587,15 +587,15 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverse iterator obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných sadu (umístění, které měl před první prvek v sadě unreversed).
+Konstantní reverzní obousměrný iterátor adresující umístění následující po posledním prvku v obráceném objektu set (umístění, ke které došlo před první prvek v neobráceném sadě).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend` se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.
+`crend` se používá s obráceném objektu set stejně jako [end](#end) je součástí sady.
 
-S návratovou hodnotou `crend`, nemůže být upraven objekt set. Hodnoty vrácené `crend` by neměl být vyhodnoceny odkazy.
+S návratovou hodnotou `crend`, nelze upravit objekt set. Hodnota vrácená `crend` by neměla být dereferencována.
 
-`crend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.
+`crend` slouží k otestování pro Určuje, zda zpětný iterátor dosáhl konce jeho sady.
 
 ### <a name="example"></a>Příklad
 
@@ -631,9 +631,9 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type` Je typ vrácena, pokud odečtením nebo zvyšování prostřednictvím iterátory kontejneru. `difference_type` Se obvykle používá k reprezentování počet elementů v rozsahu *[první, poslední)* mezi iterátory `first` a `last`, obsahuje element, na kterou odkazuje `first` a rozsahu elementy až do, s výjimkou elementu na kterou odkazuje `last`.
+`difference_type` Typ dochází při přičítání nebo zvýšení prostřednictvím iterátorů kontejneru. `difference_type` Se obvykle používá k vyjádření počtu prvků v rozsahu *[jméno, příjmení)* mezi iterátory `first` a `last`, obsahuje element, na které odkazuje `first` a rozsah prvky až, ale bez zahrnutí elementu odkazované `last`.
 
-Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupní iterator, který obsahuje třídu obousměrného iterátory nepodporuje reverzibilního kontejnery, jako je sada, odčítání mezi iterátory pouze iterátory náhodný přístup poskytuje náhodný přístup kontejner například vektoru podporována.
+Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky na vstupní iterátor, který obsahuje třídou obousměrných iterátorů, které jsou podporovány reverzibilního kontejnery, jako je sada odčítání mezi iterátory pouze podporuje iterátory s náhodným přístupem k dispozici kontejnerem náhodného přístupu, jako je například vektoru.
 
 ### <a name="example"></a>Příklad
 
@@ -696,7 +696,7 @@ The number of elements in the set s1 is: 2.
 
 ## <a name="emplace"></a>  set::emplace
 
-Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací).
+Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí).
 
 ```cpp
 template <class... Args>
@@ -709,17 +709,17 @@ emplace(
 
 |Parametr|Popis|
 |-|-|
-|`args`|Argumenty předané vytvořit element, který má být vložen do sady, pokud již obsahuje element, jehož hodnota je ekvivalentně řazení.|
+|*argumenty*|Argumenty předané vytvořit element, který má být vložen do sady, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [pár](../standard-library/pair-structure.md) jejichž bool součást vrátí hodnotu true, pokud došlo vložení a NEPRAVDA, pokud mapy už obsažený element, jehož hodnota měl ekvivalentní hodnotu v řazení. Iterator součást páru návratová hodnota vrátí adresu, kde vložení nového elementu (pokud komponentu bool je true) nebo kde elementu se již nachází (pokud komponentu bool je false).
+A [pár](../standard-library/pair-structure.md) jehož komponenta bool vrátí hodnotu true Pokud bylo vložení provedeno, false, pokud mapa již obsahuje prvek, jehož hodnota má ekvivalentní hodnotu v pořadí. Komponenta iterátoru dvojice návratové hodnoty vrátí adresu, kde byl vložen nový prvek (Pokud je součást logická hodnota je true) nebo kde element se již nachází (je-li komponenta logická hodnota je false).
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce jsou zneplatněny žádné iterátory nebo odkazy.
+Touto funkcí nejsou zneplatněny žádné iterátory nebo odkazy.
 
-Během. uložení Pokud je vyvolána výjimka, stavu kontejneru nezměnil.
+Při uložení Pokud je vyvolána výjimka, stav kontejneru se nezmění.
 
 ### <a name="example"></a>Příklad
 
@@ -778,7 +778,7 @@ int main()
 
 ## <a name="emplace_hint"></a>  set::emplace_hint
 
-Vloží element sestavený na místě (žádné kopírování nebo přesunutí operací), s pomocným parametrem umístění.
+Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí), s náznakem umístění.
 
 ```cpp
 template <class... Args>
@@ -791,20 +791,20 @@ iterator emplace_hint(
 
 |Parametr|Popis|
 |-|-|
-|`args`|Argumenty předané vytvořit element, který má být vložen do sady, pokud sada již obsahuje daný element nebo obecně platí, pokud už obsahuje element jehož hodnota je ekvivalentně řazení.|
-|`where`|Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod okamžitě předchází `where`, vložení se může objevit v amortizovaný konstantní čas místo logaritmické času.)|
+|*argumenty*|Argumenty předané vytvořit element, který má být vložen do sady, pokud sada už obsahuje tento prvek nebo obecně platí, pokud je již neobsahuje prvek, jehož hodnota je ekvivalentně seřazen.|
+|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor do nově vloženou elementu.
+Iterátor na nově vložený prvek.
 
-Pokud vložení selhalo, protože element již existuje, vrátí iterovat do existujícího elementu.
+Pokud vložení se nezdařilo, protože element už existuje, vrátí iterátor na existující prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce jsou zneplatněny žádné iterátory nebo odkazy.
+Touto funkcí nejsou zneplatněny žádné iterátory nebo odkazy.
 
-Během. uložení Pokud je vyvolána výjimka, stavu kontejneru nezměnil.
+Při uložení Pokud je vyvolána výjimka, stav kontejneru se nezmění.
 
 ### <a name="example"></a>Příklad
 
@@ -861,7 +861,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sada je prázdná. **false** Pokud je sada neprázdný.
+**Hodnota TRUE** Pokud sada je prázdná. **false** Pokud sada je prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -907,19 +907,19 @@ iterator end();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator minulosti the-end. Pokud sada je prázdná, pak `set::end() == set::begin()`.
+Minulosti koncem iterátor. Pokud sada byla prázdná, pak `set::end() == set::begin()`.
 
 ### <a name="remarks"></a>Poznámky
 
-**end** slouží k otestování, jestli iterovat uplynutí konce jeho sady.
+**end** slouží k otestování, zda iterátor prošel konec jeho sady.
 
-Hodnoty vrácené **end** by neměl být vyhodnoceny odkazy.
+Hodnota vrácená **end** by neměla být dereferencována.
 
-Příklad kódu, najdete v části [set::find](#find).
+Příklad kódu naleznete v tématu [set::find](#find).
 
 ## <a name="equal_range"></a>  set::equal_range
 
-Vrátí pár iterátory v uvedeném pořadí první prvek v sadě s klíčem, který je větší než nebo rovna zadaný klíč a první prvek v sadě s klíčem, který je větší než klíč.
+Vrátí pár iterátorů v uvedeném pořadí na první prvek v objektu set s klíčem, který je větší než nebo rovno zadanému klíči a na první prvek objektu set s klíčem, který je větší než tento klíč.
 
 ```cpp
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -929,13 +929,13 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-`key` Argument klíč, který se má porovnat s klíči řazení elementu ze sady prohledávaný.
+*klíč* klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pár iterátory, kde je první [lower_bound –](#lower_bound) klíč a druhý je [upper_bound –](#upper_bound) klíče.
+Pár iterátorů, kde je první [lower_bound](#lower_bound) klíče a druhá je [upper_bound](#upper_bound) klíče.
 
-Pro přístup k první iterator páru `pr` vrácené funkcí člen, použijte `pr`. **první**a pokud chcete dereference iterator dolní mez, použijte \*( `pr`. **nejprve**). Pro přístup k druhý iterator páru `pr` vrácené funkcí člen, použijte `pr`. **druhý**a pokud chcete dereference iterator horní mez, použijte \*( `pr`. **druhý**).
+Pro přístup k první iterace dvojice `pr` vrácený členskou funkci, použijte `pr`. **první**a ke zrušení iterátoru dolní mez, použijte \*( `pr`. **nejprve**). Pro přístup k druhé iterátoru dvojice `pr` vrácený členskou funkci, použijte `pr`. **druhý**a ke zrušení iterátoru horní mez, použijte \*( `pr`. **za druhé**).
 
 ### <a name="example"></a>Příklad
 
@@ -1013,13 +1013,13 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-`Where` Pozice elementu, který chcete odebrat.
+*Kde* pozici elementu, který má být odebrán.
 
-`First` Pozice prvního elementu, který chcete odebrat.
+*První* pozice prvního prvku odeberou.
 
-`Last` Pozice bezprostředně za posledním elementem odeberou.
+*Poslední* pozice bezprostředně za posledním prvkem, která se má odebrat.
 
-`Key` Hodnota klíče elementů odeberou.
+*Klíč* hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1110,7 +1110,7 @@ int main()
 
 ## <a name="find"></a>  set::Find
 
-Vrátí iterátor, který odkazuje na umístění elementu v sadě, s klíčem ekvivalentní k zadanému klíči.
+Vrátí iterátor odkazující na umístění prvku v sadě, který má klíč odpovídající zadanému klíči.
 
 ```cpp
 iterator find(const Key& key);
@@ -1121,17 +1121,17 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-`key` Hodnota klíče odpovídala klíč řazení elementu ze sady být vyhledán.
+*klíč* k porovnání s klíči řazení prvek ze sady vyhledávaná hodnota klíče.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který odkazuje na umístění element se zadaným klíčem nebo umístění úspěšné posledním prvkem v sadě ( `set::end()`) Pokud není nalezena žádná shoda pro klíč.
+Iterátor, který odkazuje na umístění element se zadaným klíčem nebo umístění následující po posledním prvku v sadě (`set::end()`) Pokud není nalezena žádná shoda pro klíč.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor, který odkazuje na element v sadě, jehož klíč je ekvivalentní argument `key` v predikátu Binární indukuje řazení podle menší než srovnání vztah.
+Členská funkce vrátí iterátor, který odkazuje na prvek v sadě, jejichž klíč odpovídá argumentu *klíč* pod binární predikát, který indukuje má za výsledek řazení podle méně než srovnání vztah.
 
-Pokud vrátí hodnotu, která **najít** je přiřazena k **const_iterator –**, nemůže být upraven objekt set. Pokud vrátí hodnotu, která **najít** je přiřazena k **iterator**, je možné upravit objekt sady
+Pokud návratová hodnota `find` je přiřazena `const_iterator`, nelze upravit objekt set. Pokud návratová hodnota `find` je přiřazena `iterator`, je možné upravit objekt set
 
 ### <a name="example"></a>Příklad
 
@@ -1197,7 +1197,7 @@ int main()
 
 ## <a name="get_allocator"></a>  set::get_allocator
 
-Vrátí kopii allocator objekt použitý k vytvoření sady.
+Vrátí kopii přidělování objektu používanou k vytvoření sady.
 
 ```cpp
 allocator_type get_allocator() const;
@@ -1205,13 +1205,13 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Allocator používá sada ke správě paměti, což je parametr šablony `Allocator`.
+Alokátor použitý ke správě paměti, což je parametr šablony sadou `Allocator`.
 
-Další informace o `Allocator`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Allocator`, najdete v části poznámky [nastavit třídy](../standard-library/set-class.md) tématu.
 
 ### <a name="remarks"></a>Poznámky
 
-Alokátorů pro třídu sadu zadejte, jak třída spravuje úložiště. Pro většinu programovacích potřeb stačí alokátorů výchozí součástí standardní knihovna C++ – třídy kontejnerů. Psaní a pomocí vlastní allocator – třída je rozšířená C++.
+Alokátory pro třídu sady zadejte, jak spravuje třídu úložiště. Pro většinu programovacích potřeb stačí výchozí alokátorů součástí třídy kontejneru standardní knihovny C++. Psaní a použití vlastní třídu alokátoru je rozšířená C++.
 
 ### <a name="example"></a>Příklad
 
@@ -1316,35 +1316,35 @@ IList);
 
 |Parametr|Popis|
 |-|-|
-|`Val`|Hodnota elementu, který má být vložen do sady, pokud již obsahuje element, jehož hodnota je ekvivalentně řazení.|
-|`Where`|Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod okamžitě předchází `Where`, vložení se může objevit v amortizovaný konstantní čas místo logaritmické času.)|
-|`ValTy`|Parametr šablony, která určuje typ argumentu, který sadu můžete použít k vytvoření element [value_type](../standard-library/map-class.md#value_type)a představuje výhodu předávání `Val` jako argument.|
-|`First`|Pozice prvního prvku, který chcete zkopírovat.|
-|`Last`|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|`InputIterator`|Argument funkce šablony, který splňuje požadavky [vstupní iterator](../standard-library/input-iterator-tag-struct.md) který odkazuje na elementy typu, který slouží k vytvoření [value_type](../standard-library/map-class.md#value_type) objekty.|
-|`IList`|[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.|
+|*Val*|Hodnota element, který má být vložen do sady, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.|
+|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
+|*ValTy*|Parametr šablony určující typ argumentu, sady můžete použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a dokonalému předání *Val* jako argument.|
+|*první*|Pozice prvního prvku, který chcete zkopírovat.|
+|*poslední*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
+|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních [value_type](../standard-library/map-class.md#value_type) objekty.|
+|*IList*|[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí jeden element členské funkce (1) a (2), [pár](../standard-library/pair-structure.md) jejichž `bool` součást je hodnota true, pokud došlo vložení a hodnotu false, pokud sada už obsažený element odpovídající hodnoty v pořadí. Komponenta iterátoru dvojice návratové hodnoty odkazuje na nově vložený prvek, pokud má komponenta `bool` hodnotu true, nebo na existující prvek, pokud má komponenta `bool` hodnotu false.
+Jedním prvkem členské funkce (1) a (2) vrátí [pár](../standard-library/pair-structure.md) jehož **bool** komponenta je hodnota true, pokud bylo vložení provedeno a hodnotu false, pokud již obsahuje prvek stejné hodnoty v sadě řazení. Komponenta iterátoru dvojice návratové hodnoty odkazuje na nově vložený prvek, pokud **bool** komponenta je nastavena hodnota true, nebo do existujícího prvku Pokud **bool** komponenta má hodnotu false.
 
-Jeden element s nápovědu členské funkce, (3) a (4) vrátí iterátor, který odkazuje na umístění, kde nového elementu byl vložen do sady nebo, pokud již existuje element s klíčem ekvivalentní, do existujícího elementu.
+Jeden element s nápovědu členské funkce, (3) a (4) vrátí iterátor odkazující na pozici, kde nový prvek vložila do sady nebo, pokud prvek s ekvivalentním klíčem již existuje, do existujícího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
 Touto funkcí nejsou zneplatněny žádné iterátory, ukazatele ani odkazy.
 
-Během vkládání pouze jeden prvek Pokud je vyvolána výjimka, stavu kontejneru nezměnil. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
+Při vložení pouze jednoho prvku Pokud je vyvolána výjimka, stav kontejneru se nezmění. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-Pro přístup k komponenta iterator `pair` `pr` je vrácený jedné položce členské funkce, použijte `pr.first`; chcete dereference iterator v rámci vrácený pár, použijte `*pr.first`, budete elementu. Chcete-li přistupovat ke komponentě `bool`, použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
+Pro přístup ke komponentě iterátoru objektu `pair` `pr` , který je vrácen jedním prvkem členské funkce, použijte `pr.first`; pro přístup přes ukazatel k iterátoru ve vráceném objektu pair použijte `*pr.first`, poskytující prvek. Pro přístup **bool** komponenty, použijte `pr.second`. Příklad naleznete v ukázce kódu dále v tomto článku.
 
-[Value_type](../standard-library/map-class.md#value_type) kontejner je typedef, který patří do kontejneru a pro sadu, `set<V>::value_type` je typ `const V`.
+[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, který patří do tohoto kontejneru a sady pro `set<V>::value_type` je typ `const V`.
 
-Členská funkce rozsahu (5) vloží pořadí hodnot element do sady, která odpovídá každý prvek řešené pomocí iterace v rozsahu `[First, Last)`; proto `Last` získat nevloží. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `s.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `s`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
+Rozsah členské funkce (5) vloží sekvenci hodnot prvků do objektu set, který odpovídá každému prvku určenému pomocí iterátoru v rozsahu `[First, Last)`; proto `Last` nebude vložen. Členská funkce kontejneru `end()` se vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `s.insert(v.begin(), v.end());` se pokusí vložit všechny prvky `v` do `s`. Vkládají se pouze prvky, které v rozsahu obsahují jedinečné hodnoty. Duplicitní hodnoty jsou ignorovány. Chcete-li sledovat, které prvky jsou odmítnuty, použijte jednoprvkovou verzi funkce `insert`.
 
-Funkce člena inicializátoru seznamu (6) používá [initializer_list](../standard-library/initializer-list.md) kopírování prvků do sady.
+Funkce člena seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) pro kopírování prvků do sady.
 
-Pro vkládání elementu sestavený na místě – to znamená, se provádí žádné operace kopírování nebo přesunutí – najdete v části [set::emplace](#emplace) a [set::emplace_hint](#emplace_hint).
+Pro vložení prvku vytvořeného na místě – to znamená, jsou prováděny žádné operace kopírování nebo přesunutí – naleznete v tématu [set::emplace](#emplace) a [set::emplace_hint](#emplace_hint).
 
 ### <a name="example"></a>Příklad
 
@@ -1447,7 +1447,7 @@ int main()
 
 ## <a name="iterator"></a>  set::iterator
 
-Typ, který poskytuje konstanta [obousměrného iterator](../standard-library/bidirectional-iterator-tag-struct.md) který může číst libovolný element v sadě.
+Typ, který poskytuje konstantní [obousměrný iterátor, který](../standard-library/bidirectional-iterator-tag-struct.md) , který může číst libovolný prvek v objektu set.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1455,7 +1455,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání **iterator**.
+Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání `iterator`.
 
 ## <a name="key_comp"></a>  set::key_comp
 
@@ -1467,19 +1467,19 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce používající sadu pořadí jeho prvky, což je parametr šablony `Traits`.
+Vrátí objekt funkce, který používá sada k seřazení prvků, což je parametr šablony `Traits`.
 
-Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Traits` najdete v článku [nastavit třídy](../standard-library/set-class.md) tématu.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt uložené definuje – členská funkce:
+Uložený objekt definuje členskou funkci:
 
-**Operator() – BOOL**( **const klíč &**`_xVal`, **const klíč &**`_yVal`);
+**BOOL operator()**( **const Key &**`_xVal`, **const Key &**`_yVal`);
 
-která vrací **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
+který vrátí **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
 
-Všimněte si, že oba [key_compare –](#key_compare) a [value_compare –](#value_compare) jsou synonyma pro parametr šablony **vlastnosti**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba [key_compare](#key_compare) a [value_compare –](#value_compare) jsou synonyma pro parametr šablony `Traits`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
@@ -1544,17 +1544,17 @@ typedef Traits key_compare;
 
 `key_compare` je synonymum pro parametr šablony `Traits`.
 
-Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Traits` najdete v článku [nastavit třídy](../standard-library/set-class.md) tématu.
 
-Všimněte si, že oba `key_compare` a [value_compare –](#value_compare) jsou synonyma pro parametr šablony **vlastnosti**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba `key_compare` a [value_compare –](#value_compare) jsou synonyma pro parametr šablony `Traits`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [key_comp –](#key_comp) příklad toho, jak deklarace a používání `key_compare`.
+Podívejte se na příklad pro [key_comp](#key_comp) příklad toho, jak deklarace a používání `key_compare`.
 
 ## <a name="key_type"></a>  set::key_type
 
-Typ, který popisuje objekt uložené jako element sady jako klíč řazení.
+Typ, který popisuje objekt uložený jako prvek sady v jeho kapacitě jako klíč řazení.
 
 ```cpp
 typedef Key key_type;
@@ -1564,9 +1564,9 @@ typedef Key key_type;
 
 `key_type` je synonymum pro parametr šablony `Key`.
 
-Další informace o `Key`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Key`, najdete v části poznámky [nastavit třídy](../standard-library/set-class.md) tématu.
 
-Všimněte si, že oba `key_type` a [value_type](#value_type) jsou synonyma pro parametr šablony **klíč**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba `key_type` a [value_type](#value_type) jsou synonyma pro parametr šablony `Key`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
@@ -1584,11 +1584,11 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-`key` Argument klíč, který se má porovnat s klíči řazení elementu ze sady prohledávaný.
+*klíč* klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor nebo `const_iterator` adresy umístění elementu v sadě, s klíčem, která je rovna nebo větší než argument klíč nebo který adres umístění úspěšné posledním prvkem v sadě, pokud žádné shodovat se nalézt klíče.
+Iterátor nebo `const_iterator` adresy umístění prvku v objektu set, s klíčem, který je roven nebo větší než tento klíč argument nebo který adresuje umístění následující po posledním prvku v sadě Pokud žádná odpovídají je nalezen klíč.
 
 ### <a name="example"></a>Příklad
 
@@ -1649,7 +1649,7 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální délka možné sady.
+Maximální možná délka sady.
 
 ### <a name="example"></a>Příklad
 
@@ -1673,7 +1673,7 @@ int main( )
 
 ## <a name="op_eq"></a>  set::Operator =
 
-Nahradí elementy tohoto `set` pomocí elementů z jiné `set`.
+Nahradí prvky objektu to `set` konkrétně pomocí elementů z jiného `set`.
 
 ```cpp
 set& operator=(const set& right);
@@ -1685,15 +1685,15 @@ set& operator=(set&& right);
 
 |Parametr|Popis|
 |-|-|
-|`right`|`set` Poskytuje nové prvky pro přiřazení k tomuto `set`.|
+|*doprava*|`set` Poskytnutí nových prvků pro přiřazení k tomuto `set`.|
 
 ### <a name="remarks"></a>Poznámky
 
-První verze součásti `operator=` používá [odkazu lvalue](../cpp/lvalue-reference-declarator-amp.md) pro `right`, zkopírovat elementy z `right` k tomuto `set`.
+První verze `operator=` používá [odkaz lvalue](../cpp/lvalue-reference-declarator-amp.md) pro *správné*, zkopírujte prvky ze *správné* této `set`.
 
-Druhá verze používá [deklarátor odkazu hodnoty](../cpp/rvalue-reference-declarator-amp-amp.md) pro vpravo. Přesune elementy z `right` k tomuto `set`.
+Druhá verze používá [odkaz rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) vpravo. Přesune prvky z *správné* tomuto `set`.
 
-Všechny elementy v tomto `set` před provedením funkce operátor se zahodí.
+Všechny prvky v tomto `set` před spuštěním funkce operátoru jsou ignorovány.
 
 ### <a name="example"></a>Příklad
 
@@ -1742,9 +1742,9 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ **ukazatel** lze upravit hodnotu elementu.
+Typ **ukazatel** lze použít ke změně hodnoty prvku.
 
-Ve většině případů [iterator](#iterator) se má použít pro přístup k elementům v objektu sady.
+Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v objektu set.
 
 ## <a name="rbegin"></a>  set::rbegin
 
@@ -1758,15 +1758,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator zpětné obousměrného adresování první prvek v sadě odstínech nebo řešení, co je posledním prvkem v sadě unreversed.
+Reverzní obousměrný iterátor adresující první prvek v obráceném objektu set nebo adresování, co bylo posledním prvkem v neobráceném sady.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin` se používá s sadu odstínech stejně jako [začít](#begin) se používá s sadu.
+`rbegin` se používá s obráceném objektu set stejně jako [začít](#begin) je součástí sady.
 
-Pokud vrátí hodnotu, která `rbegin` je přiřazena k `const_reverse_iterator`, pak objekt set nelze změnit. Pokud vrátí hodnotu, která `rbegin` je přiřazena k `reverse_iterator`, pak je možné upravit objekt set.
+Pokud návratová hodnota `rbegin` je přiřazena `const_reverse_iterator`, pak objekt set nelze upravit. Pokud návratová hodnota `rbegin` je přiřazena `reverse_iterator`, pak je možné upravit objekt set.
 
-`rbegin` můžete použít k iteraci v rámci sady zpětné.
+`rbegin` můžete použít k iteraci v rámci sady zpětně.
 
 ### <a name="example"></a>Příklad
 
@@ -1870,15 +1870,15 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator zpětné obousměrného, která řeší umístění úspěšné posledním prvkem v invertovaných sadu (umístění, které měl před první prvek v sadě unreversed).
+Reverzní obousměrný iterátor adresující umístění následující po posledním prvku v obráceném objektu set (umístění, ke které došlo před první prvek v neobráceném sadě).
 
 ### <a name="remarks"></a>Poznámky
 
-`rend` se používá s sadu odstínech stejně jako [end](#end) se používá s sadu.
+`rend` se používá s obráceném objektu set stejně jako [end](#end) je součástí sady.
 
-Pokud vrátí hodnotu, která `rend` je přiřazena k `const_reverse_iterator`, pak objekt set nelze změnit. Pokud vrátí hodnotu, která `rend` je přiřazena k `reverse_iterator`, pak je možné upravit objekt set. Hodnoty vrácené `rend` by neměl být vyhodnoceny odkazy.
+Pokud návratová hodnota `rend` je přiřazena `const_reverse_iterator`, pak objekt set nelze upravit. Pokud návratová hodnota `rend` je přiřazena `reverse_iterator`, pak je možné upravit objekt set. Hodnota vrácená `rend` by neměla být dereferencována.
 
-`rend` dá se použít k testování na tom, jestli zpětné iterator dosáhne konce své sady.
+`rend` slouží k otestování pro Určuje, zda zpětný iterátor dosáhl konce jeho sady.
 
 ### <a name="example"></a>Příklad
 
@@ -1939,7 +1939,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` je použít k iteraci v rámci sady pozpátku.
+Typ `reverse_iterator` se používá k iteraci v rámci sady v opačném pořadí.
 
 ### <a name="example"></a>Příklad
 
@@ -2001,30 +2001,30 @@ set(
 
 |Parametr|Popis|
 |-|-|
-|`Al`|Allocator – třída úložiště má být použit pro tento objekt set, výchozí nastavení je **Allocator**.|
-|`Comp`|Funkci porovnání typu `const Traits` sloužící k uspořádání elementy v sadě, který se standardně `Compare`.|
-|`Rght`|Sada, které má být kopii sady vytvořený.|
-|`First`|Pozice první prvek v rozsahu elementy, které se mají zkopírovat.|
-|`Last`|Pozice první prvek mimo rozsah elementy, které se mají zkopírovat.|
-|`IList`|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
+|*Al*|Třída úložiště alokátoru pro tento objekt set, kde je použit výchozí `Allocator`.|
+|*Kompozice*|Funkce porovnání typu `const Traits` používají k seřazení prvků v sadě, kde je použit výchozí `Compare`.|
+|*Rght*|Sada je vytvořen objekt set kopií.|
+|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
+|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
+|*IList*|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládání typu allocator objektu, který spravuje paměti úložiště pro sadu a který se může vracet později voláním [get_allocator –](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
+Všechny konstruktory ukládají typ objektu allocator, který spravuje úložiště paměti pro sadu a, který lze později vrátit voláním [get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
 
-Všechny konstruktory inicializovat jejich sady.
+Všechny konstruktory inicializují své sady.
 
-Všechny konstruktory uložit objekt funkce typu **vlastnosti** který se používá k navázání pořadí mezi klíči sady a který se může vracet později voláním [key_comp –](#key_comp).
+Všechny konstruktory ukládají objekt funkce typu `Traits` , který slouží k vytvoření pořadí mezi klíči objektu sady a, který lze později vrátit voláním [key_comp](#key_comp).
 
-Zadejte první tři konstruktory prázdná sada počáteční, druhý určující typ porovnání – funkce ( `comp`) pro použití při vytváření pořadí elementy a třetí explicitním zadáním přidělujícího modulu zadejte ( `al`) jako použít. Klíčové slovo **explicitní** potlačí určité druhy převod automatické typu.
+První tři konstruktory určují prázdný počáteční sadu, druhý určuje typ funkce porovnání (`comp`) který se má použít při stanovení pořadí prvků a třetí explicitně určuje typ alokátoru (`al`) bude použít. Klíčové slovo **explicitní** potlačí některé druhy automatického převodu typu.
 
 Čtvrtý konstruktor určuje kopii sady `right`.
 
-Následující tři konstruktory initializer_list slouží k určení elementy.
+Následující tři konstruktory použijte k určení prvků objekt initializer_list.
 
-Zkopírujte následující tři konstruktory rozsahu [ `first`, `last`) sady se zvýšeným explicitness v určení typu funkci porovnání třídy **vlastnosti** a **Allocator**.
+Následující tři konstruktory kopírují rozsah [ `first`, `last`) sady se zvyšující se explicitností v určování typu funkce porovnání třídy `Traits` a **alokátoru**.
 
-Osmého konstruktor určuje kopii sady přesunutím `right`.
+Osmý konstruktor určuje kopii sady přesunutím `right`.
 
 ### <a name="example"></a>Příklad
 
@@ -2149,7 +2149,7 @@ size_type size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální délka sady.
+Aktuální délku objektu set.
 
 ### <a name="example"></a>Příklad
 
@@ -2203,11 +2203,11 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Argument záměnu s cílem nastavit poskytování elementy nastaven.
+*správné* argument nastaven poskytující prvky pro záměnu s cílovou sadu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce by způsobila neplatnost žádné odkazy, ukazatele nebo iterátory, které určit elementů ve dvou sad, jehož elementy jsou během výměny.
+Žádné odkazy, ukazatele nebo iterátory, které určují prvky ve dvou sad, jehož prvky jsou během výměny nezruší platnost členskou funkci.
 
 ### <a name="example"></a>Příklad
 
@@ -2261,7 +2261,7 @@ After swapping with s3, list s1 is: 300.
 
 ## <a name="upper_bound"></a>  set::upper_bound
 
-Vrátí iterovat první prvek v sadě, s klíčem, který je větší než je zadaný klíč.
+Vrátí iterátor na první prvek v objektu set, který s klíčem, který je větší než zadaný klíč.
 
 ```cpp
 const_iterator upper_bound(const Key& key) const;
@@ -2271,11 +2271,11 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-`key` Argument klíč, který se má porovnat s klíči řazení elementu ze sady prohledávaný.
+*klíč* klíč argumentu k porovnání s klíči řazení prvek ze sady vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Iterator** nebo `const_iterator` adresy umístění elementu v sadě, s klíčem, který je větší než klíč argument, nebo, který se týká umístění úspěšné posledním prvkem v sadě, pokud žádné shodovat se nalézt klíče.
+`iterator` Nebo `const_iterator` adresy umístění prvku v objektu set, s klíčem, který je větší než tento klíč argument nebo který adresuje umístění následující po posledním prvku v sadě Pokud žádná odpovídají je nalezen klíč.
 
 ### <a name="example"></a>Příklad
 
@@ -2336,19 +2336,19 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce používající sadu pořadí jeho prvky, což je parametr šablony `Traits`.
+Vrátí objekt funkce, který používá sada k seřazení prvků, což je parametr šablony `Traits`.
 
-Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Traits` najdete v článku [nastavit třídy](../standard-library/set-class.md) tématu.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt uložené definuje – členská funkce:
+Uložený objekt definuje členskou funkci:
 
-**BOOL – operátor**( **const klíč &**`_xVal`, **const klíč &**`_yVal`);
+**BOOL – operátor**( **const Key &**`_xVal`, **const Key &**`_yVal`);
 
-která vrací **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
+který vrátí **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
 
-Všimněte si, že oba [value_compare –](#value_compare) a [key_compare –](#key_compare) jsou synonyma pro parametr šablony **vlastnosti**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba [value_compare –](#value_compare) a [key_compare](#key_compare) jsou synonyma pro parametr šablony `Traits`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
@@ -2403,7 +2403,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.
 
 ## <a name="value_compare"></a>  set::value_compare
 
-Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty elementu a určit jejich relativní pořadí v sadě.
+Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v sadě.
 
 ```cpp
 typedef key_compare value_compare;
@@ -2413,9 +2413,9 @@ typedef key_compare value_compare;
 
 `value_compare` je synonymum pro parametr šablony `Traits`.
 
-Další informace o `Traits` najdete v článku [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Traits` najdete v článku [nastavit třídy](../standard-library/set-class.md) tématu.
 
-Všimněte si, že oba [key_compare –](#key_compare) a **value_compare –** jsou synonyma pro parametr šablony **vlastnosti**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba [key_compare](#key_compare) a `value_compare` jsou synonyma pro parametr šablony `Traits`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
@@ -2423,7 +2423,7 @@ Podívejte se na příklad pro [value_comp –](#value_comp) příklad toho, jak
 
 ## <a name="value_type"></a>  set::value_type
 
-Typ, který popisuje objekt uložené jako element sady jako hodnotu.
+Typ, který popisuje objekt uložený jako prvek sady v jeho kapacitě jako hodnotu.
 
 ```cpp
 typedef Key value_type;
@@ -2433,9 +2433,9 @@ typedef Key value_type;
 
 `value_type` je synonymum pro parametr šablony `Key`.
 
-Další informace o `Key`, najdete v části poznámky [set – třída](../standard-library/set-class.md) tématu.
+Další informace o `Key`, najdete v části poznámky [nastavit třídy](../standard-library/set-class.md) tématu.
 
-Všimněte si, že oba [key_type –](#key_type) a `value_type` jsou synonyma pro parametr šablony **klíč**. Oba typy jsou uvedené pro sady a multiset třídy, tam, kde jsou identické, zajištění kompatibility se službou mapy a multimap třídy, které jsou jedinečné.
+Všimněte si, že oba [key_type](#key_type) a `value_type` jsou synonyma pro parametr šablony `Key`. Oba typy jsou k dispozici pro sadu a multiset – třídy, kde jsou identické, z důvodu kompatibility s mapy a multimap třídy, ve kterém se liší.
 
 ### <a name="example"></a>Příklad
 
@@ -2472,7 +2472,7 @@ int main( )
 The set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<set>](../standard-library/set.md)<br/>
 [Kontejnery](../cpp/containers-modern-cpp.md)<br/>

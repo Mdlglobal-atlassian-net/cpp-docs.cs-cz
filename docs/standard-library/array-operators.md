@@ -1,5 +1,5 @@
 ---
-title: '&lt;pole&gt; operátory | Microsoft Docs'
+title: '&lt;pole&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,25 +13,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965455"
 ---
 # <a name="ltarraygt-operators"></a>&lt;pole&gt; operátory
 
-\<Pole > Hlavička zahrnuje tyto `array` třetí porovnání šablony funkcí.
+\<Pole > záhlaví obsahuje tyto **pole** porovnání třetí funkce šablony.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
-Pole porovnání, není rovno.
+Porovnání pole, není rovno.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -42,17 +42,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `!(left == right)`.
+Šablona funkce vrátí `!(left == right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -98,9 +98,9 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Pole porovnání, menší než.
+Array – porovnání, menší než.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -111,17 +111,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení funkce šablony `operator<` k porovnání dvou objektů třídy šablony [array – třída](../standard-library/array-class-stl.md). Funkce vrátí hodnotu `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Funkce přetížení šablon `operator<` k porovnání dvou objektů třídy šablony [array – třída](../standard-library/array-class-stl.md). Funkce vrátí `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Příklad
 
@@ -168,9 +168,9 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Pole porovnání je menší než nebo rovno.
+Porovnání pole menší než nebo rovno.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -181,17 +181,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `!(right < left)`.
+Šablona funkce vrátí `!(right < left)`.
 
 ### <a name="example"></a>Příklad
 
@@ -240,7 +240,7 @@ false
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Pole porovnání, stejné.
+Porovnání pole, stejné.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -251,17 +251,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení funkce šablony `operator==` k porovnání dvou objektů třídy šablony [array – třída](../standard-library/array-class-stl.md). Funkce vrátí hodnotu `equal(left.begin(), left.end(), right.begin())`.
+Funkce přetížení šablon `operator==` k porovnání dvou objektů třídy šablony [array – třída](../standard-library/array-class-stl.md). Funkce vrátí `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Příklad
 
@@ -308,9 +308,9 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Pole porovnání, větší než.
+Porovnání pole, větší než.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -321,17 +321,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `(right < left)`.
+Šablona funkce vrátí `(right < left)`.
 
 ### <a name="example"></a>Příklad
 
@@ -378,7 +378,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
 Porovnání pole, větší než nebo rovno.
 
@@ -391,17 +391,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` Levé kontejner k porovnání.
+*levé* levé kontejneru pro porovnání.
 
-`right` Správném kontejneru k porovnání.
+*správné* správném kontejneru pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `!(left < right)`.
+Šablona funkce vrátí `!(left < right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -448,6 +448,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<pole >](../standard-library/array.md)<br/>

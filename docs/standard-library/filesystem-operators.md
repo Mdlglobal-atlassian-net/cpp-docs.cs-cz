@@ -1,5 +1,5 @@
 ---
-title: '&lt;FileSystem&gt; operátory | Microsoft Docs'
+title: '&lt;systém souborů&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965575"
 ---
-# <a name="ltfilesystemgt-operators"></a>&lt;FileSystem&gt; operátory
+# <a name="ltfilesystemgt-operators"></a>&lt;systém souborů&gt; operátory
 
-Operátory, proveďte lexikální porovnání dvě cesty řetězce. Použití **ekvivalentní** funkce k určení, zda dvě cesty (například relativní cesty a absolutní cesta) odkazovat na stejný soubor nebo adresář na disku.
+Operátory provést lexikální porovnání ze dvou možných cest jako řetězce. Použití `equivalent` funkce k určení, zda dvě cesty (například relativní cesty a absolutní cesta) odkazují na stejný soubor nebo adresář na disku.
 
-Další informace najdete v tématu [navigační systému souborů (C++)](../standard-library/file-system-navigation.md).
+Další informace najdete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="operator"></a>operator==
 
@@ -41,7 +41,7 @@ Další informace najdete v tématu [navigační systému souborů (C++)](../sta
 bool operator==(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu left.native() == right.native().
+Funkce vrátí left.native() == right.native().
 
 ## <a name="operator"></a>operator!=
 
@@ -49,7 +49,7 @@ Funkce vrátí hodnotu left.native() == right.native().
 bool operator!=(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu! (vlevo == vpravo).
+Funkce vrátí! (== zleva doprava).
 
 ## <a name="operator"></a>operator<
 
@@ -57,7 +57,7 @@ Funkce vrátí hodnotu! (vlevo == vpravo).
 bool operator<(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu left.native() < right.native().
+Funkce vrátí left.native() < right.native().
 
 ## <a name="operator"></a>operator<=
 
@@ -65,15 +65,15 @@ Funkce vrátí hodnotu left.native() < right.native().
 bool operator<=(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu! (vpravo \< levém).
+Funkce vrátí! (pravém \< vlevo).
 
-## <a name="operator"></a>operátor >
+## <a name="operator"></a>Operator >
 
 ```cpp
 bool operator>(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu právo \< levé.
+Funkce vrátí přímo \< vlevo.
 
 ## <a name="operator"></a>Operator > =
 
@@ -81,15 +81,15 @@ Funkce vrátí hodnotu právo \< levé.
 bool operator>=(const path& left, const path& right) noexcept;
 ```
 
-Funkce vrátí hodnotu! (levém < vpravo).
+Funkce vrátí! (levý < vpravo).
 
-## <a name="operator"></a>operátor nebo
+## <a name="operator"></a>Operator /
 
 ```cpp
 path operator/(const path& left, const path& right);
 ```
 
-Provede funkci:
+Provede se příslušná funkce:
 
 ```cpp
 basic_string<Elem, Traits> str;
@@ -104,7 +104,7 @@ template <class Elem, class Traits>
 basic_ostream<Elem, Traits>& operator<<(basic_ostream<Elem, Traits>& os, const path& pval);
 ```
 
-Funkce vrátí hodnotu os << pval.string\<Elem, vlastnosti > ().
+Funkce vrátí os << pval.string\<Elem, osobnostní rysy > ().
 
 ## <a name="operator"></a>operátor >>
 
@@ -113,7 +113,7 @@ template <class Elem, class Traits>
 basic_istream<Elem, Traits>& operator<<(basic_istream<Elem, Traits>& is, const path& pval);
 ```
 
-Provede funkci:
+Provede se příslušná funkce:
 
 ```cpp
 basic_string<Elem, Traits> str;
@@ -122,7 +122,7 @@ pval = str;
 return (is);
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Path – třída (standardní knihovna C++)](../standard-library/path-class.md)<br/>
 [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)<br/>

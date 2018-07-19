@@ -1,5 +1,5 @@
 ---
-title: Vytváření objektů vstupního datového proudu | Microsoft Docs
+title: Vytváření objektů vstupního Stream | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842869"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963547"
 ---
 # <a name="constructing-input-stream-objects"></a>Vytváření objektů vstupního datového proudu
 
-Pokud používáte pouze `cin` objektu, není potřeba vytvořit vstupního datového proudu. Pokud používáte, je nutné vytvořit vstupní datový proud:
+Pokud používáte pouze `cin` objektu, není potřeba vytvořit vstupní datový proud. Pokud použijete, je nutné vytvořit vstupní datový proud:
 
-- [Vstupní soubor datového proudu konstruktory](#vclrfinputfilestreamconstructorsanchor8)
+- [Vstupní soubor Stream konstruktory](#vclrfinputfilestreamconstructorsanchor8)
 
-- [Vstupní řetězec datového proudu konstruktory](#vclrfinputstringstreamconstructorsanchor9)
+- [Vstupní řetězec Stream konstruktory](#vclrfinputstringstreamconstructorsanchor9)
 
-## <a name="vclrfinputfilestreamconstructorsanchor8"></a> Vstupní soubor datového proudu konstruktory
+## <a name="vclrfinputfilestreamconstructorsanchor8"></a> Vstupní soubor Stream konstruktory
 
-Existují dva způsoby vytvoření datového proudu vstupní soubor:
+Existují dva způsoby, jak vytvořit proud vstupních souborů:
 
-- Použití `void` argument konstruktoru, potom zavolejte `open` – členská funkce:
+- Použití **void** argument konstruktoru, zavolejte `open` členské funkce:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -43,15 +43,15 @@ Existují dva způsoby vytvoření datového proudu vstupní soubor:
    pmyFile->open("filename");
    ```
 
-- Zadejte název souboru a režim příznaky ve volání konstruktoru, během procesu vytváření a otevírání souboru:
+- Zadejte název souboru a režim příznaky ve vyvolání konstruktoru, během procesu vytváření a otevírání souboru:
 
    ```cpp
    ifstream myFile("filename");
    ```
 
-## <a name="vclrfinputstringstreamconstructorsanchor9"></a> Vstupní řetězec datového proudu konstruktory
+## <a name="vclrfinputstringstreamconstructorsanchor9"></a> Vstupní řetězec Stream konstruktory
 
-Vstupní řetězec datového proudu konstruktory vyžadovat adresu předběžně přidělené, preinitialized úložiště:
+Vstupní řetězec datového proudu konstruktory vyžadovat adresy předem inicializovaná, předběžně přidělené úložiště:
 
 ```cpp
 string s("123.45");
@@ -63,6 +63,6 @@ istringstream myString(s);
 myString>> amt; // amt contains 123.45
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vstupní streamy](../standard-library/input-streams.md)<br/>

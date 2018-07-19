@@ -1,5 +1,5 @@
 ---
-title: logical_and – struktura | Microsoft Docs
+title: logical_and – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0abc8da68d16ea88b08ff7b9d54e06655e44c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964857"
 ---
 # <a name="logicaland-struct"></a>logical_and – struktura
 
-Předdefinované funkce objekt, který provede operaci logické spojení ( `operator&&`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace logického spojení (`operator&&`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator&&` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator&&` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand operace logické spojení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace logického spojení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand operace logické spojení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace logického spojení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left && Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator&&`.
+Výsledek `Left && Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator&&`.
 
 ## <a name="remarks"></a>Poznámky
 
-Uživatelem definované typy není v žádné krátká smyčka operand vyhodnocení. Oba argumenty vyhodnocují podle `operator&&`.
+Pro typy definované uživatelem neexistuje žádné krátký cyklus vyhodnocení operand. Oba argumenty jsou vyhodnocovány pomocí `operator&&`.
 
 ## <a name="example"></a>Příklad
 
@@ -139,9 +139,9 @@ The deque which is the conjuction of d1 & d2 is:
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

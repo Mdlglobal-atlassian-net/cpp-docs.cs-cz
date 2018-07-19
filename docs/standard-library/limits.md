@@ -1,5 +1,5 @@
 ---
-title: '&lt;omezení&gt; | Microsoft Docs'
+title: '&lt;omezení&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964753"
 ---
-# <a name="ltlimitsgt"></a>&lt;Omezení&gt;
+# <a name="ltlimitsgt"></a>&lt;omezení&gt;
 
-Definuje třídu šablony `numeric_limits` a dva výčty týkající se reprezentace plovoucí desetinné čárky a zaokrouhlení.
+Třída šablony definuje `numeric_limits` a dvě výčty o reprezentaci s plovoucí desetinnou čárkou a zaokrouhlení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,22 +37,22 @@ Definuje třídu šablony `numeric_limits` a dva výčty týkající se reprezen
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializací `numeric_limits` třída popisují mnoho vlastností základních typů, včetně znaku, celé číslo a typy s plovoucí desetinnou čárkou a `bool` , které jsou implementace definované než Pevná pravidly C++ jazyk. Vlastnosti popsané v \<omezení > zahrnují přesnost, minimální a maximální velikost reprezentace zaokrouhlení a signalizace typ chyby.
+Explicitní specializace `numeric_limits` třídy popisují mnoho vlastností ze základní typy, včetně znaku, celé číslo a typy s plovoucí desetinnou čárkou a **bool** , které jsou implementace definované, spíše než opravených pravidla jazyka C++. Vlastnosti podle \<omezení > zahrnout přesnost, minimální a maximální velikosti reprezentace, zaokrouhlení a signalizace chyby typu.
 
 ### <a name="enumerations"></a>Výčty
 
 |||
 |-|-|
-|[float_denorm_style –](../standard-library/limits-enums.md#float_denorm_style)|Výčet popisuje různé metody, které můžete vybrat implementace pro představující hodnotu s plovoucí desetinnou čárkou nenormalizované – jeden příliš malá, aby představují jako normalizovanou hodnotu:|
-|[float_round_style –](../standard-library/limits-enums.md#float_round_style)|Výčet popisuje různé metody, které můžete vybrat implementace pro zaokrouhlení hodnotu s plovoucí desetinnou čárkou na celočíselnou hodnotu.|
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Výčet popisuje různé metody, které můžete vybrat implementaci představující hodnotu s plovoucí desetinnou čárkou Nenormalizovaná – jeden příliš malá, aby reprezentovala normalizovanou hodnotu:|
+|[float_round_style](../standard-library/limits-enums.md#float_round_style)|Výčet popisuje různé metody, které můžete vybrat implementaci při zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[numeric_limits – třída](../standard-library/numeric-limits-class.md)|Šablony třídy popisuje aritmetické vlastnosti vestavěné číselné typy.|
+|[numeric_limits – třída](../standard-library/numeric-limits-class.md)|Třída šablony popisuje aritmetické vlastnosti předdefinovaných číselných typů.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

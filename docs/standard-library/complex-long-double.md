@@ -1,5 +1,5 @@
 ---
-title: komplexní&lt;long double&gt; | Microsoft Docs
+title: komplexní&lt;long double&gt; | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083ef4cea345e7b600782c09a7bdfdc09b4af3d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962855"
 ---
 # <a name="complexltlong-doublegt"></a>komplexní&lt;long double&gt;
 
-Popisuje objekt, který ukládá dvojici seřazené objektů typu `long double`, nejprve představující skutečné část reprezentující komplexní čísla a druhý představující pomyslná část.
+Popisuje objekt, který ukládá seřazená dvojice objektů typu **long double**, nejprve představující skutečný součástí komplexní čísla a druhý představující imaginární části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,21 +47,21 @@ complex(
 
 ### <a name="parameters"></a>Parametry
 
-`_RealVal` Hodnota typu **long double** pro skutečné součástí komplexního čísla vytvářen.
+*_RealVal* hodnotu typu **long double** pro skutečné součástí komplexní čísla při konstrukci.
 
-`_ImagVal` Hodnota typu `long double` pro pomyslná součástí komplexního čísla vytvářen.
+*_ImagVal* hodnotu typu **long double** imaginární části komplexního čísla při konstrukci.
 
-`complexNum` Komplexní čísla typu **dvojité** nebo typu **float** jejichž skutečné a pomyslná částí se používají k inicializaci komplexní čísla typu `long double` vytvářen.
+*complexNum* komplexního čísla typu **double** nebo typu **float** jehož reálné a imaginární části se používají k inicializaci komplexního čísla typu **dlouho dvakrát**vytváří.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla typu `long double`.
+Komplexní čísla typu **long double**.
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace šablony třídy složitou complex – třída typu `long double` se liší od třídy šablony pouze v konstruktorech definuje. Převod z `long double` k **float** může být implicitní, ale převod **dvojité** k `long double` musí být **explicitní**. Použití **explicitní** pravidla na zahájení s pomocí syntaxe přiřazení převod typů.
+Explicitní specializace šablony třídy komplexní complex – třída typu **long double** se liší od třídy šablony pouze v konstruktorech definuje. Převod z **long double** k **float** může být implicitní, ale převod z **double** k **long double** je povinný Chcete-li být **explicitní**. Použití **explicitní** Vylučuje zahájení s převod typu pomocí syntaxe přiřazení.
 
-Další informace o třídě šablony `complex`, najdete v části [complex – třída](../standard-library/complex-class.md). Pro seznam členů třídy šablony `complex`, najdete v článku.
+Další informace o šablony třídy `complex`, naleznete v tématu [complex – třída](../standard-library/complex-class.md). Pro seznam členů třídy šablony `complex`, naleznete v tématu.
 
 ## <a name="example"></a>Příklad
 
@@ -120,11 +120,11 @@ Argument of c3 is recovered from c3 using:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<komplexní >
+**Hlavička**: \<komplexní >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [complex – třída](../standard-library/complex-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: basic_istream – třída | Microsoft Docs
+title: basic_istream – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22dc1282dc165941c1a611583138c2d9aed51090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848921"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964460"
 ---
 # <a name="basicistream-class"></a>basic_istream – třída
 
-Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměť elementy typu `Elem`, také známé jako [char_type –](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znak určuje třídu *Tr* , také známé jako [traits_type –](../standard-library/basic-ios-class.md#traits_type).
+Popisuje objekt, který řídí extrakce prvků a kódovaného objekty z vyrovnávací paměti datového proudu s prvky typu `Elem`, označované také jako [char_type](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znaků určuje třídu *Tr* , označované také jako [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +64,7 @@ class basic_istream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>Poznámky
 
-Většina člena funkce této přetížení [operátor >>](#op_gt_gt) jsou formátovány vstupní funkce. Budou vyhovovat vzoru:
+Většinu člena funkce, které přetěžují [operátor >>](#op_gt_gt) jsou formátovány vstupní funkce. Jsou podle tohoto vzoru vytvořené:
 
 ```cpp
 iostate state = goodbit;
@@ -97,7 +97,7 @@ setstate(state);
 return (*this);
 ```
 
-Mnoho funkcí člen je neformátovaný vstupní funkce. Budou vyhovovat vzoru:
+Mnoho dalších funkcí členů je neformátovaný vstupní funkcí. Jsou podle tohoto vzoru vytvořené:
 
 ```cpp
 iostate state = goodbit;
@@ -129,17 +129,17 @@ if (ok)
 setstate(state);
 ```
 
-Obě skupiny volání funkce [setstate –](../standard-library/basic-ios-class.md#setstate)( **eofbit**) když narazí při extrahování elementy konec souboru.
+Obě volání funkce [setstate](../standard-library/basic-ios-class.md#setstate)(`eofbit`) pokud narazí při extrahování prvků konec souboru.
 
-Třída objektu `basic_istream` <  `Elem`, *Tr*> ukládá:
+Objekt třídy `basic_istream` <  `Elem`, *Tr*> ukládá:
 
-- Základní virtuální veřejné objekt třídy [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`
+- Virtuální základní objekt veřejné třídy [basic_ios –](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`
 
-- Extrakci počet pro poslední neformátovaný vstupní operace (nazývá **počet** v předchozí kód).
+- Extrakci počet pro poslední neformátovaný vstupní operace (volá `count` v předcházejícím kódu).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/basic-ifstream-class.md) Další informace o vstupní datové proudy.
+Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/basic-ifstream-class.md) získat další informace o vstupní datové proudy.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -151,35 +151,35 @@ Podívejte se na příklad pro [basic_ifstream – třída](../standard-library/
 
 |Členská funkce|Popis|
 |-|-|
-|[gcount –](#gcount)|Vrátí počet znaků pro čtení během poslední neformátovaný vstup.|
-|[get](#get)|Přečte jeden nebo více znaků ze vstupního datového proudu.|
+|[gcount –](#gcount)|Vrátí počet znaků čtení během posledních neformátovaný vstup.|
+|[get](#get)|Načte jeden nebo více znaků ze vstupního datového proudu.|
 |[getline](#getline)|Přečte řádek ze vstupního datového proudu.|
-|[Ignorovat](#ignore)|Způsobí, že počet elementů přeskočil z aktuální číst pozici.|
-|[Prohlížení](#peek)|Vrací další znak, který má být číst.|
+|[Ignorovat](#ignore)|Způsobí, že počet prvků přeskočit z aktuální pozici čtení.|
+|[Náhled](#peek)|Vrátí následující znak pro čtení.|
 |[putback –](#putback)|Vloží zadaný znak do datového proudu.|
-|[read](#read)|Přečte zadaný počet znaků z datového proudu a ukládá je do pole.|
-|[readsome –](#readsome)|Čtení z jenom vyrovnávací paměti.|
-|[seekg –](#seekg)|Přesune čtení pozici v datovém proudu.|
-|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupní funkce a neformátovaný vstupní funkce.|
-|[Swap](#swap)|To výměny `basic_istream` objekt pro poskytnutého `basic_istream` parametru objektu.|
-|[sync](#sync)|Synchronizuje vstupní zařízení přidružená datový proud s vyrovnávací paměti datový proud.|
-|[tellg –](#tellg)|Hlásí, že aktuální číst pozici v datovém proudu.|
-|[unget –](#unget)|PUT naposledy přečíst znak zpět do datového proudu.|
+|[read](#read)|Přečte zadaný počet znaků z datového proudu a uloží je v poli.|
+|[readsome –](#readsome)|Čtení z pouze vyrovnávací paměti.|
+|[seekg –](#seekg)|Posune pozici v datovém proudu pro čtení.|
+|[SENTRY](#sentry)|Vnořené třídy popisuje objekt, jehož deklarace struktur formátovaný vstupu funkce a neformátovaný vstupní funkce.|
+|[Prohození](#swap)|Vymění to `basic_istream` objekt pro zadaný `basic_istream` parametru objektu.|
+|[sync](#sync)|Synchronizuje vstupní zařízení spojené s datovým proudem s vyrovnávací paměť datového proudu.|
+|[tellg –](#tellg)|Hlásí, že čtení aktuální pozici v datovém proudu.|
+|[unget –](#unget)|Vloží naposledy čtení znak zpět do datového proudu.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor >>](#op_gt_gt)|Volání funkce na vstupního datového proudu nebo čte formátovaná data z vstupního datového proudu.|
-|[operátor =](#op_eq)|Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Jedná se o přesunutí přiřazení zahrnující `rvalue` odkaz, který kopii nenechává za sebou.|
+|[operátor >>](#op_gt_gt)|Volá funkci vstupního datového proudu nebo přečte formátovaná data ze vstupního datového proudu.|
+|[operátor =](#op_eq)|Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Toto je zahrnující přiřazení pro přesun `rvalue` odkaz, který kopii nenechává za sebou.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<IStream on Request >
+**Záhlaví:** \<istream >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istream"></a>  basic_istream::basic_istream –
 
 Vytvoří objekt typu `basic_istream`.
 
@@ -193,25 +193,25 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`strbuf` Objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf* objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-`_Isstd` `true` Pokud se jedná o standardní datový proud; v opačném `false`.
+*_Isstd* **true** pokud jde standardní datový proud; v opačném případě **false**.
 
-`right` A `basic_istream` objekt, který chcete kopírovat.
+*správné* A `basic_istream` objektu, který chcete zkopírovat.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje základní třídu voláním [init](../standard-library/basic-ios-class.md#init)(_Malá `trbuf`). Také ukládá nula počet extrakce. Další informace o tento počet extrakce, najdete v části poznámky [basic_istream – třída](../standard-library/basic-istream-class.md) přehledu.
+První konstruktor inicializuje základní třídu voláním [init](../standard-library/basic-ios-class.md#init)(_Malá `trbuf`). Také ukládá nula počet extrakce. Další informace o tento počet extrakce, najdete v části poznámky [basic_istream – třída](../standard-library/basic-istream-class.md) – téma s přehledem.
 
-Druhý konstruktor inicializuje základní třídu voláním `move( right)`. Ukládá také _R `ight.gcount()` v extrakce počet a úložišť nula počet extrakce pro _R `ight`.
+Druhý konstruktor inicializuje základní třídu voláním `move( right)`. Také ukládá _R `ight.gcount()` v počtu extrakce a úložišti nula počet extrakce pro _R `ight`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) Další informace o vstupní datové proudy.
+Podívejte se na příklad pro [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) získat další informace o vstupní datové proudy.
 
 ## <a name="gcount"></a>  basic_istream::gcount
 
-Vrátí počet znaků pro čtení během poslední neformátovaný vstup.
+Vrátí počet znaků čtení během posledních neformátovaný vstup.
 
 ```cpp
 streamsize gcount() const;
@@ -223,7 +223,7 @@ Počet extrakce.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [basic_istream::get](#get) číst neformátovaný znaků.
+Použití [basic_istream::get](#get) ke čtení neformátovaný znaků.
 
 ### <a name="example"></a>Příklad
 
@@ -262,7 +262,7 @@ a
 
 ## <a name="get"></a>  basic_istream::Get
 
-Přečte jeden nebo více znaků ze vstupního datového proudu.
+Načte jeden nebo více znaků ze vstupního datového proudu.
 
 ```cpp
 int_type get();
@@ -277,41 +277,41 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parametry
 
-`count` Počet znaků ke čtení z `strbuf`.
+*počet* počet znaků ke čtení z `strbuf`.
 
-`Delim` Znak, který by měl ukončit čtení, pokud je zjištěna před `count`.
+*Delim* znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
 
-`str` Řetězec, ve kterém se má zapisovat.
+*Str* řetězec, do kterých chcete zapsat.
 
-`Ch` Znak pro získání.
+*Ch* znak zobrazíte.
 
-`strbuf` Vyrovnávací paměť ve kterém se má zapisovat.
+*strbuf* do vyrovnávací paměti, do kterých chcete zapsat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bez parametrů formu get vrátí prvek přečíst jako celé číslo nebo číslo konec souboru. Zbývající formuláře vrátit datový proud (* `this`).
+Konstruktor bez parametrů formuláře get vrací element číst jako celé číslo nebo konec souboru. Zbývající formuláře vrátit datový proud (* `this`).
 
 ### <a name="remarks"></a>Poznámky
 
-První z těchto funkcí neformátovaný vstupní extrahuje elementu, pokud je to možné, jako kdyby nástrojem vrácení `rdbuf` ->  `sbumpc`. Funkce **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof). Pokud funkci extrahuje žádné elementy, zavolá [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+První z těchto funkcí neformátovaný vstupní extrahuje element, pokud je to možné, jako kdyby Autor vrácení `rdbuf` ->  `sbumpc`. V opačném případě vrátí **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Pokud funkci extrahuje žádný element, volá [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-Extrahuje funkce second [int_type –](../standard-library/basic-ios-class.md#int_type) element `meta` stejným způsobem. Pokud `meta` porovná rovno **traits_type::eof**, volání funkce `setstate`( **failbit**). Jinak, ukládá **traits_type –::**[to_char_type –](../standard-library/char-traits-struct.md#to_char_type)( `meta`) v `Ch`. Funkce vrátí hodnotu  **\*to**.
+Druhá funkce extrahuje [int_type](../standard-library/basic-ios-class.md#int_type) element `meta` stejným způsobem. Pokud `meta` porovná rovno **traits_type::eof**, volání funkce `setstate`( **failbit**). V opačném případě ukládá **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) v `Ch`. Funkce vrátí  **\*to**.
 
-Vrátí třetí funkce **získat**(_ *Str*, `count`, `widen`('\ **n**.)).
+Třetí funkce vrátí **získat**(_ *Str*, `count`, `widen`('\ **n**")).
 
-Čtvrtý funkce extrahuje až `count` – 1 elementy a ukládá je do pole počínaje _ *Str*. Vždy ukládá `char_type` po žádné extrahování elementy ukládá. V pořadí podle testování zastaví extrakce:
+Čtvrtý funkce extrahuje až *počet* + 1 prvků a ukládá je do pole počínaje _ *Str*. Vždy ukládá `char_type` po žádné elementy, které je uložený. V pořadí podle testování zastaví extrakce:
 
 - Na konci souboru.
 
-- Po funkce extrahuje element, který porovnává rovna `Delim`, v takovém případě je element vrátit zpět k řízené sekvenci.
+- Po funkci extrahuje element, který při porovnání rovna *Delim*, v takovém případě je prvek zařadí zpět do řízené sekvence.
 
-- Po extrahuje funkce `count` – 1 elementy.
+- Po funkci extrahuje *počet* + 1 prvků.
 
 Pokud funkci extrahuje žádné elementy, zavolá `setstate`( **failbit**). V každém případě vrátí  **\*to**.
 
-Páté funkce vrátí hodnotu **získat**( **strbuf**, `widen`('\ **n**.)).
+Pátý funkce vrátí **získat**( **strbuf**, `widen`('\ **n**")).
 
-Funkci šesté extrahuje prvky a vloží je do **strbuf**. Extrakce zastaví na koncové souboru nebo na element, který porovnává rovna _ *Delim,* které není extrahovat. Zastaví také, bez extrahování dotyčná, pokud vložení selže nebo vyvolá výjimku, (což je zachycena, ale není znovu vyvolány). Pokud funkci extrahuje žádné elementy, zavolá `setstate`( **failbit**). V každém případě funkce vrátí hodnotu  **\*to**.
+Šestý funkce extrahuje prvky a vloží je do `strbuf`. Extrakce zastaví na ukončení souboru nebo na element, který při porovnání rovna _ *Delim,* které se extrahují. Také zastaví, bez extrahování elementu Nejistá, pokud selže vložení nebo vyvolá výjimku (která je zachycena ale není znovu vyvolána). Pokud funkci extrahuje žádné elementy, zavolá `setstate`( **failbit**). V každém případě funkce vrací  **\*to**.
 
 ### <a name="example"></a>Příklad
 
@@ -341,7 +341,7 @@ int main( )
 
 ## <a name="getline"></a>  basic_istream::getline
 
-Získá řádku ze vstupního datového proudu.
+Získá řádek ze vstupního datového proudu.
 
 ```cpp
 basic_istream<Elem, Tr>& getline(
@@ -356,11 +356,11 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-`count` Počet znaků ke čtení z **strbuf**.
+*počet* počet znaků ke čtení z `strbuf`.
 
-`Delim` Znak, který by měl ukončit čtení, pokud je zjištěna před `count`.
+*Delim* znak, který by měla ukončit čtení, pokud je zjištěna před *počet*.
 
-`str` Řetězec, ve kterém se má zapisovat.
+*Str* řetězec, do kterých chcete zapsat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -368,17 +368,17 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-První z nich neformátovaný vstup funkce vrátí **getline**(_ *Str*, `count`, `widen`(' `\` **n**.)).
+První z těchto neformátovaný vstup funkce vrátí **getline**(_ *Str*, `count`, `widen`(" `\` **n**")).
 
-Funkce second extrahuje až `count` – 1 elementy a ukládá je do pole počínaje _ *Str*. Vždy ukládá ukončovací znak řetězec po extrahované prvků, které ukládají. V pořadí podle testování zastaví extrakce:
+Druhá funkce extrahuje až *počet* + 1 prvků a ukládá je do pole počínaje _ *Str*. Po extrahované prvků, které ukládají vždy ukládá znak ukončení řetězce. V pořadí podle testování zastaví extrakce:
 
 - Na konci souboru.
 
-- Po funkce extrahuje element, který porovnává rovna `Delim`, v takovém případě elementu je vrátit zpět ani připojenou k řízené sekvenci.
+- Po funkci extrahuje element, který při porovnání rovna *Delim*, v takovém případě elementu je vrátit ani připojenou k řízené sekvence.
 
-- Po extrahuje funkce `count` – 1 elementy.
+- Po funkci extrahuje *počet* + 1 prvků.
 
-Pokud funkci extrahuje žádné elementy nebo `count` – 1 elementy, zavolá [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě vrátí  **\*to**.
+Pokud funkci extrahuje žádné elementy nebo *počet* + 1 prvků, volá [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě vrátí  **\*to**.
 
 ### <a name="example"></a>Příklad
 
@@ -404,7 +404,7 @@ int main( )
 
 ## <a name="ignore"></a>  basic_istream::Ignore
 
-Způsobí, že počet elementů přeskočil z aktuální číst pozici.
+Způsobí, že počet prvků přeskočit z aktuální pozici čtení.
 
 ```cpp
 basic_istream<Elem, Tr>& ignore(
@@ -414,9 +414,9 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parametry
 
-`count` Počet elementů tak, aby přeskočil z aktuální pozici pro čtení.
+*počet* počet prvků, které se od aktuálního přeskočit čtení pozici.
 
-`Delim` Element, který, pokud došlo k před počet, způsobí, že **Ignorovat** vrátit a umožní všechny elementy po `Delim` čtení.
+*Delim* elementu, který, pokud došlo k před počet, způsobí, že `ignore` vrátit a umožňuje všechny prvky po *Delim* ke čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -424,7 +424,7 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-Neformátovaný tvar vstupní funkce extrahuje až `count` elementy a je ignoruje. Pokud `count` rovná **numeric_limits\<int >:: maximální**, ale je provedena jako libovolně velké. Extrakce zastaví již v rané fázi na konec souboru nebo na element `Ch` tak, aby **traits_type –::**[to_int_type –](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) porovnává rovno *Delim* (který je také extrahovat). Funkce vrátí hodnotu  **\*to**.
+Neformátovaný vstupní funkce extrahuje až *počet* prvky a je ignoruje. Pokud *počet* rovná **numeric_limits –\<int >:: maximální**, ale se používá jako libovolně velké. Extrakce zastaví již v rané fázi na konec souboru nebo v elementu `Ch` tak, aby **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) porovnává rovno *Delim* (který je také extrahován). Funkce vrátí  **\*to**.
 
 ### <a name="example"></a>Příklad
 
@@ -450,7 +450,7 @@ def
 
 ## <a name="op_gt_gt"></a>  základní\_istream::operator >>
 
-Volání funkce na vstupního datového proudu nebo čte formátovaná data z vstupního datového proudu.
+Volá funkci vstupního datového proudu nebo přečte formátovaná data ze vstupního datového proudu.
 
 ```cpp
 basic_istream& operator>>(basic_istream& (* Pfn)(basic_istream&));
@@ -474,11 +474,11 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parametry
 
-`Pfn` Ukazatel na funkci.
+*Pfn* ukazatele na funkci.
 
-`strbuf` Objekt typu **stream_buf**.
+*strbuf* objekt typu `stream_buf`.
 
-`val` Hodnoty ke čtení z datového proudu.
+*Val* hodnoty ke čtení z datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -486,9 +486,9 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-\<IStream on Request > záhlaví také definuje několik globální extraction – operátory. Další informace najdete v tématu [operátor >> (\<IStream on Request >)](../standard-library/istream-operators.md#op_gt_gt).
+\<Istream > záhlaví také definuje několik operátorů globální extrakce. Další informace najdete v tématu [operátor >> (\<istream >)](../standard-library/istream-operators.md#op_gt_gt).
 
-První člen funkce zajišťuje, že výrazu ve formátu **istr**  >>  `ws` volání [ws](../standard-library/istream-functions.md#ws)( **istr**) a vrátí  **\*to**. Druhý a třetí funkce, jako zajistěte, aby další manipulátory [šestnáctkových](../standard-library/ios-functions.md#hex), chovají podobně. Zbývající funkce tvoří formátovaný vstupní funkce.
+První členská funkce zajišťuje, že výraz ve tvaru **istr**  >>  `ws` volání [ws](../standard-library/istream-functions.md#ws)( **istr**) a vrátí  **\*to**. Druhý a třetí funkce zajišťují další manipulátory, jako například [hex](../standard-library/ios-functions.md#hex), se chovají podobně. Zbývající funkce představují formátovaný vstupní funkce.
 
 Funkce:
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-Extrahuje prvky, pokud _ *Strbuf* není nulový ukazatel a vloží je do `strbuf`. Extrakce zastaví na konec souboru. Zastaví také bez extrahování dotyčná, pokud vložení selže nebo vyvolá výjimku, (což je zachycena, ale není znovu vyvolány). Pokud funkci extrahuje žádné elementy, zavolá [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě funkce vrátí hodnotu  **\*to**.
+Extrahuje prvky, pokud _ *Strbuf* není ukazatel s hodnotou null a vloží je do *strbuf*. Extrakce zastaví na konec souboru. Zastaví také bez extrahování elementu Nejistá, pokud selže vložení nebo vyvolá výjimku (která je zachycena ale není znovu vyvolána). Pokud funkci extrahuje žádné elementy, zavolá [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě funkce vrací  **\*to**.
 
 Funkce:
 
@@ -505,7 +505,7 @@ Funkce:
 basic_istream& operator>>(bool& val);
 ```
 
-extrahuje pole a převede jej na logickou hodnotu voláním [use_facet](../standard-library/basic-filebuf-class.md#open)  <  `num_get` \< **Elem**, **InIt**> ( [getloc –](../standard-library/ios-base-class.md#getloc)). [získat](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf –](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0),  **\*to**, `getloc`, `val`). Zde **InIt** je definován jako [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md) \< **Elem**, **Tr**>. Funkce vrátí hodnotu  **\*to**.
+extrahuje pole a převede ho na hodnotu typu Boolean voláním [use_facet](../standard-library/basic-filebuf-class.md#open)  <  `num_get` \< **Elem**, **InIt**> ( [getloc –](../standard-library/ios-base-class.md#getloc)). [získat](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf –](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0),  **\*to**, `getloc`, `val`). Tady **InIt** je definován jako [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md) \< **Elem**, **Tr**>. Funkce vrátí  **\*to**.
 
 Funkce:
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-každé pole extrahovat a převést jej do číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). [získat](#get)( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Zde **InIt** je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **dlouho**,`unsigned long`, nebo **void \***  podle potřeby.
+Každá extrahovat pole a převést na číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). [získat](#get)( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Tady **InIt** je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **dlouhé**,**unsigned long**, nebo **void \***  podle potřeby.
 
-Pokud převedenou hodnotu nelze reprezentovat jako typ `val`, volání funkce [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě funkce vrátí hodnotu  **\*to**.
+Pokud se převedená hodnota nemůže být reprezentovaný jako typ `val`, volání funkce [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě funkce vrací  **\*to**.
 
 Funkce:
 
@@ -533,9 +533,9 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-každé pole extrahovat a převést jej do číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). **získat**( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Zde **InIt** je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **dvojité** nebo `long double` podle potřeby.
+Každá extrahovat pole a převést na číselnou hodnotu voláním `use_facet` <  `num_get` \< **Elem**, **InIt**> ( `getloc`). **získat**( **InIt**( `rdbuf`), `Init`(0),  **\*to**, `getloc`, `val`). Tady `InIt` je definován jako `istreambuf_iterator` \< **Elem**, **Tr**>, a `val` má typ **double** nebo **dlouhý dvojité** podle potřeby.
 
-Pokud převedenou hodnotu nelze reprezentovat jako typ `val`, volání funkce `setstate`( **failbit**). V každém případě vrátí  **\*to**.
+Pokud se převedená hodnota nemůže být reprezentovaný jako typ `val`, volání funkce `setstate`( **failbit**). V každém případě vrátí  **\*to**.
 
 ### <a name="example"></a>Příklad
 
@@ -576,7 +576,7 @@ int main( )
 
 ## <a name="op_eq"></a>  basic_istream::Operator =
 
-Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Jedná se o přesunutí přiřazení zahrnující `rvalue` odkaz, který kopii nenechává za sebou.
+Přiřadí `basic_istream` na pravé straně operátoru k tomuto objektu. Toto je zahrnující přiřazení pro přesun `rvalue` odkaz, který kopii nenechává za sebou.
 
 ```cpp
 basic_istream& operator=(basic_istream&& right);
@@ -584,7 +584,7 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `rvalue` Odkaz na `basic_ifstream` objektu.
+*správné* `rvalue` odkaz `basic_ifstream` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -592,11 +592,11 @@ Vrátí * to.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor členů volá swap `( right)`.
+Členský operátor volá prohození `( right)`.
 
 ## <a name="peek"></a>  basic_istream::Peek
 
-Vrací další znak, který má být číst.
+Vrátí následující znak pro čtení.
 
 ```cpp
 int_type peek();
@@ -608,7 +608,7 @@ Další znak, který bude číst.
 
 ### <a name="remarks"></a>Poznámky
 
-Neformátovaný tvar vstupní funkce extrahuje elementu, pokud je to možné, jako kdyby nástrojem vrácení `rdbuf`  ->  [sgetc –](../standard-library/basic-streambuf-class.md#sgetc). Funkce **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof).
+Neformátovaný vstupní funkce extrahuje element, pokud je to možné, jakoby Autor vrácení `rdbuf`  ->  [sgetc –](../standard-library/basic-streambuf-class.md#sgetc). V opačném případě vrátí **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="example"></a>Příklad
 
@@ -653,7 +653,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Znak pro vrátit zpět do datového proudu.
+*Ch* znak převést zpět do datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -661,7 +661,7 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-[Neformátovaný vstupní funkce](../standard-library/basic-istream-class.md) vrátí zpět `Ch`, pokud je to možné, jako kdyby pomocí volání metody [rdbuf –](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc –](../standard-library/basic-streambuf-class.md#sputbackc). Pokud je rdbuf – ukazatele null, nebo pokud volání `sputbackc` vrátí **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof), volání funkce [setstate –](../standard-library/basic-ios-class.md#setstate)( **badbit**). V každém případě vrátí  **\*to**.
+[Neformátovaný vstupní funkce](../standard-library/basic-istream-class.md) vrátí zpět *Ch*, pokud je to možné, jako kdyby volala [rdbuf –](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc –](../standard-library/basic-streambuf-class.md#sputbackc). Pokud rdbuf – je ukazatel s hodnotou null, nebo pokud volání `sputbackc` vrátí **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), volání funkce [setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`). V každém případě vrátí  **\*to**.
 
 ### <a name="example"></a>Příklad
 
@@ -690,9 +690,9 @@ qwq
 
 ## <a name="read"></a>  basic_istream::Read
 
-Přečte zadaný počet znaků z datového proudu a ukládá je do pole.
+Přečte zadaný počet znaků z datového proudu a uloží je v poli.
 
-Tato metoda je potenciálně nebezpečné, jako je závislé na volajícího, aby zkontrolujte správnost předané hodnoty.
+Tato metoda je potenciálně nebezpečná, protože spoléhá na že volající zkontroluje správnost předaných hodnot.
 
 ```cpp
 basic_istream<Elem, Tr>& read(
@@ -702,9 +702,9 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parametry
 
-`str` Pole, ve kterém se má číst znaky.
+*Str* pole, ve kterém čtení znaků.
 
-`count` Počet znaků ke čtení.
+*počet* počet znaků pro čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -712,7 +712,7 @@ Datový proud ( `*this`).
 
 ### <a name="remarks"></a>Poznámky
 
-Neformátovaný tvar vstupní funkce extrahuje až `count` elementy a ukládá je do pole počínaje _ `Str`. Extrakce zastaví již v rané fázi na konci souboru, ve kterém případ funkce volá [setstate –](../standard-library/basic-ios-class.md#setstate)( `failbit`). V každém případě vrátí `*this`.
+Neformátovaný vstupní funkce extrahuje až *počet* elementy a ukládá je do pole počínaje _ `Str`. Extrakce zastaví již v rané fázi na konec souboru, ve kterém případ funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě vrátí `*this`.
 
 ### <a name="example"></a>Příklad
 
@@ -754,7 +754,7 @@ abcde
 
 Přečte zadaný počet znaků hodnoty.
 
-Tato metoda je potenciálně nebezpečné, jako je závislé na volajícího, aby zkontrolujte správnost předané hodnoty.
+Tato metoda je potenciálně nebezpečná, protože spoléhá na že volající zkontroluje správnost předaných hodnot.
 
 ```cpp
 streamsize readsome(
@@ -764,19 +764,19 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parametry
 
-`str` Pole, ve kterém `readsome` ukládá přečte znaky.
+*Str* pole, ve kterém `readsome` ukládá přečte znaky.
 
-`count` Počet znaků ke čtení.
+*počet* počet znaků pro čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků, které jsou ve skutečnosti číst, [gcount –](#gcount).
+Počet znaků ve skutečnosti čtení [gcount –](#gcount).
 
 ### <a name="remarks"></a>Poznámky
 
-Neformátovaný tvar vstupní funkce extrahuje až `count` elementy ze vstupu datového proudu a ukládá je v poli `str`.
+Tato funkce neformátovaný vstupní extrahuje až *počet* elementy ze vstupní datový proud stream a uloží je v poli *str*.
 
-Tato funkce nečeká na vstup. Kromě toho přečte ať data nejsou k dispozici.
+Tato funkce není počkat na vstup. Načte libovolná data je k dispozici.
 
 ### <a name="example"></a>Příklad
 
@@ -809,7 +809,7 @@ int main( )
 
 ## <a name="seekg"></a>  basic_istream::seekg
 
-Přesune čtení pozici v datovém proudu.
+Posune pozici v datovém proudu pro čtení.
 
 ```cpp
 basic_istream<Elem, Tr>& seekg(pos_type pos);
@@ -819,11 +819,11 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parametry
 
-`pos` Absolutní umístění, ve kterém se má přesunout ukazatel pro čtení.
+*POS* absolutní pozici, do kterého chcete přesunout ukazatel pro čtení.
 
-`off` Posun přesunout ukazatel čtení vzhledem k `way`.
+*vypnout* posun čtení ukazatele vzhledem k *způsob*.
 
-`way` Jeden z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) výčty.
+*způsob, jak* některou [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) výčty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -831,14 +831,14 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-První člen funkce provede absolutní seek, druhý členská funkce provede relativní seek.
+První členská funkce provádí absolutní hledání, druhá členská funkce provádí relativní seek.
 
 > [!NOTE]
-> Nepoužívejte funkci druhý člen s textovými soubory, protože standardní C++ nepodporuje relativní bude hledat v textových souborů.
+> Druhá členská funkce s textovými soubory nepoužívejte, protože Standard C++ nepodporuje relativní vyhledá v textových souborech.
 
-Pokud [nezdaří](../standard-library/basic-ios-class.md#fail) je nastavena hodnota false, první volání funkce člen **newpos** = [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), pro některé **pos_type –** dočasný objekt **newpos**. Pokud **nezdaří** je nastavena hodnota false, druhé volání funkce **newpos** = **rdbuf –** -> [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). V obou případech Pokud ( `off_type`) **newpos** == ( `off_type`)(-1) (umísťovací operace selže), volání funkce **istr**. [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). Obě funkce vrátí  **\*to**.
+Pokud [selhání](../standard-library/basic-ios-class.md#fail) má hodnotu false, první volání členských funkcí **newpos** = [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), pro některé `pos_type` dočasný objekt `newpos`. Pokud `fail` má hodnotu false, druhé volání funkce **newpos** = **rdbuf –** -> [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). V obou případech Pokud ( `off_type`) **newpos** == ( `off_type`)(-1) (umístění operace selže), volání funkce `istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). Obě funkce vrátí  **\*to**.
 
-Pokud [nezdaří](../standard-library/basic-ios-class.md#fail) má hodnotu true, členské funkce Neprovádět žádnou akci.
+Pokud [selhání](../standard-library/basic-ios-class.md#fail) má hodnotu true, členské funkce Neprovádět žádnou akci.
 
 ### <a name="example"></a>Příklad
 
@@ -863,23 +863,23 @@ int main ( )
 
 ## <a name="sentry"></a>  basic_istream::SENTRY
 
-Vnořené třídy popisuje objekt, jehož deklarace struktur vstupní funkce formátovaný a neformátovaný tvar.
+Vnořené třídy popisuje objekt, jehož deklarace struktur vstupní funkce naformátovaný a je neformátovaný.
 
-Třída sentry {veřejné: explicitní sentry (basic_istream\<Elem, Tr > & _Istr, bool _Noskip = false); operátor bool() const;};
+Třída sentry {public: explicitní sentry (basic_istream –\<Elem, Tr > & _Istr, bool _Noskip = false); operator bool() const;};
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `_Istr.` [dobrý](../standard-library/basic-ios-class.md#good) je nastavena hodnota true, konstruktoru:
+Pokud `_Istr.` [dobré](../standard-library/basic-ios-class.md#good) má hodnotu true, konstruktor:
 
-- Volání `_Istr`. [Tie –](../standard-library/basic-ios-class.md#tie) -> [vyprázdnění](../standard-library/basic-ostream-class.md#flush) Pokud `_Istr`. `tie` není ukazatele null.
+- Volání `_Istr`. [Tie](../standard-library/basic-ios-class.md#tie) -> [vyprázdnění](../standard-library/basic-ostream-class.md#flush) Pokud `_Istr`. `tie` není ukazatel s hodnotou null
 
-- Efektivně volá [ws](../standard-library/istream-functions.md#ws)( `_Istr`) Pokud `_Istr`. [příznaky](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) je nenulové hodnoty
+- Efektivně volá [ws](../standard-library/istream-functions.md#ws)( `_Istr`) Pokud `_Istr`. [příznaky](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) je nenulový
 
-Pokud po takové přípravy `_Istr`. **Dobrý** je nastavena hodnota false, volání konstruktoru `_Istr`. [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě konstruktoru ukládá hodnoty vrácené `_Istr`. **Dobrý** v **stav**. Novější volání **operátor bool** přináší tato uložené hodnoty.
+Pokud po těchto přípravy `_Istr`. `good` má hodnotu false, volá konstruktor `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). V každém případě konstruktor ukládá hodnotu vrácenou příkazem `_Istr`. `good` v `status`. Pozdější volání `operator bool` poskytuje tuto uloženou hodnotu.
 
 ## <a name="swap"></a>  basic_istream::swap
 
-Výměny obsahu dvou `basic_istream` objekty.
+Vyměňuje obsahy dvě `basic_istream` objekty.
 
 ```cpp
 void swap(basic_istream& right);
@@ -887,15 +887,15 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Odkaz na lvalue `basic_istream` objektu.
+*správné* reference na lvalue k `basic_istream` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání členských funkcí [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. Také k výměně počet extrakce se počet extrakce pro `right`.
+Volání členských funkcí [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. Také vymění počet extrakce s počtem extrakce pro *správné*.
 
 ## <a name="sync"></a>  basic_istream::Sync
 
-Synchronizuje vstupní zařízení přidružená datový proud s vyrovnávací paměti datový proud.
+Synchronizuje vstupní zařízení spojené s datovým proudem s vyrovnávací paměť datového proudu.
 
 ```cpp
 int sync();
@@ -903,11 +903,11 @@ int sync();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) je ukazatel s hodnotou null, funkce vrátí hodnotu -1. Jinak zavolá `rdbuf`  ->  [pubsync –](../standard-library/basic-streambuf-class.md#pubsync). Pokud, vrátí hodnotu -1, zavolá funkci [setstate –](../standard-library/basic-ios-class.md#setstate)( **badbit**) a vrátí hodnotu -1. Funkce, jinak vrátí hodnotu nula.
+Pokud [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) je ukazatel s hodnotou null, funkce vrátí hodnotu -1. V opačném případě volá `rdbuf`  ->  [pubsync –](../standard-library/basic-streambuf-class.md#pubsync). Pokud, která vrátí hodnotu -1, funkce zavolá [setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`) a vrátí hodnotu -1. V opačném případě funkce vrátí hodnotu 0.
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
-Hlásí, že aktuální číst pozici v datovém proudu.
+Hlásí, že čtení aktuální pozici v datovém proudu.
 
 ```cpp
 pos_type tellg();
@@ -915,11 +915,11 @@ pos_type tellg();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální pozici v datovém proudu.
+Aktuální pozice v datovém proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [nezdaří](../standard-library/basic-ios-class.md#fail) je nastavena hodnota false, vrátí funkce člena [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **v**). Funkce `pos_type`(-1).
+Pokud [selhání](../standard-library/basic-ios-class.md#fail) má hodnotu false, členská funkce vrátí [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **v**). V opačném případě vrátí `pos_type`(-1).
 
 ### <a name="example"></a>Příklad
 
@@ -949,7 +949,7 @@ int main()
 
 ## <a name="unget"></a>  basic_istream::unget
 
-PUT naposledy přečíst znak zpět do datového proudu.
+Vloží naposledy čtení znak zpět do datového proudu.
 
 ```cpp
 basic_istream<Elem, Tr>& unget();
@@ -961,9 +961,9 @@ Datový proud (  **\*to**).
 
 ### <a name="remarks"></a>Poznámky
 
-[Neformátovaný vstupní funkce](../standard-library/basic-istream-class.md) vrátí zpět předchozí prvek v datovém proudu, pokud je to možné, jako kdyby pomocí volání metody `rdbuf`  ->  [sungetc –](../standard-library/basic-streambuf-class.md#sungetc). Pokud [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) je ukazatel s hodnotou null, nebo pokud volání `sungetc` vrátí **traits_type –::**[eof](../standard-library/basic-ios-class.md#eof), volání funkce [setstate –](../standard-library/basic-ios-class.md#setstate)() **badbit**). V každém případě vrátí  **\*to**.
+[Neformátovaný vstupní funkce](../standard-library/basic-istream-class.md) vrátí zpět předchozí prvek v datovém proudu, pokud je to možné, jako kdyby volala `rdbuf`  ->  [sungetc –](../standard-library/basic-streambuf-class.md#sungetc). Pokud [rdbuf –](../standard-library/basic-ios-class.md#rdbuf) je ukazatel s hodnotou null, nebo pokud volání `sungetc` vrátí **traits_type::**[eof](../standard-library/basic-ios-class.md#eof), volání funkce [setstate](../standard-library/basic-ios-class.md#setstate)() `badbit`). V každém případě vrátí  **\*to**.
 
-Informace o tom `unget` může selhat, najdete v části [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).
+Informace o tom, jak `unget` může selhat, naleznete v tématu [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).
 
 ### <a name="example"></a>Příklad
 
@@ -997,7 +997,7 @@ abc
 abc
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

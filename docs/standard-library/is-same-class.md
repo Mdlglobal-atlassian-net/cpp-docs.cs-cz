@@ -1,5 +1,5 @@
 ---
-title: is_same – třída | Microsoft Docs
+title: is_same – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964974"
 ---
 # <a name="issame-class"></a>is_same – třída
 
-Testy, pokud dva typy jsou stejné.
+Testuje, zda dva typy jsou stejné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty1` První typ dotazu.
+*Ty1* první typ dotazu.
 
-`Ty2` Druhý typ dotazu.
+*Ty2* druhý typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typy `Ty1` a `Ty2` jsou stejného typu, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typy *Ty1* a *Ty2* jsou stejného typu, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -93,9 +93,9 @@ is_same<int, const int> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_convertible – třída](../standard-library/is-convertible-class.md)<br/>

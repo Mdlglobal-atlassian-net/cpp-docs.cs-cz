@@ -1,5 +1,5 @@
 ---
-title: Třída CNoWorkerThread | Microsoft Docs
+title: Cnoworkerthread – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16eafd8c33bf1c9a42b95c31a333ff1df55b3495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962501"
 ---
-# <a name="cnoworkerthread-class"></a>CNoWorkerThread – třída
-Tato třída slouží jako argument pro `MonitorClass` parametr šablony do mezipaměti tříd, pokud chcete zakázat dynamické mezipaměti údržby.  
+# <a name="cnoworkerthread-class"></a>Cnoworkerthread – třída
+Použijte tuto třídu jako argument pro `MonitorClass` parametr šablony třídy mezipaměti, pokud chcete zakázat dynamické mezipaměti údržby.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,24 +49,24 @@ class CNoWorkerThread
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CNoWorkerThread::AddHandle](#addhandle)|Non-ekvivalentní [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
-|[CNoWorkerThread::AddTimer](#addtimer)|Non-ekvivalentní [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
-|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Non-ekvivalentní [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
-|[CNoWorkerThread::GetThreadId](#getthreadid)|Non-ekvivalentní [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
-|[CNoWorkerThread::Initialize](#initialize)|Non-ekvivalentní [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
-|[CNoWorkerThread::RemoveHandle](#removehandle)|Non-ekvivalentní [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
-|[CNoWorkerThread::Shutdown](#shutdown)|Non-ekvivalentní [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
+|[CNoWorkerThread::AddHandle](#addhandle)|Nefunkční ekvivalent [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
+|[CNoWorkerThread::AddTimer](#addtimer)|Nefunkční ekvivalent [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
+|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Nefunkční ekvivalent [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
+|[CNoWorkerThread::GetThreadId](#getthreadid)|Nefunkční ekvivalent [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
+|[CNoWorkerThread::Initialize](#initialize)|Nefunkční ekvivalent [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
+|[CNoWorkerThread::RemoveHandle](#removehandle)|Nefunkční ekvivalent [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
+|[CNoWorkerThread::Shutdown](#shutdown)|Nefunkční ekvivalent [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje stejné veřejné rozhraní jako [CWorkerThread](../../atl/reference/cworkerthread-class.md). Toto rozhraní se očekává poskytovaný `MonitorClass` parametr šablony do mezipaměti tříd.  
+ Tato třída poskytuje stejné veřejné rozhraní jako [cworkerthread –](../../atl/reference/cworkerthread-class.md). Očekává se toto rozhraní je poskytovat `MonitorClass` parametr šablony tříd mezipaměti.  
   
- Metody v této třídě jsou implementované se nic nestane. Metody, které vracejí HRESULT vždy vrátí S_OK a metody, které vrátí POPISOVAČ nebo vlákno ID vždy vrátí 0.  
+ Metody této třídy jsou implementovány neprovede žádnou akci. Metody, které vracejí HRESULT vždy vrátí hodnotu S_OK a metody, které vrátí ID POPISOVAČ nebo vlákno vždy vrátí 0.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
   
 ##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
- Non-ekvivalentní [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Nefunkční ekvivalent [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
 HRESULT AddHandle(HANDLE /* hObject
@@ -81,10 +81,10 @@ HRESULT AddHandle(HANDLE /* hObject
  Vždy vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
- Non-ekvivalentní [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
+ Nefunkční ekvivalent [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
 HRESULT AddTimer(DWORD /* dwInterval
@@ -101,10 +101,10 @@ HRESULT AddTimer(DWORD /* dwInterval
  Vždy vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
- Non-ekvivalentní [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
+ Nefunkční ekvivalent [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
 HANDLE GetThreadHandle() throw();
@@ -114,10 +114,10 @@ HANDLE GetThreadHandle() throw();
  Vždy vrátí hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
- Non-ekvivalentní [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
+ Nefunkční ekvivalent [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
 DWORD GetThreadId() throw();
@@ -127,10 +127,10 @@ DWORD GetThreadId() throw();
  Vždy vrátí hodnotu 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
- Non-ekvivalentní [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
+ Nefunkční ekvivalent [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
 HRESULT Initialize() throw();
@@ -140,10 +140,10 @@ HRESULT Initialize() throw();
  Vždy vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
- Non-ekvivalentní [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
+ Nefunkční ekvivalent [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
 HRESULT RemoveHandle(HANDLE /* hObject
@@ -154,10 +154,10 @@ HRESULT RemoveHandle(HANDLE /* hObject
  Vždy vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.  
+ Provádění, poskytuje tato třída nemá žádný účinek.  
   
 ##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
- Non-ekvivalentní [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
+ Nefunkční ekvivalent [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -167,4 +167,4 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
  Vždy vrátí hodnotu S_OK.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace poskytuje tuto třídu neprovede žádnou akci.
+ Provádění, poskytuje tato třída nemá žádný účinek.

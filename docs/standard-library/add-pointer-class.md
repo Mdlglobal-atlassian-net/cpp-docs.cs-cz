@@ -1,5 +1,5 @@
 ---
-title: add_pointer – třída | Microsoft Docs
+title: add_pointer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841415"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963573"
 ---
 # <a name="addpointer-class"></a>add_pointer – třída
 
@@ -44,13 +44,13 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>Poznámky
 
-Typedef člen `type` názvy stejného typu jako `remove_reference<T>::type*`. Alias `add_pointer_t` je zástupce pro přístup k typedef člen `type`.
+Člen **typedef** `type` pojmenovává stejný typ jako `remove_reference<T>::type*`. Alias `add_pointer_t` je zástupce pro přístup k členu **typedef** `type`.
 
-Protože je neplatné. Chcete-li ukazatel z odkaz, `add_pointer` odebere odkaz, pokud existuje, ze zadaného typu dříve, než se provede ukazatel na type. V důsledku toho můžete použít typ s `add_pointer` bez se problémem o tom, zda typu odkaz.
+Protože je vytvořit ukazatel z odkazu, `add_pointer` odebere odkaz, pokud existuje, z určeného typu dříve, než se provede ukazatel na typ. V důsledku toho můžete použít typ s `add_pointer` bez nutnosti zabývat o tom, zda je typ odkaz.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, který `add_pointer` typu je stejný jako ukazatel na typu.
+Následující příklad ukazuje, že `add_pointer` typu je stejné jako ukazatel na typu.
 
 ```cpp
 #include <type_traits>
@@ -76,9 +76,9 @@ add_pointer_t<int> == int *
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_pointer – třída](../standard-library/remove-pointer-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Jedna dědičnost | Microsoft Docs
+title: Jedna dědičnost | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028452"
 ---
 # <a name="single-inheritance"></a>Jedna dědičnost
 V „jednoduché dědičnosti“, tedy v běžné formě dědičnosti, mají třídy pouze jednu základní třídu. Vezměte v úvahu vztah znázorněný na následujícím obrázku.  
   
- ![Základní jedním&#45;graf dědičnosti](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Základní jedním&#45;grafu dědičnosti](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Jednoduchý graf jednoduché dědičnosti  
   
  V obrázku si povšimněte přechodu od obecného ke konkrétnímu. Další běžnou vlastností návrhu ve většině hierarchií tříd je, že odvozené třídy mají se základní třídou vztah „je druh“. V obrázku je třída `Book` druhem třídy `PrintedDocument` a třída `PaperbackBook` je druhem třídy `book`.  
   
  Na obrázku si lze povšimnout ještě jedné položky: třída `Book` je odvozenou třídou (z třídy `PrintedDocument`) a zároveň základní třídou (třída `PaperbackBook` je odvozena z třídy `Book`). Základní deklarace takové hierarchie tříd je uvedena v následujícím příkladu:  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,21 +53,21 @@ class PaperbackBook : public Book {};
   
  Základní třída, ze které je každá třída odvozena, je deklarována před deklarací odvozené třídy. Nepostačuje poskytnout vpřed odkazující deklaraci pro základní třídu, musí jít o úplnou deklaraci.  
   
- V předchozím příkladu specifikátor přístupu **veřejné** se používá. Význam veřejné, chráněné a privátní dědičnosti je popsaná v [řízení přístup ke členu.](../cpp/member-access-control-cpp.md)  
+ V předchozím příkladu, specifikátor přístupu **veřejné** se používá. Význam dědičnosti public, protected a private je popsán v [řízení přístupu členů.](../cpp/member-access-control-cpp.md)  
   
  Jak ukazuje následující obrázek, třída může sloužit jako základní třída mnoha specifickým třídám.  
   
- ![Necyklicky](../cpp/media/vc38xj2.gif "vc38XJ2")  
+ ![Orientovaného acyklického grafu](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Ukázka orientovaného acyklického grafu  
   
  Ve výše uvedeném diagramu nazývaném „orientovaný acyklický graf“ (také „DAG“) jsou některé třídy základními třídami více než jedné odvozené třídy. Opačně to však neplatí: každá odvozená třída má pouze jednu přímou základní třídu. Graf na obrázku znázorňuje strukturu „jednoduché dědičnosti“.  
   
 > [!NOTE]
->  Orientované acyklické grafy se nepoužívají pouze pro jednoduchou dědičnost. Používají se také ke znázornění grafů vícenásobné dědičnosti. Toto téma je zahrnuté v [vícenásobná dědičnost](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Orientované acyklické grafy se nepoužívají pouze pro jednoduchou dědičnost. Používají se také ke znázornění grafů vícenásobné dědičnosti. Toto téma je obsaženo v [vícenásobná dědičnost](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
- V dědičnosti obsahuje odvozená třída členy základní třídy a nové, přidané členy. Díky tomu mohou odvozené třídy odkazovat na členy základní třídy (pokud tyto členy nebyly v odvozené třídě předefinovány). Pokud byly členy v odvozené třídě předefinovány, lze se na členy v přímých nebo nepřímých základních třídách odkazovat pomocí operátoru vyhodnocení oboru (`::`). Vezměte v úvahu v tomto příkladu:  
+ V dědičnosti obsahuje odvozená třída členy základní třídy a nové, přidané členy. Díky tomu mohou odvozené třídy odkazovat na členy základní třídy (pokud tyto členy nebyly v odvozené třídě předefinovány). Pokud byly členy v odvozené třídě předefinovány, lze se na členy v přímých nebo nepřímých základních třídách odkazovat pomocí operátoru vyhodnocení oboru (`::`). Podívejte se například:  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  Povšimněte si, že konstruktor třídy `Book` (`Book::Book`) má přístup k datovému členu `Name`. Objekt typu `Book` lze v programu vytvořit a použít takto:  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  Jak ukazuje předchozí příklad, členy třídy a zděděná data a funkce se používají zcela shodně. Vyžaduje-li implementace třídy `Book` novou implementaci funkce `PrintNameOf`, lze funkci patřící třídě `Document` volat pouze pomocí operátoru vyhodnocení oboru (`::`):  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  Existuje-li přístupná a jednoznačná základní třída, lze ukazatele a reference na odvozené třídy implicitně převádět na ukazatele a reference jejich základní třídy. Následující kód tento koncept demonstruje pomocí ukazatelů (pro reference platí stejný princip):  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  
@@ -162,5 +163,5 @@ int main() {
  Jelikož třída `Document` obsahuje funkci `PrintNameOf`, dokáže vypsat názvy všech knih v knihovně, přestože může vynechat některé informace specifické pro daný typ dokumentu (počet stran u objektů `Book`, počet bajtů u objektu `HelpFile` atd.).  
   
 > [!NOTE]
->  Často není optimální přinutit základní třídu implementovat funkci jako `PrintNameOf`. [Virtuální funkce](../cpp/virtual-functions.md) nabízí další možnosti návrhu.  
+>  Často není optimální přinutit základní třídu implementovat funkci jako `PrintNameOf`. [Virtuální funkce](../cpp/virtual-functions.md) jiné alternativy návrhu nabízí.  
   

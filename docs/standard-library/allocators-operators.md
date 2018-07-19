@@ -1,5 +1,5 @@
 ---
-title: '&lt;alokátorů&gt; operátory | Microsoft Docs'
+title: '&lt;alokátory&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962953"
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;alokátorů&gt; operátory
+# <a name="ltallocatorsgt-operators"></a>&lt;alokátory&gt; operátory
 
-Toto jsou globální šablona funkce operátor definované v &lt;alokátorů&gt;. Členské funkce operátor třídy najdete v dokumentaci třídy.
+Toto jsou globální šablona operátoru funkce definované v &lt;alokátorů&gt;. Třída členské funkce operátora najdete v dokumentaci třídy.
 
 |||
 |-|-|
@@ -39,12 +39,12 @@ bool operator!=(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Jeden z objektů allocator má být testována nerovnost.|
-|`right`|Jeden z objektů allocator má být testována nerovnost.|
+|*doleva*|Jeden z allocator objekty, které chcete otestovat nerovnost.|
+|*doprava*|Jeden z allocator objekty, které chcete otestovat nerovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud allocator objekty nejsou stejné; **false** Pokud allocator objekty jsou stejné.
+**Hodnota TRUE** Pokud objekty přidělování nejsou stejné; **false** Pokud allocator objekty rovnají.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -65,17 +65,17 @@ bool operator==(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Jeden z objektů allocator má být testována rovnosti.|
-|`right`|Jeden z objektů allocator má být testována rovnosti.|
+|*doleva*|Jeden z allocator objekty, které chcete být testovány z hlediska rovnosti.|
+|*doprava*|Jeden z allocator objekty, které chcete být testovány z hlediska rovnosti.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud allocator objekty jsou stejné; **false** Pokud allocator objekty nejsou stejné.
+**Hodnota TRUE** Pokud allocator objekty rovnají. **false** Pokud objekty přidělování nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor šablony vrátí `left.equals(right)`.
+Tato šablona operátor vrátí `left.equals(right)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)
+[\<alokátory: >](../standard-library/allocators-header.md)

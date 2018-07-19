@@ -1,5 +1,5 @@
 ---
-title: MODULUS – struktura | Microsoft Docs
+title: MODULUS – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853554"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962159"
 ---
 # <a name="modulus-struct"></a>modulus – struktura
 
-Předdefinované funkce objekt, který provede operaci dělení numerického zbytku ( `operator%`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace dělení numerického zbytku (`operator%`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator%` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator%` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand numerického zbytku operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace numerického zbytku. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand numerického zbytku operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace numerického zbytku. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left % Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator%`.
+Výsledek `Left % Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator%`.
 
 ## <a name="remarks"></a>Poznámky
 
-`modulus` Functor je omezený na integrální typy pro základní typy dat, nebo na uživatelem definované typy, které implementují `operator%`.
+`modulus` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy, které implementují `operator%`.
 
 ## <a name="example"></a>Příklad
 
@@ -123,9 +123,9 @@ The element-wise remainders of the modular division
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: gamma_distribution – třída | Microsoft Docs
+title: gamma_distribution – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611030b6707a6087e0908aa69349af21858aba0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962423"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution – třída
 
-Generuje gama rozdělení.
+Generuje rozdělení gamma.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,32 +80,32 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `double`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*URNG* uniform náhodné číslo generátor modul. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*URNG* jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje distribuce, která vytváří hodnoty definované uživatelem s plovoucí desetinnou čárkou nebo typu `double` Pokud žádný je k dispozici, distribuovat podle gama rozdělení. Následující tabulka odkazy na články o jednotlivé členy.
+Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného s plovoucí desetinnou čárkou, typu nebo typu **double** Pokud se žádný nezadá, které jsou rozděleny podle rozdělení Gamma. Následující tabulka odkazuje na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[gamma_distribution –](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
 
-Funkce vlastností `alpha()` a `beta()` vrátit jejich příslušné hodnoty pro parametry uložené distribuční *alpha* a *beta*.
+Funkce vlastností `alpha()` a `beta()` vrátit jejich příslušných hodnot pro parametry uložené distribuce *alfa* a *beta*.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.
+Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
 
-`min()` a `max()` členské funkce vrátí nejmenší možný výsledek a největší možné výsledek, v uvedeném pořadí.
+`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
 
-`reset()` – Členská funkce zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
 
-`operator()` Členské funkce vrátí další generované hodnoty, které jsou založené na modulu URNG buď z aktuální parametr balíček nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
 
-Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
-Podrobné informace o rozdělení gama, najdete v článku Wolfram MathWorld [gama rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401111).
+Podrobné informace o rozdělení gamma, najdete v článku Wolfram MathWorld [rozdělení Gamma](http://go.microsoft.com/fwlink/p/?linkid=401111).
 
 ## <a name="example"></a>Příklad
 
@@ -192,13 +192,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
 
-Vytvoří rozdělení.
+Vytvoří rozložení.
 
 ```cpp
 explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
@@ -207,23 +207,23 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*Alpha* `alpha` distribuční parametr.
+*systém Alpha* `alpha` parametru distribuce.
 
-*Beta* `beta` distribuční parametr.
+*Beta verze* `beta` parametru distribuce.
 
-*Parametr* strukturu parametr použitý k vytvoření distribuce.
+*Parametr* parametr struktury použité k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou:** `0.0 < alpha` a `0.0 < beta`
+**Předpoklad:** `0.0 < alpha` a `0.0 < beta`
 
-První konstruktoru vytvoří objekt jehož uložené `alpha` hodnota obsahuje hodnotu *alpha* a jehož uložené `beta` hodnota obsahuje hodnotu *beta*.
+První konstruktor vytvoří objekt, jehož uložené `alpha` hodnota obsahuje hodnotu *alfa* a jehož uložené `beta` hodnota obsahuje hodnotu *beta*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
 
 ## <a name="param_type"></a>  gamma_distribution::param_type
 
-Ukládá parametry rozdělení.
+Ukládá parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -239,18 +239,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*Alpha* `alpha` distribuční parametr.
+*systém Alpha* `alpha` parametru distribuce.
 
-*Beta* `beta` distribuční parametr.
+*Beta verze* `beta` parametru distribuce.
 
-*pravé* `param_type` instance k k porovnání.
+*správné* `param_type` instance pro tuto hodnotu na porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou:** `0.0 < alpha` a `0.0 < beta`
+**Předpoklad:** `0.0 < alpha` a `0.0 < beta`
 
-Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.
+Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

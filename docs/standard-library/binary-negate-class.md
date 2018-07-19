@@ -1,5 +1,5 @@
 ---
-title: binary_negate – třída | Microsoft Docs
+title: binary_negate – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961919"
 ---
 # <a name="binarynegate-class"></a>binary_negate – třída
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Binární funkce se má být Negované.
+*Func* binární funkce, která se bude negovat.
 
-`left` Levý operand binární funkce, která má být Negované.
+*levé* levý operand binární funkce, která se bude negovat.
 
-`right` Pravý operand binární funkce, která má být Negované.
+*správné* pravý operand binární funkce, která se bude negovat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -56,9 +56,9 @@ Negace binární funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie výraz _ objekt binární funkce *Func*. Definuje jeho – členská funkce `operator()` jako vrácení **!**\_ *Func (vlevo, vpravo).*
+Třída šablony ukládá jejich kopii _ objekt binární funkce *Func*. Definuje jeho členskou funkci `operator()` jako vracející **!**\_ *Func (levý, pravý).*
 
-Konstruktoru `binary_negate` je používána zřídka přímo. Pomocné funkce [not2 –](../standard-library/functional-functions.md#not2) je obvykle preference deklarování a použití **binary_negator** adaptéru predikátu.
+Konstruktor třídy `binary_negate` je zřídka se používá přímo. Pomocná funkce [not2 –](../standard-library/functional-functions.md#not2) se obvykle dává přednost před deklarování a použití **binary_negator** adaptér predikátu.
 
 ## <a name="example"></a>Příklad
 
@@ -127,9 +127,9 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 
 **Záhlaví:** \<funkční >
 
-– std
+std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

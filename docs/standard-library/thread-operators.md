@@ -1,5 +1,5 @@
 ---
-title: '&lt;vlákno&gt; operátory | Microsoft Docs'
+title: '&lt;vlákno&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 1f5f523b19581fe11f01266c90e6b8612da125fc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964811"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;vlákno&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|[Operátor&lt;=](#op_lt_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|[– Operátor&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Určuje, zda jeden `thread::id` je větší než nebo rovna hodnotě jiný objekt.
+Určuje, zda jeden `thread::id` objekt je větší než nebo roven jinému.
 
 ```cpp
 bool operator>= (
@@ -49,9 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `thread::id` objektu.
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -59,11 +61,11 @@ bool operator>= (
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Určuje, zda jeden `thread::id` je větší než druhý objekt.
+Určuje, zda jeden `thread::id` je větší než jiný objekt.
 
 ```cpp
 bool operator> (
@@ -73,9 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `thread::id` objektu.
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -83,11 +87,11 @@ bool operator> (
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Určuje, zda jeden `thread::id` objektu je menší než nebo rovna do jiného.
+Určuje, zda jeden `thread::id` je objekt menší než nebo rovna do jiného.
 
 ```cpp
 bool operator<= (
@@ -97,9 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `thread::id` objektu.
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -107,11 +113,11 @@ bool operator<= (
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Určuje, zda jeden `thread::id` objektu je menší než jiné.
+Určuje, zda jeden `thread::id` je menší než jiný objekt.
 
 ```cpp
 bool operator<(
@@ -121,19 +127,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `thread::id` objektu.
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `Left` předchází `Right` v celkový řazení; v opačném `false`.
+**Hodnota TRUE** Pokud *vlevo* předchází *vpravo* v celkový řazení; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor definuje celkový řazení na všech `thread::id` objekty. Tyto objekty lze jako klíče v asociativní kontejnery.
+Operátor, který definuje celkový řazení ve všech `thread::id` objekty. Tyto objekty je možné jako klíče v asociativních kontejnerech.
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
 ## <a name="op_neq"></a>  Operator! =
 
@@ -147,9 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Levé straně `thread::id` objektu.
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -157,11 +167,11 @@ bool operator!= (
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Porovná dva `thread::id` objekty rovnosti.
+Porovná dva `thread::id` objekty pro rovnost.
 
 ```cpp
 bool operator== (
@@ -170,22 +180,24 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parametry
+ 
+*Doleva*  
+ Levé straně `thread::id` objektu.
 
-`Left` Levé straně `thread::id` objektu.
-
-`Right` Právo `thread::id` objektu.
+*Doprava*  
+ Vpravo `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud dva objekty představují stejném vlákně, v provádění nebo pokud ani objekt představuje podproces provádění; v opačném `false`.
+**Hodnota TRUE** , zda dva objekty představují stejné vlákno provádění, nebo pokud žádný objekt představuje vlákno provádění; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nevyvolá výjimku jakékoli výjimky.
+Tato funkce nevyvolá žádné výjimky.
 
-## <a name="op_lt_lt"></a>  Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
 
-Vloží text reprezentace `thread::id` objektu do datového proudu.
+Vloží textové vyjádření `thread::id` objektu do datového proudu.
 
 ```cpp
 template <class Elem, class Tr>
@@ -195,20 +207,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`Ostr` A [basic_ostream](../standard-library/basic-ostream-class.md) objektu.
+*Ostr*  
+ A [basic_ostream –](../standard-library/basic-ostream-class.md) objektu.
 
-`Id` A `thread::id` objektu.
+*ID*  
+ A `thread::id` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`Ostr`.
+*Ostr*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vloží `Id` do `Ostr`.
+Tato funkce vloží *Id* do *Ostr*.
 
-Pokud dva `thread::id` porovnat stejné objekty, vložené textové reprezentace těchto objektů jsou stejné.
+Pokud dvě `thread::id` objekty rovnají, byl vložen text interpretací těchto objektů jsou stejné.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<vlákno >](../standard-library/thread.md)<br/>
+[\<vlákna >](../standard-library/thread.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: is_default_constructible třída | Microsoft Docs
+title: is_default_constructible – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964252"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible – třída
 
-Testy, pokud typ má výchozí konstruktor.
+Testuje, zda má typ výchozí konstruktor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je typu třídy, která má výchozí konstruktor, jinak má hodnotu false. Jde o ekvivalent predikát `is_constructible<T>`. Typ `T` musí být typu dokončení `void`, nebo pole neznámé hranice.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je typ třídy, která má výchozí konstruktor, jinak má hodnotu false. Jedná se o ekvivalent predikátu `is_constructible<T>`. Typ *T* musí být dokončený typ **void**, nebo pole neznámým rozsahem.
 
 ## <a name="example"></a>Příklad
 
@@ -81,8 +81,8 @@ is_default_constructible<Simple2> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

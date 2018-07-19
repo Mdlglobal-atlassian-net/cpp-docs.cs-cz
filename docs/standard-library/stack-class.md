@@ -1,5 +1,5 @@
 ---
-title: Stack – třída | Microsoft Docs
+title: Stack – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,16 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862374"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963222"
 ---
 # <a name="stack-class"></a>stack – třída
 
-Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k prvek naposledy přidaný do některé základní typ kontejneru. Stack – třída se používá v případě, že je důležité mít pouze zásobníku operace, se provádí na kontejneru.
+Kontejner adaptér třídu šablony, která poskytuje omezení funkcí omezení přístupu k elementu naposledy přidaný do některé základní typy kontejnerů. Třída zásobníku se používá, když je důležité, aby bylo jasné, že se pouze zásobníku operace provádějí v kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,57 +50,57 @@ class stack
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* element datový typ se neukládají v zásobníku.
+*Typ* typ dat prvku, který bude uložen do zásobníku.
 
-`Container` Typ základního kontejneru použít k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >*.
+*Kontejner* typu základního kontejneru používaný k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >*.
 
 ## <a name="remarks"></a>Poznámky
 
-Elementy třídy **typ** stanovené v šabloně první parametr zásobníku objektu je shodný s [value_type](#value_type) a musí shodovat s typem elementu v základní třídě kontejneru **Kontejneru** stanoveno druhý parametr šablony. **Typu** musí být přiřaditelný, takže je možné zkopírovat objekty daného typu a přiřadit hodnoty proměnné daného typu.
+Prvky třídy `Type` stanovené v šabloně první parametr objektu zásobníku je synonymní s [value_type](#value_type) a musí shodovat s typem elementu v základní třídě kontejneru `Container` stanovených druhý parametr šablony. `Type` Musí být možné přiřadit, takže je možné zkopírovat objekty daného typu a přiřadit proměnné typu hodnoty.
 
-Zahrnout vhodný základní třídy kontejnerů pro zásobník [deque](../standard-library/deque-class.md), [list – třída](../standard-library/list-class.md), a [vector – třída](../standard-library/vector-class.md), nebo jakékoli jiné pořadí kontejner, který podporuje operace **zpět**, `push_back`, a `pop_back`. Základní třída kontejneru je zapouzdřený v rámci kontejneru adaptéru, který zveřejňuje jenom omezená sada členské funkce kontejneru pořadí jako veřejné rozhraní.
+Zahrnout vhodný základní třídy kontejnerů pro zásobník [deque](../standard-library/deque-class.md), [list – třída](../standard-library/list-class.md), a [vector – třída](../standard-library/vector-class.md), nebo jiném pořadí kontejneru, který podporuje operace `back`, `push_back`, a `pop_back`. Základní třída kontejneru je zapouzdřen v rámci kontejneru adaptér, který zpřístupňuje pouze omezená sada členské funkce kontejneru pořadí jako veřejné rozhraní.
 
-Zásobník objekty jsou v případě porovnatelný z hlediska rovnosti a pouze v případě elementy třídy **typ** jsou porovnatelný z hlediska rovnosti a menší – než porovnatelný z hlediska v případě a pouze v případě elementy třídy **typ** méně – než porovnatelný.
+Zásobníku objekty jsou srovnatelné if rovnosti a pouze v případě elementů třídy `Type` lze porovnávat rovnosti a jsou méně – než srovnatelné Pokud a pouze v případě elementů třídy `Type` jsou méně – než srovnatelná s hodnotou.
 
-- Stack – třída podporuje last-in ven (LIFO) datová struktura. Dobrý analogovým pamatovat by zásobník desky. Elementy (tabulky) může vložit, prověřovány nebo odebrat pouze z horní části zásobníku, který je posledním elementem na konci základní kontejneru. Omezení přístup pouze nejvyšší element je z důvodu pro použití třídy zásobníku.
+- Třída zásobníku podporuje poslední dovnitř, první (ven LIFO) datové struktury. Dobré analogové brát v úvahu by stoh talířů shora. Elementy (tabulky) může vložit, prozkoumat nebo odebrat jenom z horní části zásobníku, což je poslední prvek na konci kontejneru základní. Omezení přístupu jenom k prvku na vrcholu je důvod horizontálních oddílů pomocí třídy zásobníku.
 
-- [Queue – třída](../standard-library/queue-class.md) podporuje first-in použity datová struktura. Dobrý analogovým pamatovat by zarovnání pro bankovní pokladnu osoby. Elementy (uživatelé) mohou být přidány do pozadí čáry a jsou odebrány z před řádku. Může být prověřovány přední a zadní straně řádku. Omezení přístup pouze přední a zadní prvky tímto způsobem je kožešiny důvod pomocí třídy fronty.
+- [Front třídy](../standard-library/queue-class.md) podporuje první dovnitř, první ven (FIFO) datová struktura. Dobré analogové brát v úvahu by zarovnání pro bankovní pokladnu lidí. Elementy (lidé) mohou být přidány do pozadí řádku a odeberou se ze začátku řádku. Přední a zadní řádku může být kontrolována. Omezení přístupu jenom přední a zadní prvky tímto způsobem je z důvodu kožešiny horizontálních oddílů pomocí třídy fronty.
 
-- [Priority_queue – třída](../standard-library/priority-queue-class.md) řadí jeho prvky tak, aby největší element je vždy na nejvyšší pozici. Podporuje vkládání element a kontroly a odebrání nejvyšší elementu. Dobrý analogovým pamatovat by uživatelé zarovnávání, kde jsou uspořádané podle stáří, výšky nebo jiné kritérium.
+- [Priority_queue – třída](../standard-library/priority-queue-class.md) orders jeho prvky tak, aby největšího prvku je vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odstranění prvku na vrcholu. Dobré analogové brát v úvahu by uživatelé zarovnání ve kterém jsou uspořádané podle věku, výšku ani jiné kritérium.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[Zásobníku](#stack)|Vytvoří `stack` který je prázdný nebo je kopie základní kontejnerového objektu.|
+|[Zásobník](#stack)|Vytvoří `stack` , který je prázdný nebo který je kopií základní kontejnerového objektu.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[container_type](#container_type)|Typ, který poskytuje základní kontejner, aby se přizpůsobit podle `stack`.|
-|[size_type](#size_type)|Typ celé číslo bez znaménka, která představuje počet elementů ve `stack`.|
-|[value_type](#value_type)|Typ, který reprezentuje typ objektu uložené jako element v `stack`.|
+|[container_type](#container_type)|Typ, který poskytuje základní kontejneru upraví `stack`.|
+|[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `stack`.|
+|[value_type](#value_type)|Typ, který představuje typ uložený jako prvek v objektu `stack`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[prázdný](#empty)|Pokud testy `stack` je prázdný.|
+|[prázdný](#empty)|Testuje, zda `stack` je prázdný.|
 |[POP](#pop)|Odebere element z horní části `stack`.|
-|[push](#push)|Přidá prvek na začátek `stack`.|
+|[push](#push)|Přidá prvek do horní části `stack`.|
 |[Velikost](#size)|Vrátí počet prvků v `stack`.|
-|[Horní](#top)|Vrátí odkaz na element v horní části `stack`.|
+|[nahoru](#top)|Vrátí odkaz na prvek v horní části `stack`.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<zásobníku >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="container_type"></a>  Stack::container_type
 
-Typ, který poskytuje základní kontejner, aby se přizpůsobit.
+Typ, který poskytuje základní kontejner, aby ho upravit.
 
 ```cpp
 typedef Container container_type;
@@ -108,7 +108,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Container`. Všechny tři třídy kontejnerů pořadí standardní knihovna C++ – vector – třída list – třída a deque – třída výchozí – požadavkům má být použit jako základní kontejner pro objekt zásobníku. Uživatelem definované typy, které splňují tyto požadavky mohou být využity také.
+Typ je synonymum pro parametr šablony `Container`. Všechny tři třídy kontejnerů sekvence standardní knihovny C++ – třídu vector, list – třída a třídě deque výchozí – požadavkům má být použit jako základní kontejneru pro objekt zásobníku. Uživatelem definované typy, které splňují tyto požadavky může také sloužit.
 
 Další informace o `Container`, najdete v části poznámky [stack – třída](../standard-library/stack-class.md) tématu.
 
@@ -118,7 +118,7 @@ Podívejte se na příklad pro [stack::stack](#stack) příklad toho, jak deklar
 
 ## <a name="empty"></a>  Stack::Empty
 
-Testy, pokud zásobník je prázdný.
+Testuje, zda je zásobník je prázdný.
 
 ```cpp
 bool empty() const;
@@ -126,7 +126,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** pokud zásobník je prázdný; **false** pokud zásobník představuje neprázdný.
+**Hodnota TRUE** pokud zásobník je prázdný; **false** pokud zásobník je prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -171,7 +171,7 @@ void pop();
 
 ### <a name="remarks"></a>Poznámky
 
-V zásobníku musí být neprázdný použít – členská funkce. Horní části zásobníku je pozice obsazena naposledy přidaný prvek a posledním elementem na konci tohoto kontejneru.
+Zásobník musí být neprázdné použít členskou funkci. Horní části zásobníku je obsazena naposledy přidaný prvek pozice a poslední prvek na konci kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -219,7 +219,7 @@ After a pop, the element at the top of the stack is 20.
 
 ## <a name="push"></a>  Stack::push
 
-Přidá prvek na začátek konec zásobníku.
+Přidá prvek na horní konec zásobníku.
 
 ```cpp
 void push(const Type& val);
@@ -227,11 +227,11 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-`val` Element přidán do horní části zásobníku.
+*Val* prvku přidán do horní části zásobníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Horní části zásobníku je pozice obsazena naposledy přidaný prvek a posledním elementem na konci tohoto kontejneru.
+Horní části zásobníku je obsazena naposledy přidaný prvek pozice a poslední prvek na konci kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -308,7 +308,7 @@ The stack length is now 2.
 
 ## <a name="size_type"></a>  Stack::size_type
 
-Typ celé číslo bez znaménka, která představuje počet elementů v sadě.
+Typ celé číslo bez znaménka představující počet prvků v zásobníku.
 
 ```cpp
 typedef typename Container::size_type size_type;
@@ -316,7 +316,7 @@ typedef typename Container::size_type size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `size_type` základní kontejneru upraveném zásobníku.
+Typ je synonymum pro `size_type` základní kontejneru přizpůsobené zásobníku.
 
 ### <a name="example"></a>Příklad
 
@@ -324,7 +324,7 @@ Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a
 
 ## <a name="stack"></a>  Stack::Stack
 
-Vytvoří zásobníku, která je prázdný nebo který je kopií kontejner základní třídy.
+Sestaví zásobníku, který je prázdný nebo který je kopii kontejner základní třídy.
 
 ```cpp
 stack();
@@ -334,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Kontejner, které má být kopie sestavené zásobníku.
+*správné* kontejneru je vytvořený zásobníku kopií.
 
 ### <a name="example"></a>Příklad
 
@@ -377,7 +377,7 @@ The element at the top of stack vsi2 is 1.
 
 ## <a name="top"></a>  Stack::TOP
 
-Vrátí odkaz na element v horní části zásobníku.
+Vrátí odkaz na prvek v horní části zásobníku.
 
 ```cpp
 reference top();
@@ -387,13 +387,13 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na posledním prvkem v kontejneru v horní části zásobníku.
+Odkaz na poslední prvek v kontejneru v horní části zásobníku.
 
 ### <a name="remarks"></a>Poznámky
 
-V zásobníku musí být neprázdný použít – členská funkce. Horní části zásobníku je pozice obsazena naposledy přidaný prvek a posledním elementem na konci tohoto kontejneru.
+Zásobník musí být neprázdné použít členskou funkci. Horní části zásobníku je obsazena naposledy přidaný prvek pozice a poslední prvek na konci kontejneru.
 
-Pokud vrátí hodnotu, která **horní** je přiřazena k `const_reference`, zásobník objekt nelze změnit. Pokud návratová hodnota **horní** je přiřazena k **odkaz**, je možné upravit objekt zásobníku.
+Pokud návratová hodnota `top` je přiřazena `const_reference`, objekt zásobníku nelze upravit. Pokud návratová hodnota `top` je přiřazen `reference`, objekt zásobníku lze upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -428,7 +428,7 @@ The next integer down is 1.
 
 ## <a name="value_type"></a>  Stack::value_type
 
-Typ, který představuje typ objektu uložené jako element v zásobníku.
+Typ, který představuje typ objektu uložený jako prvek v zásobníku.
 
 ```cpp
 typedef typename Container::value_type value_type;
@@ -436,7 +436,7 @@ typedef typename Container::value_type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `value_type` základní kontejneru upraveném zásobníku.
+Typ je synonymum pro `value_type` základní kontejneru přizpůsobené zásobníku.
 
 ### <a name="example"></a>Příklad
 
@@ -467,7 +467,7 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

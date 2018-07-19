@@ -1,5 +1,5 @@
 ---
-title: Locale – třída | Microsoft Docs
+title: Locale – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963791"
 ---
 # <a name="locale-class"></a>locale – třída
 
@@ -50,7 +50,7 @@ class locale;
 
 ## <a name="remarks"></a>Poznámky
 
-Omezující vlastnost je ukazatel na objekt třídy odvozené od třídy [omezující vlastnost](#facet_class) s veřejné objekt ve formátu:
+Omezující vlastnost je ukazatel na objekt třídy odvozené od třídy [omezující vlastnost](#facet_class) , která má veřejný objekt formuláře:
 
 ```cpp
 static locale::id id;
@@ -58,7 +58,7 @@ static locale::id id;
 
 Můžete definovat neuzavřenou množinu těchto omezujících vlastností. Můžete také sestavit objekt národního prostředí, který určuje libovolný počet omezujících vlastností.
 
-Předdefinované skupiny tyto omezující vlastnosti představují [kategorie národního prostředí](#category) tradičně spravuje standardní knihovny jazyka C: funkce `setlocale`.
+Předdefinované skupiny těchto omezujících vlastností představují [kategorie národního prostředí](#category) tradičně spravované ve standardní knihovny jazyka C pomocí funkce `setlocale`.
 
 Kategorie collate (LC_COLLATE) obsahuje omezující vlastnosti:
 
@@ -122,7 +122,7 @@ messages<wchar_t>
 
 Některé z těchto předdefinovaných omezujících vlastností jsou používány třídami iostreams k řízení převodu číselných hodnot z a na sekvence textu.
 
-Název národního prostředí objekt národní prostředí – třída také ukládá jako objekt třídy [řetězec](../standard-library/string-typedefs.md#string). Pomocí názvu objektu neplatné národní prostředí vytvořit národního prostředí omezující vlastnost nebo objekt národního prostředí, vyvolá objekt třídy [runtime_error](../standard-library/runtime-error-class.md). Název uložené národního prostředí je `"*"` Pokud objekt národní prostředí nelze určité přesně na odpovídá C-style národní prostředí, reprezentovaný objektem. Jinak, můžete vytvořit odpovídající národního prostředí v rámci standardní knihovny jazyka C pro objekt národního prostředí `Loc`, voláním `setlocale`(LC_ALL `,` `Loc`. [název](#name)`().c_str()`).
+Objekt třídy národního prostředí také ukládá název národního prostředí jako objekt třídy [řetězec](../standard-library/string-typedefs.md#string). Pomocí neplatného názvu národního prostředí k vytvoření omezující vlastnost národního prostředí nebo objektu národního prostředí vyvolá objekt třídy [runtime_error –](../standard-library/runtime-error-class.md). Název uloženého národního prostředí je `"*"` Pokud objekt národního prostředí není možné určité, národní prostředí stylu C přesně odpovídá, reprezentovaný objektem. V opačném případě můžete vytvořit odpovídající národní prostředí v rámci standardní knihovny jazyka C pro objekt národního prostředí `Loc`, voláním `setlocale`(LC_ALL `,` `Loc`. [název](#name)`().c_str()`).
 
 V této implementaci můžete také volat statickou členskou funkci:
 
@@ -130,13 +130,13 @@ V této implementaci můžete také volat statickou členskou funkci:
 static locale empty();
 ```
 
-k vytvoření objektu národního prostředí, který nemá žádné omezující vlastnosti Je také transparentní národního prostředí; Pokud funkce šablon [has_facet](../standard-library/locale-functions.md#has_facet) a [use_facet](../standard-library/locale-functions.md#use_facet) nelze najít požadovaný omezující vlastnost v transparentní národním prostředí, se poraďte se nejprve globální národní prostředí a poté, pokud je transparentní, classic národní prostředí. Lze tedy psát:
+k vytvoření objektu národního prostředí, který nemá žádné omezující vlastnosti Je to také transparentní národní prostředí; Pokud funkce šablony [has_facet](../standard-library/locale-functions.md#has_facet) a [use_facet](../standard-library/locale-functions.md#use_facet) nejde najít požadovanou omezující vlastnost v transparentním národním prostředí, mohou konzultovat nejdříve globální národní prostředí a potom, pokud je transparentní, klasické národní prostředí. Lze tedy psát:
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-Následné vložení do [cout](../standard-library/iostream.md#cout) jsou zprostředkovaného podle aktuálního stavu globální národního prostředí. Lze dokonce psát:
+Následná vložení do [cout](../standard-library/iostream.md#cout) jsou zprostředkována aktuálním stavem globálního národního prostředí. Lze dokonce psát:
 
 ```cpp
 locale loc(locale::empty(),
@@ -146,7 +146,7 @@ locale loc(locale::empty(),
 cout.imbue(loc);
 ```
 
-Pravidla pro následné vložení pro formátování čísel `cout` zůstat stejné jako národní prostředí C, to i v případě změny pravidel pro vkládání a peněžní částky poskytuje globální národní prostředí.
+Pravidla číselného formátování pro následná vložení do `cout` zůstávají stejná jako národní prostředí jazyka C, i když globální národní prostředí, které poskytuje pravidla pro vkládání dat a peněžních částek.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -179,7 +179,7 @@ Pravidla pro následné vložení pro formátování čísel `cout` zůstat stej
 |Operátor|Popis|
 |-|-|
 |[operator!=](#op_neq)|Testuje dvě národní prostředí na nerovnost.|
-|[operátor)](#op_call)|Porovná dva `basic_string` objekty.|
+|[() – operátor](#op_call)|Porovná dva `basic_string` objekty.|
 |[operator==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|
 
 ### <a name="classes"></a>Třídy
@@ -193,7 +193,7 @@ Pravidla pro následné vložení pro formátování čísel `cout` zůstat stej
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="category"></a>  locale::category
 
@@ -213,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `int` typu, která představuje skupinu různých elementů bitová maska místní pro národní prostředí – třída typu nebo můžete použít k reprezentování žádné odpovídající kategorie národního prostředí C. Elementy jsou:
+Typ je synonymum pro **int** typ představující skupinu různých elementů bitová maska zadejte místní třídy národního prostředí nebo lze použít k reprezentaci všech odpovídající kategorie národního prostředí C. Prvky jsou:
 
-- **COLLATE**, odpovídající kategorii C lc_collate –
+- `collate`, odpovídající kategorii C LC_COLLATE
 
-- **ctype**, odpovídající kategorii C LC_CTYPE –
+- `ctype`, odpovídající kategorii C LC_CTYPE
 
-- **peněžní**, odpovídající kategorii C lc_monetary –
+- `monetary`, odpovídající kategorii C LC_MONETARY
 
-- **číselné**, odpovídající kategorii C lc_numeric –
+- `numeric`, odpovídající kategorii C LC_NUMERIC
 
-- **čas**, odpovídající kategorii C lc_time –
+- `time`, odpovídající kategorii C LC_TIME
 
-- **zprávy**, odpovídající kategorii Posix LC_MESSAGES
+- `messages`, odpovídající kategorii Posix LC_MESSAGES
 
-Kromě toho jsou užitečné dvou hodnot:
+Kromě toho jsou dvě užitečné hodnoty:
 
-- **žádný**, odpovídajících do žádné kategorie C
+- `none`, odpovídající žádná kategorie C
 
-- **všechny**, odpovídající sjednocení C všechny kategorie LC_ALL –
+- `all`, odpovídající všechny kategorie LC_ALL sjednocení jazyka C
 
-Může představovat libovolný skupiny kategorie pomocí `OR` s tyto konstanty, jako v **peněžní** &#124; **čas**.
+Může představovat libovolný skupinu kategorií pomocí `OR` pomocí těchto konstant, jako v `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::Classic
 
@@ -245,11 +245,11 @@ static const locale& classic();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na C národní prostředí.
+Odkaz na národním prostředí C.
 
 ### <a name="remarks"></a>Poznámky
 
-Národní prostředí classic C je USA Anglickou ASCII národního prostředí v rámci standardní knihovny jazyka C implicitně používaný v programech, které nejsou mezinárodní.
+Klasické národní prostředí jazyka C je USA ASCII anglické národní prostředí v rámci standardní knihovny jazyka C, který se implicitně používá v aplikacích, které nejsou mezinárodní.
 
 ### <a name="example"></a>Příklad
 
@@ -301,11 +301,11 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametry
 
-`Loc` Národní prostředí obsahující omezující vlastnosti má být vložen do cílové národní prostředí.
+*Loc* národní prostředí obsahující omezující vlastnosti má být vložen do cílového národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vrátí objekt národního prostředí, který nahrazuje v nebo ho přidá k  **\*to** omezující vlastnost `Facet` uvedené v `Loc`.
+Členská funkce vrátí objekt národního prostředí, který nahrazuje v nebo přidá do  **\*to** omezující vlastnost `Facet` uvedené v *Loc*.
 
 ### <a name="example"></a>Příklad
 
@@ -355,13 +355,13 @@ private:
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že nelze kopírovat a přiřaďte objekt omezující vlastnosti třídy. Můžete vytvořit a zrušení objektů odvozených od třídy `locale::facet` , ale ne objekty správné základní třídy. Obvykle vytvoříte objekt `_Myfac` odvozené od omezující vlastnosti, když vytvoříte v národním prostředí, jako v **localeloc**( `locale::classic`(), **nové**`_Myfac`);
+Všimněte si, že nelze kopírovat ani přiřadit objekt omezující vlastnosti třídy. Můžete vytvořit a zničit objekty odvozené od třídy `locale::facet` , ale ne objekty správné základní třídy. Obvykle vytvoříte objekt `_Myfac` odvozený od omezující vlastnost při konstrukci národní prostředí, stejně jako v **localeloc**( `locale::classic`(), **nové**`_Myfac`);
 
-V takových případech by měl mít v konstruktoru pro základní třídu omezující vlastnost nulu `_Refs` argument. Pokud objekt je již nepotřebujete, je odstraněn. Proto je zadat nenulové hodnoty _ *odolný systém souborů* argument pouze v těchto výjimečných případech, kdy převzít odpovědnost za dobu životnosti objektu.
+V takovém případě by měl mít konstruktor základní třídy omezující vlastnosti nulu `_Refs` argument. Pokud objekt je už nepotřebujete, je odstranit. Tedy zadáte nenulovou _ *odolný systém souborů* argument pouze v těchto výjimečných případech, ve kterém můžete převzít odpovědnost za dobu života objektu.
 
 ## <a name="global"></a>  locale::Global
 
-Obnoví výchozí národní prostředí pro program. Tato akce ovlivní globální národní prostředí pro C a C++.
+Obnoví výchozí národní prostředí pro program. Tímto je ovlivněn globální národní prostředí pro jazyky C a C++.
 
 ```cpp
 static locale global(const locale& Loc);
@@ -369,15 +369,15 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-`Loc` Národní prostředí má být použit jako výchozí národní prostředí program.
+*Loc* národní prostředí pro program používá jako výchozí národní prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí národního prostředí, než byl resetován výchozí národní prostředí.
+Předchozí národní prostředí, než výchozí národní prostředí bylo resetováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Při spuštění programu globální národního prostředí je stejný jako classic národní prostředí. `global()` Volání funkce `setlocale( LC_ALL, loc.name. c_str())` k navázání odpovídající národního prostředí v knihovně standardní C.
+Při spuštění programu globální národní prostředí je stejný jako klasické národní prostředí. `global()` Volání funkce `setlocale( LC_ALL, loc.name. c_str())` vytvořit odpovídající národní prostředí v knihovně Standard C.
 
 ### <a name="example"></a>Příklad
 
@@ -411,11 +411,11 @@ The previous locale was: C
 
 Třída členu poskytuje jedinečnou identifikaci omezující podmínky, která se používá jako index při vyhledávání omezujících vlastností v národním prostředí.
 
-id třídy {chráněné: id(); privátní: id(const id&) / / není definována void – operátor =(const id&) / / není definována};
+id třídy {chráněné: id(); privátní: id(const id&) / / není definována void operator =(const id&) / / nedefinovaná.};
 
 ### <a name="remarks"></a>Poznámky
 
-Třída členů popisuje objekt statický člen vyžaduje každý omezující vlastnost jedinečný národního prostředí. Poznámka: nelze kopírovat nebo přiřadit objekt třídy **id**.
+Člen třídy popisuje statického členu objektu vyžaduje každý omezující vlastnost národního prostředí jedinečná. Všimněte si, že nelze kopírovat ani přiřadit objekt třídy `id`.
 
 ## <a name="locale"></a>  locale::Locale
 
@@ -436,35 +436,35 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametry
 
-`Locname` Název v národním prostředí.
+*Locname* název národního prostředí.
 
-`Loc` Národní prostředí, která se zkopírují při vytváření nové národní prostředí.
+*Loc* národního prostředí, které se mají zkopírovat při konstrukci nové národní prostředí.
 
-`Other` Národní prostředí ze kterého mají být vyberte kategorii.
+*Další* národní prostředí, ze kterého se má vybrat kategorii.
 
-`Cat` Kategorii, kterou chcete nahrazena do sestavené národní prostředí.
+*Cat* kategorii, kterou chcete nahradit do vytvořeného národní prostředí.
 
-`Fac` Omezující vlastnost k nahrazena do sestavené národní prostředí.
+*FAC* omezující vlastnost pro nahrazena do vytvořeného národní prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje objekt, který má odpovídající globální národní prostředí. Druhý a třetí konstruktory inicializovat všechny kategorie národního prostředí tak, aby měl chování, které jsou konzistentní s názvem národní prostředí `Locname`. Zkopírujte zbývající konstruktory `Loc`, s výjimkou uvedeno:
+První konstruktor inicializuje objekt tak, aby odpovídaly globální národní prostředí. Druhý a třetí konstruktor inicializuje všechny kategorie národního prostředí má chování je konzistentní s názvem národního prostředí *Locname*. Zbývající konstruktory kopírují *Loc*, s výjimkami, které jste si poznamenali:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-nahradí z `Other` těchto omezující vlastnosti odpovídající kategorii C pro které C & `Cat` nenulový.
+nahradí z *jiných* těchto omezujících vlastností odpovídající kategorie C pro které C & *Cat* nenulové.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-nahradí z `locale(Locname, _All)` těchto omezující vlastnosti odpovídající kategorii C pro které C & `Cat` nenulový.
+nahradí z `locale(Locname, _All)` těchto omezujících vlastností odpovídající kategorie C pro které C & *Cat* nenulové.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-nahradí v (nebo ho přidá k) `Loc` omezující vlastnost `Fac`, pokud `Fac` není nulový ukazatel.
+nahradí v (nebo přidá) *Loc* omezující vlastnost *Fac*, pokud *Fac* není ukazatel s hodnotou null.
 
-Pokud název národního prostředí `Locname` je nulový ukazatel nebo jinak neplatných, funkce vyvolá [runtime_error](../standard-library/runtime-error-class.md).
+Pokud název národního prostředí *Locname* je ukazatel s hodnotou null nebo jinak neplatných, funkce vyvolá [runtime_error –](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Příklad
 
@@ -516,7 +516,7 @@ string name() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec, která poskytuje název národního prostředí.
+Řetězec názvu národního prostředí.
 
 ### <a name="example"></a>Příklad
 
@@ -555,15 +555,15 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Jeden národních prostředí, které má být testována nerovnost.
+*správné* jeden národní prostředí má být testována nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota, která je **true** Pokud národní prostředí nejsou kopie stejném národním prostředí; **false** Pokud se národní prostředí kopie stejném národním prostředí.
+Logická hodnota, která je **true** Pokud se národní prostředí nejsou kopie stejného národního prostředí; **false** Pokud se národní prostředí kopie stejného národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jsou stejném národním prostředí, pokud je kopie dalších, nebo pokud mají stejné názvy dvou národní prostředí jsou si rovny.
+Dvě národní prostředí jsou stejné v případě, že jsou na stejné národní prostředí, pokud je kopie druhé, nebo pokud mají stejný název.
 
 ### <a name="example"></a>Příklad
 
@@ -618,19 +618,19 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Levé řetězec.
+*levé* levé řetězec.
 
-`right` Pravé řetězec.
+*správné* správný řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členské funkce vrátí hodnotu:
+Členská funkce vrátí:
 
-- -1, pokud je první pořadí porovná nižší než druhý pořadí.
+- -1, pokud první pořadí porovnává menší než druhý pořadí.
 
-- + 1, pokud druhý pořadí porovná nižší než první pořadí.
+- + 1, pokud druhá sekvence porovnává méně než první pořadí.
 
-- 0, pokud odpovídají pořadí.
+- 0, pokud jsou ekvivalentní sekvencí.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -642,7 +642,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-Proto můžete objekt národního prostředí jako objekt funkce.
+To znamená slouží objekt národního prostředí jako objekt funkce.
 
 ### <a name="example"></a>Příklad
 
@@ -685,15 +685,15 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Jeden národních prostředí, které má být testována rovnosti.
+*správné* jeden národní prostředí, které chcete testovat rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota, která je **true** Pokud se národní prostředí kopie stejném národním prostředí; **false** Pokud národní prostředí nejsou kopie stejném národním prostředí.
+Logická hodnota, která je **true** Pokud se národní prostředí kopie stejného národního prostředí; **false** Pokud se národní prostředí nejsou kopie stejného národního prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jsou stejném národním prostředí, pokud je kopie dalších, nebo pokud mají stejné názvy dvou národní prostředí jsou si rovny.
+Dvě národní prostředí jsou stejné v případě, že jsou na stejné národní prostředí, pokud je kopie druhé, nebo pokud mají stejný název.
 
 ### <a name="example"></a>Příklad
 
@@ -739,9 +739,9 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<národní prostředí >](../standard-library/locale.md)<br/>
 [Znakové stránky](../c-runtime-library/code-pages.md)<br/>
-[Názvy národních prostředí, jazyků a řetězce zemí/oblastí](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Názvy národních prostředí, jazyků a Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

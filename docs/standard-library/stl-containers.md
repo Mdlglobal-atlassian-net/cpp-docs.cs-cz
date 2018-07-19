@@ -1,5 +1,5 @@
 ---
-title: Standardní C++ knihovny kontejnery | Microsoft Docs
+title: Kontejnery standardní knihovny C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,60 +15,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862426"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965239"
 ---
-# <a name="c-standard-library-containers"></a>Kontejnery knihovny C++ Standard
+# <a name="c-standard-library-containers"></a>Kontejnery standardní knihovny C++
 
-Standardní knihovna obsahuje různé kontejnery bezpečnost typů ukládání kolekcí související objekty. Kontejnery jsou šablony třídy; Když je deklarovat proměnnou kontejneru, můžete zadat typ prvků, které bude obsahovat kontejneru. Kontejnery konstruovat s inicializační seznamy. Mají členské funkce pro přidávání a odebírání elementů a provádění dalších operací.
+Standardní knihovna poskytuje různé zajišťující bezpečnost typů kontejnery pro ukládání kolekcí souvisejících objektů. Kontejnery jsou třídy šablony. Pokud deklarujete proměnnou kontejneru, zadejte typ prvků, které bude obsahovat kontejneru. Kontejnery lze zkonstruovat se seznamy inicializátorů. Mají členské funkce pro přidání a odebrání prvků a provádění dalších operací.
 
-Iterace v elementy v kontejneru a přístup k jednotlivé elementy pomocí [iterátory](../standard-library/iterators.md). Iterátory můžete použít explicitně pomocí svých členských funkcí a operátory stejně jako globální funkce. Můžete také použít je implicitně, například pomocí rozsah-pro smyčky. Iterátory pro všechny kontejnery standardní knihovna C++ mají společné rozhraní, ale každý kontejner definuje vlastní specializované iterátory.
+Iterovat přes prvky v kontejneru a přístup k jednotlivým prvkům pomocí [iterátory](../standard-library/iterators.md). Pomocí jejich členské funkce a operátory stejně jako globální funkce lze explicitně použití iterátorů. Můžete použít také je implicitně, třeba v rozsahu-smyčky for. Iterátory pro všechny kontejnery standardní knihovny C++, které mají společné rozhraní, ale každý kontejner definuje vlastní specializované iterátory.
 
-Kontejnery je možné rozdělit do tří kategorií: pořadí kontejnery, asociativní kontejnerů a kontejner adaptéry.
+Kontejnery lze rozdělit do tří kategorií: pořadí kontejnery, asociativní kontejnery a adaptéry kontejneru.
 
-## <a name="sequence_containers"></a> Pořadí kontejnery
+## <a name="sequence_containers"></a> Kontejnery sekvence
 
-Kontejnery pořadí zachovávají řazení vložené prvky zda jste zadali.
+Kontejnery sekvence si zachovávají řazení vložených prvků, že zadáte.
 
-A `vector` kontejneru se chová jako pole, ale můžou automaticky růst podle potřeby. Je náhodný přístup a souvisle uložené, a délka je vysoce flexibilní. Z těchto důvodů a informace `vector` je kontejner upřednostňované pořadí pro většinu aplikací. Pokud máte pochybnosti, jaký typ kontejneru pořadí použití, spusťte pomocí vektor! Další informace najdete v tématu [vector – třída](../standard-library/vector-class.md).
+A `vector` kontejneru se chová jako pole, ale může automaticky růst podle potřeby. Je náhodný přístup a ukládán souvisle a délka je vysoce flexibilní. Z těchto důvodů a další věci `vector` je kontejner upřednostňovaným pořadím pro většinu aplikací. Pokud máte pochybnosti o jaký druh pořadí kontejner, aby používal, spusťte s použitím vektoru! Další informace najdete v tématu [vector – třída](../standard-library/vector-class.md).
 
-`array` Kontejner obsahuje některé z výhod `vector`, ale není tak účinná délka. Další informace najdete v tématu [array – třída](../standard-library/array-class-stl.md).
+`array` Kontejner obsahuje některé síly `vector`, ale délka není tak pružná. Další informace najdete v tématu [array – třída](../standard-library/array-class-stl.md).
 
-A `deque` kontejneru (dvěma konci queue) umožňuje rychlé vložení a odstranění na začátku a konci kontejneru. Sdílí výhody náhodný přístup a flexibilní délky `vector`, ale není souvislé. Další informace najdete v tématu [deque – třída](../standard-library/deque-class.md).
+A `deque` kontejneru (fronta se dvěma konci) umožňuje rychlé vložení a odstranění na začátku a konci kontejneru. Sdílí náhodný přístup a flexibilní délky výhody `vector`, ale není souvislé. Další informace najdete v tématu [třídou deque](../standard-library/deque-class.md).
 
-A `list` kontejneru je dvakrát propojený seznam, který umožňuje obousměrnou přístup, rychlé vložení a rychlé odstranění kdekoli v kontejneru, ale nemůže náhodně přístup k elementu v kontejneru. Další informace najdete v tématu [list – třída](../standard-library/list-class.md).
+A `list` kontejneru je dvakrát propojený seznam, který umožňuje obousměrný přístup, rychlé vkládání a odstranění kdekoli v kontejneru, ale neumožňuje náhodný přístup prvku v kontejneru. Další informace najdete v tématu [list – třída](../standard-library/list-class.md).
 
-A `forward_list` kontejner je jednotlivě propojený seznam – předat dál přístup verzi `list`. Další informace najdete v tématu [forward_list – třída](../standard-library/forward-list-class.md).
+A `forward_list` kontejneru je jednotlivě propojený seznam – verze dopředný přístup `list`. Další informace najdete v tématu [forward_list – třída](../standard-library/forward-list-class.md).
 
 ## <a name="associative-containers"></a>Asociativní kontejnery
 
-V asociativní kontejnery, jsou vloženy elementy předem definovaným pořadím – například jako seřazená vzestupně. Neseřazený asociativní kontejnery jsou k dispozici. Asociativní kontejnery lze rozdělit do dvou podmnožin: mapuje a nastaví.
+V asociativních kontejnerech jsou prvky vloženy v předem definovaném pořadí, například seřazeny vzestupně. Neuspořádané asociativní kontejnery jsou také k dispozici. Asociativní kontejnery lze rozdělit do dvou podskupin: mapy a sady.
 
-A `map`, někdy označují jako slovník, se skládá z dvojice klíč/hodnota. Klíč slouží k uspořádání pořadí a hodnota souvisí s tímto klíčem. Například `map` může obsahovat klíče, které představují každý jedinečný slova v text a odpovídající hodnoty, které představují počet pokusů, které se zobrazí jednotlivých slov v textu. Neseřazený verze `map` je `unordered_map`. Další informace najdete v tématu [map – třída](../standard-library/map-class.md) a [unordered_map – třída](../standard-library/unordered-map-class.md).
+A `map`, někdy označuje jako slovník, se skládá z dvojice klíč/hodnota. Klíč slouží k uspořádání pořadí a hodnota je přidružená tomuto klíči. Například `map` může obsahovat klíče, které reprezentují všechna jedinečná slova v textu a odpovídající hodnoty, které představují počet případů, kdy se každé slovo zobrazí v textu. Neuspořádaná verze `map` je `unordered_map`. Další informace najdete v tématu [map – třída](../standard-library/map-class.md) a [unordered_map – třída](../standard-library/unordered-map-class.md).
 
-A `set` je právě vzestupným kontejner jedinečný elementy – hodnota je také klíč. Neseřazený verze `set` je `unordered_set`. Další informace najdete v tématu [set – třída](../standard-library/set-class.md) a [unordered_set – třída](../standard-library/unordered-set-class.md).
+A `set` je pouze vzestupný kontejner jedinečných prvků, hodnota je také klíč. Neuspořádaná verze `set` je `unordered_set`. Další informace najdete v tématu [nastavit třídy](../standard-library/set-class.md) a [unordered_set – třída](../standard-library/unordered-set-class.md).
 
-Obě `map` a `set` Povolit jenom jednu instanci klíče nebo elementu, který chcete vložit do kontejneru. Pokud je potřeba víc instancí elementů, použijte `multimap` nebo `multiset`. Je neuspořádaného verze `unordered_multimap` a `unordered_multiset`. Další informace najdete v tématu [multimap – třída](../standard-library/multimap-class.md), [unordered_multimap – třída](../standard-library/unordered-multimap-class.md), [multiset – třída](../standard-library/multiset-class.md), a [unordered_multiset – třída](../standard-library/unordered-multiset-class.md).
+Obě `map` a `set` Povolit jenom jednu instanci klíče nebo prvek, který má být vložen do kontejneru. Pokud je požadováno více instancí prvků, použijte `multimap` nebo `multiset`. Neseřazené verze jsou `unordered_multimap` a `unordered_multiset`. Další informace najdete v tématu [multimap – třída](../standard-library/multimap-class.md), [unordered_multimap – třída](../standard-library/unordered-multimap-class.md), [multiset – třída](../standard-library/multiset-class.md), a [unordered_multiset – třída](../standard-library/unordered-multiset-class.md).
 
-Seřazené mapy a nastaví podporují obousměrný iterátory a jejich neuspořádaný protějšky podporují dopředného iterátory. Další informace najdete v tématu [iterátory](../standard-library/iterators.md).
+Uspořádané mapy a sady podporují obousměrné iterátory a jejich neuspořádané protějšky podporují u dopředné iterátory. Další informace najdete v tématu [iterátory](../standard-library/iterators.md).
 
-### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>Heterogenní vyhledávání v asociativní kontejnery (C ++ 14)
+### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>Heterogenní vyhledávání v asociativních kontejnerech (C ++ 14)
 
-Seřazené asociativní kontejnery (mapy, multimap, sady a multimnožina) teď heterogenní podpora vyhledávání, což znamená, že už nejste potřeba předat přesně stejný typ objektu jako klíč nebo element v členské funkce, jako `find()` a `lower_bound()` . Místo toho můžete předat libovolný typ, pro kterou přetížené `operator<` je definována umožňující porovnání se typ klíče.
+Uspořádané asociativní kontejnery (mapování, multimap, sada a multiset) nyní heterogenní podpora vyhledávání, což znamená, že už nebude potřeba předat přesně stejný typ objektu jako klíče nebo prvek v členské funkce, jako `find()` a `lower_bound()` . Místo toho můžete předat libovolný typ, pro kterou přetížený `operator<` je definován, která umožňuje porovnání pro typ klíče.
 
-Je povoleno heterogenous vyhledávání na základě přihlášení, když zadáte `std::less<>` nebo `std::greater<>` "diamond functor" komparátoru při deklarace proměnné kontejneru, jak je vidět tady:
+Na základě přihlášení je povoleno heterogenní vyhledávání, když zadáte `std::less<>` nebo `std::greater<>` "diamond funktor" Komparátor při deklarování proměnné kontejneru, jak je znázorněno zde:
 
 ```cpp
 std::set<BigObject, std::less<>> myNewSet;
 ```
 
-Pokud chcete použít výchozí Komparátor, kontejneru se chová, stejně jako v C ++ 11 a starší.
+Pokud používáte výchozí Komparátor, kontejner chová stejně jako v C ++ 11 a starší.
 
-Následující příklad ukazuje, jak přetížení `operator<` Chcete-li povolit uživatelům `std::set` provedete hledání jednoduše tak, že předávání malé řetězec, který je možné porovnávat pro každý objekt `BigObject::id` člen.
+Následující příklad ukazuje, jak přetěžovat `operator<` Chcete-li povolit uživatelům `std::set` provést vyhledávání jednoduše tak, že předávání malé řetězec, který je možné porovnat každému objektu `BigObject::id` člena.
 
 ```cpp
 #include <set>
@@ -130,7 +130,7 @@ int main()
 
 ```
 
-Následující členské funkce v mapování, multimap, sady a multimnožina mít byl přetížený pro podporu heterogenní vyhledávání:
+Tyto členské funkce v mapování, multimap, sada a multiset se přetěžují pro podporu heterogenní vyhledávání:
 
 1. find
 
@@ -144,42 +144,42 @@ Následující členské funkce v mapování, multimap, sady a multimnožina mí
 
 ## <a name="container-adapters"></a>Adaptéry kontejneru
 
-Adaptér kontejneru se odlišuje od pořadí nebo asociativní kontejner, který omezuje rozhraní, jednoduchost a srozumitelnější. Kontejner adaptéry nepodporují iterátory.
+Adaptér kontejneru je změna pořadí nebo asociativního kontejneru, který omezuje rozhraní pro zjednodušení a srozumitelnost. Adaptéry kontejneru nepodporují iterátory.
 
-A `queue` kontejneru následuje sémantiku FIFO (první do, první out). První prvek *nabídnutých*– to znamená, vložených do fronty – je první být *odebrány*– to znamená, odebraných z fronty. Další informace najdete v tématu [queue – třída](../standard-library/queue-class.md).
+A `queue` kontejneru následuje sémantiku FIFO (první dovnitř, první ven). První prvek *vloženo*– to znamená, vložených do fronty – je jako první se *odebrány*– to znamená odebrání z fronty. Další informace najdete v tématu [front třídy](../standard-library/queue-class.md).
 
-A `priority_queue` kontejneru je organizovaná tak, aby elementu, který má nejvyšší hodnotou je vždy první ve frontě. Další informace najdete v tématu [priority_queue – třída](../standard-library/priority-queue-class.md).
+A `priority_queue` kontejneru je uspořádán tak, aby prvek, který má nejvyšší hodnota je vždy první ve frontě. Další informace najdete v tématu [priority_queue – třída](../standard-library/priority-queue-class.md).
 
-A `stack` kontejneru následuje sémantiku LIFO (last in, out první). Posledním elementem nabídnutých v zásobníku je první prvek odebrány. Další informace najdete v tématu [stack – třída](../standard-library/stack-class.md).
+A `stack` kontejneru následuje sémantiku LIFO (poslední dovnitř, první ven). Poslední element vložený do zásobníku je odebrán první prvek. Další informace najdete v tématu [stack – třída](../standard-library/stack-class.md).
 
-Protože kontejner adaptéry nepodporují iterátory, nelze použít s algoritmy standardní knihovna C++. Další informace najdete v tématu [algoritmy](../standard-library/algorithms.md).
+Protože adaptéry kontejneru nepodporují iterátory, nelze použít s algoritmy standardní knihovny C++. Další informace najdete v tématu [algoritmy](../standard-library/algorithms.md).
 
-## <a name="requirements-for-container-elements"></a>Požadavky na elementy kontejneru
+## <a name="requirements-for-container-elements"></a>Požadavky na elementy kontejnerů
 
-Obecně platí může být prvky vloženy do kontejneru standardní knihovna C++ jakéhokoli typu objektu, pokud jsou kopírovatelná. Elementy jen Movable – například ty, například `vector<unique_ptr<T>>` které jsou vytvořené pomocí `unique_ptr<>` bude fungovat, dokud není volat členské funkce, které se pokoušejí o zkopírujte je.
+Obecně prvky vloženy do kontejneru standardní knihovny C++ mohou být jakéhokoli typu objektu, pokud jsou kopírovatelné. Jen pohyblivé prvky, například ty, jako `vector<unique_ptr<T>>` , která se vytvářejí pomocí `unique_ptr<>` budou fungovat tak dlouho, dokud nebudete volat členské funkce, které se snaží kopírovat.
 
-Destruktoru nemá oprávnění k výjimku.
+Destruktor není oprávněn vyvolávat výjimky.
 
-Seřazené asociativní kontejnery – popsané výše v tomto článku – musí mít definovaný operátor porovnání veřejné. (Ve výchozím nastavení, operátor je `operator<`, ale i typy, které nefungují s `operator<` jsou podporovány.
+Uspořádané asociativní kontejnery – popsané dříve v tomto článku, musí mít veřejný operátor porovnání definované. (Výchozí operátor je `operator<`, ale i typy, které nefungují s `operator<` jsou podporovány.
 
-Některé operace kontejnerům může také vyžadovat veřejný výchozí konstruktor a veřejné ekvivalenční operátor. Například neuspořádaný asociativní kontejnery vyžaduje podporu algoritmu hash a rovnosti.
+Některé operace s kontejnery mohou vyžadovat také veřejný výchozí konstruktor a veřejný operátor rovnocennosti. Například neuspořádané asociativní kontejnery vyžadují podporu rovnosti a použití algoritmu hash.
 
-## <a name="accessing-container-elements"></a>Přístup k elementy kontejneru
+## <a name="accessing-container-elements"></a>Přístup k prvkům kontejneru
 
-Elementy kontejnerů jsou přístupné pomocí iterátory. Další informace najdete v tématu [iterátory](../standard-library/iterators.md).
+Prvky kontejnerů jsou přístupné pomocí iterátorů. Další informace najdete v tématu [iterátory](../standard-library/iterators.md).
 
 > [!NOTE]
-> Můžete také použít [na základě rozsahu smyčky for](../cpp/range-based-for-statement-cpp.md) Iterujte přes standardní knihovna C++ kolekce.
+> Můžete také použít [rozsah smyčky for vycházející](../cpp/range-based-for-statement-cpp.md) iterace nad kolekcí standardní knihovny C++.
 
 ## <a name="comparing-containers"></a>Porovnání kontejnery
 
-Všechny kontejnery přetížení operátoru == pro porovnání dvou kontejnery stejného typu, které mají stejný typ elementu. Můžete použít k porovnání vektor ==\<řetězec > k jiným způsobem\<řetězec >, ale nemůžete ji použít k porovnání vektor\<řetězec > do seznamu\<řetězec > nebo vektor\<řetězec > na vektor \<char * >.  Můžete v C ++ 98/03 [std::equal](algorithm-functions.md#equal) nebo [std::mismatch](algorithm-functions.md#mismatch) k porovnání kontejneru odlišné typy nebo typy elementů. V C ++ 11 můžete také použít [std::is_permutation](algorithm-functions.md#is_permutation). Ale v těchto případech funkce předpokládá, že kontejnery mají stejnou délku. Pokud je kratší než výsledky první pak nedefinované chování druhého rozsahu. Pokud již druhého rozsahu, výsledky může být nesprávný protože porovnání nikdy pokračuje za koncem první rozsahu.
+Všechny kontejnery přetížit operátor == pro porovnání dvou kontejnerů stejného typu, které mají stejný typ elementu. Můžete použít == k porovnání vektor\<řetězec > k jiné vektoru\<řetězec >, ale nelze jej použít k porovnání vektor\<řetězec > na seznam\<řetězec > nebo vektor\<řetězec > do vektoru \<char * >.  V C ++ 98/03 můžete [std::equal](algorithm-functions.md#equal) nebo [std::mismatch](algorithm-functions.md#mismatch) srovnávat odlišné kontejneru typy nebo typy prvků. V C ++ 11 můžete také použít [std::is_permutation](algorithm-functions.md#is_permutation). Ale v těchto případech se funkce předpokládá, že kontejnery mají stejnou délku. Pokud se druhá oblast je kratší než výsledky prvního, a potom nedefinované chování. Pokud druhá oblast je delší, výsledky může být nesprávné protože porovnání nikdy bude pokračovat za koncem první oblast.
 
-### <a name="comparing-dissimilar-containers-c14"></a>Porovnání odlišné kontejnery (C ++ 14)
+### <a name="comparing-dissimilar-containers-c14"></a>Porovnání kontejnery odlišných typů (C ++ 14)
 
-C ++ 14 a novější, můžete porovnat odlišné kontejnery nebo odlišných typů elementů typů pomocí jedné z **std::equal**, **std::mismatch**, nebo **std::is_permutation**funkce přetížení, které provést dvě dokončení rozsahy. Tato přetížení umožňují porovnat kontejnery s různých délek. Tato přetížení jsou mnohem méně náchylný k chybě uživatele a jsou optimalizované vrátí hodnotu false v konstantní čas, kdy jsou porovnávány kontejnery odlišné délky. Proto doporučujeme, abyste používali tyto přetížení, pokud (1) máte velmi jasně důvod nikoli k, nebo (2) používáte [std::list](../standard-library/list-class.md) kontejneru, který není těžit z výhod duální rozsahy optimalizace.
+V C ++ 14 a později, můžete porovnat kontejnery odlišných typů a typů rozdílné prvky pomocí jedné z `std::equal`, `std::mismatch`, nebo `std::is_permutation` funkce přetížení, která berou dva rozsahy dokončení. Tato přetížení umožňují snadno porovnat kontejnerů pomocí různých délek. Tato přetížení jsou mnohem méně náchylný k chybě uživatele a jsou optimalizované vrátí hodnotu false v konstantním času, kdy jsou porovnány kontejnery rozdílné délky. Proto doporučujeme, abyste použili tato přetížení, pokud (1) máte jasný důvod nebylo, nebo (2) používáte [std::list](../standard-library/list-class.md) kontejneru, který nijak přínosné optimalizace duální rozsahy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kontejnery](../cpp/containers-modern-cpp.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

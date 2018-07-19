@@ -1,5 +1,5 @@
 ---
-title: packaged_task – třída | Microsoft Docs
+title: packaged_task – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964792"
 ---
 # <a name="packagedtask-class"></a>packaged_task – třída
 
-Popisuje, *asynchronní zprostředkovatele* tedy obálku volání jejíž volání podpis je `Ty(ArgTypes...)`. Jeho *přidružené asynchronní stavu* obsahuje kopii svého s objektu kromě potenciální výsledek.
+Popisuje, *asynchronního poskytovatele* , který je obálka volání signaturou volání `Ty(ArgTypes...)`. Jeho *přidružený asynchronní stav* obsahuje kopii jeho volatelný objekt kromě potenciální výsledek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,35 +55,35 @@ class packaged_task;
 |Název|Popis|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Vytvoří `packaged_task` objektu.|
-|[packaged_task::~packaged_task Destructor](#dtorpackaged_task_destructor)|Zničí `packaged_task` objektu.|
+|[packaged_task::~packaged_task Destructor](#dtorpackaged_task_destructor)|Odstraní `packaged_task` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
-|[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejné přidružené asynchronní stavu.|
-|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Volání s objekt, který je uložený v přidružený stav asynchronní a atomicky ukládá vrácené hodnoty.|
-|[Resetování](#reset)|Nahradí přidružený stav asynchronní.|
-|[Swap](#swap)|Výměny přidružené asynchronní stavu se u zadaného objektu.|
-|[Platný](#valid)|Určuje, zda má objekt přidružený asynchronní stát.|
+|[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejný připojený asynchronní stav.|
+|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Volá volatelný objekt, který je uložený v přidruženém asynchronním stavu a atomicky ukládá vrácené hodnoty.|
+|[Resetovat](#reset)|Nahradí přidružený asynchronní stav.|
+|[Prohození](#swap)|Vymění přidružený asynchronní stav zadaný objekt.|
+|[platný](#valid)|Určuje, zda má objekt přidružený asynchronní stav.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[packaged_task::operator=](#op_eq)|Přenos přidružený asynchronní stát ze zadaného objektu.|
-|[packaged_task::operator()](#op_call)|Volání s objekt, který je uložený v přidružený stav asynchronní, atomicky ukládá vrácené hodnoty a nastaví stav *připraven*.|
-|[packaged_task::Operator bool](#op_bool)|Určuje, zda má objekt přidružený asynchronní stát.|
+|[packaged_task::operator=](#op_eq)|Přenese přidružený asynchronní stav ze zadaného objektu.|
+|[packaged_task::operator()](#op_call)|Volá volatelný objekt, který je uložen v přidruženém asynchronním stavu, atomicky ukládá vrácené hodnoty a nastaví stav *připravené*.|
+|[packaged_task::Operator bool](#op_bool)|Určuje, zda má objekt přidružený asynchronní stav.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<budoucí >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="get_future"></a>  packaged_task::get_future –
 
-Vrátí objekt typu `future<Ty>` má stejné *přidružené asynchronní stavu*.
+Vrátí objekt typu `future<Ty>` , který má stejný *přidružený asynchronní stav*.
 
 ```cpp
 future<Ty> get_future();
@@ -91,13 +91,13 @@ future<Ty> get_future();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `packaged_task` objekt nemá přidružený asynchronní stát, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud `packaged_task` objekt nemá přidružený asynchronní stav, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud tato metoda již byla volána pro `packaged_task` objekt, který má stejné přidružené asynchronní stavu, vyvolá metoda `future_error` s kódem chyby `future_already_retrieved`.
+Pokud tato metoda již byla volána pro `packaged_task` objekt, který má stejný připojený asynchronní stav, vyvolá metoda výjimku `future_error` , který má kód chyby `future_already_retrieved`.
 
 ## <a name="make_ready_at_thread_exit"></a>  packaged_task::make_ready_at_thread_exit –
 
-Volání s objekt, který je uložen v *přidružené asynchronní stavu* a atomicky ukládá vrácené hodnoty.
+Volá volatelný objekt, který je uložen v *přidružený asynchronní stav* a atomicky ukládá vrácené hodnoty.
 
 ```cpp
 void make_ready_at_thread_exit(ArgTypes... args);
@@ -105,17 +105,17 @@ void make_ready_at_thread_exit(ArgTypes... args);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `packaged_task` objekt nemá přidružený asynchronní stát, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud `packaged_task` objekt nemá přidružený asynchronní stav, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud tato metoda nebo [make_ready_at_thread_exit](#make_ready_at_thread_exit) již byla volána pro `packaged_task` objekt, který má stejné přidružené asynchronní stavu, vyvolá metoda `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud tato metoda nebo [make_ready_at_thread_exit](#make_ready_at_thread_exit) již byly volány pro `packaged_task` objekt, který má stejný připojený asynchronní stav, vyvolá metoda výjimku `future_error` , který má kód chyby `promise_already_satisfied`.
 
-Jinak zavolá tento operátor `INVOKE(fn, args..., Ty)`, kde *fn* je možné volat objekt, který je uložen v přidružený stav asynchronní. Všechny vrácená hodnota je uložena atomicky jako na vrácený výsledek přidružený stav asynchronní.
+V opačném případě tento operátor volá `INVOKE(fn, args..., Ty)`, kde *fn* je volatelný objekt, který je uložen v přidruženém asynchronním stavu. Žádné vrácené hodnoty se atomicky ukládá jako vrácený výsledek přidružený asynchronní stav.
 
-Rozdíl k [packaged_task:: Operator() –](#op_call), přidružené asynchronní stav není nastavený na `ready` až po všech místní objekty v volající vlákno zničena. Obvykle vláken, které blokují na přidružený stav asynchronní nejsou odblokuje, až do konce volající vlákno.
+Rozdíl od [packaged_task:: Operator()](#op_call), není přidružený asynchronní stav nastaven `ready` dokud všechny místní objekty ve volajícím vlákně nejsou zničeny. Vlákna, která jsou blokována v přidruženém asynchronním stavu obvykle nejsou odblokovány, dokud ukončí volající vlákno.
 
 ## <a name="op_eq"></a>  packaged_task::Operator =
 
-Přenosy *přidružené asynchronní stavu* ze zadaného objektu.
+Převody *přidružený asynchronní stav* ze zadaného objektu.
 
 ```cpp
 packaged_task& operator=(packaged_task&& Right);
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parametry
 
-`Right` A `packaged_task` objektu.
+*Pravé* A `packaged_task` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -131,11 +131,11 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Poznámky
 
-Po operaci `Right` již nemá přidružený asynchronní stát.
+Po provedení této operace *vpravo* již nemá přidružený asynchronní stav.
 
-## <a name="op_call"></a>  packaged_task:: Operator() –
+## <a name="op_call"></a>  packaged_task:: Operator()
 
-Volání s objekt, který je uložen v *přidružené asynchronní stavu*, atomicky ukládá vrácené hodnoty a nastaví stav *připraven*.
+Volá volatelný objekt, který je uložen v *přidružený asynchronní stav*atomicky ukládá vrácené hodnoty a nastaví stav *připravené*.
 
 ```cpp
 void operator()(ArgTypes... args);
@@ -143,15 +143,15 @@ void operator()(ArgTypes... args);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `packaged_task` objekt nemá přidružený asynchronní stát, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud `packaged_task` objekt nemá přidružený asynchronní stav, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud tato metoda nebo [make_ready_at_thread_exit](#make_ready_at_thread_exit) již byla volána pro `packaged_task` objekt, který má stejné přidružené asynchronní stavu, vyvolá metoda `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud tato metoda nebo [make_ready_at_thread_exit](#make_ready_at_thread_exit) již byly volány pro `packaged_task` objekt, který má stejný připojený asynchronní stav, vyvolá metoda výjimku `future_error` , který má kód chyby `promise_already_satisfied`.
 
-Jinak zavolá tento operátor `INVOKE(fn, args..., Ty)`, kde *fn* je možné volat objekt, který je uložen v přidružený stav asynchronní. Žádné vrácená hodnota je uložena atomicky jako na vrácený výsledek přidružený asynchronní stav a stav nastaven na hodnotu Připraveno. V důsledku toho žádné podprocesy, které blokují na přidružený stav asynchronní stát odblokování.
+V opačném případě tento operátor volá `INVOKE(fn, args..., Ty)`, kde *fn* je volatelný objekt, který je uložen v přidruženém asynchronním stavu. Některé vrácená hodnota je uložena atomicky jako vrácený výsledek přidružený asynchronní stav a stav je nastaven na hodnotu Připraveno. V důsledku toho budou odblokována veškerá vlákna, která jsou blokována v přidruženém asynchronním stavu.
 
 ## <a name="op_bool"></a>  packaged_task::Operator bool
 
-Určuje, zda je objekt `associated asynchronous state`.
+Určuje, zda má objekt `associated asynchronous state`.
 
 ```cpp
 operator bool() const noexcept;
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud objekt má přidružený stav asynchronní; v opačném `false`.
+**Hodnota TRUE** Pokud objekt má přidružený asynchronní stav; v opačném případě **false**.
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task – konstruktor
 
@@ -178,25 +178,25 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-`Right` A `packaged_task` objektu.
+*Pravé* A `packaged_task` objektu.
 
-`alloc` Přidělení paměti. Další informace najdete v tématu [ \<alokátorů >](../standard-library/allocators-header.md).
+*ALLOC* Přidělovač paměti. Další informace najdete v tématu [ \<alokátorů >](../standard-library/allocators-header.md).
 
-`fn` Objekt funkce.
+*fn* objekt funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstrukce konstruktor `packaged_task` objekt, který neobsahuje žádné *přidružené asynchronní stavu*.
+První konstruktor zkonstruuje `packaged_task` objekt, který nemá žádné *přidružený asynchronní stav*.
 
-Druhý konstruktor konstrukce `packaged_task` objektu a přenáší přidružený stav asynchronní z `Right`. Po operaci `Right` již nemá přidružený asynchronní stát.
+Druhý konstruktor vytvoří `packaged_task` objektu a přenese přidružený asynchronní stav z *vpravo*. Po provedení této operace *vpravo* již nemá přidružený asynchronní stav.
 
-Třetí konstrukce konstruktor `packaged_task` objekt, který obsahuje kopie `fn` uložen v jeho přidružený stav asynchronní.
+Třetí konstruktor vytvoří `packaged_task` objekt, který obsahuje kopii *fn* uložené v příslušném asynchronním stavu.
 
-Čtvrtý konstrukce konstruktor `packaged_task` objekt, který obsahuje kopie `fn` uložen v jeho přidružený stav asynchronní a používá `alloc` pro přidělení paměti.
+Čtvrtý konstruktor vytvoří `packaged_task` objekt, který obsahuje kopii *fn* uložené v příslušném asynchronním stavu a používá `alloc` pro přidělení paměti.
 
-## <a name="dtorpackaged_task_destructor"></a>  packaged_task:: ~ packaged_task – destruktor
+## <a name="dtorpackaged_task_destructor"></a>  packaged_task –:: ~ packaged_task – destruktor
 
-Zničí `packaged_task` objektu.
+Odstraní `packaged_task` objektu.
 
 ```cpp
 ~packaged_task();
@@ -204,11 +204,11 @@ Zničí `packaged_task` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *přidružené asynchronní stavu* není *připraven*, destruktor úložiště [future_error](../standard-library/future-error-class.md) výjimka, která má chybový kód `broken_promise` jako výsledek v přidružený stav asynchronní a všechny vláken, která se v přidružené asynchronní stavu stát odblokuje blokuje.
+Pokud *přidružený asynchronní stav* není *připravené*, úložišť – destruktor [future_error](../standard-library/future-error-class.md) výjimku, která má kód chyby `broken_promise` jako výsledek v přidružený asynchronní stav a veškerá vlákna, která jsou blokována v přidruženém asynchronním stavu budou odblokována.
 
 ## <a name="reset"></a>  packaged_task::Reset –
 
-Používá nový *přidružené asynchronní stavu* nahradit stávající přidružené asynchronní stavu.
+Používá nový *přidružený asynchronní stav* nahradit stávající přidružený asynchronní stav.
 
 ```cpp
 void reset();
@@ -216,11 +216,11 @@ void reset();
 
 ### <a name="remarks"></a>Poznámky
 
-V důsledku toho tato metoda provede `*this = packaged_task(move(fn))`, kde *fn* je objekt funkce, který je uložen v asynchronním přidružený stav pro tento objekt. Proto je zrušeno stav objektu, a [get_future](#get_future), [Operator() –](#op_call), a [make_ready_at_thread_exit](#make_ready_at_thread_exit) lze volat jako na nově vytvořený objekt.
+V důsledku toho tato metoda se spouští `*this = packaged_task(move(fn))`, kde *fn* je objekt funkce, která je uložena v přidruženém asynchronním stavu pro tento objekt. Proto se vymaže stav objektu, a [get_future](#get_future), [operator()](#op_call), a [make_ready_at_thread_exit](#make_ready_at_thread_exit) lze volat jako na nově vytvořeným objektem.
 
 ## <a name="swap"></a>  packaged_task::swap –
 
-Výměny přidružené asynchronní stavu se u zadaného objektu.
+Vymění přidružený asynchronní stav zadaný objekt.
 
 ```cpp
 void swap(packaged_task& Right) noexcept;
@@ -228,11 +228,11 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Right` A `packaged_task` objektu.
+*Pravé* A `packaged_task` objektu.
 
 ## <a name="valid"></a>  packaged_task::valid –
 
-Určuje, zda je objekt `associated asynchronous state`.
+Určuje, zda má objekt `associated asynchronous state`.
 
 ```cpp
 bool valid() const;
@@ -240,9 +240,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud objekt má přidružený stav asynchronní; v opačném `false`.
+**Hodnota TRUE** Pokud objekt má přidružený asynchronní stav; v opačném případě **false**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<budoucí >](../standard-library/future.md)<br/>
+[\<Další >](../standard-library/future.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: aligned_union – třída | Microsoft Docs
+title: aligned_union – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962110"
 ---
 # <a name="alignedunion-class"></a>aligned_union – třída
 
-Poskytuje typ POD dostatečně velké a vhodně zarovnaný k ukládání union typ a velikost vyžaduje.
+Poskytuje typ POD dostatečně velké a vhodně zarovnaný pro uložení typu union a požadovanou velikost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,17 +39,17 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`Len` Zarovnání hodnota pro typ největší ve sjednocení.
+*Len* hodnota zarovnání největšího typu ve sjednocení.
 
-`Types` Odlišné typy v základní sjednocení.
+*Typy* odlišné typy v podkladové sjednocení.
 
 ## <a name="remarks"></a>Poznámky
 
-Použití třídy šablony potřebná pro ukládání sjednocení Neinicializovaný úložiště velikost a zarovnání. Typedef člen `type` názvy POD zadejte vhodný pro ukládání libovolného typu uvedené v `Types`; je minimální velikost `Len`. Statický člen `alignment_value` typu `std::size_t` obsahuje nejpřísnějším zarovnání od všechny typy uvedené v vyžadují `Types`.
+Třída šablony používají k získávání zarovnání a velikost potřebná k ukládání sjednocení neinicializované úložiště. Definice typu člena `type` názvy POD zadejte vhodný pro uložení libovolného typu, které jsou uvedeny v *typy*; minimální velikost je *Len*. Statický člen `alignment_value` typu `std::size_t` obsahuje nejpřísnější zarovnání požadované pro všechny typy uvedené v *typy*.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak používat `aligned_union` přidělit vyrovnávací paměť zarovnaný zásobníku umístit spojení.
+Následující příklad ukazuje, jak používat `aligned_union` přidělit vyrovnávací paměť zarovnané zásobníku umístit sjednocení.
 
 ```cpp
 // std__type_traits__aligned_union.cpp
@@ -89,9 +89,9 @@ value of u->i is 1065353216
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [alignment_of – třída](../standard-library/alignment-of-class.md)<br/>

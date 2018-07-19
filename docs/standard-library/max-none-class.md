@@ -1,5 +1,5 @@
 ---
-title: max_none – třída | Microsoft Docs
+title: max_none – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97cb713eda7a11874893bc9fc8a13b3b0784f29a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 44981141be5bfb4f18cb278e724ab905aebcc5cf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964168"
 ---
 # <a name="maxnone-class"></a>max_none – třída
 
-Popisuje [maximálního počtu třída](../standard-library/allocators-header.md) objekt, který omezuje [freelist](../standard-library/freelist-class.md) objekt, který má maximální délku nula.
+Popisuje [maximálního počtu tříd](../standard-library/allocators-header.md) objekt, který omezuje [freelist](../standard-library/freelist-class.md) objekt má maximální délku nula.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,27 +48,27 @@ class max_none
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Max`|Maximální třídu, která určuje maximální počet elementů k uložení v `freelist`.|
+|*Max*|Maximální třídu, která určuje maximální počet prvků k ukládání `freelist`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Přidělené](#allocated)|Zvětší počet bloků přidělené paměti.|
-|[Zrušeno](#deallocated)|Snižuje počet přidělené bloky paměti.|
-|[Úplná](#full)|Vrátí hodnotu, která určuje, zda více bloky paměti by měla být přidán do seznamu volné.|
-|[Vydání](#released)|Snižuje počet paměti bloků v seznamu volné.|
-|[saved](#saved)|Zvýší počet bloky paměti v seznamu volné.|
+|[přidělené](#allocated)|Zvýší počet přidělených paměťových bloků.|
+|[přidělení](#deallocated)|Sníží počet přidělených paměťových bloků.|
+|[Úplné](#full)|Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.|
+|[Všeobecně dostupné](#released)|Sníží počet paměti blokuje v seznamu zdarma.|
+|[saved](#saved)|Zvýší počet paměťových bloků v seznamu zdarma.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="allocated"></a>  max_none::allocated
 
-Zvětší počet bloků přidělené paměti.
+Zvýší počet přidělených paměťových bloků.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -78,15 +78,15 @@ void allocated(std::size_t _Nx = 1);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Nx`|Hodnota přírůstku.|
+|*_Nx*|Přírůstková hodnota.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen neprovede žádnou akci. Je volána po každém úspěšném volání pomocí `cache_freelist::allocate` operátor `new`. Argument `_Nx` je počet bloků paměti v bloku dat přidělené operátor `new`.
+Tato členská funkce nemá žádný účinek. Volá se po každé úspěšné volání podle `cache_freelist::allocate` operátoru **nové**. Argument *_Nx* je počet paměťových bloků v bloku dat přidělena pomocí operátoru **nové**.
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
-Snižuje počet přidělené bloky paměti.
+Sníží počet přidělených paměťových bloků.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -96,15 +96,15 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Nx`|Hodnota přírůstku.|
+|*_Nx*|Přírůstková hodnota.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce neprovede žádnou akci. Tato funkce člen je volána po každé pro volání `cache_freelist::deallocate` operátor `delete`. Argument `_Nx` je počet bloků paměti v bloku dat navrácena operátorem `delete`.
+Členská funkce nemá žádný účinek. Tato členská funkce je volána po každé volání podle `cache_freelist::deallocate` operátoru **odstranit**. Argument *_Nx* je počet paměťových bloků v bloku dat navrácena pomocí operátoru **odstranit**.
 
 ## <a name="full"></a>  max_none::full
 
-Vrátí hodnotu, která určuje, zda více bloky paměti by měla být přidán do seznamu volné.
+Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.
 
 ```cpp
 bool full();
@@ -112,15 +112,15 @@ bool full();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členské funkce vždy vrátí hodnotu `true`.
+Tato členská funkce vždy vrátí **true**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen funkce volá `cache_freelist::deallocate`. Pokud se volání vrátí `true`, `deallocate` vloží bloku paměti v seznamu volné; Pokud vrátí hodnotu false, `deallocate` operátor volání `delete` se zrušit přidělení bloku.
+Tato členská funkce je volána `cache_freelist::deallocate`. Pokud volání vrátí **true**, `deallocate` vloží blok paměti v seznamu zdarma; Pokud vrátí hodnotu false, `deallocate` operátor volání **odstranit** se uvolnit bloku.
 
 ## <a name="released"></a>  max_none::released
 
-Snižuje počet paměti bloků v seznamu volné.
+Sníží počet paměti blokuje v seznamu zdarma.
 
 ```cpp
 void released();
@@ -128,11 +128,11 @@ void released();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen neprovede žádnou akci. `released` Je volána funkce člena třídy aktuální maximální `cache_freelist::allocate` vždy, když odebere blok paměti ze seznamu volné.
+Tato členská funkce nemá žádný účinek. `released` Členské funkce třídy aktuální maximální volá `cache_freelist::allocate` vždy, když ji odebere blok paměti ze seznamu zdarma.
 
 ## <a name="saved"></a>  max_none::saved
 
-Zvýší počet bloky paměti v seznamu volné.
+Zvýší počet paměťových bloků v seznamu zdarma.
 
 ```cpp
 void saved();
@@ -140,8 +140,8 @@ void saved();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen neprovede žádnou akci. Je volána metodou `cache_freelist::deallocate` vždy, když vloží blok paměti v seznamu volné.
+Tato členská funkce nemá žádný účinek. Je volána metodou `cache_freelist::deallocate` vždy, když umístí blok paměti v seznamu zdarma.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

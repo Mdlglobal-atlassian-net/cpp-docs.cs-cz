@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkční&gt; operátory | Microsoft Docs'
+title: '&lt;funkční&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845216"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962046"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;funkční&gt; operátory
 
@@ -32,7 +32,7 @@ ms.locfileid: "33845216"
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, pokud je možné volat objektu prázdný.
+Testuje, zda je volatelný objekt je prázdný.
 
 ```cpp
 template <class Fty>
@@ -44,15 +44,15 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parametry
 
-`Fty` Typ funkce zabalit.
+*Fty* typ funkce zahrnující.
 
-`f` Objekt – funkce
+*f* objektu – funkce
 
-`npc` Ukazatel s hodnotou null.
+*NPC* ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory obou trvat argument, který je odkaz na `function` objekt a argument, který je konstanta ukazatele null. Obě vrací hodnotu true pouze v případě `function` objekt je prázdný.
+Operátory obou přijímají argument, který je odkaz na `function` objekt a argument, který je konstantní ukazatel s hodnotou null. Oba vracejí hodnotu true pouze v případě, `function` objekt je prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -89,7 +89,7 @@ empty == false
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testy, pokud je možné volat objekt není prázdný.
+Testuje, zda je volatelný objekt není prázdný.
 
 ```cpp
 template <class Fty>
@@ -101,15 +101,15 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parametry
 
-`Fty` Typ funkce zabalit.
+*Fty* typ funkce zahrnující.
 
-`f` Objekt – funkce
+*f* objektu – funkce
 
-`npc` Ukazatel s hodnotou null.
+*NPC* ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory obou trvat argument, který je odkaz na `function` objekt a argument, který je konstanta ukazatele null. Obě vrací hodnotu true pouze v případě `function` objekt není prázdný.
+Operátory obou přijímají argument, který je odkaz na `function` objekt a argument, který je konstantní ukazatel s hodnotou null. Oba vracejí hodnotu true pouze v případě, `function` objekt není prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -144,6 +144,6 @@ not empty == false
 not empty == true
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<funkční >](../standard-library/functional.md)<br/>

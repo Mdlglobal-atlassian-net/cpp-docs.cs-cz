@@ -1,5 +1,5 @@
 ---
-title: '&lt;IOS&gt; | Microsoft Docs'
+title: '&lt;IOS&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961480"
 ---
 # <a name="ltiosgt"></a>&lt;IOS&gt;
 
-Definuje několik typů a základní funkce pro operaci iostreams. Tuto hlavičku je obvykle zahrnuté pro můžete podle jiného iostream hlaviček; zřídka zahrnete ji přímo.
+Definuje několik typů a základní funkce pro operace iostreams. Tato hlavička se obvykle zahrnuté pro vás pomocí jiné záhlaví iostream –; zřídka zahrnete ji přímo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,9 +37,9 @@ Definuje několik typů a základní funkce pro operaci iostreams. Tuto hlavičk
 
 ## <a name="remarks"></a>Poznámky
 
-Velkou skupinu funkce jsou manipulátory. Manipulator deklarované v \<ios > mění hodnotami uloženými v jeho argument objekt třídy [ios_base](../standard-library/ios-base-class.md). Jiné manipulátory provádět akce na datové proudy řízené objekty typu odvozeného z této třídy, jako je například specializace jednoho tříd šablon [basic_istream](../standard-library/basic-istream-class.md) nebo [basic_ostream](../standard-library/basic-ostream-class.md). Například [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) vymaže příznak formátu `ios_base::skipws` v objektu **str**, což může mít jednu z těchto typů.
+Velká skupina funkcí jsou manipulátory. Manipulátor deklarované v \<ios > změní hodnoty uložené v její argument objekt třídy [ios_base –](../standard-library/ios-base-class.md). Jiné manipulátory provádění akcí u streamů řídí objekty typu odvozeného z této třídy, jako je například specializace jednu z tříd šablon [basic_istream](../standard-library/basic-istream-class.md) nebo [basic_ostream –](../standard-library/basic-ostream-class.md). Například [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) příznak formátu `ios_base::skipws` v objektu `str`, což může být jedna z těchto typů.
 
-Můžete také zavolat manipulator vložením do výstupního proudu nebo extrahování ze vstupního datového proudu z důvodu speciální operací vložení a extrakci zadaný pro třídy odvozené od `ios_base`. Příklad:
+Můžete také volat manipulátor vložením do výstupní datový proud nebo extrahování ze vstupního datového proudu, protože speciální operace vložení a extrakci zadaný pro třídy odvozené z `ios_base`. Příklad:
 
 ```cpp
 istr>> noskipws;
@@ -51,50 +51,50 @@ volání [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |Název typu|Popis|
 |-|-|
-|[IOS](../standard-library/ios-typedefs.md#ios)|Podporuje ios třída ze staré knihovny iostream.|
-|[streamoff](../standard-library/ios-typedefs.md#streamoff)|Podporuje interní operace.|
-|[streampos](../standard-library/ios-typedefs.md#streampos)|Obsahuje aktuální pozici vyrovnávací paměti ukazatele nebo ukazatele souboru.|
+|[IOS](../standard-library/ios-typedefs.md#ios)|Podporuje ios třídy z původní Knihovna iostream.|
+|[streamoff](../standard-library/ios-typedefs.md#streamoff)|Podporuje vnitřní operace.|
+|[streampos](../standard-library/ios-typedefs.md#streampos)|Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatel na soubor.|
 |[streamsize](../standard-library/ios-typedefs.md#streamsize)|Určuje velikost datového proudu.|
-|[wios](../standard-library/ios-typedefs.md#wios)|Podporuje třídě wios ze staré knihovny iostream.|
-|[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Obsahuje aktuální pozici vyrovnávací paměti ukazatele nebo ukazatele souboru.|
+|[wios](../standard-library/ios-typedefs.md#wios)|Podporuje wios třídy z původní Knihovna iostream.|
+|[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatel na soubor.|
 
 ### <a name="manipulators"></a>Manipulátory
 
 |||
 |-|-|
-|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) zobrazí jako **true** nebo **false** v datovém proudu.|
-|[DEC](../standard-library/ios-functions.md#dec)|Určuje celé číslo proměnné, které se zobrazují v základní 10 zápisu.|
-|[defaultfloat –](../standard-library/ios-functions.md#ios_defaultfloat)|Nakonfiguruje příznaky z `ios_base` objekt, který chcete použít výchozí zobrazení formát pro hodnoty typu float.|
-|[Pevná](../standard-library/ios-functions.md#fixed)|Určuje, že číslo s plovoucí desetinnou čárkou zobrazí notaci decimal.|
-|[Hex](../standard-library/ios-functions.md#hex)|Určuje celé číslo proměnné, které se zobrazují v základní 16 zápisu.|
-|[internal](../standard-library/ios-functions.md#internal)|Způsobí, že přihlášení počet zbývajících oprávněné a číslo, které má být zarovnání doprava.|
-|[Vlevo](../standard-library/ios-functions.md#left)|Způsobí, že text, který není široká jako šířka výstupu se objeví v vyprázdnění datového proudu s levým okrajem.|
-|[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) zobrazí jako 1 nebo 0 v datovém proudu.|
-|[noshowbase](../standard-library/ios-functions.md#noshowbase)|Vypne označující konvenční základní, ve kterém se zobrazí číslo.|
-|[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Zobrazí jenom část celé číslo s plovoucí desetinnou čárkou čísel, jejichž zlomkové části je nulová.|
-|[noshowpos](../standard-library/ios-functions.md#noshowpos)|Způsobí, že nebyla výslovně podepsané kladná čísla.|
-|[noskipws](../standard-library/ios-functions.md#noskipws)|Způsobit prostory a číst vstupního datového proudu.|
-|[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Příčiny výstupní vyrovnávací paměti a zpracovat, když vyrovnávací paměť je plná.|
-|[nouppercase](../standard-library/ios-functions.md#nouppercase)|Určuje, že šestnáctkové číslice a exponent v vědecká notace se objeví na malá písmena.|
-|[OCT](../standard-library/ios-functions.md#oct)|Určuje celé číslo proměnné, které se zobrazují v základní 8 zápisu.|
-|[Vpravo](../standard-library/ios-functions.md#right)|Způsobí, že text, který není široká jako šířka výstupu se objeví v vyprázdnění datového proudu s pravým okrajem.|
-|[Scientific](../standard-library/ios-functions.md#scientific)|Příčiny plovoucí bodu čísla, který se má zobrazit pomocí exponenciální notace.|
-|[showbase](../standard-library/ios-functions.md#showbase)|Označuje konvenční základní, ve kterém se zobrazí číslo.|
-|[showpoint](../standard-library/ios-functions.md#showpoint)|Zobrazí celé číslo část číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nulová.|
-|[showpos](../standard-library/ios-functions.md#showpos)|Způsobí, že kladná čísla explicitně podepsat.|
-|[skipws](../standard-library/ios-functions.md#skipws)|Způsobit prostory a vstupní datový proud nelze číst.|
-|[unitbuf](../standard-library/ios-functions.md#unitbuf)|Příčiny výstupní mají být zpracovány, pokud vyrovnávací paměť není prázdný.|
-|[Velká písmena](../standard-library/ios-functions.md#uppercase)|Určuje, že šestnáctkové číslice a exponent v vědecká notace se objeví na velká písmena.|
+|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Určuje proměnné tohoto typu [bool](../cpp/bool-cpp.md) zobrazí jako **true** nebo **false** v datovém proudu.|
+|[DEC](../standard-library/ios-functions.md#dec)|Určuje, že celočíselné proměnné zobrazí v základní 10 zápisu.|
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Nakonfiguruje příznaky ze `ios_base` objektu, který chcete použít výchozí zobrazovací formát pro hodnoty typu float.|
+|[Oprava](../standard-library/ios-functions.md#fixed)|Určuje, že číslo s plovoucí desetinnou čárkou se zobrazí v oprava desítkovém zápisu.|
+|[Hex](../standard-library/ios-functions.md#hex)|Určuje, že celočíselné proměnné zobrazí v základní 16 zápisu.|
+|[internal](../standard-library/ios-functions.md#internal)|Způsobí, že se znaménkem číslo vlevo oprávněné a číslo, které má být zarovnané vpravo.|
+|[doleva](../standard-library/ios-functions.md#left)|Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v stream vyprázdnění se na levém okraji.|
+|[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) jako 1 nebo 0 v datovém proudu.|
+|[noshowbase](../standard-library/ios-functions.md#noshowbase)|Vypne označující konvenční základní třídy, ve kterém se zobrazí číslo.|
+|[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Zobrazí pouze část celého čísla s plovoucí desetinnou čárkou čísel, jehož zlomkové části je nula.|
+|[noshowpos](../standard-library/ios-functions.md#noshowpos)|Způsobí, že kladná čísla nesmí být explicitně přihlášení.|
+|[noskipws](../standard-library/ios-functions.md#noskipws)|Způsobit prostory přečtou vstupní datový proud.|
+|[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Způsobí, že výstupní vyrovnávací paměť a zpracovávaná vyrovnávací paměť je plná.|
+|[nouppercase](../standard-library/ios-functions.md#nouppercase)|Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na malá písmena.|
+|[Říjen](../standard-library/ios-functions.md#oct)|Určuje, že celočíselné proměnné zobrazí v základní 8 zápisu.|
+|[doprava](../standard-library/ios-functions.md#right)|Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v vyprázdnění datový proud s na pravém okraji.|
+|[vědecké](../standard-library/ios-functions.md#scientific)|Způsobí, že plovoucí desetinnou čárkou zobrazeného pomocí vědeckého zápisu.|
+|[showbase](../standard-library/ios-functions.md#showbase)|Označuje konvenční základní třídy, ve kterém se zobrazí číslo.|
+|[showpoint](../standard-library/ios-functions.md#showpoint)|Zobrazuje část celého čísla číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nula.|
+|[showpos](../standard-library/ios-functions.md#showpos)|Způsobí, že explicitně podepsat kladná čísla.|
+|[skipws](../standard-library/ios-functions.md#skipws)|Způsobit prostory vstupního datového proudu nelze číst.|
+|[unitbuf](../standard-library/ios-functions.md#unitbuf)|Způsobí, že výstupní ke zpracování, pokud vyrovnávací paměť není prázdný.|
+|[velká písmena](../standard-library/ios-functions.md#uppercase)|Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na velká písmena.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[basic_ios –](../standard-library/basic-ios-class.md)|Šablony třídy popisuje funkce úložiště a člen, které jsou společné pro obě vstupní datové proudy (šablony třídy [basic_istream](../standard-library/basic-istream-class.md)) a výstupní datové proudy (šablony třídy [basic_ostream](../standard-library/basic-ostream-class.md)), závisí na Parametry šablony.|
-|[fpos](../standard-library/fpos-class.md)|Šablony třídy popisuje objekt, který může ukládat všechny informace potřebné k obnovení indikátor libovolný pozice souboru v rámci všech datového proudu.|
-|[ios_base](../standard-library/ios-base-class.md)|Třída popisuje úložiště a členské funkce společné pro vstupní a výstupní datové proudy, které jsou nezávislé na parametry šablony.|
+|[basic_ios –](../standard-library/basic-ios-class.md)|Třída šablony popisuje funkce úložiště a člena, které jsou společné pro oba vstupní datové proudy (třídy šablony [basic_istream](../standard-library/basic-istream-class.md)) tak za výstupní datové proudy (třídy šablony [basic_ostream –](../standard-library/basic-ostream-class.md)), který závisí na Parametry šablony.|
+|[fpos –](../standard-library/fpos-class.md)|Třída šablony popisuje objekt, který můžete uložit všechny informace potřebné k obnovení Indikátor pozice souboru v libovolné v rámci jakékoli služby stream.|
+|[ios_base](../standard-library/ios-base-class.md)|Tato třída popisuje úložiště a členské funkce společné pro vstupní a výstupní datové proudy, které nezávisí na parametry šablony.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

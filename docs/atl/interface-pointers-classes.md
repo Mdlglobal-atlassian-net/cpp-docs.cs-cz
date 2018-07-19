@@ -1,5 +1,5 @@
 ---
-title: Rozhraní třídy ukazatele (ATL) | Microsoft Docs
+title: Třídy ukazatelů (ATL) rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa649b6d290244a62cf94dcd68617a2926ad3e44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961795"
 ---
-# <a name="interface-pointers-classes"></a>Třídy ukazatele rozhraní
+# <a name="interface-pointers-classes"></a>Třídy ukazatelů rozhraní
 Následující třídy spravovat ukazatel v příslušném rozhraní:  
   
--   [CComPtr](../atl/reference/ccomptr-class.md) provede počítání automatické odkazů.  
+-   [CComPtr](../atl/reference/ccomptr-class.md) provádí automatické počítání odkazů.  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) . podobá se `CComPtr`, ale také provádí Automatické dotazování rozhraní.  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) podobné `CComPtr`, ale také provádí Automatické dotazování rozhraní.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) poskytuje metody, které jsou užitečné při vytváření pole COM rozhraní ukazatele.  
+-   [Cinterfacearray –](../atl/reference/cinterfacearray-class.md) poskytuje metody, které jsou užitečné při vytváření pole z COM rozhraní ukazatele.  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) poskytuje metody, které jsou užitečné při sestavování seznamu COM rozhraní ukazatele.  
+-   [Cinterfacelist –](../atl/reference/cinterfacelist-class.md) poskytuje metody, které jsou užitečné při vytváření seznamu COM rozhraní ukazatele.  
   
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) poskytuje metody pro práci s ukazatele rozhraní a globální rozhraní tabulky (GIT).  
+-   [Ccomgitptr –](../atl/reference/ccomgitptr-class.md) poskytuje metody pro práci s ukazatele rozhraní a tabulky globálního rozhraní (GIT).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

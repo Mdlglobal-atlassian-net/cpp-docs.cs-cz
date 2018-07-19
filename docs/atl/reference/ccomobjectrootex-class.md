@@ -1,5 +1,5 @@
 ---
-title: Třída CComObjectRootEx | Microsoft Docs
+title: CComObjectRootEx – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b147f0ad3f1a54c2ae640b6bf2426bcddf060b35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365978"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027524"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx – třída
-Tato třída poskytuje metody pro zpracování Správa počet odkaz objektu pro neagregovaná a agregované objekty.  
+Tato třída poskytuje metody pro zpracování správy referenční počet objektů pro neagregovaná a agregované objekty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,8 +48,8 @@ class CComObjectRootEx : public CComObjectRootBase
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ThreadModel`  
- Třída, jejichž metody implementovat požadovanou model vláken. Můžete vybrat model vláken explicitně nastavením `ThreadModel` k [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), nebo [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Můžete přijmout model vláken výchozí serveru nastavením `ThreadModel` k [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+ *ThreadModel*  
+ Třídy, jejíž metody implementovat požadovaného modelu vlákna. Můžete explicitně nastavit model vláken nastavením *ThreadModel* k [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), nebo [ Ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md). Model na server výchozí vlákno může přijmout tak, že nastavíte *ThreadModel* k [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
 
   
 ## <a name="members"></a>Členové  
@@ -59,49 +59,49 @@ class CComObjectRootEx : public CComObjectRootBase
 |||  
 |-|-|  
 |[CComObjectRootEx](#ccomobjectrootex)|Konstruktor|  
-|[Internaladdref –](#internaladdref)|Zvýší počet odkazů pro objekt neagregovaná.|  
-|[Internalrelease –](#internalrelease)|Snižuje počet odkaz na objekt neagregovaná.|  
-|[Zámek](#lock)|Pokud je model vláken s více vlákny, získá vlastnictví objektu kritická sekce.|  
-|[odemknutí](#unlock)|Pokud je model vláken s více vlákny, uvolní vlastnictví objektu kritická sekce.|  
+|[Internaladdref –](#internaladdref)|Zvýší počet odkazů pro neagregovaná objekt.|  
+|[Internalrelease –](#internalrelease)|Sníží počet referenční pro neagregovaná objekt.|  
+|[Zámek](#lock)|Pokud je model vláken s více vlákny, nezíská vlastnictví objektu kritický oddíl.|  
+|[Odemknutí](#unlock)|Pokud je model vláken s více vlákny, uvolní vlastnictví objektu kritický oddíl.|  
   
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase metody  
   
 |||  
 |-|-|  
-|[FinalConstruct](#finalconstruct)|Přepsání ve třídě provést všechny inicializace vyžadovanou objektu.|  
-|[FinalRelease](#finalrelease)|Přepsání ve třídě k vyčištění vyžadované vaší objektem.|  
-|[OuterAddRef](#outeraddref)|Zvýší počet odkazů pro agregovaný objekt.|  
-|[OuterQueryInterface](#outerqueryinterface)|Delegátů k vnější **IUnknown** agregovaného objektu.|  
-|[OuterRelease](#outerrelease)|Snižuje počet odkaz na agregovaný objekt.|  
+|[FinalConstruct](#finalconstruct)|Přepsání ve své třídě pro udělat všechny inicializace, vyžaduje váš objekt.|  
+|[FinalRelease](#finalrelease)|Přepište ve třídě provádět vyčištění vyžadované objektu.|  
+|[OuterAddRef](#outeraddref)|Zvýší počet odkazů pro agregovaného objektu.|  
+|[OuterQueryInterface](#outerqueryinterface)|Delegáty pro vnější `IUnknown` agregované objektu.|  
+|[OuterRelease](#outerrelease)|Sníží počet referenční pro agregovaného objektu.|  
   
 ### <a name="static-functions"></a>Statické funkce  
   
 |||  
 |-|-|  
-|[InternalQueryInterface](#internalqueryinterface)|Deleguje **IUnknown** neagregovaná objektu.|  
-|[ObjectMain](#objectmain)|Volané během inicializace modulu a ukončení odvozené třídy, které jsou uvedené v mapování objektu.|  
+|[InternalQueryInterface](#internalqueryinterface)|Deleguje se do `IUnknown` neagregovaná objektu.|  
+|[ObjectMain](#objectmain)|Volané při inicializaci modulu a ukončení pro odvozených tříd uvedených v mapě objektů.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |||  
 |-|-|  
-|[m_dwRef](#m_dwref)|S `m_pOuterUnknown`, součástí spojení. Použít při objekt není agregovaný pro uložení počet odkazů `AddRef` a **verze**.|  
-|[m_pOuterUnknown](#m_pouterunknown)|S `m_dwRef`, součástí spojení. Použít, když je objekt agregován do podržte ukazatel na vnější neznámý.|  
+|[m_dwRef](#m_dwref)|S `m_pOuterUnknown`, část sjednocení. Použito pro objekt není agregovaný pro uložení počet odkazů `AddRef` a `Release`.|  
+|[m_pOuterUnknown](#m_pouterunknown)|S `m_dwRef`, část sjednocení. Použít, pokud objekt je agregován pro uchování ukazatele na vnější neznámá.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComObjectRootEx` zpracovává Správa počet odkaz objektu pro neagregovaná a agregované objekty. Pokud není agregovaný objektu a obsahuje ukazatele na vnější neznámý, pokud je agregovaný objektu drží odkaz počet objektů. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a k ochraně vnější objekt z odstranění, když jsou vydávány vnitřní rozhraní nebo vnitřní objekt se odstraní.  
+ `CComObjectRootEx` zpracovává správy referenční počet objektů pro neagregovaná a agregované objekty. Obsahuje referenční počet objektů, pokud objekt není agregovaný a drží ukazatel vnější neznámá, pokud je agregovaný objekt. Pro agregované objekty `CComObjectRootEx` metody lze použít k vyřešení selhání vnitřní objekt k vytvoření a odstranění k ochraně vnější objekt před odstraněním vydáním vnitřní rozhraní nebo vnitřní objekt.  
   
- Třídu, která implementuje COM server musí dědit z `CComObjectRootEx` nebo [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
+ Třída, která implementuje COM server musí dědit z `CComObjectRootEx` nebo [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md).  
   
- Pokud vaše definice třídy určuje [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) makro, ATL vytvoří instanci **CComPolyObject\<CYourClass >** při **IClassFactory:: CreateInstance –** je volána. Během vytváření se kontroluje hodnota vnější neznámý. Pokud je **NULL**, **IUnknown** je implementována pro objekt neagregovaná. Pokud vnější Neznámý není **NULL**, **IUnknown** je implementována pro agregovaný objekt.  
+ Pokud vaše definice třídy určuje [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) makra ATL vytvoří instanci `CComPolyObject<CYourClass>` při `IClassFactory::CreateInstance` je volána. Při vytváření se kontroluje hodnota vnější neznámá. Pokud má hodnotu NULL, `IUnknown` je implementován pro neagregovaná objektu. Pokud není NULL, vnější Neznámá `IUnknown` je implementován pro agregovaného objektu.  
   
- Pokud vaše třída neurčuje `DECLARE_POLY_AGGREGATABLE` makro, ATL vytvoří instanci **CAggComObject\<CYourClass >** pro agregovaná objektů nebo instanci **CComObject\<CYourClass >** pro neagregovaná objekty.  
+ Pokud vaše třída neurčuje – makro DECLARE_POLY_AGGREGATABLE, ATL vytvoří instanci `CAggComObject<CYourClass>` agregovaných objektů nebo instanci `CComObject<CYourClass>` pro neagregovaná objekty.  
   
- Výhodou použití `CComPolyObject` je vyhnout se nutnosti obě `CComAggObject` a `CComObject` v modulu pro zpracování agregované a neagregovaná případy. Jediný `CComPolyObject` objekt zpracovává obou případech. Proto pouze jedné kopie tabulce vtable a jednu kopii funkce existují v modulu. Pokud vaše vtable velká, může to podstatně snížit velikost vašeho modulu. Ale pokud je vaše vtable malá, pomocí `CComPolyObject` může způsobit něco větší velikost modulu, protože není optimalizována pro agregovaná nebo neagregovaná objekt, jako jsou `CComAggObject` a `CComObject`.  
+ Výhodou použití `CComPolyObject` je, že se vyhnete nutnosti obě `CComAggObject` a `CComObject` v modulu pro zpracování agregované a neagregovaná případech. Jediný `CComPolyObject` objekt zpracovává obou případech. Proto pouze jednu kopii tabulku vtable a jedna kopie funkce existovat v modulu. Pokud je vaše vtable velký, to může výrazně zkrátit velikost vašeho modulu. Nicméně pokud je vaše vtable malá, pomocí `CComPolyObject` může vést o něco větší velikost modulu, protože není optimalizován pro objekt agregována nebo neagregovaná jsou `CComAggObject` a `CComObject`.  
   
- Pokud je agregován objektu, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) je implementováno modulem `CComAggObject` nebo `CComPolyObject`. Tyto třídy delegovat `QueryInterface`, `AddRef`, a **verze** volání `CComObjectRootEx`na `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease` předávání do vnějšího neznámý. Obvykle je přepsat `CComObjectRootEx::FinalConstruct` v třídě vytvoření agregované objekty a přepsání `CComObjectRootEx::FinalRelease` uvolnit všechny agregovat objekty.  
+ Pokud objekt je agregován, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) je implementováno `CComAggObject` nebo `CComPolyObject`. Tyto třídy delegáta `QueryInterface`, `AddRef`, a `Release` volání `CComObjectRootEx`společnosti `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease` předat vnější neznámá. Obvykle je přepsat `CComObjectRootEx::FinalConstruct` ve své třídě pro vytvoření jakýchkoli agregovaných objektů a přepsání `CComObjectRootEx::FinalRelease` uvolnit všechny agregované objekty.  
   
- Pokud nejsou agregovány objektu, **IUnknown** je implementováno modulem `CComObject` nebo `CComPolyObject`. V takovém případě volání `QueryInterface`, `AddRef`, a **verze** jsou přeneseny na `CComObjectRootEx`na `InternalQueryInterface`, `InternalAddRef`, a `InternalRelease` k provedení vlastní operace.  
+ Pokud není agregovaný objekt, `IUnknown` je implementováno `CComObject` nebo `CComPolyObject`. V takovém případě volání `QueryInterface`, `AddRef`, a `Release` se deleguje na `CComObjectRootEx`společnosti `InternalQueryInterface`, `InternalAddRef`, a `InternalRelease` k provedení vlastní operace.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
@@ -114,59 +114,59 @@ CComObjectRootEx();
 ```  
   
 ##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct  
- Mohou přepsat tuto metodu v odvozené třídě provést jakékoli inicializace požadována pro objekt.  
+ Potlačí tuto metodu ve vaší odvozené třídy za účelem udělat všechny inicializace, vyžaduje se pro objekt.  
   
 ```
 HRESULT FinalConstruct();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo jeden z standardní chyba `HRESULT` hodnoty.  
+ Vrátí hodnotu S_OK na úspěch nebo jednu standardní chybu hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení `CComObjectRootEx::FinalConstruct` jednoduše vrátí `S_OK`.  
+ Ve výchozím nastavení `CComObjectRootEx::FinalConstruct` jednoduše vrátí hodnotu S_OK.  
   
- Existují výhody provádět inicializace v `FinalConstruct` místo konstruktoru vaší třídy:  
+ Existují výhody provedení inicializace v `FinalConstruct` namísto konstruktoru třídy:  
   
--   Stavový kód nemůže vrátit z konstruktoru, ale můžete se vrátit `HRESULT` prostřednictvím `FinalConstruct`na vrátit hodnotu. Při vytváření objektů vaší třídy pomocí objektu pro vytváření standardní třída poskytované ATL, tento návratovou hodnotu rozšířena zpět do klienta COM, což umožňuje jim poskytnout podrobné informace o chybě.  
+-   Nelze vrátit stavový kód z konstruktoru, ale můžete se vrátit HRESULT prostřednictvím `FinalConstruct`jeho návratovou hodnotu. Při vytváření objektů třídy pomocí standardní třídu výroby pomocí knihovny ATL, tento návratová hodnota se šíří zpět k klient modelu COM, abyste mohli poskytnout podrobné informace o chybě.  
   
--   Virtuální funkce nelze volat přes mechanismus virtuální funkci z konstruktoru třídy. Volání virtuální funkci z konstruktoru třídy výsledkem statisticky volání funkce, jako je definována v tomto bodě v hierarchii dědičnosti. Volání funkcí čistý virtuální vést k chybám linkeru.  
+-   Nelze volat virtuální funkce pomocí mechanismu virtuální funkce z konstruktoru třídy. Volání virtuální funkce z konstruktoru třídy, výsledkem je staticky řešeného volání funkce, jak jsou definovány v daném okamžiku v hierarchii dědičnosti. Volání čistě virtuální funkce má za následek chyby linkeru.  
   
-     Vaše třída není nejvíce odvozené třídy v hierarchii dědičnosti – přitom spoléhá na odvozené třídě poskytl ATL zajistit některé ze svých funkcí. Je dobré pravděpodobné, že vaše inicializace budou muset používat funkce poskytované službou třídy (to je určitě true při objekty vaší třídy vyžadují k agregaci jiné objekty), ale konstruktoru ve třídě nemá žádnou možnost přístupu k nim. Vytváření kódu pro třídu je spuštěna před plně sestavený nejvíce odvozené třídy.  
+     Vaše třída není nejvíce odvozené třídy v hierarchii dědičnosti, spoléhá na odvozenou třídu poskytnutých ATL poskytnout některé ze svých funkcí. Je dobré pravděpodobné, že inicializace potřebovat k funkcím, které poskytuje tuto třídu (to platí jistě při objekty třídy potřeba agregovat jiné objekty), ale nemá žádný způsob, jak přistupovat k těm funkcím konstruktoru ve své třídě. Konstrukce kódu pro třídu je spuštěn před úplném nejvíce odvozené třídy.  
   
-     Ale `FinalConstruct` je volána hned po nejvíc odvozené třídy plně sestavený umožňuje volání virtuální funkce a použít počítání odkazů implementace poskytované ATL.  
+     Nicméně `FinalConstruct` je volána ihned poté, co nejvíce odvozené třídy úplném díky tomu můžete volat virtuální funkce a použít implementaci počítání odkazů poskytované ATL.  
   
 ### <a name="example"></a>Příklad  
- Obvykle potlačí tuto metodu do třídy odvozené od `CComObjectRootEx` vytvořit žádné agregovat objekty. Příklad:  
+ Obvykle, přepište tuto metodu v třídě odvozené z `CComObjectRootEx` vytvořit všechny agregované objekty. Příklad:  
   
  [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
- Pokud vytváření nezdaří, můžete se vrátit k chybě. Můžete také použít makro [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) k ochraně před vrácení vnější objektu odstranit, pokud během vytváření interního objektu agregované zvětší počet odkazů a snižuje počet na hodnotu 0.  
+ Pokud procesu vytváření se nezdaří, můžete se vrátit k chybě. Můžete také použít makra [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) k ochraně před vrácení vnější objekt odstranit, pokud během vytváření, interní agregovaného objektu zvýší počet odkazů pak dekrementuje počet na hodnotu 0.  
   
- Tady je typické způsob, jak vytvořit agregace:  
+ Zde je typický způsob, jak vytvořit agregace:  
   
--   Přidat **IUnknown** ukazatel do vaší třídy objektu a inicializujte ho, aby **NULL** v konstruktoru.  
+-   Přidat `IUnknown` ukazatel na třídu objektu a inicializovat na hodnotu NULL v konstruktoru.  
   
--   Přepsání `FinalConstruct` vytvoření agregace.  
+-   Přepsat `FinalConstruct` vytvoření agregace.  
   
--   Použití **IUnknown** ukazatel definován jako parametr pro [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) makro.  
+-   Použití `IUnknown` ukazatele, které jste definovali jako parametr [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) – makro.  
   
--   Přepsání `FinalRelease` k uvolnění **IUnknown** ukazatel.  
+-   Přepsat `FinalRelease` uvolnit `IUnknown` ukazatele.  
   
 ##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease  
- Mohou přepsat tuto metodu v odvozené třídě k vyčištění vyžadované pro objekt.  
+ Potlačí tuto metodu v odvozené třídy provádět všechny požadované čištění pro váš objekt.  
   
 ```
 void FinalRelease();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení `CComObjectRootEx::FinalRelease` se nic nestane.  
+ Ve výchozím nastavení `CComObjectRootEx::FinalRelease` nemá žádný účinek.  
   
- Provádění vyčištění v `FinalRelease` je vhodnější při přidávání kódu do destruktor vaší třídy, vzhledem k tomu, že objekt je stále plně vytvořený v okamžiku, kdy `FinalRelease` je volána. To vám umožňuje bezpečně přístup metody poskytované nejvíce odvozené třídy. To je obzvláště důležité pro uvolnění všechny agregované objekty před odstraněním.  
+ Probíhá čištění v `FinalRelease` je vhodnější než přidání kódu destruktoru své třídy, protože objekt je stále plně sestaveny v okamžiku, kdy `FinalRelease` je volána. To umožňuje bezpečně přistupovat k metodám poskytovaných nejvíce odvozené třídy. To je zvlášť důležité pro uvolnění jakýchkoli agregovaných objektů před odstraněním.  
   
 ##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef  
- Počet odkazů objekt neagregovaná zvýší o 1.  
+ Zvýší počet odkazů neagregovaná objektu 1.  
   
 ```
 ULONG InternalAddRef();
@@ -176,7 +176,7 @@ ULONG InternalAddRef();
  Hodnota, která může být užitečné pro diagnostiku a testování.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je model vláken s více vlákny, **InterlockedIncrement** se používá k více než jedno vlákno zabránit ve změně počet odkazů ve stejnou dobu.  
+ Pokud je model vláken s více vlákny, `InterlockedIncrement` umožňuje zabránit ve změně počtu odkazů ve stejnou dobu více než jedno vlákno.  
   
 ##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface  
  Načte ukazatel na požadované rozhraní.  
@@ -190,58 +190,58 @@ static HRESULT InternalQueryInterface(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pThis`  
- [v] Ukazatel na objekt, který obsahuje mapy COM rozhraní vystavený `QueryInterface`.  
+ *pThis*  
+ [in] Ukazatel na objekt, který obsahuje mapování modelu COM rozhraní vystavena `QueryInterface`.  
   
- `pEntries`  
- [v] Ukazatel **_ATL_INTMAP_ENTRY** struktura, která přistupuje k mapu k dispozici rozhraní.  
+ *pEntries*  
+ [in] Ukazatel `_ATL_INTMAP_ENTRY` struktura, která přistupuje k mapě dostupné rozhraní.  
   
- `iid`  
- [v] Identifikátor GUID se požadované rozhraní.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID se požadované rozhraní.  
   
- `ppvObject`  
- [out] Ukazatel na ukazatel rozhraní zadaný v `iid`, nebo **NULL** Pokud rozhraní nebyl nalezen.  
+ *ppvObject*  
+ [out] Ukazatel na ukazatel rozhraní zadané v *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden standardní `HRESULT` hodnoty.  
+ Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- `InternalQueryInterface` Zpracovává jenom rozhraní v tabulce COM mapy. Pokud je agregován objektu, `InternalQueryInterface` není delegovat na vnější neznámý. Rozhraní můžete zadat do tabulky mapování COM s makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jednoho z jeho variant.  
+ `InternalQueryInterface` zpracovává pouze v tabulce mapy modelu COM rozhraní. Pokud objekt je agregován, `InternalQueryInterface` není delegovat na vnější neznámá. Rozhraní můžete zadat do tabulky mapování modelu COM s makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jeden z jeho variant.  
   
 ##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease  
- Snižuje odkaz na počet objekt neagregovaná o 1.  
+ Sníží odkaz počet neagregovaná objektu 1.  
   
 ```
 ULONG InternalRelease();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V obou jiný debug a ladicí sestavení, tato funkce vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování. Přesná hodnota vrácená závislá na mnoha faktorech, jako je například operačního systému použít a může nebo nemusí, být počet odkazů.  
+ V obou bez ladění a ladění sestavení, tato funkce vrací hodnotu, která může být užitečné pro diagnostiku a testování. Přesná hodnota vrácená závislá na mnoha faktorech, jako je například operačního systému použít a může nebo nemusí, být počet odkazů.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je model vláken s více vlákny, **InterlockedDecrement** se používá k více než jedno vlákno zabránit ve změně počet odkazů ve stejnou dobu.  
+ Pokud je model vláken s více vlákny, `InterlockedDecrement` umožňuje zabránit ve změně počtu odkazů ve stejnou dobu více než jedno vlákno.  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- Pokud je model vláken s více vlákny, tato metoda volá funkce rozhraní Win32 API [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), které počká na vlákno může převzít vlastnictví objektu kritická sekce získaných pomocí privátní datový člen.  
+ Pokud je model vláken s více vlákny, tato metoda volá funkci Win32 API [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), které počká, dokud vlákno může převzít vlastnictví objektu kritický oddíl získaných dat soukromých členů.  
   
 ```
 void Lock();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po dokončení provádění kód chráněné musí volat vlákno `Unlock` k uvolnění vlastnictví kritická sekce.  
+ Po dokončení provádění chráněné kódu vlákna musí volat `Unlock` uvolnit vlastnictví kritický oddíl.  
   
- Pokud je model vláken jednovláknové, tato metoda neprovede žádnou akci.  
+ Pokud je model vláken s jedním vláknem, tato metoda nemá žádný účinek.  
   
 ##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef  
- Součást spojení, který používá čtyři bajtů paměti.  
+ Část sjednocení, který přistupuje k čtyři bajty paměti.  
   
 ```
 long m_dwRef;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- S `m_pOuterUnknown`, součástí spojení:  
+ S `m_pOuterUnknown`sjednocení patří:  
   
  `union`  
   
@@ -253,10 +253,10 @@ long m_dwRef;
   
  `};`  
   
- Pokud není agregovaný objekt, počet odkazů přístup `AddRef` a **verze** je uložen v `m_dwRef`. Pokud je objekt agregován, má ukazatel na vnější Neznámý je uložen v [m_pOuterUnknown](#m_pouterunknown).  
+ Pokud objekt není agregovaný, počet odkazů přistupuje `AddRef` a `Release` je uložen v `m_dwRef`. Pokud objekt je agregován, ukazatel na vnější Neznámá je uložen v [m_pOuterUnknown](#m_pouterunknown).  
   
 ##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown  
- Součást spojení, který používá čtyři bajtů paměti.  
+ Část sjednocení, který přistupuje k čtyři bajty paměti.  
   
 ```
 IUnknown*
@@ -264,7 +264,7 @@ IUnknown*
 ```     
   
 ### <a name="remarks"></a>Poznámky  
- S `m_dwRef`, součástí spojení:  
+ S `m_dwRef`sjednocení patří:  
   
  `union`  
   
@@ -276,29 +276,29 @@ IUnknown*
   
  `};`  
   
- Pokud je objekt agregován, má ukazatel na vnější Neznámý je uložen v `m_pOuterUnknown`. Pokud není agregovaný objekt, počet odkazů přístup `AddRef` a **verze** je uložen v [m_dwRef](#m_dwref).  
+ Pokud objekt je agregován, ukazatel na vnější Neznámá je uložen v `m_pOuterUnknown`. Pokud objekt není agregovaný, počet odkazů přistupuje `AddRef` a `Release` je uložen v [m_dwRef](#m_dwref).  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- Pro každou třídu uvedené v [mapování objektu](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), tato funkce je volána po při inicializaci modulu, a znovu při ukončena.  
+ Pro každou třídu uvedené v [mapu objektu](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f), tato funkce je volána při inicializaci modulu, a znovu když je ukončen.  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bStarting`  
- [out] Hodnota je **true** Pokud je třída inicializovaného; jinak hodnota **false**.  
+ *bStarting*  
+ [out] Hodnota je TRUE, pokud třída je inicializována; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota `bStarting` parametr označuje, zda modul se inicializovat nebo byla ukončena. Výchozí implementaci `ObjectMain` nic neprovádí, ale můžete přepsat tuto funkci v třídě pro inicializaci nebo vyčištění prostředků, které chcete přidělit pro třídu. Všimněte si, že `ObjectMain` je volána před všechny instance třídy jsou požadovány.  
+ Hodnota *bStarting* parametr označuje, zda se v modulu inicializován nebo ukončen. Výchozí implementace `ObjectMain` nemá žádný účinek, ale můžete přepsat tuto funkci ve své třídě pro inicializaci nebo vyčistit prostředky, které chcete přidělit pro třídu. Všimněte si, že `ObjectMain` je volána před požadavku na všechny instance třídy.  
   
- `ObjectMain` je volána ze vstupního bodu knihovny DLL, tak, aby typ operace, která může provádět funkce vstupního bodu s omezeným přístupem. Další informace o těchto omezeních najdete v tématu [knihovny DLL a Visual C++ chování běhové knihovny](../../build/run-time-library-behavior.md) a [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` je volána z vstupní bod knihovny DLL, je omezený typ operace, které provádí funkci vstupního bodu. Další informace o těchto omezeních najdete v tématu [Visual C++ a knihoven DLL knihovny run-time chování](../../build/run-time-library-behavior.md) a [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef  
- Zvýší počet odkazů vnější Neznámý agregace.  
+ Zvýší počet odkazů vnější Neznámá agregaci.  
   
 ```
 ULONG OuterAddRef();
@@ -315,39 +315,39 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [v] Identifikátor GUID se požadované rozhraní.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID se požadované rozhraní.  
   
- `ppvObject`  
- [out] Ukazatel na ukazatel rozhraní zadaný v `iid`, nebo **NULL** Pokud agregace nepodporuje rozhraní.  
+ *ppvObject*  
+ [out] Ukazatel na ukazatel rozhraní zadané v *iid*, nebo hodnota NULL, pokud agregaci nepodporuje rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden standardní `HRESULT` hodnoty.  
+ Jeden standardní hodnoty HRESULT.  
   
 ##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease  
- Snižuje počet odkaz na vnější Neznámá o agregaci.  
+ Sníží počet referenční vnější Neznámá agregaci.  
   
 ```
 ULONG OuterRelease();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V sestavení pro bez ladění vždy vrátí hodnotu 0. V sestavení pro ladění vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování.  
+ V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečné pro diagnostiku a testování.  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- Pokud je model vláken s více vlákny, tato metoda volá funkce rozhraní Win32 API [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), které verze vlastnictví objektu kritická sekce získaných pomocí privátní datový člen.  
+ Pokud je model vláken s více vlákny, tato metoda volá funkci Win32 API [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), které verze vlastnictví objektu kritický oddíl získaných dat soukromých členů.  
   
 ```
 void Unlock();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete získat vlastnictví, musí volat vlákno `Lock`. Každé volání `Lock` vyžaduje odpovídající volání `Unlock` k uvolnění vlastnictví kritická sekce.  
+ Získání vlastnictví, musí volat vlákno `Lock`. Každé volání `Lock` vyžaduje odpovídající volání `Unlock` uvolnit vlastnictví kritický oddíl.  
   
- Pokud je model vláken jednovláknové, tato metoda neprovede žádnou akci.  
+ Pokud je model vláken s jedním vláknem, tato metoda nemá žádný účinek.  
   
 ## <a name="see-also"></a>Viz také  
  [CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)   
  [CComObject – třída](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;unordered_map –&gt; funkce | Microsoft Docs'
+title: '&lt;unordered_map –&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665bdfd08fffdfcb662c175b9af44b8e9ed42a1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857308"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965549"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map –&gt; funkce
 
@@ -42,19 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`Key` Typ klíče.
+*Key*  
+ Klíčový typ
 
-`Ty` Typ namapované.
+*Ty*  
+ Mapovaný typ
 
-`Hash` Typ objektu funkce hash.
+*Hash*  
+ Typ objektu hashovací funkce
 
-`Pred` Typ objektu rovnosti porovnání funkce.
+*Před*  
+ Typ objektu funkce porovnání rovnosti
 
-`Alloc` Allocator – třída.
+*ALLOC*  
+ Třída alokátoru
 
-`left` První kontejner chcete prohodit.
+*doleva*  
+ První kontejner přepínat.
 
-`right` Druhý kontejneru se prohodit.
+*doprava*  
+ Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -129,19 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`Key` Typ klíče.
+*Key*  
+ Klíčový typ
 
-`Ty` Typ namapované.
+*Ty*  
+ Mapovaný typ
 
-`Hash` Typ objektu funkce hash.
+*Hash*  
+ Typ objektu hashovací funkce
 
-`Pred` Typ objektu rovnosti porovnání funkce.
+*Před*  
+ Typ objektu funkce porovnání rovnosti
 
-`Alloc` Allocator – třída.
+*ALLOC*  
+ Třída alokátoru
 
-`left` První kontejner chcete prohodit.
+*doleva*  
+ První kontejner přepínat.
 
-`right` Druhý kontejneru se prohodit.
+*doprava*  
+ Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -203,6 +217,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<unordered_map>](../standard-library/unordered-map.md)<br/>

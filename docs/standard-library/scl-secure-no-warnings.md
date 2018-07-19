@@ -1,5 +1,5 @@
 ---
-title: _SCL_SECURE_NO_WARNINGS | Microsoft Docs
+title: _SCL_SECURE_NO_WARNINGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965497"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Volání metod potenciálně nebezpečného ve standardní knihovně C++ výsledkem [upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Chcete-li zakázat toto upozornění, definujte makro **_SCL_SECURE_NO_WARNINGS** ve vašem kódu:
+Volání metod potenciálně nebezpečné ve standardní knihovně C++ výsledkem [upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Chcete-li zakázat toto upozornění, definujte _SCL_SECURE_NO_WARNINGS – makro ve vašem kódu:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Pokud používáte předkompilovaných hlaviček, uveďte tato direktiva v předkompilovaný hlavičkový soubor předtím, než je zahrnout všechny běhové knihovny jazyka C nebo standardní knihovna hlavičky. Pokud jste ji vložili do souboru kódu jednotlivé zdrojové předtím, než zahrnete předkompilovaný hlavičkový soubor, je ignorován v kompilátoru.
+Pokud použití předkompilovaných hlaviček vložte této direktivy v souboru předkompilované hlavičky teprve potom zahrňte všechny běhové knihovny jazyka C nebo hlavičky standardní knihovny. Pokud jste ji vložili na jednotlivé zdrojový soubor kódu před zahrnutím souboru předkompilované hlavičky, je ignorován kompilátory.
 
 ## <a name="remarks"></a>Poznámky
 
-Další způsoby, jak zakázat upozornění C4996 patří:
+Další možnosti, jak zakázat upozornění C4996 patří:
 
-- Pomocí [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru:
+- Použití [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru:
 
    > cl myfile.cpp /D_SCL_SECURE_NO_WARNINGS [Další možnosti kompilátoru]
 
-- Pomocí [/w](../build/reference/compiler-option-warning-level.md) – možnost kompilátoru:
+- Použití [/w](../build/reference/compiler-option-warning-level.md) – možnost kompilátoru:
 
    > cl /wd4996 [Další možnosti kompilátoru] myfile.cpp
 
-- Pomocí [#pragma – upozornění](../preprocessor/warning.md) – direktiva:
+- Použití [varování #pragma](../preprocessor/warning.md) – direktiva:
 
    ```cpp
    #pragma warning(disable:4996)
    ```
 
-Navíc můžete ručně změnit úroveň upozornění C4996 s **/w\<l >\<n >** – možnost kompilátoru. Chcete-li například nastavit upozornění C4996 na úroveň 4:
+Také můžete ručně změnit úroveň upozornění C4996 se **/w\<l >\<n >** – možnost kompilátoru. Chcete-li například nastavit upozornění C4996 úrovně 4:
 
 > cl /w44996 [Další možnosti kompilátoru] myfile.cpp
 
-Další informace najdete v tématu [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, nebo jsme /wo, /Wv, wdn (úroveň upozornění)](../build/reference/compiler-option-warning-level.md).
+Další informace najdete v tématu [/w, /W0, /W1, /W2, w3, / W4, /w1, /w2, w3, / W4, / wall, WD, / we, Wo, WV, /WX (úroveň upozornění)](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečné knihovny: standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

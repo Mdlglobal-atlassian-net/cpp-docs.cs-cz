@@ -1,5 +1,5 @@
 ---
-title: Třída CComCurrency | Microsoft Docs
+title: Ccomcurrency – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847cbe230e14975e883c42f52538ba3863d505c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 699a68d973f905b094bec681400dffb033d83aec
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366244"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027619"
 ---
-# <a name="ccomcurrency-class"></a>CComCurrency – třída
-`CComCurrency` obsahuje operátory a metody pro vytváření a správu objekt měny.  
+# <a name="ccomcurrency-class"></a>Ccomcurrency – třída
+`CComCurrency` obsahuje metody a operátory k vytváření a správě objekt měny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,61 +47,61 @@ class CComCurrency
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComCurrency::CComCurrency](#ccomcurrency)|V konstruktoru pro `CComCurrency` objektu.|  
+|[CComCurrency::CComCurrency](#ccomcurrency)|Konstruktor pro `CComCurrency` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Vrátí adresu `m_currency` – datový člen.|  
-|[CComCurrency::GetFraction](#getfraction)|Volání této metody vrátit zlomkové komponenta `CComCurrency` objektu.|  
-|[CComCurrency::GetInteger](#getinteger)|Volání této metody vrátit komponenta celé číslo `CComCurrency` objektu.|  
-|[CComCurrency::Round](#round)|Volat tuto metodu, která má být zaokrouhleno `CComCurrency` objektu na nejbližší celé číslo.|  
-|[CComCurrency::SetFraction](#setfraction)|Volat tuto metodu a nastavit komponentu zlomkové `CComCurrency` objektu.|  
-|[CComCurrency::SetInteger](#setinteger)|Volat tuto metodu a nastavit komponentu celé číslo `CComCurrency` objektu.|  
+|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Vrátí adresu `m_currency` datový člen.|  
+|[CComCurrency::GetFraction](#getfraction)|Voláním této metody vrátí desetinné složku `CComCurrency` objektu.|  
+|[CComCurrency::GetInteger](#getinteger)|Voláním této metody vrátí celočíselné složku `CComCurrency` objektu.|  
+|[CComCurrency::Round](#round)|Voláním této metody lze zaokrouhlit `CComCurrency` objektu na nejbližší celočíselnou hodnotu.|  
+|[CComCurrency::SetFraction](#setfraction)|Voláním této metody nastavte desetinné součást `CComCurrency` objektu.|  
+|[CComCurrency::SetInteger](#setinteger)|Voláním této metody nastavte součást celé číslo `CComCurrency` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComCurrency::operator-](#operator_-)|Tento operátor slouží k provádění odčítání na `CComCurrency` objektu.|  
+|[CComCurrency::operator-](#operator_-)|Tento operátor se používá k provedení odečtení na `CComCurrency` objektu.|  
 |[CComCurrency::operator! =](#operator_neq)|Porovná dva `CComCurrency` objekty nerovnost.|  
-|[CComCurrency::operator *](#operator_star)|Tento operátor slouží k plnění násobení `CComCurrency` objektu.|  
-|[CComCurrency::operator * =](#operator_star_eq)|Tento operátor slouží k plnění násobení `CComCurrency` objektu a přiřaďte ho výsledek.|  
-|[CComCurrency::operator /](#operator_div)|Tento operátor slouží k provádění dělení na `CComCurrency` objektu.|  
-|[CComCurrency::operator / =](#operator_div_eq)|Tento operátor slouží k provádění dělení na `CComCurrency` objektu a přiřaďte ho výsledek.|  
-|[CComCurrency::operator +](#operator_add)|Tento operátor slouží k přidání plnění `CComCurrency` objektu.|  
-|[CComCurrency::operator +=](#operator_add_eq)|Tento operátor slouží k přidání plnění `CComCurrency` objektu a výsledek přiřadit aktuální objekt.|  
-|[CComCurrency::operator <](#operator_lt)|Tento operátor porovná dvě `CComCurrency` objekty, které chcete určit menší.|  
-|[CComCurrency::operator < =](#operator_lt_eq)|Tento operátor porovná dvě `CComCurrency` objekty k určení rovnosti nebo menší.|  
+|[CComCurrency::operator *](#operator_star)|Tento operátor se používá k provedení násobení na `CComCurrency` objektu.|  
+|[CComCurrency::operator * =](#operator_star_eq)|Tento operátor se používá k provedení násobení na `CComCurrency` objekt a přiřaďte ho výsledek.|  
+|[CComCurrency::operator /](#operator_div)|Tento operátor se používá k provedení dělení na `CComCurrency` objektu.|  
+|[CComCurrency::operator / =](#operator_div_eq)|Tento operátor se používá k provedení dělení na `CComCurrency` objekt a přiřaďte ho výsledek.|  
+|[CComCurrency::operator +](#operator_add)|Tento operátor se používá k provedení sčítání na `CComCurrency` objektu.|  
+|[CComCurrency::operator +=](#operator_add_eq)|Tento operátor se používá k provedení sčítání na `CComCurrency` objektu a výsledek přiřaďte do aktuálního objektu.|  
+|[CComCurrency::operator <](#operator_lt)|Tento operátor porovná dva `CComCurrency` objekty k určení menší než.|  
+|[CComCurrency::operator < =](#operator_lt_eq)|Tento operátor porovná dva `CComCurrency` objekty k určení rovnosti, nebo menší.|  
 |[CComCurrency::operator =](#operator_eq)|Tento operátor přiřadí `CComCurrency` objektu na novou hodnotu.|  
-|[CComCurrency::operator-=](#operator_-_eq)|Tento operátor slouží k provádění odčítání na `CComCurrency` objektu a přiřaďte ho výsledek.|  
-|[CComCurrency::operator ==](#operator_eq_eq)|Tento operátor porovná dvě `CComCurrency` objekty rovnosti.|  
-|[CComCurrency::operator >](#operator_gt)|Tento operátor porovná dvě `CComCurrency` objekty, které chcete určit delší.|  
-|[CComCurrency::operator > =](#operator_gt_eq)|Tento operátor porovná dvě `CComCurrency` objekty k určení rovnosti nebo delší.|  
-|[CComCurrency::operator měny](#operator_currency)|Přetypování `CURRENCY` objektu.|  
+|[CComCurrency::operator-=](#operator_-_eq)|Tento operátor se používá k provedení odečtení na `CComCurrency` objekt a přiřaďte ho výsledek.|  
+|[CComCurrency::operator ==](#operator_eq_eq)|Tento operátor porovná dva `CComCurrency` objekty pro rovnost.|  
+|[CComCurrency::operator >](#operator_gt)|Tento operátor porovná dva `CComCurrency` objekty k určení větší.|  
+|[CComCurrency::operator > =](#operator_gt_eq)|Tento operátor porovná dva `CComCurrency` objekty k určení rovnosti, nebo větší.|  
+|[CComCurrency::operator měny](#operator_currency)|Přetypuje objekt měny.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComCurrency::m_currency](#m_currency)|`CURRENCY` Proměnné vytvořené ve vaší instanci třídy.|  
+|[CComCurrency::m_currency](#m_currency)|Proměnná měny vytvořil instanci třídy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComCurrency` představuje obálku pro **MĚNA** datového typu. **MĚNA** je implementovaný jako celočíselnou hodnotu 8bajtový doplňkem škálovat podle 10 000. To dává číslo s pevnou desetinnou čárkou s 15 číslic nalevo od desetinné čárky a 4 číslic vpravo. **MĚNA** datový typ je velmi užitečná pro peněžních výpočtů, nebo pro všechny výpočty s pevnou desetinnou čárkou kde přesnost je důležité.  
+ `CComCurrency` představuje obálku pro datový typ MĚNA. MĚNY je implementovaný jako celočíselnou hodnotu 8bajtový dvojkového doplňku měřítkem řídit 10 000. Díky tomu číslo s pevnou desetinnou čárkou s 15 číslic nalevo od desetinné čárky a 4 číslice vpravo. Datový typ MĚNA. je velmi užitečné pro peněžních výpočtů nebo pro všechny výpočty s pevnou desetinnou čárkou, kdy přesnost je důležité.  
   
- **CComCurrency** obálku implementuje aritmetické, přiřazení a porovnání operací pro tento typ s pevnou desetinnou čárkou. Nebyly vybrány podporovaných aplikací k řízení zaokrouhlení chybách, ke kterým může dojít během výpočty s pevnou desetinnou čárkou.  
+ `CComCurrency` Obálky implementuje operace aritmetické, přiřazení a porovnání tohoto typu s pevnou desetinnou čárkou. Podporované aplikace byly vybrány pro řízení zaokrouhlovací chyby, které se můžou objevit během výpočty s pevnou desetinnou čárkou.  
   
- `CComCurrency` Objekt poskytuje přístup k čísla na obou stranách od desetinné čárky ve formě dvě součásti: komponentu celé číslo, které ukládá hodnotu směrem doleva od desetinné čárky a zlomkové komponenta, která ukládá hodnotu napravo desetinné čárky. Komponentu zlomkové je uložen interně jako celočíselná hodnota mezi-9999 ( **CY_MIN_FRACTION**) a +9999 ( **CY_MAX_FRACTION**). Metoda [CComCurrency::GetFraction](#getfraction) vrací hodnotu škálovat faktorem 10000 ( **CY_SCALE**).  
+ `CComCurrency` Objekt poskytuje přístup k čísla na obou stranách desetinné čárky ve formě dvě součásti: jako součást celé číslo, který ukládá hodnotu nalevo od desetinné čárky a zlomkové komponenta, která ukládá hodnotu napravo desetinné čárky. Desetinné komponenty je interně uložené jako celočíselnou hodnotu mezi -9999 (CY_MIN_FRACTION) a +9999 (CY_MAX_FRACTION). Metoda [CComCurrency::GetFraction](#getfraction) vrací hodnotu měřítkem řídit 10000 (CY_SCALE).  
   
- Při zadávání celé číslo a zlomkové součásti **CComCurrency** objektu, mějte na paměti, že zlomkové součást je číslo v rozsahu 0 až 9 999. To je důležité při plánování práce s měny například dolaru USA, která vyjadřuje částky pomocí pouze dvě významné číslice za desetinnou čárkou. I když nejsou zobrazeny dvě poslední číslice, musí vzít v úvahu.  
+ Při zadávání celé číslo a komponenty zlomku z `CComCurrency` objektu, mějte na paměti, že je součást desetinné číslo v rozsahu 0 až 9 999. To je důležité, když se zabývají měny, jako je AMERICKÝ dolar, která vyjadřuje částky s použitím pouze dvě platné číslice za desetinnou čárkou. I když nejsou zobrazeny poslední dvě číslice, musíte vzít do úvahy.  
   
-|Hodnota|Možné CComCurrency přiřazení|  
+|Hodnota|Je to možné ccomcurrency – přiřazení|  
 |-----------|---------------------------------------|  
 |$10.50|CComCurrency(10,5000) *nebo* CComCurrency(10.50)|  
 |$10.05|CComCurrency(10,500) *nebo* CComCurrency(10.05)|  
   
- Hodnoty **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, a **CY_SCALE** jsou definovány v atlcur.h.  
+ Hodnoty CY_MIN_FRACTION CY_MAX_FRACTION a CY_SCALE jsou definovány v atlcur.h.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcur.h  
@@ -130,88 +130,88 @@ explicit CComCurrency(LPCSTR szSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `curSrc`  
+ *curSrc*  
  Existující objekt `CComCurrency`.  
   
- `cySrc`  
- Proměnné typu **MĚNA**.  
+ *cySrc*  
+ Proměnné typu MĚNA.  
   
- `bSrc`, `dSrc`, `fSrc`, `lSrc`, *sSrc*, *ulSrc usSrc*  
- Počáteční hodnota zadané členské proměnné `m_currency`.  
+ *bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*  
+ Počáteční hodnota předaná do proměnné člena `m_currency`.  
   
- `cSrc`  
- Znak, který obsahuje počáteční hodnotu na členské proměnné `m_currency`.  
+ *cSrc*  
+ Znak obsahující počáteční hodnota předaná do proměnné člena `m_currency`.  
   
- `nInteger`, *nFraction*  
- Celé číslo a zlomkové součástí počáteční peněžní hodnota. Najdete v článku [CComCurrency](../../atl/reference/ccomcurrency-class.md) přehled pro další informace.  
+ *nInteger*, *nFraction*  
+ Celé číslo a komponenty zlomku počáteční peněžní hodnoty. Zobrazit [ccomcurrency –](../../atl/reference/ccomcurrency-class.md) přehled pro další informace.  
   
- `pDispSrc`  
- `IDispatch` Ukazatel.  
+ *pDispSrc*  
+ `IDispatch` Ukazatele.  
   
  *varSrc*  
- Proměnné typu **VARIANT**. Národní prostředí aktuální vlákno se používá k provádění převod.  
+ Proměnné typu VARIANT. Národní prostředí aktuálního vlákna se používá k provedení převodu.  
   
- `szSrc`  
- Unicode nebo ANSI řetězec obsahující počáteční hodnota. Národní prostředí aktuální vlákno se používá k provádění převod.  
+ *szSrc*  
+ Řetězec Unicode nebo ANSI obsahující počáteční hodnota. Národní prostředí aktuálního vlákna se používá k provedení převodu.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastaví počáteční hodnotu konstruktoru [CComCurrency::m_currency](#m_currency)a přijímá široké škály datových typů, včetně celá čísla, řetězce, čísla s plovoucí desetinnou čárkou, **MĚNA** proměnné a další `CComCurrency` objekty. Pokud není zadána žádná hodnota, `m_currency` je nastaven na hodnotu 0.  
+ Konstruktor nastaví počáteční hodnotu [CComCurrency::m_currency](#m_currency)a přijímá širokou škálu datových typů včetně celá čísla, řetězce, čísla s plovoucí desetinnou čárkou, měny proměnné a další `CComCurrency` objekty. Pokud se nezadá žádná hodnota, `m_currency` je nastavena na hodnotu 0.  
   
- V případě chyby, jako je přetečení, konstruktory postrádá specifikace prázdný výjimky ( **throw()**) volání `AtlThrow` s HRESULT popisující chybu.  
+ V případě chyby, jako je například přetečení, konstruktory chybí specifikaci výjimky prázdný (**throw()**) volání `AtlThrow` s chybou HRESULT popisující chybu.  
   
- Při použití hodnoty s plovoucí desetinnou čárkou nebo dvojité o přiřazení hodnoty, Všimněte si, že **CComCurrency(10.50)** je ekvivalentní **CComCurrency(10,5000)** a není **CComCurrency(10,50)**.  
+ Při použití hodnoty s plovoucí desetinnou čárkou nebo double pro přiřazení hodnoty, Všimněte si, že `CComCurrency(10.50)` je ekvivalentní `CComCurrency(10,5000)` a ne `CComCurrency(10,50)`.  
   
 ##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr  
- Vrátí adresu `m_currency` – datový člen.  
+ Vrátí adresu `m_currency` datový člen.  
   
 ```
 CURRENCY* GetCurrencyPtr() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí adresu `m_currency` – datový člen  
+ Vrátí adresu `m_currency` datový člen  
   
 ##  <a name="getfraction"></a>  CComCurrency::GetFraction  
- Volání této metody vrátit zlomkové součást `CComCurrency` objektu.  
+ Voláním této metody vrátí desetinné složku `CComCurrency` objektu.  
   
 ```
 SHORT GetFraction() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí komponentu zlomkové `m_currency` – datový člen.  
+ Vrátí komponentu desetinné hodnoty `m_currency` datový člen.  
   
 ### <a name="remarks"></a>Poznámky  
- Komponentu zlomkové je 4 číslice celočíselná hodnota mezi-9999 ( **CY_MIN_FRACTION**) a +9999 ( **CY_MAX_FRACTION**). `GetFraction` vrací hodnotu této škálovat podle 10000 ( **CY_SCALE**). Hodnoty **CY_MIN_FRACTION**, **CY_MAX_FRACTION**, a **CY_SCALE** jsou definovány v atlcur.h.  
+ Desetinné komponenta je 4 číslice celočíselnou hodnotu mezi -9999 (CY_MIN_FRACTION) a +9999 (CY_MAX_FRACTION). `GetFraction` Vrátí tuto hodnotu škálovat podle 10000 (CY_SCALE). Hodnoty CY_MIN_FRACTION CY_MAX_FRACTION a CY_SCALE jsou definovány v atlcur.h.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#50](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]  
   
 ##  <a name="getinteger"></a>  CComCurrency::GetInteger  
- Volat tuto metodu za účelem získání součástí celé číslo `CComCurrency` objektu.  
+ Volání této metody k získání celého čísla součást `CComCurrency` objektu.  
   
 ```
 LONGLONG GetInteger() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí komponentu celé číslo `m_currency` – datový člen.  
+ Vrátí komponentu celého čísla `m_currency` datový člen.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#51](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]  
   
 ##  <a name="m_currency"></a>  CComCurrency::m_currency  
- **MĚNA** – datový člen.  
+ Datový člen měny.  
   
 ```
 CURRENCY m_currency;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen obsahuje měna přístup a manipulovat metody této třídy.  
+ Tento člen obsahuje měny přistupovat a pracovat s nimi metody této třídy.  
   
 ##  <a name="operator_-"></a>  CComCurrency::operator-  
- Tento operátor slouží k provádění odčítání na `CComCurrency` objektu.  
+ Tento operátor se používá k provedení odečtení na `CComCurrency` objektu.  
   
 ```
 CComCurrency operator-() const;
@@ -219,34 +219,34 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CComCurrency` objekt reprezentující výsledek odčítání. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí `CComCurrency` objekt představující výsledek odčítání. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]  
   
 ##  <a name="operator_neq"></a>  CComCurrency::operator! =  
- Tento operátor porovná nerovnost dva objekty.  
+ Tento operátor porovná dva objekty nerovnost.  
   
 ```
 bool operator!= (const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
- `CComCurrency` Objekt, který má být porovnána.  
+ *Měna*  
+ `CComCurrency` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud položka porovnávané není rovno `CComCurrency` objektu; jinak, **false**.  
+ Vrátí TRUE, pokud položka, který se porovnává se nerovná `CComCurrency` objektu; jinak hodnota FALSE.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]  
   
 ##  <a name="operator_star"></a>  CComCurrency::operator *  
- Tento operátor slouží k plnění násobení `CComCurrency` objektu.  
+ Tento operátor se používá k provedení násobení na `CComCurrency` objektu.  
   
 ```
 CComCurrency operator*(long nOperand) const;
@@ -254,20 +254,20 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOperand`  
+ *nOperand*  
  Násobitel.  
   
- `cur`  
- `CComCurrency` Objekt použitý jako násobitel.  
+ *Měna*  
+ `CComCurrency` Objektu se používá jako násobitel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CComCurrency` objekt reprezentující výsledek násobení. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí `CComCurrency` objekt představující výsledek násobení. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
 ##  <a name="operator_star_eq"></a>  CComCurrency::operator * =  
- Tento operátor slouží k plnění násobení `CComCurrency` objektu a přiřaďte ho výsledek.  
+ Tento operátor se používá k provedení násobení na `CComCurrency` objekt a přiřaďte ho výsledek.  
   
 ```
 const CComCurrency& operator*= (long nOperand);
@@ -275,44 +275,44 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOperand`  
+ *nOperand*  
  Násobitel.  
   
- `cur`  
- `CComCurrency` Objekt použitý jako násobitel.  
+ *Měna*  
+ `CComCurrency` Objektu se používá jako násobitel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]  
   
 ##  <a name="operator_div"></a>  CComCurrency::operator /  
- Tento operátor slouží k provádění dělení na `CComCurrency` objektu.  
+ Tento operátor se používá k provedení dělení na `CComCurrency` objektu.  
   
 ```
 CComCurrency operator/(long nOperand) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOperand`  
+ *nOperand*  
  Dělitel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CComCurrency` objekt reprezentující výsledek rozdělení. Pokud dělitel je 0, dojde k chybě vyhodnocení.  
+ Vrátí `CComCurrency` objekt reprezentuje výsledek dělení. Pokud dělitel je 0, dojde k chybě vyhodnocení.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]  
   
 ##  <a name="operator_div_eq"></a>  CComCurrency::operator / =  
- Tento operátor slouží k provádění dělení na `CComCurrency` objektu a přiřaďte ho výsledek.  
+ Tento operátor se používá k provedení dělení na `CComCurrency` objekt a přiřaďte ho výsledek.  
   
 ```
 const CComCurrency& operator/= (long nOperand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOperand`  
+ *nOperand*  
  Dělitel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -322,69 +322,69 @@ const CComCurrency& operator/= (long nOperand);
  [!code-cpp[NVC_ATL_Utilities#60](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]  
   
 ##  <a name="operator_add"></a>  CComCurrency::operator +  
- Tento operátor slouží k přidání plnění `CComCurrency` objektu.  
+ Tento operátor se používá k provedení sčítání na `CComCurrency` objektu.  
   
 ```
 CComCurrency operator+(const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
- `CComCurrency` Objekt, který chcete přidat do původní objekt.  
+ *Měna*  
+ `CComCurrency` Objekt přidán na původní objekt.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CComCurrency` objekt reprezentující výsledek přidání. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí `CComCurrency` objekt představující výsledek součtu. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CComCurrency::operator +=  
- Tento operátor slouží k přidání plnění `CComCurrency` objektu a výsledek přiřadit aktuální objekt.  
+ Tento operátor se používá k provedení sčítání na `CComCurrency` objektu a výsledek přiřaďte do aktuálního objektu.  
   
 ```
 const CComCurrency& operator+= (const CComCurrency& cur);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  `CComCurrency` Objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]  
   
 ##  <a name="operator_lt"></a>  CComCurrency::operator &lt;  
- Tento operátor porovná dvě `CComCurrency` objekty, které chcete určit menší.  
+ Tento operátor porovná dva `CComCurrency` objekty k určení menší než.  
   
 ```
 bool operator<(const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt menší než druhý, **false** jinak.  
+ Vrátí TRUE, pokud je první objekt menší než druhé, FALSE v opačném případě.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]  
   
 ##  <a name="operator_lt_eq"></a>  CComCurrency::operator &lt;=  
- Tento operátor porovná dvě `CComCurrency` objekty k určení rovnosti nebo menší.  
+ Tento operátor porovná dva `CComCurrency` objekty k určení rovnosti, nebo menší.  
   
 ```
 bool operator<= (const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt menší než nebo rovna druhý, **false** jinak.  
+ Pokud je první objekt menší než nebo roven druhému, FALSE v opačném případě vrátí hodnotu TRUE.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]  
@@ -407,91 +407,91 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `curSrc`  
- A **CComCurrency** objektu.  
+ *curSrc*  
+ A `CComCurrency` objektu.  
   
- `cySrc`  
- Proměnné typu **MĚNA**.  
+ *cySrc*  
+ Proměnné typu MĚNA.  
   
- *sSrc*, `fSrc`, `lSrc`, *bSrc*, *usSrc*, `dSrc`, *cSrc*, *ulSrc*, `dSrc`  
+ *sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
  Číselná hodnota pro přiřazení `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]  
   
 ##  <a name="operator_-_eq"></a>  CComCurrency::operator-=  
- Tento operátor slouží k provádění odčítání na `CComCurrency` objektu a přiřaďte ho výsledek.  
+ Tento operátor se používá k provedení odečtení na `CComCurrency` objekt a přiřaďte ho výsledek.  
   
 ```
 const CComCurrency& operator-= (const CComCurrency& cur);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je přetečení, tento operátor volání `AtlThrow` s HRESULT popisující chybu.  
+ Vrátí aktualizovaný `CComCurrency` objektu. V případě chyby, jako je například přetečení, volá tento operátor `AtlThrow` s chybou HRESULT popisující chybu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>  CComCurrency::operator ==  
- Tento operátor porovná dvě `CComCurrency` objekty rovnosti.  
+ Tento operátor porovná dva `CComCurrency` objekty pro rovnost.  
   
 ```
 bool operator== (const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  `CComCurrency` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud jsou objekty stejné (tedy `m_currency` datových členů, obě celé číslo a zlomkové v obou objekty mají stejnou hodnotu), **false** jinak.  
+ Vrátí hodnotu PRAVDA, pokud se objekty rovnají (to znamená `m_currency` datové členy, obě celé číslo a desetinných v obou objekty mají stejnou hodnotu), FALSE, jinak.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]  
   
 ##  <a name="operator_gt"></a>  CComCurrency::operator &gt;  
- Tento operátor porovná dvě `CComCurrency` objekty, které chcete určit delší.  
+ Tento operátor porovná dva `CComCurrency` objekty k určení větší.  
   
 ```
 bool operator>(const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt větší než druhý, **false** jinak.  
+ Pokud je první objekt větší než druhý FALSE v opačném případě vrátí hodnotu TRUE.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]  
   
 ##  <a name="operator_gt_eq"></a>  CComCurrency::operator &gt;=  
- Tento operátor porovná dvě `CComCurrency` objekty k určení rovnosti nebo delší.  
+ Tento operátor porovná dva `CComCurrency` objekty k určení rovnosti, nebo větší.  
   
 ```
 bool operator>= (const CComCurrency& cur) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cur`  
+ *Měna*  
  A `CComCurrency` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud se první objekt větší než nebo rovna hodnotě druhého, **false** jinak.  
+ Pokud je první objekt větší než nebo roven druhému FALSE v opačném případě vrátí hodnotu TRUE.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]  
   
 ##  <a name="operator_currency"></a>  CComCurrency::operator měny  
- Tyto operátory se používají k přetypování `CComCurrency` do objektu **MĚNA** datového typu.  
+ Tyto operátory lze přetypovat `CComCurrency` objektu na datový typ MĚNA.  
   
 ```  
 operator CURRENCY&() throw();
@@ -499,13 +499,13 @@ operator const CURRENCY&() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí odkaz na **MĚNA** objektu.  
+ Vrátí odkaz na objekt měny.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#70](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]  
   
 ##  <a name="round"></a>  CComCurrency::Round  
- Volejte tuto metodu, která má být zaokrouhleno měna zadaný počet desetinných míst.  
+ Voláním této metody lze zaokrouhlit měny zadaný počet desetinných míst.  
   
 ```
 HRESULT Roundint nDecimals);
@@ -513,16 +513,16 @@ HRESULT Roundint nDecimals);
   
 ### <a name="parameters"></a>Parametry  
  *nDecimals*  
- Počet číslic, na kterou `m_currency` zaokrouhlen, v rozsahu 0 až 4.  
+ Počet číslic, na který `m_currency` zaokrouhlen v rozsahu 0 až 4.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]  
   
 ##  <a name="setfraction"></a>  CComCurrency::SetFraction  
- Volat tuto metodu a nastavit komponentu zlomkové `CComCurrency` objektu.  
+ Voláním této metody nastavte desetinné součást `CComCurrency` objektu.  
   
 ```
 HRESULT SetFraction(SHORT nFraction);
@@ -530,34 +530,34 @@ HRESULT SetFraction(SHORT nFraction);
   
 ### <a name="parameters"></a>Parametry  
  *nFraction*  
- Hodnota pro přiřazení ke zlomkové komponenta `m_currency` – datový člen. Znaménko komponentu zlomkové musíte stejný jako součást celé číslo a hodnota musí být v rozsahu-9999 ( **CY_MIN_FRACTION**) k +9999 ( **CY_MAX_FRACTION**).  
+ Hodnota má být přiřazena k desetinné součást `m_currency` datový člen. Znak desetinné součásti musí stejný jako součást celé číslo a hodnota musí být v rozsahu -9999 (CY_MIN_FRACTION) +9999 (CY_MAX_FRACTION).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#53](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]  
   
 ##  <a name="setinteger"></a>  CComCurrency::SetInteger  
- Volat tuto metodu a nastavit komponentu celé číslo `CComCurrency` objektu.  
+ Voláním této metody nastavte součást celé číslo `CComCurrency` objektu.  
   
 ```
 HRESULT SetInteger(LONGLONG nInteger);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nInteger`  
- Hodnota, která má být přiřazovány komponenta celé číslo `m_currency` – datový člen. Znaménko komponentu celé číslo se musí shodovat znaménko existující zlomkové součást.  
+ *nInteger*  
+ Hodnota, která má být přiřazená součást celé číslo `m_currency` datový člen. Znaménko celé číslo součásti musí odpovídat znaménko existující komponentu desetinné části.  
   
- `nInteger` musí být v rozsahu **CY_MIN_INTEGER** k **CY_MAX_INTEGER** (včetně). Tyto hodnoty jsou definovány v atlcur.h.  
+ *nInteger* musí být v rozsahu CY_MIN_INTEGER k CY_MAX_INTEGER (včetně). Tyto hodnoty jsou definovány v atlcur.h.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#54](../../atl/codesnippet/cpp/ccomcurrency-class_21.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
  [COleCurrency – třída](../../mfc/reference/colecurrency-class.md)   
- [MĚNA.](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [MĚNY](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

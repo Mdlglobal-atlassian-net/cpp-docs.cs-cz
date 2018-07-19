@@ -1,5 +1,5 @@
 ---
-title: codecvt_base – třída | Microsoft Docs
+title: codecvt_base – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965389"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base – třída
 
-Základní třída pro codecvt – třída, která se používá k definování typu výčtu označuje jako **výsledek**, použít jako návratový typ pro členské funkce omezující vlastnost udávajících výsledek převodu z.
+Základní třída pro třídu codecvt, která slouží k definování typu výčtu uvedené jako `result`, která se používá jako návratový typ členských funkcí omezující vlastnosti k určení výsledku převodu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,22 +48,22 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje výčet společné pro všechny specializací třídy šablony [codecvt –](../standard-library/codecvt-class.md). Výsledek výčtu popisuje možné vrácené hodnoty z [do_in –](../standard-library/codecvt-class.md#do_in) nebo [do_out –](../standard-library/codecvt-class.md#do_out):
+Tato třída popisuje společné pro všechny specializace šablony třídy výčtu [codecvt](../standard-library/codecvt-class.md). Popisuje výsledek výčet možných vrácených hodnot z [do_in](../standard-library/codecvt-class.md#do_in) nebo [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **OK** Pokud převod mezi kódování znaků interních a externích úspěšné.
+- `ok` Pokud bude úspěšné převodu mezi interním a externím kódováním znaků.
 
-- **částečné** Pokud cíl není dostatečně velký pro převod úspěšný.
+- `partial` Pokud cíl není dostatečně velký pro úspěšný převod.
 
-- **Chyba** vytvořen. Pokud zdrojové sekvence je chybný.
+- `error` Pokud je zdrojové sekvence výplně tvar.
 
-- **noconv** Pokud funkce provádí žádný převod.
+- `noconv` Pokud funkce provádí převod.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

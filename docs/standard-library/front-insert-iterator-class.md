@@ -1,5 +1,5 @@
 ---
-title: front_insert_iterator – třída | Microsoft Docs
+title: front_insert_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964382"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator – třída
 
-Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do přední části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++. `front_insert_iterator` Třída je převést na šablonu pro typ kontejneru.
+Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do přední části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++. `front_insert_iterator` Třídy je založena na typu kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,11 +40,11 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-`Container` Typ kontejneru do popředí jsou elementy vkládat `front_insert_iterator`.
+*Kontejner* typ kontejneru, do front, které mají být vloženy pomocí prvků `front_insert_iterator`.
 
 ## <a name="remarks"></a>Poznámky
 
-Kontejner musí splňovat požadavky pro sekvenci vložení do přední části, je-li možné vložit prvky na začátek sekvence v amortizovaném konstantním času. Kontejnery pořadí standardní knihovny C++ definované [deque – třída](../standard-library/deque-class.md) a [list – třída](../standard-library/list-class.md) poskytují potřebné `push_front` členské funkce a splňují tyto požadavky. Naopak pořadí kontejnery, které jsou definované [vector – třída](../standard-library/vector-class.md) tyto požadavky nesplňují a nemůže být upravena pro použití s `front_insert_iterator`s. A `front_insert_iterator` musí být vždy inicializovaný s jeho kontejneru.
+Kontejner musí splňovat požadavky pro sekvenci vložení do přední části, je-li možné vložit prvky na začátek sekvence v amortizovaném konstantním času. Kontejnery sekvence standardní knihovny C++ definované [třídou deque](../standard-library/deque-class.md) a [list – třída](../standard-library/list-class.md) poskytují potřebnou `push_front` členské funkce a tyto požadavky splňují. Naopak kontejnery sekvence definované [vector – třída](../standard-library/vector-class.md) tyto požadavky nesplňují a nelze je adaptovat k použití s `front_insert_iterator`s. A `front_insert_iterator` je vždy nutné inicializovat s jejím kontejnerem.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -63,15 +63,15 @@ Kontejner musí splňovat požadavky pro sekvenci vložení do přední části,
 
 |Operátor|Popis|
 |-|-|
-|[operátor *](#op_star)|Při přesměrování operátor použít k implementaci výraz iterator výstup * `i`  =  `x` pro front vložení.|
-|[Operator ++](#op_add_add)|Zvýší `front_insert_iterator` do následujícího umístění, do které můžou být uložené hodnotu.|
-|[operátor =](#op_eq)|Operátor přiřazení použít k implementaci výraz iterator výstup * `i`  =  `x` pro front vložení.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro vložení dopředu.|
+|[Operator ++](#op_add_add)|Zvýší `front_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro vložení dopředu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<iterator >
+**Hlavička**: \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="container_type"></a>  front_insert_iterator::container_type
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **kontejneru**.
+Typ je synonymum pro parametr šablony *kontejneru*.
 
 ### <a name="example"></a>Příklad
 
@@ -125,11 +125,11 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-`_Cont` Objekt kontejner, do kterého `front_insert_iterator` je vložit elementy.
+*_Cont* objektu kontejneru, do kterého `front_insert_iterator` je vložit prvky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `front_insert_iterator` pro parametr kontejnerového objektu.
+A `front_insert_iterator` pro parametr objektu kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -179,7 +179,7 @@ After the front insertions, the list L is:
 
 ## <a name="op_star"></a>  front_insert_iterator::Operator *
 
-Dereferences iterator vložení vrácení na element, který ho adresy.
+Přístupů přes ukazatel iterátoru vložení vrátí prvek, na který se zaměřuje.
 
 ```cpp
 front_insert_iterator<Container>& operator*();
@@ -187,11 +187,11 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vrátí hodnotu elementu řešit.
+Členská funkce vrátí hodnotu prvku zákazníky a vyřešené.
 
 ### <a name="remarks"></a>Poznámky
 
-Použít k implementaci výraz iterator výstup  **\*Iter** = **hodnotu**. Pokud **Iter** je iterátor, která řeší prvku v sekvenci, pak  **\*Iter** = **hodnotu** nahrazen hodnotou tohoto prvku a není Celkový počet elementů v pořadí změňte.
+Používaný k implementaci výrazu výstupního iterátoru  **\*Iter** = **hodnota**. Pokud `Iter` je iterátor adresující prvek v sekvenci, pak  **\*Iter** = **hodnotu** nahrazuje tento element s hodnotou a nemění celkový počet prvky v sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -240,7 +240,7 @@ After the front insertions, the list L is:
 
 ## <a name="op_add_add"></a>  front_insert_iterator::Operator ++
 
-Zvýší `back_insert_iterator` do následujícího umístění, do které můžou být uložené hodnotu.
+Zvýší `back_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.
 
 ```cpp
 front_insert_iterator<Container>& operator++();
@@ -250,11 +250,11 @@ front_insert_iterator<Container> operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `front_insert_iterator` adresování další umístění, do které můžou být uložené hodnotu.
+A `front_insert_iterator` adresování další umístění, do kterého mohou být uloženy hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory preincrementation a postincrementation vrátí stejný výsledek.
+Operátory preincrementation a postincrementation vrací stejný výsledek.
 
 ### <a name="example"></a>Příklad
 
@@ -291,7 +291,7 @@ The list L1 is: ( 30 20 10 ).
 
 ## <a name="op_eq"></a>  front_insert_iterator::Operator =
 
-Připojí (oznámení) hodnotu na popředí kontejneru.
+Připojí (nabízená oznámení) hodnotu do přední části kontejneru.
 
 ```cpp
 front_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -301,17 +301,17 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parametry
 
-`val` Hodnota pro přiřazení ke kontejneru.
+*Val* hodnota, která má být přiřazena ke kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na posledním prvkem v popředí kontejneru.
+Odkaz na poslední prvek vložený do přední části kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-První člen operátor vyhodnotí `container.push_front( val)`, vrátí `*this`.
+První členský operátor vyhodnotí `container.push_front( val)`, vrátí `*this`.
 
-Vyhodnotí druhý operátor členů
+Vyhodnotí se druhý členský operátor
 
 `container->push_front((typename Container::value_type&&) val)`,
 
@@ -394,8 +394,8 @@ The first element in the list L is: 30.
 *\
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

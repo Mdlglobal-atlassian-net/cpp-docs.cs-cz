@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: vytváření a používání instancí ukazatelů weak_ptr | Microsoft Docs'
+title: 'Postupy: vytváření a používání instancí ukazatelů weak_ptr | Dokumentace Microsoftu'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,28 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415142"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034813"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů weak_ptr
-V některých případech musí objekt uložení přístup k základní objekt `shared_ptr` aniž by to způsobilo počet odkazů na se zvýší. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instance.  
-  
- Nejlepší návrhu se vyhnete sdílené vlastnictví ukazatele, kdykoli je to možné. Ale pokud musí mít sdílená vlastnictví `shared_ptr` instancí, vyhněte se cyklické odkazy mezi nimi. Pokud jsou cyklické odkazy nevyhnutelné použít, nebo i vhodnější z nějakého důvodu, použijte `weak_ptr` poskytnout jednu nebo více vlastníci slabé odkaz na jiný `shared_ptr`. Pomocí `weak_ptr`, můžete vytvořit `shared_ptr` , která se připojuje k existující sady souvisejících instancí, ale pouze pokud základní paměti prostředků je stále platné. A `weak_ptr` samotné neúčastní počítání odkazů, a proto ho nemůže zabránit počet odkazů přejdete na nulu. Můžete však použít `weak_ptr` pokusit se získat novou kopii `shared_ptr` s, který byl inicializován. Pokud byl již odstraněn paměť, **bad_weak_ptr** je vyvolána výjimka. Pokud velikost paměti je stále platné, nový sdílený ukazatel zvýší počet odkazů a zaručuje, že paměť bude platit, dokud `shared_ptr` zůstává proměnné v oboru.  
-  
+Někdy musí objekt uložit cestu pro přístup k objektu `shared_ptr` aniž by došlo k navýšení počtu odkazů. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instancí.  
+
+ Nejlepší je vyhnout se sdílenému vlastnictví ukazatelů, kdykoli je to možné. Nicméně pokud musíte mít sdílené vlastnictví `shared_ptr` instancí, vyhněte se cyklickým odkazům mezi nimi. Pokud z nějakého důvodu jsou cyklické odkazy nevyhnutelné nebo dokonce výhodnější, použijte `weak_ptr` poskytnout jednu nebo více vlastníkům nestálý odkaz na jiný `shared_ptr`. Pomocí `weak_ptr`, můžete vytvořit `shared_ptr` , který se připojí k existující sadě souvisejících instancí, ale pouze pokud jsou prostředky základní paměti stále platné. A `weak_ptr` sám se neúčastní počítání odkazů, a proto ji nelze zabránit počet odkazů v dosažení nuly. Můžete však použít `weak_ptr` pro pokus o získání nové kopie `shared_ptr` s kterou byla inicializována. Je-li paměť již byla odstraněna, `bad_weak_ptr` je vyvolána výjimka. Pokud je paměť stále platná, nový sdílený ukazatel zvýší počet odkazů a zaručuje, že paměť bude platit za předpokladu, `shared_ptr` proměnná zůstane v oboru.  
+
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje případu kde `weak_ptr` slouží k zajištění správné odstranění objektů, které mají cyklické závislosti. Jak byste zkontrolovat příklad, Předpokládejme, že byl vytvořili až poté, co se považuje za alternativní řešení. `Controller` Objekty představují některých aspektů procesu počítače a fungovat nezávisle. Každý řadič musí být schopný dotaz na stav se ostatní řadiče kdykoli a každé z nich obsahuje soukromé `vector<weak_ptr<Controller>>` pro tento účel. Každý vektoru obsahuje cyklický odkaz a proto `weak_ptr` instancí se používají místo `shared_ptr`.  
-  
+ Následující příklad kódu ukazuje případ kde `weak_ptr` se používá k zajištění řádného odstranění objektů, které mají cyklické závislosti. Při prohlížení příkladu, se předpokládá, že byl vytvořen pouze poté, co byla zvážena alternativní řešení. `Controller` Objekty představují některé aspekty procesu počítače a fungují nezávisle na sobě. Každý řadič musí být schopen kdykoli zjistit stav ostatních řadičů a každý z nich obsahuje privátní `vector<weak_ptr<Controller>>` pro tento účel. Každý vektor obsahuje cyklický odkaz a proto `weak_ptr` instancí se používají místo `shared_ptr`.  
+
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
-  
+
 ```Output  
-Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+Creating Controller0  
+Creating Controller1  
+Creating Controller2  
+Creating Controller3  
+Creating Controller4  
+push_back to v[0]: 1  
+push_back to v[0]: 2  
+push_back to v[0]: 3  
+push_back to v[0]: 4  
+push_back to v[1]: 0  
+push_back to v[1]: 2  
+push_back to v[1]: 3  
+push_back to v[1]: 4  
+push_back to v[2]: 0  
+push_back to v[2]: 1  
+push_back to v[2]: 3  
+push_back to v[2]: 4  
+push_back to v[3]: 0  
+push_back to v[3]: 1  
+push_back to v[3]: 2  
+push_back to v[3]: 4  
+push_back to v[4]: 0  
+push_back to v[4]: 1  
+push_back to v[4]: 2  
+push_back to v[4]: 3
+use_count = 1  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = O  
+nStatus of 1 = On  
+Status of 2 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Destroying Controller0  
+Destroying Controller1  
+Destroying Controller2  
+Destroying Controller3  
+Destroying Controller4  
+Press any key  
 ```  
-  
- Jako experimentu, upravte vektoru `others` být `vector<shared_ptr<Controller>>`a potom ve výstupu, Všimněte si, že jsou spuštěny žádné destruktorů při `TestRun` vrátí.  
-  
+
+ Jako experiment upravte vektor `others` bude `vector<shared_ptr<Controller>>`a potom ve výstupu Všimněte si, že nejsou vyvolány žádné destruktory při `TestRun` vrátí.  
+
 ## <a name="see-also"></a>Viz také  
- [Chytré ukazatele](../cpp/smart-pointers-modern-cpp.md)
+ [Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)

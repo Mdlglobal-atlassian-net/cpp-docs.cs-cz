@@ -1,5 +1,5 @@
 ---
-title: Konzole MMC modul Snap-In třídy (ATL) | Microsoft Docs
+title: Konzole MMC modul Snap-In tříd (knihovny ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3b5c1786695c9bf48189c6ff350d721a5bdac74
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 571cee9a309f1e980e62521215a717e6af432b08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964105"
 ---
-# <a name="mmc-snap-in-classes"></a>Modul Snap-In konzoly MMC – třídy
+# <a name="mmc-snap-in-classes"></a>Třídy modulu Snap-In konzoly MMC
 Následující třídy poskytují podporu pro vývoj Microsoft Management Console (MMC) snap-in součásti:  
   
--   [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) implementuje objekt uzlu modul snap-in, například přidávání položek nabídek a panelů nástrojů a předávání příkazy pro uzel modul snap-in k funkci příslušnou obslužnou rutinu.  
+-   [Csnapinitemimpl –](../atl/reference/csnapinitemimpl-class.md) implementuje objekt uzel modulu snap-in, jako je přidání položek nabídky a panely nástrojů a příkazů pro modul snap-in uzel, který má odpovídajícího popisovače funkce předávání.  
   
--   [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md) implementuje objekt modul snap-in Vlastnosti stránky.  
+-   [Csnapinpropertypageimpl –](../atl/reference/csnapinpropertypageimpl-class.md) implementuje objekt stránky vlastností modul snap-in.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
  [Makra objektů modulu snap-in](../atl/reference/snap-in-object-macros.md)
 

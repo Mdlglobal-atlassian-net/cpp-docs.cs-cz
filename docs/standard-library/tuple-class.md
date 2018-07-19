@@ -1,5 +1,5 @@
 ---
-title: tuple – třída | Microsoft Docs
+title: tuple – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963923"
 ---
 # <a name="tuple-class"></a>tuple – třída
 
-Zabalí pevnou délkou pořadí elementů.
+Zabalí pevné délky sekvence elementů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Parametry
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
-## Remarks
+## <a name="remarks"></a>Poznámky
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+Třída šablony popisuje objekt, který ukládá objekty N typů `T1`, `T2`,..., `TN`, respektive, kdy kde `0 <= N <= Nmax`. Rozsah řazené kolekce členů instance `tuple<T1, T2, ..., TN>` je číslo `N` šablony argumentů. Index argumentu šablony `Ti` a odpovídající uložené hodnotě tohoto typu je `i - 1`. Proto když jsme počet typů od 1 do N v této dokumentaci, odpovídající index hodnoty v rozsahu od 0 do N - 1.
 
-## Example
+## <a name="example"></a>Příklad
 
 ```cpp
 // tuple.cpp
@@ -130,7 +131,7 @@ The tuples in the vector are
 
 **Záhlaví:** \<řazené kolekce členů >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="op_eq"></a>  tuple::Operator =
 
@@ -153,15 +154,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-`UN` Typ n. zkopírovat element řazené kolekce členů.
+*ZRUŠENÍ*  
+ Typ n-té zkopírovat prvek řazené kolekce členů.
 
-`right` Kopírování ze řazené kolekce členů.
+*doprava*  
+ Kopírování z řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-První dvě člen operátory přiřadit elementy `right` na odpovídající elementy `*this`. Třetí operátor členů přiřadí `right.first` pro element v indexu 0 `*this` a `right.second` pro element v indexu 1. Vrátí všechny tři člen operátory `*this`.
+První dvě členské operátory přiřadit elementy *správné* na odpovídající elementy `*this`. Třetí členský operátor přiřadí `right.first` pro element v indexu 0 `*this` a `right.second` na element na indexu 1. Vrátí všechny tři členské operátory `*this`.
 
-Operátory zbývající členy jsou analogických chcete starší, ale s [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Zbývající členské operátory jsou analogických ty dřívější, ale s [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Příklad
 
@@ -215,7 +218,7 @@ x 4
 
 ## <a name="tuple_swap"></a>  tuple:swap
 
-Výměny elementy dvě řazené kolekce členů.
+Vymění prvky dvou řazené kolekce členů.
 
 ```cpp
 template <class... Types>
@@ -226,12 +229,12 @@ template <class... Types>
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Řazené kolekce členů, jehož elementy jsou k výměně s těmi, která n-tice `right`.|
-|`right`|Řazené kolekce členů, jehož elementy jsou k výměně s těmi, která n-tice `left`.|
+|*doleva*|Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *správné*.|
+|*doprava*|Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *levé*.|
 
 ### <a name="remarks"></a>Poznámky
 
-Provede funkci `left.swap(right)`.
+Provede se příslušná funkce `left.swap(right)`.
 
 ## <a name="tuple"></a>  tuple::tuple
 
@@ -260,21 +263,23 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-`UN` Typ n. zkopírovat element řazené kolekce členů.
+*ZRUŠENÍ*  
+ Typ n-té zkopírovat prvek řazené kolekce členů.
 
-`right` Kopírování ze řazené kolekce členů.
+*doprava*  
+ Kopírování z řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktoru vytvoří objekt, jehož elementy jsou výchozí zkonstruovat.
+První konstruktor vytvoří objekt, jehož prvky jsou výchozí vyrobený.
 
-Druhý konstruktor vytvoří objekt, jehož elementy jsou kopie vytvářejí na základě argumenty `P1`, `P2`,..., `PN` s jednotlivými `Pi` inicializace element v indexu `i - 1`.
+Druhý konstruktor vytvoří objekt, jehož prvky jsou kopie vytvořený z argumentů `P1`, `P2`,..., `PN` s každým `Pi` inicializace element v indexu `i - 1`.
 
-Konstruktory třetí a čtvrtý vytvořit objekt, jehož elementy jsou kopie vytvářejí na základě odpovídající prvek `right`.
+Třetí a čtvrtý konstruktor Sestavte objekt, jehož prvky jsou kopie vytvořený z odpovídající prvek *správné*.
 
-Páté konstruktor konstrukce objekt, jehož element v indexu 0 je kopie vytvářejí na základě `right.first` a jehož element v indexu 1 kopie sestavený ze `right.second`.
+Pátý konstruktor zkonstruuje objekt, jehož element na indexu 0 je kopie vytvořený z `right.first` a jejichž element na indexu 1 je kopií vytvořen z `right.second`.
 
-Zbývající konstruktory jsou analogických chcete starší, ale s [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Zbývající konstruktory jsou analogických ty dřívější, ale s [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Příklad
 
@@ -345,7 +350,7 @@ int main()
  4 5 6 7
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<řazené kolekce členů >](../standard-library/tuple.md)<br/>
 [make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

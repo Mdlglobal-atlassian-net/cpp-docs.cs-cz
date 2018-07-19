@@ -1,5 +1,5 @@
 ---
-title: Přidání komponentu ATL COM + 1.0 | Microsoft Docs
+title: Přidání komponenty ATL COM + 1.0 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0375c0c098d3e8328cb8c8a678b266053ef7e89
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963560"
 ---
-# <a name="adding-an-atl-com-10-component"></a>Přidání komponentu ATL COM + 1.0
-Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, včetně transakcí.  
+# <a name="adding-an-atl-com-10-component"></a>Přidání komponenty ATL COM + 1.0
+Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, včetně transakce.  
   
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Chcete-li do projektu přidejte komponentu ATL COM + 1.0  
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Přidat do projektu jako komponenta knihovny ATL modelu COM + 1.0  
   
-1.  Buď **Průzkumníku řešení** nebo [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na název projektu, do které chcete přidat součást ATL COM + 1.0.  
+1.  V jednom **Průzkumníka řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat součást knihovny ATL modelu COM + 1.0.  
   
-2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na **přidat třídu**.  
+2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
   
-3.  V [přidat třídu](../../ide/add-class-dialog-box.md) kliknutím na dialogové okno, v podokně šablon **komponenta knihovny ATL COM + 1.0**a potom klikněte na **otevřete** zobrazíte [ATL COM + 1.0 součást Průvodce ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
+3.  V [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, v podokně šablon, klikněte na tlačítko **komponenta knihovny ATL modelu COM + 1.0**a potom klikněte na tlačítko **otevřít** zobrazíte [modelu COM + 1.0 Průvodce komponentami ATL ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: const_mem_fun1_ref_t – třída | Microsoft Docs
+title: const_mem_fun1_ref_t – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c465ce95ecbf2ecb50e79e6e4cbaafce8cf7a407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddd340f0a5d988709804698f53918462f4b4e512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964528"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t – třída
 
-Třídu adaptér, který umožňuje **const** – členská funkce, které přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem odkaz.
+Třída adaptéru umožňující **const** členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem reference.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,31 +41,31 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Parametry
 
-`Pm` Ukazatel na funkci člena třídy **typ** má být převeden na objekt funkce.
+*PM* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-`left` **Const** objektu, který `Pm` – členská funkce je volána v.
+*levé* **const** objekt, který *Pm* členská funkce je volána v.
 
-`right` Argument, který se na `Pm`.
+*správné* argument, který je právě přiřazen k *Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelné binární funkce.
+Přizpůsobitelnou binární funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie `Pm`, která musí být ukazatel na funkci člena třídy **typu**, v objektu privátního člena. Definuje jeho – členská funkce `operator()` jako vrácení ( `left`.\* *PM*) ( `right`) **const**.
+Třída šablony ukládá kopie *Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( `left`.\* *PM*) ( `right`) **const**.
 
 ## <a name="example"></a>Příklad
 
-Konstruktoru `const_mem_fun1_ref_t` se obvykle nepoužívá přímo; pomocné funkce `mem_fun_ref` slouží k přizpůsobení členské funkce. V tématu [mem_fun_ref –](../standard-library/functional-functions.md#mem_fun_ref) příklady, jak používat funkce adaptéry člen.
+Konstruktor třídy `const_mem_fun1_ref_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun_ref` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun_ref –](../standard-library/functional-functions.md#mem_fun_ref) příklady, jak používat adaptéry členské funkce.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

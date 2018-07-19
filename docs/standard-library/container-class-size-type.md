@@ -1,5 +1,5 @@
 ---
-title: Třída kontejneru::size_type | Microsoft Docs
+title: Třída kontejneru::size_type | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1c987ac2034fa11de72ad96c5e85669ee7ee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 191dee69d9c25df677e9e30fb0b1d451b520f5ac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844156"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962410"
 ---
 # <a name="container-classsizetype"></a>Třída kontejneru::size_type
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Popisuje objekt, který může představovat délka žádné řízené sekvenci.
+Popisuje objekt, který může představovat délka jakékoli řízené sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,8 +37,8 @@ typedef T0 size_type;
 
 ## <a name="remarks"></a>Poznámky
 
-Je popsán sem jako synonymum pro neurčeného typu **T0** (obvykle **Alloc::size_type**).
+Je popsán jako synonymum pro neurčeného typu `T0` (obvykle `Alloc::size_type`).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

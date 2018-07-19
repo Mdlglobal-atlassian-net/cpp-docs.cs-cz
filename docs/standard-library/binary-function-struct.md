@@ -1,5 +1,5 @@
 ---
-title: binary_function – struktura | Microsoft Docs
+title: binary_function – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964155"
 ---
 # <a name="binaryfunction-struct"></a>binary_function – struktura
 
-Prázdný základní struktura definující typy, které může být zděděn odvozené třídy poskytující binární funkce objektu.
+Prázdnou základní strukturu, která definuje typy, které mohou být zděděny odvozenými třídami, který poskytuje objekt binární funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ struct binary_function {
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona struktura slouží jako základ pro třídy, které definují členské funkce ve tvaru:
+Struktura šablony slouží jako základ pro třídy, které definují členské funkce ve tvaru:
 
-**Operator() – result_type**( **constfirst_argument_type &**,
+**result_type operator()**( **constfirst_argument_type &**,
 
 **Const second_argument_type &** ) **const**
 
-Všechny tyto binární funkce mohou odkazovat na jejich první typ argumentu jako **first_argument_type**, zadejte jejich druhý argument jako **second_argument_type**a jejich návratový typ jako ***result_type*** .
+Všechny tyto binární funkce mohou odkazovat na jejich první argument typu jako `first_argument_type`, zadejte jejich druhý argument jako `second_argument_type`a jejich návratový typ jako ***result_type***.
 
 ## <a name="example"></a>Příklad
 
@@ -112,9 +112,9 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

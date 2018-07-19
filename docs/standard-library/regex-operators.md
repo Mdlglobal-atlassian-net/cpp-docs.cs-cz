@@ -1,5 +1,5 @@
 ---
-title: '&lt;regulární výraz&gt; operátory | Microsoft Docs'
+title: '&lt;regulární výraz&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,19 +14,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961539"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regulární výraz&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|[Operátor&lt;=](#op_lt_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|[– Operátor&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
@@ -70,19 +70,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí každé šablony operátor `!(left == right)`.
+Každá šablona operátor vrátí `!(left == right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
 Menší než porovnání pro různé objekty.
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor každé šablony Převede argumenty pro řetězcový typ a vrátí hodnotu true pouze v případě převedenou hodnotu `left` porovná menší než převedenou hodnotu `right`.
+Každý šablona operátor Převede argumenty na typ řetězec a vrátí hodnotu true pouze v případě převedená hodnota *levé* porovná menší než převedená hodnota *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -250,9 +250,9 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
 
-Vloží sub_match v datovém proudu.
+Vloží sub_match – v datovém proudu.
 
 ```cpp
 template <class Elem, class IOtraits, class Alloc, class BidIt>
@@ -262,17 +262,17 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Typ elementu.
+*Elem* typ elementu.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`os` Do výstupního datového proudu.
+*operační systém* výstupního datového proudu.
 
-`right` Objekt, který se má vložit.
+*správné* objekt, který chcete vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -305,7 +305,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
 Menší než nebo roven hodnotě porovnání pro různé objekty.
 
@@ -342,19 +342,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí každé šablony operátor `!(right < left)`.
+Každá šablona operátor vrátí `!(right < left)`.
 
 ### <a name="example"></a>Příklad
 
@@ -452,27 +452,27 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor každé šablony převede jednotlivé argumenty pro řetězcový typ a vrátí výsledek porovnávání převedený objektů rovnosti.
+Každý operátor šablony převede jednotlivé argumenty typu řetězec a vrátí výsledek porovnání převedený objekty pro rovnost.
 
-Operátor šablony Převede argumenty pro řetězcový typ použije první následující transformace, která se vztahuje:
+Šablona operátor Převede argumenty na typ řetězec použije první následující transformací, která se použije:
 
-argumenty, jejichž typy jsou specializace šablon třídy `match_results` nebo `sub_match` jsou převedené pomocí volání `str` – členská funkce;
+argumenty, jejichž typy jsou specializace šablony třídy `match_results` nebo `sub_match` jsou převedené pomocí volání `str` členskou funkci
 
-argumenty, jejichž typy jsou specializace šablon třídy `basic_string` jsou stejné jako;
+argumenty, jejichž typy jsou specializace šablony třídy `basic_string` jsou beze změny;
 
-všechny ostatní typy argument se převedou pomocí předání hodnota argumentu v konstruktoru pro příslušné specializace šablon třídy `basic_string`.
+všechny ostatní typy argumentů jsou převedené pomocí předání hodnoty argumentu konstruktoru pro odpovídající specializace šablony třídy `basic_string`.
 
 ### <a name="example"></a>Příklad
 
@@ -534,7 +534,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
 Větší než porovnání pro různé objekty.
 
@@ -571,19 +571,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí každé šablony operátor `right < left`.
+Každá šablona operátor vrátí `right < left`.
 
 ### <a name="example"></a>Příklad
 
@@ -640,7 +640,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
 Větší než nebo rovna porovnání pro různé objekty.
 
@@ -677,19 +677,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Iterator typu.
+*BidIt* typ iterátoru.
 
-`IOtraits` Třída vlastnosti string.
+*IOtraits* třída vlastností řetězce.
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`left` Levý objekt k porovnání.
+*levé* levý objekt k porovnání.
 
-`right` Pravý objekt k porovnání.
+*správné* správný objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí každé šablony operátor `!(left < right)`.
+Každá šablona operátor vrátí `!(left < right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -745,7 +745,7 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants – třída](../standard-library/regex-constants-class.md)<br/>
@@ -754,4 +754,4 @@ sub >= 'a' == true
 [regex_iterator – třída](../standard-library/regex-iterator-class.md)<br/>
 [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
-[\<regulární výraz > Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
+[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>

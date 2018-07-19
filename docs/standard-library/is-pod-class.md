@@ -1,5 +1,5 @@
 ---
-title: is_pod – třída | Microsoft Docs
+title: is_pod – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856769"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962062"
 ---
 # <a name="ispod-class"></a>is_pod – třída
 
-Testy, pokud je typ POD.
+Testuje, zda je typ POD.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,33 +37,33 @@ struct is_pod;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typ, který má dotaz.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-`is_pod<T>::value` je `true` Pokud typ *T* je prostý staré dat (POD). V opačném případě je `false`.
+`is_pod<T>::value` je **true** Pokud typ *T* je prostý starých dat (POD). V opačném případě je **false**.
 
-Aritmetické typy, výčtové typy, typy ukazatelů a ukazatel na typy členů jsou POD.
+Aritmetické typy, výčtové typy, typy ukazatele a typy ukazatelů na členy jsou POD.
 
-Odchylka nákladů kvalifikovaný verzi POD typu samotné je typ POD.
+Verze cv kvalifikovaný typ POD samotného je typ POD.
 
-Pole POD se POD.
+Pole POD patří POD.
 
-Struktura nebo union, jsou všechny obsahující data nestatické POD, je sám POD Pokud má:
+Struktura nebo sjednocení, jehož nestatických datových členů jsou POD, je samotný POD Pokud má:
 
-- Žádné uživatele deklarovaný konstruktory.
+- Žádné uživatelem deklarované konstruktory.
 
-- Žádné datové nestatické soukromé nebo chráněné členy.
+- Žádné soukromé nebo chráněné nestatické datové členy.
 
 - Žádné základní třídy.
 
 - Žádné virtuální funkce.
 
-- Žádné datové nestatické členy odkazového typu.
+- Žádné nestatické datové členy typu odkazu.
 
-- Operátor přiřazení žádné uživatelem definované kopírování.
+- Žádné uživatelem definovaného kopírovacího operátoru přiřazení.
 
-- Žádné – destruktor definovaný uživatelem.
+- Žádné uživatelem definovaný destruktor.
 
 Proto můžete rekurzivně sestavení POD struktury a pole, které obsahují POD struktury a pole.
 
@@ -107,8 +107,8 @@ is_pod<throws> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: is_destructible třída | Microsoft Docs
+title: is_destructible – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a5da108c082dc4199a216d36f51d41e1748ada
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5b2c9237c7f17217d28e489edef4ab65863b54b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844286"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964109"
 ---
 # <a name="isdestructible-class"></a>is_destructible – třída
 
-Ověřuje, zda je typ zničitelné.
+Ověřuje, zda typ zničitelné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,18 +37,18 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` zničitelné typu, jinak má hodnotu false. Zničitelné typy jsou odkazové typy, kde je pro nějaký typ objektu typy a typy `U` rovna `remove_all_extents_t<T>` unevaluated operand `std::declval<U&>.~U()` je ve správném formátu. Jiné typy, včetně neúplné typy `void`a funkce typy, nejsou zničitelné typy.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* zničitelné typ, jinak má hodnotu false. Zničitelné typy jsou typy odkazů, kde pro nějaký typ objektu typy a typy `U` rovna `remove_all_extents_t<T>` nevyhodnoceném operand `std::declval<U&>.~U()` ve správném formátu. Jiné typy, včetně neúplných typů **void**a funkce typů, nejsou zničitelné typy.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

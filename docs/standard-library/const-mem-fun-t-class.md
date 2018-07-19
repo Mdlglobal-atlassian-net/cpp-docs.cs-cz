@@ -1,5 +1,5 @@
 ---
-title: const_mem_fun_t – třída | Microsoft Docs
+title: const_mem_fun_t – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cc88fab5584d92d79bb0dabb816898f3925546
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962998"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t – třída
 
@@ -40,29 +40,29 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametry
 
-`Pm` Ukazatel na funkci člena třídy **typ** má být převeden na objekt funkce.
+*PM* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-`Pleft` Objekt, `Pm` – členská funkce je volána v.
+*Pleft* objekt, který *Pm* členská funkce je volána v.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelné unární funkce.
+Přizpůsobitelnou jednočlennou funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie `Pm`, která musí být ukazatel na funkci člena třídy **typu**, v objektu privátního člena. Definuje jeho – členská funkce `operator()` jako vrácení ( `Pleft` -> \* `Pm`) () **const**.
+Třída šablony ukládá kopie *Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( `Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Příklad
 
-Konstruktoru `const_mem_fun_t` se obvykle nepoužívá přímo; pomocné funkce `mem_fun` slouží k přizpůsobení členské funkce. V tématu [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad použití členské funkce adaptéry.
+Konstruktor třídy `const_mem_fun_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

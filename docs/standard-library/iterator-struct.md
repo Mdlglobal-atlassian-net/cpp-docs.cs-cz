@@ -1,5 +1,5 @@
 ---
-title: iterator – struktura | Microsoft Docs
+title: iterator – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963625"
 ---
 # <a name="iterator-struct"></a>iterator – struktura
 
-Prázdný základní struktura, která používá k zajištění, že třídu uživatelem definované iterator správně funguje s **iterator_trait**s.
+Prázdná základní struktura používá k zajištění, že uživatelský iterátoru třídu správně funguje s `iterator_trait`s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,11 +43,11 @@ struct iterator {
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona struktura slouží jako základní typ pro všechny iterátory. Definuje typy členů
+Struktura šablony slouží jako základní typ pro všechny iterátory. Definuje typy členů
 
 - `iterator_category` (synonymum pro parametr šablony `Category`).
 
-- `value_type` (synonymum pro parametr šablony **typu**).
+- `value_type` (synonymum pro parametr šablony `Type`).
 
 - `difference_type` (synonymum pro parametr šablony `Distance`).
 
@@ -57,20 +57,20 @@ struct iterator {
 
 - `reference` (synonymum pro parametr šablony `Reference`).
 
-Všimněte si, že `value_type` nesmí být typu konstanty. i když **ukazatel** bodů v objektu const **typ** a označí odkaz na objekt const **typu**.
+Všimněte si, že `value_type` by neměl být konstantní typ i v případě `pointer` bodů v objektu **const** `Type` a odkaz označí objekt **const** `Type`.
 
 ## <a name="example"></a>Příklad
 
-V tématu [iterator_traits –](../standard-library/iterator-traits-struct.md) příklad toho, jak deklarování a použití typů v základní třídě iterator.
+Zobrazit [iterator_traits –](../standard-library/iterator-traits-struct.md) příklad toho, jak deklarovat a použití typů v základní třídě iterátoru.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

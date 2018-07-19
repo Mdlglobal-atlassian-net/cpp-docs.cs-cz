@@ -1,5 +1,5 @@
 ---
-title: is_object – třída | Microsoft Docs
+title: is_object – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912781"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965588"
 ---
 # <a name="isobject-class"></a>is_object – třída
 
-Testy, pokud typ je typ objektu.
+Testuje, zda je typ je typ objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu false, pokud typ `Ty` je typu odkazu, typ funkce nebo void, nebo `cv-qualified` formu jeden z nich, jinak hodnota platí.
+Instance predikátu typu obsahuje hodnotu false, pokud typ *Ty* je odkazový typ, typ funkce nebo hodnoty typu void, nebo `cv-qualified` formu jeden z nich, jinak platí.
 
 ## <a name="example"></a>Příklad
 
@@ -91,9 +91,9 @@ is_object<void> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_function – třída](../standard-library/is-function-class.md)<br/>

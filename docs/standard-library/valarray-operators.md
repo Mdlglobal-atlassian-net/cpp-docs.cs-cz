@@ -1,5 +1,5 @@
 ---
-title: '&lt;valarray –&gt; operátory | Microsoft Docs'
+title: '&lt;valarray –&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -34,27 +34,27 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862465"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964831"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[% – operátor](#op_mod)|[Operátor&amp;](#op_amp)|
-|[Operátor&amp;&amp;](#op_amp_amp)|[Operátor&gt;](#op_gt)|[Operátor&gt;&gt;](#op_gt_gt)|
-|[Operátor&gt;=](#op_gt_eq)|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|
-|[Operátor&lt;=](#op_lt_eq)|[operátor *](#op_star)|[operátor +](#op_add)|
-|[Operator –](#operator-)|[operátor nebo](#op_div)|[operator==](#op_eq_eq)|
-|[Operator ^](#op_xor)|[– operátor|](#op_or)|[– operátor||](#op_lor)|
+|[operator!=](#op_neq)|[% – operátor](#op_mod)|[– Operátor&amp;](#op_amp)|
+|[– Operátor&amp;&amp;](#op_amp_amp)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;&gt;](#op_gt_gt)|
+|[– Operátor&gt;=](#op_gt_eq)|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|
+|[– Operátor&lt;=](#op_lt_eq)|[Operator *](#op_star)|[Operator +](#op_add)|
+|[Operator-](#operator-)|[Operator /](#op_div)|[operator==](#op_eq_eq)|
+|[operátor ^](#op_xor)|[– operátor|](#op_or)|[– operátor||](#op_lor)|
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testuje, jestli odpovídající elementy dva stejně velké valarray – třídy jsou různé nebo zda jsou všechny elementy valarray – nerovné zadanou hodnotou.
+Testuje, jestli odpovídající prvky dvou stejně velké valarrays nestejné nebo zda jsou všechny prvky valarray – nerovné zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -78,25 +78,27 @@ operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou má být testována nerovnost.
+*doleva*  
+ První dva valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou má být testována nerovnost.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud odpovídající prvky nerovné.
+- **Hodnota TRUE** Pokud odpovídající prvky nerovnost.
 
-- **false** Pokud odpovídající elementy nejsou.
+- **false** Pokud odpovídající prvky nejsou.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí první operátor šablony objekt třídy [valarray –\<bool >](../standard-library/valarray-bool-class.md), každý z jehož elementy `I` je `left[I] != right[I]`.
+První šablona operátor vrací objekt třídy [valarray\<bool >](../standard-library/valarray-bool-class.md), každý z jehož prvků `I` je `left[I] != right[I]`.
 
-Druhá šablona operátor ukládá v elementu `I` `left[I] != right`.
+Druhý operátor šablony jsou uloženy v elementu `I` `left[I] != right`.
 
-Třetí operátor šablony ukládá v elementu `I` `left != right[I]`.
+Operátor třetí šablony jsou uloženy v elementu `I` `left != right[I]`.
 
 ### <a name="example"></a>Příklad
 
@@ -147,7 +149,7 @@ The element-by-element result of the not equal comparison test is the
 
 ## <a name="op_mod"></a>  % – operátor
 
-Získá zbytek po dělení odpovídající elementy dva stejně velké valarray – třídy nebo dělení valarray – zadanou hodnotou nebo dělení valarray – zadanou hodnotou.
+Získá zbytek po dělení odpovídající prvky dva stejně velké valarrays nebo rozdělení valarray zadanou hodnotou nebo dělení valarray zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -171,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Hodnota nebo valarray –, která slouží jako dělenec, do které jinou hodnotu nebo valarray – je možné rozdělit.
+*doleva*  
+ Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit.
 
-`right` Hodnota nebo valarray –, který slouží jako dělitel a který rozděluje jinou hodnotu nebo valarray –.
+*doprava*  
+ Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise zbytků z `left` dělený `right`.
+Valarray, jehož prvky jsou element-wise zbytků z *levé* dělený *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -226,9 +230,9 @@ The remainders from the element-by-element division is the
 *\
 ```
 
-## <a name="op_amp"></a>  Operátor&amp;
+## <a name="op_amp"></a>  – Operátor&amp;
 
-Získá bitové hodnotě **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.
+Získá bitový **a** mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
 ```cpp
 template <class Type>
@@ -252,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě **a** nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doleva*  
+ První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě **a** nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise kombinace bitové operace AND z `left` a `right`.
+Valarray, jehož prvky jsou element-wise kombinací bitové operace AND z *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Bitové operace lze použít pouze k manipulaci s bitů `char` a `int` datové typy a variantních proměnných a ne v **float**, **dvojité**, **longdouble**, `void`, `bool` nebo jiných, komplexnější datové typy.
+Bitová operace jde použít jenom k manipulaci s bity v **char** a **int** datových typů a variant a ne v **float**, **double**, **longdouble**, **void**, **bool** nebo jiné, komplexnější datové typy.
 
-Bitové hodnotě **a** má stejné tabulce pravdivosti jako logické **a** , ale platí pro typ dat na úrovni jednotlivých bitů. [Operátor & &](../standard-library/valarray-operators.md#amp) se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray – hodnot logická hodnota. Bitové hodnotě **ANDoperator &**, naopak může mít za následek valarray – hodnot než 0 nebo 1, v závislosti na výsledek bitové operace.
+Bitový `AND` má stejné tabulky pravdivých informací jako logický `AND` ale platí pro typ dat na úrovni jednotlivých bitů. [Operator & &](../standard-library/valarray-operators.md#amp) se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitový **ANDoperator &**, naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -313,9 +319,9 @@ The element-by-element result of the bitwise operator & is the
 *\
 ```
 
-## <a name="op_amp_amp"></a>  Operátor&amp;&amp;
+## <a name="op_amp_amp"></a>  – Operátor&amp;&amp;
 
-Získá logické **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu valarray – element typu.
+Získá logickou **a** mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu valarray element typu.
 
 ```cpp
 template <class Type>
@@ -339,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s logické **a** nebo zadaná hodnota typu prvku a nelze jej zkombinovat s každý prvek valarray –.
+*doleva*  
+ První dva valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s logické **a** nebo zadaná hodnota typu prvku a nelze jej zkombinovat s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou logického typu a element-wise kombinace logické **a** operace `left` a `right`.
+Valarray –, jehož prvky jsou z typu bool a element-wise kombinace logické `AND` fungování *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Logické **ANDoperator & &** se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray – hodnot logická hodnota. Bitové verzi **a**, [operátor &,](../standard-library/valarray-operators.md#op_amp), naopak může mít za následek valarray – hodnot než 0 nebo 1, v závislosti na výsledek bitové operace.
+Logický `ANDoperator&&` se vztahuje na úroveň element počítání všechny nenulové hodnoty jako true a výsledek je valarray z logické hodnoty. Bitové verzi `AND`, [operátor &,](../standard-library/valarray-operators.md#op_amp), naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -398,9 +406,9 @@ The element-by-element result of the logical AND operator&& is the
 *\
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Ověřuje, zda prvky jeden valarray – jsou větší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.
+Ověřuje, zda prvky jeden valarray jsou větší než prvků stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadanou hodnotou.
 
 ```cpp
 template <class Type>
@@ -424,21 +432,23 @@ operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud `left` je větší než odpovídající element nebo hodnota `right` element nebo hodnota.
+- **Hodnota TRUE** Pokud *levé* je větší než odpovídající element nebo hodnota *správné* element nebo hodnota.
 
-- **false** Pokud `left` není větší než odpovídající element nebo hodnota `right` element nebo hodnota.
+- **false** Pokud *levé* není větší než odpovídající element nebo hodnota *správné* element nebo hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud počet elementů ve dvou valarray – třídy není rovno, výsledkem nedefinovaný.
+Pokud se nerovná počtu prvků v dvě valarrays výsledek není definován.
 
 ### <a name="example"></a>Příklad
 
@@ -487,9 +497,9 @@ The element-by-element result of the greater than comparison test is the
 *\
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Ověřuje, zda prvky jeden valarray – jsou větší než nebo rovna hodnotě elementy stejně velké valarray – nebo jestli všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.
+Ověřuje, zda jsou elementy jeden valarray větší než nebo rovna hodnotě prvky stejně velké valarray nebo určuje, zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.
 
 ```cpp
 template <class Type>
@@ -513,21 +523,23 @@ operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud `left` element nebo hodnota je větší než nebo rovna hodnotě odpovídající `right` element nebo hodnota.
+- **true** Pokud *levé* element nebo hodnota je větší než nebo rovno odpovídající *správné* element nebo hodnotu.
 
-- **false** Pokud `left` element nebo hodnota je menší než odpovídající `right` element nebo hodnota.
+- **false** Pokud *levé* element nebo hodnota je menší než odpovídající *správné* element nebo hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud počet elementů ve dvou valarray – třídy není rovno, výsledkem nedefinovaný.
+Pokud se nerovná počtu prvků v dvě valarrays výsledek není definován.
 
 ### <a name="example"></a>Příklad
 
@@ -576,9 +588,9 @@ The element-by-element result of the greater than or equal test is the
 *\
 ```
 
-## <a name="op_gt_gt"></a>  Operátor&gt;&gt;
+## <a name="op_gt_gt"></a>  – Operátor&gt;&gt;
 
-Posuny vpravo bits pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.
+Posuny doprava bity pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.
 
 ```cpp
 template <class Type>
@@ -602,17 +614,19 @@ operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Hodnota posunutí nebo valarray –, jehož elementy jsou posunutí.
+*doleva*  
+ Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-`right` Hodnota udávající dobu posunutí doprava nebo valarray –, jehož elementy znamenat element-wise množství posunutí doprava.
+*doprava*  
+ Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy mít právo posunuty, o zadanou velikost.
+Valarray –, jehož prvky mají posunuta doprava podle zadaného množství.
 
 ### <a name="remarks"></a>Poznámky
 
-Podepsaný čísla mají jejich znaménka zachovaná.
+Čísla se znaménkem mají jejich znaménka zachovány.
 
 ### <a name="example"></a>Příklad
 
@@ -661,9 +675,9 @@ The element-by-element result of the right shift is the
 *\
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Ověřuje, zda elementy jeden valarray – je nižší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.
+Ověřuje, zda prvky valarray – jeden je menší než prvky stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadanou hodnotou.
 
 ```cpp
 template <class Type>
@@ -687,21 +701,23 @@ operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud `left` element nebo hodnota je menší než odpovídající `right` element nebo hodnota.
+- **true** Pokud *levé* element nebo hodnota je menší než odpovídající *správné* element nebo hodnotu.
 
-- **false** Pokud `left` element nebo hodnota je menší než odpovídající `right` element nebo hodnota.
+- **false** Pokud *levé* element nebo hodnota není menší než odpovídající *správné* element nebo hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud počet elementů dva valarray – třídy není rovno, výsledkem nedefinovaný.
+Pokud počet valarrays dva elementy se nerovná, výsledek není definován.
 
 ### <a name="example"></a>Příklad
 
@@ -750,9 +766,9 @@ The element-by-element result of the less-than comparson test is the
 *\
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Testuje, zda jsou elementy valarray – jeden, menší než nebo rovna hodnotě elementy stejně velké valarray – nebo zda všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.
+Testuje, jestli prvky jeden valarray jsou menší než nebo rovna hodnotě elementy stejně velké valarray nebo zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.
 
 ```cpp
 template <class Type>
@@ -776,21 +792,23 @@ operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou být porovnána nebo zadaná hodnota se porovná s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud `left` element nebo hodnota je menší než nebo rovna do odpovídajících `right` element nebo hodnota.
+- **true** Pokud *levé* element nebo hodnota je menší než nebo rovno odpovídající *správné* element nebo hodnotu.
 
-- **false** Pokud `left` je větší než odpovídající element nebo hodnota `right` element nebo hodnota.
+- **false** Pokud *levé* je větší než odpovídající element nebo hodnota *správné* element nebo hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud počet elementů dva valarray – třídy není rovno, výsledkem nedefinovaný.
+Pokud počet valarrays dva elementy se nerovná, výsledek není definován.
 
 ### <a name="example"></a>Příklad
 
@@ -839,9 +857,9 @@ The element-by-element result of the less than or equal test is the
 *\
 ```
 
-## <a name="op_lt_lt"></a>  Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
 
-Levé posune bitů pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.
+Vlevo posune bitů pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.
 
 ```cpp
 template <class Type>
@@ -865,17 +883,19 @@ operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Hodnota posunutí nebo valarray –, jehož elementy jsou posunutí.
+*doleva*  
+ Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-`right` Hodnota udávající dobu posunutí doleva nebo valarray –, jehož elementy znamenat element-wise množství posunutí doleva.
+*doprava*  
+ Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy byly posunuty doleva o zadanou velikost.
+Valarray, jejichž prvky byly posunuty vlevo o zadanou velikost.
 
 ### <a name="remarks"></a>Poznámky
 
-Podepsaný čísla mají jejich znaménka zachovaná.
+Čísla se znaménkem mají jejich znaménka zachovány.
 
 ### <a name="example"></a>Příklad
 
@@ -924,9 +944,9 @@ The element-by-element result of the left shift is the
 *\
 ```
 
-## <a name="op_star"></a>  operátor *
+## <a name="op_star"></a>  Operator *
 
-Získá element-wise produktu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.
+Získá produktu mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -950,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou vynásobí nebo zadanou hodnotu vynásobí jednotlivé prvky valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou vynásobí nebo zadanou hodnotu vynásobí jednotlivé prvky valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise produktu z `left` a `right`.
+Valarray, jehož prvky jsou produktu z *levé* a *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -1005,9 +1027,9 @@ The element-by-element result of the multiplication is the
 *\
 ```
 
-## <a name="op_add"></a>  operátor +
+## <a name="op_add"></a>  Operator +
 
-Získá element-wise součet mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.
+Získá element-wise součet mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -1031,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou přidávaného nebo zadaná hodnota má být přidán s každý prvek valarray –.
+*doleva*  
+ První dva valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou přidávaného nebo zadanou hodnotou přidávaného s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise sum z `left` a `right`.
+Valarray, jehož prvky jsou element-wise součet z *levé* a *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -1086,9 +1110,9 @@ The element-by-element result of the sum is the
 *\
 ```
 
-## <a name="operator-"></a>  Operator –
+## <a name="operator-"></a>  Operator-
 
-Získá element-wise rozdíl mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.
+Získá element-wise rozdíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -1112,17 +1136,19 @@ operator-(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Hodnota nebo valarray –, která slouží jako minuend, ze kterého jiných hodnot nebo valarray – třídy se bude odečítat v, které tvoří rozdíl.
+*doleva*  
+ Hodnota nebo valarray –, který slouží jako minuend, ze kterého jiných hodnot nebo valarrays se bude odečítat v které tvoří rozdíl.
 
-`right` Hodnota nebo valarray –, která slouží jako subtrahend, která se bude odečítat od jiných hodnot nebo valarray – třídy, ve které tvoří rozdíl.
+*doprava*  
+ Hodnota nebo valarray –, který slouží jako, který se bude odečítat od jiných hodnot nebo valarrays v které tvoří rozdíl menšitel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise rozdíl z `left` a `right`.
+Valarray, jehož prvky jsou element-wise rozdíl z *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Aritmetické technologiím použitým v popisující odčítání:
+Aritmetické terminologii používané v popisující odčítání:
 
 rozdíl = minuend - subtrahend
 
@@ -1173,9 +1199,9 @@ The element-by-element result of the difference is the
 *\
 ```
 
-## <a name="op_div"></a>  operátor nebo
+## <a name="op_div"></a>  Operator /
 
-Získá element-wise podílu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadanou hodnotou.
+Získá element-wise podíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
 ```cpp
 template <class Type>
@@ -1199,19 +1225,21 @@ operator/(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Hodnota nebo valarray –, která slouží jako dělenec, do které jinou hodnotu nebo valarray – je možné rozdělit v tvořící podílu.
+*doleva*  
+ Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit do tvořící podíl.
 
-`right` Hodnota nebo valarray –, který slouží jako dělitel a který rozděluje jiná hodnota nebo valarray – v tvořící podílu.
+*doprava*  
+ Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray v tvořící podíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise podílu z `left` dělený `right`.
+Valarray, jehož prvky jsou element-wise podíl z *levé* dělený *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Aritmetické technologiím použitým v popisující dělení:
+Aritmetické terminologii používané v popisující dělení:
 
-koeficient = dělenec / dělitel
+podíl = Delenec / Delitel
 
 ### <a name="example"></a>Příklad
 
@@ -1262,7 +1290,7 @@ The element-by-element result of the quotient is the
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, jestli odpovídající elementy dva stejně velké valarray – třídy jsou stejné, nebo zda jsou všechny elementy valarray – rovnat zadanou hodnotou.
+Testy, zda odpovídající prvky dvou stejně velké valarrays se rovná nebo zda jsou všechny prvky valarray roven zadané hodnotě.
 
 ```cpp
 template <class Type>
@@ -1286,21 +1314,23 @@ operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jehož elementy jsou má být testována rovnosti.
+*doleva*  
+ První dva valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
-`right` Druhý dva valarray – třídy, jehož elementy jsou má být testována rovnosti.
+*doprava*  
+ Druhé dvě valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – logické hodnoty, z nichž každý je:
+Valarray z logické hodnoty, z nichž každý je:
 
-- **Hodnota TRUE,** Pokud odpovídající elementy jsou stejné.
+- **Hodnota TRUE** Pokud odpovídající prvky jsou stejné.
 
-- **false** Pokud odpovídající elementy nejsou stejné.
+- **false** Pokud odpovídající prvky nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí první operátor šablony objekt třídy [valarray –\<bool >](../standard-library/valarray-bool-class.md), každý z jehož elementy `I` je `left[I] == right[I]`. Druhá šablona operátor ukládá v elementu `I` `left[I] == right`. Třetí operátor šablony ukládá v elementu `I` `left == right[I]`.
+První šablona operátor vrací objekt třídy [valarray\<bool >](../standard-library/valarray-bool-class.md), každý z jehož prvků `I` je `left[I] == right[I]`. Druhý operátor šablony jsou uloženy v elementu `I` `left[I] == right`. Operátor třetí šablony jsou uloženy v elementu `I` `left == right[I]`.
 
 ### <a name="example"></a>Příklad
 
@@ -1349,9 +1379,9 @@ The element-by-element result of the equality comparison test is the
 *\
 ```
 
-## <a name="op_xor"></a>  Operator ^
+## <a name="op_xor"></a>  operátor ^
 
-Získá bitový exkluzivní `OR` ( **XOR**) mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.
+Získá bitový exkluzivní `OR` ( **XOR**) mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
 ```cpp
 template <class Type>
@@ -1375,19 +1405,21 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě **XOR** nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doleva*  
+ První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě **XOR** nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise kombinace bitové hodnotě **XOR** operace `left` a `right`.
+Valarray, jehož prvky jsou element-wise kombinaci bitového **XOR** fungování *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Bitové operace lze použít pouze k manipulaci s bitů `char` a `int` datové typy a variantních proměnných a ne v **float**, **dvojité**, `long double`, `void`, `bool` nebo jiných, komplexnější datové typy.
+Bitová operace jde použít jenom k manipulaci s bity v **char** a **int** datových typů a variant a ne v **float**, **double**, **long double**, **void**, **bool** nebo jiné, komplexnější datové typy.
 
-Bitový exkluzivní `OR` ( **XOR**) má následující sémantiku: zadané bity *b*1 a *b*2, *b*1  **XOR** *b*2 je **true** Pokud právě jeden z bitů pravdivá; **false** Pokud jsou obě bits false nebo pokud jsou splněny obě služby bits.
+Bitový exkluzivní `OR` ( **XOR**) tuto sémantiku: Zadaný bits *b*1 a *b*2, *b*1  **XOR** *b*2 je **true** Pokud právě jeden z bitů je true. **false** pokud obě bity jsou false nebo pokud jsou splněny obě bits.
 
 ### <a name="example"></a>Příklad
 
@@ -1440,9 +1472,9 @@ The element-by-element result of the bitwise XOR operator^ is the
 *\
 ```
 
-## <a name="op_or"></a>  operátor&#124;
+## <a name="op_or"></a>  – operátor&#124;
 
-Získá bitové hodnotě `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.
+Získá bitový `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
 ```cpp
 template <class Type>
@@ -1466,19 +1498,21 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě `OR` nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doleva*  
+ První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě `OR` nebo zadaná hodnota typu prvku a nelze jej zkombinovat bitový s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou element-wise kombinace bitové hodnotě `OR` operace `left` a `right`.
+Valarray, jehož prvky jsou element-wise kombinaci bitového `OR` fungování *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Bitové operace lze použít pouze k manipulaci s bitů `char` a `int` datové typy a variantních proměnných a ne v **float**, **dvojité**, **longdouble**, `void`, `bool` nebo jiných, komplexnější datové typy.
+Bitová operace jde použít jenom k manipulaci s bity v **char** a **int** datových typů a variant a ne v **float**, **double**, **longdouble**, **void**, **bool** nebo jiné, komplexnější datové typy.
 
-Bitová hodnota OR má stejné tabulce pravdivosti jako logické `OR`, ale platí pro typ dat na úrovni jednotlivých bitů. Zadané bity *b*1 a *b*2, *b*1 `OR` *b*2 je **true** pokud alespoň jedna z bitů Hodnota TRUE, nebo **false** Pokud jsou obě bits false. Logické `OR` [operátor&#124; &#124; ](../standard-library/valarray-operators.md#op_lor) se vztahuje na úroveň element počítání všechny nenulové hodnoty jako **true**, a výsledkem je valarray – hodnot logická hodnota. Bitová hodnota OR `operator|`, naopak může mít za následek valarray – hodnot než 0 nebo 1, v závislosti na výsledek bitové operace.
+Bitový operátor OR má stejné tabulky pravdivých informací jako logický `OR`, ale platí pro typ dat na úrovni jednotlivých bitů. Zadaný bits *b*1 a *b*2, *b*1 `OR` *b*2 je **true** pokud alespoň jedna z bitů Hodnota TRUE nebo **false** Pokud jsou obě bitů hodnotu false. Logický `OR` [operátor&#124; &#124; ](../standard-library/valarray-operators.md#op_lor) se vztahuje na úrovni prvku, počítací všechny nenulové hodnoty jako **true**, a výsledek je valarray z logické hodnoty. Bitový operátor OR `operator|`, naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -1531,9 +1565,9 @@ The element-by-element result of the bitwise OR operator| is the
 *\
 ```
 
-## <a name="op_lor"></a>  operátor&#124;&#124;
+## <a name="op_lor"></a>  – operátor&#124;&#124;
 
-Získá logické `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo mezi valarray – a zadanou hodnotu valarray – typ elementu.
+Získá logickou `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku valarray.
 
 ```cpp
 template <class Type>
@@ -1557,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s logické `OR` nebo zadaná hodnota typu prvku a nelze jej zkombinovat s každý prvek valarray –.
+*doleva*  
+ První dva valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s logické `OR` nebo zadaná hodnota typu prvku a nelze jej zkombinovat s každý prvek valarray –.
+*doprava*  
+ Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray –, jehož elementy jsou typu `bool` a jsou element-wise kombinace logický provoz nebo `left` a `right`.
+Valarray, jehož prvky jsou typu **bool** a element-wise kombinace logické operace OR *levé* a *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Logické `OR` `operator||` se vztahuje na úroveň element počítání všechny nenulové hodnoty jako **true**, a výsledkem je valarray – hodnot logická hodnota. Bitové verzi `OR`, [operátor&#124; ](../standard-library/valarray-operators.md#op_or) naopak může mít za následek valarray – hodnot než 0 nebo 1, v závislosti na výsledek bitové operace.
+Logický `OR` `operator||` se vztahuje na úrovni prvku, počítací všechny nenulové hodnoty jako **true**, a výsledek je valarray z logické hodnoty. Bitové verzi `OR`, [operátor&#124; ](../standard-library/valarray-operators.md#op_or) naopak může vést k valarray hodnot než 0 nebo 1, v závislosti na výsledcích bitová operace.
 
 ### <a name="example"></a>Příklad
 
@@ -1620,6 +1656,6 @@ The element-by-element result of the logical OR operator|| is the
 *\
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<valarray>](../standard-library/valarray.md)<br/>

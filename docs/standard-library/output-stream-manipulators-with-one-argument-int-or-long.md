@@ -1,5 +1,5 @@
 ---
-title: Manipulátory výstupního datového proudu s jedním argumentem (int nebo long) | Microsoft Docs
+title: Výstupní Stream manipulátory s jedním argumentem (int nebo long) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961848"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipulátory výstupního datového proudu s jedním argumentem (int nebo long)
 
-Iostream – knihovna tříd poskytuje sadu makra pro vytváření parametrizované manipulátory. Manipulátory s jedním `int` nebo `long` argument představují zvláštní případ. Chcete-li vytvořit manipulator datového proudu výstup, který přijímá jeden `int` nebo `long` argument (jako `setw`), je nutné použít makro _Smanip, která je definována v \<iomanip – >. Tento příklad definuje `fillblank` manipulator, který se vloží do datového proudu zadaný počet prázdných hodnot:
+Iostream – knihovna tříd poskytuje sadu makra pro vytváření parametrizovaných manipulátory. Manipulátory s jedním **int** nebo **dlouhé** argument představují zvláštní případ. K vytvoření manipulátor datového proudu výstupu, která přijímá jeden **int** nebo **dlouhé** argument (jako je `setw`), je nutné použít _Smanip makra, která je definována v \<iomanip >. Tento příklad definuje `fillblank` manipulátor, který se vkládá zadaný počet prázdných hodnot do datového proudu:
 
 ## <a name="example"></a>Příklad
 
@@ -56,6 +56,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)<br/>

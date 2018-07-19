@@ -1,5 +1,5 @@
 ---
-title: remove_extent – třída | Microsoft Docs
+title: remove_extent – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12be6ffa2eba8d53a8972994ebf03138947df404
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 749877c670d1c40f0cc7ff4d7e438fdd8c96ca5b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964870"
 ---
 # <a name="removeextent-class"></a>remove_extent – třída
 
@@ -40,11 +40,11 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_extent<T>` obsahuje upravit – typ, který je `T1` při `T` je ve formátu `T1[N]`, jinak `T`.
+Instance `remove_extent<T>` obsahuje změněný typ, který je `T1` při *T* má formu `T1[N]`, jinak *T*.
 
 ## <a name="example"></a>Příklad
 
@@ -77,9 +77,9 @@ remove_extent_t<int[5][10]> == int [10]
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_all_extents – třída](../standard-library/remove-all-extents-class.md)<br/>

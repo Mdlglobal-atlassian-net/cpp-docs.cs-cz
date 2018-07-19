@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolBar | Microsoft Docs
+title: Cmfctoolbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -321,15 +321,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a767c0c53aff4234a773cc8b788eaf0289972347
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041760"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027976"
 ---
-# <a name="cmfctoolbar-class"></a>CMFCToolBar – třída
-`CMFCToolBar` Vypadá takto: Třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale nabízí další podporu pro funkce uživatelského rozhraní. Patří ploché panely nástrojů, panely nástrojů s aktivní obrázky, ikony. velké ikony, tlačítka stránkování, uzamčení panely nástrojů, ovládací prvky matrice, text v rámci bitové kopie, obrázky na pozadí a na kartách panely nástrojů. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro uživatele přizpůsobení panelů nástrojů a nabídky, přetažení myší mezi panely nástrojů a nabídky, tlačítek pole se seznamem, upravit pole tlačítka, výběr barvy a souhrnné tlačítka.
+# <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
+`CMFCToolBar` Vypadá podobně jako třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
   
@@ -352,187 +352,187 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Příkaz nabídky přidá do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.|  
-|[CMFCToolBar::AddCommandUsage](#addcommandusage)|Zvýší jedním čítač, který je přidružen daný příkaz.|  
-|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|Přidá bitové kopie z prostředky uživatelského rozhraní pro kolekci obrázků v aplikaci.|  
-|[CMFCToolBar::AdjustLayout](#adjustlayout)|Přepočítá velikost a umístění panelu nástrojů. (Přepisuje [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout)).|  
+|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Přidá příkaz nabídky do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.|  
+|[CMFCToolBar::AddCommandUsage](#addcommandusage)|Zvýší o jedna čítač, který je přidružen daný příkaz.|  
+|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|Přidá Image z prostředky uživatelského rozhraní do kolekce imagí v aplikaci.|  
+|[CMFCToolBar::AdjustLayout](#adjustlayout)|Přepočítá velikost a umístění panelu nástrojů. (Přepíše [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout)).|  
 |[CMFCToolBar::AdjustSize](#adjustsize)|Přepočítá velikost panelu nástrojů.|  
-|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda text popisků lze zobrazit v části Image na tlačítka panelu nástrojů.|  
-|[CMFCToolBar::AreTextLabels](#aretextlabels)|Určuje, zda text popisky v rámci bitové kopie jsou aktuálně zobrazený na tlačítka panelu nástrojů.|  
-|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|Povolení nebo zakáže automatické generování bitových kopií neaktivní tlačítko.|  
-|[CMFCToolBar::ButtonToIndex](#buttontoindex)|Vrátí index zadané [CMFCToolBarButton třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu tohoto panelu nástrojů.|  
-|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|Vypočítá vodorovné velikost panelu nástrojů. (Přepisuje [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCToolBar::CalcSize](#calcsize)|Voláno rámcem jako součást procesu výpočtu rozložení. (Přepisuje [CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize).)|  
-|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Určuje, jestli jsou umístění panelu nástrojů a jeho na stejné úrovni na podokně stejné.|  
-|[CMFCToolBar::CleanUpImages](#cleanupimages)|Uvolní systémové prostředky přidělené obrázků panelu nástrojů.|  
-|[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|Uvolní systémové prostředky přidělené pro bitové kopie uzamčeném panelu nástrojů.|  
-|[CMFCToolBar::CanBeClosed](#canbeclosed)|Určuje, zda uživatel můžete zavřít panelu nástrojů. (Přepisuje [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed).)|  
-|[CMFCToolBar::CanBeRestored](#canberestored)|Určuje, zda systém obnovit panelu nástrojů do původního stavu po přizpůsobení.|  
-|[CMFCToolBar::CanFocus](#canfocus)|Určuje, zda v podokně mohou získat fokus. (Přepisuje [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus).)|  
-|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Určuje, jestli jsou umístění panelu nástrojů a jeho na stejné úrovni na podokně stejné.|  
-|[CMFCToolBar::CommandToIndex](#commandtoindex)|Vrátí index tlačítka na panelu nástrojů s ID zadaný příkaz.|  
+|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda textové popisky můžete zobrazit v části Image na tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::AreTextLabels](#aretextlabels)|Určuje, zda textové popisky v rámci bitové kopie jsou aktuálně zobrazovaný na tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|Povolit nebo zakáže automatické generování bitových kopií neaktivní tlačítko.|  
+|[CMFCToolBar::ButtonToIndex](#buttontoindex)|Vrátí index zadané [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu tohoto panelu nástrojů.|  
+|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|Vypočítá vodorovnou velikost panelu nástrojů. (Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCToolBar::CalcSize](#calcsize)|Volá se rozhraním, jako součást procesu výpočet rozložení. (Přepíše [CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize).)|  
+|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Určuje, zda panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném podokně.|  
+|[CMFCToolBar::CleanUpImages](#cleanupimages)|Uvolnění systémových prostředků přidělených pro obrázky panelu nástrojů.|  
+|[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|Uvolnění systémových prostředků přidělených pro obrázky panelu nástrojů uzamčené.|  
+|[CMFCToolBar::CanBeClosed](#canbeclosed)|Určuje, zda uživatel můžete zavřít panel nástrojů. (Přepíše [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed).)|  
+|[CMFCToolBar::CanBeRestored](#canberestored)|Určuje, zda systém může panel nástrojů – obnovit do původního stavu po přizpůsobení.|  
+|[CMFCToolBar::CanFocus](#canfocus)|Určuje, zda v podokně může získat fokus. (Přepíše [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus).)|  
+|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Určuje, zda panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném podokně.|  
+|[CMFCToolBar::CommandToIndex](#commandtoindex)|Vrátí index tlačítka na panelu nástrojů s ID zadaného příkazu.|  
 |[CMFCToolBar::Create](#create)|Vytvoří `CMFCToolBar` objektu.|  
 |[CMFCToolBar::CreateEx](#createex)|Vytvoří `CMFCToolBar` objekt, který používá styl další možnosti, jako je například velké ikony.|  
 |[CMFCToolBar::Deactivate](#deactivate)|Deaktivuje panelu nástrojů.|  
-|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Povolí nebo zakáže **přidat nebo odebrat tlačítka** tlačítka, který se zobrazí na konci panelu nástrojů.|  
-|[CMFCToolBar::EnableDocking](#enabledocking)|Umožňuje ukotvení podokna do hlavního rámce. (Přepisuje [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|  
-|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Povolí nebo zakáže velkých ikon na tlačítka panelu nástrojů.|  
-|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|Povolí nebo zakáže rychlé přizpůsobení panelů nástrojů tak, aby uživatel stisknout **Alt** klíče a přetáhněte tlačítko do nového umístění.|  
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Povolí nebo zakáže **přidat nebo odebrat tlačítka** tlačítko, které se zobrazí na konci tohoto panelu nástrojů.|  
+|[CMFCToolBar::EnableDocking](#enabledocking)|Umožňuje ukotvení podokna na hlavní rámec. (Přepíše [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|  
+|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Povolí nebo zakáže velkých ikon na tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|Povolí nebo zakáže rychlé přizpůsobení panelů nástrojů tak, aby uživatel stisknout **Alt** klíče a přetáhněte tlačítko na nové umístění.|  
 |[CMFCToolBar::EnableReflections](#enablereflections)|Povolí nebo zakáže příkaz reflexe.|  
-|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|Povolí nebo zakáže text popisky v části Image tlačítka panelu nástrojů.|  
-|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|Načte ukazatel `CMFCToolBar` objekt, který obsahuje popisovač daného okna.|  
+|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|Povolí nebo zakáže popisků text pod obrázky tlačítka panelu nástrojů.|  
+|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|Načte ukazatel `CMFCToolBar` objekt, který obsahuje popisovač dané okna.|  
 |[CMFCToolBar::GetAllButtons](#getallbuttons)|Vrátí seznam jen pro čtení tlačítek na panelu nástrojů.|  
 |[CMFCToolBar::GetAllToolbars](#getalltoolbars)|Vrátí seznam všech panelů nástrojů jen pro čtení v aplikaci.|  
-|[CMFCToolBar::GetBasicCommands](#getbasiccommands)|Vrátí seznam základních příkazů, které jsou definované v aplikaci jen pro čtení.|  
-|[CMFCToolBar::GetButton](#getbutton)|Vrátí ukazatel `CMFCToolBarButton` objekt, který má zadaný panelu nástrojů tlačítko index.|  
-|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|Vrátí ID příkazu, stylu a index bitové kopie tlačítka na zadaný index.|  
-|[CMFCToolBar::GetButtonSize](#getbuttonsize)|Vrátí dimenze pro každé tlačítko na panelu nástrojů.|  
-|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|Vrátí aktuální styl tlačítka panelu nástrojů, který se nachází v zadaném indexu.|  
-|[CMFCToolBar::GetButtonText](#getbuttontext)|Vrátí textový popisek tlačítka, které se zadaným indexem.|  
-|[CMFCToolBar::GetColdImages](#getcoldimages)|Vrací ukazatel na kolekci obrázků cold panelu nástrojů tlačítko v aplikaci.|  
-|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|Vrátí šířku tlačítka panelu nástrojů.|  
-|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|Vrátí seznam hodnot tlačítka, které mají zadaný příkaz ID ze všech panelů nástrojů v aplikaci.|  
-|[CMFCToolBar::GetCount](#getcount)|Vrátí počet oddělovače a tlačítek na panelu nástrojů.|  
-|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|Načte ukazatel `CMFCCustomizeButton` objekt, který je přidružen panelu nástrojů.|  
-|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|Vrátí index výchozí obrázek pro tlačítko toolbar pomocí ID zadaný příkaz.|  
-|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|Vrací ukazatel na kolekci imagí, které se používají pro tlačítka panelu nástrojů zakázané v aplikaci.|  
+|[CMFCToolBar::GetBasicCommands](#getbasiccommands)|Vrátí seznam základních příkazů, které jsou definovány v aplikaci jen pro čtení.|  
+|[CMFCToolBar::GetButton](#getbutton)|Vrací ukazatel `CMFCToolBarButton` objekt, který má zadaný nástrojů tlačítko index.|  
+|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|Vrátí ID příkazu, styl a index obrázku tlačítka na zadaném indexu.|  
+|[CMFCToolBar::GetButtonSize](#getbuttonsize)|Vrátí dimenze každé tlačítko na panelu nástrojů.|  
+|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|Vrátí aktuální styl tlačítka panelu nástrojů, který se nachází na zadaném indexu.|  
+|[CMFCToolBar::GetButtonText](#getbuttontext)|Vrátí textový popisek tlačítka, který má zadaný index.|  
+|[CMFCToolBar::GetColdImages](#getcoldimages)|Vrací ukazatel na kolekci obrázků studenou panelu nástrojů tlačítko v aplikaci.|  
+|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|Vrátí šířku tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|Vrátí seznam tlačítek, které mají ID zadaného příkazu ze všech panelů nástrojů v aplikaci.|  
+|[CMFCToolBar::GetCount](#getcount)|Vrátí počet oddělovače a tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|Načte ukazatel `CMFCCustomizeButton` objekt, který je přidružený k panelu nástrojů.|  
+|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|Vrátí index výchozí obrázek pro tlačítko toolbar pomocí ID zadaného příkazu.|  
+|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|Vrací ukazatel na kolekci imagí, které se používají pro tlačítka panelu nástrojů zakázáno v aplikaci.|  
 |[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|Vrací ukazatel na kolekci imagí, které se používají pro zakázané nabídky tlačítka v aplikaci.|  
-|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|Načte ukazatel na objekt tlačítko nabídky, který je aktuálně zobrazení jeho dílčí nabídky.|  
-|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|Určuje, zda jsou bitové kopie zakázané tlačítka neaktivní verzích regulární tlačítko Image, nebo prováděné z kolekce zakázané tlačítko bitových kopií.|  
-|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|Vrací ukazatel na tlačítka panelu nástrojů, který je aktuálně označený.|  
-|[CMFCToolBar::GetHotBorder](#gethotborder)|Určuje, zda tlačítka panelu nástrojů sledovat za provozu.|  
-|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|Vrátí barvu textu tlačítka panelu nástrojů zvýrazněné.|  
-|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|Vrátí popisovač okna, který měl zaměření pro vstup těsně před nebyla panelu nástrojů.|  
-|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|Určuje, zda mají být ignorovány volání nastavit popisy tlačítek.|  
-|[CMFCToolBar::GetImageSize](#getimagesize)|Vrátí aktuální velikost bitové kopie tlačítka panelu nástrojů.|  
-|[CMFCToolBar::GetImages](#getimages)|Vrací ukazatel na kolekci výchozí tlačítko obrázky v aplikaci.|  
-|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|Vrátí posunutí index použít k vyhledání obrázky tlačítka panelu nástrojů pro tohoto panelu nástrojů v seznamu pro globální obrázků tlačítka panelu nástrojů.|  
-|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|Načte oblast oblasti klienta, které musí být překreslen pro tlačítko v daném indexu.|  
-|[CMFCToolBar::GetItemID](#getitemid)|Vrátí ID příkazového tlačítka panelu nástrojů na zadaný index.|  
-|[CMFCToolBar::GetItemRect](#getitemrect)|Vrátí ohraničující obdélník tlačítko na zadaný index.|  
-|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|Vrací ukazatel na kolekci bitových kopií velký cold panelu nástrojů tlačítko v aplikaci.|  
-|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|Vrací ukazatel na kolekci bitových kopií velký zakázané panelu nástrojů tlačítko v aplikaci.|  
-|[CMFCToolBar::GetLargeImages](#getlargeimages)|Vrací ukazatel na kolekci bitových kopií velký panelu nástrojů tlačítko v aplikaci.|  
-|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|Vrací ukazatel na kolekci uzamčeném cold bitových kopií na panelu nástrojů.|  
-|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|Vrací ukazatel na kolekci uzamčeném zakázané bitových kopií na panelu nástrojů.|  
-|[CMFCToolBar::GetLockedImages](#getlockedimages)|Vrací ukazatel na kolekci obrázky uzamčeném tlačítka na panelu nástrojů.|  
-|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|Vrátí výchozí velikost bitové kopie uzamčeném panelu nástrojů.|  
-|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|Vrací ukazatel na kolekci uzamčeném nástrojů nabídky obrázků na panelu nástrojů.|  
+|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|Načte ukazatel na objekt tlačítka nabídky, která se aktuálně zobrazuje jeho dílčí nabídky.|  
+|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|Určuje, zda jsou Image zakázané tlačítka šedě verze běžné tlačítko imagí, nebo na základě kolekce imagí tlačítko na zakázané.|  
+|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|Vrací ukazatel na panelu nástrojů, který je momentálně označený.|  
+|[CMFCToolBar::GetHotBorder](#gethotborder)|Určuje, zda tlačítka panelu nástrojů horkou sledovány.|  
+|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|Vrátí barvu textu tlačítka panelu nástrojů zvýrazněný.|  
+|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|Vrátí popisovač okna, které měly zaměření pro vstup těsně před plánovaným začátkem nebyla panelu nástrojů.|  
+|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|Určuje, zda mají být ignorovány volání k nastavení popisy tlačítek.|  
+|[CMFCToolBar::GetImageSize](#getimagesize)|Vrátí aktuální velikost obrázky tlačítka panelu nástrojů.|  
+|[CMFCToolBar::GetImages](#getimages)|Vrací ukazatel na kolekci výchozí obrázky tlačítka v aplikaci.|  
+|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|Vrátí index posun použit k vyhledání obrázky tlačítka panelu nástrojů pro tento panel nástrojů v globálním seznamu obrázky tlačítka panelu nástrojů.|  
+|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|Načte oblast oblasti klienta, který musí být vystavena pro tlačítko v daném indexu.|  
+|[CMFCToolBar::GetItemID](#getitemid)|Vrátí Identifikátor příkazu tlačítka panelu nástrojů na zadaném indexu.|  
+|[CMFCToolBar::GetItemRect](#getitemrect)|Vrací ohraničující obdélník tlačítko v zadaném indexu.|  
+|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|Vrací ukazatel na kolekci obrázků velké studenou panelu nástrojů tlačítko v aplikaci.|  
+|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|Vrací ukazatel na kolekci obrázky tlačítka panelu nástrojů velké zakázáno v aplikaci.|  
+|[CMFCToolBar::GetLargeImages](#getlargeimages)|Vrací ukazatel na kolekci obrázků velké panelu nástrojů tlačítko v aplikaci.|  
+|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|Vrací ukazatel na kolekci uzamčené studenou imagí na panelu nástrojů.|  
+|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|Vrací ukazatel na kolekci uzamčené zakázané imagí na panelu nástrojů.|  
+|[CMFCToolBar::GetLockedImages](#getlockedimages)|Vrací ukazatel na kolekci imagí uzamčené tlačítko na panelu nástrojů.|  
+|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|Vrátí výchozí velikost obrázků panelu nástrojů uzamčené.|  
+|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|Vrací ukazatel na kolekci uzamčené nástrojů nabídky imagí na panelu nástrojů.|  
 |[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|Vrátí velikost tlačítka nabídky v aplikaci.|  
 |[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|Vrátí velikost obrázků tlačítko nabídky v aplikaci.|  
-|[CMFCToolBar::GetMenuImages](#getmenuimages)|Vrací ukazatel na kolekci obrázků tlačítko nabídky v aplikaci.|  
+|[CMFCToolBar::GetMenuImages](#getmenuimages)|Vrací ukazatel na kolekci imagí tlačítko nabídky v aplikaci.|  
 |[CMFCToolBar::GetOrigButtons](#getorigbuttons)|Načte kolekci neupravené tlačítek panelu nástrojů.|  
 |[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|Načte kolekci neupravené resetování tlačítek panelu nástrojů.|  
 |[CMFCToolBar::GetResourceID](#getresourceid)|Načte ID prostředku panelu nástrojů.|  
-|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|Určuje, který objekt, nadřazeného rámce nebo vlastníka, odešle příkazy na panelu nástrojů.|  
-|[CMFCToolBar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítka panelu nástrojů.|  
-|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|Určuje, zda se zobrazí popisy tlačítek na panelu nástrojů.|  
-|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|Načte na stejné úrovni panelu nástrojů.|  
-|[CMFCToolBar::GetUserImages](#getuserimages)|Vrací ukazatel na kolekci obrázky tlačítka panelu nástrojů uživatelem definované v aplikaci.|  
-|[CMFCToolBar::HitTest](#hittest)|Vrátí index tlačítka panelu nástrojů, který se nachází na zadané pozici.|  
+|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|Určuje, který z objektů, nadřazeného rámce nebo vlastník, odesílá příkazy do panelu nástrojů.|  
+|[CMFCToolBar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|Určuje, zda jsou zobrazeny popisy tlačítek pro tlačítka panelu nástrojů.|  
+|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|Načte na stejné úrovni z panelu nástrojů.|  
+|[CMFCToolBar::GetUserImages](#getuserimages)|Vrací ukazatel na kolekci uživatelů – definované obrázky panelu nástrojů tlačítko v aplikaci.|  
+|[CMFCToolBar::HitTest](#hittest)|Vrátí index panelu nástrojů, který se nachází na zadané pozici.|  
 |[CMFCToolBar::InsertButton](#insertbutton)|Vloží tlačítko na panelu nástrojů.|  
 |[CMFCToolBar::InsertSeparator](#insertseparator)|Oddělovač vloží do panelu nástrojů.|  
-|[CMFCToolBar::InvalidateButton](#invalidatebutton)|Zruší platnost klientské oblasti tlačítka panelu nástrojů, který již existuje v zadané hodnotě indexu.|  
-|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|Určuje, zda uživatel může přidat nebo odebrat pomocí tlačítka panelu nástrojů **přizpůsobit** možnost nabídky.|  
-|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|Určuje, zda *rychlé přizpůsobení* používá přetáhněte tlačítko.|  
-|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|Určuje, zda je povoleno automatické generování bitových kopií neaktivní tlačítko (bez zvýrazněné).|  
-|[CMFCToolBar::IsBasicCommand](#isbasiccommand)|Určuje, zda příkaz na seznam základních příkazů.|  
-|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Určuje, zda lze panelu nástrojů zobrazovat tlačítka, která rozšířili ohraničení.|  
-|[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|Určuje, zda je označený tlačítka na panelu nástrojů.|  
-|[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|Určuje, zda příkaz jsou povoleny.|  
-|[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|Určuje, zda je příkaz zřídka použít (viz [CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)).|  
-|[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|Určuje, zda rozhraní panelu nástrojů v režimu vlastní nastavení.|  
-|[CMFCToolBar::IsDragButton](#isdragbutton)|Určuje, zda je právě přetáhli tlačítka panelu nástrojů.|  
-|[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|Určuje, zda obsahuje panelu nástrojů **přizpůsobit** tlačítko.|  
+|[CMFCToolBar::InvalidateButton](#invalidatebutton)|Zruší platnost klientské oblasti tlačítko na panelu nástrojů, která existuje na zadané pozici indexu.|  
+|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|Určuje, jestli uživatel může přidat nebo odebrat pomocí tlačítka na panelu nástrojů **vlastní** nabídky.|  
+|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|Určuje, zda *rychlé přizpůsobení* přetáhněte tlačítko používá.|  
+|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|Určuje, zda je povoleno automatické generování bitových kopií neaktivní tlačítko (bez zvýrazněno).|  
+|[CMFCToolBar::IsBasicCommand](#isbasiccommand)|Určuje, zda je příkaz v seznamu základních příkazů.|  
+|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Určuje, jestli můžou panelu nástrojů zobrazovat tlačítka, která jste rozšířili ohraničení.|  
+|[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|Určuje, zda se zvýrazní tlačítko na panelu nástrojů.|  
+|[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|Určuje, zda je příkaz povolen.|  
+|[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|Určuje, jestli se příkaz používá zřídka (viz [CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)).|  
+|[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|Určuje, zda rozhraní nástrojů je v režimu úprav.|  
+|[CMFCToolBar::IsDragButton](#isdragbutton)|Určuje, zda je přetažen tlačítka panelu nástrojů.|  
+|[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|Určuje, zda obsahuje panelu nástrojů **vlastní** tlačítko.|  
 |[CMFCToolBar::IsFloating](#isfloating)|Určuje, zda je číslo s plovoucí čárkou panelu nástrojů.|  
-|[CMFCToolBar::IsLargeIcons](#islargeicons)|Určuje, zda panely nástrojů v aplikaci aktuálně zobrazení velkých ikon.|  
-|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Určuje, zda naposledy provést, že příkaz byl odeslán z tlačítka zadaný panelu nástrojů.|  
-|[CMFCToolBar::IsLocked](#islocked)|Určuje, zda je zablokován panelu nástrojů.|  
-|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Určuje, zda panelu nástrojů a jeho panelu nástrojů na stejné úrovni jsou umístěny na stejném řádku.|  
+|[CMFCToolBar::IsLargeIcons](#islargeicons)|Určuje, zda panelů nástrojů v aplikaci aktuálně zobrazuje velké ikony.|  
+|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Určuje, zda naposledy proveden, že příkaz byl odeslán na panelu nástrojů zadané.|  
+|[CMFCToolBar::IsLocked](#islocked)|Určuje, zda je uzamčen panelu nástrojů.|  
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Určuje, zda panelu nástrojů a jeho nástrojů na stejné úrovni jsou umístěny na stejném řádku.|  
 |[CMFCToolBar::IsUserDefined](#isuserdefined)|Určuje, zda je panel nástrojů definovaný uživatelem.|  
-|[CMFCToolBar::LoadBitmap](#loadbitmap)|Načte obrázků panelu nástrojů z prostředků aplikace.|  
-|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Načte obrázků panelu nástrojů z prostředků aplikace. Zahrnuje velkých obrázků.|  
-|[CMFCToolBar::LoadParameters](#loadparameters)|Možnosti globální panelu nástrojů načte z registru systému Windows.|  
-|[CMFCToolBar::LoadState](#loadstate)|Načte informace o stavu nástrojů z registru systému Windows. (Přepisuje [CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate).)|  
-|[CMFCToolBar::LoadToolBar](#loadtoolbar)|Načte panelu nástrojů z prostředků aplikace.|  
-|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Načte panelu nástrojů z prostředky aplikace pomocí `CMFCToolBarInfo` pomocná třída určená k povolení aplikace pro používání velkých obrázků.|  
-|[CMFCToolBar::OnChangeHot](#onchangehot)|Voláno rámcem, když uživatel vybere tlačítka na panelu nástrojů.|  
-|[CMFCToolBar::OnFillBackground](#onfillbackground)|Voláno rámcem z [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) k vyplnění pozadí panelu nástrojů.|  
-|[CMFCToolBar::OnReset](#onreset)|Lze obnovit do původního stavu.|  
-|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(Přepisuje [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
+|[CMFCToolBar::LoadBitmap](#loadbitmap)|Načte obrázky panelu nástrojů ze zdrojů aplikace.|  
+|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Načte obrázky panelu nástrojů ze zdrojů aplikace. Zahrnuje velké obrázky.|  
+|[CMFCToolBar::LoadParameters](#loadparameters)|Možnosti panelu nástrojů globální načte z registru Windows.|  
+|[CMFCToolBar::LoadState](#loadstate)|Načte informace o stavu nástrojů z registru Windows. (Přepíše [CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate).)|  
+|[CMFCToolBar::LoadToolBar](#loadtoolbar)|Načte panel nástrojů ze zdrojů aplikace.|  
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Načte panel nástrojů ze zdrojů aplikace s použitím `CMFCToolBarInfo` pomocná třída určená k povolení aplikace pro používání velkých obrázků.|  
+|[CMFCToolBar::OnChangeHot](#onchangehot)|Volá se rozhraním, když uživatel vybere tlačítko na panelu nástrojů.|  
+|[CMFCToolBar::OnFillBackground](#onfillbackground)|Volá se rozhraním z [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) vyplnit pozadí panelu nástrojů.|  
+|[CMFCToolBar::OnReset](#onreset)|Panel nástrojů se obnoví do původního stavu.|  
+|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(Přepíše [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
 |[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Text tlačítka panelu nástrojů se obnoví do výchozího stavu.|  
 |`CMFCToolBar::OnUpdateCmdUI`|Interně.|  
-|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|Odebere všechny tlačítka panelu nástrojů.|  
+|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|Odebere všechna tlačítka na panelu nástrojů.|  
 |[CMFCToolBar::RemoveButton](#removebutton)|Odebere z panelu nástrojů na tlačítko se zadaným indexem.|  
-|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|Odstraní informace o stavu pro panel nástrojů z registru systému Windows.|  
-|[CMFCToolBar::ReplaceButton](#replacebutton)|Tlačítka panelu nástrojů nahradí jinou tlačítka panelu nástrojů.|  
-|[CMFCToolBar::ResetAll](#resetall)|Všechny panely nástrojů se obnoví do původního stavu.|  
-|[CMFCToolBar::ResetAllImages](#resetallimages)|Vymaže všechny kolekce obrázku panelu nástrojů v aplikaci.|  
+|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|Odstraní informace o stavu pro panel nástrojů z registru Windows.|  
+|[CMFCToolBar::ReplaceButton](#replacebutton)|Nahradí jiné tlačítko panelu nástrojů tlačítko panelu nástrojů.|  
+|[CMFCToolBar::ResetAll](#resetall)|Obnoví všechny panely nástrojů do původního stavu.|  
+|[CMFCToolBar::ResetAllImages](#resetallimages)|Vymaže všechny kolekce obrázků panelu nástrojů v aplikaci.|  
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|Obnoví původní stav panelu nástrojů.|  
-|[CMFCToolBar::SaveState](#savestate)|Uloží informace o stavu pro panelu nástrojů v registru systému Windows. (Přepisuje [CPane::SaveState](../../mfc/reference/cpane-class.md#savestate).)|  
-|`CMFCToolBar::Serialize`|(Přepisuje `CBasePane::Serialize`.)|  
+|[CMFCToolBar::SaveState](#savestate)|Uloží informace o stavu pro panel nástrojů v registru Windows. (Přepíše [CPane::SaveState](../../mfc/reference/cpane-class.md#savestate).)|  
+|`CMFCToolBar::Serialize`|(Přepíše `CBasePane::Serialize`.)|  
 |[CMFCToolBar::SetBasicCommands](#setbasiccommands)|Nastaví seznam příkazů, které se zobrazují vždy, když uživatel otevře nabídku.|  
-|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Nastaví ID příkazu, stylu a ID obrázku tlačítka panelu nástrojů.|  
-|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Nastavuje styl tlačítka panelu nástrojů na danou indexu.|  
+|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Nastaví ID příkazu, styl a ID obrázku tlačítka panelu nástrojů.|  
+|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Nastaví styl tlačítka panelu nástrojů na daném indexu.|  
 |[CMFCToolBar::SetButtonText](#setbuttontext)|Nastaví textový popisek tlačítka panelu nástrojů.|  
 |[CMFCToolBar::SetButtons](#setbuttons)|Nastaví tlačítka panelu nástrojů.|  
-|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|Určuje, kdy zřídka používané příkazy se nezobrazí v nabídce aplikace.|  
-|[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|Povolí nebo zakáže režimu vlastní nastavení pro všechny panely nástrojů v aplikaci.|  
-|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|Určuje, zda jsou neaktivní zakázané tlačítek na panelu nástrojů nebo pokud zakázané Image se používají pro zakázané tlačítka.|  
+|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|Určuje, kdy se zřídka používané příkazy nezobrazí v nabídce aplikace.|  
+|[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|Povolí nebo zakáže režim přizpůsobení pro všechny panely nástrojů v aplikaci.|  
+|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|Určuje, zda jsou neaktivní zakázané tlačítka na panelu nástrojů nebo pokud zakázané Image se používají pro zakázané tlačítka.|  
 |[CMFCToolBar::SetHeight](#setheight)|Nastaví výšku panelu nástrojů.|  
-|[CMFCToolBar::SetHotBorder](#sethotborder)|Určuje, zda tlačítka panelu nástrojů jsou sledovány za provozu.|  
-|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|Nastaví barvu textu pro tlačítka panelu nástrojů aktivní.|  
-|[CMFCToolBar::SetLargeIcons](#setlargeicons)|Určuje, zda tlačítka panelu nástrojů zobrazení velkých ikon.|  
-|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Nastaví velikosti uzamčeném tlačítka a uzamčeném obrázků na panelu nástrojů.|  
+|[CMFCToolBar::SetHotBorder](#sethotborder)|Určuje, zda tlačítka na panelu nástrojů jsou sledovány za běhu.|  
+|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|Nastaví barvu textu pro tlačítka panelu nástrojů hot.|  
+|[CMFCToolBar::SetLargeIcons](#setlargeicons)|Určuje, jestli tlačítka na panelu nástrojů zobrazovat velké ikony.|  
+|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Nastaví velikosti uzamčené tlačítka a uzamčené obrázků na panelu nástrojů.|  
 |[CMFCToolBar::SetMenuSizes](#setmenusizes)|Nastaví velikost tlačítka nabídky panelu nástrojů a jejich obrázků.|  
-|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|Nastaví seznam příkazů, které nelze provést uživatelem.|  
-|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Umisťuje panelu nástrojů a jeho na stejné úrovni na stejný řádek.|  
-|[CMFCToolBar::SetPermament](#setpermament)|Určuje, zda uživatel můžete zavřít panelu nástrojů.|  
-|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Určuje, zda nadřazeného rámce nebo vlastník odešle příkazy na panelu nástrojů.|  
-|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Určuje, zda rozhraní zobrazí popisy.|  
-|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Určuje na stejné úrovni panelu nástrojů.|  
-|[CMFCToolBar::SetSizes](#setsizes)|Určuje velikost tlačítek a bitové kopie na všechny panely nástrojů.|  
-|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Určuje vlastností tlačítka na panelu nástrojů.|  
-|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Umisťuje panelu nástrojů a jeho na stejné úrovni na samostatné řádky.|  
-|[CMFCToolBar::SetUserImages](#setuserimages)|Nastaví kolekci uživatelem definované bitové kopie v aplikaci.|  
-|[CMFCToolBar::StretchPane](#stretchpane)|Roztahovány panelu nástrojů vodorovně nebo svisle. (Přepisuje [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
-|[CMFCToolBar::TranslateChar](#translatechar)|Spustí příkaz tlačítko, pokud zadaný klíč kód odpovídá platné klávesové zkratky.|  
-|[CMFCToolBar::UpdateButton](#updatebutton)|Aktualizuje stav dané tlačítko.|  
-|[CMFCToolBar::WrapToolBar](#wraptoolbar)|Přemístí tlačítka panelu nástrojů v rámci dané dimenze.|  
+|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|Nastaví seznam příkazů, které uživatel nemůže provést.|  
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Na stejném řádku se umístí panelu nástrojů a jejich na stejné úrovni.|  
+|[CMFCToolBar::SetPermament](#setpermament)|Určuje, zda uživatel můžete zavřít panel nástrojů.|  
+|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Určuje, zda nadřazeného rámce nebo vlastník odesílá příkazy do panelu nástrojů.|  
+|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Určuje, zda rozhraní zobrazuje popisy tlačítek.|  
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Určuje, na stejné úrovni z panelu nástrojů.|  
+|[CMFCToolBar::SetSizes](#setsizes)|Určuje velikost tlačítka a obrázků na všechny panely nástrojů.|  
+|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Určuje vlastnosti tlačítka na panelu nástrojů.|  
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Panel nástrojů a jejich na stejné úrovni se umístí na samostatné řádky.|  
+|[CMFCToolBar::SetUserImages](#setuserimages)|Nastaví kolekci uživatelem definované obrázky v aplikaci.|  
+|[CMFCToolBar::StretchPane](#stretchpane)|Roztáhne panelu vodorovně nebo svisle. (Přepíše [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
+|[CMFCToolBar::TranslateChar](#translatechar)|Spustí příkaz tlačítko, pokud zadaný kód odpovídá platný klávesové zkratky.|  
+|[CMFCToolBar::UpdateButton](#updatebutton)|Aktualizuje stav určeného tlačítka.|  
+|[CMFCToolBar::WrapToolBar](#wraptoolbar)|Přemístí tlačítka na panelu nástrojů v rámci dané dimenze.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Určuje, zda se panelu nástrojů zobrazí v seznamu na **panely nástrojů** podokně **přizpůsobit** dialogové okno.|  
+|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Určuje, zda panel nástrojů se zobrazí v seznamu v **panely nástrojů** podokně **vlastní** dialogové okno.|  
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítka na panelu nástrojů.|  
 |[CMFCToolBar::DoPaint](#dopaint)|Překreslí panelu nástrojů.|  
 |[CMFCToolBar::DrawButton](#drawbutton)|Překreslí tlačítka panelu nástrojů.|  
-|[CMFCToolBar::DrawSeparator](#drawseparator)|Překreslí oddělovače na panelu nástrojů.|  
-|[CMFCToolBar::OnUserToolTip](#onusertooltip)|Voláno rámcem, když je popis tlačítka pro tlačítko o který se má zobrazit.|  
+|[CMFCToolBar::DrawSeparator](#drawseparator)|Překreslí oddělovač na panelu nástrojů.|  
+|[CMFCToolBar::OnUserToolTip](#onusertooltip)|Volá se rozhraním po se zobrazení popisu tlačítka pro tlačítko.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Určuje, zda se má velikost nebo není obrázků panelu nástrojů v režimu vysoké DPI.|  
-|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Určuje poměr mezi dimenzi (výška a šířka) velkých obrázků a dimenze regulární bitových kopií.|  
+|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Určuje, jestli se má změnit velikost nebo obrázky panelu nástrojů nejsou v režimu vysoké rozlišení DPI.|  
+|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Určuje poměr mezi rozměr (výšky a šířky) velké obrázky a dimenze běžných bitových kopií.|  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li zahrnout `CMFCToolBar` objektu do své aplikace, postupujte takto:  
+ Začlenit `CMFCToolBar` objektu do své aplikace, postupujte podle těchto kroků:  
   
-1.  Přidat `CMFCToolBar` objektu do hlavního rámce okna.  
+1.  Přidat `CMFCToolBar` objekt do okna hlavního rámce.  
   
-2.  Když při zpracování `WM_CREATE` zpráva pro hlavní okno rámce, volejte buď [CMFCToolBar::Create](#create) nebo [CMFCToolBar::CreateEx](#createex) vytvořit panelu nástrojů a určit její stylu.  
+2.  Při zpracování zprávy WM_CREATE pro hlavní okno rámce volání buď [CMFCToolBar::Create](#create) nebo [CMFCToolBar::CreateEx](#createex) vytvoření panelu nástrojů a určit jeho styl.  
   
 3.  Volání [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) určit styl ukotvení.  
   
- Pokud chcete vložit speciální tlačítko, například pole se seznamem nebo rozevírací seznam nástrojů, rezervovat fiktivní tlačítka na nadřazený prostředek a nahraďte tlačítko fiktivní za běhu pomocí [CMFCToolBar::ReplaceButton](#replacebutton). Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../walkthrough-putting-controls-on-toolbars.md).  
+ Vložit speciální tlačítko, jako je například pole se seznamem a rozevírací seznam nástrojů, rezervovat zástupné tlačítko v nadřazeném prostředku a nahraďte zástupné tlačítko za běhu pomocí [CMFCToolBar::ReplaceButton](#replacebutton). Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../walkthrough-putting-controls-on-toolbars.md).  
   
- `CMFCToolBar` je základní třída pro třídy knihovny MFC [CMFCMenuBar třída](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar třída](../../mfc/reference/cmfcpopupmenubar-class.md), a [CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
+ `CMFCToolBar` je základní třída pro třídy knihovny MFC [cmfcmenubar – třída](../../mfc/reference/cmfcmenubar-class.md), [cmfcpopupmenubar – třída](../../mfc/reference/cmfcpopupmenubar-class.md), a [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pomocí různých metod v nástroji `CMFCToolBar` třídy. Příklad ukazuje, jak nastavit text popisku okno zobrazí panel nástrojů, ohraničení, a nastavte styl podokně, a povolit **přidat nebo odebrat tlačítka** tlačítka, který se zobrazí na konci panelu nástrojů. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBar` třídy. Tento příklad ukazuje, jak nastavit text popisku okno panelu nástrojů, nastavit ohraničení, nastavit styl v podokně a povolte **přidat nebo odebrat tlačítka** tlačítko, které se zobrazí na konci tohoto panelu nástrojů. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
@@ -541,7 +541,7 @@ class CMFCToolBar : public CMFCBaseToolBar
  **Záhlaví:** afxtoolbar.h  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -551,46 +551,46 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
+ [Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
  `CMFCToolBar`  
   
 ##  <a name="addbasiccommand"></a>  CMFCToolBar::AddBasicCommand  
- Příkaz nabídky přidá do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.  
+ Přidá příkaz nabídky do seznamu příkazů, které se zobrazují vždy, když uživatel otevře nabídku.  
   
 ```  
 static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
+ [in] *uiCmd*  
  Určuje příkaz pro přidání.  
   
 ### <a name="remarks"></a>Poznámky  
- Základní příkaz se vždy zobrazuje, když je otevřen v nabídce. Tato metoda je důležité, když uživatel vybere možnost zobrazit naposledy použité příkazy.  
+ Základní příkaz se vždy zobrazí, když se otevře nabídka. Tato metoda má smysl, když uživatel zvolí možnost zobrazit naposledy použité příkazy.  
   
- Použití [CMFCToolBar::SetBasicCommands](#setbasiccommands) metodu a nastavit seznam příkazů, které se zobrazují vždy, když uživatel otevře nabídku. Použití [CMFCToolBar::GetBasicCommands](#getbasiccommands) metoda načíst seznam základních příkazů, které používá vaše aplikace.  
+ Použití [CMFCToolBar::SetBasicCommands](#setbasiccommands) metody nastavte seznam příkazů, které se zobrazují vždy, když uživatel otevře nabídku. Použití [CMFCToolBar::GetBasicCommands](#getbasiccommands) metodu pro načtení seznamu základních příkazů, který používá vaše aplikace.  
   
 ##  <a name="addcommandusage"></a>  CMFCToolBar::AddCommandUsage  
- Zvýší jedním čítač, který je přidružen daný příkaz.  
+ Zvýší o jedna čítač, který je přidružen daný příkaz.  
   
 ```  
 static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCommand*  
+ [in] *uiCommand*  
  Určuje příkaz čítače se zvýší.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když uživatel vybere položku nabídky.  
+ Rozhraní volá tuto metodu, když uživatel vybere položku nabídky.  
   
- Rozhraní používá příkaz čítače, které se zobrazí nedávno používat položky nabídky.  
+ Rozhraní používá příkaz čítače, které se zobrazí naposledy použitých položek nabídky.  
   
- Tato metoda zvýší čítač příkaz s použitím [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) metoda.  
+ Tato metoda zvýší čítač příkaz s použitím [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) metody.  
   
 ##  <a name="addtoolbarforimagecollection"></a>  CMFCToolBar::AddToolBarForImageCollection  
- Přidá bitové kopie z prostředky uživatelského rozhraní pro kolekci obrázků v aplikaci.  
+ Přidá Image z prostředky uživatelského rozhraní do kolekce imagí v aplikaci.  
   
 ```  
 static BOOL __stdcall AddToolBarForImageCollection(
@@ -603,29 +603,29 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
- ID prostředku panel nástrojů s obrázky načíst.  
+ [in] *uiResID*  
+ ID prostředku s obrázky panelu nástrojů načíst.  
   
- [v] *uiBmpResID*  
- ID prostředku bitové mapy s obrázky panelu nástrojů.  
+ [in] *uiBmpResID*  
+ ID prostředku rastrového obrázku s obrázky panelu nástrojů.  
   
- [v] *uiColdResID*  
- ID prostředku bitové mapy s obrázky "studených" panelu nástrojů.  
+ [in] *uiColdResID*  
+ ID prostředku rastrového obrázku s obrázky panelu nástrojů "studenými".  
   
- [v] *uiMenuResID*  
- ID prostředku bitové mapy s obrázky nabídky.  
+ [in] *uiMenuResID*  
+ ID prostředku rastrového obrázku pomocí nabídky imagí.  
   
- [v] *uiDisabledResID*  
- ID prostředku bitové mapy s obrázky zakázané panelu nástrojů.  
+ [in] *uiDisabledResID*  
+ ID prostředku rastrového obrázku s obrázky panelu nástrojů zakázané.  
   
- [v] *uiMenuDisabledResID*  
- ID prostředku bitové mapy s obrázky zakázané nabídky.  
+ [in] *uiMenuDisabledResID*  
+ ID prostředku rastrového obrázku s zakázáno nabídky Image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda úspěšně. `FALSE` Pokud *uiResID* nebo *uiBmpResID* nezadávejte žádné platné prostředky, nebo dojde k jiné chybě.  
+ Hodnota TRUE, pokud metoda uspěje; FALSE v případě *uiResID* nebo *uiBmpResID* neurčují platný prostředky nebo dojde k jiné chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem načtení rastrového obrázku panelu nástrojů obrázky a přidat jej do kolekce obrázků panelu nástrojů. Tato metoda vytvoří objekt dočasné panelu nástrojů a volání [CMFCToolBar::LoadToolBar](#loadtoolbar).  
+ Volejte tuto metodu za účelem načtení rastrový obrázek s obrázky panelu nástrojů a přidat jej do kolekce obrázků panelu nástrojů. Tato metoda vytvoří objekt dočasné nástrojů a volání [CMFCToolBar::LoadToolBar](#loadtoolbar).  
   
 ##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout  
  Přepočítá velikost a umístění panelu nástrojů.  
@@ -635,11 +635,11 @@ virtual void AdjustLayout();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytvoření panelu nástrojů přepočítat jeho velikost a umístění, volejte tuto metodu.  
+ Volejte tuto metodu po vytvoření panelu nástrojů přepočítat její velikost a umístění.  
   
- Rozhraní framework volá tuto metodu pokaždé, když je třeba změnit rozložení panelu nástrojů. Rozložení musíte například změnit, když uživatel přesune jiné ovládacích pruhů, změní velikost okna aplikace nebo přizpůsobení panelu nástrojů.  
+ Rozhraní volá tuto metodu pokaždé, když je třeba změnit rozložení panelu nástrojů. Rozložení musíte například změnit, když uživatel přesune jiným posuvníkem ovládací prvek, změní velikost okna aplikace nebo přizpůsobení panelu nástrojů.  
   
- Přepsání této metody můžete zajistit vlastní dynamické rozložení v třídy, které jsou odvozeny od `CMFCToolbar`.  
+ Přepsáním této metody můžete poskytovat dynamické rozložení ve třídách, které jsou odvozeny z `CMFCToolbar`.  
   
 ##  <a name="adjustsize"></a>  CMFCToolBar::AdjustSize  
  Přepočítá velikost panelu nástrojů.  
@@ -649,57 +649,57 @@ void AdjustSize();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zajišťuje, že panelu nástrojů se vejde hranice nadřazeného rámce. Tato metoda se nic nestane. Pokud má nadřazený rámec panelu nástrojů.  
+ Tato metoda zajišťuje, že panelu nástrojů vejde okraje nadřazeného rámce. Tato metoda nemá žádný účinek, pokud panel nástrojů nemá žádný nadřazeného rámce.  
   
- [CMFCToolBar::AdjustLayout](#adjustlayout) metoda volá tuto metodu za účelem přepočítat velikost, pokud není nadřazený tohoto panelu nástrojů `CMFCReBar` objektu.  
+ [CMFCToolBar::AdjustLayout](#adjustlayout) metoda volá tuto metodu za účelem přepočítat velikost, pokud není nadřazeného panelu nástrojů `CMFCReBar` objektu.  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCToolBar::AllowChangeTextLabels  
- Určuje, zda text popisků lze zobrazit v části Image na tlačítka panelu nástrojů.  
+ Určuje, zda textové popisky můžete zobrazit v části Image na tlačítka na panelu nástrojů.  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je povolen pro zobrazení textu popisků pod obrázky; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud je povoleno ji zobrazit popisky text pod obrázky; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána dialogovém okně Vlastní nastavení k určení, jestli se má povolit **zobrazit text popisky** políčko na **panely nástrojů** stránky pro vybrané panelu nástrojů.  
+ Tato metoda je volána v dialogovém okně přizpůsobení k určení, jestli chcete povolit **zobrazit textové popisky** zaškrtávací políčko **panely nástrojů** stránek pro vybraný panel nástrojů.  
   
- Výchozí implementace vrací `TRUE`.  
+ Výchozí implementace vrací hodnotu TRUE.  
   
- Potlačí tuto metodu v odvozené z objektu `CMFCToolBar` a vrátit `FALSE` když nechcete, aby uživateli se rozhodnout, zda jsou zobrazeny popisky text na tlačítka panelu nástrojů v rámci bitové kopie.  
+ Potlačí tuto metodu v objektu odvozeného od `CMFCToolBar` a vrátí hodnotu FALSE, pokud nechcete, aby se uživateli rozhodnout, zda jsou textové popisky zobrazeny na tlačítka na panelu nástrojů v rámci bitové kopie.  
   
 ##  <a name="allowshowonlist"></a>  CMFCToolBar::AllowShowOnList  
- Určuje, zda se panelu nástrojů zobrazí v seznamu panelů nástrojů na **panely nástrojů** podokně **přizpůsobit** dialogové okno.  
+ Určuje, zda panelu se zobrazí v seznamu panelů nástrojů v **panely nástrojů** podokně **vlastní** dialogové okno.  
   
 ```  
 virtual BOOL AllowShowOnList() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud objekt nástrojů lze zobrazit v seznamu na stránce přizpůsobení panelu nástrojů; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud objekt nástrojů lze zobrazit v seznamu na stránce přizpůsobení panelu nástrojů. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána rámcem k určení, zda v seznamu na stránce přizpůsobení panelu nástrojů by měla obsahovat určitý objekt odvozené z `CMFCToolBar`.  
+ Tato metoda je volána rozhraním, chcete-li zjistit, jestli v seznamu na stránce přizpůsobení panelu nástrojů by měl obsahovat určitý objekt odvozený od `CMFCToolBar`.  
   
- Výchozí implementace vždy vrátí `TRUE`. Potlačí tuto metodu, pokud nechcete, aby se objeví v seznamu panely nástrojů v dialogovém okně přizpůsobení panelu nástrojů.  
+ Výchozí implementace vždy vrátí hodnotu TRUE. Potlačí tuto metodu, když nechcete, aby se zobrazí v seznamu panely nástrojů v dialogovém okně přizpůsobení panelu nástrojů.  
   
 ##  <a name="aretextlabels"></a>  CMFCToolBar::AreTextLabels  
- Určuje, zda text popisky v rámci bitové kopie jsou aktuálně zobrazený na tlačítka panelu nástrojů.  
+ Určuje, zda textové popisky v rámci bitové kopie jsou aktuálně zobrazovaný na tlačítka na panelu nástrojů.  
   
 ```  
 BOOL AreTextLabels() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tlačítka panelu nástrojů zobrazit popisky text pod obrázky; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud tlačítka panelu nástrojů zobrazí popisky text pod obrázky; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [CMFCToolBar::EnableTextLabels](#enabletextlabels) k určení, zda se zobrazí text. Výchozí hodnota je `FALSE`. Volání [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) k určení, jestli uživatel může změnit toto nastavení v dialogovém okně Vlastní nastavení.  
+ Použití [CMFCToolBar::EnableTextLabels](#enabletextlabels) k určení, zda je zobrazen text. Výchozí hodnota je FALSE. Volání [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) k určení, zda uživatel může změnit toto nastavení v dialogovém okně přizpůsobení.  
   
 ##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages  
- Povolení nebo zakáže automatické generování bitových kopií neaktivní tlačítko.  
+ Povolit nebo zakáže automatické generování bitových kopií neaktivní tlačítko.  
   
 ```  
 static void AutoGrayInactiveImages(
@@ -709,36 +709,36 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- Logická hodnota, která určuje, zda dim neaktivní bitové kopie. Pokud tento parametr je `TRUE`, jsou neaktivní neaktivní bitové kopie. Neaktivní bitové kopie, jinak hodnota nejsou nedostupné.  
+ [in] *bEnable*  
+ Logická hodnota, která určuje, jestli se má dim neaktivní imagí. Pokud tento parametr má hodnotu TRUE, jsou neaktivní neaktivní imagí. V opačném případě neaktivní obrázky nejsou nedostupné.  
   
- [v] *nGrayImagePercentage*  
- Určuje procento světlostí pro neaktivní bitové kopie. Pokud *bEnable* je `FALSE`, tato hodnota je ignorována.  
+ [in] *nGrayImagePercentage*  
+ Určuje procento světelnost pro neaktivní bitové kopie. Pokud *bEnable* má hodnotu FALSE, tato hodnota se ignoruje.  
   
- [v] *bRedrawAllToolbars*  
- Logická hodnota, která určuje, jestli ho překreslit všechny panely nástrojů v aplikaci. Pokud tento parametr je `TRUE`, tato metoda ho překreslí všechny panely nástrojů.  
+ [in] *bRedrawAllToolbars*  
+ Logická hodnota, která určuje, zda překreslení všech panelů nástrojů v aplikaci. Pokud tento parametr má hodnotu TRUE, tato metoda překreslí všechny panely nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *bEnable* je `TRUE`, používá rozhraní *nGrayImagePercentage* generovat neaktivní bitové kopie z regulární bitové kopie. Jinak je nutné zadat sadu neaktivní imagí pomocí [CMFCToolBar::GetColdImages](#getcoldimages) metoda. Ve výchozím nastavení je tato možnost vypnuta.  
+ Pokud *bEnable* má hodnotu TRUE, používá rozhraní framework *nGrayImagePercentage* ke generování neaktivní Image od běžných bitových kopií. V opačném případě je nutné zadat sadu neaktivní imagí pomocí [CMFCToolBar::GetColdImages](#getcoldimages) metody. Ve výchozím nastavení je tato možnost zakázaná.  
   
- Další informace o *nGrayImagePercentage* parametr, najdete v části [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
+ Další informace o *nGrayImagePercentage* parametr, naleznete v tématu [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
 ##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
- Vrátí index zadané [CMFCToolBarButton třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu tohoto panelu nástrojů.  
+ Vrátí index zadané [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu tohoto panelu nástrojů.  
   
 ```  
 int ButtonToIndex(const CMFCToolBarButton* pButton) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
+ [in] *pButton*  
  Ukazatel na objekt tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index z *pButton* v seznamu interní tlačítka panelu nástrojů; nebo -1, pokud není zadaný tlačítko tento panel nástrojů.  
+ Index o *pButton* ve vnitřním seznamu tlačítka na panelu nástrojů; nebo -1, pokud není zadaný tlačítko na tomto panelu nástrojů.  
   
 ##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
- Vypočítá vodorovné velikost panelu nástrojů.  
+ Vypočítá vodorovnou velikost panelu nástrojů.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -747,22 +747,22 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bStretch*  
- `TRUE` k roztahování velikost nadřazené rámečku panelu nástrojů.  
+ [in] *bStretch*  
+ TRUE, pokud chcete roztáhnout nástrojů velikosti nadřazeného rámce.  
   
- [v] *bHorz*  
- `TRUE` pro orientaci panelu nástrojů vodorovně; `FALSE` pro orientaci panelu nástrojů ve svislém směru.  
+ [in] *bHorz*  
+ TRUE, pokud chcete změnit orientaci panelu vodorovně. FALSE, pokud chcete změnit orientaci panelu svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který určuje velikost panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se vypočítává velikost panelu nástrojů `CMFCToolBar::CalcLayout` metoda. Pak předá `LM_STRETCH` příznak pro *dwMode* parametr Pokud *bStretch* je `TRUE`. Pak předá `LM_HORZ` příznak Pokud *bHorz* je `TRUE`.  
+ Tato metoda se vypočítává velikost panelu nástrojů `CMFCToolBar::CalcLayout` metody. Předá příznak LM_STRETCH *dwMode* parametr Pokud *bStretch* má hodnotu TRUE. Předá příznak LM_HORZ *bHorz* má hodnotu TRUE.  
   
- Viz ukázka VisualStudioDemo pro příklad, který používá tato metoda.  
+ Najdete v ukázce VisualStudioDemo Příklad používající tuto metodu.  
   
 ##  <a name="calcmaxbuttonheight"></a>  CMFCToolBar::CalcMaxButtonHeight  
- Vypočítá maximální výšku tlačítek na panelu nástrojů.  
+ Vypočítá maximální výšku tlačítka na panelu nástrojů.  
   
 ```  
 virtual int CalcMaxButtonHeight();
@@ -772,113 +772,113 @@ virtual int CalcMaxButtonHeight();
  Maximální výška tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vypočítá maximální výška mezi všechny tlačítka panelu nástrojů na panelu nástrojů. Výška se může lišit v závislosti na faktorech, jako je aktuální stav ukotvení panelu nástrojů.  
+ Tato metoda vypočítá maximální výšku mezi všechna tlačítka panelu nástrojů na panelu nástrojů. Výška může lišit v závislosti na faktorech jako aktuální stav ukotvení panelu nástrojů.  
   
- Potlačí tuto metodu do třídy odvozené od `CMFCToolBar` poskytnout vlastní výpočet výšku.  
+ Potlačí tuto metodu v třídě odvozené z `CMFCToolBar` poskytnout výška výpočet.  
   
 ##  <a name="calcsize"></a>  CMFCToolBar::CalcSize  
- Voláno rámcem jako součást procesu výpočtu rozložení.  
+ Volá se rozhraním, jako součást procesu výpočet rozložení.  
   
 ```  
 virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bVertDock*  
- `TRUE` Chcete-li určit, že panelu nástrojů ukotven svisle; `FALSE` k určení, že panelu nástrojů ukotven vodorovně.  
+ [in] *bVertDock*  
+ TRUE, pokud chcete určit, že panelu nástrojů je ukotven. FALSE, pokud chcete určit, že se ukotví vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` objekt, který určuje celkovou velikost tlačítek na panelu nástrojů.  
+ A `CSize` objekt, který určuje celkovou velikost tlačítka na panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zvažuje atributy, které ovlivňují velikost každé tlačítko, jako je například oblasti textový popisek a velikosti ohraničení.  
+ Tato metoda bude považovat za atributy, které ovlivňují velikost každé tlačítko, jako jsou oblasti textový popisek a velikost ohraničení.  
   
- Pokud panel nástrojů obsahuje žádné tlačítka, vrátí tato metoda pomocí vyhrazené velikost jednoho tlačítka [CMFCToolBar::GetButtonSize](#getbuttonsize) metoda.  
+ Pokud panel nástrojů obsahuje žádná tlačítka, vrátí tato metoda pomocí vyhrazené velikosti na jediné tlačítko [CMFCToolBar::GetButtonSize](#getbuttonsize) metody.  
   
 ##  <a name="canbeclosed"></a>  CMFCToolBar::CanBeClosed  
- Určuje, zda uživatel můžete zavřít panelu nástrojů.  
+ Určuje, zda uživatel můžete zavřít panel nástrojů.  
   
 ```  
 virtual BOOL CanBeClosed() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud uživatel, je možné uzavřít panelu nástrojů v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud zavřením panelu uživatelem. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu za účelem určení, jestli uživatel může zavřít panelu nástrojů. Pokud metoda vrátí `TRUE`, rozhraní umožňuje příkaz SC_CLOSE v systému nabídky panelu nástrojů a uživatel zavřít pomocí zaškrtávacího políčka v seznamu panelů nástrojů v dialogovém okně přizpůsobení panelu nástrojů.  
+ Rozhraní volá tuto metodu za účelem určení, zda uživatel můžete zavřít panel nástrojů. Pokud metoda vrátí hodnotu TRUE, rozhraní umožňuje SC_CLOSE příkaz v nabídce systému na panelu nástrojů a uživatele můžete zavřít panel nástrojů pomocí zaškrtávacího políčka v seznamu panelů nástrojů v dialogovém okně přizpůsobení.  
   
- Výchozí implementace vrací `TRUE`. Potlačí tuto metodu do třídy odvozené od `CMFCToolBar` aby objekty nástrojů, které nelze zavřít, uživatelem.  
+ Výchozí implementace vrací hodnotu TRUE. Potlačí tuto metodu v třídě odvozené z `CMFCToolBar` aby nástrojů objekty, které nelze zavřít, uživatelem.  
   
 ##  <a name="canberestored"></a>  CMFCToolBar::CanBeRestored  
- Určuje, zda systém obnovit panelu nástrojů do původního stavu po přizpůsobení.  
+ Určuje, zda systém může panel nástrojů – obnovit do původního stavu po přizpůsobení.  
   
 ```  
 virtual BOOL CanBeRestored() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud panelu nástrojů lze obnovit z prostředky aplikace; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud panelu nástrojů můžete obnovit ze zdrojů aplikace; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu za účelem určení, zda lze panel nástrojů vrátit do původního stavu po přizpůsobení. Původní stav je načten z prostředků aplikace.  
+ Rozhraní volá tuto metodu za účelem určení, zda panel nástrojů můžete vrátit do původního stavu po přizpůsobení. Původní stav načtení ze zdrojů aplikace.  
   
- Pokud `CanBeRestored` vrátí `TRUE`, **panely nástrojů** stránky dialogového okna přizpůsobení umožňuje **resetovat** tlačítko pro vybrané panelu nástrojů.  
+ Pokud `CanBeRestored` vrátí hodnotu TRUE, **panely nástrojů** stránky v dialogovém okně přizpůsobení umožňuje, aby **resetování** tlačítko pro vybrané panel nástrojů.  
   
- Výchozí implementace vrací `TRUE` Pokud původní ID prostředku panelu nástrojů, když byl načten je nulová. Pouze vlastní panely nástrojů obvykle nelze obnovit.  
+ Výchozí implementace vrátí TRUE, pokud je nulová původní ID prostředku panelu nástrojů, když byl načten. Obvykle není možné obnovit pouze uživatelské panely nástrojů.  
   
  Je možné přepsat `CanBeRestored` metodu za účelem přizpůsobení toto chování v odvozených třídách.  
   
 ##  <a name="canfocus"></a>  CMFCToolBar::CanFocus  
- Určuje, zda v podokně mohou získat fokus.  
+ Určuje, zda v podokně může získat fokus.  
   
 ```  
 virtual BOOL CanFocus() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato metoda vrátí hodnotu `FALSE`.  
+ Tato metoda vrátí hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přepsání implementace základní třídy [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), protože objekty nástrojů nemůže přijmout fokus.  
+ Tato metoda přepíše metodu základní třídy implementace [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), protože objekty panelu nástrojů nemůže získat fokus.  
   
 ##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings  
- Určuje, jestli jsou umístění panelu nástrojů a jeho na stejné úrovni na podokně stejné.  
+ Určuje, zda panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném podokně.  
   
 ```  
 BOOL CanHandleSiblings();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je panelu nástrojů na stejné úrovni a panelu nástrojů a jeho na stejné úrovni jsou umístěny na stejném podokna. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud na stejné úrovni má panelu nástrojů a panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném podokně; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Interní CMFCCustomizeButton::CreatePopupMenu metoda volá tuto metodu za účelem určit, jak se zobrazují **přizpůsobit** místní nabídky. Pokud tato metoda vrátí hodnotu `TRUE`, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka.  
+ Interní metoda CMFCCustomizeButton::CreatePopupMenu volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka.  
   
- Obvykle Nemáte při použití této metody. Chcete-li povolit **přizpůsobit** tlačítka, který se zobrazí na panelu nástrojů, volání [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metoda. Chcete-li povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
+ Obvykle není nutné použít tuto metodu. Povolit **vlastní** tlačítko, které se zobrazí na panelu nástrojů, volání [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metody. Povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
 ##  <a name="cleanupimages"></a>  CMFCToolBar::CleanUpImages  
- Uvolní systémové prostředky přidělené obrázků panelu nástrojů.  
+ Uvolnění systémových prostředků přidělených pro obrázky panelu nástrojů.  
   
 ```  
 static void CMFCToolBar::CleanUpImages();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při ukončení aplikace.  
+ Rozhraní volá tuto metodu při ukončení aplikace.  
   
 ##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages  
- Uvolní systémové prostředky přidělené pro bitové kopie uzamčeném panelu nástrojů.  
+ Uvolnění systémových prostředků přidělených pro obrázky panelu nástrojů uzamčené.  
   
 ```  
 void CleanUpLockedImages();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu volejte, když se změní vizuální styl vaší aplikace. Viz ukázka VisualStudioDemo pro příklad, který používá tato metoda.  
+ Tuto metodu volejte, když se změní vzhled vaší aplikace. Najdete v ukázce VisualStudioDemo Příklad používající tuto metodu.  
   
 ##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex  
- Vrátí index tlačítka na panelu nástrojů s ID zadaný příkaz.  
+ Vrátí index tlačítka na panelu nástrojů s ID zadaného příkazu.  
   
 ```  
 int CommandToIndex(
@@ -887,19 +887,19 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIDFind*  
+ [in] *nIDFind*  
  Určuje ID příkazu.  
   
- [v] *iIndexFirst*  
- Určuje počáteční index pro spuštění z.  
+ [in] *iIndexFirst*  
+ Určuje počáteční index, spusťte z.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index nule tlačítka panelu nástrojů, pokud metoda byla úspěšná. -1, pokud není tlačítko se zadaným ID.  
+ Index založený na nule tlačítka panelu nástrojů, byla-li metoda úspěšná; -1, pokud není tlačítko se zadaným ID.  
   
 ### <a name="remarks"></a>Poznámky  
- A `CMFCToolBar` objekt udržuje interní seznam tlačítek na panelu nástrojů. Volání této funkce načíst index tlačítka v seznamu zadané ID příkazu, který tlačítka.  
+ A `CMFCToolBar` objekt udržuje interní seznam tlačítka na panelu nástrojů. Volání této funkce načtete index tlačítko v seznamu uvedeny Identifikátor příkazu tlačítka.  
   
- Pokud *iIndex* je větší než 0, tato metoda ignoruje všechny tlačítka na panelu nástrojů, který má index menší než *iIndex*.  
+ Pokud *iIndex* je větší než 0, tato metoda ignoruje jakékoli tlačítko na panelu nástrojů, který má index menší než *iIndex*.  
   
 ##  <a name="create"></a>  CMFCToolBar::Create  
  Vytvoří `CMFCToolBar` objektu.  
@@ -912,20 +912,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentWnd*  
- Ukazatel do nadřazeného okna panelu nástrojů.  
+ [in] *pParentWnd*  
+ Ukazatel na nadřazené okno panelu nástrojů.  
   
- [v] *dwStyle*  
- Styl panelu nástrojů. V tématu [Toolbar – ovládací prvek a styly tlačítek](http://msdn.microsoft.com/library/windows/desktop/bb760439) ve Windows SDK pro seznam stylů.  
+ [in] *dwStyle*  
+ Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439) v sadě Windows SDK pro seznam styly.  
   
- [v] *nID*  
- ID podřízeného okna panelu nástrojů.  
+ [in] *nID*  
+ Identifikátor podřízené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda bude úspěšná; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří ovládacích pruhů a připojí k panelu nástrojů. Vytvoří ovládací prvek panel s `TBSTYLE_FLAT` stylu. Volání [CMFCToolBar::CreateEx](#createex) Pokud chcete, aby styl panelu různých ovládacího prvku.  
+ Tato metoda vytvoří panel ovládacího prvku a připojí ho k panelu nástrojů. Vytvoří panel ovládacího prvku se stylem TBSTYLE_FLAT. Volání [CMFCToolBar::CreateEx](#createex) potřebujete styl panelu jiného ovládacího prvku.  
   
 ##  <a name="createex"></a>  CMFCToolBar::CreateEx  
  Vytvoří `CMFCToolBar` objekt, který používá styl další možnosti, jako je například velké ikony.  
@@ -943,31 +943,31 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentWnd*  
- Ukazatel do nadřazeného okna panelu nástrojů.  
+ [in] *pParentWnd*  
+ Ukazatel na nadřazené okno panelu nástrojů.  
   
- [v] *dwCtrlStyle*  
+ [in] *dwCtrlStyle*  
  Další styly pro vytvoření objektu panelu vloženému ovládacímu prvku.  
   
- [v] *dwStyle*  
- Styl panelu nástrojů. V tématu [Toolbar – ovládací prvek a styly tlačítek](http://msdn.microsoft.com/library/windows/desktop/bb760439) seznam příslušné styly.  
+ [in] *dwStyle*  
+ Styl toolbar. Zobrazit [ovládací prvek panelu nástrojů a styly](http://msdn.microsoft.com/library/windows/desktop/bb760439) seznam vhodné styly.  
   
- [v] *rcBorders*  
- A `CRect` objekt, který určuje šířku ohraničení panelu nástrojů okna.  
+ [in] *rcBorders*  
+ A `CRect` objekt, který určuje šířku ohraničení okna nástrojů.  
   
- [v] *nID*  
- ID podřízeného okna panelu nástrojů.  
+ [in] *nID*  
+ Identifikátor podřízené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě, že tato metoda bude úspěšná; jinak 0.  
+ Nenulové, pokud tato metoda bude úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří ovládacích pruhů a připojí k panelu nástrojů.  
+ Tato metoda vytvoří panel ovládacího prvku a připojí ho k panelu nástrojů.  
   
- Volat tuto metodu místo [CMFCToolBar::Create](#create) Pokud byste chtěli poskytnout specifické styly. Například nastavit *dwCtrlStyle* k `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` vytvořit panel nástrojů, která se podobá panely nástrojů, které jsou používány v aplikaci Internet Explorer 4.  
+ Volání této metody místo [CMFCToolBar::Create](#create) když chcete poskytnout určitých stylů. Například nastavte *dwCtrlStyle* k TBSTYLE_FLAT | TBSTYLE_TRANSPARENT vytvořit panel nástrojů, která se podobá panely nástrojů, které se používají v Internet Exploreru 4.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `CreateEx` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `CreateEx` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
@@ -980,7 +980,7 @@ virtual void Deactivate();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda deaktivuje odebráním fokus ze zvýrazněných panelu nástrojů tlačítko panelu nástrojů. Tato metoda volá framework když panelu nástrojů ztratí fokus nebo zničena.  
+ Tato metoda deaktivuje panelu nástrojů tak, že odeberete fokus na panelu nástrojů zvýrazněný. Rozhraní volá tuto metodu, když ztratí fokus panelu nástrojů nebo jeho zničení.  
   
 ##  <a name="dopaint"></a>  CMFCToolBar::DoPaint  
  Překreslí panelu nástrojů.  
@@ -990,13 +990,13 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána rámcem při musí překreslen součástí panelu nástrojů.  
+ Tato metoda je volána rozhraním, když musí být překreslit část panelu nástrojů.  
   
- Potlačí tuto metodu za účelem přizpůsobení vzhledu odvozený od objektu `CMFCToolBar`.  
+ Potlačí tuto metodu pro přizpůsobení vzhledu objektu odvozeného od `CMFCToolBar`.  
   
 ##  <a name="drawbutton"></a>  CMFCToolBar::DrawButton  
  Překreslí tlačítka panelu nástrojů.  
@@ -1011,31 +1011,31 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
- [v] *pButton*  
- Ukazatel na tlačítko k vykreslení.  
+ [in] *pButton*  
+ Ukazatel na tlačítku pro kreslení.  
   
- [v] *pImages*  
- Ukazatel na panelu nástrojů bitové kopie.  
+ [in] *pImages*  
+ Ukazatel na obrázky panelu nástrojů.  
   
- [v] *bHighlighted*  
- `TRUE` Pokud je tlačítko označený; v opačném případě `FALSE`.  
+ [in] *bHighlighted*  
+ Hodnota TRUE, pokud je zvýrazněný na tlačítko. v opačném případě FALSE.  
   
- [v] *bDrawDisabledImages*  
- `TRUE` Pokud jsou neaktivní zakázané tlačítka; v opačném případě `FALSE`.  
+ [in] *bDrawDisabledImages*  
+ Hodnota TRUE, pokud jsou neaktivní zakázané tlačítka; v opačném případě FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud byl překreslen tlačítko; `FALSE` -li na tlačítko skryt.  
+ Hodnota TRUE, pokud byl překreslit tlačítko; FALSE, pokud je skrytý na tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCToolBar::DrawButton](#drawbutton) metoda volá tuto metodu, když musíte překreslen tlačítka panelu nástrojů.  
+ [CMFCToolBar::DrawButton](#drawbutton) metoda volá tuto metodu při musí být překreslit tlačítko panelu nástrojů.  
   
  Potlačí tuto metodu, pokud chcete přizpůsobit vzhled tlačítek na panelu nástrojů.  
   
 ##  <a name="drawseparator"></a>  CMFCToolBar::DrawSeparator  
- Překreslí oddělovače na panelu nástrojů.  
+ Překreslí oddělovač na panelu nástrojů.  
   
 ```  
 virtual void DrawSeparator(
@@ -1045,22 +1045,22 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
- [v] *Rect –*  
- Ohraničující obdélník umístění, kde se vykreslují oddělovače v pixelech.  
+ [in] *rect*  
+ Ohraničující obdélník umístění, kde je vykreslen oddělovače v pixelech.  
   
- [v] *bHorz*  
- `TRUE` Pokud je vodorovné, oddělovače `FALSE` Pokud oddělovače je svislý.  
+ [in] *bHorz*  
+ Hodnotu TRUE, pokud oddělovač vodorovné, FALSE v případě, že oddělovač je svislý.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu pro každou [CMFCToolBar::DrawSeparator](#drawseparator) objekt, který má `TBBS_SEPARATOR` styl, namísto volání [CMFCToolBar::DrawButton](#drawbutton) pro ty tlačítka.  
+ [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu pro každý [CMFCToolBar::DrawSeparator](#drawseparator) objekt, který má TBBS_SEPARATOR styl, namísto volání metody [CMFCToolBar::DrawButton](#drawbutton) pro ty tlačítka.  
   
- Potlačí tuto metodu do třídy odvozené od [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) přizpůsobit vzhled oddělovače na panelu nástrojů. Výchozí implementace volá [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) k vykreslení oddělovač, jejichž vzhled je dáno aktuální visual správce.  
+ Potlačí tuto metodu v třídě odvozené z [cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md) pro přizpůsobení vzhledu oddělovače na panelu nástrojů. Výchozí implementace volá [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) nakreslete oddělovač, jejichž vzhled se určuje podle aktuální správce vzhledu.  
   
 ##  <a name="enablecustomizebutton"></a>  CMFCToolBar::EnableCustomizeButton  
- Povolí nebo zakáže tlačítko Vlastní, který se zobrazí na panelu nástrojů.  
+ Povolí nebo zakáže tlačítko přizpůsobit, který se zobrazí na panelu nástrojů.  
   
 ```  
 void EnableCustomizeButton(
@@ -1078,66 +1078,66 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- Povolí nebo zakáže na tlačítko Přizpůsobit.  
+ [in] *bEnable*  
+ Povolí nebo zakáže tlačítko Přizpůsobit.  
   
- [v] *iCustomizeCmd*  
- ID příkazu tlačítko Přizpůsobit.  
+ [in] *iCustomizeCmd*  
+ Identifikátor příkazu tlačítka Upravit.  
   
- [v] *strCustomizeText*  
- Textový popisek na tlačítko Přizpůsobit.  
+ [in] *strCustomizeText*  
+ Textový popisek tlačítka pro přizpůsobení.  
   
- [v] *uiCustomizeTextResId*  
- ID prostředku řetězec popisu tlačítka Upravit.  
+ [in] *uiCustomizeTextResId*  
+ ID prostředku řetězce vlastní popisek tlačítka.  
   
- [v] *bQuickCustomize*  
- Povolí nebo zakáže **přidat nebo odebrat tlačítka** v nabídce, která zahodí od tlačítko.  
+ [in] *bQuickCustomize*  
+ Povolí nebo zakáže **přidat nebo odebrat tlačítka** možnost v nabídce, který rozbalí se na panelu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *iCustomizeCmd* je -1, zobrazí framework přizpůsobit tlačítko při více tlačítka panelu nástrojů se nevejdou do oblasti panelu nástrojů. Tlačítko dvojitou směřující vlevo zobrazuje šipku nebo dvojitou šipku, která označuje, že jsou více tlačítek.  
+ Pokud *iCustomizeCmd* se -1, zobrazí rozhraní framework nebudou vyhovovat více tlačítek panelu nástrojů v oblasti panelu nástrojů tlačítko Přizpůsobit. Tlačítko dvojitou směřující vlevo zobrazí šipky, nebo dvojitou šipku, což znamená, že existují další tlačítka.  
   
- Pokud *iCustomizeCmd* určuje platný příkaz ID, a *bEnable* je `TRUE`, vždy se zobrazí tlačítko Přizpůsobit. Tlačítko má malá šipka dolů a otevře se nabídka, která obsahuje příkaz. Tento příkaz používá textový popisek určeného *strCustomizeText*. Pokud *bQuickCustomize* je také `TRUE`, zobrazí v nabídce **přidat nebo odebrat tlačítka** možnost.  
+ Pokud *iCustomizeCmd* Určuje ID platný příkaz, a *bEnable* je TRUE, je vždy zobrazeno tlačítko Přizpůsobit. Tlačítko má malou šipku dolů a otevře se nabídka, která obsahuje příkaz. Tento příkaz používá textový popisek určené *strCustomizeText*. Pokud *bQuickCustomize* platí to i NAOPAK, v nabídce se zobrazí **přidat nebo odebrat tlačítka** možnost.  
   
- Rozhraní framework dynamicky přidá do nabídky žádné tlačítka, které se nehodí v oblasti nástrojů před položku, která je zadána *iCustomizeCmd*. Zobrazí se na dvojitou šipku vedle na šipku dolů.  
+ Rozhraní framework dynamicky přidá do nabídky tlačítka, která se nevejdou do oblasti nástrojů před položku, která je určená *iCustomizeCmd*. Zobrazí se na dvojitou šipku vedle šipky dolů.  
   
 ##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
- Umožňuje ukotvení podokna do hlavního rámce.  
+ Umožňuje ukotvení podokna na hlavní rámec.  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *dwAlignment*  
- Určuje zarovnání ukotvení povolit.  
+ [in] *dwAlignment*  
+ Určuje dokovací zarovnáním, které chcete povolit.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), nastavením `CBasePane::m_dwControlBarStyle` – datový člen k `AFX_CBRS_FLOAT`. Tato metoda pak předá *dwAlignment* k implementaci základní třídy.  
+ Tato metoda rozšiřuje implementaci základní třídy [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), tak, že nastavíte `CBasePane::m_dwControlBarStyle` datový člen do AFX_CBRS_FLOAT. Tato metoda pak předá *dwAlignment* k implementaci základní třídy.  
   
 ##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
- Povolí nebo zakáže velkých ikon na tlačítka panelu nástrojů.  
+ Povolí nebo zakáže velkých ikon na tlačítka na panelu nástrojů.  
   
 ```  
 void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li povolit ikony. velké ikony, `FALSE` zakázat ikony. velké ikony.  
+ [in] *bEnable*  
+ Hodnota TRUE, FALSE povolit velké ikony, chcete-li zakázat velké ikony.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení jsou povolené ikony. velké ikony.  
+ Ve výchozím nastavení jsou povoleny velké ikony.  
   
 ##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization  
- Povolí nebo zakáže rychlé přizpůsobení panelů nástrojů tak, aby uživatel stisknout **Alt** klíče a přetáhněte tlačítko do nového umístění.  
+ Povolí nebo zakáže rychlé přizpůsobení panelů nástrojů tak, aby uživatel stisknout **Alt** klíče a přetáhněte tlačítko na nové umístění.  
   
 ```  
 static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` za účelem rychlé přizpůsobení `FALSE` zakázat rychlé přizpůsobení.  
+ [in] *bEnable*  
+ TRUE, pokud chcete povolit rychlé přizpůsobení FALSE zakázat rychlé přizpůsobení.  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  Povolí nebo zakáže příkaz reflexe.  
@@ -1147,16 +1147,16 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li povolit příkaz reflexe. `FALSE` zakázat příkaz reflexe.  
+ [in] *bEnable*  
+ TRUE, pokud chcete povolit příkaz reflexe. FALSE, pokud chcete zakázat příkaz reflexe.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze povolit příkaz reflexe pro tlačítka panelu nástrojů, které obsahují embedded ovládací prvky, jako je například pole se seznamem.  
+ Volejte tuto metodu za účelem povolení reflexe příkaz pro tlačítka panelu nástrojů, které obsahují vložené ovládací prvky, jako je například pole se seznamem.  
   
- Další informace o příkazu reflexi najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../../mfc/tn062-message-reflection-for-windows-controls.md).  
+ Další informace o reflexi příkazu najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../../mfc/tn062-message-reflection-for-windows-controls.md).  
   
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels  
- Povolí nebo zakáže text popisky v části Image tlačítka panelu nástrojů.  
+ Povolí nebo zakáže popisků text pod obrázky tlačítka panelu nástrojů.  
   
 ```  
 void EnableTextLabels(BOOL bEnable=TRUE);
@@ -1164,27 +1164,27 @@ void EnableTextLabels(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bEnable*  
- `TRUE` Pokud se zobrazí popisky text v části Image tlačítka panelu nástrojů; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud se zobrazí popisky text pod obrázky tlačítka panelu nástrojů; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jsou povolené text popisků, jsou všechny tlačítek na panelu nástrojů zvětšení poskytující místo pro popisky, který se má zobrazit v rámci bitové kopie. Dialogové okno přizpůsobení má **zobrazit textový popisek** políčko na **panely nástrojů** stránky. Když uživatel vybere panelu nástrojů a kontroluje tuto možnost, volá framework `EnableTextLabels` pro vybrané panelu nástrojů. Zaškrtávací políčko můžete zakázat pro objekt odvozené od [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) vrácením `FALSE` z [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .  
+ Pokud textové popisky jsou povoleny, jsou všechna tlačítka na panelu nástrojů zvětšení místa pro popisky, který se má zobrazit v rámci bitové kopie poskytnout. Má dialogového okna vlastního nastavení **zobrazit textový popisek** zaškrtávací políčko **panely nástrojů** stránky. Když uživatel vybere panel nástrojů a kontroluje tuto možnost, volá framework `EnableTextLabels` vybraného panelu nástrojů. Můžete zakázat zaškrtávací políčko pro objekt odvozený od [cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md) tak, že vrací hodnotu FALSE z [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .  
   
 ##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent  
- Načte ukazatel `CMFCToolBar` objekt, který obsahuje popisovač daného okna.  
+ Načte ukazatel `CMFCToolBar` objekt, který obsahuje popisovač dané okna.  
   
 ```  
 static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hwnd*  
- Popisovač okna, který má být vyhledán.  
+ [in] *hwnd*  
+ Popisovač okna, který se má hledat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CMFCToolBar` objekt, který obsahuje popisovač daného okna, nebo `NULL` Pokud žádný odpovídající `CMFCToolBar` objekt existuje.  
+ Ukazatel `CMFCToolBar` objekt, který obsahuje daném okně popisovač nebo hodnota NULL, pokud žádné odpovídající `CMFCToolBar` objekt existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda sdílené kontroluje každý panelu nástrojů v žádosti o `CMFCToolBar` objekt, který obsahuje popisovač daného okna.  
+ Tato metoda sdílené zkontroluje každý panel nástrojů v aplikaci pro `CMFCToolBar` objekt, který obsahuje popisovač dané okna.  
   
 ##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons  
  Vrátí seznam jen pro čtení tlačítek na panelu nástrojů.  
@@ -1194,7 +1194,7 @@ const CObList& GetAllButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Konstantní odkaz na [CObList třída](../../mfc/reference/coblist-class.md) objekt, který obsahuje kolekci [CMFCToolBarButton třída](../../mfc/reference/cmfctoolbarbutton-class.md) objekty.  
+ Konstantní odkaz na [coblist – třída](../../mfc/reference/coblist-class.md) objektu, který obsahuje kolekci [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objekty.  
   
 ##  <a name="getalltoolbars"></a>  CMFCToolBar::GetAllToolbars  
  Vrátí seznam všech panelů nástrojů jen pro čtení v aplikaci.  
@@ -1204,37 +1204,37 @@ static const CObList& GetAllToolbars();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Const odkaz na [CObList třída](../../mfc/reference/coblist-class.md) objekt, který obsahuje kolekci `CMFCToolBar` objekty.  
+ Konstantní odkaz [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který obsahuje kolekci `CMFCToolBar` objekty.  
   
 ##  <a name="getbasiccommands"></a>  CMFCToolBar::GetBasicCommands  
- Vrátí seznam základních příkazů, které jsou definované v aplikaci jen pro čtení.  
+ Vrátí seznam základních příkazů, které jsou definovány v aplikaci jen pro čtení.  
   
 ```  
 static const CList<UINT,UINT>& GetBasicCommands();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Const odkaz na [CList – třída](../../mfc/reference/clist-class.md) objekt, který obsahuje kolekci základních příkazů.  
+ Konstantní odkaz [CList – třída](../../mfc/reference/clist-class.md) objekt, který obsahuje sadu základních příkazů.  
   
 ### <a name="remarks"></a>Poznámky  
  Přidat základní příkazy voláním [CMFCToolBar::AddBasicCommand](#addbasiccommand) nebo [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
 ##  <a name="getbutton"></a>  CMFCToolBar::GetButton  
- Vrátí ukazatel [CMFCToolBarButton třída](../../mfc/reference/cmfctoolbarbutton-class.md) objekt v zadaném indexu.  
+ Vrací ukazatel [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu na zadaném indexu.  
   
 ```  
 CMFCToolBarButton* GetButton(int iIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Určuje index tlačítko vrátit.  
+ [in] *iIndex*  
+ Určuje index na tlačítko pro vrácení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na tlačítka panelu nástrojů, pokud existuje; nebo `NULL` Pokud není takové tlačítko.  
+ Ukazatel na panelu nástrojů, pokud existuje; nebo hodnota NULL, pokud neexistuje žádný takový tlačítko.  
   
 ##  <a name="getbuttoninfo"></a>  CMFCToolBar::GetButtonInfo  
- Vrátí ID příkazu, stylu a index bitové kopie tlačítka na zadaný index.  
+ Vrátí ID příkazu, styl a index obrázku tlačítka na zadaném indexu.  
   
 ```  
 void GetButtonInfo(
@@ -1245,55 +1245,55 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index tlačítka v seznamu tlačítek na panelu nástrojů.  
+ [in] *nIndex*  
+ Určuje index tlačítka v seznamu tlačítka na panelu nástrojů.  
   
  [out] *nID*  
- ID příkazu tlačítka.  
+ Identifikátor příkazu tlačítka.  
   
  [out] *nStyle*  
- Styl tlačítko.  
+ Styl tlačítka.  
   
  [out] *iImage*  
  Index obrázku pro tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetButtonInfo` Metoda vyhledá tlačítka panelu nástrojů v zadaném indexu a načte index příkazů ID, stylu a obrázek tlačítka.  
+ `GetButtonInfo` Metoda vyhledá tlačítka panelu nástrojů v zadaném indexu a načte index příkazu ID, styl a obrázku tlačítka.  
   
- Pokud tlačítko v zadaném indexu neexistuje, nastaví rozhraní *nID* a *nStyle* na hodnotu 0, a *iImage* na hodnotu -1, pokud metoda vrátí.  
+ Pokud tlačítko v zadaném indexu neexistuje, nastaví rozhraní *nID* a *nStyle* na hodnotu 0, a *iImage* na hodnotu -1, když se vrátí metoda.  
   
 ##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
- Vrátí dimenze pro každé tlačítko na panelu nástrojů.  
+ Vrátí dimenze každé tlačítko na panelu nástrojů.  
   
 ```  
 CSize GetButtonSize() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CSize třída](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje dimenze pro každé tlačítko na panelu nástrojů.  
+ A [csize – třída](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje rozměry každé tlačítko na panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::SetSizes](#setsizes) nebo [CMFCToolBar::SetLockedSizes](#setlockedsizes) nastavit dimenze pro každé tlačítko na panelu nástrojů.  
+ Volání [CMFCToolBar::SetSizes](#setsizes) nebo [CMFCToolBar::SetLockedSizes](#setlockedsizes) nastavení dimenze každé tlačítko na panelu nástrojů.  
   
 ##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle  
- Vrátí aktuální styl tlačítka panelu nástrojů, který se nachází v zadaném indexu.  
+ Vrátí aktuální styl tlačítka panelu nástrojů, který se nachází na zadaném indexu.  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
  Určuje index tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která určuje styl tlačítka panelu nástrojů. . V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam možných stylů.  
+ Hodnota, která určuje styl tlačítka panelu nástrojů. . Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam možných styly.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCToolBar::SetButtonStyle](#setbuttonstyle) nastavit styl tlačítka panelu nástrojů  
   
 ##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText  
- Vrátí textový popisek tlačítka, které se zadaným indexem.  
+ Vrátí textový popisek tlačítka, který má zadaný index.  
   
 ```  
 CString GetButtonText(int nIndex) const;  
@@ -1304,7 +1304,7 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
  Index tlačítka panelu nástrojů.  
   
  [out] *rString*  
@@ -1317,33 +1317,33 @@ void GetButtonText(
  Volání [CMFCToolBar::SetButtonText](#setbuttontext) nebo [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) nastavit textový popisek.  
   
 ##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages  
- Vrací ukazatel na kolekci obrázků cold panelu nástrojů tlačítko v aplikaci.  
+ Vrací ukazatel na kolekci obrázků studenou panelu nástrojů tlačítko v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetColdImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci cold panelu nástrojů tlačítko obrázků.  
+ Ukazatel na kolekci obrázky tlačítka panelu nástrojů studenou.  
   
 ### <a name="remarks"></a>Poznámky  
- Studené Image jsou bitové kopie, které se používají, když uživatel není interakci s tlačítka panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) nebo [CMFCToolBar::LoadBitmap](#loadbitmap) načíst cold bitové kopie.  
+ Studená Image jsou Image, které se používají, když uživatel nijak s tlačítky na panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) nebo [CMFCToolBar::LoadBitmap](#loadbitmap) načíst studenou bitové kopie.  
   
 ##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth  
- Vrátí šířku tlačítka panelu nástrojů.  
+ Vrátí šířku tlačítka na panelu nástrojů.  
   
 ```  
 virtual int GetColumnWidth() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která určuje šířku tlačítka panelu nástrojů.  
+ Hodnota, která určuje šířku tlačítka na panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu pro výpočet rozložení panelu nástrojů. Potlačí tuto metodu v odvozené třídě a zadat šířku sloupce různých k panelu nástrojů.  
+ Rozhraní volá tuto metodu za účelem výpočtu rozložení panelu nástrojů. Potlačí tuto metodu v odvozené třídě zadat šířku jiný sloupec pro panel nástrojů.  
   
 ##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons  
- Vrátí seznam hodnot tlačítka, které mají zadaný příkaz ID ze všech panelů nástrojů v aplikaci.  
+ Vrátí seznam tlačítek, které mají ID zadaného příkazu ze všech panelů nástrojů v aplikaci.  
   
 ```  
 static int GetCommandButtons(
@@ -1352,69 +1352,69 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítek.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka.  
   
  [out] *listButtons*  
- Odkaz na [CObList třída](../../mfc/reference/coblist-class.md) objekt, který přijme seznam tlačítka panelu nástrojů.  
+ Odkaz na [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který přijme seznam tlačítek panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet tlačítek, které mají zadaný příkaz ID.  
+ Počet tlačítek, které mají ID zadaného příkazu.  
   
 ##  <a name="getcount"></a>  CMFCToolBar::GetCount  
- Vrátí počet oddělovače a tlačítek na panelu nástrojů.  
+ Vrátí počet oddělovače a tlačítka na panelu nástrojů.  
   
 ```  
 int GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet tlačítka a oddělovače na panelu nástrojů.  
+ Počet tlačítek a oddělovače na panelu nástrojů.  
   
 ##  <a name="getcustomizebutton"></a>  CMFCToolBar::GetCustomizeButton  
- Načte ukazatel `CMFCCustomizeButton` objekt, který je přidružen panelu nástrojů.  
+ Načte ukazatel `CMFCCustomizeButton` objekt, který je přidružený k panelu nástrojů.  
   
 ```  
 CMFCCustomizeButton* GetCustomizeButton();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CMFCCustomizeButton` objekt, který je přidružen panelu nástrojů.  
+ Ukazatel `CMFCCustomizeButton` objekt, který je přidružený k panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načítá **přizpůsobit** tlačítko, které se zobrazí na konci tohoto panelu nástrojů. Použití [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metody přidat **přizpůsobit** tlačítko panelu nástrojů.  
+ Tato metoda načítá **vlastní** tlačítko, které se zobrazí na konci panelu nástrojů. Použití [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metoda pro přidání **vlastní** tlačítko na panelu nástrojů.  
   
- Můžete volat [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) metoda k určení, zda obsahuje platné panelu nástrojů `CMFCCustomizeButton` objektu.  
+ Můžete volat [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) metodou ke zjištění, zda obsahuje platné panelu nástrojů `CMFCCustomizeButton` objektu.  
   
 ##  <a name="getdefaultimage"></a>  CMFCToolBar::GetDefaultImage  
- Vrátí index výchozí obrázek pro tlačítko toolbar pomocí ID zadaný příkaz.  
+ Vrátí index výchozí obrázek pro tlačítko toolbar pomocí ID zadaného příkazu.  
   
 ```  
 static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiID*  
- Určuje ID příkazového tlačítka.  
+ [in] *uiID*  
+ Určuje Identifikátor příkazu tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index obrázku panelu nástrojů v seznamu sdílených bitových kopií.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této metody sdílené načíst index výchozí obrázek pro tlačítko toolbar pomocí ID zadaný příkaz. Vrácená hodnota je index do sdílené kolekce obrázků panelu nástrojů tlačítko pro všechny panely nástrojů v aplikaci. Volání [CMFCToolBar::GetImages](#getimages) metodu za účelem získání ukazatele na tuto kolekci.  
+ Pomocí této sdílené metody k získání indexu výchozí obrázek pro tlačítko toolbar pomocí ID zadaného příkazu. Vrácená hodnota je index do sdílené kolekce obrázky tlačítka panelu nástrojů pro všechny panely nástrojů v aplikaci. Volání [CMFCToolBar::GetImages](#getimages) metodu k získání ukazatele na tuto kolekci.  
   
 ##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages  
- Vrací ukazatel na kolekci imagí, které se používají pro tlačítka panelu nástrojů zakázané v aplikaci.  
+ Vrací ukazatel na kolekci imagí, které se používají pro tlačítka panelu nástrojů zakázáno v aplikaci.  
   
 ```  
 static CMFCToolBarImages* __stdcall GetDisabledImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci obrázků tlačítko panelu nástrojů zakázané.  
+ Ukazatel na kolekci obrázky tlačítka panelu nástrojů zakázané.  
   
 ### <a name="remarks"></a>Poznámky  
- Načíst obrázky tlačítka panelu nástrojů zakázané pomocí [CMFCToolBarEditBoxButton třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md) a [CMFCToolBar::LoadBitmap](#loadbitmap) metody.  
+ Nahrajte obrázky tlačítek zakázané nástrojů s využitím [cmfctoolbareditboxbutton – třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md) a [CMFCToolBar::LoadBitmap](#loadbitmap) metody.  
   
 ##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages  
  Vrací ukazatel na kolekci imagí, které se používají pro zakázané nabídky tlačítka v aplikaci.  
@@ -1424,13 +1424,13 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci obrázků zakázané nabídky.  
+ Ukazatel na kolekci zakázané nabídky imagí.  
   
 ### <a name="remarks"></a>Poznámky  
- Načíst zakázané bitové kopie pomocí [CMFCToolBarEditBoxButton třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md) metoda.  
+ Načíst zakázané obrázky pomocí [cmfctoolbareditboxbutton – třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md) metody.  
   
 ##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu  
- Načte ukazatel na objekt tlačítko nabídky, který je aktuálně zobrazení jeho dílčí nabídky.  
+ Načte ukazatel na objekt tlačítka nabídky, která se aktuálně zobrazuje jeho dílčí nabídky.  
   
 ```  
 CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;  
@@ -1438,133 +1438,133 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  [out] *pIndex*  
- Získá index tlačítko v kolekci tlačítka panelu nástrojů.  
+ Získá index na tlačítko v kolekci tlačítek panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na objekt tlačítko nabídky, který zobrazuje jeho dílčí nabídky nebo `NULL` Pokud žádná nabídka zobrazit jeho dílčí nabídky.  
+ Ukazatel na objekt tlačítka nabídky, který se zobrazuje jeho dílčí nabídky nebo hodnota NULL, pokud žádná nabídka zobrazit jeho dílčí nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda vrátí hodnotu jinou hodnotu než `NULL` hodnotu a *pIndex* není `NULL`, hodnota na kterou odkazuje *pIndex* je nastaven na index v kolekci tlačítka panelu nástrojů zobrazí tlačítko nabídky.  
+ Pokud tato metoda vrátí NENULOVOU hodnotu a *pIndex* nemá hodnotu NULL, hodnota odkazované *pIndex* je nastavena na index na tlačítko nabídky v kolekci tlačítek panelu nástrojů.  
   
 ##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
- Určuje, zda jsou bitové kopie zakázané tlačítka neaktivní verzích regulární tlačítko Image, nebo prováděné z kolekce zakázané tlačítko bitových kopií.  
+ Určuje, zda jsou Image zakázané tlačítka šedě verze běžné tlačítko imagí, nebo na základě kolekce imagí tlačítko na zakázané.  
   
 ```  
 BOOL GetGrayDisabledButtons() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Chcete-li dim bitové kopie zakázané tlačítka; `FALSE` získat bitové kopie z kolekce zakázané bitových kopií.  
+ TRUE, pokud chcete dim imagí zakázané tlačítka; FALSE, pokud chcete získat Image z kolekce zakázané imagí.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) přepínat mezi neaktivní Image a Image z kolekce zakázané bitových kopií.  
+ Použití [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) přepínat mezi šedě Image a Image z kolekce zakázané imagí.  
   
 ##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton  
- Vrací ukazatel na tlačítka panelu nástrojů, který je aktuálně označený.  
+ Vrací ukazatel na panelu nástrojů, který je momentálně označený.  
   
 ```  
 CMFCToolBarButton* GetHighlightedButton() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na objekt tlačítka panelu nástrojů; nebo `NULL` zvýrazněna žádné tlačítko.  
+ Ukazatel na objekt tlačítka na panelu nástrojů nebo hodnota NULL, pokud se neobjeví tlačítko je zvýrazněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Tlačítka panelu nástrojů se zvýrazní, pokud má fokus klávesnice. Pokud tlačítka panelu nástrojů v této aplikaci sledovat horkou také zvýrazní tlačítka panelu nástrojů (Další informace najdete v tématu [CMFCToolBar::GetHotBorder](#gethotborder) a [CMFCToolBar::SetHotBorder](#sethotborder)) a myš je odkazující na to, když má právě fokus klávesnice, žádná položka tlačítka nebo nabídky panelu nástrojů.  
+ Tlačítka panelu nástrojů je zvýrazněn, pokud má klávesnice fokus. Tlačítka panelu nástrojů je také zvýrazněna, pokud jsou tlačítka panelu nástrojů v této aplikaci sledovat horkou (Další informace najdete v tématu [CMFCToolBar::GetHotBorder](#gethotborder) a [CMFCToolBar::SetHotBorder](#sethotborder)) a myš Sada odkazuje na to, pokud žádná položka tlačítko nebo nabídku nástrojů má fokus klávesnice.  
   
 ##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder  
- Určuje, zda jsou tlačítka panelu nástrojů *horkou sledovat*. Pokud je tlačítko sledovat za provozu, zvýrazní se při přesunu napříč ho myši.  
+ Určuje, zda jsou tlačítka panelu nástrojů *horkou sledovat*. Pokud je tlačítko horkou sledovat, zvýrazní se při pohybu myši přes tuto.  
   
 ```  
 BOOL GetHotBorder() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud jsou tlačítka panelu nástrojů horkou sledovat; v opačném `FALSE`.  
+ TRUE, pokud jsou tlačítka panelu nástrojů, horká sledovat; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tlačítka panelu nástrojů jsou ve výchozím nastavení sledovat za provozu.  
+ Ve výchozím nastavení tlačítka na panelu nástrojů jsou sledovány za běhu.  
   
 ##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor  
- Vrátí barvu textu tlačítka panelu nástrojů zvýrazněné.  
+ Vrátí barvu textu tlačítka panelu nástrojů zvýrazněný.  
   
 ```  
 static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představují aktuální zvýrazněná barvy.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představují aktuální barvu zvýrazněného textu.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::SetHotTextColor](#sethottextcolor) nastavit novou barvu textu pro tlačítka panelu nástrojů zvýrazněné.  
+ Volání [CMFCToolBar::SetHotTextColor](#sethottextcolor) nastavit novou barvu textu pro tlačítka panelu nástrojů zvýrazněný.  
   
 ##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus  
- Vrátí popisovač okna, který měl zaměření pro vstup těsně před nebyla panelu nástrojů.  
+ Vrátí popisovač okna, které měly zaměření pro vstup těsně před plánovaným začátkem nebyla panelu nástrojů.  
   
 ```  
 HWND GetHwndLastFocus() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro okno, které není odvozen od [CMFCBaseToolBar třída](../../mfc/reference/cmfcbasetoolbar-class.md), který byl dříve zaměření pro vstup; nebo `NULL` Pokud není takové okno.  
+ Popisovač okna, který není odvozen z [cmfcbasetoolbar – třída](../../mfc/reference/cmfcbasetoolbar-class.md), které měly dříve vstup zaměřit; nebo hodnota NULL, pokud neexistuje žádný takový interval.  
   
 ### <a name="remarks"></a>Poznámky  
- Když `CMFCToolBar` řízení dostane zaměření pro vstup, se uloží popisovač do okna ztratil fokus, aby ho bylo možné později obnovit.  
+ Když `CMFCToolBar` ovládací prvek dostane fokus vstupu, uloží popisovač okna, které tak, aby ho později mohli obnovit ztratí fokus.  
   
 ##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText  
- Určuje, zda mají být ignorovány volání nastavit popisy tlačítek.  
+ Určuje, zda mají být ignorovány volání k nastavení popisy tlačítek.  
   
 ```  
 BOOL GetIgnoreSetText() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud volání nastavit tlačítko popisky jsou ignorovány; v opačném `FALSE`.  
+ Hodnota TRUE, pokud volání k nastavení popisky tlačítek jsou ignorovány; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getimages"></a>  CMFCToolBar::GetImages  
- Vrací ukazatel na kolekci výchozí tlačítko obrázky v aplikaci.  
+ Vrací ukazatel na kolekci výchozí obrázky tlačítka v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který obsahuje kolekci výchozí bitové kopie pro všechny panely nástrojů v aplikaci.  
+ Ukazatel [cmfctoolbarimages – třída](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který obsahuje kolekci výchozí Image pro všechny panely nástrojů v aplikaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda sdílené poskytuje přístup ke kolekci všechny výchozí bitové kopie nástrojů pro aplikaci. Volání [CMFCToolBar::LoadBitmap](#loadbitmap) metoda pro přidání bitové kopie do kolekce.  
+ Tato metoda sdílené poskytuje přístup ke kolekci všechny výchozí obrázky panelu nástrojů aplikace. Volání [CMFCToolBar::LoadBitmap](#loadbitmap) způsob, jak přidat Image do kolekce.  
   
 ##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize  
- Vrátí aktuální velikost bitové kopie tlačítka panelu nástrojů.  
+ Vrátí aktuální velikost obrázky tlačítka panelu nástrojů.  
   
 ```  
 CSize GetImageSize() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CSize třída](../../atl-mfc-shared/reference/csize-class.md) objekt, který představuje aktuální velikost bitové kopie tlačítka panelu nástrojů.  
+ A [csize – třída](../../atl-mfc-shared/reference/csize-class.md) objekt, který představuje aktuální velikost obrázky tlačítka panelu nástrojů.  
   
 ##  <a name="getimagesoffset"></a>  CMFCToolBar::GetImagesOffset  
- Vrátí posunutí index použít k vyhledání obrázky tlačítka panelu nástrojů pro tohoto panelu nástrojů v seznamu pro globální obrázků tlačítka panelu nástrojů.  
+ Vrátí index posun použit k vyhledání obrázky tlačítka panelu nástrojů pro tento panel nástrojů v globálním seznamu obrázky tlačítka panelu nástrojů.  
   
 ```  
 int GetImagesOffset() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Posun index bitové kopie panelu nástrojů.  
+ Posun index obrázky panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny nástrojů výchozí Image jsou uložené v globální [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md) seznamu. Obrázky pro každé tlačítko na panelu nástrojů v tomto seznamu ukládají za sebou. K výpočtu indexu bitové kopie, přidejte index tlačítka na panelu nástrojů na posun na začátek seznamu obrázků tohoto tlačítka panelu nástrojů.  
+ Všechny výchozí obrázky panelu nástrojů jsou uloženy v globální [cmfctoolbarimages – třída](../../mfc/reference/cmfctoolbarimages-class.md) seznamu. Image pro každé tlačítko na panelu nástrojů se postupně ukládají v tomto seznamu. Vypočítat index image, přidáte index tlačítka na panelu nástrojů pro posun na začátek seznamu imagí pro toto tlačítko panelu nástrojů.  
   
- Volání [CMFCToolBar::ButtonToIndex](#buttontoindex) získat index zadaný ukazatel na tlačítko tlačítka panelu nástrojů.  
+ Volání [CMFCToolBar::ButtonToIndex](#buttontoindex) získat index tlačítka panelu nástrojů na tlačítko dán ukazatel.  
   
- Volání [CMFCToolBar::GetImages](#getimages) k získání ukazatele na kolekci obrázků panelu nástrojů.  
+ Volání [CMFCToolBar::GetImages](#getimages) získat ukazatel na kolekci obrázků panelu nástrojů.  
   
 ##  <a name="getinvalidateitemrect"></a>  CMFCToolBar::GetInvalidateItemRect  
- Načte oblast oblasti klienta, které musí být překreslen pro tlačítko v daném indexu.  
+ Načte oblast oblasti klienta, který musí být vystavena pro tlačítko v daném indexu.  
   
 ```  
 virtual void GetInvalidateItemRect(
@@ -1573,31 +1573,31 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index tlačítko u kterých se budou načítat klientské oblasti.  
+ [in] *nIndex*  
+ Index tlačítko, pro které se mají načíst klientské oblasti.  
   
  [out] *lprect –*  
- Ukazatel na `RECT` objekt, který přijme oblasti klientské oblasti.  
+ Ukazatel na objekt OBD, který přijímá oblasti od klientské oblasti.  
   
 ### <a name="remarks"></a>Poznámky  
- *Lprect –* parametr nesmí být `NULL`. Pokud žádné tlačítko existuje v zadané hodnotě indexu, *lprect –* obdrží `RECT` objekt, který je inicializováno na nulu.  
+ *Lprect –* parametr nesmí mít hodnotu NULL. Pokud se neobjeví tlačítko neexistuje na zadané pozici indexu *lprect –* přijímá objekt OBDÉLNÍK, který je inicializován na hodnotu nula.  
   
 ##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
- Vrátí ID příkazového tlačítka panelu nástrojů na zadaný index.  
+ Vrátí Identifikátor příkazu tlačítka panelu nástrojů na zadaném indexu.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index tlačítka panelu nástrojů.  
+ [in] *nIndex*  
+ Určuje index panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID příkazu panelu nástrojů zobrazí tlačítko; nebo nula, pokud neexistuje na tlačítko se zadaným indexem.  
+ Identifikátor příkazu tlačítka panelu nástrojů; nebo nula, pokud neexistuje na tlačítko se zadaným indexem.  
   
 ##  <a name="getitemrect"></a>  CMFCToolBar::GetItemRect  
- Vrátí ohraničující obdélník tlačítko na zadaný index.  
+ Vrací ohraničující obdélník tlačítko v zadaném indexu.  
   
 ```  
 virtual void GetItemRect(
@@ -1606,142 +1606,142 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
  Určuje index tlačítka panelu nástrojů.  
   
  [out] *lprect –*  
- Ukazatel na `CRect` objekt, který přijme souřadnice ohraničujícího rámečku bitové kopie.  
+ Ukazatel na `CRect` objekt, který přijme souřadnice image ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
- `CRect` Objekt, ke kterému *lprect –* body nastavena na 0, pokud neexistuje tlačítka v zadaném indexu.  
+ `CRect` Objekt, na který *lprect –* body je nastavena na 0, pokud neexistuje tlačítko v zadaném indexu.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `GetItemRect` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `GetItemRect` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
 ##  <a name="getlargecoldimages"></a>  CMFCToolBar::GetLargeColdImages  
- Vrací ukazatel na kolekci bitových kopií velký cold panelu nástrojů tlačítko v aplikaci.  
+ Vrací ukazatel na kolekci obrázků velké studenou panelu nástrojů tlačítko v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetLargeColdImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci velkých cold obrázků.  
+ Ukazatel na kolekci velké studenou imagí.  
   
 ### <a name="remarks"></a>Poznámky  
- Studené Image jsou bitové kopie, které se používají, když uživatel není interakci s tlačítka panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) načíst velkých cold obrázků.  
+ Studená Image jsou Image, které se používají, když uživatel nijak s tlačítky na panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) při načítání velkých studenou bitových kopií.  
   
 ##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages  
- Vrací ukazatel na kolekci bitových kopií velký zakázané panelu nástrojů tlačítko v aplikaci.  
+ Vrací ukazatel na kolekci obrázky tlačítka panelu nástrojů velké zakázáno v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetLargeDisabledImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci velké zakázána obrázky tlačítka panelu nástrojů.  
+ Ukazatel na kolekci velké zakázané obrázky tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Velkých obrázků jsou velké verze bitových kopií tlačítko regulární panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) nebo [CMFCToolBar::LoadBitmap](#loadbitmap) načíst velkých obrázků.  
+ Velké obrázky jsou velké verze obrázky tlačítek regulární nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) nebo [CMFCToolBar::LoadBitmap](#loadbitmap) načíst velké obrázky.  
   
 ##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages  
- Vrací ukazatel na kolekci bitových kopií velký panelu nástrojů tlačítko v aplikaci.  
+ Vrací ukazatel na kolekci obrázků velké panelu nástrojů tlačítko v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetLargeImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci bitových kopií velký panelu nástrojů tlačítko.  
+ Ukazatel na kolekci nástrojů velké obrázky tlačítek.  
   
 ### <a name="remarks"></a>Poznámky  
- Velkých obrázků jsou velké verze bitových kopií tlačítko regulární panelu nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) načíst velkých obrázků.  
+ Velké obrázky jsou velké verze obrázky tlačítek regulární nástrojů. Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) načíst velké obrázky.  
   
 ##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages  
- Vrací ukazatel na kolekci uzamčeném cold bitových kopií na panelu nástrojů.  
+ Vrací ukazatel na kolekci uzamčené studenou imagí na panelu nástrojů.  
   
 ```  
 CMFCToolBarImages* GetLockedColdImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci uzamčeném cold imagí, nebo `NULL` Pokud není uzamčený panelu nástrojů.  
+ Ukazatel na kolekci uzamčené studenou imagí, nebo hodnota NULL, pokud není uzamčen panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Uzamčení Image jsou verze bitových kopií regulární panelu nástrojů tlačítko, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů. Studené Image jsou bitové kopie, které se používají, když uživatel není interakci s tlačítka panelu nástrojů.  
+ Uzamčené bitové kopie jsou verze bitových kopií tlačítko regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů. Studená Image jsou Image, které se používají, když uživatel nijak s tlačítky na panelu nástrojů.  
   
- Tato metoda vrátí hodnotu `NULL` Pokud není uzamčený panelu nástrojů. Tato metoda také generuje chybu assertion u sestavení ladicí verze, pokud není uzamčený panelu nástrojů. Další informace o uzamčení panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
+ Tato metoda vrátí hodnotu NULL, pokud není uzamčen panelu nástrojů. Tato metoda také vygeneruje selhání kontrolního výrazu v sestavení ladění, pokud není uzamčen panelu nástrojů. Další informace o zamčené panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
   
- Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metoda načíst uzamčeném cold bitové kopie.  
+ Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodu načtení uzamčené studenou imagí.  
   
 ##  <a name="getlockeddisabledimages"></a>  CMFCToolBar::GetLockedDisabledImages  
- Vrací ukazatel na kolekci uzamčeném zakázané bitových kopií na panelu nástrojů.  
+ Vrací ukazatel na kolekci uzamčené zakázané imagí na panelu nástrojů.  
   
 ```  
 CMFCToolBarImages* GetLockedDisabledImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci uzamčeném zakázané imagí, nebo `NULL` Pokud není uzamčený panelu nástrojů.  
+ Ukazatel na kolekci uzamčené zakázané imagí, nebo hodnota NULL, pokud není uzamčen panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Uzamčení Image jsou verze bitových kopií regulární panelu nástrojů tlačítko, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů. Zakázané Image jsou bitové kopie, které rozhraní používá, když má tlačítka `TBBS_DISABLED` stylu.  
+ Uzamčené bitové kopie jsou verze bitových kopií tlačítko regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů. Zakázané bitové kopie jsou obrázky, které rozhraní používá po TBBS_DISABLED styl tlačítka.  
   
- Tato metoda vrátí hodnotu `NULL` Pokud není uzamčený panelu nástrojů. Tato metoda také generuje chybu assertion u sestavení ladicí verze, pokud není uzamčený panelu nástrojů. Další informace o uzamčení panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
+ Tato metoda vrátí hodnotu NULL, pokud není uzamčen panelu nástrojů. Tato metoda také vygeneruje selhání kontrolního výrazu v sestavení ladění, pokud není uzamčen panelu nástrojů. Další informace o zamčené panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
   
- Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metoda načíst uzamčeném zakázáno bitové kopie.  
+ Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodu pro načtení uzamčeném zakázané bitové kopie.  
   
 ##  <a name="getlockedimages"></a>  CMFCToolBar::GetLockedImages  
- Vrací ukazatel na kolekci obrázky uzamčeném tlačítka na panelu nástrojů.  
+ Vrací ukazatel na kolekci imagí uzamčené tlačítko na panelu nástrojů.  
   
 ```  
 CMFCToolBarImages* GetLockedImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci uzamčeném panelu nástrojů tlačítko imagí, nebo `NULL` Pokud není uzamčený panelu nástrojů.  
+ Ukazatel na kolekci obrázky tlačítka panelu nástrojů uzamčené nebo hodnota NULL, pokud není uzamčen panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Uzamčení Image jsou verze bitových kopií regulární panelu nástrojů tlačítko, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
+ Uzamčené bitové kopie jsou verze bitových kopií tlačítko regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
   
- Tato metoda vrátí hodnotu `NULL` Pokud není uzamčený panelu nástrojů. Tato metoda také generuje chybu assertion u sestavení ladicí verze, pokud není uzamčený panelu nástrojů. Další informace o uzamčení panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
+ Tato metoda vrátí hodnotu NULL, pokud není uzamčen panelu nástrojů. Tato metoda také vygeneruje selhání kontrolního výrazu v sestavení ladění, pokud není uzamčen panelu nástrojů. Další informace o zamčené panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
   
 ##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize  
- Vrátí výchozí velikost bitové kopie uzamčeném panelu nástrojů.  
+ Vrátí výchozí velikost obrázků panelu nástrojů uzamčené.  
   
 ```  
 CSize GetLockedImageSize() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` struktura, která určuje velikost obrázků uzamčeném panelu nástrojů nebo na prázdný `CSize` struktury, pokud není uzamčený panelu nástrojů.  
+ A `CSize` struktura, která určuje velikost Image uzamčené nástrojů nebo na prázdný `CSize` struktury, pokud není uzamčen panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Uzamčení Image jsou verze bitových kopií regulární panelu nástrojů tlačítko, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
+ Uzamčené bitové kopie jsou verze bitových kopií tlačítko regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
   
- Tato metoda vrátí hodnotu `CSize` struktury s nulovou šířku a výšku. nula, pokud není uzamčený panelu nástrojů. Tato metoda také generuje chybu assertion u sestavení ladicí verze, pokud není uzamčený panelu nástrojů. Další informace o uzamčení panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
+ Tato metoda vrátí hodnotu `CSize` struktury s nulovou šířkou a výškou nula, pokud není uzamčen panelu nástrojů. Tato metoda také vygeneruje selhání kontrolního výrazu v sestavení ladění, pokud není uzamčen panelu nástrojů. Další informace o zamčené panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
   
- Volání [CMFCToolBar::SetLockedSizes](#setlockedsizes) metoda zadat velikost uzamčeném bitové kopie.  
+ Volání [CMFCToolBar::SetLockedSizes](#setlockedsizes) metodu k určení velikosti uzamčené image.  
   
 ##  <a name="getlockedmenuimages"></a>  CMFCToolBar::GetLockedMenuImages  
- Vrací ukazatel na kolekci uzamčeném nástrojů nabídky obrázků na panelu nástrojů.  
+ Vrací ukazatel na kolekci uzamčené nástrojů nabídky imagí na panelu nástrojů.  
   
 ```  
 CMFCToolBarImages* GetLockedMenuImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci uzamčeném nástrojů nabídky imagí, nebo `NULL` Pokud není uzamčený panelu nástrojů.  
+ Ukazatel na kolekci uzamčené nástrojů nabídky imagí, nebo hodnota NULL, pokud není uzamčen panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Uzamčení Image jsou verze bitových kopií nabídky regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
+ Uzamčené bitové kopie jsou verze bitových kopií nabídky regulární nástrojů, které rozhraní používá, když uživatel nemůže přizpůsobení panelu nástrojů.  
   
- Tato metoda vrátí hodnotu `NULL` Pokud není uzamčený panelu nástrojů. Tato metoda také generuje chybu assertion u sestavení ladicí verze, pokud není uzamčený panelu nástrojů. Další informace o uzamčení panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
+ Tato metoda vrátí hodnotu NULL, pokud není uzamčen panelu nástrojů. Tato metoda také vygeneruje selhání kontrolního výrazu v sestavení ladění, pokud není uzamčen panelu nástrojů. Další informace o zamčené panely nástrojů najdete v tématu [CMFCToolBar::IsLocked](#islocked).  
   
- Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metoda načíst Image uzamčeném nabídky.  
+ Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodu načtení uzamčené nabídky Image.  
   
 ##  <a name="getmenubuttonsize"></a>  CMFCToolBar::GetMenuButtonSize  
  Vrátí velikost tlačítka nabídky v aplikaci.  
@@ -1751,27 +1751,27 @@ static CSize GetMenuButtonSize();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` objekt, který představuje velikost tlačítka nabídky v pixelech.  
+ A `CSize` objekt, který představuje velikost tlačítka nabídky, v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost tlačítka nabídky na panely nástrojů se udržuje jako globální proměnné a může načíst tento statickou metodu.  
+ Velikost tlačítka nabídky na panely nástrojů nakládat jako s globální proměnné a je možné načíst podle této statickou metodu.  
   
- Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) nastavit tuto globální proměnnou.  
+ Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) tato globální proměnná nastavena.  
   
 ##  <a name="getmenuimages"></a>  CMFCToolBar::GetMenuImages  
- Vrací ukazatel na kolekci obrázků tlačítko nabídky v aplikaci.  
+ Vrací ukazatel na kolekci imagí tlačítko nabídky v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetMenuImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci obrázků nabídky.  
+ Ukazatel na kolekci nabídky imagí.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metoda načíst Image nabídky.  
+ Volání [CMFCToolBar::LoadBitmapEx](#loadbitmapex) metodu načtení nabídky Image.  
   
- Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) metodu a nastavit velikost tlačítek a jejich obrázků.  
+ Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) metoda nastavit velikost tlačítek a jejich bitové kopie.  
   
 ##  <a name="getmenuimagesize"></a>  CMFCToolBar::GetMenuImageSize  
  Vrátí velikost obrázků tlačítko nabídky v aplikaci.  
@@ -1781,10 +1781,10 @@ static CSize GetMenuImageSize();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` objekt, který představuje velikost obrázků nabídky.  
+ A `CSize` objekt, který představuje velikost nabídky Image.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vrátí velikost obrázků na tlačítka nabídky panelu nástrojů, který se spravuje jako globální proměnná. Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) nastavit tuto globální proměnnou.  
+ Tato metoda vrátí velikost obrázků na tlačítka nabídky, který se spravuje jako globální proměnná. Volání [CMFCToolBar::SetMenuSizes](#setmenusizes) tato globální proměnná nastavena.  
   
 ##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons  
  Načte kolekci neupravené tlačítek panelu nástrojů.  
@@ -1794,12 +1794,12 @@ const CObList& GetOrigButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na seznam neupravené tlačítka panelu nástrojů.  
+ Odkaz na seznam neupravené tlačítek panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework vytvoří kopii tlačítka panelu nástrojů, než jsou přizpůsobené uživatelem. [CMFCToolBar::SetButtons](#setbuttons) metoda přidá kopii každé tlačítko v poli zadané do seznamu původní tlačítek. [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) metoda obnoví původní stav panelu nástrojů načtením ze zdrojového souboru.  
+ Rozhraní vytvoří kopii tohoto tlačítka na panelu nástrojů předtím, než jsou přizpůsobeny uživatelem. [CMFCToolBar::SetButtons](#setbuttons) metoda přidá kopie každé tlačítko předané pole do seznamu původní tlačítka. [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) metoda obnoví původní stav panelu nástrojů v načítání ze souboru prostředků.  
   
- Chcete-li nastavit seznam původní tlačítka panelu nástrojů, zavolejte [CMFCToolBar::SetOrigButtons](#setorigbuttons) metoda.  
+ Chcete-li nastavit seznam původní tlačítka panelu nástrojů, zavolejte [CMFCToolBar::SetOrigButtons](#setorigbuttons) metody.  
   
 ##  <a name="getorigresetbuttons"></a>  CMFCToolBar::GetOrigResetButtons  
  Načte kolekci neupravené resetování tlačítek panelu nástrojů.  
@@ -1809,12 +1809,12 @@ const CObList& GetOrigResetButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na seznam neupravené resetovat tlačítka panelu nástrojů.  
+ Odkaz na seznam neupravené resetování tlačítek panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel klikne **resetovat** tlačítko během režimu přizpůsobení, rozhraní používá tato metoda obnovení tlačítka, které byly odebrány z panelu nástrojů.  
+ Pokud uživatel klikne **resetování** tlačítka režimu vlastního nastavení rozhraní používá tuto metodu pro obnovení tlačítka, které byly odebrány z panelu nástrojů.  
   
- [CMFCToolBar::SetButtons](#setbuttons) metoda kopii tlačítko panelu nástrojů, přidá do seznamu tlačítek resetování původní po zavolá [CMFCToolBar::OnReset](#onreset) metoda. Je možné přepsat [CMFCToolBar::OnReset](#onreset) metoda přizpůsobit vzhled tlačítek po stisknutí uživatele **resetovat** tlačítko.  
+ [CMFCToolBar::SetButtons](#setbuttons) – metoda přidá kopie každé tlačítko panelu nástrojů seznamu původní resetování tlačítka po volá [CMFCToolBar::OnReset](#onreset) metody. Je možné přepsat [CMFCToolBar::OnReset](#onreset) metodu za účelem přizpůsobení vzhledu tlačítka po stisknutí uživatele **resetování** tlačítko.  
   
 ##  <a name="getresourceid"></a>  CMFCToolBar::GetResourceID  
  Načte ID prostředku panelu nástrojů.  
@@ -1827,25 +1827,25 @@ UINT GetResourceID() const;
  ID prostředku panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) metodu a nastavit ID prostředku panelu nástrojů.  
+ Volání [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) metody nastavte ID prostředku panelu nástrojů.  
   
 ##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame  
- Určuje, který objekt, nadřazeného rámce nebo vlastníka, odešle příkazy na panelu nástrojů.  
+ Určuje, který z objektů, nadřazeného rámce nebo vlastník, odesílá příkazy do panelu nástrojů.  
   
 ```  
 BOOL GetRouteCommandsViaFrame();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud nadřazený rámec odešle příkazy na panelu nástrojů; 0, pokud vlastník odešle příkazy na panelu nástrojů.  
+ Nenulové, pokud nadřazený rámec odesílá příkazy do panelu nástrojů; 0, pokud vlastník odesílá příkazy do panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení odešle nadřazeného rámce příkazy na panelu nástrojů. Volání [CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe) toto chování změnit.  
+ Ve výchozím nastavení nadřazeného rámce odesílá příkazy do panelu nástrojů. Volání [CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe) ke změně tohoto chování.  
   
- Pokud tato metoda vrátí nenulovou hodnotu, můžete načíst ukazatel na rámec nadřazený objekt pomocí `CMFCToolBar::GetCommandTarget` metoda. Viz ukázka VisualStudioDemo pro příklad, který používá tato metoda.  
+ Pokud tato metoda vrátí nenulovou hodnotu, ukazatel na rámec nadřazeného objektu můžete načíst pomocí `CMFCToolBar::GetCommandTarget` metody. Najdete v ukázce VisualStudioDemo Příklad používající tuto metodu.  
   
 ##  <a name="getrowheight"></a>  CMFCToolBar::GetRowHeight  
- Vrátí výšku tlačítka panelu nástrojů.  
+ Vrátí výšku tlačítka na panelu nástrojů.  
   
 ```  
 virtual int GetRowHeight() const;  
@@ -1855,23 +1855,23 @@ virtual int GetRowHeight() const;
  Výška tlačítka panelu nástrojů v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu pro výpočet rozložení panelu nástrojů. Potlačí tuto metodu v odvozené třídě a zadejte jiné výška k panelu nástrojů.  
+ Rozhraní volá tuto metodu za účelem výpočtu rozložení panelu nástrojů. Potlačí tuto metodu v odvozené třídě k určení různých výška panelu nástrojů.  
   
 ##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips  
- Určuje, zda se zobrazí popisy tlačítek na panelu nástrojů.  
+ Určuje, zda jsou zobrazeny popisy tlačítek pro tlačítka panelu nástrojů.  
   
 ```  
 static BOOL GetShowTooltips();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud popisy jsou zobrazeny pro tlačítka panelu nástrojů; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud jsou uvedeny popisy tlačítek pro tlačítka panelu nástrojů; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení se zobrazí popisy. Tento příznak statické lze změnit pomocí volání [CMFCToolBar::SetShowTooltips](#setshowtooltips).  
+ Ve výchozím nastavení jsou uvedeny popisy tlačítek. Tento příznak statické lze změnit pomocí volání [CMFCToolBar::SetShowTooltips](#setshowtooltips).  
   
 ##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar  
- Načte na stejné úrovni panelu nástrojů.  
+ Načte na stejné úrovni z panelu nástrojů.  
   
 ```  
 CMFCToolBar* GetSiblingToolBar();
@@ -1881,34 +1881,34 @@ CMFCToolBar* GetSiblingToolBar();
  Ukazatel na panelu nástrojů na stejné úrovni.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o tom, jak povolit **zobrazit tlačítka na jeden řádek** a **zobrazit tlačítka ve dvou řádcích** tlačítka, najdete v části [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
+ Další informace o tom, jak povolit **zobrazit tlačítka na jeden řádek** a **zobrazit tlačítka ve dvou řádcích** tlačítka, naleznete v tématu [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
 ##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages  
- Vrací ukazatel na kolekci obrázky tlačítka panelu nástrojů uživatelem definované v aplikaci.  
+ Vrací ukazatel na kolekci uživatelů – definované obrázky panelu nástrojů tlačítko v aplikaci.  
   
 ```  
 static CMFCToolBarImages* GetUserImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na kolekci obrázků tlačítko panelu nástrojů uživatelem definované pro všechny panely nástrojů v aplikaci.  
+ Ukazatel na kolekci uživatelů – definované obrázky panelu nástrojů tlačítko pro všechny panely nástrojů v aplikaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::SetUserImages](#setuserimages) metodu a nastavit kolekci obrázků, uživatelem definované v aplikaci.  
+ Volání [CMFCToolBar::SetUserImages](#setuserimages) metody nastavte kolekci uživatelem definované obrázky v aplikaci.  
   
 ##  <a name="hittest"></a>  CMFCToolBar::HitTest  
- Vrátí index tlačítka panelu nástrojů, který se nachází na zadané pozici.  
+ Vrátí index panelu nástrojů, který se nachází na zadané pozici.  
   
 ```  
 virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
+ [in] *bodu*  
  Bod, který má být testována, v souřadnicích klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index tlačítka, který se nachází na zadané pozici nebo -1, pokud neexistuje žádný takový tlačítko nebo je oddělovač.  
+ Index tlačítka, které je umístěn na určené pozici nebo -1, pokud neexistuje žádný takový tlačítko nebo je oddělovač.  
   
 ##  <a name="insertbutton"></a>  CMFCToolBar::InsertButton  
  Vloží tlačítko na panelu nástrojů.  
@@ -1925,19 +1925,19 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *tlačítko*  
- Určuje, na tlačítko Vložit.  
+ [in] *tlačítko*  
+ Určuje tlačítko pro vložení.  
   
- [v] *iInsertAt*  
- Určuje pozice s nulovým základem vložit tlačítko v.  
+ [in] *iInsertAt*  
+ Určuje pozice s nulovým základem pro vložení na tlačítko v.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pozice, kdy byl vložen tlačítko nebo -1, pokud se chyba dojde.  
+ Pozice, kdy byl objekt vložen tlačítka nebo dojde k-1, pokud chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *iInsertAt* -1, je tato metoda přidá na konec seznamu tlačítka panelu nástrojů na tlačítko.  
+ Pokud *iInsertAt* -1, je tato metoda přidá na konec seznamu tlačítka na panelu nástrojů na tlačítko.  
   
- Volání [CMFCToolBar::InsertSeparator](#insertseparator) metoda vložení oddělovače do panelu nástrojů.  
+ Volání [CMFCToolBar::InsertSeparator](#insertseparator) metoda vložit oddělovač do panelu nástrojů.  
   
 ##  <a name="insertseparator"></a>  CMFCToolBar::InsertSeparator  
  Oddělovač vloží do panelu nástrojů.  
@@ -1947,212 +1947,212 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iInsertAt*  
- Určuje pozice s nulovým základem vložíte oddělovače v. Tento parametr musí být větší než 0.  
+ [in] *iInsertAt*  
+ Určuje pozici založený na nule vložit oddělovač za. Tento parametr musí být větší než 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pozice, kdy byl vložen oddělovač nebo -1, pokud se chyba dojde.  
+ Umístění, ve kterém byl vložen oddělovač nebo nastane-1, pokud chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze vložit oddělovač mezi dvěma existující tlačítka. Pokud *iInsertAt* -1, je tato metoda oddělovače přidá na konec seznamu tlačítka panelu nástrojů.  
+ Voláním této metody lze vložit oddělovač mezi dva existující tlačítka. Pokud *iInsertAt* -1, je tato metoda přidá oddělovač na konci seznamu tlačítka na panelu nástrojů.  
   
- Tuto metodu nelze použít pro přidání oddělovače do prázdné panelu nástrojů.  
+ Tuto metodu nelze použít prázdný panel nástrojů přidat oddělovač.  
   
- Volání [CMFCToolBar::InsertButton](#insertbutton) metodu pro příkaz insert pro tlačítka panelu nástrojů.  
+ Volání [CMFCToolBar::InsertButton](#insertbutton) metoda vložte tlačítko na panelu nástrojů.  
   
 ##  <a name="invalidatebutton"></a>  CMFCToolBar::InvalidateButton  
- Zruší platnost klientské oblasti tlačítka panelu nástrojů, který již existuje v zadané hodnotě indexu.  
+ Zruší platnost klientské oblasti tlačítko na panelu nástrojů, která existuje na zadané pozici indexu.  
   
 ```  
 CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index založený na nule tlačítka na panelu nástrojů.  
+ [in] *nIndex*  
+ Index založený na nule tlačítko na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CMFCToolBarButton` objekt, který existuje v zadané hodnotě indexu nebo `NULL` Pokud takový objekt existuje.  
+ Ukazatel `CMFCToolBarButton` objekt, který existuje na zadaný index nebo hodnota NULL, pokud žádný takový objekt neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při aktualizaci klientské oblasti, která souvisí s tlačítka panelu nástrojů. Zavolá [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) metoda s obdélník klienta `CMFCToolBarButton` objekt, který existuje v zadané hodnotě indexu.  
+ Rozhraní volá tuto metodu při aktualizaci oblasti klienta, který je přidružen tlačítka panelu nástrojů. Volá [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) metodu s obdélníku klienta `CMFCToolBarButton` objekt, který existuje u zadaného indexu.  
   
 ##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize  
- Určuje, zda uživatel může přidat nebo odebrat pomocí tlačítka panelu nástrojů **přizpůsobit** možnost nabídky.  
+ Určuje, jestli uživatel může přidat nebo odebrat pomocí tlačítka na panelu nástrojů **vlastní** nabídky.  
   
 ```  
 BOOL IsAddRemoveQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud může uživatel používat **přizpůsobit** nabídky panelu nástrojů; změnit, jinak hodnota `FALSE`.  
+ Hodnota TRUE, pokud může uživatel používat **vlastní** nabídky Upravit panel nástrojů; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode  
- Určuje, zda *rychlé přizpůsobení* používá přetáhněte tlačítko. Pokud je povoleno rychlé přizpůsobení, může uživatel stiskněte a přidržte klávesu Alt a přetáhněte tlačítko do nového umístění.  
+ Určuje, zda *rychlé přizpůsobení* přetáhněte tlačítko používá. Pokud je povoleno rychlé přizpůsobení, můžete uživatele stiskněte a podržte stisknutou klávesu Alt a přetáhněte tlačítko na nové umístění.  
   
 ```  
 static BOOL __stdcall IsAltCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se používá rychlé přizpůsobení přetáhněte tlačítko; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je to snadné přizpůsobení se používá k přetáhněte tlačítko; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages  
- Určuje, zda je povoleno automatické generování bitových kopií neaktivní tlačítko (bez zvýrazněné).  
+ Určuje, zda je povoleno automatické generování bitových kopií neaktivní tlačítko (bez zvýrazněno).  
   
 ```  
 static BOOL IsAutoGrayInactiveImages();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je povolená možnost automaticky dim neaktivní Image; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud je povolena možnost automaticky dim neaktivní imagí; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete povolit nebo zakázat automatické ztmavení neaktivní Image voláním [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).  
+ Můžete povolit nebo zakázat automatické ztmavení neaktivní imagí voláním [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).  
   
 ##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand  
- Určuje, zda příkaz na seznam základních příkazů.  
+ Určuje, zda je příkaz v seznamu základních příkazů.  
   
 ```  
 static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- Určuje příkaz, který chcete zkontrolovat.  
+ [in] *uiCmd*  
+ Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud zadaný příkaz patří do seznamu příkazů, základní; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud zadaný příkaz patří do seznamu základních příkazů; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato statická metoda určuje, zda příkaz určeného *uiCmd* patří do globálního seznamu základních příkazů. Seznam základních příkazů můžete změnit voláním [CMFCToolBar::AddBasicCommand](#addbasiccommand) nebo [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
+ Tato statická metoda určuje, zda příkaz určený *uiCmd* patří do globálního seznamu základních příkazů. Seznam základních příkazů můžete změnit po zavolání [CMFCToolBar::AddBasicCommand](#addbasiccommand) nebo [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
- Určuje, zda lze panelu nástrojů zobrazovat tlačítka, která rozšířili ohraničení.  
+ Určuje, jestli můžou panelu nástrojů zobrazovat tlačítka, která jste rozšířili ohraničení.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud na panelu můžete zobrazení tlačítka s velikostí navíc ohraničení; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud panelu můžete zobrazení tlačítka s velikostí navíc ohraničení; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrátí objekt nástrojů `TRUE` Pokud mohla zobrazovat tlačítka, která rozšířili ohraničení. Tlačítka panelu nástrojů volá tuto metodu, pokud ho zpracuje [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) oznámení a bude odpovídajícím způsobem nastavit příznak velikost interní navíc ohraničení. Tento příznak interní může načíst později pomocí volání [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
+ Objekt panelu nástrojů vrací hodnotu TRUE, pokud je zobrazení tlačítka, která jste rozšířili ohraničení. Tlačítka panelu nástrojů volá tuto metodu při zpracování [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) oznámení a nastavíte jeho velikost příznak vnitřních hranicích nadbytečné. Tento příznak interní může být načten voláním později [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
- Potlačí tuto metodu do třídy odvozené od `CMFCToolBar` a vrátit `TRUE` panelu svého vrátí a zobrazení tlačítka panelu nástrojů s velikostí navíc ohraničení `FALSE` jinak. Výchozí implementace vrací `TRUE`.  
+ Potlačí tuto metodu v třídě odvozené z `CMFCToolBar` a vrací TRUE, pokud panel můžete zobrazit tlačítka panelu nástrojů s velikostí navíc ohraničení a v opačném případě vrátí hodnotu FALSE. Výchozí implementace vrací hodnotu TRUE.  
   
 ##  <a name="isbuttonhighlighted"></a>  CMFCToolBar::IsButtonHighlighted  
- Určuje, zda je označený dané tlačítko.  
+ Určuje, zda je zvýrazněn určeného tlačítka.  
   
 ```  
 BOOL IsButtonHighlighted(int iButton) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iButton*  
+ [in] *iButton*  
  Určuje index tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` tlačítko zadaný zvýrazněna; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je zvýrazněný určeného tlačítka. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted  
- Určuje, zda příkaz jsou povoleny.  
+ Určuje, zda je příkaz povolen.  
   
 ```  
 static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- Určuje příkaz, který chcete zkontrolovat.  
+ [in] *uiCmd*  
+ Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je povoleno zadaný příkaz; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud zadaný příkaz je povolené; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato statická metoda určuje, zda příkaz určeného *uiCmd* patří do globálního seznamu příkazů, není povolené.  
+ Tato statická metoda určuje, zda příkaz určený *uiCmd* patří do globální seznam příkazů není povolené.  
   
- Seznam příkazů, není povolené lze změnit pomocí volání [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
+ Seznam příkazů není povolené, které lze změnit pomocí volání [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
 ##  <a name="iscommandrarelyused"></a>  CMFCToolBar::IsCommandRarelyUsed  
- Určuje, zda příkaz zřídka používá.  
+ Určuje, zda příkaz používá zřídka.  
   
 ```  
 static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- Určuje příkaz, který chcete zkontrolovat.  
+ [in] *uiCmd*  
+ Určuje příkaz a zkontrolujte.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se používá zřídka zadaný příkaz; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud zadaný příkaz je málo používané; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- `IsCommandRarelyUsed` Metoda vrátí `FALSE` Pokud dojde k jedné nebo více z následujících podmínek:  
+ `IsCommandRarelyUsed` Metoda vrátí hodnotu NEPRAVDA, pokud jeden nebo více z těchto podmínek dojde k:  
   
 -   Zadaný příkaz patří do seznamu základních příkazů  
   
 -   Zadaný příkaz je standardní příkazy  
   
--   Rozhraní je v režimu vlastní nastavení  
+-   Rozhraní je v režimu úprav  
   
 -   Seznam základních příkazů je prázdný  
   
--   Více než 20 % volání příkazu jsou volání zadaný příkaz.  
+-   Více než 20 % příkaz volání jsou volání k zadanému příkazu.  
   
 ##  <a name="iscustomizemode"></a>  CMFCToolBar::IsCustomizeMode  
- Určuje, zda rozhraní panelu nástrojů v režimu vlastní nastavení.  
+ Určuje, zda rozhraní nástrojů je v režimu úprav.  
   
 ```  
 static BOOL IsCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud rozhraní je v režimu přizpůsobení; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud rozhraní je v režimu úprav. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete přepnout režim přizpůsobení voláním [CMFCToolBar::SetCustomizeMode](#setcustomizemode).  
+ Můžete přepínat režim úprav voláním [CMFCToolBar::SetCustomizeMode](#setcustomizemode).  
   
- Rozhraní framework změní režim, pokud uživatel vyvolá dialogové okno přizpůsobení ( [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
+ Rozhraní framework změní režim, když uživatel vyvolá dialogovém okně přizpůsobení ( [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
   
 ##  <a name="isdragbutton"></a>  CMFCToolBar::IsDragButton  
- Určuje, zda je právě přetáhli tlačítka panelu nástrojů.  
+ Určuje, zda je přetažen tlačítka panelu nástrojů.  
   
 ```  
 BOOL IsDragButton(const CMFCToolBarButton* pButton) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
+ [in] *pButton*  
  Ukazatel na tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je právě přetáhli dané tlačítko; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je přetažen určeného tlačítka; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton  
- Určuje, zda obsahuje panelu nástrojů **přizpůsobit** tlačítko.  
+ Určuje, zda obsahuje panelu nástrojů **vlastní** tlačítko.  
   
 ```  
 BOOL IsExistCustomizeButton();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud obsahuje panelu nástrojů **přizpůsobit** tlačítko; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud obsahuje panelu nástrojů **vlastní** tlačítko; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda vrátí hodnotu `TRUE`, [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) metoda vrátí ukazatel **přizpůsobit** tlačítko, které se zobrazí na konci tohoto panelu nástrojů.  
+ Pokud tato metoda vrátí hodnotu TRUE, [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) metoda vrací ukazatel na **vlastní** tlačítko, které se zobrazí na konci panelu nástrojů.  
   
- Použití [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metody přidat **přizpůsobit** tlačítko panelu nástrojů.  
+ Použití [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metoda pro přidání **vlastní** tlačítko na panelu nástrojů.  
   
 ##  <a name="isfloating"></a>  CMFCToolBar::IsFloating  
  Určuje, zda je číslo s plovoucí čárkou panelu nástrojů.  
@@ -2162,69 +2162,69 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je plovoucí panelu nástrojů; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je panel nástrojů plovoucí; v opačném případě hodnota FALSE.  
   
 ##  <a name="islargeicons"></a>  CMFCToolBar::IsLargeIcons  
- Určuje, zda panely nástrojů v aplikaci aktuálně zobrazení velkých ikon.  
+ Určuje, zda panelů nástrojů v aplikaci aktuálně zobrazuje velké ikony.  
   
 ```  
 static BOOL IsLargeIcons();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud aplikace používá ikony. velké ikony; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud aplikace používá velké ikony; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CMFCToolBar::SetLargeIcons](#setlargeicons) k přepnutí mezi regulární ikony a ikony. velké ikony.  
+ Volání [CMFCToolBar::SetLargeIcons](#setlargeicons) přepínat mezi velké ikony a pravidelné ikony.  
   
- Rozhraní framework automaticky změní režim, když uživatel přepíná **ikony. velké ikony** políčko na **možnosti** stránky **přizpůsobení** dialogové okno.  
+ Rozhraní automaticky změní režim, pokud uživatel přepíná **velké ikony** zaškrtávací políčko **možnosti** stránku **přizpůsobení** dialogové okno.  
   
 ##  <a name="islastcommandfrombutton"></a>  CMFCToolBar::IsLastCommandFromButton  
- Určuje, zda naposledy provést, že příkaz byl odeslán z tlačítka zadaný panelu nástrojů.  
+ Určuje, zda naposledy proveden, že příkaz byl odeslán na panelu nástrojů zadané.  
   
 ```  
 static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
+ [in] *pButton*  
  Ukazatel na tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se poslední příkaz byl odeslán z tlačítko který *pButton* určuje; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud poslední příkaz byl odeslán z tlačítka, který *pButton* určuje; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda získá ukazatel [MSG – struktura](../../mfc/reference/msg-structure1.md) voláním `CWnd::GetCurrentMessage`. Pak porovná `HWND` tlačítka s `MSG::lParam` a `MSG::hwnd` členy k určení, zda byla na tlačítko zdroj příkazu.  
+ Tato metoda získá ukazatel [msg – struktura](../../mfc/reference/msg-structure1.md) voláním `CWnd::GetCurrentMessage`. Poté porovná HWND. tlačítko s `MSG::lParam` a `MSG::hwnd` členy k určení, zda byla tlačítka zdroji příkazu.  
   
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked  
- Určuje, zda je zablokován panelu nástrojů.  
+ Určuje, zda je uzamčen panelu nástrojů.  
   
 ```  
 BOOL IsLocked() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je uzamčené panelu nástrojů; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je uzamčen panelu nástrojů; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vrátí hodnotu `TRUE` když uživatel nemůže provést úkoly vlastního nastavení, jako je například přemístění tlačítka panelu nástrojů.  
+ Tato metoda vrátí hodnotu PRAVDA, pokud uživatel nemůže provést úkoly vlastního nastavení, jako je například přemístění tlačítka na panelu nástrojů.  
   
- Panely nástrojů uzamčeném pomocí seznamů samostatnou bitovou kopii. Další informace o těchto seznamů obrázků najdete v tématu [CMFCToolBar::LoadBitmapEx](#loadbitmapex).  
+ Zamčené panely nástrojů pomocí seznamů samostatnou bitovou kopii. Další informace o těchto seznamů obrázků najdete v tématu [CMFCToolBar::LoadBitmapEx](#loadbitmapex).  
   
 ##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling  
- Určuje, zda panelu nástrojů a jeho panelu nástrojů na stejné úrovni jsou umístěny na stejném řádku.  
+ Určuje, zda panelu nástrojů a jeho nástrojů na stejné úrovni jsou umístěny na stejném řádku.  
   
 ```  
 BOOL IsOneRowWithSibling();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud panelu nástrojů a jeho na stejné úrovni jsou umístěny na stejném řádku; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud panelu nástrojů a jejich na stejné úrovni jsou umístěny na stejném řádku; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda volá tuto metodu za účelem určit, jak se zobrazují **přizpůsobit** místní nabídky. Pokud tato metoda vrátí hodnotu `TRUE`, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. Jinak rozhraní zobrazí **zobrazit tlačítka ve dvou řádcích** tlačítko.  
+ [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda volá tuto metodu za účelem určení, jak zobrazit **vlastní** rozbalovací nabídky. Pokud tato metoda vrátí hodnotu TRUE, zobrazí rozhraní **zobrazit tlačítka na jeden řádek** tlačítko. V opačném případě se zobrazí rozhraní **zobrazit tlačítka ve dvou řádcích** tlačítko.  
   
- Obvykle Nemáte při použití této metody. Chcete-li povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
+ Obvykle není nutné použít tuto metodu. Povolit **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged  
 
@@ -2256,10 +2256,10 @@ BOOL IsUserDefined() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je panel nástrojů vytvořený uživatelem. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud panel nástrojů byl vytvořen uživatelem. v opačném případě FALSE.  
   
 ##  <a name="loadbitmap"></a>  CMFCToolBar::LoadBitmap  
- Načte obrázků panelu nástrojů z prostředků aplikace.  
+ Načte obrázky panelu nástrojů ze zdrojů aplikace.  
   
 ```  
 virtual BOOL LoadBitmap(
@@ -2272,31 +2272,31 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
- ID prostředku bitové mapy, který odkazuje na jeho aktivní obrázků.  
+ [in] *uiResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
   
- [v] *uiColdResID*  
- ID prostředku bitové mapy, který odkazuje na jeho cold obrázků.  
+ [in] *uiColdResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
   
- [v] *uiMenuResID*  
- ID prostředku bitové mapy, která odkazuje na Image regulární nabídky.  
+ [in] *uiMenuResID*  
+ ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
   
- [v] *blokován*  
- `TRUE` Zamknout panelu nástrojů; v opačném případě `FALSE`.  
+ [in] *blokované*  
+ TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.  
   
- [v] *uiDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na jeho zakázané obrázků.  
+ [in] *uiDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
   
- [v] *uiMenuDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na Image zakázané nabídky.  
+ [in] *uiMenuDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) metoda volá tuto metodu za účelem načtení bitové kopie, které jsou přidruženy panelu nástrojů. Potlačí tuto metodu za účelem provedení vlastní načítání prostředků bitové kopie.  
+ [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) metoda volá tuto metodu za účelem načtení bitové kopie, které jsou spojeny s panelem nástrojů. Potlačí tuto metodu za účelem provedení vlastní načítání prostředků obrázků.  
   
- Volání `LoadBitmapEx` metodu pro načtení další Image, po vytvoření panelu nástrojů.  
+ Volání `LoadBitmapEx` metodu pro načtení další Image po vytvoření panelu nástrojů.  
   
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx  
 
@@ -2308,8 +2308,8 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *parametry*  
- [v] *blokován*  
+ [in] *parametry*  
+ [in] *blokované*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2323,33 +2323,33 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters  
- Možnosti globální panelu nástrojů načte z registru systému Windows.  
+ Možnosti panelu nástrojů globální načte z registru Windows.  
   
 ```  
 static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
  Určuje relativní cestu klíče registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte globální parametry, jako je například typ animace nabídky, styl stínu nabídky a jestli se má zobrazit ikony. velké ikony z registru systému Windows.  
+ Tato metoda načte globální parametry, jako je například typ nabídky animace, styl stínové nabídky a jestli mají zobrazovat velké ikony z registru Windows.  
   
  [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) metoda volá tuto metodu jako součást procesu inicializace aplikace.  
   
 ##  <a name="loadstate"></a>  CMFCToolBar::LoadState  
- Načte informace o stavu nástrojů z registru systému Windows.  
+ Načte informace o stavu nástrojů z registru Windows.  
   
 ```  
 virtual BOOL LoadState(
@@ -2359,23 +2359,23 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
  Určuje relativní cestu klíče registru Windows.  
   
- [v] *nIndex*  
- Určuje ID ovládacího panelu nástrojů.  
+ [in] *nIndex*  
+ Určuje ID ovládacího prvku panelu nástrojů.  
   
- [v] *uiID*  
+ [in] *uiID*  
  Určuje ID prostředku panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda jako součást procesu inicializace aplikace volá framework. Další informace najdete v tématu [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
+ Rozhraní volá tuto metodu jako součást procesu inicializace aplikace. Další informace najdete v tématu [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
 ##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar  
- Načte panelu nástrojů z prostředků aplikace.  
+ Načte panel nástrojů ze zdrojů aplikace.  
   
 ```  
 virtual BOOL LoadToolBar(
@@ -2389,41 +2389,41 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
+ [in] *uiResID*  
  ID prostředku panelu nástrojů.  
   
- [v] *uiColdResID*  
- ID prostředku bitové mapy, který odkazuje na jeho cold obrázků.  
+ [in] *uiColdResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
   
- [v] *uiMenuResID*  
- ID prostředku bitové mapy, která odkazuje na Image regulární nabídky.  
+ [in] *uiMenuResID*  
+ ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
   
- [v] *blokován*  
- Logická hodnota, která určuje, zda je panel nástrojů uzamčeny nebo ne. Pokud tento parametr je *TRUE*, je pevně nastavené panelu nástrojů. Jinak není uzamčený panelu nástrojů.  
+ [in] *blokované*  
+ Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud je tento parametr *TRUE*, panelu nástrojů je uzamčen. V opačném případě není uzamčen panelu nástrojů.  
   
- [v] *uiDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na jeho zakázané obrázků.  
+ [in] *uiDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
   
- [v] *uiMenuDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na Image zakázané nabídky.  
+ [in] *uiMenuDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
   
- [v] *uiHotResID*  
- ID prostředku bitové mapy, který odkazuje na jeho aktivní obrázků.  
+ [in] *uiHotResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework během inicializace načíst bitové kopie, které jsou přidruženy panelu nástrojů.  
+ Rozhraní volá tuto metodu během inicializace k načtení bitové kopie, které jsou spojeny s panelem nástrojů.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `LoadToolBar` metoda v `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `LoadToolBar` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
 ##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx  
- Načte panelu nástrojů z prostředky aplikace pomocí `CMFCToolBarInfo` pomocná třída určená k povolení aplikace pro používání velkých obrázků.  
+ Načte panel nástrojů ze zdrojů aplikace s použitím `CMFCToolBarInfo` pomocná třída určená k povolení aplikace pro používání velkých obrázků.  
   
 ```  
 virtual BOOL LoadToolBarEx(
@@ -2433,32 +2433,32 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiToolbarResID*  
+ [in] *uiToolbarResID*  
  ID prostředku panelu nástrojů.  
   
- [v] *parametry*  
- Odkaz na `CMFCToolBarInfo` objekt, který obsahuje ID prostředku pro Image panelu nástrojů.  
+ [in] *parametry*  
+ Odkaz na `CMFCToolBarInfo` objekt, který obsahuje ID prostředků obrázků panelu nástrojů.  
   
- [v] *blokován*  
- Logická hodnota, která určuje, zda je panel nástrojů uzamčeny nebo ne. Pokud tento parametr je `TRUE`, je pevně nastavené panelu nástrojů. Jinak není uzamčený panelu nástrojů.  
+ [in] *blokované*  
+ Logická hodnota, která určuje, zda je nebo není uzamčen panelu nástrojů. Pokud tento parametr má hodnotu TRUE, je uzamčené panelu nástrojů. V opačném případě není uzamčen panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem načtení nástrojů bitové kopie z prostředky aplikace.  
+ Volejte tuto metodu za účelem načtení ze zdrojů aplikace obrázky panelu nástrojů.  
   
 ##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio  
- Určuje poměr mezi dimenzi (výška a šířka) velkých obrázků a dimenze regulární bitových kopií.  
+ Určuje poměr mezi rozměr (výšky a šířky) velké obrázky a dimenze běžných bitových kopií.  
   
 ```  
 AFX_IMPORT_DATA static double m_dblLargeImageRatio;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Poměr výchozí hodnotu 2. Můžete změnit tato hodnota k vytvoření bitových kopií velký panel nástrojů větší nebo menší.  
+ Poměr výchozím nastavení je 2. Můžete změnit tuto hodnotu, aby obrázky panelu nástrojů velké větší nebo menší.  
   
- Rozhraní framework použije tento člen dat, když nezadáte sadu velkých obrázků. Například pokud zadejte pouze sadu malé obrázky o velikosti 16 x 16. a chcete velkých obrázků na velikost 24 x 24, nastavte tuto – datový člen 1,5.  
+ Rozhraní používá tomuto datovému členu, pokud nezadáte sady velkých obrázků. Například pokud obsahují pouze sadu malé obrázky s velikosti 16 x 16 a chcete velkých obrázků mají velikost 24 × 24, nastavte tomuto datovému členu 1.5.  
   
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu  
 
@@ -2481,29 +2481,29 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
- Nepoužívá se.  
+ [in] *pButton*  
+ Nevyužité.  
   
- [v] *dropEffect*  
- Nepoužívá se.  
+ [in] *dropEffect*  
+ Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot  
- Voláno rámcem, když uživatel vybere tlačítka na panelu nástrojů.  
+ Volá se rozhraním, když uživatel vybere tlačítko na panelu nástrojů.  
   
 ```  
 virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iHot*  
- Určuje index tlačítka panelu nástrojů, který je vybraný; nebo -1, pokud je vybrána žádná tlačítka panelu nástrojů.  
+ [in] *iHot*  
+ Určuje index panelu nástrojů, který je vybrán; nebo -1, pokud je vybrána žádná tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu pro proces oznámení, že vybraný uživatel tlačítka panelu nástrojů.  
+ Potlačí tuto metodu za účelem zpracovat oznámení, že uživatel vybral tlačítko na panelu nástrojů.  
   
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager  
 
@@ -2515,20 +2515,20 @@ virtual void OnChangeVisualManager();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground  
- Voláno rámcem z [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) k vyplnění pozadí panelu nástrojů.  
+ Volá se rozhraním z [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) vyplnit pozadí panelu nástrojů.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu, když se naplní na pozadí panelu nástrojů. Výchozí implementace neprovede žádnou akci.  
+ [CMFCToolBar::DoPaint](#dopaint) volá tuto metodu, když bylo vyplněno pozadí panelu nástrojů. Výchozí implementace nemá žádný účinek.  
   
- Potlačí tuto metodu kreslení vlastní pozadí v odvozených třídách.  
+ Potlačí tuto metodu za účelem vykreslení vlastní pozadí v odvozených třídách.  
   
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged  
 
@@ -2540,16 +2540,16 @@ virtual void OnGlobalFontsChanged();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onreset"></a>  CMFCToolBar::OnReset  
- Lze obnovit do původního stavu.  
+ Panel nástrojů se obnoví do původního stavu.  
   
 ```  
 virtual void OnReset();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu pro zpracování oznámení o resetování panelu nástrojů.  
+ Potlačí tuto metodu za účelem zpracování oznámení o obnovení panelu nástrojů.  
   
- Výchozí implementace neprovede žádnou akci. Přepsání `OnReset` v třídy odvozené od `CMFCToolBar` při panelu nástrojů má fiktivní tlačítka, který je třeba nahradit, když se panelu nástrojů vrátí do původního stavu.  
+ Výchozí implementace nemá žádný účinek. Přepsat `OnReset` ve třídě odvozené z `CMFCToolBar` při panelu nástrojů má fiktivní tlačítka, který musí být nahrazen, když se panelu nástrojů vrátí do původního stavu.  
   
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData  
 
@@ -2559,7 +2559,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lVal*  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2573,19 +2573,19 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
- Odkazuje na tlačítko, jejíž text je nastavena.  
+ [in] *pButton*  
+ Odkazuje na tlačítku, jejichž text je nastavena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` ifthe text byla úspěšně obnovena; v opačném případě `FALSE`.  
+ TRUE ifthe text byl úspěšně obnoven; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu pro proces oznámení, že se text tlačítka panelu nástrojů mění na svou výchozí.  
+ Potlačí tuto metodu za účelem zpracovat oznámení, že text tlačítka se mění na jeho výchozí.  
   
- Výchozí implementace načte text tlačítka z prostředky aplikace.  
+ Výchozí implementace načte text tlačítku ze zdrojů aplikace.  
   
 ##  <a name="onusertooltip"></a>  CMFCToolBar::OnUserToolTip  
- Voláno rámcem, když je popis tlačítka pro tlačítko o který se má zobrazit.  
+ Volá se rozhraním po se zobrazení popisu tlačítka pro tlačítko.  
   
 ```  
 virtual BOOL OnUserToolTip(
@@ -2594,19 +2594,19 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
- Odkazuje na tlačítka panelu nástrojů na kterou má být zobrazí popisek.  
+ [in] *pButton*  
+ Odkazuje na tlačítka na panelu nástrojů, pro kterou je ovládací prvek tooltip zobrazený.  
   
  [out] *strTTText*  
- Odkaz na `CString` objekt, který přijme text popisu tlačítka.  
+ Odkaz na `CString` objekt, který přijme text ovládacího prvku tooltip.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud *strTTText* byla vyplněná s text popisku jinak `FALSE`.  
+ Hodnota TRUE v případě *strTTText* byla vyplněna pomocí přejede myší; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework popisek pro tlačítka panelu nástrojů se zobrazí při. Pokud `OnUserToolTip` vrátí `TRUE`, rozhraní zobrazí popisek, který obsahuje text vrácený `OnUserToolTip` v *strTTText*. Popisek, jinak hodnota obsahuje text tlačítka.  
+ Rozhraní volá tuto metodu po se zobrazení popisu tlačítka pro tlačítko toolbar. Pokud `OnUserToolTip` vrací hodnotu TRUE, zobrazí popisek, který obsahuje text vrácený rozhraní `OnUserToolTip` v *strTTText*. V opačném případě popisek obsahuje text tlačítka.  
   
- Přepsání `OnUserToolTip` přizpůsobit popisy tlačítek panelu nástrojů. Výchozí implementace volá [CMFCToolBar::OnUserToolTip](#onusertooltip) se získat text popisku.  
+ Přepsat `OnUserToolTip` přizpůsobení popisy tlačítek panelu nástrojů. Výchozí implementace volá [CMFCToolBar::OnUserToolTip](#onusertooltip) získat text popisku.  
   
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu  
 
@@ -2620,55 +2620,55 @@ virtual BOOL PrevMenu();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
- Wm_command – zprávy odešle do okna, který vlastní panelu nástrojů.  
+ Wm_command – zprávy odešle do okna, který vlastní panel nástrojů.  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
+ [in] *pButton*  
  Ukazatel na tlačítka na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato metoda by měla vrátit vždy `TRUE`. MFC používá `FALSE` hodnoty interně.  
+ Tato metoda by měla vždy vrátí hodnotu TRUE. Knihovna MFC používá hodnoty FALSE interně.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odešle wm_command – zprávy do okna, který vlastní panelu nástrojů voláním [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) a předání ID příkazu, který zadaný tlačítka, jako `wParam` parametr.  
+ Tato metoda odešle zprávu wm_command – okna, které vlastní panel nástrojů voláním [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) a při předávání ID příkazu od určeného tlačítka, jako *wParam* parametru.  
   
- Použití [on_command –](message-map-macros-mfc.md#on_command) makro mapovat wm_command – zprávy členské funkce.  
+ Použití [ON_COMMAND](message-map-macros-mfc.md#on_command) – makro mapovat wm_command – zprávy na členskou funkci.  
   
 ##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
- Odebere všechny tlačítka a oddělovače na panelu nástrojů.  
+ Odebere všechna tlačítka a oddělovače z panelu nástrojů.  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework, pokud znovu vytvoří nebo zničí panelu nástrojů.  
+ Rozhraní volá tuto metodu, když jej znovu vytvoří nebo odstraní panelu nástrojů.  
   
 ##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton  
- Odebere z panelu nástrojů tlačítko se zadaným indexem.  
+ Odebere z panelu nástrojů na tlačítko, které se zadaným indexem.  
   
 ```  
 virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Určuje index založený na nule tlačítko Odebrat.  
+ [in] *iIndex*  
+ Určuje index založený na nule na tlačítko Odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda bude úspěšná, nebo `FALSE` Pokud zadaný index není platný nebo index odkazuje **přizpůsobit** tlačítko.  
+ Hodnota TRUE, pokud metoda uspěje, nebo FALSE, pokud zadaný index je neplatná nebo index odkazuje **vlastní** tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda aktualizace dalších nástrojů atributy, které jsou ovlivněné odebrání tlačítko. Například tato metoda odebere nepotřebných oddělovačů z panelu nástrojů a znovu sestaví tabulku klávesových zkratek.  
+ Tato metoda aktualizuje atributy dalších nástrojů, které jsou ovlivněny odebrání tlačítka. Například tato metoda odebere nepotřebných oddělovače z panelu nástrojů a znovu vytvoří tabulku klávesových zkratek.  
   
- Další informace o **přizpůsobit** tlačítko najdete v tématu [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
+ Další informace o **vlastní** tlačítko, naleznete v tématu [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
 ##  <a name="removestatefromregistry"></a>  CMFCToolBar::RemoveStateFromRegistry  
- Odstraní informace o stavu pro panel nástrojů z registru systému Windows.  
+ Odstraní informace o stavu pro panel nástrojů z registru Windows.  
   
 ```  
 virtual BOOL RemoveStateFromRegistry(
@@ -2678,25 +2678,25 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
- Určuje klíč registru, kde se nachází informace o stavu.  
+ [in] *lpszProfileName*  
+ Určuje klíč registru, ve kterém se nachází informace o stavu.  
   
- [v] *nIndex*  
- ID ovládacího panelu nástrojů.  
+ [in] *nIndex*  
+ ID ovládacího prvku panelu nástrojů.  
   
- [v] *uiID*  
- ID prostředku panelu nástrojů. Pokud má parametr hodnotu -1, používá tato metoda [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metoda pro načtení ID prostředku.  
+ [in] *uiID*  
+ ID prostředku panelu nástrojů. Pokud má parametr hodnotu -1, tato metoda používá [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) metody k získání ID prostředku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když ji odstraní uživatelské panelu nástrojů.  
+ Rozhraní volá tuto metodu, když odstraní panel nástrojů definovaný uživatelem.  
   
- Potlačí tuto metodu, je-li uložit informace o dalších stavu v registru systému Windows.  
+ Potlačí tuto metodu, pokud obsahují informace o dalších stavu v registru Windows.  
   
 ##  <a name="replacebutton"></a>  CMFCToolBar::ReplaceButton  
- Tlačítka panelu nástrojů nahradí jinou tlačítka panelu nástrojů.  
+ Nahradí jiné tlačítko panelu nástrojů tlačítko panelu nástrojů.  
   
 ```  
 int ReplaceButton(
@@ -2706,46 +2706,46 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu k nahrazení tlačítka.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pro nahrazení.  
   
- [v] *tlačítko*  
- Odkaz na `CMFCToolBarButton` k vložení.  
+ [in] *tlačítko*  
+ Odkaz na `CMFCToolBarButton` pro vložení.  
   
- [v] *míč*  
- Logická hodnota, která určuje, jestli se k nahrazení všech tlačítka, které mají ID příkazu, který je určeného *uiCmd*. Pokud tento parametr je `TRUE`, budou nahrazeny všechny tlačítka, které mají ID zadaný příkaz. Na první tlačítko, jinak hodnota je nahrazena.  
+ [in] *koule*  
+ Logická hodnota, která určuje, jestli se má nahradit všechna tlačítka, které mají určená ID příkazu *uiCmd*. Pokud tento parametr má hodnotu TRUE, jsou nahrazeny všechna tlačítka, které mají ID zadaného příkazu. V opačném případě se nahradí první tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet tlačítka, který se nahrazuje. Tato metoda vrátí hodnotu 0, pokud tlačítko s zadaný příkaz ID neexistuje na panelu nástrojů.  
+ Počet tlačítek, která se nahradí. Tato metoda vrátí hodnotu 0, pokud tlačítko s Identifikátorem zadaný příkaz neexistuje na panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete přidat tlačítka panelu nástrojů, který nelze načíst z prostředků, volejte tuto metodu. Můžete vytvořit tlačítko zástupný symbol v době návrhu a nahraďte tento tlačítko s tlačítkem na vlastní při inicializaci panelu nástrojů. Viz ukázka VisualStudioDemo pro příklad, který používá tato metoda.  
+ Tuto metodu volejte, pokud chcete přidat tlačítka na panelu nástrojů, který nelze načíst ze zdroje. Můžete vytvořit tlačítko zástupný symbol v době návrhu a nahraďte toto tlačítko tlačítka s vlastní při inicializaci panelu nástrojů. Najdete v ukázce VisualStudioDemo Příklad používající tuto metodu.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `ReplaceButton` metoda v `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `ReplaceButton` metodu `CMFCToolBar` třídy. Tento fragment kódu je součástí [IE demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
 ##  <a name="resetall"></a>  CMFCToolBar::ResetAll  
- Všechny panely nástrojů se obnoví do původního stavu.  
+ Obnoví všechny panely nástrojů do původního stavu.  
   
 ```  
 static void __stdcall ResetAll();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) metoda na každý nástrojů v aplikaci, kterou lze obnovit. Použije [CMFCToolBar::CanBeRestored](#canberestored) metoda k určení, zda může být obnovena panelu nástrojů.  
+ Tato metoda volá [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) metodu na každý panel nástrojů v aplikaci, která může být obnovena. Používá [CMFCToolBar::CanBeRestored](#canberestored) metodou ke zjištění, zda je možné obnovit panelu nástrojů.  
   
 ##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages  
- Vymaže všechny kolekce obrázku panelu nástrojů v aplikaci.  
+ Vymaže všechny kolekce obrázků panelu nástrojů v aplikaci.  
   
 ```  
 static void __stdcall ResetAllImages();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vymaže kolekce bitové kopie, které se inicializuje pomocí [CMFCToolBar::LoadToolBar](#loadtoolbar) a [CMFCToolBar::LoadBitmap](#loadbitmap) metody.  
+ Tato metoda odstraní image kolekce, které jsou inicializovány [CMFCToolBar::LoadToolBar](#loadtoolbar) a [CMFCToolBar::LoadBitmap](#loadbitmap) metody.  
   
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages  
 
@@ -2773,12 +2773,12 @@ virtual BOOL RestoreOriginalState();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda bude úspěšná, nebo `FALSE` Pokud metoda selže nebo panelu nástrojů je definovaný uživatelem.  
+ TRUE, pokud metoda uspěje, nebo FALSE, pokud je metoda neúspěšná nebo na panelu nástrojů je definovaný uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte panelu nástrojů ze zdrojového souboru pomocí [CMFCToolBar::LoadToolBar](#loadtoolbar) metoda.  
+ Tato metoda načte panel nástrojů ze souboru prostředků s použitím [CMFCToolBar::LoadToolBar](#loadtoolbar) metody.  
   
- Rozhraní framework volá tuto metodu, když uživatel vybere **Obnovit vše** tlačítko **panely nástrojů** stránky dialogového okna přizpůsobení.  
+ Rozhraní volá tuto metodu, když uživatel vybere **Obnovit vše** tlačítko **panely nástrojů** stránky dialogového okna vlastního nastavení.  
   
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters  
 
@@ -2788,14 +2788,14 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="savestate"></a>  CMFCToolBar::SaveState  
- Uloží informace o stavu pro panelu nástrojů v registru systému Windows.  
+ Uloží informace o stavu pro panel nástrojů v registru Windows.  
   
 ```  
 virtual BOOL SaveState(
@@ -2805,20 +2805,20 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
  Určuje relativní cestu klíče registru Windows.  
   
- [v] *nIndex*  
- ID ovládacího panelu nástrojů.  
+ [in] *nIndex*  
+ ID ovládacího prvku panelu nástrojů.  
   
- [v] *uiID*  
+ [in] *uiID*  
  ID prostředku panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když ho uloží stav aplikace do registru. Další informace najdete v tématu [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
+ Rozhraní volá tuto metodu, když ho uloží stav aplikace do registru. Další informace najdete v tématu [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
 ##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands  
  Nastaví seznam příkazů, které se zobrazují vždy, když uživatel otevře nabídku.  
@@ -2828,18 +2828,18 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lstCommands*  
+ [in] *lstCommands*  
  Odkaz na `CList` objekt, který obsahuje kolekci příkazů.  
   
 ### <a name="remarks"></a>Poznámky  
- Základní příkaz se vždy zobrazuje, když je otevřen v nabídce. Tato metoda je důležité, když uživatel vybere možnost zobrazit naposledy použité příkazy.  
+ Základní příkaz se vždy zobrazí, když se otevře nabídka. Tato metoda má smysl, když uživatel zvolí možnost zobrazit naposledy použité příkazy.  
   
- Použití [CMFCToolBar::AddBasicCommand](#addbasiccommand) metodu přidejte příkaz do seznamu základních příkazů. Použití [CMFCToolBar::GetBasicCommands](#getbasiccommands) metoda načíst seznam základních příkazů, které používá vaše aplikace.  
+ Použití [CMFCToolBar::AddBasicCommand](#addbasiccommand) metoda přidání příkazu do seznamu základních příkazů. Použití [CMFCToolBar::GetBasicCommands](#getbasiccommands) metodu pro načtení seznamu základních příkazů, který používá vaše aplikace.  
   
- Viz ukázka Průzkumníka pro příklad, který používá tato metoda.  
+ Viz ukázka Průzkumníka Příklad používající tuto metodu.  
   
 ##  <a name="setbuttoninfo"></a>  CMFCToolBar::SetButtonInfo  
- Nastaví ID příkazu, stylu a ID obrázku tlačítka panelu nástrojů.  
+ Nastaví ID příkazu, styl a ID obrázku tlačítka panelu nástrojů.  
   
 ```  
 void SetButtonInfo(
@@ -2850,24 +2850,24 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index založený na nule tlačítka, jehož vlastnosti jsou nastavené.  
+ [in] *nIndex*  
+ Index založený na nule tlačítko, jehož vlastnosti jsou nastavené.  
   
- [v] *nID*  
- ID příkazu tlačítka.  
+ [in] *nID*  
+ Identifikátor příkazu tlačítka.  
   
- [v] *nStyle*  
- Styl tlačítko. V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam styly tlačítek panelu nástrojů k dispozici.  
+ [in] *nStyle*  
+ Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
   
- [v] *iImage*  
- Index počítaný od nuly obrázku tlačítka (tedy indexu v kolekci obrázků panelu nástrojů).  
+ [in] *iImage*  
+ Index založený na nule obrázku tlačítka (to znamená, indexu v kolekci obrázků panelu nástrojů).  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze nastavit vlastnosti tlačítka panelu nástrojů.  
   
- V sestavení pro ladění, tato metoda generuje chybu assertion Pokud indexu, která je zadána *nIndex* je neplatný.  
+ V sestavení ladění, tato metoda generuje selhání kontrolního výrazu, pokud indexu, pro který je určen *nIndex* je neplatný.  
   
- Volání [CMFCToolBar::SetButtonStyle](#setbuttonstyle) metodu a nastavit pouze na styl tlačítka.  
+ Volání [CMFCToolBar::SetButtonStyle](#setbuttonstyle) metody nastavte styl tlačítka.  
   
 ##  <a name="setbuttons"></a>  CMFCToolBar::SetButtons  
  Nastaví tlačítka panelu nástrojů.  
@@ -2880,25 +2880,25 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpIDArray*  
- Ukazatel na pole ID příkazů tlačítek k vložení.  
+ [in] *lpIDArray*  
+ Ukazatele na pole ID příkazů tlačítek pro vložení.  
   
- [v] *nIDCount*  
+ [in] *nIDCount*  
  Počet položek v *lpIDArray*.  
   
- [v] *bRemapImages*  
- Logická hodnota, která určuje, zda chcete stávající Image tlačítko přidružit vložené tlačítek. Pokud tento parametr je `TRUE`, jsou mapovány bitové kopie.  
+ [in] *bRemapImages*  
+ Logická hodnota, která určuje, jestli se má přidružit existující obrázky tlačítek vložené tlačítka. Pokud tento parametr má hodnotu TRUE, jsou mapovány obrázky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem odeberte existující tlačítek z panelu nástrojů a vložte kolekce nová tlačítka.  
+ Volejte tuto metodu za účelem odebrání existující tlačítek z panelu nástrojů a vložit kolekce nová tlačítka.  
   
- Tato metoda přidá **přizpůsobit** tlačítko panelu nástrojů a zasílá AFX_WM_RESETTOOLBAR zprávy do nadřazeného okna panelu nástrojů. Další informace o **přizpůsobit** tlačítko najdete v tématu [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
+ Tato metoda přidá **vlastní** tlačítko na panelu nástrojů a odešle AFX_WM_RESETTOOLBAR zpráva do nadřazené okno panelu nástrojů. Další informace o **vlastní** tlačítko, naleznete v tématu [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
 ##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
- Nastavuje styl tlačítka panelu nástrojů na danou indexu.  
+ Nastaví styl tlačítka panelu nástrojů na daném indexu.  
   
 ```  
 virtual void SetButtonStyle(
@@ -2907,14 +2907,14 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index založený na nule tlačítka panelu nástrojů, jehož styl má být nastavena.  
+ [in] *nIndex*  
+ Z nuly vycházející index panelu nástrojů, jehož styl, je možné nastavit.  
   
- [v] *nStyle*  
- Styl tlačítko. V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam styly tlačítek panelu nástrojů k dispozici.  
+ [in] *nStyle*  
+ Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odebere `TBBS_PRESSED` styl Pokud `nStyle` je `TBBS_DISABLED` kvůli uživatele nelze klikněte na tlačítko zakázané.  
+ Tato metoda odstraní styl TBBS_PRESSED Pokud *nStyle* je TBBS_DISABLED, protože uživatel nelze kliknout na tlačítko zakázané.  
   
 ##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText  
  Nastaví textový popisek tlačítka panelu nástrojů.  
@@ -2926,20 +2926,20 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index tlačítka panelu nástrojů.  
+ [in] *nIndex*  
+ Index panelu nástrojů.  
   
- [v] *lpszText*  
- Textový popisek tlačítka panelu nástrojů. Musí být jinou hodnotu než `NULL`.  
+ [in] *lpszText*  
+ Textový popisek tlačítka panelu nástrojů. Musí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda úspěšně. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vrátí hodnotu `FALSE` Pokud zadaný index neodkazuje na platný panelu nástrojů tlačítko.  
+ Tato metoda vrátí hodnotu FALSE, pokud zadaný index neodkazuje na platný tlačítka.  
   
 ##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions  
- Určuje, kdy zřídka používané příkazy se nezobrazí v nabídce aplikace.  
+ Určuje, kdy se zřídka používané příkazy nezobrazí v nabídce aplikace.  
   
 ```  
 static BOOL SetCommandUsageOptions(
@@ -2948,50 +2948,50 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nStartCount*  
- Určuje počet pokusů, které příkazy, je třeba spustit před rozhraní zobrazuje pouze základní a naposledy použitých příkazy.  
+ [in] *nStartCount*  
+ Určuje, kolikrát, která příkazů musí být provedeny před rozhraní obsahuje pouze základní a naposledy použité příkazy.  
   
- [v] *nMinUsagePercentage*  
- Procento doby, které je třeba spustit příkaz, aby byla považována za příkaz nedávno použité.  
+ [in] *nMinUsagePercentage*  
+ Procento případů, kdy je třeba spustit příkaz aby byla považována za příkaz naposledy použitých.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `FALSE` Pokud *nMinUsagePercentage* je rovna nebo větší než 100; jinak hodnota `TRUE`.  
+ FALSE v případě *nMinUsagePercentage* je roven nebo větší než 100; v opačném případě TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem přizpůsobení algoritmus, který zobrazí framework používá k určení jak základní a naposledy použité položky nabídky. Další informace o základních příkazů najdete v tématu [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
+ Volejte tuto metodu za účelem přizpůsobení algoritmus, který se zobrazí rozhraní framework používá k určení jak základní a naposledy použitých položek nabídky. Další informace o základních příkazů najdete v tématu [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
   
- Tato třída se používá `CMFCCmdUsageCount` třída sledovat počet použití příkazů. Další informace o této třídy najdete v tématu [CMFCCmdUsageCount třída](../../mfc/reference/cmfccmdusagecount-class.md).  
+ Tato třída používá `CMFCCmdUsageCount` třídy můžete sledovat počet použití příkazů. Další informace o této třídy najdete v tématu [cmfccmdusagecount – třída](../../mfc/reference/cmfccmdusagecount-class.md).  
   
 ##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode  
- Povolí nebo zakáže režimu vlastní nastavení pro všechny panely nástrojů v aplikaci.  
+ Povolí nebo zakáže režim přizpůsobení pro všechny panely nástrojů v aplikaci.  
   
 ```  
 static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bSet*  
- Logická hodnota, která určuje, zda chcete povolit nebo zakázat režim přizpůsobení. Tento parametr nastavte na `TRUE` povolení režimu přizpůsobení nebo `FALSE` ji zakázat.  
+ [in] *bSet*  
+ Logická hodnota, která určuje, jestli se má povolit nebo zakázat režim úprav. Nastavte tento parametr na hodnotu PRAVDA, povolte režim úprav, nebo hodnotu NEPRAVDA pro jeho zakázání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tuto metodu zavoláte změny režimu přizpůsobení; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud volání této metody změní režim úprav; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda upraví rozložení a překreslí každý panelu nástrojů v aplikaci. Volání [CMFCToolBar::IsCustomizeMode](#iscustomizemode) k určení, zda je v režimu vlastní nastavení aplikace – metoda  
+ Tato metoda upraví rozložení a překreslí každý panel nástrojů v aplikaci. Volání [CMFCToolBar::IsCustomizeMode](#iscustomizemode) metodou ke zjištění, zda je aplikace v režimu úprav  
   
 ##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons  
- Určuje, zda jsou k dispozici tlačítka na panelu nástrojů neaktivní nebo jestli není k dispozici tlačítko Image se používají.  
+ Určuje, zda jsou neaktivní není k dispozici tlačítka na panelu nástrojů nebo zda není k dispozici tlačítko Image se používají.  
   
 ```  
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bGrayDisabledButtons*  
- Logická hodnota, která určuje, jak se zobrazení není k dispozici tlačítek. Pokud tento parametr je `TRUE`, rozhraní ztlumí tlačítka. Rozhraní používá, jinak hodnota kolekce k dispozici tlačítko bitové kopie.  
+ [in] *bGrayDisabledButtons*  
+ Logická hodnota, která určuje způsob zobrazení není k dispozici tlačítka. Pokud tento parametr má hodnotu TRUE, rozhraní ztmavnou tlačítek. V opačném případě rozhraní používá kolekce není k dispozici tlačítko imagí.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení jsou k dispozici tlačítka neaktivní.  
+ Ve výchozím nastavení jsou neaktivní není k dispozici tlačítka.  
   
 ##  <a name="setheight"></a>  CMFCToolBar::SetHeight  
  Nastaví výšku panelu nástrojů.  
@@ -3001,11 +3001,11 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *cyHeight*  
+ [in] *cyHeight*  
  Výška panelu nástrojů v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda překreslí panelu nástrojů, jakmile ji nastaví výšku.  
+ Tato metoda překreslí panelu nástrojů po Nastaví výšku.  
   
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode  
 
@@ -3015,7 +3015,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Pozvánka*  
+ [in] *Šťastnou*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3027,41 +3027,41 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pMenuButton*  
+ [in] *pMenuButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder  
- Určuje, zda tlačítka panelu nástrojů jsou sledovány za provozu.  
+ Určuje, zda tlačítka na panelu nástrojů jsou sledovány za běhu.  
   
 ```  
 void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bShowHotBorder*  
- Logická hodnota, která určuje, zda hot sledovat tlačítka panelu nástrojů. Pokud tento parametr je `TRUE`, panelu nástrojů horkou sleduje jeho tlačítka. Jinak hodnota panelu nástrojů nejsou hot sledovat jeho tlačítka.  
+ [in] *bShowHotBorder*  
+ Logická hodnota, která určuje, jestli se má horkou průběh tlačítka na panelu nástrojů. Pokud tento parametr má hodnotu TRUE, panel nástrojů horká stop jeho tlačítka. V opačném případě panelu nástrojů nejsou horká sledování jeho tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je tlačítko sledovat za provozu, označuje rozhraní tlačítko při přesunu napříč ho myši. Ve výchozím nastavení každou nástrojů horkou sleduje jeho tlačítka.  
+ Pokud je tlačítko horkou sledovat, rozhraní zvýrazní tlačítko při pohybu myši přes tuto. Ve výchozím nastavení každý nástrojů horká sleduje jeho tlačítka.  
   
- Volání [CMFCToolBar::GetHotBorder](#gethotborder) metoda k určení zda panelu nástrojů horkou sleduje jeho tlačítka.  
+ Volání [CMFCToolBar::GetHotBorder](#gethotborder) metodou ke zjištění, zda nástrojů horká stop jeho tlačítka.  
   
 ##  <a name="sethottextcolor"></a>  CMFCToolBar::SetHotTextColor  
- Nastaví barvu textu pro tlačítka panelu nástrojů aktivní.  
+ Nastaví barvu textu pro tlačítka panelu nástrojů hot.  
   
 ```  
 static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *clrText*  
- Určuje barvu textu pro tlačítka panelu nástrojů, které jsou sledovány za provozu.  
+ [in] *clrText*  
+ Určuje barvu textu pro tlačítka panelu nástrojů, které jsou sledovány za běhu.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o tlačítka panelu nástrojů sledovat za provozu najdete v tématu [CMFCToolBar::GetHotBorder](#gethotborder) a [CMFCToolBar::SetHotBorder](#sethotborder).  
+ Další informace o hot sledovat tlačítka, naleznete v tématu [CMFCToolBar::GetHotBorder](#gethotborder) a [CMFCToolBar::SetHotBorder](#sethotborder).  
   
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText  
 
@@ -3071,30 +3071,30 @@ void SetIgnoreSetText(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bValue*  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons  
- Určuje, zda tlačítka panelu nástrojů zobrazení velkých ikon.  
+ Určuje, jestli tlačítka na panelu nástrojů zobrazovat velké ikony.  
   
 ```  
 static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bLargeIcons*  
- Logická hodnota, která určuje, které ikony použít. Pokud tento parametr je `TRUE`, rozhraní zobrazí ikony. velké ikony. Rozhraní, jinak hodnota zobrazí regulární ikony.  
+ [in] *bLargeIcons*  
+ Logická hodnota, která určuje, jaké ikony použít. Pokud tento parametr má hodnotu TRUE, zobrazí rozhraní velké ikony. V opačném případě zobrazí rozhraní pravidelně ikony.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když uživatel změní stav **ikony. velké ikony** zaškrtávací políčko **možnosti** kartě **přizpůsobit** dialogové okno. Tato metoda změní velikost všech panelů nástrojů v aplikaci.  
+ Rozhraní volá tuto metodu, když uživatel změní stav **velké ikony** zaškrtávací políčko **možnosti** karty **vlastní** dialogové okno. Tato metoda mění velikost všech panelů nástrojů v aplikaci.  
   
- Ve výchozím nastavení zobrazí rozhraní regulární ikony.  
+ Ve výchozím nastavení zobrazí rozhraní pravidelně ikony.  
   
- Další informace o **přizpůsobit** dialogové okno, najdete v části [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ Další informace o **vlastní** dialogovém okně naleznete v tématu [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ##  <a name="setlockedsizes"></a>  CMFCToolBar::SetLockedSizes  
- Nastaví velikosti uzamčeném tlačítka a uzamčeném obrázků na panelu nástrojů.  
+ Nastaví velikosti uzamčené tlačítka a uzamčené obrázků na panelu nástrojů.  
   
 ```  
 void SetLockedSizes(
@@ -3104,19 +3104,19 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *sizeButton*  
- Určuje velikost tlačítka panelu nástrojů uzamčení.  
+ [in] *sizeButton*  
+ Určuje velikost tlačítka na panelu nástrojů uzamčené.  
   
- [v] *sizeImage*  
- Určuje velikost obrázků uzamčeném panelu nástrojů.  
+ [in] *sizeImage*  
+ Určuje velikost obrázků uzamčené nástrojů.  
   
  *bDontScale*  
- Určuje, zda škálování nebo nejsou uzamčeny obrázků panelu nástrojů v režimu vysoké DPI.  
+ Určuje, zda škálování nebo není uzamčen obrázky panelu nástrojů v režimu vysoké rozlišení DPI.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí velikost uzamčeném tlačítek je 23 × 22 pixelů. Výchozí velikost uzamčeném bitových kopií je 16 x 15 pixelů.  
+ Výchozí velikost uzamčené tlačítek je 23 × 22 pixelů. Výchozí velikost uzamčené imagí je 16 × 15 pixelů.  
   
- Volání [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) uzamčení metoda pro načtení velikost bitové kopie. Volání [CMFCToolBar::GetButtonSize](#getbuttonsize) metoda pro načtení velikost uzamčení tlačítka panelu nástrojů.  
+ Volání [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) metody k získání velikosti uzamčen bitové kopie. Volání [CMFCToolBar::GetButtonSize](#getbuttonsize) metody k získání velikosti uzamčen tlačítka na panelu nástrojů.  
   
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode  
 
@@ -3126,7 +3126,7 @@ void SetMaskMode(BOOL bMasked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bMasked*  
+ [in] *bMasked*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3140,48 +3140,48 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *sizeButton*  
+ [in] *sizeButton*  
  Určuje velikost tlačítka panelu nástrojů v pixelech.  
   
- [v] *sizeImage*  
+ [in] *sizeImage*  
  Určuje velikost obrázků panelu nástrojů v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení nabídky tlačítka a jejich obrázků mají nedefinované velikost.  
+ Ve výchozím nastavení mají nedefinovaný velikost tlačítka nabídky a jejich bitové kopie.  
   
- Volání [CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize) metoda k určení velikosti nabídky, tlačítek a [CMFCToolBar::GetMenuImageSize](#getmenuimagesize) metoda k určení velikosti obrázků tlačítka nabídky.  
+ Volání [CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize) metodou ke zjištění velikost tlačítka nabídky a [CMFCToolBar::GetMenuImageSize](#getmenuimagesize) metodu pro určení velikosti obrázky tlačítka nabídky.  
   
- Prohlédněte IEDemo a MSMoneyDemo příklady, které používají tuto metodu.  
+ Najdete v ukázkách IEDemo a MSMoneyDemo příklady, které používají tuto metodu.  
   
 ##  <a name="setnonpermittedcommands"></a>  CMFCToolBar::SetNonPermittedCommands  
- Nastaví seznam příkazů, které nelze provést uživatelem.  
+ Nastaví seznam příkazů, které uživatel nemůže provést.  
   
 ```  
 static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lstCommands*  
- Odkaz na `CList` objekt, který obsahuje příkazy, které nelze provést uživatelem.  
+ [in] *lstCommands*  
+ Odkaz na `CList` objekt, který obsahuje příkazy, které uživatel nemůže provést.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem zabránění uživatele ve výběru některé příkazy. Například můžete chtít zabránit tomu, aby uživatel vybírat určité příkazy z bezpečnostních důvodů. Prohlédněte MDITabsDemo a MenuSubSet příklady, které používají tuto metodu.  
+ Voláním této metody lze zabránit uživateli v výběrem některé příkazy. Můžete například chtít zabránit uživateli v výběrem některé příkazy z bezpečnostních důvodů. Najdete v ukázkách MDITabsDemo a MenuSubSet příklady, které používají tuto metodu.  
   
- Tato metoda vymaže předchozí seznam příkazů, není povolené. Ve výchozím nastavení je prázdný seznam příkazů, není povolené.  
+ Tato metoda odstraní předchozí seznam příkazů není povolené. Ve výchozím nastavení je prázdný seznam příkazů není povolené.  
   
 ##  <a name="setonerowwithsibling"></a>  CMFCToolBar::SetOneRowWithSibling  
- Umisťuje panelu nástrojů a jeho na stejné úrovni na stejný řádek.  
+ Na stejném řádku se umístí panelu nástrojů a jejich na stejné úrovni.  
   
 ```  
 void SetOneRowWithSibling();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když uživatel klikne **zobrazit tlačítka na jeden řádek** tlačítko.  
+ Rozhraní volá tuto metodu, když uživatel klikne **zobrazit tlačítka na jeden řádek** tlačítko.  
   
- Volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) způsob povolení **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka. Když zavoláte [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) tento panel nástrojů, panelu nástrojů na stejné úrovni jako je přesunuta do řádek tohoto panelu nástrojů. Tento panel nástrojů, jinak je přesunuta do řádek na stejné úrovni.  
+ Volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) metoda umožňuje **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka. Při volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) pro tento panel nástrojů panelu nástrojů na stejné úrovni přesune na řádek tohoto panelu nástrojů. V opačném případě tento panel nástrojů se přesune na řádek na stejné úrovni.  
   
- Volání framework [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling) metoda, když uživatel klikne **zobrazit tlačítka ve dvou řádcích** tlačítko.  
+ Rámec volá [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling) metodu, když uživatel klikne **zobrazit tlačítka ve dvou řádcích** tlačítko.  
   
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons  
 
@@ -3191,76 +3191,76 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lstOrigButtons*  
+ [in] *lstOrigButtons*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpermament"></a>  CMFCToolBar::SetPermament  
- Určuje, zda uživatel můžete zavřít panelu nástrojů.  
+ Určuje, zda uživatel můžete zavřít panel nástrojů.  
   
 ```  
 void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bPermament*  
- Logická hodnota, která určuje, zda uživatel můžete zavřít panelu nástrojů. Pokud tento parametr je `TRUE`, uživatel nemůže zavřít panelu nástrojů. Uživatele můžete zavřít, jinak hodnota panelu nástrojů.  
+ [in] *bPermament*  
+ Logická hodnota určující, zda uživatel můžete zavřít panel nástrojů. Pokud tento parametr má hodnotu TRUE, uživatel nezavře panelu nástrojů. Uživatel, v opačném případě můžete zavřít panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení můžete uživatele zavřít každý panelu nástrojů.  
+ Ve výchozím nastavení můžete zavřít uživatel každý panel nástrojů.  
   
- Volání [CMFCToolBar::CanBeClosed](#canbeclosed) metoda k určení, zda uživatel můžete zavřít panelu nástrojů.  
+ Volání [CMFCToolBar::CanBeClosed](#canbeclosed) metodou ke zjištění, jestli uživatel může zavřít panelu nástrojů.  
   
 ##  <a name="setroutecommandsviaframe"></a>  CMFCToolBar::SetRouteCommandsViaFrame  
- Určuje, zda nadřazeného rámce nebo vlastník odešle příkazy na panelu nástrojů.  
+ Určuje, zda nadřazeného rámce nebo vlastník odesílá příkazy do panelu nástrojů.  
   
 ```  
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bValue*  
- Pokud tento parametr je `TRUE`, nadřazeného rámce odešle příkazy na panelu nástrojů. Vlastník, jinak hodnota odešle příkazy na panelu nástrojů.  
+ [in] *bValue*  
+ Pokud tento parametr má hodnotu TRUE, nadřazeného rámce odesílá příkazy do panelu nástrojů. V opačném případě vlastník odesílá příkazy do panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení odešle nadřazeného rámce příkazy na panelu nástrojů. Volání [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) metoda k určení, zda má nadřazeného rámce nebo vlastník odesílat příkazy panelu nástrojů.  
+ Ve výchozím nastavení nadřazeného rámce odesílá příkazy do panelu nástrojů. Volání [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) metodou ke zjištění, zda nadřazeného rámce nebo vlastník odesílá příkazy do panelu nástrojů.  
   
 ##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips  
- Určuje, zda rozhraní zobrazí popisy.  
+ Určuje, zda rozhraní zobrazuje popisy tlačítek.  
   
 ```  
 static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bValue*  
- Pokud tento parametr je `TRUE`, rozhraní zobrazuje popisy. Rozhraní, jinak hodnota skryje popisy.  
+ [in] *bValue*  
+ Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje popisy tlačítek. V opačném případě rozhraní se skryje možnost popisů tlačítek.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení zobrazuje popisy rozhraní.  
+ Ve výchozím nastavení zobrazuje rozhraní popisů tlačítek.  
   
- Volání [CMFCToolBar::GetShowTooltips](#getshowtooltips) metoda k určení, zda rozhraní zobrazuje popisy.  
+ Volání [CMFCToolBar::GetShowTooltips](#getshowtooltips) metodou ke zjištění, zda rozhraní zobrazuje popisy tlačítek.  
   
 ##  <a name="setsiblingtoolbar"></a>  CMFCToolBar::SetSiblingToolBar  
- Určuje na stejné úrovni panelu nástrojů.  
+ Určuje, na stejné úrovni z panelu nástrojů.  
   
 ```  
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBrotherToolbar*  
+ [in] *pBrotherToolbar*  
  Ukazatel na panelu nástrojů na stejné úrovni.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda umožňuje **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, která se zobrazí, když uživatel zobrazí **přizpůsobit** místní nabídky. Volejte tuto metodu, pokud chcete zajistit, aby uživatel k určení, zda se mají zobrazovat související panely nástrojů na stejném řádku nebo na různé řádky.  
+ Tato metoda umožňuje **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka, která se zobrazí, když uživatel zobrazí **vlastní** rozbalovací nabídky. Tuto metodu volejte, pokud chcete povolit uživatele, aby určil, zda se zobrazí související panelů nástrojů na stejném řádku nebo na různé řádky.  
   
- Volat tuto metodu, povolíte **přizpůsobit** tlačítka, který se zobrazí na panelu nástrojů. Chcete-li povolit **přizpůsobit** tlačítko, volání [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metoda.  
+ Tuto metodu volat po povolení **vlastní** tlačítko, které se zobrazí na panelu nástrojů. Povolit **vlastní** tlačítko, volání [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) metody.  
   
- Chcete-li načíst panelu nástrojů na stejné úrovni, volejte [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).  
+ Chcete-li načíst na stejné úrovni panelu nástrojů, zavolejte [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).  
   
 ##  <a name="setsizes"></a>  CMFCToolBar::SetSizes  
- Určuje velikost tlačítek a bitové kopie na všechny panely nástrojů.  
+ Určuje velikost tlačítka a obrázků na všechny panely nástrojů.  
   
 ```  
 static void __stdcall SetSizes(
@@ -3269,19 +3269,19 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *sizeButton*  
+ [in] *sizeButton*  
  Velikost tlačítka panelu nástrojů v pixelech.  
   
- [v] *sizeImage*  
- Velikost obrázku pro tlačítko panelu nástrojů, v pixelech.  
+ [in] *sizeImage*  
+ Velikost obrázku tlačítka panelu nástrojů, v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí velikost tlačítka panelu nástrojů je 23 × 22 pixelů. Výchozí velikost panelu nástrojů tlačítko obrázků je 16 x 15 pixelů.  
+ Výchozí velikost tlačítka na panelu nástrojů je 23 × 22 pixelů. Výchozí velikost obrázky tlačítka panelu nástrojů je 16 × 15 pixelů.  
   
- Volání [CMFCToolBar::GetImageSize](#getimagesize) metoda pro načtení velikost obrázků tlačítka panelu nástrojů. Volání [CMFCToolBar::GetButtonSize](#getbuttonsize) metoda pro načtení velikost tlačítka panelu nástrojů.  
+ Volání [CMFCToolBar::GetImageSize](#getimagesize) metody k získání velikosti obrázky tlačítka panelu nástrojů. Volání [CMFCToolBar::GetButtonSize](#getbuttonsize) metody, aby se načetla velikost tlačítka na panelu nástrojů.  
   
 ##  <a name="settoolbarbtntext"></a>  CMFCToolBar::SetToolBarBtnText  
- Určuje vlastností tlačítka na panelu nástrojů.  
+ Určuje vlastnosti tlačítka na panelu nástrojů.  
   
 ```  
 void SetToolBarBtnText(
@@ -3292,62 +3292,62 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nBtnIndex*  
- Index založený na nule v seznamu tlačítka panelu nástrojů zobrazí tlačítko panelu nástrojů.  
+ [in] *nBtnIndex*  
+ Z nuly vycházející index panelu nástrojů v seznamu tlačítka na panelu nástrojů.  
   
- [v] *szText*  
+ [in] *szText*  
  Určuje textový popisek tlačítka panelu nástrojů.  
   
- [v] *bShowText*  
- Pokud tento parametr je `TRUE`, rozhraní určuje textový popisek. Rozhraní, jinak hodnota skryje textový popisek.  
+ [in] *bShowText*  
+ Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje textový popisek. V opačném případě rozhraní se skryje možnost textový popisek.  
   
- [v] *bShowImage*  
- Pokud tento parametr je `TRUE`, rozhraní znázorňuje obrázek tlačítka panelu nástrojů. Rozhraní, jinak hodnota skryje obrázek tlačítka panelu nástrojů.  
+ [in] *bShowImage*  
+ Pokud tento parametr je hodnota TRUE, rozhraní zobrazuje obrázek tlačítka panelu nástrojů. V opačném případě rozhraní se skryje možnost obrázku tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení rozhraní ukazuje bitové kopie tlačítka panelu nástrojů ale nezobrazuje textový popisek tlačítek panelu nástrojů.  
+ Ve výchozím nastavení rozhraní zobrazuje obrázky tlačítka panelu nástrojů, ale nezobrazuje textový popisek tlačítka na panelu nástrojů.  
   
- V sestavení pro ladění, tato metoda generuje chybu assertion Pokud *nBtnIndex* neodkazuje na platný panelu nástrojů tlačítko panelu nástrojů nebo je oddělovač.  
+ V sestavení ladění, tato metoda generuje selhání kontrolního výrazu, pokud *nBtnIndex* neodkazuje na platný panel nástrojů nebo tlačítko panelu nástrojů je oddělovač.  
   
 ##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling  
- Umisťuje panelu nástrojů a jeho na stejné úrovni na samostatné řádky.  
+ Panel nástrojů a jejich na stejné úrovni se umístí na samostatné řádky.  
   
 ```  
 void SetTwoRowsWithSibling();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když uživatel klikne **zobrazit tlačítka ve dvou řádcích** tlačítko.  
+ Rozhraní volá tuto metodu, když uživatel klikne **zobrazit tlačítka ve dvou řádcích** tlačítko.  
   
- Volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) způsob povolení **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka. Když zavoláte [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) tento panel nástrojů, panelu nástrojů na stejné úrovni přesunuli na samostatném řádku. Tento panel nástrojů, jinak je přesunout na samostatný řádek.  
+ Volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) metoda umožňuje **zobrazit tlačítka na jeden řádek** nebo **zobrazit tlačítka ve dvou řádcích** tlačítka. Při volání [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) pro tento panel nástrojů panelu nástrojů na stejné úrovni přesune na samostatném řádku. V opačném případě tento panel nástrojů se přesune na samostatném řádku.  
   
- Volání framework [CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling) metoda, když uživatel klikne **zobrazit tlačítka na jeden řádek** tlačítko.  
+ Rámec volá [CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling) metodu, když uživatel klikne **zobrazit tlačítka na jeden řádek** tlačítko.  
   
 ##  <a name="setuserimages"></a>  CMFCToolBar::SetUserImages  
- Nastaví kolekci uživatelem definované bitové kopie v aplikaci.  
+ Nastaví kolekci uživatelem definované obrázky v aplikaci.  
   
 ```  
 static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pUserImages*  
- Ukazatel na kolekci uživatelská Image.  
+ [in] *pUserImages*  
+ Ukazatel na kolekci uživatelem definované obrázky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. v opačném případě 0, pokud zadaný `CMFCToolBarImages` objekt není platný nebo je-li velikost bitové kopie, který se liší od výchozí velikost obrázku panelu nástrojů.  
+ Nenulové, pokud metoda uspěje; v opačném případě 0, pokud zadaný `CMFCToolBarImages` objektu je neplatný nebo má velikost obrázku, který se liší od výchozí velikost obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Systém použije k vykreslení tlačítka panelu nástrojů, které jsou přizpůsobené uživatelem uživatelská Image. Seznam obrázků určeného *pUserImages* sdílí všechny panely nástrojů v aplikaci.  
+ Rozhraní používá uživatelem definované obrázky pro kreslení tlačítka na panelu nástrojů, které jsou přizpůsobené uživatelem. Seznam obrázků určené *pUserImages* je sdílen mezi všechny panely nástrojů v aplikaci.  
   
- Tato metoda generuje chybu assertion u sestavení ladicí verze, pokud zadaný `CMFCToolBarImages` objekt není platný nebo je-li velikost bitové kopie, který se liší od výchozí velikost obrázku panelu nástrojů.  
+ Tato metoda generuje chybu kontrolní výraz v sestavení ladění, pokud zadaný `CMFCToolBarImages` objektu je neplatný nebo má velikost obrázku, který se liší od výchozí velikost obrázků panelu nástrojů.  
   
- Ukázky OutlookDemo, ToolTipDemo a VisualStudioDemo tuto metodu použijte k nastavení globální kolekce uživatelské Image. Se načíst soubor s názvem UserImages.bmp, který je umístěný v pracovním adresáři aplikace.  
+ Ukázky OutlookDemo ToolTipDemo a VisualStudioDemo pomocí této metody můžete nastavit globální kolekci uživatelem definované obrázky. Načten soubor s názvem UserImages.bmp, který je umístěn v pracovním adresáři aplikace.  
   
- Volání [CMFCToolBar::GetUserImages](#getuserimages) metoda pro načtení kolekce uživatelem definované bitové kopie v aplikaci.  
+ Volání [CMFCToolBar::GetUserImages](#getuserimages) metodu pro načtení kolekce uživatelem definované obrázky v aplikaci.  
   
 ##  <a name="stretchpane"></a>  CMFCToolBar::StretchPane  
- Roztahovány panelu nástrojů vodorovně nebo svisle a přemístí tlačítek v případě potřeby.  
+ Vertikálně nebo horizontálně roztáhne panelu nástrojů a přemístí tlačítek v případě potřeby.  
   
 ```  
 virtual CSize StretchPane(
@@ -3356,52 +3356,52 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nLength*  
- Velikost v pixelech, podle kterého k roztahování podokně.  
+ [in] *nLength*  
+ Velikost v pixelech, podle kterého chcete roztáhnout podokna.  
   
- [v] *bVert*  
- Pokud `TRUE`, v podokně roztahovány svisle. Pokud `FALSE`, roztahovány podokně vodorovně.  
+ [in] *bVert*  
+ Při hodnotě TRUE se roztáhne podokna svisle. Pokud má hodnotu FALSE, roztáhne podokna vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` objekt, který určuje velikost panelu nástrojů klientské oblasti.  
+ A `CSize` objekt, který určuje velikost klientské oblasti panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [CMFCToolBar::WrapToolBar](#wraptoolbar) aby přemístil tlačítka v rámci roztažené panelu nástrojů.  
+ Tato metoda volá [CMFCToolBar::WrapToolBar](#wraptoolbar) můžete přemístit tlačítka v roztažených nástrojů.  
   
- Návratová hodnota je určena voláním [CMFCToolBar::CalcSize](#calcsize).  
+ Vrácená hodnota je určena voláním [CMFCToolBar::CalcSize](#calcsize).  
   
 ##  <a name="translatechar"></a>  CMFCToolBar::TranslateChar  
- Spustí příkaz tlačítko, pokud zadaný klíč kód odpovídá platné klávesové zkratky.  
+ Spustí příkaz tlačítko, pokud zadaný kód odpovídá platný klávesové zkratky.  
   
 ```  
 virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nChar*  
- Určuje virtuální klíče kódu. Seznam kódů standardní virtuální klíčů najdete v tématu winuser  
+ [in] *nChar*  
+ Určuje kód virtuální klávesy. Seznam kódů standardní virtuální klíče najdete v tématu winuser  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `FALSE` Pokud zadaný klíč kód je buď netisknutelné nebo neodpovídá platné klávesové zkratky; `TRUE` Pokud zadaný klíč kód odpovídá z rozevírací nabídky; jinak, návratový hodnotu z [CMFCToolBar::ProcessCommand](#processcommand).  
+ FALSE, pokud zadaný kód je buď málo častého netisknutelného nebo neodpovídá platný klávesové zkratky; Hodnota TRUE, pokud zadaný kód odpovídá z rozevírací nabídky; v opačném případě se návratová hodnota z [CMFCToolBar::ProcessCommand](#processcommand).  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při stisknutí klávesy společně s klávesu Alt.  
+ Rozhraní volá tuto metodu, když se stiskne klávesa, společně s klávesu Alt.  
   
 ##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton  
- Aktualizuje stav dané tlačítko.  
+ Aktualizuje stav určeného tlačítka.  
   
 ```  
 void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index založený na nule tlačítko Aktualizovat.  
+ [in] *nIndex*  
+ Určuje index založený na nule na tlačítko Aktualizovat.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar  
- Přemístí tlačítka panelu nástrojů v rámci dané dimenze.  
+ Přemístí tlačítka na panelu nástrojů v rámci dané dimenze.  
   
 ```  
 int WrapToolBar(
@@ -3413,29 +3413,29 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nWindth*  
+ [in] *nWidth*  
  Maximální šířka panelu nástrojů.  
   
- [v] *nHeight*  
- Maximální výška panelu nástrojů. Nepoužívá, pokud je plovoucí panelu nástrojů.  
+ [in] *nHeight*  
+ Maximální výška panelu nástrojů. Není použito, pokud je plovoucí panel nástrojů.  
   
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení. Pokud hodnotu NULL, použije se kontext zařízení pro panelu nástrojů.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení. Pokud má hodnotu NULL, použije se kontext zařízení pro panel nástrojů.  
   
- [v] *nColumnWidth*  
- Šířka tlačítko. Pokud-1, použije se aktuální šířku.  
+ [in] *nColumnWidth*  
+ Šířka tlačítka. Pokud hodnotu-1, použije se aktuální šířka.  
   
- [v] m *nRowHeight*  
- Výška tlačítko. Pokud-1, použije se aktuální výšku.  
+ [in] m *nRowHeight*  
+ Výška tlačítka. Pokud hodnotu-1, použije se aktuální výška.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet řádků tlačítek na panelu nástrojů.  
+ Počet řádků tlačítka na panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přemístí tlačítka v panelu nástrojů zabalení tlačítka na další řádky v případě potřeby.  
+ Tato metoda přemístí tlačítka v panelu nástrojů obtékání tlačítka další řádky v případě potřeby.  
   
 ##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages  
- Určuje, zda chcete škálovat obrázků panelu nástrojů v režimu vysoké DPI.  
+ Určuje, jestli chcete škálovat obrázky panelu nástrojů v režimu vysoké rozlišení DPI.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDontScaleImages;  
@@ -3446,9 +3446,9 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCMenuBar – třída](../../mfc/reference/cmfcmenubar-class.md)   
- [CMFCPopupMenuBar – třída](../../mfc/reference/cmfcpopupmenubar-class.md)   
- [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [Cmfcmenubar – třída](../../mfc/reference/cmfcmenubar-class.md)   
+ [Cmfcpopupmenubar – třída](../../mfc/reference/cmfcpopupmenubar-class.md)   
+ [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
  [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 

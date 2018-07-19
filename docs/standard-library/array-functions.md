@@ -1,5 +1,5 @@
 ---
-title: '&lt;pole&gt; funkce | Microsoft Docs'
+title: '&lt;pole&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961068"
 ---
 # <a name="ltarraygt-functions"></a>&lt;pole&gt; funkce
 
-\<Pole > Hlavička zahrnuje dvě funkce třetí `get` a `swap`, které pracují na `array` objekty.
+\<Pole > záhlaví obsahuje dvě funkce bez členů `get` a `swap`, které pracují na **pole** objekty.
 
 |||
 |-|-|
-|[get](#get)|[Swap](#swap)|
+|[get](#get)|[Prohození](#swap)|
 
-## <a name="get"></a>  GET
+## <a name="get"></a>  získat
 
-Vrátí odkaz na zadaný element pole.
+Vrátí odkaz na zadaný prvek pole.
 
 ```cpp
 template <int Index, class T, size_t N>
@@ -50,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Index` Posunutí elementu.
+*Index* posunutí elementu.
 
-`T` Typ elementu.
+*T* typ elementu.
 
-`N` Počet prvků v poli.
+*N* počet prvků v poli.
 
-`arr` Pole lze vybírat.
+*směrování žádostí na aplikace* pole lze vybírat.
 
 ### <a name="example"></a>Příklad
 
@@ -90,9 +90,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
-Specializace šablony třetí z `std::swap` , dva prohození `array` objekty.
+Specializace šablony nečlenské `std::swap` Prohodí dva **pole** objekty.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Velikost pole.
+*N* velikost pole.
 
-`left` První pole, které chcete prohodit.
+*levé* prvního pole, které chcete prohodit.
 
-`right` Druhé pole chcete prohodit.
+*správné* druhého pole, které chcete prohodit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<pole >](../standard-library/array.md)<br/>

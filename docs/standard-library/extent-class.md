@@ -1,5 +1,5 @@
 ---
-title: Extent – třída | Microsoft Docs
+title: Extent – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843246"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964307"
 ---
 # <a name="extent-class"></a>extent – třída
 
-Získá rozměru pole.
+Získá rozměr pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
-`I` Pole vázán k dotazu.
+*Můžu* pole vázaná k dotazování.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud `Ty` je typ pole, která má nejméně `I` dimenze typu dotaz obsahuje počet elementů v dimenzi určeného `I`. Pokud `Ty` není typu pole nebo je jeho pořadí menší než `I`, nebo pokud `I` rovná nule a `Ty` je typu "pole Neznámý hranice elementu `U`", typ dotazu obsahuje hodnotu 0.
+Pokud *Ty* je typ pole, které mají alespoň *můžu* dimenze, typ dotazu obsahuje počet prvků v dimenzi určené *můžu*. Pokud *Ty* není typem pole nebo jeho pořadí je menší než *můžu*, nebo pokud *můžu* je nula a *Ty* je typu "mez pole neznámé `U` ", dotaz typu obsahuje hodnotu 0.
 
 ## <a name="example"></a>Příklad
 
@@ -74,9 +74,9 @@ extent 1 == 10
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_all_extents – třída](../standard-library/remove-all-extents-class.md)<br/>

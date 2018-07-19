@@ -1,5 +1,5 @@
 ---
-title: collate_byname – třída | Microsoft Docs
+title: collate_byname – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964909"
 ---
 # <a name="collatebyname-class"></a>collate_byname – třída
 
@@ -49,20 +49,20 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` S názvem národní prostředí.
+*_Locname* s názvem národního prostředí.
 
-`_Refs` Počet počáteční odkazů.
+*_Refs* počet počáteční odkazů.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [collate](../standard-library/collate-class.md#collate)\<CharType >. Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [collate](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
+Třída šablony popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [collate](../standard-library/collate-class.md#collate)\<CharType >. Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národní prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [collate](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

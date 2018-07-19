@@ -1,7 +1,7 @@
 ---
-title: '&lt;Atomic&gt; funkce | Microsoft Docs'
+title: '&lt;Atomic&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50e70230dd5b8d9aa61f4df8c1288569192048b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848788"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028314"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkce
 
@@ -92,7 +92,7 @@ ms.locfileid: "33848788"
 
 ## <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong –
 
-Provede atomická operace porovnání a serveru exchange.
+Provádí operaci atomické porovnání a záměna.
 
 ```cpp
 template <class Ty>
@@ -110,23 +110,23 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel *atomické* objekt, který ukládá hodnotu typu `Ty`.
 
-`Exp` Ukazatel na hodnotu typu `Ty`.
+*Exp* ukazatel na hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `bool` určující výsledek porovnání hodnoty.
+**Hodnota TRUE** Pokud jsou hodnoty stejné, jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda provádí atomická operace porovnání a exchange pomocí implicitní `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_strong_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
+Tato metoda provádí operaci atomické porovnání a záměna použitím implicitních `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_strong_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
 
 ## <a name="atomic_compare_exchange_strong_explicit"></a>  atomic_compare_exchange_strong_explicit
 
-Provede *atomic porovnání a exchange* operaci.
+Provádí *atomické porovnání a záměna* operace.
 
 ```cpp
 template <class T>
@@ -148,27 +148,27 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Exp` Ukazatel na hodnotu typu `Ty`.
+*Exp* ukazatel na hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
-`Order1` První [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argument.
+*Order1* první [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
-`Order2` Druhý `memory_order` argument. Hodnota `Order2` nemůže být `memory_order_release` nebo `memory_order_acq_rel`, nemůže být vyšší než hodnota `Order1`.
+*Order2* druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, nemůže být silnější než hodnota *Order1*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `bool` určující výsledek porovnání hodnoty.
+**Hodnota TRUE** Pokud jsou hodnoty stejné, jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-*Atomické operace porovnání a exchange* porovnává hodnotu, která je uložená v objektu, která ukazuje `Atom` s hodnotou, která ukazuje `Exp`. Pokud jsou hodnoty stejné, hodnotou, která je uložená v objektu, která ukazuje `atom` se nahradí `Val` pomocí `read-modify-write` operace a použití paměti pořadí omezení, které jsou určené `Order1`. Pokud tyto hodnoty nebudou stejné, operace nahradí hodnotu, která ukazuje `Exp` s hodnotou, která je uložená v objektu, která ukazuje `Atom` a platí omezení paměti pořadí, které jsou určené `Order2`.
+*Atomická operace porovnání a záměna* porovnává hodnotu uloženou v objektu, který ukazuje *Atom* oproti hodnotě, ukazuje *Exp*. Pokud jsou hodnoty stejné, hodnota, která je uložena v objektu, který ukazuje *atom* nahradí `Val` pomocí `read-modify-write` operace a použití paměti omezení, která jsou určena podle pořadí*Order1*. Pokud nejsou hodnoty stejné, operace nahradí hodnotu, která ukazuje *Exp* s hodnotou, která je uložena v objektu, který ukazuje *Atom* a použije omezení pořadí paměti, které jsou určená *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak –
 
-Provede *weak atomic porovnat a exchange* operaci.
+Provádí *slabé atomické porovnání a výměna* operace.
 
 ```cpp
 template <class Ty>
@@ -186,23 +186,23 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Exp` Ukazatel na hodnotu typu `Ty`.
+*Exp* ukazatel na hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `bool` určující výsledek porovnání hodnoty.
+**Hodnota TRUE** Pokud jsou hodnoty stejné, jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda provádí *weak atomic porovnat a exchange operaci* má implicitní `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_weak_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
+Tato metoda provádí *slabé atomické porovnání a výměna operace* , která má implicitní `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumenty. Další informace najdete v tématu [atomic_compare_exchange_weak_explicit –](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
 
 ## <a name="atomic_compare_exchange_weak_explicit"></a>  atomic_compare_exchange_weak_explicit
 
-Provede *weak atomic porovnat a exchange* operaci.
+Provádí *slabé atomické porovnání a výměna* operace.
 
 ```cpp
 template <class Ty>
@@ -224,29 +224,27 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Exp` Ukazatel na hodnotu typu `Ty`.
+*Exp* ukazatel na hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
-`Order1` První [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) argument.
+*Order1* první [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
-`Order2` Druhý `memory_order` argument. Hodnota `Order2` nemůže být `memory_order_release` nebo `memory_order_acq_rel`, ani může být vyšší než hodnota `Order1`.
+*Order2* druhý `memory_order` argument. Hodnota *Order2* nemůže být `memory_order_release` nebo `memory_order_acq_rel`, ani nemůže být silnější než hodnota *Order1*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `bool` určující výsledek porovnání hodnoty.
+**Hodnota TRUE** Pokud jsou hodnoty stejné, jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-*Atomické operace porovnání a exchange* porovnává hodnotu, která je uložená v objektu, která ukazuje `Atom` s hodnotou, která ukazuje `Exp`. Pokud jsou hodnoty stejné, operace nahradí hodnotu, která je uložená v objektu, která ukazuje `Atom` s `Val` pomocí `read-modify-write` operace a použití omezení paměti pořadí, které jsou určené `Order1`. Pokud tyto hodnoty nebudou stejné, operace nahradí hodnotu, která ukazuje `Exp` s hodnotou, která je uložená v objektu, která ukazuje `Atom` a platí omezení paměti pořadí, které jsou určené `Order2`.
-
-A *slabé* atomické operace porovnání a exchange provede exchange, pokud jsou porovnávané hodnoty rovny. Ale pokud tyto hodnoty nebudou stejné, není zaručena operaci provést exchange.
+Silné a slabé typy z *atomická operace porovnání a záměna* záruky, které jsou v nich uložené novou hodnotu, není-li očekávaným způsobem a je aktuální hodnoty nejsou shodné. Silné charakter zaručuje, že ho uloží novou hodnotu, když očekávaným způsobem a je aktuální hodnoty rovnají. Někdy může vrátit slabé flavor **false** a ukládat je nová hodnota i v případě, že aktuální a očekávané hodnoty jsou stejné. Jinými slovy, funkce vrátí **false**, ale pozdější prozkoumání očekávané hodnoty může odhalit, že nezměnil a proto by měl mít porovnání rovnají.
 
 ## <a name="atomic_exchange"></a>  atomic_exchange –
 
-Používá `Value` nahradit uložené hodnotu `Atom`.
+Používá *hodnotu* k nahrazení uložené hodnoty *Atom*.
 
 ```cpp
 template <class T>
@@ -258,21 +256,21 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Uložené hodnoty z `Atom` před exchange.
+Uložené hodnoty *Atom* před výměnou.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_exchange` Provádí funkce `read-modify-write` operaci Exchange hodnotou, která je uložená v `Atom` s `Value`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_exchange` Funkce provádí `read-modify-write` operace k výměně hodnoty uložené v *Atom* s *hodnotu*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit –
 
-Nahradí hodnotu uložené `Atom` s `Value`.
+Nahradí uloženou hodnotu *Atom* s *hodnota*.
 
 ```cpp
 template <class Ty>
@@ -290,23 +288,23 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Uložené hodnoty z `Atom` před exchange.
+Uložené hodnoty *Atom* před výměnou.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_exchange_explicit` Provádí funkce `read-modify-write` operaci Exchange hodnotou, která je uložená v `Atom` s `Value`, v rámci omezení paměti, které jsou určené `Order`.
+`atomic_exchange_explicit` Funkce provádí `read-modify-write` operace k výměně hodnoty uložené v *Atom* s *hodnotu*, v rámci omezení paměti, která jsou určena podle  *Pořadí*.
 
 ## <a name="atomic_fetch_add"></a>  atomic_fetch_add –
 
-Přidá hodnotu do stávající hodnotu, která je uložená v `atomic` objektu.
+Přidá hodnotu do existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -317,21 +315,21 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který ukládá ukazatel na typ `T`.
+*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-`Value` Hodnotu typu `ptrdiff_t`.
+*Hodnota* hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota ukazatele obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota ukazatele obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_add` Provádí funkce `read-modify-write` operace atomicky přidání `Value` k hodnotě uložené v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+`atomic_fetch_add` Funkce provádí `read-modify-write` operace a přidává tak atomicky *hodnotu* k uložené hodnotě v *Atom*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)omezení.
 
-Pokud je typ atomic `atomic_address`, `Value` má typ `ptrdiff_t` a operace jsou považovány za uložené ukazatele `char *`.
+Pokud je Atomický typ `atomic_address`, *hodnotu* má typ `ptrdiff_t` a operace považují uložený ukazatel `char *`.
 
-Tato operace je přetížena také pro integrální typy:
+Tato operace je také přetížena pro integrální typy:
 
 ```cpp
 integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexcept;
@@ -341,7 +339,7 @@ integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 
 ## <a name="atomic_fetch_add_explicit"></a>  atomic_fetch_add_explicit –
 
-Přidá hodnotu do stávající hodnotu, která je uložená v `atomic` objektu.
+Přidá hodnotu do existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -359,21 +357,21 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který ukládá ukazatel na typ `T`.
+*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-`Value` Hodnotu typu `ptrdiff_t`.
+*Hodnota* hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota ukazatele obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota ukazatele obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_add_explicit` Provádí funkce `read-modify-write` operace atomicky přidání `Value` k hodnotě uložené v `Atom`, uvnitř [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení, které jsou určené `Order`.
+`atomic_fetch_add_explicit` Funkce provádí `read-modify-write` operace a přidává tak atomicky *hodnotu* do hodnoty uložené v proměnné *Atom*, v rámci [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení která jsou určena podle `Order`.
 
-Pokud je typ atomic `atomic_address`, `Value` má typ `ptrdiff_t` a operace jsou považovány za uložené ukazatele `char *`.
+Pokud je Atomický typ `atomic_address`, `Value` má typ `ptrdiff_t` a operace považují uložený ukazatel `char *`.
 
-Tato operace je přetížena také pro integrální typy:
+Tato operace je také přetížena pro integrální typy:
 
 ```cpp
 integral atomic_fetch_add_explicit(
@@ -389,7 +387,7 @@ integral atomic_fetch_add_explicit(
 
 ## <a name="atomic_fetch_and"></a>  atomic_fetch_and –
 
-Provede bitové `and` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `and` na hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -400,21 +398,21 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_and` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `and` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+`atomic_fetch_and` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `and` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
 
 ## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit –
 
-Provede bitové `and` hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `and` hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -432,23 +430,23 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_and_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `and` z `Value` a aktuální hodnotu, která je uložená v `Atom`, v rámci omezení paměti, které jsou specifikace `Order`.
+`atomic_fetch_and_explicit` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `and` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, v rámci omezení paměti, která jsou určena podle *pořadí*.
 
 ## <a name="atomic_fetch_or"></a>  atomic_fetch_or –
 
-Provede bitové `or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `or` na hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -459,21 +457,21 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_or` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `or` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_or` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `or` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit –
 
-Provede bitové `or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `or` na hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -491,23 +489,23 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_or_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `or` z `Value` a aktuální hodnotu, která je uložená v `Atom`, uvnitř [memory_ pořadí](../standard-library/atomic-enums.md#memory_order_enum) omezení určeného `Order`.
+`atomic_fetch_or_explicit` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `or` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, v rámci [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení určené *pořadí*.
 
 ## <a name="atomic_fetch_sub"></a>  atomic_fetch_sub –
 
-Odečte hodnotu od stávající hodnotu, která je uložená v `atomic` objektu.
+Odečte hodnotu z existující hodnoty, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -523,21 +521,21 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který ukládá ukazatel na typ `T`.
+*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-`Value` Hodnotu typu `ptrdiff_t`.
+*Hodnota* hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota ukazatele obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota ukazatele obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_sub` Provádí funkce `read-modify-write` operace atomicky odečtena `Value` z uložené hodnoty v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+`atomic_fetch_sub` Funkce provádí `read-modify-write` operace a odebírá tak atomicky *hodnotu* z hodnoty uložené v proměnné *Atom*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
 
-Pokud je typ atomic `atomic_address`, `Value` má typ `ptrdiff_t` a operace jsou považovány za uložené ukazatele `char *`.
+Pokud je Atomický typ `atomic_address`, *hodnotu* má typ `ptrdiff_t` a operace považují uložený ukazatel `char *`.
 
-Tato operace je přetížena také pro integrální typy:
+Tato operace je také přetížena pro integrální typy:
 
 ```cpp
 integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexcept;
@@ -546,7 +544,7 @@ integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 
 ## <a name="atomic_fetch_sub_explicit"></a>  atomic_fetch_sub_explicit –
 
-Odečte hodnotu od stávající hodnotu, která je uložená v `atomic` objektu.
+Odečte hodnotu z existující hodnoty, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -563,21 +561,21 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který ukládá ukazatel na typ `T`.
+*Atom* ukazatel `atomic` objekt, který uchovává ukazatel na typ `T`.
 
-`Value` Hodnotu typu `ptrdiff_t`.
+*Hodnota* hodnotu typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota ukazatele obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota ukazatele obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_sub_explicit` Provádí funkce `read-modify-write` operace atomicky odečtena `Value` z uložené hodnoty v `Atom`, uvnitř [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení, které jsou určené `Order`.
+`atomic_fetch_sub_explicit` Funkce provádí `read-modify-write` operace a odebírá tak atomicky *hodnotu* z hodnoty uložené v proměnné *Atom*, v rámci [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení, která jsou určena podle `Order`.
 
-Pokud je typ atomic `atomic_address`, `Value` má typ `ptrdiff_t` a operace jsou považovány za uložené ukazatele `char *`.
+Pokud je Atomický typ `atomic_address`, *hodnotu* má typ `ptrdiff_t` a operace považují uložený ukazatel `char *`.
 
-Tato operace je přetížena také pro integrální typy:
+Tato operace je také přetížena pro integrální typy:
 
 ```cpp
 integral atomic_fetch_sub_explicit(
@@ -593,7 +591,7 @@ integral atomic_fetch_sub_explicit(
 
 ## <a name="atomic_fetch_xor"></a>  atomic_fetch_xor –
 
-Provede bitové `exclusive or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `exclusive or` na hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -605,21 +603,21 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_xor` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `exclusive or` z `Value` a aktuální hodnotu, která je uložená v `Atom`pomocí `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_xor` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `exclusive or` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, použije `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit –
 
-Provede bitové `exclusive or` na hodnotu a stávající hodnotu, která je uložená v `atomic` objektu.
+Provádí logické bitové `exclusive or` na hodnotu a existující hodnotu, která je uložena v `atomic` objektu.
 
 ```cpp
 template <class T>
@@ -637,23 +635,23 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
-`Value` Hodnotu typu `T`.
+*Hodnota* hodnotu typu `T`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota obsažených v atomic objektu bezprostředně před operace byla provedena.
+Hodnota obsažená v atomickém objektu těsně před spuštěním operace.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_fetch_xor_explicit` Provádí funkce `read-modify-write` operace nahraďte uložené hodnotu `Atom` s bitové `exclusive or` z `Value` a aktuální hodnotu, která je uložená v `Atom`, uvnitř [memory_ pořadí](../standard-library/atomic-enums.md#memory_order_enum) omezení, které jsou určené `Order`.
+`atomic_fetch_xor_explicit` Funkce provádí `read-modify-write` operace k nahrazení uložené hodnoty *Atom* logickou bitovou hodnotou `exclusive or` z *hodnota* a aktuální hodnotou, která je uložena v *Atom*, v rámci [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení, která jsou určena podle *pořadí*.
 
-## <a name="atomic_flag_clear"></a>  atomic_flag_clear –
+## <a name="atomic_flag_clear"></a>  atomic_flag_clear
 
-Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `false`, uvnitř `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+Nastaví **bool** příznak v [atomic_flag](../standard-library/atomic-flag-structure.md) objektu **false**, v rámci `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -662,11 +660,11 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Flag` Ukazatel na `atomic_flag` objektu.
+*Příznak* ukazatel `atomic_flag` objektu.
 
-## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit –
+## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
-Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `false`, v rámci zadaného [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+Nastaví **bool** příznak v [atomic_flag](../standard-library/atomic-flag-structure.md) objektu **false**, v rámci zadaného [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -675,13 +673,13 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametry
 
-`Flag` Ukazatel na `atomic_flag` objektu.
+*Příznak* ukazatel `atomic_flag` objektu.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set –
+## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
-Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `true`, v rámci omezení `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+Nastaví **bool** příznak v [atomic_flag](../standard-library/atomic-flag-structure.md) objektu **true**, v rámci omezení `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -690,15 +688,15 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Flag` Ukazatel na `atomic_flag` objektu.
+*Příznak* ukazatel `atomic_flag` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční hodnota `Flag`.
+Počáteční hodnota *příznak*.
 
-## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit –
+## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit
 
-Nastaví `bool` příznak v [atomic_flag –](../standard-library/atomic-flag-structure.md) do objektu `true`, v rámci zadaného [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+Nastaví **bool** příznak v [atomic_flag](../standard-library/atomic-flag-structure.md) objektu **true**, v rámci zadaného [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -707,13 +705,13 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametry
 
-`Flag` Ukazatel na `atomic_flag` objektu.
+*Příznak* ukazatel `atomic_flag` objektu.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční hodnota `Flag`.
+Počáteční hodnota *příznak*.
 
 ## <a name="atomic_init"></a>  atomic_init –
 
@@ -728,17 +726,17 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_init` není atomické operace. Není bezpečné pro přístup z více vláken.
+`atomic_init` není atomická operace. Není bezpečné pro vlákna.
 
 ## <a name="atomic_is_lock_free"></a>  atomic_is_lock_free –
 
-Určuje, zda atomické operací na `atomic` objekty *uvolnění zámku*.
+Určuje, zda atomické operace na `atomic` objektu jsou *bez zámku*.
 
 ```cpp
 template <class T>
@@ -749,19 +747,19 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který uchovává hodnotu typu `T`.
+*Atom* ukazatel `atomic` objekt, který ukládá hodnotu typu `T`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud atomické operací na `Atom` jsou bez uzamčení, jinak hodnota `false`.
+**Hodnota TRUE** Pokud atomické operace na *Atom* jsou bez zámku; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Atomic typ zámku bez Pokud žádné atomické operací na daný typ používat zámky. Pokud funkce vrátí hodnotu true, typ je bezpečné pro použití v signál-obslužné rutiny.
+Atomický typ je bez Pokud žádné atomické operace na daném typu nepoužívají zámky zámku. Pokud tato funkce vrací hodnotu true, typ je bezpečný pro použití v obslužných rutinách signálu.
 
 ## <a name="atomic_load"></a>  atomic_load –
 
-Načte hodnotu uloženou v `atomic` objektu.
+Načte uloženou hodnotu do `atomic` objektu.
 
 ```cpp
 template <class Ty>
@@ -772,19 +770,19 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načtené hodnoty, které jsou uloženy v `Atom`.
+Načtená hodnota, která je uložena v *Atom*.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_load` implicitně používá `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_load` implicitně používá `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_load_explicit"></a>  atomic_load_explicit –
 
-Načte hodnotu uloženou v `atomic` objekt, v rámci zadané [memory_order –](../standard-library/atomic-enums.md#memory_order_enum).
+Načte uloženou hodnotu do `atomic` objekt v rámci určeného [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 template <class Ty>
@@ -795,17 +793,17 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_release` nebo `memory_order_acq_rel`.
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_release` nebo `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načtené hodnoty, které jsou uloženy v `Atom`.
+Načtená hodnota, která je uložena v *Atom*.
 
 ## <a name="atomic_signal_fence"></a>  atomic_signal_fence –
 
-Funguje jako *ochranná*– tedy paměti synchronizaci primitivní který vynucuje řazení mezi operacemi zatížení nebo úložiště – mezi ostatní ochranné volající vlákno, které mají signál obslužné rutiny, které jsou spouštěny ve stejném vlákně.
+Funguje jako *ohrazení*– což je primitiv synchronizace paměti vynucující řazení mezi operacemi načtení/uložení – mezi jinými ohrazeními ve volajícím vláknu, které mají obslužné rutiny signálu spouštěné ve stejném vlákně.
 
 ```cpp
 inline void atomic_signal_fence(memory_order Order) noexcept;
@@ -813,24 +811,24 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Order` Paměť, omezení, která určuje typ ochranná řazení.
+*Pořadí* omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-`Order` Argument určuje typ ohraničení.
+*Pořadí* argument určuje typ plotu.
 
 |||
 |-|-|
-|`memory_order_relaxed`|Ochranná nemá žádný vliv.|
-|`memory_order_consume`|Ochranná představuje ochranná získání.|
-|`memory_order_acquire`|Ochranná představuje ochranná získání.|
-|`memory_order_release`|Ochranná představuje ochranná verze.|
-|`memory_order_acq_rel`|Ochranná představuje získání ochranná a ochranná verze.|
-|`memory_order_seq_cst`|Ohraničení je získání ochranná i ochranná verze a postupně konzistentní.|
+|`memory_order_relaxed`|Ohrazení nemá žádný vliv.|
+|`memory_order_consume`|Plot je plot získání.|
+|`memory_order_acquire`|Plot je plot získání.|
+|`memory_order_release`|Plot je plot uvolňování.|
+|`memory_order_acq_rel`|Plot je plot získání i plot uvolnění.|
+|`memory_order_seq_cst`|Plot je plot získání i plot uvolnění a je sekvenčně konzistentní.|
 
 ## <a name="atomic_store"></a>  atomic_store –
 
-Atomicky ukládá hodnotu v atomic objektu.
+Atomicky ukládá hodnotu v atomickém objektu.
 
 ```cpp
 template <class Ty>
@@ -841,17 +839,17 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na atomic objekt, který obsahuje hodnotu typu `Ty`.
+*Atom* ukazatel na Atomický objekt, který obsahuje hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_store` ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order_seq_cst` [memory_order –](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+`atomic_store` ukládá *hodnotu* v objektu, který ukazuje *Atom*, v rámci `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
 
 ## <a name="atomic_store_explicit"></a>  atomic_store_explicit –
 
-Atomicky ukládá hodnotu v atomic objektu.
+Atomicky ukládá hodnotu v atomickém objektu.
 
 ```cpp
 template <class Ty>
@@ -869,19 +867,19 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-`Atom` Ukazatel na `atomic` objekt, který obsahuje hodnotu typu `Ty`.
+*Atom* ukazatel `atomic` objekt, který obsahuje hodnotu typu `Ty`.
 
-`Value` Hodnotu typu `Ty`.
+*Hodnota* hodnotu typu `Ty`.
 
-`Order` A [memory_order –](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.
+*Pořadí* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nepoužívejte `memory_order_consume`, `memory_order_acquire`, nebo `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic_store` ukládá `Value` v objektu, která ukazuje `Atom`, uvnitř `memory_order` , který je určen podle `Order`.
+`atomic_store` ukládá *hodnotu* v objektu, který ukazuje *Atom*, v rámci `memory_order` určené *pořadí*.
 
 ## <a name="atomic_thread_fence"></a>  atomic_thread_fence –
 
-Funguje jako *ochranná*– tedy paměti synchronizaci primitivní který vynucuje řazení mezi operacemi zatížení nebo úložiště – bez přidružených atomické operace.
+Funguje jako *ohrazení*– což je primitiv synchronizace paměti vynucující řazení mezi operacemi načtení/uložení – bez přidružené atomické operace.
 
 ```cpp
 inline void atomic_thread_fence(memory_order Order) noexcept;
@@ -889,20 +887,20 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Order` Paměť, omezení, která určuje typ ochranná řazení.
+*Pořadí* omezení, která určuje typ plotu řazení paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-`Order` Argument určuje typ ohraničení.
+*Pořadí* argument určuje typ plotu.
 
 |||
 |-|-|
-|`memory_order_relaxed`|Ochranná nemá žádný vliv.|
-|`memory_order_consume`|Ochranná představuje ochranná získání.|
-|`memory_order_acquire`|Ochranná představuje ochranná získání.|
-|`memory_order_release`|Ochranná představuje ochranná verze.|
-|`memory_order_acq_rel`|Ochranná představuje získání ochranná a ochranná verze.|
-|`memory_order_seq_cst`|Ohraničení je získání ochranná i ochranná verze a postupně konzistentní.|
+|`memory_order_relaxed`|Ohrazení nemá žádný vliv.|
+|`memory_order_consume`|Plot je plot získání.|
+|`memory_order_acquire`|Plot je plot získání.|
+|`memory_order_release`|Plot je plot uvolňování.|
+|`memory_order_acq_rel`|Plot je plot získání i plot uvolnění.|
+|`memory_order_seq_cst`|Plot je plot získání i plot uvolnění a je sekvenčně konzistentní.|
 
 ## <a name="kill_dependency"></a>  kill_dependency –
 
@@ -915,12 +913,12 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Arg` Hodnotu typu `Ty`.
+*Arg* hodnotu typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota je `Arg`. Vyhodnocení `Arg` neobsahuje závislost volání funkce. Porušením řetězec možných závislostí může povolit funkce kompilátoru pro generování kódu efektivnější.
+Vrácená hodnota je *Arg*. Vyhodnocení *Arg* neobsahuje závislosti pro volání funkce. Tím, že rozkládají řetěz závislostí je to možné, může povolit funkci kompilátor generuje kód efektivnější.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<Atomic >](../standard-library/atomic.md)<br/>

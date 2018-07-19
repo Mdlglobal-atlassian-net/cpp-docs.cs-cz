@@ -1,5 +1,5 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference::operator bool | Microsoft Docs'
+title: 'vektor&lt;bool&gt;:: reference::operator bool | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fd249dd7591caaaf62a0b8a698085efedb1f25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00ccd9e9ffbab78534c5b6417b7567ba03d007ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963677"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vektor&lt;bool&gt;:: reference::operator bool
 
-Poskytuje implicitní převod z `vector<bool>::reference` k `bool`.
+Poskytuje implicitní převod z `vector<bool>::reference` k **bool**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,15 +43,15 @@ Logická hodnota elementu [vektoru\<bool >](../standard-library/vector-bool-clas
 
 ## <a name="remarks"></a>Poznámky
 
-`vector<bool>` Objektu nelze změnit pomocí tento operátor.
+`vector<bool>` Objektu nelze změnit tímto operátorem.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<vektoru >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[vektor\<bool >:: odkazovat – třída](../standard-library/vector-bool-reference-class.md)<br/>
+[vektor\<bool >:: reference – třída](../standard-library/vector-bool-reference-class.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

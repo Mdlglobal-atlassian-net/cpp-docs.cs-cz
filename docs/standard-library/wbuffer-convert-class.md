@@ -1,5 +1,5 @@
 ---
-title: wbuffer_convert – třída | Microsoft Docs
+title: wbuffer_convert – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df93b54accbfdc3ff8f486c41a47af72032c3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 364ae6c544f58f09208cefeec9d3984de35120e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965213"
 ---
 # <a name="wbufferconvert-class"></a>wbuffer_convert – třída
 
-Popisuje datový proud vyrovnávací paměť, která řídí přenos elementů do a z vyrovnávací paměti datového proudu bajtů.
+Popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky do a z vyrovnávací paměti datového proudu bajtů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,18 +39,18 @@ class wbuffer_convert
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Codecvt`|[Národního prostředí](../standard-library/locale-class.md) omezující vlastnosti, který představuje objekt převod.|
-|`Elem`|Typ elementu široká charakterová.|
-|`Traits`|Vlastnosti související s *Elem*.|
+|*codecvt –*|[Národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která představuje objekt převodu.|
+|*Elem*|Typ elementu širokého znaku.|
+|*Osobnostní rysy*|Vlastnosti přidružené k *Elem*.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `_Elem`, jejichž znak vlastnosti jsou popsány v třídě `Traits`, do a z vyrovnávací paměti datového proudu bajtů typu `std::streambuf`.
+Tato třída šablony popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky typu `_Elem`, jehož vlastnosti znaků jsou popsány pomocí třídy `Traits`, do a z vyrovnávací paměti datového proudu bajtů typu `std::streambuf`.
 
-Převod mezi posloupnost `Elem` hodnoty a vícebajtové pořadí se provádí v objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky omezující vlastnost standardní převod kódu `std::codecvt<Elem, char, std::mbstate_t>`.
+Převod mezi sekvencí `Elem` hodnoty a vícebajtové sekvence se provádí pomocí objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky omezující vlastnost standardní převodu kódu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Tato třída šablony objektu ukládá:
+Ukládá se objekt této třídy šablony:
 
-- Ukazatel na jeho základní datový proud vyrovnávací paměť
+- Ukazatel na jeho základní vyrovnávací paměť datového proudu bajtů
 
-- Ukazatel na objekt přidělené převodu (což je při vydání [wbuffer_convert](../standard-library/wbuffer-convert-class.md)
+- Ukazatel na objekt přidělený převod (což je uvolněna při [wbuffer_convert –](../standard-library/wbuffer-convert-class.md)
