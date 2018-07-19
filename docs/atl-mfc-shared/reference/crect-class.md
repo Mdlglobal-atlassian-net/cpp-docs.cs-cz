@@ -1,5 +1,5 @@
 ---
-title: Třída CRect | Microsoft Docs
+title: Crect – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,15 +44,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366292"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881084"
 ---
-# <a name="crect-class"></a>CRect – třída
-Podobně jako Windows [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
+# <a name="crect-class"></a>Crect – třída
+Podobně jako Windows [RECT](../../mfc/reference/rect-structure1.md) struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,63 +72,63 @@ class CRect : public tagRECT
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CRect::BottomRight](#bottomright)|Vrací vpravo dole bod `CRect`.|  
+|[CRect::BottomRight](#bottomright)|Vrátí bod vpravo dole `CRect`.|  
 |[CRect::CenterPoint](#centerpoint)|Vrátí centerpoint z `CRect`.|  
-|[CRect::CopyRect](#copyrect)|Zkopíruje dimenze zdroje obdélníku do `CRect`.|  
-|[CRect::DeflateRect](#deflaterect)|Snižuje se šířka a Výška `CRect`.|  
-|[CRect::EqualRect](#equalrect)|Určuje, zda `CRect` rovná dané rámeček.|  
-|[CRect::Height](#height)|Vypočítá výšku `CRect`.|  
-|[CRect::InflateRect](#inflaterect)|Zvyšuje šířka a Výška `CRect`.|  
-|[CRect::IntersectRect](#intersectrect)|Nastaví `CRect` rovna průnik dvou tvaru.|  
-|[CRect::IsRectEmpty](#isrectempty)|Určuje, zda `CRect` je prázdný. `CRect` je prázdný, pokud je šířka nebo výška mají hodnotu 0.|  
-|[CRect::IsRectNull](#isrectnull)|Určuje, zda **horní**, **dolní**, **levém**, a **správné** členské proměnné jsou všechny rovna 0.|  
+|[CRect::CopyRect](#copyrect)|Zkopíruje rozměry zdrojového obdélníku do `CRect`.|  
+|[CRect::DeflateRect](#deflaterect)|Snižuje šířku a výšku `CRect`.|  
+|[CRect::EqualRect](#equalrect)|Určuje, zda `CRect` je rovna hodnotě dané obdélník.|  
+|[CRect::Height](#height)|Vypočítá výška `CRect`.|  
+|[CRect::InflateRect](#inflaterect)|Zvětšuje šířku a výšku `CRect`.|  
+|[CRect::IntersectRect](#intersectrect)|Nastaví `CRect` rovna průnik dvou obdélníků.|  
+|[CRect::IsRectEmpty](#isrectempty)|Určuje, zda `CRect` je prázdný. `CRect` je prázdný, pokud šířku nebo výšku je 0.|  
+|[CRect::IsRectNull](#isrectnull)|Určuje, zda `top`, `bottom`, `left`, a `right` členské proměnné jsou všechny rovnat 0.|  
 |[CRect::MoveToX](#movetox)|Přesune `CRect` k zadané souřadnice x.|  
 |[CRect::MoveToXY](#movetoxy)|Přesune `CRect` do zadaných x a y souřadnic.|  
-|[CRect::MoveToY](#movetoy)|Přesune `CRect` k zadané souřadnici y.|  
-|[CRect::NormalizeRect](#normalizerect)|Standardizuje výška a šířka `CRect`.|  
+|[CRect::MoveToY](#movetoy)|Přesune `CRect` k zadané souřadnice na ose y.|  
+|[CRect::NormalizeRect](#normalizerect)|Standardizuje výšku a šířku `CRect`.|  
 |[CRect::OffsetRect](#offsetrect)|Přesune `CRect` podle zadaných odsazení.|  
-|[CRect::PtInRect](#ptinrect)|Určuje, zda se zadaný bod je v rámci `CRect`.|  
+|[CRect::PtInRect](#ptinrect)|Určuje, zda se zadaný bod nachází v rámci `CRect`.|  
 |[CRect::SetRect](#setrect)|Nastaví rozměry `CRect`.|  
 |[CRect::SetRectEmpty](#setrectempty)|Nastaví `CRect` na prázdný obdélník (všechny souřadnice rovno 0).|  
 |[CRect::Size](#size)|Vypočítá velikost `CRect`.|  
-|[CRect::SubtractRect](#subtractrect)|Odečítá od jeden rámeček z jiné.|  
-|[CRect::TopLeft](#topleft)|Vrátí bod levého horního `CRect`.|  
-|[CRect::UnionRect](#unionrect)|Nastaví `CRect` rovna sjednocení dvou tvaru.|  
+|[CRect::SubtractRect](#subtractrect)|Odečte jeden obdélník z jiného.|  
+|[CRect::TopLeft](#topleft)|Vrátí bod levého horního rohu `CRect`.|  
+|[CRect::UnionRect](#unionrect)|Nastaví `CRect` rovna sjednocení dvou obdélníků.|  
 |[CRect::Width](#width)|Vypočítá šířku `CRect`.|  
   
 ### <a name="public-operators"></a>Veřejné operátory    
 |Název|Popis|  
 |----------|-----------------|  
-|[CRect::operator-](#operator_-)|Odečítá od daného posuny z `CRect` nebo snížení kapacity `CRect` a vrátí výsledný `CRect`.|  
-|[Lpcrect – CRect::operator](#operator_lpcrect)|Převede `CRect` k **lpcrect –**.|  
-|[CRect::operator lprect –](#operator_lprect)|Převede `CRect` k `LPRECT`.|  
+|[CRect::operator-](#operator_-)|Odečte daný posun od `CRect` nebo vyfoukne `CRect` a vrátí výsledný `CRect`.|  
+|[CRect::operator lpcrect –](#operator_lpcrect)|Převede `CRect` do `LPCRECT`.|  
+|[CRect::operator lprect –](#operator_lprect)|Převede `CRect` do `LPRECT`.|  
 |[CRect::operator! =](#operator_neq)|Určuje, zda `CRect` není roven obdélníku.|  
-|[CRect::operator &amp;](#operator_amp)|Vytvoří průnik `CRect` a obdélníku a vrátí výsledný `CRect`.|  
-|[CRect::operator &amp;=](#operator_amp_eq)|Nastaví `CRect` rovna průnik `CRect` a obdélníku.|  
-|[CRect::operator |](#operator_or)|Vytvoří sjednocení `CRect` a obdélníku a vrátí výsledný `CRect`.|  
+|[CRect::operator &amp;](#operator_amp)|Vytvoří průsečík `CRect` a obdélník a vrátí výsledný `CRect`.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|Nastaví `CRect` rovno je určena průsečíkem `CRect` a obdélníku.|  
+|[CRect::operator |](#operator_or)|Vytvoří sjednocení `CRect` a obdélník a vrátí výsledný `CRect`.|  
 |[CRect::operator |=](#operator_or_eq)|Nastaví `CRect` rovna sjednocení `CRect` a obdélníku.|  
 |[CRect::operator +](#operator_add)|Přidá daný posuny k `CRect` nebo zvýšení kapacity `CRect` a vrátí výsledný `CRect`.|  
-|[CRect::operator +=](#operator_add_eq)|Přidá zadaný posun na `CRect` nebo zvýšení kapacity `CRect`.|  
+|[CRect::operator +=](#operator_add_eq)|Přidá zadaný posun k `CRect` nebo zvýšení kapacity `CRect`.|  
 |[CRect::operator =](#operator_eq)|Zkopíruje dimenze obdélníku do `CRect`.|  
-|[CRect::operator-=](#operator_-_eq)|Odečítá od zadaných odsazení z `CRect` nebo snížení kapacity `CRect`.|  
+|[CRect::operator-=](#operator_-_eq)|Odečte zadaný posun od `CRect` nebo vyfoukne `CRect`.|  
 |[CRect::operator ==](#operator_eq_eq)|Určuje, zda `CRect` rovná obdélníku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRect` také obsahuje členské funkce k manipulaci s `CRect` objekty a Windows `RECT` struktury.  
+ `CRect` zahrnuje také členské funkce pro manipulaci s `CRect` objekty a Windows `RECT` struktury.  
   
- A `CRect` objekt můžete předat jako parametr funkce bez ohledu `RECT` struktura, **lpcrect –**, nebo `LPRECT` lze předat.  
+ A `CRect` objekt je možné předat jako parametr funkce bez ohledu na to `RECT` strukturu, `LPCRECT`, nebo `LPRECT` mohou být předány.  
   
 > [!NOTE]
->  Tato třída je odvozený od **tagRECT** struktury. (Název **tagRECT** je název méně běžně používané `RECT` struktura.) To znamená, že datové členy (**levém**, **horní**, **správné**, a **dolní**) z `RECT` struktura jsou přístupná data Členové `CRect`.  
+>  Tato třída je odvozena z `tagRECT` struktury. (Název `tagRECT` je názvu nižší běžně používané pro `RECT` struktura.) To znamená, že datové členy (`left`, `top`, `right`, a `bottom`) z `RECT` struktury jsou dostupné datové členy `CRect`.  
   
- A `CRect` obsahuje členské proměnné, které definují levém horním a pravém dolním body obdélníku.  
+ A `CRect` obsahuje členské proměnné, které definují body vlevo nahoře a pravém dolním rohu obdélníku.  
   
- Při zadávání `CRect`, je třeba dbát na vytvořit ji tak, aby je normalized – jinými slovy, menší než dolní je tak, aby hodnota levou souřadnici je menší než vpravo a horní. Například top levé (10,10) a dolním rohu (20,20) definuje normalizovaný obdélníku, ale top levé (20,20) a dolním rohu (10,10) definuje obdélníku zadání nenormalizovaného. Pokud rámeček není normalized, mnoho `CRect` členské funkce může vrátit nesprávné výsledky. (Viz [CRect::NormalizeRect](#normalizerect) seznam tyto funkce.) Před voláním funkce, které vyžadují normalizovaný obdélníků můžete normalizovat zadání nenormalizovaného obdélníků voláním `NormalizeRect` funkce.  
+ Při zadávání `CRect`, musíte být opatrní při jeho vytvoření, tak, aby se normalizuje – jinými slovy, menší než dolní je tak, aby hodnota levou souřadnici je menší než vpravo a horní části. Například levém horním rohu (10,10) a pravém dolním rohu (20,20) definuje normalizované obdélník, ale horním levém rohu (20,20) a pravém dolním rohu (10,10) definuje nenormalizovaný obdélníku. Pokud obdélník není normalizovaná, mnoho `CRect` členské funkce může vrátit nesprávné výsledky. (Viz [CRect::NormalizeRect](#normalizerect) seznam těchto funkcí.) Před voláním funkce, která vyžaduje normalizované obdélníků můžete normalizovat nenormalizovaný obdélníků pomocí volání `NormalizeRect` funkce.  
   
- Buďte opatrní při manipulaci s `CRect` s [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) a [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) členské funkce. Pokud je režim mapování kontextu zobrazení tak, aby byla v rozsahu y záporná, jako v `MM_LOENGLISH`, pak `CDC::DPtoLP` transformuje `CRect` tak, aby jeho horní je větší než dolní. Funkce, jako **výška** a **velikost** pak vrátí záporné hodnoty pro výšku transformovaných `CRect`, a zadání nenormalizovaného rámeček.  
+ Buďte opatrní při manipulaci s `CRect` s [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) a [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) členské funkce. Pokud je režim mapování kontextu zobrazení tak, aby byla záporná, stejně jako v rozsahu y `MM_LOENGLISH`, pak `CDC::DPtoLP` transformuje `CRect` tak, aby její horní části je větší než dolní části. Funkce, jako například `Height` a `Size` potom vrátí záporné hodnoty Výška transformovaná `CRect`, a nenormalizovaný obdélníku.  
 
   
- Při použití přetížený `CRect` operátory, musí být první operand `CRect`; druhý může být buď [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objektu.  
+ Při použití přetížené `CRect` operátory, musí být první operand `CRect`; druhého může být buď [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objektu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `tagRECT`  
@@ -139,7 +139,7 @@ class CRect : public tagRECT
  **Záhlaví:** atltypes.h  
   
 ##  <a name="bottomright"></a>  CRect::BottomRight  
- Souřadnice se vrátí jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
+ Souřadnice jsou vrácena jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
   
 ```  
 CPoint& BottomRight() throw();
@@ -150,7 +150,7 @@ const CPoint& BottomRight() const throw();
  Souřadnice pravého dolního rohu obdélníku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce slouží k získání nebo nastavení pravém dolním rohu obdélníku. Nastavte rohu pomocí této funkce na levé straně operátoru přiřazení.  
+ Tato funkce slouží k získání nebo nastavení pravého dolního rohu obdélníku. Nastavení rohu s použitím této funkce na levé straně operátoru přiřazení.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -178,7 +178,7 @@ rect2.BottomRight() = ptLow;
 ```
   
 ##  <a name="centerpoint"></a>  CRect::CenterPoint 
- Vypočítá centerpoint z `CRect` přidání levé a pravé hodnoty a dělení dva týdny a přidáním hodnoty horní a dolní a dělení dvou.  
+ Vypočítá centerpoint z `CRect` přidání levé a pravé hodnoty a dělení dvou a přidáním hodnoty horní a dolní a dělení dvou.  
   
 ```  
 CPoint CenterPoint() const throw();
@@ -246,8 +246,8 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSrcRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který je zkopírovat.  
+ *lpSrcRect*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který se mají zkopírovat.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -288,36 +288,36 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  Určuje umístění levého `CRect`.  
   
  *t*  
- Určuje horní části `CRect`.  
+ Určuje horní `CRect`.  
   
  *r*  
  Určuje pravou pozici `CRect`.  
   
  *b*  
- Určuje dolní části `CRect`.  
+ Určuje dolní `CRect`.  
   
  *srcRect*  
- Odkazuje [Rect –](../../mfc/reference/rect-structure1.md) struktura s souřadnice pro `CRect`.  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) strukturu s souřadnice pro `CRect`.  
   
- `lpSrcRect`  
- Odkazuje na `RECT` struktura s souřadnice pro `CRect`.  
+ *lpSrcRect*  
+ Odkazuje `RECT` strukturu s souřadnice pro `CRect`.  
   
- `point`  
- Určuje počáteční bod pro rámeček k zkonstruovat. Odpovídá levého horního rohu.  
+ *Bod*  
+ Určuje počáteční bod pro obdélník budovat. Odpovídá do levého horního rohu.  
   
- `size`  
- Určuje posunutí v levém horním rohu na pravém dolním rohu obdélníku, aby zkonstruovat.  
+ *Velikost*  
+ Určuje posunutí z levého horního rohu do pravého dolního rohu obdélníku, aby byly konstruovány.  
   
  *TopLeft*  
- Určuje umístění levého horního `CRect`.  
+ Určuje umístění levého horního rohu `CRect`.  
   
  *BottomRight*  
  Určuje pozici vpravo dole `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jsou zadány žádné argumenty, **levém**, **horní**, **správné**, a **dolní** členy nejsou inicializovány.  
+ Pokud nejsou zadány žádné argumenty, `left`, `top`, `right`, a `bottom` členy nejsou inicializovány.  
   
- `CRect`(**Const Rect – &**) a `CRect`(**lpcrect –**) provést konstruktory [CopyRect](#copyrect). Další konstruktory inicializace členské proměnné objektu přímo.  
+ `CRect`(`const RECT&`) A `CRect`(`LPCRECT`) provádět konstruktory [CopyRect](#copyrect). Další konstruktory inicializovat proměnné členů objektu přímo.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -358,7 +358,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 ```
   
 ##  <a name="deflaterect"></a>  CRect::DeflateRect  
- `DeflateRect` snížení kapacity `CRect` přesunutím jeho stranách směrem k jeho středu.  
+ `DeflateRect` vyfoukne `CRect` přesunutím jeho stran směrem k středu.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -369,33 +369,33 @@ void DeflateRect(int l, int t, int r, int b) throw();
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Určuje počet jednotek na levé straně deflate a pravé straně `CRect`.  
+ Určuje počet jednotek deflate levé a pravé straně `CRect`.  
   
  *y*  
- Určuje počet jednotek k deflate horní a dolní část `CRect`.  
+ Určuje počet jednotek, aby se horní a dolní část deflate `CRect`.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) určující počet jednotek k deflate `CRect`. `cx` Hodnota určuje počet jednotek k deflate levé a pravé straně a `cy` hodnota určuje počet jednotek pro horní a dolní deflate.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek deflate `CRect`. `cx` Hodnota určuje počet jednotek deflate levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se horní a dolní deflate.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` určující počet jednotek na každé straně deflate.  
+ *lprect –*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` , která určuje počet jednotek na každé straně deflate.  
   
  *l*  
  Určuje počet jednotek na levé straně deflate `CRect`.  
   
  *t*  
- Určuje počet jednotek do horní části deflate `CRect`.  
+ Určuje počet jednotek, aby se horní deflate `CRect`.  
   
  *r*  
  Určuje počet jednotek na pravé straně deflate `CRect`.  
   
  *b*  
- Určuje počet jednotek do dolní části deflate `CRect`.  
+ Určuje počet jednotek deflate dolní `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- K tomu, `DeflateRect` přidá jednotky na levé straně a horní a odečítá od jednotky z vpravo a dole. Parametry `DeflateRect` jsou podepsané hodnoty; kladné hodnoty deflate `CRect` a záporné hodnoty zvýšilo ho.  
+ K tomu `DeflateRect` přidá jednotky levé straně a zároveň klauzuli top a odečte jednotky z vpravo a dole. Parametry `DeflateRect` jsou podepsané hodnoty; kladné hodnoty deflate `CRect` a záporné hodnoty rozšiřování ho.  
   
- První dva přetížení deflate obou dvojic opačné strany `CRect` tak, aby jeho celková šířka se snížila o dvakrát *x* (nebo `cx`) a jeho celková výška je snížila o dvakrát *y* () nebo `cy`). Další dvě přetížení deflate každé straně `CRect` nezávisle na ostatních.  
+ První dvě přetížení deflate obou dvojic opačné stranách `CRect` tak, aby jeho celková šířka se sníží dvakrát *x* (nebo `cx`) a jeho celková výška se sníží dvakrát *y* () nebo `cy`). Další dvě přetížení deflate každé straně `CRect` nezávisle na ostatních.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -412,21 +412,21 @@ void DeflateRect(int l, int t, int r, int b) throw();
 ```
   
 ##  <a name="equalrect"></a>  CRect::EqualRect  
- Určuje, zda `CRect` rovná dané rámeček.  
+ Určuje, zda `CRect` je rovna hodnotě dané obdélník.  
   
 ```  
 BOOL EqualRect(LPCRECT lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje souřadnice levém horním a pravém dolním rohu obdélníku.  
+ *lprect –*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje souřadnice levého a pravého dolního rohu obdélníku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud dva obdélníků stejné nejvyšší, vlevo, dolní a pravé hodnoty; jinak 0.  
+ Nenulové, pokud mají dvou obdélníků stejné nejvyšší, vlevo, dolní a pravé hodnoty; jinak 0.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -447,7 +447,7 @@ ASSERT(rect1.EqualRect(rect2));
 ```
 
 ##  <a name="height"></a>  CRect::Height  
- Vypočítá výšku `CRect` odečtením nejvyšší hodnotu než dolní.  
+ Vypočítá výška `CRect` odečtením nejvyšší hodnotu z dolní hodnotu.  
   
 ```  
 int Height() const throw();
@@ -457,10 +457,10 @@ int Height() const throw();
  Výška `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Výsledná hodnota může být záporná.  
+ Výsledná hodnota může být záporné.  
   
 > [!NOTE]
->  Musí být normalizovány rámeček nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci rámeček před voláním této funkce.  
+>  Musí být normalizovaná obdélník nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélník před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -477,7 +477,7 @@ int nHt = rect.Height();
 
   
 ##  <a name="inflaterect"></a>  CRect::InflateRect  
- `InflateRect` zvýšení kapacity `CRect` přesunutím jeho stranách od jeho center.  
+ `InflateRect` zvýšení kapacity `CRect` přesunutím jeho stran od středu.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -488,33 +488,33 @@ void InflateRect(int l, int t, int r,  int b) throw();
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Určuje počet jednotek k zvýšilo doleva a pravé straně `CRect`.  
+ Určuje počet jednotek na rozšiřování levé a pravé straně `CRect`.  
   
  *y*  
- Určuje počet jednotek k zvýšilo horní a dolní část `CRect`.  
+ Určuje počet jednotek, aby se zvýšilo horní a dolní část `CRect`.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) určující počet jednotek k zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek k zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek k zvýšilo horní a dolní.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek, aby se zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek, aby se zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se zvýšilo horní a dolní části.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` určující počet jednotek na každé straně narůstat.  
+ *lprect –*  
+ Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` , která určuje počet jednotek, aby se zvýšilo každé straně.  
   
  *l*  
- Určuje počet jednotek na levé straně zvýšilo `CRect`.  
+ Určuje počet jednotek, aby se zvýšilo na levé straně `CRect`.  
   
  *t*  
- Určuje počet jednotek do horní části zvýšilo `CRect`.  
+ Určuje počet jednotek, aby se zvýšilo horní `CRect`.  
   
  *r*  
- Určuje počet jednotek na pravé straně zvýšilo `CRect`.  
+ Určuje počet jednotek, aby se zvýšilo pravé straně `CRect`.  
   
  *b*  
- Určuje počet jednotek do dolní části zvýšilo `CRect`.  
+ Určuje počet jednotek, aby se zvýšilo dolní `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- K tomu, `InflateRect` odečítá od jednotky z vlevo a nahoře a přidá jednotky vpravo a dole. Parametry `InflateRect` jsou podepsané hodnoty, kladné hodnoty zvýšilo `CRect` a záporné hodnoty deflate ho.  
+ K tomu `InflateRect` odečte jednotky levé straně a zároveň klauzuli top a přidá jednotky doprava a dolů. Parametry `InflateRect` jsou podepsané hodnoty; kladné hodnoty rozšiřování `CRect` a záporné hodnoty deflate ho.  
   
- První dva přetížení zvýšilo obou dvojic opačné strany `CRect` tak, aby jeho celková šířka je zvýšen dvakrát *x* (nebo `cx`) a jeho celková výška je zvýšen dvakrát *y* () nebo `cy`). Další dvě přetížení zvýšilo každé straně `CRect` nezávisle na ostatních.  
+ První dvě přetížení rozšiřování obou dvojic opačné stranách `CRect` tak, aby jeho celková šířka se zvýší o dvakrát *x* (nebo `cx`) a zvyšují jeho celková výška dvakrát *y* () nebo `cy`). Další dvě přetížení rozšiřování každé straně `CRect` nezávisle na ostatních.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -526,27 +526,27 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ```
   
 ##  <a name="intersectrect"></a>  CRect::IntersectRect  
- Díky `CRect` rovna průnik dvou existující tvaru.  
+ Díky `CRect` rovna průnik dvou obdélníků existující.  
   
 ```  
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect1`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje obdélníku zdroje.  
+ *lpRect1*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje zdrojového obdélníku.  
   
- `lpRect2`  
- Odkazuje na `RECT` struktura nebo `CRect` objekt, který obsahuje obdélníku zdroje.  
+ *lpRect2*  
+ Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje zdrojového obdélníku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud průnik není prázdná. 0, pokud průnik je prázdný.  
+ Nenulové, pokud je určena průsečíkem není prázdná. 0, pokud je určena průsečíkem je prázdný.  
   
 ### <a name="remarks"></a>Poznámky  
- Průnik je největší rámeček obsažené v obou existující obdélníky.  
+ Je určena průsečíkem je největší obdélník obsažené v obou existující obdélníků.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -576,13 +576,13 @@ BOOL IsRectEmpty() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `CRect` je prázdný; 0 Pokud `CRect` není prázdná.  
+ Nenulovou hodnotu, pokud `CRect` je prázdný; 0 Pokud `CRect` není prázdný.  
   
 ### <a name="remarks"></a>Poznámky  
- Obdélník je prázdný, pokud je šířka nebo výška mají hodnotu 0 nebo záporné. Se liší od `IsRectNull`, která určuje, zda jsou všechny souřadnice rámeček nula.  
+ Obdélníku je prázdný, pokud je šířka nebo výška mají hodnotu 0 nebo záporné. Se liší od `IsRectNull`, který určuje, zda jsou všechny souřadnice obdélníku nula.  
   
 > [!NOTE]
->  Musí být normalizovány rámeček nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci rámeček před voláním této funkce.  
+>  Musí být normalizovaná obdélník nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélník před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -600,17 +600,17 @@ CRect rectEmpty(35, 35, 35, 35);
 
   
 ##  <a name="isrectnull"></a>  CRect::IsRectNull  
- Určuje, zda nahoře vlevo, dolů a pravým hodnoty `CRect` jsou na stejné úrovni na hodnotu 0.  
+ Určuje, zda, vlevo nahoře, dole a klikněte pravým tlačítkem myši hodnoty `CRect` jsou na stejné úrovni na hodnotu 0.  
   
 ```  
 BOOL IsRectNull() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `CRect`je dolů vlevo, nahoře, a pravé hodnoty jsou všechny rovná 0; jinak hodnota 0.  
+ Nenulovou hodnotu, pokud `CRect`na horní, levý, dolní a pravé hodnoty jsou všechny rovná 0; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Se liší od `IsRectEmpty`, která určuje, zda rámeček je prázdný.  
+ Se liší od `IsRectEmpty`, který určuje, zda obdélníku je prázdný.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -629,7 +629,7 @@ ASSERT(rectNone.IsRectNull());
 ```
   
 ##  <a name="movetox"></a>  CRect::MoveToX  
- Volání této funkce pro přesun rámeček do absolutní souřadnice x určeného *x*.  
+ Voláním této funkce přesunout obdélník na absolutní souřadnice x určené *x*.  
   
 ```  
 void MoveToX(int x) throw();  
@@ -653,7 +653,7 @@ rect.MoveToX(10);
 ```
   
 ##  <a name="movetoxy"></a>  CRect::MoveToXY  
- Volání této funkce můžete přesunout k absolutní souřadnic x a y-zadaný rámeček.  
+ Voláním této funkce přesunout obdélník na absolutní souřadnic x a y-zadán.  
   
 ```  
 void MoveToXY(int x, int y) throw();
@@ -667,8 +667,8 @@ void MoveToXY(POINT point) throw();
  *y*  
  Absolutní souřadnice y levého horního rohu obdélníku.  
   
- `point`  
- A **bodu** struktura zadání absolutní levého horního rohu obdélníku.  
+ *Bod*  
+ A `POINT` struktura určení absolutní levého horního rohu obdélníku.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -684,7 +684,7 @@ void MoveToXY(POINT point) throw();
 
   
 ##  <a name="movetoy"></a>  CRect::MoveToY  
- Volání této funkce pro přesun rámeček do absolutní souřadnice y určeného *y*.  
+ Voláním této funkce přesunout obdélník na absolutní souřadnice na ose y určené *y*.  
   
 ```  
 void MoveToY(int y) throw();  
@@ -708,17 +708,17 @@ void MoveToY(int y) throw();
 
   
 ##  <a name="normalizerect"></a>  CRect::NormalizeRect  
- Normalizuje `CRect` tak, aby výška a šířka jsou pozitivní.  
+ Normalizuje `CRect` tak, aby byly kladné výšku a šířku.  
   
 ```  
 void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rámeček normalizována pro čtvrtý kvadrantu umístění, které Windows se obvykle používá pro souřadnice. `NormalizeRect` Porovná hodnoty horní a dolní a prohození je, pokud je větší než dolní horní. Podobně prohození levé a pravé hodnoty, pokud je větší než právo levé straně. Tato funkce je užitečná při plánování práce s mapování různé režimy a obdélníky obrácený.  
+ Obdélníku je normalizovány pro čtvrté kvadrantu umístění, které Windows se obvykle používá pro souřadnice. `NormalizeRect` Porovnává hodnoty horní a dolní a zamění je, pokud je větší než dolní horní části. Podobně Zamění levé a pravé hodnoty, pokud je větší než vpravo levé straně. Tato funkce je užitečná při práci s režimy jinému mapování a obrácený obdélníků.  
   
 > [!NOTE]
->  Následující `CRect` členské funkce vyžadují normalizovaný obdélníků správné fungování: [výška](#height), [šířka](#width), [velikost](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operátor ==](#operator_eq_eq), [operátor! =](#operator_neq), [operátor &#124; ](#operator_or), [operátor &#124;=](#operator_or_eq), [operátor &](#operator_amp), a [operátor & =](#operator_amp_eq).  
+>  Následující `CRect` členské funkce vyžadují normalizované obdélníky správné fungování: [výška](#height), [šířka](#width), [velikost](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [operátor ==](#operator_eq_eq), [operátor! =](#operator_neq), [operátor &#124; ](#operator_or), [operátor &#124;=](#operator_or_eq), [operátor &](#operator_amp), a [operátor & =](#operator_amp_eq).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -744,19 +744,19 @@ void OffsetRect(SIZE size) throw();
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Určuje dobu, přesunout doleva nebo doprava. Musí to být záporné přesunout vlevo.  
+ Určuje dobu, chcete-li posunout vlevo nebo vpravo. Musí být záporná hodnota, při doleva.  
   
  *y*  
- Určuje dobu, chcete-li přesunout nahoru nebo dolů. Musí to být záporné přesunout nahoru.  
+ Určuje dobu, chcete-li přesunout nahoru nebo dolů. Musí být záporná hodnota, při přesunutí nahoru.  
   
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](cpoint-class.md) objekt zadání obou dimenzí, kterým se mají přesunout.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) určující oba rozměry, podle kterého se má přesunout.  
   
- `size`  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](csize-class.md) objekt zadání obou dimenzí, kterým se mají přesunout.  
+ *Velikost*  
+ Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) určující oba rozměry, podle kterého se má přesunout.  
   
 ### <a name="remarks"></a>Poznámky  
- Přesune `CRect` *x* jednotky podél osy x a *y* jednotky podél osy y. *x* a *y* parametry jsou podepsané hodnoty, takže `CRect` lze přesunout doleva nebo doprava a nahoru nebo dolů.  
+ Přesune `CRect` *x* jednotky podél osy x a *y* jednotky podél osy y. *x* a *y* parametry jsou hodnoty se znaménkem, takže `CRect` může přesunou doleva nebo doprava a nahoru nebo dolů.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -772,7 +772,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>  Lpcrect – převede CRect::operator `CRect` k [lpcrect –](../../mfc/reference/data-types-mfc.md).  
+##  <a name="operator_lpcrect"></a>  CRect::operator lpcrect – převede `CRect` do [lpcrect –](../../mfc/reference/data-types-mfc.md).  
 
   
 ```  
@@ -780,11 +780,11 @@ operator LPCRECT() const throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Použijete-li tuto funkci, není nutné adresu z (**&**) operátor. Tento operátor se automaticky použije při předání `CRect` objekt, který má funkci, která očekává **lpcrect –**.  
+ Když tuto funkci použít, nepotřebujete adresy (**&**) – operátor. Tento operátor se automaticky použije při předání `CRect` objekt funkce, která očekává, že `LPCRECT`.  
   
 
 ##  <a name="operator_lprect"></a>  CRect::operator lprect –  
- Převede `CRect` k [lprect –](../../mfc/reference/data-types-mfc.md).  
+ Převede `CRect` do [lprect –](../../mfc/reference/data-types-mfc.md).  
 
   
 ```
@@ -792,7 +792,7 @@ operator LPRECT() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Použijete-li tuto funkci, není nutné adresu z (**&**) operátor. Tento operátor se automaticky použije při předání `CRect` objekt, který má funkci, která očekává `LPRECT`.  
+ Když tuto funkci použít, nepotřebujete adresy (**&**) – operátor. Tento operátor se automaticky použije při předání `CRect` objekt funkce, která očekává, že `LPRECT`.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [lpcrect – CRect::operator](#operator_lpcrect).  
@@ -806,7 +806,7 @@ void operator=(const RECT& srcRect) throw();
   
 ### <a name="parameters"></a>Parametry  
  *srcRect*  
- Odkazuje na zdroj obdélníku. Může být [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -823,23 +823,23 @@ void operator=(const RECT& srcRect) throw();
 
   
 ##  <a name="operator_eq_eq"></a>  CRect::operator ==  
- Určuje, zda `rect` rovná `CRect` tak, že porovnáte souřadnice jejich levém horním a pravém dolním rozích.  
+ Určuje, zda `rect` rovná `CRect` porovnáním souřadnice jejich pravém a levém horním rohu.  
   
 ```  
 BOOL operator==(const RECT& rect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
- Odkazuje na zdroj obdélníku. Může být [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ *Rect*  
+ Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je to stejné; jinak 0.  
+ Nenulové, pokud shodné; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -865,23 +865,23 @@ ASSERT(rect1 == rect2);
 
   
 ##  <a name="operator_neq"></a>  CRect::operator! =  
- Určuje, zda `rect` se nerovná `CRect` tak, že porovnáte souřadnice jejich levém horním a pravém dolním rozích.  
+ Určuje, zda *rect* není roven `CRect` porovnáním souřadnice jejich pravém a levém horním rohu.  
   
 ```  
 BOOL operator!=(const RECT& rect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
- Odkazuje na zdroj obdélníku. Může být [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ *Rect*  
+ Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud není rovno; jinak 0.  
+ Nenulové, pokud není rovno; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -906,7 +906,7 @@ ASSERT(rect1 != rect3);
 ```
   
 ##  <a name="operator_add_eq"></a>  CRect::operator +=  
- První dva přetížení přesunout `CRect` podle zadaných odsazení.  
+ První dvě přetížení přesunout `CRect` podle zadaných odsazení.  
   
 ```  
 void operator+=(POINT point) throw();
@@ -915,19 +915,19 @@ void operator+=(LPCRECT lpRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- A [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout rámeček.  
+ *Bod*  
+ A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout rámeček.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje počet jednotek na každé straně zvýšilo `CRect`.  
+ *lprect –*  
+ Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně rozšiřování `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametru *x* a *y* (nebo `cx` a `cy`) hodnoty se přidají do `CRect`.  
+ Parametr *x* a *y* (nebo `cx` a `cy`) přidání hodnot do `CRect`.  
   
- Zvýšení kapacity třetí přetížení `CRect` podle počtu jednotek zadaných v každém členovi parametru.  
+ Tento třetí přetížení `CRect` podle počtu jednotek zadaný v parametru každého člena.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -945,7 +945,7 @@ void operator+=(LPCRECT lpRect) throw();
 ```
   
 ##  <a name="operator_-_eq"></a>  CRect::operator-=  
- První dva přetížení přesunout `CRect` podle zadaných odsazení.  
+ První dvě přetížení přesunout `CRect` podle zadaných odsazení.  
   
 ```  
 void operator-=(POINT point) throw();
@@ -954,19 +954,19 @@ void operator-=(LPCRECT lpRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- A [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout rámeček.  
+ *Bod*  
+ A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout rámeček.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje počet jednotek na každé straně deflate `CRect`.  
+ *lprect –*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně deflate `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametru *x* a *y* (nebo `cx` a `cy`) hodnoty jsou odečten od `CRect`.  
+ Parametr *x* a *y* (nebo `cx` a `cy`) jsou hodnoty odečtena od `CRect`.  
   
- Snížení kapacity třetí přetížení `CRect` podle počtu jednotek zadaných v každém členovi parametru. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect).  
+ Třetí přetížení vyfoukne `CRect` podle počtu jednotek zadaný v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -984,21 +984,21 @@ void operator-=(LPCRECT lpRect) throw();
 ```
   
 ##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
- Nastaví `CRect` rovna průnik `CRect` a `rect`.  
+ Nastaví `CRect` rovno je určena průsečíkem `CRect` a `rect`.  
   
 ```  
 void operator&=(const RECT& rect) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
- Obsahuje [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ *Rect*  
+ Obsahuje [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Průnik je největší obdélníku, která se nachází v obou rámečků.  
+ Je určena průsečíkem je největší obdélník, který je obsažen v obou obdélníků.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRect::IntersectRect](#intersectrect).  
@@ -1011,14 +1011,14 @@ void operator|=(const RECT& rect) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
- Obsahuje `CRect` nebo [Rect –](../../mfc/reference/rect-structure1.md).  
+ *Rect*  
+ Obsahuje `CRect` nebo [RECT](../../mfc/reference/rect-structure1.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Sjednocení je nejmenší obdélníku, která obsahuje oba zdroje obdélníky.  
+ Sjednocení je nejmenší obdélník, který obsahuje oba zdroje obdélníků.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1037,7 +1037,7 @@ void operator|=(const RECT& rect) throw();
 
   
 ##  <a name="operator_add"></a>  CRect::operator +  
- Vrátí první dva přetížení `CRect` objekt, který se rovná `CRect` po přidání zadaných odsazení.  
+ Vrátí první dvě přetížení `CRect` objekt, který je roven `CRect` vytiskne podle zadaných odsazení.  
   
 ```  
 CRect operator+(POINT point) const throw();
@@ -1046,22 +1046,22 @@ CRect operator+(SIZE size) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- A [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout návratovou hodnotu.  
+ *Bod*  
+ A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout návratovou hodnotu.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje počet jednotek k zvýšilo každé straně návratovou hodnotu.  
+ *lprect –*  
+ Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek, aby se zvýšilo každé straně návratovou hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `CRect` Vyplývající z přesunutí nebo nafouknutí `CRect` podle počtu jednotek zadaný v parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametru *x* a *y* (nebo `cx` a `cy`) parametry jsou přidány do `CRect`je pozice.  
+ Parametr *x* a *y* (nebo `cx` a `cy`) parametry jsou přidány do `CRect`je umístit.  
   
- Vrátí novou třetí přetížení `CRect` který se rovná `CRect` zvětšený podle počtu jednotek zadaných v každém členovi parametru.  
+ Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zvětšený podle počtu jednotek zadaný v parametru každého člena.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1076,7 +1076,7 @@ CRect operator+(SIZE size) const throw();
 
   
 ##  <a name="operator_-"></a>  CRect::operator-  
- Vrátí první dva přetížení `CRect` objekt, který se rovná `CRect` po přidání zadaných odsazení.  
+ Vrátí první dvě přetížení `CRect` objekt, který je roven `CRect` vytiskne podle zadaných odsazení.  
   
 ```  
 CRect operator-(POINT point) const throw();
@@ -1085,22 +1085,22 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- A [bodu](../../mfc/reference/point-structure1.md) struktura nebo `CPoint` objekt, který určuje počet jednotek přesunout návratovou hodnotu.  
+ *Bod*  
+ A [bodu](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo `CSize` objekt, který určuje počet jednotek přesunout návratovou hodnotu.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.  
   
- `lpRect`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, který obsahuje počet jednotek na každé straně návratovou hodnotu deflate.  
+ *lprect –*  
+ Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně návratová hodnota deflate.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `CRect` Vyplývající z přesunutí nebo deflaci `CRect` podle počtu jednotek zadaný v parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametru *x* a *y* (nebo `cx` a `cy`) jsou parametry odečten od `CRect`je pozice.  
+ Parametr *x* a *y* (nebo `cx` a `cy`) jsou parametry odečtena od `CRect`je umístit.  
   
- Vrátí novou třetí přetížení `CRect` který se rovná `CRect` zmenšený podle počtu jednotek zadaných v každém členovi parametru. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect), nikoli [SubtractRect](#subtractrect).  
+ Vrátí nový třetí přetížení `CRect` , který je roven `CRect` zmenšený podle počtu jednotek zadaný v parametru každého člena. Všimněte si, že toto přetížení funkce jako [DeflateRect](#deflaterect), nikoli [SubtractRect](#subtractrect).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1115,7 +1115,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
   
 ##  <a name="operator_amp"></a>  CRect::operator &amp;  
- Vrátí `CRect` tedy průnik `CRect` a *rect2*.  
+ Vrátí `CRect` , který je průsečík `CRect` a *rect2*.  
   
 ```  
 CRect operator&(const RECT& rect2) const throw();
@@ -1123,16 +1123,16 @@ CRect operator&(const RECT& rect2) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *rect2*  
- Obsahuje [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ Obsahuje [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CRect` tedy průnik `CRect` a *rect2*.  
+ A `CRect` , který je průsečík `CRect` a *rect2*.  
   
 ### <a name="remarks"></a>Poznámky  
- Průnik je největší obdélníku, která se nachází v obou rámečků.  
+ Je určena průsečíkem je největší obdélník, který je obsažen v obou obdélníků.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1147,7 +1147,7 @@ CRect operator&(const RECT& rect2) const throw();
 
   
 ##  <a name="operator_or"></a>  CRect::operator&#124;  
- Vrátí `CRect` tedy sjednocení `CRect` a *rect2*.  
+ Vrátí `CRect` , který je sjednocení `CRect` a *rect2*.  
   
 ```   
 CRect operator|(const RECT& 
@@ -1156,16 +1156,16 @@ rect2) const throw();
   
 ### <a name="parameters"></a>Parametry  
  *rect2*  
- Obsahuje [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
+ Obsahuje [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CRect` tedy sjednocení `CRect` a *rect2*.  
+ A `CRect` , který je sjednocení `CRect` a *rect2*.  
   
 ### <a name="remarks"></a>Poznámky  
- Sjednocení je nejmenší obdélníku, která obsahuje oba obdélníky.  
+ Sjednocení je nejmenší obdélník, který obsahuje oba obdélníků.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1185,24 +1185,24 @@ rect2) const throw();
 
   
 ##  <a name="ptinrect"></a>  CRect::PtInRect  
- Určuje, zda se zadaný bod je v rámci `CRect`.  
+ Určuje, zda se zadaný bod nachází v rámci `CRect`.  
   
 ```   
 BOOL PtInRect(POINT point) const throw(); 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](cpoint-class.md) objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](cpoint-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se bod nachází v rámci `CRect`; jinak hodnota 0.  
+ Nenulové, pokud bod nachází v rámci `CRect`; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Bod je v rámci `CRect` Pokud je na straně levého nebo horního nebo je v rámci všechny čtyři strany. Bod na pravé nebo dolní straně je mimo `CRect`.  
+ Bod je v rámci `CRect` Pokud leží na straně levého nebo horního nebo je v rámci všechny čtyři strany. Bod na pravé nebo dolní straně je mimo `CRect`.  
   
 > [!NOTE]
->  Musí být normalizovány rámeček nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci rámeček před voláním této funkce.  
+>  Musí být normalizovaná obdélník nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélník před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1232,24 +1232,24 @@ BOOL PtInRect(POINT point) const throw();
 ```
   
 ##  <a name="setrect"></a>  CRect::SetRect  
- Nastaví rozměry `CRect` k zadané souřadnice.  
+ Nastaví rozměry `CRect` na zadaných souřadnicích.  
   
 ```   
 void SetRect(int x1, int y1, int x2, int y2) throw(); 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
- Určuje souřadnici x levého horního rohu.  
+ *x1*  
+ Určuje souřadnice x levého horního rohu.  
   
- `y1`  
+ *Y1*  
  Určuje souřadnici y levého horního rohu.  
   
- `x2`  
+ *x2*  
  Určuje souřadnici x v pravém dolním rohu.  
   
- `y2`  
- Určuje souřadnici y pravém dolním rohu.  
+ *y2*  
+ Určuje souřadnici y pravého dolního rohu.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1264,7 +1264,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
   
 ##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
- Díky `CRect` null obdélníku nastavením všechny souřadnice na nulu.  
+ Díky `CRect` obdélníkem tak, že nastavíte všechny souřadnice na nulu.  
   
 ```  
 void SetRectEmpty() throw();
@@ -1280,7 +1280,7 @@ ASSERT(rect.IsRectEmpty());
 ```
   
 ##  <a name="size"></a>  CRect::SIZE 
- `cx` a `cy` návratovou hodnotu obsahují výška a šířka `CRect`.  
+ `cx` a `cy` návratová hodnota obsahují výšku a šířku `CRect`.  
   
 ```  
 CSize Size() const throw();
@@ -1290,10 +1290,10 @@ CSize Size() const throw();
  A [CSize](csize-class.md) objekt, který obsahuje velikost `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Šířka nebo výška může být záporná.  
+ Šířka nebo výška může být záporné.  
   
 > [!NOTE]
->  Musí být normalizovány rámeček nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci rámeček před voláním této funkce.  
+>  Musí být normalizovaná obdélník nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélník před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1303,33 +1303,33 @@ CSize Size() const throw();
 ```
 
 ##  <a name="subtractrect"></a>  CRect::SubtractRect  
- Díky rozměry **CRect** rovna odčítání z `lpRectSrc2` z `lpRectSrc1`.  
+ Díky rozměry `CRect` rovna odečtení `lpRectSrc2` z `lpRectSrc1`.  
   
 ```  
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRectSrc1`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo `CRect` objekt, ze kterého se bude odečítat obdélníku.  
+ *lpRectSrc1*  
+ Odkazuje na [RECT](../../mfc/reference/rect-structure1.md) struktury nebo `CRect` objektu, ze kterého se bude odečítat obdélníku.  
   
- `lpRectSrc2`  
- Odkazuje na `RECT` struktura nebo `CRect` objekt, který se bude odečítat od rámeček na kterou odkazuje `lpRectSrc1` parametr.  
+ *lpRectSrc2*  
+ Odkazuje na `RECT` struktury nebo `CRect` objekt, který má být odečtena od obdélník na které odkazují *lpRectSrc1* parametru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor odečítání je nejmenší obdélníku, která obsahuje všechny body v `lpRectScr1` které nejsou v průniku `lpRectScr1` a *lpRectScr2*.  
+ Odčítání je nejmenší obdélník, který obsahuje všechny body v *lpRectScr1* , které nejsou v průsečíku *lpRectScr1* a *lpRectScr2*.  
   
- Rámeček určeného `lpRectSrc1` bude beze změny, pokud rámeček určeného `lpRectSrc2` nepřekrývá úplně rámeček určeného *lpRectSrc1* alespoň v jedné z x - nebo y pokynů.  
+ Obdélník určené *lpRectSrc1* bude beze změny, pokud obdélník určené *lpRectSrc2* nepřekrývá zcela obdélník určené *lpRectSrc1*alespoň v jedné z x - nebo y pokynů.  
   
- Například pokud `lpRectSrc1` byly (10,10, 100,100) a `lpRectSrc2` byly (50,50, 150,150), rámeček na kterou odkazuje `lpRectSrc1` by beze změny, když funkce vrátila. Pokud `lpRectSrc1` byly (10,10, 100,100) a `lpRectSrc2` byly (50,10, 150,150), ale rámeček na kterou odkazuje `lpRectSrc1` by obsahovat souřadnice (10,10, 50,100) při funkce vrátila.  
+ Například pokud *lpRectSrc1* byly (10,10, 100,100) a *lpRectSrc2* byly (50,50, 150,150), obdélník odkazované *lpRectSrc1* by být beze změn při Funkce vrátila. Pokud *lpRectSrc1* byly (10,10, 100,100) a *lpRectSrc2* byly (50,10, 150,150), ale obdélník odkazované *lpRectSrc1* by obsahovat souřadnice (10,10, 50,100) po vrácení funkce.  
   
- `SubtractRect` není stejný jako [operátor -](#operator_-) ani [operátor-=](#operator_-_eq). Ani jeden z těchto operátorů někdy volá `SubtractRect`.  
+ `SubtractRect` není stejný jako [operátor -](#operator_-) ani [operator-=](#operator_-_eq). Ani jeden z těchto operátorů někdy volá `SubtractRect`.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1365,7 +1365,7 @@ CRect   rectResult(10, 10, 50, 100);
 ```
   
 ##  <a name="topleft"></a>  CRect::TopLeft  
- Souřadnice se vrátí jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
+ Souřadnice jsou vrácena jako odkaz na [CPoint](cpoint-class.md) objekt, který je součástí `CRect`.  
   
 ```  
 CPoint& TopLeft() throw();
@@ -1376,35 +1376,35 @@ const CPoint& TopLeft() const throw();
  Souřadnice levého horního rohu obdélníku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce slouží k získání nebo nastavení levého horního rohu obdélníku. Nastavte rohu pomocí této funkce na levé straně operátoru přiřazení.  
+ Tato funkce slouží k získání nebo nastavení levého horního rohu obdélníku. Nastavení rohu s použitím této funkce na levé straně operátoru přiřazení.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CRect::CenterPoint](#centerpoint).  
   
 ##  <a name="unionrect"></a>  CRect::UnionRect  
- Díky rozměry `CRect` rovna sjednocení obdélníky dva zdroje.  
+ Díky rozměry `CRect` rovna sjednocení dva zdroje obdélníků.  
   
 ```  
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect1`  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) nebo `CRect` obsahující obdélníku zdroje.  
+ *lpRect1*  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) nebo `CRect` , který obsahuje zdrojového obdélníku.  
   
- `lpRect2`  
- Odkazuje na `RECT` nebo `CRect` obsahující obdélníku zdroje.  
+ *lpRect2*  
+ Odkazuje `RECT` nebo `CRect` , který obsahuje zdrojového obdélníku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud sjednocení není prázdná. 0, pokud sjednocení je prázdný.  
+ Nenulové, pokud sjednocení není prázdná. 0, pokud sjednocení je prázdný.  
   
 ### <a name="remarks"></a>Poznámky  
- Sjednocení je nejmenší obdélníku, která obsahuje oba zdroje obdélníky.  
+ Sjednocení je nejmenší obdélník, který obsahuje oba zdroje obdélníků.  
   
- Windows ignoruje dimenze prázdný obdélníku; To znamená, který má žádné výšky nebo žádné šířka obdélníku.  
+ Windows ignoruje dimenze prázdného obdélník; To znamená, který nemá žádnou výšku nebo šířku obdélníku.  
   
 > [!NOTE]
->  Obě obdélníků budou normalizovány nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci obdélníků před voláním této funkce.  
+>  Obě obdélníků musí být normalizovaná nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélníků před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -1418,7 +1418,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```
  
 ##  <a name="width"></a>  CRect::Width  
- Vypočítá šířku `CRect` odečtením levé hodnoty z pravé hodnoty.  
+ Vypočítá šířku `CRect` tak, že se levé hodnoty z správné hodnoty.  
   
 ```  
 int Width() const throw();
@@ -1428,10 +1428,10 @@ int Width() const throw();
  Šířka `CRect`.  
   
 ### <a name="remarks"></a>Poznámky  
- Šířka může být záporná.  
+ Šířka může být záporné.  
   
 > [!NOTE]
->  Musí být normalizovány rámeček nebo této funkce může selhat. Můžete volat [NormalizeRect](#normalizerect) k normalizaci rámeček před voláním této funkce.  
+>  Musí být normalizovaná obdélník nebo může dojít k selhání této funkce. Můžete volat [NormalizeRect](#normalizerect) normalizace obdélník před voláním této funkce.  
   
 ### <a name="example"></a>Příklad  
 
@@ -1442,8 +1442,8 @@ int nWid = rect.Width();
    ASSERT(nWid == 60);   
 ```
 ## <a name="see-also"></a>Viz také  
- [CPoint – třída](cpoint-class.md)   
- [CSize – třída](csize-class.md)   
- [RECT –](../../mfc/reference/rect-structure1.md)
+ [Cpoint – třída](cpoint-class.md)   
+ [Csize – třída](csize-class.md)   
+ [RECT](../../mfc/reference/rect-structure1.md)
 
 

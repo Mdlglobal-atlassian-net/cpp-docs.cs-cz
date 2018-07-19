@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCTasksPaneTask | Microsoft Docs
+title: Cmfctaskspanetask – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040698"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853966"
 ---
-# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask – třída
-`CMFCTasksPaneTask` Třída je pomocná třída, která představuje úlohy pro ovládací prvek podokna úloh ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klikne na úlohy a ikonu, která se zobrazí vlevo od název úlohy.  
+# <a name="cmfctaskspanetask-class"></a>Cmfctaskspanetask – třída
+`CMFCTasksPaneTask` Třída je pomocná třída, která představuje úkoly pro podokno úloh ovládacího prvku ( [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klepne na úlohu a ikonu, která se zobrazí vlevo od názvu úkolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,35 +69,35 @@ class CMFCTasksPaneTask : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Určuje nastavení dat pro usnadnění přístupu pro aktuální úlohu.|  
+|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Určuje usnadnění dat pro aktuální úlohu.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Určuje, zda okno úloha automaticky zničena.|  
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Určuje, zda rozhraní nevykresluje popisek úlohy tučným písmem.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Obsahuje uživatelská data, která přidruží rozhraní úlohy. Nastavte na nulu, pokud úloha nemá žádné přidružená data.|  
-|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Obslužná rutina v okně úlohy.|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|Index v seznamu obrázků bitové kopie, rozhraní se zobrazí vedle úlohy.|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|Výška okna úloh. Pokud úloha nemá žádný časový interval pro úkol, je tato hodnota nula.|  
-|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Ukazatel `CMFCTasksPaneTaskGroup` náležející do této úlohy.|  
-|[CMFCTasksPaneTask::m_rect](#m_rect)|Určuje ohraničující obdélník úlohu.|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Určuje, zda je okno úkolů automaticky odstraní.|  
+|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Určuje, zda rozhraní nakreslí popisek úlohy tučným písmem.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Obsahuje data uživatelského rozhraní, přidruží k úkolu. Nastavte na hodnotu nula, pokud úloha nemá žádná přidružená data.|  
+|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Popisovač okna úloh.|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|Index v seznamu obrázků obrázku, který se zobrazí vedle úloha rozhraní.|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|Výšku okna úloh. Pokud úloha nemá žádný časový interval pro úkol, tato hodnota je nula.|  
+|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Ukazatel `CMFCTasksPaneTaskGroup` patřící do této úlohy.|  
+|[CMFCTasksPaneTask::m_rect](#m_rect)|Určuje ohraničující obdélník úkolu.|  
 |[CMFCTasksPaneTask::m_strName](#m_strname)|Název úlohy|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Určuje příkaz ID příkazu, který rozhraní provede, když uživatel klikne na úkol. Pokud tato hodnota není platný příkaz ID, úloha je považována za jednoduché štítek.|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Určuje Identifikátor příkazu příkazu, který rozhraní spustí, když uživatel klikne úkol. Pokud tato hodnota není platný příkaz ID, je považován za jmenovku jednoduchý úkol.|  
   
 ## <a name="remarks"></a>Poznámky  
- Následující obrázek znázorňuje skupinu úloh, která obsahuje tři úkoly:  
+ Následující obrázek ukazuje skupiny úloh, která obsahuje tři úkoly:  
   
- ![Skupiny úloh, rozšířit](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Skupiny úloh, rozbalení](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
 > [!NOTE]
->  Pokud úloha nemá platný příkaz ID, se zpracovává jako jednoduchý štítek.  
+>  Pokud úloha nemá platný příkaz ID, je považován za jednoduché popisek.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)  
+ [Cmfctaskspanetask –](../../mfc/reference/cmfctaskspanetask-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxTasksPane.h  
@@ -119,25 +119,25 @@ CMFCTasksPaneTask(
   
 ### <a name="parameters"></a>Parametry  
  *pGroup*  
- Určuje, [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , ke které patří úkol.  
+ Určuje, [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , ke které úkol patří.  
   
  *lpszName*  
- Určuje název úlohy.  
+ Určuje název úkolu.  
   
  *nIcon*  
- Určuje index image úkolu v seznamu obrázků.  
+ Určuje index bitové kopie úkol v seznamu obrázků.  
   
  *uiCommandID*  
- Určuje příkaz ID příkazu, který se spustí, až po kliknutí na úlohu.  
+ Určuje Identifikátor příkazu příkazu, který se spouští při kliknutí na úlohu.  
   
  *dwUserData*  
- Uživatelská data.  
+ Data definovaná uživatelem.  
   
  *hwndTask*  
  Určuje popisovač okna úloh.  
   
  *bAutoDestroyWindow*  
- Pokud `TRUE`, okno úlohy budou automaticky zničena.  
+ Při hodnotě TRUE se okno úloha automaticky zničen.  
   
  *nWindowHeight*  
  Určuje výšku okna úloh.  
@@ -145,27 +145,27 @@ CMFCTasksPaneTask(
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
- Určuje, zda okno úloha automaticky zničena.  
+ Určuje, zda je okno úkolů automaticky odstraní.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavte na `TRUE` určíte, že okna úloh ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) musí být zničený, automaticky; v opačném `FALSE`.  
+ Nastavte na TRUE, pokud chcete určit, že okno úkolů ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) by měl zničí automaticky; jinak hodnota FALSE.  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
- Určuje, zda se popisek úlohy vykresluje v tučně.  
+ Určuje, jestli je popisek úlohy vykresleno tučným písmem.  
   
 ```  
 BOOL m_bIsBold;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte tučně pro popisek úlohy.  
+ Nastavte tento člen pro hodnotu PRAVDA, zobrazení tučný text popisku úloh.  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
- Obsahuje uživatelská data, která souvisí s úlohu. Nastavte na nulu, pokud je přidružen úlohu žádná data.  
+ Obsahuje uživatelem definované datové části, která je přidružená k úloze. Nastavte na hodnotu nula, pokud žádná data nejsou přidružená k úloze.  
   
 ```  
 DWORD m_dwUserData;  
@@ -174,29 +174,29 @@ DWORD m_dwUserData;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
- Obslužná rutina v okně úlohy.  
+ Popisovač okna úloh.  
   
 ```  
 HWND m_hwndTask;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li přidat úloha okno, volejte [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
+ Chcete-li přidat časové období úkolu, zavolejte [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- Index pozice v seznamu obrázků identifikující obrázek, který se zobrazí vedle zadané úloze.  
+ Index pozice v seznamu obrázků, který identifikuje bitovou kopii, která se zobrazí vedle zadanou úlohu.  
   
 ```  
 int m_nIcon;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Seznam obrázků se nastavuje pomocí [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
+ Seznam obrázků nastavuje [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
- Nastavit `m_nIcon` na -1, pokud chcete zobrazit úlohy bez bitovou kopii.  
+ Nastavte `m_nIcon` na hodnotu -1, pokud chcete zobrazit úkol bez bitovou kopii.  
   
 ##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
- Výška okna úloh. Pokud úloha nemá žádný časový interval pro úkol, je tato hodnota nula.  
+ Výšku okna úloh. Pokud úloha nemá žádný časový interval pro úkol, tato hodnota je nula.  
   
 ```  
 int m_nWindowHeight;  
@@ -205,24 +205,24 @@ int m_nWindowHeight;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
- Ukazatel [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , ke které patří tato úloha.  
+ Ukazatel [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , ke které úkol patří.  
   
 ```  
 CMFCTasksPaneTaskGroup* m_pGroup;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Každý úkol, musí mít nadřazenou skupinu. Přidání skupiny do podokna úloh voláním [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Každá úloha musí mít nadřazenou skupinu. Přidejte skupiny do podokna úloh voláním [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
- Určuje ohraničující obdélník úlohu.  
+ Určuje ohraničující obdélník úkolu.  
   
 ```  
 CRect m_rect;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato hodnota je vypočítána rozhraní při sestavování úlohu.  
+ Tato hodnota je vypočítána rozhraní framework při vykreslení úlohy.  
   
 ##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
  Název úlohy  
@@ -234,7 +234,7 @@ CString m_strName;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
- Určuje příkaz ID příkazu, který je spuštěn, když uživatel klikne na úkol. Pokud tato hodnota není platný příkaz ID, úloha je považována za jednoduché štítek.  
+ Určuje Identifikátor příkazu příkazu, který je spuštěn, když uživatel klikne úkol. Pokud tato hodnota není platný příkaz ID, je považován za jmenovku jednoduchý úkol.  
   
 ```  
 UINT m_uiCommandID;  
@@ -243,7 +243,7 @@ UINT m_uiCommandID;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
- Určuje nastavení dat pro usnadnění přístupu pro aktuální úlohu.  
+ Určuje usnadnění dat pro aktuální úlohu.  
   
 ```  
 virtual BOOL SetACCData(
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParent*  
- Představuje nadřazeného okna aktuální úlohy.  
+ [in] *pParent*  
+ Představuje nadřazené okno aktuálního úkolu.  
   
  [out] *dat*  
- Objekt typu `CAccessibilityData` který naplněný daty usnadnění aktuálního úkolu.  
+ Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuálního úkolu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud *data* parametr byl úspěšně vyplněná s daty usnadnění aktuálního úkolu, jinak hodnota `FALSE`.  
+ Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuálního úkolu; v opačném případě hodnota FALSE.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

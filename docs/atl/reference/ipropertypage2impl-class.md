@@ -1,5 +1,5 @@
 ---
-title: Třída IPropertyPage2Impl | Microsoft Docs
+title: Ipropertypage2impl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 204f62e667bd149dd174f960ba31d8388e01394e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361899"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882894"
 ---
-# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl – třída
-Tato třída implementuje **IUnknown** a dědí výchozí implementaci [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
+# <a name="ipropertypage2impl-class"></a>Ipropertypage2impl – třída
+Tato třída implementuje `IUnknown` a zdědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md).  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,8 +41,8 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `IPropertyPage2Impl`.  
+ *T*  
+ Vaše třída odvozena od `IPropertyPage2Impl`.  
   
 ## <a name="members"></a>Členové  
   
@@ -50,21 +50,21 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Určuje, který vlastnost ovládací prvek bude získat fokus, když je aktivován stránku vlastností. Implementace ATL vrátí **E_NOTIMPL**.|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Určuje, který vlastnost ovládací prvek získá fokus, když je aktivován na stránce vlastností. Implementace knihovny ATL vrátí E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) rozšiřuje rozhraní [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) přidáním `EditProperty` metoda. Tato metoda umožňuje klientovi, vyberte konkrétní vlastnost v objektu stránku vlastností.  
+ [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) rozhraní rozšiřuje [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) tak, že přidáte `EditProperty` metody. Tato metoda umožňuje vybrat konkrétní vlastnost v objektu vlastností stránky klientovi.  
   
- Třída `IPropertyPage2Impl` jednoduše vrátí **E_NOTIMPL** pro **IPropertyPage2::EditProperty**. Ale zdědil výchozí implementaci [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) a implementuje **IUnknown** posíláním informací o k výpisu zařízení ladění sestavení.  
+ Třída `IPropertyPage2Impl` jednoduše vrací E_NOTIMPL pro `IPropertyPage2::EditProperty`. Ale dědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md) a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
- Při vytváření stránky vlastností vlastní třídy je obvykle odvozený od `IPropertyPageImpl`. Poskytovat další podporu systému **IPropertyPage2**, upravte definici vaší třídy a přepsat `EditProperty` metoda.  
+ Při vytváření stránky vlastností vaší třídy je obvykle odvozen z `IPropertyPageImpl`. Kvůli další podpoře `IPropertyPage2`, úpravě vaší definice třídy a přepsat `EditProperty` metody.  
   
- **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IPropertyPage`  
   
- [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)  
+ [Ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md)  
   
  `IPropertyPage2Impl`  
   
@@ -72,19 +72,19 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
  **Záhlaví:** atlctl.h  
   
 ##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty  
- Určuje, který vlastnost ovládací prvek bude získat fokus, když je aktivován stránku vlastností.  
+ Určuje, který vlastnost ovládací prvek získá fokus, když je aktivován na stránce vlastností.  
   
 ```
 HRESULT EditProperty(DISPID dispID);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **E_NOTIMPL**.  
+ Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) ve Windows SDK.  
+ Zobrazit [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [Iperpropertybrowsingimpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)   
  [ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

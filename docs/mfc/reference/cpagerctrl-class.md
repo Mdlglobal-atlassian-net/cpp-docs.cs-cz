@@ -1,5 +1,5 @@
 ---
-title: Třída CPagerCtrl | Microsoft Docs
+title: Cpagerctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,15 +58,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079640"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853820"
 ---
-# <a name="cpagerctrl-class"></a>CPagerCtrl – třída
-`CPagerCtrl` Třída zabalí řízení pager Windows, které můžete přejděte do zobrazení obsažené okno, které nebudou vyhovovat obsahující okno.  
+# <a name="cpagerctrl-class"></a>Cpagerctrl – třída
+`CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,36 +86,36 @@ class CPagerCtrl : public CWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|Vytvoří se zadaný styly ovládacího prvku pager a připojí k aktuální `CPagerCtrl` objektu.|  
-|[CPagerCtrl::CreateEx](#createex)|Vytvoří se zadaný rozšířené styly ovládacího prvku pager a připojí k aktuální `CPagerCtrl` objektu.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Povolí nebo zakáže předávání [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) zprávy do okna je obsažen v ovládacím prvku aktuální pager.|  
-|[CPagerCtrl::GetBkColor](#getbkcolor)|Načte barvu pozadí ovládacího prvku aktuální pager.|  
-|[CPagerCtrl::GetBorder](#getborder)|Získá velikost ohraničení ovládacího prvku aktuální pager.|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Načte tlačítko velikosti ovládacího prvku aktuální pager.|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|Načte stav tlačítko zadaný v ovládacím prvku aktuální pager.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro aktuální ovládací prvek pager.|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|Načte pozici posunutí aktuální ovládacího prvku pager.|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Určuje, zda je dané tlačítko aktuální ovládacího prvku pager v `pressed` stavu.|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Určuje, zda je dané tlačítko aktuální ovládacího prvku pager v `grayed` stavu.|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Určuje, zda je dané tlačítko aktuální ovládacího prvku pager v `hot` stavu.|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Určuje, zda je dané tlačítko aktuální ovládacího prvku pager v `invisible` stavu.|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Určuje, zda je dané tlačítko aktuální ovládacího prvku pager v `normal` stavu.|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|Způsobí, že aktuální řízení pager přepočítat velikost okna obsažené.|  
-|[CPagerCtrl::SetBkColor](#setbkcolor)|Nastaví barvu pozadí ovládacího prvku aktuální pager.|  
-|[CPagerCtrl::SetBorder](#setborder)|Nastaví velikost ohraničení ovládacího prvku aktuální pager.|  
-|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Nastaví velikost tlačítko aktuální ovládacího prvku pager.|  
-|[CPagerCtrl::SetChild](#setchild)|Nastaví obsažené okna pro ovládací prvek aktuální pager.|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|Nastaví pozici posunutí aktuální ovládacího prvku pager.|  
+|[CPagerCtrl::Create](#create)|Vytvoří ovládací prvek stránkování se zadaným styly a připojí ho k aktuální `CPagerCtrl` objektu.|  
+|[CPagerCtrl::CreateEx](#createex)|Vytvoří ovládací prvek stránkování se zadaným rozšířené styly a připojí ho k aktuální `CPagerCtrl` objektu.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Povolí nebo zakáže předávání [wm_mousemove a](http://msdn.microsoft.com/library/windows/desktop/ms645616) zprávu do okna, která je součástí aktuální ovládacího prvku stránkování.|  
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Zjišťuje barvu pozadí ovládacího prvku aktuální stránkování.|  
+|[CPagerCtrl::GetBorder](#getborder)|Získá velikost ohraničení ovládacího prvku aktuální stránkování.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Získá velikost tlačítka aktuálního ovládacího prvku stránkování.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Načte stav určeného tlačítka v ovládacím prvku aktuální stránkování.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro aktuální ovládací prvek stránkování.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Načte pozici posunutí aktuální ovládacího prvku stránkování.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Určuje, zda je zadaný tlačítko aktuální ovládací prvek stránkování v `pressed` stavu.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Určuje, zda je zadaný tlačítko aktuální ovládací prvek stránkování v `grayed` stavu.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Určuje, zda je zadaný tlačítko aktuální ovládací prvek stránkování v `hot` stavu.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Určuje, zda je zadaný tlačítko aktuální ovládací prvek stránkování v `invisible` stavu.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Určuje, zda je zadaný tlačítko aktuální ovládací prvek stránkování v `normal` stavu.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Způsobí, že aktuální ovládacího prvku stránkování přepočítat velikost obsaženého okna.|  
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Nastaví barvu pozadí ovládacího prvku aktuální stránkování.|  
+|[CPagerCtrl::SetBorder](#setborder)|Nastaví velikost ohraničení ovládacího prvku aktuální stránkování.|  
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Nastaví velikost tlačítka aktuálního ovládacího prvku stránkování.|  
+|[CPagerCtrl::SetChild](#setchild)|Nastaví obsaženého okna pro ovládací prvek aktuální stránkování.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Nastaví pozici posunutí aktuální ovládacího prvku stránkování.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ovládací prvek pager je okno, které obsahuje jiné okno, které je lineární a větší než okno obsahující a umožňuje přejděte do zobrazení okna obsažené. Stránkovací ovládací prvek zobrazí dvě Posunutí tlačítek, které automaticky při přesunut oblasti okno obsažené zmizí jeho nejvíce rozsahu a jinak objevit znova. Můžete vytvořit pager ovládací prvek, který se posouvá společně vodorovně nebo svisle.  
+ Ovládací prvek stránkování je okno, které obsahuje další okno, které je větší než obsahujícího okna a lineární a umožňuje přejděte do zobrazení obsaženého okna. Ovládacího prvku stránkování zobrazí dvě tlačítka pro posunutí, které automaticky zmizí při posunu obsaženého okna jeho nejvíce rozsahu a v opačném případě se zase objeví. Můžete vytvořit ovládací prvek stránkování, který posouvána vodorovně nebo svisle.  
   
- Například pokud aplikace obsahuje panel nástrojů, který není dost široké, a zobrazit všechny jeho položky, můžete přiřadit panelu nástrojů do ovládacího prvku pager a uživatelé budou moci posuňte doleva nebo doprava přístup všechny položky panelu nástrojů. Microsoft Internet Explorer verze 4.0 (verze commctrl.dll 4.71) představuje ovládacího prvku pager.  
+ Pokud má vaše aplikace, která není dost široký, chcete-li zobrazit všechny jeho položky panelu nástrojů, panelu nástrojů můžete přiřadit do ovládacího prvku stránkování a uživatelé budou moci posunout doleva nebo doprava přístup ke všem položek panelu nástrojů. Microsoft Internet Explorer verze 4.0 (verze commctrl.dll 4.71) představuje ovládacího prvku stránkování.  
   
- `CPagerCtrl` Je třída odvozená z [CWnd](../../mfc/reference/cwnd-class.md) třídy. Obrázek ovládacího prvku pager a další informace najdete v tématu [ovládací prvky Pager](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
+ `CPagerCtrl` Je třída odvozena z [CWnd](../../mfc/reference/cwnd-class.md) třídy. Další informace a ilustraci ovládacího prvku stránkování najdete v tématu [ovládacími prvky stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -134,10 +134,10 @@ CPagerCtrl();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metodu pro vytvoření ovládacího prvku pager a připojte ji k `CPagerCtrl` objektu.  
+ Použití [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metodu pro vytvoření ovládacího prvku stránkování a připojte ji k `CPagerCtrl` objektu.  
   
 ##  <a name="create"></a>  CPagerCtrl::Create  
- Vytvoří se zadaný styly ovládacího prvku pager a připojí k aktuální `CPagerCtrl` objektu.  
+ Vytvoří ovládací prvek stránkování se zadaným styly a připojí ho k aktuální `CPagerCtrl` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -151,24 +151,24 @@ virtual BOOL Create(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *dwStyle*|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
-|[v] *Rect –*|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
-|[v] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
-|[v] *nID*|ID ovládacího prvku.|  
+|[in] *dwStyle*|Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859) u ovládacího prvku.|  
+|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
+|[in] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
+|[in] *nID*|ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoření ovládacího prvku pager, deklarovat `CPagerCtrl` proměnnou, pak volání [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metoda na tuto proměnnou.  
+ Chcete-li vytvořit ovládací prvek stránkování, deklarujte `CPagerCtrl` proměnnou, zavolejte [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metoda u této proměnné.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad vytvoří ovládacího prvku pager a pak používá [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit velmi dlouhé tlačítko – ovládací prvek s ovládacím prvkem pager. V příkladu se pak použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metodu a nastavit pager ovládacího prvku do 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metodu a nastavit tloušťku ohraničení na 1 pixel.  
+ Následující příklad vytvoří ovládací prvek stránkování a pak pomocí [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit ovládací prvek velmi dlouhý tlačítko s ovládacím prvkem pager. Příklad poté použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metody nastavte výšku ovládacího prvku stránkování na 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metody nastavte tloušťku ohraničení 1 pixelu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CPagerCtrl::CreateEx  
- Vytvoří se zadaný rozšířené styly ovládacího prvku pager a připojí k aktuální `CPagerCtrl` objektu.  
+ Vytvoří ovládací prvek stránkování se zadaným rozšířené styly a připojí ho k aktuální `CPagerCtrl` objektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -183,20 +183,20 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *dwExStyle*|Bitová kombinace rozšířené styly použité pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
-|[v] *dwStyle*|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
-|[v] *Rect –*|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
-|[v] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
-|[v] *nID*|ID ovládacího prvku.|  
+|[in] *dwExStyle*|Bitová kombinace hodnot rozšířené styly pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
+|[in] *dwStyle*|Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859) u ovládacího prvku.|  
+|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku, v souřadnicích klienta.|  
+|[in] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže mít hodnotu NULL.|  
+|[in] *nID*|ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoření ovládacího prvku pager, deklarovat `CPagerCtrl` proměnnou, pak volání [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metoda na tuto proměnnou.  
+ Chcete-li vytvořit ovládací prvek stránkování, deklarujte `CPagerCtrl` proměnnou, zavolejte [CPagerCtrl::Create](#create) nebo [CPagerCtrl::CreateEx](#createex) metoda u této proměnné.  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
- Povolí nebo zakáže předávání [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) zprávy do okna je obsažen v ovládacím prvku aktuální pager.  
+ Povolí nebo zakáže předávání [wm_mousemove a](http://msdn.microsoft.com/library/windows/desktop/ms645616) zprávu do okna, která je součástí aktuální ovládacího prvku stránkování.  
   
 ```  
 void ForwardMouse(BOOL bForward);
@@ -206,13 +206,13 @@ void ForwardMouse(BOOL bForward);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *bForward*|`true` k předávání zpráv myši nebo `false` není předávat zprávy myši.|  
+|[in] *bForward*|True pro zprávy týkající se myši dopředu, nebo hodnotu NEPRAVDA nelze předávat zprávy týkající se myši.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
- Získá velikost ohraničení ovládacího prvku aktuální pager.  
+ Získá velikost ohraničení ovládacího prvku aktuální stránkování.  
   
 ```  
 int GetBorder() const;  
@@ -222,48 +222,48 @@ int GetBorder() const;
  Aktuální velikost ohraničení měřená v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::GetBorder](#getborder) metoda pro načtení Tloušťka ohraničení ovládacího prvku pager.  
+ V následujícím příkladu [CPagerCtrl::GetBorder](#getborder) metodu pro načtení Tloušťka ohraničení ovládacího prvku stránkování.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
 ##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
- Načte barvu pozadí ovládacího prvku aktuální pager.  
+ Zjišťuje barvu pozadí ovládacího prvku aktuální stránkování.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje aktuální barva pozadí ovládacího prvku pager.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje aktuální barva pozadí ovládacího prvku stránkování.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::SetBkColor](#setbkcolor) metodu a nastavit barvu pozadí ovládacího prvku pager na červený a [CPagerCtrl::GetBkColor](#getbkcolor) metoda potvrďte, že změny.  
+ Následující příklad používá [CPagerCtrl::SetBkColor](#setbkcolor) metodu a nastavit barvu pozadí ovládacího prvku stránkování na červený, tak i [CPagerCtrl::GetBkColor](#getbkcolor) metody pro potvrzení, že byla změněna.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
- Načte tlačítko velikosti ovládacího prvku aktuální pager.  
+ Získá velikost tlačítka aktuálního ovládacího prvku stránkování.  
   
 ```  
 int GetButtonSize() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Aktuální velikost tlačítko měřená v pixelech.  
+ Aktuální velikost tlačítka měřená v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) zprávu, která je popsána v sadě Windows SDK.  
   
- Pokud se má ovládací prvek pager `PGS_HORZ` styl, velikost tlačítko Určuje šířku tlačítka stránkování, a pokud se má ovládací prvek pager `PGS_VERT` styl, velikost tlačítko Určuje výšku tlačítka stránkování. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Pokud je ovládací prvek stránkování PGS_HORZ styl, velikost tlačítka Určuje šířku tlačítka stránkování a pokud PGS_VERT stylu ovládacího prvku stránkování, velikost tlačítka Určuje výšku tlačítka stránkování. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
- Načte stav tlačítko posuvníku zadaný v ovládacím prvku aktuální pager.  
+ Načte stav tlačítko zadané posouvání v ovládacím prvku aktuální stránkování.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
@@ -273,49 +273,49 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav tlačítko určeného *iButton* parametr. Stav je buď `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, nebo `PGF_HOT`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Stav tlačítka určené *iButton* parametru. Stav je buď PGF_INVISIBLE PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED či PGF_HOT. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
- Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro aktuální ovládací prvek pager.  
+ Načte [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní pro aktuální ovládací prvek stránkování.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `IDropTarget` rozhraní pro aktuální ovládací prvek pager.  
+ Ukazatel `IDropTarget` rozhraní pro aktuální ovládací prvek stránkování.  
   
 ### <a name="remarks"></a>Poznámky  
- `IDropTarget` je jedním z rozhraní implementaci pro podporu operací přetažení myší v aplikaci.  
+ `IDropTarget` je jedním z rozhraní implementaci pro podporu operací přetažení myší ve vaší aplikaci.  
   
- Tato metoda odesílá [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) zprávy, která je popsána v sadě Windows SDK. Volající tuto metodu je zodpovědná za volání `Release` členem [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní když rozhraní je už nepotřebují.  
+ Tato metoda odesílá [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) zprávu, která je popsána v sadě Windows SDK. Volající této metody je zodpovědná za volání `Release` člena [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) rozhraní, pokud rozhraní je už nepotřebujete.  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
- Načte pozici posunutí aktuální ovládacího prvku pager.  
+ Načte pozici posunutí aktuální ovládacího prvku stránkování.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Na aktuální pozici posunutí měřená v pixelech.  
+ Aktuální pozice posuvníku, měřeno v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::GetScrollPos](#getscrollpos) metoda pro načtení na aktuální pozici posunutí ovládacího prvku pager. Pokud ovládacího prvku pager není již přešli na nulu, levou krajní pozici v příkladu se používá [CPagerCtrl::SetScrollPos](#setscrollpos) metodu a nastavit na pozici posunutí na nulu.  
+ V následujícím příkladu [CPagerCtrl::GetScrollPos](#getscrollpos) metody k získání aktuální pozici posunutí ovládacího prvku stránkování. Pokud ovládacího prvku stránkování není již přešli na nulu, úplně vlevo pozice v příkladu se používá [CPagerCtrl::SetScrollPos](#setscrollpos) metody nastavte pozici posunutí na nulu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
 ##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
- Určuje, zda tlačítko posuvníku zadaného prvku aktuální pager je ve stavu při stisknutí tlačítka.  
+ Označuje, zda tlačítko zadané posouvání aktuálního ovládacího prvku stránkování je ve stavu při stisknutí tlačítka.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
@@ -325,16 +325,16 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud zadaný tlačítko je ve stavu při stisknutí tlačítka; v opačném `false`.  
+ Hodnota TRUE, pokud zadaný tlačítko je ve stavu při stisknutí; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK. Potom testuje, zda je stav, který je vrácen `PGF_DEPRESSED`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK. Pak ověřuje, jestli je stav, který je vrácen PGF_DEPRESSED. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
- Určuje, zda tlačítko posuvníku zadaného prvku aktuální pager v šedým stavu.  
+ Označuje, zda tlačítko zadané posouvání aktuálního ovládacího prvku stránkování v potlačených stavu.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
@@ -344,16 +344,16 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je tlačítko zadaný v šedým stavu; v opačném `false`.  
+ Hodnota TRUE, pokud je zadaný tlačítko v potlačených stavu; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK. Potom testuje, zda je stav, který je vrácen `PGF_GRAYED`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK. Pak ověřuje, jestli je stav, který je vrácen PGF_GRAYED. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
- Určuje, zda aktuální pager ovládacího prvku tlačítko zadaný posuvníku je ve stavu aktivní.  
+ Označuje, zda tlačítko zadané posouvání aktuálního ovládacího prvku stránkování v horkém stavu.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
@@ -363,16 +363,16 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je tlačítko zadaný v aktivního stavu; v opačném `false`.  
+ Hodnota TRUE, pokud je zadaný tlačítko v horkém stavu; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK. Potom testuje, zda je stav, který je vrácen `PGF_HOT`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK. Pak ověřuje, jestli je stav, který je vrácen PGF_HOT. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
- Určuje, zda tlačítko posuvníku zadaného prvku aktuální pager v neviditelná stavu.  
+ Označuje, zda tlačítko zadané posouvání aktuálního ovládacího prvku stránkování je ve stavu neviditelné.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
@@ -382,23 +382,23 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je tlačítko zadaný v neviditelná stavu; v opačném `false`.  
+ Hodnota TRUE, pokud zadaný tlačítko je ve stavu neviditelné; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Windows vytváří tlačítko posuvníku v konkrétní směr neviditelná při okno obsažené přesunut oblasti jeho nejvíce rozsahu vzhledem k tomu, že kliknete na tlačítko Další nelze uvést více okna obsažené do zobrazení.  
+ Windows díky tlačítko posouvání v konkrétní směr neviditelné při obsaženého okna je přechod na jeho nejvíce rozsah, protože kliknutím na tlačítko Další nelze uvést do režimu více obsaženého okna do zobrazení.  
   
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK. Potom testuje, zda je stav, který je vrácen `PGF_INVISIBLE`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK. Pak ověřuje, jestli je stav, který je vrácen PGF_INVISIBLE. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) metodu za účelem zjištění, zda je ponecháno ovládacího prvku pager a správné Posunutí tlačítek jsou viditelné.  
+ V následujícím příkladu [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) metodou ke zjištění, zda ovládací prvek stránkování levým a tlačítka pro posunutí doprava jsou viditelné.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
 ##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
- Určuje, zda tlačítko posuvníku zadaného prvku aktuální pager v normálním stavu.  
+ Označuje, zda tlačítko zadané posouvání aktuálního ovládacího prvku stránkování v normálním stavu.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
@@ -408,36 +408,36 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Určuje tlačítko, pro který je načten do stavu. Pokud je styl ovládacího prvku stránkování PGS_HORZ, zadejte pro tlačítko vlevo a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro pravým tlačítkem. Pokud je styl ovládacího prvku stránkování PGS_VERT, zadejte pro tlačítko nahoře a PGB_BOTTOMORRIGHT PGB_TOPORLEFT pro tlačítko dole. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je tlačítko zadaný v normálním stavu; v opačném `false`.  
+ Hodnota TRUE, pokud je zadaný tlačítko v normálním stavu; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK. Potom testuje, zda je stav, který je vrácen `PGF_NORMAL`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávu, která je popsána v sadě Windows SDK. Pak ověřuje, jestli je stav, který je vrácen PGF_NORMAL. Další informace najdete v části vrátit hodnotu z [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
- Způsobí, že aktuální řízení pager přepočítat velikost okna obsažené.  
+ Způsobí, že aktuální ovládacího prvku stránkování přepočítat velikost obsaženého okna.  
   
 ```  
 void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) zprávy, která je popsána v sadě Windows SDK. V důsledku toho odesílá ovládacího prvku pager [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) oznámení k získání dimenze posuvného okna obsažené.  
+ Tato metoda odesílá [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) zprávu, která je popsána v sadě Windows SDK. V důsledku toho odesílá ovládacího prvku stránkování [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) oznámení k získání posuvný dimenze obsaženého okna.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::RecalcSize](#recalcsize) metoda požádat o prvku aktuální pager přepočítat jeho velikost.  
+ V následujícím příkladu [CPagerCtrl::RecalcSize](#recalcsize) metodu pro žádost o aktuální ovládacího prvku stránkování přepočítat její velikost.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [zprávy reflexe](../../mfc/tn062-message-reflection-for-windows-controls.md) povolit ovládacího prvku pager přepočítat vlastní velikost místo nutnosti dialog nadřazeného ovládacího prvku provést výpočet. V příkladu je odvozena `MyPagerCtrl` třídy z [CPagerCtrl třída](../../mfc/reference/cpagerctrl-class.md), pak použije mapy zpráv pro přidružení [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) oznámení s `OnCalcsize` obslužná rutina oznámení. V tomto příkladu obslužná rutina oznámení Nastaví šířku a výšku ovládacího prvku pager na pevné hodnoty.  
+ Následující příklad používá [zprávy reflexe](../../mfc/tn062-message-reflection-for-windows-controls.md) k povolte stažení ovládacího prvku stránkování přepočítat vlastní velikost nemusíte mít nadřazeného ovládacího prvku dialogu k provedení výpočtu. V příkladu je odvozena `MyPagerCtrl` třídy z [cpagerctrl – třída](../../mfc/reference/cpagerctrl-class.md), pak používá mapy zpráv pro přiřazení [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) oznámení `OnCalcsize` obslužné rutina oznámení. V tomto příkladu nastaví obslužnou rutinu oznámení šířku a výšku ovládacího prvku stránkování na pevné hodnoty.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
 ##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
- Nastaví barvu pozadí ovládacího prvku aktuální pager.  
+ Nastaví barvu pozadí ovládacího prvku aktuální stránkování.  
   
 ```  
 COLORREF SetBkColor(COLORREF clrBk);
@@ -447,21 +447,21 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku pager.|  
+|[in] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku stránkování.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje předchozí barvu pozadí ovládacího prvku pager.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje na předchozí barvu pozadí ovládacího prvku stránkování.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad používá [CPagerCtrl::SetBkColor](#setbkcolor) metodu a nastavit barvu pozadí ovládacího prvku pager na červený a [CPagerCtrl::GetBkColor](#getbkcolor) metoda potvrďte, že změny.  
+ Následující příklad používá [CPagerCtrl::SetBkColor](#setbkcolor) metodu a nastavit barvu pozadí ovládacího prvku stránkování na červený, tak i [CPagerCtrl::GetBkColor](#getbkcolor) metody pro potvrzení, že byla změněna.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
- Nastaví velikost ohraničení ovládacího prvku aktuální pager.  
+ Nastaví velikost ohraničení ovládacího prvku aktuální stránkování.  
   
 ```  
 int SetBorder(int iBorder);
@@ -471,21 +471,21 @@ int SetBorder(int iBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iBorder*|Novou velikost ohraničení měřená v pixelech. Pokud *iBorder* nachází záporný parametr, bude velikost ohraničení nastavena na hodnotu nula.|  
+|[in] *iBorder*|Nová velikost ohraničení měřená v pixelech. Pokud *iBorder* nachází záporný parametr, velikost ohraničení je nastavena na hodnotu nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Velikost předchozí ohraničení měřená v pixelech.  
+ Předchozí velikost ohraničení měřená v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad vytvoří ovládacího prvku pager a pak používá [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit velmi dlouhé tlačítko – ovládací prvek s ovládacím prvkem pager. V příkladu se pak použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metodu a nastavit pager ovládacího prvku do 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metodu a nastavit tloušťku ohraničení na 1 pixel.  
+ Následující příklad vytvoří ovládací prvek stránkování a pak pomocí [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit ovládací prvek velmi dlouhý tlačítko s ovládacím prvkem pager. Příklad poté použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metody nastavte výšku ovládacího prvku stránkování na 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metody nastavte tloušťku ohraničení 1 pixelu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
- Nastaví velikost tlačítko aktuální ovládacího prvku pager.  
+ Nastaví velikost tlačítka aktuálního ovládacího prvku stránkování.  
   
 ```  
 int SetButtonSize(int iButtonSize);
@@ -495,23 +495,23 @@ int SetButtonSize(int iButtonSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iButtonSize*|Velikost nové tlačítko měřená v pixelech.|  
+|[in] *iButtonSize*|Nová velikost tlačítka měřená v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Velikost předchozí tlačítko měřená v pixelech.  
+ Předchozí velikost tlačítka měřená v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) zprávu, která je popsána v sadě Windows SDK.  
   
- Pokud se má ovládací prvek pager `PGS_HORZ` styl, velikost tlačítko Určuje šířku tlačítka stránkování, a pokud se má ovládací prvek pager `PGS_VERT` styl, velikost tlačítko Určuje výšku tlačítka stránkování. Výchozí tlačítko velikost je tříčtvrtinovou šířka posuvníku a tlačítko minimální velikost je 12 pixelů. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Pokud je ovládací prvek stránkování PGS_HORZ styl, velikost tlačítka Určuje šířku tlačítka stránkování a pokud PGS_VERT stylu ovládacího prvku stránkování, velikost tlačítka Určuje výšku tlačítka stránkování. Tři čtvrtiny šířka posuvníku je výchozí velikost tlačítka a tlačítka minimální velikost je 12 pixelů. Další informace najdete v tématu [– styly ovládacího prvku stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad vytvoří ovládacího prvku pager a pak používá [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit velmi dlouhé tlačítko – ovládací prvek s ovládacím prvkem pager. V příkladu se pak použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metodu a nastavit pager ovládacího prvku do 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metodu a nastavit tloušťku ohraničení na 1 pixel.  
+ Následující příklad vytvoří ovládací prvek stránkování a pak pomocí [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit ovládací prvek velmi dlouhý tlačítko s ovládacím prvkem pager. Příklad poté použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metody nastavte výšku ovládacího prvku stránkování na 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metody nastavte tloušťku ohraničení 1 pixelu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setchild"></a>  CPagerCtrl::SetChild  
- Nastaví obsažené okna pro ovládací prvek aktuální pager.  
+ Nastaví obsaženého okna pro ovládací prvek aktuální stránkování.  
   
 ```  
 void SetChild(HWND hwndChild);
@@ -521,20 +521,20 @@ void SetChild(HWND hwndChild);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *hwndChild*|Zpracování do okna být obsaženy.|  
+|[in] *hwndChild*|Popisovač okna, které mají být obsažena.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) zprávu, která je popsána v sadě Windows SDK.  
   
- Tato metoda se nemění nadřazeného okna obsažené; pouze pro posouvání ovládacího prvku pager přiřadí popisovač okna. Ve většině případů bude okno obsažené podřízeného okna ovládacího prvku pager.  
+ Tato metoda nezmění nadřazené okno omezením. pouze přiřadí popisovač okna ovládacího prvku stránkování pro posouvání. Ve většině případů bude obsaženého okna podřízeného okna ovládacího prvku stránkování.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad vytvoří ovládacího prvku pager a pak používá [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit velmi dlouhé tlačítko – ovládací prvek s ovládacím prvkem pager. V příkladu se pak použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metodu a nastavit pager ovládacího prvku do 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metodu a nastavit tloušťku ohraničení na 1 pixel.  
+ Následující příklad vytvoří ovládací prvek stránkování a pak pomocí [CPagerCtrl::SetChild](#setchild) metoda, jak přidružit ovládací prvek velmi dlouhý tlačítko s ovládacím prvkem pager. Příklad poté použije [CPagerCtrl::SetButtonSize](#setbuttonsize) metody nastavte výšku ovládacího prvku stránkování na 20 pixelů a [CPagerCtrl::SetBorder](#setborder) metody nastavte tloušťku ohraničení 1 pixelu.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
- Nastaví pozici posunutí aktuální ovládacího prvku pager.  
+ Nastaví pozici posunutí aktuální ovládacího prvku stránkování.  
   
 ```  
 void SetScrollPos(int iPos);
@@ -544,15 +544,15 @@ void SetScrollPos(int iPos);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *iPos*|Nové pozici posunutí měřená v pixelech.|  
+|[in] *iPos*|Na nové pozici posunutí měřená v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) zprávu, která je popsána v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)   
+ [Cpagerctrl – třída](../../mfc/reference/cpagerctrl-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Ovládací prvky pager](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+ [Ovládacími prvky stránkování](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

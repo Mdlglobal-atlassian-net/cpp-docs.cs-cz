@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonStatusBarPane | Microsoft Docs
+title: Cmfcribbonstatusbarpane – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038429"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853846"
 ---
-# <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane – třída
-`CMFCRibbonStatusBarPane` Třída implementuje na pásu karet element, který můžete přidat do stavového řádku pásu karet.  
+# <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane – třída
+`CMFCRibbonStatusBarPane` Třída implementuje prvek pásu karet, který lze přidat na stavový panel pásu karet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,40 +73,40 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 |[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Vrátí řetězec, který definuje nejdelší textový řetězec, který lze zobrazit v podokně bez zkrácení.|  
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Vrátí aktuální nastavení zarovnání textu.|  
 |[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Určuje, zda je animace v průběhu.|  
-|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Určuje, zda v podokně se nachází v oblasti rozšířené stavového řádku pásu karet.|  
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Přepisuje [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|  
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Přepisuje [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|  
+|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Určuje, zda v podokně se nachází v oblasti rozšířené stavový panel pásu karet.|  
+|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Přepíše [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|  
+|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Přepíše [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|  
 |[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Definuje nejdelší textový řetězec, který lze zobrazit v podokně bez zkrácení.|  
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Přiřadí v podokně seznamu obrázků, které lze použít pro animace.|  
+|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Přiřadí v podokně seznamu obrázků, které lze použít pro animaci.|  
 |[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Nastaví zarovnání textu.|  
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Spustí animace, který je přiřazen do podokna.|  
+|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Spuštění animace, který je přiřazen do podokna.|  
 |[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Zastaví animace, který je přiřazen do podokna. .|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Voláno rámcem při zastavení animace, který je přiřazen do podokna.|  
+|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Volá se rozhraním, když se zastaví animace, který je přiřazen do podokna.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonStatusBarPane` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonStatusBarPane` objektu, nastavte zarovnání textu popisku panelu Stav řádku, zadejte nejdelší text, který lze zobrazit v podokně panelu stavu bez zkrácení, připojení k panelu řádku stav seznamu obrázků, které lze použít pro nalizaci a spusťte animace.  
+ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonStatusBarPane` třídy. Tento příklad ukazuje, jak vytvořit `CMFCRibbonStatusBarPane` objektu, nastavení zarovnání textu popisku panelu stavového řádku stav, definujte nejdelší text, který lze zobrazit v podokně Stav panelu nezkrácený, připojit k podokno panelu Stav, který lze použít pro seznam obrázků nalizaci a spuštění animace.  
   
  [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
+ [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
+ [Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)  
   
- [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
+ [Cmfcribbonstatusbarpane –](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonstatusbarpane.h  
   
 ##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
- Vytvořte objekt podokně ve stavovém řádku.  
+ Vytvoření objektu podokně ve stavovém řádku.  
   
 ```  
 CMFCRibbonStatusBarPane(
@@ -136,45 +136,45 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nCmdID*  
- Určuje ID příkazu, který podokna.  
+ [in] *nCmdID*  
+ Určuje ID příkazového podokna.  
   
- [v] *lpszText*  
+ [in] *lpszText*  
  Určuje textový řetězec, který se má zobrazit v podokně.  
   
- [v] *bIsStatic*  
- Pokud `TRUE`, v podokně Stav nemůže být zvýrazněná nebo vybrat kliknutím ji.  
+ [in] *bIsStatic*  
+ Při hodnotě TRUE nelze podokně Stav zvýrazněny nebo vybrat kliknutím ji.  
   
- [v] *hIcon*  
- Určuje popisovač pro ikonu, která se zobrazí v podokně.  
+ [in] *hIcon*  
+ Určuje ikonu, která se zobrazí v podokně popisovač.  
   
- [v] *lpszAlmostLargeText*  
+ [in] *lpszAlmostLargeText*  
  Určuje nejdelší textový řetězec, který lze zobrazit v podokně.  
   
- [v] *hBmpAnimationList*  
- Určuje popisovač pro seznamu obrázků, který se používá pro animace.  
+ [in] *hBmpAnimationList*  
+ Určuje popisovač, který se používá pro animaci seznamu obrázků.  
   
- [v] *cxAnimation*  
- Určuje šířku v pixelech na ikonu v seznamu obrázků, který se používá pro animace.  
+ [in] *cxAnimation*  
+ Určuje šířku v pixelech, ikony v seznamu obrázků, který se používá pro animaci.  
   
- [v] *clrTrnsp*  
- Určuje průhlednou barvu obrázků v seznamu obrázků, které se používají pro animace.  
+ [in] *clrTrnsp*  
+ Určuje průhlednou barvu imagí v seznamu obrázků, které se používají pro animaci.  
   
- [v] *uiAnimationListResID*  
- Určuje ID prostředku ze seznamu obrázků, který se používá pro animace.  
+ [in] *uiAnimationListResID*  
+ Určuje Identifikátor prostředku, který se používá pro animaci seznamu obrázků.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
- Získá nejdelší textový řetězec, který můžete zobrazit v podokně panelu stavu.  
+ Načte nejdelší textový řetězec, který může zobrazit panelu stavového řádku stav.  
   
 ```  
 LPCTSTR GetAlmostLargeText() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nejdelší textový řetězec, která může zobrazovat v podokně panelu stavu.  
+ Nejdelší textový řetězec, který lze zobrazit panelu stavového řádku stav.  
   
 ##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign  
- Získá aktuální nastavení zarovnání textu popisku panelu řádku stavu.  
+ Získá aktuální nastavení zarovnání textu popisku panelu stavového řádku stav.  
   
 ```  
 int GetTextAlign() const;  
@@ -197,17 +197,17 @@ BOOL IsAnimation() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud animace probíhá; `FALSE` jinak.  
+ Hodnota TRUE, pokud je animace v průběhu; FALSE v opačném případě.  
   
 ##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended  
- Určí, zda v podokně se nachází v oblasti rozšířené stavového řádku pásu karet.  
+ Určení, zda v podokně se nachází v oblasti rozšířené stavový panel pásu karet.  
   
 ```  
 BOOL IsExtended() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud podokno je na stavovém řádku rozšířené oblasti. `FALSE` jinak.  
+ TRUE, pokud je podokno na stavovém řádku rozšířené oblasti. FALSE v opačném případě.  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *CDC**  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -229,14 +229,14 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
- Tato metoda volá Framework při ukončení animace, který je přiřazen do podokna.  
+ Rozhraní volá tuto metodu při ukončení animace, který je přiřazen do podokna.  
   
 ```  
 virtual void OnFinishAnimation();
@@ -246,21 +246,21 @@ virtual void OnFinishAnimation();
  `StopAnimation` volání metody `OnFinishAnimation` metodu, která slouží k vyčištění dat při ukončení animace.  
   
 ##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
- Definujte nejdelší text, který lze zobrazit v podokně panelu stavu bez zkrácení.  
+ Definujte nejdelší text, který lze zobrazit v podokně Stav panelu bez zkrácení.  
   
 ```  
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszAlmostLargeText*  
- Určuje nejdelší řetězec, který lze zobrazit v podokně Stav panelu bez zkrácení.  
+ [in] *lpszAlmostLargeText*  
+ Určuje nejdelší řetězec, který lze zobrazit na panelu stavového stav bez zkrácení.  
   
 ### <a name="remarks"></a>Poznámky  
- Knihovny vypočítá velikost textu, který *lpszAlmostLargeText* určuje a změní velikost podokně odpovídajícím způsobem. Text bude zkrácen, pokud ho stále nevejde v podokně.  
+ Knihovny vypočítá velikost textu, který *lpszAlmostLargeText* určuje a změní velikost panelu odpovídajícím způsobem. Text bude zkrácen, pokud ho stále nevejde do podokna.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
- Připojí k panelu řádku stav seznamu obrázků, které lze použít pro animace.  
+ Připojí se k podokno panelu Stav, který lze použít pro animaci seznamu obrázků.  
   
 ```  
 void SetAnimationList(
@@ -275,43 +275,43 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hBmpAnimationList*  
- Určuje popisovač pro seznamu obrázků.  
+ [in] *hBmpAnimationList*  
+ Určuje popisovač seznamu obrázků.  
   
- [v] *cxAnimation*  
- Určuje šířku v pixelech rámce v seznamu obrázků.  
+ [in] *cxAnimation*  
+ Určuje šířku v pixelech, rámce v seznamu obrázků.  
   
- [v] *clrTransp*  
+ [in] *clrTransp*  
  Určuje průhlednou barvu ze seznamu obrázků.  
   
- [v] *uiAnimationListResID*  
- Určuje ID prostředku seznamu obrázků.  
+ [in] *uiAnimationListResID*  
+ Určuje ID prostředku ze seznamu obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud seznam obrázků se úspěšně připojil k panelu řádku stav; `FALSE` jinak.  
+ Hodnota TRUE, pokud seznam obrázků se úspěšně připojil k panelu stavového řádku stav; FALSE v opačném případě.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign  
- Nastaví zarovnání textu popisku panelu řádku stavu.  
+ Nastaví zarovnání textu popisku panelu stavového řádku stav.  
   
 ```  
 void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nAlign*  
+ [in] *nAlign*  
  Určuje zarovnání textu.  
   
 ### <a name="remarks"></a>Poznámky  
- *nAlign* může mít jeden z následujících hodnot:  
+ *nAlign* může mít jednu z následujících hodnot:  
   
-- `TA_LEFT`: zarovnání vlevo  
+- TA_LEFT: zarovnání doleva  
   
-- `TA_CENTER:` zarovnání na střed  
+- TA_CENTER: zarovnání na střed  
   
-- `TA_RIGHT:` Zarovnání doprava  
+- TA_RIGHT: zarovnání doprava  
   
 ##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
- Spustí animace, který přiřadíte do podokna.  
+ Spuštění animace, která přiřadíte do podokna.  
   
 ```  
 void StartAnimation(
@@ -320,17 +320,17 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nFrameDelay*  
- Určuje frekvenci snímků animace, v milisekundách.  
+ [in] *nFrameDelay*  
+ Určuje frekvenci snímků animace v milisekundách.  
   
- [v] *nDuration*  
- Určuje, jak dlouho přehrávání animace, v milisekundách. Použít hodnotu -1 pro nekonečné smyčce.  
+ [in] *nDuration*  
+ Určuje, jak dlouho přehrávání animace, v milisekundách. Použijte hodnotu -1 pro nekonečnou smyčku.  
   
 ### <a name="remarks"></a>Poznámky  
- Před voláním musíte zadat popisovač pro seznamu obrázků `StartAnimation` pomocí `SetAnimationList`.  
+ Před voláním, je nutné zadat popisovač seznamu obrázků `StartAnimation` pomocí `SetAnimationList`.  
   
 ##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  
- Zastaví animace, který jste přiřadili k podokně panelu stavu.  
+ Zastaví animace, který jste přiřadili do podokna stav řádku.  
   
 ```  
 void StopAnimation();
@@ -339,5 +339,5 @@ void StopAnimation();
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [Cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md)   
  [CMFCRibbonStatusBar – třída](../../mfc/reference/cmfcribbonstatusbar-class.md)

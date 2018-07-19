@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlModuleT | Microsoft Docs
+title: Catlmodulet – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dd5bd4c7bc88d0a0acc8abc18b0d7b3462b7f52
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361685"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880843"
 ---
-# <a name="catlmodulet-class"></a>CAtlModuleT – třída
-Tato třída implementuje modul ATL.  
+# <a name="catlmodulet-class"></a>Catlmodulet – třída
+Tato třída implementuje modul knihovny ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,8 +42,8 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `CAtlModuleT`.  
+ *T*  
+ Vaše třída odvozena od `CAtlModuleT`.  
   
 ## <a name="members"></a>Členové  
   
@@ -57,23 +57,23 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlModuleT::InitLibId](#initlibid)|Inicializuje datový člen obsahující identifikátor GUID modulu aktuální.|  
-|[CAtlModuleT::RegisterAppId](#registerappid)|EXE se přidá do registru.|  
-|[CAtlModuleT::RegisterServer](#registerserver)|Přidá službu do registru.|  
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|EXE se odebere z registru.|  
+|[CAtlModuleT::InitLibId](#initlibid)|Inicializuje datový člen obsahující identifikátor GUID aktuálního modulu.|  
+|[CAtlModuleT::RegisterAppId](#registerappid)|Přidá soubor EXE do registru.|  
+|[CAtlModuleT::RegisterServer](#registerserver)|Přidá služby do registru.|  
+|[CAtlModuleT::UnregisterAppId](#unregisterappid)|Odebere soubor EXE z registru.|  
 |[CAtlModuleT::UnregisterServer](#unregisterserver)|Odebere službu z registru.|  
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Aktualizuje informace o EXE v registru.|  
+|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Aktualizuje informace o souboru EXE v registru.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CAtlModuleT`, odvozené od [CAtlModule](../../atl/reference/catlmodule-class.md), implementuje modul ATL služby (EXE) nebo spustitelný soubor (EXE). Modul spustitelný soubor je serveru místní, mimo proces, zatímco modul služby je aplikace Windows, která běží na pozadí při spuštění systému Windows.  
+ `CAtlModuleT`, odvozený z [catlmodule –](../../atl/reference/catlmodule-class.md), implementuje modul služby (EXE) knihovny ATL nebo spustitelný soubor (EXE). Spustitelný soubor modulu je serveru místní, mimo proces, že modul Service je aplikace Windows, na kterém běží na pozadí při spuštění Windows.  
   
- `CAtlModuleT` poskytuje podporu pro inicializaci registrace a zrušení registrace modulu.  
+ `CAtlModuleT` poskytuje podporu pro inicializaci, registrace a zrušení registrace modulu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
 
   
- [CAtlModule](../../atl/reference/catlmodule-class.md)  
+ [Catlmodule –](../../atl/reference/catlmodule-class.md)  
   
  `CAtlModuleT`  
   
@@ -91,7 +91,7 @@ CAtlModuleT() throw();
  Volání [CAtlModuleT::InitLibId](#initlibid).  
   
 ##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
- Inicializuje datový člen obsahující identifikátor GUID modulu aktuální.  
+ Inicializuje datový člen obsahující identifikátor GUID aktuálního modulu.  
   
 ```
 static void InitLibId() throw();
@@ -101,17 +101,17 @@ static void InitLibId() throw();
  Volá konstruktor [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
 ##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
- EXE se přidá do registru.  
+ Přidá soubor EXE do registru.  
   
 ```
 HRESULT RegisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
- Přidá službu do registru.  
+ Přidá služby do registru.  
   
 ```
 HRESULT RegisterServer(
@@ -120,24 +120,24 @@ HRESULT RegisterServer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRegTypeLib`  
- TRUE, pokud je typ knihovna k registraci. Výchozí hodnota je FALSE.  
+ *bRegTypeLib*  
+ TRUE, pokud knihovna typů je k registraci. Výchozí hodnota je FALSE.  
   
- `pCLSID`  
- Body CLSID objekt, který má být zaregistrován. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapování objektu bude zaregistrována.  
+ *pCLSID*  
+ Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud se zaregistruje NULL (výchozí hodnota), všechny objekty v mapě objektů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
- EXE se odebere z registru.  
+ Odebere soubor EXE z registru.  
   
 ```
 HRESULT UnregisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
  Odebere službu z registru.  
@@ -149,30 +149,30 @@ HRESULT UnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bUnRegTypeLib`  
- TRUE, pokud knihovny typů je také možné odregistrovat.  
+ *bUnRegTypeLib*  
+ TRUE, pokud knihovna typů je také možné odregistrovat.  
   
- `pCLSID`  
- Body CLSID objekt, který má neregistrované. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapování objektu bude zrušena.  
+ *pCLSID*  
+ Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud hodnotu NULL (výchozí hodnota), všechny objekty v mapě objektů bude zrušena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
- Aktualizuje informace o EXE v registru.  
+ Aktualizuje informace o souboru EXE v registru.  
   
 ```
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRegister`  
- Vyhrazena.  
+ *bRegister*  
+ Vyhrazená.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ## <a name="see-also"></a>Viz také  
- [CAtlModule – třída](../../atl/reference/catlmodule-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Catlmodule – třída](../../atl/reference/catlmodule-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [Třídy modulů](../../atl/atl-module-classes.md)

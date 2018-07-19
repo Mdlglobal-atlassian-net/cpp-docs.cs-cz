@@ -1,5 +1,5 @@
 ---
-title: Globální funkce pro převod pixelů HIMETRIC | Microsoft Docs
+title: Globální funkce pro převod pixelů na HIMETRIC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359423"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881159"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>Globální funkce pro převod pixelu nebo HIMETRIC
-Tyto funkce poskytují podporu pro převod do a z pixelů a HIMETRIC jednotky.  
+# <a name="pixelhimetric-conversion-global-functions"></a>Globální funkce pro převod pixelů/HIMETRIC
+Tyto funkce poskytují podporu pro převod do a z pixelů a jednotkách HIMETRIC.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|Převede HIMETRIC jednotky (jednotlivých jednotek je 0,01 milimetru) pixelů.|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|Převede pixelů na HIMETRIC jednotky (jednotlivých jednotek je 0,01 milimetru).|  
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|Převede jednotkách HIMETRIC (každá jednotka je 0,01 milimetru) na pixelech.|  
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Převede pixelů na jednotkách HIMETRIC (každá jednotka je 0,01 milimetru).|  
   
 ##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  Převede velikost objektu v jednotkách HIMETRIC (každá jednotka je 0,01 milimetru) na velikost v pixelech na obrazovkovém zařízení.  
@@ -44,11 +44,11 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSizeInHiMetric`  
- [v] Ukazatel na velikost objektu v HIMETRIC jednotkách.  
+ *lpSizeInHiMetric*  
+ [in] Ukazatel na velikost objektu v jednotkách HIMETRIC.  
   
- `lpSizeInPix`  
- [out] Ukazatel na to, kde je velikost objektu v pixelech má být vrácen.  
+ *lpSizeInPix*  
+ [out] Ukazatel na kterém má být vrácena velikost objektu v pixelech.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
@@ -66,10 +66,10 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSizeInPix`  
- [v] Ukazatel na velikost objektu v pixelech.  
+ *lpSizeInPix*  
+ [in] Ukazatel objekt velikost v pixelech.  
   
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [out] Ukazatel na to, kde je velikost objektu v jednotkách HIMETRIC má být vrácen.  
   
 ### <a name="example"></a>Příklad  

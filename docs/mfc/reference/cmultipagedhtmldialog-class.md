@@ -1,5 +1,5 @@
 ---
-title: Třída CMultiPageDHtmlDialog | Microsoft Docs
+title: Cmultipagedhtmldialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 51e9b34252b2a3fa7d097914360b9ee24baa8301
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038003"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850862"
 ---
-# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog – třída
-Vícestránkové dialogové okno zobrazí více stránek HTML postupně a zpracovává události z každé stránce.  
+# <a name="cmultipagedhtmldialog-class"></a>Cmultipagedhtmldialog – třída
+Vícestránkové dialogové okno zobrazí postupně několik stránek HTML a zpracovává události z každé stránky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,25 +40,25 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Vytvoří objekt dialogové okno vícestránkové DHTML (Průvodce style).|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Zničí vícestránkové objektu dialogového okna DHTML.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Vytvoří vícestránkové dialogové okno objekt DHTML (Průvodce style).|  
+|[Cmultipagedhtmldialog –:: ~ cmultipagedhtmldialog –](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Odstraní objekt vícestránkové dialogové okno DHTML.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tento mechanismus tohoto postupu je [DHTML a adresy URL mapa událostí](dhtml-event-maps.md), která obsahuje vložené mapy událostí pro jednotlivé stránky.  
+ Mechanismus pro to je [DHTML a adresu URL mapa událostí](dhtml-event-maps.md), který obsahuje vložené mapy událostí pro každou stránku.  
   
 ## <a name="example"></a>Příklad  
- Toto dialogové okno vícestránkové předpokládá tři HTML prostředky, které definují jednoduché průvodce jako funkce. Na první stránce `Next` tlačítko, druhý **Prev** a `Next` tlačítko a třetí **Prev** tlačítko. Při stisknutí tlačítka volá funkci obslužné rutiny [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) k načtení příslušné nové stránky.  
+ Toto vícestránkové dialogové okno předpokládá tři zdroje HTML, které definují jednoduché funkce průvodce. První stránka má **Další** tlačítko, druhý **předchozí** a **Další** tlačítko a třetí **předchozí** tlačítko. Když se stiskne některého tlačítka, volá funkci obslužné rutiny [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) načíst příslušnou novou stránku.  
   
- Příslušné části deklaraci třídy (v CMyMultiPageDlg.h):  
+ Relevantní části deklaraci třídy (v CMyMultiPageDlg.h):  
   
  [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
- Příslušné části v implementaci třídy (v CMyMultipageDlg.cpp):  
+ Relevantní části implementace třídy (v CMyMultipageDlg.cpp):  
   
  [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
   
@@ -82,7 +82,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
  **Záhlaví:** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Vytvoří objekt dialogové okno vícestránkové DHTML (Průvodce style).  
+ Vytvoří vícestránkové dialogové okno objekt DHTML (Průvodce style).  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -101,22 +101,22 @@ CMultiPageDHtmlDialog();
   
 ### <a name="parameters"></a>Parametry  
  *lpszTemplateName*  
- Řetězce ukončené hodnotou null, která je název prostředku šablony – dialogové okno.  
+ Řetězec zakončený hodnotou null, který je název prostředku šablony dialogového okna.  
   
  *szHtmlResID*  
- Řetězce ukončené hodnotou null, která je název prostředek HTML.  
+ Řetězec zakončený hodnotou null, který je název prostředku HTML.  
   
  *pParentWnd*  
- Ukazatel na nadřazené nebo vlastníka objektu okna (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
+ Ukazatel na objekt okna nadřazené nebo vlastník (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je hodnota NULL, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
  *nIDTemplate*  
- Obsahuje počet ID prostředku šablony – dialogové okno.  
+ Obsahuje identifikační číslo prostředku šablony dialogového okna.  
   
  *nHtmlResID*  
- Obsahuje počet ID prostředek HTML.  
+ Obsahuje identifikační číslo prostředku HTML.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- Zničí vícestránkové objektu dialogového okna DHTML.  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  Cmultipagedhtmldialog –:: ~ cmultipagedhtmldialog –  
+ Odstraní objekt vícestránkové dialogové okno DHTML.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();

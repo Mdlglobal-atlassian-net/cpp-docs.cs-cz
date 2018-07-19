@@ -1,5 +1,5 @@
 ---
-title: Třída CFixedStringT | Microsoft Docs
+title: Cfixedstringt – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6b47642965b73662e63a839796425be855a6523
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356984"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879524"
 ---
-# <a name="cfixedstringt-class"></a>CFixedStringT – třída
-Tato třída reprezentuje objekt řetězec s pevnou znak vyrovnávací paměti.  
+# <a name="cfixedstringt-class"></a>Cfixedstringt – třída
+Tato třída reprezentuje objekt řetězce s pevnou znak vyrovnávací paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,11 +37,11 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `StringType`  
- Použít jako základní třída pro objekt pevné řetězce a může být libovolná `CStringT`– na základě typu. Mezi příklady patří `CString`, `CStringA`, a `CStringW`.  
+ *StringType*  
+ Použít jako základní třídu pro řetězec pevné délky objekt a může být kterýkoli `CStringT`– na základě typu. Mezi příklady patří `CString`, `CStringA`, a `CStringW`.  
   
  *t_nChars*  
- Počet znaků, které jsou uložené ve vyrovnávací paměti.  
+ Počet znaků, které jsou uloženy ve vyrovnávací paměti.  
   
 ## <a name="members"></a>Členové  
   
@@ -49,24 +49,24 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|V konstruktoru pro objekt řetězce.|  
+|[CFixedStringT::CFixedStringT](#cfixedstringt)|Konstruktor pro objekt řetězce.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFixedStringT::operator =](#eq)|Přiřadí novou hodnotu k `CFixedStringT` objektu.|  
+|[CFixedStringT::operator =](#eq)|Přiřadí novou hodnotu `CFixedStringT` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída je příkladem třídu vlastní řetězec na základě `CStringT`. I když je velmi podobné, se liší v implementaci dvou tříd. Hlavní rozdíly mezi `CFixedStringT` a `CStringT` jsou:  
+ Tato třída je příkladem třídu vlastního řetězce na základě `CStringT`. I když je velmi podobné, se liší v implementaci dvou tříd. Hlavní rozdíly mezi `CFixedStringT` a `CStringT` jsou:  
   
--   Vyrovnávací paměť počáteční znak je přidělená v rámci objektu a má velikost *t_nChars*. To umožňuje **CFixedString** objektu tak, aby zabíral bloku souvislé paměti pro účely výkonu. Ale pokud obsah `CFixedStringT` objekt zvětšování nad rámec *t_nChars*, vyrovnávací paměť je přiřazen dynamicky.  
+-   Počáteční znak vyrovnávací paměti přidělené jako součást objektu a má velikost *t_nChars*. Díky tomu `CFixedString` objektu tak, aby obsadily blok souvislé paměti z důvodů výkonu. Ale pokud obsah `CFixedStringT` objekt překročí *t_nChars*, je dynamicky přidělené vyrovnávací paměti.  
   
--   Znak vyrovnávací paměti pro `CFixedStringT` objekt je vždy stejnou délku ( *t_nChars*). Neexistuje žádné omezení velikosti vyrovnávací paměti pro `CStringT` objekty.  
+-   Vyrovnávací paměti pro znaky pro `CFixedStringT` objektu je vždy stejnou délku ( *t_nChars*). Neexistuje žádné omezení velikosti vyrovnávací paměti pro `CStringT` objekty.  
   
--   Správce paměti pro `CFixedStringT` je přizpůsobit tak, aby sdílení [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) objektu mezi dvěma nebo více `CFixedStringT` objectsis není povoleno. `CStringT` objekty není nutné toto omezení.  
+-   Správce paměti pro `CFixedStringT` upravíte tak, že sdílení [cstringdata –](../../atl-mfc-shared/reference/cstringdata-class.md) objektu mezi dvěma nebo více `CFixedStringT` objectsis není povolený. `CStringT` objekty není nutné toto omezení.  
   
- Další informace o možnosti vlastního nastavení `CFixedStringT` a obecně platí, najdete v části Správa paměti pro objekty řetězec [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ Další informace o přizpůsobení sady `CFixedStringT` a správa paměti pro řetězec objektů naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IAtlStringMgr`  
@@ -94,20 +94,20 @@ explicit CFixedStringT(const unsigned char* psz);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
- Řetězce ukončené hodnotou null zkopírovat do této `CFixedStringT` objektu.  
+ *psz*  
+ Řetězec zakončený hodnotou null ke zkopírování do tohoto `CFixedStringT` objektu.  
   
- `str`  
- Existující `CFixedStringT` objekt, který se má zkopírovat do této `CFixedStringT` objektu.  
+ *str*  
+ Existující `CFixedStringT` objektu, které se mají zkopírovat do tohoto `CFixedStringT` objektu.  
   
- `pStringMgr`  
- Ukazatel na správce paměti `CFixedStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CFixedStringT`, najdete v části [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ *pStringMgr*  
+ Ukazatel na správce paměti `CFixedStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CFixedStringT`, naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Protože konstruktorů zkopírovat do nového úložiště přidělené vstupních dat, je třeba si uvědomit, že paměť, může způsobit výjimky. Všimněte si, že některé z těchto konstruktorů fungovat jako funkce pro převod.  
+ Protože se konstruktory kopírují do nového úložiště přidělené vstupních dat, je třeba si uvědomit, tato paměť, může způsobit výjimky. Všimněte si, že některé z těchto konstruktorů fungovat jako funkce pro převod.  
   
 ##  <a name="operator__eq"></a>  CFixedStringT::operator =  
- Znovu inicializuje existující `CFixedStringT` objekt se nová data.  
+ Znovu inicializuje existující `CFixedStringT` objektu s novými daty.  
   
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
@@ -119,19 +119,19 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
- Řetězce ukončené hodnotou null zkopírovat do této `CFixedStringT` objektu.  
+ *str*  
+ Řetězec zakončený hodnotou null ke zkopírování do tohoto `CFixedStringT` objektu.  
   
- `psz`  
- Existující `CFixedStringT` zkopírovat do této `CFixedStringT` objektu.  
+ *psz*  
+ Existující `CFixedStringT` ke zkopírování do tohoto `CFixedStringT` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Je třeba věnovat pozornost že paměť výjimky může dojít při každém použití operátor přiřazení, protože nové úložiště je často přidělené k uchování výsledná `CFixedStringT` objektu.  
+ Je třeba si uvědomit, tato paměť výjimky může dojít při každém použití operátoru přiřazení, protože často přiděleno nové úložiště pro uložení výsledný `CFixedStringT` objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)   
+ [Cstringt – třída](../../atl-mfc-shared/reference/cstringt-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [ATL a MFC sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 
 

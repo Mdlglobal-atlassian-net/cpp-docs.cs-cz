@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCKeyMapDialog | Microsoft Docs
+title: Cmfckeymapdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,14 +36,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037285"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853667"
 ---
-# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog – třída
+# <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog – třída
 `CMFCKeyMapDialog` Třída podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -70,22 +70,22 @@ class CMFCKeyMapDialog : public CDialogEx
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Voláno rámcem vytvořit řetězec, který popisuje klíčové mapování. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.|  
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Načte řetězec, který obsahuje seznam klávesové zkratky, které jsou přidružené k zadaný příkaz.|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Voláno rámcem, než je vložit novou položku do interní seznamu ovládací prvek, který podporuje ovládací prvek mapování klávesnice.|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Voláno rámcem tisknout hlavičku pro mapu klávesnice na novou stránku.|  
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Voláno rámcem tisknout položku mapování klávesnice.|  
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Voláno rámcem nastavit titulky pro sloupce v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.|  
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Voláno rámcem, když uživatel klikne **tiskových** tlačítko.|  
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Voláno rámcem nastavit šířku sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Volá se rozhraním sestavit řetězec, který popisuje mapování klíčů. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.|  
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Načte řetězec, který obsahuje seznam klávesových zkratek, které jsou přidružené k zadaný příkaz.|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Volá se rozhraním, než se nová položka je vložen do ovládacího prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Volá se rozhraním pro tisk na novou stránku záhlaví pro mapování klávesnice.|  
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Volá se rozhraním pro tisk položku mapování klávesnice.|  
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Volá se rozhraním, chcete-li nastavit popisky sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.|  
+|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Volá se rozhraním, když uživatel klikne **tisk** tlačítko.|  
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Volá se rozhraním, aby nastavte šířku sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CMFCKeyMapDialog` třídu pro implementaci dialogové okno mapování klávesnice s možností změny velikosti. Dialogové okno používá ovládacího prvku zobrazení seznamu zobrazíte klávesové zkratky a jejich přidružené příkazy.  
+ Použití `CMFCKeyMapDialog` třídu pro implementaci dialogové okno mapování klávesnice umožňující změnu velikosti. Dialogové okno používá ovládací prvek zobrazení seznamu zobrazíte klávesové zkratky a jejich přidružené příkazy.  
   
- Použít `CMFCKeyMapDialog` třídy v aplikaci, předat ukazatel hlavního okna rámce jako parametr, který se `CMFCKeyMapDialog` konstruktor. Potom zavolejte `DoModal` metoda zahájíte modální dialogové okno.  
+ Použít `CMFCKeyMapDialog` třídy v aplikaci, předat ukazatel do okna hlavního rámce jako parametr `CMFCKeyMapDialog` konstruktoru. Zavolejte `DoModal` metoda spuštění modální dialogové okno.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -93,9 +93,9 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CDialogEx](../../mfc/reference/cdialogex-class.md)  
+ [Cdialogex –](../../mfc/reference/cdialogex-class.md)  
   
- [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
+ [Cmfckeymapdialog –](../../mfc/reference/cmfckeymapdialog-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxkeymapdialog.h  
@@ -110,16 +110,16 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParentFrame*  
- Ukazatel na okno nadřazené `CMFCKeyMapDialog` objektu.  
+ [in] *pWndParentFrame*  
+ Ukazatel do nadřazeného okna `CMFCKeyMapDialog` objektu.  
   
- [v] *bEnablePrint*  
- `TRUE` Pokud je seznam klávesy akcelerátoru můžete vytisknout; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [in] *bEnablePrint*  
+ Hodnota TRUE, pokud lze vytisknout seznam klávesové zkratky; v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCKeyMapDialog` třídy. Tato ukázka je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCKeyMapDialog` třídy. V tomto příkladu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
@@ -131,21 +131,21 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Podepsaná hodnota typu integer, například `IDOK` nebo `IDCANCEL`, která je předán [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) metoda. V případě metody zase zavře dialogové okno. Další informace najdete v tématu [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
+ Celé číslo se znaménkem, jako je například IDOK nebo IDCANCEL, který je předán [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) metody. Metoda, pak zavřete dialogové okno. Další informace najdete v tématu [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
 ### <a name="remarks"></a>Poznámky  
- Dialogové okno mapování klávesnice umožňuje vybrat a přiřadit různé kategorie příkazy klávesy akcelerátoru. Kromě toho můžete zkopírovat vybrané přístupové klávesy a jejich popis do schránky.  
+ Dialogové okno mapování klávesnice umožňuje vybrat a přiřadit různé kategorie příkazy kláves akcelerátoru. Kromě toho můžete zkopírovat vybrané přístupové klávesy a jejich popis do schránky.  
   
 ##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
- Voláno rámcem vytvořit řetězec, který popisuje klíčové mapování. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.  
+ Volá se rozhraním sestavit řetězec, který popisuje mapování klíčů. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nItem*  
- Index založený na nule položky v seznamu interní klíče mapování.  
+ [in] *nItem*  
+ Index založený na nule položka ve vnitřním seznamu mapování klíčů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CString` objekt, který obsahuje text formátovaný položky.  
@@ -153,23 +153,23 @@ virtual CString FormatItem(int nItem) const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
- Načte hodnotu řetězce. Řetězec obsahuje seznam klávesové zkratky, které jsou přidruženy zadaný příkaz.  
+ Načte hodnotu řetězce. Řetězec obsahuje seznam klávesových zkratek, které jsou spojeny s zadaný příkaz.  
   
 ```  
 virtual CString GetCommandKeys(UINT uiCmdID) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdID*  
+ [in] *uiCmdID*  
  ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Oddělený středníkem (;) seznamu klávesových zkratek, který je přidružen zadaný příkaz.  
+ Oddělený středníkem (;) seznam klávesových zkratek, které souvisí s zadaný příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
- Voláno rámcem, než je vložit novou položku do prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
+ Volá se rozhraním, než se nová položka je vložen do ovládacího prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  
 virtual void OnInsertItem(
@@ -178,16 +178,16 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
- Ukazatel na tlačítka panelu nástrojů, který se používá k mapování kombinaci kláves klávesnice na příkaz název a popis. Položka klíče mapy je uložena v ovládacím prvku vnitřní seznam.  
+ [in] *pButton*  
+ Ukazatel, který se používá k mapování kombinaci kláves klávesnice k příkazu název a popis tlačítka panelu nástrojů. Položka mapování klíčů je uložena v ovládacím prvku vnitřní seznam.  
   
- [v] *nItem*  
- Index počítaný od nuly, který určuje, kam chcete vložit novou položku klíče mapy v ovládacím prvku vnitřní seznam.  
+ [in] *nItem*  
+ Index založený na nule, který určuje, kam chcete vložit novou položku mapování klíčů v ovládacím prvku vnitřní seznam.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
- Voláno rámcem tisknout hlavičku pro mapu klávesnice na novou stránku.  
+ Volá se rozhraním pro tisk na novou stránku záhlaví pro mapování klávesnice.  
   
 ```  
 virtual int OnPrintHeader(
@@ -197,23 +197,23 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *řadiče domény*  
+ [in] *řadiče domény*  
  Kontext zařízení pro tiskárny.  
   
- [v] *nPage*  
- Číslo stránky k vytištění.  
+ [in] *nPage*  
+ Číslo stránky k tisku.  
   
- [v] *cx*  
- Vodorovný posun záhlaví má v pixelech.  
+ [in] *cx*  
+ Vodorovný posun záhlaví v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného výšku tištěných textu. Další informace najdete v části vrátit hodnotu z [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
+ V případě úspěšného ověření výšku tištěných textu. Další informace najdete v části vrátit hodnotu z [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní používá tato metoda tisknout mapy klávesnice. Ve výchozím nastavení vytiskne tato metoda číslo stránky, název aplikace a dialogové okno název.  
+ Rozhraní používá tuto metodu pro tisk mapování klávesnice. Ve výchozím nastavení tato metoda vytiskne číslo stránky, název aplikace a název pole dialogového okna.  
   
 ##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
- Voláno rámcem tisknout položku mapování klávesnice.  
+ Volá se rozhraním pro tisk položku mapování klávesnice.  
   
 ```  
 virtual int OnPrintItem(
@@ -225,56 +225,56 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *řadiče domény*  
+ [in] *řadiče domény*  
  Kontext zařízení tiskárny.  
   
- [v] *nItem*  
+ [in] *nItem*  
  Index založený na nule položky k vytištění.  
   
- [v] *y*  
- Svislý posun od pozice položky horní části stránky.  
+ [in] *y*  
+ Svislý posun mezi horní části stránky a pozici položky.  
   
- [v] *cx*  
- Vodorovný posun mezi levé části stránky a umístění položky.  
+ [in] *cx*  
+ Vodorovný posun mezi levé části stránky a pozici položky.  
   
- [v] *bCalcHeight*  
- `TRUE` Chcete-li vypočítat nejlepší výšku pro položku tiskové; `FALSE` zkrátit tiskové položky tak, aby odpovídal výchozí místo.  
+ [in] *bCalcHeight*  
+ TRUE, pokud chcete vypočítat nejlepší výška tisku položky; Došlo ke zkrácení tisku položky tak, aby místo výchozí hodnotu FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výška tištěných položky.  
+ Výšku tištěných položky.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu za účelem tisku položky dialogového okna klíče mapy. Ve výchozím nastavení vytiskne tato metoda název příkazu, klávesové zkratky a příkaz popis položky.  
+ Rozhraní volá tuto metodu pro tisk položky dialogového okna mapování klíčů. Ve výchozím nastavení tato metoda vytiskne název příkazu, klávesové zkratky a příkaz popis položky.  
   
 ##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
- Voláno rámcem nastavit titulky pro sloupce v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
+ Volá se rozhraním, chcete-li nastavit popisky sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda získá titulky pro sloupce z tři zdroje. Popisek sloupce příkaz je z IDS_AFXBARRES_COMMAND, titulek klíčový sloupec je z IDS_AFXBARRES_KEYS a titulek popis sloupce je z IDS_AFXBARRES_DESCRIPTION.  
+ Ve výchozím nastavení tato metoda získává popisky sloupců z tři zdroje. Titulek příkazový sloupec je z IDS_AFXBARRES_COMMAND titulek klíčový sloupec je z IDS_AFXBARRES_KEYS a titulek popis sloupce je z IDS_AFXBARRES_DESCRIPTION.  
   
 ##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
- Voláno rámcem, když uživatel klikne **tiskových** tlačítko.  
+ Volá se rozhraním, když uživatel klikne **tisk** tlačítko.  
   
 ```  
 virtual void PrintKeyMap();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `PrintKeyMap` Metoda vytiskne klíče mapy. Inicializuje nové tiskové úlohy a pak opakovaně zavolá [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) a [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metody, dokud se všechny klíče mapování jsou vytisknout.  
+ `PrintKeyMap` Metoda vytiskne mapování klíčů. Inicializuje nové tiskové úlohy a pak zavolá opakovaně [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) a [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metody, dokud jsou zobrazeny všechny mapování klíčů.  
   
 ##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
- Voláno rámcem nastavit šířku sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
+ Volá se rozhraním, aby nastavte šířku sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  
 virtual void SetColumnsWidth();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví vnitřní seznam sloupců ovládacího prvku na výchozí šířky. Nejprve se počítá šířku sloupce klíče zástupce. Pak jednu třetinu zbývající šířky je přidělená k sloupci příkazu a zbývající dvoutřetinovou je přidělená k sloupci Popis.  
+ Tato metoda nastaví vnitřní seznam sloupců ovládacího prvku na výchozí šířky. Nejprve se vypočítá šířku sloupce klíče zástupce. Pak jednu třetinu zbývající šířky je přidělená k příkazový sloupec a zbývající dvě třetiny je přidělená k sloupci Popis.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

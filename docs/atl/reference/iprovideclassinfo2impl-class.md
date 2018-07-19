@@ -1,5 +1,5 @@
 ---
-title: Třída IProvideClassInfo2Impl | Microsoft Docs
+title: Iprovideclassinfo2impl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361342"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880615"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl – třída
-Tato třída poskytuje výchozí implementaci třídy [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) a [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.  
+# <a name="iprovideclassinfo2impl-class"></a>Iprovideclassinfo2impl – třída
+Tato třída poskytuje výchozí implementaci třídy [iprovideclassinfo –](http://msdn.microsoft.com/library/windows/desktop/ms687303) a [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +46,22 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 #### <a name="parameters"></a>Parametry  
  *pcoclsid*  
- Ukazatel na identifikátor třída typu coclass'.  
+ Ukazatel na identifikátor coclass'.  
   
  *psrcid*  
- Ukazatel na identifikátor třída typu coclass' výchozí odchozí dispinterface.  
+ Ukazatel na identifikátor coclass' výchozí odchozí dispinterface.  
   
- `plibid`  
- Ukazatel na ID KNIHOVNY knihovny typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předaná knihovny typů úrovni serveru.  
+ *plibid*  
+ Ukazatel na LIBID knihovnu typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předán typ na úrovni serveru knihovny.  
   
- `wMajor`  
+ *wMajor*  
  Hlavní verze knihovny typů. Výchozí hodnota je 1.  
   
- `wMinor`  
- Vedlejší verze knihovny typů. Výchozí hodnota je 0.  
+ *wMinor*  
+ Dílčí verze knihovny typů. Výchozí hodnota je 0.  
   
- `tihclass`  
- Třída, která slouží ke správě informací o typu coclass. Výchozí hodnota je `CComTypeInfoHolder`.  
+ *tihclass*  
+ Třída používá ke správě informací o typu coclass'. Výchozí hodnota je `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Členové  
   
@@ -75,19 +75,19 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Načte **ITypeInfo** ukazatel na informace o typu coclass.|  
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Načte identifikátor GUID pro odchozí dispinterface objektu.|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Načte `ITypeInfo` ukazatel na informace o typu coclass'.|  
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|Získá identifikátor GUID pro odchozí dispinterface daného objektu.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::_tih](#_tih)|Spravuje informace o typu coclass.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) rozšiřuje rozhraní [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) přidáním `GetGUID` metoda. Tato metoda umožňuje klientům pro načtení objektu odchozí rozhraní IID pro jeho výchozí sadu událostí. Třída `IProvideClassInfo2Impl` poskytuje výchozí implementaci třídy **IProvideClassInfo** a `IProvideClassInfo2` metody.  
+ [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) rozhraní rozšiřuje [iprovideclassinfo –](http://msdn.microsoft.com/library/windows/desktop/ms687303) tak, že přidáte `GetGUID` metody. Tato metoda umožňuje klientovi k načtení objektu odchozí rozhraní IID pro jeho výchozí sadu událostí. Třída `IProvideClassInfo2Impl` poskytuje výchozí implementaci třídy `IProvideClassInfo` a `IProvideClassInfo2` metody.  
   
- `IProvideClassInfo2Impl` obsahuje statický člen typu `CComTypeInfoHolder` který spravuje informace o typu coclass.  
+ `IProvideClassInfo2Impl` obsahuje statický člen typu `CComTypeInfoHolder` , který spravuje informace o typu coclass.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IProvideClassInfo2`  
@@ -98,17 +98,17 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  **Záhlaví:** atlcom  
   
 ##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
- Načte `ITypeInfo` ukazatel na informace o typu coclass.  
+ Načte `ITypeInfo` ukazatel na informace o typu coclass'.  
   
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) ve Windows SDK.  
+ Zobrazit [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) ve Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
- Načte identifikátor GUID pro odchozí dispinterface objektu.  
+ Získá identifikátor GUID pro odchozí dispinterface daného objektu.  
   
 ```
 STDMETHOD(GetGUID)(
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) ve Windows SDK.  
+ Zobrazit [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) ve Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Konstruktor  
@@ -127,10 +127,10 @@ IProvideClassInfo2Impl();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání `AddRef` na [_tih](#_tih) člen. Volání destruktoru **verze**.  
+ Volání `AddRef` na [_tih](#_tih) člena. Volání destruktoru `Release`.  
   
 ##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
- Tento člen statických dat je instance třídy parametr šablony, `tihclass`, který ve výchozím nastavení je `CComTypeInfoHolder`.  
+ Tento statický datový člen je instancí parametru šablony třídy *tihclass*, která ve výchozím nastavení je `CComTypeInfoHolder`.  
   
 ```
 static  tihclass
@@ -138,7 +138,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Poznámky  
- `_tih` Spravuje informace o typu coclass.  
+ `_tih` spravuje informace o typu coclass.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

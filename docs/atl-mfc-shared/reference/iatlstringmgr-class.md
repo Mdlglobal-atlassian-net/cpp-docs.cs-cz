@@ -1,5 +1,5 @@
 ---
-title: Třída IAtlStringMgr | Microsoft Docs
+title: Iatlstringmgr – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7ff0a38c0a557016887e6fce92fcb0bf28226
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a69b2667b92b27f7310bbc70087331acd4aefaa5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360123"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880645"
 ---
-# <a name="iatlstringmgr-class"></a>IAtlStringMgr – třída
-Tato třída představuje rozhraní pro `CStringT` správce paměti.  
+# <a name="iatlstringmgr-class"></a>Iatlstringmgr – třída
+Tato třída reprezentuje rozhraní pro `CStringT` správce paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,63 +46,63 @@ __interface IAtlStringMgr
   
 |||  
 |-|-|  
-|[přidělit](#allocate)|Volejte tuto metodu za účelem přidělení nového datová struktura řetězec.|  
-|[klonování](#clone)|Volání této metody se vraťte do nového správce řetězec pro použití s jiná instance ukazatel `CSimpleStringT`.|  
-|[Volné](#free)|Volejte tuto metodu k bezplatným datová struktura řetězec.|  
-|[GetNilString](#getnilstring)|Vrátí ukazatel `CStringData` objekt použitý objektem objekty prázdný řetězec.|  
-|[Přidělit jinému uživateli](#reallocate)|Volejte tuto metodu a znovu přidělte datová struktura řetězec.|  
+|[přidělení](#allocate)|Volejte tuto metodu za účelem přidělení nového datová struktura řetězec.|  
+|[Klonování](#clone)|Volejte tuto metodu za účelem vrací ukazatel na nového správce řetězců pro použití s jinou instancí `CSimpleStringT`.|  
+|[Zdarma](#free)|Volejte tuto metodu pro uvolnění datová struktura řetězec.|  
+|[GetNilString](#getnilstring)|Vrací ukazatel `CStringData` objekt použitý objektem objekty prázdný řetězec.|  
+|[Přidělit jinému uživateli](#reallocate)|Volejte tuto metodu, aby mohla znovu přidělit datová struktura řetězec.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní spravuje množství paměti používané řetězec třídy MFC nezávislé; například [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), a [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).  
+ Toto rozhraní spravuje paměť používanou tříd řetězců nezávislé na MFC; například [csimplestringt –](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), a [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).  
   
- Tuto třídu můžete také použít k implementaci správce vlastní paměti pro vaše vlastní řetězec třídu. Další informace najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ Tato třída také můžete implementovat vlastní paměti správce pro vaši třídu vlastního řetězce. Další informace najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpstr.h  
   
 ##  <a name="allocate"></a>  IAtlStringMgr::Allocate  
- Přiděluje nový datová struktura řetězec.  
+ Přidělí novou strukturu dat řetězce.  
   
 ```
 CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAllocLength`  
+ *nAllocLength*  
  Počet znaků v nového bloku paměti.  
   
- `nCharSize`  
- Velikost (v bajtech) tyto typy znaků pomocí Správce řetězec.  
+ *nCharSize*  
+ Velikost typ znaku, používá správce řetězců (v bajtech).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na nově přidělených paměti bloku.  
+ Vrací ukazatel na nově přidělenou paměť bloku.  
   
 > [!NOTE]
->  Neúspěšné přidělení signál není podle došlo k výjimce. Místo toho by měla být neúspěšné přidělení signalizovala vrácením **NULL**.  
+>  Nevydá signál neúspěšné přidělení vyvoláním výjimky. Místo toho by měl být signalizován neúspěšné přidělení vrácením hodnoty NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [IAtlStringMgr::Free](#free) nebo [IAtlStringMgr::ReAllocate](#reallocate) k bezplatným je paměť přidělená touto metodou.  
+ Volání [IAtlStringMgr::Free](#free) nebo [IAtlStringMgr::ReAllocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
 > [!NOTE]
->  Příklady použití najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="clone"></a>  IAtlStringMgr::Clone  
- Vrací ukazatel na nový správce řetězec pro použití s jiná instance `CSimpleStringT`.  
+ Vrací ukazatel na nového správce řetězců pro použití s jinou instancí `CSimpleStringT`.  
   
 ```
 IAtlStringMgr* Clone() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí kopii `IAtlStringMgr` objektu.  
+ Vrátí kopii objektu `IAtlStringMgr` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Běžně voláno rámcem správce řetězec je potřeba pro nový řetězec. Ve většině případů **to** ukazatel je vrácen.  
+ Běžně volá se rozhraním, když správce řetězců je potřeba pro nový řetězec. Ve většině případů **to** je vrácen ukazatel.  
   
- Ale pokud správce paměti nepodporuje více instancí používá `CSimpleStringT`, ukazatel manažera lze sdílet řetězec má být vrácen.  
+ Nicméně pokud správce paměti nepodporuje, která je používána ve více instancí `CSimpleStringT`, má být vrácen ukazatel na řetězec sdílet správce.  
   
 > [!NOTE]
->  Příklady použití najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="free"></a>  IAtlStringMgr::Free  
  Uvolní datová struktura řetězec.  
@@ -112,36 +112,36 @@ void Free(CStringData* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pData`  
- Ukazatel na blok paměti, který má být uvolněno.  
+ *pData*  
+ Ukazatele na blok paměti určený k uvolnění.  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní zadaná paměťová bloku dříve přidělena [přidělte](#allocate) nebo [znovu přidělte](../../atl/reference/iatlmemmgr-class.md#reallocate).  
+ Uvolní blok zadaný paměti dříve přidělený metodou [přidělení](#allocate) nebo [přidělit jinému uživateli](../../atl/reference/iatlmemmgr-class.md#reallocate).  
   
 > [!NOTE]
->  Příklady použití najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString  
- Vrací ukazatel na strukturu dat řetězec pro prázdný řetězec.  
+ Vrací ukazatel na strukturu dat řetězce pro prázdný řetězec.  
   
 ```
 CStringData* GetNilString() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CStringData` objekt se používá k reprezentování prázdný řetězec.  
+ Ukazatel `CStringData` objekt použitý k reprezentaci prázdný řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce vrátit reprezentace prázdný řetězec.  
+ Voláním této funkce vrátí reprezentaci prázdný řetězec.  
   
 > [!NOTE]
->  Při implementaci vlastní řetězec manager, musí tuto funkci nikdy selhat. Lze toho docílit vložením instanci **CNilStringData** v třída manager řetězec a vrátí ukazatel do této instance.  
+>  Při implementaci vlastní řetězec správce, musí tuto funkci nikdy selhat. Lze toho docílit s využitím vkládání služby instance `CNilStringData` správce třída string a vrácení ukazatele do této instance.  
   
 > [!NOTE]
->  Příklady použití najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate  
- Přidělí datová struktura řetězec.  
+ Znovu alokuje datová struktura řetězec.  
   
 ```
 CStringData* Reallocate(  
@@ -151,28 +151,28 @@ CStringData* Reallocate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pData`  
- Ukazatel na paměti, dříve přidělené tomuto správci paměti.  
+ *pData*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
- `nAllocLength`  
+ *nAllocLength*  
  Počet znaků v nového bloku paměti.  
   
- `nCharSize`  
- Velikost (v bajtech) tyto typy znaků pomocí Správce řetězec.  
+ *nCharSize*  
+ Velikost typ znaku, používá správce řetězců (v bajtech).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce ke změně velikosti stávající blok paměti určeného `pData`.  
+ Voláním této funkce pro změnu velikosti existujícího blok paměti určený *pData*.  
   
- Volání [IAtlStringMgr::Free](#free) k bezplatným je paměť přidělená touto metodou.  
+ Volání [IAtlStringMgr::Free](#free) k uvolnění paměti přidělené touto metodou.  
   
 > [!NOTE]
->  Příklady použití najdete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [ATL a MFC sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 

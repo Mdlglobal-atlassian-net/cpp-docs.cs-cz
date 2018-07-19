@@ -1,5 +1,5 @@
 ---
-title: Třída CComAllocator | Microsoft Docs
+title: Ccomallocator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358274"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881920"
 ---
-# <a name="ccomallocator-class"></a>CComAllocator – třída
-Tato třída poskytuje metody pro správu paměti pomocí rutiny paměti COM.  
+# <a name="ccomallocator-class"></a>Ccomallocator – třída
+Tato třída poskytuje metody pro správu paměti používá rutiny COM paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,68 +42,68 @@ class CComAllocator
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Volejte tuto metodu statické přidělit paměť.|  
-|[CComAllocator::Free](#free)|Volejte tuto metodu statické uvolnit přidělené paměti.|  
-|[CComAllocator::Reallocate](#reallocate)|Volejte tuto metodu statické a znovu přidělte paměť.|  
+|[CComAllocator::Allocate](#allocate)|Volejte tuto statickou metodu přidělení paměti.|  
+|[CComAllocator::Free](#free)|Volání této statické metody pro uvolnění paměti přidělené.|  
+|[CComAllocator::Reallocate](#reallocate)|Volání této statické metody, aby mohla znovu přidělit paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída se používá ve [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) k poskytnutí paměti COM přidělení rutiny. Třída protějšku [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), poskytuje stejné metody, pomocí rutiny CRT.  
+ Tato třída používá [ccomheapptr –](../../atl/reference/ccomheapptr-class.md) k poskytnutí paměti modelu COM, rutin přidělení. Třída protějšek [ccrtallocator –](../../atl/reference/ccrtallocator-class.md), poskytuje stejné metody, pomocí rutiny CRT.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
 ##  <a name="allocate"></a>  CComAllocator::Allocate  
- Volání této statické funkce přidělit paměť.  
+ Voláním této funkce statické přidělení paměti.  
   
 ```
 static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
- Počet bajtů přidělit.  
+ *nBytes*  
+ Počet bajtů k přidělení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí neplatný ukazatel přidělené místo, nebo hodnota NULL, pokud není k dispozici dostatek paměti.  
+ Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud není k dispozici dostatek paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Přidělí paměť. V tématu [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) další podrobnosti.  
+ Přidělí paměť. Zobrazit [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) další podrobnosti.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- Volání této statické funkce uvolnit přidělené paměti.  
+ Voláním této funkce statických zdarma přidělené paměti.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na přidělenou paměť.  
+ *p*  
+ Ukazatel do přidělené paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní přidělenou paměť. V tématu [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) další podrobnosti.  
+ Uvolní přidělené paměti. Zobrazit [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) další podrobnosti.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
- Volání této statické funkce a znovu přidělte paměť.  
+ Voláním této funkce statické přidělení paměti.  
   
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na přidělenou paměť.  
+ *p*  
+ Ukazatel do přidělené paměti.  
   
- `nBytes`  
- Počet bajtů a znovu přidělte.  
+ *nBytes*  
+ Počet bajtů, které mají přidělit jinému uživateli.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací neplatný ukazatel na přidělené místo, nebo hodnota NULL, pokud je nedostatek paměti  
+ Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud je nedostatek paměti  
   
 ### <a name="remarks"></a>Poznámky  
- Změní velikost je množství paměti přidělené. V tématu [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) další podrobnosti.  
+ Změní velikost přidělené paměti. Zobrazit [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) další podrobnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [CComHeapPtr – třída](../../atl/reference/ccomheapptr-class.md)   
- [CCRTAllocator – třída](../../atl/reference/ccrtallocator-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ccomheapptr – třída](../../atl/reference/ccomheapptr-class.md)   
+ [Ccrtallocator – třída](../../atl/reference/ccrtallocator-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

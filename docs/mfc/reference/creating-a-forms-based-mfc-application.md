@@ -1,5 +1,5 @@
 ---
-title: Vytváření aplikací MFC založených na formulářích | Microsoft Docs
+title: Vytvoření aplikace MFC založené na formulářích | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 292e3d5b0fdc7e42bd44e6993535cd176e877ca5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372444"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851636"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Vytváření aplikací MFC založených na formulářích
-Formulář je dialogové okno s ovládacími prvky, které může uživatel získávat přístup a které by mohly mít měnit data. Můžete vyvíjet aplikace, ve kterém si uživatel vybere ze několika formulářů. Běžně, formulářové aplikace umožňuje uživateli přístup k formulářům kliknutím **nový** z **souboru** nabídky. Dialogové okno aplikace, které uživateli neposkytují přístup k **nový** možnost **souboru** nabídky, je také považují za aplikace založené na formulářích.  
+Formulář je dialogové okno s ovládacími prvky, které mohl uživatel získávat přístup a pravděpodobně měnit data. Můžete vyvíjet aplikace, ve kterém uživatel vybere z výběru formuláře. Aplikace založené na formulářích často, umožní uživateli přístup k formulářům kliknutím **nový** z **souboru** nabídky. Dialogové okno aplikace, které uživateli neposkytují přístup k **nový** možnost **souboru** nabídky, jsou také považovány za aplikace založené na formulářích.  
   
- Jedním dokumentem (SDI rozhraní), na základě formulářů aplikace umožňuje jenom jednu instanci příslušného formuláře ke spuštění v čase. Je možné spustit různé formuláře ve stejnou dobu z aplikace založené na formulářích SDI výběrem nového formuláře z **nový** možnost **souboru** nabídky.  
+ Rozhraní jednoho dokumentu (SDI), aplikace založené na formulářích umožňuje pouze jednu instanci příslušného formuláře ke spuštění v čase. Je možné spustit různé formuláře ve stejnou dobu z aplikace založené na formulářích SDI tak, že vyberete nového formuláře pomocí **nový** možnost **souboru** nabídky.  
   
- Pokud vytvoříte rozhraní více dokumentů (MDI), aplikace založené na formulářích, aplikace se nebude moct podporují více instancí stejného formuláře.  
+ Pokud vytvoříte rozhraním více dokumentů (MDI), aplikace založené na formulářích, aplikace bude moci podporovat více instancí stejného formuláře.  
   
- Pokud vytvoříte aplikaci s podporou více dokumentů nejvyšší úrovně, ploše je implicitní nadřazeného prvku pro dokument a rámec dokumentu není omezen na klientské oblasti aplikace. Můžete otevřít několik instancí dokumentu, každou s vlastním rámce, nabídky a ikonou hlavního panelu. Další instance dokumentu můžete zavřít jednotlivě, ale pokud vyberete `Exit` možnost z **souboru** nabídka počáteční instance, aplikace se zavře všechny instance.  
+ Pokud vytvoříte aplikaci s podporou více dokumentů nejvyšší úrovně, je implicitní nadřazené dokumentu a rámce dokumentu se neomezuje na oblasti klienta aplikace. Můžete otevřít více instance dokumentu, každá má svou vlastní rámce, nabídky a ikonu panelu úloh. Můžete zavřít další instance dokumenty jednotlivě, ale pokud vyberete **ukončovací** možnost **souboru** nabídka původní instance, aplikace se zavře všechny instance.  
   
- SDI, MDI a více dokumentů nejvyšší úrovně aplikací jsou na základě všech formulářů a používat architektuře dokument/zobrazení.  
+ SDI, MDI a více nejvyšší úrovně dokumentu aplikace jsou všechny formuláře na základě a použít architekturu document/view.  
   
- Všechny aplikace na základě dialogové okno, podle definice, jsou na základě formulářů. Dialogové aplikace nepoužívá architektuře dokument/zobrazení, takže se musí spravovat metody vytváření a přístup pro vlastní formuláře.  
+ Všechny aplikace založené na dialogu, podle definice je na základě formulářů. Aplikace založené na dialogu architekturu document/view nepoužívá, takže je třeba spravovat metody vytvoření a přístupu pro další formulářů.  
   
- Základní třída pro formulářové aplikace je [CFormView](../../mfc/reference/cformview-class.md). Pokud vaše aplikace obsahuje podporu databáze, pak můžete také vybrat libovolnou třídu odvozenou z `CFormView`. Formulář je jakékoliv okno odvozené z `CFormView` nebo z libovolné třídy, která dědí z `CFormView`.  
+ Základní třída pro aplikace založené na formulářích je [CFormView](../../mfc/reference/cformview-class.md). Pokud má vaše aplikace Podpora databáze, pak můžete také vybrat jakoukoli třídu, která je odvozena z `CFormView`. Formulář je jakékoli okno odvozené od `CFormView` nebo z jiné třídy, která dědí z `CFormView`.  
   
- I když používáte základní třídy, jako [CView](../../mfc/reference/cview-class.md), můžete později provést aplikace na základě formulářů pomocí [přidání třídy knihovny MFC](../../mfc/reference/adding-an-mfc-class.md) odvozené z `CFormView` a kontrolu **Generate DocTemplate prostředky** zaškrtnout políčko [Průvodce třídou MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
+ I v případě, že je použít jako základní třídu [CView](../../mfc/reference/cview-class.md), můžete později provést aplikace formulářů pomocí [přidání třídy knihovny MFC](../../mfc/reference/adding-an-mfc-class.md) odvozený od `CFormView` a kontrolu **generovat DocTemplate prostředky** zaškrtávací políčko ve [Průvodce třídami MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
- Po dokončení se Průvodce otevře projekt, a pokud jste vybrali `CFormView` (nebo třídu, která dědí z `CFormView`) jako základní třída nebo pokud jste vytvořili dialogové aplikace, Visual C++ otevře dialogové okno editor. V tomto okamžiku jste připraveni navrhnout první formulář.  
+ Po dokončení Průvodce vytvořením projektu se otevře, a pokud jste vybrali `CFormView` (nebo třídu, která dědí z `CFormView`) jako základní třída nebo pokud jste vytvořili aplikaci založené na dialogu, Visual C++ se otevře editor dialogového okna. V tuto chvíli jste připraveni k návrhu první formuláře.  
   
-### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Zahajte proces vytváření formulářů spustitelný soubor knihovny MFC  
+### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Můžete začít vytvářet založené na formulářích spustitelný soubor knihovny MFC  
   
-1.  Postupujte podle pokynů v [vytváření aplikací MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Postupujte podle pokynů v [vytvoření aplikace MFC](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  V Průvodce aplikací MFC [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md) vyberte **Document/view – architektura podporu** zaškrtávací políčko.  
+2.  Průvodce aplikací knihovny MFC [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md) stránky, vyberte **podpora architektury Document/view** zaškrtávací políčko.  
   
-3.  Vyberte **jednotlivý dokument**, **více dokumentů**, nebo **více dokumentů nejvyšší úrovně**.  
+3.  Vyberte **jednotlivý dokument**, **více dokumentů**, nebo **více dokumentů na nejvyšší úrovni**.  
   
     > [!NOTE]
-    >  Pokud jste zvolili SDI, MDI nebo rozhraní více dokumentů nejvyšší úrovně ve výchozím nastavení, `CView` je nastaven jako základní třída pro zobrazení vaší aplikace v [generované třídy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránce průvodce. Chcete-li vytvořit aplikaci založené na formulářích, je nutné vybrat `CFormView` jako základní třída pro zobrazení aplikace. Všimněte si, že Průvodce neposkytuje podporu tisku pro aplikaci na základě formulářů.  
+    >  Pokud jste zvolili SDI, MDI nebo rozhraní více dokumentů nejvyšší úrovně ve výchozím nastavení, `CView` je nastaven jako základní třída pro zobrazení vaší aplikace [třídy generované v](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránce průvodce. Vytvoření aplikace založené na formulářích, musíte vybrat `CFormView` jako základní třída pro zobrazení vaší aplikace. Všimněte si, že Průvodce neposkytuje podporu tisku pro aplikace založené na formulářích.  
   
-4.  Nastavte další možnosti projektu, který má na dalších stránkách průvodce.  
+4.  Nastavte další požadované možnosti projektu na dalších stránkách průvodce.  
   
-5.  Klikněte na tlačítko **Dokončit** pro vygenerování kostru aplikace.  
+5.  Klikněte na tlačítko **Dokončit** ke generování kostry aplikace.  
   
  Další informace naleznete v tématu:  
   
@@ -67,8 +67,8 @@ Formulář je dialogové okno s ovládacími prvky, které může uživatel zís
 -   [Volby při návrhu aplikací](../../mfc/application-design-choices.md)  
   
 ## <a name="see-also"></a>Viz také  
- [MFC – Průvodce aplikací](../../mfc/reference/mfc-application-wizard.md)   
+ [Průvodce aplikací MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Zobrazení formulářů](../../mfc/form-views-mfc.md)   
- [Vytváření aplikací MFC ve stylu Průzkumníka souborů](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
+ [Vytvoření aplikace MFC ve stylu Průzkumníka souborů](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
  [Vytvoření aplikace MFC ve stylu webového prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 

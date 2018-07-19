@@ -1,5 +1,5 @@
 ---
-title: Třída CA2CAEX | Microsoft Docs
+title: Ca2caex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357799"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879241"
 ---
-# <a name="ca2caex-class"></a>CA2CAEX – třída
-Tato třída se používá ve makra převodů řetězec `CA2CTEX` a `CT2CAEX`a typedef **CA2CA**.  
+# <a name="ca2caex-class"></a>Ca2caex – třída
+Tato třída se používá řetězec převodních maker CA2CTEX CT2CAEX a definice typedef CA2CA.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_nBufferLength`  
- Velikost vyrovnávací paměti používané v procesu překladu. Výchozí délka je 128 bajtů.  
+ *t_nBufferLength*  
+ Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.  
   
 ## <a name="members"></a>Členové  
   
@@ -50,7 +50,7 @@ class CA2CAEX
 |Název|Popis|  
 |----------|-----------------|  
 |[CA2CAEX::CA2CAEX](#ca2caex)|Konstruktor|  
-|[CA2CAEX:: ~ CA2CAEX](#dtor)|Destruktor.|  
+|[CA2CAEX –:: ~ CA2CAEX –](#dtor)|Destruktor.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -62,27 +62,27 @@ class CA2CAEX
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|Data člena, který ukládá zdrojový řetězec.|  
+|[CA2CAEX::m_psz](#m_psz)|Datový člen, který ukládá zdrojový řetězec.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je potřeba další funkce, používat `CA2CTEX`, `CT2CAEX`, nebo **CA2CA** v kódu.  
+ Pokud není vyžadována další funkce, pomocí CA2CTEX, CT2CAEX nebo CA2CA ve svém vlastním kódu.  
   
- Tato třída je bezpečné pro použití v smyčky a nebude přetečení zásobníku. Ve výchozím nastavení převod ATL – třídy a makra použije aktuální vlákno ANSI znaková stránka pro převod.  
+ Tato třída je bezpečné používat ve smyčkách a nebude přetečení zásobníku. Ve výchozím nastavení Převod třídy ATL a makra použije znakovou stránku ANSI aktuální vlákno pro převod.  
   
- Následující makra je založena na této třídě:  
+ Následující makra jsou založené na této třídě:  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- Následující definice typu je založena na této třídě:  
+ Následující definice typedef je založena na této třídě:  
   
-- **CA2CA**  
+- CA2CA  
   
- Informace o těchto makra převodů text, najdete v části [ATL a MFC makra převodů řetězec](string-conversion-macros.md).  
+ Informace o těchto makrech převodu textu, naleznete v tématu [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [ATL a MFC makra převodů řetězec](string-conversion-macros.md) příklad použití převodních maker tyto řetězce.  
+ Zobrazit [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md) příklad použití převodních maker tyto řetězce.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlconv.h  
@@ -96,16 +96,16 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
+ *psz*  
  Textový řetězec, který má být převeden.  
   
- `nCodePage`  
- Nepoužívá se v této třídě.  
+ *nCodePage*  
+ Nepoužívané v této třídě.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří vyrovnávací paměti vyžadované pro překlad.  
+ Vytvoří vyrovnávací paměti vyžadované pro převod.  
   
-##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>  CA2CAEX –:: ~ CA2CAEX –  
  Destruktor.  
   
 ```
@@ -116,7 +116,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  Uvolní přidělené vyrovnávací paměti.  
   
 ##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- Data člena, který ukládá zdrojový řetězec.  
+ Datový člen, který ukládá zdrojový řetězec.  
   
 ```
 LPCSTR m_psz;
@@ -130,12 +130,12 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí textový řetězec jako typ `LPCSTR`.  
+ Vrátí textový řetězec psaní LPCSTR.  
   
 ## <a name="see-also"></a>Viz také  
- [CA2AEX – třída](../../atl/reference/ca2aex-class.md)   
- [CA2WEX – třída](../../atl/reference/ca2wex-class.md)   
- [CW2AEX – třída](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX – třída](../../atl/reference/cw2wex-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ca2aex – třída](../../atl/reference/ca2aex-class.md)   
+ [Ca2wex – třída](../../atl/reference/ca2wex-class.md)   
+ [Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
+ [Cw2cwex – třída](../../atl/reference/cw2cwex-class.md)   
+ [Cw2wex – třída](../../atl/reference/cw2wex-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

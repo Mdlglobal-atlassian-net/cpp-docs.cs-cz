@@ -1,5 +1,5 @@
 ---
-title: Třída IPropertyNotifySinkCP | Microsoft Docs
+title: Ipropertynotifysinkcp – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361623"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879186"
 ---
-# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP – třída
-Tato třída zpřístupňuje [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní jako odchozí rozhraní na objekt umožňující připojení.  
+# <a name="ipropertynotifysinkcp-class"></a>Ipropertynotifysinkcp – třída
+Tato třída zveřejňuje [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní jako odchozí rozhraní umožňující připojení k objektu.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +41,20 @@ class IPropertyNotifySinkCP
 ```    
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `IPropertyNotifySinkCP`.  
+ *T*  
+ Vaše třída odvozena od `IPropertyNotifySinkCP`.  
   
- `CDV`  
- Třída, která spravuje připojení mezi bod připojení a jeho jímky. Výchozí hodnota je [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), což umožňuje neomezený počet připojení. Můžete také použít [CComUnkArray](../../atl/reference/ccomunkarray-class.md), která určuje pevný počet připojení.  
+ *CDV*  
+ Třída, která spravuje připojení mezi bodem připojení a jeho jímky. Výchozí hodnota je [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), který umožňuje neomezený počet připojení. Můžete také použít [ccomunkarray –](../../atl/reference/ccomunkarray-class.md), která určuje pevný počet připojení.  
   
 ## <a name="remarks"></a>Poznámky  
- `IPropertyNotifySinkCP` dědí všechny metody prostřednictvím její základní třída [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
+ `IPropertyNotifySinkCP` dědí všechny metody prostřednictvím její základní třídě [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní, které umožňuje podřízený objekt k přijímání oznámení o změnách vlastnost. Třída `IPropertyNotifySinkCP` zpřístupní toto rozhraní jako odchozí rozhraní na objekt umožňující připojení. Klient musí implementovat `IPropertyNotifySink` metody na jímky.  
+ [Ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní umožňuje vnořený objekt k přijímání oznámení o změně vlastnosti. Třída `IPropertyNotifySinkCP` zpřístupní toto rozhraní jako odchozí rozhraní umožňující připojení k objektu. Klient musí implementovat `IPropertyNotifySink` metody na jímce.  
   
- Odvození třídě z `IPropertyNotifySinkCP` když chcete vytvořit spojovací bod, který představuje `IPropertyNotifySink` rozhraní.  
+ Odvodit třídu z `IPropertyNotifySinkCP` Pokud chcete vytvořit, který představuje bod připojení `IPropertyNotifySink` rozhraní.  
   
- Další informace o používání v ATL – body připojení, najdete v článku [spojovací body](../../atl/atl-connection-points.md).  
+ Další informace o použití spojovacích bodů v ATL, najdete v článku [spojovací body](../../atl/atl-connection-points.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlctl.h  
@@ -62,4 +62,4 @@ class IPropertyNotifySinkCP
 ## <a name="see-also"></a>Viz také  
  [IConnectionPointImpl – třída](../../atl/reference/iconnectionpointimpl-class.md)   
  [IConnectionPointContainerImpl – třída](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

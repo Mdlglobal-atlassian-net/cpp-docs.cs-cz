@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCStatusBar – | Microsoft Docs
+title: CMFCStatusBar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e0f97eb2bce0bb39641aeceeaaa57d73dd45994e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041723"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854028"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar – třída
-`CMFCStatusBar` Třída implementuje podobná stavového řádku `CStatusBar` třídy. Ale `CMFCStatusBar` třída má funkce není služeb `CStatusBar` třídy, například možnost zobrazit obrázky, animace a indikátory průběhu; a schopnost reagovat na myši poklikáním. 
+`CMFCStatusBar` Třída implementuje stavový řádek podobný `CStatusBar` třídy. Ale `CMFCStatusBar` třída obsahuje funkce, které nejsou nabízeny třídou `CStatusBar` třídy, jako je schopnost zobrazit obrázky, animace a indikátory; a schopnost reagovat na poklepání myši. 
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
@@ -106,13 +106,13 @@ class CMFCStatusBar : public CPane
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Přepisuje [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||  
-|[CMFCStatusBar::Create](#create)|Vytvoří ovládacích pruhů a připojí jej k [CPane](../../mfc/reference/cpane-class.md) objektu. (Přepisuje [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
-|[CMFCStatusBar::CreateEx](#createex)|Vytvoří ovládacích pruhů a připojí jej k [CPane](../../mfc/reference/cpane-class.md) objektu. (Přepisuje [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
-|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi v tomto podokně a nadřazeného rámce. (Přepisuje [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Povolí nebo zakáže ošetření myši poklikáním na stavovém řádku.|  
-|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|V podokně zadaný zobrazuje indikátor průběhu.|  
+|[CMFCStatusBar::Create](#create)|Ovládací panel vytvoří a připojí ho k [cpane –](../../mfc/reference/cpane-class.md) objektu. (Přepíše [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCStatusBar::CreateEx](#createex)|Ovládací panel vytvoří a připojí ho k [cpane –](../../mfc/reference/cpane-class.md) objektu. (Přepíše [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
+|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi toto podokno a nadřazeného rámce. (Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Povolí nebo zakáže zpracování myši dvakrát klikne na stavovém řádku.|  
+|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|V podokně zadané zobrazí indikátor průběhu.|  
 |[CMFCStatusBar::GetCount](#getcount)|Vrátí počet podokna na stavovém řádku.|  
 |[CMFCStatusBar::GetDrawExtendedArea](#getdrawextendedarea)||  
 |[CMFCStatusBar::GetExtendedArea](#getextendedarea)||  
@@ -120,49 +120,49 @@ class CMFCStatusBar : public CPane
 |[CMFCStatusBar::GetItemRect](#getitemrect)||  
 |[CMFCStatusBar::GetPaneInfo](#getpaneinfo)||  
 |[CMFCStatusBar::GetPaneProgress](#getpaneprogress)||  
-|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Vrátí styl podokně. (Přepisuje [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
+|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Vrátí podokno style. (Přepíše [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
 |[CMFCStatusBar::GetPaneText](#getpanetext)||  
-|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Vrátí šířku v pixelech podokně zadaný stavový řádek.|  
-|[CMFCStatusBar::GetTipText](#gettiptext)|Vrátí text popisu nástroje pro zadaný podokně stavový řádek.|  
-|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Zruší platnost zadaného podokně nebo ho překreslí jeho obsah.|  
-|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Voláno rámcem před vytvořením okna Windows připojených k tomuto `CWnd` objektu. (Přepisuje [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
+|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Vrátí šířku v pixelech, podokna zadané ve stavovém řádku.|  
+|[CMFCStatusBar::GetTipText](#gettiptext)|Vrátí text tipu nástroj pro zadané podokno ve stavovém řádku.|  
+|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Zruší platnost zadané podokně a překreslí jeho obsah.|  
+|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Volá se rozhraním před vytvořením okna Windows připojených k tomuto `CWnd` objektu. (Přepíše [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
 |[CMFCStatusBar::SetDrawExtendedArea](#setdrawextendedarea)||  
 |[CMFCStatusBar::SetIndicators](#setindicators)||  
-|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Přiřadí animace do podokna zadaný.|  
-|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Nastaví barvu pozadí pro zadaný podokně stavový řádek.|  
-|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Nastaví ikona indikátoru pro zadaný podokně stavový řádek.|  
+|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Přiřadí zadaný podokně animace.|  
+|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Nastaví barvu pozadí pro podokno zadané ve stavovém řádku.|  
+|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Nastaví ikona indikátoru podokna zadané ve stavovém řádku.|  
 |[CMFCStatusBar::SetPaneInfo](#setpaneinfo)||  
-|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Nastaví aktuální průběh indikátor průběhu pro zadaný podokně stavový řádek.|  
-|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Nastavuje styl podokna. (Přepisuje [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
+|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Nastaví aktuální průběh indikátoru průběhu pro zadaný podokno ve stavovém řádku.|  
+|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Nastaví styl podokna. (Přepíše [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
 |[CMFCStatusBar::SetPaneText](#setpanetext)||  
-|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Nastaví barvu textu pro zadaný podokně stavový řádek.|  
-|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Nastaví šířku v pixelech podokně zadaný stavový řádek.|  
-|[CMFCStatusBar::SetTipText](#settiptext)|Nastaví text popisu nástroje pro zadaný podokně stavový řádek.|  
+|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Nastaví barvu textu pro zadaný podokno ve stavovém řádku.|  
+|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Nastavuje šířku v pixelech podokna zadané ve stavovém řádku.|  
+|[CMFCStatusBar::SetTipText](#settiptext)|Nastaví text popisu nástroje pro zadaný podokno ve stavovém řádku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Voláno rámcem, pokud ho překreslí podokně stavový řádek.|  
+|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Volá se rozhraním, když ho překreslí podokně ve stavovém řádku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Následující diagram znázorňuje obrázek stavového řádku z [stav panelu Demo-ukázka](../../visual-cpp-samples.md) aplikace.  
+ Následující diagram znázorňuje obrázek ve stavovém řádku z [stav panelu demonstrační ukázka](../../visual-cpp-samples.md) aplikace.  
   
  ![Příklad CMFCStatusBar –](../../mfc/reference/media/cmfcstatusbar.png "CMFCStatusBar –")  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, místní proměnné, které aplikace používá k volání různých metod `CMFCStatusBar` třídy. Tyto proměnné jsou deklarovány v StatusBarDemoView.h. Je v MainFrm.h deklarována hlavního rámce, dokument je deklarován v StatusBarDemoDoc.h a zobrazení je deklarován v StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje místní proměnné, které aplikace používá k volání různých metodách `CMFCStatusBar` třídy. Tyto proměnné jsou deklarovány v StatusBarDemoView.h. Hlavního rámce je deklarován v MainFrm.h, dokument je deklarován v StatusBarDemoDoc.h a zobrazení je deklarován v StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak získat odkaz na `CMFCStatusBar` objekt zavedením `GetStatusBar` metoda v MainFrm.h a potom voláním této metody z `GetStatusBar` metoda v StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak získat odkaz na `CMFCStatusBar` objekt zavedením `GetStatusBar` metoda MainFrm.h a následným voláním této metody z `GetStatusBar` metoda ve StatusBarDemoView.h. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak volat různé metody `CMFCStatusBar` třídy v StatusBarDemoView.cpp. Konstanty jsou deklarované v MainFrm.h. Tento příklad ukazuje, jak na ikonu, a nastavte text popisku panelu řádku stav, v podokně zadaný, zobrazuje indikátor průběhu, přiřadit animace do podokna zadaný, nastavení textu a šířka podokně panelu stavu, a nastavit aktuální indikátor průběhu systému progr Indikátor ESS podokně panelu stavu. Tento fragment kódu je součástí [stav panelu Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob volání různých metodách `CMFCStatusBar` třídy v StatusBarDemoView.cpp. Konstanty jsou deklarovány v MainFrm.h. Tento příklad ukazuje, jak nastavit ikonu, nastaví text popisu tlačítka panelu stavového řádku stav, zobrazí indikátor průběhu na zadané podokně, přiřadit animace do podokna zadaný, nastavit text a šířku panelu stavového řádku stav a nastavit aktuální indikátoru průběhu progr panel upu pro podokno panelu Stav. Tento fragment kódu je součástí [stav panelu demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]  
@@ -172,7 +172,7 @@ class CMFCStatusBar : public CPane
 [!code-cpp[NVC_MFC_StatusBarDemo#5](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_9.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bStretch*  
- [v] *bHorz*  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -212,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIDFind*  
+ [in] *nIDFind*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -229,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentWnd*  
- [v] *dwStyle*  
- [v] *nID*  
+ [in] *pParentWnd*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentWnd*  
- [v] *dwCtrlStyle*  
- [v] *dwStyle*  
- [v] *nID*  
+ [in] *pParentWnd*  
+ [in] *dwCtrlStyle*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -270,21 +270,21 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="enablepanedoubleclick"></a>  CMFCStatusBar::EnablePaneDoubleClick  
- Povolí nebo zakáže ošetření myši poklikáním na stavovém řádku.  
+ Povolí nebo zakáže zpracování myši dvakrát klikne na stavovém řádku.  
   
 ```  
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- Pokud `TRUE`, povolit, klikněte dvakrát na zpracování myši. V opačném případě zakážete zpracování poklikejte myši.  
+ [in] *bEnable*  
+ Pokud je hodnota TRUE, povolte zpracování dvojitým kliknutím myši. V opačném případě zakážete zpracování dvojitým kliknutím myši.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud stavový řádek je povolen zpracování dvojité kliknutí, systém Windows odešle oznámení wm_command – společně s ID prostředku vlastníkovi na stavovém řádku pokaždé, když uživatel dvakrát klikne na podokně panelu stavu.  
+ Pokud je stavový řádek je povoleno zpracování dvojité kliknutí, Windows odešle oznámení wm_command – spolu s ID prostředku vlastníkovi stavového řádku pokaždé, když uživatel dvakrát klikne na panelu stavového stav.  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
- V podokně zadaný zobrazuje indikátor průběhu.  
+ V podokně zadané zobrazí indikátor průběhu.  
   
 ```  
 void EnablePaneProgressBar(
@@ -297,33 +297,33 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně, jejichž indikátor průběhu, chcete-li povolit.  
+ [in] *nIndex*  
+ Určuje index podokna jehož indikátor průběhu povolit.  
   
- [v] *ncelkový počet*  
+ [in] *ncelkový počet*  
  Určuje maximální hodnotu indikátor průběhu.  
   
- [v] *bDisplayText*  
- Určuje, zda má indikátoru průběhu zobrazit aktuální hodnota průběhu.  
+ [in] *bDisplayText*  
+ Určuje, zda by měl indikátor průběhu zobrazit aktuální hodnotu průběh.  
   
- [v] *clrBar*  
+ [in] *clrBar*  
  Určuje barvu pozadí indikátor průběhu.  
   
- [v] *clrBarDest*  
- Určuje sekundární barvu pozadí panelu průběhu. Použít jinou hodnotu než *clrBar* k vyplnění pomocí barev, smíšení do přechod.  
+ [in] *clrBarDest*  
+ Určuje sekundární barvu pozadí panelu průběh. Použít jinou hodnotu než *clrBar* tak, aby vyplnil pomocí barev prolnuty do přechodu.  
   
- [v] *clrProgressText*  
+ [in] *clrProgressText*  
  Určuje barvu textu indikátor průběhu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete zakázat volání panelu průběhu `EnablePaneProgressBar` s *ncelkový počet* nastavena na hodnotu -1. Ve výchozím nastavení *ncelkový počet* je nastavena na hodnotu 100. Proto není nutné žádné další výpočty zobrazíte průběh jako procento.  
+ Pokud chcete zakázat volání panelu průběh `EnablePaneProgressBar` s *ncelkový počet* nastavena na hodnotu -1. Ve výchozím nastavení *ncelkový počet* je nastavena na hodnotu 100. Proto není nutné žádné další výpočty, chcete-li zobrazit průběh v procentech.  
   
- Musí předat různé hodnoty pro *clrBar* a *clrBarDest* tak, aby barvu pozadí panelu průběhu zobrazí barvu smíšení do přechod. .  
+ Je třeba předat různé hodnoty *clrBar* a *clrBarDest* tak, aby barvu pozadí indikátoru průběhu zobrazí barva prolnuty do přechodu. .  
   
- Chcete-li nastavit aktuální průběh, zavolejte [CMFCStatusBar::SetPaneProgress](#setpaneprogress) metoda.  
+ Chcete-li nastavit aktuální průběh, zavolejte [CMFCStatusBar::SetPaneProgress](#setpaneprogress) metody.  
   
 ##  <a name="getcount"></a>  CMFCStatusBar::GetCount  
- Načte počet podokna ve stavovém řádku.  
+ Získá počet podokna ve stavovém řádku.  
   
 ```  
 int GetCount() const;  
@@ -351,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -365,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *lprect –*  
+ [in] *nIndex*  
+ [in] *lprect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *nID*  
- [v] *nStyle*  
- [v] *cxWidth*  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -413,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -427,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *s*  
+ [in] *nIndex*  
+ [in] *s*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -460,42 +460,42 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index panelu řádku stavu.  
+ [in] *nIndex*  
+ Určuje index panelu stavového řádku stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka podokně panelu stavu, *nIndex* určuje; jinak hodnota nula, pokud panelu stavového řádku neexistuje.  
+ Šířka panelu stavového stav, který *nIndex* určuje; v opačném případě nula, pokud neexistuje panelu stavového řádku.  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
- Načtěte text popisku panelu stavového řádku.  
+ Načtěte text popisku stavovém panelu.  
   
 ```  
 CString GetTipText(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně, pro které chcete načíst text popisu nástroje.  
+ [in] *nIndex*  
+ Určuje index v podokně pro kterou se má načíst text tipu nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Text popisku panelu stavového řádku, *nIndex* určuje. Jinak hodnota prázdnému řetězci, pokud podokno panelu Stav neexistuje pro zadaný *nIndex* nebo pokud jeho text popisu je prázdný.  
+ Text popisu tlačítka panelu stavového řádku, který *nIndex* určuje. V opačném případě prázdnému řetězci, pokud neexistuje panelu stavového řádku stavu pro zadaný *nIndex* nebo pokud jeho text popisu je prázdný.  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
- Zrušení platnosti podokně panelu stavu nebo ho překreslit jeho obsah.  
+ Zrušení platnosti panelu stavového řádku stav nebo ho překreslit jeho obsah.  
   
 ```  
 void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně, jejíž obsah má být zrušena a překreslen.  
+ [in] *nIndex*  
+ Určuje index v podokně, jejíž obsah má být zrušena a překreslení.  
   
 ### <a name="remarks"></a>Poznámky  
- Když je zrušena stavového řádku, je označen pro překreslování. Windows ho překreslí ho při `UpdateWindow` metoda odesílá WM_PAINT zprávu, která `OnPaint` metoda.  
+ Když stavový řádek zneplatněna, označí se pro překreslení. Windows překreslí ho při `UpdateWindow` metoda odesílá zprávu WM_PAINT `OnPaint` metody.  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
- Ho překreslit podokně stavový řádek.  
+ Ho překreslit podokně ve stavovém řádku.  
   
 ```  
 virtual void OnDrawPane(
@@ -504,16 +504,16 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro kreslení.  
   
- [v] *pPane*  
- Ukazatel na `CMFCStatusBarPaneInfo` struktura, která obsahuje informace o podokně překreslit.  
+ [in] *pPane*  
+ Ukazatel `CMFCStatusBarPaneInfo` strukturu, která obsahuje informace o podokně tak, aby vyžadovaly překreslení.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení `OnDrawPane` ho překreslí v podokně s použitím kontextu zařízení *primárního řadiče domény* podle stylu a obsah v podokně.  
+ Ve výchozím nastavení `OnDrawPane` překreslí v podokně s použitím kontextu zařízení *primárního řadiče domény* podle stylu a obsah v podokně.  
   
- Potlačí tuto metodu v `CMFCStatusBar`-odvozené třídy přizpůsobit vzhled podokno.  
+ Potlačí tuto metodu v `CMFCStatusBar`-odvozené třídy pro přizpůsobení vzhledu podokno.  
   
 ##  <a name="precreatewindow"></a>  CMFCStatusBar::PreCreateWindow  
 
@@ -523,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *cs*  
+ [in] *cs*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -537,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bSet*  
+ [in] *bSet*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -551,15 +551,15 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpIDArray*  
- [v] *nIDCount*  
+ [in] *lpIDArray*  
+ [in] *nIDCount*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpaneanimation"></a>  CMFCStatusBar::SetPaneAnimation  
- Přiřadí animace do podokna zadaný.  
+ Přiřadí zadaný podokně animace.  
   
 ```  
 void SetPaneAnimation(
@@ -570,23 +570,23 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně, ke kterému chcete přiřadit k němu animace.  
+ [in] *nIndex*  
+ Určuje index v podokně, ke kterému chcete přiřadit k ní animace.  
   
- [v] *hImageList*  
- Určuje popisovač pro seznamu obrázků, který obsahuje snímků animace.  
+ [in] *hImageList*  
+ Určuje popisovač pro seznam obrázků, která uchovává snímky animace.  
   
- [v] *nFrameRate*  
- Určuje obnovovací frekvence (v milisekundách) pro animaci.  
+ [in] *nFrameRate*  
+ Určuje frekvenci snímků v milisekundách pro animaci.  
   
- [v] *bUpdate*  
- Pokud `TRUE`, okamžitě aktualizovat obsah podokně. Jinak v podokně obsahu je aktualizována při je zrušena.  
+ [in] *bUpdate*  
+ Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. V opačném případě se aktualizuje obsah podokně při jeho platnost.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete zakázat aktuální animace, zavolejte `SetPaneAnimation` s `hImageList` nastavena na `NULL`.  
+ Pokud chcete zakázat aktuální animace, zavolejte `SetPaneAnimation` s `hImageList` nastavena na hodnotu NULL.  
   
 ##  <a name="setpanebackgroundcolor"></a>  CMFCStatusBar::SetPaneBackgroundColor  
- Nastaví barvu pozadí panelu řádku stavu.  
+ Nastaví barvu pozadí panelu stavového řádku stav.  
   
 ```  
 void SetPaneBackgroundColor(
@@ -596,17 +596,17 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně pro kterou chcete nastavit novou barvu pozadí.  
+ [in] *nIndex*  
+ Určuje index v podokně pro kterou chcete nastavit novou barvou pozadí.  
   
- [v] *clrBackground*  
- Určuje barvu pozadí nové.  
+ [in] *clrBackground*  
+ Určuje novou barvou pozadí.  
   
- [v] *bUpdate*  
- Pokud `TRUE`, okamžitě aktualizovat obsah podokně. V podokně obsahu, jinak hodnota neaktualizujete, dokud v podokně zneplatněna jinou metodou.  
+ [in] *bUpdate*  
+ Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
- Nastavte ikonu podokně panelu stavu.  
+ Nastavte ikonu panelu stavového řádku stav.  
   
 ```  
 void SetPaneIcon(
@@ -623,25 +623,25 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
  Určuje index v podokně pro kterou chcete nastavit bitovou kopii.  
   
- [v] *hIcon*  
- Určuje popisovač pro ikonu Nastavit jako obrázek podokna.  
+ [in] *hIcon*  
+ Určuje popisovač ikona nastavit jako obrázek podokna.  
   
- [v] *bUpdate*  
- Určuje, jestli pro aktualizaci obsahu podokně okamžitě.  
+ [in] *bUpdate*  
+ Určuje, zda pro aktualizaci obsahu podokna okamžitě.  
   
- [v] *hBmp*  
- Určuje popisovač pro bitovou mapu nastavit jako obrázek podokna.  
+ [in] *hBmp*  
+ Určuje popisovač rastrový obrázek, nastavit jako obrázek podokna.  
   
- [v] *clrTransparent*  
- Určuje průhlednou barvu bitmapy, *hBmp* označuje.  
+ [in] *clrTransparent*  
+ Určuje průhlednou barvu rastrového obrázku, který *hBmp* označuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete buď předat `HICON` nebo `HBITMAP` společně s průhledná barva nastavit bitové kopie v podokně. Pokud nechcete zobrazit obrázek už, předat `NULL` hodnotu jako popisovač bitové kopie.  
+ Můžete předat HICON nebo HBITMAP spolu s průhledná barva obrázku v podokně nastavení. Pokud nechcete zobrazit obrázek déle, předejte hodnotu NULL jako popisovač bitové kopie.  
   
- Pokud je všechny běžící animace, [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) má nastavené, animace se zastaví.  
+ Pokud není k dispozici žádné běžící animace, která [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) má nastavení, se zastaví animace.  
   
 ##  <a name="setpaneinfo"></a>  CMFCStatusBar::SetPaneInfo  
 
@@ -655,15 +655,15 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *nID*  
- [v] *nStyle*  
- [v] *cxWidth*  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpaneprogress"></a>  CMFCStatusBar::SetPaneProgress  
- Nastavte aktuální indikátor průběhu indikátoru průběhu pro zadaný podokně.  
+ Nastavte aktuální indikátoru průběhu indikátoru průběhu pro zadaný podokno.  
   
 ```  
 void SetPaneProgress(
@@ -673,19 +673,19 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
+ [in] *nIndex*  
  Určuje index v podokně, pro které chcete aktualizovat indikátor průběhu.  
   
- [v] *nCurr*  
- Určuje aktuální hodnota indikátoru průběhu.  
+ [in] *nCurr*  
+ Určuje aktuální hodnotu indikátor průběhu.  
   
- [v] *bUpdate*  
- Určuje, zda by měl v podokně aktualizovat okamžitě.  
+ [in] *bUpdate*  
+ Určuje, zda by měl v podokně okamžitě aktualizovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete aktualizovat indikátor průběhu pro indikátor průběhu v podokně zadaný, volejte tuto metodu.  
+ Tuto metodu volejte, pokud chcete aktualizovat indikátoru průběhu pro indikátor průběhu v podokně zadané.  
   
- Chcete-li tuto funkci použít pro dané podokně, musí volat [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) první.  
+ Chcete-li tuto funkci použít pro dané podokno, musíte volat [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) první.  
   
 ##  <a name="setpanestyle"></a>  CMFCStatusBar::SetPaneStyle  
 
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *nStyle*  
+ [in] *nIndex*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -713,16 +713,16 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- [v] *lpszNewText*  
- [v] *bUpdate*  
+ [in] *nIndex*  
+ [in] *lpszNewText*  
+ [in] *bUpdate*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpanetextcolor"></a>  CMFCStatusBar::SetPaneTextColor  
- Nastaví barvu textu zadaný podokna.  
+ Nastaví barvu textu zadaného podokna.  
   
 ```  
 void SetPaneTextColor(
@@ -732,17 +732,17 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Určuje index v podokně, ke kterému chcete přiřadit nové barvy.  
+ [in] *nIndex*  
+ Určuje index v podokně, ke kterému chcete přiřadit novou barvu textu.  
   
- [v] *clrText*  
+ [in] *clrText*  
  Určuje barvu textu.  
   
- [v] *bUpdate*  
- Pokud `TRUE`, okamžitě aktualizovat obsah podokně. V podokně obsahu, jinak hodnota neaktualizujete, dokud v podokně zneplatněna jinou metodou.  
+ [in] *bUpdate*  
+ Při hodnotě TRUE se aktualizace obsahu podokna okamžitě. Podokno obsahu v opačném případě neaktualizují, dokud podokně zneplatněna jinou metodou.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
- Nastavte šířku podokně panelu stavu.  
+ Nastavte šířku panelu stavového řádku stav.  
   
 ```  
 void SetPaneWidth(
@@ -751,14 +751,14 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index panelu řádku stav, pro kterou chcete nastavit novou šířku.  
+ [in] *nIndex*  
+ Index podokno panelu Stav, pro kterou chcete nastavit novou šířku.  
   
- [v] *cx*  
- Nové šířka podokně panelu stavu, v pixelech.  
+ [in] *cx*  
+ Novou šířku podokno panelu Stav, v pixelech.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
- Nastavte text popisku panelu řádku stav.  
+ Nastavte text popisu tlačítka na panelu stavového řádku stav.  
   
 ```  
 void SetTipText(
@@ -767,14 +767,14 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIndex*  
- Index v podokně, ke kterému chcete přiřadit text popisku.  
+ [in] *nIndex*  
+ Index v podokně, ke kterému chcete přiřadit přejede myší.  
   
- [v] *pszTipText*  
+ [in] *pszTipText*  
  Nový text popisku.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CPane – třída](../../mfc/reference/cpane-class.md)   
+ [Cpane – třída](../../mfc/reference/cpane-class.md)   
  [CStatusBar – třída](../../mfc/reference/cstatusbar-class.md)

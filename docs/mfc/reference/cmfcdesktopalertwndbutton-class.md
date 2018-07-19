@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDesktopAlertWndButton | Microsoft Docs
+title: Cmfcdesktopalertwndbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f9993f33386f93ef696213c1721bac5172a2436
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370331"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853592"
 ---
-# <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton – třída
-Umožňuje tlačítka, který se má přidat do plochy dialogového okna výstrah.  
+# <a name="cmfcdesktopalertwndbutton-class"></a>Cmfcdesktopalertwndbutton – třída
+Umožňuje tlačítka pro přidání do klasické pracovní plochy dialogového okna výstrah.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Určuje, jestli se v oblasti Titulek dialogového okna výstrah zobrazí tlačítko.|  
+|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Určuje, zda je zobrazeno tlačítko v oblasti Titulek dialogového okna Výstraha.|  
 |[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Určuje, zda tlačítko zavře dialogové okno upozornění.|  
   
 ### <a name="data-members"></a>Datové členy  
@@ -59,22 +59,22 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 |||  
 |-|-|  
 |Název|Popis|  
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Logická hodnota, která určuje, jestli se v oblasti Titulek dialogového okna výstrah zobrazí tlačítko.|  
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Logická hodnota, která určuje, zda tlačítko zavře dialogové okno upozornění.|  
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Logická hodnota určující, zda je zobrazeno tlačítko v oblasti Titulek dialogového okna Výstraha.|  
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Logická hodnota určující, zda tlačítko zavře dialogové okno upozornění.|  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, konstruktor nastaví `m_bIsCaptionButton` a `m_bIsCloseButton` datových členů ke `FALSE`. Nadřazený `CMFCDesktopAlertDialog` objektu sady `m_bIsCaptionButton` k `TRUE` Pokud tlačítko je umístěný v oblasti Titulek dialogového okna výstrah. `CMFCDesktopAlertDialog` Třída vytvoří `CMFCDesktopAlertWndButton` objekt, který slouží jako tlačítko zavření dialogového okna výstrah pole a nastaví `m_bIsCloseButton` k `TRUE`.  
+ Ve výchozím nastavení, konstruktor nastaví `m_bIsCaptionButton` a `m_bIsCloseButton` datové členy na hodnotu FALSE. Nadřazené `CMFCDesktopAlertDialog` objektu sady `m_bIsCaptionButton` na hodnotu TRUE, pokud tlačítko je umístěný v oblasti Titulek dialogového okna Výstraha. `CMFCDesktopAlertDialog` Vytvoří třídu `CMFCDesktopAlertWndButton` objekt, který slouží jako tlačítko, které zavření dialogového okna výstrah pole a nastaví `m_bIsCloseButton` na hodnotu TRUE.  
   
- Přidat `CMFCDesktopAlertWndButton` objekty do `CMFCDesktopAlertDialog` objektů, jako by všechny tlačítko Přidat. Další informace o `CMFCDesktopAlertDialog`, najdete v části [CMFCDesktopAlertDialog třída](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ Přidat `CMFCDesktopAlertWndButton` objektů do `CMFCDesktopAlertDialog` jak by jakékoli tlačítko Přidat. Další informace o `CMFCDesktopAlertDialog`, naleznete v tématu [cmfcdesktopalertdialog – třída](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `SetImage` metoda v `CMFCDesktopAlertWndButton` třídy. Tento fragment kódu je součástí [plochy výstrahy Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `SetImage` metodu `CMFCDesktopAlertWndButton` třídy. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -82,22 +82,22 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CButton](../../mfc/reference/cbutton-class.md)  
   
- [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
+ [Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)  
   
- [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
+ [Cmfcdesktopalertwndbutton –](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdesktopalertwnd.h  
   
 ##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
- Určuje, jestli se v oblasti Titulek dialogového okna výstrah zobrazí tlačítko.  
+ Určuje, zda je zobrazeno tlačítko v oblasti Titulek dialogového okna Výstraha.  
   
 ```  
 BOOL IsCaptionButton() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, je-li na tlačítko se zobrazí v oblasti titulek pole dialogového okna výstrah; jinak hodnota 0.  
+ Nenulové, pokud na tlačítko se zobrazí v oblasti popisek pole dialogového okna výstrah. jinak 0.  
   
 ##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
  Určuje, zda tlačítko zavře dialogové okno upozornění.  
@@ -107,7 +107,7 @@ BOOL IsCloseButton() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, je-li na tlačítko zavření dialogového okna Výstraha; jinak hodnota 0.  
+ Nenulové, pokud tlačítko zavření dialogového okna Výstraha; jinak 0.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

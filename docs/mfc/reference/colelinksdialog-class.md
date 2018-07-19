@@ -1,5 +1,5 @@
 ---
-title: Třída COleLinksDialog | Microsoft Docs
+title: Colelinksdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042531"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853875"
 ---
-# <a name="colelinksdialog-class"></a>COleLinksDialog – třída
-Používá se pro dialogové okno OLE upravit propojení.  
+# <a name="colelinksdialog-class"></a>Colelinksdialog – třída
+Používá se pro dialogové okno úpravy odkazů OLE.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,26 +50,26 @@ class COleLinksDialog : public COleDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|Zobrazí dialogové okno OLE upravit propojení.|  
+|[COleLinksDialog::DoModal](#domodal)|Zobrazí dialogové okno úpravy odkazů OLE.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Struktura typu **OLEUIEDITLINKS** , řídí chování dialogového okna.|  
+|[COleLinksDialog::m_el](#m_el)|Struktura typu OLEUIEDITLINKS, které ovládá chování dialogového okna.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoření objektu třídy `COleLinksDialog` když chcete volat tohoto dialogového okna. Po `COleLinksDialog` objekt byl vytvořen, můžete použít [m_el](#m_el) struktura k chybě při inicializaci hodnoty nebo stavy, které ovládacích prvků v dialogovém okně. `m_el` Struktura je typu **OLEUIEDITLINKS**. Další informace o používání této třídy dialogového okna, najdete v článku [DoModal](#domodal) – členská funkce.  
+ Vytvoření objektu třídy `COleLinksDialog` kdy chcete volat dialogovému oknu. Po `COleLinksDialog` objekt byl vytvořen, můžete použít [m_el](#m_el) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_el` Struktury je typu OLEUIEDITLINKS. Další informace o použití této třídy dialogového okna, najdete v článku [DoModal](#domodal) členskou funkci.  
   
 > [!NOTE]
->  Kód aplikace generované v Průvodci kontejneru používá tuto třídu.  
+>  Generované průvodcem kontejneru kódu aplikace používá tuto třídu.  
   
- Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura v sadě Windows SDK.  
   
- Další informace týkající se konkrétní OLE dialogových oken, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -77,9 +77,9 @@ class COleLinksDialog : public COleDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
- [COleDialog](../../mfc/reference/coledialog-class.md)  
+ [Coledialog –](../../mfc/reference/coledialog-class.md)  
   
  `COleLinksDialog`  
   
@@ -87,23 +87,23 @@ class COleLinksDialog : public COleDialog
  **Záhlaví:** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
- Zobrazí dialogové okno OLE upravit propojení.  
+ Zobrazí dialogové okno úpravy odkazů OLE.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav dokončení pro dialogové okno. Jedna z následujících hodnot:  
+ Stav dokončení pro dialogové okno. Jeden z následujících hodnot:  
   
-- **IDOK** Pokud úspěšně zobrazí dialogové okno.  
+- IDOK, pokud úspěšně zobrazí dialogové okno.  
   
-- **IDCANCEL** Pokud uživatel zrušil dialogové okno.  
+- IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- **IDABORT** Pokud došlo k chybě. Pokud **IDABORT** se volání vrátí, `COleDialog::GetLastError` – členská funkce získat další informace o typu Chyba, že došlo k chybě. Seznam možné chyby, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce ve Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různých dialogové okno Ovládací prvky nastavením členy [m_el](#m_el) struktura, měli byste tak provést před voláním `DoModal`, ale po objektu dialogového okna je vytvořený.  
+ Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_el](#m_el) strukturu, proveďte to před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Vytvoří `COleLinksDialog` objektu.  
@@ -118,33 +118,33 @@ COleLinksDialog (
   
 ### <a name="parameters"></a>Parametry  
  *pDoc*  
- Body OLE dokumentu, který obsahuje odkazy k provádění úprav.  
+ Ukazuje na dokument OLE, který obsahuje odkazy na Upravit.  
   
  *pView*  
  Odkazuje na aktuální zobrazení na *pDoc*.  
   
  *dwFlags*  
- Vytvoření příznak, který obsahuje buď 0 nebo **ELF_SHOWHELP** k určení, zda na tlačítko Nápověda se zobrazí, když se zobrazí dialogové okno.  
+ Vytvoření příznak, který obsahuje 0 nebo ELF_SHOWHELP k určení, zda se zobrazí tlačítko Nápověda, když se zobrazí dialogové okno.  
   
  *pParentWnd*  
- Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna nastavena na hlavní okno aplikace.  
+ Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nadřazené okno dialogového okna je nastaveno na hlavního okna aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce se vytvoří pouze `COleLinksDialog` objektu. Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
+ Tato funkce vytvoří pouze `COleLinksDialog` objektu. Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
   
 ##  <a name="m_el"></a>  COleLinksDialog::m_el  
- Struktura typu **OLEUIEDITLINKS** používat k ovládání chování dialogové okno Upravit propojení.  
+ Struktura typu OLEUIEDITLINKS používat k ovládání chování dialogovém okně Upravit odkazy.  
   
 ```  
 OLEUIEDITLINKS m_el;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členy této struktury lze změnit buď přímo nebo prostřednictvím členských funkcí.  
+ Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [COleDialog – třída](../../mfc/reference/coledialog-class.md)   
+ [Coledialog – třída](../../mfc/reference/coledialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [COleDialog – třída](../../mfc/reference/coledialog-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCImageEditorPaletteBar | Microsoft Docs
+title: Cmfcimageeditorpalettebar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370039"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851454"
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar – třída
-Poskytuje funkce panelu palety dialogovém okně editor bitové kopie.  
+# <a name="cmfcimageeditorpalettebar-class"></a>Cmfcimageeditorpalettebar – třída
+Poskytuje funkce panel palety dialogovém okně editoru obrázků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítka panelu nástrojů. (Přepisuje [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Určuje, zda lze panelu nástrojů zobrazovat tlačítka, která rozšířili ohraničení. (Přepisuje [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítka na panelu nástrojů. (Přepíše [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Určuje, jestli můžou panelu nástrojů zobrazovat tlačítka, která jste rozšířili ohraničení. (Přepíše [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato třída není určena pro použití přímo z vašeho kódu.  
+ Tato třída není určena pro použití přímo v kódu.  
   
- Rozhraní používá tuto třídu pro zobrazení palety panelu v dialogovém okně editor bitové kopie. Další informace o dialogovém okně editor bitové kopie najdete v tématu [CMFCImageEditorDialog třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Rozhraní používá tuto třídu zobrazíte panel palety v dialogovém okně editoru obrázků. Další informace o dialogové okno editoru obrázků, naleznete v tématu [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -64,32 +64,32 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCBaseToolBa](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
- [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
+ [Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)  
   
- [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
+ [Cmfcimageeditorpalettebar –](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afximageeditordialog.h  
   
 ##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
- Vrátí výšku tlačítka panelu nástrojů.  
+ Vrátí výšku tlačítka na panelu nástrojů.  
   
 ```  
 virtual int GetRowHeight() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výška jednotlivých tlačítek na panelu nástrojů.  
+ Výška každé tlačítko na panelu nástrojů.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Určuje, zda lze panelu nástrojů zobrazovat tlačítka, která rozšířili ohraničení.  
+ Určuje, jestli můžou panelu nástrojů zobrazovat tlačítka, která jste rozšířili ohraničení.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato metoda vrátí hodnotu `FALSE`.  
+ Tato metoda vrátí hodnotu FALSE.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

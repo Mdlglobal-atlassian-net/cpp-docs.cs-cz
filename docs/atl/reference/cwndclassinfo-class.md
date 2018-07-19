@@ -1,5 +1,5 @@
 ---
-title: Třída CWndClassInfo | Microsoft Docs
+title: Cwndclassinfo – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d6065f3a158ac4404620205ef9c60912d89ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365761"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879832"
 ---
-# <a name="cwndclassinfo-class"></a>CWndClassInfo – třída
+# <a name="cwndclassinfo-class"></a>Cwndclassinfo – třída
 Tato třída poskytuje metody pro registraci informace pro třídu okna.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,36 +50,36 @@ class CWndClassInfo
   
 |||  
 |-|-|  
-|[Registrace](#register)|Zaregistruje třídu oken.|  
+|[Registrace](#register)|Zaregistruje třídu okna.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |||  
 |-|-|  
-|[m_atom](#m_atom)|Jednoznačně identifikuje třídu registrované oken.|  
-|[m_bSystemCursor](#m_bsystemcursor)|Určuje, zda prostředek kurzoru odkazuje kurzoru systému nebo kurzoru obsažené v modulu prostředků.|  
+|[m_atom](#m_atom)|Jednoznačně identifikuje třídy registrované okna.|  
+|[m_bSystemCursor](#m_bsystemcursor)|Určuje, zda odkazuje prostředku kurzoru do pozice kurzoru systém nebo ke kurzoru obsažené v modulu zdroje.|  
 |[m_lpszCursorID](#m_lpszcursorid)|Určuje název prostředku kurzoru.|  
-|[m_lpszOrigName](#m_lpszorigname)|Obsahuje název existující třídy oken.|  
-|[m_szAutoName](#m_szautoname)|Obsahuje název ATL generované třídy oken.|  
-|[m_wc](#m_wc)|Uchovává informace o třídě okna v **WNDCLASSEX** struktura.|  
-|[pWndProc](#pwndproc)|Body procedury okna existující třídy oken.|  
+|[m_lpszOrigName](#m_lpszorigname)|Obsahuje název existující třídy okna.|  
+|[m_szAutoName](#m_szautoname)|ATL generovaný název třídy okna obsahuje.|  
+|[m_wc](#m_wc)|Udržuje informace o třídě okna v `WNDCLASSEX` struktury.|  
+|[pWndProc](#pwndproc)|Body procedury okna existující třídy okna.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWndClassInfo` spravuje informace okno třídy. Obvykle použijete `CWndClassInfo` prostřednictvím jednoho z tři makra `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, nebo `DECLARE_WND_SUPERCLASS`, jak je popsáno v následující tabulce:  
+ `CWndClassInfo` spravuje informace třídy okna. Obvykle použijete `CWndClassInfo` prostřednictvím jednoho z tři makra, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX nebo DECLARE_WND_SUPERCLASS, jak je popsáno v následující tabulce:  
   
 |– Makro|Popis|  
 |-----------|-----------------|  
 |[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` zaregistruje informace pro novou třídu okna.|  
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` zaregistruje informace pro novou třídu okno, včetně parametrů třídy.|  
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` zaregistruje informace pro okno třídu, která je založená na existující třídy, ale používá jiné časové období procedury. Tento postup se nazývá vytváření supertříd.|  
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` zaregistruje informace pro novou třídu okna, včetně parametrů třídy.|  
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` zaregistruje informace pro třídy okna, která je založena na existující třídy, ale používá jiné okno procedury. Tato technika se nazývá superclassing.|  
   
- Ve výchozím nastavení [CWindowImpl](../../atl/reference/cwindowimpl-class.md) zahrnuje `DECLARE_WND_CLASS` makro vytvořit okno založeno na třídě nové okno. DECLARE_WND_CLASS poskytuje výchozí styly a barvu pozadí ovládacího prvku. Pokud chcete určit styl a barva pozadí sami, odvozena třídě z `CWindowImpl` a zahrnout `DECLARE_WND_CLASS_EX` makra v definici vaší třídy.  
+ Ve výchozím nastavení [CWindowImpl](../../atl/reference/cwindowimpl-class.md) zahrnuje `DECLARE_WND_CLASS` – makro vytvořit okno založené na nové třídě okna. DECLARE_WND_CLASS poskytuje výchozí styly a barva pozadí ovládacího prvku. Pokud chcete určit styl a barva pozadí sami, odvodit třídu z `CWindowImpl` a zahrnují DECLARE_WND_CLASS_EX makra v definici třídy.  
   
- Pokud chcete vytvořit okno podle existující třídy oken, odvozena třídě z `CWindowImpl` a zahrnout `DECLARE_WND_SUPERCLASS` makra v definici vaší třídy. Příklad:  
+ Pokud chcete vytvořit okno na základě existující třídy okna, jsou odvozeny z vaší třídy `CWindowImpl` a zahrnují DECLARE_WND_SUPERCLASS makra v definici třídy. Příklad:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Další informace o třídách oken najdete v tématu [třídy oken](http://msdn.microsoft.com/library/windows/desktop/ms632596) ve Windows SDK.  
+ Další informace o třídách oken, naleznete v tématu [tříd oken](http://msdn.microsoft.com/library/windows/desktop/ms632596) v sadě Windows SDK.  
   
  Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
   
@@ -87,97 +87,97 @@ class CWndClassInfo
  **Záhlaví:** atlwin.h  
   
 ##  <a name="m_atom"></a>  CWndClassInfo::m_atom  
- Obsahuje jedinečný identifikátor pro třídu registrované oken.  
+ Obsahuje jedinečný identifikátor pro třídu registrované okna.  
   
 ```
 ATOM m_atom;
 ```  
   
 ##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor  
- Pokud **TRUE**, systémový prostředek kurzoru budou načteny po registraci třídu oken.  
+ Při hodnotě TRUE se při registraci třídu okna se načtou systémový prostředek kurzoru.  
   
 ```
 BOOL m_bSystemCursor;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Prostředků kurzoru obsažené v modulu, jinak budou načteny.  
+ V opačném případě bude načten prostředku kurzoru obsažené v modulu.  
   
- `CWndClassInfo` používá `m_bSystemCursor` pouze tehdy, když [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí hodnota v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro je zadán. V takovém případě `m_bSystemCursor` je inicializováno **TRUE**. Další informace najdete v tématu [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Přehled.  
+ `CWndClassInfo` používá `m_bSystemCursor` pouze tehdy, když [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí nastavení v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) – makro je zadán. V takovém případě `m_bSystemCursor` je inicializován na hodnotu TRUE. Další informace najdete v tématu [cwndclassinfo –](../../atl/reference/cwndclassinfo-class.md) Přehled.  
   
 ##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID  
- Určuje název prostředku kurzoru, nebo identifikátor prostředku v aplikaci word nejnižší a nula v aplikaci word vysokou pořadí.  
+ Určuje název prostředku kurzoru nebo identifikátor prostředku v nižší řád slova a nulu, ve vyšší řád slova.  
   
 ```
 LPCTSTR m_lpszCursorID;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Při registraci třídy oken, popisovač kurzor identifikovaný `m_lpszCursorID` je načíst a uložení [m_wc](#m_wc).  
+ Při registraci třídy okna, popisovač do pozice kurzoru identifikovaný `m_lpszCursorID` je načten a ukládaná [m_wc](#m_wc).  
   
- `CWndClassInfo` používá `m_lpszCursorID` pouze tehdy, když [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí hodnota v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro je zadán. V takovém případě `m_lpszCursorID` je inicializováno **IDC_ARROW**. Další informace najdete v tématu [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Přehled.  
+ `CWndClassInfo` používá `m_lpszCursorID` pouze tehdy, když [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí nastavení v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) – makro je zadán. V takovém případě `m_lpszCursorID` je inicializován na IDC_ARROW. Další informace najdete v tématu [cwndclassinfo –](../../atl/reference/cwndclassinfo-class.md) Přehled.  
   
 ##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName  
- Obsahuje název existující třídy oken.  
+ Obsahuje název existující třídy okna.  
   
 ```
 LPCTSTR m_lpszOrigName;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CWndClassInfo` používá `m_lpszOrigName` pouze pokud zahrnete [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra v definici vaší třídy. V takovém případě `CWndClassInfo` zaregistruje třídu okna na základě třídy s názvem podle `m_lpszOrigName`. Další informace najdete v tématu [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Přehled.  
+ `CWndClassInfo` používá `m_lpszOrigName` pouze pokud zahrnete [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra v definici třídy. V takovém případě `CWndClassInfo` registrů třídy okna založené na třídě s názvem podle `m_lpszOrigName`. Další informace najdete v tématu [cwndclassinfo –](../../atl/reference/cwndclassinfo-class.md) Přehled.  
   
 ##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName  
- Obsahuje název třídy oken.  
+ Obsahuje název třídy okna.  
   
 ```
 TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CWndClassInfo` používá `m_szAutoName` pouze v případě **NULL** byla předána pro `WndClassName` parametru [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) nebo [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL se vytvořit název po registraci třídu oken.  
+ `CWndClassInfo` používá `m_szAutoName` pouze tehdy, pokud je předána hodnota NULL `WndClassName` parametr [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) nebo [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL – vytvoří název třídy okna se po zaregistrování.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- Uchovává informace o třídě okna v [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) struktura.  
+ Udržuje informace o třídě okna v [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) struktury.  
   
 ```
 WNDCLASSEX m_wc;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jste zadali [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí hodnota v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro, `m_wc` obsahuje informace o třídy oken s novou.  
+ Pokud jste zadali [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí nastavení v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) – makro, `m_wc` obsahuje informace o nové třídy okna.  
   
- Pokud jste zadali [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makro, `m_wc` obsahuje informace o supertřídou – okno třídu, která je založená na existující třídy, ale používá jiné časové období procedury. [m_lpszOrigName](#m_lpszorigname) a [pWndProc](#pwndproc) uložit název existující třídy okno a postup okno, v uvedeném pořadí.  
+ Pokud jste zadali [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) – makro, `m_wc` obsahuje informace supertřídě – třídy okna, která je založena na existující třídy, ale používá jiné okno procedury. [m_lpszOrigName](#m_lpszorigname) a [pWndProc](#pwndproc) uložit název existující třídy okna a proceduru okna, v uvedeném pořadí.  
   
 ##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc  
- Body procedury okna existující třídy oken.  
+ Body procedury okna existující třídy okna.  
   
 ```
 WNDPROC pWndProc;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `CWndClassInfo` používá `pWndProc` pouze pokud zahrnete [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra v definici vaší třídy. V takovém případě `CWndClassInfo` zaregistruje okno třídu, která je založená na existující třídy, ale používá jiné časové období procedury. Existující třída okna okno postup je uložen v `pWndProc`. Další informace najdete v tématu [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Přehled.  
+ `CWndClassInfo` používá `pWndProc` pouze pokud zahrnete [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra v definici třídy. V takovém případě `CWndClassInfo` zaregistruje třídu okna, která vychází z existující třídy, ale používá jiné okno postup. Proceduru okna existující třídu okna se uloží do `pWndProc`. Další informace najdete v tématu [cwndclassinfo –](../../atl/reference/cwndclassinfo-class.md) Přehled.  
   
 ##  <a name="register"></a>  CWndClassInfo::Register  
- Voláno rozhraním [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) registrovat třídu okno, pokud ho ještě není zaregistrovaný.  
+ Volané [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) registrace třídy okna, pokud ho ještě není zaregistrovaný.  
   
 ```
 ATOM Register(WNDPROC* pProc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pProc`  
- [out] Určuje původní procedury okna existující třídy oken.  
+ *pProc*  
+ [out] Určuje původní proceduru okna existující třídy okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného atom který jednoznačně identifikuje třídu oken registrována. Jinak hodnota 0.  
+ V případě úspěchu, atom, který jednoznačně identifikuje registrovaného třídu okna. Jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jste zadali [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí hodnota v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) makro, `Register` zaregistruje novou třídu okna. V takovém případě `pProc` parametr se nepoužívá.  
+ Pokud jste zadali [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (výchozí nastavení v [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) nebo [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) – makro, `Register` zaregistruje nové třídy okna. V takovém případě *pProc* parametr se nepoužívá.  
   
- Pokud jste zadali [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makro, `Register` zaregistruje supertřídou – okno třídu, která je založená na existující třídy, ale používá jiné časové období procedury. Existující třída okna okno postup je vrácený v `pProc`.  
+ Pokud jste zadali [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) – makro, `Register` zaregistruje nadřazenou třídu – třídy okna, která je založena na existující třídy, ale používá jiné okno procedury. Proceduru okna existující třídu okna se vrátí v *pProc*.  
   
 ## <a name="see-also"></a>Viz také  
- [CComControl – třída](../../atl/reference/ccomcontrol-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

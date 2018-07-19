@@ -1,5 +1,5 @@
 ---
-title: Třída ICollectionOnSTLImpl | Microsoft Docs
+title: Icollectiononstlimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,138 +21,139 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7001474bc766410092c6b9d6f9759b6f44cdd3e4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 812deba7cb33a713d8b1a55eaa4c375092168dce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358487"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881669"
 ---
-# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl – třída
-Tato třída poskytuje metody používané v třídě kolekce.  
+# <a name="icollectiononstlimpl-class"></a>Icollectiononstlimpl – třída
+Tato třída poskytuje metody používané třídy kolekce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```
 template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
-class ICollectionOnSTLImpl : public T```  
+class ICollectionOnSTLImpl : public T
+```  
   
-#### Parameters  
- `T`  
- A COM collection interface.  
+#### <a name="parameters"></a>Parametry  
+ *T*  
+ Kolekce rozhraní modelu COM.  
   
- `CollType`  
- A C++ Standard Library container class.  
+ *CollType*  
+ Třída kontejneru standardní knihovny C++.  
   
- *ItemType*  
- The type of item exposed by the container interface.  
+ *Typ položky*  
+ Typ položky, které jsou vystavené rozhraní kontejneru.  
   
  *CopyItem*  
- A [copy policy class](../../atl/atl-copy-policy-classes.md).  
+ A [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).  
   
  *EnumType*  
- A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-compatible enumerator class.  
+ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)– třída kompatibilní enumerátor.  
   
-## Members  
+## <a name="members"></a>Členové  
   
-### Public Methods  
+### <a name="public-methods"></a>Veřejné metody  
   
-|Name|Description|  
+|Název|Popis|  
 |----------|-----------------|  
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Returns an enumerator object for the collection.|  
-|[ICollectionOnSTLImpl::getcount](#get_count)|Returns the number of elements in the collection.|  
-|[ICollectionOnSTLImpl::get_Item](#get_item)|Returns the requested item from the collection.|  
+|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Vrátí objekt enumerátoru pro kolekci.|  
+|[ICollectionOnSTLImpl::getcount](#get_count)|Vrátí počet prvků v kolekci.|  
+|[ICollectionOnSTLImpl::get_Item](#get_item)|Vrátí požadovanou položku z kolekce.|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>Veřejné datové členy  
   
-|Name|Description|  
+|Název|Popis|  
 |----------|-----------------|  
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|The collection.|  
+|[ICollectionOnSTLImpl::m_coll](#m_coll)|Kolekce.|  
   
-## Remarks  
- This class provides the implementation for three methods of a collection interface: [getcount](#get_count), [get_Item](#get_item), and [get__NewEnum](#newenum).  
+## <a name="remarks"></a>Poznámky  
+ Tato třída poskytuje implementaci pro tři metody rozhraní kolekce: [getcount](#get_count), [get_Item](#get_item), a [get__NewEnum](#newenum).  
   
- To use this class:  
+ Chcete-li použít tuto třídu:  
   
--   Define (or borrow) a collection interface that you wish to implement.  
+-   Definovat (nebo si půjčte), který chcete implementovat rozhraní kolekce.  
   
--   Derive your class from a specialization of `ICollectionOnSTLImpl` based on this collection interface.  
+-   Odvodit třídu z specializací `ICollectionOnSTLImpl` založené na tomto rozhraní kolekce.  
   
--   Use your derived class to implement any methods from the collection interface not handled by `ICollectionOnSTLImpl`.  
+-   Použití odvozené třídy pro implementaci jakékoli metody z rozhraní kolekce není zpracována `ICollectionOnSTLImpl`.  
   
 > [!NOTE]
->  If the collection interface is a dual interface, derive your class from [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passing the `ICollectionOnSTLImpl` specialization as the first template parameter if you want ATL to provide the implementation of the `IDispatch` methods.  
+>  Pokud kolekce rozhraní je duální rozhraní, odvodit třídu z [třídou IDispatchImpl](../../atl/reference/idispatchimpl-class.md), předejte `ICollectionOnSTLImpl` specializace jako první parametr šablony, pokud chcete, aby ATL poskytnout implementaci `IDispatch` metody.  
   
--   Add items to the [m_coll](#m_coll) member to populate the collection.  
+-   Přidat položky do [m_coll](#m_coll) člen k naplnění kolekce.  
   
- For more information and examples, see [ATL Collections and Enumerators](../../atl/atl-collections-and-enumerators.md).  
+ Další informace a příklady najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).  
   
-## Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `T`  
   
  `ICollectionOnSTLImpl`  
   
-## Requirements  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** atlcom  
   
 ##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount  
- This method returns the number of items in the collection.  
+ Tato metoda vrátí počet položek v kolekci.  
   
 ```
-STDMETHOD(GetCount) (dlouho * pcount –);
+STDMETHOD(getcount)(long* pcount);
 ```  
   
-### Parameters  
- *pcount*  
- [out] The number of elements in the collection.  
+### <a name="parameters"></a>Parametry  
+ *pcount –*  
+ [out] Počet elementů v kolekci.  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Návratová hodnota  
+ Standardní hodnoty HRESULT.  
   
 ##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item  
- This method returns the specified item from the collection.  
+ Tato metoda vrátí určenou položku z kolekce.  
   
 ```
-STDMETHOD(get_Item) (dlouho Index, ItemType * pvar);
+STDMETHOD(get_Item)(long Index, ItemType* pvar);
 ```  
   
-### Parameters  
- `Index`  
- [in] The 1-based index of an item in the collection.  
+### <a name="parameters"></a>Parametry  
+ *Index*  
+ [in] Index založený na 1 položka v kolekci.  
   
- `pvar`  
- [out] The item corresponding to `Index`.  
+ *pvar*  
+ [out] Odpovídající položky pro *Index*.  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Návratová hodnota  
+ Standardní hodnoty HRESULT.  
   
-### Remarks  
- The item is obtained by copying the data at the specified position in [m_coll](#m_coll) using the copy method of the [copy policy class](../../atl/atl-copy-policy-classes.md) passed as a template argument in the `ICollectionOnSTLImpl` specialization.  
+### <a name="remarks"></a>Poznámky  
+ Položka se získá zkopírováním dat na konkrétní pozici v [m_coll](#m_coll) pomocí metody kopie [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md) předán jako argument šablony v `ICollectionOnSTLImpl` specializace.  
   
 ##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum  
- Returns an enumerator object for the collection.  
+ Vrátí objekt enumerátoru pro kolekci.  
   
 ```
-STDMETHOD(get__NewEnum) (IUnknown ** ppUnk);
+STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ```  
   
-### Parameters  
- `ppUnk`  
- [out] The **IUnknown** pointer of a newly created enumerator object.  
+### <a name="parameters"></a>Parametry  
+ *ppUnk*  
+ [out] **IUnknown** ukazatel nově vytvořený enumerator – objekt.  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>Návratová hodnota  
+ Standardní hodnoty HRESULT.  
   
-### Remarks  
- The newly created enumerator maintains an iterator on the original collection, `m_coll`, (so no copy is made) and holds a COM reference on the collection object to ensure that the collection remains alive while there are outstanding enumerators.  
+### <a name="remarks"></a>Poznámky  
+ Nově vytvořený čítač udržuje iterátor v původní kolekci `m_coll`proto (není vytvořena žádná kopie) a obsahuje odkaz modelu COM v objektu kolekce k zajištění, že kolekce zůstane aktivní, i když existují nevyřízené enumerátory.  
   
 ##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll  
- This member holds the items represented by the collection.  
+ Tento člen obsahuje položky reprezentována kolekce.  
   
 ```
 CollType m_coll;
 ```  
   
-## See Also  
- [ATLCollections Sample](../../visual-cpp-samples.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Viz také  
+ [Ukázka ATLCollections](../../visual-cpp-samples.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

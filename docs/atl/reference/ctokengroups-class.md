@@ -1,5 +1,5 @@
 ---
-title: Třída CTokenGroups | Microsoft Docs
+title: Ctokengroups – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ccf73cdeac0e7522551c6ddb7bef6b0122297ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c186302c1c59e73e63e20ae29aa665f600fe23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365491"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880330"
 ---
-# <a name="ctokengroups-class"></a>CTokenGroups – třída
-Tato třída je obálka pro **TOKEN_GROUPS** struktury.  
+# <a name="ctokengroups-class"></a>Ctokengroups – třída
+Tato třída představuje obálku pro `TOKEN_GROUPS` struktury.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,40 +52,40 @@ class CTokenGroups
 |Název|Popis|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Konstruktor|  
-|[CTokenGroups:: ~ CTokenGroups](#dtor)|Destruktor.|  
+|[Ctokengroups –:: ~ ctokengroups –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CTokenGroups::Add](#add)|Přidá `CSid` nebo existující **TOKEN_GROUPS** struktury k `CTokenGroups` objektu.|  
+|[CTokenGroups::Add](#add)|Přidá `CSid` nebo existující `TOKEN_GROUPS` struktury na `CTokenGroups` objektu.|  
 |[CTokenGroups::Delete](#delete)|Odstraní `CSid` a jeho přidružených atributů z `CTokenGroups` objektu.|  
-|[CTokenGroups::DeleteAll](#deleteall)|Odstraní všechna `CSid` objekty a jejich přidružených atributů z `CTokenGroups` objektu.|  
-|[CTokenGroups::GetCount](#getcount)|Vrátí počet `CSid` objekty a přidružených atributů, které jsou součástí **CTokenGroups** objektu.|  
-|[CTokenGroups::GetLength](#getlength)|Vrátí velikost `CTokenGroups` objektu.|  
-|[CTokenGroups::GetPTOKEN_GROUPS](#getptoken_groups)|Načte ukazatel **TOKEN_GROUPS** struktury.|  
-|[CTokenGroups::GetSidsAndAttributes](#getsidsandattributes)|Načte `CSid` objektů a atributů, které patří do `CTokenGroups` objektu.|  
-|[CTokenGroups::LookupSid](#lookupsid)|Načte atributy přidružené `CSid` objektu.|  
+|[CTokenGroups::DeleteAll](#deleteall)|Odstraní všechny `CSid` objekty a jejich přidružených atributů z `CTokenGroups` objektu.|  
+|[CTokenGroups::GetCount](#getcount)|Vrátí počet `CSid` objekty a přidruženými atributy, které jsou součástí `CTokenGroups` objektu.|  
+|[CTokenGroups::GetLength](#getlength)|Vrátí velikost položky `CTokenGroups` objektu.|  
+|[CTokenGroups::GetPTOKEN_GROUPS](#getptoken_groups)|Načte ukazatel `TOKEN_GROUPS` struktury.|  
+|[CTokenGroups::GetSidsAndAttributes](#getsidsandattributes)|Načte `CSid` objektů a atributy, které patří k `CTokenGroups` objektu.|  
+|[CTokenGroups::LookupSid](#lookupsid)|Získá atributy přidružené k `CSid` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Přetypování `CTokenGroups` objekt, který má ukazatel **TOKEN_GROUPS** struktury.|  
+|[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Přetypování `CTokenGroups` na ukazatel na objekt `TOKEN_GROUPS` struktury.|  
 |[CTokenGroups::operator =](#operator_eq)|Operátor přiřazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen všem uživatelům přihlášení systému Windows.  
+ [Přístupový token](http://msdn.microsoft.com/library/windows/desktop/aa374909) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows.  
   
- **CTokenGroups** třída je obálka pro [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura, která obsahuje informace o tokenu přístupu skupiny identifikátory zabezpečení (SID).  
+ `CTokenGroups` Třídy tvoří obálku pro [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura obsahující informace o identifikátory zabezpečení skupiny (SID) v tokenu přístupu.  
   
- Úvod do model řízení přístupu v systému Windows, najdete v části [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) ve Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsecurity.h  
   
 ##  <a name="add"></a>  CTokenGroups::Add  
- Přidá `CSid` nebo existující **TOKEN_GROUPS** struktury k `CTokenGroups` objektu.  
+ Přidá `CSid` nebo existující `TOKEN_GROUPS` struktury na `CTokenGroups` objektu.  
   
 ```
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
@@ -93,17 +93,17 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
+ *rSid*  
  A [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.  
   
- `dwAttributes`  
- Atributy, které se přidružit `CSid` objektu.  
+ *dwAttributes*  
+ Atributy pro přidružení k `CSid` objektu.  
   
  *rTokenGroups*  
  A [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Tyto metody přidat jeden nebo víc `CSid` objekty a jejich atributy přidružené k `CTokenGroups` objektu.  
+ Tyto metody přidat jeden nebo více `CSid` objekty a jejich přidružených atributů, které mají `CTokenGroups` objektu.  
   
 ##  <a name="ctokengroups"></a>  CTokenGroups::CTokenGroups  
  Konstruktor  
@@ -115,13 +115,13 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- `CTokenGroups` Objekt nebo [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura, pomocí kterého můžete vytvořit `CTokenGroups` objektu.  
+ *Zarovnání indirekce RHS*  
+ `CTokenGroups` Objektu nebo [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) strukturu, pomocí kterého se má vytvořit `CTokenGroups` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `CTokenGroups` Můžete volitelně vytvořit objekt pomocí **TOKEN_GROUPS** struktura nebo dříve definovaném `CTokenGroups` objektu.  
+ `CTokenGroups` Objektu je volitelně možné vytvořit `TOKEN_GROUPS` struktury nebo dříve definované `CTokenGroups` objektu.  
   
-##  <a name="dtor"></a>  CTokenGroups:: ~ CTokenGroups  
+##  <a name="dtor"></a>  Ctokengroups –:: ~ ctokengroups –  
  Destruktor.  
   
 ```
@@ -129,7 +129,7 @@ virtual ~CTokenGroups() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Destruktoru uvolní všechny přidělené prostředky.  
+ Destruktor uvolní všechny přidělené prostředky.  
   
 ##  <a name="delete"></a>  CTokenGroups::Delete  
  Odstraní `CSid` a jeho přidružených atributů z `CTokenGroups` objektu.  
@@ -139,14 +139,14 @@ bool Delete(const CSid& rSid) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
- [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekt, pro který měla by být odebrána identifikátor zabezpečení (SID) a atributy.  
+ *rSid*  
+ [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu, pro který by měl odebrán identifikátor zabezpečení (SID) a atributy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true, pokud `CSid` je odebrán, false jinak.  
+ Vrátí hodnotu true, pokud `CSid` Odebereme, false v opačném případě.  
   
 ##  <a name="deleteall"></a>  CTokenGroups::DeleteAll  
- Odstraní všechna `CSid` objekty a jejich přidružených atributů z `CTokenGroups` objektu.  
+ Odstraní všechny `CSid` objekty a jejich přidružených atributů z `CTokenGroups` objektu.  
   
 ```
 void DeleteAll() throw();
@@ -163,27 +163,27 @@ UINT GetCount() const throw();
  Vrátí počet [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty a jejich přidruženými atributy, které jsou součástí `CTokenGroups` objektu.  
   
 ##  <a name="getlength"></a>  CTokenGroups::GetLength  
- Vrátí velikost **CTokenGroup** objektu.  
+ Vrátí velikost položky `CTokenGroup` objektu.  
   
 ```
 UINT GetLength() const throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vrátí celková velikost **CTokenGroup** objektu v bajtech.  
+ Vrátí celkovou velikost `CTokenGroup` objektu v bajtech.  
   
 ##  <a name="getptoken_groups"></a>  CTokenGroups::GetPTOKEN_GROUPS  
- Načte ukazatel **TOKEN_GROUPS** struktury.  
+ Načte ukazatel `TOKEN_GROUPS` struktury.  
   
 ```
 const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Načte ukazatel [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura patřící do `CTokenGroups` objektu tokenu přístupu.  
+ Načte ukazatel [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktury, které patří do `CTokenGroups` objekt tokenu přístupu.  
   
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes  
- Načte `CSid` objekty a (volitelně) atributy, které patří do `CTokenGroups` objektu.  
+ Načte `CSid` objekty a (volitelně) atributy, které patří k `CTokenGroups` objektu.  
   
 ```
 void GetSidsAndAttributes(
@@ -192,17 +192,17 @@ void GetSidsAndAttributes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSids`  
- Ukazatele na pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.  
+ *pSids*  
+ Ukazatel na pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.  
   
- `pAttributes`  
- Ukazatel na pole typu DWORD. Pokud tento parametr vynechán nebo má hodnotu NULL, nejsou načíst atributy.  
+ *pAttributes*  
+ Ukazatel na pole typu DWORD. Pokud je tento parametr vynechán nebo mít hodnotu NULL, nejsou načíst atributy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří výčet všech `CSid` objekty obsažené v `CTokenGroups` objektu a umístit je a (volitelně) atribut příznaky do pole objektů.  
+ Tato metoda projde všechny `CSid` objekty obsažené v `CTokenGroups` objektu a umístit je a (volitelně příznaků atributu) na pole objektů.  
   
 ##  <a name="lookupsid"></a>  CTokenGroups::LookupSid  
- Načte atributy přidružené `CSid` objektu.  
+ Získá atributy přidružené k `CSid` objektu.  
   
 ```
 bool LookupSid(  
@@ -211,17 +211,17 @@ bool LookupSid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
+ *rSid*  
  [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.  
   
- `pdwAttributes`  
- Ukazatel na DWORD, která bude přijímat `CSid` atribut objektu. Pokud není zadán nebo hodnotu NULL, nebudou načteny atribut.  
+ *pdwAttributes*  
+ Ukazatel na DWORD, který bude přijímat `CSid` objektu atributu. Pokud vynechán nebo hodnotu NULL, nebude možné načíst atribut.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true, pokud `CSid` je nalezena, false jinak.  
+ Vrátí hodnotu true, pokud `CSid` nenajde, false v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavení `pdwAttributes` na hodnotu NULL zajištěný potvrzení existenci `CSid` bez přístupu k atributu. Poznamenat, že tato metoda by neměl použít ke kontrole přístupová práva. Aplikace by měly používat místo toho [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) metoda.  
+ Nastavení *pdwAttributes* na NULL poskytuje způsob, jak potvrzují se existence `CSid` není potřeba přístup k atributu. Všimněte si, že tato metoda by neměla být ke kontrole přístupová práva. Aplikace by měly místo toho používat [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) metody.  
   
 ##  <a name="operator_eq"></a>  CTokenGroups::operator =  
  Operátor přiřazení.  
@@ -232,24 +232,24 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- `CTokenGroups` Objekt nebo [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura přiřadit `CTokenGroups` objektu.  
+ *Zarovnání indirekce RHS*  
+ `CTokenGroups` Objektu nebo [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktura přiřadit `CTokenGroups` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CTokenGroups` objektu.  
   
 ##  <a name="operator_const_token_groups__star"></a>  CTokenGroups::operator const TOKEN_GROUPS *  
- Vrhá hodnotu na ukazatel **TOKEN_GROUPS** struktury.  
+ Přetypování na ukazatel na hodnotu `TOKEN_GROUPS` struktury.  
   
 ```  
 operator const TOKEN_GROUPS *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vrhá hodnotu na ukazatel [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktury.  
+ Přetypování na ukazatel na hodnotu [TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624) struktury.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
- [Identifikační číslo volané stanice – třída](../../atl/reference/csid-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [CSID – třída](../../atl/reference/csid-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

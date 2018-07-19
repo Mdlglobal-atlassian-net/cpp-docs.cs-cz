@@ -1,5 +1,5 @@
 ---
-title: Třída CStrBufT | Microsoft Docs
+title: Cstrbuft – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfe483c89345dd0920bbd2f32500679c88ebf85a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361355"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882582"
 ---
-# <a name="cstrbuft-class"></a>CStrBufT – třída
-Tato třída poskytuje vyčištění automatické prostředků pro `GetBuffer` a `ReleaseBuffer` volání na existující `CStringT` objektu.  
+# <a name="cstrbuft-class"></a>Cstrbuft – třída
+Tato třída poskytuje vyčištění automatické prostředků pro `GetBuffer` a `ReleaseBuffer` zavolá u existujícího `CStringT` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,67 +42,67 @@ class CStrBufT
   
 #### <a name="parameters"></a>Parametry  
  *TCharType*  
- Typ znak `CStrBufT` třídy. Může být jedna z následujících akcí:  
+ Znakový typ `CStrBufT` třídy. Může být jedna z následujících akcí:  
   
-- `char` (pro znakových řetězců v kódu ANSI)  
+- **Char** (pro řetězce znaků ANSI)  
   
-- `wchar_t` (na řetězec znaků Unicode)  
+- **wchar_t** (pro řetězce znaků Unicode)  
   
-- **Tchar –** (pro ANSI a Unicode řetězce znaků)  
+- Tchar – (pro řetězce znaků ANSI a Unicode)  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`PCXSTR`|Ukazatel na konstantní řetězec.|  
-|`PXSTR`|Ukazatel na řetězec.|  
-|`StringType`|Typ řetězec, jehož vyrovnávací paměti je uživatel manipulovat specializací této třídy šablony.|  
+|PCXSTR|Ukazatel na konstanty typu řetězec.|  
+|PXSTR|Ukazatel na řetězec.|  
+|`StringType`|Typ řetězec, jehož vyrovnávací paměť je manipulovat specializace této třídy šablony.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStrBufT::CStrBufT](#cstrbuft)|V konstruktoru pro vyrovnávací paměť objekt řetězce.|  
+|[CStrBufT::CStrBufT](#cstrbuft)|Konstruktor pro objekt vyrovnávací paměti řetězce.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStrBufT::SetLength](#setlength)|Nastaví délka vyrovnávací paměti znak objekt přidružený řetězce.|  
+|[CStrBufT::SetLength](#setlength)|Nastaví délku objektu příslušný řetězcový znak vyrovnávací paměti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Načte **const** ukazatel do vyrovnávací paměti znak objektu přidružené řetězec.|  
-|[CStrBufT::operator PXSTR](#operator_pxstr)|Načte ukazatel do vyrovnávací paměti znak objektu přidružené řetězec.|  
+|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Načte **const** ukazatel do vyrovnávací paměti pro znaky přidruženými řetězcovými objektu.|  
+|[CStrBufT::operator PXSTR](#operator_pxstr)|Načte ukazatel do vyrovnávací paměti pro znaky přidruženými řetězcovými objektu.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Automaticky zjistit nový délky řetězce na verzi.|  
-|[CStrBufT::SET_LENGTH](#set_length)|Nastavte délku řetězce objektu v době getbuffer –|  
+|[CStrBufT::AUTO_LENGTH](#auto_length)|Automaticky určete nový délku řetězce při vydání verze.|  
+|[CStrBufT::SET_LENGTH](#set_length)|Nastavení délky na objekt řetězce v době getbuffer –|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída se používá jako obálkovou třídu pro náhradu volání [getbuffer –](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) a [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), nebo [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) a `ReleaseBuffer`.  
+ Tato třída se používá jako obálkovou třídu pro nahrazení volání [getbuffer –](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) a [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), nebo [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) a `ReleaseBuffer`.  
   
- Primárně určený jako pomocná třída `CStrBufT` představuje pohodlný způsob pro vývojáře pro práci s znak vyrovnávací paměti objektu řetězec bez starostí o nebo kdy se má volat `ReleaseBuffer`. To je možné, protože objekt obálky ocitne mimo obor přirozeně v případě výjimku nebo více cest existujícímu kódu; způsobuje její destruktor na uvolnění prostředků řetězec.  
+ Primárně určený jako pomocnou třídu, `CStrBufT` představuje pohodlný způsob pro vývojáře pro práci s vyrovnávací paměti pro znaky z objektu typu string, ale nemusíme se starat o tom, nebo kdy se má volat `ReleaseBuffer`. Je to možné proto Obálkový objekt dostane mimo rozsah přirozeně v případě výjimku nebo více cest stávající kód; způsobuje, že jeho destruktor uvolnit prostředek řetězce.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpstr.h  
   
 ##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
- Automaticky zjistit nový délky řetězce na verzi.  
+ Automaticky určete nový délku řetězce při vydání verze.  
   
 ```
 static const DWORD AUTO_LENGTH = 0x01;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Automaticky zjistit nový délky řetězce na verzi. Řetězec musí být ukončené hodnotou null.  
+ Automaticky určete nový délku řetězce při vydání verze. Musí být řetězec zakončený hodnotou null.  
   
 ##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
  Vytvoří objekt vyrovnávací paměti.  
@@ -113,52 +113,52 @@ explicit CStrBufT(StringType& str) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
- Objekt string přidružený vyrovnávací paměti. Vývojář se obvykle používají předdefinované definice TypeDef z **CStrBuf** ( **Tchar –** variant), **CStrBufA** ( `char` variant) a **CStrBufW**  ( `wchar_t` variant).  
+ *str*  
+ Objekt řetězec přidružený k vyrovnávací paměti. Vývojář se obvykle používají předdefinované funkce typedefs z `CStrBuf` (Tchar – typ variant), `CStrBufA` (**char** typ variant) a `CStrBufW` (**wchar_t** variantu).  
   
  *nMinLength*  
- Minimální délka vyrovnávací paměti znak.  
+ Minimální délka vyrovnávací paměti pro znaky.  
   
- `dwFlags`  
- Určuje, pokud je automaticky určeno délku řetězce. Může být jedna z následujících akcí:  
+ *dwFlags*  
+ Určuje, pokud je automaticky určena délka řetězce. Může být jedna z následujících akcí:  
   
-- **AUTO_LENGTH** délka řetězce je automaticky určit, kdy [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) je volána. Řetězec musí být ukončené hodnotou null. Výchozí hodnota.  
+- Délka řetězce AUTO_LENGTH je automaticky určit, kdy [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) je volána. Musí být řetězec zakončený hodnotou null. Výchozí hodnota.  
   
-- **SET_LENGTH** délka řetězce je nastavena, když [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) je volána.  
+- Délka řetězce SET_LENGTH je nastavena, když [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) je volána.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří vyrovnávací paměti řetězců pro objekt přidružený řetězce. Během vytváření [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) nebo [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) je volána.  
+ Vytvoří řetězec vyrovnávací paměť pro objekt přidruženými řetězcovými. Během vytváření [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) nebo [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) je volána.  
   
- Všimněte si, že je konstruktor copy `private`.  
+ Všimněte si, že je kopírovací konstruktor **privátní**.  
   
 ##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
- Přímý přístup k znaky, které jsou uloženy v přidružených řetězec objekt jako řetězec stylu jazyka C.  
+ Přímý přístup k znaků uložených v přidruženými řetězcovými objektu jako řetězec stylu C.  
   
 ```  
 operator PCXSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Znak ukazatel na data řetězec.  
+ Ukazatel znaku řetězec data.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce se vraťte do vyrovnávací paměti znak objektu string ukazatel. Obsah řetězce objektu nelze změnit pomocí tento ukazatel.  
+ Voláním této funkce vrátí ukazatel do vyrovnávací paměti pro znaky z objektu typu string. Pomocí tohoto ukazatele nelze změnit obsah na objekt řetězce.  
   
 ##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
- Přímý přístup k znaky, které jsou uloženy v přidružených řetězec objekt jako řetězec stylu jazyka C.  
+ Přímý přístup k znaků uložených v přidruženými řetězcovými objektu jako řetězec stylu C.  
   
 ```
 operator PXSTR() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Znak ukazatel na data řetězec.  
+ Ukazatel znaku řetězec data.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce se vraťte do vyrovnávací paměti znak objektu string ukazatel. Vývojář může změnit obsah objektu řetězec tento ukazatel.  
+ Voláním této funkce vrátí ukazatel do vyrovnávací paměti pro znaky z objektu typu string. Vývojář může změnit obsah na objekt řetězce s ukazatele this.  
   
 ##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
- Ukazatel na konstantní řetězec.  
+ Ukazatel na konstanty typu řetězec.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
@@ -172,46 +172,46 @@ typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
 ##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
- Nastavte délku řetězce objekt v `GetBuffer` čas.  
+ Nastavení délky na objekt řetězce na `GetBuffer` čas.  
   
 ```
 static const DWORD SET_LENGTH = 0x02;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Getbuffer – okamžiku nastaven délka objekt řetězce.  
+ V době getbuffer – nastavte délku objektu typu string.  
   
- Určuje, zda [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) a [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) jsou volány při sestavený objekt řetězce vyrovnávací paměti.  
+ Určuje, zda [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) a [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) jsou volány při vytvoření objektu vyrovnávací paměti řetězce.  
   
 ##  <a name="setlength"></a>  CStrBufT::SetLength  
- Nastaví délka vyrovnávací paměti znak.  
+ Nastaví délku vyrovnávací paměti pro znaky.  
   
 ```
 void SetLength(int nLength);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLength`  
- Nové délka vyrovnávací paměti znak objektu typu string.  
+ *nLength*  
+ Novou velikost vyrovnávací paměti pro znaky z objektu string.  
   
 > [!NOTE]
->  Musí být menší než nebo rovna minimální velikost vyrovnávací paměti, zadaný v konstruktoru `CStrBufT`.  
+>  Musí být menší nebo rovna minimální vyrovnávací paměti délka zadaná v konstruktoru `CStrBufT`.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce lze nastavit délku řetězce reprezentovaný objektem vyrovnávací paměti.  
+ Voláním této funkce nastavit délku řetězce reprezentovaný objektem vyrovnávací paměti.  
   
 ##  <a name="stringtype"></a>  CStrBufT::StringType  
- Typ řetězec, jehož vyrovnávací paměti je uživatel manipulovat specializací této třídy šablony.  
+ Typ řetězec, jehož vyrovnávací paměť je manipulovat specializace této třídy šablony.  
   
 ```
 typedef CSimpleStringT<TCharType> StringType;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- **TCharType** je typ znak použitá se specializují šablona třídy.  
+ `TCharType` slouží k specializovat šablonu třídy tyto typy znaků.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [ATL a MFC sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 

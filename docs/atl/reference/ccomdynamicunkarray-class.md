@@ -1,5 +1,5 @@
 ---
-title: Třída CComDynamicUnkArray | Microsoft Docs
+title: Ccomdynamicunkarray – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363920"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879806"
 ---
-# <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray – třída
-Tato třída ukládá pole **IUnknown** ukazatele.  
+# <a name="ccomdynamicunkarray-class"></a>Ccomdynamicunkarray – třída
+Tato třída obsahuje pole z `IUnknown` ukazatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,38 +50,38 @@ class CComDynamicUnkArray
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor Inicializuje kolekci hodnoty tak, aby **NULL** a velikosti kolekce na nulu.|  
-|[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Destruktor.|  
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Konstruktor Inicializuje kolekci hodnoty, které mají hodnotu NULL a velikosti kolekce na nulu.|  
+|[Ccomdynamicunkarray –:: ~ ccomdynamicunkarray –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::Add](#add)|Voláním této metody lze přidat `IUnknown` ukazatel na pole.|  
-|[CComDynamicUnkArray::begin](#begin)|Vrací ukazatel na první `IUnknown` ukazatele v kolekci.|  
+|[CComDynamicUnkArray::begin](#begin)|Vrací ukazatel na první `IUnknown` ukazatel v kolekci.|  
 |[CComDynamicUnkArray::clear](#clear)|Vyprázdní pole.|  
-|[CComDynamicUnkArray::end](#end)|Vrací ukazatel na jednu za posledních **IUnknown** ukazatele v kolekci.|  
-|[CComDynamicUnkArray::GetAt](#getat)|Načte element v zadaném indexu.|  
-|[CComDynamicUnkArray::GetCookie](#getcookie)|Volat tuto metodu za účelem získání souboru cookie přidruženého dané **IUnknown** ukazatel.|  
+|[CComDynamicUnkArray::end](#end)|Vrací ukazatel na jedno místo za posledním `IUnknown` ukazatel v kolekci.|  
+|[CComDynamicUnkArray::GetAt](#getat)|Načte prvek v zadaném indexu.|  
+|[CComDynamicUnkArray::GetCookie](#getcookie)|Volejte tuto metodu za účelem získání souborů cookie, přidružené danou `IUnknown` ukazatele.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Vrátí délku pole.|  
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Voláním této metody lze získat **IUnknown** ukazatel spojené s danou souboru cookie.|  
-|[CComDynamicUnkArray::Remove](#remove)|Voláním této metody lze odebrat **IUnknown** ukazatel z pole.|  
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Volejte tuto metodu za účelem získání `IUnknown` ukazatel přidružený k daném souboru cookie.|  
+|[CComDynamicUnkArray::Remove](#remove)|Volejte tuto metodu za účelem odebrání `IUnknown` ukazatele z pole.|  
   
 ## <a name="remarks"></a>Poznámky  
- **CComDynamicUnkArray** obsahuje dynamicky přidělené pole **IUnknown** ukazatele, každý rozhraní na připojení bodu. **CComDynamicUnkArray** lze použít jako parametr, který se [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) třídy šablony.  
+ `CComDynamicUnkArray` obsahuje dynamicky přiřazeného pole `IUnknown` ukazatele, každý bod rozhraní připojení. `CComDynamicUnkArray` lze použít jako parametr [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) šablony třídy.  
   
- **CComDynamicUnkArray** metody [začít](#begin) a [end](#end) slouží k procházení všechny body připojení (například při vyvolání události).  
+ `CComDynamicUnkArray` Metody [začít](#begin) a [end](#end) lze použít k vytvoření smyčky přes všechny body připojení (například když se aktivuje událost).  
   
- V tématu [přidání body připojení k objektu](../../atl/adding-connection-points-to-an-object.md) informace o automatizaci vytváření připojení bodu proxy.  
+ Zobrazit [přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md) podrobnosti k automatizaci vytváření připojení bodu proxy servery.  
   
 > [!NOTE]
-> **Poznámka:** třídy **CComDynamicUnkArray** je používán **přidat třídu** Průvodce při vytvoření ovládacího prvku, který má spojovací body. Pokud chcete určit počet bodů připojení ručně, změňte odkaz z **CComDynamicUnkArray** k `CComUnkArray<` *n* `>`, kde *n*je počet bodů připojení vyžaduje.  
+> **Poznámka:** třídy `CComDynamicUnkArray` používá **přidat třídu** Průvodce při vytváření ovládacího prvku, který má spojovací body. Pokud chcete určit, kolik bodů připojení ručně, změňte odkazy z `CComDynamicUnkArray` k `CComUnkArray<` *n* `>`, kde *n* je počet bodů připojení povinné.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
   
 ##  <a name="add"></a>  CComDynamicUnkArray::Add  
- Voláním této metody lze přidat **IUnknown** ukazatel na pole.  
+ Voláním této metody lze přidat `IUnknown` ukazatel na pole.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -89,13 +89,13 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Parametry  
  *pUnk*  
- **IUnknown** ukazatele pro přidání do pole.  
+ `IUnknown` Ukazatel na Přidat do pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí souboru cookie přidruženého nově přidané ukazatele.  
+ Vrátí přidružený ukazatel na nově přidaný soubor cookie.  
   
 ##  <a name="begin"></a>  CComDynamicUnkArray::begin  
- Vrátí ukazatel na začátek kolekce **IUnknown** rozhraní ukazatele.  
+ Vrací ukazatel na začátek kolekce `IUnknown` ukazatele rozhraní.  
   
 ```
 IUnknown**
@@ -103,12 +103,12 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na **IUnknown** ukazatel rozhraní.  
+ Ukazatel `IUnknown` ukazatel rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
- Kolekce obsahuje odkazy na rozhraní místně uložené jako **IUnknown**. Každý vložíte **IUnknown** rozhraní pro typ skutečné rozhraní a pak zavolají jejím prostřednictvím. Není nutné nejprve dotaz pro rozhraní.  
+ Kolekce obsahuje odkazy na rozhraní místně uložená jako `IUnknown`. Každý přetypování `IUnknown` rozhraní na typ skutečné rozhraní a pak přes ni volat. Dotaz na rozhraní nejprve nepotřebujete.  
   
- Před použitím **IUnknown** rozhraní, je potřeba zkontrolovat, že není **NULL**.  
+ Před použitím `IUnknown` rozhraní, zkontrolujte, že není NULL.  
   
 ##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Vyprázdní pole.  
@@ -125,9 +125,9 @@ CComDynamicUnkArray();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nastaví velikost kolekce na hodnotu nula a inicializuje hodnoty tak, aby **NULL**. Destruktoru uvolní kolekce, v případě potřeby.  
+ Nastaví velikost kolekce na nulu a inicializuje hodnoty, které mají hodnotu NULL. Destruktor uvolní kolekce, v případě potřeby.  
   
-##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  Ccomdynamicunkarray –:: ~ ccomdynamicunkarray –  
  Destruktor.  
   
 ```
@@ -138,7 +138,7 @@ CComDynamicUnkArray();
  Uvolní prostředky přidělené pomocí konstruktoru třídy.  
   
 ##  <a name="end"></a>  CComDynamicUnkArray::end  
- Vrací ukazatel na jednu za posledních **IUnknown** ukazatele v kolekci.  
+ Vrací ukazatel na jedno místo za posledním `IUnknown` ukazatel v kolekci.  
   
 ```
 IUnknown**
@@ -146,38 +146,38 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na **IUnknown** ukazatel rozhraní.  
+ Ukazatel `IUnknown` ukazatel rozhraní.  
   
 ##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
- Načte element v zadaném indexu.  
+ Načte prvek v zadaném indexu.  
   
 ```
 IUnknown* GetAt(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index elementu, který chcete načíst.  
+ *nIndex*  
+ Index prvku, který chcete načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní.  
+ Ukazatel [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
- Volat tuto metodu za účelem získání souboru cookie přidruženého dané **IUnknown** ukazatel.  
+ Volejte tuto metodu za účelem získání souborů cookie, přidružené danou `IUnknown` ukazatele.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppFind`  
- **IUnknown** ukazatele, pro které se vyžaduje přidružených souborů cookie.  
+ *ppFind*  
+ `IUnknown` Ukazatel, pro který je vyžadován přidružený soubor cookie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí souboru cookie přidruženého **IUnknown** ukazatel nebo nula, pokud neexistuje odpovídající **IUnknown** ukazatel myši nachází.  
+ Vrátí soubor cookie, přidružené `IUnknown` ukazatel nebo nula, pokud neexistuje odpovídající `IUnknown` nachází ukazatelem.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je více než jednu instanci stejného **IUnknown** ukazatele, funkce vrátí hodnotu souboru cookie, který pro první.  
+ Pokud existuje více než jednu instanci stejného `IUnknown` ukazatele, tato funkce vrátí soubor cookie pro první z nich.  
   
 ##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Vrátí délku pole.  
@@ -190,33 +190,33 @@ int GetSize() const;
  Délka pole.  
   
 ##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
- Voláním této metody lze získat **IUnknown** ukazatel spojené s danou souboru cookie.  
+ Volejte tuto metodu za účelem získání `IUnknown` ukazatel přidružený k daném souboru cookie.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCookie`  
- Soubor cookie, pro které přidružené **IUnknown** je vyžadován.  
+ *dwCookie*  
+ Soubor cookie, pro kterou přidruženého `IUnknown` ukazatel je povinný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **IUnknown** ukazatel nebo hodnota NULL, pokud je nalezen žádný odpovídající soubor cookie.  
+ Vrátí `IUnknown` ukazatel nebo hodnota NULL, pokud není nalezen žádný odpovídající soubor cookie.  
   
 ##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
- Voláním této metody lze odebrat **IUnknown** ukazatel z pole.  
+ Volejte tuto metodu za účelem odebrání `IUnknown` ukazatele z pole.  
   
 ```
 BOOL Remove(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCookie`  
- Odkazování na soubor cookie **IUnknown** ukazatel na odeberou z pole.  
+ *dwCookie*  
+ Odkazování na soubor cookie `IUnknown` ukazatel na odebrat z pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud je ukazatel odebrán; jinak hodnota FALSE.  
+ Vrátí hodnotu TRUE, pokud se odebere ukazatele; v opačném případě FALSE.  
   
 ## <a name="see-also"></a>Viz také  
- [CComUnkArray – třída](../../atl/reference/ccomunkarray-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ccomunkarray – třída](../../atl/reference/ccomunkarray-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

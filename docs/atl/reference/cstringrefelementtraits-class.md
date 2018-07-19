@@ -1,5 +1,5 @@
 ---
-title: Třída CStringRefElementTraits | Microsoft Docs
+title: Cstringrefelementtraits – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8746bf216be417fb569aae58421b272c983914b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 967ae999811e829ae7a890d367a6cdc16fb28239
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360684"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880480"
 ---
-# <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits – třída
-Tato třída poskytuje statické funkce související s řetězce, které jsou uložené v objektech třídy kolekce. Řetězec objekty jsou uvedeny jako odkazy.  
+# <a name="cstringrefelementtraits-class"></a>Cstringrefelementtraits – třída
+Tato třída poskytuje statické funkce související se ukládají v objektech třídy kolekce řetězců. Řetězcových objektů jsou zpracovány jako odkazy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,8 +38,8 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ dat se neukládají v kolekci.  
+ *T*  
+ Typ dat uložených v kolekci.  
   
 ## <a name="members"></a>Členové  
   
@@ -47,17 +47,17 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CStringRefElementTraits::CompareElements](#compareelements)|Volání této statické funkce k porovnání dvou prvků řetězce rovnosti.|  
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Volání této statické funkce k porovnání dvou prvků řetězce.|  
-|[CStringRefElementTraits::Hash](#hash)|Volání této statické funkce Vypočítat hodnotu hash pro daný řetězec elementu.|  
+|[CStringRefElementTraits::CompareElements](#compareelements)|Voláním této funkce statických porovnat dva prvky řetězce pro rovnosti.|  
+|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Voláním této funkce statických porovnat dva prvky řetězce.|  
+|[CStringRefElementTraits::Hash](#hash)|Voláním této funkce statických vypočítat hodnotu hash pro prvek zadaného řetězce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje statické funkce pro porovnávání řetězců a pro vytvoření hodnoty hash. Tyto funkce jsou užitečné při použití třídy kolekce k ukládání dat na základě řetězce. Na rozdíl od [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) a [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` způsobí, že `CString` argumenty, které mají být předány jako **const CString &** odkazy.  
+ Tato třída poskytuje statické funkce pro porovnávání řetězců a pro vytvoření hodnoty hash. Tyto funkce jsou užitečné při použití třídy kolekce k ukládání dat založené na řetězci. Na rozdíl od [cstringelementtraits –](../../atl/reference/cstringelementtraits-class.md) a [cstringelementtraitsi –](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` způsobí, že `CString` argumenty, které mají být předány jako **const** `CString&` odkazy.  
   
  Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
+ [Celementtraitsbase –](../../atl/reference/celementtraitsbase-class.md)  
   
  `CStringRefElementTraits`  
   
@@ -65,53 +65,53 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
  **Záhlaví:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements  
- Volání této statické funkce k porovnání dvou prvků řetězce rovnosti.  
+ Voláním této funkce statických porovnat dva prvky řetězce pro rovnosti.  
   
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `element1`  
+ *element1*  
  První řetězec elementu.  
   
- `element2`  
+ *element2*  
  Druhý řetězec elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true Pokud elementy jsou stejné, jinak hodnota false.  
+ Vrátí true, pokud prvky jsou stejné, jinak hodnota false.  
   
 ##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered  
- Volání této statické funkce k porovnání dvou prvků řetězce.  
+ Voláním této funkce statických porovnat dva prvky řetězce.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str1`  
+ *Str1*  
  První řetězec elementu.  
   
- `str2`  
+ *řetězci Str2*  
  Druhý řetězec elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nula. Pokud jsou řetězce identické, < 0 Pokud `str1` je menší než `str2`, nebo > 0 Pokud `str1` je větší než `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda se používá k provádění porovnání.  
+ Nula v případě, že jsou řetězce identické, < 0 Pokud *str1* je menší než *řetězci str2*, nebo > 0 Pokud *str1* je větší než *řetězci str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda se používá k provádění porovnání.  
   
 ##  <a name="hash"></a>  CStringRefElementTraits::Hash  
- Volání této statické funkce Vypočítat hodnotu hash pro daný řetězec elementu.  
+ Voláním této funkce statických vypočítat hodnotu hash pro prvek zadaného řetězce.  
   
 ```
 static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
- Element řetězec.  
+ *str*  
+ Element řetězce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu hash, vypočítává pomocí obsahu řetězce.  
+ Vrátí hodnotu hash pomocí obsahu řetězce.  
   
 ## <a name="see-also"></a>Viz také  
- [CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Celementtraitsbase – třída](../../atl/reference/celementtraitsbase-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

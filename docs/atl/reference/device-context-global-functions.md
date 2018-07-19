@@ -1,5 +1,5 @@
 ---
-title: Globální funkce kontextu zařízení | Microsoft Docs
+title: Globální funkce kontextu zařízení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d54fbe9391cb53cca1d84401e90bb6fd47a479
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358586"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881393"
 ---
 # <a name="device-context-global-functions"></a>Globální funkce kontextu zařízení
 Tato funkce vytvoří kontext zařízení pro dané zařízení.  
   
 |||  
 |-|-|  
-|[AtlCreateTargetDC](#atlcreatetargetdc)|Vytvoří kontextu zařízení.|  
+|[AtlCreateTargetDC](#atlcreatetargetdc)|Vytvoří kontext zařízení.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Vytvoří pro zadané zařízení v kontextu zařízení [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktura.  
+ Vytvoří kontext zařízení pro zařízení zadané ve [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktury.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -37,18 +37,18 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
   
 ### <a name="parameters"></a>Parametry  
  *hDC*  
- [v] Existující popisovač kontextu zařízení, nebo **NULL**.  
+ [in] Existující popisovač kontextu zařízení, nebo hodnota NULL.  
   
- `ptd`  
- [v] Ukazatel **DVTARGETDEVICE** struktura, která obsahuje informace o cílové zařízení.  
+ *ptd*  
+ [in] Ukazatel `DVTARGETDEVICE` strukturu, která obsahuje informace o cílové zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač do kontextu zařízení pro zařízení v zadané **DVTARGETDEVICE**. Pokud je zadána žádná zařízení, vrátí popisovač výchozí zobrazovací zařízení.  
+ Vrátí popisovač kontext zařízení pro zařízení zadané ve `DVTARGETDEVICE`. Pokud není zadána žádná zařízení, vrátí popisovač na výchozím zobrazovacím zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud strukturu **NULL** a *hdc* je **NULL**, vytvoří kontext zařízení pro výchozí zobrazení zařízení.  
+ Pokud struktura je NULL a *hdc* má hodnotu NULL, vytvoří kontext zařízení pro výchozím zobrazovacím zařízení.  
   
- Pokud *hdc* není **NULL** a `ptd` je **NULL**, funkce vrátí hodnotu existující *hdc*.  
+ Pokud *hdc* nemá hodnotu NULL a *ptd* má hodnotu NULL, funkce vrátí existující *hdc*.  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  

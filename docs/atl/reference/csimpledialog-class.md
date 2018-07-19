@@ -1,5 +1,5 @@
 ---
-title: Třída CSimpleDialog | Microsoft Docs
+title: CSimpleDialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362384"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881656"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog – třída
-Tato třída implementuje základní modální dialogové.  
+Tato třída implementuje základní modální dialogové okno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,10 @@ class CSimpleDialog : public CDialogImplBase
 #### <a name="parameters"></a>Parametry  
  *t_wDlgTemplateID*  
   
- ID prostředku prostředku šablony dialogového okna.  
+ ID prostředku šablony prostředku dialogového okna.  
   
  *t_bCenter*  
- **Hodnota TRUE,** Pokud má být zarovnaný na střed v okně vlastníka; jinak hodnota objektu dialogového okna **FALSE**.  
+ Hodnota TRUE, pokud objektu dialogového okna je zarovnaný na střed na okno vlastníka. v opačném případě FALSE.  
   
 ## <a name="members"></a>Členové  
   
@@ -55,11 +55,11 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Vytvoří modální dialogové okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Implementuje modální dialogové okno s základních funkcí. `CSimpleDialog` poskytuje podporu pro běžné ovládací prvky Windows jenom. Vytvoření a zobrazí modální dialogové okno, vytvoření instance této třídy, poskytuje název existující šablony prostředků pro dialogové okno. Pole objektu dialogového okna se zavře po kliknutí na libovolný ovládací prvek s předem definované hodnoty (například IDOK nebo IDCANCEL).  
+ Implementuje modální dialogové okno se základní funkčností. `CSimpleDialog` poskytuje podporu pro Windows běžné ovládací prvky pouze. Vytvoření a zobrazení modálního dialogového okna, vytvoření instance této třídy, že zadáte název existující šablony prostředků pro dialogové okno. Pole objektu dialogového okna zavře, když uživatel klikne libovolný ovládací prvek s hodnotou předem definovaných (například IDOK nebo IDCANCEL).  
   
- `CSimpleDialog` Umožňuje vytvořit pouze modálních dialogových oken. `CSimpleDialog` Poskytuje postup pole dialogu, který používá výchozí mapování zpráv směrovat zprávy do příslušné obslužné rutiny.  
+ `CSimpleDialog` Umožňuje vytvořit pouze modálních dialogových oken. `CSimpleDialog` poskytuje pole proceduru dialogového okna, který používá výchozí mapování zpráv ke směrování zpráv do příslušné obslužné rutiny.  
   
- V tématu [implementace dialogové okno](../../atl/implementing-a-dialog-box.md) Další informace.  
+ Zobrazit [implementace dialogového okna](../../atl/implementing-a-dialog-box.md) Další informace.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CDialogImplBase`  
@@ -70,23 +70,23 @@ class CSimpleDialog : public CDialogImplBase
  **Záhlaví:** atlwin.h  
   
 ##  <a name="domodal"></a>  CSimpleDialog::DoModal  
- Vyvolá modální dialogové okno a vrátí výsledek – dialogové okno po dokončení.  
+ Vyvolá modální dialogové okno a vrátí výsledek dialogového okna, až budete hotovi.  
   
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
- Obslužná rutina s nadřazeným dialogového okna. Pokud není zadána žádná hodnota, nadřazený nastavená na aktuální aktivní okno.  
+ *hWndParent*  
+ Popisovač na nadřazený prvek dialogového okna. Pokud se nezadá žádná hodnota, nadřazené nastavená na aktuálně aktivní okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného vrácená hodnota je ID prostředku ovládací prvek, který se zavře dialogové okno.  
+ Pokud je úspěšná, vrácená hodnota je ID prostředku ovládacího prvku, který se zavře dialogové okno.  
   
- Pokud se funkce nezdaří, je vrácenou hodnotu -1. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.  
+ Pokud funkce selže, vrácená hodnota je -1. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zpracovává všechny interakci s uživatelem, při dialogové okno je aktivní. To je díky modální; dialogových oken To znamená uživatel nemůže komunikovat s jinými dokud nezavře dialogové okno.  
+ Tato metoda zpracovává všechny interakce s uživatelem, dialogové okno je aktivní. Toto je kvůli tomu dialogové okno modální; To znamená uživatel nemohou komunikovat s ostatní okna, dokud není zavřena dialogových oken.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

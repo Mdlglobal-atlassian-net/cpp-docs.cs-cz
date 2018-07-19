@@ -1,5 +1,5 @@
 ---
-title: Třída CPoint | Microsoft Docs
+title: Cpoint – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365390"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880089"
 ---
-# <a name="cpoint-class"></a>CPoint – třída
-Podobně jako Windows `POINT` struktura.  
+# <a name="cpoint-class"></a>Cpoint – třída
+Podobně jako Windows `POINT` struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,29 +49,29 @@ class CPoint : public tagPOINT
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPoint::Offset](#offset)|Přidá hodnoty **x** a **y** členy `CPoint`.|  
+|[CPoint::Offset](#offset)|Přidá hodnoty `x` a `y` členy `CPoint`.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPoint::operator-](#operator_-)|Vrátí rozdíl `CPoint` a velikost nebo negace bod nebo velikost rozdíl mezi dvěma body nebo posun podle záporná velikost.|  
-|[CPoint::operator! =](#operator_neq)|Kontroluje nerovnost mezi dva body.|  
-|[CPoint::operator +](#operator_add)|Vrátí součet `CPoint` a na velikosti nebo bod, nebo `CRect` posunut o velikosti.|  
-|[CPoint::operator +=](#operator_add_eq)|Posun `CPoint` přidáním velikost nebo bodu.|  
-|[CPoint::operator-=](#operator_-_eq)|Posun `CPoint` odečtením velikost nebo bodu.|  
-|[CPoint::operator ==](#operator_eq_eq)|Kontroly rovnosti mezi dva body.|  
+|[CPoint::operator-](#operator_-)|Vrátí rozdíl `CPoint` a velikost nebo negace bod nebo rozdíl velikosti mezi dvěma body nebo offset zápornou velikostí.|  
+|[CPoint::operator! =](#operator_neq)|Kontroly pro nerovnost mezi dvěma body.|  
+|[CPoint::operator +](#operator_add)|Vrátí součet `CPoint` a velikost nebo bodu, nebo `CRect` posunut o velikosti.|  
+|[CPoint::operator +=](#operator_add_eq)|Odsadí `CPoint` přidáním velikosti nebo bodu.|  
+|[CPoint::operator-=](#operator_-_eq)|Odsadí `CPoint` tak, že se velikost nebo bodu.|  
+|[CPoint::operator ==](#operator_eq_eq)|Kontroly pro rovnost mezi dvěma body.|  
   
 ## <a name="remarks"></a>Poznámky  
- Zahrnuje také členské funkce k manipulaci s `CPoint` a [bodu](../../mfc/reference/point-structure1.md) struktury.  
+ Zahrnuje také členské funkce pro manipulaci s `CPoint` a [bodu](../../mfc/reference/point-structure1.md) struktury.  
   
- A `CPoint` objekt lze použít kdekoli `POINT` struktura se používá. Operátory této třídy, které pracují se "velikost" přijmout, buď [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktur, protože zaměnitelné.  
-  
-> [!NOTE]
->  Tato třída je odvozený od `tagPOINT` struktura. (Název `tagPOINT` je méně často používaná název `POINT` struktura.) To znamená, že data členů `POINT` struktury `x` a `y`, jsou členy dat dostupný `CPoint`.  
+ A `CPoint` objektu lze použít všude, kde `POINT` struktura se používá. Operátory, které pracují s "velikost" této třídy buď přijměte [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktur, protože zaměnitelné.  
   
 > [!NOTE]
->  Další informace o sdílených nástroj třídy (jako je `CPoint`), najdete v části [sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md).  
+>  Tato třída je odvozena z `tagPOINT` struktury. (Název `tagPOINT` je název ne tak často používaná pro `POINT` struktura.) To znamená, že datové členy `POINT` strukturu, `x` a `y`, jsou dostupné datové členy `CPoint`.  
+  
+> [!NOTE]
+>  Další informace o sdílené třídy nástroje (jako je `CPoint`), najdete v článku [sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `tagPOINT`  
@@ -93,23 +93,23 @@ CPoint(LPARAM dwPoint) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initX`  
- Určuje hodnotu `x` členem `CPoint`.  
+ *initX*  
+ Určuje hodnotu `x` člen `CPoint`.  
   
- `initY`  
- Určuje hodnotu `y` členem `CPoint`.  
+ *initY*  
+ Určuje hodnotu `y` člen `CPoint`.  
   
- `initPt`  
- [BOD](../../mfc/reference/point-structure1.md) struktura nebo `CPoint` určující hodnoty používané k chybě při inicializaci `CPoint`.  
+ *initPt*  
+ [BOD](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` určující hodnoty použité k inicializaci `CPoint`.  
   
- `initSize`  
- [VELIKOST](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty používané k chybě při inicializaci `CPoint`.  
+ *initSize*  
+ [VELIKOST](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.  
   
- `dwPoint`  
- Nastaví `x` člena do aplikace word nejnižší z `dwPoint` a `y` člena do aplikace word horní z `dwPoint`.  
+ *dwPoint*  
+ Nastaví `x` člen pro nižší řád slova *dwPoint* a `y` člena na vyšší řád slova *dwPoint*.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jsou zadány žádné argumenty, `x` a `y` členů je nastaven na hodnotu 0.  
+ Pokud nejsou zadány žádné argumenty, `x` a `y` členy jsou nastaveny na hodnotu 0.  
   
 ### <a name="example"></a>Příklad  
   
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
 ##  <a name="offset"></a>  CPoint::Offset  
- Přidá hodnoty **x** a **y** členy `CPoint`.  
+ Přidá hodnoty `x` a `y` členy `CPoint`.  
   
 ```  
 void Offset(int xOffset, int yOffset) throw();
@@ -149,56 +149,56 @@ void Offset(SIZE size) throw();
   
 ### <a name="parameters"></a>Parametry  
  *xOffset*  
- Určuje dobu, k posunutí **x** členem `CPoint`.  
+ Určuje velikost odsazení `x` člena `CPoint`.  
   
  *yOffset*  
- Určuje dobu, k posunutí **y** členem `CPoint`.  
+ Určuje velikost odsazení `y` člena `CPoint`.  
   
- `point`  
- Určuje dobu ( [bodu](../../mfc/reference/point-structure1.md) nebo `CPoint`) k posunutí `CPoint`.  
+ *Bod*  
+ Určuje dobu ( [bodu](../../mfc/reference/point-structure1.md) nebo `CPoint`) pro posun `CPoint`.  
   
- `size`  
- Určuje dobu ( [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) k posunutí `CPoint`.  
+ *Velikost*  
+ Určuje dobu ( [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>  CPoint::operator ==  
- Kontroly rovnosti mezi dva body.  
+ Kontroly pro rovnost mezi dvěma body.  
   
 ```  
 BOOL operator==(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo `CPoint` objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud body jsou si rovny; jinak 0.  
+ Nenulové, pokud body rovnají. jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
 ##  <a name="operator_neq"></a>  CPoint::operator! =  
- Kontroluje nerovnost mezi dva body.  
+ Kontroly pro nerovnost mezi dvěma body.  
   
 ```  
 BOOL operator!=(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo `CPoint` objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud body nejsou stejné; jinak 0.  
+ Nenulové, pokud body nejsou stejné; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CPoint::operator +=  
- První přetížení přidá velikost tak, aby `CPoint`.  
+ První přetížení přidá velikost, aby `CPoint`.  
   
 ```  
 void operator+=(SIZE size) throw(); 
@@ -206,24 +206,24 @@ void operator+=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ *Velikost*  
+ Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Druhý přetížení přidá bod, aby `CPoint`.  
+ Druhé přetížení přidá bod, který má `CPoint`.  
   
- V obou případech se přidání provádí přidáním **x** (nebo **cx**) členem pravém operand **x** členem `CPoint` a přidání **y**  (nebo **cy**) členem pravém operand **y** členem `CPoint`.  
+ V obou případech sčítání se provádí tak, že přidáte `x` (nebo `cx`) člen zpracovával pravý operand na `x` člena `CPoint` a přidání `y` (nebo `cy`) člen zpracovával pravý operand na `y` člena `CPoint`.  
   
- Například přidání `CPoint(5, -7)` do proměnné, která obsahuje `CPoint(30, 40)` změny proměnnou `CPoint(35, 33)`.  
+ Například přidáním `CPoint(5, -7)` na proměnnou, která obsahuje `CPoint(30, 40)` změní proměnnou `CPoint(35, 33)`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
 ##  <a name="operator_-_eq"></a>  CPoint::operator-=  
- Odečte první přetížení velikost z `CPoint`.  
+ Velikost z odečte první přetížení `CPoint`.  
   
 ```  
 void operator-=(SIZE size) throw(); 
@@ -231,24 +231,24 @@ void operator-=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ *Velikost*  
+ Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Druhý přetížení odečítá bod ze `CPoint`.  
+ Odečte bod z druhé přetížení `CPoint`.  
   
- V obou případech se provádí odčítání odečtením **x** (nebo **cx**) členem pravém operand z **x** členem `CPoint` a odečítání **y** (nebo **cy**) členem pravém operand z **y** členem `CPoint`.  
+ V obou případech se provádí odčítání tak, že se `x` (nebo `cx`) člen zpracovával pravý operand z `x` člena `CPoint` a odečítání `y` (nebo `cy`) členem pravém Operand od `y` člena `CPoint`.  
   
- Například odečtením `CPoint(5, -7)` z proměnné, která obsahuje `CPoint(30, 40)` změny proměnnou `CPoint(25, 47)`.  
+ Například odečtením `CPoint(5, -7)` z proměnné, která obsahuje `CPoint(30, 40)` změní proměnnou `CPoint(25, 47)`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CPoint::operator +  
- Použít tento operátor pro posun `CPoint` podle `CPoint` nebo `CSize` objekt, nebo k posunutí `CRect` podle `CPoint`.  
+ Tento operátor odsazení `CPoint` podle `CPoint` nebo `CSize` objektu, nebo odsazení `CRect` podle `CPoint`.  
   
 ```  
 CPoint operator+(SIZE size) const throw();
@@ -257,28 +257,28 @@ CRect operator+(const RECT* lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
- Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ *Velikost*  
+ Obsahuje [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
- `point`  
- Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
+ *Bod*  
+ Obsahuje [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
   
- `lpRect`  
- Obsahuje odkazy [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu.  
+ *lprect –*  
+ Obsahuje ukazatel [RECT](../../mfc/reference/rect-structure1.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CPoint` , velikost, posunut **CPoint** bodem, který je posun nebo **CRect** posunut bod.  
+ A `CPoint` , který je posunut velikosti `CPoint` , který je posunut bod, nebo `CRect` posunut bod.  
   
 ### <a name="remarks"></a>Poznámky  
- Například pomocí jednoho z první dva přetížení k posunutí bodem `CPoint(25, -19)` bodem `CPoint(15, 5)` nebo velikost `CSize(15, 5)` vrátí hodnotu `CPoint(40, -14)`.  
+ Například pomocí jedné z první dvě přetížení odsazení bod `CPoint(25, -19)` bodem `CPoint(15, 5)` nebo velikost `CSize(15, 5)` vrátí hodnotu `CPoint(40, -14)`.  
   
- Přidání obdélníku do bodu vrátí rámeček po se posunut **x** a **y** hodnoty zadané v bodu. Například pomocí poslední přetížení k posunutí obdélníku `CRect(125, 219, 325, 419)` bodem `CPoint(25, -19)` vrátí `CRect(150, 200, 350, 400)`.  
+ Přidání obdélníku do bodu vrátí obdélníku po se posunut `x` a `y` hodnoty zadané v bodu. Například pomocí poslední přetížení odsazení obdélník `CRect(125, 219, 325, 419)` bodem `CPoint(25, -19)` vrátí `CRect(150, 200, 350, 400)`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>  CPoint::operator-  
- Použijte jednu z první dva přetížení má odečíst `CPoint` nebo `CSize` objektu z `CPoint`.  
+ Použijte jednu z prvních dvou přetížení se má odečíst `CPoint` nebo `CSize` objektu z `CPoint`.  
   
 ```  
 CSize operator-(POINT point) const throw();
@@ -288,37 +288,37 @@ CPoint operator-() const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
- A [bodu](../../mfc/reference/point-structure1.md) struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
+ *Bod*  
+ A [bodu](../../mfc/reference/point-structure1.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.  
   
- `size`  
- A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
+ *Velikost*  
+ A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
   
- `lpRect`  
- Ukazatel [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu.  
+ *lprect –*  
+ Ukazatel [RECT](../../mfc/reference/rect-structure1.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CSize` který je rozdíl mezi dvěma body `CPoint` je posunut negace velikosti, `CRect` je posunut negace bodu, nebo `CPoint` tedy negace bodu.  
+ A `CSize` , který je rozdíl mezi dvěma body `CPoint` , který je posunut negace velikosti, `CRect` , který je posunut negace bod, nebo `CPoint` , který je negace bod.  
   
 ### <a name="remarks"></a>Poznámky  
- Třetí přetížení odsazení `CRect` podle negace z `CPoint`. Nakonec pomocí unární operátor negate `CPoint`.  
+ Třetí přetížení posuny `CRect` negaci `CPoint`. Nakonec použijte unární operátor negovat `CPoint`.  
   
- Například pomocí první přetížení rozdíl mezi dvěma body `CPoint(25, -19)` a `CPoint(15, 5)` vrátí `CSize(10, -24)`.  
+ Například pomocí prvního přetížení rozdíl mezi dvěma body `CPoint(25, -19)` a `CPoint(15, 5)` vrátí `CSize(10, -24)`.  
   
- Odečtením `CSize` z `CPoint` nemá stejný výpočet, jak je uvedeno výše, ale vrací `CPoint` objektu není `CSize` objektu. Například pomocí druhého přetížení rozdíl mezi bodem `CPoint(25, -19)` a velikost `CSize(15, 5)` vrátí `CPoint(10, -24)`.  
+ Přičítání `CSize` z `CPoint` nemá stejný výpočet, jak je uvedeno výše, ale vrací `CPoint` objekt nelze `CSize` objektu. Například použití druhé přetížení rozdíl mezi bodem `CPoint(25, -19)` a velikost `CSize(15, 5)` vrátí `CPoint(10, -24)`.  
   
- Odečtením obdélníku z bodu vrátí posunutí obdélníku podle negativy z **x** a **y** hodnoty zadané v bodu. Například pomocí poslední přetížení k posunutí rámeček `CRect(125, 200, 325, 400)` bodem `CPoint(25, -19)` vrátí `CRect(100, 219, 300, 419)`.  
+ Podle negativy z odečtením obdélník z bodu vrátí posunutí obdélník `x` a `y` hodnoty zadané v bodu. Například pomocí poslední přetížení odsazení obdélník `CRect(125, 200, 325, 400)` bodem `CPoint(25, -19)` vrátí `CRect(100, 219, 300, 419)`.  
   
- Operátor unární negate bod. Například pomocí unárního operátoru s bodem `CPoint(25, -19)` vrátí `CPoint(-25, 19)`.  
+ Operátor unární negate bod. Například použití s bodem unární operátor `CPoint(25, -19)` vrátí `CPoint(-25, 19)`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC MDI](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [POINT – struktura](../../mfc/reference/point-structure1.md)   
- [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)   
+ [Crect – třída](../../atl-mfc-shared/reference/crect-class.md)   
  [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)
 
 

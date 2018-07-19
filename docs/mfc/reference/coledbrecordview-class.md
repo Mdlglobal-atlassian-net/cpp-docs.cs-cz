@@ -1,5 +1,5 @@
 ---
-title: COleDBRecordView – třída | Microsoft Docs
+title: COleDBRecordView – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037854"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853690"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -50,23 +50,23 @@ class COleDBRecordView : public CFormView
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Vrátí standardní `HRESULT` hodnotu.|  
-|[COleDBRecordView::OnMove](#onmove)|Aktualizace na aktuální záznam (je-li změny) ve zdroji dat a pak se posouvá zadaný záznam (Další, předchozí, první nebo poslední).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Vrací standardní hodnotu HRESULT.|  
+|[COleDBRecordView::OnMove](#onmove)|Aktualizuje aktuální záznam ve zdroji dat (Pokud) a pak přesune zadaný záznam (Další, předchozí, první nebo poslední).|  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazení je přímo připojený k zobrazení formuláře `CRowset` objektu. Zobrazení je vytvořený z prostředku šablony dialogovém okně a zobrazí pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna. `COleDBRecordView` Objektu používá výměna dialogových dat (DDX) a navigačních funkce součástí `CRowset`, k automatizaci přesun dat mezi ovládacími prvky na formuláři a pole sady řádků. `COleDBRecordView` také poskytuje výchozí implementaci pro přesun na první další, předchozí nebo poslední záznam a rozhraní pro aktualizaci záznamu aktuálně pro zobrazení.  
+ Zobrazení je připojený přímo k zobrazení formuláře `CRowset` objektu. Toto zobrazení je vytvořen z prostředků šablony dialogového okna a zobrazí pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna. `COleDBRecordView` Objektu používá výměna dat dialogových oken (DDX) a navigačních funkce součástí `CRowset`, automatizovat přesouvání dat mezi ovládacími prvky ve formuláři a polí v sadě řádků. `COleDBRecordView` také poskytuje výchozí implementaci pro přechod na první další, předchozí nebo poslední záznam a rozhraní pro aktualizace záznamu aktuálně pro zobrazení.  
   
- Můžete použít funkce DDX s **COleDbRecordView** získat data přímo ze záznamů databáze a zobrazit ji v dialogovém okně ovládacího prvku. Byste měli používat **DDX_\***  metody (například `DDX_Text`), nikoli **DDX_Field –\***  funkce (například `DDX_FieldText`) s **COleDbRecordView** . `DDX_FieldText` nebude fungovat se **COleDbRecordView** protože `DDX_FieldText` používá další argument typu **CRecordset\***  (pro `CRecordView`) nebo **CDaoRecordset\***  (pro `CDaoRecordView`).  
+ Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Byste měli použít **DDX_\***  metody (jako `DDX_Text`), nikoli **DDX_Field –\***  funkce (například `DDX_FieldText`) s `COleDbRecordView`. `DDX_FieldText` nebude fungovat s `COleDbRecordView` protože `DDX_FieldText` přijímá další argument typu **CRecordset\***  (pro `CRecordView`) nebo **CDaoRecordset\***  (pro `CDaoRecordView`).  
   
 > [!NOTE]
->  Pokud pracujete s třídy objektů DAO (Data Access), nikoli třídy šablony příjemce technologie OLE DB, použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: programování databáze](../../data/data-access-programming-mfc-atl.md).  
+>  Pokud pracujete s třídami objektů DAO (Data Access), a ne třídy šablona příjemce technologie OLE DB, použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: databáze programování](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView` uchovává informace o pozici uživatele v dané sadě řádků tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Pokud se uživatel přesune na obou koncích sady řádků, zobrazení záznamu zakáže objekty uživatelského rozhraní – například položek nabídky nebo tlačítka panelu nástrojů – pro přesun další ve stejném směru.  
+ `COleDBRecordView` uchovává informace o poloze uživatele v dané sadě řádků tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Když uživatel přesune na oba konce řádků, zobrazení záznamů zakáže objektů uživatelského rozhraní, jako je například položky nabídky nebo tlačítka na panelu nástrojů – pro přesun dále ve stejném směru.  
   
  Další informace o třídy sady řádků, najdete v článku [pomocí OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md) článku.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -74,9 +74,9 @@ class COleDBRecordView : public CFormView
   
  [CView](../../mfc/reference/cview-class.md)  
   
- [CScrollView](../../mfc/reference/cscrollview-class.md)  
+ [Cscrollview –](../../mfc/reference/cscrollview-class.md)  
   
- [Třídy CFormView](../../mfc/reference/cformview-class.md)  
+ [CFormView](../../mfc/reference/cformview-class.md)  
   
  `COleDBRecordView`  
   
@@ -93,19 +93,19 @@ COleDBRecordView(UINT nIDTemplate);
   
 ### <a name="parameters"></a>Parametry  
  *lpszTemplateName*  
- Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony dialogového okna.  
+ Obsahuje řetězec zakončený hodnotou null, který je název prostředku šablony dialogového okna.  
   
  *nIDTemplate*  
- Obsahuje číslo ID prostředku šablony dialogového okna.  
+ Obsahuje identifikační číslo prostředku šablony dialogového okna.  
   
 ### <a name="remarks"></a>Poznámky  
- Když vytvoříte objekt typ odvozený z `COleDBRecordView`, vyvolat jeden z konstruktorů vytvořit objekt zobrazení a identifikovat prostředku dialogového okna, na kterých je založena zobrazení. Prostředek můžete identifikovat pomocí názvu (pass řetězec jako argument konstruktoru) nebo pomocí jejího ID (pass celé číslo bez znaménka jako argument).  
+ Při vytváření objektu typu odvozené z `COleDBRecordView`, vyvolat jeden z konstruktorů k vytvoření objektu zobrazení a k identifikaci prostředku dialogového okna, na kterých je založena zobrazení. Název (pass řetězec jako argument konstruktoru) nebo jeho ID (pass celé číslo bez znaménka jako argument) můžete identifikovat prostředek.  
   
 > [!NOTE]
->  Odvozené třídy *musí* zadat vlastní konstruktor. V konstruktoru, vyvolat konstruktor, `COleDBRecordView::COleDBRecordView`, s názvem prostředků nebo ID jako argument.  
+>  Odvozené třídy *musí* zadat vlastní konstruktor. V konstruktoru, vyvolání konstruktoru, `COleDBRecordView::COleDBRecordView`, s názvem prostředku nebo ID jako argument.  
   
 ##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
- Vrátí popisovač pro **CRowset <>** objekt přidružený k zobrazení záznamu.  
+ Vrátí obslužnou rutinu pro **CRowset <>** objekt přidružený k zobrazení záznamu.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
@@ -113,21 +113,21 @@ virtual CRowset<>* OnGetRowset() = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Člen funkci Vytvořit nebo získat objektu sady řádků a vrácení popisovače musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací popisovač řádků uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objektu sady řádků typu zadán s ClassWizard a volání jeho `Open` člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí popisovač k objektu.  
+ Je nutné přepsat tuto členskou funkci sestavit nebo získání objektu sady řádků a vrátí popisovač do něj. Pokud deklarujete vaší třídy zobrazení záznamu s ClassWizard, zapíše průvodce přepsáním výchozího nastavení. ClassWizard výchozí implementace vrací popisovač řádků uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objektu sady řádků typu zadán s ClassWizard a volání jeho `Open` členské funkce Otevřít v tabulce nebo spustit dotaz a vrátí popisovač objektu.  
   
 > [!NOTE]
->  Předchozí MFC 7.0 `OnGetRowset` vrátil ukazatel na `CRowset`. Pokud máte kód, který volá `OnGetRowset`, budete muset změnit návratový typ k třídě šablonou **CRowset <>**.  
+>  Vytváření knihovny MFC 7.0 `OnGetRowset` vrátí ukazatel na `CRowset`. Pokud máte kód, který volá `OnGetRowset`, budete muset změnit návratový typ pro třídu přepsaly **CRowset <>**.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- Další informace a příklady naleznete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
+ Další informace a příklady najdete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove  
- Přesune na jiný záznam v sadě řádků a zobrazení zobrazit jeho polí v ovládacích prvcích záznamu.  
+ Zobrazení polí v ovládacích prvcích záznamu přesune na jiný záznam v sadě řádků a zobrazení.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -135,27 +135,27 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
   
 ### <a name="parameters"></a>Parametry  
  *nIDMoveCommand*  
- Jedna z následujících hodnot ID standardních příkazů:  
+ Jeden z následujících hodnot ID standardních příkazů:  
   
-- `ID_RECORD_FIRST` – Přesunout na první záznam v sadě záznamů.  
+- ID_RECORD_FIRST – Přesunout na první záznam v sadě záznamů.  
   
-- `ID_RECORD_LAST` – Přesunete na poslední záznam v sadě záznamů.  
+- ID_RECORD_LAST – Přechod na poslední záznam v sadě záznamů.  
   
-- `ID_RECORD_NEXT` – Přejděte na další záznam v sadě záznamů.  
+- ID_RECORD_NEXT – Přesune na další záznam v sadě záznamů.  
   
-- `ID_RECORD_PREV` – Přesunout do předchozího záznamu v sadě záznamů.  
+- ID_RECORD_PREV – Přesunout na předchozí záznam v sadě záznamů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud byl přesun úspěšný; jinak hodnota 0, pokud žádost o přesunutí byl odepřen.  
+ Nenulové, pokud bylo přesunutí úspěšné; jinak 0, pokud žádost o přesunutí byl odepřen.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace volá odpovídající `Move` členské funkce `CRowset` objekt přidružený k zobrazení záznamu.  
+ Výchozí implementace volá odpovídající `Move` členskou funkci `CRowset` objekt přidružený k zobrazení záznamu.  
   
- Ve výchozím nastavení `OnMove` aktualizuje na aktuální záznam ve zdroji dat, pokud uživatel se změnilo v zobrazení záznamů.  
+ Ve výchozím nastavení `OnMove` aktualizuje aktuální záznam ve zdroji dat, pokud uživatel byl změněn v zobrazení záznamů.  
   
- V Průvodce vytvořením aplikace vytvoří prostředek nabídky k položkám nabídky první záznam, poslední záznam, další záznam a předchozího záznamu. Pokud vyberete možnost lze ukotvit nástrojů, aplikace Průvodce také vytvoří panel nástrojů s tlačítka odpovídající tyto příkazy.  
+ Průvodce aplikace vytvoří prostředek nabídky s první záznam, poslední záznam, další záznam a předchozí záznam položky nabídky. Pokud vyberete možnost Ukotvitelné nástrojů, Průvodce aplikací také vytvoří panel nástrojů s tlačítky odpovídající tyto příkazy.  
   
- Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů stále zobrazuje poslední záznam. Pokud přesunete zpátky po první záznam, zobrazení záznamů stále zobrazuje na první záznam.  
+ Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů stále zobrazuje poslední záznam. Pokud přejdete zpět za první záznam, zobrazení záznamů nepřestává zobrazovat první záznam.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)

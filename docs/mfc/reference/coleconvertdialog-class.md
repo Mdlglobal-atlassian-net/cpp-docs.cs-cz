@@ -1,5 +1,5 @@
 ---
-title: Třída COleConvertDialog | Microsoft Docs
+title: Coleconvertdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042518"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849680"
 ---
-# <a name="coleconvertdialog-class"></a>COleConvertDialog – třída
-Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura ve Windows SDK.  
+# <a name="coleconvertdialog-class"></a>Coleconvertdialog – třída
+Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,12 +60,12 @@ class COleConvertDialog : public COleDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleConvertDialog::DoConvert](#doconvert)|Provede zadané v dialogovém okně Převod.|  
+|[COleConvertDialog::DoConvert](#doconvert)|Provádí převod zadané v dialogovém okně.|  
 |[COleConvertDialog::DoModal](#domodal)|Zobrazí dialogové okno OLE změnu položky.|  
-|[COleConvertDialog::GetClassID](#getclassid)|Získá **CLSID** přidružené k vybrané položce.|  
-|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|Určuje, jestli se k vykreslení položky jako ikona.|  
-|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač pro metafile přidružené ikony formu této položky.|  
-|[COleConvertDialog::GetSelectionType](#getselectiontype)|Získá typ výběru vybrali.|  
+|[COleConvertDialog::GetClassID](#getclassid)|Získá identifikátor CLSID přidružené k vybrané položce.|  
+|[COleConvertDialog::GetDrawAspect](#getdrawaspect)|Určuje, jestli se má kreslit položky jako ikona.|  
+|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač pro tento metasoubor spojené s formuláři ikonickým této položky.|  
+|[COleConvertDialog::GetSelectionType](#getselectiontype)|Získá typ výběru zvolili.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -76,12 +76,12 @@ class COleConvertDialog : public COleDialog
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Kód aplikace generované v Průvodci kontejneru používá tuto třídu.  
+>  Generované průvodcem kontejneru kódu aplikace používá tuto třídu.  
   
- Další informace o dialogových oknech OLE specifické, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -89,9 +89,9 @@ class COleConvertDialog : public COleDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
- [COleDialog](../../mfc/reference/coledialog-class.md)  
+ [Coledialog –](../../mfc/reference/coledialog-class.md)  
   
  `COleConvertDialog`  
   
@@ -111,26 +111,26 @@ explicit COleConvertDialog (
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Odkazuje na položku, kterou chcete převést nebo aktivovat.  
+ Odkazuje na položky, která má být převeden nebo aktivovat.  
   
  *dwFlags*  
- Vytvoření příznak, který obsahuje libovolný počet následující hodnoty spojovat pomocí bitové hodnotě – operátor or:  
+ Vytvoření příznak, který bude obsahovat libovolný počet následující hodnoty kombinované pomocí bitového – operátor or:  
   
-- **CF_SELECTCONVERTTO** Určuje, že přepínač převést na vybere původně při volání dialogové okno. Toto nastavení je výchozí.  
+- CF_SELECTCONVERTTO Určuje, které se bude přepínač převést na vybrané zpočátku když je volána dialogových oken. Toto nastavení je výchozí.  
   
-- **CF_SELECTACTIVATEAS** Určuje, že přepínač aktivovat jako vybere původně při volání dialogové okno.  
+- CF_SELECTACTIVATEAS Určuje, které se bude přepínač aktivovat jako vybraná zpočátku když je volána dialogových oken.  
   
-- **CF_SETCONVERTDEFAULT** Určuje, že třída jejichž **CLSID** je zadána **clsidConvertDefault** členem `m_cv` struktura se použije jako výchozí výběr v seznamu tříd zaškrtnuto políčko převést na přepínač.  
+- CF_SETCONVERTDEFAULT Určuje, že třídy, jejíž identifikátor CLSID určený pomocí `clsidConvertDefault` člena `m_cv` struktura se použije jako výchozí výběr v seznamu tříd, pokud je vybrána přepínač převést na.  
   
-- **CF_SETACTIVATEDEFAULT** Určuje, že třída jejichž **CLSID** je zadána **clsidActivateDefault** členem `m_cv` struktura bude sloužit jako výchozí Výběr v seznamu Třída při aktivaci jako přepínač vybrán.  
+- CF_SETACTIVATEDEFAULT Určuje, že třídy, jejíž identifikátor CLSID určený pomocí `clsidActivateDefault` člena `m_cv` struktura se použije jako výchozí výběr v seznamu tříd, pokud je vybrána přepínací tlačítko Aktivovat jako.  
   
-- **CF_SHOWHELPBUTTON** Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
+- CF_SHOWHELPBUTTON Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogových oken.  
   
  *pClassID má*  
- Body CLSID položku, kterou chcete převést nebo aktivovat. Pokud **NULL**, **CLSID** přidružené *pItem* se použije.  
+ Odkazuje na identifikátor CLSID položka, která má být převeden nebo aktivovat. Pokud má hodnotu NULL, identifikátor CLSID přidružené *pItem* se použije.  
   
  *pParentWnd*  
- Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna nastavena na hlavní okno aplikace.  
+ Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nadřazené okno dialogového okna je nastaveno na hlavního okna aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.  
@@ -138,7 +138,7 @@ explicit COleConvertDialog (
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) a [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktury.  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
- Volání této funkce po vrácení úspěšně z [DoModal](#domodal), buď převést nebo aktivovat objekt typu [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
+ Tato funkce se volá po vrácení úspěšně z [DoModal](#domodal)– buď k převodu nebo aktivovat objekt typu [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
 BOOL DoConvert(COleClientItem* pItem);
@@ -146,52 +146,52 @@ BOOL DoConvert(COleClientItem* pItem);
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Odkazuje na položku, kterou chcete převést nebo aktivovat. Nemůže být **NULL**.  
+ Odkazuje na položky, která má být převeden nebo aktivovat. Nemůže mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Převést nebo aktivovat podle informace uživatelem v dialogovém okně Převést vybrané položky.  
+ Položka je převeden nebo aktivovanou podle vybrané uživatelem v dialogovém okně Převést informace.  
   
 ##  <a name="domodal"></a>  COleConvertDialog::DoModal  
- Volání této funkce můžete zobrazit dialogové okno Převést OLE.  
+ Voláním této funkce zobrazíte dialogové okno Převést OLE.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav dokončení pro dialogové okno. Jedna z následujících hodnot:  
+ Stav dokončení pro dialogové okno. Jeden z následujících hodnot:  
   
-- **IDOK** Pokud úspěšně zobrazí dialogové okno.  
+- IDOK, pokud úspěšně zobrazí dialogové okno.  
   
-- **IDCANCEL** Pokud uživatel zrušil dialogové okno.  
+- IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- **IDABORT** Pokud došlo k chybě. Pokud **IDABORT** se volání vrátí, [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) – členská funkce získat další informace o typu Chyba, že došlo k chybě. Seznam možné chyby, najdete v článku [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) funkce ve Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různých dialogové okno Ovládací prvky nastavením členy [m_cv](#m_cv) struktura, bude třeba provést před voláním `DoModal`, ale po objektu dialogového okna je vytvořený.  
+ Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_cv](#m_cv) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
   
- Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo informace, které se vstup uživatelem na dialogové okno.  
+ Pokud `DoModal` vrátí IDOK, můžete volat ostatní členské funkce k načtení nastavení nebo informace, které se vstup uživatelem do dialogových oken.  
   
 ##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
- Volání této funkce můžete získat **CLSID** přidružené k položce vyberte v dialogovém okně Převést uživatele.  
+ Volání této funkce získáte identifikátor CLSID přidružené k položce vybrané v dialogovém okně Převést uživatele.  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **CLSID** přidružené k položce, který byl vybrán v dialogovém okně Převést.  
+ Identifikátor CLSID přidružené k položce, která byla vybrána v dialogovém okně Convert.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce až po volání [DoModal](#domodal) vrátí **IDOK**.  
+ Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.  
   
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
- Volání této funkce určete, zda se uživatel rozhodl zobrazit vybranou položku jako ikonu.  
+ Voláním této funkce určete, jestli se uživatel rozhodl zobrazení vybrané položky jako ikona.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
@@ -200,37 +200,37 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Metoda potřebné k vykreslení objektu.  
   
-- `DVASPECT_CONTENT` Vrátí, pokud není zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.  
+- DVASPECT_CONTENT vrácena, pokud není zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.  
   
-- `DVASPECT_ICON` Vrátí, pokud byl zaškrtnutí zaškrtávacího políčka Zobrazit jako ikonu.  
+- DVASPECT_ICON vrácena, pokud je zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce až po volání [DoModal](#domodal) vrátí **IDOK**.  
+ Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.  
   
- Další informace o kreslení aspekt najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura dat ve Windows SDK.  
+ Další informace o aspekt kreslení, najdete v článku [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) datové struktury v sadě Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
- Volání této funkce se získat popisovač pro metafile, který obsahuje ikony aspekt vybrané položky.  
+ Voláním této funkce se získat popisovač pro tento metasoubor obsahující ikonickým aspekt vybranou položku.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač metafile obsahující ikony aspekt vybrané položky, pokud byl zaškrtněte políčko Zobrazit jako ikonu zaškrtnutí, když se tak, že zvolíte zavřel dialogové okno **OK**jinak **NULL**.  
+ Popisovač pro tento metasoubor obsahující ikonickým aspekt vybranou položku, pokud se zaškrtávací políčko Zobrazit jako ikonu zaškrtnutí, když výběrem OK; zavřel dialogové okno v opačném případě hodnota NULL.  
   
 ##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
- Volání této funkce se zjistit typ převodu vybrané v dialogovém okně Převést.  
+ Voláním této funkce určit typ převodu vybrané v dialogovém okně Convert.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Typ provedeného výběru.  
+ Typ výběru.  
   
 ### <a name="remarks"></a>Poznámky  
- Návratový typ hodnoty jsou určené **výběr** typ výčtu deklarované v `COleConvertDialog` – třída.  
+ Typ vrácené hodnoty jsou určeny `Selection` typ výčtu deklarovaný v `COleConvertDialog` třídy.  
   
 ```  
 enum Selection {
@@ -242,25 +242,25 @@ enum Selection {
   
  Postupujte podle stručný popis těchto hodnot:  
   
-- **COleConvertDialog::noConversion** vrátil Pokud buď byla zrušena dialogové okno, nebo uživatel vybraný žádný převod. Pokud `COleConvertDialog::DoModal` vrátil **IDOK**, je možné, že vybraný uživatel jinou ikonu, než byla předtím vybrali.  
+- `COleConvertDialog::noConversion` Vrátí Pokud dialogové okno byla zrušena nebo uživatel vybral žádný převod. Pokud `COleConvertDialog::DoModal` vrátil IDOK, je možné, že uživatel vybral jinou ikonu než dříve vybraný.  
   
-- **COleConvertDialog::convertItem** vrácena, pokud byla zaškrtnutá přepínač převést na, uživatel vybrat jinou položku převést, a `DoModal` vrátil **IDOK**.  
+- `COleConvertDialog::convertItem` Vrátí, pokud došlo k zaškrtnutí přepínač převést na, uživatel vybral jiná položka převést, a `DoModal` vrátil IDOK.  
   
-- **COleConvertDialog::activateAs** vrácena, pokud byl zaškrtnutí přepínač aktivovat jako uživatel vybral jinou položku chcete aktivovat, a `DoModal` vrátil **IDOK**.  
+- `COleConvertDialog::activateAs` Vrátí, pokud došlo k zaškrtnutí přepínač aktivovat jako uživatel vybral jinou položku, pokud chcete aktivovat, a `DoModal` vrátil IDOK.  
   
 ##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
- Struktura typu **OLEUICONVERT** používat k ovládání chování dialogové okno Převést.  
+ Struktura typu OLEUICONVERT používat k ovládání chování dialogové okno Převést.  
   
 ```  
 OLEUICONVERT m_cv;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členy této struktury lze změnit buď přímo nebo prostřednictvím členských funkcí.  
+ Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [COleDialog – třída](../../mfc/reference/coledialog-class.md)   
+ [Coledialog – třída](../../mfc/reference/coledialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [COleDialog – třída](../../mfc/reference/coledialog-class.md)

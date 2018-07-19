@@ -1,5 +1,5 @@
 ---
-title: Třída IPerPropertyBrowsingImpl | Microsoft Docs
+title: Iperpropertybrowsingimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9fffd6151405eaf53e99f770281139d7664b01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364905"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883102"
 ---
-# <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl – třída
-Tato třída implementuje **IUnknown** a umožňuje klientům přístup k informacím na stránkách vlastností objektu.  
+# <a name="iperpropertybrowsingimpl-class"></a>Iperpropertybrowsingimpl – třída
+Tato třída implementuje `IUnknown` a umožňuje klientům přístup k informacím na stránkách vlastností objektu.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,8 +46,8 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `IPerPropertyBrowsingImpl`.  
+ *T*  
+ Vaše třída odvozena od `IPerPropertyBrowsingImpl`.  
   
 ## <a name="members"></a>Členové  
   
@@ -56,17 +56,17 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 |Název|Popis|  
 |----------|-----------------|  
 |[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|Načte řetězec popisující dané vlastnosti.|  
-|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|Načte pole řetězců odpovídající hodnoty, které může přijmout dané vlastnosti.|  
-|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|Načte **VARIANT** obsahující hodnotu vlastnosti identifikovaný dané DISPID. DISPID je spojena s název řetězce načítají `GetPredefinedStrings`. Implementace ATL vrátí **E_NOTIMPL**.|  
-|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|Načte CLSID ze stránky vlastností, které jsou přidružené k dané vlastnosti.|  
+|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|Načte pole řetězce odpovídající hodnoty, které přijímají dané vlastnosti.|  
+|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|Načte hodnotu typu VARIANT obsahující hodnotu vlastnosti identifikovaný daný identifikátor DISPID. Hodnota DISPID souvisí s názvem řetězec získaných `GetPredefinedStrings`. Implementace knihovny ATL vrátí E_NOTIMPL.|  
+|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|Načte identifikátor CLSID stránky vlastností, které jsou přidružené k dané vlastnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432) rozhraní umožňuje klientům přístup k informacím na stránkách vlastností objektu. Třída `IPerPropertyBrowsingImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje **IUnknown** posíláním informací o k výpisu zařízení ladění sestavení.  
+ [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432) rozhraní umožňuje klientům přístup k informacím na stránkách vlastností objektu. Třída `IPerPropertyBrowsingImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
 > [!NOTE]
->  Pokud používáte Microsoft Access jako kontejner aplikace, musí být odvozeny třídě z `IPerPropertyBrowsingImpl`. Přístup, jinak hodnota nenačte vlastního ovládacího prvku.  
+>  Pokud používáte Microsoft Access jako aplikace typu kontejner, musíte odvodit třídu z `IPerPropertyBrowsingImpl`. V opačném případě přístup nenačte ovládacího prvku.  
   
- **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IPerPropertyBrowsing`  
@@ -86,10 +86,10 @@ STDMETHOD(GetDisplayString)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) ve Windows SDK.  
   
 ##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings  
- Doplní každé pole s nulové položky.  
+ Vyplní jednotlivá pole s nulovou položky.  
   
 ```
 STDMETHOD(GetPredefinedStrings)(
@@ -99,13 +99,13 @@ STDMETHOD(GetPredefinedStrings)(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Implementace je ATL [GetPredefinedValue](#getpredefinedvalue) vrátí **E_NOTIMPL**.  
+ Implementace ATL [GetPredefinedValue](#getpredefinedvalue) vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) ve Windows SDK.  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
- Načte **VARIANT** obsahující hodnotu vlastnosti identifikovaný dané DISPID. DISPID je spojena s název řetězce načítají `GetPredefinedStrings`.  
+ Načte hodnotu typu VARIANT obsahující hodnotu vlastnosti identifikovaný daný identifikátor DISPID. Hodnota DISPID souvisí s názvem řetězec získaných `GetPredefinedStrings`.  
   
 ```
 STDMETHOD(GetPredefinedValue)(
@@ -115,15 +115,15 @@ STDMETHOD(GetPredefinedValue)(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **E_NOTIMPL**.  
+ Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementace je ATL [GetPredefinedStrings](#getpredefinedstrings) načte žádné odpovídající řetězce.  
+ Implementace ATL [GetPredefinedStrings](#getpredefinedstrings) načte žádné odpovídající řetězce.  
   
- V tématu [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) ve Windows SDK.  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
- Načte identifikátor CLSID její stránku vlastností, které jsou přidružené k zadané vlastnosti.  
+ Načte identifikátor CLSID stránky vlastností související se zadanou vlastností.  
   
 ```
 STDMETHOD(MapPropertyToPage)(
@@ -132,11 +132,11 @@ STDMETHOD(MapPropertyToPage)(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- ATL používá mapa vlastností objektu k získání těchto informací.  
+ Mapy vlastností objektu ATL používá pro získání těchto informací.  
   
- V tématu [IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) ve Windows SDK.  
+ Zobrazit [IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [IPropertyPageImpl – třída](../../atl/reference/ipropertypageimpl-class.md)   
+ [Ipropertypageimpl – třída](../../atl/reference/ipropertypageimpl-class.md)   
  [ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

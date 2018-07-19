@@ -1,5 +1,5 @@
 ---
-title: Makra COM Map | Microsoft Docs
+title: Makra COM Map | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358420"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879306"
 ---
 # <a name="com-map-macros"></a>Makra COM Map
-Tyto makra definovat COM rozhraní mapy.  
+Tato makra definují mapy rozhraní modelu COM.  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|Označuje začátek položek mapování rozhraní COM.|  
-|[END_COM_MAP](#end_com_map)|Označuje konec položek mapování rozhraní COM.|  
+|[BEGIN_COM_MAP](#begin_com_map)|Označuje začátek položek mapování rozhraní modelu COM.|  
+|[END_COM_MAP](#end_com_map)|Označuje konec položky map rozhraní COM.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- Mapa COM je mechanismus, který zveřejňuje rozhraní objektu klientovi prostřednictvím `QueryInterface`.  
+ Mapy modelu COM je mechanismus, který poskytuje rozhraní pro objekt do klienta prostřednictvím `QueryInterface`.  
   
 ```
 BEGIN_COM_MAP(x)
@@ -44,14 +44,14 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- [v] Název objektu třídy jsou zpřístupňuje rozhraní na.  
+ [in] Název objektu třídy, které jsou vystaveny rozhraní na.  
   
 ### <a name="remarks"></a>Poznámky  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) vrátí pouze ukazatele pro rozhraní COM mapy. Spuštění mapy rozhraní s `BEGIN_COM_MAP` makro, přidejte položky pro každý z vašich rozhraní s [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) makro nebo jednoho z jeho variant a dokončete mapa s [END_COM_MAP](#end_com_map) makro.  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) pouze v objektu map COM vrací ukazatele pro rozhraní. Mapy rozhraní začínat – makro BEGIN_COM_MAP, přidejte položky pro každý z vašich rozhraní s [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) – makro nebo jeden z jeho variant a dokončete mapy s [END_COM_MAP](#end_com_map) makra.  
 
   
 ### <a name="example"></a>Příklad  
- Z knihovny ATL [BEEPER](../../visual-cpp-samples.md) ukázka:  
+ Z knihovny ATL [BEEPER](../../visual-cpp-samples.md) vzorku:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   

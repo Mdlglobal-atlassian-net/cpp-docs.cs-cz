@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCMaskedEdit | Microsoft Docs
+title: Cmfcmaskededit – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040100"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849468"
 ---
-# <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit – třída
-`CMFCMaskedEdit` Třída podporuje ovládací prvek maskované pole, která ověří vstup uživatele s maskou a zobrazí výsledky ověřené podle šablony.  
+# <a name="cmfcmaskededit-class"></a>Cmfcmaskededit – třída
+`CMFCMaskedEdit` Třída podporuje maskovaného ovládacího prvku, který ověřuje vstup uživatele v porovnání s maskou a zobrazí ověřené výsledky podle šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,52 +64,52 @@ class CMFCMaskedEdit : public CEdit
 |Název|Popis|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Zakáže ověřování uživatelského vstupu.|  
-|[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Určuje, zda `GetWindowText` metoda načte pouze maskované znaky.|  
+|[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Určuje, zda `GetWindowText` metoda načte pouze maskované znaků.|  
 |[CMFCMaskedEdit::EnableMask](#enablemask)|Inicializuje maskované ovládacích prvků pro úpravy.|  
-|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Určuje, zda ovládací prvek maskované pole vybere konkrétní skupiny vstup uživatele nebo zadání od všechny uživatele.|  
-|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Určuje, zda text bude ověřeno jen maskovat znaků, nebo pro celý maska.|  
-|`CMFCMaskedEdit::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
+|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Určuje, zda maskované textové pole vybere konkrétní skupiny uživatelský vstup nebo vstup všechny uživatele.|  
+|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Určuje, zda text je ověřen vůči jen maskované znaků, nebo proti celý masky.|  
+|`CMFCMaskedEdit::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
 |[CMFCMaskedEdit::GetWindowText](#getwindowtext)|Načte ověřit text z maskované textové pole.|  
 |[CMFCMaskedEdit::SetValidChars](#setvalidchars)|Určuje řetězec platné znaky, které může uživatel zadat.|  
-|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Zobrazí výzvu v maskované textové pole.|  
+|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Zobrazí příkazový řádek v maskované textové pole.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Voláno rámcem k ověření je zadaný znak proti odpovídající znak masky.|  
+|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Volá se rozhraním pro ověření zadaného znaku podle odpovídajícího znaku masky.|  
   
 ## <a name="remarks"></a>Poznámky  
- Proveďte následující kroky a použít `CMFCMaskedEdit` ovládacího prvku ve vaší aplikaci:  
+ Proveďte následující kroky a použít `CMFCMaskedEdit` ovládací prvek ve vaší aplikaci:  
   
- 1. Vložení `CMFCMaskedEdit` objektu do vaší třídy oken.  
+ 1. Vložit `CMFCMaskedEdit` objektu do vaší třídy okna.  
   
- 2. Volání [CMFCMaskedEdit::EnableMask](#enablemask) metoda k určení maska.  
+ 2. Volání [CMFCMaskedEdit::EnableMask](#enablemask) metody zadejte masku.  
   
- 3. Volání [CMFCMaskedEdit::SetValidChars](#setvalidchars) metoda zadat seznam platné znaky.  
+ 3. Volání [CMFCMaskedEdit::SetValidChars](#setvalidchars) metoda určení seznamu platné znaky.  
   
- 4. Volání [CMFCMaskedEdit::SetWindowText](#setwindowtext) metodu zadat výchozí text maskované ovládacích prvků pro úpravy.  
+ 4. Volání [CMFCMaskedEdit::SetWindowText](#setwindowtext) metodu pro určení výchozí text maskovaný ovládací prvek textové pole.  
   
- 5. Volání [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodu za účelem načtení ověřené textu.  
+ 5. Volání [CMFCMaskedEdit::GetWindowText](#getwindowtext) metody k získání ověřeného text.  
   
- Pokud Nevolejte jedné nebo několika metod k chybě při inicializaci maska, platné znaky a výchozí text, ovládací prvek maskované pole se chová stejně jako chová standardní textové pole.  
+ Pokud nebude volat jednu nebo více metod se inicializovat maska, platné znaky a výchozí text, maskované textové pole se chová stejně jako standardní textovém poli se chová.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak nastavit masku (například telefonní číslo) pomocí `EnableMask` metodu pro vytvoření maska pro maskovaný ovládací prvky, upravovat `SetValidChars` zadat řetězec platné znaky, které můžete zadat uživatele a –Metoda`SetWindowText` metodu pro zobrazení na řádku v maskované ovládacích prvků pro úpravy. Tato ukázka je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak nastavit masku (například telefonní číslo) pomocí `EnableMask` metodu pro vytvoření maska pro maskované upravit ovládací prvek, `SetValidChars` metoda zadat řetězec platné znaky, které může uživatel zadat a `SetWindowText` metodu pro zobrazení výzvy v maskovaný ovládací prvek textové pole. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CEdit](../../mfc/reference/cedit-class.md)  
+ [Cedit –](../../mfc/reference/cedit-class.md)  
   
- [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)  
+ [Cmfcmaskededit –](../../mfc/reference/cmfcmaskededit-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmaskededit.h  
@@ -122,21 +122,21 @@ void DisableMask();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je zakázáno ověřování vstupu uživatele, se chová jako standardní ovládacích prvků pro úpravy maskované textové pole.  
+ Pokud je zakázané ověřování uživatelského vstupu, maskované textové pole se chová jako standardní ovládací prvek textové pole.  
   
 ##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly  
- Určuje, zda `GetWindowText` metoda načte pouze maskované znaky.  
+ Určuje, zda `GetWindowText` metoda načte pouze maskované znaků.  
   
 ```  
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li určit, že [CMFCMaskedEdit::GetWindowText](#getwindowtext) metoda načíst pouze maskovat znaků; `FALSE` k určení, že metoda načíst celý text. Výchozí hodnota je `TRUE`.  
+ [in] *bEnable*  
+ PRAVDA, pokud chcete určit, že [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodu načtení pouze maskované znaků. FALSE, pokud chcete určit, že metodu načtení celého textu. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte, chcete-li povolit načítání maskované znaků. Pak vytvořte maskované textové pole, která odpovídá telefonní číslo, například (425) 555-0187. Když zavoláte `GetWindowText` metoda, vrátí "4255550187". Pokud zakážete načítání maskované znaky, `GetWindowText` metoda vrátí text, který se zobrazí v ovládacím prvku upravit, například "(425) 555-0187".  
+ Pomocí této metody můžete povolit načítání maskované znaků. Pak vytvořte maskované textové pole, která odpovídá telefonní číslo, například (425) 555-0187. Při volání `GetWindowText` metody, vrátí "4255550187". Pokud zakážete načítání maskované znaků `GetWindowText` metoda vrací text, který se zobrazí v textovém poli, například "(425) 555-0187".  
   
 ##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  Inicializuje maskované ovládacích prvků pro úpravy.  
@@ -150,51 +150,51 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszMask*  
- Maska řetězec, který určuje typ znak, který může vyskytovat na každý pozici v vstupu uživatele. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné. Najdete v části poznámky pro více podrobností o maska znaků.  
+ [in] *lpszMask*  
+ Maska řetězec, který určuje typ znaku, který se může zobrazit na každou pozici v vstupu uživatele. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné. Další podrobnosti o znaky masky v části poznámky.  
   
- [v] *lpszInputTemplate*  
- Řetězec masky šablony, která určuje, že je literál znaků, který se může zobrazit na každý pozici v vstupu uživatele. Použijte znak podtržítka (_) jako zástupný znak. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné.  
+ [in] *lpszInputTemplate*  
+ Řetězec masky šablony, která určuje, že je literál znaků, které se může zobrazit na každé pozici ve vstupu uživatele. Použijte znak podtržítka ("_") jako zástupný znak. Délka *lpszInputTemplate* a *lpszMask* parametr řetězce musí být stejné.  
   
- [v] *chMaskInputTemplate*  
- Výchozí znak, který nahradí název rozhraní pro každý neplatný znak v vstupu uživatele. Výchozí hodnota tohoto parametru je podtržítko (_).  
+ [in] *chMaskInputTemplate*  
+ Výchozí znak, který rozhraní provede nahrazení pro každý neplatný znak v vstupu uživatele. Výchozí hodnota tohoto parametru je podtržítko (_).  
   
- [v] *lpszValid*  
- Řetězec, který obsahuje sadu platné znaky. `NULL` Určuje, zda jsou všechny znaky platné. Výchozí hodnota tohoto parametru je `NULL`.  
+ [in] *lpszValid*  
+ Řetězec, který obsahuje sadu platných znaků. Hodnota NULL označuje, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k vytvoření masky pro ovládací prvek maskované pole. Odvození třídy z `CMFCMaskedEdit` třídy a přepsat [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metody vlastní kód pro zpracování vlastní masky.  
+ Pomocí této metody můžete vytvořit maska maskované textové pole. Odvodit třídu z `CMFCMaskedEdit` třídy a přepsat [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metodu použít vlastní kód pro zpracování vlastní masku.  
   
- V následující tabulce je seznam výchozích maska znaků:  
+ V následující tabulce seznamu výchozích maska znaků:  
   
 |Znak masky|Definice|  
 |--------------------|----------------|  
 |D|Číslice.|  
 |d|Číslice nebo mezera.|  
-|+|Plus ('+ '), minus ('-'), nebo místo.|  
-|C|Znak abecedy.|  
-|c|Znak abecedy nebo místa.|  
+|+|Plus ('+ '), minus ("-"), nebo místo.|  
+|C|Abecední znak.|  
+|c|Abecední znak nebo znak.|  
 |OBJEKT|Alfanumerický znak.|  
-|a|Alfanumerický znak nebo místa.|  
-|*|Tisknutelná znak.|  
+|a|Alfanumerický znak nebo znak.|  
+|*|Tisknutelný znak.|  
   
 ##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
- Určuje, zda ovládací prvek maskované pole umožňuje uživateli vyberte konkrétní skupiny vstup nebo všechny vstupy.  
+ Určuje, zda maskované textové pole umožňuje uživateli vybrat konkrétní skupiny vstup nebo všechny vstupy.  
   
 ```  
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li vybrat jenom skupiny; `FALSE` vyberte celý text. Výchozí hodnota je `TRUE`.  
+ [in] *bEnable*  
+ TRUE, pokud chcete vybrat jenom skupiny. FALSE, pokud chcete vybrat celý text. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete určit, zda ovládací prvek maskované pole umožňuje uživateli vybrat podle skupiny nebo celý text.  
+ Tuto funkci použijte k určení, zda maskované textové pole umožňuje uživateli vybrat podle skupiny nebo celého textu.  
   
- Ve výchozím nastavení je povolen výběr skupinou. V takovém případě může uživatel vybrat pouze souvislé skupiny platné znaky.  
+ Ve výchozím nastavení je povolen výběr podle skupiny. V tomto případě může uživatel vybrat pouze průběžné skupiny platné znaky.  
   
- Například můžete použít následující ovládací prvek maskované pole ověření telefonní číslo:  
+ Například můžete použít následující maskované textové pole pro ověření telefonní číslo:  
   
  `m_wndMaskEdit.EnableMask(`  
   
@@ -208,18 +208,18 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
   
- Pokud je povolen výběr skupinou, uživatel může načíst jenom "425", "555" nebo "0187" řetězec skupiny. Pokud je zakázána výběr skupiny uživatele můžete načíst celý text telefonní číslo: "(425) 555-0187".  
+ Pokud je povolen výběr podle skupiny, uživatel může načíst pouze "425", "555" nebo "0187" řetězec skupiny. Pokud je výběr skupiny zakázaný uživatel může načíst celý text telefonní číslo: "(425) 555-0187".  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
- Určuje, zda je text ověřit před pouze maskované znaky, nebo celý maska.  
+ Určuje, zda text ověření před pouze maskované znaků, nebo celé masky.  
   
 ```  
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` k ověření uživatele vstup podle dokumentu pouze maskovat znaků; `FALSE` ověření oproti celou maska. Výchozí hodnota je `TRUE`.  
+ [in] *bEnable*  
+ TRUE, pokud chcete ověřit uživatele zadejte proti jen maskované znaků. FALSE, pokud chcete ověřovat proti celý masky. Výchozí hodnota je TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Načte ověřit text z maskované textové pole.  
@@ -234,24 +234,24 @@ void GetWindowText(CString& rstrString) const;
   
 ### <a name="parameters"></a>Parametry  
  [out] *lpszStringBuf*  
- Ukazatel na vyrovnávací paměť, která obdrží text z ovládacího prvku úprav.  
+ Ukazatel do vyrovnávací paměti, která přijímá text z ovládacího prvku pro úpravy.  
   
- [v] *nMaxCount*  
+ [in] *nMaxCount*  
  Maximální počet znaků pro příjem.  
   
  [out] *rstrString*  
- Odkaz na objekt řetězce, který přijme text z ovládacího prvku úprav.  
+ Odkaz na objekt řetězce, která přijímá text z ovládacího prvku pro úpravy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet bajtů řetězce, který se zkopíruje na první přetížení metody *lpszStringBuf* parametr vyrovnávací paměti; 0, pokud má ovládací prvek maskované pole žádný text.  
+ První přetížení metody vrátí počet bajtů na řetězec, který se zkopíruje do *lpszStringBuf* parametr vyrovnávací paměti; 0, pokud maskované textové pole nemá žádný text.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zkopíruje text z maskované textové pole na *lpszStringBuf* vyrovnávací paměti nebo *rstrString* řetězec.  
+ Tato metoda kopíruje text z maskované textové pole na *lpszStringBuf* vyrovnávací paměti nebo *rstrString* řetězec.  
   
- Tato metoda znovu definuje [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
+ Tato metoda předefinuje [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
 ##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
- Voláno rámcem k ověření je zadaný znak proti odpovídající znak masky.  
+ Volá se rozhraním pro ověření zadaného znaku podle odpovídajícího znaku masky.  
   
 ```  
 virtual BOOL IsMaskedChar(
@@ -260,17 +260,17 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *chChar*  
+ [in] *chChar*  
  Znak, který má být ověřen.  
   
- [v] *chMaskChar*  
- Odpovídající znak z řetězec masky.  
+ [in] *chMaskChar*  
+ Na odpovídající znak z řetězec masky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud *chChar* parametr je typ znaku povoleného *chMaskChar* parametr, jinak hodnota `FALSE`.  
+ Hodnota TRUE, pokud *chChar* je parametr typu znak povoleném *chMaskChar* parametr; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu pro ověření vstupu znaků sami. Další informace o znaky masky najdete v tématu [CMFCMaskedEdit::EnableMask](#enablemask) metoda.  
+ Potlačí tuto metodu za účelem ověření vstupních znaků vlastními silami. Další informace o znacích maska, najdete v článku [CMFCMaskedEdit::EnableMask](#enablemask) metody.  
   
 ##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  Určuje řetězec platné znaky, které může uživatel zadat.  
@@ -280,31 +280,31 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszValid*  
- Řetězec, který obsahuje sadu platné vstupní znaky. `NULL` znamená, že jsou platné všechny znaky. Výchozí hodnota tohoto parametru je `NULL`.  
+ [in] *lpszValid*  
+ Řetězec, který obsahuje sadu platných vstupních znaků. Hodnota NULL znamená, že jsou všechny znaky platné. Výchozí hodnota tohoto parametru je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k definování seznam platné znaky. Pokud vstupní znak není v tomto seznamu, nebudou jejich přijetí maskované textové pole.  
+ Pomocí této metody můžete definovat seznam platné znaky. Pokud vstupní znak není v tomto seznamu, ovládacího prvku pro editování nepřijme.  
   
- Následující příklad kódu je možné zadat pouze hexadecimální číslice.  
+ Následující příklad kódu přijímá pouze šestnáctkové číslice.  
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
- Zobrazí výzvu v maskované textové pole.  
+ Zobrazí příkazový řádek v maskované textové pole.  
   
 ```  
 void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszString*  
- Odkazuje na řetězec ukončené hodnotou null, který se použije jako výzvu.  
+ [in] *lpszString*  
+ Odkazuje na řetězec zakončený hodnotou null, který se použije příkazovém řádku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví ovládací prvek text.  
+ Tato metoda nastaví text ovládacího prvku.  
   
- Tato metoda znovu definuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
+ Tato metoda předefinuje [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

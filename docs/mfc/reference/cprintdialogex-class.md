@@ -1,5 +1,5 @@
 ---
-title: Třída CPrintDialogEx | Microsoft Docs
+title: Cprintdialogex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 45975354305323f2a3a4d4f8916b901110d91441
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079095"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849581"
 ---
-# <a name="cprintdialogex-class"></a>CPrintDialogEx – třída
-Zapouzdří služeb poskytovaných vlastností Tisk systému Windows.  
+# <a name="cprintdialogex-class"></a>Cprintdialogex – třída
+Zapouzdřuje služby poskytované seznamem vlastností tisku Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,48 +76,48 @@ class CPrintDialogEx : public CCommonDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Bez zobrazení dialogového okna Tisk vytvoří kontextu zařízení tiskárny.|  
-|[CPrintDialogEx::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživateli možnosti.|  
-|[CPrintDialogEx::GetCopies](#getcopies)|Načte počtu kopií požadovaný.|  
+|[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Vytvoří kontext zařízení tiskárny bez zobrazení dialogového okna Tisk.|  
+|[CPrintDialogEx::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživateli vybrat.|  
+|[CPrintDialogEx::GetCopies](#getcopies)|Získá počet kopií požadovaný.|  
 |[CPrintDialogEx::GetDefaults](#getdefaults)|Načte výchozí nastavení zařízení bez zobrazení dialogového okna.|  
 |[CPrintDialogEx::GetDeviceName](#getdevicename)|Načte název zařízení aktuálně vybrané tiskárny.|  
-|[CPrintDialogEx::GetDevMode](#getdevmode)|Načte `DEVMODE` struktura.|  
-|[CPrintDialogEx::GetDriverName](#getdrivername)|Načte název definované systémem ovladače zařízení.|  
+|[CPrintDialogEx::GetDevMode](#getdevmode)|Načte `DEVMODE` struktury.|  
+|[CPrintDialogEx::GetDriverName](#getdrivername)|Načte název definovaných systémem ovladače zařízení.|  
 |[CPrintDialogEx::GetPortName](#getportname)|Načte název portu aktuálně vybrané tiskárny.|  
-|[CPrintDialogEx::GetPrinterDC](#getprinterdc)|Načte popisovač pro kontext zařízení tiskárny.|  
-|[CPrintDialogEx::PrintAll](#printall)|Určuje, zda všechny stránky z dokumentu.|  
-|[CPrintDialogEx::PrintCollate](#printcollate)|Určuje, zda kompletován, že jsou požadovány kopie.|  
-|[CPrintDialogEx::PrintCurrentPage](#printcurrentpage)|Určuje, zda se aktuální stránku dokumentu vytisknout.|  
-|[CPrintDialogEx::PrintRange](#printrange)|Určuje, zda zadaný rozsah stránek vytisknout.|  
-|[CPrintDialogEx::PrintSelection](#printselection)|Určuje, jestli se mají vytisknout pouze aktuálně vybrané položky.|  
+|[CPrintDialogEx::GetPrinterDC](#getprinterdc)|Načte popisovač kontextu zařízení tiskárny.|  
+|[CPrintDialogEx::PrintAll](#printall)|Určuje, jestli se má vytisknout všechny stránky dokumentu.|  
+|[CPrintDialogEx::PrintCollate](#printcollate)|Určuje, zda porovnávány kopie jsou požadovány.|  
+|[CPrintDialogEx::PrintCurrentPage](#printcurrentpage)|Určuje, jestli se má vytisknout aktuální stránku z dokumentu.|  
+|[CPrintDialogEx::PrintRange](#printrange)|Určuje, jestli se má vytisknout zadaného rozsahu stránek.|  
+|[CPrintDialogEx::PrintSelection](#printselection)|Určuje, jestli se má tisknout jen aktuálně vybrané položky.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPrintDialogEx::m_pdex](#m_pdex)|Struktura sloužící k přizpůsobení `CPrintDialogEx` objektu.|  
+|[CPrintDialogEx::m_pdex](#m_pdex)|Struktura používané k úpravám `CPrintDialogEx` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete spolehnout na rozhraní pro zpracování mnoho aspektů proces tisku pro vaši aplikaci. Další informace o používání rozhraní k zpracovávat tiskové úlohy, najdete v článku [tisk](../../mfc/printing.md).  
+ Můžete se spolehnout na rozhraní .NET framework pro zpracování mnoho aspektů proces tisku pro vaši aplikaci. Další informace o použití rozhraní pro zpracování tiskové úlohy, najdete v článku [tisk](../../mfc/printing.md).  
   
- Pokud chcete, aby aplikace pro zpracování tisk bez zapojení rozhraní framework, můžete použít `CPrintDialogEx` třídy s konstruktorem poskytuje "tak, jak je, nebo odvozujete vlastní třídy dialogového okna z `CPrintDialogEx` a zápis konstruktoru tak, aby vyhovovala vašim potřebám. V obou případech tyto dialogy budou chovat jako standardní dialogová okna MFC vzhledem k tomu, že jsou odvozeny od třídy `CCommonDialog`.  
+ Pokud chcete, aby aplikace zpracovávala tisk bez zapojení rozhraní framework, můžete použít `CPrintDialogEx` třídy pomocí konstruktoru určených "tak jak jsou", nebo lze odvodit vlastní třídy dialogového okna z `CPrintDialogEx` a zápis konstruktoru tak, aby odpovídala vašim potřebám. V obou případech se tyto dialogy se chovají jako standardní dialogová okna MFC vzhledem k tomu, že jsou odvozeny z třídy `CCommonDialog`.  
   
- Použít `CPrintDialogEx` objektu, nejprve vytvořit objekt pomocí `CPrintDialogEx` konstruktor. Jakmile dialogové okno byl vytvořený, můžete nastavit nebo změnit všechny hodnoty v [m_pdex](#m_pdex) struktura k chybě při inicializaci hodnoty ovládací prvky dialogových oken. `m_pdex` Struktura je typu [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844). Další informace o tuto strukturu najdete v části Windows SDK.  
+ Použití `CPrintDialogEx` objektu, musíte nejprve vytvořit objekt pomocí `CPrintDialogEx` konstruktoru. Jakmile byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [m_pdex](#m_pdex) struktura inicializace hodnot ovládacích prvků v dialogovém okně. `m_pdex` Struktury je typu [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844). Další informace o této struktuře naleznete v tématu Windows SDK.  
   
- Pokud nezadáte vlastní obslužných rutin v `m_pdex` pro **hDevMode** a **hDevNames je** členy, nezapomeňte volání funkce systému Windows **GlobalFree** pro tyto obslužné rutiny Jakmile jste hotovi s dialogové okno.  
+ Pokud nezadáte vlastní obslužných rutin v `m_pdex` pro `hDevMode` a `hDevNames` členy, nezapomeňte volat funkci Windows `GlobalFree` pro tyto manipulační body, jakmile budete hotovi s dialogovým oknem.  
   
- Po inicializaci ovládacím prvkům v dialogovém okně, volání `DoModal` – členská funkce a zobrazit dialogové okno Povolit uživateli vybrat možnosti tisku. Když `DoModal` vrátí, můžete určit, zda uživatel vybral na tlačítko OK, použít nebo Storno.  
+ Po inicializaci ovládací prvky dialogového okna, zavolejte `DoModal` členské funkce k zobrazení dialogového okna a umožnit uživateli vybrat možnosti tisku. Když `DoModal` vrátí, můžete určit, zda uživatel vybral tlačítko OK, použít nebo zrušit.  
   
- Pokud uživatel klepl na tlačítko OK, můžete použít `CPrintDialogEx`na členské funkce načíst informace o zadaný uživatelem.  
+ Pokud uživatel stiskl OK, můžete použít `CPrintDialogEx`pro členské funkce načtete informace o vstup uživatele.  
   
- `CPrintDialogEx::GetDefaults` – Členská funkce je užitečná pro načítání aktuální výchozí nastavení tiskárny bez zobrazení dialogového okna. Tato metoda vyžaduje zásah uživatele.  
+ `CPrintDialogEx::GetDefaults` Členská funkce je užitečná pro získání aktuální výchozí nastavení tiskárny bez zobrazení dialogového okna. Tato metoda nevyžaduje žádný zásah uživatele.  
   
- Můžete použít Windows **CommDlgExtendedError** funkce k určení, zda došlo k chybě během inicializace dialogových oken a další informace o této chybě. Další informace o této funkci najdete v části Windows SDK.  
+ Můžete použít Windows `CommDlgExtendedError` funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě. Další informace o této funkci najdete v tématu Windows SDK.  
   
- Další informace o používání `CPrintDialogEx`, najdete v části [třídy společných dialogů](../../mfc/common-dialog-classes.md).  
+ Další informace o používání `CPrintDialogEx`, naleznete v tématu [společné třídy dialogových oken](../../mfc/common-dialog-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -129,7 +129,7 @@ class CPrintDialogEx : public CCommonDialog
   
  `IPrintDialogCallback`  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
  `CPrintDialogEx`  
   
@@ -137,7 +137,7 @@ class CPrintDialogEx : public CCommonDialog
  **Záhlaví:** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
- Vytvoří seznam vlastností Tisk systému Windows.  
+ Sestaví seznam vlastností tisku Windows.  
   
 ```  
 CPrintDialogEx(
@@ -147,16 +147,16 @@ CPrintDialogEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwFlags*  
- Jeden nebo více příznaky, které můžete použít k přizpůsobení nastavení dialogovém okně spojovat pomocí bitový operátor OR. Například **PD_ALLPAGES** příznak nastaví výchozí rozsah tisku na všechny stránky z dokumentu. Najdete v článku [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktura ve Windows SDK pro další informace o tyto příznaky.  
+ Jeden nebo více příznaků, které vám umožní přizpůsobit nastavení dialogovém okně kombinované pomocí bitového operátoru OR. Například PD_ALLPAGES příznak nastaví výchozí rozsah tisku na všechny stránky dokumentu. Zobrazit [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktura v sadě Windows SDK pro další informace o těchto příznacích.  
   
  *pParentWnd*  
- Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
+ Ukazatel na okno nadřazené nebo vlastník dialogových oken.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen pouze vytvoří objekt. Použití `DoModal` členské funkce k zobrazení dialogového okna.  
+ Tato členská funkce pouze vytvoří objekt. Použití `DoModal` členské funkce k zobrazení dialogového okna.  
   
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC  
- Vytvoří z kontextu zařízení tiskárny (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
+ Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.  
   
 ```  
 HDC CreatePrinterDC();
@@ -166,29 +166,29 @@ HDC CreatePrinterDC();
  Popisovač kontextu zařízení nově vytvořené tiskárny.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácený řadič domény je také uložen v **hDC** členem [m_pdex](#m_pdex).  
+ Vrácený řadič domény je také uložena v `hDC` členem [m_pdex](#m_pdex).  
   
- Tento řadič domény předpokládá se, že aktuální tiskárny řadiče domény a všechny další dříve získány tiskárny, řadiče domény musí být odstraněny. Tato funkce se dá volat a výsledný řadič domény použít bez někdy zobrazení dialogového okna Tisk.  
+ Tento řadič domény je považován za aktuální tiskárny řadiče domény a jakýkoli jiný dříve získány tiskárny, řadiče domény musí být odstraněny. Tuto funkci lze volat a výsledné řadič domény používá bez někdy zobrazení dialogového okna Tisk.  
   
 ##  <a name="domodal"></a>  CPrintDialogEx::DoModal  
- Volání této funkce můžete zobrazit seznam vlastností Tisk systému Windows a umožní uživateli vybrat různé možnosti tisku, jako je například počet kopií, rozsahu stránek, a zda mají být tříděny kopie.  
+ Voláním této funkce zobrazí seznamem vlastností tisku Windows a umožní uživateli vybrat různé možnosti tisku, jako je například počet kopií, stránka rozsahu, a určuje, zda mají být kopie tříděny.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- INT_PTR vrátit, že hodnota je ve skutečnosti HRESULT. Najdete v části vrátit hodnoty v [PrintDlgEx](http://msdn.microsoft.com/library/windows/desktop/ms646942) ve Windows SDK.  
+ INT_PTR návratové hodnoty je ve skutečnosti HRESULT. V části vrátit hodnoty v [PrintDlgEx](http://msdn.microsoft.com/library/windows/desktop/ms646942) v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různé tiskové dialogové okno Možnosti nastavením členy `m_pdex` struktura, bude třeba provést před voláním `DoModal`, ale po objektu dialogového okna je vytvořený.  
+ Pokud chcete inicializovat různé možnosti dialogového okna Tisk nastavením členy `m_pdex` strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
   
- Po volání `DoModal`, můžete volat jiné členské funkce načíst nastavení nebo uživatelský vstup informace do dialogových oken.  
+ Po volání `DoModal`, můžete volat ostatní členské funkce k načtení nastavení nebo informace o vstup uživatelem do dialogových oken.  
   
- Pokud **PD_RETURNDC** příznak se používá při volání metody `DoModal`, tiskárny řadič domény, vrátí se **hDC** členem [m_pdex](#m_pdex). Tento řadič domény musí být uvolněno pomocí volání [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) volající z `CPrintDialogEx`.  
+ Pokud je příznak PD_RETURNDC použitá při volání metody `DoModal`, tiskárnu řadiče domény, vrátí se `hDC` členem [m_pdex](#m_pdex). Tento řadič domény musí být uvolněna voláním [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) volajícím funkce `CPrintDialogEx`.  
   
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies  
- Volání této funkce po volání `DoModal` načíst počet kopií požadovaný.  
+ Voláním této funkce po volání `DoModal` načíst počet kopií požadovaný.  
   
 ```  
 int GetCopies() const;  
@@ -198,60 +198,60 @@ int GetCopies() const;
  Počet kopií požadovaný.  
   
 ##  <a name="getdefaults"></a>  CPrintDialogEx::GetDefaults  
- Volání této funkce se načíst výchozí nastavení zařízení výchozí tiskárny bez zobrazení dialogového okna.  
+ Voláním této funkce načtete výchozí tiskárny výchozí nastavení zařízení bez zobrazení dialogového okna.  
   
 ```  
 BOOL GetDefaults();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud bylo úspěšné, jinak **FALSE**.  
+ TRUE, pokud je úspěšná, jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří z kontextu zařízení tiskárny (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES](../../mfc/reference/devnames-structure.md) struktury.  
+ Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.  
   
- `GetDefaults` nezobrazuje vlastností tisku. Místo toho nastaví **hDevNames je** a **hDevMode** členy [m_pdex](#m_pdex) ke zpracování na [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES ](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány tiskárny výchozí systému. Obě **hDevNames je** a **hDevMode** musí mít hodnotu NULL, nebo `GetDefaults` selže.  
+ `GetDefaults` nezobrazuje seznamem vlastností tisku. Místo toho se nastaví `hDevNames` a `hDevMode` členy [m_pdex](#m_pdex) do popisovače [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány pro výchozí tiskárna systému. Obě `hDevNames` a `hDevMode` musí mít hodnotu NULL, nebo `GetDefaults` selže.  
   
- Pokud **PD_RETURNDC** nastavený příznak, tato funkce nebude vrátit pouze **hDevNames je** a **hDevMode** (umístěné v **m_pdex.hDevNames** a **m_pdex.hDevMode**) volajícího, ale také vrátí tiskárnu řadiče domény v **m_pdex.hDC**. Zodpovídá volající odstranit tiskárny řadiče domény a volání Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkce na obslužné rutiny pro zpracování po dokončení se `CPrintDialogEx` objektu.  
+ Pokud je nastavený příznak PD_RETURNDC, tato funkce nebude vrátit pouze `hDevNames` a `hDevMode` (umístěné v `m_pdex.hDevNames` a `m_pdex.hDevMode`) volajícímu, ale také vrátí tiskárnu řadiče domény v `m_pdex.hDC`. Je odpovědností volajícího k odstranění tiskárny řadiče domény a volat Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkce s popisovači po dokončení se `CPrintDialogEx` objektu.  
   
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName  
- Volání této funkce po volání [DoModal](#domodal) získávání názvu aktuálně vybrané tiskárny, nebo po volání [GetDefaults](#getdefaults) načíst název výchozí tiskárny.  
+ Voláním této funkce po volání [DoModal](#domodal) načíst název aktuálně vybrané tiskárny, nebo po volání [GetDefaults](#getdefaults) načíst název výchozí tiskárna.  
   
 ```  
 CString GetDeviceName() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název aktuálně vybrané tiskárny.  
+ Název vybrané tiskárny.  
   
 ### <a name="remarks"></a>Poznámky  
- Použijte odkazy `CString` objekt vrácený `GetDeviceName` jako hodnotu `lpszDeviceName` ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Použít ukazatel `CString` vrácený `GetDeviceName` jako hodnotu `lpszDeviceName` ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getdevmode"></a>  CPrintDialogEx::GetDevMode  
- Volání této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) k načtení informací o tisk zařízení.  
+ Voláním této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) k načtení informací o tiskové zařízení.  
   
 ```  
 LPDEVMODE GetDevMode() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) datová struktura, která obsahuje informace o zařízení inicializace a prostředí ovladače tiskárny. Je třeba odemknout paměť provedenou tuto strukturu s Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkce, která je popsána v sadě Windows SDK.  
+ [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) datová struktura, která obsahuje informace o inicializaci zařízení a prostředí, které ovladače tiskárny. Musíte odemknout paměť provedenou tato struktura se Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) funkce, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName  
- Volání této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název definované systémem ovladače zařízení.  
+ Voláním této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název definovaných systémem ovladače zařízení.  
   
 ```  
 CString GetDriverName() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CString` zadání názvu ovladače definovaná systémem.  
+ A `CString` určující název ovladače definovaná systémem.  
   
 ### <a name="remarks"></a>Poznámky  
- Použijte odkazy `CString` objekt vrácený `GetDriverName` jako hodnotu *lpszDriverName* ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Použít ukazatel `CString` vrácený `GetDriverName` jako hodnotu *lpszDriverName* ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
- Volání této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název portu aktuálně vybrané tiskárny.  
+ Voláním této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název portu aktuálně vybrané tiskárny.  
   
 ```  
 CString GetPortName() const;  
@@ -261,84 +261,84 @@ CString GetPortName() const;
  Název portu aktuálně vybrané tiskárny.  
   
 ##  <a name="getprinterdc"></a>  CPrintDialogEx::GetPrinterDC  
- Vrátí popisovač kontextu zařízení tiskárny.  
+ Vrátí popisovač do kontextu zařízení tiskárny.  
   
 ```  
 HDC GetPrinterDC() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro kontext zařízení tiskárny.  
+ Popisovač kontextu zařízení tiskárny.  
   
 ### <a name="remarks"></a>Poznámky  
- Je třeba volat Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkce můžete odstranit kontextu zařízení, když jste hotovi jeho použití.  
+ Je třeba zavolat Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkce kontextu zařízení odstranit, po dokončení jeho použití.  
   
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex  
- Struktura PRINTDLGEX, jejíž členové uložení charakteristiky objektu dialogového okna.  
+ PRINTDLGEX struktura, jejíž členové uložení vlastnosti z objektu dialogového okna.  
   
 ```  
 PRINTDLGEX m_pdex;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytváření `CPrintDialogEx` objekt, můžete použít `m_pdex` nastavit různé aspekty dialogu před voláním [DoModal](#domodal) – členská funkce. Další informace o `m_pdex` struktury najdete v tématu [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) ve Windows SDK.  
+ Po sestavení `CPrintDialogEx` objektu, můžete použít `m_pdex` nastavit různé aspekty dialogového okna před voláním [DoModal](#domodal) členskou funkci. Další informace o `m_pdex` struktury, přečtěte si téma [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) v sadě Windows SDK.  
   
- Pokud změníte `m_pdex` – datový člen přímo, přepíše jakékoli výchozí chování.  
+ Pokud změníte `m_pdex` datový člen přímo, budou všechny výchozí chování přepsat.  
   
 ##  <a name="printall"></a>  CPrintDialogEx::PrintAll  
- Volání této funkce po volání `DoModal` a určí, jestli všechny stránky v dokumentu.  
+ Voláním této funkce po volání `DoModal` k určení, jestli se má vytisknout všechny stránky v dokumentu.  
   
 ```  
 BOOL PrintAll() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud jsou všechny stránky v dokumentu na tištěných; jinak hodnota **FALSE**.  
+ TRUE, pokud jsou všechny stránky v dokumentu, které se mají vytisknout; v opačném případě FALSE.  
   
 ##  <a name="printcollate"></a>  CPrintDialogEx::PrintCollate  
- Volání této funkce po volání `DoModal` k určení, zda by měl tiskárny collate všechny na tištěných kopií dokumentu.  
+ Voláním této funkce po volání `DoModal` k určení, zda by měl tiskárny collate všechny vytištěných kopií dokumentu.  
   
 ```  
 BOOL PrintCollate() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud uživatel vybere toto políčko, pokud v dialogovém okně; v opačném případě **FALSE**.  
+ Hodnota TRUE, pokud uživatel vybere toto políčko, pokud v dialogovém okně. v opačném případě FALSE.  
   
 ##  <a name="printcurrentpage"></a>  CPrintDialogEx::PrintCurrentPage  
- Volání této funkce po volání `DoModal` a určí, jestli tisk aktuální stránky v dokumentu.  
+ Voláním této funkce po volání `DoModal` k určení, jestli se má vytisknout aktuální stránku v dokumentu.  
   
 ```  
 BOOL PrintCurrentPage() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud **tisk aktuální stránky** je vybraný v dialogovém okně tisku; jinak hodnota **FALSE**.  
+ Hodnota TRUE v případě **vytisknout aktuální stránku** je vybrané v dialogovém okně tisku; jinak hodnota FALSE.  
   
 ##  <a name="printrange"></a>  CPrintDialogEx::PrintRange  
- Volání této funkce po volání `DoModal` a určí, jestli chcete vytisknout pouze rozsahu stránek v dokumentu.  
+ Voláním této funkce po volání `DoModal` k určení, jestli se má vytisknout pouze rozsah stránek v dokumentu.  
   
 ```  
 BOOL PrintRange() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** -li jen rozsahu stránek v dokumentu jsou na tištěných; jinak hodnota **FALSE**.  
+ Hodnota TRUE, pokud pouze rozsahu stránek v dokumentu se mají vytisknout; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Lze určit rozsahy Zadaná stránka [m_pdex](#m_pdex) (viz **nPageRanges**, **nMaxPageRanges**, a **lpPageRanges** v [ PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktura ve Windows SDK).  
+ Lze určit rozsahy zadanou stránku [m_pdex](#m_pdex) (naleznete v tématu `nPageRanges`, `nMaxPageRanges`, a `lpPageRanges` v [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktura v sadě Windows SDK).  
   
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection  
- Volání této funkce po volání `DoModal` a určí, jestli chcete vytisknout pouze aktuálně vybrané položky.  
+ Voláním této funkce po volání `DoModal` k určení, jestli se má tisknout jen aktuálně vybrané položky.  
   
 ```  
 BOOL PrintSelection() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud pouze vybrané položky se na tištěných; jinak hodnota **FALSE**.  
+ Hodnota TRUE, pokud pouze vybrané položky se mají vytisknout; v opačném případě FALSE.  
   
 ## <a name="see-also"></a>Viz také  
- [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)   
+ [Ccommondialog – třída](../../mfc/reference/ccommondialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CPrintInfo – struktura](../../mfc/reference/cprintinfo-structure.md)

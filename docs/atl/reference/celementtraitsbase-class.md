@@ -1,5 +1,5 @@
 ---
-title: Třída CElementTraitsBase | Microsoft Docs
+title: Celementtraitsbase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70ae03c15fcdee4510e25815e516c3e17eb1a2a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359591"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879415"
 ---
-# <a name="celementtraitsbase-class"></a>CElementTraitsBase – třída
-Tato třída poskytuje výchozí kopírovat a přesouvat metody pro třídu kolekce.  
+# <a name="celementtraitsbase-class"></a>Celementtraitsbase – třída
+Tato třída poskytuje výchozí kopie a přesunutí metody pro třídu kolekce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,27 +39,27 @@ class CElementTraitsBase
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ dat se neukládají v kolekci.  
+ *T*  
+ Typ dat uložených v kolekci.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání do třídy objektu kolekce elementů.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Datový typ pro načítání elementy z kolekce třídy objektu.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání prvků do objektu třídy kolekce.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Datový typ použitý pro získání prvky z třídy objektu kolekce.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Voláním této metody lze kopírovat prvky, které jsou uložené v objektu třídy kolekce.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Volejte tuto metodu přesunovat elementy, které jsou uložené v objektu třídy kolekce.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Volání této metody pro kopírování prvků uložených v objektu třídy kolekce.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Volejte tuto metodu za účelem přemístit prvků uložených v objektu třídy kolekce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato základní třída definuje metody pro kopírování a přemístění elementů ve třídě kolekce. Je využíváno třídy [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), a [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Tato základní třída definuje metody pro kopírování a přemístění elementů ve třídě kolekce. Se používá v rámci tříd [cdefaultelementtraits –](../../atl/reference/cdefaultelementtraits-class.md), [cstringrefelementtraits –](../../atl/reference/cstringrefelementtraits-class.md), a [cstringelementtraitsi –](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
@@ -67,7 +67,7 @@ class CElementTraitsBase
  **Záhlaví:** atlcoll.h  
   
 ##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
- Voláním této metody lze kopírovat prvky, které jsou uložené v objektu třídy kolekce.  
+ Volání této metody pro kopírování prvků uložených v objektu třídy kolekce.  
   
 ```
 static void CopyElements(
@@ -77,14 +77,14 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDest`  
- Ukazatel na první prvek, který obdrží zkopírovaná data.  
+ *pDest*  
+ Ukazatel na první prvek, který bude příjemcem zkopírovaná data.  
   
- `pSrc`  
- Ukazatel na první prvek pro kopírování.  
+ *pSrc*  
+ Ukazatel na první prvek ke kopírování.  
   
- `nElements`  
- Počet elementů pro kopírování.  
+ *nElements*  
+ Počet prvků ke zkopírování.  
   
 ### <a name="remarks"></a>Poznámky  
  Zdrojové a cílové elementy se nesmí překrývat.  
@@ -97,14 +97,14 @@ typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
- Datový typ pro načítání elementy z kolekce.  
+ Datový typ použitý pro získání elementy z kolekce.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
- Volejte tuto metodu přesunovat elementy, které jsou uložené v objektu třídy kolekce.  
+ Volejte tuto metodu za účelem přemístit prvků uložených v objektu třídy kolekce.  
   
 ```
 static void RelocateElements(
@@ -114,17 +114,17 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDest`  
- Ukazatel na první prvek, který bude přijímat přemístěné data.  
+ *pDest*  
+ Ukazatel na první prvek, který bude příjemcem přemisťování dat.  
   
- `pSrc`  
- Ukazatel na první prvek přesunovat.  
+ *pSrc*  
+ Ukazatel na první prvek pro přemístění.  
   
- `nElements`  
- Počet elementů přesunovat.  
+ *nElements*  
+ Počet prvků, které mají přemístění.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [memmove –](../../c-runtime-library/reference/memmove-wmemmove.md), což je dostatečné pro většinu datových typů. Pokud objekty přesouvání obsahují ukazatelé na své vlastní členy, tato metoda potřebovat k přepsání.  
+ Tato metoda volá [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), který stačí pro většinu datových typů. Pokud objekty přesouvaných obsahují ukazatele a jejich členy, bude nutné tuto metodu přepsat.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

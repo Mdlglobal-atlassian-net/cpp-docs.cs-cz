@@ -1,5 +1,5 @@
 ---
-title: Implementace stránky vlastností (ATL) | Microsoft Docs
+title: Implementace stránky vlastností (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,133 +14,133 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363710"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852272"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
-Tento příklad ukazuje, jak vytvořit stránku vlastností, která zobrazuje (a umožňuje změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.  
+Tento příklad ukazuje, jak vytvořit stránku vlastnost, která zobrazuje (a je možné změnit) vlastnosti [třídy dokumentů](../mfc/document-classes.md) rozhraní.  
   
- Tento příklad vychází z [ATLPages ukázka](../visual-cpp-samples.md).  
+ Tento příklad vychází [ATLPages ukázka](../visual-cpp-samples.md).  
   
- Abyste mohli dokončit tento příklad, které budete:  
+ Abyste mohli absolvovat tento příklad, provedete následující:  
   
-- [Přidání třídy knihovny ATL vlastnost stránky](#vcconusing_the_atl_object_wizard) pomocí průvodce ATL vlastnost stránky a dialogové okno Přidat třídu.  
+- [Přidání třídy stránky vlastností knihovny ATL](#vcconusing_the_atl_object_wizard) pomocí dialogového okna Přidat třídu a Průvodce stránkou vlastností ATL.  
   
-- [Úprava prostředku dialogového okna](#vcconediting_the_dialog_resource) přidáním nové ovládací prvky pro zajímavé vlastnosti **dokumentu** rozhraní.  
+- [Úprava prostředku dialogového okna](#vcconediting_the_dialog_resource) přidáním nových ovládacích prvků pro zajímavé vlastnosti `Document` rozhraní.  
   
-- [Přidání obslužné rutiny zpráv](#vcconadding_message_handlers) zachovat webu stránky vlastnost informováni o změny provedené uživatelem.  
+- [Přidání obslužné rutiny zpráv](#vcconadding_message_handlers) udržovat lokality stránky vlastností informováni o změny provedené uživatelem.  
   
--   Přidejte nějaké `#import` příkazů a typedef v [Housekeeping](#vcconhousekeeping) části.  
+-   Přidat některé `#import` příkazy a definice typu v [údržbu](#vcconhousekeeping) oddílu.  
   
-- [Přepsání IPropertyPageImpl::SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) k ověření objektů předávány na stránku vlastností.  
+- [Přepsat IPropertyPageImpl::SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) ověření objekty předávány na stránku vlastností.  
   
-- [Přepsání IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) inicializovat rozhraní její stránku vlastností.  
+- [Přepsat IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) inicializovat rozhraní na stránce vlastností.  
   
-- [Přepsání IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply) aktualizace s nejnovější hodnoty vlastností objektu.  
+- [Přepsat IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply) aktualizovat nejnovější hodnoty vlastností objektu.  
   
-- [Zobrazení vlastností stránky](#vccontesting_the_property_page) vytvořením jednoduchého pomocný objekt.  
+- [Zobrazit na stránce vlastností](#vccontesting_the_property_page) tak, že vytvoříte jednoduchou pomocný objekt.  
   
-- [Vytvoření makra](#vcconcreating_a_macro) , testovat stránku vlastností.  
+- [Vytvoření makra](#vcconcreating_a_macro) , která otestuje na stránce vlastností.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a> Přidání třídy ATL – stránky vlastností  
- Nejprve vytvořte nový projekt ATL pro knihovny DLL na serveru s názvem `ATLPages7`. Teď použít [ATL vlastnost stránky průvodce](../atl/reference/atl-property-page-wizard.md) ke generování stránky vlastností. Poskytnout stránku vlastností **krátký název** z **DocProperties** potom přepnout **řetězce** stránky lze nastavit položky podle vlastností stránky, jak je znázorněno v následující tabulce.  
+##  <a name="vcconusing_the_atl_object_wizard"></a> Přidání třídy stránky vlastností knihovny ATL  
+ Nejprve vytvořte nový projekt knihovny ATL DLL serveru s názvem `ATLPages7`. Teď použijte [Průvodce stránkou vlastností ATL](../atl/reference/atl-property-page-wizard.md) ke generování stránky vlastností. Zadejte na stránce vlastností **krátký název** z **DocProperties** pak přepnout do **řetězce** stránky lze nastavit vlastnosti stránky konkrétní položky, jak je znázorněno v následující tabulce.  
   
 |Položka|Hodnota|  
 |----------|-----------|  
 |Název|TextDocument|  
-|Popisný řetězec|Vlastnosti TextDocument VCUE|  
-|Soubor nápovědy|*\<prázdné >*|  
+|Řetězec doc|Vlastnosti TextDocument VCUE|  
+|Soubor nápovědy|*\<Prázdný >*|  
   
- Hodnoty, které nastavíte na této stránce průvodce se vrátí do kontejneru vlastnost stránky, pokud zavolá **IPropertyPage::GetPageInfo**. Co se stane řetězce, po které je závislá na kontejner, ale obvykle se používá k identifikaci stránku pro uživatele. Název se obvykle objeví na kartě výše stránku a řetězec Doc, může se zobrazit ve stavovém řádku nebo popisek (i když standardní rámec vlastností vůbec nepoužívá tento řetězec).  
+ Hodnoty, které jste nastavili na této stránce průvodce se vrátí do kontejneru stránky vlastností, pokud zavolá `IPropertyPage::GetPageInfo`. Co se stane řetězce po, který je závislý na kontejner, ale obvykle se používá k identifikaci vaší stránce uživateli. Nadpis se obvykle zobrazí na kartě nad vaší stránce a řetězec Doc, může se zobrazit ve stavovém řádku nebo popisek (i když rámec vlastnosti standardní nebude vůbec používat tento řetězec).  
   
 > [!NOTE]
->  Řetězce, které tady nastavíte, jsou uloženy jako řetězcové prostředky ve vašem projektu průvodcem. Můžete snadno upravit tyto řetězce pomocí editoru prostředků, pokud potřebujete změnit tyto informace po vygenerování kódu pro stránku.  
+>  Řetězce, které tady nastavíte, jsou uloženy jako řetězcové prostředky ve vašem projektu průvodce. Můžete snadno upravit tyto řetězce pomocí editoru prostředků, pokud potřebujete změnit tyto informace po vygenerování kódu pro stránku.  
   
- Klikněte na tlačítko **OK** Průvodce generování stránky vlastností.  
+ Klikněte na tlačítko **OK** má průvodce vytvořit stránky vlastností.  
   
 ##  <a name="vcconediting_the_dialog_resource"></a> Úprava prostředku dialogového okna  
- Teď, když byla vygenerována stránky vlastností, budete muset přidat několik ovládacích prvků do prostředku dialogového okna představující stránku. Přidání textové pole, ovládacího prvku statický text a zaškrtněte políčko a nastavte jejich ID, jak je uvedeno níže:  
+ Teď, když byl vytvořen stránky vlastností, budete muset přidat několik ovládacích prvků do dialogu prostředků představující vaše stránky. Přidejte do textového pole, ovládací prvek statický text a zaškrtávací políčko a nastavení jejich ID, jak je znázorněno níže:  
   
  ![Úprava prostředku dialogového okna](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
   
- Tyto ovládací prvky se použije k zobrazení názvu souboru dokumentu a jeho stav jen pro čtení.  
+ Tyto ovládací prvky se použije k zobrazovaný název souboru dokumentu a jeho stav jen pro čtení.  
   
 > [!NOTE]
->  Prostředek dialogu nezahrnuje rámce nebo příkazového tlačítka a nemusí záložkách vzhled, které se mají očekávat. Tyto funkce jsou poskytovány rámce stránky vlastnost jako je třeba vytvořit voláním [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Prostředku dialogového okna rámce nebo příkazového tlačítka nezahrnuje ani nemá s kartami vzhled, který může očekávat. Tyto funkce jsou poskytovány rámec pro stránky vlastností, jako jsou vytvořeny pomocí volání [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
 ##  <a name="vcconadding_message_handlers"></a> Přidání obslužných rutin zpráv  
- Ovládací prvky na místě můžete přidat obslužné rutiny zpráv se bude aktualizovat stav dirty stránky, při změně hodnoty buď ovládacích prvků:  
+ Pomocí ovládacích prvků na místě můžete přidat obslužné rutiny zpráv pro aktualizaci změny stavu stránky při změně hodnoty buď ovládacích prvků:  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
   
- Tento kód reaguje na změny provedené ovládacích prvcích pro úpravy nebo zaškrtněte políčko voláním [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), která informuje o stránku lokality, která se změnila na stránku. Obvykle bude odpovídat webu stránky povolením nebo zakázáním **použít** na stránku rámečku vlastnost tlačítko.  
+ Tento kód reaguje na změny provedené na ovládací prvek pro úpravy nebo zaškrtněte políčko voláním [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), která informuje stránku webu, který se změnil na stránce. Obvykle bude stránka web reagovat povolením nebo zakázáním **použít** tlačítko v rámci stránky vlastností.  
   
 > [!NOTE]
->  V vlastní stránky vlastností může být nutné ke sledování přesněji vlastnosti, které bylo změněno uživatelem tak, aby se můžete vyhnout, aktualizace vlastností, které nebyly změněny. Tento příklad implementuje tento kód nesleduje původní hodnoty vlastností a porovnávání pomocí aktuálních hodnot z uživatelského rozhraní, když je čas, aby se změny projevily.  
+>  Ve vlastní stránky vlastností můžete potřebovat k udržení přehledu o přesně vlastnosti, které změnily uživatel tak, aby se můžete vyhnout, aktualizují se vlastnosti, které nebyly změněny. V tomto příkladu implementuje tento kód tak, že neudržují přehled o původní hodnoty vlastností a jejich porovnání pomocí aktuálních hodnot z uživatelského rozhraní, až nastane čas, aby se změny projevily.  
   
-##  <a name="vcconhousekeeping"></a> Housekeeping  
- Nyní přidat pár `#import` příkazy, čímž DocProperties.h tak, aby kompilátor zná **dokumentu** rozhraní:  
+##  <a name="vcconhousekeeping"></a> Údržbu  
+ Teď přidejte do ní několik `#import` příkazy DocProperties.h tak, aby kompilátor ví o `Document` rozhraní:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
   
- Budete také potřebovat k odkazování na `IPropertyPageImpl` základní třída; přidejte následující `typedef` k **CDocProperties** třídy:  
+ Budete také muset odkazovat `IPropertyPageImpl` základní třídy, přidejte následující **– typedef** k `CDocProperties` třídy:  
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
 ##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Přepsání IPropertyPageImpl::SetObjects  
- První `IPropertyPageImpl` metoda, která je nutné přepsat [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Zde přidáte kód pro zkontrolujte, že byl předán pouze jeden objekt, a že podporuje **dokumentu** rozhraní, které očekáváte:  
+ První `IPropertyPageImpl` je metoda, která je potřeba přepsat [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Zde přidejte kód pro kontrolu, že pouze jeden objekt se předal dvoubajtový a že podporuje `Document` rozhraní, které očekáváte:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
   
 > [!NOTE]
->  Má smysl pro podporu pouze jednoho objektu pro tuto stránku, protože vám umožní uživateli nastavit název souboru objektu – v libovolném jeden umístění může existovat pouze jeden soubor.  
+>  Je vhodné podporují pouze jeden objekt pro tuto stránku, protože vám umožní uživateli nastavit název souboru objektu – může existovat pouze jeden soubor v libovolném jednoho umístění.  
   
 ##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Přepsání IPropertyPageImpl::Activate  
- Dalším krokem je k chybě při inicializaci stránku vlastností s hodnoty vlastností podkladového objektu při prvním vytvoření stránky.  
+ Dalším krokem je inicializovat na stránce vlastností s hodnotami vlastností základního objektu při prvním vytvoření stránky.  
   
- V takovém případě by měl přidejte následující členy do třídy, vzhledem k tomu, že budete taky používat počáteční hodnoty vlastnosti pro porovnání když uživatelé stránky své změny:  
+ Následující členy v tomto případě by měl přidejte do třídy, protože můžete také využít počáteční hodnoty vlastností pro porovnání použijete jejich změny stránky:  
   
  [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/cpp/example-implementing-a-property-page_5.h)]  
   
- Základní třída implementace [aktivovat](../atl/reference/ipropertypageimpl-class.md#activate) metoda zodpovídá za vytvoření dialogového okna a jeho ovládacích prvků, aby bylo možné tuto metodu přepsat a přidejte vlastní inicializaci po volání metody základní třídy:  
+ Implementace základní třídy [aktivovat](../atl/reference/ipropertypageimpl-class.md#activate) metoda je zodpovědný za vytváření dialogových oken a jejích ovládacích prvků, aby bylo možné tuto metodu přepsat a přidejte vlastní inicializaci po volání metody základní třídy:  
   
  [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/cpp/example-implementing-a-property-page_6.h)]  
   
- Tento kód používá metody COM **dokumentu** rozhraní získat vlastnosti, které vás zajímají. Poté použije obálky Win32 API poskytované [CDialogImpl](../atl/reference/cdialogimpl-class.md) a jeho základních tříd k zobrazení hodnot vlastností pro uživatele.  
+ Tento kód použije metody COM `Document` rozhraní pro získání vlastnosti, které vás zajímají. Poté použije obálek rozhraní Win32 API poskytované [CDialogImpl](../atl/reference/cdialogimpl-class.md) a její základní třídy k zobrazení hodnoty vlastností pro uživatele.  
   
 ##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Přepsání IPropertyPageImpl::Apply  
- Když uživatelé chtějí jejich změny pro objekty, bude volat webu stránky vlastností [použít](../atl/reference/ipropertypageimpl-class.md#apply) metoda. Toto je místo, kde opačný kód **aktivovat** – zatímco **aktivovat** trvalo hodnot z objektu a jejich instaluje do ovládacích prvků na stránce vlastností **použít** vezme hodnoty z ovládacích prvků na stránce vlastností a jejich nabízených oznámení do objektu.  
+ Pokud uživatelé chtějí své změny použít u objektů, bude volat web stránku vlastností [použít](../atl/reference/ipropertypageimpl-class.md#apply) metody. Toto je místo, kde opačný kód v `Activate` – že `Activate` trvalo hodnot z objektu a odesílají je do ovládacích prvků na stránce vlastností `Apply` vezme hodnoty ze ovládacích prvků na stránce vlastností a odesílá je do objekt.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
   
 > [!NOTE]
->  Kontrola u [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) na začátku Tato implementace je počáteční kontrolu, aby se zabránilo zbytečným aktualizace objektů, pokud **použít** nazývá více než jednou. Existují také kontroly proti jednotlivým hodnot vlastností zajistit, že pouze změny provedené výsledkem volání metody **dokumentu**.  
+>  Kontrola proti [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) na začátku této implementaci je počáteční kontrolu, aby se zabránilo zbytečným aktualizace objektů, pokud `Apply` je volána více než jednou. Také se kontroly oproti každému z hodnot vlastností k zajištění, že pouze změny výsledkem volání metody `Document`.  
   
 > [!NOTE]
-> **Dokument** zpřístupní **FullName** jako vlastnost jen pro čtení. Pokud chcete aktualizovat název souboru dokumentu, na základě změn provedených na stránku vlastností, budete muset použít **Uložit** metoda uložte soubor pod jiným názvem. Proto kód na stránce vlastností nemá omezit sám sebe pro získání nebo nastavení vlastností.  
+> `Document` Zpřístupňuje `FullName` jako vlastnost jen pro čtení. Chcete-li aktualizovat název souboru dokumentu na základě změn provedených na stránku vlastností, je nutné použít `Save` metoda uložte soubor pod jiným názvem. Proto nebude muset kód na stránce Vlastnosti omezit k získání nebo nastavení vlastnosti.  
   
 ##  <a name="vccontesting_the_property_page"></a> Zobrazení stránky vlastností  
- K zobrazení této stránky, musíte vytvořit jednoduché pomocný objekt. Pomocný objekt poskytne metodu, která zjednodušuje **OleCreatePropertyFrame** rozhraní API pro zobrazení jednotlivých stránek připojení pro jediný objekt. Tohoto pomocníka budou navrženy tak, aby ho bylo možné použít z jazyka Visual Basic.  
+ Chcete-li zobrazit tuto stránku, je potřeba vytvořit jednoduché pomocný objekt. Pomocný objekt se bude poskytovat metodu, která zjednodušuje `OleCreatePropertyFrame` připojení rozhraní API pro jednu stránku zobrazení do jednoho objektu. Tohoto pomocníka budou navržené tak, že je možné v prostředí Visual Basic.  
   
- Použít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md) vygenerovat novou třídu a použijte `Helper` jako jeho krátký název. Po vytvoření, přidejte metodu, jak je znázorněno v následující tabulce.  
+ Použít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md) pro vygenerování nové třídy a použití `Helper` jako jeho krátký název. Po vytvoření, přidejte metodu, jak je znázorněno v následující tabulce.  
   
 |Položka|Hodnota|  
 |----------|-----------|  
 |Název metody|`ShowPage`|  
 |Parametry|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|  
   
- `bstrCaption` Parametr je titulek zobrazený v záhlaví dialogového okna. `bstrID` Parametr je řetězec představující identifikátor CLSID nebo ProgID vlastnost stránky zobrazení. `pUnk` Parametr bude `IUnknown` ukazatele objektu, jehož vlastnosti se bude konfigurovat pomocí jeho stránku vlastností.  
+ *BstrCaption* parametr je titulek zobrazený v záhlaví dialogového okna. *BstrID* parametr je řetězec představující identifikátor CLSID nebo ProgID na stránce vlastností zobrazení. *PUnk* parametr bude `IUnknown` ukazatel na objekt, jehož vlastnosti se bude konfigurovat pomocí stránky vlastností.  
   
- Implementujte metodu, jak je uvedeno níže:  
+ Implementujte metodu, jak je znázorněno níže:  
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a> Vytváření maker  
- Jakmile jste sestavili projekt, můžete otestovat stránku vlastností a objekt pomocníka použití jednoduchého makra, která umožňuje vytvářet a spouštět ve vývojovém prostředí sady Visual Studio. Toto makro vytvoří pomocné rutiny objektu a pak volat jeho **ShowPage** metodu pomocí atribut ProgID v **DocProperties** stránku vlastností a **IUnknown** ukazatel dokumentu v editoru Visual Studio aktuálně aktivní. Kód, který je nutné pro tuto makro je zobrazena níže:  
+##  <a name="vcconcreating_a_macro"></a> Vytvoření makra  
+ Jakmile jednou sestavíte projekt, můžete otestovat stránky vlastností a pomocný objekt pomocí jednoduchého makro, které můžete vytvořit a spustit ve vývojovém prostředí sady Visual Studio. Toto makro vytvoří pomocné rutiny a pak volat jeho `ShowPage` metodu pomocí identifikátor ProgID **DocProperties** stránku vlastností a `IUnknown` ukazatel aktuálně aktivním dokumentem v editoru sady Visual Studio. Kód, který potřebujete pro toto makro je zobrazena níže:  
   
 ```  
 Imports EnvDTE  
@@ -164,7 +164,7 @@ Public Module AtlPages
 End Module  
 ```  
   
- Při spuštění této makra vlastnosti se zobrazí stránka zobrazuje název souboru a jen pro čtení stav aktuálně aktivní textového dokumentu. Stav jen pro čtení dokumentu odráží pouze možnost zapisovat do dokumentu ve vývojovém prostředí; neovlivní atribut jen pro čtení souboru na disku.  
+ Když spustíte toto makro, na stránce vlastností zobrazí zobrazuje název souboru a stav jen pro čtení aktuálního textového dokumentu. Umožňuje zápis do dokumentu ve vývojovém prostředí; jsou pouze údaje stavu jen pro čtení dokumentu To nemá vliv na atribut jen pro čtení souboru na disku.  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../atl/atl-com-property-pages.md)   

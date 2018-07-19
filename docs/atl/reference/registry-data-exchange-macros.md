@@ -1,5 +1,5 @@
 ---
-title: Výměna dat registru makra | Microsoft Docs
+title: Makra výměny dat registru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,56 +21,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7473bed5e4bf973dcea4d186e9b5b3367fb03ff1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363055"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880356"
 ---
-# <a name="registry-data-exchange-macros"></a>Makra Exchange dat registru
-Tyto makra provádět operace výměny dat registru.  
+# <a name="registry-data-exchange-macros"></a>Makra výměny dat registru
+Tato makra výměny dat registru operacím.  
   
 |||  
 |-|-|  
-|[BEGIN_RDX_MAP](#begin_rdx_map)|Označuje začátek mapy výměny dat registru.|  
-|[END_RDX_MAP](#end_rdx_map)|Označuje konec mapy výměny dat registru.|  
-|[RDX_BINARY](#rdx_binary)|Zadaná položka registru přidruží zadané členské proměnné typu BAJTŮ.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Zadaná položka registru přidruží proměnné typu CString zadaného člena.|  
-|[RDX_DWORD](#rdx_dword)|Přidruží zadaná položka registru typu DWORD s hodnotou proměnné zadaného člena.|  
-|[RDX_TEXT](#rdx_text)|Zadaná položka registru přidruží proměnné typu TCHAR – zadaného člena.|  
+|[BEGIN_RDX_MAP](#begin_rdx_map)|Označuje začátek toho mapy výměny dat registru.|  
+|[END_RDX_MAP](#end_rdx_map)|Označuje konec mapování výměny dat registru.|  
+|[RDX_BINARY](#rdx_binary)|Zadaná položka registru se přidruží k zadané členské proměnné typu BYTE.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Přidruží zadaný člen proměnné typu CString zadaná položka registru.|  
+|[RDX_DWORD](#rdx_dword)|Přidruží zadaný člen proměnné typu DWORD zadaná položka registru.|  
+|[RDX_TEXT](#rdx_text)|Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlplus.h  
    
 ##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
- Označuje začátek mapy výměny dat registru.  
+ Označuje začátek toho mapy výměny dat registru.  
   
 ```
 BEGIN_RDX_MAP
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Následující makra se používají v rámci mapy výměny dat registru ke čtení a zápisu položky systémového registru:  
+ Následující makra jsou používány ve výměny dat registru mapy čtení a zápis položky systémového registru:  
   
 |– Makro|Popis|  
 |-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|Zadaná položka registru přidruží zadané členské proměnné typu BAJTŮ.|  
-|[RDX_DWORD](#rdx_dword)|Přidruží zadaná položka registru typu DWORD s hodnotou proměnné zadaného člena.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Zadaná položka registru přidruží proměnné typu CString zadaného člena.|  
-|[RDX_TEXT](#rdx_text)|Zadaná položka registru přidruží proměnné typu TCHAR – zadaného člena.|  
+|[RDX_BINARY](#rdx_binary)|Zadaná položka registru se přidruží k zadané členské proměnné typu BYTE.|  
+|[RDX_DWORD](#rdx_dword)|Přidruží zadaný člen proměnné typu DWORD zadaná položka registru.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Přidruží zadaný člen proměnné typu CString zadaná položka registru.|  
+|[RDX_TEXT](#rdx_text)|Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.|  
   
- Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se použije vždy, když je váš kód pro výměnu dat mezi systémového registru a proměnné určené v mapě RDX.  
+ Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit vždy, když je váš kód pro výměnu dat mezi systémovým registrem a zadané v objektu map RDX proměnné.  
   
 ##  <a name="end_rdx_map"></a>  END_RDX_MAP  
- Označuje konec mapy výměny dat registru.  
+ Označuje konec mapování výměny dat registru.  
   
 ```
 END_RDX_MAP
 ```  
   
 ##  <a name="rdx_binary"></a>  RDX_BINARY  
- Zadaná položka registru přidruží zadané členské proměnné typu BAJTŮ.  
+ Zadaná položka registru se přidruží k zadané členské proměnné typu BYTE.  
   
 ```
 RDX_BINARY(
@@ -82,26 +82,26 @@ RDX_BINARY(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
- Kořen klíče registru.  
+ *kořenovým klíčem*  
+ Kořenový klíč registru.  
   
- `subkey`  
+ *podklíč*  
  Podklíč registru.  
   
- `valuename`  
+ *Název hodnoty*  
  Klíč registru.  
   
- `member`  
- Členské proměnné přidružit zadaná položka registru.  
+ *Člen*  
+ Členské proměnné, které chcete přidružit k zadaná položka registru.  
   
- `member_size`  
- Velikost v bajtech členské proměnné.  
+ *member_size*  
+ Velikost v bajtech, členské proměnné.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
+ Toto makro se používá ve spojení s makry BEGIN_RDX_MAP a END_RDX_MAP Pokud chcete přidružit k členské proměnné položky daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit k provedení výměny dat mezi systémovým registrem a členské proměnné v RDX map.  
   
 ##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
- Zadaná položka registru přidruží proměnné typu CString zadaného člena.  
+ Přidruží zadaný člen proměnné typu CString zadaná položka registru.  
   
 ```
 RDX_CSTRING_TEXT(
@@ -113,26 +113,26 @@ RDX_CSTRING_TEXT(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
- Kořen klíče registru.  
+ *kořenovým klíčem*  
+ Kořenový klíč registru.  
   
- `subkey`  
+ *podklíč*  
  Podklíč registru.  
   
- `valuename`  
+ *Název hodnoty*  
  Klíč registru.  
   
- `member`  
- Členské proměnné přidružit zadaná položka registru.  
+ *Člen*  
+ Členské proměnné, které chcete přidružit k zadaná položka registru.  
   
- `member_size`  
- Velikost v bajtech členské proměnné.  
+ *member_size*  
+ Velikost v bajtech, členské proměnné.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
+ Toto makro se používá ve spojení s makry BEGIN_RDX_MAP a END_RDX_MAP Pokud chcete přidružit k členské proměnné položky daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit k provedení výměny dat mezi systémovým registrem a členské proměnné v RDX map.  
   
 ##  <a name="rdx_dword"></a>  RDX_DWORD  
- Přidruží zadaná položka registru typu DWORD s hodnotou proměnné zadaného člena.  
+ Přidruží zadaný člen proměnné typu DWORD zadaná položka registru.  
   
 ```
 RDX_DWORD(
@@ -144,26 +144,26 @@ RDX_DWORD(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
- Kořen klíče registru.  
+ *kořenovým klíčem*  
+ Kořenový klíč registru.  
   
- `subkey`  
+ *podklíč*  
  Podklíč registru.  
   
- `valuename`  
+ *Název hodnoty*  
  Klíč registru.  
   
- `member`  
- Členské proměnné přidružit zadaná položka registru.  
+ *Člen*  
+ Členské proměnné, které chcete přidružit k zadaná položka registru.  
   
- `member_size`  
- Velikost v bajtech členské proměnné.  
+ *member_size*  
+ Velikost v bajtech, členské proměnné.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
+ Toto makro se používá ve spojení s makry BEGIN_RDX_MAP a END_RDX_MAP Pokud chcete přidružit k členské proměnné položky daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit k provedení výměny dat mezi systémovým registrem a členské proměnné v RDX map.  
   
 ##  <a name="rdx_text"></a>  RDX_TEXT  
- Zadaná položka registru přidruží proměnné typu TCHAR – zadaného člena.  
+ Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.  
   
 ```
 RDX_TEXT(
@@ -175,23 +175,23 @@ RDX_TEXT(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
- Kořen klíče registru.  
+ *kořenovým klíčem*  
+ Kořenový klíč registru.  
   
- `subkey`  
+ *podklíč*  
  Podklíč registru.  
   
- `valuename`  
+ *Název hodnoty*  
  Klíč registru.  
   
- `member`  
- Členské proměnné přidružit zadaná položka registru.  
+ *Člen*  
+ Členské proměnné, které chcete přidružit k zadaná položka registru.  
   
- `member_size`  
- Velikost v bajtech členské proměnné.  
+ *member_size*  
+ Velikost v bajtech, členské proměnné.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro se používá ve spojení s `BEGIN_RDX_MAP` a `END_RDX_MAP` makra přidružit členské proměnné s položkou daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo funkci člen se stejným názvem vytvořené `BEGIN_RDX_MAP` a `END_RDX_MAP` makra, se má použít k provést výměnu dat mezi systémového registru a člen proměnné v mapě RDX.  
+ Toto makro se používá ve spojení s makry BEGIN_RDX_MAP a END_RDX_MAP Pokud chcete přidružit k členské proměnné položky daného registru. Globální funkce [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), nebo členská funkce se stejným názvem, který vytvořil BEGIN_RDX_MAP a END_RDX_MAP makra, by měla sloužit k provedení výměny dat mezi systémovým registrem a členské proměnné v RDX map.  
   
 ## <a name="see-also"></a>Viz také  
  [Makra](../../atl/reference/atl-macros.md)   

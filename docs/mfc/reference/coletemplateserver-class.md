@@ -1,5 +1,5 @@
 ---
-title: Třída COleTemplateServer | Microsoft Docs
+title: Coletemplateserver – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077975"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849337"
 ---
-# <a name="coletemplateserver-class"></a>COleTemplateServer – třída
-Použít pro OLE visual úpravy servery, automatizační servery a kontejnery odkaz (aplikace, které podporují odkazy na vložené části).  
+# <a name="coletemplateserver-class"></a>Coletemplateserver – třída
+Používá se pro OLE vizuálních úprav servery, automatizační servery a propojení kontejnerů (aplikace, které podporují odkazy na vložené části).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,23 +52,23 @@ class COleTemplateServer : public COleObjectFactory
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Šablona dokumentu se připojuje k základní `COleObjectFactory` objektu.|  
-|[COleTemplateServer::Unregister](#unregister)|Zruší registraci šablona přidružené dokumentu.|  
-|[COleTemplateServer::UpdateRegistry](#updateregistry)|Zaregistruje typ dokumentu s registrem systému OLE.|  
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Šablona dokumentu se připojí k základní `COleObjectFactory` objektu.|  
+|[COleTemplateServer::Unregister](#unregister)|Zruší registraci přidružený dokument šablony.|  
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registruje typ dokumentu OLE systémového registru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída je odvozena od třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle, můžete použít `COleTemplateServer` přímo místo odvození vlastní třídy. `COleTemplateServer` používá [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objekt ke správě dokumentů na serveru. Použití `COleTemplateServer` při implementaci celého serveru, který je server, který lze spustit jako samostatnou aplikaci. Úplné servery jsou obvykle více rozhraní (MDI) – aplikace dokumentů, i když jsou podporovány aplikace (SDI rozhraní) jednotlivý dokument. Jeden `COleTemplateServer` objektu je potřeba pro každý typ dokumentu serveru podporuje aplikace; to znamená, pokud vaše serverová aplikace podporuje listů a grafy, musíte mít dva `COleTemplateServer` objekty.  
+ Tato třída je odvozená od třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle, můžete použít `COleTemplateServer` přímo, spíš než odvození vlastní třídy. `COleTemplateServer` používá [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objektu, který chcete spravovat dokumenty na serveru. Použití `COleTemplateServer` při implementaci plnou instalaci systému server, to znamená, že server, který může běžet jako samostatné aplikace. Úplných serverů jsou obvykle více dokumentů aplikace (MDI interface), i když jsou podporovány aplikací rozhraní (SDI) jednotlivý dokument. Jeden `COleTemplateServer` objekt je potřeba pro každý typ dokumentu serveru podporuje aplikace; to znamená, pokud vaše serverová aplikace podporuje listů a grafy, musíte mít dva `COleTemplateServer` objekty.  
   
- `COleTemplateServer` přepsání `OnCreateInstance` – členská funkce definované `COleObjectFactory`. Tento člen funkce je volána rámcem k vytvoření objektu C++ správné typu.  
+ `COleTemplateServer` přepsání `OnCreateInstance` členské funkce definované `COleObjectFactory`. Tato členská funkce se volá se rozhraním, chcete-li vytvořit objekt jazyka C++ vhodný typ.  
   
- Další informace o serverech najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).  
+ Další informace o serverech, najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)  
+ [COleObjectFactory –](../../mfc/reference/coleobjectfactory-class.md)  
   
  `COleTemplateServer`  
   
@@ -83,10 +83,10 @@ COleTemplateServer();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Stručný popis použití `COleTemplateServer` naleznete [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) přehledu třídy.  
+ Stručný popis použití `COleTemplateServer` najdete v tématu [colelinkingdoc –](../../mfc/reference/colelinkingdoc-class.md) přehledu třídy.  
   
 ##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
- Připojí šablona dokumentu, na kterou odkazuje `pDocTemplate` na odpovídající [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objektu.  
+ Připojuje šablonu dokumentu, na které odkazuje *pDocTemplate* k podkladovým [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objektu.  
   
 ```  
 void ConnectTemplate(
@@ -96,33 +96,33 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *CLSID*  
- Odkaz na ID třídy OLE, které požadavky šablony.  
+ *identifikátor CLSID*  
+ Odkaz na ID třídy OLE, který požaduje šablony.  
   
  *pDocTemplate*  
- Ukazatel na šabloně dokumentu.  
+ Ukazatel na dokument šablony.  
   
  *bMultiInstance*  
- Určuje, zda jednu instanci aplikace může podporovat více instancí. Pokud **TRUE**, pro každý požadavek pro vytvoření objektu je spuštěných víc instancí aplikace.  
+ Určuje, zda jednu instanci aplikace může podporovat víc instancí. Při hodnotě TRUE se více instancí aplikace jsou spouštěny pro každý požadavek na vytvoření objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
+ Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) v sadě Windows SDK.  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
- Zruší registraci šablona přidružené dokumentu.  
+ Zruší registraci přidružený dokument šablony.  
   
 ```  
 BOOL Unregister();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
+ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  EnterRemarks  
   
 ##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
- Načte typ souboru informace z řetězce šablony dokumentu a umístí tyto informace v registru systému OLE.  
+ Načte informace o souboru typu z řetězce šablony dokumentu a umístí tyto informace v systémovém registru OLE.  
   
 ```  
 void UpdateRegistry(
@@ -134,39 +134,39 @@ void UpdateRegistry(
   
 ### <a name="parameters"></a>Parametry  
  *nAppType*  
- Hodnota z **OLE_APPTYPE** výčtu, která je definována v AFXDISP. H. Může mít jednu z následujících hodnot:  
+ Hodnota z výčtu OLE_APPTYPE, která je definována v AFXDISP. H. Může mít některou z následujících hodnot:  
   
-- `OAT_INPLACE_SERVER` Server má celého serveru uživatelského rozhraní.  
+- OAT_INPLACE_SERVER Server má plnou instalaci systému server uživatelského rozhraní.  
   
-- `OAT_SERVER` Server podporuje jenom vkládání.  
+- OAT_SERVER Server podporuje jenom vkládání.  
   
-- `OAT_CONTAINER` Kontejner podporuje odkazy na vložené objekty.  
+- OAT_CONTAINER kontejner podporuje odkazy na vložené objekty.  
   
-- `OAT_DISPATCH_OBJECT` Objekt je `IDispatch`-podporující.  
+- OAT_DISPATCH_OBJECT objekt `IDispatch`-podporuje.  
   
-- `OAT_DOC_OBJECT_SERVER` Server podporuje obě vložení a součástí modelu objektu dokumentu.  
+- OAT_DOC_OBJECT_SERVER Server podporuje i vkládání a komponenta modelu objektu dokumentu.  
   
  *rglpszRegister*  
- Seznam položek, které se zapíše do registru pouze v případě, že neexistují žádné položky.  
+ Seznam položek, které zápisu do registru pouze v případě, že neexistují žádné položky.  
   
  *rglpszOverwrite*  
- Seznam položek, které se zapíše do registru bez ohledu na to, zda existují jakékoli předchozí položky.  
+ Seznam položek, která jsou zapsána do registru bez ohledu na to, zda existují nějaké předchozí položky.  
   
  *bRegister*  
- Určuje, zda třída je nutné zaregistrovat. Pokud *bRegister* je **TRUE**, třída není zaregistrována systémový registr. V opačném. zrušení registrace třídy.  
+ Určuje, zda je třída má být zaregistrován. Pokud *bRegister* má hodnotu TRUE, třída je registrována s registrem systému. V opačném případě ji zruší registraci třídy.  
   
 ### <a name="remarks"></a>Poznámky  
- Informace o registraci je načten prostřednictvím volání [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Dílčích řetězců načíst odpovídají identifikovaný indexy **regFileTypeId**, **regFileTypeName**, a **fileNewName**, jak je popsáno v `GetDocString` — Referenční stránky.  
+ Informace o registraci je načtena pomocí volání [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Podřetězce načíst jsou identifikované indexy `regFileTypeId`, `regFileTypeName`, a `fileNewName`, jak je popsáno v `GetDocString` odkazují na stránky.  
   
- Pokud **regFileTypeId** dílčí řetězec je prázdný nebo pokud volání `GetDocString` selže z jiného důvodu, tato funkce se nezdaří a informací o souboru není zadaný v registru.  
+ Pokud `regFileTypeId` dílčí řetězec je prázdný nebo pokud volání `GetDocString` selže z jiného důvodu, tato funkce se nezdaří a informace o souboru není zadán v registru.  
   
- Informace v argumenty *rglpszRegister* a *rglpszOverwrite* je zapsán do registru prostřednictvím volání [afxoleregisterserverclass –](application-control.md#afxoleregisterserverclass). Výchozí informace, která je registrována, pokud jsou dva argumenty **NULL**, je vhodná pro většinu aplikací. Informace o struktuře informace v těchto argumentů najdete v tématu `AfxOleRegisterServerClass`.  
+ Informace v argumentech *rglpszRegister* a *rglpszOverwrite* jsou zapsána do registru pomocí volání [afxoleregisterserverclass –](application-control.md#afxoleregisterserverclass). Informace o výchozím nastavení, které se zaregistruje, když dva argumenty jsou NULL, je vhodný pro většinu aplikací. Informace o struktuře informace v těchto argumentech najdete v tématu `AfxOleRegisterServerClass`.  
   
  Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   
  [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)   
+ [Coleserverdoc – třída](../../mfc/reference/coleserverdoc-class.md)   
  [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

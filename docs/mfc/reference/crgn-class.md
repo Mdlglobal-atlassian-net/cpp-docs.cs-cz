@@ -1,5 +1,5 @@
 ---
-title: Třída CRgn | Microsoft Docs
+title: Třída CRgn | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,15 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079600"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853859"
 ---
-# <a name="crgn-class"></a>Třída CRgn
-Zapouzdří oblast Windows zařízení grafické rozhraní (GDI).  
+# <a name="crgn-class"></a>Crgn – třída
+Zapouzdřuje oblast rozhraní GDI systému Windows grafiky zařízení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,42 +85,42 @@ class CRgn : public CGdiObject
 |Název|Popis|  
 |----------|-----------------|  
 |[CRgn::CombineRgn](#combinergn)|Nastaví `CRgn` objektu tak, aby je ekvivalentní k sjednocení dvou zadaný `CRgn` objekty.|  
-|[CRgn::CopyRgn](#copyrgn)|Nastaví `CRgn` objektu tak, aby se kopie zadané `CRgn` objektu.|  
-|[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializuje `CRgn` objekt s eliptické oblast.|  
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje `CRgn` objekt s oblast eliptické definované [Rect –](../../mfc/reference/rect-structure1.md) struktura.|  
-|[CRgn::CreateFromData](#createfromdata)|Vytvoří z dané oblasti a transformace dat oblast.|  
-|[CRgn::CreateFromPath](#createfrompath)|Vytvoří z cesty, která je do kontextu daného zařízení vybraná oblast.|  
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializuje `CRgn` objektu s polygonálních oblastí. Systém mnohoúhelníku automaticky zavře, v případě potřeby podle kreslení na první řádek z poslední vrchol.|  
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicializuje `CRgn` objektu s oblastí, který se skládá z řady uzavřené mnohoúhelníky. Polygonů může být nesouvislý, nebo se překrývají.|  
-|[CRgn::CreateRectRgn](#createrectrgn)|Inicializuje `CRgn` objekt s obdélníkovou oblast.|  
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje `CRgn` objekt s obdélníkovou oblast definované [Rect –](../../mfc/reference/rect-structure1.md) struktura.|  
-|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicializuje `CRgn` objekt s obdélníkovou oblast s zaoblenými hranami.|  
-|[CRgn::EqualRgn](#equalrgn)|Kontroluje dva `CRgn` objekty, které chcete určit, jestli jsou ekvivalentní.|  
-|[CRgn::FromHandle](#fromhandle)|Vrátí ukazatel na `CRgn` objektu, pokud Zadaný popisovač v oblasti systému Windows.|  
-|[CRgn::GetRegionData](#getregiondata)|Vyplní zadanou vyrovnávací paměť data popisující příslušnou oblast.|  
+|[CRgn::CopyRgn](#copyrgn)|Nastaví `CRgn` objektu tak, že jde o kopii zadaného `CRgn` objektu.|  
+|[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializuje `CRgn` objektu s elipsy oblastí.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje `CRgn` objekt elipsy oblast určené [RECT](../../mfc/reference/rect-structure1.md) struktury.|  
+|[CRgn::CreateFromData](#createfromdata)|Vytvoří z dané oblasti a transformace dat v oblasti.|  
+|[CRgn::CreateFromPath](#createfrompath)|Vytvoří oblast cesty, který je vybraný v kontextu daného zařízení.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializuje `CRgn` objektu s mnohoúhelníkové oblastí. Systém mnohoúhelníku se automaticky zavře, v případě potřeby kreslením řádku od posledního vrcholu první.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicializuje `CRgn` objektu s oblastí, který se skládá z řady uzavřené mnohoúhelníky. Může být polygonů nesouvislý, nebo mohou překrývat.|  
+|[CRgn::CreateRectRgn](#createrectrgn)|Inicializuje `CRgn` objekt s obdélníková oblast.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje `CRgn` objekt s obdélníková oblast určené [RECT](../../mfc/reference/rect-structure1.md) struktury.|  
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicializuje `CRgn` objekt s oblasti obdélníkový zaoblené rohy.|  
+|[CRgn::EqualRgn](#equalrgn)|Zkontroluje dvě `CRgn` objekty k určení, zda jsou ekvivalentní.|  
+|[CRgn::FromHandle](#fromhandle)|Vrací ukazatel `CRgn` objektu, když je zadaný popisovač do oblasti Windows.|  
+|[CRgn::GetRegionData](#getregiondata)|Vyplní zadané vyrovnávací paměti dat popisující příslušnou oblast.|  
 |[CRgn::GetRgnBox](#getrgnbox)|Načte souřadnice ohraničující obdélník `CRgn` objektu.|  
-|[CRgn::OffsetRgn](#offsetrgn)|Přesune `CRgn` objektu podle zadaných odsazení.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Přesune `CRgn` objektu zadaných odsazení.|  
 |[CRgn::PtInRegion](#ptinregion)|Určuje, zda zadaný bod nachází v oblasti.|  
-|[CRgn::RectInRegion](#rectinregion)|Určuje, zda libovolná součást zadaný obdélníku uvnitř oblasti.|  
-|[CRgn::SetRectRgn](#setrectrgn)|Nastaví `CRgn` objekt, který má zadaný obdélníkovou oblast.|  
+|[CRgn::RectInRegion](#rectinregion)|Určuje, zda jakékoliv části obdélníku zadaného v rámci hranic vytyčených oblast.|  
+|[CRgn::SetRectRgn](#setrectrgn)|Nastaví `CRgn` objekt do zadané oblasti obdélníkový.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CRgn::operator HRGN](#operator_hrgn)|Vrátí popisovač Windows, které jsou součástí `CRgn` objektu.|  
+|[CRgn::operator HRGN](#operator_hrgn)|Vrátí popisovač Windows, součástí `CRgn` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Oblast je oblast eliptické nebo polygonálních v rámci časového období. Pokud chcete použít oblasti, můžete použít funkce člena třídy `CRgn` s výstřižek funkce definované členy třídy `CDC`.  
+ Oblast je oblast elipsy nebo mnohoúhelníku v rámci časového období. Použití oblastí pomocí členské funkce třídy `CRgn` s funkcí oříznutí definovaných jako členy třídy `CDC`.  
   
- Členské funkce `CRgn` vytvářet, alter a načíst informace o oblast objektu, pro které se nazývají.  
+ Členské funkce `CRgn` vytvářet, měnit a načítání informací o objektu oblasti, pro které se nazývají.  
   
- Další informace o používání `CRgn`, najdete v části [grafické objekty](../../mfc/graphic-objects.md).  
+ Další informace o používání `CRgn`, naleznete v tématu [grafické objekty](../../mfc/graphic-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
+ [Cgdiobject –](../../mfc/reference/cgdiobject-class.md)  
   
  `CRgn`  
   
@@ -128,7 +128,7 @@ class CRgn : public CGdiObject
  **Záhlaví:** afxwin.h  
   
 ##  <a name="combinergn"></a>  CRgn::CombineRgn  
- Vytvoří novou oblast GDI kombinací dvou existující oblastí.  
+ Vytvoří novou oblast GDI kombinací dvou stávajících oblastí.  
   
 ```  
 int CombineRgn(
@@ -145,37 +145,37 @@ int CombineRgn(
  Určuje existující oblasti.  
   
  *nCombineMode*  
- Určuje operaci provést, pokud kombinace dvě zdrojových oblastí. Může být některého z následujících hodnot:  
+ Určuje operaci, která mají být provedeny při sloučení dvou zdrojových oblastí. To může být jedna z následujících hodnot:  
   
-- **RGN_AND** používá překrývající se oblasti obou oblastí (průnik).  
+- RGN_AND používá překrývajících se oblastí obě oblasti (průnik).  
   
-- **RGN_COPY** vytvoří kopii oblast 1 (identifikovaný *pRgn1*).  
+- RGN_COPY vytvoří kopii oblast 1 (identifikovaný *pRgn1*).  
   
-- **RGN_DIFF** vytvoří oblasti, které se skládají z oblastí, které oblasti 1 (identifikovaný *pRgn1*), nejsou součástí oblasti 2 (identifikovaný *pRgn2*).  
+- Vytvoří RGN_DIFF oblasti skládající se z oblasti oblast 1 (identifikovaný *pRgn1*), které nejsou součástí oblasti 2 (identifikovaný *pRgn2*).  
   
-- **RGN_OR** kombinuje obou oblastí jako celek (sjednocení).  
+- RGN_OR kombinuje obě oblasti v plné výši (sjednocení).  
   
-- **RGN_XOR** kombinuje obou oblastí, ale odebere překrývajících se oblastí.  
+- RGN_XOR kombinuje obě oblasti, ale odebere překrývající se oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Určuje typ výsledné oblasti. Může být jedna z následujících hodnot:  
+ Určuje typ výsledný oblasti. Může být jeden z následujících hodnot:  
   
-- **COMPLEXREGION** novou oblast má překrývající se hranice.  
+- COMPLEXREGION nové oblasti obsahuje překrývající se hranice.  
   
-- **Chyba** žádné nové oblasti vytvořit.  
+- Došlo k CHYBĚ vytvořeny žádné nové oblasti.  
   
-- **NULLREGION** novou oblast je prázdný.  
+- NULLREGION nové oblasti je prázdný.  
   
-- **SIMPLEREGION** novou oblast nemá žádné překrývající se hranice.  
+- SIMPLEREGION novou oblast nemá žádné překrývající se hranice.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblasti se zkombinují zadané *nCombineMode*.  
+ Jsou zkombinované v oblastech podle *nCombineMode*.  
   
- Dva zadané oblasti se zkombinují a výsledný popisovač oblast je uložen v `CRgn` objektu. Proto je libovolnou oblast uložený v `CRgn` objektu je nahrazena kombinované oblast.  
+ Dvě zadané oblasti jsou zkombinované a výsledné popisovač oblast je uložen v `CRgn` objektu. Díky tomu se jakékoli oblasti je uložen v `CRgn` objekt je nahrazen kombinované oblasti.  
   
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Použití [CopyRgn](#copyrgn) jedné oblasti jednoduše zkopírovat do jiné oblasti.  
+ Použití [CopyRgn](#copyrgn) jednoduše zkopírovat jedné oblasti do jiné oblasti.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
@@ -192,24 +192,24 @@ int CopyRgn(CRgn* pRgnSrc);
  Určuje existující oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Určuje typ výsledné oblasti. Může být jedna z následujících hodnot:  
+ Určuje typ výsledný oblasti. Může být jeden z následujících hodnot:  
   
-- **COMPLEXREGION** novou oblast má překrývající se hranice.  
+- COMPLEXREGION nové oblasti obsahuje překrývající se hranice.  
   
-- **Chyba** žádné nové oblasti vytvořit.  
+- Došlo k CHYBĚ vytvořeny žádné nové oblasti.  
   
-- **NULLREGION** novou oblast je prázdný.  
+- NULLREGION nové oblasti je prázdný.  
   
-- **SIMPLEREGION** novou oblast nemá žádné překrývající se hranice.  
+- SIMPLEREGION novou oblast nemá žádné překrývající se hranice.  
   
 ### <a name="remarks"></a>Poznámky  
- Novou oblast nahradí dříve uložené v oblasti `CRgn` objektu. Tato funkce je zvláštním případem [CombineRgn](#combinergn) – členská funkce.  
+ Nahradí oblasti dříve uložené v nové oblasti `CRgn` objektu. Tato funkce je zvláštním případem [CombineRgn](#combinergn) členskou funkci.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
 ##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
- Vytvoří eliptické oblast.  
+ Vytvoří elipsy oblasti.  
   
 ```  
 BOOL CreateEllipticRgn(
@@ -221,32 +221,32 @@ BOOL CreateEllipticRgn(
   
 ### <a name="parameters"></a>Parametry  
  *x1*  
- Určuje logické souřadnici x levého horního rohu ohraničující obdélník se třemi tečkami.  
+ Určuje logickou souřadnici x levého horního rohu ohraničující obdélník na tři tečky.  
   
  *Y1*  
- Určuje logické souřadnici y levého horního rohu ohraničující obdélník se třemi tečkami.  
+ Určuje logickou souřadnici y levého horního rohu ohraničující obdélník na tři tečky.  
   
  *x2*  
- Určuje logické souřadnici x pravém dolním rohu ohraničující obdélník se třemi tečkami.  
+ Určuje logickou souřadnici x pravého dolního rohu ohraničující obdélník na tři tečky.  
   
  *y2*  
- Určuje logické souřadnici y pravém dolním rohu ohraničující obdélník se třemi tečkami.  
+ Určuje logickou souřadnici y pravého dolního rohu ohraničující obdélník na tři tečky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblast je definována ohraničující obdélník určeného *x1*, *y1*, *x2*, a *y2*. Oblast je uložen v `CRgn` objektu.  
+ Oblast je definován ohraničující obdélník určené *x1*, *y1*, *x2*, a *y2*. Oblast je uložen v `CRgn` objektu.  
   
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Po dokončení pomocí oblast vytvořené pomocí `CreateEllipticRgn` funkce, aplikace by měla vyberte oblast na kontextu zařízení a použití `DeleteObject` funkce jeho odebrání.  
+ Po dokončení použít oblast vytvořené pomocí `CreateEllipticRgn` funkce, aplikace by měla vyberte oblast si tohoto kontextu zařízení a `DeleteObject` funkce jeho odstranění.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
 ##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
- Vytvoří eliptické oblast.  
+ Vytvoří elipsy oblasti.  
   
 ```  
 BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
@@ -254,23 +254,23 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
   
 ### <a name="parameters"></a>Parametry  
  *lprect –*  
- Odkazuje na `RECT` struktura nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rozích ohraničující obdélník se třemi tečkami.  
+ Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rohu ohraničující obdélník na tři tečky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblasti definované struktury nebo na kterou odkazuje objekt *lprect –* a je uložen ve `CRgn` objektu.  
+ V oblasti určené struktury nebo objekt, na které odkazuje *lprect –* a je uložen v `CRgn` objektu.  
   
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Po dokončení pomocí oblast vytvořené pomocí `CreateEllipticRgnIndirect` funkce, aplikace by měla vyberte oblast na kontextu zařízení a použití `DeleteObject` funkce jeho odebrání.  
+ Po dokončení použít oblast vytvořené pomocí `CreateEllipticRgnIndirect` funkce, aplikace by měla vyberte oblast si tohoto kontextu zařízení a `DeleteObject` funkce jeho odstranění.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
 ##  <a name="createfromdata"></a>  CRgn::CreateFromData  
- Vytvoří z dané oblasti a transformace dat oblast.  
+ Vytvoří z dané oblasti a transformace dat v oblasti.  
   
 ```  
 BOOL CreateFromData(
@@ -281,39 +281,39 @@ BOOL CreateFromData(
   
 ### <a name="parameters"></a>Parametry  
  *lpXForm*  
- Odkazuje na [xform –](../../mfc/reference/xform-structure.md) datová struktura, která definuje transformace provádět v oblasti. Pokud je tento ukazatel **NULL**, transformaci identity se používá.  
+ Odkazuje na [xform –](../../mfc/reference/xform-structure.md) datová struktura, která definuje transformaci provést v oblasti. Pokud tento ukazatel je NULL, použije se identita transformaci.  
   
  *nCount*  
- Určuje počet bajtů, na kterou odkazuje *pRgnData*.  
+ Určuje počet bajtů, na které odkazuje *pRgnData*.  
   
  *pRgnData*  
- Odkazuje na [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která obsahuje data oblast.  
+ Odkazuje [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která obsahuje data oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace může načíst data pro oblast voláním `CRgn::GetRegionData` funkce.  
+ Aplikace může načíst data pro určitou oblast voláním `CRgn::GetRegionData` funkce.  
   
 ##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
- Vytvoří z cesty, která je do kontextu daného zařízení vybraná oblast.  
+ Vytvoří oblast cesty, který je vybraný v kontextu daného zařízení.  
   
 ```  
 BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *primárního řadiče domény*  
- Identifikuje kontextu zařízení, který obsahuje uzavřené cestu.  
+ *primární řadič domény*  
+ Určuje kontext zařízení, který obsahuje uzavřené cestu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Kontext zařízení se identifikovanou pomocí *primárního řadiče domény* parametr musí obsahovat uzavřené cestu. Po `CreateFromPath` převede cestu do oblasti, Windows zahodí uzavřené cesty z daného kontextu zařízení.  
+ Kontext zařízení identifikován *primárního řadiče domény* parametr musí obsahovat uzavřené cestu. Po `CreateFromPath` převede cestu do oblasti, Windows zahodí uzavřené cestu z kontextu zařízení.  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
- Vytvoří polygonálních oblast.  
+ Vytvoří mnohoúhelníkové oblasti.  
   
 ```  
 BOOL CreatePolygonRgn(
@@ -324,7 +324,7 @@ BOOL CreatePolygonRgn(
   
 ### <a name="parameters"></a>Parametry  
  *lpPoints*  
- Odkazuje na pole **bodu** struktury nebo pole `CPoint` objekty. Každá struktura určuje souřadnice x a y souřadnice jednoho vrcholu mnohoúhelníku. **Bodu** struktura má následující formát:  
+ Odkazuje na pole `POINT` struktury nebo pole `CPoint` objekty. Každá struktura určuje souřadnice x a y jednoho vrcholu mnohoúhelníku. `POINT` Struktura má následující formát:  
   
  `typedef struct tagPOINT {`  
   
@@ -335,30 +335,30 @@ BOOL CreatePolygonRgn(
  `} POINT;`  
   
  *nCount*  
- Určuje počet **bodu** struktury nebo `CPoint` objektů v poli, na kterou odkazuje *lpPoints*.  
+ Určuje počet `POINT` struktury nebo `CPoint` objektů v poli odkazované *lpPoints*.  
   
  *nMode*  
- Určuje režim naplnění pro oblast. Tento parametr může být buď **alternativní** nebo **VINUTÍ**.  
+ Určuje režim vyplnění oblasti. Tento parametr může být alternativní nebo zrušení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Systém mnohoúhelníku automaticky zavře, v případě potřeby podle kreslení na první řádek z poslední vrchol. Výsledná oblast je uložen v `CRgn` objektu.  
+ Systém mnohoúhelníku se automaticky zavře, v případě potřeby kreslením řádku od posledního vrcholu první. Výsledný oblasti je uložen v `CRgn` objektu.  
   
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Pokud je režim mnohoúhelníku naplnění **alternativní**, systém vyplní celé oblasti mezi stranách lichých a sudé mnohoúhelníku na každém řádku kontroly. To znamená systém vyplní oblast mezi první a druhé straně, mezi čtvrtý a třetí straně a tak dále.  
+ ALTERNATIVNÍ při vyplňování mnohoúhelníku režimu systému vyplní oblast mezi stran lichými čísly a sudým číslem mnohoúhelníku na každém řádku kontroly. To znamená, že systém vyplní oblast mezi první a druhé straně, mezi třetí a čtvrtá straně a tak dále.  
   
- Pokud je režim mnohoúhelníku naplnění **VINUTÍ**, používá systém směr, ve kterém obrázek vykreslení k určení, zda vyplnil celou oblast. Každý řádek segmentu v mnohoúhelníku, se vykresluje v po směru hodinových ručiček nebo proti směru hodinových ručiček. Vždy, když čárou čerpají z uzavřené oblasti ven obrázek prochází segment po směru hodinových ručiček řádku, se zvýší počet. Když na řádku prochází segment proti směru hodinových ručiček řádku, se odečte počet. Pokud je počet nenulové hodnoty, když na řádku dosáhne mimo obrázek, naplní oblasti.  
+ Když je režim vyplnění mnohoúhelníku zrušení, systém použije směr, ve kterém byl nakreslen elementu figure k určení, jestli k vyplnění oblasti. Každý úsek čáry v mnohoúhelník je vykreslen v po směru nebo proti směru hodinových ručiček. Pokaždé, když se z uzavřených oblasti vykreslit vnější elementu figure čárou prochází po směru hodinových ručiček čárového segmentu, počet se zvýší. Když řádku prochází proti směru hodinových ručiček čárového segmentu, je snížen počet. Oblast je vyplněna, pokud je počet nenulové dosáhne řádku mimo na obrázku.  
   
- Když aplikace dokončí pomocí oblast vytvořené pomocí `CreatePolygonRgn` funkce, ho měli vyberte oblast na kontextu zařízení a použití `DeleteObject` funkce jeho odebrání.  
+ Když aplikace dokončí použít oblast vytvořené pomocí `CreatePolygonRgn` funkce, ji by měl vyberte oblast si tohoto kontextu zařízení a `DeleteObject` funkce jeho odstranění.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
 ##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
- Vytvoří v oblasti, který se skládá z řady uzavřené mnohoúhelníky.  
+ Vytvoří oblasti, který se skládá z řady uzavřené mnohoúhelníky.  
   
 ```  
 BOOL CreatePolyPolygonRgn(
@@ -370,7 +370,7 @@ BOOL CreatePolyPolygonRgn(
   
 ### <a name="parameters"></a>Parametry  
  *lpPoints*  
- Odkazuje na pole **bodu** struktury nebo pole `CPoint` objekty, které definuje vrcholy polygonů. Každého mnohoúhelníku musí explicitně zavřít, protože je systém automaticky nezavře. Polygonů nejsou zadány za sebou. **Bodu** struktura má následující formát:  
+ Odkazuje na pole `POINT` struktury nebo pole `CPoint` objekty, které definuje vrcholy polygonů. Každého mnohoúhelníku musí explicitně ukončeno, protože je systém automaticky nezavře. Polygonů zadávají postupně. `POINT` Struktura má následující formát:  
   
  `typedef struct tagPOINT {`  
   
@@ -381,32 +381,32 @@ BOOL CreatePolyPolygonRgn(
  `} POINT;`  
   
  *lpPolyCounts*  
- Bodů na pole celých čísel. První celé číslo udává číslo vrcholy v první mnohoúhelníku ve *lpPoints* pole, druhý celé číslo udává číslo vrcholy v druhé mnohoúhelníku a tak dále.  
+ Odkazuje na pole celých čísel. První celé číslo určuje počet vrcholů v první mnohoúhelníku ve *lpPoints* pole, druhý celé číslo určuje počet vrcholů v druhé mnohoúhelníků a tak dále.  
   
  *nCount*  
  Určuje celkový počet celých čísel v *lpPolyCounts* pole.  
   
  *nPolyFillMode*  
- Určuje režim naplnění mnohoúhelníku. Tato hodnota může být buď **alternativní** nebo **VINUTÍ**.  
+ Určuje režim vyplnění mnohoúhelníku. Tato hodnota může být alternativní nebo zrušení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výsledná oblast je uložen v `CRgn` objektu.  
+ Výsledný oblasti je uložen v `CRgn` objektu.  
   
- Polygonů může být nesouvislý, nebo se překrývají.  
+ Může být polygonů nesouvislý, nebo mohou překrývat.  
   
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Pokud je režim mnohoúhelníku naplnění **alternativní**, systém vyplní celé oblasti mezi stranách lichých a sudé mnohoúhelníku na každém řádku kontroly. To znamená systém vyplní oblast mezi první a druhé straně, mezi čtvrtý a třetí straně a tak dále.  
+ ALTERNATIVNÍ při vyplňování mnohoúhelníku režimu systému vyplní oblast mezi stran lichými čísly a sudým číslem mnohoúhelníku na každém řádku kontroly. To znamená, že systém vyplní oblast mezi první a druhé straně, mezi třetí a čtvrtá straně a tak dále.  
   
- Pokud je režim mnohoúhelníku naplnění **VINUTÍ**, používá systém směr, ve kterém obrázek vykreslení k určení, zda vyplnil celou oblast. Každý řádek segmentu v mnohoúhelníku, se vykresluje v po směru hodinových ručiček nebo proti směru hodinových ručiček. Vždy, když čárou čerpají z uzavřené oblasti ven obrázek prochází segment po směru hodinových ručiček řádku, se zvýší počet. Když na řádku prochází segment proti směru hodinových ručiček řádku, se odečte počet. Pokud je počet nenulové hodnoty, když na řádku dosáhne mimo obrázek, naplní oblasti.  
+ Když je režim vyplnění mnohoúhelníku zrušení, systém použije směr, ve kterém byl nakreslen elementu figure k určení, jestli k vyplnění oblasti. Každý úsek čáry v mnohoúhelník je vykreslen v po směru nebo proti směru hodinových ručiček. Pokaždé, když se z uzavřených oblasti vykreslit vnější elementu figure čárou prochází po směru hodinových ručiček čárového segmentu, počet se zvýší. Když řádku prochází proti směru hodinových ručiček čárového segmentu, je snížen počet. Oblast je vyplněna, pokud je počet nenulové dosáhne řádku mimo na obrázku.  
   
- Když aplikace dokončí pomocí oblast vytvořené pomocí `CreatePolyPolygonRgn` funkce, ho měli vyberte oblast na kontextu zařízení a použití [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) – členská funkce jeho odebrání.  
+ Když aplikace dokončí použít oblast vytvořené pomocí `CreatePolyPolygonRgn` funkce, ji by měl vyberte oblast si tohoto kontextu zařízení a [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členskou funkci jeho odstranění.  
   
 ##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
- Vytvoří obdélníkovou oblast, která je uložená v `CRgn` objektu.  
+ Vytvoří obdélníkovou oblast, která je uložena v `CRgn` objektu.  
   
 ```  
 BOOL CreateRectRgn(
@@ -418,32 +418,32 @@ BOOL CreateRectRgn(
   
 ### <a name="parameters"></a>Parametry  
  *x1*  
- Určuje logické souřadnici x levého horního rohu oblasti.  
+ Určuje logickou souřadnici x levého horního rohu oblasti.  
   
  *Y1*  
- Určuje logické souřadnici y levého horního rohu oblasti.  
+ Určuje logickou souřadnici y levého horního rohu oblasti.  
   
  *x2*  
- Určuje logické souřadnici x pravém dolním rohu oblasti.  
+ Určuje logickou souřadnici x pravém dolním rohu oblasti.  
   
  *y2*  
- Určuje logické souřadnici y pravém dolním rohu oblasti.  
+ Určuje logickou souřadnici y pravého dolního rohu oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Po dokončení oblast vytvořené pomocí `CreateRectRgn`, aplikace by měl používat [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) – členská funkce odebrat oblast.  
+ Když se dokončí oblasti vytvořené využitím `CreateRectRgn`, by měla aplikace použít [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členskou funkci odebrat oblasti.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
- Další příklad najdete v tématu [CRgn::CombineRgn](#combinergn).  
+ Další příklad naleznete v tématu [CRgn::CombineRgn](#combinergn).  
   
 ##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
- Vytvoří obdélníkovou oblast, která je uložená v `CRgn` objektu.  
+ Vytvoří obdélníkovou oblast, která je uložena v `CRgn` objektu.  
   
 ```  
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
@@ -451,7 +451,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
 ### <a name="parameters"></a>Parametry  
  *lprect –*  
- Odkazuje na `RECT` struktura nebo `CRect` objekt, který obsahuje logické souřadnice levém horním a pravém dolním rozích oblasti. `RECT` Struktura má následující formát:  
+ Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rohu oblasti. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
   
@@ -466,18 +466,18 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  `} RECT;`  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Po dokončení oblast vytvořené pomocí `CreateRectRgnIndirect`, aplikace by měl používat [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) – členská funkce odebrat oblast.  
+ Když se dokončí oblasti vytvořené využitím `CreateRectRgnIndirect`, by měla aplikace použít [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členskou funkci odebrat oblasti.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
 ##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
- Vytvoří obdélníkovou oblast s zaoblenými hranami, které jsou uloženy v `CRgn` objektu.  
+ Vytvoří oblasti obdélníkový zaoblené rohy, která je uložena v `CRgn` objektu.  
   
 ```  
 BOOL CreateRoundRectRgn(
@@ -491,30 +491,30 @@ BOOL CreateRoundRectRgn(
   
 ### <a name="parameters"></a>Parametry  
  *x1*  
- Určuje logické souřadnici x levého horního rohu oblasti.  
+ Určuje logickou souřadnici x levého horního rohu oblasti.  
   
  *Y1*  
- Určuje logické souřadnici y levého horního rohu oblasti.  
+ Určuje logickou souřadnici y levého horního rohu oblasti.  
   
  *x2*  
- Určuje logické souřadnici x pravém dolním rohu oblasti.  
+ Určuje logickou souřadnici x pravém dolním rohu oblasti.  
   
  *y2*  
- Určuje logické souřadnici y pravém dolním rohu oblasti.  
+ Určuje logickou souřadnici y pravého dolního rohu oblasti.  
   
  *x3*  
- Určuje šířku se třemi tečkami použít k vytvoření zaoblenými hranami.  
+ Určuje šířku použitý k vytvoření oblých rohů elipsy.  
   
  *Y3*  
- Určuje výšku se třemi tečkami použít k vytvoření zaoblenými hranami.  
+ Určuje výšku elipsy použitý k vytvoření zaoblené rohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
+ Nenulové, pokud je operace úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
+ Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, která je menší.  
   
- Když aplikace dokončí pomocí oblast vytvořené pomocí `CreateRoundRectRgn` funkce, ho měli vyberte oblast na kontextu zařízení a použití [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) – členská funkce jeho odebrání.  
+ Když aplikace dokončí použít oblast vytvořené pomocí `CreateRoundRectRgn` funkce, ji by měl vyberte oblast si tohoto kontextu zařízení a [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členskou funkci jeho odstranění.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
@@ -527,13 +527,13 @@ CRgn();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_hObject` – Datový člen neobsahuje platný oblast GDI systému Windows, dokud se neinicializuje objekt s jedním nebo více dalších `CRgn` členské funkce.  
+ `m_hObject` Datový člen neobsahuje platný oblasti Windows GDI, dokud nebude objekt je inicializován s jednou nebo více z nich `CRgn` členské funkce.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
 ##  <a name="equalrgn"></a>  CRgn::EqualRgn  
- Určuje, zda je ekvivalentní pro oblast uložené v dané oblasti `CRgn` objektu.  
+ Určuje, zda je ekvivalentní k oblasti uložených v dané oblasti `CRgn` objektu.  
   
 ```  
 BOOL EqualRgn(CRgn* pRgn) const;  
@@ -541,16 +541,16 @@ BOOL EqualRgn(CRgn* pRgn) const;
   
 ### <a name="parameters"></a>Parametry  
  *pRgn*  
- Určuje oblast.  
+ Identifikuje oblast.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud odpovídají dvou oblastí; jinak 0.  
+ Nenulové, pokud tyto dvě oblasti jsou ekvivalentní; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
 ##  <a name="fromhandle"></a>  CRgn::FromHandle  
- Vrátí ukazatel na `CRgn` objektu, pokud Zadaný popisovač v oblasti systému Windows.  
+ Vrací ukazatel `CRgn` objektu, když je zadaný popisovač do oblasti Windows.  
   
 ```  
 static CRgn* PASCAL FromHandle(HRGN hRgn);
@@ -558,16 +558,16 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
   
 ### <a name="parameters"></a>Parametry  
  *hRgn*  
- Určuje popisovač v oblasti systému Windows.  
+ Určuje popisovač do oblasti Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na `CRgn` objektu. Pokud funkce nebyla úspěšná, je vrácenou hodnotu **NULL**.  
+ Ukazatel `CRgn` objektu. Pokud funkce nebyla úspěšná, vrácená hodnota je NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CRgn` objekt není už připojený k popisovač dočasného `CRgn` objekt se vytvoří a připojené. Toto dočasný `CRgn` je objekt platný pouze dokud příště aplikace má čas nečinnosti v jeho událostí smyčky, na který čas všechny dočasné obrázek objekty jsou odstraněny. Jinými slovy to je, že dočasný objekt platí pouze při zpracování zprávy jeden interval.  
+ Pokud `CRgn` objekt už není připojen ke zpracování, dočasný `CRgn` objekt se vytvoří a připojí. Tento dočasný `CRgn` objektu je platná pouze v až při příštím má aplikace čas nečinnosti v jeho smyčkou událostí, na které čas všechny dočasné obrázek objekty budou odstraněny. Jinými slovy to je, že dočasný objekt platí pouze při zpracování zprávy jedno okno.  
   
 ##  <a name="getregiondata"></a>  CRgn::GetRegionData  
- Zadané vyrovnávací vyplní data popisující oblasti.  
+ Vyplní data popisující oblast zadané vyrovnávací paměti.  
   
 ```  
 int GetRegionData(
@@ -577,16 +577,16 @@ int GetRegionData(
   
 ### <a name="parameters"></a>Parametry  
  *lpRgnData*  
- Odkazuje na [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která přijímá informace. Pokud tento parametr je **NULL**, počet bajtů, které jsou potřebné pro oblast dat obsahuje návratovou hodnotu.  
+ Odkazuje [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která přijímá informace. Pokud má parametr hodnotu NULL, návratová hodnota obsahuje počet bajtů potřebných pro datové oblasti.  
   
  *nCount*  
- Určuje velikost v bajtech, a to *lpRgnData* vyrovnávací paměti.  
+ Určuje velikost v bajtech, *lpRgnData* vyrovnávací paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud se podaří funkce a *nCount* určuje odpovídající počet bajtů, se vrácená hodnota je vždy *nCount*. Pokud funkce selže, nebo pokud *nCount* určuje menší než odpovídající počet bajtů, vrácená hodnota je 0 (chyba).  
+ Pokud je funkce úspěšná a *nCount* určuje odpovídající počet bajtů, vrácená hodnota je vždy *nCount*. Pokud funkce selže nebo pokud *nCount* určuje menší než odpovídající počet bajtů, vrácená hodnota je 0 (chyba).  
   
 ### <a name="remarks"></a>Poznámky  
- Tato data zahrnují dimenze obdélníky, které tvoří oblasti. Tato funkce se používá ve spojení s `CRgn::CreateFromData` funkce.  
+ Tato data zahrnují dimenze obdélníky, které tvoří oblast. Tato funkce se používá ve spojení s `CRgn::CreateFromData` funkce.  
   
 ##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
  Načte souřadnice ohraničující obdélník `CRgn` objektu.  
@@ -597,7 +597,7 @@ int GetRgnBox(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Parametry  
  *lprect –*  
- Odkazuje na `RECT` struktura nebo `CRect` objekt, který chcete přijímat souřadnice ohraničující obdélník. `RECT` Struktura má následující formát:  
+ Odkazuje na `RECT` struktury nebo `CRect` objektu získat souřadnice ohraničujícího rámečku. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
   
@@ -612,21 +612,21 @@ int GetRgnBox(LPRECT lpRect) const;
  `} RECT;`  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Určuje typ této oblasti. Může být libovolná z následujících hodnot:  
+ Určuje typ oblasti. Může být některý z následujících hodnot:  
   
-- **COMPLEXREGION** oblast má překrývající se hranice.  
+- Oblast COMPLEXREGION obsahuje překrývající se hranice.  
   
-- **NULLREGION** oblast je prázdný.  
+- Oblast NULLREGION je prázdný.  
   
-- **Chyba** `CRgn` objekt neurčuje platnou oblast.  
+- Chyba `CRgn` objekt neurčuje platnou oblast.  
   
-- **SIMPLEREGION** oblast nemá žádné překrývající se hranice.  
+- Oblast SIMPLEREGION nemá žádné překrývající se hranice.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
 ##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
- Přesune uložené v oblasti `CRgn` objektu podle zadaných odsazení.  
+ Přesune uložené v oblasti `CRgn` objektu zadaných odsazení.  
   
 ```  
 int OffsetRgn(
@@ -638,50 +638,50 @@ int OffsetRgn(POINT point);
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Určuje počet jednotek přesunout doleva nebo doprava.  
+ Určuje počet jednotek na doleva nebo doprava.  
   
  *y*  
- Určuje počet jednotek přesunout nahoru nebo dolů.  
+ Určuje počet jednotek, aby se přesuňte směrem nahoru nebo dolů.  
   
  *Bod*  
- Souřadnici x *bodu* určuje počet jednotek přesunout doleva nebo doprava. Souřadnici y *bodu* určuje počet jednotek přesunout nahoru nebo dolů. *Bodu* parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
+ Souřadnici x *bodu* určuje počet jednotek na doleva nebo doprava. Souřadnici y *bodu* určuje počet jednotek, aby se přesuňte směrem nahoru nebo dolů. *Bodu* parametr může být buď `POINT` struktury nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Typ nové oblasti. Může být některého z následujících hodnot:  
+ Typ nové oblasti. To může být jedna z následujících hodnot:  
   
-- **COMPLEXREGION** oblast má překrývající se hranice.  
+- Oblast COMPLEXREGION obsahuje překrývající se hranice.  
   
-- **Chyba** popisovač oblasti je neplatný.  
+- Chyba oblasti popisovač je neplatný.  
   
-- **NULLREGION** oblast je prázdný.  
+- Oblast NULLREGION je prázdný.  
   
-- **SIMPLEREGION** oblast nemá žádné překrývající se hranice.  
+- Oblast SIMPLEREGION nemá žádné překrývající se hranice.  
   
 ### <a name="remarks"></a>Poznámky  
  Funkce přesune oblast *x* jednotky podél osy x a *y* jednotky podél osy y.  
   
- Souřadnice hodnoty oblasti musí být menší než nebo rovna 32 767 a větší než nebo rovna hodnotě-32 768. *x* a *y* parametry musí být pečlivě zvolili aby souřadnice neplatná oblast.  
+ Hodnoty souřadnic oblasti musí být menší než nebo rovna 32 767 a větší než nebo rovna hodnotě-32 768. *x* a *y* parametry musí být pečlivě zvolili zabránit souřadnice neplatnou oblast.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
 ##  <a name="operator_hrgn"></a>  CRgn::operator HRGN  
- Tento operátor. použijte k získání připojené popisovač GDI systému Windows `CRgn` objektu.  
+ Tento operátor se získat popisovač Windows GDI připojené `CRgn` objektu.  
   
 ```  
 operator HRGN() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud úspěšné, popisovač pro objekt Windows GDI reprezentována `CRgn` objektu; v opačném případě **NULL**.  
+ Pokud úspěchu popisovač objektů Windows GDI reprezentována `CRgn` objektu; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor je operátor přetypování, který podporuje přímý použití **HRGN** objektu.  
+ Tento operátor je operátor přetypování, která podporuje přímému použití objektu HRGN.  
   
- Další informace o použití grafických objektů najdete v článku [obrázek objekty](http://msdn.microsoft.com/library/windows/desktop/dd144962) ve Windows SDK.  
+ Další informace o použití grafických objektů najdete v článku [objektů grafiky](http://msdn.microsoft.com/library/windows/desktop/dd144962) v sadě Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
- Kontroluje, zda bodu určeného vlastností *x* a *y* v oblasti uložené v `CRgn` objektu.  
+ Kontroluje, zda bodu *x* a *y* je v oblasti uložené v `CRgn` objektu.  
   
 ```  
 BOOL PtInRegion(
@@ -693,19 +693,19 @@ BOOL PtInRegion(POINT point) const;
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- Určuje logické souřadnice x bodu k testování.  
+ Určuje logickou souřadnici x bodu k testování.  
   
  *y*  
- Určuje logické souřadnici y bodu k testování.  
+ Určuje logickou souřadnici y bodu k testování.  
   
  *Bod*  
- X-y souřadnice a *bodu* zadejte x - a souřadnice y bodu k testování hodnotu. *Bodu* parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
+ X-y souřadnice a *bodu* zadejte x - a souřadnice y bodu pro testování hodnot. *Bodu* parametr může být buď `POINT` struktury nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je bod v oblasti; jinak 0.  
+ Nenulové, pokud je bod je v oblasti; jinak 0.  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- Určuje, zda libovolná součást rámeček určeného *lprect –* nachází uvnitř monitorované geografické oblasti uložené v `CRgn` objektu.  
+ Určuje, zda jakékoliv části obdélníku určené *lprect –* nachází uvnitř uložené v oblasti `CRgn` objektu.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
@@ -713,7 +713,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
   
 ### <a name="parameters"></a>Parametry  
  *lprect –*  
- Odkazuje na `RECT` struktura nebo `CRect` objektu. `RECT` Struktura má následující formát:  
+ Odkazuje `RECT` struktury nebo `CRect` objektu. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
   
@@ -728,10 +728,10 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  `} RECT;`  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud libovolná součást určeného obdélníku leží v hranicích oblasti; jinak 0.  
+ Nenulové, pokud libovolné části obdélníku zadaného leží v hranicích oblasti; jinak 0.  
   
 ##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
- Vytvoří obdélníkovou oblast.  
+ Vytvoří obdélníková oblast.  
   
 ```  
 void SetRectRgn(
@@ -745,24 +745,24 @@ void SetRectRgn(LPCRECT lpRect);
   
 ### <a name="parameters"></a>Parametry  
  *x1*  
- Určuje souřadnici x levého horního rohu obdélníkovou oblast.  
+ Určuje souřadnice x levého horního rohu oblasti obdélníkový.  
   
  *Y1*  
- Určuje souřadnici y levého horního rohu obdélníkovou oblast.  
+ Určuje souřadnici y levého horního rohu oblasti obdélníkový.  
   
  *x2*  
- Určuje souřadnici x v pravém dolním rohu obdélníkovou oblast.  
+ Určuje souřadnici x v pravém dolním rohu oblasti obdélníkový.  
   
  *y2*  
- Určuje souřadnici y pravém dolním rohu obdélníkovou oblast.  
+ Určuje souřadnici y pravého dolního rohu oblasti obdélníkový.  
   
  *lprect –*  
- Určuje obdélníkovou oblast. Může být buď ukazatel na `RECT` struktura nebo `CRect` objektu.  
+ Určuje obdélníkovou oblast. Může být buď ukazatel `RECT` struktury nebo `CRect` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Na rozdíl od [CreateRectRgn](#createrectrgn), ale ji není přidělit žádné další paměť z lokální haldy aplikace systému Windows. Místo toho použije místo přidělené pro oblast uložené v `CRgn` objektu. To znamená, že `CRgn` objekt musí již byly inicializovány s platnou oblastí Windows před voláním `SetRectRgn`. Body poskytují *x1*, *y1*, *x2*, a *y2* určit minimální velikost přidělené místo.  
+ Na rozdíl od [CreateRectRgn](#createrectrgn), ale ho nepřidělí další paměti z haldy místní aplikace Windows. Místo toho používá místo přidělené oblasti uložená ve `CRgn` objektu. To znamená, že `CRgn` objektu musí již byly inicializovány s platnou oblast Windows před voláním `SetRectRgn`. Body Dal *x1*, *y1*, *x2*, a *y2* zadat minimální velikost přidělené místo.  
   
- Tato funkce je místo `CreateRectRgn` – členská funkce, aby se zabránilo volání správci místní paměti.  
+ Pomocí této funkce místo `CreateRectRgn` členskou funkci, aby se zabránilo volání do paměti místního správce.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   

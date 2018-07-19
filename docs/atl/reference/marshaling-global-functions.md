@@ -1,5 +1,5 @@
 ---
-title: Zařazování globální funkce | Microsoft Docs
+title: Zařazení globálních funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362824"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879331"
 ---
-# <a name="marshaling-global-functions"></a>Zařazování globální funkce
-Tyto funkce poskytuje podporu pro zařazování a převodu zařazování dat na ukazatele rozhraní.  
+# <a name="marshaling-global-functions"></a>Zařazení globálních funkcí
+Tyto funkce poskytují podporu pro zařazování a převodem zařazování dat na ukazatele rozhraní.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Uvolní data zařazování a `IStream` ukazatel.|  
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Vytvoří nový objekt datového proudu a zařazuje ukazatel zadaný rozhraní.|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede datový proud zařazování dat ukazatele rozhraní.|  
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Uvolní zařazování dat a `IStream` ukazatele.|  
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Vytvoří nový objekt streamu a zařadí zadaný ukazatel rozhraní.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede zařazovaná data streamu ukazatel rozhraní.|  
 
 ## <a name="requirements"></a>Požadavky:
 **Záhlaví:** atlbase.h
@@ -46,8 +46,8 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
- [v] Ukazatel `IStream` rozhraní na datový proud použitý pro zařazování.  
+ *pStream*  
+ [in] Ukazatel `IStream` rozhraní na datový proud použitý k zařazování.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
@@ -64,23 +64,23 @@ HRESULT AtlMarshalPtrInProc(
   
 ### <a name="parameters"></a>Parametry  
  *pUnk*  
- [v] Ukazatel rozhraní být zařazena.  
+ [in] Ukazatel rozhraní k zařadit.  
   
- `iid`  
- [v] Identifikátor GUID rozhraní se zařazené.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID rozhraní se zařadit.  
   
- `ppStream`  
- [out] Ukazatel `IStream` rozhraní na nový datový proud objekt použitý pro zařazování.  
+ *ppStream*  
+ [out] Ukazatel `IStream` rozhraní u nového objektu datového proudu, který se používá pro zařazování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- **MSHLFLAGS_TABLESTRONG** je příznak nastaven tak ukazatele může být zařazen do různých datových proudů. Ukazatele může být také zařazeny vícekrát.  
+ Příznak MSHLFLAGS_TABLESTRONG je nastaven tak, že ukazatele může být zařazen do různých datových proudů. Ukazatel může být také zařazeny více než jednou.  
   
- Pokud zařazování selže, je vydala ukazatele datového proudu.  
+ Pokud zařazování selže, se uvolní ukazatel streamu.  
   
- `AtlMarshalPtrInProc` můžete použít pouze v ukazatel na objekt v procesu.  
+ `AtlMarshalPtrInProc` jde použít jenom na ukazatel na objekt v rámci procesu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
@@ -96,17 +96,17 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
- [v] Ukazatel na datový proud se zařazeny.  
+ *pStream*  
+ [in] Ukazatel na datový proud se zařazeny.  
   
- `iid`  
- [v] Identifikátor GUID rozhraní se zařazeny.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID rozhraní jsou zařazeny.  
   
- `ppUnk`  
- [out] Ukazatel rozhraní zařazeny.  
+ *ppUnk*  
+ [out] Ukazatel na rozhraní zrušeno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).  

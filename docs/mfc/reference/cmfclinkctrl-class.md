@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCLinkCtrl | Microsoft Docs
+title: Cmfclinkctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038351"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851584"
 ---
-# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl – třída
-`CMFCLinkCtrl` Třída zobrazí tlačítko jako hypertextový odkaz a vyvolá na odkaz cíl při kliknutí na tlačítko.  
+# <a name="cmfclinkctrl-class"></a>Cmfclinkctrl – třída
+`CMFCLinkCtrl` Třídy zobrazí tlačítko jako hypertextový odkaz a po kliknutí na tlačítko vyvolá cíl odkazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,25 +48,25 @@ class CMFCLinkCtrl : public CMFCButton
 |----------|-----------------|  
 |[CMFCLinkCtrl::SetURL](#seturl)|Zadaná adresa URL se zobrazí jako text tlačítka.|  
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Nastaví implicitní protokol (například "http:") adresy URL.|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Změní velikost tlačítko tak, aby obsahovala text tlačítka nebo rastrového obrázku.|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Změní velikost tlačítka tak, aby obsahovala text tlačítka nebo rastrový obrázek.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Voláno rámcem před vykreslením rámečku fokusu tlačítka.|  
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Volá se rozhraním před vykreslením obdélník tlačítka.|  
   
 ## <a name="remarks"></a>Poznámky  
- Při kliknutí na tlačítko, který je odvozený od `CMFCLinkCtrl` třídu rozhraní předá adresu URL tlačítko jako parametr, který se `ShellExecute` metoda. Pak se `ShellExecute` metoda otevře cílové adresy URL.  
+ Po kliknutí na tlačítko, který je odvozen z `CMFCLinkCtrl` třídy, rozhraní předá adresu URL na tlačítko jako parametr, který se `ShellExecute` metody. Pak bude `ShellExecute` metoda otevře cílové adresy URL.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak nastavit velikost `CMFCLinkCtrl` objekt a jak nastavit adresu url a popis v `CMFCLinkCtrl` objektu. Tato ukázka je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak nastavit velikost `CMFCLinkCtrl` objekt a jak nastavit adresu url a popis ve `CMFCLinkCtrl` objektu. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -74,15 +74,15 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CButton](../../mfc/reference/cbutton-class.md)  
   
- [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
+ [Cmfcbutton –](../../mfc/reference/cmfcbutton-class.md)  
   
- [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
+ [Cmfclinkctrl –](../../mfc/reference/cmfclinkctrl-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
- Voláno rámcem před vykreslením rámečku fokusu tlačítka.  
+ Volá se rozhraním před vykreslením obdélník tlačítka.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -91,14 +91,14 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
- [v] *rectClient*  
- Obdélníku, která bounds ovládací prvek odkazu.  
+ [in] *rectClient*  
+ Obdélník, který odkaz ovládacího prvku za rozsahem.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete použít k vykreslení rámečku fokusu na tlačítko Vlastní kód.  
+ Potlačí tuto metodu, pokud chcete použít vlastní kód chcete-li nakreslit obdélník na tlačítko.  
   
 ##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  Zadaná adresa URL se zobrazí jako text tlačítka.  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszURL*  
+ [in] *lpszURL*  
  Text tlačítka pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -121,14 +121,14 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszPrefix*  
- Předponu adresy URL protokolu.  
+ [in] *lpszPrefix*  
+ Předpona protokolu URL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte, chcete-li nastavit předponu adresy URL. Předpona se nezobrazí na vzhled tlačítka, ale slouží ke procházet cílovou adresu URL.  
+ Tuto metodu použijte k nastavení předponu adresy URL. Předpona není zobrazena na tlačítka pro rozpoznávání tváře, ale slouží ke, přejděte na adresu URL cílové.  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
- Změní velikost tlačítko tak, aby obsahovala text tlačítka nebo rastrového obrázku.  
+ Změní velikost tlačítka tak, aby obsahovala text tlačítka nebo rastrový obrázek.  
   
 ```  
 virtual CSize SizeToContent(
@@ -137,19 +137,19 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bVCenter*  
- `TRUE` na střed tlačítko text a rastrový obrázek svisle mezi horní a dolní část řízení propojení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [in] *bVCenter*  
+ TRUE, pokud chcete text tlačítka a rastrový obrázek svisle mezi horní a dolní ovládací prvek odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
- [v] *bHCenter*  
- `TRUE` na střed tlačítko text a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkaz; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [in] *bHCenter*  
+ TRUE, pokud chcete text tlačítka a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkazu; center v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje nové velikosti ovládacího prvku odkazu.  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje novou velikost ovládacího prvku odkaz.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CLinkCtrl – třída](../../mfc/reference/clinkctrl-class.md)   
+ [Clinkctrl – třída](../../mfc/reference/clinkctrl-class.md)   
  [CMFCButton – třída](../../mfc/reference/cmfcbutton-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDropDownToolbarButton | Microsoft Docs
+title: Cmfcdropdowntoolbarbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 42ea64180a9f7abf37f379e3e8feccc4ee41fd44
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041692"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850193"
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton – třída
-Typ tlačítka panelu nástrojů, který se chová jako regulární tlačítko po klepnutí. Ale, otevře se panel nástrojů rozevíracího seznamu ( [CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskem tlačítka a obsahuje tlačítka panelu nástrojů.  
+# <a name="cmfcdropdowntoolbarbutton-class"></a>Cmfcdropdowntoolbarbutton – třída
+Typ tlačítka panelu nástrojů, který se při kliknutí chová jako běžné tlačítko. Otevře však rozevírací seznam nástrojů ( [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskne a podrží tlačítko panelu nástrojů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,62 +81,62 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Kopíruje vlastnosti z jiného tlačítka panelu nástrojů na tlačítko aktuální. (Přepisuje [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
-|`CMFCDropDownToolbarButton::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Zkopíruje aktuální tlačítko Vlastnosti jiné tlačítko panelu nástrojů. (Přepíše [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCDropDownToolbarButton::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
 |[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Otevře se panel nástrojů rozevíracího seznamu.|  
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Zkopíruje text tlačítka na panelu nástrojů k nabídce. (Přepisuje [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Načte panelu nástrojů rozevíracího seznamu, který je přidružen tlačítko.|  
-|`CMFCDropDownToolbarButton::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Určuje, zda je aktuálně otevřených panelu nástrojů rozevíracího seznamu.|  
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Určuje, zda tlačítko lze zobrazit pomocí rozšířených ohraničení. (Přepisuje [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
-|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Voláno rámcem vypočítat velikost tlačítko pro zadané zařízení kontextu a ukotvení stavu. (Přepisuje [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|Voláno rámcem pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy. (Přepisuje `CMCToolBarButton::OnCancelMode`.)|  
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Voláno rámcem při vložení do nového panelu nástrojů na tlačítko. (Přepisuje [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
-|[CMFCDropDownToolbarButton::OnClick](#onclick)|Voláno rámcem, když uživatel klikne na tlačítko myši. (Přepisuje [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Voláno rámcem, když uživatel uvolní tlačítko myši. (Přepisuje [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Voláno rámcem při zpracovává nadřazené nástrojů `WM_HELPHITTEST` zprávy. (Přepisuje [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Upraví zadaný nabídky, pokud aplikace zobrazí na panelu nástrojů nadřazené místní nabídky. (Přepisuje [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
-|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Voláno rámcem k vykreslení tlačítko pomocí zadané styly a možnosti. (Přepisuje [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Voláno rámcem k vykreslení tlačítko **příkazy** podokně **přizpůsobit** dialogové okno. (Přepisuje [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
-|[CMFCDropDownToolbarButton::Serialize](#serialize)|Čte tento objekt z archivu nebo zapíše ho do archivu. (Přepisuje [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Nastaví výchozí příkaz, který používá rozhraní, když uživatel klikne na tlačítko.|  
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Zkopíruje text tlačítka na panelu nástrojů do nabídky. (Přepíše [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Načte rozevírací seznam nástrojů, který je přidružený k tlačítku.|  
+|`CMFCDropDownToolbarButton::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Určuje, zda je momentálně otevřený rozevírací seznam nástrojů.|  
+|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Určuje, zda tlačítko lze zobrazit pomocí rozšířených ohraničení. (Přepíše [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
+|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování. (Přepíše [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Volá se rozhraním pro zpracování [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) zprávy. (Přepíše `CMCToolBarButton::OnCancelMode`.)|  
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko. (Přepíše [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCDropDownToolbarButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko myši. (Přepíše [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Volá se rozhraním, když uživatel uvolní tlačítko myši. (Přepíše [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Volá se rozhraním, když zpracovává zprávu WM_HELPHITTEST nadřazeného panelu nástrojů. (Přepíše [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Upraví zadaný nabídky při aplikace zobrazí místní nabídka na panelu nástrojů nadřazené. (Přepíše [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
+|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit tlačítko s použitím zadaného styly a možnosti. (Přepíše [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Volá se rozhraním, chcete-li nakreslit tlačítko **příkazy** podokně **vlastní** dialogové okno. (Přepíše [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCDropDownToolbarButton::Serialize](#serialize)|Čte tento objekt z archivu nebo zapíše do archivu. (Přepíše [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Nastaví výchozí příkaz, který rozhraní používá, když uživatel klikne na tlačítko.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Určuje dobu, která uživatel musí podržte tlačítko myši směrem dolů, předtím, než se zobrazí panel nástrojů rozevíracího seznamu.|  
+|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Určuje dobu, která uživatel musí podržte tlačítko myši předtím, než se zobrazí rozevírací seznam nástrojů.|  
   
 ## <a name="remarks"></a>Poznámky  
- A `CMFCDropDownToolBarButton` se liší od obyčejnou tlačítko v tom, že má malou šipku v pravém horním rohu na tlačítko. Po výběru tlačítka panelu nástrojů rozevíracího seznamu, rozhraní zobrazí jeho ikonu na tlačítko panelu nástrojů nejvyšší úrovně (tlačítko s malou šipku v pravém dolním rohu).  
+ A `CMFCDropDownToolBarButton` se liší od běžné tlačítko v tom, že má malou šipku v pravém horním rohu na tlačítko. Když uživatele vybere tlačítko na panelu nástrojů v rozevíracím seznamu, zobrazí rozhraní jeho ikonu na panelu nástrojů nejvyšší úrovně (tlačítko s malou šipku v pravém dolním rohu).  
   
- Informace o tom, jak implementovat rozevírací seznam nástrojů najdete v tématu [CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
+ Informace o tom, jak implementovat rozevírací seznam nástrojů, naleznete v tématu [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
- `CMFCDropDownToolBarButton` Objektu je možné exportovat do [CMFCToolBarMenuButton třída](../../mfc/reference/cmfctoolbarmenubutton-class.md) objektu a zobrazí jako tlačítka s nabídkou s místní nabídky.  
+ `CMFCDropDownToolBarButton` Objekt je možné exportovat do [cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md) objektu a zobrazen jako tlačítko nabídky pomocí místní nabídky.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
+ [Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
- [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
+ [Cmfcdropdowntoolbarbutton –](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdropdowntoolbar.h  
   
 ##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
- Kopíruje vlastnosti z jiného tlačítka panelu nástrojů na tlačítko aktuální.  
+ Zkopíruje aktuální tlačítko Vlastnosti jiné tlačítko panelu nástrojů.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *src*  
- Odkaz na tlačítko zdroj ze kterého chcete zkopírovat.  
+ [in] *src*  
+ Odkaz na tlačítko zdroj ze kterého chcete kopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu pro kopírování jiný tlačítka panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCDropDownToolbarButton`.  
+ Volejte tuto metodu za účelem kopírování jiné tlačítko panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCDropDownToolbarButton`.  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Vytvoří `CMFCDropDownToolbarButton` objektu.  
@@ -151,19 +151,19 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszName*  
- Výchozí text tlačítka.  
+ [in] *lpszName*  
+ Výchozí text na tlačítku.  
   
- [v] *pToolBar*  
+ [in] *pToolBar*  
  Ukazatel `CMFCDropDownToolBar` objekt, který se zobrazí, když uživatel stiskne tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Druhý přetížení konstruktoru zkopíruje do rozevírací tlačítko na první tlačítko panelu nástrojů, *pToolBar* určuje.  
+ Druhé přetížení konstruktoru zkopíruje k tlačítku rozevíracího seznamu na první tlačítko na panelu nástrojů, které *pToolBar* určuje.  
   
- Obvykle tlačítka panelu nástrojů rozevíracího seznamu používá text z naposledy použitých tlačítka na panelu nástrojů, *pToolBar* určuje. Používá textem určeným parametrem *lpszName* při tlačítko je převést na tlačítka s nabídkou nebo se zobrazí v **příkazy** kartě **přizpůsobit** dialogové okno. Další informace o **přizpůsobit** dialogové okno, najdete v části [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ Obvykle tlačítka panelu nástrojů v rozevíracím seznamu použije text z naposledy použitých tlačítka na panelu nástrojů, které *pToolBar* určuje. Používá textem určeným parametrem *lpszName* když tlačítko je převedena na tlačítko nabídky nebo se zobrazí v **příkazy** karty **vlastní** dialogové okno. Další informace o **vlastní** dialogovém okně naleznete v tématu [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCDropDownToolbarButton` třídy. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCDropDownToolbarButton` třídy. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
@@ -175,63 +175,63 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- Nadřazené okno rámce rozevíracího seznamu, nebo `NULL` používat nadřazeného okna tlačítka panelu nástrojů rozevíracího seznamu.  
+ [in] *pWnd*  
+ Nadřazené okno rámce rozevíracího seznamu nebo hodnota NULL pro použití nadřazené okno panelu nástrojů v rozevíracím seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je metoda úspěšná. jinak 0.  
+ Nenulové, pokud je metoda úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCDropDownToolbarButton::OnClick](#onclick) metoda volá tuto metodu k otevření panelu nástrojů rozevíracího seznamu, když uživatel stiskem tlačítka a obsahuje tlačítka panelu nástrojů.  
+ [CMFCDropDownToolbarButton::OnClick](#onclick) metoda volá tuto metodu za účelem otevřete rozevírací seznam nástrojů, když uživatel stiskne a podrží tlačítko panelu nástrojů.  
   
- Pomocí této metody vytvoří panelu nástrojů rozevíracího seznamu [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) metoda. Pokud panelu nástrojů nadřazené ukotven ve svislém směru, tato metoda umisťuje panelu nástrojů rozevíracího seznamu buď na levé nebo pravé straně panelu nástrojů nadřazené, v závislosti na přizpůsobit. Tuto metodu, jinak hodnota umisťuje panelu nástrojů rozevíracího seznamu pod nadřazený panelu nástrojů.  
+ Tyto metody vytvoří rozevírací seznam nástrojů pomocí [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) metody. Pokud nadřazeného panelu nástrojů je ukotven svisle, tato metoda se umístí panelu rozevíracího seznamu buď na levém nebo pravém okraji nadřazeného panelu nástrojů v závislosti na přizpůsobit. Jinak tato metoda umístí panelu rozevíracího seznamu pod nadřazeného panelu nástrojů.  
   
- Tato metoda selže, pokud *pWnd* je `NULL` a tlačítko panelu nástrojů rozevíracího seznamu nemá nadřazeného okna.  
+ Tato metoda selže, pokud *pWnd* má hodnotu NULL a nadřazené okno nemá žádné tlačítko panelu nástrojů v rozevíracím seznamu.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
- Zkopíruje text tlačítka na panelu nástrojů k nabídce.  
+ Zkopíruje text tlačítka na panelu nástrojů do nabídky.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *tlačítko nabídky*  
+ [in] *menuButton*  
  Odkaz na tlačítko nabídky Cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá implementace třídy base ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) a poté na tlačítko nabídky Cíl připojí rozbalovací nabídky, které obsahuje každou položku nabídky panelu nástrojů v toto tlačítko. Tato metoda dílčí nabídky není připojení k místní nabídky.  
+ Tato metoda volá implementaci základní třídy ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) a potom připojí k cílové tlačítko nabídky rozbalovací nabídky, které obsahuje každou položku nabídky panelu nástrojů v toto tlačítko. Tato metoda nepřipojuje podnabídek rozbalovací nabídky.  
   
- Tato metoda selže, pokud panelu nástrojů nadřazené `m_pToolBar`, je `NULL` nebo základní třída implementace vrátí `FALSE`.  
+ Tato metoda selže, pokud nadřazeného panelu nástrojů `m_pToolBar`, má hodnotu NULL nebo implementaci základní třídy vrací hodnotu FALSE.  
   
 ##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
- Načte panelu nástrojů rozevíracího seznamu, který je přidružen tlačítko.  
+ Načte rozevírací seznam nástrojů, který je přidružený k tlačítku.  
   
 ```  
 CMFCToolBar* GetDropDownToolBar() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Rozevírací seznam nástrojů, který je přidružen tlačítko.  
+ Rozevírací seznam nástrojů, který je přidružený k tlačítku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vrátí hodnotu `m_pToolBar` – datový člen.  
+ Tato metoda vrátí `m_pToolBar` datový člen.  
   
 ##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
- Určuje, zda je aktuálně otevřených panelu nástrojů rozevíracího seznamu.  
+ Určuje, zda je momentálně otevřený rozevírací seznam nástrojů.  
   
 ```  
 BOOL IsDropDown() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je aktuálně otevřených; panel nástrojů rozevíracího seznamu jinak 0.  
+ Nenulové, pokud rozevírací seznam nástrojů je aktuálně otevřená. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní se otevře pomocí rozevíracího seznamu panelu nástrojů [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metoda. Rozhraní framework zavře panelu nástrojů v rozevíracím, když uživatel stiskne tlačítko myši vlevo na neklientská oblast panelu nástrojů rozevíracího seznamu.  
+ Rozhraní se otevře rozevírací seznam nástrojů pomocí [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metody. Rozhraní framework zavře rozevírací seznam nástrojů, když uživatel stiskne tlačítko vlevo myši v neklientské oblasti panelu rozevíracího seznamu.  
   
 ##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
  Určuje, zda tlačítko lze zobrazit pomocí rozšířených ohraničení.  
@@ -241,23 +241,23 @@ virtual BOOL IsExtraSize() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud tlačítka panelu nástrojů lze zobrazit pomocí rozšířených ohraničení; jinak 0.  
+ Nenulové, pokud tlačítko panelu nástrojů můžete zobrazit pomocí rozšířených hranici. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o rozšířených ohraničení najdete v tématu [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
+ Další informace o rozšířených ohraničení, naleznete v tématu [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
 ##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
- Určuje dobu, která uživatel musí podržte tlačítko myši směrem dolů, předtím, než se zobrazí panel nástrojů rozevíracího seznamu.  
+ Určuje dobu, která uživatel musí podržte tlačítko myši předtím, než se zobrazí rozevírací seznam nástrojů.  
   
 ```  
 static UINT m_uiShowBarDelay;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Doba zpoždění se měří v milisekundách. Výchozí hodnota je 500. Změnou hodnoty tento člen sdílená data, můžete nastavit jiný zpoždění.  
+ Doba zpoždění se měří v milisekundách. Výchozí hodnota je 500. Můžete změnit hodnotu tohoto člena sdílených dat můžete nastavit jinou zpoždění.  
   
 ##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
- Voláno rámcem vypočítat velikost tlačítko pro zadané zařízení kontextu a ukotvení stavu.  
+ Volá se rozhraním pro výpočet velikosti tlačítko pro zadané zařízení kontext a stav dokování.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -267,37 +267,37 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která se zobrazí tlačítko.  
   
- [v] *sizeDefault*  
+ [in] *sizeDefault*  
  Výchozí velikost tlačítka.  
   
- [v] *bHorz*  
- Stav ukotvení panelu nástrojů nadřazené. Tento parametr je `TRUE` Pokud panelu nástrojů ukotven vodorovně nebo je plovoucí, nebo `FALSE` Pokud panelu nástrojů ukotven svisle.  
+ [in] *bHorz*  
+ Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je hodnotu TRUE, pokud je ukotven vodorovně panelu nástrojů nebo plovoucí nebo hodnotu NEPRAVDA, pokud se ukotví svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `SIZE` struktura, která obsahuje dimenze tlačítka v pixelech.  
+ A `SIZE` strukturu, která obsahuje dimenze na tlačítko v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) přidáním šířku na šipku rozevíracího seznamu na vodorovné dimenze velikosti tlačítko.  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) tak, že přidáte šířku na šipku rozevíracího seznamu na vodorovný rozměr velikost tlačítka.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
- Voláno rámcem při vložení do nového panelu nástrojů na tlačítko.  
+ Volá se rozhraním při vložení do nového panelu nástrojů na tlačítko.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
+ [in] *pWndParent*  
  Nové nadřazené okno.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přepsání implementace třídy base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) tak, že smažete textový popisek ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) a nastavení [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) a [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) datových členů ke `FALSE`.  
+ Tato metoda přepisuje implementaci základní třídy ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) tím, že zrušíte textový popisek ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) a nastavení [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) a [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) datové členy na hodnotu FALSE.  
   
 ##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
- Voláno rámcem, když uživatel klikne na tlačítko myši.  
+ Volá se rozhraním, když uživatel klikne na tlačítko myši.  
   
 ```  
 virtual BOOL OnClick(
@@ -306,74 +306,74 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- Nadřazené okno tlačítka panelu nástrojů.  
+ [in] *pWnd*  
+ Nadřazené okno panelu nástrojů.  
   
- [v] *bDelay*  
- `TRUE` Pokud zpráva má zacházet s zpožděním.  
+ [in] *bDelay*  
+ TRUE, pokud zpráva by měla zpracovává se zpožděním.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud tlačítko zpracovává zprávy klikněte na tlačítko; jinak 0.  
+ Nenulové, pokud na tlačítko zpracovává zprávy klikněte na tlačítko. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), při aktualizaci stavu panelu nástrojů rozevíracího seznamu.  
+ Tato metoda rozšiřuje implementaci základní třídy [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), stačí aktualizovat stav panelu nástrojů v rozevíracím seznamu.  
   
- Když uživatel klikne na tlačítko panelu nástrojů, tato metoda vytvoří časovače, kterou čeká dobu určeného [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) – datový člen a pak otevře z rozevírací nabídky panelu nástrojů pomocí [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metoda. Tato metoda zavře panelu nástrojů rozevíracího seznamu podruhé uživatel klikne na tlačítko panelu nástrojů.  
+ Když uživatel klikne na tlačítko panelu nástrojů, tato metoda vytvoří časovač, který čeká délka časový limit určený parametrem [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) datový člen a pak se otevře rozevírací nabídky panelu nástrojů pomocí [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) metody. Tato metoda zavře panel rozevíracího seznamu podruhé uživatel klikne na tlačítko panelu nástrojů.  
   
 ##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
- Voláno rámcem, když uživatel uvolní tlačítko myši.  
+ Volá se rozhraním, když uživatel uvolní tlačítko myši.  
   
 ```  
 virtual BOOL OnClickUp();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud tlačítko zpracovává zprávy klikněte na tlačítko; jinak 0.  
+ Nenulové, pokud na tlačítko zpracovává zprávy klikněte na tlačítko. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), při aktualizaci stavu panelu nástrojů rozevíracího seznamu.  
+ Tato metoda rozšiřuje implementaci základní třídy [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), stačí aktualizovat stav panelu nástrojů v rozevíracím seznamu.  
   
- Tato metoda zastaví časovač nástrojů rozevíracího seznamu, pokud je aktivní. Pokud je otevřen toto okno zavře panelu nástrojů rozevíracího seznamu.  
+ Tato metoda zastaví časovač rozevírací seznam nástrojů, pokud je aktivní. Uzavírá rozevírací seznam nástrojů, pokud je otevřený.  
   
- Další informace o panelu nástrojů rozevírací seznam a rozevírací seznam nástrojů časovače najdete v tématu [CMFCDropDownToolbarButton::OnClick](#onclick).  
+ Další informace o panelu nástrojů rozevíracího seznamu a rozevírací seznam nástrojů časovače, naleznete v tématu [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
 ##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
- Voláno rámcem při zpracovává nadřazené nástrojů `WM_HELPHITTEST` zprávy.  
+ Volá se rozhraním, když zpracovává zprávu WM_HELPHITTEST nadřazeného panelu nástrojů.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- Nadřazené okno tlačítka panelu nástrojů.  
+ [in] *pWnd*  
+ Nadřazené okno panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud tlačítko zpracovává zprávy nápovědy; jinak 0.  
+ Nenulové, pokud tlačítko zpracovává zprávy nápovědy. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) voláním [CMFCDropDownToolbarButton::OnClick](#onclick) metoda s *bDelay*nastavena na `FALSE`. Tato metoda vrátí hodnotu, která vrátí [CMFCDropDownToolbarButton::OnClick](#onclick).  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) voláním [CMFCDropDownToolbarButton::OnClick](#onclick) metodu s *bDelay*nastavena na hodnotu FALSE. Tato metoda vrátí hodnotu, která je vrácena [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
- Další informace o `WM_HELPHITTEST message, see` [TN028: podpora pomoci Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).  
+ Další informace o zprávě WM_HELPHITTEST najdete v tématu [TN028: podpora pomůže Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).  
   
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
- Upraví zadaný nabídky, pokud aplikace zobrazí na panelu nástrojů nadřazené místní nabídky.  
+ Upraví zadaný nabídky při aplikace zobrazí místní nabídka na panelu nástrojů nadřazené.  
   
 ```  
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pMenu*  
- V nabídce přizpůsobit.  
+ [in] *pMenu*  
+ V nabídce Upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Tato metoda vrátí hodnotu `TRUE`.  
+ Tato metoda vrátí hodnotu TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) zakázáním následující položky:  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) tím, že zakážete následující položky:  
   
-- **Kopírovat vzhled tlačítka**  
+- **Kopírovat obrázek tlačítka**  
   
 - **Vzhled tlačítka**  
   
@@ -381,12 +381,12 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
 - **Text**  
   
-- **Bitové kopie a Text.**  
+- **Obrázek a Text**  
   
- Potlačí tuto metodu za účelem upravit místní nabídky, která rozhraní zobrazuje v režimu vlastní nastavení.  
+ Přepsáním této metody můžete upravit nabídku, která zobrazí rozhraní v režimu úprav.  
   
 ##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
- Voláno rámcem k vykreslení tlačítko pomocí zadané styly a možnosti.  
+ Volá se rozhraním, chcete-li nakreslit tlačítko s použitím zadaného styly a možnosti.  
   
 ```  
 virtual void OnDraw(
@@ -401,35 +401,35 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která se zobrazí tlačítko.  
   
- [v] *Rect –*  
- Ohraničující obdélník tlačítko.  
+ [in] *rect*  
+ Ohraničující obdélník na tlačítko.  
   
- [v] *pImages*  
- Kolekce obrázků panelu nástrojů, který je přidružen tlačítko.  
+ [in] *pImages*  
+ Kolekce obrázků panelu nástrojů, který je přidružený k tlačítku.  
   
- [v] *bHorz*  
- Stav ukotvení panelu nástrojů nadřazené. Tento parametr je `TRUE` když tlačítko ukotveno vodorovně a `FALSE` když tlačítko ukotveno svisle.  
+ [in] *bHorz*  
+ Ukotvit stav nadřazeného panelu nástrojů. Tento parametr je PRAVDA, pokud je ukotven tlačítka vodorovně a FALSE-li na tlačítko je ukotven svisle.  
   
- [v] *bCustomizeMode*  
- Určuje, zda je panel nástrojů v režimu vlastní nastavení. Tento parametr je `TRUE` po panelu nástrojů v režimu přizpůsobení a `FALSE` při panelu nástrojů není v režimu vlastní nastavení.  
+ [in] *bCustomizeMode*  
+ Určuje, zda je panel nástrojů v režimu úprav. Tento parametr má hodnotu TRUE, pokud panelu nástrojů je v režimu úprav a hodnotu FALSE, pokud panel nástrojů není v režimu úprav.  
   
- [v] *bHighlight*  
- Určuje, zda je označený na tlačítko. Tento parametr je `TRUE` když je označený na tlačítko a `FALSE` při není zvýrazněná tlačítko.  
+ [in] *bHighlight*  
+ Určuje, zda se zvýrazní tlačítko. Tento parametr je hodnotu PRAVDA, pokud se zvýrazní tlačítko a hodnotu FALSE, pokud není zvýrazní tlačítko.  
   
- [v] *bDrawBorder*  
- Určuje, zda má na tlačítko zobrazit jeho ohraničení. Tento parametr je `TRUE` při tlačítko by měl zobrazit jeho ohraničení a `FALSE` při nesmí na tlačítko zobrazit jeho ohraničení.  
+ [in] *bDrawBorder*  
+ Určuje, zda tlačítko zobrazí jeho ohraničení. Tento parametr je hodnota TRUE, pokud tlačítko zobrazeno jeho okraj a hodnotu FALSE při tlačítko by neměl zobrazit jeho ohraničení.  
   
- [v] *bGrayDisabledButtons*  
- Určuje, jestli stín zakázané tlačítka nebo použijte kolekci zakázané bitové kopie. Tento parametr je `TRUE` při by měla být zakázané tlačítka šedou barvou a `FALSE` když tato metoda by měla použít kolekci zakázané bitové kopie.  
+ [in] *bGrayDisabledButtons*  
+ Určuje, jestli se má stín tlačítka Zakázané nebo použít kolekci zakázané imagí. Tento parametr je hodnota TRUE, pokud zakázané tlačítka by měl být označeno šedou barvou a hodnotu FALSE, když tato metoda by měla použít kolekci zakázané imagí.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem přizpůsobení panelu nástrojů tlačítko Kreslení.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
- Voláno rámcem k vykreslení tlačítko **příkazy** podokně **přizpůsobit** dialogové okno.  
+ Volá se rozhraním, chcete-li nakreslit tlačítko **příkazy** podokně **vlastní** dialogové okno.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -439,57 +439,57 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která se zobrazí tlačítko.  
   
- [v] *Rect –*  
- Ohraničující obdélník tlačítko.  
+ [in] *rect*  
+ Ohraničující obdélník na tlačítko.  
   
- [v] *bSelected*  
- Jestli je vybraná tlačítko. Pokud tento parametr je `TRUE`, výběru tlačítka. Pokud tento parametr je `FALSE`, tlačítko není vybraná.  
+ [in] *bSelected*  
+ Určuje, zda výběru tlačítka. Pokud tento parametr má hodnotu TRUE, výběru tlačítka. Pokud má parametr hodnotu FALSE, tlačítko není vybrané.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka v pixelech tlačítko pro daný kontext zadané zařízení.  
+ Šířka v pixelech, tlačítka v kontextu zadané zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána přizpůsobení dialogových oken ( **příkazy** kartě) Pokud je tlačítko vyžadována k zobrazení sám sebe na pole se seznamem vykreslování vlastníka.  
+ Tato metoda je volána v dialogovém okně přizpůsobení ( **příkazy** kartu) když tlačítko je vyžadována k zobrazení sám na pole se seznamem vykreslené vlastníkem.  
   
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) změnou textový popisek tlačítka na název tlačítka (to znamená na hodnotu `lpszName` parametr, který je předán konstruktoru).  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) tak, že změníte textový popisek tlačítka na název tlačítka (to znamená na hodnotu *lpszName* parametr, který je předán konstruktoru).  
   
 ##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
- Čte tento objekt z archivu nebo zapíše ho do archivu.  
+ Čte tento objekt z archivu nebo zapíše do archivu.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *ar*  
- `CArchive` Objekt, ze které nebo která k serializaci.  
+ [in] *ar*  
+ `CArchive` Objektu, ze které nebo která k serializaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) serializací ID prostředku nadřazené panelu nástrojů. Při načítání archivu ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) vrátí nenulovou hodnotu), nastaví tato metoda `m_pToolBar` – datový člen na panelu nástrojů, který obsahuje ID serializovaných prostředku.  
+ Tato metoda rozšiřuje implementaci základní třídy ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) pomocí serializace ID prostředku nadřazeného panelu nástrojů. Při načítání archivu ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) vrací nenulovou hodnotu), tato metoda nastaví `m_pToolBar` datový člen na panelu nástrojů, který obsahuje ID serializovaných prostředku.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
- Nastaví výchozí příkaz, který používá rozhraní, když uživatel klikne na tlačítko.  
+ Nastaví výchozí příkaz, který rozhraní používá, když uživatel klikne na tlačítko.  
   
 ```  
 void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
+ [in] *uiCmd*  
  ID příkazu výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze zadat výchozí příkaz, který rozhraní provede, když uživatel klikne na tlačítko. Položka s ID příkazu, který je určeného *uiCmd* se musí nacházet na panelu nástrojů nadřazené rozevíracího seznamu.  
+ Voláním této metody lze zadat výchozí příkaz, který rozhraní provede, když uživatel klikne na tlačítko. Položku s Identifikátorem příkazu určené *uiCmd* se musí nacházet v rozevíracím seznamu nadřazeného panelu nástrojů.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarMenuButton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)   
+ [Cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
  [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonGallery | Microsoft Docs
+title: Cmfcribbongallery – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -88,14 +88,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039320"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851519"
 ---
-# <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery – třída
+# <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
 Implementuje Galerie pásu karet Office 2007-style.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -118,58 +118,58 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |Název|Popis|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Přidá novou skupinu do galerie.|  
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Přidá novou položku nabídky v rozevírací nabídce.|  
-|[CMFCRibbonGallery::Clear](#clear)|Vymaže obsah galerie.|  
+|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Přidá novou položku nabídky do rozevírací nabídky.|  
+|[CMFCRibbonGallery::Clear](#clear)|Vymaže obsah v galerii.|  
 |[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Povolí nebo zakáže změnu velikosti panelu nabídek.|  
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Povolí nebo zakáže na straně panelu vlevo od místní nabídky.|  
-|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Přepisuje [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Přepisuje [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|  
-|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Vrátí název skupiny, který se nachází v zadaném indexu.|  
+|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Povolí nebo zakáže bočním panelu vlevo od místní nabídka.|  
+|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Přepíše [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
+|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Přepíše [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|  
+|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Vrátí název skupiny, který se nachází na zadaném indexu.|  
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||  
-|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Vrátí počet položek v řádku, galerie pásu karet.|  
+|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Vrátí počet položek v řádku Galerie pásu karet.|  
 |[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Vrátí text popisku, který je přidružený položce v galerii.|  
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Vrátí index poslední položky v galerii vybrané uživatele.|  
-|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Vrátí ID příkazu, který aktuální galerie.|  
-|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Přepisuje [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
+|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Vrátí index poslední položky v galerii, který uživatel vybral.|  
+|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Vrátí Identifikátor příkazu aktuální galerie.|  
+|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Přepíše [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||  
-|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Přepisuje [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|  
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Určuje, zda Galerie je součástí tlačítko Galerie.|  
+|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Přepíše [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|  
+|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Určuje, zda galerii je obsažen v galerii tlačítko.|  
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Určuje, zda změna velikosti nabídky povolený nebo zakázaný.|  
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||  
-|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Určuje, zda je povoleno na straně panelu.|  
-|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Přepisuje `CMFCRibbonButton::OnAfterChangeRect`.)|  
-|[CMFCRibbonGallery::OnDraw](#ondraw)|(Přepisuje [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
-|[CMFCRibbonGallery::OnEnable](#onenable)|(Přepisuje `CMFCRibbonBaseElement::OnEnable`.)|  
-|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Přepisuje [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|  
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Překreslí galerie.|  
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Odebere všechny položky v galerii popisky tlačítek.|  
+|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Určuje, zda je povoleno postranní panel.|  
+|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Přepíše `CMFCRibbonButton::OnAfterChangeRect`.)|  
+|[CMFCRibbonGallery::OnDraw](#ondraw)|(Přepíše [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
+|[CMFCRibbonGallery::OnEnable](#onenable)|(Přepíše `CMFCRibbonBaseElement::OnEnable`.)|  
+|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Přepíše [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|  
+|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Překreslí galerii.|  
+|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Popisky se odebere ze všech položek v galerii.|  
 |[CMFCRibbonGallery::SelectItem](#selectitem)||  
-|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Přepisuje [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Určuje, jestli se má zobrazit v galerii pásu karet jako rozevírací tlačítko nebo palety přímo na pásu karet.|  
+|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Přepíše [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Určuje, jestli se mají zobrazovat v galerii pásu karet, tlačítku rozevíracího seznamu nebo jako barevnou paletu přímo na pásu karet.|  
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|Nastaví název skupiny.|  
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Určuje počet položek na řádek v galerii.|  
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Nastaví text popisku pro položku Galerie.|  
-|[CMFCRibbonGallery::SetPalette](#setpalette)|Připojí paletu do Galerie pásu karet.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definuje ID příkazu, která je odeslána wm_command – zprávy, pokud byla vybrána položka galerie.|  
+|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definuje počet položek na řádek v galerii.|  
+|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Nastaví text popisu tlačítka pro položku v galerii.|  
+|[CMFCRibbonGallery::SetPalette](#setpalette)|Připojí barevnou paletu do Galerie pásu karet.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definuje ID příkazu, který se odešle do wm_command – zprávy, když byla vybrána položka galerie.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Voláno rámcem při sestavování ikony galerie.|  
+|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Volá se rozhraním při vykreslení ikonu galerie.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tlačítko Galerie se chová stejně jako regulární nabídky tlačítka s tím rozdílem, že se zobrazí galerie, když uživatel otevře ji. Když vyberete položku v galerii, odešle rozhraní wm_command – zprávy společně s ID příkazového tlačítka. Při zpracování zprávy, měli byste zavolat [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) k určení, která položka nebyla vybrána z galerie.  
+ Tlačítko Galerie se chová stejně jako regulární nabídky tlačítka s tím rozdílem, že se zobrazí galerie, když uživatel otevře ho. Když vyberete položku v galerii, rozhraní pošle wm_command – zprávy spolu s Identifikátorem příkazu tlačítka. Při zpracování zprávy, měli byste zavolat [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) k určení, která položka byla vybrána z galerie.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pomocí různých metod v nástroji `CMFCRibbonGallery` třída ke konfiguraci `CMFCRibbonGallery` objektu. Příklad ukazuje, jak zadat počet položek na řádek v galerii, povolit změnu velikosti panelu nabídek, povolte na straně panelu vlevo od rozbalovací nabídce a zobrazit v galerii pásu karet jako palety přímo na panelu pásu karet. Tento fragment kódu je součástí [Ukázka kreslení klienta](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonGallery` třída ke konfiguraci `CMFCRibbonGallery` objektu. Tento příklad ukazuje, jak určit počet položek na řádek v galerii, povolit změnu velikosti panelu nabídky, povolit bočním panelu vlevo od rozbalovací nabídky a Galerie pásu karet se zobrazí jako barevnou paletu přímo na panelu pásu karet. Tento fragment kódu je součástí [nakreslit Client sample](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
+ [CObject –](../../mfc/reference/cobject-class.md) [cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md) [cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md)  
   
- [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)  
+ [Cmfcribbongallery –](../../mfc/reference/cmfcribbongallery-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonPaletteGallery.h  
@@ -195,26 +195,26 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszGroupName*  
+ [in] *lpszGroupName*  
  Určuje název skupiny.  
   
- [v] *uiImagesPaletteResID*  
- Určuje ID prostředku bitové kopie seznamu, který obsahuje bitových kopií pro skupinu.  
+ [in] *uiImagesPaletteResID*  
+ Určuje ID prostředku, který obsahuje Image pro skupinu seznamu obrázků.  
   
- [v] *cxPaletteImage*  
- Určuje šířku v pixelech bitové kopie.  
+ [in] *cxPaletteImage*  
+ Určuje šířku v pixelech bitovou kopii.  
   
- [v] *imagesGroup*  
- Odkaz na bitovou kopii seznamu, který obsahuje skupiny bitových kopií.  
+ [in] *imagesGroup*  
+ Odkaz na seznam obrázků, který obsahuje skupiny imagí.  
   
- [v] *nIconsNum*  
- Určuje počet ikony ve skupině. Tento parametr by měl být zadat jenom pro vlastní (vlastní vykreslování) skupiny.  
+ [in] *nIconsNum*  
+ Určuje počet ikon ve skupině. Tento parametr musí být zadán pouze pro vlastní (vlastníkem vykreslované) skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
- Prostřednictvím položky z Galerie pásu karet lze rozdělit do několika skupin voláním této metody. Každá skupina může mít popisek.  
+ Prostřednictvím položky z Galerie pásu karet lze rozdělit do několika skupin po zavolání metody. Každá skupina může mít popisek.  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
- Přidá novou položku nabídky v rozevírací nabídce.  
+ Přidá novou položku nabídky do rozevírací nabídky.  
   
 ```  
 void AddSubItem(
@@ -224,35 +224,35 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pSubItem*  
- Ukazatel na položku Přidat do nabídky.  
+ [in] *pSubItem*  
+ Ukazatel na položku, kterou chcete přidat do nabídky.  
   
- [v] *nIndex*  
+ [in] *nIndex*  
  Určuje index založený na nule umístění, kam chcete vložit položky.  
   
- [v] *bOnTop*  
- `TRUE` Chcete-li určit, že položka musí být zařazeny před galerii pásu karet; v opačném `FALSE`.  
+ [in] *bOnTop*  
+ TRUE, pokud chcete určit, že položka by měla být vložena před Galerie pásu karet; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody můžete kombinovat místní galerie s položky místní nabídky. Položky nabídky je možné přidat před nebo po galerie.  
+ Automaticky otevírané okno Galerie můžete kombinovat pomocí položky místní nabídky zavoláním této metody. Položky nabídky, jde umístit před nebo po galerii.  
   
- Chcete-li vložit položku před galerie, nastavte *bOnTop* k `TRUE`. Nastavit *bOnTop* k `FALSE` vložit položky níže galerie.  
+ Chcete-li vložit položku před galerii, nastavte *bOnTop* na hodnotu TRUE. Nastavte *bOnTop* na FALSE, pokud chcete vložit položky pod galerii.  
   
 > [!NOTE]
->  Parametr *nIndex* určuje vložení indexu v horní části galerie a v dolní části galerie. Například pokud je třeba vložit položky o jednu pozici před galerie, nastavte *nIndex* na 1 a *bOnTop* k `TRUE`. Podobně, pokud je třeba vložit položky o jednu pozici níže galerie, nastavte *nIndex* na 1 a *bOnTop* k `FALSE`.  
+>  Parametr *nIndex* Určuje index vkládání v horní části v galerii a v dolní části v galerii. Například pokud je nutné vložit položky o jednu pozici před galerii, nastavte *nIndex* na hodnotu 1 a *bOnTop* na hodnotu TRUE. Podobně, pokud je nutné vložit položky o jednu pozici níže v galerii, nastavte *nIndex* na hodnotu 1 a *bOnTop* na hodnotu FALSE.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
- Vymaže obsah galerie.  
+ Vymaže obsah v galerii.  
   
 ```  
 virtual void Clear();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem odebrání veškerý obsah z Galerie pásu karet. Je třeba provést před připojením nové galerie pásu karet nebo více skupin do Galerie pásu karet.  
+ Volejte tuto metodu za účelem odebrání veškerého obsahu z Galerie pásu karet. To je nutné provést před připojením nové galerie pásu karet nebo sadu skupin do Galerie pásu karet.  
   
 ##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
- Vytvoří a inicializuje [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) objektu.  
+ Vytvoří a inicializuje [cmfcribbongallery –](../../mfc/reference/cmfcribbongallery-class.md) objektu.  
   
 ```  
 CMFCRibbonGallery (
@@ -284,34 +284,34 @@ CMFCRibbonGallery (
   
 ### <a name="parameters"></a>Parametry  
  *nID*  
- Určuje ID příkaz příkaz ke spuštění, když uživatel klikne na tlačítko.  
+ Určuje Identifikátor příkazu příkazu ke spuštění, když uživatel klikne na tlačítko.  
   
  *lpszText*  
- Určuje text, který se zobrazí na tlačítko.  
+ Určuje text, který se zobrazí na tlačítku.  
   
  *nSmallImageIndex*  
- Index počítaný od nuly malý obrázek na tlačítko zobrazit.  
+ Index založený na nule malý obrázek, který se zobrazí na tlačítku.  
   
  *nLargeImageIndex*  
- Index počítaný od nuly velký obrázek na tlačítko zobrazit.  
+ Index založený na nule velký obrázek, který se zobrazí na tlačítku.  
   
  *imagesPalette*  
- Odkaz na [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který obsahuje obrázky, které chcete zobrazit v galerii.  
+ Odkaz na [cmfctoolbarimages –](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který obsahuje Image se zobrazí v galerii.  
   
  *uiImagesPaletteResID*  
- ID prostředku v seznamu bitových kopií zobrazit v galerii.  
+ ID prostředku seznam imagí zobrazíte v galerii.  
   
  *cxPaletteImage*  
- Určuje šířku v pixelech obrázek v galerii.  
+ Určuje šířku v pixelech, Image v galerii.  
   
  *sizeIcon*  
- Určuje velikost v pixelech, galerie bitové kopie.  
+ Určuje velikost v pixelech image z galerie.  
   
  *nIconsNum*  
- Určuje počet ikony v galerii.  
+ Určuje počet ikon v galerii.  
   
  *bDefaultButtonStyle*  
- Určuje, zda chcete použít výchozí nebo styl vykreslované uživatelem tlačítko.  
+ Určuje, jestli se má použít výchozí nebo styl tlačítka nakresleného vlastníkem.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -325,28 +325,28 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li povolit změnu velikosti v nabídce; v opačném `FALSE`.  
+ [in] *bEnable*  
+ TRUE, pokud chcete povolit změnu velikosti v nabídce; v opačném případě hodnota FALSE.  
   
- [v] *bVertcalOnly*  
- `TRUE` Chcete-li určit, že v galerii velikost lze změnit pouze svisle; `FALSE` k určení, že galerie lze změnit i vodorovně a svisle.  
+ [in] *bVertcalOnly*  
+ TRUE, pokud chcete určit, že v galerii velikost lze změnit pouze svisle; FALSE, pokud chcete určit, že galerie můžete změnit velikost vertikální i horizontální.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k povolení nebo zakázání Změna velikosti galerii pásu karet. Při změně velikosti je povoleno, zobrazí se v galerii pásu karet úchytu, který může uživatel používat k jeho velikost.  
+ Pomocí této metody můžete povolit nebo zakázat, změna velikosti Galerie pásu karet. Při změně velikosti je povoleno, galerie pásu karet zobrazí úchytu, který může uživatel používat ke změně jeho velikosti.  
   
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
- Povolí nebo zakáže na straně panelu vlevo od místní nabídky.  
+ Povolí nebo zakáže bočním panelu vlevo od místní nabídka.  
   
 ```  
 void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li určit, zda je povoleno na straně panelu; v opačném `FALSE`.  
+ [in] *bEnable*  
+ TRUE, pokud chcete určit, zda je povoleno postranní panel; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem povolení nebo zakázání straně panelu Office stylu XP na levé straně v nabídce.  
+ Volejte tuto metodu za účelem povolení nebo zakázání bočním panelu Office XP – vizuální styl v levé nabídce.  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -374,18 +374,18 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName  
- Vrátí název skupiny, který se nachází v zadaném indexu.  
+ Vrátí název skupiny, který se nachází na zadaném indexu.  
   
 ```  
 LPCTSTR GetGroupName(int nGroupIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nGroupIndex*  
- Určuje index o základu 0 pro skupiny, jehož název chcete načíst.  
+ [in] *nGroupIndex*  
+ Určuje index o základu 0 pro skupinu, jehož název chcete načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název skupiny, které jsou umístěné v zadaném indexu. Předávání neplatný index, bude mít za následek selhání kontrolního výrazu.  
+ Název skupiny nachází na zadaném indexu. Předání neplatný index způsobí neplatnost kontrolního výrazu.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -401,14 +401,14 @@ virtual int GetGroupOffset() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow  
- Vrátí počet položek v řádku, galerie pásu karet.  
+ Vrátí počet položek v řádku Galerie pásu karet.  
   
 ```  
 int GetIconsInRow() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet položek v řádku.  
+ Počet položek za sebou.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -420,11 +420,11 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nItemIndex*  
- Určuje index založený na nule položky, pro které chcete načíst text popisku.  
+ [in] *nItemIndex*  
+ Určuje index založený na nule položky, pro které se mají načíst text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na text popisku přiřazené k položce v galerii pásu karet. Může být `NULL` Pokud žádný popisek přiřazený k této položce.  
+ Ukazatel na řetězec popisku, který je přiřazen jako položka v galerii pásu karet. To může mít hodnotu NULL, pokud žádný popisek je přiřazený k této položce.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -436,23 +436,23 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdID*  
- Určuje ID příkazu, který položky nabídky, který otevírá galerii pásu karet.  
+ [in] *uiCmdID*  
+ Určuje Identifikátor příkazu položky nabídky, které se otevřelo Galerie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Když uživatel vybere libovolnou položku v galerii pásu karet, odešle knihovny wm_command – zprávy společně s ID příkazu nabídky tlačítka, které otevřít galerii pásu karet.  
+ Když uživatel vybere všechny položky v galerii pásu karet, odešle knihovny wm_command – zprávy spolu s Identifikátorem příkazu nabídky tlačítka, které se otevřelo Galerie pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID  
- Vrátí aktuální palety ID příkazu.  
+ Vrátí Identifikátor příkazu aktuální palety.  
   
 ```  
 int GetPaletteID() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID příkazu, který aktuálně vybrané palety.  
+ ID příkazu aktuálně vybraného palety.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -493,26 +493,26 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode  
- Určuje, zda paletě se nachází v galerii tlačítko.  
+ Určuje, zda je na paletě součástí tlačítka galerie.  
   
 ```  
 BOOL IsButtonMode() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud paleta se zobrazí jako rozevírací nabídky tlačítka; `FALSE` Pokud paletě se zobrazí přímo na pásu karet.  
+ Hodnota TRUE, pokud se zobrazí na paletě rozevírací nabídky tlačítka; FALSE, pokud je zobrazena na paletě přímo na pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled  
- Určuje, zda je povoleno Změna velikosti nabídky.  
+ Určuje, zda je povolena možnost Změna velikosti nabídky.  
   
 ```  
 BOOL IsMenuResizeEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud byla povolena změna velikosti nabídky; v opačném `FALSE`.  
+ Hodnota TRUE v případě změny velikosti nabídky se povolila; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -528,14 +528,14 @@ BOOL IsMenuResizeVertical() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ismenusidebar"></a>  CMFCRibbonGallery::IsMenuSideBar  
- Určuje, zda je povoleno na straně panelu.  
+ Určuje, zda je povoleno postranní panel.  
   
 ```  
 BOOL IsMenuSideBar() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud na straně panelu Office stylu XP vykreslením na levé straně místní nabídky; v opačném `FALSE`.  
+ Hodnota TRUE v případě Office XP – vizuální styl postranní panel vykreslením na levé straně místní nabídkou; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -559,12 +559,12 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon  
- Voláno rámcem při sestavování ikony galerie.  
+ Volá se rozhraním při vykreslení ikonu galerie.  
   
 ```  
 virtual void OnDrawPaletteIcon(
@@ -576,23 +576,23 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
  Ukazatel na kontext zařízení, která se používá pro vykreslování.  
   
- [v] *rectIcon*  
- Určuje ohraničující obdélník ikonu k vykreslení.  
+ [in] *rectIcon*  
+ Určuje ohraničující obdélník ikony pro kreslení.  
   
- [v] *nIconIndex*  
- Určuje index založený na nule v seznamu obrázků galerie ikon ikony k vykreslení.  
+ [in] *nIconIndex*  
+ Určuje index založený na nule v seznamu obrázků ikon Galerie ikony pro kreslení.  
   
- [v] *pIcon*  
- Ukazatel na ikonu přitahuje.  
+ [in] *pIcon*  
+ Ukazatel na ikonu, které je cílem vykreslování.  
   
- [v] *clrText*  
- Určuje barvu textu položky k vykreslení.  
+ [in] *clrText*  
+ Určuje barvu textu, předmětu k vykreslení.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete přepsat tuto metodu v odvozené třídě a přizpůsobení vzhledu galerii pásu karet.  
+ Mohou přepsat tuto metodu v odvozené třídě pro přizpůsobení vzhledu Galerie pásu karet.  
   
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable  
 
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -614,22 +614,22 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bIsRTL*  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons  
- Překreslí galerie.  
+ Překreslí galerii.  
   
 ```  
 void RedrawIcons();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce můžete ho překreslit galerie. Pokud jste změnili obsah galerie za běhu, musí volat tuto metodu.  
+ Voláním této funkce ho překreslit galerii. Tato metoda musí volat, pokud změníte obsah v galerii v modulu runtime.  
   
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
- Odebere všechny položky v galerii popisky tlačítek.  
+ Popisky se odebere ze všech položek v galerii.  
   
 ```  
 void RemoveItemToolTips();
@@ -645,12 +645,12 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nItemIndex*  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData  
- Naplní zadaný `CAccessibilityData` objekt pomocí usnadnění data z Galerie pásu karet.  
+ Naplní zadaný `CAccessibilityData` s použitím dat přístupnost z Galerie pásu karet.  
   
 ```  
 virtual BOOL SetACCData(
@@ -659,27 +659,27 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParent*  
- Nadřazené okno okna Galerie pásu karet.  
+ [in] *pParent*  
+ Nadřazené okno okno Galerie pásu karet.  
   
  [out] *dat*  
- A `CAccessibilityData` objekt, který přijímá data usnadnění z Galerie pásu karet.  
+ A `CAccessibilityData` objekt, který přijímá data přístupnost z Galerie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- `TRUE` Pokud je metoda úspěšná. v opačném `FALSE`.  
+ Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
   
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
- Určuje, jestli se má zobrazit v galerii pásu karet jako rozevírací tlačítko nebo palety přímo na pásu karet.  
+ Určuje, jestli se mají zobrazovat v galerii pásu karet, tlačítku rozevíracího seznamu nebo jako barevnou paletu přímo na pásu karet.  
   
 ```  
 void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bSet*  
- `TRUE` Chcete-li zobrazit v galerii pásu karet jako rozevírací nabídky tlačítka; `FALSE` k zobrazení obsahu galerie pásu karet přímo na pásu karet.  
+ [in] *bSet*  
+ TRUE, pokud chcete zobrazit v galerii pásu karet rozevírací nabídky tlačítka; FALSE pro zobrazení obsahu v galerii pásu karet přímo na pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -693,14 +693,14 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nGroupIndex*  
- Určuje index o základu 0 pro skupinu, pro kterou je změnit název.  
+ [in] *nGroupIndex*  
+ Určuje index o základu 0 pro skupinu, pro které se mění název.  
   
- [v] *lpszGroupName*  
- Určuje název nové skupiny.  
+ [in] *lpszGroupName*  
+ Určuje nový název pro skupinu.  
   
 ### <a name="remarks"></a>Poznámky  
- Mění se jejichž název skupiny musí být přidán pomocí [CMFCRibbonGallery::AddGroup](#addgroup) metoda.  
+ Skupiny, jejíž název je mění musí mít byly přidány pomocí [CMFCRibbonGallery::AddGroup](#addgroup) metody.  
   
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
  Určuje počet položek na řádek v galerii.  
@@ -710,14 +710,14 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIconsInRow*  
- Určuje počet položek ve každý řádek galerie.  
+ [in] *nIconsInRow*  
+ Určuje počet položek v jednotlivých řádcích v galerii.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k určení šířku galerii pásu karet.  
+ Pomocí této metody můžete určit šířku Galerie pásu karet.  
   
 ##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip  
- Nastaví text popisku pro položku Galerie.  
+ Nastaví text popisu tlačítka pro položku v galerii.  
   
 ```  
 void SetItemToolTip(
@@ -726,16 +726,16 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nItemIndex*  
- Index založený na nule položky palety, ke které chcete přidružit popisek.  
+ [in] *nItemIndex*  
+ Index založený na nule palety položky, ke které chcete přidružit popisek.  
   
- [v] *lpszToolTip*  
- Text, který se zobrazí na popisek.  
+ [in] *lpszToolTip*  
+ Text, který se zobrazí na ovládacím prvku ToolStrip.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette  
- Připojí paletu do Galerie pásu karet.  
+ Připojí barevnou paletu do Galerie pásu karet.  
   
 ```  
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -747,33 +747,33 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *imagesPalette*  
- Určuje seznam bitové kopie, který obsahuje ikony zobrazit v galerii.  
+ [in] *imagesPalette*  
+ Určuje seznam obrázků, který obsahuje ikony se zobrazí v galerii.  
   
- [v] *uiImagesPaletteResID*  
- Určuje ID prostředku bitové kopie seznamu, který obsahuje ikony zobrazit v galerii.  
+ [in] *uiImagesPaletteResID*  
+ Určuje ID prostředku, který obsahuje ikony se zobrazí v galerii seznamu obrázků.  
   
- [v] *cxPaletteImage*  
- Určuje šířku v pixelech obrázek v galerii.  
+ [in] *cxPaletteImage*  
+ Určuje šířku v pixelech, Image v galerii.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Definuje ID příkazu, která je odeslána wm_command – zprávy, pokud uživatel vybere položku Galerie.  
+ Definuje ID příkazu, který se odešle do wm_command – zprávy, když uživatel vybere položku Galerie.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nID*  
- Určuje ID příkazu, která je odeslána wm_command – zprávy, pokud uživatel vybere položku Galerie.  
+ [in] *nID*  
+ Určuje ID příkazu, který se odešle do wm_command – zprávy, když uživatel vybere položku Galerie.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li určit konkrétní položku, kterou uživatel vybrali z galerie, zavolejte [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statickou metodu.  
+ Chcete-li zjistit, konkrétní položku, uživatel vybral v galerii, zavolejte [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statické metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton – třída](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [Cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md)   
  [CMFCRibbonGalleryMenuButton – třída](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CComContainedObject | Microsoft Docs
+title: Ccomcontainedobject – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360172"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881055"
 ---
-# <a name="ccomcontainedobject-class"></a>CComContainedObject – třída
-Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním k objektu vlastníka **IUnknown**.  
+# <a name="ccomcontainedobject-class"></a>Ccomcontainedobject – třída
+Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním objekt vlastníka `IUnknown`.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,8 +45,8 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Vlastní třídy odvozené od [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
+ *základ*  
+ Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
   
 ## <a name="members"></a>Členové  
   
@@ -55,19 +55,19 @@ class CComContainedObject : public Base
 |Název|Popis|  
 |----------|-----------------|  
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Konstruktor Inicializuje člen ukazatel na objekt vlastníka `IUnknown`.|  
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|Destruktor.|  
+|[Ccomcontainedobject –:: ~ ccomcontainedobject –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|Zvětší počet odkaz objektu vlastníka.|  
+|[CComContainedObject::AddRef](#addref)|Zvýší počet odkazů na objekt vlastníka.|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Načte objekt vlastníka `IUnknown`.|  
-|[CComContainedObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované objektu vlastníka rozhraní.|  
-|[CComContainedObject::Release](#release)|Snižuje počet odkaz objektu vlastníka.|  
+|[CComContainedObject::QueryInterface](#queryinterface)|Načte ukazatel na objekt vlastníka požadované rozhraní.|  
+|[CComContainedObject::Release](#release)|Sníží počet odkaz na objekt vlastníka.|  
   
 ## <a name="remarks"></a>Poznámky  
- ATL používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním k objektu vlastníka **IUnknown**. (Vlastník je buď objekt vnější agregace, nebo objekt, pro kterou je vytvořen rozhraní úplné vypnutí.) `CComContainedObject` volání `CComObjectRootEx`na `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny zděděné prostřednictvím `Base`.  
+ ATL – používá `CComContainedObject` ve třídách [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), a [ccomcachedtearoffobject –](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) delegováním objekt vlastníka `IUnknown`. (Vlastník je buď objekt vnější agregaci, nebo objektu, pro kterou se vytváří odtržených rozhraní). `CComContainedObject` volání `CComObjectRootEx`společnosti `OuterQueryInterface`, `OuterAddRef`, a `OuterRelease`, všechny děděné přes `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Base`  
@@ -78,14 +78,14 @@ class CComContainedObject : public Base
  **Záhlaví:** atlcom  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
- Zvětší počet odkaz objektu vlastníka.  
+ Zvýší počet odkazů na objekt vlastníka.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která může být užitečné pro diagnostiku nebo testování.  
+ Hodnota, která může být užitečné pro diagnostiku a testování.  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  Konstruktor  
@@ -95,13 +95,13 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
- [v] Objekt vlastníka **IUnknown**.  
+ *PV*  
+ [in] Objekt vlastníka `IUnknown`.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastaví `m_pOuterUnknown` člen ukazatele (zděděná prostřednictvím `Base` – třída) k `pv`.  
+ Nastaví `m_pOuterUnknown` ukazatel na člen (zděděné z `Base` třídy) k *pv*.  
   
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>  Ccomcontainedobject –:: ~ ccomcontainedobject –  
  Destruktor.  
   
 ```
@@ -112,20 +112,20 @@ CComContainedObject(void* pv);
  Uvolní všechny přidělené prostředky.  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- Vrátí `m_pOuterUnknown` člen ukazatele (zděděná prostřednictvím *základní* třída) která obsahuje vlastníka objektu **IUnknown**.  
+ Vrátí `m_pOuterUnknown` ukazatel na člen (zděděné z *Base* třídy), který obsahuje objekt vlastníka `IUnknown`.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Objekt vlastníka **IUnknown**.  
+ Objekt vlastníka `IUnknown`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda může být virtuální Pokud `Base` deklaruje [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) makro.  
+ Tato metoda může být virtuální Pokud `Base` je deklarovaný [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) – makro.  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
- Načte ukazatel na požadované objektu vlastníka rozhraní.  
+ Načte ukazatel na objekt vlastníka požadované rozhraní.  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -134,27 +134,27 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [v] Identifikátor rozhraní požadováno.  
+ *identifikátor IID*  
+ [in] Identifikátor se požadované rozhraní.  
   
- `ppvObject`  
- [out] Ukazatel na ukazatel rozhraní identifikovaný `iid`. Pokud objekt nepodporuje toto rozhraní `ppvObject` je nastaven na **NULL**.  
+ *ppvObject*  
+ [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.  
   
- `pp`  
- [out] Ukazatel na ukazatel rozhraní typ identifikovat `Q`. Pokud objekt nepodporuje toto rozhraní `pp` je nastaven na **NULL**.  
+ *str*  
+ [out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
- Snižuje počet odkaz objektu vlastníka.  
+ Sníží počet odkaz na objekt vlastníka.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V sestavení pro ladění **verze** vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování. V sestavení pro bez ladění **verze** vždy vrátí hodnotu 0.  
+ V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

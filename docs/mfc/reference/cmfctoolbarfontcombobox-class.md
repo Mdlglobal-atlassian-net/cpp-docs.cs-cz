@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolBarFontComboBox | Microsoft Docs
+title: Cmfctoolbarfontcombobox – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040087"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849747"
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox – třída
-Tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem, který umožňuje uživateli vybrat písmo ze seznamu písem systému.  
+# <a name="cmfctoolbarfontcombobox-class"></a>Cmfctoolbarfontcombobox – třída
+Tlačítka panelu nástrojů obsahující ovládací prvek pole se seznamem, který umožňuje uživateli vybrat písmo ze seznamu systémových písem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,42 +50,42 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Vrátí ukazatel `CMFCFontInfo` objekt pro zadaný index v poli se seznamem.|  
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|Vybere písmo v poli se seznamem písmo podle buď v názvu písma, nebo předponu a znaková sada písma.|  
+|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Vrací ukazatel `CMFCFontInfo` objekt pro zadaný index v poli se seznamem.|  
+|[CMFCToolBarFontComboBox::SetFont](#setfont)|Vybere písmo v poli se seznamem písma podle buď název písma nebo předpona a znaková sada písmo.|  
   
 ### <a name="data-members"></a>Datové členy  
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
- Výška znaků do pole se seznamem písma.  
+ Výška znaky v poli se seznamem písma.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud chcete přidat do panelu nástrojů tlačítko pole se seznamem písma, postupujte takto:  
+ Chcete-li na panel nástrojů přidat tlačítko pole se seznamem písma, postupujte takto:  
   
 1.  Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů.  
   
-2.  Vytvořit `CMFCToolBarFontComboBox` objektu.  
+2.  Vytvoření `CMFCToolBarFontComboBox` objektu.  
   
-3.  V popisovač zpráv, který zpracovává zprávy AFX_WM_RESETTOOLBAR, nahradit původní tlačítko tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+3.  V popisovači zpráv, která zpracovává zprávu AFX_WM_RESETTOOLBAR, nahraďte původní tlačítko Nová tlačítka pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
-4.  Synchronizovat písma, který je vybraný v pole se seznamem s písma v dokumentu s použitím [CMFCToolBarFontComboBox::SetFont](#setfont) metoda.  
+4.  Synchronizovat vybrané v poli se seznamem písma v dokumentu s použitím písmo [CMFCToolBarFontComboBox::SetFont](#setfont) metody.  
   
- Chcete-li synchronizovat dokumentu písma s písma vybraného v seznamu, použijte [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) metodu za účelem načtení atributů vybrané písma a použít tyto atributy pro vytvoření [ CFont – třída](../../mfc/reference/cfont-class.md) objektu.  
+ Chcete-li synchronizovat s písmo vybrané v poli se seznamem písma dokumentu, použijte [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) má metoda načíst atributy vybraného písma a použít tyto atributy k vytvoření [ Cfont – třída](../../mfc/reference/cfont-class.md) objektu.  
   
- Tlačítko pole se seznamem písmo volá funkci Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) k určení písma obrazovky a tiskárny, které jsou k dispozici v systému.  
+ Tlačítko pole se seznamem písma volá funkci Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) určit písma obrazovky a tiskárny, které jsou k dispozici v systému.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
+ [Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
- [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
+ [Cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
   
- [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
+ [Cmfctoolbarfontcombobox –](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
- Vytvoří [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objektu.  
+ Vytvoří [cmfctoolbarfontcombobox –](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objektu.  
   
 ```  
 public:  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiID*  
+ [in] *uiID*  
  ID příkazu pole se seznamem.  
   
- [v] *iImage*  
- Index založený na nule obrázku panelu nástrojů. Bitovou kopii se nachází v [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md) objektu, který [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md) udržuje – třída.  
+ [in] *iImage*  
+ Index založený na nule Obrázek panelu nástrojů. Na obrázku se nachází v [cmfctoolbarimages – třída](../../mfc/reference/cmfctoolbarimages-class.md) objekt, který [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md) třída udržuje.  
   
- [v] *nFontType*  
- Typy písem, která obsahuje pole se seznamem. Tento parametr může být kombinaci (nebo logická hodnota) z následujících hodnot:  
+ [in] *nFontType*  
+ Typy písem, které obsahuje pole se seznamem. Tento parametr může být kombinací (logický OR) následující hodnoty:  
   
  DEVICE_FONTTYPE  
   
@@ -125,55 +125,55 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [v] *nCharSet*  
- Pokud nastaven na DEFAULT_CHARSET, pole se seznamem obsahuje všechny jednoznačně názvem písem v všechny znakových sad. (Pokud existují dvě písma se stejným názvem, pole se seznamem obsahuje jeden z nich). Pokud je nastaven na hodnotu sady platný znak pole se seznamem obsahuje pouze písma v sadě zadaný znak. V tématu [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) seznam možných znak nastaví.  
+ [in] *nCharSet*  
+ Pokud je nastaveno na DEFAULT_CHARSET, pole se seznamem obsahuje všechny jednoznačně názvem písma ve všech sadách znaků. (Pokud existují dvě písma se stejným názvem, pole se seznamem obsahuje jeden z nich). Pokud je nastaveno na hodnotu set platný znak pole se seznamem obsahuje pouze písma v zadanou znakovou sadu. Zobrazit [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) nastavuje pro výpis znaku je to možné.  
   
- [v] *dwStyle*  
- Styl pole se seznamem. (viz [pole se seznamem styly](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+ [in] *dwStyle*  
+ Styl pole se seznamem. (viz [pole se seznamem stylů](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [v] *iWidth*  
- Šířku v pixelech ovládacích prvků pro úpravy.  
+ [in] *iWidth*  
+ Šířka v pixelech ovládacích prvků pro úpravy.  
   
- [v] *nPitchAndFamily*  
- Pokud je nastaven na DEFAULT_PITCH, pole se seznamem obsahuje písma, bez ohledu na výšku. Pokud nastavíte hodnotu FIXED_PITCH nebo VARIABLE_PITCH, pole se seznamem obsahuje pouze písma s daným typem výšku. Filtrování podle rodinu písem není aktuálně podporován.  
+ [in] *nPitchAndFamily*  
+ Je-li nastaveno na DEFAULT_PITCH, pole se seznamem obsahuje písma, bez ohledu na výšku. Pokud sada FIXED_PITCH nebo VARIABLE_PITCH, pole se seznamem obsahuje pouze písma s tímto typem rozteč. Filtrování podle rodinu písem se momentálně nepodporuje.  
   
  [out] *pLstFontsExternal*  
- Ukazatel na [CObList třída](../../mfc/reference/coblist-class.md) objekt, který ukládá dostupná písma.  
+ Ukazatel [coblist – třída](../../mfc/reference/coblist-class.md) objekt, který uchovává dostupná písma.  
   
 ### <a name="remarks"></a>Poznámky  
- Obvykle `CMFCToolBarFontComboBox` objekty uložit seznam dostupných písem v jedné sdílené `CObList` objektu. Pokud použijete druhý přetížení konstruktoru a zadejte platný ukazatel na *pLstFontsExternal*, že `CMFCToolBarFontComboBox` objektu bude místo toho zadejte `CObList` , *pLstFontsExternal* odkazuje na k dispozici písmy.  
+ Obvykle `CMFCToolBarFontComboBox` objekty uložení seznamu dostupných písem v jedné sdílené `CObList` objektu. Pokud používáte druhé přetížení konstruktoru a poskytnout platný ukazatel na *pLstFontsExternal*, který `CMFCToolBarFontComboBox` objektu se místo toho vyplnit `CObList` , který *pLstFontsExternal* odkazuje na dostupné písma.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit `CMFCToolBarFontComboBox` objektu. Tento fragment kódu je součástí [ukázkové aplikace Word Pad](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit `CMFCToolBarFontComboBox` objektu. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
 ##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
- Vrátí ukazatel `CMFCFontInfo` objekt pro zadaný index v poli se seznamem.  
+ Vrací ukazatel `CMFCFontInfo` objekt pro zadaný index v poli se seznamem.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Určuje index položky pole se seznamem založený na nule.  
+ [in] *iIndex*  
+ Určuje index založený na nule položky pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na `CMFCFontInfo` objektu. Pokud *iIndex* neurčuje platnou položku index, je vrácenou hodnotou `NULL`.  
+ Ukazatel `CMFCFontInfo` objektu. Pokud *iIndex* neurčuje platnou položkou index, vrácená hodnota je NULL.  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
- Určuje výšku v pixelech znaků v pole se seznamem písma, pokud má pole se seznamem styl kreslení vlastníka.  
+ Určuje výšku v pixelech, znaků v poli se seznamem písma, pokud má pole se seznamem styl kreslení vlastníka.  
   
 ```  
 static int m_nFontHeight  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `m_nFontHeight` proměnné je 0, výška se vypočítá automaticky podle výchozí písmo pole se seznamem. Výška zahrnuje jak výstup znaků nad účaří a klesání znaků pod směrného plánu.  
+ Pokud `m_nFontHeight` proměnná je 0, výška se vypočítá automaticky podle výchozí písmo pole se seznamem. Výška zahrnuje ascent znaky nad směrný plán i sestup znaků pod směrného plánu.  
   
 ##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
- Vybere písmo v poli se seznamem písmo podle název písma a znak nastavit, které jsou určené v parametrech.  
+ Vybere písmo v poli se seznamem písma podle znaků a název písma nastavit, které jsou zadány v parametrech.  
   
 ```  
 BOOL SetFont(
@@ -183,28 +183,28 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszName*  
+ [in] *lpszName*  
  Určuje název písma nebo předponu.  
   
- [v] *nCharSet*  
+ [in] *nCharSet*  
  Určuje znakovou sadu.  
   
- [v] *bExact*  
- Určuje, zda *lpszName* obsahuje název písma nebo předponu písma.  
+ [in] *bExact*  
+ Určuje, zda *lpszName* obsahuje název písma nebo předpona písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud písmo jste vybrali úspěšně; jinak 0.  
+ Nenulové, pokud byl úspěšně; vybrán písma jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *bExact* je `TRUE`, tato metoda vybere písmo, který přesně odpovídá názvu, který jste zadali jako *lpszName*. Pokud *bExact* je `FALSE`, tato metoda vybere písmo, který začíná textem určeným jako *lpszName* a používající znaková sada, která jste zadali jako *nCharSet*. Pokud *nCharSet* je nastaven na DEFAULT_CHARSET, budou znaková sada ignorováno a pouze *lpszName* se použije k výběru písmo.  
+ Pokud *bExact* má hodnotu TRUE, tato metoda vybere písmo, který přesně odpovídá názvu, který jste zadali jako *lpszName*. Pokud *bExact* má hodnotu FALSE, tato metoda vybere písma, která začíná textem zadaný jako *lpszName* a, která používá znakovou sadu, která jste zadali jako *nCharSet*. Pokud *nCharSet* nastavený pro DEFAULT_CHARSET, znakové sady bude ignorována a pouze *lpszName* se použije k vyberte písmo.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [CMFCFontInfo – třída](../../mfc/reference/cmfcfontinfo-class.md)   
+ [Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)   
+ [Cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [Cmfcfontinfo – třída](../../mfc/reference/cmfcfontinfo-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

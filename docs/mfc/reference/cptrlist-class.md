@@ -1,5 +1,5 @@
 ---
-title: Třída CPtrList | Microsoft Docs
+title: Cptrlist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078618"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853891"
 ---
-# <a name="cptrlist-class"></a>CPtrList – třída
-Podporuje seznamy neplatné ukazatele.  
+# <a name="cptrlist-class"></a>Cptrlist – třída
+Podporuje seznamy ukazatelů void.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,25 +35,25 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Členové  
- Členské funkce `CPtrList` jsou podobné funkce člena třídy [CObList](../../mfc/reference/coblist-class.md). Z důvodu této podobnosti, můžete použít `CObList` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako parametr funkce nebo vrací hodnotu, nahraďte ukazatel na **void**.  
+ Členské funkce `CPtrList` jsou podobné jako u členských funkcí třídy [coblist –](../../mfc/reference/coblist-class.md). Z důvodu podobnosti, můžete použít `CObList` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CObject` ukazatele jako parametr funkce nebo návratová hodnota, nahraďte ukazatel na **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   
- například překládá do  
+ například se přeloží na  
   
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Poznámky  
- `CPtrList` zahrnuje `IMPLEMENT_DYNAMIC` makro pro podporu přístupu běhového typu a k vypsání `CDumpContext` objektu. Pokud potřebujete výpis seznamu elementů jednotlivé ukazatele, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
+ `CPtrList` zahrnuje IMPLEMENT_DYNAMIC – makro pro podporu přístupu typu modulu runtime a k vypsání `CDumpContext` objektu. Pokud potřebujete s výpisem paměti jednotlivých ukazatel seznam prvků, nastavte na 1 nebo větší hloubky kontextu s výpisem paměti.  
   
- Ukazatel zobrazí nelze serializovat.  
+ Seznamy ukazatel nejde serializovat.  
   
- Když `CPtrList` je odstraněn objekt, nebo při jeho prvky jsou odebrány, odeberou se jenom ukazatele není entity, které se odkazují.  
+ Když `CPtrList` odstranění objektu nebo při jeho prvky jsou odebrány, odeberou se jenom ukazatele, není entity, které odkazují.  
   
  Další informace o používání `CPtrList`, najdete v článku [kolekce](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   

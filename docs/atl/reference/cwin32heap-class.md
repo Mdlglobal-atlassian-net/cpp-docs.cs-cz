@@ -1,5 +1,5 @@
 ---
-title: Třída CWin32Heap | Microsoft Docs
+title: Cwin32heap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363933"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881724"
 ---
-# <a name="cwin32heap-class"></a>CWin32Heap – třída
-Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkce přidělení haldy Win32.  
+# <a name="cwin32heap-class"></a>Cwin32heap – třída
+Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí přidělení haldy Win32.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,25 +58,25 @@ class CWin32Heap : public IAtlMemMgr
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWin32Heap::Allocate](#allocate)|Blok paměti přidělí z objektu haldy.|  
-|[CWin32Heap::Attach](#attach)|Připojí objektu haldy existující haldě.|  
-|[CWin32Heap::Detach](#detach)|Umožňuje odpojit objektu haldy z existující haldy.|  
-|[CWin32Heap::Free](#free)|Uvolní dříve přidělené z halda paměti.|  
+|[CWin32Heap::Allocate](#allocate)|Přiděluje blok paměti z haldy objektu.|  
+|[CWin32Heap::Attach](#attach)|Objekt haldy se připojí k existující haldu.|  
+|[CWin32Heap::Detach](#detach)|Odpojí objekt haldy od existující haldu.|  
+|[CWin32Heap::Free](#free)|Uvolní paměť přidělenou dříve z haldy.|  
 |[CWin32Heap::GetSize](#getsize)|Vrátí velikost bloku paměti přidělené z objektu haldy.|  
-|[CWin32Heap::Reallocate](#reallocate)|Blok paměti přidělí z objektu haldy.|  
+|[CWin32Heap::Reallocate](#reallocate)|Znovu alokuje blok paměti z haldy objektu.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Příznak, který se používá k určení aktuální vlastnictví haldy popisovače.|  
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Příznak, který se používá k určení aktuální vlastnictví popisovač haldy.|  
 |[CWin32Heap::m_hHeap](#m_hheap)|Popisovač objektu haldy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWin32Heap` implementuje metody přidělení paměti pomocí funkce přidělení haldy Win32 včetně [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) a [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Na rozdíl od jiných třídy haldy `CWin32Heap` vyžaduje platný haldy popisovač poskytované předtím, než se přidělí paměť: jiné třídy výchozí k používání haldy procesu. Popisovač můžete zadat konstruktoru nebo na [CWin32Heap::Attach](#attach) metoda. Najdete v článku [CWin32Heap::CWin32Heap](#cwin32heap) metoda další podrobnosti.  
+ `CWin32Heap` implementuje metody přidělení paměti pomocí funkcí přidělení haldy Win32 včetně [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) a [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Na rozdíl od jiných tříd haldy `CWin32Heap` vyžaduje platným popisovačem haldy poskytované předtím, než je paměť přidělena: ostatní výchozí třídy pomocí haldy procesu. Popisovač lze je zadat do konstruktoru nebo položky [CWin32Heap::Attach](#attach) metody. Zobrazit [CWin32Heap::CWin32Heap](#cwin32heap) metoda pro další podrobnosti.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IAtlMemMgr`  
@@ -87,40 +87,40 @@ class CWin32Heap : public IAtlMemMgr
  **Záhlaví:** atlmem.h  
   
 ##  <a name="allocate"></a>  CWin32Heap::Allocate  
- Blok paměti přidělí z objektu haldy.  
+ Přiděluje blok paměti z haldy objektu.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na nově přidělených paměti bloku.  
+ Vrací ukazatel na nově přidělenou paměť bloku.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CWin32Heap::Free](#free) nebo [CWin32Heap::Reallocate](#reallocate) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CWin32Heap::Free](#free) nebo [CWin32Heap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Implementované pomocí [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
- Připojí objektu haldy existující haldě.  
+ Objekt haldy se připojí k existující haldu.  
   
 ```
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hHeap`  
- Popisovač existující haldy.  
+ *hHeap*  
+ Existující popisovač haldy.  
   
- `bTakeOwnership`  
- Příznak naznačuje v případě `CWin32Heap` objektu je převzít vlastnictví prostředků haldě.  
+ *bTakeOwnership*  
+ A pokud příznak indikující `CWin32Heap` objekt je převzít vlastnictví zdroje haldy.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bTakeOwnership` má hodnotu TRUE, `CWin32Heap` objektu je zodpovědná za zpracování haldy odstranění.  
+ Pokud *bTakeOwnership* má hodnotu TRUE, `CWin32Heap` objektu je odpovědný za odstranění popisovač haldy.  
   
 ##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  Konstruktor  
@@ -135,34 +135,34 @@ CWin32Heap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hHeap`  
+ *hHeap*  
  Existující objekt haldy  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky použité při vytváření haldy  
   
  *nInitialSize*  
  Počáteční velikost haldy  
   
- `nMaxSize`  
+ *nMaxSize*  
  Maximální velikost haldy  
   
 ### <a name="remarks"></a>Poznámky  
- Před přidělování paměti, je potřeba zadat `CWin32Heap` objektu s popisovačem haldy platný. Nejsnáze toho dosáhnete pomocí haldy procesu:  
+ Před přidělením paměti, je potřeba zadat `CWin32Heap` objekt s platným popisovačem haldy. Nejsnáze toho dosáhnete pomocí haldy procesu:  
   
  [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
   
- Je také možné zadat do konstruktoru existující popisovač haldy; v tomto případě nový objekt nepřevezme vlastnictví haldy. Původní popisovač haldy pořád bude platit při `CWin32Heap` je odstraněn objekt.  
+ Je také možné zadat do konstruktoru existující popisovač haldy; v tomto případě nový objekt nepřevezme vlastnictví haldy. Původní popisovač haldy bude stále platit `CWin32Heap` objekt odstranit.  
   
- Existující haldy lze také připojit k novému objektu pomocí [CWin32Heap::Attach](#attach).  
+ Existující haldu lze také připojit k novému objektu pomocí [CWin32Heap::Attach](#attach).  
   
  Pokud se halda vyžaduje tam, kde se všechny operace provádějí z jednoho vlákna, je nejlepší vytvořit tento objekt takto:  
   
  [!code-cpp[NVC_ATL_Utilities#93](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]  
   
- Parametr **HEAP_NO_SERIALIZE** Určuje, že vzájemné vyloučení nebude používat při funkce hald přidělit a volné paměti, podle zvýšení výkonu.  
+ Parametr HEAP_NO_SERIALIZE Určuje, že nebude používat vzájemné vyloučení, pokud funkce haldy přidělují a uvolňují paměť, zvýšení výkonu.  
   
- Třetí parametr má výchozí hodnotu 0, což umožňuje, aby halda narůstala podle potřeby. V tématu [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) vysvětlení velikostí paměti a značky.  
+ Třetí parametr má výchozí hodnotu 0, což umožňuje, aby halda narůstala podle potřeby. Zobrazit [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) vysvětlení velikostí paměti a příznaků.  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Destruktor.  
@@ -172,28 +172,28 @@ CWin32Heap(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zničí haldy popisovač, pokud `CWin32Heap` objekt má vlastnictví haldě.  
+ Zničí popisovač haldy, pokud `CWin32Heap` objekt má vlastnictví haldy.  
   
 ##  <a name="detach"></a>  CWin32Heap::Detach  
- Umožňuje odpojit objektu haldy z existující haldy.  
+ Odpojí objekt haldy od existující haldu.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač haldě, do které byl objekt dříve připojit.  
+ Vrátí popisovač haldy, do které byl objekt dříve připojen.  
   
 ##  <a name="free"></a>  CWin32Heap::Free  
- Uvolní paměť z haldy podle dříve přidělená [CWin32Heap::Allocate](#allocate) nebo [CWin32Heap::Reallocate](#reallocate).  
+ Uvolní paměť přidělenou dříve z haldy ve [CWin32Heap::Allocate](#allocate) nebo [CWin32Heap::Reallocate](#reallocate).  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na oblast paměti uvolnit. NULL není platná hodnota a neprovede žádnou akci.  
+ *p*  
+ Ukazatele na blok paměti pro uvolnění. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ##  <a name="getsize"></a>  CWin32Heap::GetSize  
  Vrátí velikost bloku paměti přidělené z objektu haldy.  
@@ -203,14 +203,14 @@ virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na oblast paměti, jejíž aktuální velikost metodu obdrží. Toto je ukazatel vrácený [CWin32Heap::Allocate](#allocate) nebo [CWin32Heap::Reallocate](#reallocate).  
+ *p*  
+ Ukazatele na blok paměti, jejichž velikost se získat metodu. Toto je vrácený ukazatel [CWin32Heap::Allocate](#allocate) nebo [CWin32Heap::Reallocate](#reallocate).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí velikost v bajtech přidělenou paměť bloku.  
+ Vrátí velikost v bajtech bloku přidělené paměti.  
   
 ##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
- Příznak používá k určení aktuální vlastnictví zpracování haldy uložené v [m_hHeap](#m_hheap).  
+ Příznak, který používá k určení aktuální vlastnictví popisovač haldy, které jsou uložené v [m_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
@@ -224,32 +224,32 @@ HANDLE m_hHeap;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Proměnná se používá k ukládání popisovač pro objektu haldy.  
+ Proměnná se používá k ukládání popisovač pro objekt haldy.  
   
 ##  <a name="reallocate"></a>  CWin32Heap::Reallocate  
- Blok paměti přidělí z objektu haldy.  
+ Znovu alokuje blok paměti z haldy objektu.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na oblast paměti a znovu přidělte.  
+ *p*  
+ Ukazatele na blok paměti, aby mohla znovu přidělit.  
   
- `nBytes`  
- Novou velikost v bajtech přidělené bloku. Blok můžete provedeny, větší nebo menší.  
+ *nBytes*  
+ Nová velikost v bajtech přiděleného bloku. Blok provádět větší nebo menší.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na nově přidělených paměti bloku.  
+ Vrací ukazatel na nově přidělenou paměť bloku.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `p` má hodnotu NULL, se předpokládá, že bloku paměti dosud nebyl přidělen a [CWin32Heap::Allocate](#allocate) je volána s argumentem z `nBytes`.  
+ Pokud *p* má hodnotu NULL, předpokládá se, že blok paměti dosud nebyl přidělen a [CWin32Heap::Allocate](#allocate) je volána s argumentem *nBytes*.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)   
- [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)   
- [CLocalHeap – třída](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap – třída](../../atl/reference/cglobalheap-class.md)   
- [CCRTHeap – třída](../../atl/reference/ccrtheap-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
+ [Iatlmemmgr – třída](../../atl/reference/iatlmemmgr-class.md)   
+ [Clocalheap – třída](../../atl/reference/clocalheap-class.md)   
+ [Cglobalheap – třída](../../atl/reference/cglobalheap-class.md)   
+ [Ccrtheap – třída](../../atl/reference/ccrtheap-class.md)   
  [CComHeap – třída](../../atl/reference/ccomheap-class.md)

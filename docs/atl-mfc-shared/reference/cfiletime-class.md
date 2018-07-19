@@ -1,5 +1,5 @@
 ---
-title: Třída CFileTime | Microsoft Docs
+title: Cfiletime – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92acaa02ada550f1a2dcbf33a0e0e67b88347a5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365292"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880944"
 ---
-# <a name="cfiletime-class"></a>CFileTime – třída
-Tato třída poskytuje metody pro správu hodnoty data a času, které jsou přidružené k souboru.  
+# <a name="cfiletime-class"></a>Cfiletime – třída
+Tato třída poskytuje metody pro správu přidružené k souboru hodnoty data a času.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,56 +58,56 @@ class CFileTime :  public FILETIME
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFileTime::GetCurrentTime](#getcurrenttime)|Volání této funkce statický načíst `CFileTime` objekt, který představuje aktuální systémový datum a čas.|  
-|[CFileTime::GetTime](#gettime)|Volat tuto metodu za účelem načtení času z `CFileTime` objektu.|  
-|[CFileTime::LocalToUTC](#localtoutc)|Voláním této metody lze převést místního času na čas souboru na základě na koordinovaný světový čas (UTC).|  
-|[CFileTime::SetTime](#settime)|Volat tuto metodu a nastavit datum a čas, které jsou uložené `CFileTime` objektu.|  
-|[CFileTime::UTCToLocal](#utctolocal)|Voláním této metody lze převádět na základě na na koordinovaný světový čas (UTC) na místní čas a čas.|  
+|[CFileTime::GetCurrentTime](#getcurrenttime)|Voláním této funkce statických načíst `CFileTime` objekt, který představuje aktuální systémový datum a čas.|  
+|[CFileTime::GetTime](#gettime)|Volejte tuto metodu za účelem načtení čas `CFileTime` objektu.|  
+|[CFileTime::LocalToUTC](#localtoutc)|Voláním této metody lze převést místního souboru čas na čas souboru založené na koordinovaný univerzální čas (UTC).|  
+|[CFileTime::SetTime](#settime)|Volání této metody nastavte datum a čas, které jsou uložené `CFileTime` objektu.|  
+|[CFileTime::UTCToLocal](#utctolocal)|Volání této metody pro převod času na základě na na koordinovaný univerzální čas (UTC) na místní čas.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFileTime::operator-](#operator_-)|Tento operátor slouží k provádění odčítání na `CFileTime` nebo `CFileTimeSpan` objektu.|  
-|[CFileTime::operator! =](#operator_neq)|Tento operátor porovná dvě `CFileTime` objekty nerovnost.|  
-|[CFileTime::operator +](#operator_add)|Tento operátor slouží k přidání plnění `CFileTimeSpan` objektu.|  
-|[CFileTime::operator +=](#operator_add_eq)|Tento operátor slouží k přidání plnění `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.|  
-|[CFileTime::operator &lt;](#operator_lt)|Tento operátor porovná dvě `CFileTime` objekty, které chcete určit menší.|  
-|[CFileTime::operator &lt;=](#operator_lt_eq)|Tento operátor porovná dvě `CFileTime` objekty k určení rovnosti nebo menší.|  
+|[CFileTime::operator-](#operator_-)|Tento operátor se používá k provedení odečtení na `CFileTime` nebo `CFileTimeSpan` objektu.|  
+|[CFileTime::operator! =](#operator_neq)|Tento operátor porovná dva `CFileTime` objekty nerovnost.|  
+|[CFileTime::operator +](#operator_add)|Tento operátor se používá k provedení sčítání na `CFileTimeSpan` objektu.|  
+|[CFileTime::operator +=](#operator_add_eq)|Tento operátor se používá k provedení sčítání na `CFileTimeSpan` objektu a výsledek přiřaďte do aktuálního objektu.|  
+|[CFileTime::operator &lt;](#operator_lt)|Tento operátor porovná dva `CFileTime` objekty k určení menší než.|  
+|[CFileTime::operator &lt;=](#operator_lt_eq)|Tento operátor porovná dva `CFileTime` objekty k určení rovnosti, nebo menší.|  
 |[CFileTime::operator =](#operator_eq)|Operátor přiřazení.|  
-|[CFileTime::operator-=](#operator_-_eq)|Tento operátor slouží k provádění odčítání na `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.|  
-|[CFileTime::operator ==](#operator_eq_eq)|Tento operátor porovná dvě `CFileTime` objekty rovnosti.|  
-|[CFileTime::operator &gt;](#operator_gt)|Tento operátor porovná dvě `CFileTime` objekty, které chcete určit delší.|  
-|[CFileTime::operator &gt;=](#operator_gt_eq)|Tento operátor porovná dvě `CFileTime` objekty k určení rovnosti nebo delší.|  
+|[CFileTime::operator-=](#operator_-_eq)|Tento operátor se používá k provedení odečtení na `CFileTimeSpan` objektu a výsledek přiřaďte do aktuálního objektu.|  
+|[CFileTime::operator ==](#operator_eq_eq)|Tento operátor porovná dva `CFileTime` objekty pro rovnost.|  
+|[CFileTime::operator &gt;](#operator_gt)|Tento operátor porovná dva `CFileTime` objekty k určení větší.|  
+|[CFileTime::operator &gt;=](#operator_gt_eq)|Tento operátor porovná dva `CFileTime` objekty k určení rovnosti, nebo větší.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFileTime::Day](#day)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden den.|  
-|[CFileTime::Hour](#hour)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jednu hodinu.|  
-|[CFileTime::Millisecond](#millisecond)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden milisekundu.|  
-|[CFileTime::Minute](#minute)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jednu minutu.|  
-|[CFileTime::Second](#second)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jedna sekunda.|  
-|[CFileTime::Week](#week)|Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden týden.|  
+|[CFileTime::Day](#day)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden den.|  
+|[CFileTime::Hour](#hour)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které společně tvoří jednu hodinu.|  
+|[CFileTime::Millisecond](#millisecond)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden milisekund.|  
+|[CFileTime::Minute](#minute)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které společně tvoří jednu minutu.|  
+|[CFileTime::Second](#second)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které společně tvoří jednu sekundu.|  
+|[CFileTime::Week](#week)|Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden týden.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje metody pro správu hodnoty data a času, které jsou přidružené k vytváření, přístup a úpravy souborů. Metody a data této třídy se často používají ve spojení s `CFileTimeSpan` objekty, které řeší relativní časové hodnoty.  
+ Tato třída poskytuje metody pro správu přidružené k vytváření, přístup a úpravy souborů hodnoty data a času. Metodám a datovým této třídy jsou často používána ve spojení s `CFileTimeSpan` objekty, které se zabývají relativní časové hodnoty.  
   
- Hodnota data a času se ukládají jako 64 bitů hodnotu představující počet 100nanosekundových intervalů od 1. ledna 1601. To je formát koordinovaný světový čas (UTC).  
+ Hodnota data a času se ukládá jako 64bitová hodnota reprezentující počet 100nanosekundových intervalů o délce od 1. ledna 1601. To je formát koordinovaný univerzální čas (UTC).  
   
- Následující statické const členské proměnné jsou k dispozici pro zjednodušení výpočty:  
+ Pro zjednodušení výpočtů, jsou k dispozici následující statické konstantní členské proměnné:  
   
-|Členské proměnné|Počet 100nanosekundových intervalů|  
+|Členské proměnné|Počet intervalů o délce 100 nanosekund|  
 |---------------------|-----------------------------------------|  
-|Milisekund|10,000|  
-|Sekunda|Milisekundu * 1 000|  
+|Milisekundy|10,000|  
+|Sekunda|Milisekundy * 1 000|  
 |Minuta|Druhý * 60|  
 |Hodina|Minutu * 60|  
 |Den|Hodina * 24|  
 |Týden|Den * 7|  
   
- **Poznámka:** ne všechny systémy souborů můžete záznam vytvoření a čas posledního přístupu a ne všechny systémy souborů je záznam stejným způsobem. Pro příklad, v systému Windows NT FAT systému souborů, vytvoření čas má rozlišení 10 milisekund, doba zápisu má rozlišení 2 sekundy a doba přístupu k má rozlišení 1 den (data access). V systému souborů NTFS čas přístupu má rozlišení 1 hodina. Kromě toho FAT zaznamenává časy na disku v místním čase, ale NTFS zaznamenává časy na disku ve standardu UTC. Další informace najdete v tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
+ **Poznámka:** všechny systémy souborů lze zaznamenat vytvoření a čas posledního přístupu a ne všechny systémy souborů je zaznamenat stejným způsobem. Vytvořte například v systému souborů FAT Windows NT, čas s rozlišením 10 milisekund, čas zápisu rozlišením 2 sekundy a čas přístupu s rozlišením 1 den (data access). V systému souborů NTFS čas přístupu s rozlišením 1 hodina. Kromě toho FAT zaznamenává časy na disku v místním čase, ale systém souborů NTFS zaznamenává ve standardu UTC, časy na disku. Další informace najdete v tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `FILETIME`  
@@ -127,17 +127,17 @@ CFileTime(ULONGLONG nTime) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- A [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.  
+ *FT*  
+ A [hodnota FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.  
   
- `nTime`  
+ *nTime*  
  Datum a čas vyjádřený jako hodnotu 64-bit.  
   
 ### <a name="remarks"></a>Poznámky  
- `CFileTime` Můžete vytvořit objekt použití existující datum a čas z `FILETIME` struktury nebo vyjádřený jako hodnotu 64-bit (ve formátu času koordinovaný světový čas (UTC) nebo místní). Výchozí konstruktor nastaví čas na hodnotu 0.  
+ `CFileTime` Objektu lze vytvořit pomocí existující data a času `FILETIME` struktury nebo vyjádřené jako hodnotu 64-bit (v místním nebo formáty času koordinovaný univerzální čas (UTC)). Výchozí konstruktor nastaví čas na hodnotu 0.  
   
 ##  <a name="day"></a>  CFileTime::Day  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden den.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden den.  
   
 ```
 static const ULONGLONG Day = Hour* 24;
@@ -147,30 +147,30 @@ static const ULONGLONG Day = Hour* 24;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ##  <a name="getcurrenttime"></a>  CFileTime::GetCurrentTime  
- Volání této funkce statický načíst `CFileTime` objekt, který představuje aktuální systémový datum a čas.  
+ Voláním této funkce statických načíst `CFileTime` objekt, který představuje aktuální systémový datum a čas.  
   
 ```
 static CFileTime GetCurrentTime() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktuální systémový datum a čas ve formátu koordinovaný světový čas (UTC).  
+ Vrátí aktuální systémový datum a čas ve formátu koordinovaného univerzálního času (UTC).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#41](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_1.cpp)]  
   
 ##  <a name="gettime"></a>  CFileTime::GetTime  
- Volat tuto metodu za účelem načtení času z `CFileTime` objektu.  
+ Volejte tuto metodu za účelem načtení čas `CFileTime` objektu.  
   
 ```
 ULONGLONG GetTime() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí datum a čas jako 64bitové číslo, které mohou být ve formátu koordinovaný světový čas (UTC) nebo místní.  
+ Vrátí datum a čas jako 64bitové číslo, které mohou být ve formátu koordinovaného univerzálního času (UTC) nebo místní.  
   
 ##  <a name="hour"></a>  CFileTime::Hour  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jednu hodinu.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které společně tvoří jednu hodinu.  
   
 ```
 static const ULONGLONG Hour = Minute* 60;
@@ -180,20 +180,20 @@ static const ULONGLONG Hour = Minute* 60;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ##  <a name="localtoutc"></a>  CFileTime::LocalToUTC  
- Voláním této metody lze převést místního času na čas souboru na základě na koordinovaný světový čas (UTC).  
+ Voláním této metody lze převést místního souboru čas na čas souboru založené na koordinovaný univerzální čas (UTC).  
   
 ```
 CFileTime LocalToUTC() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CFileTime` objekt obsahující čas ve formátu UTC.  
+ Vrátí `CFileTime` objekt, který obsahuje čas ve formátu UTC.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CFileTime::UTCToLocal](#utctolocal).  
   
 ##  <a name="millisecond"></a>  CFileTime::Millisecond  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden milisekundu.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden milisekund.  
   
 ```
 static const ULONGLONG Millisecond = 10000;
@@ -203,7 +203,7 @@ static const ULONGLONG Millisecond = 10000;
  [!code-cpp[NVC_MFCFiles#44](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_2.cpp)]  
   
 ##  <a name="minute"></a>  CFileTime::Minute  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jednu minutu.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které společně tvoří jednu minutu.  
   
 ```
 static const ULONGLONG Minute = Second* 60;
@@ -213,7 +213,7 @@ static const ULONGLONG Minute = Second* 60;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ##  <a name="operator_-"></a>  CFileTime::operator-  
- Tento operátor slouží k provádění odčítání na `CFileTime` nebo `CFileTimeSpan` objektu.  
+ Tento operátor se používá k provedení odečtení na `CFileTime` nebo `CFileTimeSpan` objektu.  
   
 ```
 CFileTime operator-(CFileTimeSpan span) const throw();
@@ -221,87 +221,87 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `span`  
+ *značka span*  
  A `CFileTimeSpan` objektu.  
   
- `ft`  
+ *FT*  
  A `CFileTime` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CFileTime` objekt nebo `CFileTimeSpan` objekt reprezentující výsledek časový rozdíl mezi dvěma objekty.  
+ Vrátí `CFileTime` objektu nebo `CFileTimeSpan` objekt představující výsledek časový rozdíl mezi dvěma objekty.  
   
 ##  <a name="operator_neq"></a>  CFileTime::operator! =  
- Tento operátor porovná dvě `CFileTime` objekty nerovnost.  
+ Tento operátor porovná dva `CFileTime` objekty nerovnost.  
   
 ```
 bool operator!=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- `CFileTime` Objekt, který má být porovnána.  
+ *FT*  
+ `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud položka porovnávané není rovno `CFileTime` objektu, jinak hodnota **false**.  
+ Vrátí TRUE, pokud položka, který se porovnává se nerovná `CFileTime` objektu, jinak hodnota FALSE.  
   
 ##  <a name="operator_add"></a>  CFileTime::operator +  
- Tento operátor slouží k přidání plnění `CFileTimeSpan` objektu.  
+ Tento operátor se používá k provedení sčítání na `CFileTimeSpan` objektu.  
   
 ```
 CFileTime operator+(CFileTimeSpan span) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `span`  
+ *značka span*  
  A `CFileTimeSpan` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CFileTime` objekt reprezentující výsledek původní čas a relativní časové.  
+ Vrátí `CFileTime` objekt představující výsledek původní čas a relativní časové.  
   
 ##  <a name="operator_add_eq"></a>  CFileTime::operator +=  
- Tento operátor slouží k přidání plnění `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.  
+ Tento operátor se používá k provedení sčítání na `CFileTimeSpan` objektu a výsledek přiřaďte do aktuálního objektu.  
   
 ```
 CFileTime& operator+=(CFileTimeSpan span) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `span`  
+ *značka span*  
  A `CFileTimeSpan` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí aktualizovaný `CFileTime` objektu, která reprezentuje výsledek původní čas a relativní časové.  
+ Vrátí aktualizovaný `CFileTime` objekt představující výsledek původní čas a relativní časové.  
   
 ##  <a name="operator_lt"></a>  CFileTime::operator &lt;  
- Tento operátor porovná dvě `CFileTime` objekty, které chcete určit menší.  
+ Tento operátor porovná dva `CFileTime` objekty k určení menší než.  
   
 ```
 bool operator<(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- `CFileTime` Objekt, který má být porovnána.  
+ *FT*  
+ `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt menší (dříve v čase) než druhý, **false** jinak.  
+ Vrátí hodnotu TRUE, pokud je první objekt menší (dříve v čase) než druhé, FALSE jinak.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#43](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_3.cpp)]  
   
 ##  <a name="operator_lt_eq"></a>  CFileTime::operator &lt;=  
- Tento operátor porovná dvě `CFileTime` objekty k určení rovnosti nebo menší.  
+ Tento operátor porovná dva `CFileTime` objekty k určení rovnosti, nebo menší.  
   
 ```
 bool operator<=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- `CFileTime` Objekt, který má být porovnána.  
+ *FT*  
+ `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt menší než (starší v čase) nebo rovna hodnotě druhého, jinak **false**.  
+ Vrátí TRUE, pokud je první objekt menší než (dříve v čase) nebo roven druhému, jinak hodnota FALSE.  
   
 ##  <a name="operator_eq"></a>  CFileTime::operator =  
  Operátor přiřazení.  
@@ -311,70 +311,70 @@ CFileTime& operator=(const FILETIME& ft) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- A `CFileTime` objekt obsahující nové data a času.  
+ *FT*  
+ A `CFileTime` objekt, který obsahuje nový čas a datum.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CFileTime` objektu.  
   
 ##  <a name="operator_-_eq"></a>  CFileTime::operator-=  
- Tento operátor slouží k provádění odčítání na `CFileTimeSpan` objektu a výsledek přiřadit aktuální objekt.  
+ Tento operátor se používá k provedení odečtení na `CFileTimeSpan` objektu a výsledek přiřaďte do aktuálního objektu.  
   
 ```
 CFileTime& operator-=(CFileTimeSpan span) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `span`  
- A `CFileTimeSpan` objekt obsahující relativní časové má odečíst.  
+ *značka span*  
+ A `CFileTimeSpan` objekt, který obsahuje relativní časové se má odečíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktualizovaný `CFileTime` objektu.  
   
 ##  <a name="operator_eq_eq"></a>  CFileTime::operator ==  
- Tento operátor porovná dvě `CFileTime` objekty rovnosti.  
+ Tento operátor porovná dva `CFileTime` objekty pro rovnost.  
   
 ```
 bool operator==(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
+ *FT*  
  `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud objekty jsou stejné, jinak **false**.  
+ Vrátí hodnotu PRAVDA, pokud jsou objekty stejné; jinak hodnota FALSE.  
   
 ##  <a name="operator_gt"></a>  CFileTime::operator &gt;  
- Tento operátor porovná dvě `CFileTime` objekty, které chcete určit delší.  
+ Tento operátor porovná dva `CFileTime` objekty k určení větší.  
   
 ```
 bool operator>(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- `CFileTime` Objekt, který má být porovnána.  
+ *FT*  
+ `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud je první objekt větší než (později v čase) než druhý, jinak **false**.  
+ Vrátí TRUE, pokud je první objekt větší než (později v čase) než druhé, jinak hodnota FALSE.  
   
 ##  <a name="operator_gt_eq"></a>  CFileTime::operator &gt;=  
- Tento operátor porovná dvě `CFileTime` objekty k určení rovnosti nebo delší.  
+ Tento operátor porovná dva `CFileTime` objekty k určení rovnosti, nebo větší.  
   
 ```
 bool operator>=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ft`  
- `CFileTime` Objekt, který má být porovnána.  
+ *FT*  
+ `CFileTime` Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **true** Pokud první objekt větší než (později v čase) nebo rovna hodnotě druhého, jinak **false**.  
+ Vrátí TRUE, pokud je první objekt (později v čase) větší než nebo roven druhému, jinak hodnota FALSE.  
   
 ##  <a name="second"></a>  CFileTime::Second  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden den.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden den.  
   
 ```
 static const ULONGLONG Second = Millisecond* 1000;
@@ -384,31 +384,31 @@ static const ULONGLONG Second = Millisecond* 1000;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ##  <a name="settime"></a>  CFileTime::SetTime  
- Volat tuto metodu a nastavit datum a čas, které jsou uložené `CFileTime` objektu.  
+ Volání této metody nastavte datum a čas, které jsou uložené `CFileTime` objektu.  
   
 ```
 void SetTime(ULONGLONG nTime) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTime`  
- 64bitová verze hodnota představující datum a čas ve formátu koordinovaný světový čas (UTC) nebo místní.  
+ *nTime*  
+ 64 bitů hodnotu představující datum a čas ve formátu koordinovaného univerzálního času (UTC) nebo místní.  
   
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal  
- Voláním této metody lze převádět na základě na na koordinovaný světový čas (UTC) na místní čas a čas.  
+ Volání této metody pro převod času na základě na na koordinovaný univerzální čas (UTC) na místní čas.  
   
 ```
 CFileTime UTCToLocal() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `CFileTime` objekt obsahující čas ve formátu času místního souboru.  
+ Vrátí `CFileTime` objekt, který obsahuje čas ve formátu času místního souboru.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#42](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_4.cpp)]  
   
 ##  <a name="week"></a>  CFileTime::Week  
- Člen statických dat ukládání počtu 100nanosekundových intervalů, které tvoří jeden týden.  
+ Statický datový člen ukládání počet intervalů o délce 100 nanosekund, které tvoří jeden týden.  
   
 ```
 static const ULONGLONG Week = Day* 7;
@@ -418,9 +418,9 @@ static const ULONGLONG Week = Day* 7;
  Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).  
   
 ## <a name="see-also"></a>Viz také  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
- [CFileTimeSpan – třída](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
+ [FILETIME –](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [Cfiletimespan – třída](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [ATL a MFC sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 

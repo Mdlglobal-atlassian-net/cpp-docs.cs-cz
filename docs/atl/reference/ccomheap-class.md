@@ -1,5 +1,5 @@
 ---
-title: Třída CComHeap | Microsoft Docs
+title: Ccomheap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359860"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881601"
 ---
-# <a name="ccomheap-class"></a>CComHeap – třída
-Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkce přidělení paměti COM.  
+# <a name="ccomheap-class"></a>Ccomheap – třída
+Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí přidělení paměti COM.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,16 +46,16 @@ class CComHeap : public IAtlMemMgr
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComHeap::Allocate](#allocate)|Voláním této metody lze přidělit blok paměti.|  
-|[CComHeap::Free](#free)|Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.|  
-|[CComHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.|  
-|[CComHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
+|[CComHeap::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|  
+|[CComHeap::Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.|  
+|[CComHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.|  
+|[CComHeap::Reallocate](#reallocate)|Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComHeap` implementuje funkce přidělení paměti pomocí funkcí přidělení COM, včetně [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)a [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maximální množství paměti, kterou lze přidělit rovná **INT_MAX** (2147483647) bajtů.  
+ `CComHeap` implementuje funkce přidělení paměti pomocí funkce přidělení modelu COM, včetně [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)a [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Maximální množství paměti, které mohou být přiděleny rovná INT_MAX (2147483647) bajtů.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IAtlMemMgr`  
@@ -66,82 +66,82 @@ class CComHeap : public IAtlMemMgr
  **Záhlaví:** ATLComMem.h  
   
 ##  <a name="allocate"></a>  CComHeap::Allocate  
- Voláním této metody lze přidělit blok paměti.  
+ Volejte tuto metodu za účelem přidělení bloku paměti.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CComHeap::Free](#free) nebo [CComHeap::Reallocate](#reallocate) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CComHeap::Free](#free) nebo [CComHeap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
+ Implementované pomocí [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
 ##  <a name="free"></a>  CComHeap::Free  
- Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti. NULL není platná hodnota a neprovede žádnou akci.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
+ Implementované pomocí [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
- Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí velikost bloku paměti přidělené v bajtech.  
+ Vrátí velikost bloku přidělené paměti v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
+ Implementované pomocí [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
 ##  <a name="reallocate"></a>  CComHeap::Reallocate  
- Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CComHeap::Free](#free) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CComHeap::Free](#free) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
+ Implementované pomocí [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
   
 ## <a name="see-also"></a>Viz také  
  [Příklad DynamicConsumer](../../visual-cpp-samples.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
- [CWin32Heap – třída](../../atl/reference/cwin32heap-class.md)   
- [CLocalHeap – třída](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap – třída](../../atl/reference/cglobalheap-class.md)   
- [CCRTHeap – třída](../../atl/reference/ccrtheap-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
+ [Cwin32heap – třída](../../atl/reference/cwin32heap-class.md)   
+ [Clocalheap – třída](../../atl/reference/clocalheap-class.md)   
+ [Cglobalheap – třída](../../atl/reference/cglobalheap-class.md)   
+ [Ccrtheap – třída](../../atl/reference/ccrtheap-class.md)   
  [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)

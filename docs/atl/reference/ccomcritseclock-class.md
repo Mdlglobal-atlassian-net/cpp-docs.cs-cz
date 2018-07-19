@@ -1,5 +1,5 @@
 ---
-title: Třída CComCritSecLock | Microsoft Docs
+title: Ccomcritseclock – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358883"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880248"
 ---
-# <a name="ccomcritseclock-class"></a>CComCritSecLock – třída
-Tato třída poskytuje metody pro zamykání a odemykání objekt kritická sekce.  
+# <a name="ccomcritseclock-class"></a>Ccomcritseclock – třída
+Tato třída poskytuje metody pro zamknutí a odemknutí objektu kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ template<class TLock> class CComCritSecLock
   
 #### <a name="parameters"></a>Parametry  
  *TLock*  
- Objekt, který má být uzamčena a odemkne.  
+ Objekt k uzamčení a odemknutí.  
   
 ## <a name="members"></a>Členové  
   
@@ -47,17 +47,17 @@ template<class TLock> class CComCritSecLock
 |Název|Popis|  
 |----------|-----------------|  
 |[CComCritSecLock::CComCritSecLock](#ctor)|Konstruktor|  
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Destruktor.|  
+|[Ccomcritseclock –:: ~ ccomcritseclock –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](#lock)|Volejte tuto metodu za účelem zamknout objekt kritická sekce.|  
-|[CComCritSecLock::Unlock](#unlock)|Volejte tuto metodu k odemknutí objekt kritická sekce.|  
+|[CComCritSecLock::Lock](#lock)|Voláním této metody lze uzamknout objekt kritický oddíl.|  
+|[CComCritSecLock::Unlock](#unlock)|Volání této metody k odemknutí objektu kritický oddíl.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída slouží k zamknutí a odemknutí objekty způsobem bezpečnější než s [CComCriticalSection třída](../../atl/reference/ccomcriticalsection-class.md) nebo [CComAutoCriticalSection třída](../../atl/reference/ccomautocriticalsection-class.md).  
+ Tato třída slouží k uzamčení nebo odemčení způsobem bezpečnější než s objekty [ccomautocriticalsection – třída](../../atl/reference/ccomcriticalsection-class.md) nebo [ccomautocriticalsection – třída](../../atl/reference/ccomautocriticalsection-class.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
@@ -71,15 +71,15 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
   
 ### <a name="parameters"></a>Parametry  
  *cs*  
- Objekt kritická sekce.  
+ Objekt, který kritický oddíl.  
   
- `bInitialLock`  
- Stav počáteční zámku: **true** znamená uzamčena.  
+ *bInitialLock*  
+ Stav zámku počáteční: **true** znamená, že uzamčen.  
   
 ### <a name="remarks"></a>Poznámky  
- Inicializuje objekt kritická sekce.  
+ Inicializuje objekt kritický oddíl.  
   
-##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  Ccomcritseclock –:: ~ ccomcritseclock –  
  Destruktor.  
   
 ```
@@ -87,31 +87,31 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odemkne objekt kritická sekce.  
+ Odemkne objekt kritický oddíl.  
   
 ##  <a name="lock"></a>  CComCritSecLock::Lock  
- Volejte tuto metodu za účelem zamknout objekt kritická sekce.  
+ Voláním této metody lze uzamknout objekt kritický oddíl.  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK, pokud objekt má úspěšně uzamčen nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK, pokud objekt má úspěšně uzamčen nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud není objekt uzamčen, dojde k chybě vyhodnocení v sestavení pro ladění.  
+ Pokud objekt je již uzamčena, dojde k chybě vyhodnocení v sestaveních ladění.  
   
 ##  <a name="unlock"></a>  CComCritSecLock::Unlock  
- Volejte tuto metodu k odemknutí objekt kritická sekce.  
+ Volání této metody k odemknutí objektu kritický oddíl.  
   
 ```
 void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud již odemknutý objekt, dojde k chybě vyhodnocení v sestavení pro ladění.  
+ Pokud už je odemknuté objektu, dojde k chybě vyhodnocení v sestaveních ladění.  
   
 ## <a name="see-also"></a>Viz také  
- [CComCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)   
+ [Ccomautocriticalsection – třída](../../atl/reference/ccomcriticalsection-class.md)   
  [CComAutoCriticalSection – třída](../../atl/reference/ccomautocriticalsection-class.md)

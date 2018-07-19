@@ -1,5 +1,5 @@
 ---
-title: Předávání argumentů CString | Microsoft Docs
+title: CString – předávání argumentů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 642ff20028a0929bb7bc11815e66b9f845ef9bd7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e89a0f4af28606abef8804aeab5d1e2f62e8d8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356827"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882448"
 ---
-# <a name="cstring-argument-passing"></a>Předávání argumentů CString
-Tento článek vysvětluje, jak předat [CString](../atl-mfc-shared/reference/cstringt-class.md) objektů funkcí a jak vracet `CString` objekty z funkce.  
+# <a name="cstring-argument-passing"></a>CString – předávání argumentů
+Tento článek vysvětluje, jak předat [CString](../atl-mfc-shared/reference/cstringt-class.md) objektů funkce a jak vrátit `CString` objekty z funkce.  
   
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> CString konvence předávání argumentů  
- Když definujete třídy rozhraní, musíte určit konvence předávání argumentů pro členské funkce. Existují některé standardní pravidla pro předávání a vrácení `CString` objekty. Pokud budete postupovat podle pravidel popsaných v [řetězce jako vstupy funkce](#_core_strings_as_function_inputs) a [řetězce jako funkce výstupy](#_core_strings_as_function_outputs), budete mít efektivní, správný kód.  
+##  <a name="_core_cstring_argument.2d.passing_conventions"></a> CString – předávání argumentů konvence  
+ Při definování třídy rozhraní, musíte určit konvence předávání argumentů pro členské funkce. Existují některé standardní pravidla pro předávání a vracení `CString` objekty. Pokud budete postupovat podle pravidel popsaných v [řetězců jako vstupy funkce](#_core_strings_as_function_inputs) a [řetězců jako výstup funkce](#_core_strings_as_function_outputs), budete mít efektivní, správný kód.  
   
 ##  <a name="_core_strings_as_function_inputs"></a> Řetězce jako vstupy – funkce  
- Nejvíce efektivní a bezpečnou způsob, jak používat `CString` objekt ve volaných funkcí je předat `CString` objekt, který má funkci. Bez ohledu název `CString` objekt neukládá řetězec interně jako řetězec stylu jazyka C, která má hodnotu null. ukončovací znak. Místo toho `CString` objekt udržuje pečlivě sledovat počet znaků je. S `CString` poskytují `LPCTSTR` ukazatel na řetězce ukončené hodnotou null je malé množství práce, která se může stát důležité, aby to udělal neustále má váš kód. Výsledkem je dočasný, protože jakékoli změny `CString` obsah by způsobila neplatnost staré kopie `LPCTSTR` ukazatel.  
+ Nejvíce efektivní a zabezpečený způsob, jak používat `CString` objekt ve volané funkce je k předání `CString` objektu funkce. Bez ohledu na název `CString` objekt neukládá řetězec interně jako řetězec stylu C, který má ukončovací znak null. Místo toho `CString` objekt opatrní sleduje počet znaků, obsahuje. S `CString` malé množství práce, která se může stát důležité, pokud má váš kód provést neustále se LPCTSTR ukazatel na řetězec zakončený hodnotou null. Výsledkem je dočasný, protože jakékoli změny `CString` obsah zruší platnost stará kopie LPCTSTR ukazatele.  
   
- V některých případech zadejte řetězec stylu jazyka C ho mít smysl. Například může být situaci, kdy volaná funkce je napsané v jazyce C a nepodporuje objekty. V takovém případě coerce `CString` parametru `LPCTSTR`, a funkce získají stylu jazyka C řetězce ukončené hodnotou null. Můžete také přejít opačným směrem a vytvořit `CString` objekt pomocí `CString` konstruktor, který přijímá řetězcový parametr stylu jazyka C.  
+ To dává smysl v některých případech k poskytování řetězec C-style. Například může být situaci, kdy volaná funkce je napsána v jazyce C a nepodporuje objekty. V takovém případě převedeno `CString` parametr LPCTSTR a funkce se zobrazí řetězec stylu C zakončený hodnotou null. Můžete také přejít opačným směrem a vytvořit `CString` s použitím `CString` konstruktor, který přijímá řetězcový parametr C-style.  
   
- Pokud řetězec obsah změnit, a funkce, deklarovat parametr jako nonconstant `CString` odkaz (**CString &**).  
+ Obsah řetězce mají-li změnit tak funkce, deklaraci parametru jako nonconstant `CString` odkaz (`CString&`).  
   
-##  <a name="_core_strings_as_function_outputs"></a> Řetězce jako výstupy – funkce  
- Obvykle se můžete vrátit `CString` objekty z funkcí, protože `CString` objekty podle hodnoty sémantiku jako primitivní typy. Chcete-li vrátit řetězec jen pro čtení, použijte konstanta `CString` odkaz (**const CString &**). Následující příklad ukazuje použití `CString` parametry a návratové typy:  
+##  <a name="_core_strings_as_function_outputs"></a> Řetězců jako výstup – funkce  
+ Obvykle se můžete vrátit `CString` objekty z funkcí, protože `CString` objekty podle hodnoty sémantiku jako primitivní typy. Chcete-li vrátit řetězec jen pro čtení, použijte konstantu `CString` odkaz (`const CString&`). Následující příklad ukazuje použití `CString` parametry a návratové typy:  
   
  [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]  
   
  [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Řetězce (ATL a MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+ [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

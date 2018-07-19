@@ -1,5 +1,5 @@
 ---
-title: Třída CSecurityAttributes | Microsoft Docs
+title: Csecurityattributes – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357503"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879336"
 ---
-# <a name="csecurityattributes-class"></a>CSecurityAttributes – třída
-Tato třída je dynamické obálku pro strukturu atributy zabezpečení.  
+# <a name="csecurityattributes-class"></a>Csecurityattributes – třída
+Tato třída představuje dynamického zajišťování obálku pro strukturu atributy zabezpečení.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,12 +50,12 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSecurityAttributes::Set](#set)|Volat tuto metodu a nastavit atributy `CSecurityAttributes` objektu.|  
+|[CSecurityAttributes::Set](#set)|Volejte tuto metodu za účelem nastavení atributů `CSecurityAttributes` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- **SECURITY_ATTRIBUTES** struktury [popisovač zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379561) použit pro vytvoření objektu a určuje, jestli je zděditelné popisovač načíst tak, že zadáte tuto strukturu.  
+ `SECURITY_ATTRIBUTES` Struktura obsahuje [popisovače zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379561) používají k vytvoření objektu a určuje, zda je popisovač načíst tak, že zadáte tuto strukturu odvoditelný.  
   
- Úvod do model řízení přístupu v systému Windows, najdete v části [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) ve Windows SDK.  
+ Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](http://msdn.microsoft.com/library/windows/desktop/aa374860) v sadě Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SECURITY_ATTRIBUTES`  
@@ -74,32 +74,32 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Odkaz na popisovač zabezpečení.  
   
- `bInheritsHandle`  
- Určuje, jestli je vrácená popisovač zdědí při vytvoření nového procesu. Pokud je tento člen pravdivá, zdědí nový proces popisovač.  
+ *bInheritsHandle*  
+ Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.  
   
 ##  <a name="set"></a>  CSecurityAttributes::Set  
- Volat tuto metodu a nastavit atributy `CSecurityAttributes` objektu.  
+ Volejte tuto metodu za účelem nastavení atributů `CSecurityAttributes` objektu.  
   
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Odkaz na popisovač zabezpečení.  
   
- `bInheritHandle`  
- Určuje, jestli je vrácená popisovač zdědí při vytvoření nového procesu. Pokud je tento člen pravdivá, zdědí nový proces popisovač.  
+ *bInheritHandle*  
+ Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se používá konstruktorem k chybě při inicializaci `CSecurityAttributes` objektu.  
+ Tato metoda používá konstruktor k inicializaci `CSecurityAttributes` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka zabezpečení](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [Popisovač zabezpečení](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

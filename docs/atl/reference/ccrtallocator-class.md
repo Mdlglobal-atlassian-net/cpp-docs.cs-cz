@@ -1,5 +1,5 @@
 ---
-title: Třída CCRTAllocator | Microsoft Docs
+title: Ccrtallocator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f026610469c75f37e49df6f42358a3ff378cb0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363444"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879582"
 ---
-# <a name="ccrtallocator-class"></a>CCRTAllocator – třída
-Tato třída poskytuje metody pro správu paměti pomocí rutiny CRT paměti.  
+# <a name="ccrtallocator-class"></a>Ccrtallocator – třída
+Tato třída poskytuje metody pro správu paměti používá rutiny paměti CRT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,68 +42,68 @@ class ATL::CCRTAllocator
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCRTAllocator::Allocate](#allocate)|(Statické) Voláním této metody lze přidělit paměť.|  
+|[CCRTAllocator::Allocate](#allocate)|(Statické) Volejte tuto metodu za účelem přidělení paměti.|  
 |[CCRTAllocator::Free](#free)|(Statické) Volejte tuto metodu za účelem uvolnění paměti.|  
-|[CCRTAllocator::Reallocate](#reallocate)|(Statické) Volejte tuto metodu a znovu přidělte paměť.|  
+|[CCRTAllocator::Reallocate](#reallocate)|(Statické) Voláním této metody lze znovu přidělit paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída se používá ve [CHeapPtr](../../atl/reference/cheapptr-class.md) k poskytnutí paměti CRT přidělení rutiny. Třída protějšku [CComAllocator](../../atl/reference/ccomallocator-class.md), poskytuje stejné metody, pomocí rutiny COM.  
+ Tato třída používá [cheapptr –](../../atl/reference/cheapptr-class.md) k poskytnutí paměti CRT rutiny přidělení. Třída protějšek [ccomallocator –](../../atl/reference/ccomallocator-class.md), poskytuje stejné metody, pomocí modelu COM, rutin.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcore.h  
   
 ##  <a name="allocate"></a>  CCRTAllocator::Allocate  
- Volání této statické funkce přidělit paměť.  
+ Voláním této funkce statické přidělení paměti.  
   
 ```
 static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
- Počet bajtů přidělit.  
+ *nBytes*  
+ Počet bajtů k přidělení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí neplatný ukazatel přidělené místo, nebo hodnota NULL, pokud není k dispozici dostatek paměti.  
+ Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud není k dispozici dostatek paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Přidělí paměť. V tématu [malloc –](../../c-runtime-library/reference/malloc.md) další podrobnosti.  
+ Přidělí paměť. Zobrazit [malloc](../../c-runtime-library/reference/malloc.md) další podrobnosti.  
   
 ##  <a name="free"></a>  CCRTAllocator::Free  
- Volání této statické funkce na uvolnění paměti.  
+ Voláním této funkce statických k uvolnění paměti.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na přidělenou paměť.  
+ *p*  
+ Ukazatel do přidělené paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní přidělenou paměť. V tématu [volné](../../c-runtime-library/reference/free.md) další podrobnosti.  
+ Uvolní přidělené paměti. Zobrazit [bezplatné](../../c-runtime-library/reference/free.md) další podrobnosti.  
   
 ##  <a name="reallocate"></a>  CCRTAllocator::Reallocate  
- Volání této statické funkce a znovu přidělte paměť.  
+ Voláním této funkce statické přidělení paměti.  
   
 ```
 static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na přidělenou paměť.  
+ *p*  
+ Ukazatel do přidělené paměti.  
   
- `nBytes`  
- Počet bajtů a znovu přidělte.  
+ *nBytes*  
+ Počet bajtů, které mají přidělit jinému uživateli.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí neplatný ukazatel přidělené místo, nebo hodnota NULL, pokud je nedostatek paměti.  
+ Vrací neplatný ukazatel do přiděleného místa nebo hodnota NULL, pokud není dostatek paměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Změní velikost je množství paměti přidělené. V tématu [realloc –](../../c-runtime-library/reference/realloc.md) další podrobnosti.  
+ Změní velikost přidělené paměti. Zobrazit [realloc](../../c-runtime-library/reference/realloc.md) další podrobnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [CHeapPtr – třída](../../atl/reference/cheapptr-class.md)   
- [CComAllocator – třída](../../atl/reference/ccomallocator-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
+ [Ccomallocator – třída](../../atl/reference/ccomallocator-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

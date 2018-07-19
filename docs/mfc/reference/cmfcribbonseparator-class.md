@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonSeparator | Microsoft Docs
+title: Cmfcribbonseparator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039792"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849761"
 ---
-# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator – třída
-Implementuje oddělovače pásu karet.  
+# <a name="cmfcribbonseparator-class"></a>Cmfcribbonseparator – třída
+Implementuje oddělovač pásu karet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,26 +62,26 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Přidá oddělovač, který má **příkazy** v seznamu **přizpůsobit** dialogové okno. (Přepisuje [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
-|`CMFCRibbonSeparator::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|`CMFCRibbonSeparator::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Oddělovač, který se přidá **příkazy** v seznamu **vlastní** dialogové okno. (Přepíše [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
+|`CMFCRibbonSeparator::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|`CMFCRibbonSeparator::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Metoda kopírování, která nastaví proměnné oddělovače člena z jiného objektu.|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Vrátí velikost oddělovač.|  
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Určuje, zda se jedná o oddělovač.|  
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Určuje, zda se jedná o zarážku.|  
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|Volá se v systému k vykreslení oddělovače na pásu karet nebo panel nástrojů Rychlý přístup.|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Volá kreslení oddělovače v systému **příkazy** seznamu.|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Metoda kopírování, která nastaví oddělovač členské proměnné z jiného objektu.|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Vrátí velikost položky oddělovače.|  
+|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Označuje, zda se jedná o oddělovač.|  
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Označuje, zda se jedná o zarážku.|  
+|[CMFCRibbonSeparator::OnDraw](#ondraw)|Volá se systémem na oddělovač nakreslit na pásu karet nebo panel nástrojů Rychlý přístup.|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Volá se v systému k vykreslení oddělovač **příkazy** seznamu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Oddělovač pásu karet je svislé nebo vodorovné čáry, logicky odděluje pásu karet elementy. Oddělovač, mohou být založeny na řízení pásu karet, v nabídce hlavní aplikace, stavového řádku pásu karet a panelu nástrojů Rychlý přístup.  
+ Oddělovač pásu karet je svislé nebo vodorovné čáry, logicky odděluje prvky pásu karet. Oddělovačem může vykreslit v ovládacím prvku pás karet, hlavní nabídky, stavový panel pásu karet a panelu nástrojů Rychlý přístup.  
   
- Chcete-li použít oddělovače v aplikaci, vytvořit nový objekt a přidejte ho do hlavní aplikace nabídky, jak je vidět tady:  
+ Pokud chcete použít oddělovače ve vaší aplikaci, vytvořit nový objekt a přidat do nabídky hlavní aplikace, jak je znázorněno zde:  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -91,20 +91,20 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-Volání [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) Přidání oddělovačů do panelů pásu karet. Oddělovače se přidělené a přidají se interně pomocí `AddSeparator` metoda.  
+Volání [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) přidat oddělovače na panely pásu karet. Oddělovače jsou přiděleny a přidali interně pomocí `AddSeparator` metody.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
+ [Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
- [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
+ [Cmfcribbonseparator –](../../mfc/reference/cmfcribbonseparator-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
- Přidá oddělovač, který má **příkazy** v seznamu **přizpůsobit** dialogové okno.  
+ Oddělovač, který se přidá **příkazy** v seznamu **vlastní** dialogové okno.  
   
 ```  
 virtual int AddToListBox(
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndListBox*  
- Ukazatel **příkazy** seznamu, kde se přidá oddělovače.  
+ [in] *pWndListBox*  
+ Ukazatel **příkazy** seznam, kde se přidá oddělovače.  
   
- [v] *bDeep*  
+ [in] *bDeep*  
  Ignorovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index počítaný od nuly na řetězec v seznamu určeného *pWndListBox*.  
+ Index založený na nule na řetězec v poli určeném *pWndListBox*.  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Vytvoří `CMFCRibbonSeparator` objektu.  
@@ -130,11 +130,11 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bIsHoriz*  
- Pokud `TRUE`, oddělovače je vodorovný; Pokud `FALSE`, oddělovače je svislý.  
+ [in] *bIsHoriz*  
+ Hodnota TRUE znamená, že oddělovač je vodorovné; Pokud má hodnotu FALSE, oddělovač je svislý.  
   
 ### <a name="remarks"></a>Poznámky  
- Vodorovné oddělovače jsou použité v nabídkách aplikace. Svislé oddělovačů se používají v panelech nástrojů.  
+ Vodorovné oddělovače jsou použité v nabídkách aplikace. Svislé oddělovače se používají v panelech nástrojů.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonSeparator` třídy.  
@@ -142,66 +142,66 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
- Metoda kopírování, která nastaví proměnné oddělovače člena z jiného objektu.  
+ Metoda kopírování, která nastaví oddělovač členské proměnné z jiného objektu.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Src*  
- Element source pásu karet pro kopírování z.  
+ [in] *Src*  
+ Zdroj pásu karet elementu, který chcete kopírovat.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
- Vrátí velikost oddělovač.  
+ Vrátí velikost položky oddělovače.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
  Ukazatel na obsah zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Velikost oddělovače v kontextu daného zařízení.  
+ Velikost oddělovač v kontextu daného zařízení.  
   
 ##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
- Určuje, zda se jedná o oddělovač.  
+ Označuje, zda se jedná o oddělovač.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy `TRUE` pro tuto třídu.  
+ Vždy TRUE pro tuto třídu.  
   
 ##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
- Určuje, zda se jedná o zarážku.  
+ Označuje, zda se jedná o zarážku.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy `FALSE` pro tuto třídu.  
+ Vždy hodnotu FALSE pro tuto třídu.  
   
 ### <a name="remarks"></a>Poznámky  
- Oddělovač pásu karet není zarážku.  
+ Oddělovač pásu karet není konec tabulátoru.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
- Volá se v systému k vykreslení oddělovače na pásu karet nebo panel nástrojů Rychlý přístup.  
+ Volá se systémem na oddělovač nakreslit na pásu karet nebo panel nástrojů Rychlý přístup.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
- Volá kreslení oddělovače v systému **příkazy** seznamu.  
+ Volá se v systému k vykreslení oddělovač **příkazy** seznamu.  
   
 ```  
 virtual void OnDrawOnList(
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *primárního řadiče domény*|Ukazatel na kontextu zařízení.|  
-|[v] *strText*|Text zobrazovaný v seznamu.|  
-|[v] *nTextOffset*|Mezera mezi textem a levé straně ohraničující obdélník.|  
-|[v] *Rect –*|Určuje ohraničující obdélník.|  
-|[v] *bIsSelected*|Ignorovat.|  
-|[v] *bHighlighted*|Ignorovat.|  
+|[in] *primárního řadiče domény*|Ukazatel na kontext zařízení.|  
+|[in] *strText*|Text zobrazený v seznamu.|  
+|[in] *nTextOffset*|Vzdálenost mezi textem a levé straně ohraničující obdélník.|  
+|[in] *rect*|Určuje ohraničující obdélník.|  
+|[in] *bIsSelected*|Ignorovat.|  
+|[in] *bHighlighted*|Ignorovat.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

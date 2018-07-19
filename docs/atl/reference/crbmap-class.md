@@ -1,5 +1,5 @@
 ---
-title: Třída CRBMap | Microsoft Docs
+title: Crbmap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32b21c8785bb5e28058c51f2345c5ffcb6de1f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d4ca53db3dc74838592ad0b279ac541d23ad097f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364934"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880343"
 ---
-# <a name="crbmap-class"></a>CRBMap – třída
-Tato třída reprezentuje strukturou mapování pomocí binárního stromu Red černé.  
+# <a name="crbmap-class"></a>Crbmap – třída
+Tato třída reprezentuje strukturu mapování pomocí binárního stromu Red Black.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,17 +42,17 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ```    
   
 #### <a name="parameters"></a>Parametry  
- `K`  
- Typ klíče elementu.  
+ *K*  
+ Typ klíče prvku.  
   
  *V*  
- Typ elementu hodnotu.  
+ Typ elementu hodnota.  
   
- `KTraits`  
- Kód používaný k zkopírovat nebo přesunout klíčové prvky. V tématu [CElementTraits třída](../../atl/reference/celementtraits-class.md) další podrobnosti.  
+ *KTraits*  
+ Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.  
   
- `VTraits`  
- Kód používaný k zkopírovat nebo přesunout hodnotu elementy.  
+ *VTraits*  
+ Kód použitý má zkopírovat nebo přesunout elementy hodnotu.  
   
 ## <a name="members"></a>Členové  
   
@@ -61,31 +61,31 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 |Název|Popis|  
 |----------|-----------------|  
 |[CRBMap::CRBMap](#crbmap)|Konstruktor|  
-|[CRBMap:: ~ CRBMap](#dtor)|Destruktor.|  
+|[Crbmap –:: ~ crbmap –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CRBMap::Lookup](#lookup)|Volat tuto metodu za účelem vyhledání klíče nebo hodnoty ve `CRBMap` objektu.|  
-|[CRBMap::RemoveKey](#removekey)|Voláním této metody lze odebrat element z `CRBMap` objekt, daný klíč.|  
-|[CRBMap::SetAt](#setat)|Volejte tuto metodu za účelem vložení dvojici element do mapy.|  
+|[CRBMap::Lookup](#lookup)|Volejte tuto metodu za účelem vyhledání klíče nebo hodnoty `CRBMap` objektu.|  
+|[CRBMap::RemoveKey](#removekey)|Voláním této metody lze odebrat element z `CRBMap` objekt daný klíč.|  
+|[CRBMap::SetAt](#setat)|Voláním této metody lze vložit páru prvek do objektu map.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRBMap` poskytuje podporu pro mapování pole daného typu, Správa uspořádaného pole klíčové prvky a jejich přidružené hodnoty. Každý klíč může mít pouze jeden přidružené hodnoty. Elementy (tvořený klíč a hodnotu) se ukládají do binárního stromu struktury, pomocí [CRBMap::SetAt](#setat) metoda. Elementy se dá odebrat pomocí [CRBMap::RemoveKey](#removekey) metoda, která odstraňuje element s danou hodnotou klíče.  
+ `CRBMap` poskytuje podporu pro mapování pole daného typu, Správa uspořádaného pole klíčové prvky a jejich přidružené hodnoty. Každý klíč může mít pouze jednu přidruženou hodnotu. Prvky (skládající se z klíče a hodnoty) jsou uloženy v binárního stromu struktury, pomocí [CRBMap::SetAt](#setat) metody. Prvky lze odebrat prostřednictvím [CRBMap::RemoveKey](#removekey) metoda, která odstraňuje prvek s danou hodnotu klíče.  
   
  Procházení stromu je možné provádět pomocí metod, jako [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), a [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue).  
   
- `KTraits` a `VTraits` parametry jsou třídy vlastností, které obsahují žádný doplňkový kód potřebné k zkopírovat nebo přesunout elementy.  
+ *KTraits* a *VTraits* parametry jsou třídy, které obsahují žádný doplňkový kód potřeba zkopírovat nebo přesunout prvky.  
   
- `CRBMap` je odvozený od [CRBTree](../../atl/reference/crbtree-class.md), který implementuje pomocí algoritmu Red černé binárního stromu. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) je variace, která umožňuje více hodnot pro každý klíč. Příliš je odvozen od `CRBTree`a proto sdílí mnoho funkcí s `CRBMap`.  
+ `CRBMap` je odvozen z [crbtree –](../../atl/reference/crbtree-class.md), který implementuje pomocí algoritmu Red černé binárního stromu. [Crbmultimap –](../../atl/reference/crbmultimap-class.md) varianta, který umožňuje více hodnot pro každý klíč. Příliš odvozené od `CRBTree`a proto sdílí řadu funkcí s `CRBMap`.  
   
- Alternativu obou `CRBMap` a `CRBMultiMap` nabízí [CAtlMap](../../atl/reference/catlmap-class.md) třídy. Když pouze malý počet elementů musí být uložen, zvažte použití [CSimpleMap](../../atl/reference/csimplemap-class.md) třídy místo.  
+ Alternativa k oběma `CRBMap` a `CRBMultiMap` nabízí [catlmap –](../../atl/reference/catlmap-class.md) třídy. Pokud musí být uložen pouze malý počet prvků, zvažte použití [csimplemap –](../../atl/reference/csimplemap-class.md) namísto třídy.  
   
- Podrobnější informace o různých třídy kolekce a jejich funkce a vlastnosti výkonu, najdete v části [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
+ Podrobnější diskuzi o různých třídy kolekcí a jejich funkce a výkonové charakteristiky, naleznete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CRBTree](../../atl/reference/crbtree-class.md)  
+ [Crbtree –](../../atl/reference/crbtree-class.md)  
   
  `CRBMap`  
   
@@ -100,18 +100,18 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Velikost bloku.  
   
 ### <a name="remarks"></a>Poznámky  
- `nBlockSize` Parametr se rozumí míra množství paměti přidělené, pokud je potřeba nového elementu. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků. Výchozí hodnota se přidělit prostor pro 10 elementy najednou.  
+ *NBlockSize* parametr je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků. Výchozí hodnota se přidělit prostor pro 10 prvků v čase.  
   
- Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
+ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>  CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>  Crbmap –:: ~ crbmap –  
  Destruktor.  
   
 ```
@@ -121,10 +121,10 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="remarks"></a>Poznámky  
  Uvolní všechny přidělené prostředky.  
   
- Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
+ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
 ##  <a name="lookup"></a>  CRBMap::Lookup  
- Volat tuto metodu za účelem vyhledání klíče nebo hodnoty ve `CRBMap` objektu.  
+ Volejte tuto metodu za účelem vyhledání klíče nebo hodnoty `CRBMap` objektu.  
   
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const throw(...);
@@ -133,43 +133,43 @@ CPair* Lookup(KINARGTYPE key) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Určuje klíč, který identifikuje elementu, který chcete vyhledávat.  
   
  *value*  
- Proměnná, která přijímá vyhledaných hodnota.  
+ Proměnná, která přijímá hodnotu vyhledaných.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- První formulář metoda vrátí hodnotu true, pokud je nalezen klíč, jinak hodnota false. Vrátí ukazatel na druhý a třetí formuláře [CPair](crbtree-class.md#cpair_class).  
+ První forma metoda vrátí hodnotu true, pokud je nalezen klíč, jinak hodnota false. Druhý a třetí formuláře vrátí ukazatel [CPair](crbtree-class.md#cpair_class).  
   
 ### <a name="remarks"></a>Poznámky  
- Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
+ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
 ##  <a name="removekey"></a>  CRBMap::RemoveKey  
- Voláním této metody lze odebrat element z `CRBMap` objekt, daný klíč.  
+ Voláním této metody lze odebrat element z `CRBMap` objekt daný klíč.  
   
 ```
 bool RemoveKey(KINARGTYPE key) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
- Klíč odpovídající element pár chcete odebrat.  
+ *Klíč*  
+ Klíč odpovídající dvojice elementů chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true Pokud je klíč nalezen a odebrána, false při selhání.  
+ Vrátí true, pokud je klíč nalezen a odebrané, při neúspěchu hodnotu false.  
   
 ### <a name="remarks"></a>Poznámky  
- Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
+ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
 ##  <a name="setat"></a>  CRBMap::SetAt  
- Volejte tuto metodu za účelem vložení dvojici element do mapy.  
+ Voláním této metody lze vložit páru prvek do objektu map.  
   
 ```
 POSITION SetAt(
@@ -178,25 +178,25 @@ POSITION SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
- Hodnota klíče pro přidání do `CRBMap` objektu.  
+ *Klíč*  
+ Hodnotu klíče pro přidání do `CRBMap` objektu.  
   
  *value*  
  Hodnota k přidání do `CRBMap` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí pozici element dvojice klíč/hodnota v `CRBMap` objektu.  
+ Vrátí pozici prvku dvojice klíč/hodnota v `CRBMap` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetAt` nahradí existující elementu, pokud je nalezen odpovídající klíč. Pokud není nalezen klíč, vytvoří se nový pár klíč/hodnota.  
+ `SetAt` nahradí existující prvek, pokud je nalezen odpovídající klíč. Pokud klíč není nalezen, vytvoří se nový pár klíč/hodnota.  
   
- Najdete v dokumentaci pro základní třídu [CRBTree](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
+ Najdete v dokumentaci pro základní třídu [crbtree –](../../atl/reference/crbtree-class.md) informace o dalších metodách, k dispozici.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [CRBTree – třída](../../atl/reference/crbtree-class.md)   
- [CAtlMap – třída](../../atl/reference/catlmap-class.md)   
- [CRBMultiMap – třída](../../atl/reference/crbmultimap-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Crbtree – třída](../../atl/reference/crbtree-class.md)   
+ [Catlmap – třída](../../atl/reference/catlmap-class.md)   
+ [Crbmultimap – třída](../../atl/reference/crbmultimap-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

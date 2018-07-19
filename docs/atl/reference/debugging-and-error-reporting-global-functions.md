@@ -1,5 +1,5 @@
 ---
-title: Ladění a globální funkce zpráv o chybách | Microsoft Docs
+title: Ladění a globální funkce zpráv o chybách | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb3257b5205587b27a83671ed8e610aad5373eef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d41cc60b9a30254e46a9ca3ef3d3ad7dbc0dfcfb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364879"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882910"
 ---
-# <a name="debugging-and-error-reporting-global-functions"></a>Ladění a chybách globální funkce
-Tyto funkce poskytují užitečné ladění a trasování zařízení.  
+# <a name="debugging-and-error-reporting-global-functions"></a>Ladění a globální funkce hlášení chyb
+Tyto funkce poskytují užitečné funkce ladění a trasování.  
   
 |||  
 |-|-|  
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Vrátí `GetLastError` kód chyby ve formě HRESULT.|  
+|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Vrátí `GetLastError` chyba kódu ve formě HRESULT.|  
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Převede kód chyby Win32 na HRESULT.|  
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Nastaví **IErrorInfo** poskytnout podrobné informace o chybě pro klienta.|  
-|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Vyvolá `CAtlException`.|  
-|[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Volání této funkce signál chybu na základě výsledku funkce systému Windows `GetLastError`.|  
+|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Nastaví `IErrorInfo` poskytovat podrobnosti o chybě klienta.|  
+|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Vyvolá výjimku `CAtlException`.|  
+|[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Voláním této funkce signalizujete chybu na základě výsledku funkce Windows `GetLastError`.|  
   
 ##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError  
  Vrátí hodnotu posledního kódu chyby volajícího vlákna ve formě HRESULT.  
@@ -44,7 +44,7 @@ HRESULT AtlHresultFromLastError();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlHresultFromLastError` volání `GetLastError` získat poslední chyby a vrátí chybu po převodu k HRESULT pomocí **HRESULT_FROM_WIN32** makro.  
+ `AtlHresultFromLastError` volání `GetLastError` získat poslední chyby a vrátí chybu po převedení na použití makra HRESULT_FROM_WIN32 HRESULT.  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcomcli.h  
@@ -61,16 +61,16 @@ AtlHresultFromWin32(DWORD error);
  Hodnota chyby pro převod.  
   
 ### <a name="remarks"></a>Poznámky  
- Převede kód chyby Win32 HRESULT, pomocí makro **HRESULT_FROM_WIN32**.  
+ Převede kód chyby Win32 na HRESULT, makro HRESULT_FROM_WIN32.  
   
 > [!NOTE]
->  Místo použití **HRESULT_FROM_WIN32(GetLastError())**, použijte funkci [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Namísto použití `HRESULT_FROM_WIN32(GetLastError())`, použijte funkci [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcomcli.h  
 
 ##  <a name="atlreporterror"></a>  AtlReportError  
- Nastaví `IErrorInfo` rozhraní a poskytuje informace o chybě klientům objektu.  
+ Nastaví `IErrorInfo` rozhraní k poskytování informací o chybách klientům objektu.  
   
 ```
 HRESULT WINAPI AtlReportError(
@@ -119,70 +119,70 @@ HRESULT WINAPI AtlReportError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
- [v] CLSID objekt oznámena tato chyba.  
+ *identifikátor CLSID*  
+ [in] Identifikátor CLSID objektu oznámena tato chyba.  
   
- `lpszDesc`  
- [v] Řetězec popisující chybu. Unicode verze určit, že `lpszDesc` je typu **LPCOLESTR**; verze ANSI Určuje typ `LPCSTR`.  
+ *lpszDesc*  
+ [in] Řetězec popisující chybu. Verze Unicode určit, že *lpszDesc* je typ LPCOLESTR; verze ANSI Určuje typ LPCSTR.  
   
- `iid`  
- [v] Identifikátory IID rozhraní definování chyba nebo `GUID_NULL` Pokud chyba je definována v operačním systému.  
+ *identifikátor IID*  
+ [in] Identifikátor IID rozhraní definování chyb nebo GUID_NULL Pokud chyba není definován v operačním systému.  
   
- `hRes`  
- [v] `HRESULT` Chcete vrácen volajícímu.  
+ *hRes*  
+ [in] Hodnota HRESULT, který chcete vrátit zpět volajícímu.  
   
- `nID`  
- [v] Identifikátor prostředku, uloží řetězec popis chyby. Tato hodnota by měla být mezi hodnotu 0x0200 a 0xFFFF, (včetně). V sestavení pro ladění **ASSERT** dojde, pokud `nID` index není platný řetězec. V sestavení pro vydání řetězec popis chyby. bude nastavena na "Neznámá chyba."  
+ *nID*  
+ [in] Identifikátor prostředku řetězce popisu chyby se mají ukládat. Tato hodnota by měla být mezi hodnotu 0x0200 a 0xFFFF (včetně). V sestavení ladění **ASSERT** dojde-li *nID* index není platný řetězec. V sestaveních pro vydání řetězce popisu chyby bude nastavena na "Neznámá chyba".  
   
- `dwHelpID`  
- [v] Identifikátor nápovědy Kontext chyby.  
+ *dwHelpID*  
+ [in] Identifikátor kontextu pomoc pro chybu.  
   
- `lpszHelpFile`  
- [v] Cesta a název souboru nápovědy popisující chybu.  
+ *lpszHelpFile*  
+ [in] Cesta a název souboru nápovědy popisující chybu.  
   
- `hInst`  
- [v] Popisovač pro prostředek. Ve výchozím nastavení je tento parametr **__AtlBaseModuleModule::GetResourceInstance**, kde **__AtlBaseModuleModule** je globální instance [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) nebo třída z něj odvozenou.  
+ *hInst*  
+ [in] Popisovač pro prostředek. Ve výchozím nastavení, je tento parametr `__AtlBaseModuleModule::GetResourceInstance`, kde `__AtlBaseModuleModule` je globální instanci [catlbasemodule –](../../atl/reference/catlbasemodule-class.md) nebo z něj odvozenou třídu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud `hRes` parametr je nenulové hodnoty, vrátí hodnotu `hRes`. Pokud `hRes` nula, pak je první čtyři verze `AtlReportError` vrátit `DISP_E_EXCEPTION`. Poslední dvě verze vrátit výsledek makro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
+ Pokud *hRes* parametr je nenulovou hodnotu, vrátí hodnotu *hRes*. Pokud *hRes* je nula, pak první čtyři verzích `AtlReportError` vrátí DISP_E_EXCEPTION. Poslední dvě verze vrácení výsledku makra **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
 ### <a name="remarks"></a>Poznámky  
- Řetězec *lpszDesc* slouží jako textový popis chyby. Když klient obdrží `hRes` vrátíte z `AtlReportError`, klient může získat **IErrorInfo** struktura podrobnosti o této chybě.  
+ Řetězec *lpszDesc* slouží jako textový popis chyby. Když klient obdrží *hRes* vrátit z `AtlReportError`, klient může získat `IErrorInfo` strukturu pro podrobnosti o chybě.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
->  Nepoužívejte `AtlReportError` v jazyce C++ obslužné rutiny zachytávání. Některé přepsání tyto funkce používají makra převodů řetězec ATL interně, což následně použít `_alloca` funkce interně. Pomocí `AtlReportError` v C++ catch může způsobit obslužná rutina výjimky v C++ catch obslužné rutiny.  
+>  Nepoužívejte `AtlReportError` obslužné rutiny zachytávání v jazyce C++. Některé přepsání těchto funkcí používat převodních maker knihovny ATL řetězec interně, která pak může použít `_alloca` fungovat interně. Pomocí `AtlReportError` v bloku catch C++ může způsobit obslužná rutina výjimky v obslužné rutiny catch C++.  
 
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
     
 ##  <a name="atlthrow"></a>  AtlThrow  
- Volání této funkce signál chybu na základě `HRESULT` stavový kód.  
+ Voláním této funkce signalizujete chybu na základě kódu stavu HRESULT.  
   
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hr`  
- Standardní hodnota HRESULT.  
+ *hr*  
+ Standardní hodnotu HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce používá kódu ATL a MFC v případě chybový stav. Také může být volána z vlastního kódu. Výchozí implementace této funkce závisí na definici symbolu **_ATL_NO_EXCEPTIONS** a na typu projektu knihovny MFC nebo ATL.  
+ Tato funkce používá kódu ATL a MFC v případě chybového stavu. Také může být volána z vlastního kódu. Výchozí implementace této funkce závisí na definici symbolu _ATL_NO_EXCEPTIONS a na typu projektu knihovny MFC ani ATL.  
   
- Ve všech případech tato funkce sleduje HRESULT k ladicího programu.  
+ Ve všech případech se tato funkce sleduje HRESULT v ladicím programu.  
   
- V sadě Visual Studio 2015 Update 3 nebo novější je tato funkce s atributy __declspec(noreturn), aby se zabránilo nesprávné upozornění SAL.  
+ V sadě Visual Studio 2015 Update 3 nebo novější tato funkce je s atributy __declspec(noreturn), aby se zabránilo detekováno falešné upozornění SAL.  
   
- Pokud **_ATL_NO_EXCEPTIONS** není definován v projektu knihovny MFC, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md) na základě hodnoty hodnota HRESULT.  
+ Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny MFC, tato funkce vyvolá [cmemoryexception –](../../mfc/reference/cmemoryexception-class.md) nebo [coleexception –](../../mfc/reference/coleexception-class.md) na základě hodnoty HRESULT.  
   
- Pokud **_ATL_NO_EXCEPTIONS** není definován v projektu knihovny ATL, vrátí funkce [CAtlException](../../atl/reference/catlexception-class.md).  
+ Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny ATL, funkce vyvolá [catlexception –](../../atl/reference/catlexception-class.md).  
   
- Pokud **_ATL_NO_EXCEPTIONS** je definován, funkce způsobí chybu assertion místo došlo k výjimce.  
+ Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního výrazu namísto vyvolání výjimky.  
   
- Pro projekty knihovny ATL je možné poskytnout vlastní implementaci této funkci můžete používat knihovny ATL v případě selhání. K tomuto účelu definovat vlastní funkce se stejným podpisem jako `AtlThrow` a #define `AtlThrow` jako název funkce. To je třeba provést před zahrnutím atlexcept.h (což znamená, že je třeba provést před včetně všechny hlavičky ATL vzhledem k tomu, že atlbase.h zahrnuje atlexcept.h). Atribut funkce `__declspec(noreturn)` předejdete nesprávné upozornění SAL.  
+ Pro projekty ATL je možné poskytnout vlastní implementaci této funkce ATL používané v případě selhání. K tomuto účelu definovat vlastní funkce se stejným podpisem jako `AtlThrow` a #define `AtlThrow` bude název vaší funkce. To je nutné provést před zahrnutím atlexcept.h (to znamená, že je třeba provést před včetně záhlaví knihovny ATL, protože obsahuje atlbase.h atlexcept.h). Atribut funkce `__declspec(noreturn)` , aby detekováno falešné upozornění SAL.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
@@ -191,20 +191,20 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
  **Záhlaví:** atldef.h  
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32  
- Volání této funkce signál chybu na základě výsledku funkce systému Windows `GetLastError`.  
+ Voláním této funkce signalizujete chybu na základě výsledku funkce Windows `GetLastError`.  
   
 ```
 inline void AtlThrowLastWin32();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce sleduje výsledek `GetLastError` do ladicího programu.  
+ Tato funkce sleduje výsledek `GetLastError` ladicímu programu.  
   
- Pokud **_ATL_NO_EXCEPTIONS** není definován v projektu knihovny MFC, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md) na základě hodnoty vrácené `GetLastError`.  
+ Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny MFC, tato funkce vyvolá [cmemoryexception –](../../mfc/reference/cmemoryexception-class.md) nebo [coleexception –](../../mfc/reference/coleexception-class.md) podle hodnoty vrácené `GetLastError`.  
   
- Pokud **_ATL_NO_EXCEPTIONS** není definován v projektu knihovny ATL, vrátí funkce [CAtlException](../../atl/reference/catlexception-class.md).  
+ Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny ATL, funkce vyvolá [catlexception –](../../atl/reference/catlexception-class.md).  
   
- Pokud **_ATL_NO_EXCEPTIONS** je definován, funkce způsobí chybu assertion místo došlo k výjimce.  
+ Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního výrazu namísto vyvolání výjimky.  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atldef.h  

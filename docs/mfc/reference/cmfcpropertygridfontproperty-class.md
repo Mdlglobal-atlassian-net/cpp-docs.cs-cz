@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCPropertyGridFontProperty | Microsoft Docs
+title: Cmfcpropertygridfontproperty – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039035"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852978"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty – třída
-`CMFCPropertyGridFileProperty` Třída podporuje ovládací prvek položky seznamu vlastnosti, které se otevře dialogové okno Výběr písma.  
+# <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty – třída
+`CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu s, která se otevře dialogové okno Výběr písma.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,20 +51,20 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
   
 |Název|Popis|  
 |----------|-----------------|  
-|`CMFCPropertyGridFontProperty::FormatProperty`|Formátuje textové reprezentace hodnotu vlastnosti. (Přepisuje [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Načte Barva písma, který si uživatel vybere ze dialogové okno písmo.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Načte písmo, které si uživatel vybere ze dialogové okno písmo.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|`CMFCPropertyGridFontProperty::OnClickButton`|Voláno rámcem po kliknutí na tlačítko, který je obsažený ve vlastnosti. (Přepisuje [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
+|`CMFCPropertyGridFontProperty::FormatProperty`|Formátuje textovou reprezentaci hodnoty vlastnosti. (Přepíše [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Načte barvu písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.|  
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Načte písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|`CMFCPropertyGridFontProperty::OnClickButton`|Volá se rozhraním, když uživatel klikne na tlačítko, který je obsažen ve vlastnosti. (Přepíše [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
+ [Cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md)  
   
- [CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
+ [Cmfcpropertygridfontproperty –](../../mfc/reference/cmfcpropertygridfontproperty-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridctrl.h  
@@ -83,58 +83,58 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *%{strName/*  
+ [in] *%{strName/*  
  Název vlastnosti  
   
- [v] *lf*  
- Struktura logické písma, která určuje atributy písma.  
+ [in] *lf*  
+ Písmo logickou strukturu, která určuje atributy písma.  
   
- [v] *dwFontDialogFlags*  
- Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnota rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [in] *dwFontDialogFlags*  
+ Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnotu rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [v] *lpszDescr*  
- Popis vlastnosti písma. Výchozí hodnota je `NULL`.  
+ [in] *lpszDescr*  
+ Popis vlastnosti font. Výchozí hodnota je NULL.  
   
- [v] *dwData*  
- Specifické pro aplikaci data, jako třeba celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
+ [in] *dwData*  
+ Specifická data, jako je například celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [v] *barev*  
- Barva písma. Výchozí hodnota je výchozí barvu.  
+ [in] *barva*  
+ Barva písma. Výchozí hodnota je výchozí barvy.  
   
 ### <a name="remarks"></a>Poznámky  
- A `CMFCPropertyGridFontProperty` objekt představuje vlastnost písma v ovládacím prvku mřížky písma vlastnost.  
+ A `CMFCPropertyGridFontProperty` objekt představuje vlastnost font v ovládacím prvku písma grid vlastnost.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCPropertyGridFontProperty` třídy. Tato ukázka je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCPropertyGridFontProperty` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
 ##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
- Načte Barva písma, který si uživatel vybere ze dialogové okno písmo.  
+ Načte barvu písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota Barva RGB představující barvy vybraných písma.  
+ Hodnota barvy RGB, který představuje barvu vybraného písma.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
- Načte písmo, které si uživatel vybere ze dialogové okno písmo.  
+ Načte písma, kterou uživatel vybere z rozevíracího seznamu písmo dialogového okna.  
   
 ```  
 LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura, která popisuje vybrané písmo.  
+ Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura, která popisuje vybraného písma.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyGridCtrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md)   
+ [Cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md)   
  [CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)

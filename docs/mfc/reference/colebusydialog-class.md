@@ -1,5 +1,5 @@
 ---
-title: Třída COleBusyDialog | Microsoft Docs
+title: Colebusydialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040909"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853066"
 ---
-# <a name="colebusydialog-class"></a>COleBusyDialog – třída
-Použít pro dialogových oken OLE serveru neodpovídá nebo zaneprázdněný Server.  
+# <a name="colebusydialog-class"></a>Colebusydialog – třída
+Používá se pro dialogová okna Server OLE neodpovídá nebo Server je zaneprázdněn.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,27 +52,27 @@ class COleBusyDialog : public COleDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleBusyDialog::DoModal](#domodal)|Zobrazí dialogové okno OLE Server zaneprázdněn.|  
+|[COleBusyDialog::DoModal](#domodal)|Zobrazí dialogové okno OLE Server je zaneprázdněn.|  
 |[COleBusyDialog::GetSelectionType](#getselectiontype)|Určuje volby provedené v dialogovém okně.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|Struktura typu **OLEUIBUSY** , řídí chování dialogového okna.|  
+|[COleBusyDialog::m_bz](#m_bz)|Struktura typu OLEUIBUSY, které ovládá chování dialogového okna.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoření objektu třídy `COleBusyDialog` když chcete volat tyto dialogy. Po `COleBusyDialog` objekt byl vytvořen, můžete použít [m_bz](#m_bz) struktura k chybě při inicializaci hodnoty nebo stavy, které ovládacích prvků v dialogovém okně. `m_bz` Struktura je typu **OLEUIBUSY**. Další informace o používání této třídy dialogového okna, najdete v článku [DoModal](#domodal) – členská funkce.  
+ Vytvoření objektu třídy `COleBusyDialog` kdy chcete volat tyto dialogy. Po `COleBusyDialog` objekt byl vytvořen, můžete použít [m_bz](#m_bz) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_bz` Struktury je typu OLEUIBUSY. Další informace o použití této třídy dialogového okna, najdete v článku [DoModal](#domodal) členskou funkci.  
   
 > [!NOTE]
->  Kód aplikace generované v Průvodci kontejneru používá tuto třídu.  
+>  Generované průvodcem kontejneru kódu aplikace používá tuto třídu.  
   
- Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura v sadě Windows SDK.  
   
- Další informace o dialogových oknech OLE specifické, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -80,9 +80,9 @@ class COleBusyDialog : public COleDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
- [COleDialog](../../mfc/reference/coledialog-class.md)  
+ [Coledialog –](../../mfc/reference/coledialog-class.md)  
   
  `COleBusyDialog`  
   
@@ -90,7 +90,7 @@ class COleBusyDialog : public COleDialog
  **Záhlaví:** afxodlgs.h  
   
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
- Tato funkce pouze vytvoří `COleBusyDialog` objektu.  
+ Tato funkce vytvoří pouze `COleBusyDialog` objektu.  
   
 ```  
 explicit COleBusyDialog(
@@ -102,61 +102,61 @@ explicit COleBusyDialog(
   
 ### <a name="parameters"></a>Parametry  
  *htaskBusy*  
- Zpracování úlohy serveru, který je zaneprázdněn.  
+ Zpracování úkolu serveru, který je zaneprázdněný.  
   
  *bNotResponding*  
- Pokud **TRUE**, volání dialogové okno neodpovídá místo dialogové okno Server zaneprázdněn. Pomocí jiné volby slov v dialogovém okně neodpovídá se poněkud liší od slov v dialogovém okně zaneprázdněný Server a je zakázáno na tlačítko Storno.  
+ Při hodnotě TRUE se volejte bez Serverbusy dialogu dialogové okno neodpovídá. Text v dialogovém okně neodpovídá se trochu liší od formulace v dialogovém okně Serverbusy a je zakázáno na tlačítko Storno.  
   
  *dwFlags*  
- Vytvoření příznak. Může obsahovat nula nebo více z následujících hodnot v kombinaci s operátorem bitový operátor OR:  
+ Vytvoření příznak. Může obsahovat nula nebo více z následujících hodnot kombinované pomocí bitového operátoru OR – operátor:  
   
-- **BZ_DISABLECANCELBUTTON** zakázat tlačítko Zrušit při volání metody dialogové okno.  
+- Při volání metody dialogových oken, zakažte BZ_DISABLECANCELBUTTON tlačítko Storno.  
   
-- **BZ_DISABLESWITCHTOBUTTON** zakázat tlačítko přepínače při volání metody dialogové okno.  
+- BZ_DISABLESWITCHTOBUTTON zakázat tlačítko Přepnout při volání metody dialogových oken.  
   
-- **BZ_DISABLERETRYBUTTON** zakázat tlačítko Opakovat při volání metody dialogové okno.  
+- BZ_DISABLERETRYBUTTON zakázat tlačítko opakování při volání metody dialogových oken.  
   
  *pParentWnd*  
- Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, okno nadřazeného objektu dialogové okno bude nastaveno na hlavní okno aplikace.  
+ Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nadřazené okno z objektu dialogového okna je nastaveno na hlavního okna aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li zobrazit dialogové okno, volejte [DoModal](#domodal).  
+ Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal).  
   
- Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura v sadě Windows SDK.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
- Volání této funkce můžete zobrazit dialogové okno OLE Server zaneprázdněn nebo Server neodpovídá.  
+ Voláním této funkce k zobrazení dialogových oken OLE zaneprázdněný Server nebo Server neodpovídá.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav dokončení pro dialogové okno. Jedna z následujících hodnot:  
+ Stav dokončení pro dialogové okno. Jeden z následujících hodnot:  
   
-- **IDOK** Pokud úspěšně zobrazí dialogové okno.  
+- IDOK, pokud úspěšně zobrazí dialogové okno.  
   
-- **IDCANCEL** Pokud uživatel zrušil dialogové okno.  
+- IDCANCEL, pokud uživatel zrušil dialogové okno.  
   
-- **IDABORT** Pokud došlo k chybě. Pokud **IDABORT** se volání vrátí, `COleDialog::GetLastError` – členská funkce získat další informace o typu Chyba, že došlo k chybě. Seznam možné chyby, najdete v článku [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) funkce ve Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různých dialogové okno Ovládací prvky nastavením členy [m_bz](#m_bz) struktura, bude třeba provést před voláním `DoModal`, ale po objektu dialogového okna je vytvořený.  
+ Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_bz](#m_bz) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
   
- Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo informace, které se vstup uživatelem na dialogové okno.  
+ Pokud `DoModal` vrátí IDOK, můžete volat ostatní členské funkce k načtení nastavení nebo informace, které se vstup uživatelem do dialogových oken.  
   
 ##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
- Volání této funkce se získat typ výběr volená uživatelem v dialogovém okně Server zaneprázdněn.  
+ Voláním této funkce se získat typ výběru uživatelem v dialogovém okně Server je zaneprázdněn.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Typ provedeného výběru.  
+ Typ výběru.  
   
 ### <a name="remarks"></a>Poznámky  
- Návratový typ hodnoty jsou určené **výběr** typ výčtu deklarované v `COleBusyDialog` – třída.  
+ Typ vrácené hodnoty jsou určeny `Selection` typ výčtu deklarovaný v `COleBusyDialog` třídy.  
   
 ```  
 enum Selection {
@@ -168,25 +168,25 @@ enum Selection {
   
  Postupujte podle stručný popis těchto hodnot:  
   
-- **COleBusyDialog::switchTo** klepnutí na přepínač na tlačítko.  
+- `COleBusyDialog::switchTo` Stisknutí tlačítka Přepnout.  
   
-- **COleBusyDialog::retry** klepnutí na tlačítko Opakovat.  
+- `COleBusyDialog::retry` Klepnutí na tlačítko Opakovat.  
   
-- **COleBusyDialog::callUnblocked** volání k aktivaci serveru je nyní odblokování.  
+- `COleBusyDialog::callUnblocked` Volání k aktivaci serveru je nyní odblokované.  
   
 ##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
- Struktura typu **OLEUIBUSY** používat k ovládání chování serveru zaneprázdněn dialogových oken.  
+ Struktura typu OLEUIBUSY používat k ovládání chování Serverbusy dialogového okna.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členové této struktury se dá změnit přímo nebo prostřednictvím členských funkcí.  
+ Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.  
   
- Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura ve Windows SDK.  
+ Další informace najdete v tématu [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktura v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [COleDialog – třída](../../mfc/reference/coledialog-class.md)   
+ [Coledialog – třída](../../mfc/reference/coledialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [COleDialog – třída](../../mfc/reference/coledialog-class.md)

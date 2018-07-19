@@ -1,5 +1,5 @@
 ---
-title: CMonthCalCtrl – třída | Microsoft Docs
+title: Cmonthcalctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,14 +100,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039216"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853547"
 ---
-# <a name="cmonthcalctrl-class"></a>CMonthCalCtrl – třída
+# <a name="cmonthcalctrl-class"></a>Cmonthcalctrl – třída
 Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -128,65 +128,65 @@ class CMonthCalCtrl : public CWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMonthCalCtrl::Create](#create)|Vytvoří ovládací prvek měsíční kalendář a připojí jej k `CMonthCalCtrl` objektu.|  
-|[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Načte šířka ohraničení ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetCalendarCount](#getcalendarcount)|Načte počet kalendářů zobrazí v ovládacím prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetCalendarGridInfo](#getcalendargridinfo)|Načte informace o ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetCalID](#getcalid)|Načte identifikátor kalendáře ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetColor](#getcolor)|Získá barvu zadané oblasti ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::GetCurrentView](#getcurrentview)|Načte zobrazení, které je aktuálně zobrazený v ovládacím prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetCurSel](#getcursel)|Načte systémového času uvedeného data aktuálně vybrané.|  
-|[CMonthCalCtrl::GetFirstDayOfWeek](#getfirstdayofweek)|Získá první den v týdnu, který se má zobrazit v levém sloupci kalendáře.|  
-|[CMonthCalCtrl::GetMaxSelCount](#getmaxselcount)|Načte aktuální maximální počet dní, které je možné vybrat v ovládacím prvku měsíční kalendář.|  
-|[CMonthCalCtrl::GetMaxTodayWidth](#getmaxtodaywidth)|Načte maximální šířku řetězec "Dnes" ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::GetMinReqRect](#getminreqrect)|Získá minimální velikost pro indikaci úplný měsíc v ovládacím prvku měsíční kalendář.|  
-|[CMonthCalCtrl::GetMonthDelta](#getmonthdelta)|Načte scroll rychlost pro ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::GetMonthRange](#getmonthrange)|Načte aktuální informace představující vysoké a nízké omezení prvku měsíční kalendář zobrazení.|  
-|[CMonthCalCtrl::GetRange](#getrange)|Načte aktuální minimální a maximální datum nastaveno v ovládacím prvku měsíční kalendář.|  
-|[CMonthCalCtrl::GetSelRange](#getselrange)|Načte informace o datu představující horní a dolní meze rozsahu kalendářních dat, který je aktuálně vybraný uživatelem.|  
-|[CMonthCalCtrl::GetToday](#gettoday)|Načte informace o datu zadané jako "dnes" pro ovládací prvek měsíční kalendář datum.|  
-|[CMonthCalCtrl::HitTest](#hittest)|Určuje, které části ovládací prvek měsíční kalendář je k danému bodu na obrazovce.|  
-|[CMonthCalCtrl::IsCenturyView](#iscenturyview)|Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce století zobrazení.|  
-|[CMonthCalCtrl::IsDecadeView](#isdecadeview)|Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce desetiletí zobrazení.|  
-|[CMonthCalCtrl::IsMonthView](#ismonthview)|Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce zobrazení měsíce.|  
-|[CMonthCalCtrl::IsYearView](#isyearview)|Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce roku zobrazení.|  
-|[CMonthCalCtrl::SetCalendarBorder](#setcalendarborder)|Nastaví šířku ohraničení ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::SetCalendarBorderDefault](#setcalendarborderdefault)|Nastaví výchozí šířku ohraničení ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::SetCalID](#setcalid)|Nastaví identifikátor kalendáře ovládacího prvku kalendář aktuálního měsíce.|  
-|[CMonthCalCtrl::SetCenturyView](#setcenturyview)|Nastaví ovládací prvek aktuální měsíční kalendář zobrazit století.|  
-|[CMonthCalCtrl::SetColor](#setcolor)|Nastaví barvu zadané oblasti ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Nastaví ovládací prvek aktuální měsíční kalendář zobrazíte zadané zobrazení.|  
+|[CMonthCalCtrl::Create](#create)|Vytvoří ovládací prvek měsíční kalendář a připojí ho k `CMonthCalCtrl` objektu.|  
+|[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Zjišťuje šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::GetCalendarCount](#getcalendarcount)|Získá počet kalendáře zobrazí v ovládacím prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::GetCalendarGridInfo](#getcalendargridinfo)|Načte informace o ovládacím prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::GetCalID](#getcalid)|Načte identifikátor kalendáře pro ovládací prvek kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::GetColor](#getcolor)|Získá barva zadané oblasti ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::GetCurrentView](#getcurrentview)|Načte zobrazení, které se nyní zobrazí v ovládacím prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::GetCurSel](#getcursel)|Načte systémový čas je určeno aktuálně vybrané datum.|  
+|[CMonthCalCtrl::GetFirstDayOfWeek](#getfirstdayofweek)|Získá první den v týdnu, kdy se zobrazí v levém sloupci kalendáře.|  
+|[CMonthCalCtrl::GetMaxSelCount](#getmaxselcount)|Načte aktuální maximální počet dní, které se dají vybrat ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::GetMaxTodayWidth](#getmaxtodaywidth)|Získá maximální šířku ovládacího prvku Kalendář aktuální měsíc na řetězec "Dnes".|  
+|[CMonthCalCtrl::GetMinReqRect](#getminreqrect)|Získá minimální velikost požadovaná k zobrazení celého měsíce v ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::GetMonthDelta](#getmonthdelta)|Načte kurz posuvníku pro ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::GetMonthRange](#getmonthrange)|Načte nejnovější informace, které představují vysoké a nízké omezení zobrazení prvku měsíční kalendář.|  
+|[CMonthCalCtrl::GetRange](#getrange)|Načte aktuální minimální a maximální datum nastaveno v ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::GetSelRange](#getselrange)|Načte informace o datu představující horní a dolní mez rozsahu kalendářních dat, který je aktuálně vybraný uživatelem.|  
+|[CMonthCalCtrl::GetToday](#gettoday)|Načte informace o datu kalendářní datum zadané jako "dnes" pro ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::HitTest](#hittest)|Určuje, jaké části ovládací prvek měsíční kalendář je v daném bodě na obrazovce.|  
+|[CMonthCalCtrl::IsCenturyView](#iscenturyview)|Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc zobrazení století.|  
+|[CMonthCalCtrl::IsDecadeView](#isdecadeview)|Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc desetiletí zobrazení.|  
+|[CMonthCalCtrl::IsMonthView](#ismonthview)|Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc zobrazení měsíc.|  
+|[CMonthCalCtrl::IsYearView](#isyearview)|Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc roku zobrazení.|  
+|[CMonthCalCtrl::SetCalendarBorder](#setcalendarborder)|Nastaví šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::SetCalendarBorderDefault](#setcalendarborderdefault)|Nastaví výchozí šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::SetCalID](#setcalid)|Nastaví identifikátor kalendáře pro ovládací prvek kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::SetCenturyView](#setcenturyview)|Nastaví ovládací prvek kalendáři aktuálního měsíce zobrazení století.|  
+|[CMonthCalCtrl::SetColor](#setcolor)|Nastavuje barvu zadané oblasti ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Nastaví ovládací prvek kalendáři aktuálního měsíce zadaného zobrazení.|  
 |[CMonthCalCtrl::SetCurSel](#setcursel)|Nastaví aktuálně vybrané datum pro ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::SetDayState](#setdaystate)|Nastaví zobrazení dní v ovládacím prvku měsíční kalendář.|  
-|[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Nastaví aktuální měsíční kalendář řídit desetiletí zobrazení.|  
-|[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Nastaví den v týdnu, který se má zobrazit v levém sloupci kalendáře.|  
-|[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Nastaví maximální počet dní, které je možné vybrat v ovládacím prvku měsíční kalendář.|  
-|[CMonthCalCtrl::SetMonthDelta](#setmonthdelta)|Nastaví četnost posuv pro ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::SetMonthView](#setmonthview)|Nastaví ovládací prvek aktuální měsíční kalendář zobrazit měsíc.|  
-|[CMonthCalCtrl::SetRange](#setrange)|Nastaví minimální a maximální počet povolených data pro ovládací prvek měsíční kalendář.|  
-|[CMonthCalCtrl::SetSelRange](#setselrange)|Nastaví výběr měsíční kalendář řízení na daném časovém období.|  
-|[CMonthCalCtrl::SetToday](#settoday)|Nastaví ovládacího prvku kalendář aktuálního dne.|  
-|[CMonthCalCtrl::SetYearView](#setyearview)|Nastaví aktuální měsíční kalendář řídit k zobrazení roku.|  
-|[CMonthCalCtrl::SizeMinReq](#sizeminreq)|Ovládací prvek měsíční kalendář repaints jeho velikost minimální, jeden měsíc.|  
-|[CMonthCalCtrl::SizeRectToMin](#sizerecttomin)|Aktuální ovládací prvek měsíční kalendář vypočítá nejmenší obdélníku, která může obsahovat všech kalendářů splňující v obdélníku zadaný.|  
+|[CMonthCalCtrl::SetDayState](#setdaystate)|Nastaví zobrazení dní v ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Nastaví k zobrazení desetiletí řídit kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Nastaví dne v týdnu, kdy se zobrazí v levém sloupci kalendáře.|  
+|[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Nastaví maximální počet dní, které se dají vybrat ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::SetMonthDelta](#setmonthdelta)|Nastaví frekvenci posuvníku pro ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::SetMonthView](#setmonthview)|Nastaví ovládací prvek kalendáři aktuálního měsíce zobrazení měsíc.|  
+|[CMonthCalCtrl::SetRange](#setrange)|Nastaví minimální a maximální počet povolených dat pro ovládací prvek měsíční kalendář.|  
+|[CMonthCalCtrl::SetSelRange](#setselrange)|Ovládací prvek výběru pro měsíční kalendář sady pro daný rozsah.|  
+|[CMonthCalCtrl::SetToday](#settoday)|Nastaví ovládací prvek kalendáři pro aktuální den.|  
+|[CMonthCalCtrl::SetYearView](#setyearview)|Nastaví k zobrazení rok řídit kalendáři aktuálního měsíce.|  
+|[CMonthCalCtrl::SizeMinReq](#sizeminreq)|Ovládací prvek měsíční kalendář repaints velikost minimální, jeden měsíc.|  
+|[CMonthCalCtrl::SizeRectToMin](#sizerecttomin)|Aktuální ovládací prvek měsíční kalendář vypočítá nejmenší obdélník, který může obsahovat všechny kalendáře, které odpovídají zadaným obdélníku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ovládací prvek měsíční kalendář poskytuje uživatele s kalendáři jednoduché rozhraní, ze kterého může uživatel vybrat datum. Uživatel může změnit zobrazení podle:  
+ Ovládací prvek měsíční kalendář poskytuje uživatelské rozhraní jednoduché kalendáře, ze kterého může uživatel vybrat datum. Uživatel může změnit zobrazení podle:  
   
--   Zpětný posun a jejich předávání z měsíc měsíc.  
+-   Posouvání zpět a vpřed, z měsíce na měsíc.  
   
--   Kliknutím na text dnes zobrazíte aktuální den (Pokud **MCS_NOTODAY** styl nepoužívá).  
+-   Klikněte na text dnes zobrazíte aktuální den (Pokud se nepoužívá MCS_NOTODAY style).  
   
 -   Výběr měsíc nebo rok z místní nabídky.  
   
- Můžete přizpůsobit v měsíci v ovládacím prvku kalendář s použitím různých styly k objektu při jeho vytvoření. Tyto styly jsou popsané v [styly ovládacího prvku měsíční kalendář](http://msdn.microsoft.com/library/windows/desktop/bb760919) ve Windows SDK.  
+ Můžete přizpůsobit v měsíci v kalendáři ovládacího prvku s použitím různých stylů objektu při vytváření. Tyto styly jsou popsány v [– styly ovládacích prvků kalendáře měsíce](http://msdn.microsoft.com/library/windows/desktop/bb760919) v sadě Windows SDK.  
   
- Ovládací prvek měsíční kalendář můžete zobrazit více než jeden měsíc a speciální dnů (například svátků) může svědčit o tom podle tučné datum.  
+ Ovládací prvek měsíční kalendář můžete zobrazení více než jednoho měsíce a může znamenat speciální dnů (například svátků) podle tučné datum.  
   
- Další informace o použití ovládací prvek měsíční kalendář, najdete v části [pomocí CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md).  
+ Další informace o použití ovládací prvek měsíční kalendář, naleznete v tématu [používání atributu CMonthCalCtrl](../../mfc/using-cmonthcalctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -205,10 +205,10 @@ CMonthCalCtrl();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je třeba volat **vytvořit** po vytvoření objektu.  
+ Je nutné volat `Create` po vytvoření objektu.  
   
 ##  <a name="create"></a>  CMonthCalCtrl::Create  
- Vytvoří ovládací prvek měsíční kalendář a připojí jej k `CMonthCalCtrl` objektu.  
+ Vytvoří ovládací prvek měsíční kalendář a připojí ho k `CMonthCalCtrl` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -227,67 +227,67 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. V tématu [styly ovládacího prvku měsíční kalendář](http://msdn.microsoft.com/library/windows/desktop/bb760919) ve Windows SDK pro další informace o stylů.  
+ Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. Zobrazit [– styly ovládacích prvků kalendáře měsíce](http://msdn.microsoft.com/library/windows/desktop/bb760919) v sadě Windows SDK pro další informace o stylech.  
   
- *Rect –*  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.  
+ *Rect*  
+ Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.  
   
  *PT*  
- Odkaz na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která identifikuje umístění ovládací prvek měsíční kalendář.  
+ Odkaz na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.  
   
  *pParentWnd*  
- Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je okno nadřazeného prvku měsíční kalendář. Nesmí být **NULL**.  
+ Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno Ovládací prvek měsíční kalendář. Nesmí být NULL.  
   
  *nID*  
  Určuje ID ovládacího prvku měsíční kalendář  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se inicializace byla úspěšná. jinak 0.  
+ Nenulové, pokud se inicializace byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoření měsíce v ovládacím prvku ve dvou krocích kalendář:  
+ Vytvořit za měsíc v kalendáři ovládacího prvku ve dvou krocích:  
   
-1.  Volání [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) k vytvoření `CMonthCalCtrl` objektu.  
+1.  Volání [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) k vytvoření `CMonthCalCtrl` objektu.  
   
-2.  Volání této funkce člen, který vytvoří ovládací prvek měsíční kalendář a připojí jej k `CMonthCalCtrl` objektu.  
+2.  Voláním této členské funkce, která vytvoří ovládací prvek měsíční kalendář a připojí ho k `CMonthCalCtrl` objektu.  
   
- Při volání `Create`, běžné ovládací prvky jsou inicializovány. Verze `Create` můžete volání Určuje, jak je velikost:  
+ Při volání `Create`, běžné ovládací prvky jsou inicializovány. Verze `Create` je volání Určuje, jak se velikosti:  
   
--   Pokud chcete, aby MFC automaticky velikost ovládacího prvku na jeden měsíc, volání přepsání, které používá *pt* parametr.  
+-   Pokud chcete, aby automaticky velikost ovládacího prvku na jeden měsíc knihovny MFC, volat přepsání, které používá *pt* parametru.  
   
--   Chcete-li velikost ovládacího prvku, volejte přepsání této funkce, která používá *Rect –* parametr.  
+-   Chcete-li velikost ovládacího prvku, zavolejte přepsat tuto funkci, která se používá *rect* parametru.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
   
 ##  <a name="getcalendarborder"></a>  CMonthCalCtrl::GetCalendarBorder  
- Načte šířka ohraničení ovládacího prvku kalendář aktuálního měsíce.  
+ Zjišťuje šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.  
   
 ```  
 int GetCalendarBorder() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka ohraničení ovládacího prvku v pixelech.  
+ Tloušťka ohraničení ovládacího prvku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760945) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760945) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcalendarcount"></a>  CMonthCalCtrl::GetCalendarCount  
- Načte počet kalendářů zobrazí v ovládacím prvku kalendář aktuálního měsíce.  
+ Získá počet kalendáře zobrazí v ovládacím prvku kalendáři aktuálního měsíce.  
   
 ```  
 int GetCalendarCount() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet aktuálně zobrazený v ovládacím prvku měsíční kalendář kalendáře. Maximální povolený počet kalendáře je 12.  
+ Počet aktuálně zobrazený v ovládacím prvku měsíční kalendář kalendáře. Maximální povolený počet kalendářů se 12.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCALENDARCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760947) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETCALENDARCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760947) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcalendargridinfo"></a>  CMonthCalCtrl::GetCalendarGridInfo  
- Načte informace o ovládacího prvku kalendář aktuálního měsíce.  
+ Načte informace o ovládacím prvku kalendáři aktuálního měsíce.  
   
 ```  
 BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;  
@@ -297,41 +297,41 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Ukazatel na [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) struktura, která přijímá informace o ovládacího prvku kalendář aktuálního měsíce. Volající zodpovídá za přidělování a inicializace tuto strukturu.|  
+|[out] *pmcGridInfo*|Ukazatel [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) struktura, která obdrží informace o ovládacím prvku kalendáři aktuálního měsíce. Volající zodpovídá za přidělování a inicializaci této struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCALENDARGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760949) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETCALENDARGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760949) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu používá `GetCalendarGridInfo` metoda pro načtení ovládací prvek aktuální měsíční kalendář zobrazí datum kalendáře.  
+ Následující příklad kódu používá `GetCalendarGridInfo` metodu pro načtení datum kalendáře, která zobrazuje ovládací prvek aktuální měsíční kalendář.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_3.cpp)]  
   
 ##  <a name="getcalid"></a>  CMonthCalCtrl::GetCalID  
- Načte identifikátor kalendáře ovládacího prvku kalendář aktuálního měsíce.  
+ Načte identifikátor kalendáře pro ovládací prvek kalendáři aktuálního měsíce.  
   
 ```  
 CALID GetCalID() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden z [kalendáře identifikátor](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.  
+ Jeden z [identifikátor kalendáře](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.  
   
 ### <a name="remarks"></a>Poznámky  
- Identifikátor kalendáře označuje oblast kalendář, jako je například Gregoriánský (lokalizovaný), japonština nebo hidžra kalendáře. Aplikace můžete použít identifikátor kalendář, který obsahuje různé jazykové podpory funkce.  
+ Identifikátor kalendáře označuje oblast kalendář, jako je například Gregoriánský (lokalizovaný), japonštinu nebo hidžra kalendáře. Aplikace můžete použít identifikátor kalendář, který má různé jazykové podpory funkce.  
   
- Tato metoda odesílá [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- Načte barva oblast v měsíci v ovládacím prvku určeného kalendář *nRegion*.  
+ Načte barva oblast v měsíci v kalendáři ovládací prvek určený *nRegion*.  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
@@ -339,43 +339,43 @@ COLORREF GetColor(int nRegion) const;
   
 ### <a name="parameters"></a>Parametry  
  *nRegion*  
- Oblast prvku měsíční kalendář, ze kterého je načíst barvu. Seznam hodnot, najdete v článku *nRegion* parametr [setcolor –](#setcolor).  
+ Oblasti prvku měsíční kalendář, ze kterého je načíst barvu. Seznam hodnot, najdete v článku *nRegion* parametr [setcolor –](#setcolor).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje barvu přidružené část ovládací prvek měsíční kalendář, pokud bylo úspěšné. Tato funkce člena, jinak vrátí hodnotu -1.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje barvu přidruženou s část ovládací prvek měsíční kalendář, pokud je úspěšná. V opačném případě tato členská funkce vrátí hodnotu -1.  
   
 ##  <a name="getcurrentview"></a>  CMonthCalCtrl::GetCurrentView  
- Načte zobrazení, které je aktuálně zobrazený v ovládacím prvku kalendář aktuálního měsíce.  
+ Načte zobrazení, které se nyní zobrazí v ovládacím prvku kalendáři aktuálního měsíce.  
   
 ```  
 DWORD GetCurrentView() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Aktuální zobrazení, které je indikován jednu z následujících hodnot:  
+ Aktuální zobrazení, který je označen pomocí jedné z následujících hodnot:  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|`MCMV_MONTH`|Měsíční zobrazení|  
-|`MCMV_YEAR`|Zobrazení pro roční|  
-|`MCMV_DECADE`|Desetiletí zobrazení|  
-|`MCMV_CENTURY`|Století zobrazení|  
+|MCMV_MONTH|Měsíční zobrazení|  
+|MCMV_YEAR|Roční zobrazení|  
+|MCMV_DECADE|Dekáda zobrazení|  
+|MCMV_CENTURY|Zobrazení století|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad sestavy kódu, které zobrazení měsíční kalendář řídit aktuálně zobrazuje.  
+ Následující příklad sestavy kódu, které zobrazení měsíčního kalendáře řídit aktuálně zobrazuje.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_4.cpp)]  
   
 ##  <a name="getcursel"></a>  CMonthCalCtrl::GetCurSel  
- Načte systémového času uvedeného data aktuálně vybrané.  
+ Načte systémový čas je určeno aktuálně vybrané datum.  
   
 ```  
 BOOL GetCurSel(COleDateTime& refDateTime) const;  BOOL GetCurSel(CTime& refDateTime) const;  
@@ -385,24 +385,24 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *refDateTime*  
- Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu. Přijme aktuální čas.  
+ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objektu nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu. Získá aktuální čas.  
   
  *pDateTime*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude přijímat informace o aktuálně vybraném datu. Tento parametr musí být platná adresa a nemůže být **NULL**.  
+ Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která se zobrazí informace o aktuálně vybrané datum. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; otherwize 0.  
+ Nenulové, pokud je úspěšná. otherwize 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb760957), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb760957), jak je popsáno v sadě Windows SDK.  
   
 > [!NOTE]
->  Tato funkce člen selže, pokud styl **MCS_MULTISELECT** nastavena.  
+>  Tato členská funkce selže, pokud není nastaven styl MCS_MULTISELECT.  
   
- Implementace MFC na `GetCurSel`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ V implementace MFC atributu `GetCurSel`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ##  <a name="getfirstdayofweek"></a>  CMonthCalCtrl::GetFirstDayOfWeek  
- Získá první den v týdnu, který se má zobrazit v levém sloupci kalendáře.  
+ Získá první den v týdnu, kdy se zobrazí v levém sloupci kalendáře.  
   
 ```  
 int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;  
@@ -410,13 +410,13 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *pbLocal*  
- Ukazatel **BOOL** hodnotu. Pokud je hodnota nulová, nastavení ovládacího prvku neodpovídá nastavení v Ovládacích panelech.  
+ Ukazatel na hodnotu BOOL. Pokud je hodnota nenulová, nastavení ovládacího prvku neodpovídá nastavení v Ovládacích panelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celočíselná hodnota představující první den v týdnu. V tématu **poznámky** Další informace o co představují tyto celých čísel.  
+ Celočíselná hodnota představující první den v týdnu. Zobrazit **poznámky** Další informace o co představují tyto celých čísel.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958), jak je popsáno v sadě Windows SDK. Dny v týdnu je vyjádřena jako celá čísla, následujícím způsobem.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb760958), jak je popsáno v sadě Windows SDK. Dny v týdnu jsou reprezentovány jako celá čísla, následujícím způsobem.  
   
 |Hodnota|Den v týdnu|  
 |-----------|---------------------|  
@@ -432,48 +432,48 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   Podívejte se na příklad pro [CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek).  
   
 ##  <a name="getmaxselcount"></a>  CMonthCalCtrl::GetMaxSelCount  
- Načte aktuální maximální počet dní, které je možné vybrat v ovládacím prvku měsíční kalendář.  
+ Načte aktuální maximální počet dní, které se dají vybrat ovládací prvek měsíční kalendář.  
   
 ```  
 int GetMaxSelCount() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celočíselná hodnota, která představuje celkový počet dní, které lze vybrat pro ovládací prvek.  
+ Celočíselná hodnota představující celkový počet dnů, které lze vybrat pro ovládací prvek.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760960), jak je popsáno v sadě Windows SDK. Tuto funkci člen použít pro ovládací prvky s **MCS_MULTISELECT** styl sady.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb760960), jak je popsáno v sadě Windows SDK. Tuto funkci člena můžete použijte pro ovládací prvky s nastavenou MCS_MULTISELECT style.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMonthCalCtrl::SetMaxSelCount](#setmaxselcount).  
   
 ##  <a name="getmaxtodaywidth"></a>  CMonthCalCtrl::GetMaxTodayWidth  
- Načte maximální šířku řetězec "Dnes" ovládacího prvku kalendář aktuálního měsíce.  
+ Získá maximální šířku ovládacího prvku Kalendář aktuální měsíc na řetězec "Dnes".  
   
 ```  
 DWORD GetMaxTodayWidth() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka řetězec "Dnes", v pixelech.  
+ Šířka v pixelech na řetězec "Dnes".  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `GetMaxTodayWidth` metoda.  
+ Následující příklad kódu ukazuje, `GetMaxTodayWidth` metody.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_5.cpp)]  
   
 ### <a name="remarks"></a>Poznámky  
- Uživatel může vrátit na aktuální datum kliknutím řetězec "Dnes", který se zobrazí v dolní části ovládací prvek měsíční kalendář. Řetězec "Dnes" obsahuje text popisku a datum text.  
+ Uživatel může vrátit na aktuální datum kliknutím na řetězec "Dnes", který se zobrazí v dolní části ovládací prvek měsíční kalendář. Řetězec "Dnes" obsahuje text popisku a textového datum.  
   
- Tato metoda odesílá [MCM_GETMAXTODAYWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760962) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_GETMAXTODAYWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760962) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getminreqrect"></a>  CMonthCalCtrl::GetMinReqRect  
- Získá minimální velikost pro indikaci úplný měsíc v ovládacím prvku měsíční kalendář.  
+ Získá minimální velikost požadovaná k zobrazení celého měsíce v ovládací prvek měsíční kalendář.  
   
 ```  
 BOOL GetMinReqRect(RECT* pRect) const;  
@@ -481,29 +481,29 @@ BOOL GetMinReqRect(RECT* pRect) const;
   
 ### <a name="parameters"></a>Parametry  
  *pRect*  
- Ukazatel [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude přijímat ohraničující obdélník informace. Tento parametr musí být platná adresa a nemůže být **NULL**.  
+ Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude dostávat informace ohraničující obdélník. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšné, tato funkce člen vrací nenulové hodnoty a `lpRect` obdrží ohraničující příslušné informace. Pokud je úspěšné, – členská funkce vrátí hodnotu 0.  
+ Pokud je úspěšná, tato členská funkce vrátí nenulovou hodnotu a `lpRect` obdrží příslušné ohraničující konkrétní informace. Pokud není úspěšné, členská funkce vrátí 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETMINREQRECT](http://msdn.microsoft.com/library/windows/desktop/bb760978), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETMINREQRECT](http://msdn.microsoft.com/library/windows/desktop/bb760978), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getmonthdelta"></a>  CMonthCalCtrl::GetMonthDelta  
- Načte scroll rychlost pro ovládací prvek měsíční kalendář.  
+ Načte kurz posuvníku pro ovládací prvek měsíční kalendář.  
   
 ```  
 int GetMonthDelta() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Míra posuv pro ovládací prvek měsíční kalendář. Rychlost, jakou scroll je počet měsíců, že ovládací prvek přesune jeho zobrazení, když uživatel klikne tlačítko posuvníku jednou.  
+ Kurz posuvníku pro ovládací prvek měsíční kalendář. Posunout míra je počet měsíců, že ovládací prvek přesune zobrazení, když uživatel klikne na tlačítko posuvníku jednou.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb760980), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb760980), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getmonthrange"></a>  CMonthCalCtrl::GetMonthRange  
- Načte aktuální informace představující vysoké a nízké omezení prvku měsíční kalendář zobrazení.  
+ Načte nejnovější informace, které představují vysoké a nízké omezení zobrazení prvku měsíční kalendář.  
   
 ```  
 int GetMonthRange(
@@ -524,36 +524,36 @@ int GetMonthRange(
   
 ### <a name="parameters"></a>Parametry  
  *refMinRange*  
- Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující minimální povolené datum.  
+ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje minimální datum, které jsou povoleny.  
   
  *refMaxRange*  
- Odkaz na `COleDateTime` nebo `CTime` objekt obsahující maximální povolené datum.  
+ Odkaz na `COleDateTime` nebo `CTime` objekt, který obsahuje maximální povolené datum.  
   
  *pMinRange*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
+ Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.  
   
  *pMaxRange*  
- Ukazatel na `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
+ Ukazatel `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.  
   
  *dwFlags*  
- Hodnota, která určuje obor omezení rozsahu mají být načteny. Tato hodnota musí mít jednu z následujících akcí.  
+ Hodnota, která určuje obor omezení rozsahu, který se má načíst. Tato hodnota musí být jeden z následujících akcí.  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|GMR_DAYSTATE|Zahrnout předcházející a na konci měsíců viditelné rozsahu, které se zobrazují pouze částečně.|  
-|GMR_VISIBLE|Zahrnout pouze měsíců, které jsou zcela zobrazeny.|  
+|GMR_DAYSTATE|Zahrnout před a koncové měsíců viditelný rozsah, které jsou zobrazeny pouze částečně.|  
+|GMR_VISIBLE|Zahrnout jenom v měsících, které jsou zcela zobrazeny.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celé číslo, které představuje rozsah, v měsících, předané dvě omezení indikován *refMinRange* a *refMaxRange* ve verzích první a druhý nebo *pMinRange* a *pMaxRange* ve třetí verzi.  
+ Celé číslo představující rozsah, v měsících, předané dvě omezení indikován *refMinRange* a *refMaxRange* ve verzích prvního a druhého nebo *pMinRange* a *pMaxRange* ve třetí verzi.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), jak je popsáno v sadě Windows SDK. Implementace MFC na `GetMonthRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `GetMonthRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMonthCalCtrl::SetDayState](#setdaystate).  
   
 ##  <a name="getrange"></a>  CMonthCalCtrl::GetRange  
- Načte aktuální minimální a maximální datum nastaveno v ovládacím prvku měsíční kalendář.  
+ Načte aktuální minimální a maximální datum nastaveno v ovládací prvek měsíční kalendář.  
   
 ```  
 DWORD GetRange(
@@ -571,27 +571,27 @@ DWORD GetRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.  
   
  *pMaxRange*  
- Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující datum na nejvyšší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující datum v nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `DWORD` , může být nula (žádná omezení jsou nastaveny) nebo jejich kombinaci následující hodnoty, které určují informace o limitu.  
+ DWORD, který může být nula (bez omezení jsou nastavené) nebo ke kombinaci komponent následující hodnoty, které určují informace o limitu.  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|GDTR_MAX|Maximální limit je nastaven pro ovládací prvek; *pMaxRange* platný a obsahuje informace o příslušných datu.|  
-|GDTR_MIN|Minimální limit je nastaven pro ovládací prvek; *pMinRange* platný a obsahuje informace o příslušných datu.|  
+|GDTR_MAX|Maximální limit nastavený pro ovládací prvek; *pMaxRange* je platný a obsahuje informace o příslušné datum.|  
+|GDTR_MIN|Minimální omezení je nastavena pro ovládací prvek; *pMinRange* je platný a obsahuje informace o příslušné datum.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), jak je popsáno v sadě Windows SDK. Implementace MFC na `GetRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `GetRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_6.cpp)]  
   
 ##  <a name="getselrange"></a>  CMonthCalCtrl::GetSelRange  
- Načte informace o datu představující horní a dolní meze rozsahu kalendářních dat, který je aktuálně vybraný uživatelem.  
+ Načte informace o datu představující horní a dolní mez rozsahu kalendářních dat, který je aktuálně vybraný uživatelem.  
   
 ```  
 BOOL GetSelRange(
@@ -609,27 +609,27 @@ BOOL GetSelRange(
   
 ### <a name="parameters"></a>Parametry  
  *refMinRange*  
- Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující minimální povolené datum.  
+ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje minimální datum, které jsou povoleny.  
   
  *refMaxRange*  
- Odkaz na `COleDateTime` nebo `CTime` objekt obsahující maximální povolené datum.  
+ Odkaz na `COleDateTime` nebo `CTime` objekt, který obsahuje maximální povolené datum.  
   
  *pMinRange*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
+ Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.  
   
  *pMaxRange*  
- Ukazatel na `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
+ Ukazatel `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760985), jak je popsáno v sadě Windows SDK. `GetSelRange` se nezdaří, pokud se použije k prvku měsíční kalendář, který nepoužívá **MCS_MULTISELECT** stylu.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760985), jak je popsáno v sadě Windows SDK. `GetSelRange` selže, pokud se použije ovládací prvek měsíční kalendář, která nepoužívá MCS_MULTISELECT styl.  
   
- Implementace MFC na `GetSelRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ V implementace MFC atributu `GetSelRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ##  <a name="gettoday"></a>  CMonthCalCtrl::GetToday  
- Načte informace o datu zadané jako "dnes" pro ovládací prvek měsíční kalendář datum.  
+ Načte informace o datu kalendářní datum zadané jako "dnes" pro ovládací prvek měsíční kalendář.  
   
 ```  
 BOOL GetToday(COleDateTime& refDateTime) const;  BOOL GetToday(COleDateTime& refDateTime) const;  
@@ -639,22 +639,22 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
   
 ### <a name="parameters"></a>Parametry  
  *refDateTime*  
- Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje po aktuálním dni.  
+ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje aktuální den.  
   
  *pDateTime*  
- Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude přijímat informace o datu. Tento parametr musí být platná adresa a nemůže být **NULL**.  
+ Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která se zobrazí informace o datu. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_GETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb760987), jak je popsáno v sadě Windows SDK. Implementace MFC na `GetToday`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_GETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb760987), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `GetToday`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#3](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_7.cpp)]  
   
 ##  <a name="hittest"></a>  CMonthCalCtrl::HitTest  
- Určuje které ovládací prvek měsíční kalendář, pokud existuje, na zadané pozici.  
+ Určuje které ovládací prvek měsíční kalendář, pokud existuje, je na určené pozici.  
   
 ```  
 DWORD HitTest(PMCHITTESTINFO pMCHitTest);
@@ -662,68 +662,68 @@ DWORD HitTest(PMCHITTESTINFO pMCHitTest);
   
 ### <a name="parameters"></a>Parametry  
  *pMCHitTest*  
- Ukazatel [MCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760927) struktura obsahující přístupů testování body pro ovládací prvek měsíční kalendář.  
+ Ukazatel [MCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760927) body struktury obsahující testování přístupů pro ovládací prvek měsíční kalendář.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `DWORD` hodnotu. Rovná **uHit** členem **MCHITTESTINFO** struktura.  
+ Hodnota DWORD. Rovná **uHit** člena `MCHITTESTINFO` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- `HitTest` používá **MCHITTESTINFO** struktura, která obsahuje informace o počtu test.  
+ `HitTest` používá `MCHITTESTINFO` struktura, která obsahuje informace o volání testu.  
   
 ##  <a name="iscenturyview"></a>  CMonthCalCtrl::IsCenturyView  
- Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce století zobrazení.  
+ Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc zobrazení století.  
   
 ```  
 BOOL IsCenturyView() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je aktuální zobrazení století zobrazení; v opačném `false`.  
+ Hodnota TRUE, pokud je aktuální zobrazení nastaveno zobrazení století. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávy, která je popsána v sadě Windows SDK. Pokud který zprávy vrátí `MCMV_CENTURY`, vrátí tato metoda `true`.  
+ Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávu, která je popsána v sadě Windows SDK. Pokud tuto zprávu vrátí MCMV_CENTURY, tato metoda vrátí hodnotu TRUE.  
   
 ##  <a name="isdecadeview"></a>  CMonthCalCtrl::IsDecadeView  
- Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce desetiletí zobrazení.  
+ Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc desetiletí zobrazení.  
   
 ```  
 BOOL IsDecadeView() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je aktuální zobrazení desetiletí zobrazení; v opačném `false`.  
+ Hodnota TRUE, pokud je aktuální zobrazení nastaveno desetiletí zobrazení. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávy, která je popsána v sadě Windows SDK. Pokud který zprávy vrátí `MCMV_DECADE`, vrátí tato metoda `true`.  
+ Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávu, která je popsána v sadě Windows SDK. Pokud tuto zprávu vrátí MCMV_DECADE, tato metoda vrátí hodnotu TRUE.  
   
 ##  <a name="ismonthview"></a>  CMonthCalCtrl::IsMonthView  
- Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce zobrazení měsíce.  
+ Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc zobrazení měsíc.  
   
 ```  
 BOOL IsMonthView() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je aktuální zobrazení zobrazení měsíc; v opačném `false`.  
+ Hodnota TRUE, pokud je aktuální zobrazení nastaveno zobrazení měsíc; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávy, která je popsána v sadě Windows SDK. Pokud který zprávy vrátí `MCMV_MONTH`, vrátí tato metoda `true`.  
+ Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávu, která je popsána v sadě Windows SDK. Pokud tuto zprávu vrátí MCMV_MONTH, tato metoda vrátí hodnotu TRUE.  
   
 ##  <a name="isyearview"></a>  CMonthCalCtrl::IsYearView  
- Určuje, zda je aktuální zobrazení objektu ovládacího prvku kalendář aktuálního měsíce roku zobrazení.  
+ Označuje, zda je aktuální zobrazení ovládacího prvku Kalendář aktuální měsíc roku zobrazení.  
   
 ```  
 BOOL IsYearView() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je aktuální zobrazení roku zobrazení; v opačném `false`.  
+ Hodnota TRUE, pokud je aktuální zobrazení nastaveno zobrazení rok. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávy, která je popsána v sadě Windows SDK. Pokud který zprávy vrátí `MCMV_YEAR`, vrátí tato metoda `true`.  
+ Tato metoda odesílá [MCM_GETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760955) zprávu, která je popsána v sadě Windows SDK. Pokud tuto zprávu vrátí MCMV_YEAR, tato metoda vrátí hodnotu TRUE.  
   
 ##  <a name="setcalendarborder"></a>  CMonthCalCtrl::SetCalendarBorder  
- Nastaví šířku ohraničení ovládacího prvku kalendář aktuálního měsíce.  
+ Nastaví šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.  
   
 ```  
 void SetCalendarBorder(int cxyBorder);
@@ -733,37 +733,37 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *cxyBorder*|Šířka ohraničení v pixelech.|  
+|[in] *cxyBorder*|Šířka ohraničení v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda bude úspěšná, šířka ohraničení nastavená na *cxyBorder* parametr. Jinak je šířka ohraničení resetovat na výchozí hodnotu, která je zadána aktuální [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud se nepoužívají motivů.  
+ Pokud tato metoda bude úspěšná, šířka ohraničení nastaven *cxyBorder* parametru. V opačném případě šířka ohraničení se resetují na výchozí hodnotu, která je určená aktuální [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud nejsou použity motivů.  
   
- Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující kód příklad nastavuje šířku ohraničení měsíční kalendář řídit k osm pixelů. Použití [CMonthCalCtrl::GetCalendarBorder](#getcalendarborder) metoda k určení, zda tato metoda byla úspěšná.  
+ Následující kód příklad nastaví šířku ohraničení měsíční kalendář ovládací prvek na osm pixelů. Použití [CMonthCalCtrl::GetCalendarBorder](#getcalendarborder) metodou ke zjištění, zda tato metoda byla úspěšná.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_8.cpp)]  
   
 ##  <a name="setcalendarborderdefault"></a>  CMonthCalCtrl::SetCalendarBorderDefault  
- Nastaví výchozí šířku ohraničení ovládacího prvku kalendář aktuálního měsíce.  
+ Nastaví výchozí šířku ohraničení ovládacího prvku kalendáři aktuálního měsíce.  
   
 ```  
 void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Šířka ohraničení je nastaven na výchozí hodnotu určeného aktuálním [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud se nepoužívají motivů.  
+ Šířka ohraničení nastavena na výchozí hodnotu zadanou pomocí aktuálního [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud nejsou použity motivů.  
   
- Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setcalid"></a>  CMonthCalCtrl::SetCalID  
- Nastaví identifikátor kalendáře ovládacího prvku kalendář aktuálního měsíce.  
+ Nastaví identifikátor kalendáře pro ovládací prvek kalendáři aktuálního měsíce.  
   
 ```  
 BOOL SetCalID(CALID calid);
@@ -773,41 +773,41 @@ BOOL SetCalID(CALID calid);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *ID_kal*|Jeden z [kalendáře identifikátor](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.|  
+|[in] *ID_kal*|Jeden z [identifikátor kalendáře](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje identifikátor kalendáře kalendář oblast, například Gregoriánský (lokalizovaný), japonština nebo hidžra kalendáře. Použití `SetCalID` metodu pro zobrazení kalendáře, která je zadána *ID_kal* parametru národního prostředí, který obsahuje kalendáře je nainstalován ve vašem počítači.  
+ Určuje identifikátor kalendáře konkrétní oblasti Kalendář, jako je například Gregoriánský (lokalizovaný), japonštinu nebo hidžra kalendáře. Použití `SetCalID` metodu pro zobrazení kalendáře, která je zadána *ID_kal* parametru národního prostředí, který obsahuje kalendář je nainstalován v počítači.  
   
- Tato metoda odesílá [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) zprávu, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu nastaví ovládací prvek měsíční kalendář zobrazíte japonský kalendář letopočtu kalendáři. `SetCalID` Metoda bude úspěšná pouze v případě, že se kalendář je nainstalován ve vašem počítači.  
+ Následující příklad kódu nastaví ovládací prvek měsíční kalendář k zobrazení kalendáře období japonský kalendář. `SetCalID` Metoda bude úspěšná pouze v případě, že kalendář je nainstalovaná ve vašem počítači.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_9.cpp)]  
   
 ##  <a name="setcenturyview"></a>  CMonthCalCtrl::SetCenturyView  
- Nastaví ovládací prvek aktuální měsíční kalendář zobrazit století.  
+ Nastaví ovládací prvek kalendáři aktuálního měsíce zobrazení století.  
   
 ```  
 BOOL SetCenturyView();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metodu a nastavit zobrazení `MCMV_CENTURY`, která představuje století zobrazení.  
+ Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metody nastavte zobrazení `MCMV_CENTURY`, která představuje století zobrazení.  
   
 ##  <a name="setcolor"></a>  CMonthCalCtrl::SetColor  
- Nastaví barvu zadané oblasti ovládací prvek měsíční kalendář.  
+ Nastavuje barvu zadané oblasti ovládací prvek měsíční kalendář.  
   
 ```  
 COLORREF SetColor(
@@ -817,31 +817,31 @@ COLORREF SetColor(
   
 ### <a name="parameters"></a>Parametry  
  *nRegion*  
- Celočíselná hodnota určující jakou barvu kalendáře měsíc nastavit. Tato hodnota může být jedna z následujících akcí.  
+ Celočíselná hodnota, kterou barvu kalendáře měsíce nastavit zadání. Tato hodnota může být jedna z následujících akcí.  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|MCSC_BACKGROUND|Barva pozadí zobrazí mezi měsíců.|  
-|MCSC_MONTHBK|Barva pozadí zobrazí v rámci měsíce.|  
+|MCSC_BACKGROUND|Barva pozadí zobrazená mezi měsíců.|  
+|MCSC_MONTHBK|Barva pozadí zobrazená v rámci měsíce.|  
 |MCSC_TEXT|Barva použitá k zobrazení textu během jednoho měsíce.|  
-|MCSC_TITLEBK|Barva pozadí zobrazí v nadpisu kalendáře.|  
+|MCSC_TITLEBK|Barva pozadí zobrazená v nadpisu kalendáře.|  
 |MCSC_TITLETEXT|Barva použitá k zobrazení textu v nadpisu kalendáře.|  
-|MCSC_TRAILINGTEXT|Barva použitá k zobrazení textu záhlaví a koncové den. Úvodní a koncové dny jsou dny z předešlých a následných měsíců, které se zobrazují na aktuálním kalendáři.|  
+|MCSC_TRAILINGTEXT|Barva použitá k zobrazení textu záhlaví a na konci dne. Úvodní a koncové dny jsou dny z předchozího a následujícího měsíce, které se zobrazují na aktuální kalendář.|  
   
  *ref*  
- A **COLORREF** hodnotu pro nové nastavení barvu pro zadaný část ovládací prvek měsíční kalendář.  
+ COLORREF hodnotu pro toto nové nastavení barev pro specifikovanou část ovládací prvek měsíční kalendář.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **COLORREF** hodnotu, která představuje předchozí nastavení barvu pro zadaný část ovládací prvek měsíční kalendář, pokud bylo úspěšné. Tato zpráva v opačném případě vrátí hodnotu -1.  
+ COLORREF hodnotu, která v případě úspěšného ověření představuje předchozí nastavení barev pro specifikovanou část ovládací prvek měsíční kalendář. Tato zpráva v opačném případě vrátí hodnotu -1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760997), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760997), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#4](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_10.cpp)]  
   
 ##  <a name="setcurrentview"></a>  CMonthCalCtrl::SetCurrentView  
- Nastaví ovládací prvek aktuální měsíční kalendář zobrazíte zadané zobrazení.  
+ Nastaví ovládací prvek kalendáři aktuálního měsíce zadaného zobrazení.  
   
 ```  
 BOOL SetCurrentView(DWORD dwNewView);
@@ -851,13 +851,13 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *dwNewView*|Jeden z následujících hodnot, která určuje měsíční, roční, desetiletí nebo století zobrazení.<br /><br /> MCMV_MONTH: Měsíční zobrazení<br /><br /> MCMV_YEAR: Zobrazení pro roční<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
+|[in] *dwNewView*|Jeden z následujících hodnot, které určuje měsíční, roční, deset nebo zobrazení století.<br /><br /> MCMV_MONTH: Zobrazení měsíčního<br /><br /> MCMV_YEAR: Roční zobrazení<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [MCM_SETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760998) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_SETCURRENTVIEW](http://msdn.microsoft.com/library/windows/desktop/bb760998) zprávu, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setcursel"></a>  CMonthCalCtrl::SetCurSel  
  Nastaví aktuálně vybrané datum pro ovládací prvek měsíční kalendář.  
@@ -870,22 +870,22 @@ BOOL SetCurSel(const CTime& refDateTime);
   
 ### <a name="parameters"></a>Parametry  
  *refDateTime*  
- Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje ovládacího prvku Kalendář aktuálně vybraném měsíci.  
+ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje ovládací prvek aktuálně vybrané měsíční kalendář.  
   
  *pDateTime*  
- Ukazatel na [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která obsahuje data nastavit jako aktuální výběr.  
+ Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje datum nastavit jako aktuální výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb761002), jak je popsáno v sadě Windows SDK. Implementace MFC na `SetCurSel`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb761002), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `SetCurSel`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]  
   
 ##  <a name="setdaystate"></a>  CMonthCalCtrl::SetDayState  
- Nastaví zobrazení dní v ovládacím prvku měsíční kalendář.  
+ Nastaví zobrazení dní v ovládací prvek měsíční kalendář.  
   
 ```  
 BOOL SetDayState(
@@ -895,35 +895,35 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>Parametry  
  *nMonths*  
- Hodnotu, která určuje, kolik prvky jsou v poli, která *pStates* odkazuje na.  
+ Hodnota označující počet prvků v poli, která *pStates* odkazuje na.  
   
  *pStates*  
- Ukazatel [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) pole hodnot, které definují, jak bude ovládací prvek měsíční kalendář kreslení každý den v jeho zobrazení. **MONTHDAYSTATE** datový typ je bit pole, kde každý bit (1 až 31) představuje stav den v měsíci. Pokud je bit na, zobrazí se odpovídající den v bold; v opačném případě se bude zobrazovat s žádné zvýraznění.  
+ Ukazatel [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) pole hodnot, které definují, jak bude ovládací prvek měsíční kalendář kreslení každý den v jeho zobrazení. Datový typ MONTHDAYSTATE je bitové pole, přičemž každý bit (1 až 31) představuje stavu za den v měsíci. Pokud bit zapnutý, zobrazí se odpovídající den v bold; v opačném případě se zobrazí s žádné zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761004), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761004), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#6](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_12.cpp)]  
   
 ##  <a name="setdecadeview"></a>  CMonthCalCtrl::SetDecadeView  
- Nastaví aktuální měsíční kalendář řídit desetiletí zobrazení.  
+ Nastaví k zobrazení desetiletí řídit kalendáři aktuálního měsíce.  
   
 ```  
 BOOL SetDecadeView();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metodu a nastavit zobrazení `MCMV_DECADE`, která představuje desetiletí zobrazení.  
+ Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metody nastavte zobrazení `MCMV_DECADE`, která představuje zobrazení deset let.  
   
 ##  <a name="setfirstdayofweek"></a>  CMonthCalCtrl::SetFirstDayOfWeek  
- Nastaví den v týdnu, který se má zobrazit v levém sloupci kalendáře.  
+ Nastaví dne v týdnu, kdy se zobrazí v levém sloupci kalendáře.  
   
 ```  
 BOOL SetFirstDayOfWeek(
@@ -933,42 +933,42 @@ BOOL SetFirstDayOfWeek(
   
 ### <a name="parameters"></a>Parametry  
  *iDay*  
- Celočíselná hodnota představující den, kdy má být nastavena jako první den v týdnu. Tato hodnota musí být jeden z čísla dne. V tématu [GetFirstDayOfWeek](#getfirstdayofweek) popis čísla dne.  
+ Celočíselná hodnota představující den, kdy má být nastavena jako první den v týdnu. Tato hodnota musí být jeden z čísla dne. Zobrazit [GetFirstDayOfWeek](#getfirstdayofweek) popis čísla dne.  
   
  *lpnOld*  
- Ukazatel na celočíselnou hodnotu označující první den v týdnu dříve nastavit.  
+ Nastavte ukazatel na celé číslo označující první den v týdnu dříve.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud předchozí první den v týdnu je nastavený na jinou hodnotu než u nenulové hodnoty **LOCALE_IFIRSTDAYOFWEEK**, což je den uvedené v nastavení ovládacího panelu. Tuto funkci, jinak vrátí hodnotu 0.  
+ Nenulové, pokud předchozí první den v týdnu je nastavena na jinou hodnotu než u LOCALE_IFIRSTDAYOFWEEK, což je den uvedené v nastavení ovládacího panelu. V opačném případě vrátí 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb761006), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETFIRSTDAYOFWEEK](http://msdn.microsoft.com/library/windows/desktop/bb761006), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#7](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_13.cpp)]  
   
 ##  <a name="setmaxselcount"></a>  CMonthCalCtrl::SetMaxSelCount  
- Nastaví maximální počet dní, které je možné vybrat v ovládacím prvku měsíční kalendář.  
+ Nastaví maximální počet dní, které se dají vybrat ovládací prvek měsíční kalendář.  
   
 ```  
 BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nMax*  
- Hodnota, která bude nastavena pro představují maximální počet dní volitelný.  
+ *Nmaximum*  
+ Hodnota, která bude nastavena na představuje maximální počet volitelných dnů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761008), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETMAXSELCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761008), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#8](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_14.cpp)]  
   
 ##  <a name="setmonthdelta"></a>  CMonthCalCtrl::SetMonthDelta  
- Nastaví četnost posuv pro ovládací prvek měsíční kalendář.  
+ Nastaví frekvenci posuvníku pro ovládací prvek měsíční kalendář.  
   
 ```  
 int SetMonthDelta(int iDelta);
@@ -976,39 +976,39 @@ int SetMonthDelta(int iDelta);
   
 ### <a name="parameters"></a>Parametry  
  *položky iDelta*  
- Počet měsíců nastavit jako míra scroll ovládacího prvku. Pokud je tato hodnota nulová, je rozdílu měsíc obnovit výchozí, což je počet měsíců, zobrazují v ovládacím prvku.  
+ Počet měsíců nastavit jako míra ovládacího prvku posuvníku. Pokud tato hodnota je nula, rozdílového měsíc resetuje na výchozí, což je počet měsíců zobrazí v ovládacím prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Předchozí scroll míra. Pokud rychlost scroll nebyla dříve nastavena, je vrácenou hodnotu 0.  
+ Předchozí kurz posuvníku. Pokud frekvence posuvníku nebyla dříve nastavena, vrácená hodnota je 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb761010), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETMONTHDELTA](http://msdn.microsoft.com/library/windows/desktop/bb761010), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="setmonthview"></a>  CMonthCalCtrl::SetMonthView  
- Nastaví ovládací prvek aktuální měsíční kalendář zobrazit měsíc.  
+ Nastaví ovládací prvek kalendáři aktuálního měsíce zobrazení měsíc.  
   
 ```  
 BOOL SetMonthView();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metodu a nastavit zobrazení `MCMV_MONTH`, která představuje zobrazení měsíce.  
+ Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metody nastavte zobrazení MCMV_MONTH, který představuje zobrazení měsíc.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, který používá k programovému přístupu ovládací prvek měsíční kalendář. Tato proměnná se používá v dalším příkladu.  
+ Následující příklad kódu definuje proměnnou, `m_monthCalCtrl`, která je použita k programovému přístupu ke ovládací prvek měsíční kalendář. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_2.h)]  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu nastaví ovládací prvek měsíční kalendář zobrazíte měsíc, rok, desetiletí a století zobrazení.  
+ Následující příklad kódu nastaví ovládací prvek měsíční kalendář zobrazíte měsíc, rok, deset let a zobrazení století.  
   
  [!code-cpp[NVC_MFC_CMonthCalCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_15.cpp)]  
   
 ##  <a name="setrange"></a>  CMonthCalCtrl::SetRange  
- Nastaví minimální a maximální povolená data pro ovládací prvek měsíční kalendář.  
+ Nastaví minimální a maximální povolený data pro ovládací prvek měsíční kalendář.  
   
 ```  
 BOOL SetRange(
@@ -1028,22 +1028,22 @@ BOOL SetRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.  
   
  *pMaxRange*  
- Ukazatel `COleDateTime` objekt, `CTime` objekt, nebo `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761012), jak je popsáno v sadě Windows SDK. Implementace MFC na `SetRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761012), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `SetRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMonthCalCtrl::GetRange](#getrange).  
   
 ##  <a name="setselrange"></a>  CMonthCalCtrl::SetSelRange  
- Nastaví výběr měsíční kalendář řízení na daném časovém období.  
+ Ovládací prvek výběru pro měsíční kalendář sady pro daný rozsah.  
   
 ```  
 BOOL SetSelRange(
@@ -1063,19 +1063,19 @@ BOOL SetSelRange(
   
 ### <a name="parameters"></a>Parametry  
  *pMinRange*  
- Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.  
   
  *pMaxRange*  
- Ukazatel `COleDateTime` objekt, `CTime` objekt, nebo `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
+ Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761014), jak je popsáno v sadě Windows SDK. Implementace MFC na `SetSelRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETSELRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761014), jak je popsáno v sadě Windows SDK. V implementace MFC atributu `SetSelRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
   
 ##  <a name="settoday"></a>  CMonthCalCtrl::SetToday  
- Nastaví ovládacího prvku kalendář aktuálního dne.  
+ Nastaví ovládací prvek kalendáři pro aktuální den.  
   
 ```  
 void SetToday(const COleDateTime& refDateTime);  
@@ -1088,29 +1088,29 @@ void SetToday(const CTime* pDateTime);
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje aktuální datum.  
   
  *pDateTime*  
- V druhé verzi ukazatel na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující informace o aktuálním datem. Ve třetí verzi ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která obsahuje informace o aktuálním datem.  
+ V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje informace o aktuálním datem. Ve třetí verzi ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje informace o aktuálním datem.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [MCM_SETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb761016), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce implementuje chování zprávy Win32 [MCM_SETTODAY](http://msdn.microsoft.com/library/windows/desktop/bb761016), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CMonthCalCtrl::GetToday](#gettoday).  
   
 ##  <a name="setyearview"></a>  CMonthCalCtrl::SetYearView  
- Nastaví aktuální měsíční kalendář řídit k zobrazení roku.  
+ Nastaví k zobrazení rok řídit kalendáři aktuálního měsíce.  
   
 ```  
 BOOL SetYearView();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud tato metoda je úspěšná. v opačném `false`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metodu a nastavit zobrazení `MCMV_YEAR`, která představuje roční zobrazení.  
+ Tato metoda používá [CMonthCalCtrl::SetCurrentView](#setcurrentview) metody nastavte zobrazení MCMV_YEAR, který představuje roční zobrazení.  
   
 ##  <a name="sizeminreq"></a>  CMonthCalCtrl::SizeMinReq  
- Zobrazí v měsíci prvek kalendáře pro minimální velikost, která zobrazuje jeden měsíc.  
+ Zobrazí měsíc ovládacího prvku kalendáře na minimální velikost, která zobrazuje jeden měsíc.  
   
 ```  
 BOOL SizeMinReq(BOOL bRepaint = TRUE);
@@ -1118,16 +1118,16 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bRepaint*  
- Určuje, zda ovládacího prvku překreslen. Ve výchozím nastavení **TRUE**. Pokud **FALSE**, dojde k žádné překreslení.  
+ Určuje, zda je ovládací prvek překreslen. Ve výchozím nastavení hodnotu TRUE. Pokud má hodnotu FALSE, žádné překreslení vyvolá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je velikost ovládací prvek měsíční kalendář, aby jeho minimální; jinak 0.  
+ Nenulové, pokud ovládací prvek měsíční kalendář přizpůsoben pro minimální; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání metody `SizeMinReq` úspěšně zobrazí ovládací prvek celý měsíční kalendář pro kalendář jeden měsíc.  
+ Volání `SizeMinReq` úspěšně zobrazí ovládací prvek celý měsíční kalendář pro jeden měsíční kalendář.  
   
 ##  <a name="sizerecttomin"></a>  CMonthCalCtrl::SizeRectToMin  
- Aktuální ovládací prvek měsíční kalendář vypočítá nejmenší obdélníku, která může obsahovat všech kalendářů splňující v obdélníku zadaný.  
+ Aktuální ovládací prvek měsíční kalendář vypočítá nejmenší obdélník, který může obsahovat všechny kalendáře, které odpovídají zadaným obdélníku.  
   
 ```  
 LPRECT SizeRectToMin(LPRECT lpRect);
@@ -1137,18 +1137,18 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *lprect –*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, která obsahuje požadovanou hodnotu v kalendáři.|  
+|[in] *lprect –*|Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, jejíž aktuální velikost je menší než nebo rovna rámeček definované *lprect –* parametr.  
+ Ukazatel [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélníku, jehož velikost je menší než nebo rovna obdélníku definovaném *lprect –* parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vypočítá, kolik kalendáře můžete začlenit v obdélníku určeného *lprect –* parametr a potom se vrátí nejmenší obdélníku, která může obsahovat tento počet kalendáře. V důsledku toho tato metoda zmenší zadaný rámeček přesně podle požadovaný počet kalendáře.  
+ Tato metoda vypočítá počet kalendáře lze zobrazit v obdélníku určené *lprect –* parametr a potom vrátí nejmenší obdélník, který může obsahovat tento počet kalendáře. V důsledku toho tato metoda zmenšuje zadané obdélník přesně podle požadovaného počtu kalendáře.  
   
- Tato metoda odesílá [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) zprávy, která je popsána v sadě Windows SDK.  
+ Tato metoda odesílá [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) zprávu, která je popsána v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka CMNCTRL1 MFC](../../visual-cpp-samples.md)   
+ [Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)   
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CDateTimeCtrl – třída](../../mfc/reference/cdatetimectrl-class.md)

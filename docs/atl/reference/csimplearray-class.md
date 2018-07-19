@@ -1,5 +1,5 @@
 ---
-title: Třída CSimpleArray | Microsoft Docs
+title: Csimplearray – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ef8a6a9b803cb7e1828537027bbf09b2ffd2067
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364261"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881630"
 ---
-# <a name="csimplearray-class"></a>CSimpleArray – třída
-Tato třída poskytuje metody pro správu jednoduchých polí.  
+# <a name="csimplearray-class"></a>Csimplearray – třída
+Tato třída poskytuje metody pro správu jednoduché pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ class CSimpleArray
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Typ dat pro uložení v poli.  
   
- `TEqual`  
- Objekt znak, který slouží k definování test rovnosti pro elementy typu `T`.  
+ *TEqual*  
+ Objekt vlastností definující test rovnosti pro prvky typu *T*.  
   
 ## <a name="members"></a>Členové  
   
@@ -56,36 +56,36 @@ class CSimpleArray
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSimpleArray::CSimpleArray](#csimplearray)|V konstruktoru pro jednoduché pole.|  
-|[CSimpleArray:: ~ CSimpleArray](#dtor)|Destruktor pro jednoduché pole.|  
+|[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor pro jednoduché pole.|  
+|[Csimplearray –:: ~ csimplearray –](#dtor)|Destruktor pro jednoduché pole.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSimpleArray::Add](#add)|Přidá nového elementu k poli.|  
-|[CSimpleArray::Find](#find)|Vyhledá element v poli.|  
+|[CSimpleArray::Add](#add)|Přidá nový prvek k poli.|  
+|[CSimpleArray::Find](#find)|Vyhledá prvek v poli.|  
 |[CSimpleArray::GetData](#getdata)|Vrací ukazatel na data uložená v poli.|  
-|[CSimpleArray::GetSize](#getsize)|Vrátí počet prvků, které jsou uložené v poli.|  
-|[CSimpleArray::Remove](#remove)|Odebere pole daného elementu.|  
-|[CSimpleArray::RemoveAll](#removeall)|Odebere všechny elementy z pole.|  
-|[CSimpleArray::RemoveAt](#removeat)|Odebere zadaný element z pole.|  
-|[CSimpleArray::SetAtIndex](#setatindex)|Nastaví zadaný element v poli.|  
+|[CSimpleArray::GetSize](#getsize)|Vrátí počet prvků uložených v poli.|  
+|[CSimpleArray::Remove](#remove)|Odebere daného prvku z pole.|  
+|[CSimpleArray::RemoveAll](#removeall)|Odebere všechny prvky z pole.|  
+|[CSimpleArray::RemoveAt](#removeat)|Odebere zadaný prvek z pole.|  
+|[CSimpleArray::SetAtIndex](#setatindex)|Nastaví zadaný prvek v poli.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSimpleArray::operator\[\]](#operator_at)|Načte z pole elementu.|  
+|[CSimpleArray::operator\[\]](#operator_at)|Načte prvek z pole.|  
 |[CSimpleArray::operator =](#operator_eq)|Operátor přiřazení.|  
 
   
 ## <a name="remarks"></a>Poznámky  
  `CSimpleArray` poskytuje metody pro vytváření a správu jednoduché pole daného typu `T`.  
   
- Parametr `TEqual` poskytuje způsob definování rovnosti funkce pro dva elementy typu `T`. Vytvořením třídy podobné [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), je možné změnit chování test rovnosti pro jakékoli dané pole. Například při plánování práce s pole ukazatele, může být užitečné k definování rovnosti jako v závislosti na hodnoty, které odkazují ukazatele. Výchozí implementace využívá **operator=()**.  
+ Parametr `TEqual` poskytuje způsob definice funkce protokolem rovnosti dvou prvků typu `T`. Vytvořením třídy podobný [csimplearrayequalhelper –](../../atl/reference/csimplearrayequalhelper-class.md), je možné změnit chování test rovnosti pro jakékoli dané pole. Například při práci s pole ukazatelů, může být vhodné definovat rovnost jako v závislosti na hodnoty, které odkazují ukazatele. Výchozí implementace využívá **operator=()**.  
   
- Obě `CSimpleArray` a [CSimpleMap](../../atl/reference/csimplemap-class.md) jsou navrženy pro malý počet elementů. [CAtlArray](../../atl/reference/catlarray-class.md) a [CAtlMap](../../atl/reference/catlmap-class.md) by měl být použit při pole obsahuje velký počet elementů.  
+ Obě `CSimpleArray` a [csimplemap –](../../atl/reference/csimplemap-class.md) jsou určeny pro malý počet elementů. [Catlarray –](../../atl/reference/catlarray-class.md) a [catlmap –](../../atl/reference/catlmap-class.md) má být použit při pole obsahuje velký počet prvků.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpcoll.h  
@@ -94,7 +94,7 @@ class CSimpleArray
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
 ##  <a name="add"></a>  CSimpleArray::Add  
- Přidá nového elementu k poli.  
+ Přidá nový prvek k poli.  
   
 ```
 BOOL Add(const T& t);
@@ -105,13 +105,13 @@ BOOL Add(const T& t);
  Elementu, který chcete přidat do pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud element úspěšně přidán do pole, FALSE jinak.  
+ Vrátí hodnotu TRUE, pokud prvek se úspěšně přidal do pole, FALSE v opačném případě.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
 ##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
- V konstruktoru pro objekt array.  
+ Konstruktor objektu array.  
   
 ```
 CSimpleArray(const CSimpleArray<T, TEqual>& src);  
@@ -123,9 +123,9 @@ CSimpleArray();
  Existující objekt `CSimpleArray`.  
   
 ### <a name="remarks"></a>Poznámky  
- Inicializuje datových členů, vytvoření nové prázdné `CSimpleArray` objekt nebo kopii existující `CSimpleArray` objektu.  
+ Inicializuje datové členy, vytváří se nová prázdná `CSimpleArray` objektu nebo kopii existující `CSimpleArray` objektu.  
   
-##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>  Csimplearray –:: ~ csimplearray –  
  Destruktor.  
   
 ```
@@ -136,7 +136,7 @@ CSimpleArray();
  Uvolní všechny přidělené prostředky.  
   
 ##  <a name="find"></a>  CSimpleArray::Find  
- Vyhledá element v poli.  
+ Vyhledá prvek v poli.  
   
 ```
 int Find(const T& t) const;
@@ -147,7 +147,7 @@ int Find(const T& t) const;
  Element, který chcete vyhledat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí index nalezen element nebo -1, pokud element nebyl nalezen.  
+ Vrátí index elementu nalezena, nebo -1, pokud element nebyl nalezen.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
@@ -163,28 +163,28 @@ T* GetData() const;
  Vrací ukazatel na data v poli.  
   
 ##  <a name="getsize"></a>  CSimpleArray::GetSize  
- Vrátí počet prvků, které jsou uložené v poli.  
+ Vrátí počet prvků uložených v poli.  
   
 ```
 int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet prvků, které jsou uložené v poli.  
+ Vrátí počet prvků uložených v poli.  
   
 ##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
- Načte z pole elementu.  
+ Načte prvek z pole.  
   
 ```
 T& operator[](int nindex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index elementu.  
+ *nIndex*  
+ Index prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí element pole odkazuje `nIndex`.  
+ Vrátí prvek pole odkazuje *nIndex*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
@@ -200,19 +200,19 @@ CSimpleArray<T, TEqual>
   
 ### <a name="parameters"></a>Parametry  
  *src*  
- Pole pro kopírování.  
+ Pole, které chcete kopírovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na aktualizaci `CSimpleArray` objektu.  
+ Vrací ukazatel na aktualizovaný `CSimpleArray` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Zkopíruje všechny elementy z `CSimpleArray` objekt odkazovaný *src* do aktuální objekt pole nahrazení všechna existující data.  
+ Zkopíruje všechny elementy z `CSimpleArray` objekt odkazovaný zadaným parametrem *src* do aktuálního pole objektu, nahraďte všechna existující data.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
 ##  <a name="remove"></a>  CSimpleArray::Remove  
- Odebere pole daného elementu.  
+ Odebere daného prvku z pole.  
   
 ```
 BOOL Remove(const T& t);
@@ -223,37 +223,37 @@ BOOL Remove(const T& t);
  Elementu, který chcete odebrat z pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud element je nalezen a odebrána, FALSE, jinak hodnota.  
+ Vrátí hodnotu TRUE, pokud element je nalezen a odebrané, FALSE, jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je odebrán element, zbývající prvků v poli se označuje jako k vyplnění prázdná místo.  
+ Odebraný prvek zbývající prvky v poli se označuje jako tak, aby vyplnil prázdný.  
   
 ##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
- Odebere všechny elementy z pole.  
+ Odebere všechny prvky z pole.  
   
 ```
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odebere všechny elementy, které jsou aktuálně uloženy v poli.  
+ Odebere všechny prvky, které jsou aktuálně uloženy v poli.  
   
 ##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
- Odebere zadaný element z pole.  
+ Odebere zadaný prvek z pole.  
   
 ```
 BOOL RemoveAtint nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Indexu odkazující na elementu, který chcete odebrat.  
+ *nIndex*  
+ Index, přejdete na elementu, který chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud element byla odebrána, FALSE, pokud index je neplatný.  
+ Vrátí hodnotu TRUE, pokud byl prvek odebrán, FALSE, pokud byl neplatný index.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je odebrán element, zbývající prvků v poli se označuje jako k vyplnění prázdná místo.  
+ Odebraný prvek zbývající prvky v poli se označuje jako tak, aby vyplnil prázdný.  
   
 ##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Nastavte Zadaný prvek v poli.  
@@ -265,14 +265,14 @@ BOOL SetAtIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index elementu, který chcete změnit.  
+ *nIndex*  
+ Index prvku, který chcete změnit.  
   
  *t*  
- Hodnota pro přiřazení daného elementu.  
+ Hodnota pro přiřazení k zadanému prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE Pokud úspěšné, FALSE, pokud nebyla platná index.  
+ Vrací TRUE, pokud úspěšné, FALSE, pokud index nebyl platný.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)
