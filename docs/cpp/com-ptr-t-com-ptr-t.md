@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Microsoft Docs
+title: _com_ptr_t::_com_ptr_t | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413931"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939068"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Vytvoří `_com_ptr_t` objektu.  
   
@@ -143,32 +143,32 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pInterface`  
+ *pInterface*  
  Nezpracovaný ukazatel rozhraní.  
   
- `fAddRef`  
- Pokud **true**, `AddRef` nazývá se zvýší počet odkazů ukazatel zapouzdřené rozhraní.  
+ *fAddRef*  
+ Při hodnotě TRUE se `AddRef` nazývá se zvýší počet odkazů zapouzdřený ukazatel rozhraní.  
   
  *prohlášení CP*  
  A `_com_ptr_t` objektu.  
   
- `p`  
+ *p*  
  Nezpracovaný ukazatel rozhraní, jehož typ se liší od typu inteligentního ukazatele tohoto objektu `_com_ptr_t`.  
   
  *varSrc*  
  A `_variant_t` objektu.  
   
- `clsid`  
- **CLSID** z coclass.  
+ *identifikátor CLSID*  
+ `CLSID` Třídy coclass.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Kontext spuštění spustitelného kódu.  
   
  *lpcStr*  
- Více-bajtové řetězec, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
+ Vícebajtový řetězec udržující `CLSID` (počínaje "**{**") nebo `ProgID`.  
   
- `pOuter`  
- Vnější Neznámý pro [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
+ *pOuter*  
+ Vnější Neznámá pro [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

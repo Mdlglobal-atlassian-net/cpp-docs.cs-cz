@@ -1,5 +1,5 @@
 ---
-title: Třída CComHeapPtr | Microsoft Docs
+title: Ccomheapptr – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359055"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884779"
 ---
-# <a name="ccomheapptr-class"></a>CComHeapPtr – třída
-Chytré ukazatele třída pro správu haldy ukazatele.  
+# <a name="ccomheapptr-class"></a>Ccomheapptr – třída
+Třída inteligentní ukazatel pro správu haldy ukazatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,8 +36,8 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ objektu k uložení v haldě.  
+ *T*  
+ Typ objektu ukládaly na haldě.  
   
 ## <a name="members"></a>Členové  
   
@@ -48,12 +48,12 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Konstruktor|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComHeapPtr` odvozená z `CHeapPtr`, ale používá [CComAllocator](../../atl/reference/ccomallocator-class.md) přidělit paměť pomocí rutiny COM. V tématu [CHeapPtr](../../atl/reference/cheapptr-class.md) a [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) pro dostupné metody.  
+ `CComHeapPtr` je odvozen od `CHeapPtr`, ale používá [ccomallocator –](../../atl/reference/ccomallocator-class.md) přidělení paměti pomocí modelu COM, rutin. Zobrazit [cheapptr –](../../atl/reference/cheapptr-class.md) a [cheapptrbase –](../../atl/reference/cheapptrbase-class.md) pro metody, které jsou k dispozici.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
+ [Cheapptrbase –](../../atl/reference/cheapptrbase-class.md)  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md)  
+ [Cheapptr –](../../atl/reference/cheapptr-class.md)  
   
  `CComHeapPtr`  
   
@@ -69,14 +69,14 @@ explicit CComHeapPtr(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pData`  
+ *pData*  
  Existující objekt `CComHeapPtr`.  
   
 ### <a name="remarks"></a>Poznámky  
- Ukazatel haldy lze vytvořit volitelně pomocí stávající `CComHeapPtr` objektu. Pokud ano, nové `CComHeapPtr` objekt odpovědnost za správu nový ukazatel a prostředky.  
+ Ukazatel haldy lze vytvořit volitelně pomocí existující `CComHeapPtr` objektu. Pokud ano, nové `CComHeapPtr` objekt zodpovědnost za správu nový ukazatel a prostředky.  
   
 ## <a name="see-also"></a>Viz také  
- [CHeapPtr – třída](../../atl/reference/cheapptr-class.md)   
- [CHeapPtrBase – třída](../../atl/reference/cheapptrbase-class.md)   
- [CComAllocator – třída](../../atl/reference/ccomallocator-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
+ [Cheapptrbase – třída](../../atl/reference/cheapptrbase-class.md)   
+ [Ccomallocator – třída](../../atl/reference/ccomallocator-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

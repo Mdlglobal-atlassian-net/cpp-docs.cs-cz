@@ -1,5 +1,5 @@
 ---
-title: pokračovat – příkaz (C++) | Microsoft Docs
+title: Continue – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947700"
 ---
 # <a name="continue-statement-c"></a>continue – příkaz (C++)
-Vynutí přenos řízení na řízení výraz nejmenší obklopuje [provést](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), nebo [při](../cpp/while-statement-cpp.md) smyčky.  
+Vynutí přenos řízení na kontrolní výraz nejmenší nadřazené [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), nebo [při](../cpp/while-statement-cpp.md) smyčky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,17 +33,17 @@ continue;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Všechny zbývající příkazy v aktuální iteraci nebudou provedeny. Další iterace smyčky je stanoven následujícím způsobem:  
+ Nebudou provedeny všechny zbývající příkazy v aktuální iteraci. Na další iteraci smyčky je stanoven následujícím způsobem:  
   
--   V `do` nebo `while` smyčky, další iterace začne reevaluating řízení výraz `do` nebo `while` příkaz.  
+-   V **proveďte** nebo **při** smyčky, začíná další iterace přehodnocením řídicí výraz **proveďte** nebo **při** příkazu.  
   
--   V `for` smyčky (pomocí syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` klauzule se spustí. Pak se `cond-expr` klauzule je již znovu a, v závislosti na výsledek, že opakování ve smyčce buď končí nebo nastane jiný iterace.  
+-   V **pro** smyčky (pomocí syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` provedeny klauzule. Pak bude `cond-expr` klauzule je již znovu a v závislosti na výsledku, buď smyčku ukončí nebo dojde k jiné iterace.  
   
- Následující příklad ukazuje jak `continue` příkaz lze použít vynechat sekcí kódu a spustíte následující iteraci smyčky.  
+ Následující příklad ukazuje způsob, jakým **pokračovat** příkaz je možné obejít části kódu a zahájí na další iteraci smyčky.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

@@ -1,5 +1,5 @@
 ---
-title: 'CFixedStringT: Příklad nástroje vlastní řetězec Manager | Microsoft Docs'
+title: 'CFixedStringT: Příklad z vlastního správce řetězců | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,52 +14,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8c45b9556f6211f7dc1a0c4f985cd06eb8f0b19
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359546"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884444"
 ---
-# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Příklad nástroje vlastní řetězec Manager
-Příkladem manažera vlastní řetězec, který používá třída implementuje knihovny serveru ATL [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), volané **CFixedStringMgr**. `CFixedStringT` je odvozený od [CStringT](../atl-mfc-shared/reference/cstringt-class.md) a implementuje řetězec, který přiděluje jeho textová data v rámci `CFixedStringT` samotný objekt tak dlouho, dokud řetězce je menší než délka určeného **t_nChars** parametr šablony `CFixedStringT`. S tímto přístupem řetězec nemusí halda vůbec, není-li délka řetězce zvětšování překračuje velikost vyrovnávací paměti pevné. Protože `CFixedStringT` nemá vždy používání haldy přidělit jeho data řetězec nelze použít **CAtlStringMgr** jako jeho řetězec správce. Používá vlastní řetězec manager (**CFixedStringMgr**), implementující [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní. Toto rozhraní je popsána v [implementace nástroje vlastní řetězec Manager (rozšířené metoda)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Příklad z vlastního správce řetězců
+Jedním z příkladů vlastní řetězec správce používá třída implementuje knihovny ATL [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), označované jako **CFixedStringMgr**. `CFixedStringT` je odvozen z [CStringT](../atl-mfc-shared/reference/cstringt-class.md) a implementuje řetězec, který přiděluje jeho znaková data jako součást `CFixedStringT` samotného objektu jako řetězec je menší než délka zadaná ve `t_nChars` parametrem šablony `CFixedStringT`. S tímto přístupem řetězec nemusí haldy vůbec, není-li délka řetězce překročí vyrovnávací paměť pevné velikosti. Protože `CFixedStringT` používá ne vždy haldy přidělit řetězcová data, nemůžete použít `CAtlStringMgr` jako jeho správce řetězců. Používá vlastní řetězec správce (`CFixedStringMgr`), implementující [iatlstringmgr –](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní. Toto rozhraní je popsán v [implementace z vlastního správce řetězců (rozšířené metody)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
- V konstruktoru pro **CFixedStringMgr** přijímá tři parametry:  
+ Konstruktor pro `CFixedStringMgr` přijímá tři parametry:  
   
--   **pData:** ukazatel na pevné `CStringData` struktura, který se má použít.  
+-   *pData:* ukazatel na pevné `CStringData` struktury, který se má použít.  
   
--   **nChars:** maximální počet znaků `CStringData` struktura mohou být uloženy.  
+-   *nChars:* maximální počet znaků `CStringData` struktura může obsahovat.  
   
--   **pMgr:** ukazatel `IAtlStringMgr` rozhraní "správce zálohování řetězec".  
+-   *pMgr:* ukazatel `IAtlStringMgr` rozhraní "správce zálohování řetězců".  
   
- Konstruktor ukládá hodnoty `pData` a **pMgr** v jejich odpovídajících členské proměnné (`m_pData` a **m_pMgr**). Potom nastaví délka vyrovnávací paměti na nulu, k dispozici délka rovna maximální velikost pevného vyrovnávací paměť a počet odkazů na hodnotu -1. Určuje hodnotu počtu odkazů vyrovnávací paměť je uzamčen a použít tuto instanci **CFixedStringMgr** jako správce řetězec.  
+ Konstruktor ukládá hodnoty *pData* a *pMgr* v jejich příslušných členské proměnné (`m_pData` a `m_pMgr`). Potom nastaví délku vyrovnávací paměť na nulu, k dispozici délku odpovídající maximální velikosti vyrovnávací paměť pevné a počet odkazů na hodnotu -1. Určuje hodnotu počtu odkazů vyrovnávací paměť je uzamčen a použít tuto instanci `CFixedStringMgr` jako správce řetězců.  
   
- Označení vyrovnávací paměti, protože uzamčení brání dalších `CStringT` instancí z podržíte sdílený odkaz do vyrovnávací paměti. Pokud jiné `CStringT` instance byly povoleny sdílet vyrovnávací paměti by bylo možné pro vyrovnávací paměť obsažený v `CFixedStringT` k odstranění při jiných řetězců stále používáte vyrovnávací paměti.  
+ Označení vyrovnávací paměti podle uzamčené brání jiné `CStringT` instancí z obsahující sdílený odkaz do vyrovnávací paměti. Pokud jiné `CStringT` instance povoleno sdílení vyrovnávací paměti by bylo možné do vyrovnávací paměti obsažených `CFixedStringT` odstranit, zatímco ostatní řetězce stále používali vyrovnávací paměti.  
   
- **CFixedStringMgr** je úplnou implementaci daného `IAtlStringMgr` rozhraní. Implementace každou metodu je probíraná samostatně.  
+ `CFixedStringMgr` je úplnou implementaci daného `IAtlStringMgr` rozhraní. Implementace každou metodu je popsána samostatně.  
   
-## <a name="implementation-of-cfixedstringmgrallocate"></a>Implementace CFixedStringMgr::Allocate  
- Implementace **CFixedStringMgr::Allocate** první kontroluje, zda požadovaná velikost řetězce je menší než velikost vyrovnávací paměti pevné (uložené v `m_pData` člen). Pokud pevný vyrovnávací paměť je dostatečně velké **CFixedStringMgr** zamkne pevné vyrovnávací paměti s nulovou délku. Tak dlouho, dokud délka řetězce není nárůst velikosti vyrovnávací paměti pevné, `CStringT` nebudete muset znovu přidělte vyrovnávací paměti.  
+## <a name="implementation-of-cfixedstringmgrallocate"></a>Provádění CFixedStringMgr::Allocate  
+ Provádění `CFixedStringMgr::Allocate` nejprve zkontroluje, jestli na požadovanou velikost řetězce je menší než nebo rovna velikosti vyrovnávací paměť pevné (uložené v `m_pData` člen). Pokud pevná vyrovnávací paměť je příliš velká, `CFixedStringMgr` uzamkne pevná vyrovnávací paměť s nulovou délkou. Tak dlouho, dokud délka řetězce není nárůst velikosti vyrovnávací paměť pevné `CStringT` nebudete muset znovu přidělte vyrovnávací paměti.  
   
- Pokud požadovaná velikost řetězce je větší než velikost vyrovnávací paměti pevné **CFixedStringMgr** požadavek předá do správce zálohování řetězec. Správce zálohování řetězec se předpokládá, že přidělit vyrovnávací paměť z haldy. Nicméně před vrácením této vyrovnávací paměti **CFixedStringMgr** uzamkne vyrovnávací paměti a nahradí ukazatel na ukazatel manager řetězec do vyrovnávací paměti **CFixedStringMgr** objektu. To zajistí, která se pokusí přidělit jinému uživateli nebo volné vyrovnávací paměti podle `CStringT` zavolá do **CFixedStringMgr**.  
+ Pokud požadovaná velikost řetězce je větší než vyrovnávací paměť pevné `CFixedStringMgr` požadavek předá do správce zálohování řetězců. Správce zálohování řetězců se předpokládá, že k přidělení vyrovnávací paměti z haldy. Ale před vrácením této vyrovnávací paměti `CFixedStringMgr` uzamčení vyrovnávací paměti a nahradí přípravné vyrovnávací paměti řetězce správce ukazatele s ukazatelem `CFixedStringMgr` objektu. Tím se zajistí, která se pokusí přerozdělit nebo uvolnit vyrovnávací paměti podle `CStringT` zavolá `CFixedStringMgr`.  
   
-## <a name="implementation-of-cfixedstringmgrreallocate"></a>Implementace CFixedStringMgr::ReAllocate  
- Implementace **CFixedStringMgr::ReAllocate** je velmi podobný jeho implementace **přidělte**.  
+## <a name="implementation-of-cfixedstringmgrreallocate"></a>Provádění CFixedStringMgr::ReAllocate  
+ Provádění `CFixedStringMgr::ReAllocate` je velmi podobný jeho implementace `Allocate`.  
   
- Pokud se znovu přidělit vyrovnávací paměť je pevnou velikost vyrovnávací paměti a požadovaná vyrovnávací paměť je menší než velikost vyrovnávací paměti pevné, se provádí žádné přidělení. Ale pokud se znovu přidělit vyrovnávací paměť není pevnou velikost vyrovnávací paměti, musí být vyrovnávací paměť je přiřazen správce zálohování. V takovém případě se používá správce zálohování a znovu přidělte vyrovnávací paměti.  
+ Pokud je vyrovnávací paměť přerozděleni pevná vyrovnávací paměť a velikost požadované vyrovnávací paměti je menší než Pevná vyrovnávací paměť, se provádí bez přidělení. Nicméně pokud vyrovnávací paměť přerozděleni není pevná vyrovnávací paměť, musí být vyrovnávací paměť přidělena pomocí správce zálohování. V tomto případě správce zálohování slouží k přidělení vyrovnávací paměti.  
   
- Pokud se znovu přidělit vyrovnávací paměť je pevnou velikost vyrovnávací paměti a nové vyrovnávací paměť je příliš velký, nevejde se do vyrovnávací paměti pevné, **CFixedStringMgr** přiděluje vyrovnávací paměť nového pomocí správce zálohování. Obsah pevnou velikost vyrovnávací paměti se pak zkopírují do nové vyrovnávací paměti.  
+ Pokud je vyrovnávací paměť přerozděleni pevná vyrovnávací paměť a novou velikost vyrovnávací paměti je příliš velký, aby vyhovovaly pevná vyrovnávací paměť, `CFixedStringMgr` přidělí vyrovnávací paměť nového správce zálohování. Obsah vyrovnávací paměť pevné jsou poté zkopírován do nové vyrovnávací paměti.  
   
-## <a name="implementation-of-cfixedstringmgrfree"></a>Implementace CFixedStringMgr::Free  
- Implementace **CFixedStringMgr::Free** používá se stejný vzor jako **přidělte** a `ReAllocate`. Pokud vyrovnávací paměť byla uvolňována pevnou velikost vyrovnávací paměti, metoda ji nastaví na uzamčeném vyrovnávací paměť nulové délky. Pokud vyrovnávací paměť byla uvolňována byl přidělen s správce zálohování **CFixedStringMgr** používá správce zálohování ji uvolnit.  
+## <a name="implementation-of-cfixedstringmgrfree"></a>Provádění CFixedStringMgr::Free  
+ Provádění `CFixedStringMgr::Free` používá stejný vzor jako `Allocate` a `ReAllocate`. Pokud vyrovnávací paměť je uvolněna je pevná vyrovnávací paměť, metoda ji nastaví na nulovou délkou uzamčené vyrovnávací paměti. Pokud vyrovnávací paměť je uvolněna byla přidělena pomocí správce zálohování, `CFixedStringMgr` uvolnit ji využívá správce zálohování.  
   
-## <a name="implementation-of-cfixedstringmgrclone"></a>Implementace CFixedStringMgr::Clone  
- Implementace **CFixedStringMgr::Clone** vždy vrátí ukazatel do správce zálohování místo **CFixedStringMgr** sám sebe. K tomu dojde, protože všechny instance řetězce **CFixedStringMgr** může být přidružen pouze jednu instanci `CStringT`. Všechny ostatní instance `CStringT` pokusu o klonování Správce by měl získat správce zálohování místo. Je to proto, že správce zálohování podporuje sdílená.  
+## <a name="implementation-of-cfixedstringmgrclone"></a>Provádění CFixedStringMgr::Clone  
+ Provádění `CFixedStringMgr::Clone` vždy vrací ukazatel na správce zálohování místo `CFixedStringMgr` samotný. K tomu dojde, protože každá instance `CFixedStringMgr` může být přidružen pouze jednu instanci `CStringT`. Všechny ostatní instance `CStringT` pokusu o naklonování Správce by měl získat správci zálohy. místo toho. Je to proto, že správce zálohování podporuje sdílení.  
   
-## <a name="implementation-of-cfixedstringmgrgetnilstring"></a>Implementace CFixedStringMgr::GetNilString  
- Implementace **CFixedStringMgr::GetNilString** vrátí pevnou velikost vyrovnávací paměti. Z důvodu očima soulad **CFixedStringMgr** a `CStringT`, dané instanci systému `CStringT` nikdy používá více než jeden vyrovnávací paměti v čase. Proto je ve stejnou dobu potřeba nikdy nulovou hodnotu řetězce a skutečné řetězec vyrovnávací paměti.  
+## <a name="implementation-of-cfixedstringmgrgetnilstring"></a>Provádění CFixedStringMgr::GetNilString  
+ Provádění `CFixedStringMgr::GetNilString` vrátí pevná vyrovnávací paměť. Z důvodu od vyhrazeného pracovníka korespondence `CFixedStringMgr` a `CStringT`, danou instanci `CStringT` nikdy používá více než jeden vyrovnávací paměti v čase. Nil řetězec a vyrovnávací paměti skutečné řetězce jsou proto nikdy potřebné ve stejnou dobu.  
   
- Vždy, když pevné vyrovnávací paměť není používán, **CFixedStringMgr** zajistí, že je inicializován s nulovou délkou. To umožňuje použít jako řetězec s nulovou hodnotu. Jako bonus přidání `nAllocLength` člen pevné vyrovnávací paměti je vždycky nastavený na plnou velikost vyrovnávací paměti pevné. To znamená, že `CStringT` můžou růst řetězec bez volání [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), i nulovou hodnotu řetězce.  
+ Pokaždé, když pevná vyrovnávací paměť není používán, `CFixedStringMgr` zajistí, že je inicializován s nulovou délkou. To umožňuje použít jako hodnotu nil řetězec. Jako přidání bonus `nAllocLength` členem pevná vyrovnávací paměť je vždycky nastavený na plnou velikost pevná vyrovnávací paměť. To znamená, že `CStringT` můžou růst řetězec bez volání [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), i pro řetězec hodnotu nil.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** cstringt.h  

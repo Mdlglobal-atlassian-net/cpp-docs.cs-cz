@@ -1,5 +1,5 @@
 ---
-title: Rozšíření zástupného znaku | Microsoft Docs
+title: Rozšíření zástupného znaku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420643"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939133"
 ---
 # <a name="wildcard-expansion"></a>Rozšíření zástupného znaku
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  K zadávání argumentů názvů souborů a cest v příkazovém řádku lze používat zástupné znaky – otazník (?) a hvězdičku (*).  
   
- Argumenty příkazového řádku jsou zpracovávány rutinu, která je volána **_setargv –** (nebo **_wsetargv** v prostředí široká charakterová), který ve výchozím nastavení nerozšiřuje zástupné znaky do samostatné řetězců v `argv`pole řetězců. Další informace o povolení rozšíření zástupného znaku, najdete v části [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md).  
+ Argumenty příkazového řádku jsou zpracovány rutinou s názvem `_setargv` (nebo `_wsetargv` v prostředí širokých znaků), která standardně Nerozbaluje zástupné znaky do samostatných řetězců v `argv` pole řetězců. Další informace o povolení rozbalování zástupných znaků, najdete [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md).  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [main: spuštění programu](../cpp/main-program-startup.md)

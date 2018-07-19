@@ -1,5 +1,5 @@
 ---
-title: Vnořené deklarace tříd | Microsoft Docs
+title: Deklarace vnořených tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947538"
 ---
 # <a name="nested-class-declarations"></a>Vnořené deklarace tříd
 Třída může být deklarována v rámci jiné třídy. Tato třída se nazývá „vnořená třída“. Vnořené třídy jsou považovány za součást oboru ohraničující třídy a jsou k dispozici pro použití v daném oboru. Pro odkazování na vnořenou třídu z jiného oboru než jejího bezprostředně ohraničujícího oboru je třeba použít plně kvalifikovaný název.  
   
  Následující příklad ukazuje, jak deklarovat vnořené třídy:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Výjimka deklarace viditelnosti oboru vnořené třídy se objeví, je-li název typu deklarován spolu s dopřednou deklarací.  Název třídy, která je deklarována dopřednou deklarací, je v tomto případě viditelný mimo ohraničující třídu, kde je její obor působnosti nejmenším ohraničujícím netřídním oborem.  Příklad:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -98,13 +99,13 @@ int main()
 }  
 ```  
   
-## <a name="access-privilege-in-nested-classes"></a>Oprávnění přístupu ve vnořených třídách  
+## <a name="access-privilege-in-nested-classes"></a>Přístupová oprávnění ve vnořených třídách  
  Vnoření třídy v rámci jiné třídy nedává zvláštní oprávnění k přístupu členským funkcím vnořené třídy. Podobně členské funkce ohraničující třídy nemají zvláštní přístup ke členům vnořené třídy.  
   
 ## <a name="member-functions-in-nested-classes"></a>Členské funkce ve vnořených třídách  
  Členské funkce deklarované ve vnořených třídách lze definovat v rozsahu souboru. Předchozí příklad by mohl být napsán takto:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- V předchozím příkladu *kvalifikovaný název typu* syntaxe se používá k deklarovat název funkce. Deklarace:  
+ V předchozím příkladu *qualified-type-name* syntaxe se používá k deklaraci názvu funkce. Deklarace:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Protože používá toto prohlášení *kvalifikovaný název typu* syntaxe, je možné konstrukce v následujícím formátu:  
+ znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Protože tato deklarace používá *qualified-type-name* syntaxi, je možné následující formu konstrukcí:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- Předchozí deklarace je ekvivalentní předchozí, ale místo názvu třídy používá název `typedef`.  
+ Předchozí deklarace je ekvivalentní předchozímu, ale používá **typedef** název namísto názvů tříd.  
   
-## <a name="friend-functions-in-nested-classes"></a>Friend – funkce ve vnořených třídách  
+## <a name="friend-functions-in-nested-classes"></a>Spřátelené funkce ve vnořených třídách  
  Spřátelené funkce deklarované ve vnořené třídě jsou považovány za funkce v rozsahu vnořené třídy, nikoli nadřazené třídy. Proto spřátelené funkce nezískají žádná zvláštní přístupová oprávnění ke členům nebo členským funkcím nadřazené třídy. Pokud chcete použít název, který je deklarován ve vnořené třídě ve spřátelené funkci, a tato spřátelená funkce je v rozsahu souboru, použijte kvalifikované názvy typů takto:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  Následující kód ukazuje funkci `GetExtendedErrorStatus` deklarovanou jako spřátelená funkce. Ve funkci, která je definována v rozsahu souboru, je zpráva zkopírována ze statického pole do člena třídy. Lepší implementace funkce `GetExtendedErrorStatus` je deklarována jako:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

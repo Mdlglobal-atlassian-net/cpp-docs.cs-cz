@@ -1,5 +1,5 @@
 ---
-title: Objekt životnost a Správa prostředků (moderní verze jazyka C++) | Microsoft Docs
+title: Objekt životní cyklus a Správa prostředků (moderní verze jazyka C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423493"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941548"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
-Na rozdíl od spravované jazyky nemá C++ uvolňování (GC), který automaticky uvolní prostředky, ne delší použité paměti při spuštění programu. V jazyce C++ Správa prostředků přímo souvisí s doba života objektu. Tento dokument popisuje faktory, které ovlivňují doba života objektu v jazyce C++ a postup k její správě.  
+Na rozdíl od spravovaných jazyků nemá C++ kolekce paměti (GC), který automaticky uvolní prostředky bez delší používané paměti při spuštění programu. V jazyce C++ správu prostředků přímo souvisí s životního cyklu objektu. Tento dokument popisuje faktory, které ovlivňují dobu života objektu v jazyce C++ a jak ho spravovat.  
   
- C++ nemá GC především proto ho nemůže pracovat bez paměťových prostředků. Deterministické destruktory stejně jako v C++ pouze může zpracovávat prostředky paměti a jiných paměti rovnoměrně. Globální Katalog má také jiné problémy, jako je vyšší režijní náklady v paměti a příkon procesoru a polohu. Ale všeobecné je základní problém, který nemůže být omezeny prostřednictvím inteligentní optimalizace.  
+ C++ nemá uvolňování paměti, především proto, že nezpracuje bez paměťových prostředků. Podobné těm v jazyce C++ deterministické destruktory pouze dokáže zpracovat prostředky paměti a které nejsou paměťově stejně. Globální Katalog má také jiné problémy, jako je vyšší nároky na paměť a využití procesoru a umístění. Ale obecnosti je základní problém, který není možné řešit prostřednictvím inteligentní optimalizace.  
   
 ## <a name="concepts"></a>Koncepty  
- Je důležité si ve správě doba života objektu zapouzdření – kdo používá objekt nemá vědět, co vlastní prostředky, které objektu, nebo postup zbavit nebo i jestli vlastní všechny prostředky vůbec. Právě má odstranění objektu. Základní jazyk C++ slouží k zajištění, že jsou objekty zničen ve správném čase, to znamená, jako jsou opustil bloky, v opačném pořadí v konstrukce. Pokud objekt zničení, jeho základů a členů jsou zničen v určitém pořadí.  Jazyk automaticky odstraní objekty, dokud neprovedete speciální třeba přidělení haldy nebo nové umístění.  Například [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) jako `unique_ptr` a `shared_ptr`, a jako standardní knihovna C++ kontejnery `vector`, zapouzdření `new` / `delete` a `new[]` / `delete[]` v objektech, které mají destruktory. Proto je tak důležité používat chytré ukazatele a standardní knihovny C++ kontejnery.  
+ Důležitá věc, kterou ve správě životního cyklu objektu je zapouzdření, kdo je použití objektu nemusí vědět, co vlastní prostředky, které objekt, nebo jak zbavit, nebo dokonce Určuje, zda vlastní všechny prostředky ve všech. Má jenom ke zničení objektu. Jazyk C++ core je navržený tak, aby, že objekty jsou zničeny, ve správnou dobu, to znamená, jak bloky jsou se ukončil, v opačném pořadí konstrukce. Pokud objekt je zničen, jejích základních tříd a členů jsou zničeny v určitém pořadí.  Jazyk automaticky odstraní objekty, dokud neprovedete speciální věci, jako je velikost haldy nebo nové umístění.  Například [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md) jako `unique_ptr` a `shared_ptr`, a kontejnery standardní knihovny C++, jako jsou `vector`, zapouzdření **nové** /  **Odstranit** a `new[]` / `delete[]` v objektech, které mají destruktory. To je důvod, proč je tedy potřeba použít inteligentní ukazatele a kontejnery standardní knihovny C++.  
   
- Další důležité koncept ve správě životního cyklu: destruktory. Destruktory pro zapouzdření uvolnění prostředků.  (Běžně používané symbolické je RRID prostředků verze je likvidace.)  Prostředek je něco, co můžete získat z "systém" a dát později.  Paměť je nejběžnější prostředků, ale existují také soubory, sokety, textury a dalších bez paměťových prostředků. "Vlastnícího" prostředek znamená, že můžete použít, pokud to potřebujete, ale máte také k uvolnění ho, až budete hotovi s ním.  Pokud objekt zničení, jeho – destruktor uvolní prostředky, které je vlastní.  
+ Dalším důležitým konceptem ve správě životního cyklu: destruktory. Destruktory zapouzdření uvolnění prostředků.  (Obvykle použila se mnemotechnika je RRID uvolnění prostředků je zničení.)  Prostředek je něco, co můžete získat z "systém" a dát později.  Paměť je nejběžnější prostředků, ale existují také soubory, sokety, textury a jiné než paměťových prostředků. "Vlastnit" prostředek znamená, že můžete použít, když ho potřebujete, ale taky je potřeba ji uvolnit, až budete hotovi s ním.  Pokud objekt je zničen, jeho destruktor uvolní prostředky, které jej vlastní.  
   
- Poslední koncept je DAG (směrované Acyklické grafu).  Struktura vlastnictví v programu tvoří DAG. Žádný objekt můžete vlastní sám sebe, který není pouze znemožňuje, ale také ze své podstaty smysl. Ale dva objekty můžete sdílet vlastnictví třetí objektu.  Několik druhů odkazy jsou možné u DAG takto: A je členem skupiny B (B vlastní A), C úložiště `vector<D>` (C vlastní každý prvek D), úložiště E `shared_ptr<F>` (E sdílí vlastnictví F, případně s jinými objekty), a tak dále.  Jak dlouho, dokud nejsou žádné cykly a všech propojení v DAG je reprezentována objekt, který nemá – destruktor (namísto nezpracovaná ukazatel, popisovač nebo jinému kontrolnímu mechanismu.), bude nedostatku prostředků nejsou možné, protože brání jazyk, je. Ihned po jejich už nejsou potřeba, bez systém uvolňování paměti systémem uvolnění prostředků. Životnost sledování je bez režie pro obor zásobníku, základů, členů a související případech a nenákladné pro `shared_ptr`.  
+ Poslední koncept je orientovaného acyklického grafu (orientovaného Acyklického grafu).  Struktura vlastnictví v aplikaci tvoří DAG. Žádný objekt může vlastnit sebe sama –, který je nejen nemožné, ale také ze své podstaty nemá význam. Ale dva objekty můžou sdílet vlastnictví třetí objekt.  Několik druhů odkazy je možné ve skupině DAG takto: A je členem skupiny B (B vlastníkem A), úložiště jazyka C `vector<D>` (C vlastní každý prvek D), ukládá E `shared_ptr<F>` (E sdílí vlastnictví F, případně s jinými objekty), a tak dále.  Za předpokladu, neexistují žádné cykly a každý odkaz v tomto orientovaném acyklickém grafu je reprezentován objektem, který má destruktor (namísto nezpracovaný ukazatel, popisovač nebo jiný mechanismus) a potom nedostatku prostředků jsou nemožné, protože jazyk se nedají. Uvolnění prostředků ihned poté, co jste už nepotřebujete, bez systému uvolňování paměti spuštěna. Sledování životnosti je režie bez pro obor zásobníku, základních tříd, členů a související případy a cenově dostupné pro `shared_ptr`.  
   
-### <a name="heap-based-lifetime"></a>Doba platnosti na základě haldy  
- Doba života objektu haldy, použijte [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md). Použití `shared_ptr` a `make_shared` jako výchozí ukazatel a přidělení. Použití `weak_ptr` rozdělit cykly, uděláte ukládání do mezipaměti a sledovat objekty bez ovlivnění nebo za předpokladu, že nic o jejich životnosti.  
+### <a name="heap-based-lifetime"></a>Doba života haldy  
+ Doba života objektu haldy, použijte [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md). Použití `shared_ptr` a `make_shared` jako výchozí ukazatel a alokátorem. Použití `weak_ptr` přerušit cykly, ukládání do mezipaměti, a sledujte objekty bez ovlivnění nebo za předpokladu, že nic o jejich životnosti.  
   
 ```cpp  
 void func() {  
@@ -45,13 +45,13 @@ p->draw();
   
 ```  
   
- Použití `unique_ptr` jedinečný vlastnictví, například v *pimpl* stylu. (Viz [Pimpl pro kompilaci zapouzdření](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Ujistěte se, `unique_ptr` primární cílem všechny explicitní `new` výrazy.  
+ Použití `unique_ptr` jedinečné vlastnictví, například v *ukazatel na implementaci* idiom. (Viz [ukazatel na implementaci pro zapouzdření za kompilace](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Ujistěte se, `unique_ptr` primární cílem všechny explicitní **nové** výrazy.  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
 ```  
   
- Nezpracovaná ukazatele můžete použít pro jiný vlastnictví a pozorování. Ukazatel vlastnící může dangle, ale nemůže úniku.  
+ Nezpracované ukazatele můžete použít pro jiné vlastnictví a zjišťování. Může dangle-vlastnící ukazatele, ale nemůže způsobit únik těchto.  
   
 ```cpp  
 class node {  
@@ -64,10 +64,10 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- Pokud se vyžaduje optimalizace výkonu, můžete chtít použít *dobře zapouzdřené* vlastnící ukazatelů a explicitní volání odstranit. Příkladem je při implementaci strukturu nízké úrovně data.  
+ Když se vyžaduje optimalizace výkonu, budete nejspíš muset použít *dobře zapouzdřený* vlastnící ukazatele a explicitního volání odstranit. Příkladem je při implementaci nízké úrovně datovou strukturu.  
   
-### <a name="stack-based-lifetime"></a>Doba platnosti na základě zásobníku  
- V moderní verze jazyka C++ *oboru na základě zásobníku* je efektivní způsob, jak napsat kód robustní, protože kombinuje automatické *zásobníku životnost* a *životnost člen dat* s vysoce účinné – Doba platnosti sledování je v podstatě zdarma režie. Doba života objektu haldy vyžaduje péče ruční správy a může být zdrojem nedostatku prostředků a umožňuje zvýšit efektivitu, zejména v případě, že pracujete s nezpracovaná ukazatele. Vezměte v úvahu tento kód, který ukazuje na základě zásobníku oboru:  
+### <a name="stack-based-lifetime"></a>Doba života založené na zásobníku  
+ V moderním jazyce C++ *založené na zásobníku oboru* je efektivní způsob, jak zapisovat robustního kódu, protože spojuje automatické *zásobníku životnost* a *datový člen životnost* s vysokou efektivitu – Doba života pro sledování je v podstatě zdarma režijní náklady. Doba života objektu haldy vyžaduje pečlivé ruční správy a může sloužit jako zdroj pro nedostatku prostředků a nedostatků, zejména v případě, že pracujete s nezpracované ukazatele. Vezměte v úvahu tento kód, který ukazuje obor založené na zásobníku:  
   
 ```cpp  
 class widget {  
@@ -88,9 +88,9 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"  
 ```  
   
- Doporučujeme používat statické doba platnosti (globální statické, místní statické funkce) vzhledem k tomu může dojít k problémům. Co se stane, když konstruktoru globální objektu vyvolá výjimku? Obvykle aplikace chyb způsobem, který může být obtížné ladění. Vytváření pořadí je problematické statické životnosti objektů a není bezpečné souběžnosti. Ne jenom k potížím při vytváření objektů, odstraňování pořadí může být složité, zejména v případě, že je zahrnuta polymorfismus. I když objekt nebo proměnné není polymorfní a nemá komplexní vytváření/odstraňování řazení, je stále problém souběžnosti vláken. Vícevláknové aplikace nemohou bezpečně upravovat data v statické objekty bez nutnosti úložiště thread-local, uzamčení prostředků a jiné zvláštní opatření.  
+ Používejte opatrně statickou životnost (globální statické, místní statické funkce) vzhledem k tomu může dojít k problémům. Co se stane, když se vyvolá výjimku konstruktoru na globální objekt? Obvykle aplikace chyby způsobem, který může být obtížné ladit. Pořadí konstrukce je problematické pro objekty statickou životnost a není bezpečná pro souběžnost. Nejenže je konstrukce objektu problém, pořadí zničení může být složité, zejména v případě, že je zahrnuta polymorfismu. I v případě, že objekt nebo proměnná není polymorfní a nemá komplexní konstrukce/destrukce řazení, je stále problém souběžnosti bezpečné pro vlákna. Aplikace s více podprocesy nelze bezpečně upravovat data v statické objekty bez nutnosti místní úložiště vláken, zámky prostředků a jiné zvláštní opatření.  
   
 ## <a name="see-also"></a>Viz také  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

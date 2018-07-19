@@ -1,5 +1,5 @@
 ---
-title: Třída CComControl | Microsoft Docs
+title: Ccomcontrol – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,18 +29,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365546"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883447"
 ---
-# <a name="ccomcontrol-class"></a>CComControl – třída
-Tato třída poskytuje metody pro vytváření a správu ATL ovládací prvky.  
+# <a name="ccomcontrol-class"></a>Ccomcontrol – třída
+Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,11 +51,11 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Třída implementace ovládacího prvku.  
   
  *WinBase*  
- Základní třída, která implementuje oddílová funkce. Použije se výchozí hodnota [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ Základní třída, která implementuje okny. Výchozí hodnota je [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ## <a name="members"></a>Členové  
   
@@ -70,17 +70,17 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |Název|Popis|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Načte ukazatel na požadované rozhraní.|  
-|[CComControl::CreateControlWindow](#createcontrolwindow)|Vytvoří okna pro ovládací prvek.|  
-|[CComControl::FireOnChanged](#fireonchanged)|Upozorní kontejneru podřízený, které se změnily vlastnosti ovládacího prvku.|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Kontejneru podřízený upozorní, že vlastnost ovládacího prvku se má změnit a že objekt je s dotazem, jímky postup pokračovat.|  
-|[CComControl::MessageBox](#messagebox)|Voláním této metody lze vytvořit, zobrazit a pracovat se zprávou.|  
+|[CComControl::CreateControlWindow](#createcontrolwindow)|Vytvoří okno pro ovládací prvek.|  
+|[CComControl::FireOnChanged](#fireonchanged)|Upozorní kontejneru jímky, které se změnily vlastnosti ovládacího prvku.|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Kontejneru jímky upozorní, že ve vlastnosti ovládacího prvku se chystá změna a že objekt žádá jímka jak pokračovat dál.|  
+|[CComControl::MessageBox](#messagebox)|Voláním této metody lze vytvořit, zobrazit a pracovat okno se zprávou.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComControl` je sada užitečné řízení pomocných funkcí a základní data členů pro ovládací prvky knihovny ATL. Když vytvoříte standardního ovládacího prvku nebo ovládací prvek DHTML pomocí Průvodce ovládacím prvkem ATL, průvodce automaticky odvodí třídě z `CComControl`. `CComControl` Odvozená většinu její metody z [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` je sada užitečných ovládací prvek pomocné funkce a základní datové členy pro ATL – ovládací prvky. Při vytváření standardního ovládacího prvku nebo ovládací prvek DHTML pomocí Průvodce ovládacími prvky ATL, průvodce automaticky odvodit třídu z `CComControl`. `CComControl` je odvozen většinu jeho metody ze [CComControlBase –](../../atl/reference/ccomcontrolbase-class.md).  
   
- Další informace o vytvoření ovládacího prvku, najdete v článku [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodci projektu knihovny ATL, najdete v článku [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md).  
+ Další informace o vytvoření ovládacího prvku, naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodce projektem ATL naleznete v článku [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).  
   
- Pro předvedení `CComControl` metody a členy data, najdete v článku [str](../../visual-cpp-samples.md) ukázka.  
+ Pro ukázku `CComControl` metody a datové členy, najdete v článku [KR](../../visual-cpp-samples.md) vzorku.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `WinBase`  
@@ -100,7 +100,7 @@ CComControl();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) konstruktoru, předávání `m_hWnd` – datový člen zděděná prostřednictvím [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ Volání [CComControlBase –](ccomcontrolbase-class.md#ccomcontrolbase) konstruktoru, předá `m_hWnd` datový člen zděděné z [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  Načte ukazatel na požadované rozhraní.  
@@ -110,40 +110,40 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [v] Identifikátor GUID se požadované rozhraní.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID se požadované rozhraní.  
   
- `ppv`  
- [out] Ukazatel na ukazatel rozhraní identifikovaný `iid`, nebo **NULL** Pokud rozhraní nebyl nalezen.  
+ *ppv*  
+ [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
- Zpracovává jenom rozhraní v tabulce COM mapy.  
+ zpracovává pouze v tabulce mapy modelu COM rozhraní.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
- Ve výchozím nastavení, vytvoří okna pro ovládací prvek voláním `CWindowImpl::Create`.  
+ Ve výchozím nastavení, vytvoří okno pro ovládací prvek voláním `CWindowImpl::Create`.  
   
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
- [v] Zpracování do okna nadřazené nebo vlastníka. Je nutné zadat platný okno popisovač. Okno pro řízení je omezen na oblasti jeho nadřazeného okna.  
+ *hWndParent*  
+ [in] Popisovač okna nadřazené nebo vlastníka. Je potřeba zadat popisovač okna platný. Okno ovládacího prvku je omezena na oblasti nezašle nadřazenému oknu.  
   
- `rcPos`  
- [v] Počáteční velikost a umístění okna, který se má vytvořit.  
+ *rcPos*  
+ [in] Počáteční velikost a umístění okna, který se má vytvořit.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete, aby dělala něco jiné než vytvořit v jednom okně, například pokud chcete vytvořit dvě windows, z nichž jeden se změní na panelu nástrojů pro ovládací prvek.  
+ Potlačí tuto metodu, pokud budete chtít udělat něco jiného než vytvořte jedno okno, například dvě okna vytvoříte, jedním z nich stane nástrojů pro ovládací prvek.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
- Upozorní kontejneru podřízený, které se změnily vlastnosti ovládacího prvku.  
+ Upozorní kontejneru jímky, které se změnily vlastnosti ovládacího prvku.  
   
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -151,21 +151,21 @@ HRESULT FireOnChanged(DISPID dispID);
   
 ### <a name="parameters"></a>Parametry  
  *dispID*  
- [v] Identifikátor vlastnosti, která se změnila.  
+ [in] Identifikátor vlastnosti, které se změnily.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud vaše řízení třída odvozena z [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) upozornit všechny připojené `IPropertyNotifySink` rozhraní, která daný ovládací prvek změnila se vlastnost. Pokud vaše třída ovládacích prvků není odvozena od `IPropertyNotifySink`, vrátí tato metoda `S_OK`. 
+ Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný ovládací prvek Vlastnost se změnila. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK. 
   
- Tato metoda je bezpečné volat i v případě vlastního ovládacího prvku nepodporuje spojovací body.  
+ Tato metoda je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- Kontejneru podřízený upozorní, že vlastnost ovládacího prvku se má změnit a že objekt je s dotazem, jímky postup pokračovat.  
+ Kontejneru jímky upozorní, že ve vlastnosti ovládacího prvku se chystá změna a že objekt žádá jímka jak pokračovat dál.  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -173,22 +173,22 @@ HRESULT FireOnRequestEdit(DISPID dispID);
   
 ### <a name="parameters"></a>Parametry  
  *dispID*  
- [v] Identifikátor vlastnosti Chystáte se změnit.  
+ [in] Identifikátor vlastnosti Chystáte se změnit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud vaše řízení třída odvozena z [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, která zadaný ovládací prvek vlastnost je změnit. Pokud vaše třída ovládacích prvků není odvozena od `IPropertyNotifySink`, vrátí tato metoda `S_OK`.  
+ Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný vlastnosti ovládacího prvku je změnit. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK.  
 
   
- Tato metoda je bezpečné volat i v případě vlastního ovládacího prvku nepodporuje spojovací body.  
+ Tato metoda je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>  CComControl::MessageBox  
- Voláním této metody lze vytvořit, zobrazit a pracovat se zprávou.  
+ Voláním této metody lze vytvořit, zobrazit a pracovat okno se zprávou.  
   
 ```
 int MessageBox(
@@ -198,23 +198,23 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
- Text, který se zobrazí v okně zprávy.  
+ *lpszText*  
+ Text, který se má zobrazit v okně se zprávou.  
   
- `lpszCaption`  
- Názvu dialogového okna. Pokud hodnotu NULL (výchozí), název se používá "Chyba".  
+ *lpszCaption*  
+ Pole Název dialogového okna. Pokud hodnotu NULL (výchozí), název se používá "Chyba".  
   
- `nType`  
- Určuje obsahu a chování dialogového okna. Najdete v článku [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) položku v dokumentaci k Windows SDK pro seznam polí jiná zpráva k dispozici. Výchozí hodnota poskytuje jednoduchou **OK** tlačítko.  
+ *nTyp*  
+ Určuje obsah a chování dialogového okna. Zobrazit [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) položku v dokumentaci Windows SDK pro seznam k dispozici různé zprávami. Výchozí hodnota poskytuje jednoduchý **OK** tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací celočíselnou hodnotu zadáním jednoho z položky nabídky hodnoty uvedené v [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) v dokumentaci k Windows SDK.  
+ Vrátí celočíselnou hodnotu určující jednu z hodnot položky nabídky v části [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) v dokumentaci Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- `MessageBox` je užitečné při vývoji a jako snadný způsob, jak zobrazit chyba nebo upozornění uživateli.  
+ `MessageBox` je užitečné při vývoji i snadný způsob, jak zobrazit chybu nebo upozornění pro uživatele.  
   
 ## <a name="see-also"></a>Viz také  
- [CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Cwindowimpl – třída](../../atl/reference/cwindowimpl-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [CComControlBase – třída](../../atl/reference/ccomcontrolbase-class.md)   
  [CComCompositeControl – třída](../../atl/reference/ccomcompositecontrol-class.md)

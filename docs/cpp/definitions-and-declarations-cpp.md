@@ -1,5 +1,5 @@
 ---
-title: Definice a deklarace (C++) | Microsoft Docs
+title: Definice a deklarace (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411764"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940908"
 ---
 # <a name="definitions-and-declarations-c"></a>Definice a deklarace (C++)
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft
- Odkazuje na knihovnu DLL rozhraní pro všechny položky (funkce a data), které jsou známé exportovat některé programem v systému. To znamená, všechny položky, které jsou deklarované jako `dllimport` nebo `dllexport`. Všechny deklarace, které jsou součástí rozhraní knihovny DLL musí být buď `dllimport` nebo `dllexport` atribut. Definice však musí určovat pouze atribut `dllexport`. Následující definice funkce například vygeneruje chybu kompilátoru:
+ Rozhraní DLL odkazuje na všechny položky (funkce a data), které jsou známé být exportovány nějakým programem v systému. To znamená, že všechny položky, které jsou deklarovány jako **dllimport** nebo **dllexport**. Všechny deklarace, které jsou součástí rozhraní DLL musí určovat buď **dllimport** nebo **dllexport** atribut. Nicméně, definice musí určovat pouze **dllexport** atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- Použití `dllexport` znamená definici, zatímco `dllimport` znamená deklaraci. Klíčové slovo `extern` je nutné použít spolu s atributem `dllexport` k vynucení deklarace. V opačném případě se předpokládá definice. Následující příklady jsou tedy správné:
+ Použití **dllexport** implicitně předpokládá definici, zatímco **dllimport** implicitně předpokládá deklaraci. Je nutné použít **extern** – klíčové slovo s **dllexport** k vynucení deklarace; v opačném případě se předpokládá definice. Následující příklady jsou tedy správné:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -73,7 +73,7 @@ void func() {
 }
 ```
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

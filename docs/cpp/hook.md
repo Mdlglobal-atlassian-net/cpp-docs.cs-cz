@@ -1,5 +1,5 @@
 ---
-title: __hook | Microsoft Docs
+title: __hook | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947722"
 ---
 # <a name="hook"></a>__hook
-Přidruží metoda obslužná rutina události.  
+Přidruží metodu obslužné rutiny události.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      long __hook(  
+long __hook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -44,68 +45,68 @@ long __hook(
   
 #### <a name="parameters"></a>Parametry  
  **&** *SourceClass* `::` *EventMethod*  
- Ukazatel na metodu události, ke kterému napojit obslužná rutina události:  
+ Ukazatel na metodu události, ke kterému jste připojení metodu obslužné rutiny události:  
   
--   Nativní C++ události: *SourceClass* je třída zdroje událostí a *EventMethod* je událost.  
+-   Nativní události C++: *SourceClass* je třídě zdroje události a *EventMethod* je událost.  
   
--   Události COM: *SourceClass* je rozhraní pro zdroje událostí a *EventMethod* je jedním z jeho metody.  
+-   Události modelu COM: *SourceClass* je rozhraní zdroje událostí a *EventMethod* je jedna z jeho metod.  
   
--   Spravované události: *SourceClass* je třída zdroje událostí a *EventMethod* je událost.  
+-   Spravované události: *SourceClass* je třídě zdroje události a *EventMethod* je událost.  
   
- `interface`  
- Název rozhraní se připojili k `receiver`, jenom pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver –](../windows/event-receiver.md) atribut je **true**.  
+ *interface*  
+ Název rozhraní, které jsou připojeny k *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **true**.  
   
  *Zdroj*  
- Ukazatel na instanci zdroj události. V závislosti na kód `type` zadaný v **event_receiver –**, *zdroj* může být jedna z následujících akcí:  
+ Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:  
   
--   Nativní událostí zdrojového objektu ukazatel.  
+-   Ukazatel objektu zdroje nativní události.  
   
--   **IUnknown**– na základě ukazatele (zdroj COM).  
+-   `IUnknown`– Na základě ukazatel (zdroj COM).  
   
--   Ukazatel spravovaného objektu (pro spravované událostí).  
+-   Spravovaný objekt ukazatele (pro spravované události).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Ukazatel na metodu obslužné rutiny události pro jazyka pro událost. Obslužná rutina je zadán jako metodu, třídu nebo odkaz na stejnou; Pokud nezadáte název třídy `__hook` předpokládá třídy, která má být, ve kterém se označuje jako.  
+ Ukazatel na metodu obslužné rutiny události pro připojeny k události. Obslužná rutina je zadán jako metoda třídy nebo odkaz na stejné. Pokud není zadán název třídy **__hook** předpokládá třídě může být, ve kterém je volána.  
   
--   Nativní C++ události: *ReceiverClass* je třída příjemce událostí a `HandlerMethod` je obslužná rutina.  
+-   Nativní události C++: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.  
   
--   Události COM: *ReceiverClass* je rozhraní pro příjemce událostí a `HandlerMethod` je jedním z jeho obslužné rutiny.  
+-   Události modelu COM: *ReceiverClass* je rozhraní příjemce události a `HandlerMethod` je jedním z jeho obslužné rutiny.  
   
--   Spravované události: *ReceiverClass* je třída příjemce událostí a `HandlerMethod` je obslužná rutina.  
+-   Spravované události: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.  
   
- `receiver`(volitelné)  
- Ukazatel na instanci třídy příjemce událostí. Pokud nezadáte příjemce, výchozí hodnota je příjemce třídu nebo strukturu, ve kterém `__hook` je volána.  
+ *příjemce*(volitelné)  
+ Ukazatel na instanci třídy příjemce událostí. Pokud nezadáte příjemce, výchozí hodnota je příjemce třídu nebo strukturu, ve kterém **__hook** je volána.  
   
 ## <a name="usage"></a>Použití  
- Lze použít v oboru všechny funkce, včetně hlavní mimo třídy příjemce událostí.  
+ Je možné použít v jakékoli oboru funkce, včetně hlavní mimo třídu příjemce událostí.  
   
 ## <a name="remarks"></a>Poznámky  
- Použijte funkci vnitřní `__hook` v přijímače událostí přidružit nebo napojit metoda obslužná rutina s metodou události. Zadaná obslužná rutina je volána poté, když zdroji vyvolá zadané události. Můžete napojit několik obslužné rutiny pro jednu událost nebo napojit několik událostí k jedné obslužné rutině.  
+ Použít vnitřní funkci **__hook** v přijímače událostí pro přidružení nebo zapojit obslužnou rutinu metody s metodou události. Zadaná obslužná rutina se pak volá, když zdroj vyvolá zadanou událost. Můžete připojit několik obslužných rutin pro jednu událost nebo připojit několik událostí k jedné obslužné rutině.  
   
- Existují dvě formy `__hook`. První formulář (čtyři argumentů), ve většině případů můžete konkrétně použít pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver –](../windows/event-receiver.md) atribut je **false** .  
+ Existují dvě formy **__hook**. První formulář (4 argumenty) ve většině případů můžete použít konkrétně pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **false** .  
   
- V takových případech není nutné napojit všechny metody v rozhraní, než se aktivuje událost na jednu z metod; pouze metodu zpracování události je potřeba jazyka. Můžete použít druhý formulář (dva argumentů) z `__hook` pouze pro příjemce událostí COM ve kterém * layout_dependent ***= true**.  
+ V těchto případech nepotřebujete integrovat všechny metody v rozhraní než se ohlásí události v jedné z metod; pouze metody zpracování událostí musí být připojeny. Můžete použít druhý tvar (dvěma argumenty) **__hook** pouze pro příjemci události modelu COM, ve kterém * layout_dependent ***= true**.  
   
- `__hook` Vrací dlouhou hodnotu. Vrácená nenulová hodnota určuje, že došlo k chybě (spravované události throw výjimku).  
+ **__hook** vrací dlouhou hodnotu. Nenulový návratová hodnota označuje, že došlo k chybě (spravované události vyvoláním výjimky).  
   
- Kompilátor zkontroluje existenci událost a že podpisu události souhlasí s podpisem delegáta.  
+ Kompilátor zkontroluje existenci událost a že podpisu události souhlasí s delegáta.  
   
- S výjimkou události COM `__hook` a `__unhook` lze volat mimo příjemce událostí.  
+ S výjimkou událostí modelu COM **__hook** a **__unhook** lze volat mimo příjemce událostí.  
   
- Alternativu k použití `__hook` je použití += operátor.  
+ O alternativu k použití **__hook** je použití operátoru +=.  
   
- Informace týkající se kódování spravované události v nové syntaxi najdete v tématu [událostí](../windows/event-cpp-component-extensions.md).  
+ Informace týkající se kódování spravované události v nové syntaxi naleznete v tématu [události](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Třída šablony nebo struktura nemohou obsahovat události.  
   
 ## <a name="example"></a>Příklad  
- V tématu [zpracování událostí v nativním kódu C++](../cpp/event-handling-in-native-cpp.md) a [zpracování událostí v modelu COM](../cpp/event-handling-in-com.md) ukázek.  
+ Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-in-native-cpp.md) a [zpracování událostí v modulu COM](../cpp/event-handling-in-com.md) ukázek.  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracování událostí](../cpp/event-handling.md)   
  [event_source –](../windows/event-source.md)   
- [event_receiver –](../windows/event-receiver.md)   
+ [event_receiver](../windows/event-receiver.md)   
  [__unhook](../cpp/unhook.md)   
  [__raise](../cpp/raise.md)

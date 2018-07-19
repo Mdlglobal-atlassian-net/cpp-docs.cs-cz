@@ -1,5 +1,5 @@
 ---
-title: RANK – třída | Microsoft Docs
+title: RANK – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960600"
 ---
 # <a name="rank-class"></a>rank – třída
 
-Získá počet rozměry pole.
+Získá počet rozměrů pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Typ dotazu obsahuje hodnotu počtu dimenze typu pole `Ty`, nebo 0, pokud `Ty` není typu pole.
+Dotaz typu obsahuje hodnotu počtu dimenzí pole *Ty*, nebo 0, pokud *Ty* není typem pole.
 
 ## <a name="example"></a>Příklad
 
@@ -75,9 +75,9 @@ rank<int[5][10]> == 2
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [extent – třída](../standard-library/extent-class.md)<br/>

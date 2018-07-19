@@ -1,5 +1,5 @@
 ---
-title: Třída CComTearOffObject | Microsoft Docs
+title: Ccomtearoffobject – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364986"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885036"
 ---
-# <a name="ccomtearoffobject-class"></a>CComTearOffObject – třída
-Tato třída implementuje rozhraní úplné vypnutí.  
+# <a name="ccomtearoffobject-class"></a>Ccomtearoffobject – třída
+Tato třída implementuje rozhraní s odnímatelnými nabídkami.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +43,10 @@ class CComTearOffObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Vaše úplné vypnutí třída odvozena od `CComTearOffObjectBase` a rozhraní chcete objektu úplné vypnutí pro podporu.  
+ *základ*  
+ Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.  
   
- ATL implementuje rozhraní jeho úplné vypnutí ve dvou fázích – `CComTearOffObjectBase` metody zpracování počet odkazů a `QueryInterface`, zatímco `CComTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL – implementuje jeho odtržených rozhraní ve dvou fázích – `CComTearOffObjectBase` metody zpracovávají počet odkazů a `QueryInterface`, zatímco `CComTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
   
 ## <a name="members"></a>Členové  
   
@@ -55,15 +55,15 @@ class CComTearOffObject : public Base
 |Název|Popis|  
 |----------|-----------------|  
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Konstruktor|  
-|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Destruktor.|  
+|[Ccomtearoffobject –:: ~ ccomtearoffobject –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComTearOffObject::AddRef](#addref)|Zvýší počet odkazů pro `CComTearOffObject` objektu.|  
-|[CComTearOffObject::QueryInterface](#queryinterface)|Vrací ukazatel na požadované rozhraní na třídě úplné vypnutí nebo třída vlastníka.|  
-|[CComTearOffObject::Release](#release)|Snižuje počet odkaz `CComTearOffObject` objektu a ukončuje se.|  
+|[CComTearOffObject::AddRef](#addref)|Zvýší počet odkazů `CComTearOffObject` objektu.|  
+|[CComTearOffObject::QueryInterface](#queryinterface)|Vrací ukazatel na požadované rozhraní na vaší třídy odtržených nebo třída vlastníka.|  
+|[CComTearOffObject::Release](#release)|Sníží počet odkaz pro `CComTearOffObject` objektu a odstraní jej.|  
   
 ### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase metody  
   
@@ -75,16 +75,16 @@ class CComTearOffObject : public Base
   
 |||  
 |-|-|  
-|[m_pOwner](#m_powner)|Ukazatel na `CComObject` odvozena od třídy vlastníka.|  
+|[m_pOwner](#m_powner)|Ukazatel `CComObject` odvozené od třídy vlastníka.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComTearOffObject` implementuje rozhraní úplné vypnutí jako samostatný objekt, který je vytvořena instance jenom v případě, že rozhraní je dotazován na. Úplné vypnutí se odstraní při jeho počet odkazů klesne na nulu. Obvykle vytvoříte rozhraní úplné vypnutí pro rozhraní, které se používá jen občas, protože ukazatel vtable pomocí úplné vypnutí uloží ve všech instancích vašeho hlavní objektu.  
+ `CComTearOffObject` implementuje rozhraní s odnímatelnými nabídkami jako samostatný objekt, jehož instance je vytvořena pouze v případě, že toto rozhraní se dotazují pro. Odtrhnout se odstraní při jeho počet odkazů klesne na nulu. Obvykle vytvoříte rozhraní odtržených rozhraní, který se používá jen občas, protože použití odnímatelnými nabídkami ukládá ukazatel vtable ve všech instancích hlavním objektem.  
   
- By měl být odvozen třída implementace úplné – vypnuté z `CComTearOffObjectBase` a z libovolného rozhraní má objektu úplné vypnutí pro podporu. `CComTearOffObjectBase` je převést na šablonu pro třídu vlastníka a model vláken. Třída vlastníka je třídu objektu, pro který úplné vypnutí se implementuje. Pokud model vláken nezadáte, použije se výchozí model vláken.  
+ By měla být odvozena třída implementace odtržených z `CComTearOffObjectBase` a z toho rozhraní má objekt odtržených na podporu. `CComTearOffObjectBase` je založena na třídě vlastníka a modelu vláken. Třída vlastníka je třídu objektu, pro kterou odnímatelnými nabídkami se implementuje. Pokud model vláken nezadáte, použije se výchozí model vláken.  
   
- Měli byste vytvořit mapu COM pro třídu úplné vypnutí. Když ATL vytvoří úplné vypnutí, vytvoří **CComTearOffObject\<CYourTearOffClass >** nebo **CComCachedTearOffObject\<CYourTearOffClass >**.  
+ Třídy odtržených byste měli vytvořit mapu COM. Když odtrhnout vytvoří instanci ATL, vytvoří `CComTearOffObject<CYourTearOffClass>` nebo `CComCachedTearOffObject<CYourTearOffClass>`.  
   
- Například v ukázce BEEPER `CBeeper2` třídy je třída úplné vypnutí a `CBeeper` třídy je třída vlastníka:  
+ Například v ukázce BEEPER `CBeeper2` třídy je třída odnímatelnými nabídkami a `CBeeper` třídy je třída vlastníka:  
   
  [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]  
   
@@ -114,13 +114,13 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
- [v] Ukazatele, který text bude převeden na odkazy **CComObject\<vlastníka >** objektu.  
+ *PV*  
+ [in] Ukazatel, který bude převeden na ukazatel `CComObject<Owner>` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Zvýší počet odkazů vlastníka o jednu.  
   
-##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>  Ccomtearoffobject –:: ~ ccomtearoffobject –  
  Destruktor.  
   
 ```
@@ -128,7 +128,7 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní všechny přidělené prostředky, vyvolá modul FinalRelease a snižuje počet zamknout.  
+ Uvolní všechny přidělené prostředky, volání modulu FinalRelease a sníží počet uzamčení.  
   
 ##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  Konstruktor  
@@ -138,10 +138,10 @@ CComTearOffObjectBase();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Inicializuje [m_pOwner](#m_powner) člena **NULL**.  
+ Inicializuje [m_pOwner](#m_powner) člena na hodnotu NULL.  
   
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
- Ukazatel [CComObject](../../atl/reference/ccomobject-class.md) objekt odvozen od *vlastníka*.  
+ Ukazatel [CComObject](../../atl/reference/ccomobject-class.md) objekt odvozený od *vlastníka*.  
   
 ```
 CComObject<Owner>* m_pOwner;
@@ -149,10 +149,10 @@ CComObject<Owner>* m_pOwner;
   
 ### <a name="parameters"></a>Parametry  
  *Vlastník*  
- [v] Třída, pro který úplné vypnutí se implementuje.  
+ [in] Třída, pro kterou odnímatelnými nabídkami se implementuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Je inicializováno ukazatele **NULL** během vytváření.  
+ Během konstrukce je inicializován ukazatel na hodnotu NULL.  
   
 ##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  Načte ukazatel na požadované rozhraní.  
@@ -162,28 +162,28 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [v] Identifikátory IID rozhraní požadováno.  
+ *identifikátor IID*  
+ [in] Identifikátor IID rozhraní žádá.  
   
- `ppvObject`  
- [out] Ukazatel na ukazatel rozhraní identifikovaný `iid`, nebo **NULL** Pokud rozhraní nebyl nalezen.  
+ *ppvObject*  
+ [out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Dotazy nejprve pro rozhraní na vaší třídě úplné vypnutí. Pokud rozhraní není, dotazy pro rozhraní objektu vlastníka. Pokud je požadované rozhraní **IUnknown**, vrátí **IUnknown** vlastníka.  
+ Dotazy pro rozhraní na třídě odnímatelnými nabídkami. Pokud rozhraní není, dotazy na rozhraní objektu vlastníka. Pokud je požadovaná rozhraní `IUnknown`, vrátí `IUnknown` vlastníka.  
   
 ##  <a name="release"></a>  CComTearOffObject::Release  
- Snižuje počet reference o jednu a, pokud počet odkazů nula, odstraní `CComTearOffObject`.  
+ Sníží počet referenční jednou a je-li počet odkazů nuly, odstraní `CComTearOffObject`.  
   
 ```
 STDMETHOD_ULONG Release();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V sestavení pro bez ladění vždy vrátí hodnotu nula. V sestavení pro ladění vrátí hodnotu, která může být užitečné pro diagnostiku nebo testování.  
+ V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečné pro diagnostiku a testování.  
   
 ## <a name="see-also"></a>Viz také  
- [CComCachedTearOffObject – třída](../../atl/reference/ccomcachedtearoffobject-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ccomcachedtearoffobject – třída](../../atl/reference/ccomcachedtearoffobject-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

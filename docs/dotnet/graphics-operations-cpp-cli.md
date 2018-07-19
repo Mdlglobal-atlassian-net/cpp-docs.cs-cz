@@ -1,5 +1,5 @@
 ---
-title: Grafické operace (C + +/ CLI) | Microsoft Docs
+title: Grafické operace (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,39 +13,141 @@ helpviewer_keywords:
 - images [C++], .NET Framework and
 - GDI+ [C++], about graphics operations
 - graphics [C++], .NET Framework and
+- GDI+ [C++], displaying images
+- graphics [C++], displaying images
+- GDI+, drawing shapes
+- drawing, shapes
+- shapes
+- shapes, drawing
+- GDI+ [C++], rotating images
+- graphics [C++], rotating images
+- GDI+ [C++], converting image file formats
+- graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ab3b1a8a7333a107ed9d2b368b17b8234d25be19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd28a97b9e1b6238e4f231845282739a6d15aeb2
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109492"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39092978"
 ---
 # <a name="graphics-operations-ccli"></a>Grafické operace (C++/CLI)
-Ukazuje, jak pomocí manipulace s bitovou kopii [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Ukazuje, jak pomocí manipulace s bitové kopie [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
- Následující témata ukazují použití <xref:System.Drawing.Image?displayProperty=fullName> třídy ke zpracování obrázků.  
+ Následující témata ukazují použití <xref:System.Drawing.Image?displayProperty=fullName> pro provádění zpracování obrázků.  
   
-## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: Převod formátu souborů obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
+## <a name="display"></a> Zobrazení obrázků s použitím rozhraní .NET Framework
+Následující příklad upravuje obslužná rutina události OnPaint níž načítají ukazatel na <xref:System.Drawing.Graphics> objektu pro hlavní formulář. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkce je určená pro aplikace Windows Forms, pravděpodobně vytvořené pomocí Průvodce aplikace Visual Studio.  
   
- [Postupy: Zobrazení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  
+ Na obrázku je reprezentována <xref:System.Drawing.Image> třídy. Načtení dat obrázků pomocí soubor .jpg <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> metody. Předtím, než na obrázku je vykreslen do formuláře, formuláře je velikost obrázku. Kreslení obrázku se pomocí provádí <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> metody.  
   
- [Postupy: Kreslení tvarů s použitím rozhraní .NET Framework](../dotnet/how-to-draw-shapes-with-the-dotnet-framework.md)  
+ <xref:System.Drawing.Graphics> a <xref:System.Drawing.Image> třídy jsou v <xref:System.Drawing?displayProperty=fullName> oboru názvů.  
   
- [Postupy: Otáčení obrázků s použitím rozhraní .NET Framework](../dotnet/how-to-rotate-images-with-the-dotnet-framework.md)  
+### <a name="example"></a>Příklad  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+  
+protected:  
+virtual Void Form1::OnPaint(PaintEventArgs^ pe) override  
+{  
+    Graphics^ g = pe->Graphics;  
+    Image^ image = Image::FromFile("SampleImage.jpg");  
+    Form::ClientSize = image->Size;  
+    g->DrawImage( image, 0, 0, image->Size.Width, image->Size.Height );  
+}  
+```  
+
+## <a name="draw"></a> Kreslení tvarů s použitím rozhraní .NET Framework
+Následující příklad kódu používá <xref:System.Drawing.Graphics> třídy k úpravě <xref:System.Windows.Forms.Form.OnPaint%2A> obslužnou rutinu události pro načtení ukazatel <xref:System.Drawing.Graphics> objektu pro hlavní formulář. Tento ukazatel je pak používá k nastavení barvy pozadí formuláře a nakreslení čáry a oblouku pomocí <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> a <xref:System.Drawing.Graphics.DrawArc%2A> metody.  
+  
+### <a name="example"></a>Příklad  
+  
+```cpp  
+#using <system.drawing.dll>  
+using namespace System;  
+using namespace System::Drawing;  
+// ...  
+protected:   
+virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override  
+{  
+   Graphics^ g = pe->Graphics;  
+   g->Clear(Color::AntiqueWhite);  
+  
+   Rectangle rect = Form::ClientRectangle;  
+   Rectangle smallRect;  
+   smallRect.X = rect.X + rect.Width / 4;  
+   smallRect.Y = rect.Y + rect.Height / 4;  
+   smallRect.Width = rect.Width / 2;  
+   smallRect.Height = rect.Height / 2;  
+  
+   Pen^ redPen = gcnew Pen(Color::Red);  
+   redPen->Width = 4;  
+   g->DrawLine(redPen, 0, 0, rect.Width, rect.Height);  
+  
+   Pen^ bluePen = gcnew Pen(Color::Blue);  
+   bluePen->Width = 10;  
+   g->DrawArc( bluePen, smallRect, 90, 270 );  
+}  
+```  
+
+## <a name="rotate"></a> Otáčení obrázků s použitím rozhraní .NET Framework
+Následující příklad kódu ukazuje použití <xref:System.Drawing.Image?displayProperty=fullName> třídy k načtení obrázku z disku, otočit o 90 stupňů a uložte ho jako nový soubor .jpg.  
+  
+### <a name="example"></a>Příklad  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+  
+int main()  
+{  
+   Image^ image = Image::FromFile("SampleImage.jpg");  
+   image->RotateFlip( RotateFlipType::Rotate90FlipNone );  
+   image->Save("SampleImage_rotated.jpg");  
+   return 0;  
+}  
+```  
+
+## <a name="convert"></a> Převod formátu souborů obrázků s použitím rozhraní .NET Framework
+Následující příklad kódu ukazuje <xref:System.Drawing.Image?displayProperty=fullName> třídy a <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> výčet používané k převádění a uložte soubory bitových kopií. Následující kód načte obrázek ze souboru JPG a uloží ho do formátů souborů .gif a BMP.  
+  
+### <a name="example"></a>Příklad  
+  
+```cpp  
+#using <system.drawing.dll>  
+  
+using namespace System;  
+using namespace System::Drawing;  
+using namespace System::Drawing::Imaging;  
+  
+int main()  
+{  
+   Image^ image = Image::FromFile("SampleImage.jpg");  
+   image->Save("SampleImage.png", ImageFormat::Png);  
+   image->Save("SampleImage.bmp", ImageFormat::Bmp);  
+  
+   return 0;  
+}  
+```  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Začínáme s programováním grafiky](/dotnet/framework/winforms/advanced/getting-started-with-graphics-programming)  
   
- [Informace o spravovaném kódu GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)  
-  
- <xref:System.Drawing?displayProperty=fullName>  
+ [Informace o spravovaném kódu GDI+](/dotnet/framework/winforms/advanced/about-gdi-managed-code)    
   
 ## <a name="see-also"></a>Viz také  
  [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+ <xref:System.Drawing>
+ 

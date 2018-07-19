@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetActiveObject | Microsoft Docs
+title: _com_ptr_t::GetActiveObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca25ca31475d2870e62d00676e7bf3717c10fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414741"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940365"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Připojí k existující instanci objekt daný **CLSID** nebo **ProgID**.  
+ Připojí se k existující instanci objektu dle `CLSID` nebo `ProgID`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,25 +44,25 @@ HRESULT GetActiveObject(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `rclsid`  
- **CLSID** objektu.  
+ *rclsid*  
+ `CLSID` Objektu.  
   
- `clsidString`  
- Řetězec znaků Unicode, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
+ *clsidString*  
+ Řetězec znaků Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.  
   
- `clsidStringA`  
- Vícebajtové řetězce, pomocí ANSI znaková stránka, která obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
+ *clsidStringA*  
+ Vícebajtový řetězec používající znakovou stránku ANSI, který udržuje `CLSID` (počínaje "**{**") nebo `ProgID`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto členské funkce volají funkci `GetActiveObject`, pomocí níž načítají ukazatel na spuštěný objekt registrovaný technologií OLE a poté se dotazují na typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele. Tato rutina indikuje úspěch nebo neúspěch pomocí hodnoty `HRESULT`.  
+ Tyto členské funkce volají funkci `GetActiveObject`, pomocí níž načítají ukazatel na spuštěný objekt registrovaný technologií OLE a poté se dotazují na typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel. Tato rutina vrátí hodnotu HRESULT indikuje úspěch nebo selhání.  
   
--   **Getactiveobject – (**`rclsid`**)** připojí k existující instanci objekt daný **CLSID**.      
+-   **GetActiveObject (**`rclsid`**)** připojí k existující instanci objektu dle `CLSID`.      
   
--   **Getactiveobject – (**`clsidString`**)** připojí k existující instanci objekt daný řetězec znaků Unicode, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.      
+-   **GetActiveObject (**`clsidString`**)** připojí k existující instanci objektu dle řetězce Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.      
   
--   **Getactiveobject – (**`clsidStringA`**)** připojí k existující instanci objekt daný vícebajtový řetězec, který obsahuje buď **CLSID** (počínaje "**{** ") nebo **ProgID**.     Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** připojí k existující instanci objektu dle vícebajtového řetězce znaků obsahujícího `CLSID` (počínaje "**{**") nebo `ProgID`.     Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), kde se předpokládá, že je řetězec uložen ve znakovou stránku ANSI, nikoli znakovou stránku OEM.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

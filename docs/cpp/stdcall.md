@@ -1,5 +1,5 @@
 ---
-title: __stdcall | Microsoft Docs
+title: __stdcall | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422667"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939842"
 ---
 # <a name="stdcall"></a>__stdcall
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- `__stdcall` Konvence volání se používá k volání funkcí rozhraní API Win32. Volaného vyčistí zásobníku, takže díky kompilátor **vararg** funkce `__cdecl`. Funkce, které konvence volání musí prototyp funkce.  
+ **__Stdcall** konvence volání se používá pro volání funkce rozhraní Win32 API. Volaný vyčistí zásobník, aby mohl kompilátor **vararg** funkce **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,18 +41,18 @@ return-type __stdcall function-name[(argument-list)]
 |Prvek|Implementace|  
 |-------------|--------------------|  
 |Pořadí předávání argumentů|Zprava doleva.|  
-|Konvence předávání argumentů|Podle hodnoty Pokud na ukazatel nebo odkaz na typ je předán.|  
-|Odpovědnost za údržbu zásobníku|Volá vlastní argumenty bodů POP funkce v zásobníku.|  
-|Konvence pro vzhled názvu|Název je předponou podtržítko (_). Následuje název znaku zavináče (@) následovaný počtem bajtů (decimální): v seznamu argumentů. Proto funkce deklarován jako `int func( int a, double b )` opatřen následujícím způsobem: `_func@12`|  
+|Konvence předávání argumentů|Podle hodnoty Pokud je předán typ ukazatele nebo odkazu.|  
+|Odpovědnost za údržbu zásobníku|Volaná funkce vezme argumenty ze zásobníku.|  
+|Konvence pro vzhled názvu|Podtržítko (_) je předponou názvu. Následuje název zavináč (@) následovaným počtem bajtů (v desítkové soustavě) v seznamu argumentů. Proto se funkce deklarovaná jako `int func( int a, double b )` upravena takto: `_func@12`|  
 |Konvence pro posunutí|Žádné|  
   
- [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) – možnost kompilátoru Určuje `__stdcall` pro všechny funkce, které nejsou výslovně deklarovat s jinou konvence volání.  
+ [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) určuje – možnost kompilátoru **__stdcall** pro všechny funkce, které nejsou explicitně deklarovány pomocí jiné konvence volání.  
   
- Deklarováno s použitím funkce `__stdcall` modifikátor návratové hodnoty stejným způsobem jako funkce deklarováno s použitím [__cdecl](../cpp/cdecl.md).  
+ Funkce deklarované pomocí **__stdcall** modifikátor návratové hodnoty stejným způsobem jako funkce deklarovaná pomocí [__cdecl](../cpp/cdecl.md).  
   
- Na ARM a x64 procesory, `__stdcall` je přijatá a ignoruje kompilátorem; v ARM a x64 architektury, podle konvence, jsou argumenty předány v registrech Pokud je to možné, a další argumenty se předávají v zásobníku.  
+ Na ARM a x64 procesory, **__stdcall** je přijato a ignorováno kompilátory; v ARM a x64 architektur, podle úmluvy argumenty předány v registrech, pokud je to možné a další argumenty jsou předány v zásobníku.  
   
- U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Zadané tuto definici – třída  
+ U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy  
   
 ```cpp  
 struct CMyClass {  
@@ -66,14 +66,14 @@ struct CMyClass {
 void CMyClass::mymethod() { return; }  
 ```  
   
- je ekvivalentní k tomuto  
+ je ekvivalentem tohoto  
   
 ```cpp  
 void __stdcall CMyClass::mymethod() { return; }  
 ```  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu použití __**stdcall** výsledků ve všech `WINAPI` funkce typy zpracovanou jako standardní volání:  
+ V následujícím příkladu má použití __**stdcall** výsledky ve všech `WINAPI` typů funkcí jako standardní volání:  
   
 ```cpp  
 // Example of the __stdcall keyword  

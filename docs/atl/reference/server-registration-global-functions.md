@@ -1,5 +1,5 @@
 ---
-title: Globální funkce registrace serveru | Microsoft Docs
+title: Globální funkce serverové registrace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364702"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883277"
 ---
-# <a name="server-registration-global-functions"></a>Globální funkce registrace serveru
-Tyto funkce poskytuje podporu pro registraci a zrušení registrace serveru objekty v mapování objektu.  
+# <a name="server-registration-global-functions"></a>Globální funkce serverové registrace
+Tyto funkce poskytují podporu registrace a zrušení registrace serveru objekty v mapě objektů.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Voláním této funkce se zaregistrují všechny objekty v mapě objektů.|  
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Voláním této funkce se zruší registrace všech objektů v mapě objektů.|  
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Voláním této funkce se zaregistrují objekty třídy.|  
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Tato funkce je volána k odvolání objekty tříd z modulu COM.|  
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Tato funkce je volána potřebujete objektu třídy.|  
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Tato funkce je volána k odvolání objekty třídy z modulu COM.|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Tato funkce je volána k získání objektu třídy.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
@@ -53,20 +53,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pComModule`  
+ *pComModule*  
  Ukazatel na modulu COM.  
   
- `bRegTypeLib`  
- TRUE, pokud je typ knihovna k registraci.  
+ *bRegTypeLib*  
+ TRUE, pokud knihovna typů je k registraci.  
   
- `pCLSID`  
- Body CLSID objekt, který má být zaregistrován. Pokud hodnotu NULL, se zaregistruje všechny objekty v mapování objektu.  
+ *pCLSID*  
+ Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud má hodnotu NULL, se zaregistruje všechny objekty v mapě objektů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlComModuleRegisterServer` provede mapování objektu generován automaticky ATL a zaregistruje každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` je zaregistrován; v opačném případě všechny objekty jsou registrované.  
+ `AtlComModuleRegisterServer` provede mapování objektu automaticky generované knihovny ATL a zaregistruje každý objekt v objektu map. Pokud *pCLSID* není NULL, pak pouze objekt, na které odkazuje *pCLSID* zaregistrován; v opačném případě všechny objekty jsou registrované.  
   
  Tato funkce je volána [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
@@ -81,20 +81,20 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pComModule`  
+ *pComModule*  
  Ukazatel na modulu COM.  
   
- `bUnRegTypeLib`  
- TRUE, pokud je typ knihovna k registraci.  
+ *bUnRegTypeLib*  
+ TRUE, pokud knihovna typů je k registraci.  
   
- `pCLSID`  
- Body CLSID objekt, který má neregistrované. Pokud hodnotu NULL. všechny objekty v mapování objektu bude zrušena.  
+ *pCLSID*  
+ Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud má hodnotu NULL bude zrušena všechny objekty v mapě objektů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlComModuleUnregisterServer` provede mapování objektu knihovny ATL a zrušení registrace každý objekt v mapě. Pokud `pCLSID` není NULL a pouze objekty, na kterou odkazuje `pCLSID` registrace; jinak hodnota všechny objekty se zrušit registraci.  
+ `AtlComModuleUnregisterServer` provede mapování objektu ATL a zruší registraci jednotlivých objektů v mapě. Pokud *pCLSID* není NULL, pak pouze objekt, na které odkazuje *pCLSID* jinak zrušit všechny objekty jsou odregistrovat.  
   
  Tato funkce je volána [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
@@ -109,17 +109,17 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pComModule`  
+ *pComModule*  
  Ukazatel na modulu COM.  
   
- `dwClsContext`  
- Určuje kontext, ve kterém má být spuštěna objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. V tématu [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) další podrobnosti.  
+ *dwClsContext*  
+ Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Zobrazit [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) další podrobnosti.  
   
- `dwFlags`  
- Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. V tématu [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) další podrobnosti.  
+ *dwFlags*  
+ Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Zobrazit [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) další podrobnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
@@ -132,11 +132,11 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pComModule`  
+ *pComModule*  
  Ukazatel na modulu COM.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
@@ -153,20 +153,20 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pComModule`  
+ *pComModule*  
  Ukazatel na modulu COM.  
   
- `rclsid`  
- CLSID objektu, který se má vytvořit.  
+ *rclsid*  
+ Identifikátor CLSID objektu, který má být vytvořen.  
   
- `riid`  
- Identifikátory IID požadované rozhraní.  
+ *riid*  
+ Identifikátor IID požadované rozhraní.  
   
- `ppv`  
- Ukazatel na ukazatel rozhraní identifikovaný `riid`. Pokud objekt nepodporuje toto rozhraní `ppv` je nastaven na hodnotu NULL.  
+ *ppv*  
+ Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato pomocná funkce je využíváno [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (v ATL 7.0 zastaralé) a [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).  

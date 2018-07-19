@@ -1,5 +1,5 @@
 ---
-title: __uuidof – operátor | Microsoft Docs
+title: __uuidof – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947602"
 ---
 # <a name="uuidof-operator"></a>__uuidof – operátor
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Získá identifikátor GUID připojený k výrazu.  
   
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- *Výraz* může být název typu, ukazatelů, reference nebo pole daného typu, šablonu specializuje na těchto typů, nebo proměnnou z těchto typů. Argument je platný, pokud jej kompilátor může použít k vyhledání připojeného identifikátoru GUID.  
+ *Výraz* může být název typu, ukazatel, odkaz nebo pole tohoto typu, specializovaná šablona pro tyto typy nebo proměnná těchto typů. Argument je platný, pokud jej kompilátor může použít k vyhledání připojeného identifikátoru GUID.  
   
- Zvláštním případem tomto vnitřní je při buď **0** nebo **NULL** je zadaný jako argument. V tomto případě identifikátor `__uuidof` vrátí identifikátor GUID, který je tvořen nulami.  
+ Zvláštní případ je, když buď **0** nebo je jako argument zadána hodnota NULL. V takovém případě **__uuidof** vrátí identifikátor GUID, který je tvořen nulami.  
   
  Pomocí tohoto klíčového slova je možné extrahovat identifikátor GUID připojený k:  
   
--   Objekt pomocí [uuid](../cpp/uuid-cpp.md) rozšířených atributů.  
+-   Objekt podle [uuid](../cpp/uuid-cpp.md) rozšířeného atributu.  
   
--   Blok knihovny vytvořené pomocí [modulu](../windows/module-cpp.md) atribut.  
+-   Bloku knihovny vytvořenému s [modulu](../windows/module-cpp.md) atribut.  
   
 > [!NOTE]
->  V sestavení ladění identifikátor `__uuidof` vždy inicializuje objekt dynamicky (za běhu). V sestavení pro vydání může identifikátor `__uuidof` inicializovat objekt staticky (v době kompilace).  
+>  V sestavení pro ladění **__uuidof** vždy inicializuje objekt dynamicky (za běhu). V sestavení pro vydání **__uuidof** staticky (v době kompilace) inicializovat objekt.  
   
 ## <a name="example"></a>Příklad  
  Následující kód (zkompilován s knihovnou ole32.lib) zobrazí identifikátor uuid vytvořeného bloku knihovny s atributem module:  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,13 +76,13 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Komentáře  
- V případech, kdy je název knihovny už v oboru, můžete použít __LIBID\_ místo `__uuidof`. Příklad:  
+ V případech, kdy knihovnu s názvem je již v oboru, můžete použít `__LIBID_` místo **__uuidof**. Příklad:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   

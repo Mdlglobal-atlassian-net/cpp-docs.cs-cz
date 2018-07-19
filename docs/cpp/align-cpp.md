@@ -1,5 +1,5 @@
 ---
-title: align (C++) | Microsoft Docs
+title: zarovnání (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418247"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940725"
 ---
 # <a name="align-c"></a>align (C++)
 
-V sadě Visual Studio 2015 a novější, použijte C ++ 11 standard `alignas` specifikátor pro zarovnání ovládacího prvku. Další informace najdete v tématu [zarovnání](../cpp/alignment-cpp-declarations.md).
+V sadě Visual Studio 2015 a novější, použijte standard C ++ 11 `alignas` specifikátor zarovnání ovládacího prvku. Další informace najdete v tématu [zarovnání](../cpp/alignment-cpp-declarations.md).
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Použití `__declspec(align(#))` přesně řídit zarovnání uživatelem definované datové (například statických přidělených nebo dat ve funkci).
+Použití `__declspec(align(#))` pro přesné řízení zarovnání dat definované uživatelem (například statické přidělení nebo automatická datová funkce).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (align (** *#* **))** *deklarátor*  
+> **__declspec (zarovnání (** *#* **))** *deklarátorů*  
 
 ## <a name="remarks"></a>Poznámky
 
-Zápis aplikací, které používají nejnovější pokynů procesoru zavádí některé nové omezení a problémy. Mnoho nové pokyny klást, data musí být zarovnána na 16 bajtů hranice. Kromě toho slaďte často používaných dat do mezipaměti velikost řádku specifické procesory, můžete zlepšit výkon mezipaměti. Například pokud definujete struktura, jejíž aktuální velikost je menší než 32 bajtů, můžete zarovnat na 32 bajtů, abyste měli jistotu, že objekty tohoto typu Struktura efektivně v mezipaměti.
+Psaní aplikací, které používají nejnovější instrukce procesoru zavádí některá nová omezení a problémy. Mnoho nových pokynů zejména vyžaduje, že data musí být zarovnány na hranice 16 bajtů. Kromě toho přizpůsobením často používaných dat velikosti řádku mezipaměti konkrétního procesoru zvýšit výkon mezipaměti. Například pokud definujete strukturu, jejíž velikost je menší než 32 bajtů, můžete ji zarovnat na 32 bajtů. abyste měli jistotu, že objekty tohoto typu struktury efektivně ukládány.
 
-\# je hodnota zarovnání. Platné položky jsou zajišťuje celé číslo od 1 do 8192 (v bajtech), jako jsou například 2, 4, 8, 16, 32 nebo 64 dva. `declarator` jsou data, která jsou deklarace jako zarovnána.
+\# je hodnota zarovnání. Platná zadání jsou celá čísla pro mocniny dvou od 1 do 8 192 (bajty), jako je například 2, 4, 8, 16, 32 nebo 64. `declarator` je údaj, který deklarujete jako zarovnaný.
 
-Informace o tom, jak vrátit hodnotu typu `size_t` , je požadavek na zarovnání typu, najdete v části [__alignof –](../cpp/alignof-operator.md). Informace o tom, jak deklarace nezarovnané ukazatelů, pokud je cílem 64bitovými procesory najdete v tématu [__unaligned](../cpp/unaligned.md).
+Informace o tom, jak vrátit hodnotu typu `size_t` , který je požadavek zarovnání typu naleznete v tématu [__alignof](../cpp/alignof-operator.md). Informace o tom, jak deklarace nezarovnaných ukazatelů při cílení na 64bitové procesory, naleznete v tématu [__unaligned](../cpp/unaligned.md).
 
-Můžete použít `__declspec(align(#))` při definování `struct`, `union`, nebo `class`, nebo když je deklarovat proměnnou.
+Můžete použít `__declspec(align(#))` při definování **struktura**, **sjednocení**, nebo **třída**, nebo pokud deklarujete proměnnou.
 
-Kompilátor není zaručit nebo se pokuste o zachovat atribut zarovnání dat během operace transformace kopírování nebo data. Například [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) můžete zkopírovat struktury deklarovat s `__declspec(align(#))` do libovolného umístění. Všimněte si, že běžném provozu alokátorů – například [malloc –](../c-runtime-library/reference/malloc.md), C++ [new – operátor](new-operator-cpp.md)a alokátorů Win32 – vrátí paměti, která není dostatečně zarovnána obvykle pro `__declspec(align(#))` struktury nebo pole struktury. Chcete-li zaručit, že je správně zarovnán cíl operace transformace kopírování nebo data, použijte [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md), nebo napište vlastní přidělení.
+Kompilátor nepodporuje zaručit ani pokus o zachovávají atribut zarovnání dat během kopírování nebo data operace transformace. Například [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) můžete zkopírovat struktura deklarována s `__declspec(align(#))` do libovolného umístění. Všimněte si, že běžný alokátorů – například [malloc](../c-runtime-library/reference/malloc.md), C++ [operátor new](new-operator-cpp.md)a alokátory Win32 – vrátí paměť není dostatečně zarovnáno obvykle pro `__declspec(align(#))` nebo poli struktury. Chcete-li zaručit, že cíl kopírování nebo data operace transformace je správně zarovnán, použijte [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), nebo napište vlastní Alokátor.
 
-Nelze zadat zarovnání parametry funkce. Data, která má atribut zarovnání je předaná hodnota v zásobníku, jeho zarovnání je řízeno konvence volání. Pokud zarovnání dat je důležité v volaná funkce, zkopírujte do paměti, správně zarovnané před použitím parametru.
+Nelze určit zarovnání pro parametry funkce. Data, která má atribut zarovnání je předán podle hodnoty v zásobníku, jeho zarovnání je řízeno konvence volání. Pokud zarovnání dat je důležité ve volané funkci, zkopírujte do správně zarovnané paměti před použitím parametru.
 
-Bez `__declspec(align(#))`, kompilátor obecně Zarovná data na přirozené hranic na základě cílový procesor a velikost dat, až 4bajtový hranice u 32-bit procesorů a 8bajtový hranice na 64bitovými procesory. Data v třídy nebo struktury je zarovnán v třídu nebo strukturu alespoň jeho přirozené zarovnání a nastavení aktuální balení (z #pragma `pack` nebo **/Zp** – možnost kompilátoru).
+Bez `__declspec(align(#))`, kompilátor obecně Zarovná data na přirozené hranice v závislosti na cílový procesor a množství dat, až 4bajtových hranicích na 32bitové procesory a hranice 8 bajtů na 64bitové procesory. Data v třídách nebo strukturách jsou zarovnána v dané třídy nebo struktury alespoň na jejich přirozené zarovnání a aktuální nastavení balení (z #pragma **pack** nebo **/zp** – možnost kompilátoru).
 
 Tento příklad ukazuje použití `__declspec(align(#))`:
 
@@ -60,46 +60,46 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-Tento typ má nyní atribut zarovnání 32 bajtů. To znamená, že všechny instance statické a automatického spuštění na hranici 32 bajtů. Struktura další typy deklarovat s tímto typem jako člen zachovat atribut zarovnání tento typ, tedy žádné struktury s `Str1` jako element má atribut zarovnání alespoň 32.
+Tento typ má nyní atribut zarovnání 32 bajtů. To znamená, že všechny instance statické a automatické spuštění na hranici 32 bajtů. Další typy struktur deklarované pomocí tohoto typu jako člen zachovávají atribut zarovnání tohoto typu, to znamená, že všechny struktury s `Str1` element má atribut zarovnání alespoň 32.
 
-Všimněte si, že `sizeof(struct Str1)` je rovna 32. Z toho vyplývá, že pokud je pole objektů Str1 vytvořili, a základní pole je 32 bajtů zarovnán, každý člen pole je také zarovnán 32 bajtů. K vytvoření pole, jehož základní je správně zarovnán v dynamické paměti, použijte [_aligned_malloc –](../c-runtime-library/reference/aligned-malloc.md), nebo napište vlastní přidělení.
+Všimněte si, že `sizeof(struct Str1)` je roven 32. Z toho vyplývá, že pokud je vytvořeno pole objektů Str1 a základ pole je 32 bajtů zarovnána, každý člen pole se také zarovnána na 32 bajtů. Chcete-li vytvořit pole, jehož základ je správně zarovnán v dynamické paměti, použijte [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), nebo napište vlastní Alokátor.
 
-`sizeof` u všech struktura posun posledního člena plus velikost tohoto člena, zaokrouhlený nahoru na nejbližší násobek největší hodnotu zarovnání člen nebo hodnota zarovnání celou struktura, podle toho, která je větší.
+`sizeof` Hodnotu pro libovolnou strukturu posunu posledního člena plus velikost tohoto člena, zaokrouhlená na nejbližší násobek největší hodnota člena zarovnání nebo hodnoty zarovnání celé struktury, která je větší.
 
 Kompilátor používá pro zarovnání struktury tato pravidla:
 
-- Pokud není přepsána s `__declspec(align(#))`, zarovnání struktury skalární člen je minimálně jeho velikost a aktuální okolních.
+- Pokud nejsou přepsány s `__declspec(align(#))`, zarovnání skalární struktury člena je minimální velikost a aktuální balení.
 
-- Pokud není přepsána s `__declspec(align(#))`, zarovnání struktury je maximální počet jednotlivých zarovnání její členy.
+- Pokud nejsou přepsány s `__declspec(align(#))`, zarovnání struktury člena je maximum samostatného zarovnání jeho členů.
 
-- Struktura člen je umístěn na posun od začátku její nadřazená struktura, což je nejmenší násobkem její zarovnání větší než nebo rovna hodnotě Posun konci předchozího člena.
+- Člen struktury je umístěn na posunu od začátku své nadřazené struktury, což je nejmenší násobek jeho zarovnání větší než nebo rovný posunu konce předchozího členu.
 
-- Velikost strukturou je nejmenší násobkem její zarovnání větší než nebo rovna hodnotě posunutí konce jeho posledním členem.
+- Velikost struktury je nejmenší násobek jeho zarovnání větší než nebo rovný posunu konce jeho posledního člena.
 
-`__declspec(align(#))` může se zvýšit pouze omezení zarovnání.
+`__declspec(align(#))` může pouze zvýšit omezení zarovnání.
 
 Další informace naleznete v tématu:
 
 - [Příklady zarovnání](#vclrfalignexamples)
 
-- [Definování nových typů s __declspec(align(#))](#vclrf_declspecaligntypedef)
+- [Definování nových typů pomocí __declspec(align(#))](#vclrf_declspecaligntypedef)
 
-- [Zarovnávání dat v lokální úložiště vláken](#vclrfthreadlocalstorageallocation)
+- [Zarovnávání dat v místním úložišti vláken](#vclrfthreadlocalstorageallocation)
 
-- [Jak zarovnat funguje s okolních dat](#vclrfhowalignworkswithdatapacking)
+- [Jak align spolupracuje s balením dat](#vclrfhowalignworkswithdatapacking)
 
 - [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)
 
 ##  <a name="vclrfalignexamples"></a> Příklady zarovnání
 
-Následující příklady zobrazují jak `__declspec(align(#))` má vliv na velikost a zarovnání struktur data. Příklady předpokládají následující definice:
+Následující příklady ukazují jak `__declspec(align(#))` ovlivňuje velikost a zarovnání datových struktur. V příkladech se předpokládají následující definice:
 
 ```cpp
 #define CACHE_LINE  32
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-V tomto příkladu `S1` struktura je definována pomocí `__declspec(align(32))`. Všechna použití `S1` pro definici proměnné nebo jiný typ deklarace jsou zarovnána 32 bajtů. `sizeof(struct S1)` Vrátí 32, a `S1` má 16 bajtů odsazení následující 16 bajtů požadovaných k uložení čtyři celých čísel. Každý `int` člen vyžaduje 4bajtový zarovnání, ale je deklarován jako 32 zarovnání struktury sám sebe. Proto celkové zarovnání je 32.
+V tomto příkladu `S1` struktura je definována pomocí `__declspec(align(32))`. Všechny výskyty `S1` pro definici proměnné nebo v jiném typu deklarace jsou zarovnána na 32 bajtů. `sizeof(struct S1)` Vrátí 32 a `S1` má 16 bajtů odsazení následujících po 16 bajtech potřebných k uložení čtyř celých čísel. Každý **int** člen vyžaduje 4bajtové zarovnání, ale zarovnání struktury samotné je deklarováno jako 32. Takže celkové zarovnání je 32.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -108,7 +108,7 @@ struct CACHE_ALIGN S1 { // cache align all instances of S1
 struct S1 s1;   // s1 is 32-byte cache aligned
 ```
 
-V tomto příkladu `sizeof(struct S2)` vrátí 16, které je právě součtem velikostí člena, protože se jedná násobkem požadavek na největší zarovnání (násobkem 8).
+V tomto příkladu `sizeof(struct S2)` vrátí 16, což je přesně součet velikostí členů, protože se jedná násobek největšího požadavku zarovnání (násobek 8).
 
 ```cpp
 __declspec(align(8)) struct S2 {
@@ -116,7 +116,7 @@ __declspec(align(8)) struct S2 {
 };
 ```
 
-V následujícím příkladu `sizeof(struct S3)` vrátí 64.
+V následujícím příkladu `sizeof(struct S3)` vrátí hodnotu 64.
 
 ```cpp
 struct S3 {
@@ -127,7 +127,7 @@ struct S3 {
 };
 ```
 
-V tomto příkladu, Všimněte si, že `a` má zarovnání přirozené typ, v tomto případě 4 bajtů. Ale `S1` musí být 32 bajtů zarovnána. Dvacet osm bajtů odsazení postupujte podle `a`tak, aby `s1` spustí na posunu 32. `S4` potom dědí požadavek na zarovnání `S1`, protože se jedná o požadavek na největší zarovnání ve struktuře. `sizeof(struct S4)` Vrátí hodnotu 64.
+V tomto příkladu, Všimněte si, že `a` zarovnání jeho přírodního typu, v tomto případě 4 bajty. Ale `S1` musí být zarovnaný na 32 bajtů. Dvacet osm bajtů odsazení následuje `a`tak, aby `s1` začínala na posunu 32. `S4` poté dědí požadavky na zarovnání `S1`, protože se jedná o největší požadavek zarovnání ve struktuře. `sizeof(struct S4)` Vrátí hodnotu 64.
 
 ```cpp
 struct S4 {
@@ -137,7 +137,7 @@ struct S4 {
 };
 ```
 
-Následující tři deklarace proměnných také použít `__declspec(align(#))`. V každém případě proměnná musí být zarovnána 32 bajtů. V případě pole je základní adresa pole není každý člen pole zarovnán 32 bajtů. `sizeof` Hodnotu pro každý člen pole nemá vliv, pokud používáte `__declspec(align(#))`.
+Následující tři deklarace proměnných také používají `__declspec(align(#))`. V obou případech musí být proměnná zarovnána na 32 bajtů. V případě pole je základní adresa pole, nikoli každý člen pole zarovnána na 32 bajtů. `sizeof` Hodnotu pro každého člena pole neovlivní při použití `__declspec(align(#))`.
 
 ```cpp
 CACHE_ALIGN int i;
@@ -145,14 +145,14 @@ CACHE_ALIGN int array[128];
 CACHE_ALIGN struct s2 s;
 ```
 
-Chcete-li zarovnat každý člen pole, by měl použít kód, například:
+Chcete-li zarovnat pole každého člena, byste měli použít kód takovou situaci:
 
 ```cpp
 typedef CACHE_ALIGN struct { int a; } S5;
 S5 array[10];
 ```
 
-V tomto příkladu Všimněte si, že zarovnání struktury sám a zarovnání první prvek mají stejný účinek:
+V tomto příkladu Všimněte si, že zarovnání samotné struktury a zarovnání prvního prvku mají stejný účinek:
 
 ```cpp
 CACHE_ALIGN struct S6 {
@@ -166,9 +166,9 @@ struct S7 {
 };
 ```
 
-`S6` a `S7` mít identické zarovnání a přidělení a velikost charakteristiky.
+`S6` a `S7` mají stejné zarovnání, rozdělení a charakteristiky velikostí.
 
-V tomto příkladu zarovnání počáteční adresy a, b, c, a d 4, 1, 4 a je 1, v uvedeném pořadí.
+V tomto příkladu zarovnání počáteční adresy a, b, c a d jsou 4, 1, 4 a 1, v uvedeném pořadí.
 
 ```cpp
 void fn() {
@@ -179,26 +179,26 @@ void fn() {
 }
 ```
 
-Zarovnání při přidělení paměti v haldě závisí na přidělení funkci, která je volána.  Například, pokud používáte `malloc`, výsledek bude záviset na velikosti operand. Pokud *arg* > = 8, paměť vrátil, je zarovnána na 8 bajtů. Pokud *arg* < 8, zarovnání paměti vrátil je první power 2 menší než *arg*. Například pokud používáte malloc(7), zarovnání je 4 bajtů.
+Zarovnání, když je paměť přidělena v haldě, závisí na která funkce přidělení bude volána.  Například, pokud používáte **malloc**, výsledek závisí na velikosti operandu. Pokud *arg* > = 8, je paměť vrácena zarovnán na 8 bajtů. Pokud *arg* < 8, zarovnání paměti vrátí se o první mocninu 2 menší než *arg*. Například pokud používáte malloc(7), zarovnání je 4 bajty.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Definování nových typů s __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definování nových typů pomocí __declspec(align(#))
 
-Můžete definovat typ se vlastnosti zarovnání.
+Můžete definovat typ s charakteristickým zarovnáním.
 
-Například můžete definovat `struct` s zarovnání hodnota tímto způsobem:
+Například můžete definovat `struct` s hodnotou zarovnání takto:
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-Nyní `aType` a `bType` stejnou velikost (8 bajtů) ale proměnné typu `bType` jsou zarovnána 32 bajtů.
+Nyní `aType` a `bType` jsou stejné velikosti (8 bajtů), ale proměnné typu `bType` jsou zarovnána na 32 bajtů.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Zarovnávání dat v lokální úložiště vláken
+##  <a name="vclrfthreadlocalstorageallocation"></a> Zarovnávání dat v místním úložišti vláken
 
-Statické úložiště thread local (TLS) vytvořené pomocí `__declspec(thread)` atribut a vložit do části TLS ve službě funguje bitové kopie pro zarovnání úplně stejně jako normální statických dat. Vytvořit data protokolu TLS, operační systém přidělí paměť velikost oddílu TLS a respektuje atribut zarovnání oddílu TLS.
+Statické úložiště thread local (TLS) vytvořené pomocí `__declspec(thread)` atribut a vložit ho do části TLS v obraze umožňuje zarovnání úplně stejně jako normální statická data. Pokud chcete vytvořit data protokolu TLS, operační systém přiděluje paměť velikosti sekce TLS a respektuje atributu zarovnání sekce TLS.
 
-Tento příklad ukazuje různé způsoby, jak umístění zarovnaný dat do úložiště thread local.
+Tento příklad ukazuje různé způsoby umístění zarovnaných dat do úložiště thread local.
 
 ```cpp
 // put an aligned integer in TLS
@@ -217,9 +217,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak zarovnat funguje s okolních dat
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak align spolupracuje s balením dat
 
-**/Zp** – možnost kompilátoru a `pack` – Direktiva pragma mít za následek balení data pro členové struktury a sjednocení. Tento příklad ukazuje, jak **/Zp** a `__declspec(align(#))` spolupracují:
+**/Zp** – možnost kompilátoru a **pack** – Direktiva pragma mají vliv na dodací údaje pro členy struktury a sjednocení. Tento příklad ukazuje, jak **/zp** a `__declspec(align(#))` spolupracují:
 
 ```c[[]]
 struct S {
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-Následující tabulka uvádí posun každý člen v rámci různých **/Zp** (nebo #pragma `pack`) hodnoty, znázorňující způsob, jakým dva komunikovat.
+Následující tabulka uvádí posun pro každého člena podle různých **/zp** (nebo #pragma **pack**) hodnotami, zobrazení jejich interakce.
 
 |Proměnná|/Zp1|/Zp2|/Zp4|/ Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -246,11 +246,11 @@ Následující tabulka uvádí posun každý člen v rámci různých **/Zp** (n
 
 Další informace najdete v tématu [/Zp (zarovnání členů struktury)](../build/reference/zp-struct-member-alignment.md).
 
-Posun objektu je založen na posun předchozího objektu a aktuální balení nastavení, pokud objekt má `__declspec(align(#))` atribut, v takovém případě je zarovnání podle posun předchozího objektu a `__declspec(align(#))` hodnotu objektu.
+Posun objektu je založeno na posunu na předchozí objekt a aktuální nastavení balení, pokud nemá objekt `__declspec(align(#))` atribut, v takovém případě je zarovnání založeno na posunu na předchozí objekt a `__declspec(align(#))` hodnotu objektu.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__declspec](../cpp/declspec.md)  
 [Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  

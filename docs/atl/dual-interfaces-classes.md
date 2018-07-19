@@ -1,5 +1,5 @@
 ---
-title: Duální rozhraní třídy (ATL) | Microsoft Docs
+title: Duální rozhraní třídy (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2acbad92f3da16342de41bb422a75d0304a59f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354319"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961607"
 ---
-# <a name="dual-interfaces-classes"></a>Duální rozhraní třídy
-Následující třídy poskytuje podporu pro duální rozhraní:  
+# <a name="dual-interfaces-classes"></a>Třídy duálního rozhraní
+Následující třída poskytuje podporu pro duální rozhraní:  
   
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementuje `IDispatch` část duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+-   [Idispatchimpl –](../atl/reference/idispatchimpl-class.md) implementuje `IDispatch` část duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

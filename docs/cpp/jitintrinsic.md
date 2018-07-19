@@ -1,5 +1,5 @@
 ---
-title: jitintrinsic | Microsoft Docs
+title: jitintrinsic | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418751"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939387"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 Označí funkci jako významnou pro 64bitový modul CLR (Common Language Runtime). Používáno pro určité funkce v knihovnách poskytnutých společností Microsoft.  
@@ -37,7 +37,7 @@ __declspec(jitintrinsic)
 ## <a name="remarks"></a>Poznámky  
  Direktiva `jitintrinsic` přidá k signatuře funkce klíčové slovo MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>).  
   
- Použití tohoto modifikátoru `__declspec` není doporučeno, protože může dojít k neočekávaným výsledkům.  
+ Není doporučeno použití této funkce **__declspec** modifikátor, jako výsledky neočekávané situace může nastat.  
   
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   

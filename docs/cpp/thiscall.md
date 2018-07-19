@@ -1,5 +1,5 @@
 ---
-title: __thiscall | Microsoft Docs
+title: klíčové slovo __thiscall | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4912628529ae0b47a5a5b938ab8e6d25a9099510
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d1b7718e4c6d270536f5d7973a1b5a3ec0e61f28
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704400"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941584"
 ---
 # <a name="thiscall"></a>__thiscall
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-`__thiscall` Konvence volání se používá na členské funkce a konvence volání výchozí používané C++ členské funkce, které nepoužívají proměnné argumenty. V části `__thiscall`, volaného vyčistí zásobníku, což je znemožňuje, aby `vararg` funkce. Argumenty jsou vložena v zásobníku zprava doleva, se `this` ukazatel předávány prostřednictvím registrace ECX a ne v zásobníku, na x86 architektura.
+**Klíčové slovo __thiscall** konvence volání se používá pro členské funkce a je výchozí konvenci volání členských funkcí jazyka C++, které nepoužívají proměnné argumenty používá. V části **klíčové slovo __thiscall**, volaný vyčistí zásobník, který je možné `vararg` funkce. Argumenty jsou posunuty v zásobníku zprava doleva, se **to** ukazatel předávána prostřednictvím registrace ECX a ne na zásobník, v případě x86 architektury.
 
-Jedním z důvodů používat `__thiscall` v třídy, jejichž členské funkce použití `__clrcall` ve výchozím nastavení. V takovém případě můžete použít `__thiscall` , aby jednotlivými členy funkce volány z nativního kódu.
+Jedním z důvodů použití **klíčové slovo __thiscall** je do třídy, jejíž členské funkce pomocí `__clrcall` ve výchozím nastavení. V takovém případě můžete použít **klíčové slovo __thiscall** aby jednotliví členové funkce volat z nativního kódu.
 
-Při kompilaci s [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), jsou všechny funkce a ukazatelů na funkce `__clrcall` není uvedeno jinak. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+Při kompilaci s [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), všechny funkce a ukazatelů na funkce jsou `__clrcall` není uvedeno jinak. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Ve verzích před Visual C++ 2005 `__thiscall` konvence volání nelze zadat explicitně v programu, protože `__thiscall` nebyla klíčové slovo.
+Ve verzích před Visual C++ 2005 **klíčové slovo __thiscall** konvence volání nelze zadat explicitně v aplikaci, protože **klíčové slovo __thiscall** nebyla klíčové slovo.
 
-`vararg` Členské funkce pomocí `__cdecl` konvence volání. Všechny argumenty funkce jsou vložena do zásobníku, se `this` v zásobníku poslední umístit ukazatel
+`vararg` Členské funkce použijte **__cdecl** konvence volání. Všechny argumenty funkce jsou vloženy do zásobníku s **to** ukazatel umístěny na zásobník, poslední
 
-Protože tato konvence volání se vztahuje pouze na C++, neexistuje žádné schéma decoration název C.
+Protože tato konvence volání se vztahuje pouze na C++, neexistuje žádné schéma dekorace názvu C.
 
-Na ARM a x64 počítače, `__thiscall` je přijatá a ignorovat kompilátoru.
+Na ARM a x64 počítače, **klíčové slovo __thiscall** je přijato a ignorováno kompilátory.
 
 U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

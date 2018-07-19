@@ -1,5 +1,5 @@
 ---
-title: Struktura _ATL_WIN_MODULE70 | Microsoft Docs
+title: _Atl_win_module70 – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256077"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883031"
 ---
-# <a name="atlwinmodule70-structure"></a>Struktura _ATL_WIN_MODULE70
-Používaný kód oddílová v ATL.  
+# <a name="atlwinmodule70-structure"></a>_Atl_win_module70 – struktura
+Používaný kód časová okna v knihovně ATL  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,19 +42,19 @@ struct _ATL_WIN_MODULE70 {
   
 ## <a name="members"></a>Členové  
  `cbSize`  
- Velikost strukturu, použít pro správu verzí.  
+ Velikost struktury, použít pro správu verzí.  
   
  `m_csWindowCreate`  
- Používaný k serializaci přístup ke kódu okno registrace. Interně jej využívá ATL.  
+ Slouží k serializaci přístup k okna registrační kód. Vnitřně jej používá knihovnu ATL.  
   
- **m_pCreateWndList**  
- Použije pro vazbu windows k jejich objekty. Interně jej využívá ATL.  
+ `m_pCreateWndList`  
+ Lze svázat objekty, které windows. Vnitřně jej používá knihovnu ATL.  
   
- **m_rgWindowClassAtoms**  
- Použít ke sledování registrace třídy okna tak, aby mohly být správně registrace na ukončení. Interně jej využívá ATL.  
+ `m_rgWindowClassAtoms`  
+ Používá ke sledování registrace tříd oken tak, aby mohly být správně zrušit registraci při ukončení. Vnitřně jej používá knihovnu ATL.  
   
 ## <a name="remarks"></a>Poznámky  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) je definován jako typedef z `_ATL_WIN_MODULE70`.  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) je definován jako typedef typu `_ATL_WIN_MODULE70`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  

@@ -1,5 +1,5 @@
 ---
-title: _com_error::Operator = | Microsoft Docs
+title: _com_error::Operator = | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744a4b344a336ec502e184e9be9ffb236c863708
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b358bc38ad055ed5e485dea566238de06242e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410629"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942026"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Přiřadí existující `_com_error` objekt do jiné.  
+ Přiřadí existující `_com_error` objektu na jiný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ ms.locfileid: "32410629"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `that`  
+ *který*  
  A `_com_error` objektu.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

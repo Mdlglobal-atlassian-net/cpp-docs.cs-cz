@@ -1,5 +1,5 @@
 ---
-title: __vectorcall | Microsoft Docs
+title: __vectorcall | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c05707f3d6d6e323bf9605c3c742f6bef417d817
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424731"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939777"
 ---
 # <a name="vectorcall"></a>__vectorcall
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- `__vectorcall` Konvence volání Určuje, že argumenty funkce mají být předány v registrech, pokud je to možné. `__vectorcall` používá další registry argumenty než [__fastcall](../cpp/fastcall.md) nebo výchozí [x64 konvence volání](../build/overview-of-x64-calling-conventions.md) použít. `__vectorcall` Konvence volání je podporována pouze v nativním kódu na x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Použití `__vectorcall` rychlost funkce, které předat několik s plovoucí desetinnou čárkou nebo argumenty vektoru SIMD a provádět operace, které využívají argumenty načíst v registrech. Následující seznam obsahuje funkce, které jsou společné pro implementace x86 a x64 `__vectorcall`. Rozdíly jsou vysvětlené později v tomto článku.  
+ `__vectorcall` Konvence volání Určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. `__vectorcall` používá více registrů pro argumenty než [__fastcall](../cpp/fastcall.md) nebo výchozí hodnotu [x64 konvence volání](../build/overview-of-x64-calling-conventions.md) použít. `__vectorcall` Konvence volání je podporována pouze v nativním kódu x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Použití `__vectorcall` k urychlení funkcí, které předávají několik s plovoucí desetinnou čárkou nebo SIMD vektorovým argumentům a provádět operace, které využívají argumenty načtené do registrů. Následující seznam obsahuje funkce, které jsou společné pro implementace x86 a x64 `__vectorcall`. Rozdíly jsou vysvětleny dále v tomto článku.  
   
 |Prvek|Implementace|  
 |-------------|--------------------|  
-|Konvence dekorování názvů jazyka C|Názvy funkcí jsou na konci se dvěma "na" znaky @@ následovaný počtem bajtů (decimální): v seznamu parametrů.|  
-|Konvence pro posunutí|Není proveden žádný případu překlad.|  
+|Konvence pro vzhled názvu C|Názvy funkcí jsou doplněny dvěma "zavináče" (@@) následovaný počtem bajtů (v desítkové soustavě) v seznamu parametrů.|  
+|Konvence pro posunutí|Provádí se žádný překlad případu.|  
   
- Pomocí [/gv](../build/reference/gd-gr-gv-gz-calling-convention.md) – možnost kompilátoru způsobí, že jednotlivé funkce v modulu zkompilovat jako `__vectorcall` Pokud funkce není členské funkce, je deklarovaný s atributem konfliktní konvence volání, používá `vararg` proměnné Seznam argumentů, nebo má název `main`.  
+ Použití [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) – možnost kompilátoru způsobí, že každá funkce v modulu je kompilována jako `__vectorcall` Pokud funkce je členská funkce, je deklarována s konfliktním atributem konvence volání, používá `vararg` proměnné Seznam argumentů, nebo má název `main`.  
   
- Tři druhy argumenty můžete předat pomocí registrace v `__vectorcall` funkce: *typ integer* hodnoty, *vector typ* hodnoty, a *homogenní vektoru agregace* (HVA ) hodnoty.  
+ Můžete předat tři typy argumentů podle registru ve `__vectorcall` funkce: *celočíselný typ* hodnoty, *vektorového typu* hodnoty, a *homogenního vektoru agregace* (HVA ) hodnoty.  
   
- Celočíselného typu splňuje dva požadavky: její souvislosti s velikostí nativní registrace procesoru – například 4 bajtů na x86 počítače nebo 8 bajtů na x64 počítače – a je převést na celé číslo registrace dlouhé a zpět znovu beze změny jeho verze reprezentace. Například libovolného typu, který bude sloužit k `int` na x86 (`long long` na x64) – například `char` nebo `short`– nebo které lze převést na `int` (`long long` na x64) a zpět na původní bez změny je celé číslo typ. Typy Integer patří ukazatelů, reference, a `struct` nebo `union` typy 4 bajtů (8 bajtů na x64) nebo méně. Na x64 platforem, větší `struct` a `union` typy jsou předaná odkaz na paměť přidělená volající; na x86 platformy, jsou předávány podle hodnoty v zásobníku.  
+ Typ celého čísla splňuje dva požadavky: vejde se do nativní velikosti registru procesoru – například 4 bajty v x x86 počítače nebo 8 bajtů na x x64 počítači – a je lze převést na celé číslo délky registru a zpět znovu beze změny jeho bitové reprezentace. Například libovolný typ, který může být povýšen na **int** na x86 (**long long** na x64) – například **char** nebo **krátký**– nebo, který lze převést na **int** (**long long** na x64) a zpět do původního stavu bez změn je typu integer. Celočíselné typy zahrnují ukazatel, odkaz a **struktura** nebo **sjednocení** typy 4 bajtů (8 bajtů na x64) nebo méně. Na x64 platformy **struktura** a **sjednocení** typy jsou předávány odkazem na paměť přidělenou volajícím; na x86 platformy, jsou předány podle hodnoty v zásobníku.  
   
- Typ vektoru je typu s plovoucí desetinnou čárkou – například `float` nebo `double`– nebo typ vektoru SIMD – například `__m128` nebo `__m256`.  
+ Typ vektoru je typ s plovoucí desetinnou čárkou, například **float** nebo **double**– nebo typ vektoru SIMD – například **__m128** nebo **__m256**.  
   
- Typ HVA je složeného typu až čtyři datových členů, které mají stejné vektoru typy. Typ HVA má stejný požadavek zarovnání jako typ vektoru její členy. Jedná se o příklad HVA `struct` definice, který obsahuje tři typy identické vektoru a má zarovnání 32 bajtů:  
+ Typ HVA je složený typ z až čtyř datových členů, které mají identický vektorový. Typ HVA má stejný požadavek na zarovnání jako typ vektoru jeho členů. Toto je příklad hva **struktura** definice, která obsahuje tři totožné typy vektoru a má 32bajtové zarovnání:  
   
 ```cpp  
 typedef struct {  
@@ -48,13 +48,13 @@ typedef struct {
   
 ```  
   
- Deklarace funkcí explicitně s `__vectorcall` – klíčové slovo v hlavičkových souborů umožňuje samostatně zkompilovaný kód propojení bez chyb. Funkce musí být deklaraci použít `__vectorcall`a nemůžete použít `vararg` seznam argumentů proměnlivou délkou.  
+ Deklarace vašich funkcí explicitně s `__vectorcall` – klíčové slovo v záhlaví souborů, aby bylo možné samostatně zkompilovat kód k propojení bez chyb. Funkce musí být prototypem pomocí `__vectorcall`a nelze použít `vararg` seznam argumentů s proměnnou délkou.  
   
- Členské funkce může deklarovat pomocí `__vectorcall` specifikátor. Skrytého `this` ukazatel je předaná registrace jako první argument typu celé číslo.  
+ Členské funkce mohou být deklarovány s použitím `__vectorcall` specifikátor. Skrytý **to** ukazatel je registrem odeslán jako první argument typu celé číslo.  
   
- Na počítačích ARM `__vectorcall` je přijatá a ignorovat kompilátoru.  
+ Na počítačích ARM `__vectorcall` je přijato a ignorováno kompilátory.  
   
- Pro třídu nestatické členské funkce Pokud je funkce definované z přesahujících, volání modifikátor konvence nemá být zadaný v definici--line. To znamená pro nestatické členy třídy, se předpokládá konvence volání během deklarace byly zadány v místě definice. Při této definici třídy:  
+ Pro nestatické třídy členské funkce je-li funkce definovaná mimo řádek, modifikátor konvence volání nemá být stanoven na definici mimo řádek. To znamená, že pro nestatické členy třídy, se předpokládá konvence volání zadaná během deklarace Přejme během definice. Při této definici třídy:  
   
 ```cpp  
 struct MyClass {  
@@ -74,24 +74,24 @@ void MyClass::mymethod() { return; }
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- `__vectorcall` Volání modifikátor konvence musí zadat při ukazatel na `__vectorcall` funkce se vytvoří. V dalším příkladu se vytváří `typedef` pro ukazatel `__vectorcall` funkce, která přebírá čtyři `double` argumentů a vrátí `__m256` hodnotu:  
+ `__vectorcall` Modifikátor konvence volání při musí být zadán ukazatel `__vectorcall` funkce se vytvoří. Následující příklad vytvoří **– typedef** ukazatele na `__vectorcall` funkce, která přebírá čtyři **double** argumenty a vrátí **__m256** hodnotu:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
 ```  
   
 ## <a name="vectorcall-convention-on-x64"></a>konvence __vectorcall na x64  
- `__vectorcall` Konvence volání na x64 rozšiřuje standardní x64 konvence využít další registrů volání. Argumenty typu celé číslo a argumenty typu vektoru jsou namapované na registrů na základě pozice v seznamu argumentů. Argumenty HVA jsou přiděleny nepoužívané vektoru Registry.  
+ `__vectorcall` Konvence volání na x64 rozšiřuje standardní x64 konvence volání, která tak využívá dalších registrů trvat. Argumenty typu integer a argumenty vektorového typu jsou mapovány do registrů na základě pozice v seznamu argumentů. Nepoužité vektorové registry jsou přiděleny argumentům HVA.  
   
- Pokud některý z argumentů první čtyři v pořadí zleva doprava jsou argumenty typu integer, jsou předávány v registru, který odpovídá této pozici – RCX, RDX, R8 nebo R9. Skrytý `this` ukazatel je považován za první argument typu celé číslo. Pokud argument HVA v jednom z první čtyři argumenty nelze předat v registry k dispozici, je odkaz na volající přidělené paměti místo předán v odpovídající registru typu integer. Argumenty typu Integer po čtvrtého parametru pozice se předávají v zásobníku.  
+ Pokud některý z prvních čtyř argumentů v pořadí zleva doprava jsou argumenty typu celého čísla, jsou předány do registru, který odpovídá této pozici – RCX, RDX, R8 a R9. Skrytý **to** ukazatel je považován za první argument typu celé číslo. Pokud argument HVA v jednom z prvních čtyř argumentů nelze předávat do dostupných registrů, odkaz na paměť přidělenou volajícímu je místo něho předán do odpovídajícího registru typu celého čísla. Argumenty typu celého čísla po pozici čtvrtého parametru jsou předány do zásobníku.  
   
- Pokud některý z prvních šesti argumentů, aby zleva doprava se vector argumenty typu, jsou předávány podle hodnoty v registrech vektoru SSE 0 až 5 podle pozice argument. S plovoucí desetinnou čárkou a `__m128` typy se předávají v XMM registrů a `__m256` typy jsou předané YMM zaregistruje. To se liší od standardní x64 konvence, volání, protože vektoru typy jsou předány podle hodnoty místo odkazem a další zaregistruje se používají. Stínové zásobníku místo přidělené pro argumenty typu vektoru vyřešen na 8 bajtů a [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) možnost se nevztahuje. Argumenty typu vektoru v pozice sedmého a novější parametrů jsou předaná v zásobníku odkaz na paměti přidělené volající.  
+ Pokud některý z prvních šesti argumentů v pořadí zleva doprava jsou argumenty vektorového typu, jsou předány podle hodnoty v vektorového registru SSE 0 až 5 podle pozice argumentu. S plovoucí desetinnou čárkou a **__m128** typy jsou předány v registrech XMM a **__m256** typy jsou předány v registrech YMM zaregistruje. Tím se liší od standardní x64 konvence volání, protože vektorové typy jsou předávány hodnotou místo pomocí odkazu a jsou použity další registry. Vystínovaný prostor zásobníku přidělený pro argumenty vektorového typu je nastaven na 8 bajtech a [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) neplatí. Argumenty vektorového typu sedmé a následujících pozicích parametru jsou předány do zásobníku s odkazem na paměť přidělenou volajícím.  
   
- Po registry jsou přiděleny vektoru argumenty, datové členy HVA argumentů přidělovány ve vzestupném pořadí, nepoužívané vektoru registruje XMM0 XMM5 závislé (nebo YMM0 k YMM5, pro `__m256` typy), a pokud nejsou k dispozici pro dostatek registrů celý HVA. Není-li dostatek registry jsou k dispozici, je HVA argument předaná odkaz na paměti přidělené volající. Prostoru stínové zásobníku pro HVA argument se stanoví na 8 bajtů s nedefinované obsahem. Argumenty HVA přiřazené k registrů v pořadí zleva doprava v seznamu parametrů a může být ve všech pozici. HVA argumenty v jednom z první čtyři argument, že pozice, které nejsou přiřazeny k vector zaregistruje se budou předávat odkazem v registru integer, která odpovídá této poloze. HVA argumenty předávané odkazem po čtvrtého parametru pozice se instaluje v zásobníku.  
+ Po přidělení registrů vektorovým argumentům datové členy argumentů HVA přiděleny vzestupně nepoužívaným vektorovým registrům XMM0 až XMM5 (nebo YMM0 k YMM5, pro **__m256** typy), dokud nejsou k dispozici dostatek registrů k dispozici pro celé HVA. Pokud jsou k dispozici dostatek registrů, HVA argument je předán odkazem na paměť přidělenou volajícím. Stínovaný prostor zásobníku pro HVA argument je nastaven na 8 bajtech s nedefinovaným obsahem. Argumenty HVA jsou přiřazeny k registrům v pořadí zleva doprava v seznamu parametrů a mohou být v jakékoliv pozici. Argumenty HVA v jednom z prvních čtyř argumentů, že umístění, které nejsou přiřazeny k vektorovým registrům jsou předány podle odkazu v registru celých čísel, která odpovídá této pozici. Argumenty HVA předané podle odkazu po pozici čtvrtého parametru jsou poslány do zásobníku.  
   
- Výsledky `__vectorcall` se funkce vrátí hodnotu ve registrů, pokud je to možné. Výsledky typu integer, včetně struktury a sjednocení 8 bajtů nebo méně, se vrátí hodnotu ve RAX. Vektor typ výsledky se vrátí hodnotu ve XMM0 nebo YMM0, v závislosti na velikosti. Výsledky HVA musí každý datový prvek vrácené hodnoty v XMM0:XMM3 registry nebo YMM0:YMM3, v závislosti na velikosti elementu. Typy výsledků, které se nehodí v odpovídající zaregistruje se vrátí pomocí odkazu na paměti přidělené volající.  
+ Výsledky `__vectorcall` funkce jsou vrácené hodnotou v registrech, pokud je to možné. Výsledky celočíselného typu, včetně struktur nebo sjednocení 8 bajtů nebo méně, jsou vrácené hodnotou v RAX. Výsledky vektorového typu jsou vrácené hodnotou v XMM0 nebo YMM0, v závislosti na velikosti. Výsledky HVA mají každý datový element vrácen podle hodnoty v registrech XMM0: XMM3 nebo ymm0: ymm3, v závislosti na velikosti elementu. Typy výsledků, které se nehodí do příslušného registru se vrátil s odkazem na paměť přidělenou volajícím.  
   
- V zásobníku se spravuje pomocí volající v x64 implementace `__vectorcall`. Kód volající prolog a epilog přiděluje a vymaže zásobníku pro volaná funkce. Argumenty se instaluje v zásobníku zprava doleva a místa v zásobníku stínové přidělené argumentů předaných v registrech.  
+ Zásobník je zachován volající v x64 provádění `__vectorcall`. Kód prologu a epilogu volajícího přiděluje a maže zásobník volané funkce. Argumenty jsou posunuty v zásobníku zprava doleva a je přiděleno stínové místo zásobníku argumenty předány v registrech.  
   
  Příklady:  
   
@@ -191,17 +191,17 @@ int __cdecl main( void )
 ```  
   
 ## <a name="vectorcall-convention-on-x86"></a>konvence __vectorcall na x86  
- `__vectorcall` Způsobem konvenci volání `__fastcall` konvence pro argumenty typu 32bitové celé číslo a trvá výhod registry vektoru SSE HVA argumentů a vektoru typu.  
+ `__vectorcall` Následující konvence volání **__fastcall** konvence pro argumenty typu celého čísla 32 bitů a využívá registrů vektoru SSE pro typ vektoru a argumenty HVA.  
   
- První argumenty typu dva celé číslo najít v seznamu parametrů zleva doprava jsou umístěny v ECX a EDX, v uvedeném pořadí. Skrytý `this` ukazatel je považován za první argument typu celé číslo a je předán v ECX. První argumenty typu šesti vektoru jsou předaná hodnota prostřednictvím SSE vektoru registry 0 až 5 v registrech XMM nebo YMM, v závislosti na velikosti argument.  
+ První argumenty celočíselného typu v seznamu parametrů zleva doprava jsou umístěny jeden do ECX a EDX, v uvedeném pořadí. Skrytý **to** ukazatel je považován za první argument typu integer a je předáván v ECX. Prvních šest argumentů vektorového typu jsou předávány hodnotou prostřednictvím vektorového registru SSE 0 až 5 v registrech XMM nebo YMM v závislosti na velikost argumentu.  
   
- Prvních šest vector argumenty typu, aby zleva doprava jsou předaná hodnota v registrech vektoru SSE 0 až 5. S plovoucí desetinnou čárkou a `__m128` typy se předávají v XMM registrů a `__m256` typy jsou předané YMM zaregistruje. Argumenty typu vektoru předaná registrace je přiděleno místo žádné stínové zásobníku. Argumenty typu sedmého a následné vektoru jsou předaná v zásobníku odkaz na paměti přidělené volající. Omezení kompilátoru chyby [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) nevztahuje na tyto argumenty.  
+ Prvních šest argumentů vektorových typů v pořadí zleva doprava jsou předávány hodnotou vektorového registru SSE 0 až 5. S plovoucí desetinnou čárkou a **__m128** typy jsou předány v registrech XMM a **__m256** typy jsou předány v registrech YMM zaregistruje. Žádné stínové místo zásobníku je přidělen pro argumenty vektorového typu registrem odeslán. Argumenty sedmý a následující vektorového typu jsou předány do zásobníku s odkazem na paměť přidělenou volajícím. Omezení chyby kompilátoru [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) se nevztahují na tyto argumenty.  
   
- Po registry jsou přiděleny vektoru argumenty, data členy HVA argumenty jsou přiděleny ve vzestupném pořadí k nepoužívané vektoru zaregistruje XMM0 k XMM5 závislé (nebo YMM0 k YMM5, pro `__m256` typy), a pokud nejsou k dispozici pro celý dostatek registry HVA. Pokud jsou k dispozici dostatek registrů, HVA argument předaná v zásobníku odkaz na paměti přidělené volající. Žádné místo stínové zásobníku pro HVA argument je přidělen. Argumenty HVA přiřazené k registrů v pořadí zleva doprava v seznamu parametrů a může být ve všech pozici.  
+ Po přidělení registrů vektorovým argumentům datové členy argumentů HVA přiděleny vzestupně nepoužívaným vektorovým registrům XMM0 až XMM5 (nebo YMM0 k YMM5, pro **__m256** typy), dokud nejsou k dispozici dostatek registrů k dispozici pro celé HVA. Pokud jsou k dispozici dostatek registrů, HVA argument je předán do zásobníku s odkazem na paměť přidělenou volajícím. Místo ve stínovém zásobníku pro HVA argument je přidělen. Argumenty HVA jsou přiřazeny k registrům v pořadí zleva doprava v seznamu parametrů a mohou být v jakékoliv pozici.  
   
- Výsledky `__vectorcall` se funkce vrátí hodnotu ve registrů, pokud je to možné. Výsledky typu integer, včetně struktury a sjednocení 4 bajtů nebo méně, se vrátí hodnotu ve EAX. Podle hodnoty v EDX:EAX jsou vráceny struktury typ celé číslo nebo sjednocení 8 bajtů nebo méně. Vektor typ výsledky se vrátí hodnotu ve XMM0 nebo YMM0, v závislosti na velikosti. Výsledky HVA musí každý datový prvek vrácené hodnoty v XMM0:XMM3 registry nebo YMM0:YMM3, v závislosti na velikosti elementu. Ostatní typy výsledků se vrátí pomocí odkazu na paměti přidělené volající.  
+ Výsledky `__vectorcall` funkce jsou vrácené hodnotou v registrech, pokud je to možné. Hodnota v eax VRÁTÍ jsou vráceny výsledky celočíselného typu, včetně struktur nebo sjednocení 4 bajtů nebo méně. Hodnota EDX: eax vrátí jsou vrácené struktury celočíselného typu nebo sjednocení 8 bajtů nebo i rychleji. Výsledky vektorového typu jsou vrácené hodnotou v XMM0 nebo YMM0, v závislosti na velikosti. Výsledky HVA mají každý datový element vrácen podle hodnoty v registrech XMM0: XMM3 nebo ymm0: ymm3, v závislosti na velikosti elementu. Ostatní typy výsledků jsou vráceny s odkazem na paměť přidělenou volajícím.  
   
- X86 implementace `__vectorcall` způsobem konvence argumenty nabídnutých v zásobníku zprava doleva volající a volaná funkce vymaže zásobníku těsně před vrátí. V zásobníku se odesílají pouze argumenty, které nejsou umístěné v registrech.  
+ X86 provádění `__vectorcall` následuje konvenci argumentů předaných v zásobníku zprava doleva volajícím a volané funkce vymaže zásobníku těsně před vrácením. Pouze argumenty, které nejsou uloženy v registrech, jsou odeslány do zásobníku.  
   
  Příklady:  
   
@@ -296,7 +296,7 @@ int __cdecl main( void )
   
 ```  
   
- **Konkrétní Microsoft end**  
+ **Specifické pro end Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)   

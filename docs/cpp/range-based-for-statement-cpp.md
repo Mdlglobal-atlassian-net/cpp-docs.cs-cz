@@ -1,5 +1,5 @@
 ---
-title: Na základě rozsahu pro příkaz (C++) | Microsoft Docs
+title: Range-based for Statement (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947628"
 ---
 # <a name="range-based-for-statement-c"></a>Příkaz For založený na rozsahu (C++)
 Vykoná příkaz `statement` opakovaně a sekvenčně pro každý prvek výrazu `expression`.  
@@ -25,16 +26,16 @@ Vykoná příkaz `statement` opakovaně a sekvenčně pro každý prvek výrazu 
   
 ```  
   
-      for ( for-range-declaration : expression )  
+for ( for-range-declaration : expression )  
    statement   
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použijte založený na rozsahu `for` příkaz k vytvoření smyčky, které musí být spuštěn prostřednictvím "rozsah", která je definována jako všechno, co můžete iterovat – například `std::vector`, nebo jiné pořadí standardní knihovna C++, jejichž rozsah je definované `begin()` a `end()`. Jméno, které je deklarováno v oblasti `for-range-declaration`, je lokální pro příkaz `for` a nemůže být předeklarováno ve výrazu `expression` nebo příkazu `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) – klíčové slovo je upřednostňováno v `for-range-declaration` část příkazu. 
+ Použít rozsahový **pro** příkaz k vytvoření smyček, které jsou vykonány skrze "rozsah", který je definován jako cokoli, co lze iterovat – například `std::vector`, nebo všechny ostatní standardní knihovny C++ pořadí rozsahem je definován `begin()` a `end()`. Název, který je deklarován v `for-range-declaration` je lokální pro **pro** příkazu a nemůže být předeklarováno ve `expression` nebo `statement`. Všimněte si, že [automaticky](../cpp/auto-cpp.md) je preferováno klíčové slovo `for-range-declaration` část příkazu. 
 
- **Nové ve Visual Studio 2017:** na základě rozsahu pro smyčky už nevyžadují, aby begin() a end() vrátí objekty stejného typu. To umožňuje end() vrátit objekt sentinel, jako používá rozsahy definovaným v návrhu rozsahy V3. Další informace najdete v tématu [generalizací založený na rozsahu Smyčka For](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
+ **Novinka v sadě Visual Studio 2017:** Range-based pro smyčky už nevyžadují, aby begin() a end() vrací objekty stejného typu. To umožňuje end() vrátí objekt sentinel, například používané rozsahy, jak je definováno v návrhu rozsahy V3. Další informace najdete v tématu [zobecňuje Range-Based pro smyčky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) a [knihovny rozsah v3 na Githubu](https://github.com/ericniebler/range-v3).
   
- Tento kód ukazuje, jak používat na základě rozsahu `for` smyčky k iteraci v rámci pole a vektor:  
+ Tento kód ukazuje, jak použít rozsahový **pro** smyčky pro iteraci polem a vektorem:  
   
 ```cpp  
 // range-based-for.cpp  
@@ -93,24 +94,26 @@ int main()
 ```  
   
  Zde je výstup:  
+
+```Output
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
-  
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
  `end of integer array test`  
   
  `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
   
  `end of vector test`  
+```
+
+ Range-based **pro** smyčky skončí, když jeden z těchto `statement` provádí: [přerušení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) k s popiskem příkaz mimo rozsahový **pro** smyčky. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz v možnosti range-based **pro** smyčku ukončí pouze aktuální iteraci.  
   
- Rozsah založené `for` smyčky ukončí, pokud některá z těchto `statement` se spustí: [zalomení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) pro příkaz s popiskem mimo na základě rozsahu **pro** smyčky. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz rozsah založený na `for` ukončí jenom na aktuální iteraci smyčky.  
-  
- Při použití rozsahového klíčového slova `for` je třeba pamatovat na následující:  
+ Mějte na paměti tyto skutečnosti o založený na rozsahu **pro**:  
   
 -   Automaticky rozpozná pole.  
   
@@ -121,7 +124,7 @@ int main()
 ## <a name="see-also"></a>Viz také  
  [Automaticky](../cpp/auto-cpp.md)   
  [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [while – příkaz (C++)](../cpp/while-statement-cpp.md)   
  [Proveďte-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)   
  [for – příkaz (C++)](../cpp/for-statement-cpp.md)

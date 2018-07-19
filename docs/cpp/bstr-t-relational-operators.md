@@ -1,5 +1,5 @@
 ---
-title: _bstr_t – relační operátory | Microsoft Docs
+title: _bstr_t – relační operátory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,14 +39,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 556a56de97c6e1b547b9a67387acfcdd3205913c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40834c7c41bc19b395958b4a173a68bd014b2e70
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947641"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t – relační operátory
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Porovná dva `_bstr_t` objekty.  
   
@@ -54,31 +55,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator!( ) const throw( );   
-bool operator==(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator!=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>=(  
-   const _bstr_t& str   
-) const throw( );  
+bool operator!( ) const throw( );   
+bool operator==(const _bstr_t& str) const throw( );  
+bool operator!=(const _bstr_t& str) const throw( );  
+bool operator<(const _bstr_t& str) const throw( );  
+bool operator>(const _bstr_t& str) const throw( );  
+bool operator<=(const _bstr_t& str) const throw( );  
+bool operator>=(const _bstr_t& str) const throw( );  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto operátory porovnávají dva objekty `_bstr_t` lexikograficky. Operátory vrátit **true** při jejich porovnání blokaci, jinak vrátí **false**.  
+ Tyto operátory porovnávají dva objekty `_bstr_t` lexikograficky. Operátory vrací TRUE, pokud porovnání projdou, jinak vrátí FALSE.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

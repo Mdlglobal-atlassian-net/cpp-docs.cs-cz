@@ -1,5 +1,5 @@
 ---
-title: poisson_distribution – třída | Microsoft Docs
+title: poisson_distribution – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d88359bbf1521ad9fa464f22149c82497101ecb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857282"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961623"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution – třída
 
-Generuje hodnotu Poissonovo rozdělení.
+Generuje Poissonovo rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,30 +77,30 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* výsledný typ celé číslo, výchozí nastavení je `int`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*IntType* typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje distribuce, která vytváří hodnoty definované uživatelem integrální typu s hodnotu Poissonovo rozdělení. Následující tabulka odkazy na články o jednotlivé členy.
+Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného integrálového typu s Poissonovo rozdělení. Následující tabulka odkazuje na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
 |`poisson_distribution::operator()`||[param_type](#param_type)|
 
-Funkce vlastnost `mean()` vrací hodnotu pro parametr uložené distribuční *znamenat*.
+Funkce vlastností `mean()` vrátí hodnotu pro parametr uložené distribuce *znamenat*.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.
+Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
 
-`min()` a `max()` členské funkce vrátí nejmenší možný výsledek a největší možné výsledek, v uvedeném pořadí.
+`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
 
-`reset()` – Členská funkce zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
 
-`operator()` Členské funkce vrátí další generované hodnoty, které jsou založené na modulu URNG buď z aktuální parametr balíček nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
 
-Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
-Podrobné informace o hodnotu Poissonovo rozdělení, najdete v článku Wolfram MathWorld [hodnotu Poissonovo rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401112).
+Podrobné informace o Poissonovo rozdělení, najdete v článku Wolfram MathWorld [Poissonovo rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401112).
 
 ## <a name="example"></a>Příklad
 
@@ -202,13 +202,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
 
-Vytvoří rozdělení.
+Vytvoří rozložení.
 
 ```cpp
 explicit poisson_distribution(RealType mean = 1.0);
@@ -217,21 +217,21 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*znamenat* `mean` distribuční parametr.
+*znamenají* `mean` parametru distribuce.
 
-*Parametr* strukturu parametr použitý k vytvoření distribuce.
+*Parametr* parametr struktury použité k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `0.0 < mean`
+**Předběžné podmínky:** `0.0 < mean`
 
-První konstruktoru vytvoří objekt jehož uložené `mean` hodnota obsahuje hodnotu *znamenat*.
+První konstruktor vytvoří objekt, jehož uložené `mean` hodnota obsahuje hodnotu *znamenat*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
 
 ## <a name="param_type"></a>  poisson_distribution::param_type
 
-Ukládá parametry rozdělení.
+Ukládá parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -246,14 +246,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-Naleznete na stránce parametry konstruktor pro [poisson_distribution –](#poisson_distribution).
+Najdete v parametrech konstruktor [poisson_distribution –](#poisson_distribution).
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `0.0 < mean`
+**Předběžné podmínky:** `0.0 < mean`
 
-Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.
+Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Informace běhového typu | Microsoft Docs
+title: Informace běhového typu | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419989"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938912"
 ---
 # <a name="run-time-type-information"></a>Informace běhového typu
 Informace o typu modulu runtime (RTTI) je mechanismus, který umožňuje stanovit typ objektu při provádění programu. RTTI byl přidán do jazyka C++, protože mnoho dodavatelů knihoven tříd implementovalo tuto funkci samostatně. Tím došlo k nekompatibilitě mezi knihovnami. Podpora informací o typu modulu runtime na úrovni jazyka se stala samozřejmostí.  
@@ -42,7 +42,7 @@ Informace o typu modulu runtime (RTTI) je mechanismus, který umožňuje stanovi
   
 -   [Type_info](../cpp/type-info-class.md) třídy.  
   
-     Používá se pro uchovávání informací o typu vráceném operátorem `typeid`.  
+     Sloužící k uchování informací o typu vrácené **typeid** operátor.  
   
 ## <a name="see-also"></a>Viz také  
  [Přetypování](../cpp/casting.md)

@@ -1,5 +1,5 @@
 ---
-title: Explicitní vytvoření instance | Microsoft Docs
+title: Explicitní vytváření instancí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415184"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940612"
 ---
 # <a name="explicit-instantiation"></a>Explicitní vytvoření instance
 K vytvoření instance z šablony třídy nebo funkce bez jejího použití v kódu je možné použít explicitní vytvoření instance. Vzhledem k tomu, že to je užitečné při vytváření souborů knihovny (.lib), které používají šablony pro distribuci, nejsou definice šablon bez instancí vloženy do souborů objektů (.obj).  
   
- Tento kód explicitně vytvoří instanci `MyStack` pro proměnné `int` a šest položek:  
+ Tento kód explicitně vytvoří instanci `MyStack` pro **int** proměnné a šest položek:  
   
 ```cpp  
 template class MyStack<int, 6>;  
@@ -40,9 +40,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Můžete explicitně vytvořit instanci šablony funkcí s použitím konkrétního typu argument znovu deklarovat, jak je znázorněno v příkladu v [vytváření instancí šablon funkce](../cpp/function-template-instantiation.md).  
+ Lze explicitně vytvořit instanci šablony funkce s použitím specifického argumentu typu pro jejich opětovné deklarování, jak je znázorněno v příkladu v [vytváření instancí šablon funkce](../cpp/function-template-instantiation.md).  
   
- Pro zabránění automatickému vytváření instancí členů lze použít klíčové slovo `extern`. Příklad:  
+ Můžete použít **extern** – klíčové slovo zabránit automatickému vytváření instancí členů. Příklad:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -54,10 +54,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Pro zabránění kompilátoru v generování stejného kódu instance pro více než jeden modul objektů lze použít klíčové slovo `extern`. Pokud je volána funkce, je nutné vytvořit instanci funkce šablony použitím explicitně zadaných parametrů šablony v alespoň jednom propojeném modulu, jinak bude při sestavování programu vyvolána chyba linkeru.  
+ Můžete použít **extern** – klíčové slovo pro zabránění kompilátoru v generování stejného kódu instance ve více než jeden modul objektů. Pokud je volána funkce, je nutné vytvořit instanci funkce šablony použitím explicitně zadaných parametrů šablony v alespoň jednom propojeném modulu, jinak bude při sestavování programu vyvolána chyba linkeru.  
   
 > [!NOTE]
->  Klíčové slovo `extern` se ve specializaci vztahuje pouze na členské funkce definované mimo tělo třídy. Funkce definované uvnitř deklarace třídy jsou považovány za vložené funkce a instance jsou vytvořeny vždy.  
+>  **Extern** – klíčové slovo ve specializaci vztahuje pouze na členské funkce definované mimo tělo třídy. Funkce definované uvnitř deklarace třídy jsou považovány za vložené funkce a instance jsou vytvořeny vždy.  
   
 ## <a name="see-also"></a>Viz také  
  [Šablony funkcí](../cpp/function-templates.md)

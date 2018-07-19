@@ -1,5 +1,5 @@
 ---
-title: Příkazy iterace (C++) | Microsoft Docs
+title: Příkazy iterace (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1973223d6aab44d4c5d8652111d3e6b8251676fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418910"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939426"
 ---
 # <a name="iteration-statements-c"></a>Příkazy iterace (C++)
-Příkazy iterace způsobit příkazy (nebo složené příkazy) být provedeny v počtu nula či více dobu, může některá kritéria ukončení smyčky. Když jsou tyto příkazy složené příkazy, jsou spouštěny v pořadí, s výjimkou případů, kdy buď [zalomení](../cpp/break-statement-cpp.md) příkaz nebo [pokračovat](../cpp/continue-statement-cpp.md) příkaz je zjistil.  
+Příkazy iterace způsobit, že příkazy (nebo složené příkazy) má být proveden nulakrát nebo vícekrát, v souladu s kritérií ukončení smyčky. Pokud tyto příkazy jsou složené příkazy, jsou provedeny v pořadí, kromě případů, kdy buď [přerušení](../cpp/break-statement-cpp.md) příkaz nebo [pokračovat](../cpp/continue-statement-cpp.md) příkaz dochází.  
   
- Poskytuje čtyři příkazy iterace C++ – [při](../cpp/while-statement-cpp.md), [provést](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), a [na základě rozsahu pro](../cpp/range-based-for-statement-cpp.md). Každá z těchto opakuje, dokud jeho ukončení výraz vyhodnocen jako nula (NEPRAVDA), nebo dokud ukončení smyčky je nucen se **zalomení** příkaz. Následující tabulka shrnuje tyto příkazy a jejich akce; každý je podrobněji v následujících částech.  
+ Jazyk C++ poskytuje čtyři příkazy iterace – [při](../cpp/while-statement-cpp.md), [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), a [rozsahový pro](../cpp/range-based-for-statement-cpp.md). Každá z těchto iterace, dokud jeho ukončení výraz vyhodnocen jako nula (NEPRAVDA), nebo ukončení smyčky je nucen se **přerušení** příkazu. Následující tabulka shrnuje tyto příkazy a jejich akcí. každý je podrobně popsány v následující části.  
   
 ### <a name="iteration-statements"></a>Příkazy iterace  
   
-|Příkaz|Vyhodnocovány v|Inicializace|Přírůstek|  
+|Příkaz|Vyhodnotit za|Inicializace|Přírůstek|  
 |---------------|------------------|--------------------|---------------|  
-|`while`|Začátek smyčky|Ne|Ne|  
-|**do**|Dolní části smyčky|Ne|Ne|  
-|**for**|Začátek smyčky|Ano|Ano|  
-|**na základě rozsahu pro**|Začátek smyčky|Ano|Ano|  
+|**while**|Horní části smyčky|Ne|Ne|  
+|**do**|Dolní smyčky|Ne|Ne|  
+|**for**|Horní části smyčky|Ano|Ano|  
+|**na základě rozsahu pro**|Horní části smyčky|Ano|Ano|  
   
- Příkaz část příkazu iterace nemůže být deklaraci. Však může být složené příkazu, který obsahuje deklaraci.  
+ Část příkazu iterace příkazu nemůže být deklarace. Může však být složeného příkazu, který obsahuje deklaraci.  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)

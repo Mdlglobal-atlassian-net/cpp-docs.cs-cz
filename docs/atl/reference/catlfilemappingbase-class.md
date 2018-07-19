@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlFileMappingBase | Microsoft Docs
+title: Catlfilemappingbase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364441"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883242"
 ---
-# <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase – třída
-Tato třída reprezentuje soubor mapované paměti.  
+# <a name="catlfilemappingbase-class"></a>Catlfilemappingbase – třída
+Tato třída reprezentuje soubor mapovaných do paměti.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,31 +52,31 @@ class CAtlFileMappingBase
 |Název|Popis|  
 |----------|-----------------|  
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Konstruktor|  
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Destruktor.|  
+|[Catlfilemappingbase –:: ~ catlfilemappingbase –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|Voláním této metody lze kopírovat z objekt mapování souboru.|  
-|[CAtlFileMappingBase::GetData](#getdata)|Volejte tuto metodu za účelem načtení dat z objektu mapování souboru.|  
-|[CAtlFileMappingBase::GetHandle](#gethandle)|Volejte tuto metodu vrátit popisovač souboru.|  
-|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Volejte tuto metodu za účelem načtení velikost mapování z objektu mapování souboru.|  
+|[CAtlFileMappingBase::CopyFrom](#copyfrom)|Voláním této metody lze kopírovat z objektu mapování souboru.|  
+|[CAtlFileMappingBase::GetData](#getdata)|Volejte tuto metodu za účelem získání dat z objektu mapování souboru.|  
+|[CAtlFileMappingBase::GetHandle](#gethandle)|Voláním této metody vrátí popisovač souboru.|  
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Volejte tuto metodu za účelem získání velikost mapování z objektu mapování souboru.|  
 |[CAtlFileMappingBase::MapFile](#mapfile)|Voláním této metody lze vytvořit objekt mapování souboru.|  
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Voláním této metody lze vytvořit objekt mapování souboru, která umožňuje úplný přístup do všech procesů.|  
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|Volejte tuto metodu za účelem vrací popisovač objektu mapování souboru.|  
-|[CAtlFileMappingBase::Unmap](#unmap)|Volejte tuto metodu za účelem zrušit mapování objekt mapování souboru.|  
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Volejte tuto metodu za účelem vytvoření objektu mapování souboru, který umožňuje plný přístup do všech procesů.|  
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|Voláním této metody vrátí popisovač pro objekt mapování souboru.|  
+|[CAtlFileMappingBase::Unmap](#unmap)|Volejte tuto metodu za účelem unmap objekt mapování souboru.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::operator =](#operator_eq)|Nastaví aktuální objekt mapování souboru k jinému objektu mapování souboru.|  
+|[CAtlFileMappingBase::operator =](#operator_eq)|Nastaví aktuální objekt mapování souboru na jiný objekt mapování souboru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Mapování souboru je obsah souboru přidružení část virtuální adresní prostor procesu. Tato třída poskytuje metody pro vytváření objektů mapování souboru, které umožňují programy snadný přístup a sdílet data.  
+ Mapování souboru je přidružení obsah souboru s částí virtuálního adresového prostoru procesu. Tato třída poskytuje metody pro vytváření objektů mapování souborů, které umožňují aplikacím snadný přístup k a sdílet data.  
   
- Další informace najdete v tématu [mapování souboru](http://msdn.microsoft.com/library/windows/desktop/aa366556) ve Windows SDK.  
+ Další informace najdete v tématu [mapování souboru](http://msdn.microsoft.com/library/windows/desktop/aa366556) v sadě Windows SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlfile.h  
@@ -90,16 +90,16 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `orig`  
- Původní objekt mapování souboru zkopírujte do vytvořte nový objekt.  
+ *ORIG*  
+ Původní objekt mapování souboru ke zkopírování do vytvoření nového objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří nový objekt mapování souboru, volitelně pomocí existujícího objektu. Je stále nutné volat [CAtlFileMappingBase::MapFile](#mapfile) otevřít nebo vytvořit objekt mapování souboru pro určitého souboru.  
+ Vytvoří nový objekt mapování souboru, případně můžete použít existující objekt. Je stále potřeba volat [CAtlFileMappingBase::MapFile](#mapfile) otevřít nebo vytvořit objekt mapování souboru pro určitý soubor.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  Catlfilemappingbase –:: ~ catlfilemappingbase –  
  Destruktor.  
   
 ```
@@ -107,24 +107,24 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní všechny prostředky přidělené třídy a volání [CAtlFileMappingBase::Unmap](#unmap) metoda.  
+ Uvolní všechny prostředky přidělené třídy a volání [CAtlFileMappingBase::Unmap](#unmap) metody.  
   
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
- Voláním této metody lze kopírovat z objekt mapování souboru.  
+ Voláním této metody lze kopírovat z objektu mapování souboru.  
   
 ```
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `orig`  
- Původní objekt mapování souboru pro kopírování z.  
+ *ORIG*  
+ Původní objekt mapování souboru bude kopírováno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
- Volejte tuto metodu za účelem načtení dat z objektu mapování souboru.  
+ Volejte tuto metodu za účelem získání dat z objektu mapování souboru.  
   
 ```
 void* GetData() const throw();
@@ -134,17 +134,17 @@ void* GetData() const throw();
  Vrací ukazatel na data.  
   
 ##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
- Volejte tuto metodu za účelem vrací popisovač objektu mapování souboru.  
+ Voláním této metody vrátí popisovač pro objekt mapování souboru.  
   
 ```
 HANDLE GetHandle() throw ();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač objekt mapování souboru.  
+ Vrátí popisovač pro objekt mapování souboru.  
   
 ##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
- Volejte tuto metodu za účelem načtení velikost mapování z objektu mapování souboru.  
+ Volejte tuto metodu za účelem získání velikost mapování z objektu mapování souboru.  
   
 ```
 SIZE_T GetMappingSize() throw();
@@ -157,7 +157,7 @@ SIZE_T GetMappingSize() throw();
  Podívejte se na příklad pro [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
 ##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
- Voláním této metody lze otevřít nebo vytvořit objekt mapování souboru pro zadaný soubor.  
+ Volejte tuto metodu za účelem otevřete nebo vytvořte objekt mapování souboru pro určený soubor.  
   
 ```
 HRESULT MapFile(
@@ -169,32 +169,32 @@ HRESULT MapFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
- Popisovač souboru, ve kterém vytvoříte objekt mapování. `hFile` musí být platný a nelze ji nastavit na INVALID_HANDLE_VALUE.  
+ *hfile –*  
+ Popisovač souboru, ve kterém chcete vytvořit objekt mapování. *hfile –* musí být platný a nejde ji nastavit na INVALID_HANDLE_VALUE.  
   
- `nMappingSize`  
- Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti souboru se identifikovanou pomocí *hfile –.*  
+ *nMappingSize*  
+ Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti souboru identifikovaný *hfile –.*  
   
- `nOffset`  
- Posun souboru, kde je mapování začít. Hodnota posunutí musí být násobkem členitosti přidělení paměti systému.  
+ *nOffset*  
+ Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.  
   
- `dwMappingProtection`  
- Ochrana požadovaných pro zobrazení souborů, když je mapovaný soubor. V tématu `flProtect` v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) ve Windows SDK.  
+ *dwMappingProtection*  
+ Ochrana požadovanou pro zobrazení souborů při mapování souboru. Zobrazit *flProtect* v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) v sadě Windows SDK.  
   
- `dwViewDesiredAccess`  
- Určuje typ přístupu k zobrazení souboru a tedy ochranu stránek mapovat pomocí souboru. V tématu `dwDesiredAccess` v [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) ve Windows SDK.  
+ *dwViewDesiredAccess*  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objektu mapování souboru; Pokud ano, ne všechny jeho obsah bude k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) a [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) ve Windows SDK.  
+ Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objekt mapování souboru. Pokud ano, ne veškerý obsah souboru nebudou k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) a [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
- Voláním této metody lze vytvořit objekt mapování souboru, která umožňuje úplný přístup do všech procesů.  
+ Volejte tuto metodu za účelem vytvoření objektu mapování souboru, který umožňuje plný přístup do všech procesů.  
   
 ```
 HRESULT MapSharedMem(
@@ -207,32 +207,32 @@ HRESULT MapSharedMem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMappingSize`  
- Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný `szName.`  
+ *nMappingSize*  
+ Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti objekt mapování souboru identifikovaný *szName*.  
   
- `szName`  
+ *szName*  
  Název objektu mapování.  
   
  *pbAlreadyExisted*  
- Odkazuje na BOOL hodnotu, která je nastavena na hodnotu TRUE, pokud objekt mapování už existuje.  
+ Odkazuje na hodnotu BOOL, která je nastavena na hodnotu TRUE, pokud objekt mapování již existuje.  
   
- `lpsa`  
- Ukazatel na **SECURITY_ATTRIBUTES** struktura, která určuje, zda může být vrácená popisovač zděděn podřízené procesy. V tématu *lpAttributes* v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) ve Windows SDK.  
+ *lpsa*  
+ Ukazatel `SECURITY_ATTRIBUTES` struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Zobrazit *lpAttributes* v [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) v sadě Windows SDK.  
   
- `dwMappingProtection`  
- Ochrana požadovaných pro zobrazení souborů, když je mapovaný soubor. V tématu `flProtect` v **CreateFileMapping** ve Windows SDK.  
+ *dwMappingProtection*  
+ Ochrana požadovaného pro zobrazení souborů, když je namapován soubor. Zobrazit *flProtect* v `CreateFileMapping` v sadě Windows SDK.  
   
- `dwViewDesiredAccess`  
- Určuje typ přístupu k zobrazení souboru a tedy ochranu stránek mapovat pomocí souboru. V tématu `dwDesiredAccess` v [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) ve Windows SDK.  
+ *dwViewDesiredAccess*  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- **MapShareMem** umožňuje existující objekt mapování souboru, vytvořené [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)můžete sdílet mezi procesy.  
+ `MapShareMem` Umožňuje existující objekt mapování souboru, vytvořil [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), chcete-li být sdílen mezi procesy.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
- Voláním této metody lze otevřít objekt mapování souboru s názvem pro zadaný soubor.  
+ Volejte tuto metodu za účelem otevření pojmenovaný objekt mapování souboru pro určený soubor.  
   
 ```
 HRESULT OpenMapping(
@@ -243,51 +243,51 @@ HRESULT OpenMapping(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szName`  
- Název objektu mapování. Je-li otevřít popisovač pro objekt mapování souboru s tímto názvem a popisovač zabezpečení pro objekt mapování není v konfliktu s `dwViewDesiredAccess` parametr, otevřete operace úspěšná.  
+ *szName*  
+ Název objektu mapování. Pokud není otevřený popisovač pro objekt mapování souboru s tímto názvem a popisovač zabezpečení pro objekt mapování není v konfliktu s *dwViewDesiredAccess* parametru, otevřených operace úspěšná.  
   
- `nMappingSize`  
- Velikost mapování. Pokud je 0, maximální velikost objektu mapování souboru je rovna aktuální velikosti objektu mapování souboru identifikovaný `szName.`  
+ *nMappingSize*  
+ Velikost mapování. Pokud je 0, je maximální velikost objektu mapování souboru rovná aktuální velikosti objekt mapování souboru identifikovaný *szName*.  
   
- `nOffset`  
- Posun souboru, kde je mapování začít. Hodnota posunutí musí být násobkem členitosti přidělení paměti systému.  
+ *nOffset*  
+ Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.  
   
- `dwViewDesiredAccess`  
- Určuje typ přístupu k zobrazení souboru a tedy ochranu stránek mapovat pomocí souboru. V tématu `dwDesiredAccess` v [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) ve Windows SDK.  
+ *dwViewDesiredAccess*  
+ Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](http://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- V sestavení pro ladění dojde k chybě assertion, pokud vstupní parametry jsou neplatné.  
+ V sestavení ladění dojde k chybě kontrolního výrazu, pokud vstupní parametry jsou neplatné.  
   
 ##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
- Nastaví aktuální objekt mapování souboru k jinému objektu mapování souboru.  
+ Nastaví aktuální objekt mapování souboru na jiný objekt mapování souboru.  
   
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `orig`  
+ *ORIG*  
  Aktuální objekt mapování souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na aktuální objekt.  
   
 ##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
- Volejte tuto metodu za účelem zrušit mapování objekt mapování souboru.  
+ Volejte tuto metodu za účelem unmap objekt mapování souboru.  
   
 ```
 HRESULT Unmap() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) ve Windows SDK pro další podrobnosti.  
+ Zobrazit [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) v sadě Windows SDK pro další podrobnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [CAtlFileMapping – třída](../../atl/reference/catlfilemapping-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Catlfilemapping – třída](../../atl/reference/catlfilemapping-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

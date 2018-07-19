@@ -1,5 +1,5 @@
 ---
-title: 'Datum a čas: Podpora automatizace | Microsoft Docs'
+title: 'Datum a čas: Podpora automatizace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915bcd5487f423b6240061a0e85f5554a3224397
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5f6f0c6bf9933f06da4b50f9754a0d68814e16b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357591"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883749"
 ---
 # <a name="date-and-time-automation-support"></a>Datum a čas: Podpora automatizace
-Tento článek popisuje, jak využívat výhod služeb knihovny třídy související se správou datum a čas. Popisuje postupy patří:  
+Tento článek popisuje, jak využít výhod služeb knihovny třídy související se správou data a času. Popsané postupy zahrnují:  
   
--   [Získávání aktuální čas](../atl-mfc-shared/current-time-automation-classes.md)  
+-   [Získání aktuálního času](../atl-mfc-shared/current-time-automation-classes.md)  
   
--   [Výpočet uplynulý čas](../atl-mfc-shared/elapsed-time-automation-classes.md)  
+-   [Výpočet uplynulého času](../atl-mfc-shared/elapsed-time-automation-classes.md)  
   
--   [Formátování řetězec představující datum a čas](../atl-mfc-shared/formatting-time-automation-classes.md)  
+-   [Formátování řetězcovou reprezentaci data a času](../atl-mfc-shared/formatting-time-automation-classes.md)  
   
- [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třída poskytuje způsob, jak představují informace o datu a času. Poskytuje podrobnější a větší rozsah než [CTime](../atl-mfc-shared/reference/ctime-class.md) třídy. [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) třída reprezentuje uplynulý čas, jako je rozdíl mezi dvěma `COleDateTime` objekty.  
+ [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třída poskytuje způsob, jak reprezentaci informace o datu a času. Poskytuje rozlišovací schopnosti a větší rozsah než [CTime](../atl-mfc-shared/reference/ctime-class.md) třídy. [Coledatetimespan –](../atl-mfc-shared/reference/coledatetimespan-class.md) třída reprezentuje uplynulého času, jako je rozdíl mezi dvěma `COleDateTime` objekty.  
   
- `COleDateTime` a `COleDateTimeSpan` třídy jsou určeny k použití s `COleVariant` třída používaná v automatizace. `COleDateTime` a `COleDateTimeSpan` jsou také užitečná při programování MFC databáze, ale lze ji použít vždy, když chcete k manipulaci se hodnoty data a času. I když `COleDateTime` třída má větší rozsah hodnot a podrobnější než `CTime` třída, vyžaduje další úložiště na objekt, než `CTime`. Existují také některé důležité informace při práci s základní **datum** typu. V tématu [typ DATE](../atl-mfc-shared/date-type.md) další podrobnosti o provádění **datum**.  
+ `COleDateTime` a `COleDateTimeSpan` třídy jsou navrženy tak, která se použije `COleVariant` Třída použitá ve službě Automation. `COleDateTime` a `COleDateTimeSpan` jsou také užitečná při programování knihovny MFC databáze, ale lze je použít kdykoli budete chtít pracovat s hodnotami data a času. I když `COleDateTime` třída má větší rozsah hodnot a rozlišovací schopnosti než `CTime` třídy, vyžaduje další úložiště na objekt, než `CTime`. Nejsou zde také některé speciální aspekty při práci s podkladovým typem datum. Zobrazit [typ data](../atl-mfc-shared/date-type.md) podrobné informace o provádění datum.  
   
- `COleDateTime` objekty lze používá k reprezentování kalendářní data mezi 1. leden 100 a 31. prosince 9999. `COleDateTime` objekty jsou plovoucí hodnoty bodu s rozlišení odpovídající 1 milisekundu. `COleDateTime` je založena na **datum** datového typu, definovaného v dokumentaci k MFC pod [COleDateTime::operator datum](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). Skutečné implementace **datum** přesahuje tyto hranice. `COleDateTime` Implementace ukládá tyto hranice usnadňuje práci s třídou.  
+ `COleDateTime` objekty lze použít k reprezentaci kalendářní data mezi 1 leden 100 až 31. prosince 9999. `COleDateTime` objekty jsou hodnoty plovoucího bodu, s rozlišením přibližně 1 milisekunda. `COleDateTime` je založen na datový typ DATE definované v dokumentaci knihovny MFC v [COleDateTime::operator datum](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). Skutečná implementace datum se rozpíná za tyto hranice. `COleDateTime` Implementace má tyto hranice pro usnadnění práce s třídou.  
   
- `COleDateTime` nepodporuje juliánský data. Gregoriánský kalendář se předpokládá, že rozšíření na 1. leden 100 zpět v čase.  
+ `COleDateTime` nepodporuje juliánský data. Gregoriánský kalendář je považován za rozšíření zpět v čase do 1. leden 100.  
   
- `COleDateTime` ignoruje letní čas (letní čas). Následující příklad kódu porovná dvě metody výpočtu časový interval, který protne datum přepnutí DST: jeden pomocí CRT a na jiných pomocí `COleDateTime`. DST přepne, ve většině, druhý týden v dubnu a třetí v říjnu.  
+ `COleDateTime` ignoruje letního času (DST). Následující příklad kódu porovná dvě metody pro výpočet časový interval, který překročí datum letního času přepnutí: jeden pomocí CRT a na další pomocí `COleDateTime`. Letního času se přepne, ve většině prostředí, druhý týden v dubnu na trh a třetí v říjnu.  
   
- První metoda nastaví dva `CTime` objekty, *čas1* a *time2*, duben 5 a 6. dubna, pomocí standardní struktury typu C **tm** a `time_t`. Kód zobrazí *čas1* a *time2* a časový interval mezi nimi.  
+ První metoda nastaví `CTime` objekty, *čas1* a *time2*, duben 5 a 6. dubna, pomocí standardního typu struktury C `tm` a `time_t`. Zobrazení kódu *čas1* a *time2* a časový rozsah mezi nimi.  
   
- Druhá metoda vytvoří dvě `COleDateTime` objekty, `oletime1` a `oletime2`a nastaví je stejná data jako *čas1* a *time2*. Zobrazuje `oletime1` a `oletime2` a časový interval mezi nimi.  
+ Druhá metoda vytvoří dva `COleDateTime` objekty, `oletime1` a `oletime2`a nastaví na stejná data jako *čas1* a *time2*. Zobrazí se `oletime1` a `oletime2` a časový rozsah mezi nimi.  
   
- CRT správně vypočítá rozdíl 23 hodin. `COleDateTimeSpan` vypočítá rozdíl 24 hodin.  
+ CRT správně vypočítá rozdíl ve 23 hodin. `COleDateTimeSpan` vypočítá rozdíl 24 hodin.  
   
- Upozorňujeme, že alternativní řešení je u konce v příkladu se zobrazí datum správně pomocí `COleDateTime::Format`. Najdete v článku znalostní báze Knowledge Base "chyb: Format("%D") nezdaří `COleDateTime` a `COleDateTimeSpan`" (Q167338).  
+ Všimněte si, že řešení se blíží ke konci příklad zobrazí datum pomocí správně `COleDateTime::Format`. Najdete v článku znalostní báze Knowledge Base "Chyba: Format("%D") selže `COleDateTime` a `COleDateTimeSpan`" (Q167338).  
   
  [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]  
   

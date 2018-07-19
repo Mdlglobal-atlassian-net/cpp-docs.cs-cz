@@ -1,5 +1,5 @@
 ---
-title: Třída CDebugReportHook | Microsoft Docs
+title: Cdebugreporthook – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360247"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884360"
 ---
-# <a name="cdebugreporthook-class"></a>CDebugReportHook – třída
-Tato třída slouží k ladění sestavy poslat pojmenovaný kanál.  
+# <a name="cdebugreporthook-class"></a>Cdebugreporthook – třída
+Tato třída slouží k odesílání sestav ladění k pojmenovanému kanálu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +46,24 @@ class CDebugReportHook
 |Název|Popis|  
 |----------|-----------------|  
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Volání [SetPipeName](#setpipename), [SetTimeout](#settimeout), a [SetHook](#sethook).|  
-|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Volání [CDebugReportHook::RemoveHook](#removehook).|  
+|[Cdebugreporthook –:: ~ cdebugreporthook –](#dtor)|Volání [CDebugReportHook::RemoveHook](#removehook).|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Statické) Vlastní funkce vytváření sestav, která je byl zapojen do běhu C ladění procesu generování sestav.|  
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Statické) Vlastní vytváření sestav funkce, která je připojit vykazování procesu ladění za běhu C.|  
 |[CDebugReportHook::RemoveHook](#removehook)|Voláním této metody lze zastavit odesílání sestav ladění k pojmenovanému kanálu a obnovit předchozí háku sestavy.|  
 |[CDebugReportHook::SetHook](#sethook)|Voláním této metody lze zahájit odesílání sestav ladění k pojmenovanému kanálu.|  
-|[CDebugReportHook::SetPipeName](#setpipename)|Volejte tuto metodu a nastavit počítač a název kanálu, na které se budou odesílat sestavy ladění.|  
-|[CDebugReportHook::SetTimeout](#settimeout)|Volejte tuto metodu a nastavit čas v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.|  
+|[CDebugReportHook::SetPipeName](#setpipename)|Voláním této metody nastavte počítač a název kanálu, do které se pošlou sestav ladění.|  
+|[CDebugReportHook::SetTimeout](#settimeout)|Voláním této metody lze nastavit čas v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoření instance této třídy v sestavení pro ladění služeb nebo aplikací na odesílat sestavy ladění pojmenovaný kanál. Ladění sestavy jsou generovány při volání [_crtdbgreport –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) nebo pomocí obálku pro tuto funkci, jako [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) a [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) makra.  
+ Vytvoření instance této třídy v sestavení ladění, služby nebo aplikace zasílání zpráv o ladění k pojmenovanému kanálu. Ladění sestavy jsou generovány pomocí volání [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) nebo pomocí obálku pro tuto funkci, jako [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) a [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) makra.  
   
- Pomocí této třídy můžete interaktivně ladění součásti spuštěné v neinteraktivním [okno stanice](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
+ Použití této třídy můžete interaktivně ladění součástí, které běží neinteraktivním přístupu [okno stanice](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
   
- Všimněte si, že se odesílají zprávy ladění pomocí základního kontextu zabezpečení vlákna. Zosobnění je dočasně zakázána, aby ladění sestavy můžete zobrazit v situacích, kde zosobnění uživatelů s nízkým oprávněním probíhající, například ve webových aplikacích.  
+ Všimněte si, že se odesílají zprávy ladění pomocí základního kontextu zabezpečení vlákna. Zosobnění je dočasně zakázat, aby ladění sestavy můžete zobrazit v situacích, kde zosobnění uživatelů s nízkým oprávněním probíhat, například ve webových aplikacích.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
@@ -79,16 +79,16 @@ CDebugReportHook(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szMachineName`  
- Název počítače, které se mají posílat výstup ladění. Výchozí hodnota je v místním počítači.  
+ *szMachineName*  
+ Název počítače, na které mají být odesílána výstupu ladění. Výchozí hodnota je v místním počítači.  
   
- `szPipeName`  
- Název pojmenovaného kanálu, které se mají posílat výstup ladění.  
+ *szPipeName*  
+ Název pojmenovaného kanálu, které mají posílat výstup ladění.  
   
- `dwTimeout`  
- Doba v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.  
+ *dwTimeout*  
+ Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.  
   
-##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  Cdebugreporthook –:: ~ cdebugreporthook –  
  Volání [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
@@ -96,7 +96,7 @@ CDebugReportHook(
 ```  
   
 ##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
- Vlastní funkce vytváření sestav, která je byl zapojen do běhu C ladění procesu generování sestav.  
+ Vlastní vytváření sestav funkce, která je připojit vykazování procesu ladění za běhu C.  
   
 ```
 static int __cdecl CDebugReportHookProc(
@@ -106,22 +106,22 @@ static int __cdecl CDebugReportHookProc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `reportType`  
+ *reportType*  
  Typ sestavy (_CRT_WARN, _CRT_ERROR nebo _CRT_ASSERT).  
   
- `message`  
+ *message*  
  Řetězec zprávy.  
   
- *ReturnValue*  
- Hodnota, která má být vrácen podle [_crtdbgreport –](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
+ *returnValue*  
+ Hodnota, která má být vrácen podle [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu FALSE, pokud hák zpracovává zprávy v úplně tak, aby další vykazování se nevyžaduje. Vrátí hodnotu TRUE, pokud `_CrtDbgReport` by měl sestavy zprávu obvyklým způsobem.  
+ Vrací hodnotu FALSE, pokud háku zpracovává zprávu dotyčný zcela tak, aby další vykazování se nevyžaduje. Vrátí TRUE, pokud `_CrtDbgReport` ohlaste zprávy běžným způsobem.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkci generování sestav se pokusí otevřít pojmenovaný kanál a komunikaci s procesem na druhém konci. Pokud kanál je zaneprázdněný, generování sestav funkce počká kanálu je zdarma nebo vyprší časový limit. Časový limit může být nastavena v konstruktoru nebo volání [CDebugReportHook::SetTimeout](#settimeout).  
+ Vytváření sestav funkce se pokusí otevřít pojmenovaného kanálu a komunikaci s procesem na druhém konci. Pokud kanál je zaneprázdněný, vytváření sestav funkce počká, až do kanálu je zdarma nebo vyprší časový limit. Časový limit lze nastavit pomocí konstruktoru nebo volání [CDebugReportHook::SetTimeout](#settimeout).  
   
- Kód v této funkci se spustí v kontextu zabezpečení základní volající vlákno, to znamená, že je zakázána zosobnění dobu trvání této funkce.  
+ Kód této funkce se spustí v kontextu základního zabezpečení volajícího vlákna, to znamená, je po dobu trvání této funkce zakázaná zosobnění.  
   
 ##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  Voláním této metody lze zastavit odesílání sestav ladění k pojmenovanému kanálu a obnovit předchozí háku sestavy.  
@@ -141,10 +141,10 @@ void SetHook() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [_crtsetreporthook2 –](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) tak, aby měl ladění sestavy směrován přes [CDebugReportHookProc](#cdebugreporthookproc) k pojmenovanému kanálu. Tato třída uchovává informace o předchozích háku sestavy tak, aby je bylo možné obnovit při [RemoveHook](#removehook) je volána.  
+ Volání [_crtsetreporthook2 –](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) přehledné sestavy ladění směrován přes [CDebugReportHookProc](#cdebugreporthookproc) k pojmenovanému kanálu. Tato třída uchovává informace o předchozích háku sestavy tak, aby ji bylo možné obnovit, kdy [RemoveHook](#removehook) je volána.  
   
 ##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
- Volejte tuto metodu a nastavit počítač a název kanálu, na které se budou odesílat sestavy ladění.  
+ Voláním této metody nastavte počítač a název kanálu, do které se pošlou sestav ladění.  
   
 ```
 BOOL SetPipeName(
@@ -153,25 +153,25 @@ BOOL SetPipeName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szMachineName`  
- Název počítače, které se mají posílat výstup ladění.  
+ *szMachineName*  
+ Název počítače, na které mají být odesílána výstupu ladění.  
   
- `szPipeName`  
- Název pojmenovaného kanálu, které se mají posílat výstup ladění.  
+ *szPipeName*  
+ Název pojmenovaného kanálu, které mají posílat výstup ladění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, v případě úspěchu FALSE při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
- Volejte tuto metodu a nastavit čas v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.  
+ Voláním této metody lze nastavit čas v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.  
   
 ```
 void SetTimeout(DWORD dwTimeout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTimeout`  
- Doba v milisekundách, že tato třída počká na pojmenovaný kanál k dispozici.  
+ *dwTimeout*  
+ Doba v milisekundách, že tato třída bude čekat pojmenovaný kanál k dispozici.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy](../../atl/reference/atl-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Logický operátor negace: ! | Microsoft Docs'
+title: 'Logický operátor negace: ! | Dokumenty Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c8ad17195954feeeccb47896fa013302b6d7e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947604"
 ---
 # <a name="logical-negation-operator-"></a>Logický operátor negace: !
 ## <a name="syntax"></a>Syntaxe  
@@ -34,16 +35,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Logický operátor negace (**!**) obrátí význam jeho operand. Operand musí být aritmetického typu nebo typu ukazatele (nebo výraz, jehož výsledkem je aritmetický typ nebo typ ukazatele). Operand je implicitně převeden na typ `bool`. Výsledkem je **true** pokud převedený operand **false**; výsledkem je **false** pokud převedený operand **true**. Výsledek je typu `bool`.  
+ Operátor logické negace (**!**) změní význam jeho operandu. Operand musí být aritmetického typu nebo typu ukazatele (nebo výraz, jehož výsledkem je aritmetický typ nebo typ ukazatele). Operand je implicitně převeden na typ **bool**. Výsledkem je hodnota TRUE, pokud má převedený operand hodnotu FALSE; Výsledkem je FALSE, pokud má převedený operand hodnotu TRUE. Výsledek je typu **bool**.  
   
- Pro výraz *e*, unární výraz **! *** e* je ekvivalentní výrazu **(*** e* `==` 0), s výjimkou případů, které se účastní přetížené operátory.  
+ Pro výraz *e*, je jednočlenný výraz **! *** e* je ekvivalentní výraz **(*** e* `==` 0), s výjimkou případů, ve kterém se účastní přetížené operátory.  
   
 ## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor !  
- **Není** operátor je ekvivalentem text **!**. Existují dva způsoby pro přístup **není** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+ **Není** operátor je textový ekvivalent operátoru **!**. Existují dva způsoby přístupu k **není** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Logical_NOT_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -58,5 +59,5 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Unární aritmetické operátory](../c-language/unary-arithmetic-operators.md)

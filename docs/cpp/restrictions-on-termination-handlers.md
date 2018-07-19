@@ -1,5 +1,5 @@
 ---
-title: Omezení obslužných rutin ukončení | Microsoft Docs
+title: Omezení obslužných rutin ukončení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f35560c6f29e341b05f6b8bdf22873847644d7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420579"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941337"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Omezení obslužných rutin ukončení
-Nelze použít `goto` příkaz Přejít do `__try` příkaz bloku nebo `__finally` příkaz bloku. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete, ale přejít z `__try` příkaz bloku.) Navíc nelze vnořit obslužná rutina výjimky nebo obslužné rutiny ukončení uvnitř `__finally` bloku.  
+Nelze použít **goto** příkazu Přejít do **__try** blok příkazů nebo **__finally** blok příkazů. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete, ale přejít z celkového počtu **__try** blok příkazů.) Kromě toho nelze vnořovat obslužná rutina ukončení v případě obslužná rutina výjimky **__finally** bloku.  
   
- Kromě toho některé druhy kódu povolené v obslužné rutiny ukončení výsledkům sporná, takže byste měli použít s upozorněním, a pokud vůbec. Jedna je `goto` příkaz, který přejde z `__finally` příkaz bloku. Pokud bloku spouští jako součást normální ukončení, nedojde k žádné akci. Ale pokud je systém unwinding zásobníku, který získá unwinding zastaví a funkci current řídit, jako kdyby nebyla žádná abnormální ukončení.  
+ Kromě toho některé druhy kód v obslužné rutiny ukončení výsledkům sporné, proto byste měli použít opatrně, a pokud vůbec. Je **goto** příkaz, který vrací z celkového počtu **__finally** blok příkazů. Pokud blok se provádí jako součást normální ukončení, neobvyklé nic se nestane. Ale pokud systému je odvíjení zásobníku, který získá odvíjení zarážky a aktuální funkci řízení jakoby nebyly žádné abnormální ukončení.  
   
- A `return` příkaz uvnitř `__finally` blok příkazu uvede přibližně stejné situaci. Vrátí ovládací prvek pro bezprostředního volajícího funkce obsahující obslužné rutiny ukončení. Pokud v systému byla unwinding zásobníku, tento proces je zastavit a program bude pokračovat, protože, pokud by došlo bez byla vyvolána výjimka.  
+ A **vrátit** výroku uvnitř **__finally** blok příkazů představuje přibližně o stejnou situaci. Ovládací prvek vrátí volajícímu okamžitě funkce obsahující obslužné rutiny ukončení. Pokud systém byl odvíjení zásobníku, tento proces je zastaven a program pokračuje, jako kdyby byla bez výjimky vyvolána.  
   
 ## <a name="see-also"></a>Viz také  
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   

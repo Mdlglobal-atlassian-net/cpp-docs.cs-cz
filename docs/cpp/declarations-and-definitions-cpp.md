@@ -1,5 +1,5 @@
 ---
-title: Deklarace a definice (C++) | Microsoft Docs
+title: Deklarace a definice (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,35 +12,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947622"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
-Deklarace zavést názvy v programu, například názvy proměnných, obory názvů, třídy a funkce. Deklarace také určit typ informací, jakož i dalších vlastností objektu, který je právě deklarován. Název musí být deklarován před jeho použitím; v jazyce C++ bod, ve kterém je deklarovaná název určuje, zda je viditelná pro kompilátor. Nemůže odkazovat na funkci nebo třídu, která je deklarovaná novější někde v jednotce kompilace; můžete použít *předávat deklarace* získat obejít toto omezení.  
+Deklarace zavádějí názvy v programu, například názvy proměnných, obory názvů, třídy a funkce. Deklarace také zadat informace o typu, jakož i další vlastnosti objektu, který je byl deklarován. Název musí být deklarován před jeho použitím; v jazyce C++ bod, ve kterém je název deklarován Určuje, zda je viditelný pro kompilátor. Nelze se odkazovat na funkci nebo třídu, která je deklarována někdy později v jednotce kompilace; můžete použít *předat dál deklarace* jsme toto omezení.  
   
- Definice zadejte, jaký kód nebo data popisuje název. Aby bylo možné přidělit prostor úložiště pro věcí, kterou je právě deklarovaný vyžaduje kompilátor definici.  
+ Definice určit, jaký kód nebo data název popisuje. Aby bylo možné přidělit prostor úložiště pro věc, která je deklarována jako vyžaduje kompilátor definici.  
   
 ## <a name="declarations"></a>Deklarace  
- Deklaraci představuje jeden nebo více názvů do programu. Deklarace můžete v programu vyskytnout více než jednou. Proto třídy, struktury, výčet typů a další uživatelem definované typy lze deklarovat pro každou jednotku kompilace. Omezení pro tuto deklaraci více je, že všechny deklarace, musí být identické. Deklarace taky sloužit jako definice, s výjimkou případů, kdy deklaraci:  
+ Deklarace jednoho nebo více názvů zavádí do programu. Deklarace může v jednom programu vyskytují víc než jednou. Proto tříd, struktur, výčtu typů a dalších uživatelem definované typy mohou být deklarovány pro každou jednotku kompilace. Omezení u této deklarace více je, že všechny deklarace musí být identické. Deklarace také slouží jako definice, kromě případů, kdy deklarace:  
   
-1.  Je funkce prototyp (deklaraci funkce s žádné tělo funkce).  
+1.  Je prototyp funkce (deklarace funkce s žádná tělo funkce).  
   
-2.  Obsahuje `extern` specifikace, ale žádné inicializátoru (objekty a proměnné) nebo tělo funkce (funkce). To označuje, že definice není nutně aktuální jednotku překlad poskytuje název externí propojení.  
+2.  Obsahuje **extern** specifikátor, ale žádný inicializátor (objekty a proměnné) nebo tělo funkce (funkce). Znamená to, že definice není nutně v aktuální překladové jednotce a poskytuje název vnější propojení.  
   
-3.  Je členem statických dat uvnitř deklaraci třídy.  
+3.  Je statický datový člen uvnitř deklarace třídy.  
   
-     Vzhledem k tomu, že statická třída datových členů jsou proměnné diskrétní sdílí všechny objekty třídy, musí být definovaný a inicializovat mimo deklaraci třídy. (Další informace o třídy a jejich členové najdete v tématu [třídy](../cpp/classes-and-structs-cpp.md).)  
+     Protože statické datové členy třídy jsou proměnné diskrétního sdílet všechny objekty třídy, musí být definována a inicializována mimo deklaraci třídy. (Další informace o třídách a členy třídy, naleznete v tématu [třídy](../cpp/classes-and-structs-cpp.md).)  
   
-4.  Jako je název deklaraci třídy s žádné následující definice `class T;`.  
+4.  Je název deklarace třídy s žádná následující definice například `class T;`.  
   
-5.  Je `typedef` příkaz.  
+5.  Je **typedef** příkazu.  
   
- Příklady deklarace, které jsou také definice:  
+ Příkladem deklarace, které jsou také definice jsou:  
   
-```  
+```cpp 
 // Declare and define int variables i and j.  
 int i;  
 int j = 10;  
@@ -57,28 +58,28 @@ public:
 };  
 ```  
   
- Jsou některé deklarace, které nejsou definice:  
+ Některé deklarace, které nejsou definicemi jsou:  
   
-```  
+```cpp 
   
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  
   
- Název se považuje deklarovat ihned po jeho deklarátor, ale před jeho inicializátoru (volitelné). Další informace najdete v tématu [deklarace bodu](../cpp/point-of-declaration-in-cpp.md).  
+ Název se považuje za deklarovat ihned po jeho deklarátor, ale před jeho vlastním inicializátoru (volitelné). Další informace najdete v tématu [bod deklarace](../cpp/point-of-declaration-in-cpp.md).  
   
- Deklarace, ke kterým došlo v *oboru*. Obor Určuje viditelnost deklarovaný název a trvání objekt definovaný, pokud existuje. Další informace o interakci pravidla rozsahu s deklaracemi, najdete v tématu [oboru](../cpp/scope-visual-cpp.md).  
+ Probíhá deklarace *oboru*. Obor určuje, zda se název deklarován a dobu trvání objekt definovaný, případné. Další informace o interakci pravidla rozsahu s deklaracemi, naleznete v tématu [oboru](../cpp/scope-visual-cpp.md).  
   
- Deklarace objektu je také definice pokud obsahuje `extern` – specifikátor třídy úložiště popsané v [třídy úložiště](storage-classes-cpp.md). Deklaraci funkce je také definice, pokud je prototypu. Prototyp je hlavičku funkce bez definující tělo funkce. Definici objektu způsobí, že přidělení úložiště a odpovídající inicializacích pro tento objekt.  
+ Deklarace objektu je také definice neobsahuje **extern** – specifikátor třídy úložiště popsané v [třídy úložiště](storage-classes-cpp.md). Deklarace funkce je také definice, pokud je prototyp. Prototyp se hlavička funkce bez definování těla funkce. Definice objektu způsobí, že přidělení úložiště a odpovídající inicializace pro daný objekt.  
   
 ## <a name="definitions"></a>Definice  
- Definice je jedinečný specifikace objektu nebo proměnné, funkce, třída nebo enumerátor. Protože definice musí být jedinečný, program může obsahovat pouze jednu definici pro daný program element. Může být n 1 propojeni deklarace a definice. Existují dva případy, ve kterých můžete deklarovaný program element a není definován:  
+ Definice je jedinečný specifikace objektu nebo proměnné, funkce, třídy nebo výčtu. Vzhledem k tomu, že definice musí být jedinečný, program může obsahovat jenom jednu definici pro danou aplikaci prvku. Může existovat vztahu mnoha k jednomu jinému mezi deklarace a definice. Existují dva případy, ve kterých prvek programu deklarovány a není definována:  
   
-1.  Funkce je deklarovaná, ale nikdy odkazuje volání funkce nebo s výraz, který přebírá adresu funkce.  
+1.  Funkce je deklarovaná, ale nikdy odkazována pomocí volání funkce nebo výraz přebírající adresu funkce.  
   
-2.  Třída se používá pouze způsobem, který nevyžaduje být známé jeho definice. Třída, však musí být deklarován. Následující kód ukazuje takovém případě:  
+2.  Třída se používá pouze způsobem, který nevyžaduje znát jeho definici. Třídy však musí být deklarována. Následující kód znázorňuje takový případ:  
   
-    ```  
+    ```cpp 
     // definitions.cpp  
     class WindowCounter;   // Forward declaration; no definition  
   

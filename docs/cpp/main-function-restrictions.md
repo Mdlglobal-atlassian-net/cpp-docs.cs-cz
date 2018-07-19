@@ -1,5 +1,5 @@
 ---
-title: Main – omezení funkce | Microsoft Docs
+title: Main – omezení funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419682"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941743"
 ---
 # <a name="main-function-restrictions"></a>main – omezení funkce
-Několik omezení se vztahují na **hlavní** funkce, která se nevztahují na jiných funkcí jazyka C++. **Hlavní** funkce:  
+Vztahuje několik omezení `main` funkce, která se nedá použít u jiných funkcí jazyka C++. `main` Funkce:  
   
--   Nemohou být přetíženy (viz [přetížení funkcí](function-overloading.md)).  
+-   Nemohou být přetíženy (viz [přetížení funkce](function-overloading.md)).  
   
 -   Nelze deklarovat jako **vložené**.  
   

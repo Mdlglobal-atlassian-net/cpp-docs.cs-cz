@@ -1,5 +1,5 @@
 ---
-title: Uniform inicializace a delegování konstruktorů | Microsoft Docs
+title: Jednotné inicializace a delegování konstruktorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423519"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939829"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednotná inicializace a delegování konstruktorů
-V moderní verze jazyka C++, můžete použít *složených závorek inicializace* pro jakýkoli typ bez symbolem rovná se. Navíc můžete delegování konstruktorů zjednodušit kód, když máte více konstruktory, které provádějí podobné práci.  
+V moderním jazyce C++, můžete použít *složených závorek inicializace* pro každý typ, bez znaménko rovná se. Také vám pomůže Delegující konstruktory zjednodušit kód, když máte víc konstruktorů, které provádějí podobné úkoly.  
   
-## <a name="brace-initialization"></a>Inicializace závorek  
- Inicializace závorek můžete použít u třída, struktura nebo union. Pokud typ má výchozí konstruktor, implicitně nebo explicitně deklarovat, můžete použít výchozí inicializace závorek (s prázdnou složené závorky). Například může pomocí výchozí i jiné než výchozí závorek inicializace inicializovat následující třídy:  
+## <a name="brace-initialization"></a>Inicializace složenou závorku  
+ Inicializaci složenými můžete použít pro všechny třídy, struktury nebo sjednocení. Pokud má typ výchozí konstruktor, implicitně nebo explicitně deklarován, můžete použít výchozí inicializace složenou závorku (pomocí prázdné závorky). Například následující třídy mohou být inicializovány pomocí výchozí a inicializaci složenými nevýchozí:  
   
 ```cpp  
 #include <string>  
@@ -53,7 +53,7 @@ int main()
   
 ```  
   
- Pokud třída má jiné než výchozí konstruktory, je pořadí, ve které třídy členy zobrazí ve složené závorce inicializátoru pořadí, ve kterém příslušné parametry zobrazí v konstruktoru, není pořadí, ve které jsou deklarované členy (stejně jako u `class_a` v předchozí příklad). Jinak hodnota pokud typ nemá žádný konstruktor deklarované, pořadí členů zobrazených v inicializátoru závorek je stejný jako pořadí, ve které jsou deklarovány; v takovém případě můžete inicializovat jako řadu veřejné členy jak chcete, ale nedá přeskočit kteréhokoli člena. Následující příklad ukazuje pořadí, ve kterém se používá ve složené závorce inicializace, pokud neexistuje žádný deklarované konstruktor:  
+ Pokud třída má nevýchozí konstruktory, je pořadí, ve kterém se zobrazí odpovídající parametry v konstruktoru, není pořadí, ve kterém jsou členy deklarované pořadí, ve které třídy členů zobrazují v inicializátoru složenou závorku (stejně jako u `class_a` v předchozí příklad). Jinak Pokud typ nemá žádný konstruktor deklarovaný, pořadí, ve kterém se zobrazí členy v inicializátoru složenou závorku je stejné jako pořadí, ve kterém jsou deklarovány; v takovém případě můžete inicializovat tolik veřejné členy jak chcete, ale nelze přeskočit žádný člen. Následující příklad ukazuje pořadí, ve kterém se používá v inicializaci složenými, pokud neexistuje žádná deklarovaná konstruktor:  
   
 ```cpp  
 class class_d {  
@@ -75,7 +75,7 @@ int main()
 }   
 ```  
   
- Pokud výchozí konstruktor je explicitně deklarován ale označena k odstranění, nebude možné použít výchozí složené závorce inicializace:  
+ Pokud výchozí konstruktor explicitně deklarován ale označena k odstranění, nelze ji použít výchozí inicializaci složenými:  
   
 ```cpp  
 class class_f {  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Můžete použít složené závorce inicializace kdekoli by obvykle provádí inicializace – například jako parametr funkce nebo vrací hodnotu, nebo pomocí `new` – klíčové slovo:  
+ Můžete použít k inicializaci složenými kdekoli by obvykle provést inicializaci – například jako funkce parametr nebo návratovou hodnotu, nebo se **nové** – klíčové slovo:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,17 +100,17 @@ return { 4.5 };
   
 ```  
   
-## <a name="initializerlist-constructors"></a>initializer_list konstruktory  
- [Initializer_list třída](../standard-library/initializer-list-class.md) reprezentuje seznam objektů zadaného typu, který lze použít v konstruktoru a v jiném kontextu. Initializer_list můžete vytvořit pomocí závorek inicializace:  
+## <a name="initializerlist-constructors"></a>objekt initializer_list konstruktory  
+ [Initializer_list – třída](../standard-library/initializer-list-class.md) reprezentuje seznam objektů zadaného typu, který lze použít v konstruktoru a v jiném kontextu. Objekt initializer_list můžete sestavit s využitím inicializaci složenými:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Pokud chcete používat tuto třídu, musí obsahovat [< initializer_list >](../standard-library/initializer-list.md) záhlaví.  
+>  Chcete-li použít tuto třídu, musíte zahrnout [< initializer_list >](../standard-library/initializer-list.md) záhlaví.  
   
- `initializer_list` Lze zkopírovat. V tomto případě členů nového seznamu jsou odkazy na členy původního seznamu:  
+ `initializer_list` Je možné zkopírovat. V takovém případě členy nového seznamu jsou odkazy na členy původního seznamu:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +120,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- Třídy kontejnerů standardní knihovny a také `string`, `wstring`, a `regex`, mají `initializer_list` konstruktory. Následující příklady ukazují, jak do složených závorek inicializace pomocí těchto konstruktorů:  
+ Třídy kontejnerů standardní knihovny a také `string`, `wstring`, a `regex`, mají `initializer_list` konstruktory. Následující příklady znázorňují způsob inicializace pomocí těchto konstruktorů uzavírat do složených závorek:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -130,7 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>Delegování konstruktorů  
- Mnoho třídy mají více konstruktory, které provádějí podobné věci – například ověření parametrů:  
+ Mnoho třídy mají více konstruktorů, které podobné práce – například ověřit parametry:  
   
 ```cpp  
 class class_c {  
@@ -155,7 +155,7 @@ public:
 };  
 ```  
   
- Kód opakující se může snížit tak, že přidáte funkci, která nepodporuje všechny ověření, ale kód pro `class_c` bude možné snadněji pochopit a spravovat, pokud jeden konstruktor může delegovat některé práce na jiný. Chcete-li přidat delegování konstruktorů, použijte `constructor (. . .) : constructor (. . .)` syntaxe:  
+ Může omezení opakování kódu tak, že přidáte funkci, která nemá všech ověření, ale kód `class_c` bude snadněji pochopit a udržovat-li jeden konstruktor může delegovat některé úkoly ke druhé hodnotě. Chcete-li přidat Delegující konstruktory, použijte `constructor (. . .) : constructor (. . .)` syntaxi:  
   
 ```cpp  
 class class_c {  
@@ -181,9 +181,9 @@ int main() {
   
 ```  
   
- Krocích předchozí příklad, Všimněte si, že konstruktoru `class_c(int, int, int)` nejprve volá konstruktor `class_c(int, int)`, který volá `class_c(int)`. Každá z konstruktorů provádí pouze práci, kterou není provádí další konstruktory.  
+ Krocích předchozího příkladu, Všimněte si, že konstruktor `class_c(int, int, int)` nejprve volá konstruktor `class_c(int, int)`, která pak volá `class_c(int)`. Každá z konstruktorů provádí pouze práce, která neprovádí se konstruktory.  
   
- První konstruktor, který se nazývá inicializuje objekt tak, aby všichni její členové jsou inicializovány v daném okamžiku. Inicializace členů v konstruktoru, která deleguje jiné konstruktoru, nelze provést, jak je vidět tady:  
+ První konstruktor, který se nazývá inicializuje objekt tak, aby všichni její členové jsou inicializovány v daném okamžiku. Inicializace členů v konstruktoru, který se delegoval vůči jiným konstruktorem, nelze provést, jak je znázorněno zde:  
   
 ```cpp  
 class class_a {  
@@ -204,7 +204,7 @@ public:
   
 ```  
   
- Další příklad ukazuje použití dat člena nestatické inicializátory. Všimněte si, že pokud konstruktor inicializuje také členem daného data, je přepsat inicializátoru člen:  
+ Následující příklad ukazuje použití inicializátory nestatických dat člena. Všimněte si, že pokud konstruktor inicializuje také členem daného data, je přepsána inicializátor členu:  
   
 ```cpp  
 class class_a {  
@@ -222,7 +222,7 @@ int main() {
 }  
 ```  
   
- Syntaxe delegování konstruktor nezabrání vytvoření náhodného konstruktor rekurze – Constructor1 volá Constructor2, který volá Constructor1 – a žádné chyby jsou vyvolány, dokud nedojde k přetečení zásobníku. Je vaší povinností vyhnout cyklům.  
+ Syntaxe delegování konstruktoru není zabránit náhodnému vytvoření konstruktoru rekurze – Constructor1 volá Constructor2, která volá Constructor1 – a nejsou vyvolány žádné chyby, dokud nedojde k přetečení zásobníku. Je vaší odpovědností, abyste se vyhnuli cykly.  
   
 ```cpp  
 class class_f{  

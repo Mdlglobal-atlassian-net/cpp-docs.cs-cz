@@ -1,5 +1,5 @@
 ---
-title: Nestandardní chování | Microsoft Docs
+title: Nestandardní chování | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420292"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941795"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 V následujících oddílech jsou uvedeny některé z míst, kde implementace Visual C++ jazyka C++ nesplňuje standard C++. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).  
   
- Je uveden seznam omezení kompilátoru, která se liší od definované ve verzi C++ standard v [omezení kompilátoru](../cpp/compiler-limits.md).  
+ Seznam omezení kompilátoru, které se liší od stanovených ve standardu jazyka C++ je uveden v [omezení kompilátoru](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Kovariantní návratové typy  
- Virtuální základní třídy nejsou podporovány jako kovariantní návratové typy, pokud virtuální funkce má proměnný počet argumentů. To není v souladu s oddílem 10.3, odstavcem 7 specifikace C++ ISO. Následující ukázka nelze kompilovat, udělíte Chyba kompilátoru [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Virtuální základní třídy nejsou podporovány jako kovariantní návratové typy, pokud virtuální funkce má proměnný počet argumentů. To není v souladu s oddílem 10.3, odstavcem 7 specifikace C++ ISO. Následující ukázka nezkompiluje, hlásí chybu kompilátoru [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -71,17 +71,17 @@ int main() {
 ```  
   
 ## <a name="function-exception-specifiers"></a>Specifikátory výjimek funkcí  
- Specifikátory výjimek funkcí než `throw()` analyzovat, ale není použit. To není v souladu s oddílem 15.4 specifikace ISO C++. Příklad:  
+ Specifikátory výjimek funkcí jiné než `throw()` jsou analyzovány, ale nepoužívá se. To není v souladu s oddílem 15.4 specifikace ISO C++. Příklad:  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
 void g() throw();    // parsed and used  
 ```  
   
- Další informace o specifikace výjimek najdete v tématu [specifikace výjimek](../cpp/exception-specifications-throw-cpp.md).  
+ Další informace o specifikacích výjimek naleznete v tématu [specifikace výjimek](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- Standardní C++ stavů, které [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platným `char_type` hodnotu. Visual C++ compiler vynucuje toto omezení pro typ `char`, ale ne pro typ `wchar_t`. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.  
+ C++ standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Kompilátor Visual C++ vynucuje toto omezení pro typ **char**, ale ne pro typ `wchar_t`. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.  
   
 ```cpp  
 #include <iostream>  

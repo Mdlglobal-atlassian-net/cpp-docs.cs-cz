@@ -1,5 +1,5 @@
 ---
-title: Třída _U_STRINGorID | Microsoft Docs
+title: _U_stringorid – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359659"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886164"
 ---
-# <a name="ustringorid-class"></a>_U_STRINGorID – třída
-Tato třída argument adaptér umožňuje buď názvy prostředků ( `LPCTSTR`s) nebo ID prostředku ( **Celé_číslo**s) mají být předány funkce bez nutnosti volající převést na řetězec pomocí ID **MAKEINTRESOURCE** makro.  
+# <a name="ustringorid-class"></a>_U_stringorid – třída
+Tato třída argument adaptér umožňuje názvy prostředků (LPCTSTRs) nebo ID prostředků (uvedený), které se mají předat funkci bez nutnosti volajícího k převodu na řetězec za použití makra MAKEINTRESOURCE ID.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,25 +50,25 @@ class _U_STRINGorID
   
 |Název|Popis|  
 |----------|-----------------|  
-|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identifikátor prostředku.|  
+|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identifikátor URI.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída slouží k implementaci obálky k rozhraní API správy prostředků Windows, jako [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), a [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkce, které přijímají `LPCTSTR` argument, který může být buď v názvu prostředku nebo jeho ID.  
+ Tato třída slouží k implementaci obálky pro správu prostředků Windows API, jako [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), a [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkce, které přijímají LPCTSTR argument, který může být název prostředku nebo ID.  
   
- Třída definuje dvě přetížení konstruktor: jeden přijme `LPCTSTR` argument a dalších přijme **Celé_číslo** argument. **Celé_číslo** argument je převést na typ prostředku, který je kompatibilní s funkcí pro správu prostředků systému Windows pomocí **MAKEINTRESOURCE** makro a výsledek uložený v single – datový člen dané třídy, [m_lpstr](#_u_stringorid__m_lpstr). Argument `LPCTSTR` konstruktor ukládána přímo bez převodu.  
+ Třída definuje dvě přetížení konstruktoru: přijímá jeden LPCTSTR argument a druhý UINT argument. UINT argument je převeden na typ prostředku, který je kompatibilní s funkcí správy prostředků Windows – makro MAKEINTRESOURCE a výsledek uložený v single – datový člen třídy, [m_lpstr](#_u_stringorid__m_lpstr). Argument pro konstruktor LPCTSTR ukládána přímo bez převodu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
- Třída obsahuje hodnotu předanou buď jeho konstruktory jako veřejné `LPCTSTR` – datový člen.  
+ Třída obsahuje hodnotu předanou jako veřejné datový člen LPCTSTR některou z jejích konstruktorů.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
 ##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
- **Celé_číslo** konstruktor převede její argument pro typ prostředku, který je kompatibilní s funkcí pro správu prostředků systému Windows pomocí **MAKEINTRESOURCE** makro a výsledek je uložen v jedné třídy – datový člen, [m_lpstr](#_u_stringorid__m_lpstr).  
+ Konstruktor UINT Převede argument na typ prostředku, který je kompatibilní s funkcí správy prostředků Windows makro MAKEINTRESOURCE a výsledek je uložen v single – datový člen třídy, [m_lpstr](#_u_stringorid__m_lpstr).  
   
 ```
 _U_STRINGorID(UINT nID);  
@@ -76,14 +76,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID prostředku.  
   
- `lpString`  
+ *lpString*  
  Název prostředku.  
   
 ### <a name="remarks"></a>Poznámky  
- Argument `LPCTSTR` konstruktor ukládána přímo bez převodu.  
+ Argument pro konstruktor LPCTSTR ukládána přímo bez převodu.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

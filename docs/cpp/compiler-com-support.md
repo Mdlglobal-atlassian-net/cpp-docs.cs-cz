@@ -1,5 +1,5 @@
 ---
-title: Podpora kompilátoru modelu COM | Microsoft Docs
+title: Podpora kompilátoru modelu COM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412709"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941824"
 ---
 # <a name="compiler-com-support"></a>Podpora kompilátoru modelu COM
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Visual C++ compiler může přímo číst knihovny typů model (COM) objekt součásti a převede obsah do zdrojového kódu C++, které můžou být součástí kompilace. Jazyková rozšíření jsou k dispozici pro usnadnění COM programování na straně klienta.  
+ Kompilátor Visual C++ může přímo číst knihovny typů object model (COM) komponenty a přeloží obsah do zdrojového kódu jazyka C++, které mohou být součástí kompilace. Jazyková rozšíření jsou k dispozici pro usnadnění COM programování na straně klienta.  
   
- Pomocí [#import – direktiva preprocesoru](../preprocessor/hash-import-directive-cpp.md), kompilátor může číst knihovny typů a převést jej do souboru záhlaví C++, který popisuje knihovny COM rozhraní jako třídy. Sadu `#import` atributy je k dispozici pro uživatelský ovládací prvek obsahu pro výsledný soubory hlaviček knihovny typu.  
+ S použitím [#import – direktiva preprocesoru](../preprocessor/hash-import-directive-cpp.md), kompilátor může číst knihovnu typů a převést ji do soubor hlaviček jazyka C++, který popisuje COM rozhraní jako třídy. Sada `#import` atributy je k dispozici pro uživatelský ovládací prvek obsahu pro výsledný souborů hlaviček knihoven typů.  
   
- Můžete použít [__declspec](../cpp/declspec.md) rozšířených atributů [uuid](../cpp/uuid-cpp.md) přiřadit objektu COM globálně jedinečný identifikátor (GUID). Klíčové slovo [__uuidof –](../cpp/uuidof-operator.md) slouží k extrakci identifikátor GUID přidružený k objektu COM. Jiné `__declspec` atribut [vlastnost](../cpp/property-cpp.md), lze použít k určení **získat** a **nastavit** metody pro člena data objektu COM.  
+ Můžete použít [__declspec](../cpp/declspec.md) rozšířeného atributu [uuid](../cpp/uuid-cpp.md) přiřadit objekt modelu COM globálně jedinečný identifikátor (GUID). Klíčové slovo [__uuidof](../cpp/uuidof-operator.md) je možné extrahovat identifikátor GUID přidružený objekt modelu COM. Jiné `__declspec` atribut [vlastnost](../cpp/property-cpp.md), lze použít k určení **získat** a **nastavit** metody pro datový člen objektu modelu COM.  
   
- Poskytuje sadu COM podporu globální funkce a třídy pro podporu **VARIANT** a `BSTR` typy, implementovat chytré ukazatele a zapouzdřují objekt chyba vyvolané `_com_raise_error`:  
+ Sada třídy a globální funkce modelu COM podpora se poskytuje pro podporu `VARIANT` a `BSTR` typy, implementovat inteligentní ukazatele a zapouzdření objektu chyby vyvolané `_com_raise_error`:  
   
 -   [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "32412709"
   
 -   [_variant_t](../cpp/variant-t-class.md)  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy podpory modelu comp kompilátoru](../cpp/compiler-com-support-classes.md)   
+ [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)   
  [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

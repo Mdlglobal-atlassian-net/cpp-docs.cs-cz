@@ -1,5 +1,5 @@
 ---
-title: Třída IServiceProviderImpl | Microsoft Docs
+title: Iserviceproviderimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e298f8398041b7b83a581b95f95c4ff9521cd4b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363671"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883603"
 ---
-# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl – třída
+# <a name="iserviceproviderimpl-class"></a>Iserviceproviderimpl – třída
 Tato třída poskytuje výchozí implementaci třídy `IServiceProvider` rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -37,8 +37,8 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `IServiceProviderImpl`.  
+ *T*  
+ Vaše třída odvozena od `IServiceProviderImpl`.  
   
 ## <a name="members"></a>Členové  
   
@@ -46,16 +46,16 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IServiceProviderImpl::QueryService](#queryservice)|Vytvoří nebo přistupovat ke službě zadaný a vrátí ukazatele rozhraní k zadanému rozhraní pro službu.|  
+|[IServiceProviderImpl::QueryService](#queryservice)|Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IServiceProvider` Rozhraní vyhledá službu určeného její identifikátor GUID a vrátí ukazatel rozhraní pro požadované rozhraní služby. Třída `IServiceProviderImpl` poskytuje výchozí implementaci tohoto rozhraní.  
+ `IServiceProvider` Rozhraní vyhledá službu určené její identifikátor GUID a vrátí ukazatel rozhraní pro požadované rozhraní ve službě. Třída `IServiceProviderImpl` poskytuje výchozí implementaci tohoto rozhraní.  
   
- **IServiceProviderImpl** Určuje jednu metodu: [služby QueryService](#queryservice), který vytvoří nebo přistupovat ke službě zadaný a vrátí ukazatele rozhraní k zadanému rozhraní pro službu.  
+ `IServiceProviderImpl` Určuje jednu metodu: [služby QueryService](#queryservice), který vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.  
   
- `IServiceProviderImpl` používá mapy služeb, počínaje [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) a konče [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
+ `IServiceProviderImpl` využívá mapu služeb, počínaje [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) a konče [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
- Mapy služeb obsahuje dvě položky: [SERVICE_ENTRY](service-map-macros.md#service_entry), což naznačuje id zadané služby (SID) nepodporuje objekt, a [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), který volá `QueryService` do řetězce do jiného objekt.  
+ Mapy služeb obsahuje dvě položky: [SERVICE_ENTRY](service-map-macros.md#service_entry), což znamená id zadané služby (SID) podporována objektem, a [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), který volá `QueryService` řetězce do jiného objekt.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IServiceProvider`  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
  **Záhlaví:** atlcom  
   
 ##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
- Vytvoří nebo přistupovat ke službě zadaný a vrátí ukazatele rozhraní k zadanému rozhraní pro službu.  
+ Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.  
   
 ```
 STDMETHOD(QueryService)(
@@ -76,40 +76,40 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [V] `guidService`  
+ [IN] *guidService*  
  Ukazatel na identifikátor služby (SID).  
   
- [V] `riid`  
- Identifikátor rozhraní, ke kterému má volající získat přístup.  
+ [IN] *riid*  
+ Identifikátor rozhraní, ke kterému volající získat přístup.  
   
- [OUT] `ppvObj`  
- Nepřímý ukazatel na požadované rozhraní.  
+ [OUT] *ppvObj*  
+ Nepřímé ukazatel na požadované rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrácený `HRESULT` hodnota je jeden z následujících:  
+ Vrácená hodnota HRESULT je jedním z následujících akcí:  
   
 |Návratová hodnota|Význam|  
 |------------------|-------------|  
-|S_OK|Služba byla úspěšně vytvořit nebo načíst.|  
-|E_INVALIDARG|Jeden nebo více parametrů je neplatný.|  
-|E_OUTOFMEMORY|Velikost paměti je nedostatečná pro vytvoření služby.|  
-|E_UNEXPECTED|Došlo k neznámé chybě.|  
+|S_OK|Služby byl úspěšně vytvořen nebo načten.|  
+|E_INVALIDARG|Jeden nebo více argumentů je neplatný.|  
+|E_OUTOFMEMORY|Paměti není dostatečná k vytvoření služby.|  
+|E_UNEXPECTED, JE-|Došlo k neznámé chybě.|  
 |E_NOINTERFACE|Požadované rozhraní není součástí této služby nebo služby neznámý.|  
   
 ### <a name="remarks"></a>Poznámky  
- `QueryService` Vrátí nepřímý ukazatel požadované rozhraní v zadaná služba. Volající zodpovídá za vydání tento ukazatel, když se už nevyžaduje.  
+ `QueryService` Vrátí nepřímým ukazatel na požadované rozhraní v zadaná služba. Volající zodpovídá za uvolňuje tento ukazatel, když se už nevyžaduje.  
   
- Při volání `QueryService`, předáte identifikátor služby ( `guidService`) a identifikátor rozhraní ( `riid`). `guidService` Určuje službu, na který má přístup, a `riid` identifikuje rozhraní, které je součástí služby. Naopak se zobrazí nepřímých ukazatel na rozhraní.  
+ Při volání `QueryService`, předáte identifikátor služby (*guidService*) a identifikátor rozhraní (*riid*). *GuidService* určuje služby, ke kterému chcete získat přístup, a *riid* identifikuje rozhraní, která je součástí služby. Na oplátku obdržíte nepřímé ukazatel na rozhraní.  
   
- Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiných služeb. Zvažte následující:  
+ Objekt, který implementuje rozhraní může také implementovat rozhraní, které jsou součástí jiné služby. Vezměte v úvahu následující:  
   
--   Některé z těchto rozhraní, mohou být volitelné. Ne všechny rozhraní, které jsou definované v popisu služby nejsou nezbytně na každý implementace služby nebo na každý vráceného objektu.  
+-   Některé z těchto rozhraní může být volitelný. Ne všechna rozhraní, které jsou definované v popisu služby nejsou nutně na každou implementaci služby nebo na každý vráceného objektu.  
   
--   Na rozdíl od volání `QueryInterface`, předávání identifikátor jinou službu nemusí nezbytně znamenat, že se vrátí různé objekt modelu COM (Component Object).  
+-   Na rozdíl od volání `QueryInterface`, předávání identifikátor různé služby nemusí nutně znamenat, že se vrátí jiný objekt modelu COM (Component Object).  
   
 -   Vrácený objekt může mít další rozhraní, které nejsou součástí definice služby.  
   
- Dva různé služby, jako je například SID_SMyService a SID_SYourService, můžete obě určují použití stejné rozhraní, i když implementace rozhraní může mít nic společného mezi těmito dvěma službami. Toto funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vrátit jiný objekt než `QueryService` (SID_SYourService, IID_IDispatch). Identity – objekt není předpokládá, že když zadáte identifikátor jinou službu.  
+ Dvě různé služby, jako je například SID_SMyService a SID_SYourService, můžete i určit používá stejné rozhraní, i když implementaci rozhraní může mít nic společného mezi těmito dvěma službami. Tento postup funguje, protože volání `QueryService` (SID_SMyService, IID_IDispatch) může vrátit do jiného objektu než `QueryService` (SID_SYourService, IID_IDispatch). Identita objektu není předpokládá, že pokud zadáte identifikátor jinou službu.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

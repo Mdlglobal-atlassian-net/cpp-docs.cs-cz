@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCodeToHRESULT | Microsoft Docs
+title: _com_error::WCodeToHRESULT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dce98775007360e3fdd4177141f7a550548d3679
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413372"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939192"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Mapuje 16bitové `wCode` na 32-bit `HRESULT`.  
+ Mapuje 16bitové *wCode* 32-bit HRESULT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ ms.locfileid: "32413372"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `wCode`  
- 16bitová hodnota `wCode`, která má být mapována na 32bitovou hodnotu `HRESULT`.  
+ *WCode*  
+ 16bitové hodnoty *wCode* namapována na 32bitové HRESULT.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- 32bitová hodnota `HRESULT` mapovaná z 16bitové hodnoty `wCode`.  
+ Mapovaná z 16bitové hodnoty HRESULT 32-bit *wCode*.  
   
 ## <a name="remarks"></a>Poznámky  
- Najdete v článku [wcode –](../cpp/com-error-wcode.md) – členská funkce.  
+ Zobrazit [WCode](../cpp/com-error-wcode.md) členskou funkci.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error::WCode](../cpp/com-error-wcode.md)   

@@ -1,5 +1,5 @@
 ---
-title: __based – gramatika | Microsoft Docs
+title: __based – gramatika | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,36 +14,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409534"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939361"
 ---
 # <a name="based-grammar"></a>__based – gramatika
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Na základě adresování je užitečné, když potřebujete přesné kontrolu nad segmentu, ve kterém jsou objekty přidělené (statické a dynamické na základě dat).  
+ Na základě adresování je užitečné, když je nutné mít naprostou kontrolu nad segment, ve kterém jsou objekty přidělovány (statické a dynamické na základě dat).  
   
- Pouze formuláře na základě adres přijatelné v kompilaci 32bitové a 64bitové verze je "ukazatel", který definuje typ, který obsahuje 32bitovou nebo 64bitovou přestavění na základní 32bitovou nebo 64bitovou nebo na základě `void`.  
+ Jedinou formou adresování podle přijatelný v 32bitových a 64bitových kompilacích je "na základě ukazatel", který definuje typ, který obsahuje 32bitové nebo 64bitové posunutí se základní 32bitová nebo 64bitová verze nebo na základě **void**.  
   
 ## <a name="grammar"></a>Gramatika  
- *na základě modifikátor rozsah*:  
- **__based (***základní výraz***)**   
+ *na základě modifikátoru rozsahu*:  
+ **__based (***výraz base***)**   
   
- *základní výraz*:  
+ *výraz Base*:  
  *Based-variablebased-Abstract-declaratorsegment-namesegment-CAST*  
   
- *na základě proměnné*:  
- *Identifikátor*  
+ *na základě proměnná*:  
+ *identifikátor*  
   
- *na základě deklarátor abstraktní*:  
- *deklarátor abstraktní*  
+ *na základě abstraktní declarator*:  
+ *abstraktní deklarátor*  
   
- *Typ základního*:  
+ *Základní typ*:  
  *Název typu*  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Základní ukazatele](../cpp/based-pointers-cpp.md)

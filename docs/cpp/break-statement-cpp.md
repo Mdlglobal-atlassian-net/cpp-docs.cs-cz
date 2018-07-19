@@ -1,5 +1,5 @@
 ---
-title: BREAK – příkaz (C++) | Microsoft Docs
+title: BREAK – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947608"
 ---
 # <a name="break-statement-c"></a>break – příkaz (C++)
-`break` Příkaz ukončí provádění nejbližší obklopuje smyčky nebo podmíněného příkaz, ve kterém se zobrazí. Řízení se předá příkazu, který následuje po konci příkazu.  
+**Přerušení** příkaz ukončí vykonávání nejbližšího obklopujícího cyklu nebo podmíněného příkazu, ve kterém se zobrazí. Řízení se předá příkazu, který následuje po konci příkazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `break` Pomocí zásad správy se použije příkaz [přepínač](../cpp/switch-statement-cpp.md) příkaz a [provést](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), a [při](../cpp/while-statement-cpp.md) smyčky příkazy.  
+ **Přerušení** prohlášení se používá s podmíněným [přepnout](../cpp/switch-statement-cpp.md) příkazu a s [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), a [při](../cpp/while-statement-cpp.md) příkazy pro cykly.  
   
- V `switch` příkaz, `break` příkaz způsobí, že program, který chcete spustit další příkaz mimo `switch` příkaz. Bez `break` příkaz, každý příkaz z odpovídající `case` popisek na konec `switch` prohlášení, včetně `default` klauzule, se spustí.  
+ V **přepnout** příkazu **přerušení** příkaz způsobí, že se program spustí další příkaz mimo příkaz **přepnout** příkaz. Bez **přerušení** prohlášení, každý příkaz ze spárovaného **případ** popisek na konec objektu **přepnout** prohlášení, včetně **výchozí**klauzule, je proveden.  
   
- V smyčky `break` příkaz ukončí provádění nejbližší obklopuje `do`, `for`, nebo `while` příkaz. Řízení se předá příkazu, který následuje ukončený příkaz.  
+ Ve smyčkách **přerušení** ukončí vykonávání nejbližšího obklopujícího příkazu **proveďte**, **pro**, nebo **při** příkazu. Řízení se předá příkazu, který následuje ukončený příkaz.  
   
- V rámci vnořené příkazy `break` příkaz končí pouze `do`, `for`, `switch`, nebo `while` příkaz, který okamžitě uzavře ho. Můžete použít `return` nebo `goto` příkaz k přenosu řízení z více hluboko vnořené struktury.  
+ V rámci vnořených příkazů **přerušení** ukončí pouze příkaz **proveďte**, **pro**, **přepnout**, nebo **při**příkaz, který jej bezprostředně obklopuje. Můžete použít **vrátit** nebo **goto** příkaz k přenosu řízení z více hluboce vnořené struktury.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje způsob použití `break` příkaz v `for` smyčky.  
+ Následující kód ukazuje, jak používat **přerušení** výroky **pro** smyčky.  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- Následující kód ukazuje, jak používat `break` v `while` smyčky a `do` smyčky.  
+ Následující kód ukazuje, jak používat **přerušení** v **při** smyčky a **proveďte** smyčky.  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- Následující kód ukazuje, jak používat `break` v příkazu switch. Je nutné použít `break` ve všech případech, pokud chcete pro každý případ zpracování samostatně; pokud nepoužijete `break`, provádění kódu se k další případ.  
+ Následující kód ukazuje, jak používat **přerušení** v příkazu switch. Je nutné použít **přerušení** ve všech případech, pokud chcete jednotlivé případy zpracovat zvlášť; pokud nepoužijete **přerušení**, spouštění kódu přejde na další případ.  
   
 ```cpp  
 #include <iostream>  
@@ -158,5 +160,5 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Jump – příkazy](../cpp/jump-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [continue – příkaz](../cpp/continue-statement-cpp.md)

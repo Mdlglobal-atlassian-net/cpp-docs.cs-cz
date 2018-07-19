@@ -1,5 +1,5 @@
 ---
-title: Třída CCRTHeap | Microsoft Docs
+title: Ccrtheap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68c99d1ef7b28a9325d59db2144be11fa63cc99f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363843"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883044"
 ---
-# <a name="ccrtheap-class"></a>CCRTHeap – třída
-Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) používání haldy funkcí CRT.  
+# <a name="ccrtheap-class"></a>Ccrtheap – třída
+Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí haldy CRT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ class CCRTHeap : public IAtlMemMgr
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCRTHeap::Allocate](#allocate)|Voláním této metody lze přidělit blok paměti.|  
-|[CCRTHeap::Free](#free)|Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.|  
-|[CCRTHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.|  
-|[CCRTHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
+|[CCRTHeap::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|  
+|[CCRTHeap::Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.|  
+|[CCRTHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.|  
+|[CCRTHeap::Reallocate](#reallocate)|Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CCRTHeap` implementuje paměti pomocí CRT funkce přidělení haldy funkce, včetně [malloc –](../../c-runtime-library/reference/malloc.md), [volné](../../c-runtime-library/reference/free.md), [realloc –](../../c-runtime-library/reference/realloc.md), a [_msize –](../../c-runtime-library/reference/msize.md).  
+ `CCRTHeap` implementuje paměti pomocí CRT funkcí přidělení haldy funkcí, včetně [malloc](../../c-runtime-library/reference/malloc.md), [bezplatné](../../c-runtime-library/reference/free.md), [realloc](../../c-runtime-library/reference/realloc.md), a [_msize –](../../c-runtime-library/reference/msize.md).  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IAtlMemMgr`  
@@ -63,79 +63,79 @@ class CCRTHeap : public IAtlMemMgr
  **Záhlaví:** atlmem.h  
   
 ##  <a name="allocate"></a>  CCRTHeap::Allocate  
- Voláním této metody lze přidělit blok paměti.  
+ Volejte tuto metodu za účelem přidělení bloku paměti.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CCRTHeap::Free](#free) nebo [CCRTHeap::Reallocate](#reallocate) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CCRTHeap::Free](#free) nebo [CCRTHeap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [malloc –](../../c-runtime-library/reference/malloc.md).  
+ Implementované pomocí [malloc](../../c-runtime-library/reference/malloc.md).  
   
 ##  <a name="free"></a>  CCRTHeap::Free  
- Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti. NULL není platná hodnota a neprovede žádnou akci.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [volné](../../c-runtime-library/reference/free.md).  
+ Implementované pomocí [bezplatné](../../c-runtime-library/reference/free.md).  
   
 ##  <a name="getsize"></a>  CCRTHeap::GetSize  
- Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí velikost bloku paměti přidělené v bajtech.  
+ Vrátí velikost bloku přidělené paměti v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [_msize –](../../c-runtime-library/reference/msize.md).  
+ Implementované pomocí [_msize –](../../c-runtime-library/reference/msize.md).  
   
 ##  <a name="reallocate"></a>  CCRTHeap::Reallocate  
- Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CCRTHeap::Free](#free) k bezplatným je paměť přidělená touto metodou. Implementovaná pomocí [realloc –](../../c-runtime-library/reference/realloc.md).  
+ Volání [CCRTHeap::Free](#free) k uvolnění paměti přidělené touto metodou. Implementované pomocí [realloc](../../c-runtime-library/reference/realloc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)   
- [CComHeap – třída](../../atl/reference/ccomheap-class.md)   
- [CWin32Heap – třída](../../atl/reference/cwin32heap-class.md)   
- [CLocalHeap – třída](../../atl/reference/clocalheap-class.md)   
- [CGlobalHeap – třída](../../atl/reference/cglobalheap-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
+ [Ccomheap – třída](../../atl/reference/ccomheap-class.md)   
+ [Cwin32heap – třída](../../atl/reference/cwin32heap-class.md)   
+ [Clocalheap – třída](../../atl/reference/clocalheap-class.md)   
+ [Cglobalheap – třída](../../atl/reference/cglobalheap-class.md)   
  [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)

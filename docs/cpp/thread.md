@@ -1,5 +1,5 @@
 ---
-title: vlákno | Microsoft Docs
+title: vlákno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,52 +19,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422732"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940147"
 ---
 # <a name="thread"></a>vlákno
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-**Vlákno** modifikátor rozšířené třídy úložiště se používá k deklaraci vlákna místní proměnné. Přenosných ekvivalentní v C ++ 11 a novější, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosné kód. V systému Windows **thread_local** je implementováno s **__declspec(thread)**.
+**Vlákno** modifikátor rozšířené paměťové třídy se používá k deklarování místní proměnné vlákna. Přenosná ekvivalentní v C ++ 11 a novějším, použijte [thread_local](../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště pro přenosného kódu. Na Windows `thread_local` je implementováno s `__declspec(thread)`.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec (vlákno)** *deklarátor*  
+> **__declspec (vlákno)** *deklarátorů*  
 
 ## <a name="remarks"></a>Poznámky
 
-Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplné informace o vláken, najdete v části [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplný popis vláken naleznete v tématu [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Musíte použít deklarace lokální proměnné vláken [rozšířené syntaxe atribut](../cpp/declspec.md) a `__declspec` – klíčové slovo s **vlákno** – klíčové slovo. Například následující kód deklaruje celé číslo vlákna místní proměnné a inicializuje s hodnotou:
+Deklarace místních proměnných vlákna musí použít [rozšířené syntaxe atributů](../cpp/declspec.md) a **__declspec** – klíčové slovo se **vlákno** – klíčové slovo. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Při použití lokální proměnné vláken v dynamicky načíst knihovny, musíte mít na paměti faktory, které můžou způsobit, že místní proměnnou, která nebyla správně inicializována:
+Při použití místní proměnné vlákna v dynamicky načíst knihovny, musíte mít na paměti faktory, které může způsobit, že proměnná místního vlákna nebyla správně inicializována:
 
-1. Pokud je proměnná inicializována pomocí volání funkce (včetně konstruktory), tato funkce bude volat pouze pro vlákno, která způsobila, že binární/knihovny DLL pro načtení do procesu a pro tyto vláken, která spustí po binární knihovna DLL byla načtena. Funkce inicializace nejsou volat pro jiné vlákno, který byl již spuštěn, když knihovna DLL byla načtena. Dynamické inicializace proběhne volání DllMain pro DLL_THREAD_ATTACH, ale knihovnu DLL nikdy získá, které zprávy, není-li knihovnu DLL v procesu při spuštění vlákno.
+1. Pokud proměnná je inicializována pomocí volání funkce (včetně konstruktory), tato funkce bude volat pouze vlákna, která způsobila binární/knihovny DLL pro načtení do procesu a tato vlákna, které se spustí po načtení binárního souboru knihovny DLL. Inicializační funkce nejsou volány pro ostatní vlákna, který byl již spuštěn při načtení knihovny DLL. Dynamická inicializace probíhá na volání funkce DllMain pro DLL_THREAD_ATTACH, ale knihovny DLL nikdy získá, které zprávy, není-li knihovny DLL v procesu při spuštění vlákna.
 
-1. Místní proměnné, které jsou inicializovat staticky s konstantní hodnoty se obvykle inicializují správně na všechna vlákna. Od prosince 2017 je však známé shoda problém v kompilátoru Microsoft Visual C++, při němž constexpr proměnné přijímat dynamické místo statické inicializace.
+1. Místní proměnné vlákna, které jsou staticky inicializována s konstantní hodnoty jsou obecně správně inicializována na všech vláknech. Však k prosinci 2017 existuje problém známé shoda v kompilátoru Microsoft Visual C++, kterým proměnné constexpr přijímat dynamické místo Statická inicializace.
 
-   Poznámka: Oba tyto problémy se očekává v budoucnosti opraven aktualizací kompilátoru.
+   Poznámka: Oba zmíněné problémy jsou má být opraveno v budoucím aktualizace kompilátoru.
 
-Kromě toho musí odpovídat tyto pokyny, když deklarace místní objekty vláken a proměnné:
+Kromě toho musí dodržovat tyto pokyny při deklarování proměnné a místními objekty vlákna:
 
-- Můžete použít **vlákno** atribut pouze pro třídy a data deklarace a definice; **vlákno** nelze použít na funkce deklarace nebo definice.
+- Můžete použít **vlákno** atribut pouze pro třídy a deklarace a definice dat; **vlákno** nelze použít v deklaracích nebo definicích funkce.
 
-- Můžete zadat **vlákno** atribut pouze na datové položky s úložiště se statickými doba trvání. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a členy statických dat tříd. Nelze deklarovat automatické datové objekty s **vlákno** atribut.
+- Můžete zadat **vlákno** atribut pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Nelze deklarovat s automatické datové objekty **vlákno** atribut.
 
-- Je nutné použít **vlákno** atribut deklarace a definice objekt místní vlákno, jestli deklarace a definice nastat ve stejném souboru nebo samostatné soubory.
+- Je nutné použít **vlákno** atribut pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejném souboru nebo v samostatných souborech.
 
-- Nelze použít **vlákno** atribut jako typ modifikátoru.
+- Nelze použít **vlákno** atribut jako modifikátor typu.
 
-- Protože deklarace objektů, které používají **vlákno** atribut je povoleno, tyto dva příklady jsou sémanticky ekvivalentní:
+- Protože deklarace objektů, které používají **vlákno** atribut je povolen, tyto dva příklady jsou sémanticky ekvivalentní:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -91,11 +91,11 @@ Kromě toho musí odpovídat tyto pokyny, když deklarace místní objekty vlák
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Všimněte si, že **sizeof** výraz, který obsahuje inicializovaný objekt nepředstavuje odkaz sám na sebe a je povolený v C a C++.
+   Všimněte si, že **sizeof** výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v jazyce C a C++.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__declspec](../cpp/declspec.md)  
 [Klíčová slova](../cpp/keywords-cpp.md)  

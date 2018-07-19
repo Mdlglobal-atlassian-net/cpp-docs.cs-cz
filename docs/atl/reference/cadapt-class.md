@@ -1,5 +1,5 @@
 ---
-title: Třída CAdapt | Microsoft Docs
+title: Cadapt – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabdf0a396f50f548cbe01a765411120ff7dd9f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bf0739c92513519147e9aed3b88210c4f61d0b4
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365595"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882979"
 ---
-# <a name="cadapt-class"></a>CAdapt – třída
+# <a name="cadapt-class"></a>Cadapt – třída
 Tato šablona se používá k zabalení tříd, které mění definici operátoru address-of tak, aby vracely něco jiného než adresu objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -55,11 +55,11 @@ class CAdapt
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAdapt::operator const T &](#operator_const_t_amp)|Vrátí `const` odkaz na `m_T`.|  
+|[CAdapt::operator const T &](#operator_const_t_amp)|Vrátí **const** odkaz na `m_T`.|  
 |[CAdapt::operator T &](#operator_t_amp)|Vrátí odkaz na `m_T`.|  
-|[CAdapt::operator <](#operator_lt)|Porovná objekt přizpůsobena typu s `m_T`.|  
-|[CAdapt::operator =](#operator_eq)|Přiřadí objekt typu přizpůsobena `m_T`.|  
-|[CAdapt::operator ==](#operator_eq_eq)|Porovná objekt přizpůsobena typu s `m_T`.|  
+|[CAdapt::operator <](#operator_lt)|Porovná objekt adaptovaného typu s `m_T`.|  
+|[CAdapt::operator =](#operator_eq)|Přiřadí objekt adaptovaného typu k `m_T`.|  
+|[CAdapt::operator ==](#operator_eq_eq)|Porovná objekt adaptovaného typu s `m_T`.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -68,19 +68,19 @@ class CAdapt
 |[CAdapt::m_T](#m_t)|Adaptovaná data|  
   
 ## <a name="remarks"></a>Poznámky  
- `CAdapt` je jednoduchou šablonu slouží k zabalení třídy, které znovu definovat address-of – operátor ( `operator &`) vrátit něco jiného než adresu objektu. Příklady takových třídy ATL na `CComBSTR`, `CComPtr`, a `CComQIPtr` třídy a třídy podpory kompilátoru modelu COM, `_com_ptr_t`. Tyto třídy všechny definovat operátor adresy pro zpáteční adresa jednoho z jejich datové členy ( `BSTR` u `CComBSTR`a v případě jiné třídy ukazatele rozhraní).  
+ `CAdapt` je jednoduchá šablona slouží k zabalení tříd, které mění definici operátoru address-of (`operator &`) k vracely něco jiného než adresu objektu. Mezi příklady těchto tříd patří ATL `CComBSTR`, `CComPtr`, a `CComQIPtr` třídy a třídy podpory kompilátoru modelu COM, `_com_ptr_t`. Všechny tyto třídy mění definici operátoru z adresy vrátí adresu jednoho ze svých datových členů (v případě třídy BSTR `CComBSTR`a ukazatel rozhraní v případě jiných tříd).  
   
- `CAdapt`na primární role je skrýt operátor adresy definované třídou `T`, ještě stále si zachovat vlastnosti přizpůsobena třídy. `CAdapt` splňuje tato role tím, že se členem veřejné [m_T](#m_t), typu `T`a tak, že definujete operátory převodu, relační operátory a kopírovacího konstruktoru povolit specializací `CAdapt` být zpracována jako v případě, že jsou objekty typu `T`.  
+ `CAdapt`v primární roli je skrýt operátor address-of definovaný třídou `T`, ale stále zachovat charakteristiky této adaptované třídy. `CAdapt` splňuje tuto roli tak, že veřejný člen [m_T](#m_t), typu `T`a tak, že definujete operátory převodu, operátory porovnání a kopírovacího konstruktoru povolit specializace `CAdapt` pracovat, jako by šlo objekty typu `T`.  
   
- Třída adaptér `CAdapt` je užitečné, protože některé třídy stylu kontejneru očekávají, že moct získat adresy jejich obsažených objektů pomocí operátoru adresy. Změna definice operátoru address-of může tento požadavek zmařit a zpravidla způsobí chyby kompilace a zabrání použití neadaptovaného typu s třídami, které očekávají, že bude fungovat. `CAdapt` poskytuje způsob, jak chcete vyřešit tyto problémy.  
+ Třída adaptéru `CAdapt` je užitečné, protože některé kontejnerové třídy očekávají, že budete moci získat adresy svých obsažených objektů pomocí operátoru address-of. Změna definice operátoru address-of může tento požadavek zmařit a zpravidla způsobí chyby kompilace a zabrání použití neadaptovaného typu s třídami, které očekávají, že bude fungovat. `CAdapt` poskytuje způsob řešení těchto problémů.  
   
- Obvykle použijete `CAdapt` když chcete uložit `CComBSTR`, `CComPtr`, `CComQIPtr`, nebo `_com_ptr_t` objekty ve třídě stylu kontejneru. To se nejčastěji potřebné pro podporu standardu C ++ 11 před kontejnery standardní knihovna C++, ale C ++ 11 standardní knihovna kontejnery automaticky pracovat s typy, které mají přetížený `operator&()`. Standardní knihovna dosahuje interně pomocí [std::addressof](../../standard-library/memory-functions.md#addressof) získat true adresy objektů.  
+ Obvykle budete používat `CAdapt` kdy budete chtít ukládat `CComBSTR`, `CComPtr`, `CComQIPtr`, nebo `_com_ptr_t` ve třídě kontejnerové objekty. To se běžně potřebné pro standardní knihovny C++ kontejnery před podporou standardu C ++ 11, ale C ++ 11 kontejnery standardní knihovny automaticky fungují s typy, které přetěžují `operator&()`. Standardní knihovna toho dosahuje interně pomocí [std::addressof](../../standard-library/memory-functions.md#addressof) k získává skutečné adresy objektů.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcomcli.h  
   
 ##  <a name="cadapt"></a>  CAdapt::CAdapt  
- Konstruktory povolit objekt adaptéru tak, aby se výchozí sestavený, zkopírovaných z objektu typu přizpůsobena nebo zkopírovaných z jiného objektu adaptéru.  
+ Konstruktory povolit adaptér objektu jako výchozí vytvořený, zkopírovány z objekt adaptovaného typu nebo zkopírovaných z jiného objektu adaptér.  
   
 ```
 CAdapt();
@@ -91,24 +91,24 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Proměnná typu přizpůsobována zkopírují do nově vytvořený adaptér objektu.  
+ *rSrc*  
+ Proměnné typu adaptovaná zkopírovat do objektu nově vytvořeného adaptéru.  
   
  *rSrCA*  
- Adaptér objekt, jehož obsažené data by měla být zkopírován (nebo přesunout) do nově vytvořený adaptér objektu.  
+ Objekt adaptér jehož dat obsažených by měl zkopírovat (nebo přesunut) do nově vytvořeného adaptér objektu.  
   
 ##  <a name="m_t"></a>  CAdapt::m_T  
- Obsahuje data, přizpůsobován.  
+ Obsahuje adaptovaná data.  
   
 ```
 T m_T;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- To **veřejné** – datový člen lze přistupovat přímo nebo nepřímo s [operátor const T &](#operator_const_t_amp) a [operator T &](#operator_t_amp).  
+ To **veřejné** datový člen lze přistupovat přímo nebo nepřímo pomocí [operátor const T &](#operator_const_t_amp) a [operator T &](#operator_t_amp).  
   
 ##  <a name="operator_const_t_amp"></a>  CAdapt::operator const T&amp;  
- Vrátí **const** odkaz na [m_T](#m_t) člena, což adaptér objekt, který má být zpracován, jako by měla objekt typu `T`.  
+ Vrátí **const** odkaz [m_T](#m_t) člena, což objekt adaptér, který má zacházet, jako by šlo objekt typu `T`.  
   
 ```  
 operator const T&() const;
@@ -118,7 +118,7 @@ operator const T&() const;
  A **const** odkaz na `m_T`.  
   
 ##  <a name="operator_t_amp"></a>  CAdapt::operator T&amp;  
- Vrátí odkaz na [m_T](#m_t) člena, což adaptér objekt, který má být zpracován, jako by měla objekt typu `T`.  
+ Vrátí odkaz na [m_T](#m_t) člena, což objekt adaptér, který má zacházet, jako by šlo objekt typu `T`.  
   
 ```  
 operator T&();
@@ -128,21 +128,21 @@ operator T&();
  Odkaz na `m_T`.  
   
 ##  <a name="operator_lt"></a>  CAdapt::operator &lt;  
- Porovná objekt přizpůsobena typu s [m_T](#m_t).  
+ Porovná objekt adaptovaného typu s [m_T](#m_t).  
   
 ```
 bool operator<(const T& rSrc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Odkaz na objekt, který má být porovnána.  
+ *rSrc*  
+ Odkaz na objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výsledek porovnání mezi `m_T` a `rSrc`.  
+ Výsledek porovnání mezi `m_T` a *rSrc*.  
   
 ##  <a name="operator_eq"></a>  CAdapt::operator =  
- Operátor přiřazení přiřadí argument, `rSrc`, se data členem [m_T](#m_t) a vrátí aktuální objekt adaptéru.  
+ Operátor přiřazení přiřazuje argumentu *rSrc*, na datový člen [m_T](#m_t) a vrátí aktuální objekt adaptéru.  
   
 ```
 CAdapt& operator= (const T& rSrc);
@@ -151,27 +151,27 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Odkaz na objekt přizpůsobena typu, který se má zkopírovat. 
+ *rSrc*  
+ Odkaz na objekt adaptovaného typu, které se mají zkopírovat. 
 
- `rSrCA` Odkaz na objekt, který chcete přesunout. 
+ *rSrCA* odkaz na objekt přesunout. 
   
 ### <a name="return-value"></a>Návratová hodnota  
  Odkaz na aktuální objekt.  
   
 ##  <a name="operator_eq_eq"></a>  CAdapt::operator ==  
- Porovná objekt přizpůsobena typu s [m_T](#m_t).  
+ Porovná objekt adaptovaného typu s [m_T](#m_t).  
   
 ```
 bool operator== (const T& rSrc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Odkaz na objekt, který má být porovnána.  
+ *rSrc*  
+ Odkaz na objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výsledek porovnání mezi `m_T` a `rSrc`.  
+ Výsledek porovnání mezi `m_T` a *rSrc*.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

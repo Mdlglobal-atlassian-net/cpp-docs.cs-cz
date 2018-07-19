@@ -1,5 +1,5 @@
 ---
-title: Přírůstek a snížení přetížení operátoru (C++) | Microsoft Docs
+title: Inkrementace a dekrementace přetížení operátoru (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947716"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Přetížení operátoru inkrementace a dekrementace (C++)
 Operátory zvýšení a snížení spadají do zvláštní kategorie, protože existují dvě varianty každého z nich:  
@@ -30,14 +31,14 @@ Operátory zvýšení a snížení spadají do zvláštní kategorie, protože e
   
 -   Predekrement a postdekrement  
   
- Při zápisu funkcí přetížených operátorů může být užitečné implementovat samostatné verze pro předponovou a příponovou verzi těchto operátorů. Chcete-li rozlišit mezi těmito dvěma, dodržujte následující pravidlo: Předponový tvar operátoru je deklarován stejným způsobem jako ostatní unární operátory, příponový tvar přijímá další argument typu `int`.  
+ Při zápisu funkcí přetížených operátorů může být užitečné implementovat samostatné verze pro předponovou a příponovou verzi těchto operátorů. K rozlišení mezi těmito dvěma, je dodržovat následující pravidlo: předponový tvar operátoru je deklarován stejným způsobem jako ostatní unární operátory; příponový tvar přijímá další argument typu **int**.  
   
 > [!NOTE]
->  Při zadání přetíženého operátoru pro příponový tvar operátoru zvýšení nebo snížení musí být další argument typu `int`. Zadání jiného typu vygeneruje chybu.  
+>  Při zadání přetíženého operátoru pro příponový tvar operátoru zvýšení nebo snížení, musí být další argument typu **int**; zadání jiného typu vygeneruje chybu.  
   
  Následující příklad ukazuje, jak definovat předponové a příponové operátory zvýšení a snížení třídy `Point`:  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -98,16 +99,16 @@ int main()
   
  Stejné operátory lze definovat v rozsahu souboru (globálně) pomocí následujících záhlaví funkce:  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- Argument typu `int`, který označuje příponový tvar operátoru zvýšení nebo snížení, není pro předávání argumentů běžně používán. Obvykle obsahuje hodnotu 0. Lze jej však použít následujícím způsobem:  
+ Argument typu **int** , který označuje příponový tvar přírůstek nebo operátor dekrementace se obvykle nepoužívá k předání argumentů. Obvykle obsahuje hodnotu 0. Lze jej však použít následujícím způsobem:  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  

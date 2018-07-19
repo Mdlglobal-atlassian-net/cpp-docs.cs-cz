@@ -1,5 +1,5 @@
 ---
-title: Třída CSnapInItemImpl | Microsoft Docs
+title: Csnapinitemimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,18 +37,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366455"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884926"
 ---
-# <a name="csnapinitemimpl-class"></a>CSnapInItemImpl – třída
-Tato třída poskytuje metody pro implementaci objekt modul snap-in uzlu.  
+# <a name="csnapinitemimpl-class"></a>Csnapinitemimpl – třída
+Tato třída poskytuje metody pro implementaci modulu snap-in uzel objektu.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,11 +58,11 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `CSnapInItemImpl`.  
+ *T*  
+ Vaše třída odvozena od `CSnapInItemImpl`.  
   
  *bIsExtension*  
- **Hodnota TRUE,** Pokud objekt je modul snap-in rozšíření; jinak **FALSE**.  
+ Hodnota TRUE, pokud objekt je rozšíření modulu snap-in; v opačném případě FALSE.  
   
 ## <a name="members"></a>Členové  
   
@@ -76,30 +76,30 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Položky nabídky se přidá do kontextové nabídky.|  
-|[CSnapInItemImpl::Command](#command)|Voláno rozhraním konzole při výběru položky nabídky vlastní.|  
-|[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Přidá do seznamu vlastností modulu snap-in stránky.|  
-|[CSnapInItemImpl::FillData](#filldata)|Kopie informací o objektu modulu snap-in do zadaného datového proudu.|  
-|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Načte **RESULTDATAITEM** struktura modulu snap-in.|  
+|[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Přidá položky nabídky do kontextové nabídky.|  
+|[CSnapInItemImpl::Command](#command)|Při výběru položky nabídky vlastní volány konzole.|  
+|[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Přidá do seznamu vlastností v modulu snap-in stránky.|  
+|[CSnapInItemImpl::FillData](#filldata)|Zkopíruje informace o objektu modulu snap-in do zadaného datového proudu.|  
+|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Načte `RESULTDATAITEM` strukturu modulu snap-in.|  
 |[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Určuje typ zobrazení používané v podokně výsledků.|  
-|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Načte **SCOPEDATAITEM** struktura modulu snap-in.|  
-|[CSnapInItemImpl::Notify](#notify)|Voláno rozhraním konzole upozornit modul snap-in akcí, které má uživatel.|  
-|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Volá se, pokud uzel modul snap-in podporuje stránky vlastností.|  
-|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Upravuje příznaky vložení nabídky pro objekt, který modul snap-in.|  
-|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Nastaví informace o zadané panelu nástrojů zobrazí tlačítko.|  
+|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Načte `SCOPEDATAITEM` strukturu modulu snap-in.|  
+|[CSnapInItemImpl::Notify](#notify)|Je voláno konzoly upozornit modul snap-in akcí provedených uživatelem.|  
+|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Volá se, pokud uzel modulu snap-in podporuje stránky vlastností.|  
+|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Upraví příznaky vložení nabídky pro objekt modulu snap-in.|  
+|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Nastaví informace zadané tlačítka.|  
 |[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Aktualizuje stav položky kontextové nabídky.|  
-|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Aktualizuje stav tlačítka zadaný panelu nástrojů.|  
+|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Aktualizuje stav zadaného tlačítka.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Název objektu modulu snap-in.|  
-|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows **RESULTDATAITEM** struktura používané `CSnapInItemImpl` objektu.|  
-|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM** struktura používané `CSnapInItemImpl` objektu.|  
+|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows `RESULTDATAITEM` struktura používá `CSnapInItemImpl` objektu.|  
+|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows `SCOPEDATAITEM` struktura používá `CSnapInItemImpl` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSnapInItemImpl` poskytuje základní implementaci pro objekt uzlu modul snap-in, například přidávání položek nabídek a panelů nástrojů a předávání příkazy pro uzel modul snap-in k funkci příslušnou obslužnou rutinu. Tyto funkce jsou implementovány pomocí několika různých rozhraní a mapování typů. Výchozí implementace zpracovává oznámení odesílaná určíte správné instanci odvozené třídy a pak předávání zpráv na správnou instanci objektu uzlu.  
+ `CSnapInItemImpl` poskytuje základní implementaci pro objekt uzel modulu snap-in, jako je přidání položek nabídky a panely nástrojů a příkazů pro modul snap-in uzel, který má odpovídajícího popisovače funkce předávání. Tyto funkce jsou implementované pomocí několika různých rozhraní a namapujte typy. Výchozí implementace zpracovává oznámení zaslaná z objektu uzlu určování správné instanci odvozené třídy a pak předávání zpráv na správné instanci.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CSnapInItem`  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **Záhlaví:** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- Tato metoda implementuje funkce Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
+ Tato metoda implementuje funkci Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
 AddMenuItems(  
@@ -121,32 +121,32 @@ AddMenuItems(
   
 ### <a name="parameters"></a>Parametry  
  *piCallback*  
- [v] Ukazatel **IContextMenuCallback** položky, můžete přidat do kontextové nabídky.  
+ [in] Ukazatel `IContextMenuCallback` , který můžete přidat položky do kontextové nabídky.  
   
- `pInsertionAllowed`  
- [ve out] Identifikuje Microsoft Management Console MMC definována, položky nabídky vložení body, které lze použít. To může být kombinací následující příznaky:  
+ *pInsertionAllowed*  
+ [out v] Identifikuje definované Microsoft Management Console MMC, položka nabídky vložení body, které lze použít. To může být kombinací následujících příznaků:  
   
-- **CCM_INSERTIONALLOWED_TOP** položky lze vložit v horní části z kontextové nabídky.  
+- V horní části místní nabídka může být vložen CCM_INSERTIONALLOWED_TOP položky.  
   
-- **CCM_INSERTIONALLOWED_NEW** lze vytvořit nový dílčí vkládat položky.  
+- CCM_INSERTIONALLOWED_NEW položky může být vložen do podnabídky vytvořit nový.  
   
-- **CCM_INSERTIONALLOWED_TASK** položky lze vkládat dílčí úlohy.  
+- V podnabídce úloh lze vložit CCM_INSERTIONALLOWED_TASK položky.  
   
-- **CCM_INSERTIONALLOWED_VIEW** možné vložit položky v nabídce zobrazení panelu nástrojů nebo v podnabídce zobrazení v místní nabídce podokně výsledků.  
+- V nabídce Zobrazit panel nástrojů nebo v podnabídce zobrazení místní nabídky podokna výsledků lze vložit CCM_INSERTIONALLOWED_VIEW položky.  
   
- `type`  
- [v] Určuje typ objektu. Může mít jednu z následujících hodnot:  
+ *Typ*  
+ [in] Určuje typ objektu. Může mít jednu z následujících hodnot:  
   
-- **CCT_SCOPE** datový objekt pro kontext podokně oboru.  
+- CCT_SCOPE datový objekt oboru podokno kontextu.  
   
-- **CCT_RESULT** datový objekt pro kontext podokně výsledků.  
+- CCT_RESULT datový objekt kontextu podokno výsledků.  
   
-- **CCT_SNAPIN_MANAGER** datového objektu pro modul snap-in Správce kontext.  
+- CCT_SNAPIN_MANAGER datového objektu pro modul snap-in Správce kontextu.  
   
-- **CCT_UNINITIALIZED** má neplatný typ datového objektu.  
+- CCT_UNINITIALIZED datový objekt je neplatného typu.  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- Tato metoda implementuje funkce Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
+ Tato metoda implementuje funkci Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -154,21 +154,21 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 ### <a name="parameters"></a>Parametry  
  *lCommandID*  
- [v] Určuje identifikátor příkazu položky nabídky.  
+ [in] Určuje identifikátor příkazu položky nabídky.  
   
- `type`  
- [v] Určuje typ objektu. Může mít jednu z následujících hodnot:  
+ *Typ*  
+ [in] Určuje typ objektu. Může mít jednu z následujících hodnot:  
   
-- **CCT_SCOPE** datový objekt pro kontext podokně oboru.  
+- CCT_SCOPE datový objekt oboru podokno kontextu.  
   
-- **CCT_RESULT** datový objekt pro kontext podokně výsledků.  
+- CCT_RESULT datový objekt kontextu podokno výsledků.  
   
-- **CCT_SNAPIN_MANAGER** datového objektu pro modul snap-in Správce kontext.  
+- CCT_SNAPIN_MANAGER datového objektu pro modul snap-in Správce kontextu.  
   
-- **CCT_UNINITIALIZED** má neplatný typ datového objektu.  
+- CCT_UNINITIALIZED datový objekt je neplatného typu.  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- Tato metoda implementuje funkce Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
+ Tato metoda implementuje funkci Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
 CreatePropertyPages(  
@@ -180,24 +180,24 @@ CreatePropertyPages(
   
 ### <a name="parameters"></a>Parametry  
  *lpProvider*  
- [v] Ukazatel **IPropertySheetCallback** rozhraní.  
+ [in] Ukazatel `IPropertySheetCallback` rozhraní.  
   
  *Popisovač*  
- [v] Určuje popisovač použít trasu **MMCN_PROPERTY_CHANGE** oznámení k třídě příslušná data.  
+ [in] Určuje popisovač používaný ke směrování zprávy oznámení MMCN_PROPERTY_CHANGE na třídu příslušná data.  
   
  *pUnk*  
- [v] Ukazatel **IExtendPropertySheet** rozhraní na objekt, který obsahuje kontextové informace o uzlu.  
+ [in] Ukazatel `IExtendPropertySheet` rozhraní na objekt, který obsahuje informace o kontextu uzlu.  
   
- `type`  
- [v] Určuje typ objektu. Může mít jednu z následujících hodnot:  
+ *Typ*  
+ [in] Určuje typ objektu. Může mít jednu z následujících hodnot:  
   
-- **CCT_SCOPE** datový objekt pro kontext podokně oboru.  
+- CCT_SCOPE datový objekt oboru podokno kontextu.  
   
-- **CCT_RESULT** datový objekt pro kontext podokně výsledků.  
+- CCT_RESULT datový objekt kontextu podokno výsledků.  
   
-- **CCT_SNAPIN_MANAGER** datového objektu pro modul snap-in Správce kontext.  
+- CCT_SNAPIN_MANAGER datového objektu pro modul snap-in Správce kontextu.  
   
-- **CCT_UNINITIALIZED** má neplatný typ datového objektu.  
+- CCT_UNINITIALIZED datový objekt je neplatného typu.  
   
 ##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Vytvoří `CSnapInItemImpl` objektu.  
@@ -214,17 +214,17 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
- [v] Formát (text, formátovaným textem nebo RTF s OLE – položky) do schránky.  
+ *CF*  
+ [in] Formát (text, formátovaný text nebo formátovaný text položky OLE) do schránky.  
   
- `pStream`  
- [v] Ukazatel na datový proud obsahující data objektu.  
+ *pStream*  
+ [in] Ukazatel na datový proud obsahující data objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li správně implementovat tuto funkci, zkopírujte správné informace do datového proudu ( `pStream`), v závislosti na formát schránky indikován `cf`.  
+ Pokud chcete tuto funkci správně implementovat, zkopírujte správné informace do datového proudu (*pStream*), v závislosti na formát schránky indikován *cf*.  
   
 ##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
- Volání této funkce se načíst typ zobrazení podokně s výsledky modulu snap-in objektu.  
+ Voláním této funkce se načíst typ zobrazení v podokně výsledků objektu modulu snap-in.  
   
 ```
 GetResultViewType(
@@ -234,17 +234,17 @@ GetResultViewType(
   
 ### <a name="parameters"></a>Parametry  
  *ppViewType*  
- [out] Ukazatel na adresu typ vrácený zobrazení.  
+ [out] Ukazatel na adresu typu vrácené zobrazení.  
   
  *pViewOptions*  
- [out] Ukazatel **MMC_VIEW_OPTIONS** výčtu, který poskytuje možnosti určeného vlastnícím modul snap-in konzole. Tato hodnota může být jeden z následujících akcí:  
+ [out] Ukazatel na MMC_VIEW_OPTIONS výčet, který poskytuje možnosti určené vlastnící modul snap-in konzole. Tato hodnota může být jedna z následujících akcí:  
   
-- **MMC_VIEW_OPTIONS_NOLISTVIEWS** = 0x00000001 informuje nepoužívejte prezentací standardní seznam možností zobrazení v konzole **zobrazení** nabídky. Umožňuje modulu snap-in-li zobrazit svou vlastní vlastní zobrazení pouze v podokně výsledků. Toto je pouze možnost příznak definované v tuto chvíli.  
+- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 informuje konzolu, nepoužívejte nabízí ten samý standardní seznam možností zobrazení v **zobrazení** nabídky. Umožňuje modulu snap-in k zobrazení vlastní vlastních zobrazení pouze v podokně výsledků. Toto je pouze možnost příznak definované v tuto chvíli.  
   
-- **MMC_VIEW_OPTIONS_NONE** = 0 umožňuje výchozí možnosti zobrazení.  
+- MMC_VIEW_OPTIONS_NONE = 0 umožňuje zobrazit výchozí možnosti.  
   
 ##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
- Volání této funkce můžete získat **SCOPEDATAITEM** struktura modulu snap-in.  
+ Voláním této funkce načtete `SCOPEDATAITEM` strukturu modulu snap-in.  
   
 ```
 GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
@@ -252,10 +252,10 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
   
 ### <a name="parameters"></a>Parametry  
  *pScopeDataItem*  
- [out] Ukazatel **SCOPEDATAITEM** struktura `CSnapInItemImpl` objektu.  
+ [out] Ukazatel `SCOPEDATAITEM` struktury `CSnapInItemImpl` objektu.  
   
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
- Volání této funkce můžete získat **RESULTDATAITEM** struktura modulu snap-in.  
+ Voláním této funkce načtete `RESULTDATAITEM` strukturu modulu snap-in.  
   
 ```
 GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
@@ -263,10 +263,10 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
   
 ### <a name="parameters"></a>Parametry  
  *pResultDataItem*  
- [out] Ukazatel **RESULTDATAITEM** struktura `CSnapInItemImpl` objektu.  
+ [out] Ukazatel `RESULTDATAITEM` struktury `CSnapInItemImpl` objektu.  
   
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
- Obsahuje řetězec zobrazí pro položku uzlu.  
+ Obsahuje řetězec zobrazený u položky uzlu.  
   
 ```
 CComBSTR m_bstrDisplayName;
@@ -287,7 +287,7 @@ RESULTDATAITEM m_resultDataItem;
 ```  
   
 ##  <a name="notify"></a>  CSnapInItemImpl::Notify  
- Voláno, když je objekt modul snap-in reagovali na ni uživatelem.  
+ Volá se, když modul snap-in objektu je reagovali na ni uživatelem.  
   
 ```
 STDMETHOD(Notify)(
@@ -300,69 +300,69 @@ STDMETHOD(Notify)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `event`  
- [v] Určuje akci provedenou uživatele. Následující oznámení jsou možné:  
+ *event*  
+ [in] Určuje akci provedenou uživatelem. Je možné následující oznámení:  
   
-- **MMCN_ACTIVATE** odeslána, když okno je aktivovat a deaktivovat.  
+- MMCN_ACTIVATE odesílá se, když se okna aktivovat a deaktivovat.  
   
-- **MMCN_ADD_IMAGES** posílá přidat Image do podokna výsledků.  
+- MMCN_ADD_IMAGES odesílat přidat Image do podokna výsledků.  
   
-- **MMCN_BTN_CLICK** odeslána po kliknutí na jednu z tlačítka panelu nástrojů.  
+- MMCN_BTN_CLICK posílají, když uživatel klikne jedno z tlačítek panelu nástrojů.  
   
-- **MMCN_CLICK** odeslána, když uživatel klikne na tlačítko myši na položku zobrazení seznamu.  
+- MMCN_CLICK posílají, když uživatel stiskne tlačítko myši na položku zobrazení seznamu.  
   
-- **MMCN_DBLCLICK** odeslána po dvojité kliknutí tlačítkem myši na položku zobrazení seznamu.  
+- MMCN_DBLCLICK posílají, když uživatel dvakrát klikne tlačítkem myši na položku zobrazení seznamu.  
   
-- **MMCN_DELETE** o modulu snap-in, která má být objekt odeslána odstranit.  
+- MMCN_DELETE odeslané k informování modulu snap-in, která má být objekt odstraněn.  
   
-- **MMCN_EXPAND** odeslat v případě, že složka je nutné rozšířit nebo uzavřeny.  
+- MMCN_EXPAND zasílat do složky se musí rozšířit nebo zakázku.  
   
-- **MMCN_MINIMIZED** odeslána, když okno je se rychle minimalizovat nebo v maximalizovaném okně.  
+- MMCN_MINIMIZED odesílá se, když je okno se rychle minimalizovat nebo maximalizované.  
   
-- **MMCN_PROPERTY_CHANGE** odesílá informuje objekt modul snap-in, který zobrazení objektu modulu snap-in se má změnit.  
+- MMCN_PROPERTY_CHANGE odesílat oznámení objekt modulu snap-in, který zobrazení objektu modulu snap-in se chystá změna.  
   
-- **MMCN_REMOVE_CHILDREN** odeslat v případě, že modul snap-in, musíte odstranit celý podstrom byl přidán pod určeného uzlu.  
+- MMCN_REMOVE_CHILDREN posílají, když modul snap-in musíte odstranit celý podstrom přidané pod určeného uzlu.  
   
-- **MMCN_RENAME** odeslat dotaz pro přejmenovat při prvním a druhém uděláte přejmenování.  
+- MMCN_RENAME odešle dotaz pro přejmenování při prvním a druhém provedete přejmenování.  
   
-- **MMCN_SELECT** odeslané vybranou položku v podokně zobrazení obor nebo výsledek.  
+- MMCN_SELECT posílají, když je vybraná položka v podokně zobrazení oboru nebo výsledek.  
   
-- **MMCN_SHOW** odeslat v případě, že je výběru nebo zrušení výběru první položku oboru.  
+- MMCN_SHOW posílají, když vybraná nebo vybraná poprvé rozsah položky.  
   
-- **MMCN_VIEW_CHANGE** odeslat v případě, že modul snap-in můžete aktualizovat všechna zobrazení Pokud dojde ke změně.  
+- MMCN_VIEW_CHANGE posílají, když modul snap-in můžete aktualizovat všechna zobrazení když dojde ke změně.  
   
- `arg`  
- [v] Závisí na typu oznámení.  
+ *arg*  
+ [in] Závisí na typu oznámení.  
   
- `param`  
- [v] Závisí na typu oznámení.  
+ *Param*  
+ [in] Závisí na typu oznámení.  
   
  *pComponentData*  
- [out] Ukazatel na implementaci objekt **IComponentData**. Tento parametr je **NULL** Pokud oznámení není předávaná ze **IComponentData::Notify**.  
+ [out] Ukazatel na objekt implementace `IComponentData`. Tento parametr hodnotu NULL, pokud není se předalo oznámení `IComponentData::Notify`.  
   
  *pComponent*  
- [out] Ukazatel na objektu, který implementuje **IComponent**. Tento parametr je **NULL** Pokud oznámení není předávaná ze **IComponent::Notify**.  
+ [out] Ukazatel na objekt, který implementuje `IComponent`. Tento parametr hodnotu NULL, pokud není se předalo oznámení `IComponent::Notify`.  
   
- `type`  
- [v] Určuje typ objektu. Může mít jednu z následujících hodnot:  
+ *Typ*  
+ [in] Určuje typ objektu. Může mít jednu z následujících hodnot:  
   
-- **CCT_SCOPE** datový objekt pro kontext podokně oboru.  
+- CCT_SCOPE datový objekt oboru podokno kontextu.  
   
-- **CCT_RESULT** datový objekt pro kontext podokně výsledků.  
+- CCT_RESULT datový objekt kontextu podokno výsledků.  
   
-- **CCT_SNAPIN_MANAGER** datového objektu pro modul snap-in Správce kontext.  
+- CCT_SNAPIN_MANAGER datového objektu pro modul snap-in Správce kontextu.  
   
-- **CCT_UNINITIALIZED** má neplatný typ datového objektu.  
+- CCT_UNINITIALIZED datový objekt je neplatného typu.  
   
 ##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
- Volá se, pokud uzel modul snap-in podporuje stránky vlastností.  
+ Volá se, pokud uzel modulu snap-in podporuje stránky vlastností.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
 ##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
- Volání této funkce můžete upravit v nabídce příznacích vložení určeného `pInsertionAllowed`, modul snap-in objektu.  
+ Voláním této funkce upravit příznaky vložení nabídky, určené *pInsertionAllowed*, pro objekt modulu snap-in.  
   
 ```
 void SetMenuInsertionFlags(  
@@ -372,26 +372,26 @@ void SetMenuInsertionFlags(
   
 ### <a name="parameters"></a>Parametry  
  *bBeforeInsertion*  
- [v] Nenulové hodnoty, pokud funkce by měla být volána před položky budou přidány do kontextové nabídky; jinak 0.  
+ [in] Nenulové, pokud funkce by měla být volána před položky budou přidány do kontextové nabídky; jinak 0.  
   
- `pInsertionAllowed`  
- [ve out] Identifikuje Microsoft Management Console MMC definována, položky nabídky vložení body, které lze použít. To může být kombinací následující příznaky:  
+ *pInsertionAllowed*  
+ [out v] Identifikuje definované Microsoft Management Console MMC, položka nabídky vložení body, které lze použít. To může být kombinací následujících příznaků:  
   
-- **CCM_INSERTIONALLOWED_TOP** položky lze vložit v horní části z kontextové nabídky.  
+- V horní části místní nabídka může být vložen CCM_INSERTIONALLOWED_TOP položky.  
   
-- **CCM_INSERTIONALLOWED_NEW** lze vytvořit nový dílčí vkládat položky.  
+- CCM_INSERTIONALLOWED_NEW položky může být vložen do podnabídky vytvořit nový.  
   
-- **CCM_INSERTIONALLOWED_TASK** položky lze vkládat dílčí úlohy.  
+- V podnabídce úloh lze vložit CCM_INSERTIONALLOWED_TASK položky.  
   
-- **CCM_INSERTIONALLOWED_VIEW** možné vložit položky v nabídce zobrazení panelu nástrojů nebo v podnabídce zobrazení v místní nabídce podokně výsledků.  
+- V nabídce Zobrazit panel nástrojů nebo v podnabídce zobrazení místní nabídky podokna výsledků lze vložit CCM_INSERTIONALLOWED_VIEW položky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud vyvíjíte primární modul snap-in, můžete obnovit žádné příznaky vložení jako způsob omezení druh položky nabídky, které můžete přidat rozšíření třetích stran. Například primární modul snap-in můžete zrušit **CCM_INSERTIONALLOWED_NEW** příznak, abyste zabránili přidávání vlastních vytvořit nové položky nabídky rozšíření.  
+ Pokud vyvíjíte primární modul snap-in, můžete resetovat některý z příznaků vložení jako způsob, jak omezit druh položky nabídky, které můžete přidat rozšíření třetích stran. Například primární modul snap-in můžete vymazat příznak CCM_INSERTIONALLOWED_NEW pro zabránění přidávání vlastních vytvořit nové položky nabídky rozšíření.  
   
- Byste neměli nastavení bits v `pInsertionAllowed` které byly původně vymazán. Další verze konzoly MMC může pomocí služby bits není aktuálně definován, takže byste neměli měnit bitů, které nejsou aktuálně definován.  
+ By se neměly pokoušet provést nastavení bitů *pInsertionAllowed* , které byly původně vymazána. Budoucí verze konzoly MMC může pomocí bits není aktuálně definován, takže byste neměli měnit bitů, které nejsou aktuálně definován.  
   
 ##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
- Volání této funkce k úpravě jakékoli styly tlačítek panelu nástrojů objektu modulu snap-in, před vytvořením panelu nástrojů.  
+ Voláním této funkce upravit všechny styly tlačítek panelu nástrojů, objektu modulu snap-in, před vytvořením panelu nástrojů.  
   
 ```
 void SetToolbarButtonInfo(  
@@ -401,39 +401,39 @@ void SetToolbarButtonInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id`  
- [v] ID na panelu nástrojů tlačítko nastavit.  
+ *id*  
+ [in] ID tlačítko panelu nástrojů, která se má nastavit.  
   
- `fsState`  
- [v] Příznaky stavu tlačítka. Může být jeden nebo více následujících akcí:  
+ *fsState*  
+ [in] Příznaky stav tlačítka. Může být jeden nebo více z následujících akcí:  
   
-- `TBSTATE_CHECKED` Tlačítko má **TBSTYLE_CHECKED** styl a je stisknutí tlačítka.  
+- TBSTATE_CHECKED tlačítko stylu TBSTYLE_CHECKED a stisknutí se.  
   
-- `TBSTATE_ENABLED` Tlačítko přijme vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a neaktivní.  
+- TBSTATE_ENABLED tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a nejde aktivovat.  
   
-- `TBSTATE_HIDDEN` Tlačítko není viditelná a nemůže přijímat vstup uživatele.  
+- TBSTATE_HIDDEN tlačítko není viditelný a nemůže přijímat uživatelský vstup.  
   
-- `TBSTATE_INDETERMINATE` Tlačítko neaktivní.  
+- TBSTATE_INDETERMINATE tlačítko nejde aktivovat.  
   
-- `TBSTATE_PRESSED` Stisknutí tlačítka.  
+- TBSTATE_PRESSED, které stisknutí tlačítka.  
   
-- `TBSTATE_WRAP` Konec řádku následuje tlačítko. Tlačítko musí mít také `TBSTATE_ENABLED`.  
+- Konec řádku A TBSTATE_WRAP následuje tlačítka. Tlačítka musí mít také TBSTATE_ENABLED.  
   
  *fsType*  
- [v] Příznaky stavu tlačítka. Může být jeden nebo více následujících akcí:  
+ [in] Příznaky stav tlačítka. Může být jeden nebo více z následujících akcí:  
   
-- `TBSTYLE_BUTTON` Vytvoří standardní tlačítka.  
+- TBSTYLE_BUTTON vytvoří standardní tlačítko.  
   
-- `TBSTYLE_CHECK` Vytvoří tlačítko, která přepíná mezi stavy při stisknutí tlačítka myši a stisknutí není pokaždé, když uživatel klikne. Tlačítko má jinou barvu pozadí, když je ve stavu při stisknutí tlačítka.  
+- Vytvoří TBSTYLE_CHECK tlačítko, které přepíná mezi stavů pressed a není stisknuta pokaždé, když uživatel na něj klikne. Je ve stavu při stisknutí tlačítka má jinou barvu pozadí.  
   
-- `TBSTYLE_CHECKGROUP` Vytvoří tlačítko kontroly, které zůstává při stisknutí tlačítka, dokud není stisknuta jiné tlačítko ve skupině.  
+- Stisknutí TBSTYLE_CHECKGROUP vytvoří, které se stiskne tlačítko kontroly, který zůstává až do dalšího tlačítka ve skupině.  
   
-- `TBSTYLE_GROUP` Vytvoří tlačítko, které zůstává při stisknutí tlačítka, dokud není stisknuta jiné tlačítko ve skupině.  
+- Stisknutí TBSTYLE_GROUP vytvoří, které stisknutí tlačítka, který zůstane až do dalšího tlačítka ve skupině.  
   
-- `TBSTYLE_SEP` Vytvoří oddělovač poskytování malá mezera mezi skupinami tlačítko. Tlačítko, které má tento styl nepřijímá vstup uživatele.  
+- TBSTYLE_SEP vytvoří oddělovač, poskytuje malé mezeru mezi skupinami tlačítko. Tlačítko, které má tento styl nepřijímá vstup uživatele.  
   
 ##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
- Volání této funkce můžete upravit položku nabídky, než je vložen do místní nabídky objektu modulu snap-in.  
+ Voláním této funkce Upravit položku nabídky, než je vložen do místní nabídky objektu modulu snap-in.  
   
 ```
 void UpdateMenuState(  
@@ -443,66 +443,66 @@ void UpdateMenuState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id`  
- [v] ID položku nabídky nastavení.  
+ *id*  
+ [in] ID položky nabídky, která se má nastavit.  
   
- `pBuf`  
- [v] Ukazatel na řetězec pro položku nabídky aktualizovat.  
+ *pBuf*  
+ [in] Ukazatel na řetězec pro položky nabídky aktualizace.  
   
- `flags`  
- [v] Určuje nové příznaky stavu. To může být kombinací následující příznaky:  
+ *příznaky*  
+ [in] Určuje příznaky nový stav. To může být kombinací následujících příznaků:  
   
-- **MF_POPUP** Určuje, že se jedná o podnabídky v místní nabídce. Položky nabídky, body vložení a další dílčích mohou být přidány do této konfigurace pomocí podnabídky jeho **lCommandID** jako jejich **IInsertionPointID**.  
+- MF_POPUP Určuje, že se jedná o podnabídku v místní nabídce. Položky nabídky, body vložení a další podnabídek může přidat do podnabídky pomocí jeho `lCommandID` jako jejich `IInsertionPointID`.  
   
-- **MF_BITMAP** a `MF_OWNERDRAW` nejsou povolené tyto příznaky a bude mít za následek návratová hodnota `E_INVALIDARG`.  
+- MF_BITMAP a MF_OWNERDRAW tyto příznaky nejsou povolené a bude mít za následek E_INVALIDARG návratovou hodnotu.  
   
-- **MF_SEPARATOR** nevykresluje na vodorovném řádku rozdíl. Pouze **IContextMenuProvider** je povolen pro přidání položek nabídky se **MF_SEPARATOR** nastavit.  
+- MF_SEPARATOR kreslení vodorovné zřejmý. Pouze `IContextMenuProvider` může přidání položek nabídky s MF_SEPARATOR sadou.  
   
-- **MF_CHECKED** zaškrtne políčko vedle položky nabídky.  
+- MF_CHECKED zaškrtne políčko vedle položky nabídky.  
   
-- **MF_DISABLED** zakáže položky nabídky, takže ji nelze vybrat, ale příznak není šedé ho.  
+- Zakáže MF_DISABLED položku nabídky, nelze vybrat, ale příznak není šedé ho.  
   
-- `MF_ENABLED` Umožňuje položky nabídky, lze ji použít, obnovení z šedým stavu.  
+- MF_ENABLED umožňuje položky nabídky, takže ho nejde ani zvolit, obnovení z šedě stavu.  
   
-- **MF_GRAYED** zakáže položky nabídky, graying ji proto není k dispozici.  
+- MF_GRAYED zakáže položky nabídky graying ji proto nelze vybrat.  
   
-- **MF_MENUBARBREAK** funguje stejně jako **MF_MENUBREAK** příznak pro řádku nabídek. Pro rozevírací nabídky, podnabídky nebo místní nabídky nový sloupec je oddělená od původního sloupce svislá čára.  
+- Stejné jako MF_MENUBREAK příznak pro panel nabídek MF_MENUBARBREAK funkce. Rozevírací nabídky, podnabídky nebo místní nabídku nového sloupce, který je oddělená od starý sloupec svislou čárou.  
   
-- **MF_MENUBREAK** umístí položku na nový řádek (pro řádku nabídek) nebo v novém sloupci (pro rozevírací nabídky, podnabídky nebo místní nabídky) bez dělicí sloupce.  
+- MF_MENUBREAK umístí položku na nový řádek (pro panel nabídek) nebo v novém sloupci (pro rozevírací nabídky, podnabídky nebo nabídku) bez oddělení sloupců.  
   
-- **MF_UNCHECKED** není, zaškrtněte políčko vedle položky (výchozí).  
+- MF_UNCHECKED neumístí zaškrtávací políčko vedle položky (výchozí).  
   
  Následující skupiny příznaky nelze použít společně:  
   
-- **MF_DISABLED**, `MF_ENABLED`, a **MF_GRAYED**.  
+- MF_DISABLED MF_ENABLED a MF_GRAYED.  
   
-- **MF_MENUBARBREAK** a **MF_MENUBREAK**.  
+- MF_MENUBARBREAK a MF_MENUBREAK.  
   
-- **MF_CHECKED** a **MF_UNCHECKED**.  
+- MF_CHECKED a MF_UNCHECKED.  
   
 ##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
- Volání této funkce můžete upravit tlačítka panelu nástrojů, objektu modulu snap-in, než se zobrazí.  
+ Voláním této funkce Upravit tlačítka panelu nástrojů, modul snap-in objektu, než se zobrazí.  
   
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id`  
- Určuje ID tlačítka panelu nástrojů zobrazí tlačítko Aktualizovat.  
+ *id*  
+ Určuje ID tlačítko na panelu nástrojů tlačítko Aktualizovat.  
   
- `fsState`  
- Určuje stav tlačítka panelu nástrojů. Pokud tento stav je možné nastavit, vrátí **TRUE**. To může být kombinací následující příznaky:  
+ *fsState*  
+ Určuje stav tlačítka panelu nástrojů. Pokud tento stav je možné nastavit, vrátí hodnotu TRUE. To může být kombinací následujících příznaků:  
   
-- **Povolit** tlačítko zadávaná uživateli. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a neaktivní.  
+- POVOLIT tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a nejde aktivovat.  
   
-- **ZAŠKRTNUTÍ** tlačítko má **zaškrtnutí** styl a je stisknutí tlačítka.  
+- ZAŠKRTNUTO tlačítko má styl zaškrtnutí a stisknutí se.  
   
-- **SKRYTÝ** tlačítko není viditelná a nemůže přijímat vstup uživatele.  
+- SKRYTÉ tlačítko není viditelný a nemůže přijímat uživatelský vstup.  
   
-- **NEURČITÉM** neaktivní tlačítko.  
+- NEURČITÁ tlačítko nejde aktivovat.  
   
-- **BUTTONPRESSED** stisknutí tlačítka.  
+- BUTTONPRESSED, které stisknutí tlačítka.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

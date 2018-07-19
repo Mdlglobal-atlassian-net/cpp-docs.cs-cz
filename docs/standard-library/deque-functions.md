@@ -1,5 +1,5 @@
 ---
-title: '&lt;deque&gt; funkce | Microsoft Docs'
+title: '&lt;deque –&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,22 +10,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8acde4167d9115180282b26f93cc2629c9f72638
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 409b9593d0c4d853e325502f4cc47c57a81c6264
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959177"
 ---
-# <a name="ltdequegt-functions"></a>&lt;deque&gt; funkce
+# <a name="ltdequegt-functions"></a>&lt;deque –&gt; funkce
 
 ||
 |-|
-|[Swap](#swap)|
+|[Prohození](#swap)|
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
-Elementy dvě deques výměny.
+Vymění prvky dvou deques.
 
 ```cpp
 void swap(
@@ -35,14 +35,14 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [deque::swap](../standard-library/deque-class.md#swap).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<deque >](../standard-library/deque.md)<br/>

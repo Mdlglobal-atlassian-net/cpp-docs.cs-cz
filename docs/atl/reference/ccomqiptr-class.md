@@ -1,5 +1,5 @@
 ---
-title: Třída CComQIPtr | Microsoft Docs
+title: CComQIPtr – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359176"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884828"
 ---
-# <a name="ccomqiptr-class"></a>Třída CComQIPtr
-Chytré ukazatele třída pro správu ukazatele rozhraní COM.  
+# <a name="ccomqiptr-class"></a>CComQIPtr – třída
+Třída inteligentní ukazatel pro správu ukazatele rozhraní modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ class CComQIPtr: public CComPtr<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Určení typu ukazatele k uložení rozhraní modelu COM.  
+ *T*  
+ Rozhraní modelu COM zadání typu ukazatel na Uložit.  
   
- `piid`  
- Ukazatel na identifikátory IID `T`.  
+ *piid*  
+ Ukazatel na IID *T*.  
   
 ## <a name="members"></a>Členové  
   
@@ -54,10 +54,10 @@ class CComQIPtr: public CComPtr<T>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComQIPtr::operator =](#operator_eq)|Přiřadí ukazatel člen ukazatele.|  
+|[CComQIPtr::operator =](#operator_eq)|Přiřadí ukazatel na ukazatel člen.|  
   
 ## <a name="remarks"></a>Poznámky  
- ATL používá `CComQIPtr` a [CComPtr](../../atl/reference/ccomptr-class.md) ke správě ukazatele rozhraní modelu COM, které jsou odvozeny od [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Obě třídy provést automatické prostřednictvím volání při počítání referencí `AddRef` a **verze**. Přetížené operátory řídit tyto operace ukazatele.  
+ ATL – používá `CComQIPtr` a [CComPtr](../../atl/reference/ccomptr-class.md) ke správě ukazatele rozhraní modelu COM, které jsou odvozeny z [ccomptrbase –](../../atl/reference/ccomptrbase-class.md). Obě třídy provést automatické pomocí volání pro počítání odkazů `AddRef` a `Release`. Přetížené operátory zpracování operací ukazatele.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -80,14 +80,14 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lp`  
- Použitý k inicializaci ukazatel rozhraní.  
+ *LP*  
+ Použít k inicializaci ukazatele rozhraní.  
   
- `T`  
+ *T*  
  Rozhraní modelu COM.  
   
- `piid`  
- Ukazatel na identifikátory IID `T`.  
+ *piid*  
+ Ukazatel na IID *T*.  
   
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  Operátor přiřazení.  
@@ -99,21 +99,21 @@ T* operator= (IUnknown* lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lp`  
- Použitý k inicializaci ukazatel rozhraní.  
+ *LP*  
+ Použít k inicializaci ukazatele rozhraní.  
   
- `T`  
+ *T*  
  Rozhraní modelu COM.  
   
- `piid`  
- Ukazatel na identifikátory IID `T`.  
+ *piid*  
+ Ukazatel na IID *T*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na aktualizaci `CComQIPtr` objektu.  
+ Vrací ukazatel na aktualizovaný `CComQIPtr` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
- [CComPtrBase – třída](../../atl/reference/ccomptrbase-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Ccomptrbase – třída](../../atl/reference/ccomptrbase-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)

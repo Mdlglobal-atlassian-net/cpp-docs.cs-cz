@@ -1,5 +1,5 @@
 ---
-title: Výjimky hardwaru | Microsoft Docs
+title: Výjimky hardwaru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a7e7127135837a426436c15e8ae8aff60227da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413957"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941571"
 ---
 # <a name="hardware-exceptions"></a>Výjimky hardwaru
 Většina standardních výjimek rozpoznávaných operačním systémem jsou výjimky definované hardwarem. Systém Windows rozpoznává několik softwarových výjimek nízké úrovně, ty však bývají operačním systémem zpracovány nejvhodněji.  
@@ -34,20 +34,20 @@ Většina standardních výjimek rozpoznávaných operačním systémem jsou vý
   
 |Kód výjimky|Příčina výjimky|  
 |--------------------|------------------------|  
-|**STATUS_ACCESS_VIOLATION**|Čtení nebo zápis nepřístupného umístění v paměti.|  
-|**STATUS_BREAKPOINT**|Přechod na hardwarem definovanou zarážku. Používáno pouze ladicími programy.|  
-|**STATUS_DATATYPE_MISALIGNMENT**|Čtení nebo zápis dat na nesprávně zarovnané adrese. Například 16bitové entity musí být zarovnány na 2bajtové hranice. (Nevztahuje se na Intel 80*x*86 procesory.)|  
-|**STATUS_FLOAT_DIVIDE_BY_ZERO**|Dělení typu s plovoucí desetinnou čárkou hodnotou 0,0.|  
-|**STATUS_FLOAT_OVERFLOW**|Překročení maximálního kladného exponentu typu s plovoucí desetinnou čárkou.|  
-|**STATUS_FLOAT_UNDERFLOW**|Překročení velikosti nejmenšího záporného exponentu typu s plovoucí desetinnou čárkou.|  
-|**STATUS_FLOATING_RESEVERED_OPERAND**|Použití rezervovaného formátu s plovoucí desetinnou čárkou (nesprávné použití formátu).|  
-|**STATUS_ILLEGAL_INSTRUCTION**|Pokus o spuštění kódu instrukce, který procesor nedefinuje.|  
-|**STATUS_PRIVILEGED_INSTRUCTION**|Spuštění instrukce, která není v aktuálním režimu počítače povolena.|  
-|**STATUS_INTEGER_DIVIDE_BY_ZERO**|Dělení celočíselného typu hodnotou 0.|  
-|**STATUS_INTEGER_OVERFLOW**|Pokus o operaci, která překračuje rozsah celého čísla.|  
-|**STATUS_SINGLE_STEP**|Spuštění jedné instrukce v režimu krokování. Používáno pouze ladicími programy.|  
+|STATUS_ACCESS_VIOLATION|Čtení nebo zápis nepřístupného umístění v paměti.|  
+|STATUS_BREAKPOINT|Přechod na hardwarem definovanou zarážku. Používáno pouze ladicími programy.|  
+|STATUS_DATATYPE_MISALIGNMENT|Čtení nebo zápis dat na nesprávně zarovnané adrese. Například 16bitové entity musí být zarovnány na 2bajtové hranice. (Nevztahuje se na Intel 80*x*86 procesory.)|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|Dělení typu s plovoucí desetinnou čárkou hodnotou 0,0.|  
+|STATUS_FLOAT_OVERFLOW|Překročení maximálního kladného exponentu typu s plovoucí desetinnou čárkou.|  
+|STATUS_FLOAT_UNDERFLOW|Překročení velikosti nejmenšího záporného exponentu typu s plovoucí desetinnou čárkou.|  
+|STATUS_FLOATING_RESEVERED_OPERAND|Použití rezervovaného formátu s plovoucí desetinnou čárkou (nesprávné použití formátu).|  
+|STATUS_ILLEGAL_INSTRUCTION|Pokus o spuštění kódu instrukce, který procesor nedefinuje.|  
+|STATUS_PRIVILEGED_INSTRUCTION|Spuštění instrukce, která není v aktuálním režimu počítače povolena.|  
+|STATUS_INTEGER_DIVIDE_BY_ZERO|Dělení celočíselného typu hodnotou 0.|  
+|STATUS_INTEGER_OVERFLOW|Pokus o operaci, která překračuje rozsah celého čísla.|  
+|STATUS_SINGLE_STEP|Spuštění jedné instrukce v režimu krokování. Používáno pouze ladicími programy.|  
   
- Mnoho výjimek uvedených v předchozí tabulce by mělo být zpracováno ladicími programy, operačním systémem a jiným kódem nízké úrovně. S výjimkou chyb celých čísel a čísel s plovoucí desetinnou čárkou by váš kód neměl tyto chyby zpracovávat. Proto by měl být obvykle použit filtr pro zpracování výjimek, který výjimky ignoruje (vyhodnotí na hodnotu 0). V opačném případě může být mechanismům nižší úrovně zabráněno reagovat odpovídajícím způsobem. Lze však provést vhodná bezpečnostní opatření proti potenciální účinku tyto chyby nízké úrovně podle [zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md).  
+ Mnoho výjimek uvedených v předchozí tabulce by mělo být zpracováno ladicími programy, operačním systémem a jiným kódem nízké úrovně. S výjimkou chyb celých čísel a čísel s plovoucí desetinnou čárkou by váš kód neměl tyto chyby zpracovávat. Proto by měl být obvykle použit filtr pro zpracování výjimek, který výjimky ignoruje (vyhodnotí na hodnotu 0). V opačném případě může být mechanismům nižší úrovně zabráněno reagovat odpovídajícím způsobem. Však lze přijmout vhodná opatření proti potenciálním účinkům těchto chyb nízké úrovně [napsáním obslužných rutin ukončení](../cpp/writing-a-termination-handler.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)   

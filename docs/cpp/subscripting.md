@@ -1,5 +1,5 @@
 ---
-title: Subscripting | Microsoft Docs
+title: Subscripting | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947610"
 ---
 # <a name="subscripting"></a>Předplatné
-Operátor dolního indexu (**[]**), například operátor volání funkce, je považován za binární operátor. Operátor dolního indexu musí být nestatické členské funkce, která přebírá jeden argument. Tento argument může být jakéhokoli typu, která označuje dolní index požadované pole.  
+Operátor dolního indexu (**[] č.**), třeba operátor volání funkce se považuje za binární operátor. Operátor dolního indexu musí být nestatickou členskou funkci, která přijímá jeden argument. Tento argument může být libovolného typu a Určuje dolní index požadované pole.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit vektoru typu `int` , která implementuje hranice kontrola:  
+ Následující příklad ukazuje, jak vytvořit vektorového typu **int** , která implementuje ověřování hranic:  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Komentáře  
- Když `i` dosáhne 10 v předchozím programu `operator[]` zjistí, že out-of-bounds dolního indexu je používán a vydá chybovou zprávu.  
+ Když `i` dosáhne 10 v předchozí program `operator[]` zjistí, že celočíselných dolního indexu se používá a vydává chybovou zprávu.  
   
- Všimněte si, že funkce `operator[]` vrátí odkazového typu. To způsobí, že bude l hodnota, což umožňuje použití dolního indexu výrazů na žádné straně operátorů přiřazení.  
+ Všimněte si, že funkce `operator[]` vrací typ reference. To vede k jejímu l hodnotou, je možné využívat indexovaný výrazů na obou stranách operátory přiřazení.  
   
 ## <a name="see-also"></a>Viz také  
  [Přetížení operátoru](../cpp/operator-overloading.md)

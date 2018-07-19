@@ -1,7 +1,7 @@
 ---
-title: Friend (C++) | Microsoft Docs
+title: Friend (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/02/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418260"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942078"
 ---
 # <a name="friend-c"></a>friend (C++)
-V některých případech je pohodlnější k udělení přístupu na úrovni člena na funkce, které nejsou členy třídy, nebo pro všechny členy v samostatné třídy. Pouze implementátor třída můžou deklarovat kdo jsou jeho přáteli. Funkce nebo třída nelze samotné deklarovat jako přítele libovolné třídy. V definici třídy, použijte `friend` – klíčové slovo a název třetí funkce nebo jiná třída jí udělit přístup k privátním a chráněné členy vaší třídy.         V definici šablony může být parametr typu deklarované jako přítele.  
+V některých případech je snazší udělit přístup na úrovni členů funkcím, které nejsou členy třídy nebo u všech členů v samostatné třídě. Pouze implementátora třídy lze deklarovat kdo jeho přáteli. Funkci nebo třídu nelze deklarovat samotného jako přátelská libovolné třídy. V definici třídy, použijte **friend** – klíčové slovo a názvu funkce bez členů nebo jiné třídy jí udělit přístup k soukromým a chráněným členům třídy. V definici šablony parametr typu mohou být deklarovány jako přátelská.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ friend F;
 ## <a name="friend-declarations"></a>Friend – deklarace  
  Je-li deklarována přátelská funkce, která předtím deklarována nebyla, je tato funkce exportována do ohraničujícího netřídního oboru.  
   
- Funkce deklarované v rámci přátelské deklarace jsou brány, jako kdyby byly deklarovány klíčovým slovem `extern`. (Další informace o `extern`, najdete v části [statické specifikátory třídy úložiště](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48).)  
+ Funkce deklarované v deklaraci typu friend je zpracováván stejně, jako kdyby byly deklarovány pomocí **extern** – klíčové slovo. Další informace najdete v tématu [extern](extern-cpp.md).  
   
  Přestože lze funkce s globálním rozsahem deklarovat jako přátelské s předností před jejich prototypy, nelze členské funkce deklarovat jako přátelské před objevením deklarace jejich úplné třídy. Následující kód ukazuje důvod selhání:  
   
@@ -50,18 +50,18 @@ class HasFriends
 };  
 ```  
   
- Předchozí příklad zadá do rozsahu název třídy `ForwardDeclared`, ale úplná deklarace – konkrétně část deklarující funkci `IsAFriend` – není známa. Proto deklarace `friend` ve třídě `HasFriends` vygeneruje chybu.  
+ Předchozí příklad zadá do rozsahu název třídy `ForwardDeclared`, ale úplná deklarace – konkrétně část deklarující funkci `IsAFriend` – není známa. Proto **friend** deklaraci ve třídě `HasFriends` dojde k chybě.  
   
- Počínaje C ++ 11, existují dvě formy friend – deklarace pro třídu:  
+ Od verze C ++ 11, existují dvě formy Friend – deklarace pro třídu:  
   
 ```cpp  
 friend class F;  
 friend F;  
 ```  
   
- První formulář zavádí novou třídu F, pokud neexistuje žádná existující třída tímto názvem byla nalezena v oboru názvů nejvnitřnější.  **C ++ 11**: druhý formulář nezavádí nové třídy; lze použít, pokud třída již byl deklarován a při deklarující typ parametru šablony nebo typedef jako přítele musí použít.  
+ První formulář zavádí novou třídu F, pokud žádná existující třída s tímto názvem nebyla v nejvnitřnější obor názvů.  **C ++ 11**: Druhá forma nezavádí nové třídy; můžete použít, pokud třída již byla deklarována, a musí být použit při deklaraci parametru typu šablony nebo definice typu jako přátelská.  
   
- Použití `class friend F` při nebyla odkazovaného typu ještě deklarována:  
+ Použití `class friend F` při odkazovaný typ nebyl dosud byla deklarována:  
   
 ```cpp  
 namespace NS  
@@ -83,7 +83,7 @@ namespace NS
 }  
 ```  
   
- V následujícím příkladu `friend F` odkazuje `F` třídu, která je mimo rozsah NS deklarován.  
+ V následujícím příkladu `friend F` odkazuje `F` třídu, která je deklarována mimo rozsah NS.  
   
 ```cpp  
 class F {};  
@@ -96,7 +96,7 @@ namespace NS
 }  
 ```  
   
- Použití `friend F` deklarovat jako přítele parametru šablony:  
+ Použití `friend F` deklarovat jako přátelská parametru šablony:  
   
 ```cpp  
 template <typename T>  
@@ -107,7 +107,7 @@ class my_class
 };  
 ```  
   
- Použití `friend F` deklarovat typedef jako friend:  
+ Použití `friend F` k deklaraci typedef jako deklarace friend:  
   
 ```cpp  
 class Foo {};  
@@ -126,9 +126,9 @@ class G
 >  Ačkoli celá druhá třída musí být přátelskou třídou první třídy, je možné vybrat, které funkce první třídy budou přáteli druhé třídy.  
   
 ## <a name="friend-functions"></a>friend – funkce  
- Funkce `friend` je funkce, která není členem třídy, ale má přístup k soukromým a chráněným členům třídy. Spřátelené funkce nejsou považovány za členy třídy. Jsou to normální externí funkce, kterým jsou přiřazena zvláštní přístupová oprávnění. Přátel nejsou v oboru třídy a jejich nejsou volat pomocí operátory výběru členů (**.** a -**>**) Pokud jsou členy jiné třídy. Funkce `friend` je deklarována pomocí třídy, která uděluje přístup. Deklarace `friend` může být umístěna kdekoli v deklaraci třídy. Není ovlivněna klíčovými slovy řízení přístupu.  
+ A **friend** funkce je funkce, která není členem třídy, ale má přístup k soukromým a chráněným členům třídy. Spřátelené funkce nejsou považovány za členy třídy. Jsou to normální externí funkce, kterým jsou přiřazena zvláštní přístupová oprávnění. Spřátelené funkce nejsou v oboru třídy a nejsou volány pomocí operátorů výběru členů (**.** a -**>**) Pokud nejsou členy jiné třídy. A **friend** funkce je deklarována pomocí třídy, která uděluje přístup. **Friend** deklarace může být umístěna kdekoli v deklaraci třídy. Není ovlivněna klíčovými slovy řízení přístupu.  
   
- Následující příklad ukazuje třídu `Point` a spřátelenou funkci `ChangePrivate`. Funkce `friend` má přístup ke členu soukromých dat objektu `Point`, který přijímá jako parametr.  
+ Následující příklad ukazuje třídu `Point` a spřátelenou funkci `ChangePrivate`. **Friend** funkce má přístup ke členu soukromých dat objektu `Point` který přijímá jako parametr.  
   
 ```cpp  
 // friend_functions.cpp  
@@ -161,7 +161,7 @@ int main()
 ```  
   
 ## <a name="class-members-as-friends"></a>Členy třídy jako friends  
- Členské funkce třídy mohou být v jiných třídách deklarovány jako přátelské funkce. Podívejte se na následující příklad:  
+ Členské funkce třídy mohou být v jiných třídách deklarovány jako přátelské funkce. Vezměte v úvahu v následujícím příkladu:  
   
 ```cpp  
 // classes_as_friends1.cpp  
@@ -189,7 +189,7 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248  
 ```  
   
- V předchozím příkladu je do třídy `A::Func1( B& )` udělen přátelský přístup pouze funkci `B`. Proto přístup privátního člena `_b` správné v `Func1` třídy `A` , ale ne v `Func2`.  
+ V předchozím příkladu je do třídy `A::Func1( B& )` udělen přátelský přístup pouze funkci `B`. Proto je přístup k soukromému členu `_b` správný u `Func1` třídy `A` , ale ne v `Func2`.  
   
  Třída `friend` je třída, jejíž všechny členské funkce jsou přátelské funkce třídy, jejíž členské funkce mají přístup k soukromým a chráněným členům jiné třídy. Předpokládejme, že by deklarace `friend` v třídě `B` byla:  
   
@@ -236,10 +236,10 @@ int main() {
   
  Následující obrázek znázorňuje čtyři deklarace třídy: `Base`, `Derived`, `aFriend` a `anotherFriend`. Pouze třída `aFriend` má přímý přístup k soukromým členům `Base` (a ke všem členům, které byly zděděny `Base`).  
   
- ![Důsledky friend vztah](../cpp/media/vc38v41.gif "vc38V41")  
+ ![Vliv na relace typu friend](../cpp/media/vc38v41.gif "vc38V41")  
 Důsledky přátelské relace  
   
-## <a name="inline-friend-definitions"></a>Definice vloženého friend  
+## <a name="inline-friend-definitions"></a>Definice vloženého typu friend  
  Spřátelené funkce lze definovat uvnitř deklarací tříd. Tyto funkce jsou vložené funkce a chovají se podobně jako vložené členské funkce, jako by byly definovány ihned po zjištění členů třídy, ale ještě před uzavřením oboru třídy (konec deklarace třídy).  
   
  Spřátelené funkce definované uvnitř deklarací třídy nejsou v rozsahu považovány za nadřazené třídy. Jsou v rozsahu souboru.  

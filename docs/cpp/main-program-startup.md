@@ -1,5 +1,5 @@
 ---
-title: 'hlavní: spuštění programu | Microsoft Docs'
+title: 'Main: spuštění programu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,50 +22,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2999596fe30afca4c9945efc34a8537e9f45e14a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939221"
 ---
 # <a name="main-program-startup"></a>main: nastavení programu
-Speciální funkce s názvem `main` je výchozí bod spuštění pro všechny programy C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovací model, můžete použít `wmain`, což je verze široká charakterová `main`.  
+Speciální funkce s názvem `main` je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovacího modelu, můžete použít `wmain`, což je verze širokého znaku `main`.  
   
- `main` Kompilátorem není předdefinované funkce. Je potřeba zadat ve text programu.  
+ `main` Není kompilátorem předdefinované funkce. Musí být zadána textu programu.  
   
  Syntaxe deklarace pro `main` je  
   
-```  
+```cpp 
 int main();  
 ```  
   
- případně  
+ nebo v případě potřeby  
   
-```  
+```cpp 
 int main(int argc, char *argv[], char *envp[]);  
 ```  
   
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  Syntaxe deklarace pro `wmain` vypadá takto:  
   
-```  
+```cpp 
 int wmain( );  
 ```  
   
- případně  
+ nebo v případě potřeby  
   
-```  
+```cpp 
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- Můžete také použít `_tmain`, který je definován v souboru TCHAR.h. `_tmain` přeloží na `main` Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
+ Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na `main` Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
   
- Případně `main` a `wmain` funkce lze deklarovat jako vrácení `void` (žádnou návratovou hodnotu). Pokud je deklarovat `main` nebo `wmain` jako vrácení `void`, ukončovací kód nelze vrátit k nadřazeného procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkaz. Vrátit ukončovací kód při `main` nebo `wmain` je deklarován jako `void`, je nutné použít [ukončete](../cpp/exit-function.md) funkce.  
+ Další možností `main` a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete `main` nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy `main` nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.  
   
-**Konkrétní Microsoft END**  
- Typy pro `argc` a `argv` jsou definovány pomocí jazyka. Názvy `argc`, `argv`, a `envp` jsou tradiční, ale nejsou požadována kompilátoru. Další informace a příklady naleznete v tématu [definice argumentů](../cpp/argument-definitions.md).  
+**Specifické pro END Microsoft**  
+ Typy pro `argc` a `argv` jsou definovány jazykem. Názvy `argc`, `argv`, a `envp` tradičních, avšak nemusejí kompilátorem. Další informace a příklad najdete v tématu [definice argumentů](../cpp/argument-definitions.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)   
- [main – omezení funkce](../cpp/main-function-restrictions.md)
+ [Main – omezení funkce](../cpp/main-function-restrictions.md)   
+ [Analýza argumentů příkazového řádku jazyka C++](../cpp/parsing-cpp-command-line-arguments.md)

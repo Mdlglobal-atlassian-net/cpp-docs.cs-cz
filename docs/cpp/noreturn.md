@@ -1,5 +1,5 @@
 ---
-title: noreturn | Microsoft Docs
+title: noreturn | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90fab865a02b7ad00bd25b6d74f2d19b2678875c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2323af14472741901c4e4b7d8fe27e56e1d4d4f0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947705"
 ---
 # <a name="noreturn"></a>noreturn
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Tento atribut `__declspec` říká kompilátoru, že funkce neprovede navrácení. V důsledku toho kompilátor zná, který kód po volání **__declspec(noreturn)** funkce nedostupný.  
+ To **__declspec** atribut oznamuje kompilátoru, že funkce nevrací. V důsledku toho kompilátor ví, že kód následující za voláním **__declspec(noreturn)** funkce nedostupný.  
   
- Pokud kompilátor najde funkci s cestou řízení, která nevrací hodnotu, vygeneruje upozornění (C4715) nebo chybovou zprávu (C2202). Pokud cesta ovládacích prvků není dosažitelný kvůli funkci, která nikdy vrátí, můžete použít **__declspec(noreturn)** aby tohoto varování nebo chyby.  
+ Pokud kompilátor najde funkci s cestou řízení, která nevrací hodnotu, vygeneruje upozornění (C4715) nebo chybovou zprávu (C2202). Pokud cesta správy není dostupný kvůli funkci, která se nikdy nevrátí, můžete použít **__declspec(noreturn)** zabránit tohoto varování nebo chyby.  
   
 > [!NOTE]
->  Přidání **__declspec(noreturn)** funkce, která zpět může mít za následek nedefinované chování.  
+>  Přidání **__declspec(noreturn)** funkci, která se očekává navrácení může vést k nedefinovanému chování.  
   
 ## <a name="example"></a>Příklad  
- V následující ukázce **else** klauzule neobsahuje příkaz return.  Deklarování `fatal` jako **__declspec(noreturn)** zabraňuje chybě nebo upozornění.  
+ V následujícím příkladu **else** klauzule neobsahuje příkaz return.  Deklarování `fatal` jako **__declspec(noreturn)** zabrání chybě nebo upozornění.  
   
-```  
+```cpp 
 // noreturn2.cpp  
 __declspec(noreturn) extern void fatal () {}  
   

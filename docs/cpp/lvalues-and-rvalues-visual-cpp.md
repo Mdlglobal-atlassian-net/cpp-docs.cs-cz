@@ -1,5 +1,5 @@
 ---
-title: 'Hodnotu kategorie: Hodnoty lvalue a rvalue (Visual C++) | Microsoft Docs'
+title: 'Hodnota kategorie: Hodnoty lvalue a rvalue (C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -15,34 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbe048ee6667aaf71b2a3cf52e82993f90ab1c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419138"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940183"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (Visual C++)
+# <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
 
-Každý výraz C++ má typ a patří k *hodnota kategorie*. Hodnota kategorie jsou základem pro pravidla, která řídí kompilátory při vytváření, kopírování a přesouvání dočasné objekty při vyhodnocení výrazu.
+Každý výraz jazyka C++ má typ, patří *kategorií hodnot*. Hodnota kategorie jsou základem pro pravidla, která řídí kompilátory při vytváření, kopírování a přesouvání dočasné objekty při vyhodnocení výrazu.
 
- C ++ 17 standardní definuje kategorie hodnota výrazu následujícím způsobem:
+ Standardu C ++ 17 definuje kategorie hodnotu výrazu takto:
 
-- A *glvalue* je výraz, jehož vyhodnocení určuje identitu objektu, bitová pole nebo funkce.
-- A *prvalue* je výraz, jehož vyhodnocení inicializuje objekt nebo pole bit nebo vypočítá hodnotu operand operátoru, podle určeného kontextu, ve kterém it se zobrazí.
-- *Xvalue* je glvalue, který označuje na objekt nebo pole bit, jejichž prostředky lze opětovně použít (obvykle protože je u konce své životnosti). [Příklad: osa x, hodnoty, například volání funkce s návratovým typem je odkaz rvalue nebo přetypování na typ deklarátor odkazu poskytne určité druhy výrazů zahrnující odkazy rvalue (8.3.2). ]
-- *Lvalue* je glvalue, který není hodnotu xvalue.
-- *Rvalue* prvalue nebo hodnotu xvalue.
+- A *glvalue* je výraz, jehož vyhodnocení určuje identitu objektu, bitového pole nebo funkce.
+- A *hodnota, která není* je výraz, jehož vyhodnocení inicializuje objekt nebo bitové pole nebo vypočítá hodnotu operand operátoru, podle určeného kontextu, ve kterém se zobrazí.
+- *Xvalue* je glvalue, který označuje objekt nebo bitové pole, jehož prostředky jde znovu použít (obvykle, protože je na konci svého životního cyklu). [Příklad: osa x, hodnoty, jako je například volání funkce, jejíž návratový typ je odkaz rvalue nebo přetypování na odkazový typ yield určité druhy výrazy, které obsahují odkazy rvalue (8.3.2). ]
+- *L-hodnoty* je glvalue, který není xvalue.
+- *Rvalue* hodnota, která není nebo xvalue.
 
 Následující diagram znázorňuje vztahy mezi kategorií:
 
- ![Kategorie hodnota výrazů C++](media/value_categories.png "kategorie hodnota výrazů C++")
+ ![Kategorie hodnotu výrazů C++](media/value_categories.png "kategorie hodnotu výrazu jazyka C++")
 
- Lvalue má adresu, která můžete přístup k vaší aplikaci. Příklady výrazů lvalue názvy proměnných, včetně `const` proměnné, elementy pole funkce volání, které vracejí odkazu lvalue, bitových polí, sjednocení a členy třídy.
+ L-hodnota má adresu s přístupem k aplikaci. Výrazy l-hodnoty. Příklady názvy proměnných, včetně **const** proměnné, prvky pole, funkce volání, která vrátí odkaz na lvalue, bitová pole, sjednocení a členy třídy.
 
- Výraz prvalue nemá žádnou adresu, která je přístupná pomocí vašeho programu. Příklady výrazů prvalue: literály, volání funkce, která návratový typ – referenční dokumentace a dočasné objekty, které jsou vytvořené během evalution výraz, ale přístupné pouze pomocí kompilátoru.
+ Hodnota, která není výraz nemá adresu, který je přístupný pro váš program. Příklady výrazů hodnota, která není jsou literály, volání funkce, které vracejí nereferenčního typu a dočasné objekty, které jsou vytvořeny během evalution výraz ale přístupný pouze pomocí kompilátoru.
 
- Výraz hodnotu xvalue má adresu, už nebude přístupný pro váš program, ale můžou používat k chybě při inicializaci deklarátor odkazu, který poskytuje přístup k výrazu. Příklady zahrnují volání funkcí, které vrátí deklarátor odkazu a dolní index pole, člen a ukazatele na člena výrazy kde objekt nebo pole je deklarátor odkazu.
+ Výraz hodnoty xvalue má adresu, která už nebude přístupný pro váš program však lze použít k inicializaci odkaz rvalue, který poskytuje přístup k výraz. Příklady zahrnují volání funkcí, které vrátí odkaz rvalue a dolní index pole, člen a ukazatel na člen výrazy kde pole nebo objekt je odkaz rvalue.
 
 ## <a name="example"></a>Příklad
 
@@ -76,8 +76,8 @@ int main()
 > [!NOTE]
 > Příklady v tomto tématu ukazují správné a nesprávné použití v případě, že operátory nejsou přetíženy. Přetěžováním operátorů lze vytvořit výraz jako l-hodnotu `j * 4`.
 
-Podmínky *lvalue* a *rvalue* se často používají při odkazu na odkazy na objekty. Další informace naleznete v tématu [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) a [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Podmínky *l-hodnoty* a *rvalue* jsou často používány při odkazu na odkazy objektu. Další informace o referencích naleznete v tématu [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) a [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Viz také
 
- [Základní koncepty](../cpp/basic-concepts-cpp.md) [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) [deklarátor odkazu Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [Základní koncepty](../cpp/basic-concepts-cpp.md) [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md)

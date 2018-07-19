@@ -1,5 +1,5 @@
 ---
-title: Ukazatele (C++) | Microsoft Docs
+title: Ukazatelé (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947605"
 ---
-# <a name="pointers-c"></a>Ukazatele (C++)
+# <a name="pointers-c"></a>Ukazatelé (C++)
 Ukazatele jsou deklarovány následujícím způsobem.  
   
 ```  
@@ -31,7 +32,7 @@ Ukazatele jsou deklarovány následujícím způsobem.
 [ms-modifier] declarator ;  
 ```  
   
- kde mohou být použity žádné platné ukazatel deklarátor pro `declarator`.  Syntaxe pro jednoduché ukazatel deklarátor vypadá takto:  
+ kde lze použít libovolný platný ukazatel deklarátor pro `declarator`.  Syntaxe deklarátoru jednoduchého ukazatele je následujícím způsobem:  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -39,66 +40,66 @@ Ukazatele jsou deklarovány následujícím způsobem.
   
  1. Specifikátory deklarace:  
   
--   Specifikátor třídy úložiště volitelné. Další informace najdete v tématu [specifikátory](../cpp/specifiers.md).  
+    - Volitelný specifikátor paměťové třídy. Další informace najdete v tématu [specifikátory](../cpp/specifiers.md).  
   
--   Volitelný `const` nebo `volatile` použití typu objekt, který má být ukazuje – klíčové slovo.  
+    - Volitelně **const** nebo **volatile** – klíčové slovo použití typu objekt, který má být odkazovala na.  
   
--   Specifikátor typu: název tohoto typu představující typ objektu, který chcete odkazovat.  
+    - Specifikátor typu: název typu reprezentující typ objektu odkazovala na.  
   
  2. Deklarátor:  
   
--   Volitelné Microsoft konkrétní modifikátor. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   Operátor `*`.  
+    - Operátor `*`.  
   
--   Volitelný `const` nebo `volatile` – klíčové slovo použití na samotný ukazatele.  
+    - Volitelně **const** nebo **volatile** – klíčové slovo použití na ukazatel sám.  
   
--   Identifikátor.  
+    - Identifikátor.  
   
--   Inicializátoru volitelné.  
+    - Volitelný inicializátor.  
   
- Deklarátor pro ukazatel na funkci, vypadá takto:  
+     Deklarátoru ukazatele na funkce vypadá takto:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
 [exception specification] [= expression];  
 ```  
   
--   Pro pole ukazatele syntaxe vypadat třeba takto:  
+-   Pro pole ukazatelů syntaxe vypadá takto:  
   
 ```  
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   Více deklarátor a jejich inicializátory mohou objevit společně v jediné deklaraci v následujících Specifikátor deklarace seznam oddělený čárkami.  
+-   Jejich inicializátory a víc deklarátorů. může se zobrazí společně v jedné deklaraci v následující deklaraci specifikátor seznam oddělený čárkami.  
   
- Jednoduchý příklad deklaraci ukazatel je:  
+ Jednoduchý příklad deklaraci ukazatele je:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- Předchozí deklaraci Určuje, že `pch` odkazuje na objekt typu `char`.  
+ Předchozí deklarace Určuje, že `pch` odkazuje na objekt typu **char**.  
   
- Ukázka je  
+ Je složitější příklad  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- Předchozí deklaraci Určuje, že `ptr` konstantní ukazatel na objekt typu `unsigned` `int` s úložiště se statickými doba trvání.  
+ Předchozí deklarace Určuje, že `ptr` konstantní ukazatel na objekt typu **bez znaménka** **int** s trváním statického úložiště.  
   
- Další příklad ukazuje, jak více ukazatele deklarovat a inicializovat:  
+ Následující příklad ukazuje, jak více ukazatelů jsou deklarovány a inicializovány:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- V předchozím příkladu, přejděte na objekty typu ukazatele p a q `int` a jsou inicializovány adresy i a j v uvedeném pořadí.  Specifikátor třídy úložiště `static` platí pro obě ukazatele.  
+ V předchozím příkladu, přejděte na objekty typu ukazatele p a q **int** a jsou inicializovány na hodnotu adresy i a j v uvedeném pořadí.  Specifikátor třídy úložiště **statické** platí pro obě ukazatele.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -187,9 +188,9 @@ dog dog
 ```  
   
 ## <a name="example"></a>Příklad  
- Další příklad ukazuje použití ukazatele v datové struktury; v tomto případě odkazovaného seznamu.  
+ Další příklad ukazuje použití ukazatele ve strukturách dat; v tomto případě propojeného seznamu.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

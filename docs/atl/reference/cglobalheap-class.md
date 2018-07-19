@@ -1,5 +1,5 @@
 ---
-title: Třída CGlobalHeap | Microsoft Docs
+title: Cglobalheap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363331"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882829"
 ---
-# <a name="cglobalheap-class"></a>CGlobalHeap – třída
-Tato třída implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) pomocí funkcí globální haldy Win32.  
+# <a name="cglobalheap-class"></a>Cglobalheap – třída
+Tato třída implementuje [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md) pomocí funkce globální haldy Win32.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +46,19 @@ class CGlobalHeap : public IAtlMemMgr
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGlobalHeap::Allocate](#allocate)|Voláním této metody lze přidělit blok paměti.|  
-|[CGlobalHeap::Free](#free)|Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.|  
-|[CGlobalHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.|  
-|[CGlobalHeap::Reallocate](#reallocate)|Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.|  
+|[CGlobalHeap::Allocate](#allocate)|Volejte tuto metodu za účelem přidělení bloku paměti.|  
+|[CGlobalHeap::Free](#free)|Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.|  
+|[CGlobalHeap::GetSize](#getsize)|Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.|  
+|[CGlobalHeap::Reallocate](#reallocate)|Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CGlobalHeap` implementuje pomocí funkcí globální haldy Win32 funkce přidělení paměti.  
+ `CGlobalHeap` implementuje funkce přidělení paměti pomocí funkce globální haldy Win32.  
   
 > [!NOTE]
->  Funkce globální haldy jsou nižší než jiné funkce správy paměti a neposkytuje jako řadu funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou k dispozici v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy. Globální funkce jsou nadále používány DDE a funkce schránky.  
+>  Funkce globální haldy jsou pomalejší než jiné funkce správy paměti a neposkytuje tolik funkcí. Proto měli používat nové aplikace [haldy funkce](http://msdn.microsoft.com/library/windows/desktop/aa366711). Tyto jsou dostupné v [CWin32Heap](../../atl/reference/cwin32heap-class.md) třídy. Globální funkce se stále používají DDE a funkce schránky.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ Podívejte se na příklad pro [iatlmemmgr –](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IAtlMemMgr`  
@@ -69,81 +69,81 @@ class CGlobalHeap : public IAtlMemMgr
  **Záhlaví:** atlmem.h  
   
 ##  <a name="allocate"></a>  CGlobalHeap::Allocate  
- Voláním této metody lze přidělit blok paměti.  
+ Volejte tuto metodu za účelem přidělení bloku paměti.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CGlobalHeap::Free](#free) nebo [CGlobalHeap::Reallocate](#reallocate) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CGlobalHeap::Free](#free) nebo [CGlobalHeap::Reallocate](#reallocate) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) s parametrem příznak **GMEM_FIXED**.  
+ Implementované pomocí [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) s parametrem příznak GMEM_FIXED.  
   
 ##  <a name="free"></a>  CGlobalHeap::Free  
- Volejte tuto metodu k bezplatným blok paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu pro uvolnění bloku paměti přidělené tomuto správci paměti.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti. NULL není platná hodnota a neprovede žádnou akci.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti. Hodnota NULL je platnou hodnotu a nemá žádný účinek.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
+ Implementované pomocí [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
- Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu za účelem získání přidělená velikost bloku paměti přidělené tímto správcem paměti.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí velikost bloku paměti přidělené v bajtech.  
+ Vrátí velikost bloku přidělené paměti v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
- Implementovaná pomocí [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
+ Implementované pomocí [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
 ##  <a name="reallocate"></a>  CGlobalHeap::Reallocate  
- Volejte tuto metodu a znovu přidělte paměti přidělené tomuto správci paměti.  
+ Volejte tuto metodu, aby mohla znovu přidělit paměti přidělené tímto správcem paměti.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Ukazatel na paměti dříve přidělené tomuto správci paměti.  
+ *p*  
+ Ukazatel na paměť přidělenou dříve metodou tento správce paměti.  
   
- `nBytes`  
+ *nBytes*  
  Požadovaný počet bajtů v nového bloku paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na začátku bloku nově přidělených paměti.  
+ Vrací ukazatel na začátek bloku nově přidělenou paměť.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [CGlobalHeap::Free](#free) k bezplatným je paměť přidělená touto metodou.  
+ Volání [CGlobalHeap::Free](#free) k uvolnění paměti přidělené touto metodou.  
   
- Implementovaná pomocí [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+ Implementované pomocí [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)   
- [CComHeap – třída](../../atl/reference/ccomheap-class.md)   
- [CWin32Heap – třída](../../atl/reference/cwin32heap-class.md)   
- [CLocalHeap – třída](../../atl/reference/clocalheap-class.md)   
- [CCRTHeap – třída](../../atl/reference/ccrtheap-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
+ [Ccomheap – třída](../../atl/reference/ccomheap-class.md)   
+ [Cwin32heap – třída](../../atl/reference/cwin32heap-class.md)   
+ [Clocalheap – třída](../../atl/reference/clocalheap-class.md)   
+ [Ccrtheap – třída](../../atl/reference/ccrtheap-class.md)   
  [IAtlMemMgr – třída](../../atl/reference/iatlmemmgr-class.md)

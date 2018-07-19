@@ -1,5 +1,5 @@
 ---
-title: type_info – třída | Microsoft Docs
+title: type_info – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422433"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941038"
 ---
 # <a name="typeinfo-class"></a>type_info – třída
-**Type_info** třída popisuje informace o typu generované v rámci programu kompilátoru. Objekty této třídy účinně ukládají ukazatel na název typu. **Type_info** třída také ukládá hodnotu kódovaného vhodný pro porovnání rovnosti dvou typů nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  
+`type_info` Třída popisuje typ informace generované kompilátorem v rámci programu. Objekty této třídy účinně ukládají ukazatel na název typu. `type_info` Třídy také ukládá kódovanou hodnotu vhodnou pro porovnání dvou typů pro rovnost nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  
   
- `<typeinfo>` Musí být součástí, aby bylo možné používat hlavičkový soubor **type_info** třídy. Rozhraní pro **type_info** třída je:  
+ `<typeinfo>` Soubor hlaviček musí být zahrnut pro použití `type_info` třídy. Rozhraní pro `type_info` třída je:  
   
 ```cpp
 class type_info {  
@@ -42,19 +42,19 @@ public:
 };  
 ```  
   
- Nelze doložit objekty **type_info** třídy přímo, protože třída má pouze privátní kopírovacího konstruktoru. Jediný způsob, jak vytvořit (dočasný) **type_info** objekt, je použít [typeid](../cpp/typeid-operator.md) operátor. Vzhledem k tomu, že je operátor přiřazení také privátní, nelze kopírovat nebo přiřazovat objekty třídy **type_info**.  
+ Nelze vytvořit instanci objektů `type_info` třídy přímo, protože tato třída má pouze soukromý kopírovací konstruktor. Jediný způsob, jak vytvořit (dočasný) `type_info` objektu je použít [typeid](../cpp/typeid-operator.md) operátor. Protože operátor přiřazení je také soukromý, nelze kopírovat ani přiřadit objekty třídy `type_info`.  
   
- **type_info::hash_code** definuje vhodný pro mapování hodnoty typu funkce hash **TypeInfo –** k distribučnímu index hodnot.  
+ `type_info::hash_code` Definuje funkci hash, která je vhodná pro mapování hodnot typu `typeinfo` k distribuci hodnot indexu.  
   
- Operátory `==` a `!=` lze použít k porovnání rovnosti a nerovnosti s jinými **type_info** objekty, v uvedeném pořadí.  
+ Operátory `==` a `!=` slouží k porovnání rovnosti a nerovnosti s jinými `type_info` objekty v uvedeném pořadí.  
   
- Neexistuje žádná souvislost mezi pořadím řazení typů a vztahy dědičnosti. Použití **type_info::before** – členská funkce k určení pořadí řazení typů. Neexistuje žádná záruka, **type_info::before** předá stejný výsledek v různých aplikacích nebo i jiné spustí stejný program. Tímto způsobem **type_info::before** je podobná adresu z **(&)** operátor.  
+ Neexistuje žádná souvislost mezi pořadím řazení typů a vztahy dědičnosti. Použití `type_info::before` členskou funkci k určení pořadí řazení typů. Neexistuje žádná záruka, který `type_info::before` předá stejné výsledky v různých programech nebo dokonce během různých spuštění stejného programu. Tímto způsobem `type_info::before` je podobný adresy `(&)` operátor.  
   
- **Type_info::name** – členská funkce vrátí **const char\***  představující čitelný název typu do řetězce ukončené hodnotou null. Paměť, na kterou je odkazováno, je uložena do mezipaměti a neměla by nikdy být odebrána přímo.  
+ `type_info::name` Členská funkce vrátí `const char*` na řetězec zakončený hodnotou null představující čitelný název typu. Paměť, na kterou je odkazováno, je uložena do mezipaměti a neměla by nikdy být odebrána přímo.  
   
- **Type_info::raw_name** – členská funkce vrátí **const char\***  představující upravený název typu objektu do řetězce ukončené hodnotou null. Ve skutečnosti je název pro úsporu místa uložen v upravené podobě. V důsledku toho se tato funkce je rychlejší než **type_info::name** protože nepotřebuje odstaranit úpravy názvu. Řetězec vrácený **type_info::raw_name** funkce je užitečná v operace porovnání, ale není možné číst. Pokud potřebujete čitelná pro člověka řetězec, použijte **type_info::name** funkce místo.  
+ `type_info::raw_name` Členská funkce vrátí `const char*` na řetězec zakončený hodnotou null představující upravený název typu objektu. Ve skutečnosti je název pro úsporu místa uložen v upravené podobě. V důsledku toho tato funkce je rychlejší než `type_info::name` protože není nutné rušit úpravu názvu. Řetězec vrácený funkcí `type_info::raw_name` funkce je užitečný v operacích porovnávání, ale není čitelný. Pokud potřebujete řetězec čitelný, použijte `type_info::name` namísto toho funkci.  
   
- Typ informace se generují pro polymorfní třídy pouze v případě [/GR (Povolit Run-Time informace typu)](../build/reference/gr-enable-run-time-type-information.md) – možnost kompilátoru je zadán.  
+ Informace o typu se generuje pro polymorfní třídy pouze tehdy, pokud [/GR (povolení běhové informace o typu)](../build/reference/gr-enable-run-time-type-information.md) je zadána možnost kompilátoru.  
   
 ## <a name="see-also"></a>Viz také  
  [Informace o typu modulu runtime](../cpp/run-time-type-information.md)

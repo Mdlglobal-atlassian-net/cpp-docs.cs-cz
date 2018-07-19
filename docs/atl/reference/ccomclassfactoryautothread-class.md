@@ -1,5 +1,5 @@
 ---
-title: Třída CComClassFactoryAutoThread | Microsoft Docs
+title: Ccomclassfactoryautothread – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363120"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883057"
 ---
-# <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread – třída
-Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní a umožňuje vytvořit v několika Apartment objekty.  
+# <a name="ccomclassfactoryautothread-class"></a>Ccomclassfactoryautothread – třída
+Tato třída implementuje [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) rozhraní a umožňuje objektů bude vytvořena ve více objekty apartment.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,13 +46,13 @@ class CComClassFactoryAutoThread
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Vytvoří objekt zadaného CLSID.|  
-|[CComClassFactoryAutoThread::LockServer](#lockserver)|Zamkne objektu pro vytváření tříd v paměti.|  
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Vytvoří objekt zadaným identifikátorem CLSID.|  
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|Zamkne objekt pro vytváření tříd v paměti.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComClassFactoryAutoThread` je podobná [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ale umožňuje vytvořit v několika Apartment objekty. Abyste mohli využívat této podpory, odvozena EXE modul z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` je podobný [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md), ale umožňuje objektů bude vytvořena ve více objekty apartment. Využít této podpory, jsou odvozeny z modulu EXE [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Objekty knihovny ATL normálně získat objekt třídy odvozené z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactoryAutoThread`, zadejte [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu. Příklad:  
+ Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactoryAutoThread`, zadejte [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) makra v definici třídy objektu. Příklad:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
@@ -69,7 +69,7 @@ class CComClassFactoryAutoThread
  **Záhlaví:** atlcom  
   
 ##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
- Vytvoří objekt zadaného CLSID a načte ukazatele rozhraní k tomuto objektu.  
+ Vytvoří objekt zadaným identifikátorem CLSID a načte ukazatel rozhraní k tomuto objektu.  
   
 ```
 STDMETHODIMP CreateInstance(
@@ -79,44 +79,44 @@ STDMETHODIMP CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pUnkOuter`  
- [v] Pokud objekt se vytváří v rámci agregace, pak `pUnkOuter` musí být vnější neznámé. V opačném `pUnkOuter` musí být **NULL**.  
+ *pUnkOuter*  
+ [in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.  
   
- `riid`  
- [v] Identifikátory IID požadované rozhraní. Pokud `pUnkOuter` jinou hodnotu než **NULL**, `riid` musí být **IID_IUnknown**.  
+ *riid*  
+ [in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.  
   
- `ppvObj`  
- [out] Ukazatel na ukazatel rozhraní identifikovaný `riid`. Pokud objekt nepodporuje toto rozhraní `ppvObj` je nastaven na **NULL**.  
+ *ppvObj*  
+ [out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud modul je odvozena z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` první vybere vlákno k vytvoření objektu v přidružené typu apartment.  
+ Pokud modul je odvozena z [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` nejprve vybere vlákno k vytvoření objektu v přidružené objektu apartment.  
   
 ##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
- Zvýší a sníží počet zámek modulu voláním **_Module::Lock** a **_Module::Unlock**, v uvedeném pořadí.  
+ Inkrementuje a dekrementuje počet zámků modulů voláním `_Module::Lock` a `_Module::Unlock`v uvedeném pořadí.  
   
 ```
 STDMETHODIMP LockServer(BOOL fLock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fLock`  
- [v] Pokud **TRUE**, počet zámků je zvýšena; jinak hodnota, se odečte počet zámků.  
+ *hejna*  
+ [in] Při hodnotě TRUE se zvýší počet zámků; v opačném případě je snížen počet zámků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Při použití `CComClassFactoryAutoThread`, **_Module** obvykle odkazuje na globální instance [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ Při použití `CComClassFactoryAutoThread`, `_Module` obvykle odkazuje na globální instanci [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Volání metody `LockServer` umožňuje klienta tak, aby udržení na objekt pro vytváření tříd, aby více objektů můžete rychle vytvořit.  
+ Volání `LockServer` umožňuje klientovi opřete se o objekt pro vytváření tříd tak, aby více objektů lze rychle vytvořit.  
   
 ## <a name="see-also"></a>Viz také  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
- [CComClassFactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)   
- [CComClassFactorySingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)   
+ [Ccomclassfactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)   
+ [Ccomclassfactorysingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

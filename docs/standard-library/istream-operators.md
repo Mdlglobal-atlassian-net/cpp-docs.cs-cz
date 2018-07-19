@@ -1,5 +1,5 @@
 ---
-title: '&lt;IStream on Request&gt; operátory | Microsoft Docs'
+title: '&lt;IStream&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,18 +12,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961110"
 ---
-# <a name="ltistreamgt-operators"></a>&lt;IStream on Request&gt; operátory
+# <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operátory
 
-## <a name="op_gt_gt"></a>  Operátor&gt;&gt;
+## <a name="op_gt_gt"></a>  – Operátor&gt;&gt;
 
-Extrahuje znaky a řetězce z datového proudu.
+Extrahuje z datového proudu znaků a řetězce.
 
 ```cpp
 template <class Elem, class Tr>
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Znak.
+*Ch* znak.
 
-`Istr` Datový proud.
+*Istr* datového proudu.
 
-`str` Řetězec.
+*Str* řetězec.
 
-`val` Typ.
+*Val* typu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-Extrahuje až *N* – 1 elementy a ukládá je do pole počínaje _ *Str*. Pokud `Istr`. [Šířka](../standard-library/ios-base-class.md#width) je větší než nula, *N* je `Istr`. **Šířka**, jinak je velikost největší pole **Elem** , lze deklarovat. Funkce vždy ukládá hodnotu **Elem()** po žádné extrahování elementy ukládá. Extrakce zastaví již v rané fázi na konci souboru, na znak s hodnotou **Elem**(0) (který není extrahovat), nebo u libovolného elementu (která není extrahována), které by být zrušeny [ws](../standard-library/istream-functions.md#ws). Pokud funkci extrahuje žádné elementy, zavolá `Istr`. [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě volá `Istr`. **Šířka**(0) a vrátí `Istr`.
+Extrahuje až *N* + 1 prvků a ukládá je do pole, počínaje _ *Str*. Pokud `Istr`. [Šířka](../standard-library/ios-base-class.md#width) je větší než nula, *N* je `Istr`. **Šířka**; v opačném případě je velikost největšího pole `Elem` , které mohou být deklarovány. Funkce vždy ukládá hodnotu `Elem()` po žádné elementy, které je uložený. Extrakce zastaví již v rané fázi na konec souboru, na znak s hodnotou **Elem**(0) (které se extrahují), nebo na libovolný prvek (který se extrahuje), které by být zrušeny [ws](../standard-library/istream-functions.md#ws). Pokud funkci extrahuje žádné elementy, zavolá `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). V každém případě volá `Istr`. **Šířka**(0) a vrátí *Istr*.
 
-**Poznámka k zabezpečení** řetězce ukončené hodnotou null se extrahují z vstupního datového proudu nesmí být delší než velikost vyrovnávací paměti cílový `str`. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Poznámka k zabezpečení** řetězec zakončený hodnotou null se extrahují z vstupního datového proudu nesmí překročit velikost cílové vyrovnávací paměti *str*. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Funkce šablony:
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-Extrahuje elementu, pokud je možné a uloží jej do `Ch`. Jinak zavolá **je**. [setstate –](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě vrátí `Istr`.
+Extrahuje element, pokud je možné a uloží jej do *Ch*. V opačném případě volá **je**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). V každém případě vrátí *Istr*.
 
 Funkce šablony:
 
@@ -151,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Vrátí `Istr` `>>` `val` (a převede `rvalue reference` k `Istr` k `lvalue` v procesu).
+Vrátí `Istr` `>>` `val` (a převede `rvalue reference` k `Istr` do `lvalue` v procesu).
 
 ### <a name="example"></a>Příklad
 
@@ -172,6 +172,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<IStream on Request >](../standard-library/istream.md)<br/>
+[\<IStream >](../standard-library/istream.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: __raise | Microsoft Docs
+title: __raise | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947518"
 ---
 # <a name="raise"></a>__raise
 Zvýrazní stranu volání události.  
@@ -30,23 +31,21 @@ Zvýrazní stranu volání události.
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. V tématu [událostí](../windows/event-cpp-component-extensions.md) Další informace.  
+ Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. Zobrazit [události](../windows/event-cpp-component-extensions.md) Další informace.  
   
- Klíčové slovo `__raise` vygeneruje chybu, pokud zavoláte cokoli jiného než událost.  
+ Klíčové slovo **__raise** způsobí chybu, pokud zavoláte cokoli jiného než událost.  
   
 > [!NOTE]
 >  Třída šablony nebo struktura nemohou obsahovat události.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  
@@ -71,6 +70,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracování událostí](../cpp/event-handling.md)   
  [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

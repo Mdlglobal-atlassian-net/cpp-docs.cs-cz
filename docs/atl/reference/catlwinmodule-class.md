@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlWinModule | Microsoft Docs
+title: Catlwinmodule – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cbbee8a404b679c8411470215821b8cdcccc695e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358049"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885218"
 ---
-# <a name="catlwinmodule-class"></a>CAtlWinModule – třída
-Tato třída poskytuje podporu pro knihovny ATL oddílová součásti.  
+# <a name="catlwinmodule-class"></a>Catlwinmodule – třída
+Tato třída poskytuje podporu pro komponenty ATL časová okna.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,14 +46,14 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Název|Popis|  
 |----------|-----------------|  
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Konstruktor|  
-|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Destruktor.|  
+|[Catlwinmodule –:: ~ catlwinmodule –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Přidá na datový objekt.|  
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Vrací ukazatel na datový objekt okno modulu.|  
+|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Přidá datového objektu.|  
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Vrací ukazatel na datový objekt okna modul.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tato třída poskytuje podporu pro všechny třídy ATL, které vyžadují oddílová funkce.  
@@ -67,21 +67,21 @@ class CAtlWinModule : public _ATL_WIN_MODULE
  **Záhlaví:** atlbase.h  
   
 ##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
- Tato metoda inicializuje a přidá `_AtlCreateWndData` struktura.  
+ Tato metoda inicializuje a přidá `_AtlCreateWndData` struktury.  
   
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pData`  
- Ukazatel `_AtlCreateWndData` struktura inicializovat a přidat je do aktuální modulu.  
+ *pData*  
+ Ukazatel `_AtlCreateWndData` struktura bude inicializována a přidán do aktuální modul.  
   
- `pObject`  
- Ukazatele na objekt **to** ukazatel.  
+ *odstraněný objekt*  
+ Ukazatel na objekt **to** ukazatele.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) které inicializuje [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury. Tato struktura uloží **to** ukazatele, použije k získání instance třídy v procedury oken.  
+ Tato metoda volá [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) které inicializuje [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury. Tato struktura bude uložený **to** ukazatel, použít k získání instance třídy v procedury okna.  
   
 ##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  Konstruktor  
@@ -91,9 +91,9 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud se inicializace nezdaří, **EXCEPTION_NONCONTINUABLE** došlo k výjimce.  
+ Jestliže se inicializace nezdaří, **EXCEPTION_NONCONTINUABLE** je vyvolána výjimka.  
   
-##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>  Catlwinmodule –:: ~ catlwinmodule –  
  Destruktor.  
   
 ```
@@ -104,16 +104,16 @@ CAtlWinModule();
  Uvolní všechny přidělené prostředky.  
   
 ##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
- Tato metoda vrátí ukazatel na `_AtlCreateWndData` struktura.  
+ Tato metoda vrací ukazatel na `_AtlCreateWndData` struktury.  
   
 ```
 void* ExtractCreateWndData();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí ukazatel `_AtlCreateWndData` struktura dříve přidány s [CAtlWinModule::AddCreateWndData](#addcreatewnddata), nebo hodnota NULL, pokud je k dispozici žádný objekt.  
+ Vrací ukazatel `_AtlCreateWndData` struktura přidali dříve, pomocí [CAtlWinModule::AddCreateWndData](#addcreatewnddata), nebo hodnota NULL, pokud je k dispozici žádný objekt.  
   
 ## <a name="see-also"></a>Viz také  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [Třídy modulů](../../atl/atl-module-classes.md)

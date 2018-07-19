@@ -1,5 +1,5 @@
 ---
-title: Výrazy s unárními operátory | Microsoft Docs
+title: Výrazy s unárními operátory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416168"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941155"
 ---
 # <a name="expressions-with-unary-operators"></a>Výrazy s unárními operátory
-Unární operátory fungují s pouze jedním operandem ve výrazu. Unární operátory jsou následující:  
+Unární operátory pracují na pouze jeden operand ve výrazu. Unární operátory jsou následující:  
   
--   [Indirection – operátor (*)](../cpp/indirection-operator-star.md)  
+-   [Operátor dereference (*)](../cpp/indirection-operator-star.md)  
   
--   [Address-of – operátor (&)](../cpp/address-of-operator-amp.md)  
+-   [Operátor address-of (&)](../cpp/address-of-operator-amp.md)  
   
 -   [Unární plus (+) – operátor](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
 -   [Operátor unární negace (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [Logický operátor negace (!)](../cpp/logical-negation-operator-exclpt.md)  
+-   [Operátor logické negace (!)](../cpp/logical-negation-operator-exclpt.md)  
   
--   [Vlastní operátor doplňku (~)](../cpp/one-s-complement-operator-tilde.md)  
+-   [Jeden z operátorů doplňku (~)](../cpp/one-s-complement-operator-tilde.md)  
   
--   [Předpony operátor přírůstku (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Předpona operátoru Inkrementace (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Operátor snížení předpony (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Operátor dekrementace předpony (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
 -   [Operátor přetypování)](../cpp/cast-operator-parens.md)  
   
@@ -54,37 +54,37 @@ Unární operátory fungují s pouze jedním operandem ve výrazu. Unární oper
   
 -   [delete – operátor](../cpp/delete-operator-cpp.md)  
   
- Tyto operátory mít asociativnost zprava doleva. Unární výrazy obvykle zahrnují syntaxi, která předchází operátory nebo primární výraz.  
+ Tyto operátory mají asociativitu zprava doleva. Výrazy s unárními obvykle zahrnují syntaxe, která předchází li uplatněna přípona nebo primární výraz.  
   
- Níže jsou uvedeny možné formy unární výrazy.  
+ Tady jsou možné typy unární výrazů.  
   
--   *operátory – výraz*  
+-   *výraz přípony*  
   
 -   `++` *Unární výraz*  
   
 -   `--` *Unární výraz*  
   
--   *Unární operátor* *výraz cast*  
+-   *Unární operátor* *výrazem přetypování.*  
   
--   `sizeof` *Unární výraz*  
+-   **operátor sizeof:** *unární výraz*  
   
 -   `sizeof(` *Název typu* `)`  
   
--   `decltype(` *výraz* `)`  
+-   `decltype(` *Výraz* `)`  
   
 -   *přidělení – výraz*  
   
--   *zrušení přidělení výraz*  
+-   *zrušení přidělení – výraz*  
   
- Všechny *operátory výraz* se považuje za *unární výraz*, a protože je považována za jakékoli primární výraz *operátory výraz*, je všechny primární výrazy považovat za *unární výraz* také. Další informace najdete v tématu [výrazy přípony](../cpp/postfix-expressions.md) a [primární výrazy](../cpp/primary-expressions.md).  
+ Žádné *postfix-expression* se považuje za *unární výraz*, a protože se považuje za jakékoli primární výraz *postfix-expression*, se žádné primární výrazy považovat za *unární výraz* také. Další informace najdete v tématu [výrazy přípony](../cpp/postfix-expressions.md) a [primární výrazy](../cpp/primary-expressions.md).  
   
- A *unární operátor* se skládá z jednoho nebo více z následujících znaků: `* & + - ! ~`  
+ A *unární operátor* obsahuje jeden nebo více z těchto symbolů: `* & + - ! ~`  
   
- *Výraz cast* je unární výraz s volitelné přetypování na typ změnit. Další informace najdete v části [operátor přetypování: ()](../cpp/cast-operator-parens.md).  
+ *Výrazem přetypování* je jednočlenný výraz s volitelné přetypování na typ změnit. Další informace najdete v části [operátor přetypování: ()](../cpp/cast-operator-parens.md).  
   
- *Výraz* může být jakýkoli výraz. Další informace najdete v tématu [výrazy](../cpp/expressions-cpp.md).  
+ *Výraz* může být libovolný výraz. Další informace najdete v tématu [výrazy](../cpp/expressions-cpp.md).  
   
- *Přidělení výraz* odkazuje `new` operátor. *Navrácení výraz* odkazuje `delete` operátor. Další informace najdete v tématech v tomto tématu výše.  
+ *Allocation-expression* odkazuje **nové** operátor. *Zrušení přidělení výraz* odkazuje na **odstranit** operátor. Další informace najdete v tématech dříve v tomto tématu.  
   
 ## <a name="see-also"></a>Viz také  
  [Typy výrazů](../cpp/types-of-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Datum a čas: SYSTEMTIME – podpora | Microsoft Docs'
+title: 'Datum a čas: podpora SYSTEMTIME | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355397"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883564"
 ---
-# <a name="date-and-time-systemtime-support"></a>Datum a čas: SYSTEMTIME – podpora
-[CTime](../atl-mfc-shared/reference/ctime-class.md) třída obsahuje konstruktory, které přijímají systému a soubor časy z Win32. Pokud používáte `CTime` objekty pro tyto účely, musíte změnit své inicializace podle toho, jak je popsáno v tomto článku.  
+# <a name="date-and-time-systemtime-support"></a>Datum a čas: podpora SYSTEMTIME
+[CTime](../atl-mfc-shared/reference/ctime-class.md) třída má konstruktory, které přijímají systému a soubor dobu od Win32. Pokud používáte `CTime` objekty pro tyto účely, je nutné upravit jejich inicializace odpovídajícím způsobem, jak je popsáno v tomto článku.  
   
- Informace o SYSTEMTIME – struktura najdete v tématu [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Informace o struktuře FILETIME najdete v tématu [FILETIME](../mfc/reference/filetime-structure.md).  
+ Informace o SYSTEMTIME – struktura, naleznete v tématu [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Informace o FileTime – struktura, naleznete v tématu [hodnota FILETIME](../mfc/reference/filetime-structure.md).  
   
- MFC stále poskytuje `CTime` konstruktory, které nepřijímají čas argumenty ve stylu MS-DOS, ale, počínaje MFC verze 3.0, `CTime` třída také podporuje konstruktor, který přebírá Win32 `SYSTEMTIME` struktura a druhou, která přebírá Win32 `FILETIME` struktury.  
+ Knihovna MFC poskytuje stále `CTime` konstruktorů, které přijímají argumenty času ve stylu zástupného kódu MS-DOS, ale, spouští se v prostředí MFC verze 3.0, `CTime` třída také podporuje konstruktor s daným počtem Win32 `SYSTEMTIME` struktury a další vlastnost, která přebírá Win32 `FILETIME` struktury.  
   
  Nové `CTime` konstruktory jsou:  
   
 -   CTime – (const SYSTEMTIME & `sysTime`);  
   
--   CTime – (const FILETIME & `fileTime`);  
+-   CTime – (konstantní hodnota FILETIME & `fileTime`);  
   
- `fileTime` Parametr je odkaz na Win32 `FILETIME` struktury, která představuje dobu jako hodnotu 64-bit pohodlnější formát pro interní úložiště než `SYSTEMTIME` strukturu a formát používaný Win32 představují čas souboru vytvoření.  
+ *Hodnota fileTime* parametr je odkazem na Win32 `FILETIME` struktury, která představuje čas jako hodnotu 64-bit pohodlnější formát pro interní úložiště než `SYSTEMTIME` strukturu a formát používaný čtečkou Win32 do představuje čas vytvoření souboru.  
   
- Pokud váš kód obsahuje `CTime` objekt inicializovat se systémovým časem, byste měli používat `SYSTEMTIME` konstruktor v Win32.  
+ Pokud váš kód obsahuje `CTime` objekt je inicializován s systémový čas, byste měli použít `SYSTEMTIME` konstruktor v systému Win32.  
   
- Pravděpodobně nebudete používat `CTime` `FILETIME` inicializace přímo. Pokud používáte `CFile` objekt, který chcete upravit soubor [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) načte časové razítko souboru pro vás prostřednictvím `CTime` objekt inicializován s `FILETIME` struktury.  
+ Pravděpodobně nebude používat `CTime` `FILETIME` inicializace přímo. Pokud používáte `CFile` objekt pro manipulaci s souboru [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) načte časové razítko souboru pro vás prostřednictvím `CTime` objekt inicializován s `FILETIME` struktury.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Obecné datum a čas programování v prostředí MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Podpora automatizace datum a čas programování](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Podpora automatizace data a času programování](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 -   [Obecné třídy pro datum a čas programování](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

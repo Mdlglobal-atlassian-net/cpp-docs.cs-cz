@@ -1,5 +1,5 @@
 ---
-title: Omezení kompilátoru | Microsoft Docs
+title: Omezení kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7cd26add0a46bab8df7669fb6dfb6060b0010e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412134"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938896"
 ---
 # <a name="compiler-limits"></a>Omezení kompilátoru
-Standard jazyka C++ doporučuje limity pro různé jazykové konstrukce. Následuje seznam případů, kdy Visual C++ compiler neimplementuje doporučené omezení. První číslo je limit, který je vytvořen v ISO C++ 11 standardní (INCITS nebo ISO/IEC 14882-2011 [2012] přílohy B) a druhé číslo, které je implementováno modulem Visual C++ omezení:  
+Standard jazyka C++ doporučuje limity pro různé jazykové konstrukce. Následuje seznam případů, kde kompilátor Visual C++ neimplementuje doporučené limity. První číslo je limit, který je vytvořen ISO C++ 11 standard (INCITS/ISO/IEC 14882-2011 [2012], příloha B) a druhé číslo je limit implementovaný pomocí Visual C++:  
   
--   Složené příkazy, iterace řídicí struktury a výběr úrovně vnoření řízení struktury - C++ standardní: 256, – kompilátor Visual C++: závisí na kombinaci příkazů, které jsou vnořené, ale obecně rozsahu od 100 do 110.  
+-   Vnořování úrovní složených příkazů, struktury řízení iterací a výběr řízení struktury – C++ standard: 256, kompilátor Visual C++: závisí na kombinaci příkazů, které jsou vnořené, ale obecně rozsahu od 100 do 110.  
   
--   Parametry v definici jeden makro - C++ standardní: 256, – kompilátor Visual C++: 127 znaků.  
+-   Parametry v jedné definici makra – C++ standard: 256, kompilátor Visual C++: 127.  
   
--   Argumenty v jedné makro volání - standardní C++: 256, kompilátor Visual C++ 127 znaků.  
+-   Argumenty ve vyvolání jednoho makra – C++ standard: 256, kompilátor Visual C++ 127.  
   
--   Řetězec znaků znak literálu nebo široké řetězcový literál (po zřetězení) – C++ standard: 65536, – kompilátor Visual C++: 65535 jednobajtové znaky, včetně `null` ukončovací a 32767 dvoubajtové znaky, včetně `null` ukončovací znak.  
+-   Znaky v řetězec literálu nebo literál širokého řetězce (po zřetězení) – standard jazyka C++: 65536, kompilátor Visual C++: 65535 jednobajtové znaky, včetně ukončovacího znaku NULL a 32767 dvoubajtové znaky, včetně ukončovacího znaku NULL.  
   
--   Úrovně vnořené třídy, struktury a sjednocení definice v jediném `struct-declaration-list` -C++ standard: 256, – kompilátor Visual C++: 16.  
+-   Úrovně vnořené třídy, struktury nebo sjednocení definic v jednom `struct-declaration-list` – standard jazyka C++: 256, kompilátor Visual C++: 16.  
   
--   Inicializátory člen v definici konstruktor - C++ standardní: 6144, – kompilátor Visual C++: minimálně 6144.  
+-   Inicializátoři členů v definici konstruktoru – C++ standard: 6144, kompilátor Visual C++: nejméně 6144.  
   
--   Obor kvalifikaci jeden identifikátor - C++ standardní: 256, – kompilátor Visual C++: 127 znaků.  
+-   Určení rozsahu jednoho identifikátoru – C++ standard kvalifikací: 256, kompilátor Visual C++: 127.  
   
--   Vnořené `extern` specifikace - C++ standardní: 1024 – kompilátor Visual C++: 9 (není počítání implicitní `extern` specifikace v globálním oboru nebo 10, pokud je počet implicitní `extern` specifikace v globálním oboru...  
+-   Vnořené **extern** specifikace – C++ standard: 1024, kompilátor Visual C++: 9 (nepočítají implicitní **extern** specifikace v globálním oboru nebo 10, pokud počítáš implicitní **extern**  specifikace v globálním oboru...  
   
--   Argumenty šablony v deklaraci šablony - C++ standardní: 1024 – kompilátor Visual C++: 2046.  
+-   Argumenty šablony v deklaraci šablony – C++ standard: 1024, kompilátor Visual C++: 2046.  
   
 ## <a name="see-also"></a>Viz také  
  [Nestandardní chování](../cpp/nonstandard-behavior.md)

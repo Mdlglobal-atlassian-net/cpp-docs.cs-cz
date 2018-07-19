@@ -1,5 +1,5 @@
 ---
-title: Třída CAutoPtrList | Microsoft Docs
+title: Cautoptrlist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357542"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883590"
 ---
-# <a name="cautoptrlist-class"></a>CAutoPtrList – třída
-Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu chytré ukazatele.  
+# <a name="cautoptrlist-class"></a>Cautoptrlist – třída
+Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `E`  
+ *E*  
  Typ ukazatele.  
   
 ## <a name="members"></a>Členové  
@@ -52,12 +52,12 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Konstruktor|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje konstruktor a je odvozena z metody [CAtlList](../../atl/reference/catllist-class.md) a [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) a usnadňuje vytvoření objektu seznamu ukládání chytré ukazatele. Třída [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) poskytuje podobné funkce pro objekt array.  
+ Tato třída poskytuje konstruktor a je odvozena z metody [catllist –](../../atl/reference/catllist-class.md) a [cautoptrelementtraits –](../../atl/reference/cautoptrelementtraits-class.md) pro podporu vytvoření seznamu objektů ukládání inteligentní ukazatele. Třída [cautoptrarray –](../../atl/reference/cautoptrarray-class.md) poskytuje podobné funkce pro objekt typu pole.  
   
  Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CAtlList](../../atl/reference/catllist-class.md)  
+ [Catllist –](../../atl/reference/catllist-class.md)  
   
  `CAutoPtrList`  
   
@@ -72,13 +72,13 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Velikost bloku, výchozí hodnota je 10.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost bloku se rozumí míra množství paměti přidělené, pokud je potřeba nového elementu. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.  
+ Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.  
   
 ## <a name="see-also"></a>Viz také  
- [CAtlList – třída](../../atl/reference/catllist-class.md)   
- [CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Catllist – třída](../../atl/reference/catllist-class.md)   
+ [Cautoptrelementtraits – třída](../../atl/reference/cautoptrelementtraits-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Logický operátor AND: &amp; &amp; | Microsoft Docs'
+title: 'Logický operátor AND: &amp; &amp; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d826ba5a2252ba11a0b9206a0555c7a022a9382c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947671"
 ---
 # <a name="logical-and-operator-ampamp"></a>Logický operátor AND: &amp;&amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-expression   
-&&  
- expression  
+expression && expression  
   
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Logický operátor AND (**&&**) vrátí logickou hodnotu **true** Pokud jsou oba operandy **true** a vrátí **false** jinak. Operandy jsou před vyhodnocením implicitně převáděny na typ `bool`, přičemž výsledek je také typu `bool`. Logické a má asociativnost zleva doprava.  
+ Logický operátor AND (**&&**) vrátí logickou hodnotu TRUE, pokud jsou oba operandy hodnotu TRUE a v opačném případě vrátí hodnotu FALSE. Operandy jsou implicitně převedeny na typ **bool** před hodnocení a výsledek je typu **bool**. Logický operátor AND má asociativní zleva doprava.  
   
- Operandy na logický operátor AND nemusí být stejného typu, ale musí být celé číslo nebo ukazatel typu. Operandy jsou obvykle relační výrazy nebo výrazy rovnosti.  
+ Operandy logického operátoru AND nemusí být stejného typu, ale musí být integrálového typu nebo typu ukazatele. Operandy jsou obvykle relační výrazy nebo výrazy rovnosti.  
   
- První operand úplně vyhodnocena a před pokračováním vyhodnocení výrazu pro logické a jsou dokončeny všechny vedlejší účinky.  
+ První operand je zcela vyhodnocen a všechny vedlejší účinky jsou dokončeny před pokračováním ve vyhodnocování logického výrazu AND.  
   
- Druhý operand se vyhodnocují jenom v případě, že první operand vyhodnotí na hodnotu true (nenulové hodnoty). Toto testování eliminuje zbytečně vyhodnocení Druhý operand při logický výraz a je false. Můžete to použít krátká smyčka – vyhodnocení, aby se zabránilo nulový ukazatel vyhodnocení, jak je znázorněno v následujícím příkladu:  
+ Druhý operand je vyhodnocen pouze v případě, že první operand vyhodnocen na hodnotu true (nenulový). Toto vyhodnocení odstraňuje nepotřebná vyhodnocení druhého operandu po logický výraz AND je NEPRAVDA. To může být použito krátká smyčka – vyhodnocení, aby se zabránilo přístup přes ukazatel null, jak je znázorněno v následujícím příkladu:  
   
-```  
+```cpp 
 char *pch = 0;  
 ...  
 (pch) && (*pch = 'a');  
 ```  
   
- Pokud `pch` má hodnotu null (0), na pravé straně výraz nikdy vyhodnotí. Proto není možné přiřazení prostřednictvím ukazatele null.  
+ Pokud `pch` má hodnotu null (0) pravé straně výraz nikdy není vyhodnocen. Proto není možné přiřazení přes ukazatel s hodnotou null.  
   
-## <a name="operator-keyword-for-"></a>Operator – klíčové slovo pro & &  
- **a** operátor je ekvivalentem text **&&**. Existují dva způsoby pro přístup **a** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor & &  
+ **a** operátor je textový ekvivalent operátoru **&&**. Existují dva způsoby přístupu k **a** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Logical_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate logical AND  
@@ -78,5 +77,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Předdefinované C++ operátory přednost a Asociativnost](cpp-built-in-operators-precedence-and-associativity.md) [operátory předdefinované C++, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++ přednost a asociativita operátorů](cpp-built-in-operators-precedence-and-associativity.md) [integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Logické operátory jazyka C](../c-language/c-logical-operators.md)

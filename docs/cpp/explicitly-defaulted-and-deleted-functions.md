@@ -1,5 +1,5 @@
 ---
-title: Explicitně uvedena a odstranit funkce | Microsoft Docs
+title: Explicitně nastavených a odstraněných funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,49 +12,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947612"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitně přednastavené a odstraněné funkce
-V C ++ 11 přednastavené a odstraněné funkce získáte explicitní kontrolu nad jestli jsou speciální členské funkce automaticky generovány. Odstraněné funkce také poskytují jednoduché jazyk, který chcete zakázat problematické typu povýšení z, ke kterým došlo v argumenty funkce všech typů – speciální členské funkce a také normální členských funkcí a funkcí třetí – které by jinak způsobily volání funkce nežádoucí.  
+V C ++ 11 přednastavené a odstraněné funkce poskytují explicitní kontrolu nad Určuje, zda jsou automaticky generovány zvláštní členské funkce. Odstraněné funkce také poskytují jednoduchý jazyk pro zabránění problematického typu propagací z, ke kterým došlo v argumentech funkcí všechny typy – zvláštní členské funkce stejně jako normální členské funkce a nečlenské funkce, které by mohly jinak způsobit volání nežádoucí funkce.  
   
-## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Výhody explicitně uvedena a odstranit funkce  
- V jazyce C++ kompilátor automaticky vygeneruje výchozí konstruktor, kopírovacího konstruktoru, operátor přiřazení kopírování a destruktor pro typ pokud ho nedeklaruje vlastní. Tyto funkce se označují jako *speciální členské funkce*, a jsou co zkontrolujte jednoduché uživatelem definované typy v jazyce C++ chovat jako struktury provést v C. To znamená můžete vytvořit, kopírovat a ničit bez žádné další úsilí kódování. C ++ 11 přináší přesunutí sémantiku jazyk a přidá do seznamu speciální členské funkce, které může automaticky generovat kompilátor konstruktor move a operátor move přiřazení.  
+## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Výhody explicitně nastavených a odstraněných funkcí  
+ V jazyce C++ kompilátor automaticky generuje výchozí konstruktor, konstruktor kopie, operátor přiřazení kopie a destruktor pro typ Pokud nedeklaruje svou vlastní. Tyto funkce jsou označovány jako *speciálních členských funkcí*, a nim se jednoduché typy definované uživatelem v jazyce C++ chovají jako struktury v jazyce C. To znamená můžete vytvořit, kopírovat a zničit bez jakéhokoli dalšího kódování úsilí. C ++ 11 přináší přesunutí sémantiky jazyka a přidá do seznamu speciálních členských funkcí, které může kompilátor automaticky generovat konstruktor move a operátor přiřazení přesunu.  
   
- To je vhodné pro jednoduché typy, ale komplexní typy často zadejte nejméně jeden speciální členské funkce sami a to může zabránit jiné speciální členské funkce generován automaticky. V praxi:  
+ Tato možnost je pohodlná pro jednoduché typy, ale komplexní typy často definují jednu nebo více speciálních členských funkcí, sami a to může zabránit zabránily automatickému generování dalších zvláštních členských funkcí. V praxi:  
   
--   Pokud žádné konstruktor explicitně deklarována, neexistoval výchozí konstruktor automaticky generovány.  
+-   Pokud je některý konstruktor explicitně deklarovány, pak žádný výchozí konstruktor není automaticky vygenerován.  
   
--   Pokud virtuální destruktor explicitně deklarována, žádné výchozí destruktor automaticky generovány.  
+-   Pokud jsou virtuální destruktor výslovně deklarovány, pak žádný výchozí destruktor není automaticky vygenerován.  
   
--   Pokud konstruktor move nebo operátor move přiřazení explicitně deklarována, pak:  
+-   Pokud konstruktor move a operátor přiřazení přesunu výslovně deklarovány, pak:  
   
-    -   Žádné kopírovací konstruktor se automaticky vygeneroval.  
+    -   Žádný konstruktor kopie není automaticky vygenerován.  
   
-    -   Žádné operátor přiřazení kopírování se automaticky vygeneroval.  
+    -   Žádný operátor přiřazení kopie není automaticky vygenerován.  
   
--   Pokud konstruktor copy, operátor přiřazení kopírovat, přesunout konstruktoru, operátor move přiřazení nebo destruktor explicitně deklarována, pak:  
+-   Pokud kopírovacího konstruktoru, operátor přiřazení kopie, přesunutí konstruktoru, operátor přiřazení přesunu nebo destruktor výslovně deklarovány, pak:  
   
-    -   Žádný konstruktor move se automaticky vygeneroval.  
+    -   Žádný konstruktor přesunu není automaticky vygenerován.  
   
-    -   Žádné operátor move přiřazení se automaticky vygeneroval.  
+    -   Žádný operátor přiřazení přesunu není automaticky vygenerován.  
   
 > [!NOTE]
->  Kromě toho C ++ 11 standardní určuje následující další pravidla:  
+>  Kromě toho standardu C ++ 11 určuje následující další pravidla:  
 >   
->  -   Pokud kopírovacího konstruktoru nebo destruktor explicitně deklarována, automatické generování operátor přiřazení kopie je zastaralý.  
-> -   Pokud operátor přiřazení kopírování nebo destruktor explicitně deklarované, pak automatické generování kopírovací konstruktor je zastaralý.  
+>  -   Pokud je kopírovací konstruktor nebo destruktor výslovně deklarovány, automatické generování operátor přiřazení kopie je zastaralý.  
+> -   Pokud operátor přiřazení kopie nebo destruktor je explicitně deklarované, pak automatické generování kopírovací konstruktor je zastaralý.  
 >   
->  V obou případech Visual Studio nadále automaticky generovat nezbytné funkce implicitně a není posílat upozornění.  
+>  V obou případech se Visual Studio nadále automaticky generovat nezbytné funkce implicitně a negeneruje upozornění.  
   
- Důsledky tato pravidla můžete taky úniku do objektu hierarchií. Například, pokud z nějakého důvodu nepodaří mít výchozí konstruktor, který lze volat z odvozující třídě základní třídu – to znamená, `public` nebo `protected` konstruktor, které nepřijímá žádné parametry – pak nelze automaticky generovat třídu odvozenou z něj. vlastní výchozí konstruktor.  
+ Důsledky tato pravidla mohou také způsobit únik těchto do hierarchie objektů. Například, pokud z nějakého důvodu nepodaří mít výchozí konstruktor, který lze volat z odvozená třída základní třídy – to znamená, **veřejné** nebo **chráněné** konstruktor, který nepřijímá žádné parametry – potom třídy která je odvozena od nemůže automaticky generovat vlastní výchozí konstruktor.  
   
- Tato pravidla může zkomplikovat implementace co by měl být jednoduché, uživatelem definované typy a běžné idioms C++ – například vytváření uživatelsky definovaný typ. bez kopírovatelná deklarováním kopírovacího konstruktoru a operátor přiřazení kopie soukromě a ne definování je.  
+ Tato pravidla mohou zkomplikovat implementaci toho, co by měl být přímočaré, uživatelem definované typy a společné idiomy v jazyce C++ – například vytvoření uživatelem definovaného typu nekopírovatelných deklarováním konstruktoru kopie a operátor přiřazení kopie soukromě a nikoli jejich definováním.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -65,19 +66,19 @@ private:
 };  
 ```  
   
- Před C ++ 11 byl tento fragment kódu idiomatickou formu-kopírovatelná typy. Má však několik problémů:  
+ Před C ++ 11 byl tento fragment kódu idiomatickou formou nekopírovatelných typů. Má však několik problémů:  
   
--   Konstruktor copy je třeba deklarovat soukromě ho Pokud chcete skrýt, ale protože je deklarovaná vůbec, automatické generování výchozí konstruktor je nebylo možné provést. Je nutné explicitně definovat výchozí konstruktor, chcete-li, i v případě, že ho neprovede žádnou akci.  
+-   Kopírovací konstruktor musí deklarovat soukromě a tak jej skrýt, ale protože vůbec je deklarován, automatickému generování výchozího konstruktoru je zabráněno. Je nutné explicitně definovat výchozí konstruktor, chcete-li, i když to nemá žádný účinek.  
   
--   I když explicitně definován výchozí konstruktor neprovede žádnou akci, považuje netriviální kompilátorem. Je míň efektivní než automaticky generovaný výchozí konstruktor a brání `noncopyable` nebudou typu POD hodnotu true.  
+-   I v případě, že explicitně definovaný výchozí konstruktor neprovede žádnou akci, bude považován za netriviální kompilátorem. Je méně efektivní než automaticky generovaný výchozí konstruktor a brání `noncopyable` z POD typem.  
   
--   I když kopírovacího konstruktoru a operátor přiřazení kopie jsou skryta mimo kód, členské funkce a přátelích `noncopyable` stále můžete zobrazit a volat. Pokud jsou deklarovat, ale není definována, volání je způsobí chybu linkeru.  
+-   Přestože konstruktor kopie a operátor přiřazení kopie jsou skryty z vnějšího kódu, členské funkce a přáteli `noncopyable` můžete stále vidět a jejich volání. Pokud jsou deklarovány, ale nejsou definovány, jejich volání způsobí chybu linkeru.  
   
--   Přestože je toto běžně přijatý stylu, záměr není jasné, pokud nerozumíte všechna pravidla pro automatické generování speciální členské funkce.  
+-   I když se jedná o obecně uznávaný idiom, záměr není jasný, pokud neznáte všechna pravidla pro automatické generování speciálních členských funkcí.  
   
- Ve C ++ 11 se dají implementovat způsobem, který je více přehledné-kopírovatelná stylu.  
+ V C ++ 11 je možné implementovat nekopírovatelných idiom způsobem, který je přímější.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -86,24 +87,24 @@ struct noncopyable
 };  
 ```  
   
- Všimněte si jak problémy s předkonfigurovaného-C ++ 11 stylu jsou vyřešeny:  
+ Všimněte si, že jak problémy s předdefinovanou-C ++ 11 idiomu:  
   
--   Generování výchozí konstruktor stále brání deklarace konstruktor copy, ale jeho přepnete zpět pomocí explicitně jako výchozí bude použit ho.  
+-   Generování výchozího konstruktoru je stále bráněno deklarací kopírovacího konstruktoru, ale můžete ho přenést zpět jeho explicitním přednastavením ho.  
   
--   Explicitně uvedena speciální členské funkce jsou stále považovány za trivial, takže není žádné snížení výkonu a `noncopyable` není zabráněno true POD typu.  
+-   Explicitně výchozích speciálních členských funkcí jsou stále považovány za bezvýznamné, takže není k dispozici žádné snížení výkonu a `noncopyable` není zabráněno typem POD.  
   
--   Kopírovací konstruktor a operátor přiřazení kopie jsou veřejné, ale odstraněný. Jedná o chybu kompilace definovat nebo volání funkce odstraněné.  
+-   Konstruktor kopie a operátor přiřazení kopie jsou veřejné, ale byl odstraněn. Je chyba kompilace pro definování nebo volání odstraněné funkce.  
   
--   Je třeba vymazat na každý, kdo jste srozuměni s tím `=default` a `=delete`. Nemáte porozumět pravidla pro automatické generování speciální členské funkce.  
+-   Záměr je jasný každému, kdo rozumí `=default` a `=delete`. Nemusíte pochopit pravidla pro automatické generování speciálních členských funkcí.  
   
- Podobně jako idioms existovat pro provedení uživatelem definované typy, které jsou nemobilní, který lze pouze dynamicky přidělit nebo, nelze dynamicky přidělit. Každý z těchto idioms mít pre-C ++ 11 implementace dochází k podobné problémy, a které jsou podobně přeložit v C ++ 11 implementací je z hlediska uvedena a odstranit speciální členské funkce.  
+ Podobné idiomy existují pro vytvoření uživatelem definovaných typů, které jsou nepohyblivé, který může být pouze dynamicky přiřazovány nebo, který nejde dynamicky přidělit. Každá z těchto idiomy mít pre-předimplementace C ++ 11, které trpí podobnými problémy a které jsou podobně řešeny v C ++ 11 jejich implementací výchozích a odstraněných speciálních členských funkcí.  
   
-## <a name="explicitly-defaulted-functions"></a>Explicitně uvedena funkce  
- Použít výchozí žádné speciální členské funkce – do explicitně stavu, že speciální členské funkce používá výchozí implementace definovat speciální členské funkce se kvalifikátor veřejný přístup, nebo obnovit vyřazenou aplikaci speciální členské funkce, jehož Automatické generování zabránily jiných okolností.  
+## <a name="explicitly-defaulted-functions"></a>Explicitně nastavena výchozí hodnota funkce  
+ Použít výchozí jakékoli zvláštní členské funkce – k výslovnému, že zvláštní členská funkce používá výchozí implementace k definování zvláštní členskou funkci s kvalifikátorem veřejného přístupu nebo obnovit zvláštní členské funkce, jehož Automatické generování nedošlo z důvodu jiné okolnosti.  
   
- Speciální členské funkce můžete výchozí deklarováním jako v následujícím příkladu:  
+ Výchozí funkce zvláštních členských deklarováním jako v následujícím příkladu:  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -114,14 +115,14 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;  
 ```  
   
- Všimněte si, že, dokud je inlinable použít výchozí speciální členské funkce mimo tělo třídy.  
+ Všimněte si, že použít výchozí zvláštní členské funkce mimo tělo třídy za předpokladu, že jsou vložitelné.  
   
- Z důvodu výhod trivial speciální členské funkce výkonu doporučujeme raději automaticky generované speciální členské funkce nad prázdný funkce subjekty, pokud chcete výchozí chování. Můžete to udělat buď pomocí explicitně jako výchozí bude použit speciální členské funkce, nebo není deklarován (a také není deklarace jiné speciální členské funkce, které by jinak znemožňovaly z generován automaticky.)  
+ Protože výkony těží z triviálních zvláštních členských funkcí doporučujeme raději automaticky generovat zvláštní členské funkce nad prázdnými funkcemi, pokud chcete výchozí chování. Můžete to provést jeho explicitním přednastavením speciální členská funkce nebo nedeklarováním (a také nedeklarováním dalších speciálních členských funkcí, které by zabránily automatickému generování.)  
   
 ## <a name="deleted-functions"></a>Odstraněné funkce  
- Speciální členské funkce a také normální členských funkcí a třetí funkcí, aby s nimi definované nebo názvem můžete odstranit. Odstraňování z speciální členské funkce poskytuje čisticí způsob kompilátor brání v generování speciální členské funkce, které nechcete použít. Funkce musíte odstranit, protože je deklarovaná; nelze jej odstranit později způsobem, můžete funkci deklarovaný a poté převezme později.  
+ Můžete odstranit speciální členské funkce stejně jako normální členské funkce a nečlenské funkce, chcete-li zabránit tak jejich definování nebo volání. Odstranění zvláštních členských funkcí umožňuje čistší způsob zabránění kompilátoru generovat speciálních členské funkce, které nechcete. Funkce musí odstranit, protože je deklarován; nelze jej odstranit později ve způsobu, jakým může funkce deklarované a pak později nastavit na výchozí hodnotu.  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -129,17 +130,17 @@ struct widget
 };  
 ```  
   
- Odstraňování normální – členská funkce nebo třetí funkce zabraňuje problematické typu povýšení působit nezamýšleným funkce k volání. Toto funguje, protože odstraněné funkce stále účastnit rozlišení přetížení a poskytují lepší shodu než funkce, která může být volána po povýšené typy. Volání funkce přeloží na další specifické – ale odstraněné – funkce a dojde k chybě kompilátoru.  
+ Odstraňování běžné členské funkce a nečlenské funkce zabraňuje problematickým způsobily nežádoucích funkcí k volání. Tento postup funguje, protože odstraněné funkce se stále účastní řešení přetížení a poskytnutí lepší shody než funkce, která lze volat po propagaci typů. Volání funkce se překládá na konkrétní informace, ale odstraněné – funkce a způsobí chybu kompilátoru.  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- Všimněte si v předchozím příkladu, že volání `call_with_true_double_only` pomocí `float` argument by způsobilo chybu kompilátoru ale volání `call_with_true_double_only` pomocí `int` argument by není; v `int` případě argument bude nastaven z `int` k `double` a úspěšně volat `double` verze funkce, i když, nemusí být co je určená. Aby se zajistilo, že všechny volání této funkce pomocí jiných dvojitou argument způsobí chybu kompilátoru, můžou deklarovat verzi šablony funkce, která se odstraní.  
+ V předchozím příkladu si všimněte, že volání `call_with_true_double_only` pomocí **float** argumentu by způsobila chybu kompilátoru, ale volání `call_with_true_double_only` pomocí **int** by argument; v **int** případech argumentem budou přesunuty z **int** k **double** a úspěšně volat **double** verzi funkce, i když, která nemusí být, co je určen. Aby bylo zajištěno, že jakékoli volání této funkce použitím nezdvojeného argumentu způsobí chybu kompilátoru, můžete deklarovat verzi šablony funkce, která se odstraní.  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   

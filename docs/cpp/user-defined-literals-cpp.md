@@ -1,5 +1,5 @@
 ---
-title: Uživateli definované literály (C++) | Microsoft Docs
+title: Uživatelsky definované literály (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947523"
 ---
 # <a name="user-defined-literals--c"></a>Uživateli definované literály (C++)
-Existují pět hlavních kategorií literálů: celé číslo, znak, s plovoucí desetinnou čárkou, řetězec, logická hodnota a ukazatel.  Počínaje C++ 11, můžete definovat vlastní literály podle těchto kategorií pro účely poskytování syntaktické zástupce pro běžné idioms a zvýšit zabezpečení typů. Řekněme například, že máte třídu vzdálenost. Můžete definovat literál pro kilometrech a další pro paliva a motivovat uživatele explicitní měrné jednotky jednoduše napsáním: automatické d = 42.0_km nebo auto d = 42.0_mi. Neexistuje žádné výhody výkonu nebo nevýhody k uživateli definované literály; jsou to především pro usnadnění práce nebo pro odvození typu v čase kompilace. Standardní knihovna má uživateli definované literály std:string, std::complex a jednotky v čas a dobu trvání operace v \<typu chrono > hlavičky:  
+Existuje pět hlavních kategorií literálů: celé číslo, znak, s plovoucí desetinnou čárkou, řetězec, logická hodnota a ukazatele.  Počínaje C++ 11, můžete definovat vlastní literálů na základě těchto kategorií k poskytování syntaktické klávesové zkratky pro společné idiomy a zvýšení typové bezpečnosti. Řekněme například, že máte třídu vzdálenost. Můžete definovat literál pro kilometrů a jinou pro mil a podporovat uživatele k explicitnímu měrné jednotky jednoduše napsáním: automatické d = 42.0_km nebo automaticky d = 42.0_mi. Neexistuje žádné výhody výkonu nebo nevýhodou uživateli definované literály jsou především ke zvýšení pohodlí nebo pro odvození typu v době kompilace. Standardní knihovna obsahuje uživateli definované literály std:string, std::complex a jednotky v čase a dobu trvání operace v \<chrono > hlavičky:  
   
-```  
+```cpp 
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)  
     std::string str = "hello"s + "World"s;  // Standard Library <string> UDL  
     complex<double> num =   
@@ -29,10 +30,10 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
     auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs  
 ```  
   
-## <a name="user-defined-literal-operator-signatures"></a>Uživatelem definované literálu operátor podpisy  
- Implementace literál uživatelem definované definováním `operator""` v oboru názvů s jedním z následujících podob:  
+## <a name="user-defined-literal-operator-signatures"></a>Podpisy uživatelem definovaný operátor literálu  
+ Implementovat uživatelem definovaného literálu definováním `operator""` v oboru názvů s jedním z následujících forem:  
   
-```  
+```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
 ReturnType operator "" _b(long double);              // Literal operator for user-defined FLOATING literal  
 ReturnType operator "" _c(char);                     // Literal operator for user-defined CHARACTER literal  
@@ -47,14 +48,14 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template  
 ```  
   
- Operátor názvy v předchozím příkladu jsou zástupné symboly pro jakýkoli název můžete zadat; vedoucí znak podtržítko je však vyžaduje. (Pouze standardní knihovna je povolena k definování literály bez podtržítko). Návratový typ je, kde můžete přizpůsobit převod nebo jiná operace, která provádí literál. Kromě toho některé z těchto operátorů může být definováno jako `constexpr`.  
+ Operátor názvy v předchozím příkladu jsou zástupné symboly pro jakýkoli název můžete zadat; vedoucí znaku podtržítka ale povinné. (Standardní knihovna může definovat literály bez podtržítko.) Návratový typ je, kde si přizpůsobit převod nebo jiné operace, která provádí literál. Kromě toho některé z těchto operátorů lze definovat jako `constexpr`.  
   
 ## <a name="cooked-literals"></a>Vařené literály  
- Ve zdroji code žádné literál, zda vlastní nebo není je v podstatě pořadí alfanumerické znaky, jako například `101`, nebo `54.7`, nebo `"hello"` nebo `true`. Kompilátor interpretuje pořadí jako celé číslo, float, const char\* řetězec a tak dále. Uživatelem definované literál, který přijme jako vstup, ať zadejte kompilátoru přiřazené literálovou hodnotou se nazývá neformálně *vařené literál*. Všechny operátory výše, s výjimkou `_r` a `_t` jsou vařená literály. Například literál `42.0_km` by vytvořit vazbu na operátor s názvem _km, který měl podobné _b a literálové podpis `42_km` by vytvořit vazbu na operátor podobná _a podpisem.  
+ Ve zdroji kód jakékoli literál, zda uživatelem nebo Ne, jako je v podstatě posloupnost alfanumerické znaky, `101`, nebo `54.7`, nebo `"hello"` nebo `true`. Kompilátor interpretuje pořadí jako celé číslo, float const char\* řetězec a tak dále. Uživatelem definovaného literálu, který přijímá jako vstup zadejte cokoli, co kompilátor přiřazená hodnota literálu je spor neformálně označované jako *vařené literál*. Všechny operátory výše, s výjimkou `_r` a `_t` jsou vařená literály. Například literál `42.0_km` by svázat operátor s názvem _km, který měl podobné _b a literál podpis `42_km` by svázat operátor podobný _a podpisem.  
   
- Následující příklad ukazuje, jak uživateli definované literály může podporovat volající byli explicitní o jejich vstup. K vytvoření `Distance`, musí uživatel explicitně zadat kilometrech nebo miles pomocí odpovídající uživatelem definované literál. Samozřejmě můžete také dosažení stejného výsledku jinými způsoby, ale uživateli definované literály jsou méně podrobný než alternativ.  
+ Následující příklad ukazuje, jak uživateli definované literály vstupní kontroly mohou pobídnout volající k explicitnímu svůj vstup. K vytvoření `Distance`, musí uživatel explicitně zadat kilometrech nebo mil pomocí vhodné uživatelem definovaného literálu. Samozřejmě můžete také dosažení stejného výsledku jiným způsobem, ale uživateli definované literály jsou míň podrobné než alternativ.  
   
-```  
+```cpp 
 struct Distance  
 {  
 private:  
@@ -102,24 +103,24 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Všimněte si, že číslo literálu musíte použít datový typ decimal, jinak by číslo interpretovat jako celé číslo a typ nebude kompatibilní s operátorem. Všimněte si, že pro plovoucí vstupní bod, musí být typu `long double`a pro integrální typy musí být `long long`.  
+ Všimněte si, že číslo literál musí používat desetinné číslo, jinak je číslo interpretován jako celé číslo a typ nemusí být kompatibilní s operátorem. Všimněte si také, že pro plovoucí desetinná čárka vstup, musí být typu **long double**a pro integrální typy musí být **long long**.  
   
-## <a name="raw-literals"></a>Nezpracovaná literály  
- V nezpracovaných literál uživatelem definované operátor, který definujete akceptuje literálové jako pořadí hodnot typu char a je na vás interpretovat jako číslo nebo řetězec nebo jiný typ tohoto pořadí. V seznamu operátory uvedené dříve v této stránce `_r` a `_t` lze použít k definování nezpracovaná literály:  
+## <a name="raw-literals"></a>Literály nezpracovaných  
+ V nezpracované uživatelem definovaného literálu operátor, který definujete přijímá literálu jako sekvenci hodnot typu char a je na vás k interpretaci tohoto pořadí jako číslo nebo řetězec nebo jiného typu. V seznamu výše v této stránce, operátory `_r` a `_t` slouží k definování nezpracovaná literálů:  
   
-```  
+```cpp 
 ReturnType operator "" _r(const char*);              // Raw literal operator  
 template<char...> ReturnType operator "" _t();       // Literal operator template  
 ```  
   
- Nezpracovaná literály můžete zadat vlastní interpretace vstupní pořadí, než co by kompilátor provedl. Můžete například definovat literál, který převádí sekvenci `4.75987` do vlastního typu Decimal místo IEEE 754 plovoucí typ bodu. Nezpracovaná literály jako z literály, lze také použít k provedení ověření kompilaci vstupní pořadí.  
+ Literály nezpracovaných můžete zadat vlastní interpretace vstupní sekvence, která se liší od co by kompilátor provést. Například můžete definovat literál, který převede sekvenci `4.75987` do vlastního typu desetinné místo IEEE 754 číslo s plovoucí čárkou typ bodu. Literály nezpracovaných, jako jsou vařená literály, lze také provést ověření za kompilace vstupních řad.  
   
 ### <a name="example"></a>Příklad  
   
 ### <a name="limitations-of-raw-literals"></a>Omezení nezpracovaná literály  
- Nezpracovaná literálu operátor a literálu operátor šablony fungovat pouze pro integrální a s plovoucí desetinnou čárkou uživateli definované literály, jak je znázorněno v následujícím příkladu:  
+ Operátoru nezpracovaného literálu a šablona operátoru literálu fungovat pouze pro integrální a s plovoucí desetinnou čárkou uživateli definované literály, jak je znázorněno v následujícím příkladu:  
   
-```  
+```cpp 
 #include <cstddef>  
 #include <cstdio>  
   

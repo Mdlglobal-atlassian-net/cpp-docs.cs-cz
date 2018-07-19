@@ -1,5 +1,5 @@
 ---
-title: Rozhraní IWorkerThreadClient | Microsoft Docs
+title: Iworkerthreadclient – rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e35910469128ecaf38751d6db73094adf3422e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359814"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884721"
 ---
-# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient rozhraní
-`IWorkerThreadClient` představuje rozhraní implementované klienty [CWorkerThread](../../atl/reference/cworkerthread-class.md) třídy.  
+# <a name="iworkerthreadclient-interface"></a>Iworkerthreadclient – rozhraní
+`IWorkerThreadClient` představuje rozhraní implementované klienty [cworkerthread –](../../atl/reference/cworkerthread-class.md) třídy.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,17 +44,17 @@ __interface IWorkerThreadClient
   
 |||  
 |-|-|  
-|[Funkce CloseHandle](#closehandle)|Implementujte tuto metodu zavřít popisovač přidružené k tomuto objektu.|  
-|[Spuštění](#execute)|Implementujte tuto metodu ke spouštění kódu, když se změní na signál popisovač přidružené k tomuto objektu.|  
+|[CloseHandle](#closehandle)|Implementujte tuto metodu za účelem zavřít popisovač asociovaném s tímto objektem.|  
+|[Spuštění](#execute)|Implementujte tuto metodu za účelem spouštění kódu, když se stane signalizován popisovač asociovaném s tímto objektem.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní implementujte, když máte kód, který je potřeba spustit na pracovní vlákno v reakci na signál, aby se aktivovala popisovač.  
+ Toto rozhraní implementují, když máte kód, který je potřeba provést v pracovní podproces v reakci na popisovač stávají signalizovanými.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlutil.h  
   
 ##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
- Implementujte tuto metodu zavřít popisovač přidružené k tomuto objektu.  
+ Implementujte tuto metodu za účelem zavřít popisovač asociovaném s tímto objektem.  
   
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -62,41 +62,41 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
 ### <a name="parameters"></a>Parametry  
  *hHandle*  
- Popisovač bude uzavřen.  
+ Obslužná rutina bude uzavřen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK na úspěch nebo Chyba HRESULT při selhání.  
+ Vrátí hodnotu S_OK na úspěch nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač předaná této metodě je dříve spojené s tímto objektem voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Popisovač předaný této metodě byla dříve přidružená k tomuto objektu voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Příklad  
- Následující kód ukazuje jednoduchou implementaci `IWorkerThreadClient::CloseHandle`.  
+ Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::CloseHandle`.  
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
 ##  <a name="execute"></a>  IWorkerThreadClient::Execute  
- Implementujte tuto metodu ke spouštění kódu, když se změní na signál popisovač přidružené k tomuto objektu.  
+ Implementujte tuto metodu za účelem spouštění kódu, když se stane signalizován popisovač asociovaném s tímto objektem.  
   
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwParam`  
+ *dwParam*  
  Tento parametr.  
   
- `hObject`  
- Obslužná rutina, který má být signál.  
+ *hObject*  
+ Obslužná rutina, která má být signalizovány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK na úspěch nebo Chyba HRESULT při selhání.  
+ Vrátí hodnotu S_OK na úspěch nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač a DWORD/ukazatele předaná této metodě byly dříve přidružená k tomuto objektu voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Popisovač a DWORD/ukazatel předaný této metodě byly dříve přidružená k tomuto objektu voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Příklad  
- Následující kód ukazuje jednoduchou implementaci `IWorkerThreadClient::Execute`.  
+ Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::Execute`.  
   
  [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]  
   

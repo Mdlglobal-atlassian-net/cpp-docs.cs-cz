@@ -1,5 +1,5 @@
 ---
-title: Specializace šablony (C++) | Microsoft Docs
+title: Specializace šablony (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422706"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941168"
 ---
 # <a name="template-specialization-c"></a>Specializace šablony (C++)
 
-Šablony třídy může být částečně specializuje a výsledný třída je stále šablonu. Částečná specializace umožňuje kód šablony k částečně přizpůsobit pro konkrétní typy v situacích, jako například:  
+Třída šablony může být částečně specializovaná a výsledné třídy je stále šablony. Částečná specializace umožňuje kód šablony částečně přizpůsobit pro konkrétní typy v situacích, jako například:  
   
--   Šablona má více typů a jenom některé z nich musí být specializuje. Výsledkem je šablonu na zbývající typech s parametry.  
+-   Šablony má více typů a jenom některé z nich musí být specializovaný. Výsledkem je na zbývající typy s parametry šablony.  
   
--   Šablona má pouze jeden typ, ale specializace je nutný pro ukazatelů, reference, ukazatel na člena nebo typy ukazatel funkce. Specializace samotné je stále šablonu pro typ ukazuje nebo je odkazované.  
+-   Šablona má pouze jeden typ, ale specializace je potřeba pro ukazatel, odkaz, ukazatele na člen nebo typy ukazatelů na funkci. Specializace samotného je stále šablony na typ odkazoval nebo odkazuje.  
   
 ## <a name="example"></a>Příklad  
   
@@ -80,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Příklad
 
- Pokud máte třídu kolekce šablony, která přijímá jakéhokoli typu **T**, můžete vytvořit částečná specializace, který přebírá všechny ukazatel typu **T***. Následující kód ukazuje šablonu třída kolekce `Bag` a částečná specializace pro typy ukazatelů, ve kterých kolekce dereferences typy ukazatelů před jejich zkopírováním do pole. Kolekce pak uloží hodnoty, které jsou na odkazuje. S původní šablonou pouze ukazatele sami by byly uloženy v kolekci, a bude zranitelný vůči odstranění nebo změna data. V této verzi speciální ukazatel kolekce, chcete-li zkontrolovat nulový ukazatel kód `add` se přidá metoda.  
+ Pokud máte šablony třídy kolekce, která přijímá libovolný typ `T`, můžete vytvořit částečná specializace, která přijímá libovolný typ ukazatele `T*`. Následující kód ukazuje šablony třídy kolekce `Bag` a částečnou specializaci pro typy ukazatelů, ve kterých kolekci přístupů přes ukazatel, ukazatel typy před zkopírováním do pole. Potom kolekci ukládá hodnoty, které jsou na ní odkazuje. S původní šablonou pouze ukazatele na samotných by byly uloženy v kolekci, ponechání dat snadno napadnutelný, odstranění nebo úpravy. V této verzi speciální ukazatel kolekce ke kontrole ukazatel s hodnotou null v kódu `add` metoda je přidána.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -192,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Příklad
 
- V následujícím příkladu definuje šablonu třídu, která přebírá páry dvou typů a pak definuje částečná specializace šablon třídy specializuje tak, aby jeden z typů `int`. Specializace definuje metodu další řazení, který implementuje jednoduché bublin řazení založené na celé číslo.  
+ Následující příklad definuje šablonu třídy, která přebírá páry dvou typů a pak definuje částečné specializace této třídy šablony specializované tak, aby jeden z typů **int**. Specializace definuje metodu další řazení, který implementuje jednoduchou bublinu řazení založené na celé číslo.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

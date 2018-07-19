@@ -1,5 +1,5 @@
 ---
-title: BOOL (C++) | Microsoft Docs
+title: BOOL (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410860"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939309"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-Toto klíčové slovo je vestavěný typ. Proměnné tohoto typu může mít hodnoty [true](../cpp/true-cpp.md) a [false](../cpp/false-cpp.md). Podmíněné výrazy mít typ `bool` , proto se hodnoty typu `bool`. Například `i!=0` má nyní **true** nebo **false** v závislosti na hodnotě `i`.  
+Toto klíčové slovo je vestavěný typ. Proměnná tohoto typu může mít hodnoty [true](../cpp/true-cpp.md) a [false](../cpp/false-cpp.md). Podmíněné výrazy jsou typu **bool** a mají proto hodnoty typu **bool**. Například `i!=0` teď má hodnotu TRUE nebo FALSE, v závislosti na hodnotě z `i`.  
 
-**Visual Studio 2017 verze 15.3 a novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operátory nebo předpona přírůstek nebo snížení operátor nesmí být typu **bool**. Jinými slovy, zadané proměnné **b** typu **bool**, už nejsou povolená těchto výrazů:
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand uplatněna přípona nebo předpona Inkrementace nebo dekrementace operátor nesmí být typu **bool**. Jinými slovy, zadané proměnné `b` typu **bool**, už nejsou povolené tyto výrazy:
 
 ```cpp
     b++;
@@ -38,7 +38,7 @@ Toto klíčové slovo je vestavěný typ. Proměnné tohoto typu může mít hod
     --b;
 ```
   
-Hodnoty **true** a **false** mají následující relace:  
+Hodnoty TRUE a FALSE mají následující vztah:  
   
 ```cpp  
 !false == true  
@@ -51,16 +51,16 @@ V následujícím příkazu:
 if (condexpr1) statement1;   
 ```  
   
-Pokud `condexpr1` je **true**, `statement1` je vždy provedeny; pokud `condexpr1` je **false**, `statement1` se nikdy spustí.  
+Pokud `condexpr1` má hodnotu TRUE, `statement1` je vždy spuštěn; pokud `condexpr1` má hodnotu FALSE, `statement1` není nikdy proveden.  
   
-Při operátory nebo předponu **++** operátor se použije pro proměnné typu **bool**, proměnná je nastavená na **true**. 
-**Visual Studio 2017 verze 15.3 a novější**: operator ++ pro **bool** byla odebrána z jazyka a již není podporována.
+Uplatněna přípona nebo předpona **++** operátor je použít pro proměnné typu **bool**, proměnná je nastavena na hodnotu TRUE. 
+**Visual Studio 2017 verze 15.3 nebo novější**: operator ++ pro **bool** byl odebrán z jazyka a už není podporovaná.
 
-Operátory nebo předpona **--** proměnné tohoto typu nelze použít operátor.  
+Přípony nebo předpony **--** operátor nelze použít na proměnné tohoto typu.  
   
- **Bool** typ účastní zvýšení úrovně celého čísla. R-value typu **bool** lze převést na r-value typu **int**, s **false** stal nula a **true** stal jeden. Jako typu distinct **bool** účastní rozlišení přetížení.  
+ **Bool** typ se účastní integrální propagace. R-value typu **bool** lze převést na hodnotu r-value typu **int**, se stávají FALSE nula a TRUE jedna. Jako odlišný typ se **bool** účastní řešení přetížení.  
   
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Základní typy](../cpp/fundamental-types-cpp.md)<br/>

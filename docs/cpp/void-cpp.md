@@ -1,5 +1,5 @@
 ---
-title: void (C++) | Microsoft Docs
+title: void (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de70ec6758109bc765d0cec3552762288d51ded2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947611"
 ---
 # <a name="void-c"></a>void (C++)
-Při použití jako návratový typ funkce určuje klíčové slovo `void`, že funkce nevrací hodnotu. Při použití pro seznam parametrů funkce určuje void, že funkce nepřebírá žádné parametry. Při použití v deklaraci ukazatele určuje void, že je ukazatel „univerzální“.  
+Při použití jako návratový typ funkce **void** – klíčové slovo určuje, že funkce nevrací hodnotu. Při použití pro seznam parametrů funkce určuje void, že funkce nepřebírá žádné parametry. Při použití v deklaraci ukazatele určuje void, že je ukazatel „univerzální“.  
   
- Pokud je typ ukazatele **void \***, ukazatele může ukazovat na všechny proměnné, která není deklarovaný s **const** nebo `volatile` – klíčové slovo. Ukazatel void nelze přímo odkázat, pokud není přetypován na jiný typ. Ukazatel void lze převést na libovolný typ datového ukazatele.  
+ Pokud je ukazatel typu **void \*** , může odkazovat na libovolnou proměnnou, která není deklarována s **const** nebo **volatile** – klíčové slovo. Ukazatel void nelze přímo odkázat, pokud není přetypován na jiný typ. Ukazatel void lze převést na libovolný typ datového ukazatele.  
   
  Ukazatel void může v jazyce C++ odkazovat na funkci, ale nikoli na člen třídy.  
   
@@ -35,7 +36,7 @@ Při použití jako návratový typ funkce určuje klíčové slovo `void`, že 
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // void.cpp  
 void vobject;   // C2182  
 void *pv;   // okay  
@@ -45,8 +46,8 @@ int main() {
    // Cast optional in C required in C++  
    pint = (int *)pv;  
 }   
-```  
+``` 
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Základní typy](../cpp/fundamental-types-cpp.md)

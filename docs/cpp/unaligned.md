@@ -1,5 +1,5 @@
 ---
-title: __unaligned | Microsoft Docs
+title: __unaligned | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420904"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940410"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Microsoft konkrétní**. Při deklaraci ukazatele s modifikátorem `__unaligned` kompilátor předpokládá, že ukazatel odkazuje na data, která nejsou zarovnána. V důsledku toho vhodné platformy kód se generuje pro zpracování nezarovnané čtení a zapisovala ukazatele.
+**Specifické pro Microsoft**. Při deklaraci ukazatele s **__unaligned** modifikátor, kompilátor předpokládá, že ukazatel odkazuje na data, která nejsou zarovnána. V důsledku toho příslušné platformy kód je generován pro zpracování nezarovnaných čtení a zapíše prostřednictvím ukazatele.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento modifikátor popisuje zarovnání dat řešit ukazatel; ukazatele samotné se předpokládá zarovnána.
+Tento modifikátor popisuje zarovnání dat adresovaný ukazatelem; ukazatel sám je považován za zarovnaný.
 
-Nezbytná pro `__unaligned` – klíčové slovo se liší podle platformy a prostředí. Nepodařilo se správně označit dat může způsobit problémy od penalizacím výkonu až hardwarových chyb. `__unaligned` Modifikátor není platný pro x86 platformy.
+Nutnost **__unaligned** – klíčové slovo se liší podle platformy a prostředí. Nepodařilo se označit data správně může dojít k problémům s od snížení výkonu na hardwarových chyb. **__Unaligned** modifikátor není platný pro x86 platformy.
 
 Další informace o zarovnání naleznete v následujících tématech:
 
@@ -45,6 +45,6 @@ Další informace o zarovnání naleznete v následujících tématech:
 
 - [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klíčová slova](../cpp/keywords-cpp.md)

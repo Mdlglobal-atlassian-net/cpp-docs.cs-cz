@@ -1,5 +1,5 @@
 ---
-title: Důležité informace k zápisu kódu prologu epilogu | Microsoft Docs
+title: Důležité informace k zápisu kódu prologu / epilogu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414767"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942104"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Důležité informace k zápisu kódu prologu/epilogu
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Je také užitečné vědět, jak používat **__local_size –** symbol.  
+ Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Také je užitečné vědět, jak používat __LOCAL_SIZE symbol.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Rozložení rámce zásobníku  
  Tento příklad ukazuje standardní kód prologu, který se může vyskytnout v 32bitové funkci:  
@@ -48,19 +48,19 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function  
 ```  
   
- Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Místní hodnoty oblasti začíná na `ebp-4`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.  
+ Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních hodnot začíná u `ebp-4`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.  
   
-##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE –  
- Kompilátor poskytuje symbol, **__local_size –**, pro použití v vloženého assembleru blok kódu prologu funkce. Tento symbol se používá k přidělení místa pro místní proměnné na rámec zásobníku v kódu prologu vlastní.  
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
+ Kompilátor poskytuje symbol __LOCAL_SIZE pro použití ve vloženém bloku assembleru daného kódu prologu funkce. Tento symbol se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.  
   
- Kompilátor určuje hodnota **__local_size –**. Její hodnota je celkový počet bajtů všech uživatelem definované místní proměnné a generované kompilátorem dočasné proměnné. **__Local_size –** lze použít pouze jako okamžitou operand; ji nelze použít ve výrazu. Nesmí změnit nebo znovu definovat hodnotu tento symbol. Příklad:  
+ Kompilátor Určuje hodnotu __LOCAL_SIZE. Jeho hodnota je celkový počet bajtů všech místních proměnných definovaných uživateli a dočasných proměnných generovaných kompilátoru. __LOCAL_SIZE slouží pouze jako přímý operand. nelze použít ve výrazu. Nesmí měnit nebo znovu definovat hodnotu tohoto symbolu. Příklad:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- Následující příklad holé funkce obsahující vlastní prolog a epilog pořadí používá **__local_size –** symbol v prologu pořadí:  
+ Následující příklad neviditelné funkce obsahující vlastní sekvence prologu a epilogu sekvence používá v sekvenci prologu __LOCAL_SIZE symbolů:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -84,7 +84,7 @@ __declspec ( naked ) int main() {
 }  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Volání holé funkce](../cpp/naked-function-calls.md)

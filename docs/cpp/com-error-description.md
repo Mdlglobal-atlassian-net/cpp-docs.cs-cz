@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description | Microsoft Docs
+title: _com_error::Description | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414256"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939894"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Volání **IErrorInfo::GetDescription** funkce.  
+ Volání `IErrorInfo::GetDescription` funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek **IErrorInfo::GetDescription** pro **IErrorInfo** objekt zaznamenávají v rámci `_com_error` objektu. Výsledná `BSTR` je zapouzdřené v `_bstr_t` objektu. Pokud žádné **IErrorInfo** se zaznamenávají, vrátí prázdnou `_bstr_t`.  
+ Vrátí výsledek `IErrorInfo::GetDescription` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledná `BSTR` zapouzdřena v `_bstr_t` objektu. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Volání **IErrorInfo::GetDescription** funkce a načte **IErrorInfo** zaznamenávají v rámci `_com_error` objektu. Jakákoli chyba při volání **IErrorInfo::GetDescription** metoda je ignorována.  
+ Volání `IErrorInfo::GetDescription` funkce a načte `IErrorInfo` zaznamenaný v `_com_error` objektu. Jakékoli neúspěchy při volání `IErrorInfo::GetDescription` metoda se ignoruje.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

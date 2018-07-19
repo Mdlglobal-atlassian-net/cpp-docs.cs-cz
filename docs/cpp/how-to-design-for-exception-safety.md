@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: návrh na bezpečnost výjimek | Microsoft Docs'
+title: 'Postupy: návrh pro bezpečnost výjimek | Dokumentace Microsoftu'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417965"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940316"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Postupy: Návrh s ohledem na bezpečnost výjimek
 Jednou z výhod mechanismu výjimek je, že vykonávání spolu s daty o výjimce přejde přímo z příkazu, který výjimku vyvolal, na první příkaz catch, který tuto výjimku zpracuje. Tato obslužná rutina může být v zásobníku volání o libovolný počet úrovní výše. Funkce, které se volají mezi příkazem try a příkazem throw, nemusí o vyvolání této výjimky nic vědět.  Avšak musí být navrženy tak, aby se v jakémkoli bodě, kde se výjimka může šířit výše, mohly „nečekaně“ dostat mimo rozsah, a to bez zanechání částečně vytvořených objektů, úniku paměti nebo datových struktur, které jsou v nepoužitelném stavu.  
@@ -90,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Použití vzoru RAII pro správu prostředků  
- Chcete-li zajistit bezpečnost výjimek, musí funkce zničit objekty přidělené pomocí klíčového slova `malloc` nebo `new` a všechny prostředky, jako jsou popisovače souborů, uzavřít nebo uvolnit i v případě, že je vyvolána výjimka. *Prostředků pořízení je inicializace* (RAII) stylu sváže správy takových prostředků životnost automatické proměnné. Když se funkce dostane mimo rozsah, a to buď vrácením běžným způsobem, nebo z důvodu výjimky, jsou zavolány destruktory všech plně konstruovaných automatických proměnných. Obalový objekt vzoru RAII, jako je inteligentní ukazatel, ve svém destruktoru volá příslušnou funkci odstranění nebo uzavření. V kódu bezpečném z hlediska výjimek je obzvláště důležité ihned předat vlastnictví každého prostředku nějakému typu objektu RAII. Všimněte si, že `vector`, `string`, `make_shared`, `fstream`, a podobné třídy zpracovat pořízení prostředku pro vás.  Ale `unique_ptr` a tradiční `shared_ptr` konstrukce jsou speciální, protože získávání prostředků se provádí pomocí uživatele, nikoli objekt; proto se počítají jako *prostředků verze je zničení* , ale jsou sporná jako RAII.  
+ Na bezpečnost výjimek, musí zajistit objekty, že byla přidělena pomocí funkce `malloc` nebo **nové** jsou zničeny, a všechny prostředky, jako jsou popisovače souborů, jsou uzavřít nebo uvolnit i v případě, že dojde k výjimce. *Získání prostředků je inicializace* (RAII) svazuje správu takových prostředků s životností automatických proměnných. Když se funkce dostane mimo rozsah, a to buď vrácením běžným způsobem, nebo z důvodu výjimky, jsou zavolány destruktory všech plně konstruovaných automatických proměnných. Obalový objekt vzoru RAII, jako je inteligentní ukazatel, ve svém destruktoru volá příslušnou funkci odstranění nebo uzavření. V kódu bezpečném z hlediska výjimek je obzvláště důležité ihned předat vlastnictví každého prostředku nějakému typu objektu RAII. Všimněte si, `vector`, `string`, `make_shared`, `fstream`, a podobné třídy řeší získání prostředku za vás.  Ale `unique_ptr` a tradiční `shared_ptr` jsou speciální konstrukce, protože získání prostředků provádí uživatel namísto tohoto objektu; proto se berou podle *uvolnění prostředků je zničení* , ale sporná podle vzoru RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Tři záruky výjimky  
- Obvykle je z hlediska záruky tři výjimky, poskytující funkce popsané bezpečnost výjimek: *ne výpadkům záruka*, *silné záruky*a *základní záruka* .  
+ Obvykle je bezpečnost výjimek popisována v pojmech tří záruk výjimky, které může funkce poskytovat: *záruka žádného selhání*, *silná záruka*a *základní záruka* .  
   
 ### <a name="no-fail-guarantee"></a>Záruka žádného selhání  
  Záruka žádného selhání (nebo „bez vyvolání výjimky“) je nejsilnější záruka, kterou funkce může poskytnout. Uvádí, že funkce nevyvolá výjimku a žádné výjimce nepovolí šíření. Takovou záruku však nelze spolehlivě poskytnout, pokud (a) nejsou všechny funkce, které tato funkce volá, také se zárukou žádného selhání nebo (b) nejsou všechny vyvolané výjimky zachyceny předtím, než dosáhnou této funkce nebo (c) nejsou všechny výjimky, které mohou dosáhnout tuto funkci, zachyceny a správně zpracovány.  

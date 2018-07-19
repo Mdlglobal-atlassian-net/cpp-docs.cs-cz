@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::detach | Microsoft Docs
+title: _com_ptr_t::detach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410577"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941350"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Extrahuje a vrátí zapouzdřený ukazatel rozhraní.  
   
@@ -37,9 +37,9 @@ Interface* Detach( ) throw( );
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Extrahuje a vrátí ukazatel zapouzdřené rozhraní a pak vymaže obsah zapouzdřeného ukazatel úložiště **NULL**. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je na vás k volání **verze** na ukazatel vrácený rozhraní.  
+ Extrahuje a vrátí zapouzdřený ukazatel rozhraní a poté vyčistí úložiště zapouzdřeného ukazatele na hodnotu NULL. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je na vás volat `Release` na Vrácený ukazatel rozhraní.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

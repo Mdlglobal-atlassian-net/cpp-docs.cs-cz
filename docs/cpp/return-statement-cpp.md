@@ -1,5 +1,5 @@
 ---
-title: Return – příkaz (C++) | Microsoft Docs
+title: Return – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1252e6833dae0f04e1cb148c5703d04d42cee353
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947599"
 ---
 # <a name="return-statement-c"></a>return – příkaz (C++)
-Ukončí provádění funkce a vrátí řízení volající funkci (nebo operačnímu systému, je-li řízení předáváno z funkce `main`). Provádění pokračuje ve volání funkce okamžiku hned po volání.  
+Ukončí provádění funkce a vrátí řízení volající funkci (nebo operačnímu systému, je-li řízení předáváno z funkce `main`). Provádění pokračuje ve volání funkce v okamžiku, ihned po volání.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,19 +34,19 @@ return [expression];
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Je-li přítomna klauzule `expression`, je převedena na typ zadaný v deklaraci funkce, jako kdyby byla prováděna inicializace. Převedení z typu výrazu na typ `return` funkce může vytvořit dočasné objekty. Další informace o tom, jak a kdy se vytvářejí dočasné proměnné najdete v tématu [dočasné objekty](../cpp/temporary-objects.md).  
+ Je-li přítomna klauzule `expression`, je převedena na typ zadaný v deklaraci funkce, jako kdyby byla prováděna inicializace. Převod z typu výrazu **vrátit** typ funkce může vytvořit dočasné objekty. Další informace o tom, jak a kdy jsou vytvářeny, naleznete v tématu [dočasné objekty](../cpp/temporary-objects.md).  
   
- Hodnota klauzule `expression` je vrácena volající funkci. Pokud je výraz vynechán, návratová hodnota funkce není definována. Konstruktory a destruktory a funkce typu `void`, nelze zadat výraz v `return` příkaz. Funkce všech ostatních typů musejí zadat výraz v příkazu `return`.  
+ Hodnota klauzule `expression` je vrácena volající funkci. Pokud je výraz vynechán, návratová hodnota funkce není definována. Konstruktory a destruktory a funkce typu **void**, nelze zadat výraz v **vrátit** příkazu. Funkce všech ostatních typů musejí zadat výraz v **vrátit** příkazu.  
   
- Pokud tok řízení opustí blok ohraničující definice funkce, výsledek je stejný jako u příkazu `return` bez vykonání výrazu. Toto neplatí u funkcí, které jsou deklarovány jako návratová hodnota.  
+ Pokud tok řízení opustí blok ohraničující definice funkce, výsledek je stejný, jako kdyby byl-li **vrátit** měl byl proveden příkaz bez vykonání výrazu. Toto neplatí u funkcí, které jsou deklarovány jako návratová hodnota.  
   
- Funkce může mít libovolný počet příkazů `return`.  
+ Funkce může mít libovolný počet **vrátit** příkazy.  
   
- Následující příklad používá výraz s příkazem `return` pro získání dvou největších celých čísel.  
+ Následující příklad používá výraz s **vrátit** příkazu získat největší dvou celých čísel.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // return_statement2.cpp  
 #include <stdio.h>  
   

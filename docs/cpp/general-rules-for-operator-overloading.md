@@ -1,5 +1,5 @@
 ---
-title: Obecná pravidla přetížení operátoru | Microsoft Docs
+title: Obecná pravidla přetížení operátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814336"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947529"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Obecná pravidla přetížení operátoru
-Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Ale nelze je použít k [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou popsané samostatně.  
+Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Nicméně se nevztahují na [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou pokryty samostatně.  
   
--   Nelze definovat nových operátorů, například **.**.  
+-   Nelze definovat nové operátory, jako například **.**.  
   
 -   Nelze předefinovat význam operátorů při použití předdefinovaných datových typů.  
   
@@ -47,9 +47,9 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
     }  
     ```  
   
-     Předchozí příklad kódu deklaruje operátor „menší než“ jako členskou funkci. Operátory sčítání jsou však deklarovány jako globální funkce, které mají „přátelský“ přístup. Pro daný operátor může být poskytnuta více než jedna implementace. V případě předchozího operátoru sčítání jsou poskytnuty dvě implementace pro poskytnutí komutativity. Je to stejně pravděpodobné jako implementace operátorů, které sčítají `Point` s `Point`, `int` s `Point` atd.  
+     Předchozí příklad kódu deklaruje operátor „menší než“ jako členskou funkci. Operátory sčítání jsou však deklarovány jako globální funkce, které mají „přátelský“ přístup. Pro daný operátor může být poskytnuta více než jedna implementace. V případě předchozího operátoru sčítání jsou poskytnuty dvě implementace pro poskytnutí komutativity. Je stejně pravděpodobné jako implementace operátorů, které aplikacím dodávají `Point` k `Point`, **int** k `Point`, a tak dále se musí implementovat.  
   
--   Operátory dodržují seskupování a respektují počet operandů zadaný jejich typickým použitím v rámci předdefinovaných typů. Proto neexistuje žádný způsob, jak express koncept "Přidat 2 a 3 na objekt typu `Point`," očekává 2, pokud chcete přidat do *x* souřadnice a 3, které mají být přidány do *y* koordinaci.  
+-   Operátory dodržují seskupování a respektují počet operandů zadaný jejich typickým použitím v rámci předdefinovaných typů. Proto neexistuje žádný způsob, jak vyjádřit pojem "přičíst 2 a 3 k objektu typu `Point`," očekává 2 mají být přidány do *x* souřadnice a 3 přidávaného do *y* koordinaci.  
   
 -   Unární operátory, které jsou deklarovány jako členské funkce, nepřebírají žádné argumenty. Jsou-li deklarovány jako globální funkce, přebírají jeden argument.  
   
@@ -63,9 +63,9 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
   
 -   První argument přetížených operátorů členské funkce je vždy typu třídy objektu, pro který je operátor vyvolán (třída, ve které je operátor deklarován nebo třída odvozená z této třídy). Pro první argument nejsou k dispozici žádné převody.  
   
- Význam libovolného operátoru lze zcela změnit. Význam adresu služby, který obsahuje (**&**), přiřazení (**=**) a operátory volání funkce. Identity, které lze dovolávat pro vestavěné typy, lze také změnit pomocí přetěžování operátoru. Následující čtyři příkazy jsou obvykle při vyhodnocování zcela ekvivalentní:  
+ Význam libovolného operátoru lze zcela změnit. Který zahrnuje význam adresy (**&**), přiřazení (**=**), operátory a operátory volání funkce. Identity, které lze dovolávat pro vestavěné typy, lze také změnit pomocí přetěžování operátoru. Následující čtyři příkazy jsou obvykle při vyhodnocování zcela ekvivalentní:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

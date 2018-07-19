@@ -1,5 +1,5 @@
 ---
-title: Proměnlivé datové členy (C++) | Microsoft Docs
+title: Proměnlivé datové členy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947704"
 ---
 # <a name="mutable-data-members-c"></a>Proměnlivé datové členy (C++)
-Toto klíčové slovo lze použít pouze na nestatické a nekonstantní datové členy třídy. Pokud je deklarovaná datový člen `mutable`, pak je možné přiřadit hodnotu do tohoto člena dat z **const** – členská funkce.  
+Toto klíčové slovo lze použít pouze na nestatické a nekonstantní datové členy třídy. Pokud je datový člen deklarován **proměnlivé**, je pro přiřazení k tomuto datovému členu z hodnoty **const** členskou funkci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +34,9 @@ mutable member-variable-declaration;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Například následující kód se zkompiluje bez chyb, protože `m_accessCount` byl deklarován jako `mutable`, a lze jej tedy upravit pomocí `GetFlag` i v případě, že `GetFlag` je konstantní členská funkce.  
+ Například následující kód se zkompiluje bez chyb protože `m_accessCount` byl deklarován jako **proměnlivé**a proto je možné upravovat prostřednictvím `GetFlag` i v případě, `GetFlag` je konstantní členskou funkci.  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

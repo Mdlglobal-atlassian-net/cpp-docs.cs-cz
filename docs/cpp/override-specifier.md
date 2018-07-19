@@ -1,5 +1,5 @@
 ---
-title: override – specifikátor | Microsoft Docs
+title: override – specifikátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420178"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940651"
 ---
 # <a name="override-specifier"></a>override – specifikátor
-Můžete použít `override` – klíčové slovo k určení členské funkce, které přepsat virtuální funkce v základní třídě.  
+Můžete použít **přepsat** – klíčové slovo k určení členských funkcí, které přepíšou virtuální funkci v základní třídě.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `override` Kontextová a má zvláštní význam jenom v případě, že se používá po deklaraci členské funkce; jinak není rezervované klíčové slovo.  
+ **Přepsat** je kontextový a má zvláštní význam pouze tehdy, když se používá po deklaraci členské funkce; v opačném případě to není rezervované klíčové slovo.  
   
 ## <a name="example"></a>Příklad  
- Použití `override` pomáhá zabránit nechtěnému dědičnosti chování ve vašem kódu. Následující příklad ukazuje, kde, bez použití `override`, nemusí byla určena chování funkce člen odvozené třídy. Kompilátor není emitování všechny chyby pro tento kód.  
+ Použití **přepsat** zabránit neúmyslnému chování dědičnosti ve vašem kódu. Následující příklad ukazuje, kde bez použití **přepsat**, nemusí je žádoucí chování členské funkce odvozené třídy. Kompilátor nebude posílat žádné chyby pro tento kód.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Při použití `override`, kompilátor generuje chyby místo bezobslužně vytvoření nového člena funkce.  
+ Při použití **přepsat**, kompilátor vygeneruje chyby tichého vytváření nové členské funkce.  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Chcete-li určit, že nejde přepsat, funkce a že nelze zděděné třídy, použijte [konečné](../cpp/final-specifier.md) – klíčové slovo.  
+ Chcete-li určit, že funkce nelze přepsat a že nelze dědit třídy, použijte [konečné](../cpp/final-specifier.md) – klíčové slovo.  
   
 ## <a name="see-also"></a>Viz také  
  [final – specifikátor](../cpp/final-specifier.md)   

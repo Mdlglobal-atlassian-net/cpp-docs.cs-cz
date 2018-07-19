@@ -1,5 +1,5 @@
 ---
-title: while – příkaz (C++) | Microsoft Docs
+title: while – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947524"
 ---
 # <a name="while-statement-c"></a>while – příkaz (C++)
-Provede *příkaz* opakovaně až *výraz* vyhodnotí na hodnotu nula.  
+Spustí *příkaz* opakovaně, dokud není *výraz* vyhodnocen jako nula.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Testovací nástroje *výraz* proběhne před každou provádění smyčky; proto `while` smyčky spustí vícekrát nebo. *výraz* musí mít celočíselný typ, ukazatel typu nebo typu třídy s konverzi jednoznačným na celé číslo nebo ukazatel typu.  
+ Test *výraz* probíhá před každým provedením smyčky; proto **při** cyklus se opakuje nulakrát nebo vícekrát. *výraz* musí být integrálního typu, typu ukazatele nebo typu třídy s jednoznačným převodem na integrální nebo typ ukazatele.  
   
- A `while` smyčky můžete také při ukončení [zalomení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) v rámci příkaz provede se tělo. Použití [pokračovat](../cpp/continue-statement-cpp.md) ukončit aktuální iterace bez ukončení `while` smyčky. **Pokračovat** předá řízení do další iterace `while` smyčky.  
+ A **při** smyčky může také skončit při [přerušení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) v rámci příkaz provede se tělo. Použití [pokračovat](../cpp/continue-statement-cpp.md) k ukončení aktuální iterace bez ukončení **při** smyčky. **Pokračovat** předá řízení následující iteraci **při** smyčky.  
   
- Následující kód používá smyčku `while` k odstranění koncových podtržítek z řetězce:  
+ Následující kód používá **při** smyčky k odstranění koncových podtržítek z řetězce:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  
@@ -72,7 +73,7 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Proveďte-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)   
- [pro příkaz (C++)](../cpp/for-statement-cpp.md)   
+ [for – příkaz (C++)](../cpp/for-statement-cpp.md)   
  [Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)

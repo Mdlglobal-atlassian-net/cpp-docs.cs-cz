@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t – relační operátory | Microsoft Docs
+title: _com_ptr_t – relační operátory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,154 +38,94 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2248558743ff205dc98172bf0c8b24792e4a98c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 411e1649b8d9a7f072af48103ff17af92e1a7deb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947702"
 ---
 # <a name="comptrt-relational-operators"></a>_com_ptr_t – relační operátory
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Porovnání chytré ukazatele objekt, který má jinou inteligentní ukazatel ukazatel nezpracovaná rozhraní nebo **NULL**.  
+ Porovná objekt inteligentního ukazatele k jiným inteligentním ukazatelem, nezpracovaný ukazatel rozhraní, nebo hodnota NULL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      template<typename _OtherIID>   
-bool operator==(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+template<typename _OtherIID>   
+bool operator==( const _com_ptr_t<_OtherIID>& p );  
   
 template<typename _OtherIID>    
-bool operator==(   
-   _com_ptr_t<_OtherIID>& p   
-);  
+bool operator==( _com_ptr_t<_OtherIID>& p );  
   
 template<typename _InterfaceType>   
-bool operator==(   
-   _InterfaceType* p   
-);  
+bool operator==( _InterfaceType* p );  
   
 template<>   
-bool operator==(   
-   Interface* p   
-);  
+bool operator==( Interface* p );  
   
 template<>   
-bool operator==(   
-   const _com_ptr_t& p   
-) throw();  
+bool operator==( const _com_ptr_t& p ) throw();  
   
 template<>   
-bool operator==(   
-   _com_ptr_t& p   
-) throw();  
+bool operator==( _com_ptr_t& p ) throw();  
   
-bool operator==(   
-   int null   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator!=(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+bool operator==( Int null );  
   
 template<typename _OtherIID>   
-bool operator!=(   
-   _com_ptr_t<_OtherIID>& p   
-);  
-  
-template<typename _InterfaceType>   
-bool operator!=(   
-   _InterfaceType* p   
-);  
-  
-bool operator!=(   
-   int null   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator<(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+bool operator!=( const _com_ptr_t<_OtherIID>& p );  
   
 template<typename _OtherIID>   
-bool operator<(   
-   _com_ptr_t<_OtherIID>& p   
-);  
+bool operator!=( _com_ptr_t<_OtherIID>& p );  
   
 template<typename _InterfaceType>   
-bool operator<(   
-   _InterfaceType* p   
-);  
-```  
+bool operator!=( _InterfaceType* p );  
   
-```  
-  
-      template<typename _OtherIID>   
-bool operator>(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+bool operator!=( Int null );  
+
+template<typename _OtherIID>   
+bool operator<( const _com_ptr_t<_OtherIID>& p );  
   
 template<typename _OtherIID>   
-bool operator>(_com_ptr_t<   
-   _OtherIID>& p   
-);  
+bool operator<( _com_ptr_t<_OtherIID>& p );  
   
 template<typename _InterfaceType>   
-bool operator>(   
-   _InterfaceType* p   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator<=(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+bool operator<( _InterfaceType* p );  
+
+template<typename _OtherIID>   
+bool operator>( const _com_ptr_t<_OtherIID>& p );  
   
 template<typename _OtherIID>   
-bool operator<=(   
-   _com_ptr_t<_OtherIID>& p   
-);  
+bool operator>(_com_ptr_t< _OtherIID>& p );  
   
 template<typename _InterfaceType>   
-bool operator<=(   
-   _InterfaceType* p   
-);  
-```  
-  
-```  
-  
-      template<typename _OtherIID>   
-bool operator>=(   
-   const _com_ptr_t<_OtherIID>& p   
-);  
+bool operator>( _InterfaceType* p );  
   
 template<typename _OtherIID>   
-bool operator>=(   
-   _com_ptr_t<_OtherIID>& p   
-);  
+bool operator<=( const _com_ptr_t<_OtherIID>& p );  
+  
+template<typename _OtherIID>   
+bool operator<=( _com_ptr_t<_OtherIID>& p );  
   
 template<typename _InterfaceType>   
-bool operator>=(   
-   _InterfaceType* p   
-);  
+bool operator<=( _InterfaceType* p );  
+  
+template<typename _OtherIID>  
+bool operator>=( const _com_ptr_t<_OtherIID>& p );  
+  
+template<typename _OtherIID>   
+bool operator>=( _com_ptr_t<_OtherIID>& p );  
+  
+template<typename _InterfaceType>   
+bool operator>=( _InterfaceType* p );  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Porovná objekt chytré ukazatele na další inteligentní ukazatel ukazatel nezpracovaná rozhraní nebo **NULL**. S výjimkou **NULL** ukazatel testy tyto operátory nejprve dotaz oba ukazatele pro **IUnknown**a porovnejte výsledky.  
+ Porovná objekt inteligentního ukazatele na jiný inteligentní ukazatel, nezpracovaný ukazatel rozhraní, nebo hodnota NULL. S výjimkou testy ukazatele NULL, tyto operátory první dotaz obou ukazatele pro `IUnknown`a porovnat výsledky.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

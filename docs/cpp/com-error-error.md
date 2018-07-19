@@ -1,5 +1,5 @@
 ---
-title: _com_error::Error | Microsoft Docs
+title: _com_error::Error | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412579"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942052"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Načte `HRESULT` předaný konstruktoru.  
+ Načte hodnotu HRESULT předaný konstruktoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,12 +38,12 @@ HRESULT Error( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Nezpracovaná položka `HRESULT` předaná do konstruktoru.  
+ Nezpracovaná položka HRESULT předaná do konstruktoru.  
   
 ## <a name="remarks"></a>Poznámky  
- Načítá zapouzdřenou položku `HRESULT` v objektu `_com_error`.  
+ Načte položku zapouzdřený HRESULT v `_com_error` objektu.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

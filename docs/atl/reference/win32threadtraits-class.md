@@ -1,5 +1,5 @@
 ---
-title: Třída Win32ThreadTraits | Microsoft Docs
+title: Win32threadtraits – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362013"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883671"
 ---
-# <a name="win32threadtraits-class"></a>Win32ThreadTraits – třída
-Tato třída poskytuje funkce vytváření vlákna systému Windows. Tuto třídu používejte, pokud vlákno nebude používat funkce CRT.  
+# <a name="win32threadtraits-class"></a>Win32threadtraits – třída
+Tato třída poskytuje funkce pro vytváření pro Windows vlákno. Pokud vlákno nebude používat funkce CRT, použijte tuto třídu.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,24 +45,24 @@ class Win32ThreadTraits
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Statické) Volání této funkce vytvořit vlákno, který by neměl používat funkce CRT.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statické) Voláním této funkce k vytvoření vlákna, která se nesmí používat funkce CRT.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro konkrétní typ přístup z více vláken. Vytvoření funkce má stejné podpisu a sémantiku jako Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce.  
+ Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro určitý typ vlákna. Vytvoření funkce má stejný podpis a sémantiku jako Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce.  
   
- Vlastnosti vlákna používá následující třídy:  
+ Vlastnosti vlákna jsou používány následující třídy:  
   
-- [CThreadPool](../../atl/reference/cthreadpool-class.md)  
+- [Cthreadpool –](../../atl/reference/cthreadpool-class.md)  
   
-- [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
+- [Cworkerthread –](../../atl/reference/cworkerthread-class.md)  
   
- Pokud vlákno budete používat funkce CRT, použijte [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) místo.  
+ Pokud vlákno se pomocí funkce CRT, použijte [crtthreadtraits –](../../atl/reference/crtthreadtraits-class.md) místo.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Volání této funkce vytvořit vlákno, který by neměl používat funkce CRT.  
+ Voláním této funkce k vytvoření vlákna, která se nesmí používat funkce CRT.  
   
 ```
 static HANDLE CreateThread(
@@ -75,31 +75,31 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsa`  
+ *lpsa*  
  Atributy zabezpečení pro nové vlákno.  
   
- `dwStackSize`  
+ *dwStackSize*  
  Velikost zásobníku pro nové vlákno.  
   
- `pfnThreadProc`  
- Vlákno postupu nové vlákno.  
+ *pfnThreadProc*  
+ Procedura vlákna nové vlákno.  
   
- `pvParam`  
- Parametr mají být předány postupu přístup z více vláken.  
+ *pvParam*  
+ Parametr, který má být předán procedura vlákna.  
   
- `dwCreationFlags`  
- Vytvoření příznaky (0 nebo CREATE_SUSPENDED).  
+ *dwCreationFlags*  
+ Vytváření příznaky (0 nebo CREATE_SUSPENDED).  
   
- `pdwThreadId`  
- [out] Adresa DWORD proměnné, která v případě úspěchu přijímá ID vlákna nově vytvořený vlákna.  
+ *pdwThreadId*  
+ [out] Adresa proměnné DWORD, který v případě úspěchu, přijímá ID vlákna nově vytvořeného vlákna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač pro nově vytvořený vlákno nebo hodnotu NULL při selhání. Volání [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) k získání rozšířené informace o chybě.  
+ Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) a získat tak rozšířené informace o chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Další informace o parametry, které chcete tuto funkci.  
+ Zobrazit [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Další informace o parametrech pro tuto funkci.  
   
- Tato funkce volá `CreateThread` vytvořit vlákno.  
+ Tato funkce volá `CreateThread` k vytvoření vlákna.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

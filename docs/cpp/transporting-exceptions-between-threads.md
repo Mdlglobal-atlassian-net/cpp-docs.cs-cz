@@ -1,5 +1,5 @@
 ---
-title: Převod výjimek mezi vlákny | Microsoft Docs
+title: Převod výjimek mezi vlákny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1066da6545a2e0689fbfed33be466e001142dc9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 99f2d785e9f7ab7fa91f51d22299ebab0f39197e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704643"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942065"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Převod výjimek mezi vlákny
 
-Visual C++ podporuje *převod výjimku* z jedno vlákno na jiný. Přenos výjimek umožňuje zachytit výjimku v jednom vlákně a následně nechat výjimku vypadat, jako by byla vyvolána v jiném vlákně. Například je možné tuto funkci použít pro napsání vícevláknové aplikace, kde primární vlákno zpracovává všechny výjimky vyvolané sekundárními vlákny. Přenos výjimek je užitečný především pro vývojáře, kteří vytvářejí paralelní programovací knihovny nebo systémy. Pokud chcete implementovat přenosovou výjimky, poskytuje Visual C++ [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typu a [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), a [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkce.
+Visual C++ podporuje *přenos výjimek* z jednoho vlákna do druhého. Přenos výjimek umožňuje zachytit výjimku v jednom vlákně a následně nechat výjimku vypadat, jako by byla vyvolána v jiném vlákně. Například je možné tuto funkci použít pro napsání vícevláknové aplikace, kde primární vlákno zpracovává všechny výjimky vyvolané sekundárními vlákny. Přenos výjimek je užitečný především pro vývojáře, kteří vytvářejí paralelní programovací knihovny nebo systémy. Pro implementaci přenosu výjimek poskytuje jazyk Visual C++ [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) typ a [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), a [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,16 +52,16 @@ namespace std
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Tento parametr*|Neurčené interní třída, která se používá k implementaci `exception_ptr` typu.|
+|*Tento parametr zadán*|Neurčená vnitřní třída, která se používá k implementaci `exception_ptr` typu.|
 |*p*|`exception_ptr` Objekt, který odkazuje na výjimku.|
 |*E*|Třída, která představuje výjimku.|
-|*e*|Instance parametru `E` třídy.|
+|*e*|Instance třídy parametru `E` třídy.|
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`current_exception` Funkce vrátí `exception_ptr` objekt, který odkazuje na výjimku, která právě probíhá. Pokud žádná výjimka je v průběhu, funkce vrátí hodnotu `exception_ptr` objekt, který není spojen s všechny výjimky.
+`current_exception` Vrací funkce `exception_ptr` objekt, který odkazuje na výjimku, která je aktuálně v průběhu. Pokud žádná výjimka neprobíhá, vrací funkce `exception_ptr` objekt, který není přidružen k žádné výjimce.
 
-`make_exception_ptr` Funkce vrátí `exception_ptr` objekt, který odkazuje na výjimku určeného *e* parametr.
+`make_exception_ptr` Vrací funkce `exception_ptr` , který odkazuje na výjimku zadanou parametrem *e* parametru.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -73,13 +73,13 @@ Avšak pokud sekundární vlákno vyvolá výjimku, mělo by ji primární vlák
 
 ### <a name="solution"></a>Řešení
 
-Pro zvládnutí předchozího scénáře podporuje standard jazyka C++ přenos výjimek mezi vlákny. Pokud jiného vlákna, vyvolá výjimku, stane se této výjimky *aktuální výjimku*. Obdobně pro praxi, aktuální výjimky se říká, že *na cestě*. Aktuální výjimka je v letu od okamžiku jejího vyvolání po návrat obslužné rutiny výjimky, která ji zachytila.
+Pro zvládnutí předchozího scénáře podporuje standard jazyka C++ přenos výjimek mezi vlákny. Pokud sekundární vlákno vyvolá výjimku, tato výjimka se stane *aktuální výjimku*. Podle analogie reálné je označen jako aktuální výjimka *za pochodu*. Aktuální výjimka je v letu od okamžiku jejího vyvolání po návrat obslužné rutiny výjimky, která ji zachytila.
 
-Sekundární vlákno může zachytit aktuální výjimky v `catch` blokovat a pak zavolají `current_exception` funkce k uložení výjimka v `exception_ptr` objektu. `exception_ptr` Objekt musí být k dispozici sekundární vlákno a na primární vlákno. Například `exception_ptr` objekt může být globální proměnné, jejichž přístup řídí mutex. Termín *přenosu výjimku* znamená výjimka v jedno vlákno lze převést na formulář, který je přístupný pomocí jiné vlákno.
+Sekundární vlákno může zachytit aktuální výjimku v **catch** blokovat a poté zavolejte `current_exception` funkci pro uložení výjimky do `exception_ptr` objektu. `exception_ptr` Objekt musí být k dispozici jak sekundárnímu vláknu a tak primárnímu vláknu. Například `exception_ptr` objekt může být globální proměnnou, jejíž přístup je řízen mutexem. Termín *přenést výjimku* znamená, že výjimka z jednoho vlákna může být převeden na formulář, který je přístupný jinému vláknu.
 
-V dalším kroku primární vlákno volá `rethrow_exception` funkci, která extrahuje a potom vyvolá výjimku z `exception_ptr` objektu. Jakmile je výjimka vyvolána, stane se v primárním vlákně aktuální výjimkou. A tak se zdá, že výjimka pochází z primárního vlákna.
+Dále primární vlákno volá `rethrow_exception` funkce, která extrahuje a následně vyvolává výjimku z `exception_ptr` objektu. Jakmile je výjimka vyvolána, stane se v primárním vlákně aktuální výjimkou. A tak se zdá, že výjimka pochází z primárního vlákna.
 
-Nakonec můžete primární vlákno catch aktuální výjimky v `catch` blokovat a pak ji zpracovat nebo throw na obslužnou rutinu vyšší úrovně výjimka. Nebo může primární vlákno výjimku ignorovat a dovolit procesu skončit.
+Nakonec může primární vlákno zachytit aktuální výjimku v **catch** blokovat a pak ji zpracovat nebo ji vyvolat pro obslužnou rutinu vyšší úrovně. Nebo může primární vlákno výjimku ignorovat a dovolit procesu skončit.
 
 Většina aplikací nepotřebuje přenášet výjimky mezi vlákny. Nicméně tato funkce je užitečná v paralelních výpočetních systémech, protože systém může rozdělit práci mezi sekundární vlákna, procesory nebo jádra. V prostředí paralelních výpočtů může jedno vyhrazené vlákno zpracovávat všechny výjimky ze sekundárních vláken a poskytnout konzistentní model zpracování výjimek pro jakoukoli aplikaci.
 
@@ -87,74 +87,74 @@ Pro další informace o návrhu komise standardu jazyka C++ vyhledejte na intern
 
 ### <a name="exception-handling-models-and-compiler-options"></a>Modely zpracování výjimek a možnosti kompilátoru
 
-Model zpracování výjimek v aplikaci určuje, zda lze zachytit a přenést výjimku. Jazyk Visual C++ podporuje tři modely, kterými lze zpracovávat výjimky jazyka C++, výjimky strukturovaného zpracování výjimek (SEH) a výjimky modulu CLR. Použití [/EH](../build/reference/eh-exception-handling-model.md) a [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnosti kompilátoru k určení model zpracování výjimek vaší aplikace.
+Model zpracování výjimek v aplikaci určuje, zda lze zachytit a přenést výjimku. Jazyk Visual C++ podporuje tři modely, kterými lze zpracovávat výjimky jazyka C++, výjimky strukturovaného zpracování výjimek (SEH) a výjimky modulu CLR. Použití [/EH](../build/reference/eh-exception-handling-model.md) a [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnosti kompilátoru pro určení modelu zpracování výjimek vaší aplikace.
 
 Pouze následující kombinace možností kompilátoru a programovacích příkazů může přenést výjimku. Další kombinace buď nemohou zachytit výjimky, nebo je mohou zachytit, ale nemohou přenést.
 
-- **/EHa** – možnost kompilátoru a `catch` příkaz můžete přenosu SEH a C++ výjimky.
+- **/EHa** – možnost kompilátoru a **catch** příkaz mohou přenášet SEH a výjimky jazyka C++.
 
-- **/EHa**, **/EHs**, a **/EHsc** – možnosti kompilátoru a `catch` příkaz můžete přenosu výjimky jazyka C++.
+- **/EHa**, **/EHS**, a **/EHsc** – možnosti kompilátoru a **catch** příkaz mohou přenášet výjimky jazyka C++.
 
-- **/CLR** – možnost kompilátoru a `catch` příkaz můžete přenosu výjimky jazyka C++. **/CLR** – možnost kompilátoru znamená specifikaci **/EHa** možnost. Je dobré si zapamatovat, že kompilátor nepodporuje přenos spravovaných výjimek. Důvodem je, že se spravovanými výjimkami, které jsou odvozeny od [System.Exception třída](../standard-library/exception-class.md), už jsou objekty, které můžete přesunout mezi vlákny pomocí zařízení společného languange modulu runtime.
+- **/CLR** – možnost kompilátoru a **catch** příkaz mohou přenášet výjimky jazyka C++. **/CLR** – možnost kompilátoru znamená specifikace **/EHa** možnost. Je dobré si zapamatovat, že kompilátor nepodporuje přenos spravovaných výjimek. Důvodem je, že spravované výjimky, které jsou odvozeny z [třídy System.Exception](../standard-library/exception-class.md), už jsou objekty, které lze přesunout mezi vlákny pomocí zařízení prostředků modulu CLR.
 
    > [!IMPORTANT]
-   > Doporučujeme vám, zda jste zadali **/EHsc** – možnost kompilátoru a catch pouze výjimky jazyka C++. Vystavit sami ohrožení zabezpečení Pokud použijete **/EHa** nebo **/CLR** – možnost kompilátoru a **catch** příkaz se třemi tečkami  *Výjimka – deklarace* (`catch(...)`). Chcete pravděpodobně používat `catch` příkaz zaznamenat několik specifických výjimek. Ale `catch(...)` příkaz zaznamená všechny C++ a SEH výjimky, včetně neočekávané ty, které by měly být závažná. Ignorováním nebo nesprávným zpracováním neočekávané výjimky může být dán prostor škodlivému kódu k ohrožení zabezpečení aplikace.
+   > Doporučujeme vám, že zadáte **/EHsc** – možnost kompilátoru a catch pouze výjimky jazyka C++. Zpřístupníte sami bezpečnostní hrozbu používáte **/EHa** nebo **/CLR** – možnost kompilátoru a **catch** příkazu se třemi tečkami  *deklarace výjimky* (`catch(...)`). By měl používat **catch** příkaz pro zachycení několika specifických výjimek. Ale `catch(...)` příkaz zachytí výjimky všechny C++ a SEH, včetně neočekávaných, které mohou být závažné. Ignorováním nebo nesprávným zpracováním neočekávané výjimky může být dán prostor škodlivému kódu k ohrožení zabezpečení aplikace.
 
 ## <a name="usage"></a>Použití
 
-Následující části popisují postup přenosu výjimky pomocí `exception_ptr` typ a `current_exception`, `rethrow_exception`, a `make_exception_ptr` funkce.
+Následující části popisují způsob přenášení výjimky pomocí `exception_ptr` typ a `current_exception`, `rethrow_exception`, a `make_exception_ptr` funkce.
 
 ## <a name="exceptionptr-type"></a>Typ exception_ptr
 
-Použijte `exception_ptr` objekt, který má odkazovat na aktuální výjimky nebo instanci výjimka zadaného uživatelem. V implementaci společnosti Microsoft, je reprezentována výjimku [EXCEPTION_RECORD](https://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Každý `exception_ptr` objekt zahrnuje pole odkazu výjimka, která odkazuje na kopii `EXCEPTION_RECORD` struktura, která představuje výjimku.
+Použití `exception_ptr` pro odkázání na aktuální výjimku nebo instanci uživatelské výjimky. V implementaci společnosti Microsoft, je reprezentována výjimku [EXCEPTION_RECORD](https://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Každý `exception_ptr` objekt obsahuje referenční pole výjimky, která odkazuje na kopii `EXCEPTION_RECORD` struktura, která představuje výjimku.
 
-Když je deklarovat `exception_ptr` proměnné, proměnné není přidružen k žádné výjimky. Tedy referenční pole výjimky je NULL. Takové `exception_ptr` objektu se říká *null exception_ptr*.
+Pokud deklarujete `exception_ptr` proměnné, proměnná není přidružen k žádné výjimce. Tedy referenční pole výjimky je NULL. Tyto `exception_ptr` objekt, se nazývá *nulový exception_ptr*.
 
-Použití `current_exception` nebo `make_exception_ptr` funkce přiřadit výjimku `exception_ptr` objektu. Přiřadíte-li výjimku `exception_ptr` proměnné, pole výjimka odkazu proměnnou odkazuje na kopii této výjimky. Pokud není k dispozici dostatek paměti pro kopírování výjimku, pole výjimka odkazu odkazuje na kopii [std::bad_alloc](../standard-library/bad-alloc-class.md) výjimka. Pokud `current_exception` nebo `make_exception_ptr` funkce nelze zkopírovat výjimku z jiného důvodu, volání funkce [ukončit](../c-runtime-library/reference/terminate-crt.md) funkce ukončíte aktuálním procesu.
+Použití `current_exception` nebo `make_exception_ptr` funkce pro přiřazení výjimky do `exception_ptr` objektu. Při přiřazení výjimky do `exception_ptr` proměnné, referenční pole výjimky proměnné odkazuje na kopii výjimky. Pokud není dostatek paměti pro zkopírování výjimky, referenční pole výjimky odkazuje na kopii [std::bad_alloc](../standard-library/bad-alloc-class.md) výjimky. Pokud `current_exception` nebo `make_exception_ptr` funkce nemůže zkopírovat výjimku z jiného důvodu, zavolá funkce [ukončit](../c-runtime-library/reference/terminate-crt.md) funkce, která se ukončila aktuální proces.
 
-Bez ohledu na jeho název `exception_ptr` objektu není sám sebe. je zde ukazatel. Ho neřídí sémantika ukazatele a nelze jej použít s přístup ke členu ukazatele (`->`) nebo indirection (`*`) operátory. `exception_ptr` Objekt nemá žádné členy veřejná data nebo členské funkce.
+Bez ohledu na její název `exception_ptr` objektu je sám není ukazatel. Nedodržuje sémantiku ukazatele a nelze použít s přístup ke členu ukazatel (`->`) nebo dereference (`*`) operátory. `exception_ptr` Objekt nemá žádné veřejné datové členy a členské funkce.
 
 ### <a name="comparisons"></a>Porovnání
 
-Můžete rovno (`==`) a není rovno (`!=`) operátory k porovnání dvou `exception_ptr` objekty. Operátory porovnání není binární hodnotu (bitový) `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnání adresy v poli výjimka odkazu `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a porovnání jako rovnocenné hodnotu NULL.
+Můžete použít rovnosti (`==`) a není rovno (`!=`) operátory pro porovnání dvou `exception_ptr` objekty. Operátory neporovnávají binární hodnoty (bitový vzor) z `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnávají adresy v referenčním poli výjimky z `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a hodnota NULL rovnají.
 
 ## <a name="currentexception-function"></a>Funkce current_exception
 
-Volání `current_exception` v fungovat `catch` bloku. Pokud je k výjimce v cestě a `catch` výjimku, můžete zachytit bloku `current_exception` funkce vrátí `exception_ptr` objekt, který odkazuje na výjimku. Funkce, jinak vrátí hodnotu null `exception_ptr` objektu.
+Volání `current_exception` fungovat v **catch** bloku. Je-li výjimka v letu a **catch** bloku může zachytit výjimku, `current_exception` vrací funkce `exception_ptr` objekt, který na výjimku odkazuje. V opačném případě vrátí hodnotu null `exception_ptr` objektu.
 
 ### <a name="details"></a>Podrobnosti
 
-`current_exception` Funkce zaznamená výjimka, která je na cestě bez ohledu na to, jestli `catch` Určuje příkaz [výjimka deklarace](../cpp/try-throw-and-catch-statements-cpp.md) příkaz.
+`current_exception` Funkce zachytí výjimku, která je v letu, bez ohledu na to, zda **catch** příkaz určuje, [deklarace výjimky](../cpp/try-throw-and-catch-statements-cpp.md) příkazu.
 
-Na konci se nazývá destruktor pro aktuální výjimky `catch` blokování, pokud není opětovné výjimku. Ale i v případě, že zavoláte `current_exception` fungovat v destruktoru, funkce vrátí hodnotu `exception_ptr` objekt, který odkazuje na aktuální výjimku.
+Na konci je volán destruktor aktuální výjimky **catch** blokovat, pokud není výjimka znovu. Ale i v případě, že zavoláte `current_exception` fungovat v destruktoru vrátí funkce hodnotu `exception_ptr` objekt, který odkazuje na aktuální výjimku.
 
-Následná volání `current_exception` funkce vrátí `exception_ptr` objekty, které odkazují na různé kopie aktuální výjimku. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
+Následná volání `current_exception` funkce vrátit `exception_ptr` objekty, které odkazují na různé kopie aktuální výjimky. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
 
 ### <a name="seh-exceptions"></a>Výjimky SEH
 
-Pokud použijete **/EHa** – možnost kompilátoru, můžete zachytit výjimku SEH v jazyka C++ `catch` bloku. `current_exception` Funkce vrátí `exception_ptr` objekt, který odkazuje na SEH výjimku. A `rethrow_exception` funkce vyvolá výjimku SEH při volání s thetransported `exception_ptr` objektu jako její argument.
+Pokud používáte **/EHa** – možnost kompilátoru, můžete zachytit výjimku SEH v C++ **catch** bloku. `current_exception` Vrací funkce `exception_ptr` objekt, který odkazuje na výjimku SEH. A `rethrow_exception` funkce vyvolá výjimku SEH při volání s thetransported `exception_ptr` objektu jako svůj argument.
 
-`current_exception` Funkce vrátí hodnotu null `exception_ptr` při volání v SEH `__finally` obslužné rutiny ukončení, `__except` obslužná rutina výjimky, nebo `__except` výrazu filtru.
+`current_exception` Funkce vrátí hodnotu null `exception_ptr` při volání v SEH **__finally** obslužné rutiny ukončení **__except** obslužné rutiny výjimky nebo **__except**výraz filtru.
 
-Přenesená výjimka nepodporuje vnořené výjimky. Vnořená výjimka nastane, pokud je při zpracování výjimky vyvolána jiná výjimka. Pokud zachytit vnořené výjimky, `EXCEPTION_RECORD.ExceptionRecord` – datový člen odkazuje na řetězec `EXCEPTION_RECORD` struktury, které popisují přidružené výjimky. `current_exception` Funkce nepodporuje vnořené výjimky, protože vrátí `exception_ptr` objekt, jehož `ExceptionRecord` – datový člen je dojde k vynulování.
+Přenesená výjimka nepodporuje vnořené výjimky. Vnořená výjimka nastane, pokud je při zpracování výjimky vyvolána jiná výjimka. Při zachycení vnořené výjimky `EXCEPTION_RECORD.ExceptionRecord` datový člen odkazuje na řetězec `EXCEPTION_RECORD` struktury, které popisují přidružené výjimky. `current_exception` Funkce nepodporuje vnořené výjimky, protože se vrátí `exception_ptr` jehož `ExceptionRecord` datový člen je vynulován.
 
-Pokud jste zachycení výjimek SEH, musí spravovat odkazuje žádné ukazatel v paměti `EXCEPTION_RECORD.ExceptionInformation` data člena pole. Musí zaručit, že paměť je platný po dobu životnosti odpovídající `exception_ptr` objekt, a že je paměť uvolněna při `exception_ptr` je odstraněn objekt.
+Při zachycení výjimky SEH, je nutné spravovat paměť odkazovanou ukazateli v `EXCEPTION_RECORD.ExceptionInformation` poli datového členu. Je nutné zaručit, že paměť je platná po celou dobu životnosti odpovídajícího `exception_ptr` objektu a zda je paměť uvolněna při `exception_ptr` objekt odstranit.
 
-Spolu s možností přenosu výjimek je možné použít funkce překladatele strukturovaných výjimek (SE). Pokud je výjimku SEH převedeny na výjimky C++, `current_exception` funkce vrátí `exception_ptr` přeložený výjimka místo původní výjimka SEH, který odkazuje. `rethrow_exception` Funkce následně vyvolá přeložený výjimka, není původní výjimka. Další informace o funkcích jihovýchodní překladač najdete v tématu [_set_se_translator –](../c-runtime-library/reference/set-se-translator.md).
+Spolu s možností přenosu výjimek je možné použít funkce překladatele strukturovaných výjimek (SE). Pokud je výjimka SEH přeložena do výjimky jazyka C++, `current_exception` vrací funkce `exception_ptr` odkazující na přeloženou výjimku namísto původní výjimky SEH. `rethrow_exception` Funkce následně vyvolá přeloženou výjimku, nikoli původní výjimku. Další informace o funkcích překladače najdete v tématu [_set_se_translator](../c-runtime-library/reference/set-se-translator.md).
 
 ## <a name="rethrowexception-function"></a>Funkce rethrow_exception
 
-Po uložení zachycená výjimka v `exception_ptr` objektu primární vlákno může zpracovat objekt. Ve vaší primární vláknu volání `rethrow_exception` fungovat společně s `exception_ptr` objektu jako její argument. `rethrow_exception` Extrahuje výjimky z funkce `exception_ptr` objekt a potom v kontextu primární vlákno vyvolá výjimku. Pokud `p` parametr `rethrow_exception` s hodnotou null je funkce `exception_ptr`, funkce vyvolá [std::bad_exception](../standard-library/bad-exception-class.md).
+Po uložení zachycené výjimky v `exception_ptr` objektu, může primární vlákno zpracovat objektu. V primárním vlákně, zavolejte `rethrow_exception` společně s funkcí `exception_ptr` objektu jako svůj argument. `rethrow_exception` Extrahuje výjimku z funkce `exception_ptr` objekt a potom vyvolá výjimku v kontextu primárního vlákna. Pokud *p* parametr `rethrow_exception` nulový `exception_ptr`, funkce vyvolá [std::bad_exception](../standard-library/bad-exception-class.md).
 
-Extrahovaná výjimka je nyní aktuální výjimkou v primárním vlákně a je možné ji zpracovávat stejně jako jakoukoli jinou výjimku. Pokud jste zachycení výjimky, můžete ji okamžitě zpracovávat nebo použít `throw` příkaz pro odesílání pro obslužnou rutinu vyšší úrovně výjimka. Jinak není třeba dělat nic a je možné nechat výchozí obslužnou rutinu systému ukončit proces.
+Extrahovaná výjimka je nyní aktuální výjimkou v primárním vlákně a je možné ji zpracovávat stejně jako jakoukoli jinou výjimku. Při zachycení výjimky, můžete ji okamžitě zpracovat nebo použít **throw** příkazu k odeslání obslužné rutině vyšší úrovně. Jinak není třeba dělat nic a je možné nechat výchozí obslužnou rutinu systému ukončit proces.
 
 ## <a name="makeexceptionptr-function"></a>Funkce make_exception_ptr
 
-`make_exception_ptr` Funkce použije instance třídy jako její argument a potom se vrátí `exception_ptr` instance, který odkazuje. Obvykle, zadejte [třídy výjimek](../standard-library/exception-class.md) jako argument pro objekt `make_exception_ptr` fungovat, i když všechny třídy objektu může být argument.
+`make_exception_ptr` Funkce přijímající instanci třídy jako svůj argument a vrátí `exception_ptr` , která odkazuje na instanci. Obvykle, zadejte [třída výjimky](../standard-library/exception-class.md) jako argument pro objekt `make_exception_ptr` fungovat, i když jakýkoli objekt třídy může být argumentem.
 
-Volání `make_exception_ptr` funkce je ekvivalentní volání vyvolání k výjimce C++ v zachytávání `catch` blok a pak volání `current_exception` funkci vrátíte `exception_ptr` objekt, který odkazuje na výjimku. Implementace společnosti Microsoft `make_exception_ptr` funkce je efektivnější než vyvolání a potom zachytávání výjimku.
+Volání `make_exception_ptr` funkce je ekvivalentní k vyvolání výjimky jazyka C++, jejímu zachycení v **catch** bloku a následným voláním `current_exception` funkce, která se vrátí `exception_ptr` objekt, který na výjimku odkazuje. Implementace společnosti Microsoft `make_exception_ptr` funkce je efektivnější než vyvolávání a následné zachycování výjimky.
 
-Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a budeme bránit jeho použití.
+Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a zabraňte jejich použití.
 
 ## <a name="example"></a>Příklad
 
@@ -262,7 +262,7 @@ exception_ptr 1: Caught a  myException exception.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<výjimka >
+**Záhlaví:** \<výjimky >
 
 ## <a name="see-also"></a>Viz také:
 

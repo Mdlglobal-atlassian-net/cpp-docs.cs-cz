@@ -1,5 +1,5 @@
 ---
-title: is_compound – třída | Microsoft Docs
+title: is_compound – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843805"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961588"
 ---
 # <a name="iscompound-class"></a>is_compound – třída
 
-Testy, pokud zadaný typ není základní.
+Testuje, zda zadaný typ není základní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Obsahuje instanci predikátem typu `false` Pokud typ `Ty` je základní typ (tj. Pokud [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > obsahuje `true`), jinak hodnota drží `true`. Proto predikát obsahuje `true` Pokud `Ty` je typ pole, typ funkce, ukazatel na `void` nebo příslušný objekt nebo a funkce, a odkaz, třídu, a union, výčet, nebo a ukazatel na člena nestatickou třídu nebo  *Odchylka nákladů kvalifikovaný* formu jeden z nich.
+Instance predikátu typu obsahuje **false** Pokud typ *Ty* základní typ (tj. Pokud [is_fundamental –](../standard-library/is-fundamental-class.md)\<Ty > obsahuje  **Hodnota TRUE**); v opačném případě obsahuje **true**. Proto obsahuje predikát **true** Pokud *Ty* je typem pole, typ funkce, ukazatele na **void** nebo objekt nebo funkci, odkaz, třídu, sjednocení, výčtu nebo ukazatel na člen nestatické třídy nebo *kvalifikovaný cv* formu jeden z nich.
 
 ## <a name="example"></a>Příklad
 
@@ -89,9 +89,9 @@ is_compound<int> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_class – třída](../standard-library/is-class-class.md)<br/>

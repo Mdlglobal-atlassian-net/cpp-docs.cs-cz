@@ -1,5 +1,5 @@
 ---
-title: Třída CMessageMap | Microsoft Docs
+title: Cmessagemap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359016"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884851"
 ---
-# <a name="cmessagemap-class"></a>CMessageMap – třída
-Tato třída umožňuje že mapy zpráv objektu být přístup k jinému objektu.  
+# <a name="cmessagemap-class"></a>Cmessagemap – třída
+Tato třída umožňuje že mapy zpráv objektu bude přístup k jiným objektem.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +45,16 @@ class ATL_NO_VTABLE CMessageMap
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Mapy zpráv v přistupuje `CMessageMap`-odvozené třídy.|  
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Přistupuje k mapy zpráv v `CMessageMap`-odvozené třídy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMessageMap` je abstraktní základní třída, která umožňuje objektu zpráva mapuje přístup k jinému objektu. Aby objekt vystavit jeho mapy zpráv, její třída musí být odvozeny od `CMessageMap`.  
+ `CMessageMap` je abstraktní základní třídu, která umožňuje zpráva objektu se mapuje na přístupná pomocí jiného objektu. Aby objekt vystavit jeho mapy zpráv, její třída musí být odvozen od `CMessageMap`.  
   
- ATL používá `CMessageMap` podporu obsažené windows a dynamické zpráva řetězení mapy. Například všechny třída obsahující [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objekt musí být odvozeny od `CMessageMap`. Následující kód je převzat ze [SUBEDIT](../../visual-cpp-samples.md) ukázka. Prostřednictvím [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` třída automaticky odvozena z `CMessageMap`.  
+ ATL – používá `CMessageMap` obsahovala podporu windows a dynamických zpráv řetězení mapy. Například všechny třídy obsahující [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objekt musí být odvozen od `CMessageMap`. Následující kód je převzatý z [SUBEDIT](../../visual-cpp-samples.md) vzorku. Prostřednictvím [ccomcontrol –](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` třídy je automaticky odvozen z `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- Protože okno obsažené `m_EditCtrl`, použije mapy zpráv ve třídě obsahující `CAtlEdit` je odvozena z `CMessageMap`.  
+ Protože obsaženého okna `m_EditCtrl`, použije mapy zpráv ve třídě obsahující `CAtlEdit` je odvozena z `CMessageMap`.  
   
  Další informace o mapách zpráv najdete v tématu [mapy zpráv](../../atl/message-maps-atl.md) v článku "Tříd oken ATL."  
   
@@ -62,7 +62,7 @@ class ATL_NO_VTABLE CMessageMap
  **Záhlaví:** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
- Mapy zpráv identifikovaný přistupuje k `dwMsgMapID` v `CMessageMap`-odvozené třídy.  
+ Přistupuje k mapu zpráv identifikovaný *dwMsgMapID* v `CMessageMap`-odvozené třídy.  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -75,32 +75,32 @@ virtual BOOL ProcessWindowMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWnd`  
- [v] Popisovač okna danou zprávu přijala.  
+ *hWnd*  
+ [in] Popisovač okna příjem zprávy.  
   
- `uMsg`  
- [v] Zpráva odeslaná do okna.  
+ *uMsg*  
+ [in] Zpráva odeslaná do okna.  
   
- `wParam`  
- [v] Další informace specifické pro zprávy.  
+ *wParam*  
+ [in] Další informace specifické pro zprávy.  
   
- `lParam`  
- [v] Další informace specifické pro zprávy.  
+ *lParam*  
+ [in] Další informace specifické pro zprávy.  
   
- `lResult`  
+ *lResult*  
  [out] Výsledek zpracování zprávy.  
   
- `dwMsgMapID`  
- [v] Identifikátor mapy zpráv, která zpracuje zprávu. Mapa zpráv výchozí deklarovat s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), je identifikovaný 0. Mapování zpráv alternativní deklarovat s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), je identifikovaný `msgMapID`.  
+ *dwMsgMapID*  
+ [in] Identifikátor, který bude zpracovávat zprávy mapování zprávy. Výchozí zprávu mapování deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), je identifikován 0. Mapování zpráv alternativní deklarované s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), je identifikován `msgMapID`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud zpráva je plně zpracovávaný; v opačném **FALSE**.  
+ Hodnota TRUE, pokud zpráva je plně zpracovány; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Volá proceduru okna nástroje [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objektu nebo objektu, se dynamicky řetězení do mapy zpráv.  
+ Volané procedury okna nástroje [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objektu nebo objektu, která je dynamicky řetězení v mapování zprávy.  
   
 ## <a name="see-also"></a>Viz také  
- [CDynamicChain – třída](../../atl/reference/cdynamicchain-class.md)   
+ [Cdynamicchain – třída](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

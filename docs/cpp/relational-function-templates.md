@@ -1,5 +1,5 @@
 ---
-title: Šablony relační funkce | Microsoft Docs
+title: Šablony relační funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3147ae06e4deedf48415b4ae605e524458343c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51479d6571a58fccf57c9060254cd0c445f8483b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947718"
 ---
 # <a name="relational-function-templates"></a>Šablony relační funkce
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      template<typename _InterfaceType> bool operator==(  
+template<typename _InterfaceType> bool operator==(  
    int NULL,  
    _com_ptr_t<_InterfaceType>& p   
 );  
@@ -87,13 +88,13 @@ template<typename _Interface,
  *i*  
  Nezpracovaný ukazatel rozhraní.  
   
- `p`  
- Chytré ukazatele.  
+ *p*  
+ Inteligentní ukazatel.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto šablony funkce povolit porovnání s inteligentní ukazatel na pravé straně operátoru porovnání. Tyto nejsou členské funkce `_com_ptr_t`.  
+ Tyto šablony funkce umožní porovnání s inteligentním ukazatelem na pravé straně operátoru porovnání. Toto nejsou členské funkce `_com_ptr_t`.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

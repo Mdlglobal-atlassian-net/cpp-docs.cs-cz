@@ -1,5 +1,5 @@
 ---
-title: '#Using – direktiva (C + +/ CLR) | Microsoft Docs'
+title: '#Using – direktiva (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2255f5de9cc26505bb07110da6368a039009c6c
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840733"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093030"
 ---
-# <a name="using-directive-cclr"></a>#using – direktiva (C + +/ CLR)
-Importuje metadata do aplikace, kompilovat s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="using-directive-ccli"></a>#using – direktiva (C + +/ CLI)
+Importuje metadata do programu kompilovaného s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,27 +45,27 @@ Importuje metadata do aplikace, kompilovat s [/CLR](../build/reference/clr-commo
  `#using <MyComponent.dll>`  
   
  as_friend  
- Určuje, že jsou všechny typy v `file` k dispozici.  Další informace najdete v tématu [přátelských sestavení (C++)](../dotnet/friend-assemblies-cpp.md).  
+ Určuje, že jsou všechny typy v `file` k dispozici.  Další informace najdete v tématu [přátelská sestavení (C++)](../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `file` může být soubor jazyka MSIL (Microsoft Intermediate Language), který je importován pro své spravované konstrukce a spravovaná data. Pokud soubor s příponou DLL obsahuje manifest sestavení potom všech knihoven DLL, kterou se odkazuje v manifestu importují a zobrazí seznam sestavení vytváříte *souboru* v metadatech jako odkaz na sestavení.  
+ `file` může být soubor jazyka MSIL (Microsoft Intermediate Language), který je importován pro své spravované konstrukce a spravovaná data. Pokud soubor DLL obsahuje manifest sestavení, potom jsou importovány všechny odkazované sestavované a zobrazí se seznam sestavení, kterou vytváříte *souboru* v metadatech jako odkaz na sestavení.  
   
- Pokud `file` neobsahuje sestavení (Pokud `file` je modul) a pokud jste neměli v úmyslu použít informace o typu z modulu v aktuální aplikaci (sestavení), máte možnost právě označující, že modul je součástí sestavení; použijte [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Typy z modulu pak budou k dispozici pro všechny aplikace, které odkazují na sestavení.  
+ Pokud `file` neobsahuje sestavení (Pokud `file` je modul) a pokud je nemáte v úmyslu použít informace o typu z modulu v aktuální aplikaci (sestavení), máte možnost pouze označující, že modul je součástí sestavení; použijte [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Typy z modulu pak budou k dispozici pro všechny aplikace, které odkazují na sestavení.  
   
- Alternativu k použití `#using` je [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru.  
+ Alternativou k použití `#using` je [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru.  
   
- Předaný .exe sestavení `#using` by měl být zkompilovány pomocí jedné z kompilátory .NET Visual Studio (Visual Basic nebo Visual C#, např.).  Probíhá pokus o import metadat ze sestavení .exe kompilovat s **/CLR** bude mít za následek výjimku zatížení souborů.  
+ sestavení .exe předaná `#using` by měl být zkompilován pomocí jedné z kompilátorů aplikace Visual Studio .NET (Visual Basic nebo Visual C#, například).  Pokus o import metadat ze sestavení .exe kompilovaného s **/CLR** povede k výjimce načítání souboru.  
   
 > [!NOTE]
 >  Komponentu, která je odkazována pomocí `#using`, lze spustit s jinou verzí souboru v době kompilace, což způsobí, že klientská aplikace poskytne neočekávané výsledky.  
   
  Je-li nutné, aby kompilátor rozpoznával typ v sestavení (ne modul), je zapotřebí jej donutit k přeložení typu, což lze provést například definováním instance daného typu. Existují jiné způsoby přeložení názvů typů pro kompilátor v sestavení, název typu se například stane pro kompilátor známým, pokud je zděděn z typu v sestavení.  
   
- Při importu metadat ze zdrojového kódu, který používá [__declspec(thread)](../cpp/thread.md), nejsou v metadatech trvalé sémantiku přístup z více vláken. Například proměnná definovaná s **__declspec(thread)**, kompilované v programu, který je sestavení pro modul common language runtime rozhraní .NET Framework a poté importovat prostřednictvím `#using`, nebude mít **__declspec ( vlákno)** sémantiku na proměnnou.  
+ Při importu metadat ze zdrojového kódu, který používá [__declspec(thread)](../cpp/thread.md), sémantika vláken nejsou zachované v metadatech. Například proměnná deklarovaná pomocí **__declspec(thread)** zkompilovaná v programu, který je sestaven pro modul common language runtime rozhraní .NET Framework a poté importována pomocí `#using`, už nebude mít **__declspec () vlákno)** sémantiky pro proměnnou.  
   
  Všechny importované typy (spravované a nativní) v souboru, který je odkazován pomocí `#using`, jsou k dispozici, ale kompilátor zpracovává nativní typy jako deklarace, nikoli definice.  
   
- mscorlib.dll se automaticky odkazuje, když kompilujete s **/CLR**.  
+ soubor mscorlib.dll je při kompilaci s automaticky odkazována **/CLR**.  
   
  Proměnná prostředí LIBPATH určuje adresáře, které budou prohledány, jakmile se kompilátor pokusí přeložit názvy souborů předaných pomocí `#using`.  
   
@@ -77,7 +77,7 @@ Importuje metadata do aplikace, kompilovat s [/CLR](../build/reference/clr-commo
   
 -   Systémový adresář rozhraní .NET Framework.  
   
--   Adresáře se přidaly [/AI](../build/reference/ai-specify-metadata-directories.md) – možnost kompilátoru.  
+-   Adresáře přidané pomocí [/AI](../build/reference/ai-specify-metadata-directories.md) – možnost kompilátoru.  
   
 -   Adresáře dle proměnné prostředí LIBPATH.  
   

@@ -1,5 +1,5 @@
 ---
-title: __super | Microsoft Docs
+title: __super | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947725"
 ---
 # <a name="super"></a>__super
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Umožňuje explicitně uvést, že je pro funkci, u které je prováděno přetížení, volána implementace základní funkce.  
   
@@ -31,24 +32,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
 ## <a name="remarks"></a>Poznámky  
  Všechny dostupné metody základní třídy jsou ve fázi řešení přetížení zváženy a funkce, jež poskytne nejlepší výsledek, je ta, která je volána.  
   
- `__super` může být použit pouze v rámci těla členské funkce.  
+ **__super** může být použit pouze v těle členské funkce.  
   
- `__super` nelze použít s deklarací using. V tématu [pomocí deklarace](../cpp/using-declaration.md) Další informace.  
+ **__super** nelze použít pomocí deklarace. Zobrazit [using – deklarace](../cpp/using-declaration.md) Další informace.  
   
- Se zavedením [atributy](../windows/cpp-attributes-reference.md) který vložení kódu, kód může obsahovat jeden nebo více základní třídy, jejichž názvy nemusí vědět, ale které obsahují metody, které chcete volat.  
+ Se zavedením [atributy](../windows/cpp-attributes-reference.md) , které vkládají kód, může kód obsahovat jednu nebo více základních tříd, jejichž názvy nemusí být známy, ale které obsahují metody, které chcete volat.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  
@@ -69,7 +68,7 @@ struct D : B1, B2 {
 };  
 ```  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Klíčová slova](../cpp/keywords-cpp.md)

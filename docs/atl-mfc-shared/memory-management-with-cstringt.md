@@ -1,5 +1,5 @@
 ---
-title: Správa paměti s CStringT | Microsoft Docs
+title: Správa paměti pomocí CStringT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354704"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886190"
 ---
-# <a name="memory-management-with-cstringt"></a>Správa paměti s CStringT
-Třída [CStringT](../atl-mfc-shared/reference/cstringt-class.md) je třída šablony používá k manipulaci s proměnlivou délkou znakových řetězců. Paměť pro uložení tyto řetězce je přidělené a vydání prostřednictvím objekt manager řetězec, který je spojené s každou instanci `CStringT`. MFC a knihovna ATL zadejte výchozí instancemi `CStringT`, volané `CString`, `CStringA`, a `CStringW`, který manipulaci s řetězci různých znakových typů. Tyto typy znaků jsou typu **Tchar –**, `char`, a `wchar_t`, v uvedeném pořadí. Tyto typy výchozí řetězec pomocí Správce řetězec, který přidělí paměť z haldy procesu (v ATL) nebo CRT haldy (v prostředí MFC). Pro typické aplikace je toto schéma přidělení paměti dostačující. Ale pro provedení náročné kód pomocí řetězce (nebo s více vlákny kódu), které správce paměti výchozí nemusí mít optimální. Toto téma popisuje, jak změnit výchozí chování správy paměti z `CStringT`, vytváření alokátorů speciálně optimalizovaná pro úlohy po ruce.  
+# <a name="memory-management-with-cstringt"></a>Správa paměti pomocí CStringT
+Třída [CStringT](../atl-mfc-shared/reference/cstringt-class.md) je třída šablony používá k manipulaci s řetězci proměnné délky znaků. Paměť k uložení těchto řetězců je přidělená a vydané prostřednictvím objektu string správce spojené s každou instanci `CStringT`. Knihovny MFC a ATL poskytují výchozí instancí `CStringT`, označované jako `CString`, `CStringA`, a `CStringW`, který manipulaci s řetězci znak různých typů. Tyto typy znaků jsou typu TCHAR, **char**, a `wchar_t`v uvedeném pořadí. Tyto typy výchozí řetězec použít Správce řetězec, který se přidělí paměť z haldy procesu (v ATL) nebo haldu CRT (v prostředí MFC). Pro typické aplikace stačí toto schéma přidělování paměti. Ale pro náročné kód pomocí řetězce (nebo vícevláknovém kódu), které správci výchozí paměti nemusí optimální. Toto téma popisuje, jak přepsat výchozí chování při správě paměti z `CStringT`, vytváření alokátorů speciálně optimalizovaná pro daný úkol.  
   
 -   [Implementace vlastního správce řetězců (základní způsob)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
   
@@ -40,7 +40,7 @@ Třída [CStringT](../atl-mfc-shared/reference/cstringt-class.md) je třída ša
   
 -   [Implementace vlastního správce řetězců (rozšířený způsob)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
   
--   [CFixedStringT: Příklad nástroje vlastní řetězec Manager](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+-   [CFixedStringT: Příklad z vlastního správce řetězců](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka CustomString](../visual-cpp-samples.md)

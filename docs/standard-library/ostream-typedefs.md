@@ -1,5 +1,5 @@
 ---
-title: '&lt;ostream –&gt; – definice TypeDef | Microsoft Docs'
+title: '&lt;ostream&gt; – definice TypeDef | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,22 +7,22 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: 3f5511cfbf73ddf74fa12954e1a108d8accf875e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 094952a76d8e46e4244cf57a8c5a47c929f3ae37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852576"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960349"
 ---
-# <a name="ltostreamgt-typedefs"></a>&lt;ostream –&gt; – definice TypeDef
+# <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; – definice TypeDef
 
 |||
 |-|-|
-|[ostream –](#ostream)|[wostream –](#wostream)|
+|[ostream](#ostream)|[wostream](#wostream)|
 
-## <a name="ostream"></a>  ostream –
+## <a name="ostream"></a>  ostream
 
-Umožňuje vytvořit typ ze basic_ostream, který se specializuje na `char` a `char_traits` specializované na `char`.
+Vytvoří typ z basic_ostream –, který se specializuje na **char** a `char_traits` specializované na **char**.
 
 ```cpp
 typedef basic_ostream<char, char_traits<char>> ostream;
@@ -30,11 +30,11 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ostream](../standard-library/basic-ostream-class.md), specializované pro elementy typu `char` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_ostream –](../standard-library/basic-ostream-class.md)specializované pro prvky typu **char** s výchozí vlastností.
 
-## <a name="wostream"></a>  wostream –
+## <a name="wostream"></a>  wostream
 
-Umožňuje vytvořit typ ze basic_ostream, který se specializuje na `wchar_t` a `char_traits` specializované na `wchar_t`.
+Vytvoří typ z basic_ostream –, který se specializuje na **wchar_t** a `char_traits` specializované na **wchar_t**.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
@@ -42,8 +42,8 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro třídu šablony [basic_ostream](../standard-library/basic-ostream-class.md), specializované pro elementy typu `wchar_t` s vlastnostmi výchozí znak.
+Typ je synonymum pro šablony třídy [basic_ostream –](../standard-library/basic-ostream-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<ostream – >](../standard-library/ostream.md)<br/>
+[\<ostream >](../standard-library/ostream.md)<br/>

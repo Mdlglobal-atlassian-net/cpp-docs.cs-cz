@@ -1,5 +1,5 @@
 ---
-title: Pravidla a omezení pro holé funkce | Microsoft Docs
+title: Pravidla a omezení pro holé funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947532"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Pravidla a omezení pro holé funkce
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  Na neviditelné funkce se vztahují následující pravidla a omezení:  
   
--   Příkaz `return` není povolen.  
+-   **Vrátit** příkazu není povolený.  
   
 -   Konstrukce strukturovaného zpracování výjimek a zpracování výjimek jazyka C++ nejsou povoleny, protože se musejí odvíjet prostřednictvím rámce zásobníku.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   V rámci oboru lexikální funkce nelze deklarovat třídu objektů jazyka C++. Objekty lze však deklarovat ve vnořeném bloku.  
   
--   `naked` – Klíčové slovo je ignorován, když kompilujete s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
+-   **Naked** – klíčové slovo je ignorována při kompilaci s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Pro [__fastcall](../cpp/fastcall.md) holé funkce vždy, když je v kódu C/C++ do jednoho z argumentů registru odkaz, kód prologu měli uložit hodnoty tohoto registru do zásobníku umístění pro tuto proměnnou. Příklad:  
+-   Pro [__fastcall](../cpp/fastcall.md) nahé funkce, pokaždé, když se v kódu C/C++ na jeden z argumentů registru existuje odkaz, by měl kód prologu uložit hodnoty daného registru do umístění zásobníku pro danou proměnnou. Příklad:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  
@@ -77,7 +78,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Volání holé funkce](../cpp/naked-function-calls.md)

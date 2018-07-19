@@ -1,5 +1,5 @@
 ---
-title: _variant_t::_variant_t | Microsoft Docs
+title: _variant_t::_variant_t | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ec19adc66a72a7c98772db99aaab3eee4e3b2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947536"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Vytvoří `_variant_t` objektu.  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _variant_t( ) throw( );  
+_variant_t( ) throw( );  
   
 _variant_t(  
    const VARIANT& varSrc   
@@ -139,110 +140,110 @@ _variant_t(
   
 #### <a name="parameters"></a>Parametry  
  *varSrc*  
- A **VARIANT** objekt, který má být zkopírován do nové `_variant_t` objektu.  
+ A `VARIANT` objektu, které se mají zkopírovat do nové `_variant_t` objektu.  
   
  *pVarSrc*  
- Ukazatel na **VARIANT** objekt, který má být zkopírován do nové `_variant_t` objektu.  
+ Ukazatel `VARIANT` objektu, které se mají zkopírovat do nové `_variant_t` objektu.  
   
  *var_t_Src*  
- A `_variant_t` objekt, který má být zkopírován do nové `_variant_t` objektu.  
+ A `_variant_t` objektu, které se mají zkopírovat do nové `_variant_t` objektu.  
   
- `fCopy`  
- Pokud je hodnota false, zadaných **VARIANT** objekt je připojený k nové `_variant_t` objektu bez vytvoření nové kopie podle **VariantCopy**.  
+ *fCopy*  
+ Pokud **false**, zadané `VARIANT` objektu se připojit k novému `_variant_t` objektu bez provedení pomocí nové kopie `VariantCopy`.  
   
  *Kód, sSrc*  
  Celočíselná hodnota, které se mají zkopírovat do nové `_variant_t` objektu.  
   
- `vtSrc`  
- **VARTYPE** pro nové `_variant_t` objektu.  
+ *vtSrc*  
+ `VARTYPE` Pro novou `_variant_t` objektu.  
   
  *fltSrc, dblSrc*  
  Číselné hodnoty, které se mají zkopírovat do nové `_variant_t` objektu.  
   
- `cySrc`  
- A **CY** objekt, který má být zkopírován do nové `_variant_t` objektu.  
+ *cySrc*  
+ A `CY` objektu, které se mají zkopírovat do nové `_variant_t` objektu.  
   
- `bstrSrc`  
- A `_bstr_t` objekt, který má být zkopírován do nové `_variant_t` objektu.  
+ *bstrSrc*  
+ A `_bstr_t` objektu, které se mají zkopírovat do nové `_variant_t` objektu.  
   
  *strSrc wstrSrc*  
- Řetězec, který se má zkopírovat do nové `_variant_t` objektu.  
+ Řetězec, které se mají zkopírovat do nové `_variant_t` objektu.  
   
- `bSrc`  
- A `bool` hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ *bSrc*  
+ A **bool** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
- `pIUknownSrc`  
- Ukazatel rozhraní COM **VT_UNKNOWN** objekt, který má být zapouzdřena do nové `_variant_t` objektu.  
+ *pIUknownSrc*  
+ Ukazatele rozhraní modelu COM na objekt VT_UNKNOWN zapouzdřit do nové `_variant_t` objektu.  
   
- `pDispSrc`  
- Ukazatel rozhraní COM **VT_DISPATCH** objekt, který má být zapouzdřena do nové `_variant_t` objektu.  
+ *pDispSrc*  
+ Ukazatele rozhraní modelu COM na objekt VT_DISPATCH zapouzdřit do nové `_variant_t` objektu.  
   
- `decSrc`  
- A **DECIMAL** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ *decSrc*  
+ A `DECIMAL` hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
- `bSrc`  
- A **BAJTŮ** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ *bSrc*  
+ A `BYTE` hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
- `cSrc`  
- A `char` hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ *cSrc*  
+ A **char** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *usSrc*  
- A **nepodepsané prostě** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ A **unsigned short** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *ulSrc*  
- A `unsigned long` hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ A **unsigned long** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
- `iSrc`  
- `int` Hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ *Kód*  
+ **Int** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *uiSrc*  
- `unsigned int` Hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ **Unsigned int** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *i8Src*  
  __**Int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *ui8Src*  
- **Nepodepsané __int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ **Unsigned __int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
 ## <a name="remarks"></a>Poznámky  
   
--   **(_variant_t)** vytvoří prázdnou `_variant_t` objektu `VT_EMPTY`.  
+-   **_variant_t – ()** vytvoří prázdnou `_variant_t` objektu, `VT_EMPTY`.  
   
--   **_variant_t (VARIANT &***varSrc***)** vytvoří `_variant_t` objekt z kopie **VARIANT** objektu. Typ varianty se zachová.  
+-   **_variant_t – (VARIANT &***varSrc***)** sestaví `_variant_t` objekt z kopie `VARIANT` objektu.     Typ varianty se zachová.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** vytvoří `_variant_t` objekt z kopie **VARIANT** objektu. Typ varianty se zachová.  
+-   **_variant_t – (VARIANT\****pVarSrc***)** sestaví `_variant_t` objekt z kopie `VARIANT` objektu.     Typ varianty se zachová.  
   
--   **_variant_t (_variant_t &***var_t_Src***)** vytvoří `_variant_t` objekt z jiné `_variant_t` objektu. Typ varianty se zachová.  
+-   **_variant_t – (_variant_t &***var_t_Src***)** sestaví `_variant_t` objektu z jiného `_variant_t` objektu.     Typ varianty se zachová.  
   
--   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** vytvoří `_variant_t` objekt z existující  **VARIANT** objektu. Pokud `fCopy` je **false**, **VARIANT** objekt je připojený k nového objektu bez vytvoření kopie.  
+-   **_variant_t – (VARIANT &***varSrc* **, bool**`fCopy`**)** sestaví `_variant_t` objekt z existující `VARIANT` objekt.       Pokud `fCopy` je **false**, **VARIANT** objekt je připojen nový objekt bez vytvoření kopie.  
   
--   **_variant_t (krátký***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** vytvoří `_variant_t` objektu typu `VT_I2` nebo `VT_BOOL` z **krátké** celočíselnou hodnotu. Žádné jiné **VARTYPE** vede `E_INVALIDARG` chyby.  
+-   **_variant_t – (krátký***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** sestaví `_variant_t` objekt typu VT_I2 nebo VT_BOOL z **krátký** celočíselnou hodnotu.       Jakýkoli jiný `VARTYPE` způsobí chybu E_INVALIDARG.  
   
--   **_variant_t (dlouho** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** vytvoří `_variant_t` objektu typu `VT_I4`, `VT_BOOL`, nebo `VT_ERROR`z **dlouho** celočíselnou hodnotu. Žádné jiné **VARTYPE** vede `E_INVALIDARG` chyby.  
+-   **_variant_t – (long** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** vytvoří `_variant_t` objekt typu VT_I4, VT_BOOL nebo VT_ERROR z **dlouhý**  celočíselnou hodnotu.       Jakýkoli jiný `VARTYPE` způsobí chybu E_INVALIDARG.  
   
--   **_variant_t (float**`fltSrc`**)** vytvoří `_variant_t` objektu typu `VT_R4` z **float** číselnou hodnotu.  
+-   **_variant_t – (float**`fltSrc`**)** sestaví `_variant_t` objekt typu VT_R4 z **float** číselnou hodnotu.      
   
--   **_variant_t (dvojité** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** vytvoří `_variant_t` objektu typu `VT_R8` nebo `VT_DATE` z **dvojité** číselnou hodnotu. Žádné jiné **VARTYPE** vede `E_INVALIDARG` chyby.  
+-   **_variant_t – (double** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** sestaví `_variant_t` objekt typu VT_R8 nebo VT_DATE z **double** číselnou hodnotu.       Jakýkoli jiný `VARTYPE` způsobí chybu E_INVALIDARG.  
   
--   **_variant_t (CY &**`cySrc`**)** vytvoří `_variant_t` objektu typu `VT_CY` z **CY** objektu.  
+-   **_variant_t – (kr &**`cySrc`**)** vytvoří `_variant_t` objekt typu VT_CY z `CY` objektu.      
   
--   **_variant_t (_bstr_t &**`bstrSrc`**)** vytvoří `_variant_t` objektu typu `VT_BSTR` z `_bstr_t` objektu. Nový `BSTR` je přidělen.  
+-   **_variant_t – (_bstr_t &**`bstrSrc`**)** sestaví `_variant_t` objekt typu VT_BSTR z `_bstr_t` objektu.     Nový `BSTR` je přidělen.  
   
--   **_variant_t (wchar_t \*** *wstrSrc*  **)** vytvoří `_variant_t` objektu typu `VT_BSTR` z řetězec znaků Unicode.   Nový `BSTR` je přidělen.  
+-   **_variant_t – (wchar_t \***  *wstrSrc***)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce Unicode.   Nový `BSTR` je přidělen.  
   
--   **_variant_t (char\***`strSrc`**)** vytvoří `_variant_t` objektu typu `VT_BSTR` z řetězce. Nový `BSTR` je přidělen.  
+-   **_variant_t – (char\***`strSrc`**)** sestaví `_variant_t` objekt typu VT_BSTR z řetězce.     Nový `BSTR` je přidělen.  
   
--   **_variant_t (bool**`bSrc`**)** vytvoří `_variant_t` objektu typu `VT_BOOL` z `bool` hodnotu.  
+-   **_variant_t – (bool**`bSrc`**)** sestaví `_variant_t` objekt typu VT_BOOL z **bool** hodnotu.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** vytvoří `_variant_t` objektu typu **VT_UNKNOWN** z COM rozhraní ukazatel. Pokud `fAddRef` je **true**, pak `AddRef` se volá na ukazatel zadaný rozhraní tak, aby odpovídaly volání **verze** , dojde při `_variant_t` objekt zničena. Je na vás k volání **verze** na ukazatel zadaný rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatel zadaný rozhraní; Nevolejte **verze** na ukazatel zadaný rozhraní.  
+-   **_variant_t – (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objekt typu VT_UNKNOWN z ukazatele rozhraní modelu COM .       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** vytvoří `_variant_t` objektu typu **VT_DISPATCH** z COM rozhraní ukazatel. Pokud `fAddRef` je **true**, pak `AddRef` se volá na ukazatel zadaný rozhraní tak, aby odpovídaly volání **verze** , dojde při `_variant_t` objekt zničena. Je na vás k volání **verze** na ukazatel zadaný rozhraní. Pokud **fAddRef** je nastavena hodnota false, trvá tento konstruktor vlastnictví ukazatel zadaný rozhraní; Nevolejte **verze** na ukazatel zadaný rozhraní.  
+-   **_variant_t – (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** sestaví `_variant_t` objekt typu VT_DISPATCH z rozhraní modelu COM ukazatel.       Pokud `fAddRef` je **true**, pak `AddRef` je volán na ukazatel zadané rozhraní tak, aby odpovídaly volání `Release` , dojde při `_variant_t` objekt zničen. Je na vás volat `Release` na ukazatel zadané rozhraní. Pokud `fAddRef` je **false**, tento konstruktor přijímá vlastnictví ukazatele zadané rozhraní; Nevolejte `Release` na ukazatel zadané rozhraní.  
   
--   **_variant_t (DECIMAL &**`decSrc`**)** vytvoří `_variant_t` objektu typu **VT_DECIMAL** z **DECIMAL** hodnotu.  
+-   **_variant_t – (DESÍTKOVÉ &**`decSrc`**)** sestaví `_variant_t` objekt typu VT_DECIMAL z `DECIMAL` hodnotu.      
   
--   **_variant_t (BYTE**`bSrc`**)** vytvoří `_variant_t` objektu typu `VT_UI1` z **BAJTŮ** hodnotu.  
+-   **_variant_t – (BYTE**`bSrc`**)** vytvoří `_variant_t` objekt typu `VT_UI1` z `BYTE` hodnotu.      
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_variant_t – třída](../cpp/variant-t-class.md)

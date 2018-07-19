@@ -1,5 +1,5 @@
 ---
-title: __if_exists – příkaz | Microsoft Docs
+title: __if_exists – příkaz | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947512"
 ---
 # <a name="ifexists-statement"></a>__if_exists – příkaz
-Příkaz `__if_exists` testuje, zda existuje zadaný identifikátor. Pokud existuje identifikátor, blok zadaný příkaz je spustit.  
+**__If_exists** příkaz testuje, jestli existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +41,27 @@ statements
 |Parametr|Popis|  
 |---------------|-----------------|  
 |`identifier`|Identifikátor, jehož existence bude testována.|  
-|`statements`|Jeden nebo více příkazů k provedení Pokud `identifier` existuje.|  
+|`statements`|Jeden nebo více příkazů, které budou spuštěny, pokud `identifier` existuje.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!CAUTION]
->  K dosažení nejspolehlivějších výsledků je třeba použít příkaz `__if_exists` s následujícími omezeními.  
+>  K dosažení nejspolehlivějších výsledků, použít **__if_exists** příkaz následujícími omezeními.  
   
--   Příkaz `__if_exists` je třeba použít pouze na jednoduché typy, nikoli na šablony.  
+-   Použít **__if_exists** příkazu pouze jednoduché typy, nikoli na šablony.  
   
--   Příkaz `__if_exists` je třeba použít na identifikátory uvnitř i vně třídy. Příkaz `__if_exists` se nepoužívá pro lokální proměnné.  
+-   Použít **__if_exists** příkaz na identifikátory uvnitř i vně třídy. Se nevztahují **__if_exists** příkaz pro lokální proměnné.  
   
--   Příkaz `__if_exists` je třeba použít pouze v rámci těla funkce. Mimo tělo funkce může příkaz `__if_exists` testovat pouze plně definované typy.  
+-   Použití **__if_exists** příkaz jenom v těle funkce. Mimo tělo funkce **__if_exists** příkazu můžete testovat pouze plně definované typy.  
   
 -   Při testování přetížených funkcí nelze testovat konkrétní formu přetížení.  
   
- Doplněk k `__if_exists` příkaz [__if_not_exists –](../cpp/if-not-exists-statement.md) příkaz.  
+ Doplněk k **__if_exists** příkaz je [__if_not_exists](../cpp/if-not-exists-statement.md) příkazu.  
   
 ## <a name="example"></a>Příklad  
- Všimněte si, že tento příklad používá šablony, které se nedoporučuje.  
+ Všimněte si, že v tomto příkladu šablony, které se nedoporučuje.  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  
@@ -130,5 +131,5 @@ C::f exists
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [__if_not_exists – příkaz](../cpp/if-not-exists-statement.md)

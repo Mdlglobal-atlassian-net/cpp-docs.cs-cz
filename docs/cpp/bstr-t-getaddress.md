@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetAddress | Microsoft Docs
+title: _bstr_t::GetAddress | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88accb8b614a5a07a7abf688790a80786f465607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409967"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941194"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Uvolní všechny existující řetězce a vrátí adresu řetězce s nově přidělenou pamětí.  
   
@@ -40,12 +40,12 @@ BSTR* GetAddress( );
  Ukazatel na objekt `BSTR` obalený objektem `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Funkce `GetAddress` ovlivňuje všechny objekty `_bstr_t` sdílející objekt `BSTR`. Objekt `_bstr_t` může být sdílen více než jedním objektem `BSTR` prostřednictvím kopírovacího konstruktoru a operátoru `operator=` and.  
+ Funkce `GetAddress` ovlivňuje všechny objekty `_bstr_t` sdílející objekt `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a a **operátoru =**.  
   
 ## <a name="example"></a>Příklad  
- V tématu [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití `GetAddress`.  
+ Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití `GetAddress`.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

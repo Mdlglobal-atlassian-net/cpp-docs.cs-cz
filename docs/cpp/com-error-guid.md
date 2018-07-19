@@ -1,5 +1,5 @@
 ---
-title: _com_error::GUID | Microsoft Docs
+title: _com_error::GUID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409678"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939023"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Volání **IErrorInfo::GetGUID** funkce.  
+ Volání `IErrorInfo::GetGUID` funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek **IErrorInfo::GetGUID** pro **IErrorInfo** objekt zaznamenávají v rámci `_com_error` objektu. Pokud žádné **IErrorInfo** objekt se zaznamená, vrátí `GUID_NULL`.  
+ Vrátí výsledek `IErrorInfo::GetGUID` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Pokud ne `IErrorInfo` objekt zaznamenán, vrátí GUID_NULL.  
   
 ## <a name="remarks"></a>Poznámky  
- Jakákoli chyba při volání **IErrorInfo::GetGUID** metoda je ignorována.  
+ Jakékoli neúspěchy při volání `IErrorInfo::GetGUID` metoda se ignoruje.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

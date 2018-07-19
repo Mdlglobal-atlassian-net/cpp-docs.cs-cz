@@ -1,5 +1,5 @@
 ---
-title: Třída IPointerInactiveImpl | Microsoft Docs
+title: Ipointerinactiveimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28eb8d6db520bd1c2d5de5642098263508c0f6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d916d2e2f8f42a4162966a1d0ddc7de55eb6bd4b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360329"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883577"
 ---
-# <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl – třída
-Tato třída implementuje **IUnknown** a [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) metody rozhraní.  
+# <a name="ipointerinactiveimpl-class"></a>Ipointerinactiveimpl – třída
+Tato třída implementuje `IUnknown` a [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) metody rozhraní.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,8 +43,8 @@ class IPointerInactiveImpl
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `IPointerInactiveImpl`.  
+ *T*  
+ Vaše třída odvozena od `IPointerInactiveImpl`.  
   
 ## <a name="members"></a>Členové  
   
@@ -52,18 +52,18 @@ class IPointerInactiveImpl
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Načte aktuální zásady aktivace pro objekt. Implementace ATL vrátí **E_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Upozorní, že objekt, který se přesunul ukazatel myši nad ním, označující objekt můžete aktivovat události myši. Implementace ATL vrátí **E_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Nastaví ukazatel myši pro objekt neaktivní. Implementace ATL vrátí **E_NOTIMPL**.|  
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Načte aktuální zásady aktivace pro objekt. Implementace knihovny ATL vrátí E_NOTIMPL.|  
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Upozorní, že objekt, který se přesunul ukazatel myši nad ním, označující objekt může vyvolat události myši. Implementace knihovny ATL vrátí E_NOTIMPL.|  
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Nastaví ukazatel myši pro aktivní objekt. Implementace knihovny ATL vrátí E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Poznámky  
- Neaktivní objekt je ten, který je jednoduše načíst nebo spuštěné. Na rozdíl od active objekt, a nemůže přijímat objekt neaktivní myši a klávesnice zpráv systému Windows. Proto neaktivní objekty využívat méně prostředků a jsou obvykle efektivnější.  
+ Neaktivním objektem je takový, který je jednoduše načíst nebo spuštěné. Na rozdíl od aktivního objektu neaktivním objektem nemůže přijímat zprávy myši a klávesnice Windows. Díky tomu se neaktivní objekty používají méně prostředků a jsou obvykle mnohem efektivnější.  
   
- [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) rozhraní, které umožňuje objekt pro podporu minimální úroveň interakce s myší zbývající neaktivní. Tato funkce je obzvláště užitečná pro ovládací prvky.  
+ [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) rozhraní umožňuje podporu minimální úroveň interakce s myší zbývající neaktivní. Tato funkce je zvláště užitečná pro ovládací prvky.  
   
- Třída `IPointerInactiveImpl` implementuje `IPointerInactive` metody jednoduše vrácením **E_NOTIMPL**. Ale implementuje **IUnknown** posíláním informací o k výpisu zařízení ladění sestavení.  
+ Třída `IPointerInactiveImpl` implementuje `IPointerInactive` metody jednoduše vrácením E_NOTIMPL. Nicméně, implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
- **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytváření projektu knihovny ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IPointerInactive`  
@@ -81,13 +81,13 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **E_NOTIMPL**.  
+ Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) ve Windows SDK.  
+ Zobrazit [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) ve Windows SDK.  
   
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
- Upozorní, že objekt, který se přesunul ukazatel myši nad ním, označující objekt můžete aktivovat události myši.  
+ Upozorní, že objekt, který se přesunul ukazatel myši nad ním, označující objekt může vyvolat události myši.  
   
 ```
 HRESULT OnInactiveMouseMove(
@@ -98,13 +98,13 @@ HRESULT OnInactiveMouseMove(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **E_NOTIMPL**.  
+ Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) ve Windows SDK.  
+ Zobrazit [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) ve Windows SDK.  
   
 ##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
- Nastaví ukazatel myši pro objekt neaktivní.  
+ Nastaví ukazatel myši pro aktivní objekt.  
   
 ```
 HRESULT OnInactiveSetCursor(
@@ -116,10 +116,10 @@ HRESULT OnInactiveSetCursor(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **E_NOTIMPL**.  
+ Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) ve Windows SDK.  
+ Zobrazit [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

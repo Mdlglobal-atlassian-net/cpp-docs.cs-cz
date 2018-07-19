@@ -1,5 +1,5 @@
 ---
-title: Styly ovládacího prvku panel nástrojů | Microsoft Docs
+title: ToolBar – styly ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373192"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885832"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar – styly ovládacích prvků
-[Třída CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) má sadu styl příznaky, které určují vzhled a chování tlačítka. Můžete nastavit kombinaci tyto příznaky voláním [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Toto téma obsahuje seznam hodnot příznaku styl a jejich významů.  
+[Cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) má sadu styl příznaky, které určují vzhled a chování tlačítka. Kombinace těchto příznaků můžete nastavit voláním [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Toto téma obsahuje hodnoty příznak stylu a jejich význam.  
   
 ## <a name="property-values"></a>Hodnoty vlastností  
- Typ tlačítka, která představuje ovládací prvek určete následující hodnoty:  
+ Typ tlačítka, které představuje ovládací prvek určete následující hodnoty:  
   
  TBBS_BUTTON  
- Standardní pushbutton (výchozí).  
+ Pushbutton standardní (výchozí).  
   
  TBBS_CHECKBOX  
- zaškrtávací políčko.  
+ Zaškrtávací políčko.  
   
  TBBS_CHECKGROUP  
- Spuštění skupiny zaškrtávací políčka.  
+ Začátek skupiny zaškrtávacích políček.  
   
  TBBS_GROUP  
- Začátek skupina tlačítek.  
+ Počáteční skupina tlačítek.  
   
  TBBS_SEPARATOR  
  Oddělovač.  
@@ -45,7 +45,7 @@ ms.locfileid: "33373192"
  Následující hodnoty představují aktuální stav ovládacího prvku:  
   
  TBBS_CHECKED  
- Zaškrtávací políčko je zaškrtnuto.  
+ Zaškrtávací políčko zaškrtnuto.  
   
  TBBS_DISABLED  
  Ovládací prvek je zakázaný.  
@@ -56,22 +56,22 @@ ms.locfileid: "33373192"
  TBBS_PRESSED  
  Stisknutí tlačítka.  
   
- Následující hodnotu změní rozložení tlačítka na panelu nástrojů:  
+ Následující hodnota změní rozvržení tlačítko na panelu nástrojů:  
   
  TBBS_BREAK  
- Umístí položka bez oddělení sloupců na nový řádek nebo v novém sloupci.  
+ Umístí položku na nový řádek nebo v novém sloupci bez oddělení sloupců.  
   
 ## <a name="remarks"></a>Poznámky  
  Aktuální styl je uložen v [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Nenastavujte novou hodnotu `m_nStyle` přímo, protože některé odvozené třídy provést další zpracování při volání `SetStyles`.  
   
- Visual manager určuje vzhled tlačítek v každém stavu. V tématu [správce vizualizace](../../mfc/visualization-manager.md) Další informace.  
+ Správce vzhledu určuje vzhled tlačítek v jednotlivých stavech. Zobrazit [správce vizualizace](../../mfc/visualization-manager.md) Další informace.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarbutton.h  
   
 ## <a name="see-also"></a>Viz také  
  [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)   
- [CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [Správce vizualizace](../../mfc/visualization-manager.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Pole (C++) | Microsoft Docs
+title: Pole (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947613"
 ---
 # <a name="arrays-c"></a>Pole (C++)
-Pole je kolekce podobně jako objekty. Nejjednodušším případě pole je vektor, který může být deklarován v následujícím pořadí:  
+Pole je kolekce podobných objektů. Nejjednodušší případ pole je vektor, který může být deklarován následující sekvencí:  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -36,27 +37,27 @@ decl-specifier identifier [ constant-expression ]
   
  1. Specifikátor deklarace:  
   
--   Specifikátor třídy úložiště volitelné.  
+-   Volitelný specifikátor paměťové třídy.  
   
--   Volitelné **const** nebo `volatile` specifikátory.  
+-   Volitelné **const** a/nebo **volatile** specifikátorů.  
   
--   Název typu elementy pole.  
+-   Název typu prvků pole.  
   
  2. Deklarátor:  
   
 -   Identifikátor.  
   
--   Konstantní výraz integrální typu v závorkách, **[].** Pokud více dimenzí jsou deklarováno s použitím dalších závorky, může být konstantní výraz vynechán na první sadu závorky.  
+-   Konstantní výraz integrálního typu uzavřený v závorkách, **[]**. Pokud více dimenzí jsou deklarovány pomocí dalších závorky, můžete na první sadu závorek vynechat konstantní výraz.  
   
--   Volitelné další závorky nadřazených konstantní výrazy.  
+-   Volitelně přidejte hranaté závorky ohraničující konstantní výrazy.  
   
- 3. Inicializátoru volitelné.  V tématu [inicializátory](../cpp/initializers.md).  
+ 3. Volitelný inicializátor.  Zobrazit [inicializátory](../cpp/initializers.md).  
   
- Počet prvků v poli je dána konstantní výraz. První prvek v poli je 0-té elementu a je posledním prvkem (*n*-1) elementu, kde *n* je počet elementů pole může obsahovat. *Konstantní výraz* musí být celočíselné typu a musí být větší než 0. Pole nulovou velikostí je povolen, pouze pokud je pole poslední pole v `struct` nebo **sjednocení** a pokud jsou povolené rozšíření Microsoft (/Ze).  
+ Počet prvků v poli je dán konstantní výraz. První prvek v poli je 0. prvkem a poslední prvek je (*n*-1) elementu, kde *n* je počet elementů pole může obsahovat. *Konstantní výraz* musí být integrálního typu a musí být větší než 0. Pole s nulovou velikostí je platný jenom v případě pole je posledním polem **struktura** nebo **sjednocení** a když jsou povolena rozšíření společnosti Microsoft (/Ze).  
   
- Následující příklad ukazuje, jak definovat pole v době běhu:  
+ Následující příklad ukazuje, jak definovat pole za běhu:  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Pole jsou odvozené typy a konstruovat proto z jiných základní nebo odvozené typy s výjimkou funkcí, odkazy, a `void`.  
+ Pole jsou odvozené typy a lze je tedy sestavit z jiného odvozeného nebo základního typu kromě funkcí, odkazů, a **void**.  
   
- Pole sestavený z jiných polí jsou vícerozměrná pole. Tyto vícerozměrná pole nejsou zadány tak, že více konstantní výrazy v závorkách pořadí. Představte si třeba tuto deklaraci:  
+ Pole vyrobena z jiných polí, jsou vícerozměrná pole. Tato vícedimenzová pole jsou určena umístěním více konstantní výrazy v závorkách v sekvenci. Zvažte například tuto deklaraci:  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Určuje pole typu `int`, koncepčně uspořádaných dvourozměrná matice pět řádků a sloupců sedm, jak je znázorněno na následujícím obrázku:  
+ Určuje pole typu **int**koncepčně uspořádané v dvojrozměrné matici po pěti řádcích a sedmi sloupcích, jak je znázorněno na následujícím obrázku:  
   
- ![Koncepční rozložení více&#45;dimenzí pole](../cpp/media/vc38rc1.gif "vc38RC1")  
-Koncepční rozložení multidimenzionálního pole  
+ ![Rámcové rozložení vícenásobné&#45;jednorozměrné pole](../cpp/media/vc38rc1.gif "vc38RC1")  
+Rámcové rozložení vícerozměrného pole  
   
- V deklaracích multidimensioned pole, které mají inicializátoru seznamu (jak je popsáno v [inicializátory](../cpp/initializers.md)), můžete tento parametr vynechán konstantní výraz, který určuje rozsah pro první dimenzi. Příklad:  
+ V deklaracích vícerozměrných polí, která mají seznam inicializátorů (jak je popsáno v [inicializátory](../cpp/initializers.md)), konstantní výraz, který určuje hranice pro první dimenzi lze vynechat. Příklad:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -104,7 +105,7 @@ double TransportCosts[][cMarkets] = {
 };  
 ```  
   
- Předchozí deklaraci definuje pole, které je tři řádků a sloupců čtyři. Řádky představují objekty pro vytváření a sloupce, které představují trhy, na které se dodávají objekty pro vytváření. Hodnoty jsou náklady na Transport z objekty Factory trhů. První dimenze pole je vynechána, ale kompilátor vyplní ho tak, že prověří inicializátoru.  
+ Předchozí prohlášení definuje pole, které má tři řádky a čtyři sloupce. Řádky představují továrny a sloupce představují trhy, na které továrny dodávají. Hodnoty jsou náklady na dopravu z továren na trhy. První dimenze pole je vynechána, ale kompilátor ji doplní porovnáním inicializátoru.  
   
  Témata v této části:  
   
@@ -119,9 +120,9 @@ double TransportCosts[][cMarkets] = {
 -   [Pořadí polí jazyka C++](../cpp/ordering-of-cpp-arrays.md)  
   
 ## <a name="example"></a>Příklad  
- Postup vynechání specifikace hranice pro první dimenzi multidimenzionálního pole lze také v deklaracích funkce následujícím způsobem:  
+ Metodu vynechání specifikace hranice pro první dimenzi vícerozměrného pole lze také v deklaracích funkcí následujícím způsobem:  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  
@@ -173,7 +174,7 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>Komentáře  
- Funkce `FindMinToMkt` je napsán tak, aby přidání nové objekty Factory nevyžaduje změny kódu právě opětovnou kompilaci.  
+ Funkce `FindMinToMkt` je zapsán tak, že přidání nové továrny nevyžaduje změnu kódu, stačí provést rekompilaci.  
   
 ## <a name="see-also"></a>Viz také  
  

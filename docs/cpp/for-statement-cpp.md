@@ -1,5 +1,5 @@
 ---
-title: pro příkaz (C++) | Microsoft Docs
+title: for – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417181"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940816"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C++)
-Spustí příkaz opakovaně, dokud podmínka nebude nepravda. Informace o založený na rozsahu pro příkaz, naleznete v části [na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md).  
+Spustí příkaz opakovaně, dokud podmínka nebude nepravda. Informace o podle rozsahu je pro příkaz, naleznete v tématu [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,19 +32,19 @@ for ( init-expression ; cond-expression ; loop-expression )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `for` příkaz k vytvoření smyčky, které musí být spuštěn zadaného počtu opakování.  
+ Použití **pro** příkaz k vytvoření smyček, které musí být spuštěn zadaného počtu opakování.  
   
- `for` Příkaz se skládá ze tří částí volitelné, jak je znázorněno v následující tabulce.  
+ **Pro** příkaz se skládá ze tří volitelných částí, jak je znázorněno v následující tabulce.  
   
 ### <a name="for-loop-elements"></a>Prvky smyčky for  
   
 |Název syntaxe|Při provedení|Popis|  
 |-----------------|-------------------|-----------------|  
-|`init-expression`|Před jakýkoli další prvek **pro** příkaz `init-expression` se spustí jenom jednou. Řízení potom předává do `cond-expression`.|Často se používá k inicializaci indexů smyčky. Může obsahovat výrazy nebo deklarace.|  
-|`cond-expression`|Před spuštěním každé iteraci `statement`, včetně první iterací. `statement` se spustí pouze v případě `cond-expression` vyhodnotí na hodnotu true (nenulové hodnoty).|Výraz, jehož výsledkem je integrální typ nebo typ třídy, která má jednoznačný převod na integrální typ. Obvykle se používá k testování kritérií pro ukončení smyčky.|  
-|`loop-expression`|Na konci každé iteraci `statement`. Po `loop-expression` proveden, `cond-expression` vyhodnotí.|Obvykle se používá pro zvýšení indexu smyčky.|  
+|`init-expression`|Před jakýmkoli jiným prvkem příkazu **pro** příkazu `init-expression` provedeno pouze jednou. Ovládací prvek pak předá do `cond-expression`.|Často se používá k inicializaci indexů smyčky. Může obsahovat výrazy nebo deklarace.|  
+|`cond-expression`|Před spuštěním každé iterace `statement`, včetně první iterace. `statement` provádí pouze v případě `cond-expression` vyhodnotí na hodnotu true (nenulový).|Výraz, jehož výsledkem je integrální typ nebo typ třídy, která má jednoznačný převod na integrální typ. Obvykle se používá k testování kritérií pro ukončení smyčky.|  
+|`loop-expression`|Na konci každé iterace `statement`. Po `loop-expression` provádí, `cond-expression` vyhodnocena.|Obvykle se používá pro zvýšení indexu smyčky.|  
   
- Následující příklady ukazují různé způsoby použití `for` příkaz.  
+ Následující příklady ukazují různé způsoby použití **pro** příkazu.  
   
 ```cpp  
 #include <iostream>  
@@ -71,7 +71,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` a `loop-expression` může obsahovat více příkazů, které jsou oddělené čárkami. Příklad:  
+ `init-expression` a `loop-expression` může obsahovat více příkazů oddělených čárkami. Příklad:  
   
 ```cpp  
 #include <iostream>  
@@ -89,7 +89,7 @@ int main(){
     i + j = 19  
 ```  
   
- `loop-expression` může být zvýšena nebo snížena nebo upravené jinými způsoby.  
+ `loop-expression` může být zvýšena nebo snížen či jinak změněn jiným způsobem.  
   
 ```cpp  
 #include <iostream>  
@@ -106,11 +106,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18  
 ```  
   
- A `for` ukončí smyčky, kdy [zalomení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) (pro příkaz s popiskem mimo **pro** smyčky) v rámci `statement` se spustí. A [pokračovat](../cpp/continue-statement-cpp.md) příkaz v `for` ukončí jenom na aktuální iteraci smyčky.  
+ A **pro** smyčky skončí, když [přerušení](../cpp/break-statement-cpp.md), [vrátit](../cpp/return-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md) (na označený příkaz mimo **pro**smyčky) v rámci `statement` provádí. A [pokračovat](../cpp/continue-statement-cpp.md) výroky **pro** smyčku ukončí pouze aktuální iteraci.  
   
- Pokud `cond-expression` je tento parametr vynechán, bude považován za true a **pro** nebude bez ukončení smyčky `break`, `return`, nebo `goto` v rámci `statement`.  
+ Pokud `cond-expression` je tento parametr vynechán, bude považován za true a **pro** nebude bez ukončení smyčky **přerušení**, **vrátit**, nebo **goto** v rámci `statement`.  
   
- I když tři pole `for` příkaz se obvykle používají pro inicializaci testování pro ukončení, a roste, nejsou omezeny na těchto použití. Následující kód například tiskne čísla 0 až 4. V takovém případě `statement` je null příkaz:  
+ I když jsou tři pole příkazu **pro** obvykle používána pro inicializaci, ukončení, testování a zvyšování hodnoty, nejsou omezena na tato použití. Následující kód například tiskne čísla 0 až 4. V takovém případě `statement` je příkaz null:  
   
 ```cpp  
 #include <iostream>  
@@ -126,7 +126,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>Smyčky for a standard jazyka C++  
- Standardní C++ říká, že proměnná definovaná v `for` smyčky se dostala mimo rozsah po `for` cykly elementy end. Příklad:  
+ Standard jazyka C++ říká, že proměnná deklarovaná ve **pro** smyčky se dostanou mimo rozsah po **pro** skončení smyčky. Příklad:  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -135,11 +135,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope  
 ```  
   
- Ve výchozím nastavení v části [/Ze](../build/reference/za-ze-disable-language-extensions.md), proměnná definovaná v `for` smyčky zůstane v oboru, dokud `for` smyčky je obklopuje koncích obor.  
+ Ve výchozím nastavení v části [/Ze](../build/reference/za-ze-disable-language-extensions.md), proměnná deklarovaná ve **pro** smyčky zůstává v oboru až do **pro** smyčky ukončení nadřazeného oboru.  
   
- [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) umožňuje standardní chování proměnných deklarovaných v smyčky for, aniž by museli zadat /Za.  
+ [/ Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) povoluje standardní chování proměnných deklarovaných ve smyčkách for, aniž by bylo nutné určit/za.  
   
- Je také možné použít z oboru rozdíly `for` opakování ve smyčce bude redeclare proměnné v části /Ze následujícím způsobem:  
+ Je také možné použít rozdíly oboru **pro** smyčky k předeklarování proměnných v rámci/ze následujícím způsobem:  
   
 ```cpp  
 // for_statement5.cpp  
@@ -151,11 +151,11 @@ int main(){
 }  
 ```  
   
- Tím přesněji napodobuje standardní chování proměnná definovaná v `for` smyčky, který vyžaduje proměnných deklarovaných v `for` opakování ve smyčce bude po dokončení smyčky se dostala mimo rozsah. Když je proměnná definovaná v `for` smyčky, kompilátor interně zvýší úroveň ji do místní proměnné v `for` smyčky je obklopuje oboru, i v případě, že místní proměnné se stejným názvem již existuje.  
+ Toto lépe napodobuje standardní chování proměnné deklarované ve **pro** smyčku, která vyžaduje proměnné deklarované v **pro** smyčky po jejím dokončení dostaly mimo obor. Pokud je proměnná deklarována v **pro** smyčky, kompilátor ji interně zvýší úroveň na místní proměnnou **pro** oboru nadřazeném smyčce i v případě, že místní proměnná se stejným názvem již existuje.  
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [while – příkaz (C++)](../cpp/while-statement-cpp.md)   
  [Proveďte-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)   
  [Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)

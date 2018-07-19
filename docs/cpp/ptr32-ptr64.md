@@ -1,5 +1,5 @@
 ---
-title: __ptr32 __ptr64 | Microsoft Docs
+title: __ptr32 __ptr64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704812"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941701"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Klíčové slovo `__ptr32` představuje nativní ukazatel v 32bitovém systému, zatímco klíčové slovo `__ptr64` představuje nativní ukazatel v 64bitovém systému.
+**__ptr32** představuje nativní ukazatel v 32bitovém systému, zatímco **__ptr64** představuje nativní ukazatel v 64bitovém systému.
 
 Následující příklad ukazuje, jak deklarovat jednotlivé typy ukazatelů:
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- V 32bitovém systému je ukazatel deklarovaný pomocí klíčového slova `__ptr64` zkrácen na 32bitový ukazatel. V 64bitovém systému je ukazatel deklarovaný pomocí klíčového slova `__ptr32` převeden na 64bitový ukazatel.
+ V 32bitové verzi systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen na 32bitový ukazatel. Na 64bitovém systému je ukazatel deklarovaný pomocí **__ptr32** převeden na 64bitový ukazatel.
 
 > [!NOTE]
-> Nemůžete použít `__ptr32` nebo `__ptr64` při kompilaci s **/CLR: pure**. Jinak bude vygenerována C2472 chyby kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+> Nemůžete použít **__ptr32** nebo **__ptr64** při kompilaci s **/CLR: pure**. V opačném případě bude vygenerována chyba kompilátoru C2472. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak deklarovat a přidělit ukazatele pomocí klíčových slov `__ptr32` a `__ptr64`.
+Následující příklad ukazuje, jak deklarovat a přidělit ukazatele pomocí **__ptr32** a **__ptr64** klíčová slova.
 
 ```cpp
 #include <cstdlib>
@@ -77,7 +77,7 @@ int main()
 64
 ```
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 

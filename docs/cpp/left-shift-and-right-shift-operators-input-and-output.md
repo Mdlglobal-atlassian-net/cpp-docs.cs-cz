@@ -1,5 +1,5 @@
 ---
-title: Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;) | Microsoft Docs
+title: Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,28 +23,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8835d096575f3f7a9d50c7be26fa435e5d6bcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422394"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939726"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
-Operátory bitového posunutí jsou operátor posunutí doprava (>>), který přesune bity *shift výraz* operátor posunutí doleva a doprava (<<), který přesune bity *shift výraz* doleva. <sup>1</sup>  
+Bitové operátory posunutí jsou operátor pravého posunutí (>>), který přesune bity *shift-expression* a operátor levého posunutí doprava (<<), který přesune bity *shift-expression* vlevo. <sup>1</sup>  
   
 ## <a name="syntax"></a>Syntaxe  
   
-> *SHIFT – výraz* `<<` *doplňkové – výraz*  
-> *SHIFT – výraz* `>>` *doplňkové – výraz*  
+> *SHIFT-expression* `<<` *additive-expression*  
+> *SHIFT-expression* `>>` *additive-expression*  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!IMPORTANT]
-> Následující popisy a příklady platí v systému Windows pro architektury X86 a x64. Implementace operátorů levého a pravého posunutí se výrazně liší v zařízeních se systémem Windows RT a v zařízeních ARM. Další informace najdete v části "Posunutí – operátory" [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) příspěvku na blogu.  
+> Následující popisy a příklady platí v systému Windows pro architektury X86 a x64. Implementace operátorů levého a pravého posunutí se výrazně liší v zařízeních se systémem Windows RT a v zařízeních ARM. Další informace najdete v části "Operátory posunutí" [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) blogový příspěvek.  
   
 ## <a name="left-shifts"></a>Posun doleva  
- Operátor posunutí doleva způsobí, že bity v *shift výraz* posunutí doleva o počet pozic určeného *doplňkové výraz*. Bitové pozice uvolněné operací posunutí se vyplní nulami. Posun doleva je logický posun (bity posunuté za konec se odstraní, včetně bitu znaku), Další informace o typech bitové posuny najdete v tématu [bitové posuny](http://en.wikipedia.org/wiki/Bitwise_shift).  
+ Operátor levého posunutí způsobí posunutí bitů v *shift-expression* vlevo o počet pozic určený *additive-expression*. Bitové pozice uvolněné operací posunutí se vyplní nulami. Posun doleva je logický posun (bity posunuté za konec se odstraní, včetně bitu znaku), Další informace o druzích bitových posunů naleznete v tématu [bitových posunů](http://en.wikipedia.org/wiki/Bitwise_shift).  
   
  Následující příklad ukazuje operace levého posunutí pomocí čísel bez znaménka. Příklad ukazuje, co se děje s bity, znázorněním hodnoty jako bitové sady. Další informace najdete v tématu [bitset – třída](../standard-library/bitset-class.md).  
   
@@ -92,7 +92,7 @@ int main() {
 ```  
   
 ## <a name="right-shifts"></a>Posuny doprava  
- Operátor posunutí doprava způsobí, že bitový v *shift výraz* posunutí doprava o počet pozic určeného *doplňkové výraz*. V případě čísel bez znaménka se bitové pozice uvolněné operací posunutí vyplní nulami. U čísel se znaménkem se bit znaménka použije k vyplnění uvolněných bitových pozic. Platí tedy, že pokud je číslo kladné, použije se 0. Pokud je číslo záporné, použije se 1.  
+ Operátor pravého posunutí způsobí posunutí bitů v *shift-expression* vpravo o počet pozic určený *additive-expression*. V případě čísel bez znaménka se bitové pozice uvolněné operací posunutí vyplní nulami. U čísel se znaménkem se bit znaménka použije k vyplnění uvolněných bitových pozic. Platí tedy, že pokud je číslo kladné, použije se 0. Pokud je číslo záporné, použije se 1.  
   
 > [!IMPORTANT]
 > Výsledek posunu záporného čísla se znaménkem doprava je závislý na implementaci. Přestože jazyk Visual C++ používá bit znaménka k vyplnění uvolněných pozic, není nijak zaručeno, že tak budou činit i další implementace.  
@@ -176,9 +176,9 @@ int main() {
 ```  
   
 ## <a name="shifts-and-promotions"></a>Posunutí a propagace  
- Výrazy na obou stranách operátoru posunutí musí být integrální typy. Zvýšení úrovně celého čísla probíhají podle pravidel popsaných v [standardní převody](standard-conversions.md). Typ výsledku je stejný jako typ propagovaných *shift výraz*.  
+ Výrazy na obou stranách operátoru posunutí musí být integrální typy. Integrální propagace se provádí dle pravidel popsaných v [standardní převody](standard-conversions.md). Typ výsledku je stejný jako typ zvýšeného parametru *shift-expression*.  
   
- V následujícím příkladu, proměnné typu `char` je propagována do `int`.  
+ V následujícím příkladu se proměnná typu **char** je povýšen na **int**.  
   
 ```cpp  
 #include <iostream>  
@@ -198,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Další podrobnosti  
- Výsledek operace posunutí není definován, pokud *doplňkové výraz* je záporný nebo, pokud *doplňkové výraz* je větší než nebo rovno počtu bitů v (propagovaných)  *SHIFT – výraz*. Pokud je provedena žádná operace shift *doplňkové výraz* je 0.  
+ Výsledek operace posunutí není definován, pokud *additive-expression* je záporný nebo, pokud *additive-expression* je větší než nebo roven počtu bitů ve (zvýšeném)  *SHIFT-expression*. Operace posunutí se neprovádí, pokud *additive-expression* je 0.  
   
 ```cpp  
 #include <iostream>  
@@ -224,11 +224,11 @@ int main() {
 ```  
   
 ## <a name="footnotes"></a>Poznámky pod čarou  
- 1 následuje popis operátory posunutí specifikací C ++ 11 ISO (INCITS nebo ISO/IEC 14882-2011[2012]), částech 5.8.2 a 5.8.3.  
+ 1 následuje popis operátorů posunutí ve specifikace C ++ 11 ISO (INCITS/ISO/IEC 14882-2011[2012]), oddíly 5.8.2 a 5.8.3.  
   
- Hodnota **E1 << E2** je **E1** zapuštěno doleva **E2** bit pozic; vacated bits se naplní nula. Pokud **E1** má typ bez znaménka, je hodnota výsledku **E1 × 2**<sup>**E2**</sup>, snížené modulo jednu vyšší než maximální hodnota reprezentovat Typ výsledku. Jinak Pokud **E1** má typ se znaménkem a nezápornou hodnotu a **E1 × 2**<sup>**E2** </sup> je reprezentovat odpovídající typu bez znaménka výsledek typu pak tuto hodnotu převést na typ výsledku je výsledné hodnoty. chování, jinak hodnota není definován.  
+ Hodnota `E1 << E2` je `E1` posunuta doleva o `E2` bitových pozic; uvolněné bity jsou vyplněny nulami. Pokud `E1` má typ bez znaménka, hodnota výsledku je **E1 × 2**<sup>**E2**</sup>, snížené modulo o jedno více než maximální hodnota reprezentovatelná v typu výsledku. Jinak, pokud `E1` má typ se znaménkem a nezápornou hodnotu a **E1 × 2**<sup>**E2** </sup> je reprezentovatelné v odpovídajícím typ bez znaménka typu výsledku, pak Hodnota převedená na typ výsledku je výsledná hodnota; jinak není chování definováno.  
   
- Hodnota **E1 >> E2** je **E1** zapuštěno vpravo **E2** bit pozic. Pokud **E1** má hodnotu typu bez znaménka nebo, pokud **E1** má typ se znaménkem a nezápornou hodnotu, hodnota výsledku je nedílnou součástí podíl **E1/2** <sup> **E2**</sup>. Pokud **E1** má typ se znaménkem a záporná, výsledná hodnota je definované implementací.  
+ Hodnota `E1 >> E2` je `E1` posunuta doprava `E2` bitových pozic. Pokud `E1` má typ bez znaménka nebo pokud `E1` má typ se znaménkem a nezápornou hodnotu, hodnota výsledku je integrální část kvocientu **E1/2**<sup>**E2** </sup>. Pokud `E1` má typ se znaménkem a zápornou hodnotu, je výsledná hodnota definovaná implementací.  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   

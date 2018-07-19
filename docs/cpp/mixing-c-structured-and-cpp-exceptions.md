@@ -1,5 +1,5 @@
 ---
-title: Kombinování C (strukturované) a výjimky jazyka C++ | Microsoft Docs
+title: Kombinace jazyka C (strukturované) a výjimky jazyka C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420103"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942039"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace výjimek v jazycích C (strukturované) a C++
-Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C++ doporučeno používat zpracování strukturovaných výjimek. Ale v některých případech můžete zkompilovat s **/EHa** a kombinovat strukturovaných výjimky a zdrojového kódu C++ a je třeba některá zařízení pro zpracování oba druhy výjimek. Obslužná rutina strukturovaného výjimek obsahuje žádná koncepce objekty nebo typy výjimky, a proto ho nemůže zpracovat výjimky vyvolané C++ – kód; ale C++ **catch** obslužné rutiny můžete zpracování strukturovaných výjimek. Jako takový, zpracování syntaxe výjimek C++ (**zkuste**, `throw`, **catch**) není přijat kompilátor jazyka C, ale strukturovaného zpracování syntaxe výjimek (`__try`, `__except`, `__finally`) podporuje C++ compiler.  
+Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C++ doporučeno používat zpracování strukturovaných výjimek. Však můžete někdy chtít kompilovat s **/EHa** spojit strukturované výjimky a zdrojový kód jazyka C++ a někdy třeba zařízení pro práci s oběma druhy výjimek. Protože obslužná rutina strukturované výjimky nemá žádný koncept objektů ani typových výjimek, nemůže zpracovat výjimky vyvolané z kódu jazyka C++ Nicméně C++ **catch** obslužné rutiny strukturované výjimky zpracovat mohou. Jako takové, syntaxe pro zpracování výjimek jazyka C++ (**zkuste**, **throw**, **catch**) neakceptuje kompilátor jazyka C, ale syntaxe zpracování strukturovaných výjimek (**__try** , **__except**, **__finally**) je podporována kompilátorem jazyka C++.  
   
- V tématu [_set_se_translator –](../c-runtime-library/reference/set-se-translator.md) informace o zpracování strukturovaných výjimek jako výjimky jazyka C++.  
+ Zobrazit [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) informace o zpracování strukturovaných výjimek jako výjimek jazyka C++.  
   
  Jsou-li zkombinovány strukturované výjimky a výjimky jazyka C++, je třeba uvědomit si následující:  
   
 1.  Výjimky jazyka C++ a strukturované výjimky nelze kombinovat v rámci stejné funkce.  
   
-2.  Obslužné rutiny ukončení (bloky `__finally`) jsou provedeny vždy, i v případě odvíjení po tom, co je vyvolána výjimka.  
+2.  Obslužné rutiny ukončení (**__finally** bloky) jsou provedeny vždy, i v případě odvíjení po vyvolání výjimky.  
   
-3.  Zpracovávání výjimek v jazyce C++ může zachytit a zachovat unwind sémantiku ve všech modulech kompilovat s [/EH](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru (Tato možnost umožňuje unwind sémantiku).  
+3.  Zpracování výjimek jazyka C++ může zachytit a zachovat sémantiku odvíjení ve všech modulech zkompilovaných pomocí [/EH](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru (Tato možnost povoluje sémantiku odvíjení).  
   
 4.  Mohou existovat situace, ve kterých nejsou funkce destruktoru volány pro všechny objekty. Například pokud se strukturovaná výjimka objeví při pokusu provést volání funkce prostřednictvím ukazatele neinicializované funkce, přičemž tato funkce přijímá jako parametry objekty, které byly vytvořeny před voláním, nebudou pro tyto objekty během odvíjení zásobníku volány destruktory.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
--   [Používání setjmp nebo longjmp v C++ – programy](../cpp/using-setjmp-longjmp.md)  
+-   [Použití funkcí setjmp a longjmp v programech jazyka C++](../cpp/using-setjmp-longjmp.md)  
   
 -   [Rozdíly mezi SEH a C++ EH](../cpp/exception-handling-differences.md)  
   

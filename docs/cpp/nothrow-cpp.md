@@ -1,5 +1,5 @@
 ---
-title: nothrow (C++) | Microsoft Docs
+title: nothrow (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/03/2018
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7efbd22c846327c5731cf3ab14ba1f2045c8636f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420647"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939146"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Rozšířený atribut `__declspec`, který lze použít v deklaracích funkcí.
+A **__declspec** rozšířeného atributu, který lze použít v deklaracích funkcí.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ Rozšířený atribut `__declspec`, který lze použít v deklaracích funkcí.
 
 ## <a name="remarks"></a>Poznámky
 
-Doporučujeme použít všechny nový kód [noexcept](noexcept-cpp.md) operátor místo `__declspec(nothrow)`.
+Doporučujeme použít všechny nový kód [noexcept](noexcept-cpp.md) operátor spíše než `__declspec(nothrow)`.
 
-Tento atribut oznamuje kompilátoru, že deklarovaná funkce a funkce, které volá, nikdy nevyvolají výjimku. Nevynucuje však direktivu. Jinými slovy, nikdy způsobuje [std::terminate](../standard-library/exception-functions.md#terminate) má být volána, na rozdíl od `noexcept`, nebo v **std:c ++ 17** režimu (Visual Studio 2017 verze 15,5 a novější), `throw()`.
+Tento atribut oznamuje kompilátoru, že deklarovaná funkce a funkce, které volá, nikdy nevyvolají výjimku. Nevynucuje však směrnice. Jinými slovy, nikdy způsobí, že [std::terminate](../standard-library/exception-functions.md#terminate) má být volána, na rozdíl od `noexcept`, nebo v **std: c ++ 17** režimu (Visual Studio 2017 verze 15.5 nebo novější), `throw()`.
 
-V modelu synchronního zpracování výjimek, který je nyní výchozí, může kompilátor odstranit mechanismus sledování životnosti určitých nerozvinutelných objektů v takové funkci a významně tak snížit velikost kódu. Zadané následující direktivy preprocesoru, jsou následující tři funkce deklarace ekvivalentní v **/std: c ++ 14** režimu:
+V modelu synchronního zpracování výjimek, který je nyní výchozí, může kompilátor odstranit mechanismus sledování životnosti určitých nerozvinutelných objektů v takové funkci a významně tak snížit velikost kódu. Zadaný direktivě preprocesoru, tři deklarace funkce níže jsou ekvivalentní ve **/std: c ++ 14** režimu:
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -50,13 +50,13 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-V **/std: c ++ 17** režimu `throw()` není ekvivalentní ostatním, které používají `__declspec(nothrow)` protože způsobuje, že `std::terminate` má být volána, pokud je vyvolána výjimka z funkce.
+V **/std: c ++ 17** režimu `throw()` není ekvivalentní osobám, které používají `__declspec(nothrow)` protože kvůli němu `std::terminate` má být volána, pokud je výjimka vyvolána z funkce.
 
-`void __stdcall f3() throw();` Deklarace používá syntaxi definované C++ standard. Součástí C ++ 17 `throw()` – klíčové slovo se považovat za zastaralou.
+`void __stdcall f3() throw();` Deklarace používá syntaxi definované ve standardu jazyka C++. V C ++ 17 `throw()` – klíčové slovo se přestala nabízet.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [__declspec](../cpp/declspec.md)  
 [noexcept](noexcept-cpp.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Deklarátor odkazu lvalue: &amp; | Microsoft Docs'
+title: 'Deklarátor odkazu lvalue: &amp; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947709"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Deklarátor odkazu lvalue: &amp;
 Uchovává adresu objektu, ale chová se syntakticky stejně jako objekt.  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  Libovolný objekt, jehož adresu lze převést na daný typ ukazatele, lze převést na podobný typ odkazu. Například každý objekt, jehož adresu lze převést na typ `char *`, lze také převést na typ `char &`.  
   
- Nezaměňujte deklarace odkaz s použitím [address-of – operátor](../cpp/address-of-operator-amp.md). Když `&` *identifikátor* předchází typu, například `int` nebo `char`, *identifikátor* je deklarován jako odkaz na typ. Když `&` *identifikátor* nezačíná podle typu, využití je, že adresa operátoru.  
+ Nepleťte si deklaraci odkazu s využitím [operátoru address-of](../cpp/address-of-operator-amp.md). Když `&` *identifikátor* předcházena typem, jako například **int** nebo **char**, *identifikátor* je deklarován jako odkaz na typ. Když `&` *identifikátor* párový příkaz není typem, využití představuje z operátoru address-of.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje deklarátor odkazu deklarováním objektu `Person` a odkazu na tento objekt. Vzhledem k tomu, že `rFriend` je odkazem na `myFriend`, úprava proměnné změní stejný objekt.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

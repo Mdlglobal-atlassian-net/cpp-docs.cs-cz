@@ -1,5 +1,5 @@
 ---
-title: Výrazy přípony | Microsoft Docs
+title: Výrazy přípony | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947717"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých příponové operátory následují za primárním výrazem. Příponové operátory jsou uvedeny v následující tabulce.  
@@ -33,20 +34,20 @@ Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých p
 |[Operátor volání funkce](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operátor převodu explicitního typu](../cpp/explicit-type-conversion-operator-parens.md)|*Název typu* **)**|  
 |[Operátor přístupu členů](../cpp/member-access-operators-dot-and.md)|**.** Nebo **->**|  
-|[Operátory přírůstku operátor](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
-|[Operátor snížení přípony](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
+|[Příponový operátor Inkrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Příponový operátor dekrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Následující syntaxe popisuje možné výrazy přípony:  
   
 ```  
   
-      primary-expression   
+primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
   
- *Operátory výraz* vyšší může být výraz na primární nebo jiné operátory výraz.  V tématu **primární výrazy**.  Výrazy přípony se seskupují zleva doprava, takže umožňují následující řetězení výrazů:  
+ *Postfix-expression* uvedený výše může být primární výraz nebo jiný výraz přípony.  Zobrazit **primární výrazy**.  Výrazy přípony se seskupují zleva doprava, takže umožňují následující řetězení výrazů:  
   
-```  
+```cpp 
 func(1)->GetValue()++  
 ```  
   
@@ -56,15 +57,15 @@ func(1)->GetValue()++
   
  Tvar výrazu přípony  
   
-```  
+```cpp 
 simple-type-name ( expression-list )  
 ```  
   
  označuje volání konstruktoru.  Pokud je simple-type-name základní typ, musí být seznam výrazů jeden výraz a tento výraz označuje přetypování hodnoty výrazu na základní typ.  Tento typ výrazu přetypování napodobuje konstruktor.  Vzhledem k tomu, že tento tvar umožňuje základním typům a třídám, aby byly konstruovány pomocí stejné syntaxe, je tento tvar obzvláště užitečný při definování tříd šablon.  
   
- *Cast – klíčové slovo* je jedním z `dynamic_cast`, `static_cast` nebo `reinterpret_cast`.  Další informace naleznete v **dynamic_cast**, **static_cast** a **reinterpet_cast**.  
+ *Cast-keyword* je jedním z **dynamic_cast**, **static_cast** nebo **reinterpret_cast**.  Další informace lze nalézt v **dynamic_cast**, **static_cast** a **reinterpet_cast**.  
   
- Operátor `typeid` se považuje za výraz přípony.  V tématu **typeid – operátor**.  
+ **Typeid** operátor se považuje za výraz přípony.  Zobrazit **operátor typeid**.  
   
 ## <a name="formal-and-actual-arguments"></a>Formální a aktuální argumenty  
  Volání programů předává volaným funkcím informace ve „skutečných argumentech“. Volané funkce přistupují k těmto informacím pomocí odpovídajících „formálních argumentů“.  
@@ -75,7 +76,7 @@ simple-type-name ( expression-list )
   
 -   Každý formální argument je inicializován s jeho odpovídajícím skutečným argumentem v seznamu výrazů. (Formální argument je argument, který je deklarován v hlavičce funkce a použit v těle funkce.) Jsou provedeny převody jako při inicializaci, jsou provedeny standardní i uživatelem definované převody a skutečný argument je převeden na správný typ. Provedená inicializace je konceptuálně znázorněna následujícím kódem:  
   
-    ```  
+    ```cpp 
     void Func( int i ); // Function prototype  
     ...  
     Func( 7 );          // Execute function call  
@@ -83,24 +84,24 @@ simple-type-name ( expression-list )
   
      Konceptuální inicializace provedené před voláním jsou:  
   
-    ```  
+    ```cpp 
     int Temp_i = 7;  
     Func( Temp_i );  
     ```  
   
      Inicializace probíhá, jako kdyby byla použita syntaxe znaménka rovnosti namísto syntaxe se závorkami. Před předáním této hodnoty funkci je vytvořena kopie proměnné `i`. (Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a [převody](../cpp/user-defined-type-conversions-cpp.md)).  
   
-     Proto pokud prototyp funkce (deklarace) vyžaduje argument typu **dlouho**, a pokud volací program zadává skutečného argument typu `int`, skutečný argument je povýší pomocí standardní typ převodu na typ **dlouho** (viz [standardní převody](../cpp/standard-conversions.md)).  
+     Proto pokud prototyp funkce (deklarace) vyžaduje argument typu **dlouhé**, a pokud volající program poskytne skutečný argument typu **int**, je skutečný argument povýšen pomocí Převod standardního typu na typ **dlouhé** (viz [standardní převody](../cpp/standard-conversions.md)).  
   
      Poskytnutí skutečného argumentu, pro který neexistuje žádný standardní nebo uživatelem definovaný převod na typ formálního argumentu, vygeneruje chybu.  
   
-     Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Viz [konstruktory](../cpp/constructors-cpp.md) Další informace o těchto třída speciální členské funkce.)  
+     Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Viz [konstruktory](../cpp/constructors-cpp.md) Další informace o těchto speciálních členských funkcích třídy.)  
   
 -   Je provedeno volání funkce.  
   
  Následující fragment programu znázorňuje volání funkce:  
   
-```  
+```cpp 
 // expre_Formal_and_Actual_Arguments.cpp  
 void func( long param1, double param2 );  
   
@@ -119,14 +120,14 @@ void func( long param1, double param2 )
 }  
 ```  
   
- Když `func` je volána z hlavní formální parametr `param1` je inicializován s hodnotou `i` (`i` je převést na typ **dlouho** tak, aby odpovídaly správného typu pomocí standard převod) a typ formálního parametru `param2` je inicializován s hodnotou `j` (`j` je převést na typ **dvojité** pomocí standardní převod).  
+ Když `func` je volána z hlavní, formální parametr `param1` je inicializován s hodnotou `i` (`i` je převeden na typ **dlouhé** tak, aby odpovídaly správný typ použití standardního převod) a formální parametr `param2` je inicializován s hodnotou `j` (`j` je převeden na typ **double** pomocí standardního převodu).  
   
 ## <a name="treatment-of-argument-types"></a>Zacházení s typy argumentů  
- Formální argumenty deklarované jako typy const nelze v těle funkce změnit. Funkce můžete změnit některý argument, který není typu **const**. Však změnu je místní pro funkci a neovlivní skutečné argument hodnotu, pokud skutečné argument měl odkaz na objekt není typu **const**.  
+ Formální argumenty deklarované jako typy const nelze v těle funkce změnit. Funkce mohou změnit jakýkoliv argument, který není typu **const**. Ale tato změna je místní pro funkci a nemá vliv skutečnou hodnotu argumentu není-li skutečný argument nebyl odkazem na objekt není typu **const**.  
   
  Následující funkce znázorňují některé z těchto konceptů:  
   
-```  
+```cpp 
 // expre_Treatment_of_Argument_Types.cpp  
 int func1( const int i, int j, char *c ) {  
    i = 7;   // C3892 i is const.  
@@ -143,23 +144,23 @@ double& func2( double& d, const char *c ) {
 ```  
   
 ## <a name="ellipses-and-default-arguments"></a>Výpustky a výchozí argumenty  
- Funkce lze deklarovat tak, aby přijímal argumenty méně než zadaný v definici funkce, pomocí jedné ze dvou způsobů: třemi tečkami (`...`) nebo výchozí argumenty.  
+ Funkce mohou být deklarovány pro přijmutí méně argumentů, než je určeno v definici funkce, pomocí dvou metod: tři tečky (`...`) nebo výchozí argumenty.  
   
- Tři tečky označují, že argumenty může být nutný, ale, že počet a typy nejsou zadaný v deklaraci. To je obvykle nízký C++ programovací praxí, protože ji účinně chrání před jednou z výhod C++: typ zabezpečení. Jiné převody se používají k funkcím deklarovat s výpustky než na tyto funkce, pro které jsou známé typy argumentů formální a aktuální:  
+ Symbol tří teček označuje, že argumenty mohou být požadovány, ale že počet a typy nejsou uvedené v deklaraci. Toto je obvykle nedostatečná praxe programování v C++, protože to anuluje jednu z výhod typu jazyka C++: bezpečnost typů. Různé konverze se použijí na funkce deklarované s elipsami spíše než s těmito funkcemi, u kterých formální a skutečné typy argumentů jsou známé:  
   
--   Pokud je argumentem skutečný typ **float**, je povýšit na typ **dvojité** před volání funkce.  
+-   Pokud je skutečný argument typu **float**, je povýšen na typ **double** před voláním funkce.  
   
--   Všechny podepsané nebo bez znaménka `char`, **krátké**, výčtový typ nebo bitová pole jsou převedeny na přihlášeni nebo nepodepsaný `int` integrální povýšení.  
+-   Všechny podepsané nebo nepodepsané **char**, **krátký**, výčtový typ nebo bitové pole budou převedeny na podepsaný nebo nepodepsaný **int** pomocí integrální propagace.  
   
--   Některý argument typu třídy je předaná hodnota jako datové struktury; kopie se vytvoří tak, že zkopírujete binární místo vyvoláním konstruktoru třídy kopírování (pokud existuje).  
+-   Některý argument typu třídy je předán podle hodnoty jako datová struktura; kopie je vytvořena binárním kopírováním namísto vyvoláním konstruktoru třídy kopie (pokud existuje).  
   
- Tři tečky, pokud se používá, musí být deklarován poslední v seznamu argumentů. Další informace o předávání proměnný počet argumentů, přečtěte si diskuzi o [va_arg –, va_start – a VA_LIST –](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) v *referenční dokumentace běhové knihovny*.  
+ Symbol tří teček, pokud se používá, musí být deklarován poslední v seznamu argumentů. Další informace o předávání proměnný počet argumentů, najdete v diskuzi o [va_arg, va_start a va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) v *Run-Time Library Reference*.  
   
- Informace o výchozí argumenty v CLR – programování v tématu [proměnné seznamy argumentů (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ Informace o výchozích argumentech v CLR programování naleznete v tématu [seznamy argumentů proměnných (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
- Výchozí argumenty umožňují zadat hodnotu, kterou argument musí předpokládat, pokud žádný je zadaný ve volání funkce. Následující fragment kódu ukazuje, jak fungují výchozí argumenty. Další informace o omezeních k zadávání výchozí argumenty najdete v tématu [výchozí argumenty](../cpp/default-arguments.md).  
+ Výchozí argumenty umožňují zadat hodnotu, kterou by měl předpokládat argument, pokud žádná není zadána ve volání funkce. Následující fragment kódu ukazuje, jak pracuje výchozí argument. Další informace o omezeních na určení výchozích argumentů naleznete v tématu [výchozí argumenty](../cpp/default-arguments.md).  
   
-```  
+```cpp 
 // expre_Ellipses_and_Default_Arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -190,9 +191,9 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Předchozí program deklaruje funkci, `print`, která má dva argumenty. Ale druhý argument, `terminator`, nemá výchozí hodnotu `"\n"`. V **hlavní**, první dva volání `print` povolit výchozí druhý argument zadat nový řádek ukončit tištěných řetězec. Třetí volání určuje explicitní hodnotu pro druhý argument. Výstup z programu  
+ Předchozí program deklaruje funkci `print`, která přijímá dva argumenty. Nicméně druhý argument, `terminator`, má výchozí hodnotu, `"\n"`. V `main`, první dvě volání na `print` umožňují výchozímu druhému argumentu dodat novému řádku ukončení tištěného řetězce. Třetí volání určuje explicitní hodnotu pro druhý argument. Zobrazí se výstup z programu  
   
-```  
+```Output 
 hello,  
 world!  
 good morning, sunshine.  

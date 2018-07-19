@@ -1,5 +1,5 @@
 ---
-title: New – operátor (C++) | Microsoft Docs
+title: New – operátor (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b01a7f2ca1af2ef114347d7355fbd1be973b8af
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947729"
 ---
 # <a name="new-operator-c"></a>new – operátor (C++)
-Přidělí paměť pro objekt nebo pole objektů *název typu* z volné úložiště a vrátí vhodně typové, nenulové hodnoty ukazatele k objektu.  
+Přiděluje paměť pro objekt nebo pole objektů *název typu* z volného úložiště a vrací vhodně typovaný nenulový ukazatel na objekt.  
   
 > [!NOTE]
->  Rozšíření komponent C++ Microsoft poskytuje podporu pro `new` – klíčové slovo pro přidání položek vtable slot. Další informace najdete v tématu [new (nový slot v tabulce vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+>  Rozšíření komponenty Microsoft C++ poskytuje podporu pro **nové** – klíčové slovo přidat položky vtable slot. Další informace najdete v tématu [new (nový slot v tabulce vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,53 +35,53 @@ Přidělí paměť pro objekt nebo pole objektů *název typu* z volné úloži�
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je úspěšné, **nové** vrátí nula nebo vyvolá výjimku, zjistit [nové a odstraňte operátory](../cpp/new-and-delete-operators.md) Další informace. Toto výchozí chování můžete změnit psaní vlastní rutiny zpracování výjimek a volání [_set_new_handler –](../c-runtime-library/reference/set-new-handler.md) funkce běhové knihovny s názvem vaší funkce jako její argument.  
+ Pokud není úspěšné, **nové** vrátí hodnotu 0 nebo vyvolá výjimku, naleznete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md) Další informace. Můžete změnit toto výchozí chování psaní vlastních rutin zpracování výjimek a volání [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) funkce knihovny run-time s názvem funkce jako svůj argument.  
   
- Informace o tom, jak vytvořit objekt na spravovaná halda najdete v tématu [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).  
+ Informace o tom, jak vytvořit objekt na spravované haldě, naleznete v tématu [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
- Když **nové** se používá k přidělení paměti pro objekt třídy C++, objektu volání konstruktoru po je paměť přidělená.  
+ Když **nové** se používá k přidělení paměti pro objekt třídy jazyka C++, objekt konstruktoru se volá, když je přidělena paměť.  
   
- Použití [odstranit](../cpp/delete-operator-cpp.md) operátor se zrušit přidělení paměti přidělené s **nové** operátor.  
+ Použití [odstranit](../cpp/delete-operator-cpp.md) operátor přidělení paměti s **nové** operátor.  
   
- V následujícím příkladu přiděluje a pak uvolní dvourozměrná pole znaků velikosti `dim` podle 10. Při přidělování multidimenzionálního pole, všechny dimenze kromě prvního musí být konstantní výrazy, která se vyhodnotí jako kladné hodnoty; dimenze krajní levé pole může být jakýkoli výraz, jehož výsledkem je kladné celé číslo. Při přidělování pole pomocí **nové** operátor, první dimenze může být nula – **nové** operátor vrátí jedinečný ukazatel.  
+ V následujícím příkladu se přiděluje a poté uvolněno dvourozměrné pole znaků velikost `dim` 10. Při přidělování multidimenzionálního pole, všechny dimenze s výjimkou prvního musí být konstantní výrazy, které vedou k pozitivním hodnotám; levé pole dimenze může být libovolný výraz, který je vyhodnocen jako kladná hodnota. Při přidělování pole pomocí **nové** operátoru, první dimenze může být nula – **nové** operátor vrací jedinečný ukazatel.  
   
-```  
+```cpp 
 char (*pchar)[10] = new char[dim][10];  
 delete [] pchar;  
 ```  
   
- *Název typu* nemůže obsahovat **const**, `volatile`, deklarace tříd nebo deklarace výčtů. Následující výraz je proto neplatný:  
+ *Název typu* nemůže obsahovat **const**, **volatile**, deklarace tříd nebo deklarace výčtů. Proto je neplatný následující výraz:  
   
-```  
+```cpp 
 volatile char *vch = new volatile char[20];  
 ```  
   
  **Nové** operátor nepřidělí odkazové typy, protože nejsou objekty.  
   
- **Nové** operátor nelze použít k přidělení funkce, ale může sloužit k přidělení ukazatelé na funkce. V následujícím příkladu přiděluje a pak uvolní pole sedm ukazatele na funkce, které vrací celá čísla.  
+ **Nové** operátor nelze použít k přidělení funkce, ale je možné přidělit ukazatele na funkce. V následujícím příkladu se přiděluje a poté uvolní pole sedmi ukazatelů na funkce, které vrací celá čísla.  
   
-```  
+```cpp 
 int (**p) () = new (int (*[7]) ());  
 delete *p;  
 ```  
   
- Pokud používáte operátor **nové** bez jakékoli další argumenty a kompilaci s [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md), nebo [/EHs](../build/reference/eh-exception-handling-model.md) možnost, bude kompilátor generování kódu pro volání operátor **odstranit** Pokud konstruktoru vyvolá výjimku.  
+ Pokud použijete operátor **nové** bez dalších argumentů a kompilujete s [/GX](../build/reference/gx-enable-exception-handling.md), [/EHa](../build/reference/eh-exception-handling-model.md), nebo [/EHS](../build/reference/eh-exception-handling-model.md) možnost, kompilátor způsobí Generovat kód pro volání operátoru **odstranit** Pokud konstruktor vyvolá výjimku.  
   
- Následující seznam popisuje elementy gramatika **nové**:  
+ Následující seznam popisuje gramatické prvky parametru **nové**:  
   
- *Umístění*  
- Poskytuje způsob předat další argumenty, pokud jste přetížení **nové**.  
+ *umístění*  
+ Poskytuje způsob předání dalších argumentů, pokud přetížíte **nové**.  
   
  *Název typu*  
- Určuje typ přidělování; může být buď předdefinovaných nebo uživatelem definovaný typ. Pokud specifikace typu je složitá, může být obklopená závorkách vynutit pořadí vazby.  
+ Určuje typ má být přidělen. může se jednat vestavěný nebo uživatelem definovaný typ. Pokud je specifikace typu složitá, může být uzavřen v závorkách k vynucení pořadí vazeb.  
   
  *Inicializátor*  
- Obsahuje hodnotu pro objekt inicializovaný. Inicializátory nelze zadat pro pole. **Nové** operátor vytvoří pole objektů, pouze v případě, že má třída výchozí konstruktor.  
+ Poskytuje hodnotu pro inicializaci objektu. Inicializátory nelze zadat pro pole. **Nové** operátor vytvoří pole objektů pouze v případě, třída nemá výchozí konstruktor.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu přiděluje pole znaků a třída objektu `CName` a pak je uvolní.  
+ Následující příklad kódu přiřazuje pole znaků a objekt třídy `CName` a poté je uvolní.  
   
-```  
+```cpp 
 // expre_new_Operator.cpp  
 // compile with: /EHsc  
 #include <string.h>  
@@ -122,9 +123,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Příklad  
- Pokud používáte nové formě umístění **nové** operátor, formu přidělení, kompilátor s argumenty kromě velikost nepodporuje umístění formu **odstranit** operátor Pokud konstruktor, vyvolá výjimku. Příklad:  
+ Používáte-li formu new z **nové** operátor, formu s argumenty kromě velikosti alokace, kompilátor nepodporuje formu umístění **odstranit** operátor-li konstruktor vyvolá výjimku. Příklad:  
   
-```  
+```cpp 
 // expre_new_Operator2.cpp  
 // C2660 expected  
 class A {  
@@ -156,10 +157,10 @@ int main() {
 }  
 ```  
   
-## <a name="initializing-object-allocated-with-new"></a>Inicializaci objektu přiřazen výraz new  
- Volitelný *inicializátoru* pole je součástí gramatika pro **nové** operátor. To umožňuje nové objekty inicializovat konstruktory definovanými uživatelem. Další informace o tom, jak se provádí inicializace najdete v tématu [inicializátory](../cpp/initializers.md). Následující příklad ukazuje, jak pomocí výrazu inicializace s **nové** operátor:  
+## <a name="initializing-object-allocated-with-new"></a>Inicializace objektů, kterým je přiřazen výraz new  
+ Volitelně *inicializátor* pole je součástí gramatiky **nové** operátor. To umožňuje nové objekty inicializovat konstruktory definovanými uživatelem. Další informace o průběhu inicializace naleznete v tématu [inicializátory](../cpp/initializers.md). Následující příklad ukazuje, jak použít výraz inicializace s **nové** operátor:  
   
-```  
+```cpp 
 // expre_Initializing_Objects_Allocated_with_new.cpp  
 class Acct  
 {  
@@ -181,24 +182,24 @@ int main()
 }  
 ```  
   
- V tomto příkladu objekt `CheckingAcct` je přidělen s použitím **nové** je zadán operátor však žádné výchozí inicializace. Proto je zavolán výchozí konstruktor třídy `Acct()`. Poté je objekt `SavingsAcct` přiřazen stejným způsobem s tím rozdílem, že je explicitně inicializován na hodnotu 34,98. Protože je typu 34.98 **dvojité**, konstruktor, který přebírá argument tohoto typu je volána pro zpracování inicializace. Nakonec je netřídní typ `HowMuch` inicializován na hodnotu 43,0.  
+ V tomto příkladu je objekt `CheckingAcct` je přidělena pomocí **nové** je zadán operátor, ale žádná výchozí inicializace. Proto je zavolán výchozí konstruktor třídy `Acct()`. Poté je objekt `SavingsAcct` přiřazen stejným způsobem s tím rozdílem, že je explicitně inicializován na hodnotu 34,98. Protože je 34,98 typu **double**, konstruktor, který přijímá argument tohoto typu je volána k inicializaci. Nakonec je netřídní typ `HowMuch` inicializován na hodnotu 43,0.  
   
- Pokud je objekt typu třídy a třídy obsahuje konstruktorů (jako v předchozím příkladu), můžete objekt inicializovat pomocí **nové** operátor pouze v případě, že je splněna jedna z těchto podmínek:  
+ Pokud je objekt typu třídy a tato třída má konstruktory (jako v předchozím příkladu), lze objekt inicializovat pomocí **nové** operátor pouze pokud je splněna jedna z těchto podmínek:  
   
 -   Argumenty zadané v inicializátoru souhlasí s argumenty konstruktoru.  
   
 -   Třída má výchozí konstruktor (konstruktor, který lze volat bez argumentů).  
   
- Žádné explicitní za element inicializace lze provést při přidělování maticových pomocí **nové** operátor; pouze výchozí konstruktor, pokud existuje, je volána. V tématu [výchozí argumenty](../cpp/default-arguments.md) Další informace.  
+ Inicializace žádné explicitní na element lze provést při přidělování paměti polím nelze pomocí **nové** operátor; pouze výchozí konstruktor, pokud jsou k dispozici, je volána. Zobrazit [výchozí argumenty](../cpp/default-arguments.md) Další informace.  
   
- Pokud dojde k selhání přidělení paměti (`operator new` vrátí hodnotu 0), není inicializace provedena. Je to ochrana proti pokusům o inicializaci neexistujících dat.  
+ Pokud selhání přidělení paměti (**operátor new** vrátí hodnotu 0), není inicializace provedena. Je to ochrana proti pokusům o inicializaci neexistujících dat.  
   
- Stejně jako u volání funkcí není definováno pořadí, ve kterém jsou inicializované výrazy vyhodnoceny. Takže byste se neměli spoléhat, že jsou před provedením přidělení paměti tyto výrazy zcela vyhodnoceny. Pokud se nezdaří přidělování paměti a **nové** operátor vrátí hodnotu 0, nemusí některé výrazy v inicializátoru vyhodnotí úplně.  
+ Stejně jako u volání funkcí není definováno pořadí, ve kterém jsou inicializované výrazy vyhodnoceny. Takže byste se neměli spoléhat, že jsou před provedením přidělení paměti tyto výrazy zcela vyhodnoceny. Pokud selhání přidělení paměti a **nové** operátor vrátí hodnotu 0, nemusí být některé výrazy v inicializátoru zcela vyhodnoceny.  
   
-## <a name="lifetime-of-objects-allocated-with-new"></a>Doba životnosti objektů přiřazen výraz new  
- Objekty přidělený **nové** operátor nejsou zničený, když je byl ukončen oboru, ve kterém jsou definovány. Protože **nové** operátor vrací ukazatel na objekty přiděluje, program musí definovat ukazatel s vhodný rozsah pro přístup k těmto objektům. Příklad:  
+## <a name="lifetime-of-objects-allocated-with-new"></a>Doba života objektů, kterým je přiřazen výraz new  
+ Přidělené objekty s **nové** operátor nejsou zničeny, když je byl ukončen oboru, ve kterém jsou definovány. Vzhledem k tomu, **nové** operátor vrací ukazatel na objekty přiděluje, program musí definovat ukazatel s vhodným oborem pro přístup k těmto objektům. Příklad:  
   
-```  
+```cpp 
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
 // C2541 expected  
 int main()  
@@ -224,37 +225,37 @@ int main()
  Jakmile ukazatel `AnotherArray` v příkladu překročí obor, nelze již objekt odstranit.  
   
 ## <a name="how-new-works"></a>Jak funguje výraz new  
- *Přidělení výraz* – výraz obsahující **nové** operátor – provádí tři věci:  
+ *Allocation-expression* – obsahující **nové** operátor – dělá tři věci:  
   
 -   Vyhledává a vyhrazuje úložiště pro objekt nebo objekty, které mají být přiděleny. Po dokončení této fáze je přidělen správný objem úložiště, ale není to ještě objekt.  
   
 -   Inicializuje objekt(y). Po dokončení inicializace je k dispozici dostatek informací pro přidělené úložiště, aby byl vytvořen objekt.  
   
--   Vrátí ukazatel na vybrané objekty typu ukazatele odvozené od *nový název typu* nebo *název typu*. Program používá tento ukazatel pro přístup k nově přidělenému objektu.  
+-   Vrátí ukazatel na objekt(y) typu ukazatele odvozený z *nové type-name* nebo *název typu*. Program používá tento ukazatel pro přístup k nově přidělenému objektu.  
   
- **Nové** operátor volá funkci `operator new`. Pro pole libovolného typu a pro objekty, které nejsou **třída**, `struct`, nebo **sjednocení** typy, globální funkce **:: new – operátor**, nazývá se přidělit úložiště. Objekty typu třídy mohou definovat svou vlastní funkci statického člena `operator new` na základě každé třídy.  
+ **Nové** operátor vyvolá funkci **operátor new**. Pro pole libovolného typu a pro objekty, které nejsou typu **třídy**, **struktura**, nebo **sjednocení** typy, globální funkce **:: operátor new**, je volá se, aby přidělení úložiště. Objekty typu třídy mohou definovat svou vlastní **operátor new** statickou členskou funkci na základě každé třídy.  
   
- Když kompilátor narazí **nové** operátor přidělit objekt typu `type`, vystavuje volání `type` **:: new – operátor (sizeof (** `type` **))**  nebo, pokud ne, uživatelem definované `operator new` je definován **:: new – operátor (sizeof (** `type` **))**. Proto **nové** operátor můžete přidělit správné množství paměti pro objekt.  
-  
-> [!NOTE]
->  Argument `operator new` je typu **size_t –**. Tento typ je definována v \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
-  
- Možnost v gramatiky umožňuje specifikaci *umístění* (viz gramatika pro [operátor new](../cpp/new-operator-cpp.md)). *Umístění* parametr lze použít pouze pro uživatelem definované implementace `operator new`; umožňuje doplňující informace, které mají být předány `operator new`. Výraz s *umístění* pole, jako `T *TObject = new ( 0x0040 ) T;` převádějí na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Pokud T je třídu operátor členů nové, jinak `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
-  
- Původní záměrem *umístění* bylo pole umožňující související s hardwarem objektů být přidělené adresy, které zadaného uživatelem.  
+ Když kompilátor narazí **nové** operátor přidělit objekt typu **typ**, vydá volání `type` **:: operátor new (sizeof (** `type` **))** nebo když není definovaný uživatelem **operátor new** je definován, **:: operátor new (sizeof (** `type` **))**. Proto **nové** operátor můžete přidělit objektu správnou velikost paměti pro objekt.  
   
 > [!NOTE]
->  I když v předchozím příkladu zobrazuje pouze jeden argument *umístění* pole neexistuje žádné omezení na tom, kolik další argumenty se dá předat do `operator new` tímto způsobem.  
+>  Argument **operátor new** je typu `size_t`. Tento typ je definován v \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
   
- I když byl člen `operator new` definován pro typ třídy, lze pomocí formuláře v tomto příkladu použít globální operátor:  
+ Možnost v gramatice umožňuje volbu specifikace *umístění* (viz gramatika [operátor new](../cpp/new-operator-cpp.md)). *Umístění* parametr lze použít pouze pro uživatelem definované implementací **operátor new**; umožňuje dodatečné informace, které se mají předat **operátor new**. Výraz s *umístění* pole jako `T *TObject = new ( 0x0040 ) T;` se přeloží na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` li třída T členský operátor new, jinak k `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   
-```  
+ Původní záměr *umístění* pole byl umožnit objektům závislým na hardwaru k přidělování na uživatelem zadaných adresách.  
+  
+> [!NOTE]
+>  Ačkoli předchozí příklad ukazuje pouze jeden argument *umístění* pole, neexistuje žádné omezení na tom, kolik dalších argumentů lze předat **operátor new** tímto způsobem.  
+  
+ I když **operátor new** byla definována pro typ třídy, může pomocí formuláře v tomto příkladu použít globální operátor:  
+  
+```cpp 
 T *TObject =::new TObject;  
 ```  
   
- Operátor řešení rozsahu (`::`) vynutí použití na globální **nové** operátor.  
+ Operátor rozlišení oboru (`::`) vynutí použití globálního **nové** operátor.  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
- [nové a odstraňte operátory](../cpp/new-and-delete-operators.md)
+ [klíčová slova](../cpp/keywords-cpp.md)   
+ [nové a odstranit operátory](../cpp/new-and-delete-operators.md)

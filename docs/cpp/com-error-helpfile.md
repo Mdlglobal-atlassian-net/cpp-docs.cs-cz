@@ -1,5 +1,5 @@
 ---
-title: _com_error::HelpFile | Microsoft Docs
+title: _com_error::HelpFile | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1f02238d228b5de4302812bacf4f9ad5cf1300c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acd909224d6a682a210e15eebf04d2c8429a8a3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409784"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939555"
 ---
 # <a name="comerrorhelpfile"></a>_com_error::HelpFile
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Volání **IErrorInfo::GetHelpFile** funkce.  
+ Volání `IErrorInfo::GetHelpFile` funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ _bstr_t HelpFile() const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek **IErrorInfo::GetHelpFile** pro **IErrorInfo** objekt zaznamenávají v rámci `_com_error` objektu. Výsledný BSTR je zapouzdřen v objektu `_bstr_t`. Pokud žádné **IErrorInfo** se zaznamenávají, vrátí prázdnou `_bstr_t`.  
+ Vrátí výsledek `IErrorInfo::GetHelpFile` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledný BSTR je zapouzdřen v objektu `_bstr_t`. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Jakákoli chyba při volání **IErrorInfo::GetHelpFile** metoda je ignorována.  
+ Jakékoli neúspěchy při volání `IErrorInfo::GetHelpFile` metoda se ignoruje.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

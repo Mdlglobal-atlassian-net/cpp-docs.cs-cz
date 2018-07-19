@@ -1,5 +1,5 @@
 ---
-title: Použití funkce wmain namísto main | Microsoft Docs
+title: Použití funkce wmain namísto main | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8f916fd6716678218b1b9b3d5d8b2e21a37c29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1be93b3c8d011fb34c6259fe5f044a9c463e4b20
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422199"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941210"
 ---
 # <a name="using-wmain-instead-of-main"></a>Použití funkce wmain namísto main
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- V kódu Unicode programovací model, můžete definovat široká charakterová verzi **hlavní** funkce. Použití **wmain** místo **hlavní** Pokud chcete napsat přenosné kód, který dodržuje specifikaci kódování Unicode.  
+ V programovacím modelu Unicode, můžete definovat širokoznaké verze `main` funkce. Použití `wmain` místo `main` Pokud chcete zapsat přenositelný kód, který splňuje specifikace Unicode.  
   
- Deklarovat formální parametry **wmain** pomocí podobném formátu **hlavní**. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry, které **wmain** typu `wchar_t*`.  
+ Deklarovat formální parametry `wmain` pomocí formátu podobného `main`. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. *Argv* a *envp* parametry `wmain` jsou typu `wchar_t*`.  
   
- Pokud váš program používá **hlavní** funkce, operační systém při spuštění programu je vytvořit prostředí vícebajtových znaků. Pouze v případě potřeby se vytvoří kopie široká charakterová prostředí (například voláním [_wgetenv –](../c-runtime-library/reference/getenv-wgetenv.md) nebo [_wputenv –](../c-runtime-library/reference/putenv-wputenv.md) funkce). Existuje-li již prostředí MBCS, je při prvním volání `_wputenv` nebo při prvním volání `_wgetenv` vytvořeno odpovídající prostředí řetězce širokého znaku, na které je následně odkázáno pomocí globální proměnné `_wenviron`, což je verze širokého znaku globální proměnné `_environ`. V tomto okamžiku vedle sebe existují dvě kopie prostředí (znaková sada MBCS a Unicode), které jsou udržovány v operačním systému po celou dobu trvání aplikace.  
+ Pokud program používá `main` funkce, prostředí vícebajtových znaků se vytvoří v operačním systému při spuštění programu. Kopie širokého znaku prostředí je vytvořen pouze v případě potřeby (například voláním [_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md) nebo [_wputenv](../c-runtime-library/reference/putenv-wputenv.md) funkce). Existuje-li již prostředí MBCS, je při prvním volání `_wputenv` nebo při prvním volání `_wgetenv` vytvořeno odpovídající prostředí řetězce širokého znaku, na které je následně odkázáno pomocí globální proměnné `_wenviron`, což je verze širokého znaku globální proměnné `_environ`. V tomto okamžiku vedle sebe existují dvě kopie prostředí (znaková sada MBCS a Unicode), které jsou udržovány v operačním systému po celou dobu trvání aplikace.  
   
- Podobně pokud váš program používá **wmain** funkce, prostředí MBCS (ASCII) je vytvořen při prvním volání `_putenv` nebo `getenv`a je na kterou odkazuje `_environ` – globální proměnná.  
+ Podobně pokud program používá `wmain` funkce, prostředí MBCS (ASCII) se vytvoří při prvním volání `_putenv` nebo `getenv`a ukazuje `_environ` globální proměnné.  
   
- Další informace o rozhraní MBCS prostředí najdete v tématu [jednobajtové a vícebajtové znakové sady](../c-runtime-library/single-byte-and-multibyte-character-sets.md) v *referenční dokumentace běhové knihovny.*  
+ Další informace o prostředí MBCS naleznete v tématu [jednobajtové a vícebajtové znakové sady](../c-runtime-library/single-byte-and-multibyte-character-sets.md) v *Run-Time Library Reference.*  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [main: spuštění programu](../cpp/main-program-startup.md)

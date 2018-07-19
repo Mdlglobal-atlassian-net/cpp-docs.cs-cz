@@ -1,5 +1,5 @@
 ---
-title: binder1st – třída | Microsoft Docs
+title: binder1st – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961718"
 ---
 # <a name="binder1st-class"></a>binder1st – třída
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Objekt binární funkce, která má být převeden na objekt unární funkce.
+*Func* objekt binární funkce pro převod na objekt jednočlenné funkce.
 
-`left` Hodnota, na které má být vázána první argument funkce binární objektu.
+*levé* hodnotu, do kterého má být vázaný prvního argumentu binární funkce na objekt.
 
-`right` Hodnota argumentu, který porovnává přizpůsobena binární objekt pevnou hodnotu druhý argument.
+*správné* hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Objekt unární funkce, která je výsledkem vazby první argument funkce binární objektu na hodnotu `left.`
+Objekt jednočlenné funkce, která je výsledkem vazby prvního argumentu binární funkce na objekt na hodnotu *levé*.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie objekt binární funkce `Func` v **op**a kopii `left` v **hodnotu**. Definuje jeho – členská funkce `operator()` jako vrácení **op**( **hodnotu**, `right`).
+Třída šablony ukládá jejich kopii objekt binární funkce *Func* v `op`a kopii *levé* v `value`. Definuje jeho členskou funkci `operator()` jako vracející **op**( **hodnotu**, `right`).
 
-Pokud `Func` je objekt typu **operace** a `c` je konstanta, pak [bind1st –](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) je ekvivalentní `binder1st` – třída Konstruktor `binder1st` \< **operace**> ( `Func`, `c` ) a pohodlnější.
+Pokud *Func* je objekt typu `Operation` a `c` je konstanta, pak [bind1st –](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) odpovídá `binder1st` konstruktoru třídy `binder1st` \< **Operace**> ( `Func`, `c` ) a pohodlnější.
 
 ## <a name="example"></a>Příklad
 
@@ -123,9 +123,9 @@ The number of elements in v1 less than 10 is: 2.
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

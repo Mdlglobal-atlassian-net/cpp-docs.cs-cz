@@ -1,5 +1,5 @@
 ---
-title: Multiplikativní operátory a operátor numerického zbytku | Microsoft Docs
+title: Multiplikativní operátory a operátor numerického zbytku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947699"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikativní operátory a operátor numerického zbytku
 ## <a name="syntax"></a>Syntaxe  
@@ -47,21 +48,21 @@ expression % expression
   
 -   Dělení (**/**)  
   
--   Numerického zbytku (zbytek po dělení) (`%`)  
+-   Modulo (zbytek po dělení) (`%`)  
   
  Tyto binární operátory mají asociativitu zleva doprava.  
   
- Operátory násobení vezmou operandy aritmetických typů. Operátor numerického zbytku (`%`), které se přísnější v, že jejími operandy, musí být celočíselné typu. (Získat zbytku s plovoucí desetinnou čárkou dělení, použijte funkci běhu [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Převody zahrnutých v [standardní převody](standard-conversions.md) se použijí pro operandy, a výsledkem je převedený typu.  
+ Operátory násobení vezmou operandy aritmetických typů. Operátor numerického zbytku (`%`) má přísnější požadavky v tom, že jeho operandy musí být celočíselného typu. (Chcete-li získat zbytek po dělení s pohyblivou čárkou, použijte funkci run-time [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Převody uvedené v [standardní převody](standard-conversions.md) jsou použity na operandy a výsledek je určen převedeným typem.  
   
  Operátor násobení dává výsledek vynásobení prvního operandu druhým.  
   
  Operátor dělení dává výsledek vydělení prvního operandu druhým.  
   
- Operátor numerického zbytku vypočítá zbytek poskytují následující výraz, kde *e1* je první operand a *e2* je druhý: *e1* -(*e1*  /  *e2*) \* *e2*, kde jsou oba operandy celočíselných typů.  
+ Operátor numerického zbytku vrací zbytek daný následujícím výrazem, kde *e1* je první operand a *e2* je druhý: *e1* -(*e1*  /  *e2*) \* *e2*, kde jsou oba operandy integrální typy.  
   
  Dělení nulou ve výrazu dělení nebo zbytku není definováno a způsobí chybu modulu run-time. Následující výrazy proto způsobí nedefinované chybné výsledky:  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -74,15 +75,15 @@ f / 0.0
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  V programu Microsoft C++ výsledek výrazu zbytku je vždy stejný jako znaménko prvního operandu.  
   
-**Konkrétní Microsoft END**  
- Pokud je vypočítané dělení dvou celých čísel nepřesné a pouze jeden operand je záporný, výsledkem je největší celé číslo (v rozsahu bez ohledu na znaménko) menší než přesná hodnota, kterou by byla výsledkem operace dělení. Například vypočtená hodnota vlastnosti -11 / 3 je-3.666666666. Výsledek tohoto celočíselné dělení je -3.  
+**Specifické pro END Microsoft**  
+ Pokud je vypočítané dělení dvou celých čísel nepřesné a pouze jeden operand je záporný, výsledkem je největší celé číslo (v rozsahu bez ohledu na znaménko) menší než přesná hodnota, kterou by byla výsledkem operace dělení. Například vypočítaná hodnota -11 / 3 je-3.666666666. Výsledek tohoto dělení celých čísel je -3.  
   
- Vztah mezi multiplikativní operátory je dán identity (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
+ Vztah mezi operátory násobení je dán identitou (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Příklad  
- Následující program ukazuje operátory násobení. Všimněte si, že buď operand `10 / 3` musí být explicitně přetypovat na typ `float` předejdete zkrácení tak, že jsou oba operandy typu `float` před dělení.  
+ Následující program ukazuje operátory násobení. Všimněte si, že každý operand `10 / 3` musí být explicitně přetypován na typ **float** aby se zabránilo zkrácení, takže oba operandy jsou typu **float** před dělení.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Multiplikativní operátory jazyka C](../c-language/c-multiplicative-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Načasování zpracování výjimky: Souhrn | Microsoft Docs'
+title: 'Načasování zpracování výjimky: Souhrn | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422173"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939413"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: souhrn
-Obslužná rutina ukončení se provede bez ohledu na to, jak je blok příkazu `__try` ukončen. Příčina zahrnuje opuštění bloku příkazu `__try`, příkaz `longjmp`, který provede opuštění bloku a odvíjení zásobníku z důvodu zpracování výjimek.  
+Obslužné rutiny ukončení provádí bez ohledu na to, jak **__try** se ukončí blok příkazů. Příčiny opuštění **__try** bloku, `longjmp` příkaz, který opuštění bloku a odvíjení zásobníku z důvodu zpracování výjimek.  
   
 > [!NOTE]
->  Jazyk Visual C++ podporuje dva tvary příkazů `setjmp` a `longjmp`. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li použít tuto verzi, zahrnout soubor \<setjmp.h >. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li použít tuto verzi, zahrnout soubor \<setjmpex.h >. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.  
+>  Jazyk Visual C++ podporuje dva tvary příkazů `setjmp` a `longjmp`. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li tuto verzi použít, zahrňte soubor \<setjmp.h >. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li tuto verzi použít, zahrňte soubor \<setjmpex.h >. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.  
   
  Operační systém spustí všechny obslužné rutiny ukončení ve správném pořadí, předtím než lze spustit jakýkoli jiný kód, včetně těla obslužné rutiny výjimky.  
   
@@ -44,7 +44,7 @@ Obslužná rutina ukončení se provede bez ohledu na to, jak je blok příkazu 
   
 3.  Pokud tento filtr předá řízení (vrátí hodnotu 0), proces pokračuje, dokud není nalezen filtr, který nepředá řízení.  
   
-4.  Pokud tento filtr, vrátí hodnotu -1, zpracování pokračovat, kde byla vyvolána výjimka, a bez ukončení probíhá.  
+4.  Pokud tento filtr vrátí hodnotu -1, provádění pokračuje, kde byla výjimka vyvolána, a nedojde k žádnému ukončení probíhá.  
   
 5.  Jestliže filtr vrátí hodnotu 1, dojde k následujícím událostem:  
   

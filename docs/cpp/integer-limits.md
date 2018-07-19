@@ -1,5 +1,5 @@
 ---
-title: Omezení typu Integer | Microsoft Docs
+title: Omezení typu Integer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656873dc510f53fc05250a28c61cc452078c4aca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174025fc1a44ce0db96a5a7038502dfabe90bfd6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420608"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940131"
 ---
 # <a name="integer-limits"></a>Omezení typu Integer
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-V následující tabulce jsou uvedené limity pro typy celého čísla. Tyto limity, je definována v souboru standardní hlavičku < Limits.h – >.
+Limity pro celočíselné typy jsou uvedeny v následující tabulce. Tato omezení jsou také definovány v souboru standardní záhlaví < limits.h >.
 
-## <a name="limits-on-integer-constants"></a>Omezení konstanty typu Integer
+## <a name="limits-on-integer-constants"></a>Omezení na konstanty typu Integer
 
 |Konstanta|Význam|Hodnota|
 |--------------|-------------|-----------|
-|**CHAR_BIT –**|Počet bitů v nejmenší proměnné, která není pole verze.|8|
-|**SCHAR_MIN –**|Minimální hodnota proměnné typu **podepsané char**.|-128|
-|**SCHAR_MAX**|Maximální hodnota proměnné typu **podepsané char**.|127|
-|**UCHAR_MAX**|Maximální hodnota proměnné typu **nepodepsané char**.|255 (0xff)|
-|**CHAR_MIN –**|Minimální hodnota proměnné typu **char**.|-128; 0, pokud /J možnost použít|
-|**CHAR_MAX –**|Maximální hodnota proměnné typu **char**.|127; Pokud se používá možnost /J 255|
-|**MB_LEN_MAX**|Maximální počet bajtů v multicharacter konstanta.|5|
-|**SHRT_MIN –**|Minimální hodnota proměnné typu **krátké**.|-32768|
-|**SHRT_MAX**|Maximální hodnota proměnné typu **krátké**.|32767|
-|**USHRT_MAX**|Maximální hodnota proměnné typu **nepodepsané prostě**.|65535 (0xffff)|
-|**INT_MIN –**|Minimální hodnota proměnné typu **int**.|-2147483648|
-|**INT_MAX –**|Maximální hodnota proměnné typu **int**.|2147483647|
-|**UINT_MAX**|Maximální hodnota proměnné typu **nepodepsané int**.|4294967295 (0xffffffff)|
-|**LONG_MIN**|Minimální hodnota proměnné typu **dlouho**.|-2147483648|
-|**LONG_MAX**|Maximální hodnota proměnné typu **dlouho**.|2147483647|
-|**ULONG_MAX**|Maximální hodnota proměnné typu **nepodepsané dlouho**.|4294967295 (0xffffffff)|
-|**LLONG_MIN**|Minimální hodnota proměnné typu **dlouho dlouho**|-9223372036854775808|
-|**LLONG_MAX**|Maximální hodnota proměnné typu **dlouho dlouho**|9223372036854775807|
-|**ULLONG_MAX**|Maximální hodnota proměnné typu **dlouho dlouho bez znaménka**|18446744073709551615 (0xffffffffffffffff)|
+|CHAR_BIT|Počet bitů v proměnné nejmenší, který není bitového pole.|8|
+|SCHAR_MIN|Minimální hodnota pro proměnnou typu **podepsané char**.|-128|
+|SCHAR_MAX|Maximální hodnota pro proměnnou typu **podepsané char**.|127|
+|UCHAR_MAX|Maximální hodnota pro proměnnou typu **unsigned char**.|255 (0xff)|
+|CHAR_MIN|Minimální hodnota pro proměnnou typu **char**.|-128; 0, pokud používá j.|
+|CHAR_MAX|Maximální hodnota pro proměnnou typu **char**.|127; je-li použita možnost /J 255|
+|MB_LEN_MAX|Maximální počet bajtů v víceznaková konstanta.|5|
+|SHRT_MIN|Minimální hodnota pro proměnnou typu **krátký**.|-32768|
+|SHRT_MAX|Maximální hodnota pro proměnnou typu **krátký**.|32767|
+|USHRT_MAX|Maximální hodnota pro proměnnou typu **unsigned short**.|65535 (0xffff)|
+|INT_MIN|Minimální hodnota pro proměnnou typu **int**.|-2147483648|
+|INT_MAX|Maximální hodnota pro proměnnou typu **int**.|2147483647|
+|UINT_MAX|Maximální hodnota pro proměnnou typu **unsigned int**.|4294967295 (0xffffffff)|
+|LONG_MIN|Minimální hodnota pro proměnnou typu **dlouhé**.|-2147483648|
+|LONG_MAX|Maximální hodnota pro proměnnou typu **dlouhé**.|2147483647|
+|ULONG_MAX|Maximální hodnota pro proměnnou typu **unsigned long**.|4294967295 (0xffffffff)|
+|LLONG_MIN|Minimální hodnota pro proměnnou typu **long long**|-9223372036854775808|
+|LLONG_MAX|Maximální hodnota pro proměnnou typu **long long**|9223372036854775807|
+|ULLONG_MAX|Maximální hodnota pro proměnnou typu **unsigned long long.**|18446744073709551615 (0xffffffffffffffff)|
 
-Pokud hodnota přesahuje reprezentace největší celé číslo, kompilátoru Microsoft generuje chybu.
+Pokud hodnota přesahuje reprezentace největší celé číslo, Microsoft kompilátor vygeneruje chybu.
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také
 

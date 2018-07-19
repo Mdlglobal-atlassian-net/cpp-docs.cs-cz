@@ -1,5 +1,5 @@
 ---
-title: Struktura _ATL_COM_MODULE70 | Microsoft Docs
+title: _Atl_com_module70 – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255658"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883710"
 ---
-# <a name="atlcommodule70-structure"></a>Struktura _ATL_COM_MODULE70
-Používaný kód související s COM v ATL.  
+# <a name="atlcommodule70-structure"></a>_Atl_com_module70 – struktura
+Používaný kód související s modelu COM v knihovně ATL  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,22 +43,22 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>Členové  
  `cbSize`  
- Velikost strukturu, použít pro správu verzí.  
+ Velikost struktury, použít pro správu verzí.  
   
  `m_hInstTypeLib`  
- Instance popisovače pro knihovnu typů pro tento modul.  
+ Popisovač instance do knihovny typů pro tento modul.  
   
- **m_ppAutoObjMapFirst**  
- Adresa označující začátek položek mapování objektu pro tento modul pole elementu.  
+ `m_ppAutoObjMapFirst`  
+ Adresa prvku pole označující začátek položky mapování objektu pro tento modul.  
   
- **m_ppAutoObjMapLast**  
- Adresa označující konec položek mapování objektu pro tento modul pole elementu.  
+ `m_ppAutoObjMapLast`  
+ Adresa prvku pole označující konec položky mapování objektu pro tento modul.  
   
  `m_csObjMap`  
- Kritická sekce k serializaci přístup k položek mapování objektu. Interně jej využívá ATL.  
+ Kritická sekce k serializaci přístup k položky objektu map. Vnitřně jej používá knihovnu ATL.  
   
 ## <a name="remarks"></a>Poznámky  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) je definován jako typedef z `_ATL_COM_MODULE70`.  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) je definován jako typedef _atl_com_module70 –.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  

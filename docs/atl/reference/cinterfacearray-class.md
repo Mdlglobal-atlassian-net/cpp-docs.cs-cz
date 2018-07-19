@@ -1,5 +1,5 @@
 ---
-title: Třída CInterfaceArray | Microsoft Docs
+title: Cinterfacearray – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359459"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882710"
 ---
-# <a name="cinterfacearray-class"></a>CInterfaceArray – třída
-Tato třída poskytuje metody, které jsou užitečné při vytváření pole ukazatele rozhraní COM.  
+# <a name="cinterfacearray-class"></a>Cinterfacearray – třída
+Tato třída poskytuje metody, které jsou užitečné při vytváření pole z ukazatele rozhraní modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `I`  
- Určení typu ukazatele k uložení rozhraní modelu COM.  
+ *I*  
+ Rozhraní modelu COM zadání typu ukazatel na Uložit.  
   
- `piid`  
- Ukazatel na identifikátory IID `I`.  
+ *piid*  
+ Ukazatel na IID *můžu*.  
   
 ## <a name="members"></a>Členové  
   
@@ -53,7 +53,7 @@ class CInterfaceArray :
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Konstruktor pro pole rozhraní.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje konstruktor a odvozené metody pro vytvoření pole ukazatele rozhraní COM. Použití [CInterfaceList](../../atl/reference/cinterfacelist-class.md) když je požadován jejich seznam.  
+ Tato třída poskytuje konstruktor a odvozené metody pro vytvoření pole ukazatelů rozhraní modelu COM. Použití [cinterfacelist –](../../atl/reference/cinterfacelist-class.md) při seznam je povinný.  
   
  Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).  
   
@@ -73,10 +73,10 @@ CInterfaceArray() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Inicializuje pole chytré ukazatele.  
+ Inicializuje pole inteligentního ukazatele.  
   
 ## <a name="see-also"></a>Viz také  
- [CAtlArray – třída](../../atl/reference/catlarray-class.md)   
- [Třída CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Catlarray – třída](../../atl/reference/catlarray-class.md)   
+ [CComQIPtr – třída](../../atl/reference/ccomqiptr-class.md)   
+ [Ccomqiptrelementtraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

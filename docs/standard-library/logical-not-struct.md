@@ -1,5 +1,5 @@
 ---
-title: logical_not – struktura | Microsoft Docs
+title: logical_not – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961636"
 ---
 # <a name="logicalnot-struct"></a>logical_not – struktura
 
-Předdefinované funkce objekt, který provede logické není operace ( `operator!`) na jeho argumentem.
+Předdefinovaný objekt funkce, který provádí logické operace není (`operator!`) na svůj argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,13 +49,13 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type` Žádný typ, který podporuje `operator!` operand typu zadán nebo vyvozen, která má.
+*Typ* libovolný typ, který podporuje `operator!` , která přijímá zadaný nebo odvozený typ operandu.
 
-`Left` Operand logické není operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `Type`.
+*Vlevo* operand logického není operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *typ*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `!Left`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator!`.
+Výsledek `!Left`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator!`.
 
 ## <a name="example"></a>Příklad
 
@@ -106,9 +106,9 @@ The deque with its values negated is:
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

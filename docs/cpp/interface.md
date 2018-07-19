@@ -1,5 +1,5 @@
 ---
-title: __interface | Microsoft Docs
+title: __interface | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947609"
 ---
 # <a name="interface"></a>__interface
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Rozhraní jazyka Visual C++ lze definovat takto:  
   
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Jazyka C++ [třída](../cpp/class-cpp.md) nebo [struktura](../cpp/struct-cpp.md) možná implementace s Tato pravidla, ale `__interface` vynucuje je.  
+ Jazyka C++ [třídy](../cpp/class-cpp.md) nebo [struktura](../cpp/struct-cpp.md) možná implementace s Tato pravidla, ale **__interface** je vynucuje.  
   
  Následuje příklad ukázkové definice rozhraní:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- Informace na spravované rozhraní najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
+ Informace o spravovaných rozhraních naleznete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
   
  Není nutné explicitně určit funkce `CommitX` a `get_X` jako čistě virtuální. Ekvivalentní deklarace první funkce by byla:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` znamená [novtable](../cpp/novtable.md) `__declspec` modifikátor.  
+ **__interface** znamená, [novtable](../cpp/novtable.md) **__declspec** modifikátor.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob použití vlastností deklarovaných v rozhraní.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  
@@ -150,8 +150,8 @@ p->int_data = 100
 bstr_data = Testing  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)

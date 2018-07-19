@@ -1,5 +1,5 @@
 ---
-title: Anonymní typy třídy | Microsoft Docs
+title: Anonymní typy třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947713"
 ---
 # <a name="anonymous-class-types"></a>Anonymní typy třídy
-Třídy může být anonymní – to znamená, že lze deklarovat bez *identifikátor*. Tato možnost je užitečná při nahrazení názvu třídy názvem `typedef` (viz následující příklad):  
+Třídy mohou být anonymní – to znamená, že mohou být deklarovány bez *identifikátor*. To je užitečné při nahrazení názvu třídy **typedef** název, viz následující příklad:  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  Použití anonymních tříd uvedené v předchozím příkladu je užitečné pro zachování kompatibility se stávajícím kódem jazyka C. V některých kódech jazyka C převládá použití názvu `typedef` ve spojení s anonymními strukturami.  
+>  Použití anonymních tříd uvedené v předchozím příkladu je užitečné pro zachování kompatibility se stávajícím kódem jazyka C. V kódu jazyka C, použití **typedef** ve spojení s anonymními strukturami převládá.  
   
  Anonymní třídy jsou také užitečné, pokud chcete odkazovat člena třídy, jako by nebyl obsažen v samostatné třídě (viz následující příklad):  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -51,13 +52,13 @@ struct PTValue
 PTValue ptv;  
 ```  
   
- V předchozí kód `iValue` je přístupná pomocí operátoru objekt výběru členů (**.**) následujícím způsobem:  
+ V předchozím kódu `iValue` lze přistupovat pomocí operátoru výběru členů objektu (**.**) následujícím způsobem:  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
- Na anonymní třídy se vztahují jistá omezení. (Další informace o anonymní sjednocení najdete v tématu [sjednocení](../cpp/unions.md).) Anonymní třídy:  
+ Na anonymní třídy se vztahují jistá omezení. (Další informace o anonymních sjednoceních naleznete v tématu [sjednocení](../cpp/unions.md).) Anonymní třídy:  
   
 -   Nemohou mít konstruktor ani destruktor.  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  Ke členům anonymní struktury lze přistupovat, jako kdyby byly členy obsahující struktury.  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   
@@ -99,5 +100,5 @@ int main()
 //Output: 1234567  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   

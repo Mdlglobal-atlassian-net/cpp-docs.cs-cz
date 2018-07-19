@@ -1,5 +1,5 @@
 ---
-title: Rozdíly ve zpracování výjimek | Microsoft Docs
+title: Rozdíly ve zpracování výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4577739c7ef141576361e6db630eafbe432e913
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947616"
 ---
 # <a name="exception-handling-differences"></a>Rozdíly ve zpracování výjimek
-Hlavní rozdíl mezi strukturovaným zpracováním výjimek a zpracováním výjimek v jazyce C++ je, že v modelu zpracování výjimek v jazyce C++ se model zabývá typy, zatímco model zpracování strukturovaných výjimek jazyka C se zabývá výjimkami jednoho typu – konkrétně `unsigned int`. Výjimky jazyka C jsou označeny hodnotou unsigned integer, na rozdíl od výjimek jazyka C++, které jsou určeny typem dat. Jakmile je v jazyce C vyvolána výjimka, vykoná každý popisovač filtr, který prověří kontext výjimek jazyka C a určí, zda výjimku přijmout, předat ji jiné obslužné rutině, nebo ji ignorovat. Jakmile je vyvolána výjimka v jazyce C++, může být libovolného typu.  
+Hlavní rozdíl mezi strukturovaným zpracováním výjimek a zpracování výjimek jazyka C++ je, že model zabývá typy zpracování výjimek jazyka C++, při C model zpracování strukturovaných výjimek se zabývá výjimkami jednoho typu – konkrétně  **unsigned int**. Výjimky jazyka C jsou označeny hodnotou unsigned integer, na rozdíl od výjimek jazyka C++, které jsou určeny typem dat. Jakmile je v jazyce C vyvolána výjimka, vykoná každý popisovač filtr, který prověří kontext výjimek jazyka C a určí, zda výjimku přijmout, předat ji jiné obslužné rutině, nebo ji ignorovat. Jakmile je vyvolána výjimka v jazyce C++, může být libovolného typu.  
   
  Druhý rozdíl je v tom, že model zpracování strukturovaných výjimek jazyka C je označován jako „asynchronní“, ve kterém dochází k druhotnému výskytu výjimek vzhledem k normálnímu toku řízení. Mechanismus zpracování výjimek jazyka C++ je plně „synchronní“, což znamená, že výjimky se objevují pouze při jejich vyvolání.  
   
- Pokud C výjimka vyvolána v programu C++, to mohlo být zpracováno strukturovaného výjimek obslužná rutina s jeho přidružené filtru nebo jazyka C++ **catch** obslužnou rutinu, podle toho, co je dynamicky blíže kontext výjimky. Například následující programu C++ vyvolá výjimku C uvnitř jazyka C++ **zkuste** kontextu:  
+ Pokud v programu v jazyce C++ je vyvolána výjimka jazyka C, může být zpracována strukturovanou obslužnou rutinou s přidruženým filtrem nebo pomocí jazyka C++ **catch** obslužnou rutinu, která je dynamicky blíže vzhledem ke kontextu výjimky. Například následující program jazyka C++ vyvolá výjimku jazyka C do C++ **zkuste** kontextu:  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // exceptions_Exception_Handling_Differences.cpp  
 // compile with: /EHa  
 #include <iostream>  
@@ -66,12 +67,12 @@ In finally.
 Caught a C exception.  
 ```  
   
-##  <a name="_core_c_exception_wrapper_class"></a> Obálková třída výjimky jazyka C  
- V jednoduchém příkladu jako výše, může být C výjimka zachycena pouze pomocí třemi tečkami (**...** ) **catch** obslužné rutiny. Obslužné rutině není dodána žádná informace o typu nebo povaze výjimky. Zatímco tato metoda funguje, v některých případech je zapotřebí definovat transformaci mezi dvěma modely zpracování výjimek tak, aby byly jednotlivé výjimky jazyka C spojeny s konkrétní třídou. To lze provést definováním třídy „zabalení“ výjimky jazyka C, kterou lze použít nebo odvodit pro vytvoření atributu pro určitý typ třídy na výjimku jazyka C. Tímto způsobem může ošetřit jednotlivých výjimkách C jazyka C++ **catch** obslužná rutina samostatně než v předchozím příkladu.  
+##  <a name="_core_c_exception_wrapper_class"></a> Třída zabalení výjimky jazyka C  
+ V jednoduchém příkladu je uveden výše, výjimka jazyka C může být zachycena pouze třemi tečkami (**...** ) **catch** obslužné rutiny. Obslužné rutině není dodána žádná informace o typu nebo povaze výjimky. Zatímco tato metoda funguje, v některých případech je zapotřebí definovat transformaci mezi dvěma modely zpracování výjimek tak, aby byly jednotlivé výjimky jazyka C spojeny s konkrétní třídou. To lze provést definováním třídy „zabalení“ výjimky jazyka C, kterou lze použít nebo odvodit pro vytvoření atributu pro určitý typ třídy na výjimku jazyka C. Díky tomu mohou být zpracovány jednotlivé výjimky jazyka C++ **catch** obslužná rutina oproti předchozím příkladu.  
   
- Třída zabalení může obsahovat rozhraní skládající se z některých členských funkcí, které určují hodnotu výjimky a které přistupují k rozšířeným kontextovým informacím poskytnutým modelem zpracování výjimek jazyka C. Je také možné definovat výchozí konstruktor a konstruktor, který přijímá argument `unsigned int` (pro poskytnutí zastoupení základní výjimky jazyka C) a konstruktor bitové kopie. Následuje možná implementace třídy zabalení výjimky jazyka C:  
+ Třída zabalení může obsahovat rozhraní skládající se z některých členských funkcí, které určují hodnotu výjimky a které přistupují k rozšířeným kontextovým informacím poskytnutým modelem zpracování výjimek jazyka C. Můžete také definovat výchozí konstruktor a konstruktor, který přijímá **unsigned int** argument (pro poskytnutí základní reprezentace výjimka jazyka C) a konstruktor bitové kopie. Následuje možná implementace třídy zabalení výjimky jazyka C:  
   
-```  
+```cpp 
 // exceptions_Exception_Handling_Differences2.cpp  
 // compile with: /c  
 class SE_Exception {  
@@ -89,14 +90,14 @@ public:
   
 ```  
   
- Aby bylo možné tuto třídu použít, je nutné nainstalovat vlastní funkci překladu výjimek jazyka C, která je volána mechanismem zpracování interních výjimek, při každém vyvolání výjimky jazyka C. V rámci vaší funkce překladu žádné typové výjimku můžete vyvolat (možná `SE_Exception` typu nebo typu třídy odvozené od `SE_Exception`), může být zachycena příslušné odpovídající C++ **catch** obslužné rutiny. Funkce překladu může jednoduše provést vrácení, což znamená, že nedošlo ke zpracování výjimky. Pokud C výjimky, vyvolá funkce překladu samotné [ukončit](../c-runtime-library/reference/terminate-crt.md) je volána.  
+ Aby bylo možné tuto třídu použít, je nutné nainstalovat vlastní funkci překladu výjimek jazyka C, která je volána mechanismem zpracování interních výjimek, při každém vyvolání výjimky jazyka C. V rámci funkce překladu lze vyvolat jakoukoli typovou výjimku (například `SE_Exception` typ nebo typ třídy odvozený z `SE_Exception`), které lze zachytit příslušné odpovídající C++ **catch** obslužné rutiny. Funkce překladu může jednoduše provést vrácení, což znamená, že nedošlo ke zpracování výjimky. Je-li samotná funkce překladu vyvolává výjimku jazyka C, [ukončit](../c-runtime-library/reference/terminate-crt.md) je volána.  
   
- Chcete-li zadat vlastní překlad funkce, zavolejte [_set_se_translator –](../c-runtime-library/reference/set-se-translator.md) funkce s názvem funkce překladu jako jeden argument. Překlad funkce, která můžete psát nazývá jednou pro každé vyvolání funkce v zásobníku, která má **zkuste** bloky. Neexistuje žádný výchozí funkce překladu; Pokud nezadáte jeden voláním `_set_se_translator`, C výjimka může být pouze zachycena třemi tečkami **catch** obslužné rutiny.  
+ Chcete-li zadat vlastní funkci překladu, zavolejte [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) funkci s názvem funkce překladu jako její jediný argument. Vytvořená funkce překladu při psaní se volá jednou pro každé vyvolání funkce v zásobníku, který má **zkuste** bloky. Neexistuje žádná výchozí funkce překladu; Pokud nezadáte voláním `_set_se_translator`, může být výjimka jazyka C zachycena pouze pomocí tři teček **catch** obslužné rutiny.  
   
 ## <a name="example"></a>Příklad  
  Následující kód například nainstaluje vlastní funkci překladu a poté vyvolá výjimku jazyka C, která je zabalena do třídy `SE_Exception`:  
   
-```  
+```cpp 
 // exceptions_Exception_Handling_Differences3.cpp  
 // compile with: /EHa  
 #include <stdio.h>  

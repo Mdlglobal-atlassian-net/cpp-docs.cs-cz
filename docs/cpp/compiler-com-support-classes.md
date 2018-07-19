@@ -1,5 +1,5 @@
 ---
-title: Třídy podpory kompilátoru modelu COM | Microsoft Docs
+title: Třídy podpory kompilátoru modelu COM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411234"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939816"
 ---
 # <a name="compiler-com-support-classes"></a>Třídy podpory kompilátoru modelu COM
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Standardní třídy se používají pro podporu některé typy COM. Třídy jsou definovány v \<comdef.h > a soubory hlaviček vygenerovat z knihovny typů.  
+ Standardní třídy se používá pro podporu některých typů modelu COM. Třídy jsou definovány v \<comdef.h > a souborech hlaviček generovaných z knihovny typů.  
   
 |Třída|Účel|  
 |-----------|-------------|  
-|[_bstr_t](../cpp/bstr-t-class.md)|Zabalí `BSTR` typ zajistit užitečné operátory a metody.|  
-|[_com_error](../cpp/com-error-class.md)|Definuje objekt chyba vyvolané [_com_raise_error –](../cpp/com-raise-error.md) ve většině chyb.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Zapouzdří ukazatele rozhraní COM a automatizuje vyžaduje volání `AddRef`, **verze**, a `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Zabalí **VARIANT** typ zajistit užitečné operátory a metody.|  
+|[_bstr_t](../cpp/bstr-t-class.md)|Zabalí `BSTR` typ poskytnout užitečné operátory a metody.|  
+|[_com_error](../cpp/com-error-class.md)|Definuje objekt chyby vyvolané [_com_raise_error](../cpp/com-raise-error.md) ve většině chyb.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Zapouzdřuje ukazatele rozhraní modelu COM a automatizuje vyžaduje volání `AddRef`, `Release`, a `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Zabalí `VARIANT` typ poskytnout užitečné operátory a metody.|  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)   

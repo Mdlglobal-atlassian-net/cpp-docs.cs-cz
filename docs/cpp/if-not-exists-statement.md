@@ -1,5 +1,5 @@
 ---
-title: __if_not_exists – příkaz | Microsoft Docs
+title: __if_not_exists – příkaz | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4e586a211d7c4e2ead1ce3f225e2d92d2bd5a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418813"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939946"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists – příkaz
-Příkaz `__if_not_exists` testuje, zda existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.  
+**__If_not_exists** příkaz testuje, jestli existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,27 +39,27 @@ statements
 |Parametr|Popis|  
 |---------------|-----------------|  
 |`identifier`|Identifikátor, jehož existence bude testována.|  
-|`statements`|Jeden nebo více příkazů k provedení Pokud `identifier` neexistuje.|  
+|`statements`|Jeden nebo více příkazů, které budou spuštěny, pokud `identifier` neexistuje.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!CAUTION]
->  K dosažení nejspolehlivějších výsledků je třeba použít příkaz `__if_not_exists` s následujícími omezeními.  
+>  K dosažení nejspolehlivějších výsledků, použít **__if_not_exists** příkaz následujícími omezeními.  
   
--   Příkaz `__if_not_exists` je třeba použít pouze na jednoduché typy, nikoli na šablony.  
+-   Použít **__if_not_exists** příkazu pouze jednoduché typy, nikoli na šablony.  
   
--   Příkaz `__if_not_exists` je třeba použít na identifikátory uvnitř i vně třídy. Příkaz `__if_not_exists` se nepoužívá pro lokální proměnné.  
+-   Použít **__if_not_exists** příkaz na identifikátory uvnitř i vně třídy. Se nevztahují **__if_not_exists** příkaz pro lokální proměnné.  
   
--   Příkaz `__if_not_exists` je třeba použít pouze v rámci těla funkce. Mimo tělo funkce může příkaz `__if_not_exists` testovat pouze plně definované typy.  
+-   Použití **__if_not_exists** příkaz jenom v těle funkce. Mimo tělo funkce **__if_not_exists** příkazu můžete testovat pouze plně definované typy.  
   
 -   Při testování přetížených funkcí nelze testovat konkrétní formu přetížení.  
   
- Doplněk k `__if_not_exists` příkaz [__if_exists –](../cpp/if-exists-statement.md) příkaz.  
+ Doplněk k **__if_not_exists** příkaz je [__if_exists](../cpp/if-exists-statement.md) příkazu.  
   
 ## <a name="example"></a>Příklad  
- Příklad o tom, jak používat `__if_not_exists`, najdete v části [__if_exists – příkaz](../cpp/if-exists-statement.md).  
+ Příklad použití **__if_not_exists**, naleznete v tématu [__if_exists – příkaz](../cpp/if-exists-statement.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [__if_exists – příkaz](../cpp/if-exists-statement.md)

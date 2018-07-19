@@ -1,5 +1,5 @@
 ---
-title: is_final třída | Microsoft Docs
+title: is_final – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962010"
 ---
 # <a name="isfinal-class"></a>is_final – třída
 
-Kontroluje, zda typ je typ třídy označena `final`.
+Ověřuje, zda typ není typem třídy označené `final`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,19 +37,19 @@ struct is_final;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je označena typu třídy `final`, jinak má hodnotu false. Pokud `T` – třída typu, musí být typu dokončení.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je označená typem třídy `final`, v opačném případě obsahuje hodnotu false. Pokud *T* je typ třídy, musí být dokončený typ.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [final – specifikátor](../cpp/final-specifier.md)<br/>

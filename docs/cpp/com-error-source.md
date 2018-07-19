@@ -1,5 +1,5 @@
 ---
-title: _com_error::source | Microsoft Docs
+title: _com_error::source | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33834df20606e8380e6a328a41435522185ac70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412342"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939673"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Volání **IErrorInfo::GetSource** funkce.  
+ Volání `IErrorInfo::GetSource` funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ _bstr_t Source() const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek **IErrorInfo::GetSource** pro **IErrorInfo** objekt zaznamenávají v rámci `_com_error` objektu. Výsledný BSTR je zapouzdřen v objektu `_bstr_t`. Pokud žádné **IErrorInfo** se zaznamenávají, vrátí prázdnou `_bstr_t`.  
+ Vrátí výsledek `IErrorInfo::GetSource` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledný BSTR je zapouzdřen v objektu `_bstr_t`. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Jakákoli chyba při volání **IErrorInfo::GetSource** metoda je ignorována.  
+ Jakékoli neúspěchy při volání `IErrorInfo::GetSource` metoda se ignoruje.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error – třída](../cpp/com-error-class.md)

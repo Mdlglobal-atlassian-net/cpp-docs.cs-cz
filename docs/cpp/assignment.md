@@ -1,5 +1,5 @@
 ---
-title: Přiřazení | Microsoft Docs
+title: Přiřazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd08215c3849bf487578b28b1824afbec14c52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960983"
 ---
 # <a name="assignment"></a>Přiřazení
-Operátor přiřazení (**=**) je přesněji řečeno, binární operátor. Jeho deklarace je stejná jako u ostatních binárních operátorů, s následujícími výjimkami:  
+Operátor přiřazení (**=**) je, přesněji řečeno, binární operátor. Jeho deklarace je stejná jako u ostatních binárních operátorů, s následujícími výjimkami:  
   
--   Musí to být funkce nestatického členu. Žádný `operator=` nelze deklarovat jako nečlenskou funkci.  
+-   Musí to být funkce nestatického členu. Ne **operátoru =** lze deklarovat jako nečlenskou funkci.  
   
 -   Není zděděn z odvozené třídy.  
   
--   Výchozí funkce `operator=`, pokud neexistuje, může být pro typy tříd vytvořena kompilátorem. (Další informace o výchozí `operator=` funkce, najdete v části [Memberwise přiřazení a inicializace](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
+-   Výchozí **operátoru =** funkce můžete generovaný kompilátorem pro typy tříd, pokud žádný neexistuje.  
   
  Následující příklad ukazuje, jak deklarovat operátor přiřazení:  
   
-```  
+```cpp 
 // assignment.cpp  
 class Point  
 {  
@@ -57,7 +58,7 @@ int main()
   
  Všimněte si, že zadaný argument představuje pravou stranu výrazu. Operátor vrací objekt pro zachování chování operátoru přiřazení, který po dokončení přiřazení vrací hodnotu levé strany. To umožňuje psaní příkazů, jako je například:  
   
-```  
+```cpp 
 pt1 = pt2 = pt3;  
 ```  
   

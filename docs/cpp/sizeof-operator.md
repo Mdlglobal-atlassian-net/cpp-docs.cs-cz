@@ -1,5 +1,5 @@
 ---
-title: sizeof – operátor | Microsoft Docs
+title: sizeof – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58724d2e17947c69d1aaf2ed0af66137fe20cc74
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947528"
 ---
 # <a name="sizeof-operator"></a>sizeof – operátor
-Vypočítá velikost jeho operand s ohledem na velikost typu `char`.  
+Vrátí velikost svého operandu s ohledem na velikost typu **char**.  
   
 > [!NOTE]
->  Informace o `sizeof ...` operátor, najdete v části [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md).  
+>  Informace o tom, `sizeof ...` operátoru, naleznete v tématu [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem `sizeof` operátor je typu `size_t`, typ integrální definované v souboru zahrnout \<stddef.h >. Tento operátor umožňuje Vyhněte se zadání velikosti data závislá na počítače ve vašich aplikacích.  
+ Výsledkem **sizeof** operátor je typu `size_t`, celočíselný typ definovaný v souboru zahrnutí \<stddef.h >. Tento operátor umožňuje vyhnout zadávání velikosti dat závislé na počítače ve svých programech.  
   
- Operand pro `sizeof` může být jedna z následujících akcí:  
+ Operand **sizeof** může být jedna z následujících akcí:  
   
--   Název typu. Chcete-li použít `sizeof` s názvem typu, názvu musí být uzavřena v závorkách.  
+-   Název typu. Chcete-li použít **sizeof** pomocí názvu typu, musí být uzavřena v závorkách.  
   
--   Výraz. Při použití s výrazem, `sizeof` lze zadat s nebo bez závorek. Výraz, nebude hodnocen.  
+-   Výraz. Při použití s výrazem, **sizeof** se dá nastavit s nebo bez závorek. Výraz není vyhodnocen.  
   
- Když `sizeof` operátor se použije pro objekt typu `char`, bude vrácen 1. Když `sizeof` operátor se použije pro pole, bude vrácen celkový počet bajtů v tomto poli není velikost ukazatele reprezentována identifikátor pole. Pokud chcete získat velikost ukazatele reprezentována identifikátor pole, předejte ji jako parametr funkce, která používá `sizeof`. Příklad:  
+ Když **sizeof** operátor použit objekt typu **char**, bude vrácen 1. Když **sizeof** operátor je použit na pole, bude vrácen celkový počet bajtů v poli, nikoli velikost ukazatele reprezentovaného tímto identifikátorem pole. K získání velikosti ukazatele reprezentovaného tímto identifikátorem pole, předat ji jako parametr funkce, která používá **sizeof**. Příklad:  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -72,41 +73,41 @@ int main()
   
 ## <a name="sample-output"></a>Vzorový výstup  
   
-```  
+```Output  
 The size of a char is: 1  
 The length of Hello, world! is: 14  
 The size of the pointer is 4  
 ```  
   
- Když `sizeof` operátor se použije pro `class`, `struct`, nebo `union` typu, výsledkem je počet bajtů v objektu daného typu, plus žádné odsazení přidány do zarovnat členy na hranicích aplikace word. Výsledek nutně neodpovídá velikosti vypočítat přidáním požadavky na úložiště jednotlivých členů. [/Zp](../build/reference/zp-struct-member-alignment.md) – možnost kompilátoru a [pack](../preprocessor/pack.md) – Direktiva pragma ovlivnit zarovnání hranice pro členy.  
+ Když **sizeof** je použit operátor **třídy**, **– struktura**, nebo **sjednocení** typ výsledku je počet bajtů v objektu, který typ, a navíc všechny odsazení přidány pro zarovnání členů na hranicích slov. Výsledek nemusí nutně odpovídat velikosti vypočítané přidáním požadavky na úložiště jednotlivých členů. [/Zp](../build/reference/zp-struct-member-alignment.md) – možnost kompilátoru a [pack](../preprocessor/pack.md) – Direktiva pragma ovlivnit hranice pro zarovnání členů.  
   
- `sizeof` Operátor nikdy vypočítá 0, i pro třídu prázdný.  
+ **Sizeof** operátor nikdy dává 0, a to i pro prázdnou třídu.  
   
- `sizeof` Operátor nelze použít s operandy následující:  
+ **Sizeof** operátor nelze použít s operandy následující:  
   
--   Funkce. (Ale `sizeof` lze použít na ukazatele na funkce.)  
+-   Funkce. (Ale **sizeof** lze použít u ukazatelů na funkce.)  
   
--   Chvíli pole.  
+-   Bitová pole.  
   
--   Nedefinovaná třídy.  
+-   Nedefinovaný třídy.  
   
--   Typ `void`.  
+-   Typ **void**.  
   
--   Pole přidělí dynamicky.  
+-   Dynamicky přiřazeného pole.  
   
 -   Externí pole.  
   
 -   Neúplné typy.  
   
--   Názvy v závorkách neúplné typy.  
+-   Názvy v závorkách nekompletní typy.  
   
- Když `sizeof` operátor použijí na odkaz, výsledkem je stejný jako `sizeof` měl použilo odkaz sám na sebe.  
+ Když **sizeof** operátor se použijí na odkaz, výsledek je stejný jako **sizeof** použili odkaz sám na sebe.  
   
- Je-li posledním prvkem struktury pole bez velikosti, operátor `sizeof` vrátí velikost struktury bez tohoto pole.  
+ Pokud pole bez velikosti je posledním prvkem struktury, **sizeof** operátor vrátí velikost struktury bez tohoto pole.  
   
- `sizeof` Operátor se často používá k výpočtu počet prvků v poli vlastnosti autorefresh pomocí výrazu ve formátu:  
+ **Sizeof** operátor se často používá k výpočtu počtu prvků v poli vlastnosti autorefresh pomocí výrazu ve formátu:  
   
-```  
+```cpp 
 sizeof array / sizeof array[0]  
 ```  
   

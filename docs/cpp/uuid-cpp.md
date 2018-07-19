@@ -1,5 +1,5 @@
 ---
-title: UUID (C++) | Microsoft Docs
+title: UUID (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b143def4d758307c6ce6737281bdca1097aaa8c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e81b81509877ff53b613af80638b2386ed0cb0b2
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947711"
 ---
 # <a name="uuid-c"></a>uuid (C++)
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Kompilátor připojí identifikátor GUID ke třídě nebo struktuře deklarované nebo definované (pouze úplné definice objektu modelu COM) s atributem `uuid`.  
+ Kompilátor připojí identifikátor GUID ke třídě nebo struktuře deklarované nebo definované (úplná definice objektu modelu COM pouze) se **uuid** atribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +37,18 @@ __declspec( uuid("ComObjectGUID") ) declarator
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Atribut `uuid` přijímá řetězec jako argument. Tento řetězec názvy identifikátor GUID ve formátu normální registru bez ohledu **{}** oddělovače. Příklad:  
+ **Uuid** atribut přijímá řetězec jako svůj argument. Tento řetězec pojmenuje identifikátor GUID v normálním formátu registru s nebo bez něj **{}** oddělovače. Příklad:  
   
-```  
+```cpp 
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Tento atribut lze použít v opětovné deklaraci. To umožňuje systému hlavičky k poskytování definic rozhraní, jako **IUnknown**a opětovná deklarace v některé jiné záhlaví (například \<comdef.h >) k poskytování identifikátor GUID.  
+ Tento atribut lze použít v opětovné deklaraci. To hlavičkám systému poskytnout definici rozhraní umožňuje `IUnknown`a opětovnou deklaraci v jiném souboru hlaviček (například \<comdef.h >) k zadání identifikátoru GUID.  
   
- Klíčové slovo [__uuidof –](../cpp/uuidof-operator.md) lze použít k načtení konstanta GUID připojené k uživatelem definovaného typu.  
+ Klíčové slovo [__uuidof](../cpp/uuidof-operator.md) lze použít k získání konstanty identifikátoru GUID připojeného k uživatelem definovaného typu.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   

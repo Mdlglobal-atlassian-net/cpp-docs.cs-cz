@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetBSTR | Microsoft Docs
+title: _bstr_t::GetBSTR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409095"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940479"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Odkazuje na začátku `BSTR` zabalený pomocí `_bstr_t`.  
+ Odkazuje na začátku `BSTR` uzavřenou `_bstr_t`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,15 +37,15 @@ BSTR& GetBSTR( );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Na začátek `BSTR` zabalený pomocí `_bstr_t`.  
+ Na začátek `BSTR` uzavřenou `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Funkce `GetBSTR` ovlivňuje všechny objekty `_bstr_t` sdílející objekt `BSTR`. Objekt `_bstr_t` může být sdílen více než jedním objektem `BSTR` prostřednictvím kopírovacího konstruktoru a operátoru `operator=` and.  
+ Funkce `GetBSTR` ovlivňuje všechny objekty `_bstr_t` sdílející objekt `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a a **operátoru =**.  
   
 ## <a name="example"></a>Příklad  
- V tématu [_bstr_t::Assign](../cpp/bstr-t-assign.md) pro příklad použití `GetBSTR`.  
+ Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití `GetBSTR`.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

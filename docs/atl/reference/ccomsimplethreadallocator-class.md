@@ -1,5 +1,5 @@
 ---
-title: Třída CComSimpleThreadAllocator | Microsoft Docs
+title: Ccomsimplethreadallocator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360917"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884662"
 ---
-# <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator – třída
-Tato třída spravuje výběr vlákno pro třídu `CComAutoThreadModule`.  
+# <a name="ccomsimplethreadallocator-class"></a>Ccomsimplethreadallocator – třída
+Tato třída spravuje výběr vlákna pro třídu `CComAutoThreadModule`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,36 +43,36 @@ class CComSimpleThreadAllocator
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CComSimpleThreadAllocator::GetThread](#getthread)|Vybere vlákna.|  
+|[CComSimpleThreadAllocator::GetThread](#getthread)|Vybere vlákno.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CComSimpleThreadAllocator` spravuje přístup z více vláken výběr [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` jednoduše procházení každé vlákno a vrátí následuje v sekvenci.  
+ `CComSimpleThreadAllocator` spravuje výběr vlákna pro [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` jednoduše projde každé vlákno a vrátí dalším objektem v sekvenci.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
 ##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
- Vybere vlákna tak, že zadáte další vlákno v pořadí.  
+ Vybere vlákna tak, že zadáte další vlákno v sekvenci.  
   
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pApt`  
- Nepoužívá se v ATL pro výchozí implementace.  
+ *pApt*  
+ Nepoužívá se v ATL výchozí implementaci.  
   
- `nThreads`  
- Maximální počet vláken v modulu EXE.  
+ *nThreads*  
+ Maximální počet vláken v modulu souboru EXE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celé číslo mezi nulou a ( `nThreads` - 1). Označuje jeden vláken v modulu EXE.  
+ Celé číslo mezi nulou a (*nThreads* – 1). Určuje jedno z vláken v modulu souboru EXE.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete přepsat `GetThread` zadat jinou metodu výběru nebo chcete-li použít `pApt` parametr.  
+ Můžete přepsat `GetThread` nabízejí jiný způsob výběru a vytvoříte využívání *pApt* parametru.  
   
- `GetThread` je volána metodou [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
+ `GetThread` je volán [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>Viz také  
- [CComApartment – třída](../../atl/reference/ccomapartment-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ccomapartment – třída](../../atl/reference/ccomapartment-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

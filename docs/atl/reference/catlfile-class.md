@@ -1,5 +1,5 @@
 ---
-title: Třída CAtlFile | Microsoft Docs
+title: Catlfile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366104"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885270"
 ---
-# <a name="catlfile-class"></a>CAtlFile – třída
-Tato třída poskytuje dynamické obálku kolem Windows zpracování souborů rozhraní API.  
+# <a name="catlfile-class"></a>Catlfile – třída
+Tato třída poskytuje rozhraní API pro zpracování souborů dynamického zajišťování obálku Windows.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,29 +61,29 @@ class CAtlFile : public CHandle
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CAtlFile::Create](#create)|Voláním této metody lze vytvořit nebo otevřít soubor.|  
-|[CAtlFile::Flush](#flush)|Voláním této metody lze vymazat vyrovnávací paměti pro soubor a způsobit, že všechna data ve vyrovnávací paměti pro zápis do souboru.|  
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Volejte tuto metodu za účelem získání výsledků překryté operace na souboru.|  
-|[CAtlFile::GetPosition](#getposition)|Volejte tuto metodu za účelem získání aktuálního umístění ukazatele souboru ze souboru.|  
+|[CAtlFile::Create](#create)|Volejte tuto metodu za účelem vytvoření nebo otevření souboru.|  
+|[CAtlFile::Flush](#flush)|Voláním této metody lze vymazat vyrovnávací paměť pro soubor a způsobit, že všechna data ve vyrovnávací paměti k zápisu do souboru.|  
+|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Volejte tuto metodu za účelem získání výsledků překrytá operace na souboru.|  
+|[CAtlFile::GetPosition](#getposition)|Voláním této metody k získání aktuální ukazatel pozice v souboru ze souboru.|  
 |[CAtlFile::GetSize](#getsize)|Volejte tuto metodu za účelem získání velikost v bajtech souboru.|  
-|[CAtlFile::LockRange](#lockrange)|Volejte tuto metodu za účelem uzamčení oblasti, v souboru s jinými procesy zabránit v přístupu k jeho.|  
+|[CAtlFile::LockRange](#lockrange)|Volejte tuto metodu za účelem uzamčení oblasti v souboru, který má bránit dalším procesům v přístupu k nim.|  
 |[CAtlFile::Read](#read)|Volejte tuto metodu za účelem čtení dat ze souboru začínající na pozici ukazatele souboru.|  
-|[CAtlFile::Seek](#seek)|Voláním této metody lze přesunout ukazatel souboru souboru.|  
-|[CAtlFile::SetSize](#setsize)|Volejte tuto metodu a nastavit velikost souboru.|  
-|[CAtlFile::UnlockRange](#unlockrange)|Volejte tuto metodu k odemknutí oblast souboru.|  
-|[CAtlFile::Write](#write)|Voláním této metody lze zapisovat data do souboru začínající na pozici ukazatele souboru.|  
+|[CAtlFile::Seek](#seek)|Voláním této metody lze přesunout ukazatel na soubor souboru.|  
+|[CAtlFile::SetSize](#setsize)|Voláním této metody lze nastavit velikost souboru.|  
+|[CAtlFile::UnlockRange](#unlockrange)|Volejte tuto metodu za účelem odemknout oblasti souboru.|  
+|[CAtlFile::Write](#write)|Volání této metody zapsat data do souboru začínající na pozici ukazatele souboru.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objektu|  
   
 ## <a name="remarks"></a>Poznámky  
- Při zpracování souboru potřeba je poměrně jednoduché, ale další abstrakce, než poskytuje rozhraní API systému Windows je nutná, bez včetně závislostí MFC pomocí této třídy.  
+ Při zpracování souborů potřeby je poměrně jednoduchá, ale další abstrakce, než poskytuje rozhraní API Windows je nutné, bez zahrnutí knihovny MFC závislosti, použijte tuto třídu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CHandle](../../atl/reference/chandle-class.md)  
+ [Chandle –](../../atl/reference/chandle-class.md)  
   
  `CAtlFile`  
   
@@ -101,20 +101,20 @@ explicit CAtlFile(HANDLE hFile) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `file`  
- Objekt souboru.  
+ *Soubor*  
+ Soubor objektu.  
   
- `hFile`  
+ *hfile –*  
  Popisovač souboru.  
   
- `pTM`  
- Ukazatel na objekt CAtlTransactionManager  
+ *Druh*  
+ Ukazatel na catltransactionmanager – objekt  
   
 ### <a name="remarks"></a>Poznámky  
- Konstruktor copy přenáší vlastnictví popisovač souboru z původní `CAtlFile` objekt, který chcete nově vytvořený objekt.  
+ Kopírovací konstruktor převede vlastnictví popisovač souboru z původní `CAtlFile` do nově vytvořeného objektu.  
   
 ##  <a name="create"></a>  CAtlFile::Create  
- Voláním této metody lze vytvořit nebo otevřít soubor.  
+ Volejte tuto metodu za účelem vytvoření nebo otevření souboru.  
   
 ```
 HRESULT Create(
@@ -131,45 +131,45 @@ HRESULT Create(
  *szFilename*  
  Název souboru  
   
- `dwDesiredAccess`  
- Požadovaný přístup. V tématu `dwDesiredAccess` v [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) ve Windows SDK.  
+ *dwDesiredAccess*  
+ Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) v sadě Windows SDK.  
   
- `dwShareMode`  
- Režim sdílené složky. V tématu `dwShareMode` v **CreateFile**.  
+ *dwShareMode*  
+ Režim sdílené složky. Zobrazit *dwShareMode* v `CreateFile`.  
   
- `dwCreationDisposition`  
- Vytvoření dispozice. V tématu `dwCreationDisposition` v **CreateFile**.  
+ *dwCreationDisposition*  
+ Vytvoření dispozice. Zobrazit *dwCreationDisposition* v `CreateFile`.  
   
- `dwFlagsAndAttributes`  
- Příznaky a atributy. V tématu `dwFlagsAndAttributes` v **CreateFile**.  
+ *dwFlagsAndAttributes*  
+ Příznaky a atributy. Zobrazit *dwFlagsAndAttributes* v `CreateFile`.  
   
- `lpsa`  
- Atributy zabezpečení. V tématu *lpSecurityAttributes* v **CreateFile**.  
+ *lpsa*  
+ Atributy zabezpečení. Zobrazit *lpSecurityAttributes* v `CreateFile`.  
   
- `hTemplateFile`  
- Soubor šablony. V tématu `hTemplateFile` v **CreateFile**.  
+ *hTemplateFile*  
+ Soubor šablony. Zobrazit *hTemplateFile* v `CreateFile`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) vytvořit nebo otevřít soubor.  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
- Voláním této metody lze vymazat vyrovnávací paměti pro soubor a způsobit, že všechna data ve vyrovnávací paměti pro zápis do souboru.  
+ Voláním této metody lze vymazat vyrovnávací paměť pro soubor a způsobit, že všechna data ve vyrovnávací paměti k zápisu do souboru.  
   
 ```
 HRESULT Flush() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) Vyprázdnit data ve vyrovnávací paměti do souboru.  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
- Volejte tuto metodu za účelem získání výsledků překryté operace na souboru.  
+ Volejte tuto metodu za účelem získání výsledků překrytá operace na souboru.  
   
 ```
 HRESULT GetOverlappedResult(
@@ -179,37 +179,37 @@ HRESULT GetOverlappedResult(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pOverlapped`  
- Překryté struktury. V tématu `lpOverlapped` v [funkce GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) ve Windows SDK.  
+ *pOverlapped*  
+ Překryté struktury. Zobrazit *lpOverlapped* v [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) v sadě Windows SDK.  
   
  *dwBytesTransferred*  
- Počet bajtů přenesených. V tématu *lpNumberOfBytesTransferred* v `GetOverlappedResult`.  
+ Počet bajtů přenesených. Zobrazit *lpNumberOfBytesTransferred* v `GetOverlappedResult`.  
   
- `bWait`  
- Možnost čekání. V tématu `bWait` v `GetOverlappedResult`.  
+ *bWait*  
+ Políčko čekání. Zobrazit *bWait* v `GetOverlappedResult`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) získat výsledky překryté operace na souboru.  
+ Volání [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) k získání požadovaných výsledků překrytá operace na souboru.  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
- Volejte tuto metodu za účelem získání aktuálního umístění ukazatele souboru.  
+ Voláním této metody k získání aktuální ukazatel pozice v souboru.  
   
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Pozice v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) získat aktuální umístění ukazatele souboru.  
+ Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) zobrazíte aktuální ukazatel pozice v souboru.  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  Volejte tuto metodu za účelem získání velikost v bajtech souboru.  
@@ -219,37 +219,37 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLen`  
+ *nLen*  
  Počet bajtů v souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) se získat velikost v bajtech souboru.  
+ Volání [funkce GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) získáte velikost v bajtech souboru.  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
- Volejte tuto metodu za účelem uzamčení oblasti, v souboru s jinými procesy zabránit v přístupu k jeho.  
+ Volejte tuto metodu za účelem uzamčení oblasti v souboru, který má bránit dalším procesům v přístupu k nim.  
   
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
- Pozice v souboru, kde by měl začínat zámek.  
+ *nPos –*  
+ Pozice v souboru, ve kterém chcete spustit zámek.  
   
- `nCount`  
- Délka rozsah bajtů, které se uzamkne.  
+ *nCount*  
+ Délka rozsahu bajtů uzamčení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) k uzamčení oblasti, v souboru. Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Zamknete více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Při odemknutí oblasti pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. `LockRange` nesloučí přiléhající oblasti; Pokud jsou dva uzamčení oblasti vedle sebe, je třeba každý odemknout samostatně.  
+ Volání [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) k uzamčení oblasti v souboru. Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy. Můžeš více než jedné oblasti souboru, ale žádné překrývající se oblasti jsou povoleny. Po odemknutí oblast pomocí [CAtlFile::UnlockRange](#unlockrange), rozsah bajtů musí přesně odpovídat oblasti, která dříve byla uzamčena. `LockRange` nesloučí sousední oblasti; Pokud jsou dvě oblasti uzamčené vedle sebe, musí každý odemknout samostatně.  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
- Ukazatel na `CAtlTransactionManager` objektu.  
+ Ukazatel `CAtlTransactionManager` objektu.  
   
 ```
 CAtlTransactionManager* m_pTM;
@@ -283,29 +283,29 @@ HRESULT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBuffer`  
+ *pBuffer*  
  Ukazatel do vyrovnávací paměti, která bude přijímat data načtená ze souboru.  
   
- `nBufSize`  
+ *nBufSize*  
  Velikost vyrovnávací paměti v bajtech.  
   
- `nBytesRead`  
+ *nBytesRead*  
  Počet přečtených bajtů.  
   
- `pOverlapped`  
- Překryté struktury. V tématu `lpOverlapped` v [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) ve Windows SDK.  
+ *pOverlapped*  
+ Překryté struktury. Zobrazit *lpOverlapped* v [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) v sadě Windows SDK.  
   
- `pfnCompletionRoutine`  
- Dokončení rutiny. V tématu *lpCompletionRoutine* v [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) ve Windows SDK.  
+ *pfnCompletionRoutine*  
+ Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- První tři formuláře volání [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), poslední [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) čtení dat ze souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatele souboru.  
+ První tři formuláře volání [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), poslední [readfileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365468) číst data ze souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
- Voláním této metody lze přesunout ukazatel souboru souboru.  
+ Voláním této metody lze přesunout ukazatel na soubor souboru.  
   
 ```
 HRESULT Seek(
@@ -314,57 +314,57 @@ HRESULT Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOffset`  
- Posun od počátečního bodu určeného vlastností `dwFrom`.  
+ *nOffset*  
+ Posun od počátečního bodu *dwFrom*.  
   
- `dwFrom`  
- Výchozí bod (FILE_BEGIN, FILE_CURRENT nebo FILE_END).  
+ *dwFrom*  
+ Počáteční bod (FILE_BEGIN, FILE_CURRENT nebo FILE_END).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) přesunout ukazatele souboru.  
+ Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) přesunout ukazatel souboru.  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
- Volejte tuto metodu a nastavit velikost souboru.  
+ Voláním této metody lze nastavit velikost souboru.  
   
 ```
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewLen`  
- Nové délka souboru v bajtech.  
+ *nNewLen*  
+ Novou velikost souboru v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) a [funkce SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) nastavit velikost souboru. Při návratu ukazatele souboru je nastavený na konci souboru.  
+ Volání [funkce SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) a [funkce SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) nastavit velikost souboru. Při návratu je ukazatel na soubor umístěn na konci souboru.  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
- Volejte tuto metodu k odemknutí oblast souboru.  
+ Volejte tuto metodu za účelem odemknout oblasti souboru.  
   
 ```
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
- Pozice v souboru, kde by měl začínat odemčení.  
+ *nPos –*  
+ Pozice v souboru, ve kterém chcete spustit odemknout.  
   
- `nCount`  
+ *nCount*  
  Délka rozsahu bajtů k odemknutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) k odemknutí oblast souboru.  
+ Volání [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) k odemknutí oblasti souboru.  
   
 ##  <a name="write"></a>  CAtlFile::Write  
- Voláním této metody lze zapisovat data do souboru začínající na pozici ukazatele souboru.  
+ Volání této metody zapsat data do souboru začínající na pozici ukazatele souboru.  
   
 ```
 HRESULT Write(
@@ -385,28 +385,28 @@ HRESULT Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBuffer`  
- Vyrovnávací paměť obsahující data, která má být zapsán do souboru.  
+ *pBuffer*  
+ Vyrovnávací paměť obsahující data, která mají být zapsána do souboru.  
   
- `nBufSize`  
- Počet bajtů, které se mají přenést z vyrovnávací paměti.  
+ *nBufSize*  
+ Počet bajtů, které mají být přeneseny z vyrovnávací paměti.  
   
- `pOverlapped`  
- Překryté struktury. V tématu `lpOverlapped` v [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) ve Windows SDK.  
+ *pOverlapped*  
+ Překryté struktury. Zobrazit *lpOverlapped* v [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) v sadě Windows SDK.  
   
- `pfnCompletionRoutine`  
- Dokončení rutiny. V tématu *lpCompletionRoutine* v [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) ve Windows SDK.  
+ *pfnCompletionRoutine*  
+ Dokončení rutiny. Zobrazit *lpCompletionRoutine* v [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) v sadě Windows SDK.  
   
- `pnBytesWritten`  
+ *pnBytesWritten*  
  Zapsaných bajtů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` na úspěch nebo Chyba `HRESULT` při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- První tři formuláře volání [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), poslední volání [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) zapsat data do souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatele souboru.  
+ První tři formuláře volání [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), poslední volání [writefileex spuštěná](http://msdn.microsoft.com/library/windows/desktop/aa365748) k zápisu dat do souboru. Použití [CAtlFile::Seek](#seek) přesunout ukazatel souboru.  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka rámeček](../../visual-cpp-samples.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Výběr ukázky](../../visual-cpp-samples.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [CHandle – třída](../../atl/reference/chandle-class.md)

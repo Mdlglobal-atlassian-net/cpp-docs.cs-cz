@@ -1,5 +1,5 @@
 ---
-title: Důležité informace k ukončování další | Microsoft Docs
+title: Důležité informace o dalších ukončení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b634c7c792d4462f96f022f223d0b1eec2a750ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408143"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941246"
 ---
 # <a name="additional-termination-considerations"></a>Další důležité informace k ukončování
-Můžete ukončení programu C++ pomocí **ukončete**, `return`, nebo **abort**. Pomocí funkce `atexit` lze přidat funkci, která bude zpracována před ukončením programu. Tyto funkce jsou popsány v následujících částech.  
+Program jazyka C++ lze ukončit pomocí **ukončit**, **vrátit**, nebo **přerušit**. Pomocí funkce `atexit` lze přidat funkci, která bude zpracována před ukončením programu. Tyto funkce jsou popsány v následujících částech.  
   
 ## <a name="see-also"></a>Viz také  
  [Spuštění a ukončení](../cpp/startup-and-termination-cpp.md)
