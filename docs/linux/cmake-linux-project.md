@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 285c1fcd38ef20ea38fe03e2cbd27f77469775cf
+ms.sourcegitcommit: 30192458404618039fdadddf37dc269baa559860
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849256"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182535"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -29,7 +29,7 @@ Při instalaci úlohy pro Linux C++ CMake podpoře pro Linux je standardně vybr
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Pokud váš správce balíčků poskytuje starší verzi CMake, můžete alternativně vyřešit ji [vytváření CMake ze zdroje](#build-a-supported-cmake release-from-source) nebo stahování z oficiální [stránku pro stažení CMake](https://cmake.org/download/).
+> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Pokud váš správce balíčků poskytuje starší verzi CMake, můžete alternativně vyřešit ji [vytváření CMake ze zdroje](#build-a-supported-cmake release-from-source) nebo stahování z oficiální [stránku pro stažení CMake](https://cmake.org/download/). Pro hodnotu typu variant CMake poskytovaný společností Microsoft, který podporuje [zobrazení cílů CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) podokno v sadě Visual Studio, stáhněte si nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Otevřít složku
 
@@ -143,7 +143,7 @@ V dalším kroku spusťte tento příkaz k ověření verze > = 3.8 a tento serv
 cmake -E capabilities
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
 [Nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md)  

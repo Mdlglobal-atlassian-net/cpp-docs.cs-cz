@@ -1,5 +1,5 @@
 ---
-title: strchr –, wcschr –, _mbschr –, _mbschr_l – | Microsoft Docs
+title: strchr – wcschr –, _mbschr – _mbschr_l – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d83407efee1da2bc1c59cf0d869f54f6022a4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 459192f5936db3c47d2377885cf3ca30dadb92df
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415521"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180787"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
-Vyhledá znak v řetězci, pomocí aktuální národní prostředí nebo zadané kategorii LC_CTYPE – převod stavu.
+Vyhledá znak v řetězci pomocí aktuálního národního prostředí nebo zadané kategorie převodu stavu LC_CTYPE.
 
 > [!IMPORTANT]
-> **_mbschr –** a **_mbschr_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr` a `_mbschr_l` nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -122,45 +122,45 @@ const unsigned char *_mbschr_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Řetězce ukončené hodnotou Null zdroje.
+*str*<br/>
+Řetězec zakončený hodnotou Null zdroje.
 
 *c*<br/>
-Znak, který má být umístěn.
+Znak nalezen.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na první výskyt *c* v *str*, nebo **NULL** Pokud *c* nebyl nalezen.
+Každá z těchto funkcí vrací ukazatel na první výskyt *c* v *str*, nebo hodnota NULL, pokud *c* nebyl nalezen.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strchr –** funkce vyhledá první výskyt *c* v *str*, nebo vrátí **NULL** Pokud *c* je nebyl nalezen. Hledání je součástí ukončovací znak, který null.
+`strchr` Funkce vyhledá první výskyt *c* v *str*, nebo vrátí hodnotu NULL, pokud *c* nebyl nalezen. Ukončovací znak null je zahrnutý do vyhledávání.
 
-**wcschr –**, **_mbschr –** a **_mbschr_l –** jsou široká charakterová a vícebajtových znaků verze **strchr –**. Argumenty a vrací hodnotu **wcschr –** jsou široká charakterová řetězce; u **_mbschr –** jsou řetězců vícebajtových znaků. **_mbschr –** rozpozná sekvencí vícebajtových znaků. Také, zda je řetězec ukazatel s hodnotou null, **_mbschr –** volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_mbschr –** vrátí **NULL** a nastaví **errno** k **einval –**. **strchr –** a **wcschr –** neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.
+`wcschr`, `_mbschr` a `_mbschr_l` jsou širokoznaké a vícebajtové verze `strchr`. Argumenty a vrácené hodnoty `wcschr` jsou širokoznaké řetězce `_mbschr` jsou vícebajtové znakové řetězce. `_mbschr` rozpozná vícebajtové znakové sekvence. Také, pokud je ukazatel s hodnotou null, řetězec `_mbschr` vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, `_mbschr` vrátí hodnotu NULL a nastaví `errno` k EINVAL. `strchr` a `wcschr` neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; Další informace najdete v části [setlocale](setlocale-wsetlocale.md). Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie nastavení LC_CTYPE národního prostředí; Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C, proveďte tyto funkce ** const ** pro první argument ukazatel. V jazyce C++ jsou k dispozici dva přetížení. Přetížení trvá ukazatel na ** const ** vrací ukazatel na **const **; na verzi, která přebírá ukazatel na jinou hodnotu než**const ** vrací ukazatel na jinou hodnotu než**const **. Makro **_CRT_CONST_CORRECT_OVERLOADS** je definována, pokud obě **const ** a jiných-** const ** verze tyto funkce jsou k dispozici. Pokud budete potřebovat jinou hodnotu než**const ** chování pro obě přetížení C++ definujte symbol **_CONST_RETURN**.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++, definujte symbol _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcschr –**|**strchr**|**_mbschr**|**wcschr**|
-|**_ není k dispozici**|**není k dispozici**|**_mbschr_l**|**není k dispozici**|
+|`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
+|**_ není k dispozici**|**není k dispozici**|`_mbschr_l`|**není k dispozici**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strchr**|\<String.h >|
-|**wcschr**|\<String.h > nebo \<wchar.h >|
-|**_mbschr –**, **_mbschr_l –**|\<Mbstring.h >|
+|`strchr`|\<String.h >|
+|`wcschr`|\<String.h > nebo \<wchar.h >|
+|`_mbschr`, `_mbschr_l`|\<Mbstring.h >|
 
-Další informace o kompatibilitě najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -219,7 +219,7 @@ Result:   first r found at position 12
 Result:   last r found at position 30
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

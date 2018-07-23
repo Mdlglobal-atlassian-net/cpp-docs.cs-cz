@@ -1,5 +1,5 @@
 ---
-title: CAccessorRowset – třída | Microsoft Docs
+title: CAccessorRowset – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,47 @@ f1_keywords:
 - CAccessorRowset
 - ATL.CAccessorRowset
 - ATL::CAccessorRowset
+- CAccessorRowset.Bind
+- CAccessorRowset::Bind
+- CAccessorRowset::CAccessorRowset
+- CAccessorRowset.CAccessorRowset
+- CAccessorRowset
+- ATL.CAccessorRowset.CAccessorRowset
+- ATL::CAccessorRowset::CAccessorRowset
+- CAccessorRowset.Close
+- CAccessorRowset::Close
+- CAccessorRowset::FreeRecordMemory
+- CAccessorRowset.FreeRecordMemory
+- FreeRecordMemory
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorRowset class
+- CAccessorRowset class, methods
+- CAccessorRowset class, members
+- Bind method
+- CAccessorRowset class, constructor
+- Close method
+- FreeRecordMemory method
+- GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090967"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181182"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
-Zapouzdří sadu řádků a její přidružené přístupové objekty do jedné třídy.  
+Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jedné třídě.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,12 +59,15 @@ template <class TAccessor = CNoAccessor,
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `TAccessor`  
+### <a name="parameters"></a>Parametry  
+ *TAccessor*  
  Třídu přistupujícího objektu.  
   
- `TRowset`  
+ *TRowset*  
  Třídy sady řádků.  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -50,18 +75,86 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Vazby](../../data/oledb/caccessorrowset-bind.md)|Vytvoří vazbu (použít, když **bBind** je zadán jako false v [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
-|[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|Konstruktor|  
-|[Zavřete](../../data/oledb/caccessorrowset-close.md)|Zavře sadu řádků a všechny přistupující objekty.|  
-|[Freerecordmemory –](../../data/oledb/caccessorrowset-freerecordmemory.md)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněno.|  
-|[GetColumnInfo –](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementuje [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[Vytvoření vazby](#bind)|Vytvoří vazbu (nepoužívá, pokud `bBind` je zadán jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
+|[CAccessorRowset](#caccessorrowset)|Konstruktor|  
+|[Zavřít](#close)|Zavře sadu řádků a všechny přistupující objekty.|  
+|[Freerecordmemory –](#freerecordmemory)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.|  
+|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje sadu řádků.  
+ Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.  
+
+## <a name="bind"></a> CAccessorRowset::Bind
+Vytvoří vazbu, pokud jste zadali `bBind` jako **false** v [CCommand::Open](../../data/oledb/ccommand-open.md).  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+HRESULT Bind();  
+  
+```  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Standardní HRESULT.  
+
+## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+Inicializuje `CAccessorRowset` objektu.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+CAccessorRowset();  
+  
+```  
+
+## <a name="close"></a> CAccessorRowset::Close
+Uvolní všechny aktivní přístupové objekty a sady řádků.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+void Close();  
+  
+```  
+  
+### <a name="remarks"></a>Poznámky  
+ Uvolní všechny přidružené paměti.  
+
+## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+void FreeRecordMemory();  
+  
+```  
+
+## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+Získá informace o sloupci z otevřené sady řádků.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
+   DBCOLUMNINFO** ppColumnInfo,  
+   LPOLESTR* ppStrings) const;  
+
+HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+   DBCOLUMNINFO** ppColumnInfo);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) v *referenční informace pro OLE DB programátory*.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Standardní HRESULT.  
+  
+### <a name="remarks"></a>Poznámky  
+ Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.  
+  
+ Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: memchr, wmemchr – | Microsoft Docs
+title: memchr, wmemchr – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401682"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181169"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
-Najít znaků do vyrovnávací paměti.
+Vyhledání znaků ve vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,33 +85,33 @@ const wchar_t *wmemchr(
 Ukazatel do vyrovnávací paměti.
 
 *c*<br/>
-Znak, který má hledat.
+Znak k vyhledání.
 
 *Počet*<br/>
 Počet znaků ke kontrole.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ukazatel na první umístění *c* v *vyrovnávací paměti*. V opačném případě vrátí **NULL**.
+Pokud je úspěšná, vrátí ukazatel na první umístění *c* v *vyrovnávací paměti*. V opačném případě vrátí hodnotu NULL.
 
 ## <a name="remarks"></a>Poznámky
 
-**memchr** a **wmemchr –** vyhledejte první výskyt *c* v prvním *počet* bajtů *vyrovnávací paměti*. Zastaví, pokud najde *c* nebo když byl zkontrolován první *počet* bajtů.
+`memchr` a `wmemchr` vyhledá první výskyt *c* v prvním *počet* bajtů *vyrovnávací paměti*. Zastaví najde *c* nebo kdy se má ohlásilo první *počet* bajtů.
 
-V jazyce C, proveďte tyto funkce ** const ** pro první argument ukazatel. V jazyce C++ jsou k dispozici dva přetížení. Přetížení trvá ukazatel na ** const ** vrací ukazatel na **const **; na verzi, která přebírá ukazatel na jinou hodnotu než**const ** vrací ukazatel na jinou hodnotu než**const **. Makro _CRT_CONST_CORRECT_OVERLOADS je definována, pokud obě **const ** a jiných-** const ** verze tyto funkce jsou k dispozici. Pokud budete potřebovat jinou hodnotu než**const ** chování pro obě overloadsin C++, C++, definovat symbol _CONST_RETURN.
+V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě overloadsin C++ jazyka C++, definujte symbol _CONST_RETURN.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memchr**|\<Memory.h > nebo \<string.h >|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<Memory.h > nebo \<string.h >|
+|`wmemchr`|\<wchar.h>|
 
-Další informace o kompatibilitě najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -156,7 +156,7 @@ Search char: r
 Result:      r found at position 12
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
