@@ -1,5 +1,5 @@
 ---
-title: Concurrency::precise_math – Namespace | Microsoft Docs
+title: Concurrency::precise_math – Namespace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -143,15 +143,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181b80f97dd7ae3e44d3c7c51139d492da967ba3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e8e6d0c6a33f9e981f50e847cde614299ed7b028
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695376"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208842"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math – obor názvů
-Funkce `precise_math` obor názvů jsou C99 kompatibilní. Obě jednotné přesnost a dvojitá přesnost verzích jednotlivé funkce, které jsou zahrnuty. Například `acos` je verze dvojitou přesností a `acosf` je verze jednoduchou přesností. Tyto funkce, včetně funkce jednoduchou přesností vyžadují rozšířené podpory dvojitou přesností na akcelerátor. Můžete použít [Accelerator::supports_double_precision –](accelerator-class.md#supports_double_precision) k určení, pokud tyto funkce můžete spustit na konkrétní akcelerátoru. 
+Funkce v `precise_math` obor názvů jsou kompatibilní s normou C99. Jak jednoduché přesnosti a dvojitá přesnost verze jednotlivých funkcí jsou zahrnuty. Například `acos` je verze dvojité přesnosti a `acosf` je verze jednoduchou přesností. Tyto funkce, včetně funkcí jednoduchou přesností, vyžadují rozšířenou podporu dvojité přesnosti v akcelerátoru. Můžete použít [Accelerator::supports_double_precision –](accelerator-class.md#supports_double_precision) k určení, pokud tyto funkce můžete spustit na konkrétní akcelerátoru. 
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -168,137 +168,137 @@ namespace precise_math;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ACOS](concurrency-precise-math-namespace-functions.md#acos)|Přetíženo. Vypočítá Arkus kosinus argument|  
-|[acosf](concurrency-precise-math-namespace-functions.md#acosf)|Vypočítá Arkus kosinus argument|  
+|[Funkce ACOS](concurrency-precise-math-namespace-functions.md#acos)|Přetíženo. Vypočítá arkuskosinus argumentu|  
+|[acosf](concurrency-precise-math-namespace-functions.md#acosf)|Vypočítá arkuskosinus argumentu|  
 |[acosh –](concurrency-precise-math-namespace-functions.md#acosh)|Přetíženo. Vypočítá inverzní hyperbolický kosinus argumentu|  
 |[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|Vypočítá inverzní hyperbolický kosinus argumentu|  
-|[ASIN](concurrency-precise-math-namespace-functions.md#asin)|Přetíženo. Vypočítá Arkus sinus argument|  
-|[asinf –](concurrency-precise-math-namespace-functions.md#asinf)|Vypočítá Arkus sinus argument|  
-|[asinh –](concurrency-precise-math-namespace-functions.md#asinh)|Přetíženo. Vypočítá inverzní hyperbolický sinus argumentu|  
-|[asinhf –](concurrency-precise-math-namespace-functions.md#asinhf)|Vypočítá inverzní hyperbolický sinus argumentu|  
-|[Atan](concurrency-precise-math-namespace-functions.md#atan)|Přetíženo. Vypočítá Arkus tangens argument|  
-|[atan2](concurrency-precise-math-namespace-functions.md#atan2)|Přetíženo. Vypočítá Arkus tangens _Y/_X|  
-|[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|Vypočítá Arkus tangens _Y/_X|  
-|[atanf –](concurrency-precise-math-namespace-functions.md#atanf)|Vypočítá Arkus tangens argument|  
-|[atanh –](concurrency-precise-math-namespace-functions.md#atanh)|Přetíženo. Vypočítá inverzní hyperbolický tangens argumentu|  
-|[atanhf –](concurrency-precise-math-namespace-functions.md#atanhf)|Vypočítá inverzní hyperbolický tangens argumentu|  
-|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Přetíženo. Vypočítá skutečné kořenové datové krychle argumentu|  
-|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Vypočítá skutečné kořenové datové krychle argumentu|  
-|[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Přetíženo. Vypočítá se mezní hodnota argumentu|  
-|[ceilf –](concurrency-precise-math-namespace-functions.md#ceilf)|Vypočítá se mezní hodnota argumentu|  
-|[copysign –](concurrency-precise-math-namespace-functions.md#copysign)|Přetíženo. Vytvoří hodnotu s odhad _X a znaménko _Y|  
-|[copysignf –](concurrency-precise-math-namespace-functions.md#copysignf)|Vytvoří hodnotu s odhad _X a znaménko _Y|  
-|[Cos](concurrency-precise-math-namespace-functions.md#cos)|Přetíženo. Výpočet kosinu argument|  
-|[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Výpočet kosinu argument|  
-|[COSH](concurrency-precise-math-namespace-functions.md#cosh)|Přetíženo. Vypočítá hodnotu hyperbolický kosinus argumentu|  
-|[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Vypočítá hodnotu hyperbolický kosinus argumentu|  
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Přetíženo. Vypočítá kosinus hodnotu čísla pí * _X|  
-|[cospif –](concurrency-precise-math-namespace-functions.md#cospif)|Vypočítá kosinus hodnotu čísla pí * _X|  
-|[erf](concurrency-precise-math-namespace-functions.md#erf)|Přetíženo. Vypočítá Chyba funkce _X|  
-|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Přetíženo. Vypočítá doplňkové Chyba funkce _X|  
-|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Vypočítá doplňkové Chyba funkce _X|  
-|[erfcinv –](concurrency-precise-math-namespace-functions.md#erfcinv)|Přetíženo. Vypočítá inverzní doplňkové Chyba funkce _X|  
-|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Vypočítá inverzní doplňkové Chyba funkce _X|  
-|[erff](concurrency-precise-math-namespace-functions.md#erff)|Vypočítá Chyba funkce _X|  
-|[erfinv –](concurrency-precise-math-namespace-functions.md#erfinv)|Přetíženo. Vypočítá inverzní Chyba funkce _X|  
-|[erfinvf –](concurrency-precise-math-namespace-functions.md#erfinvf)|Vypočítá inverzní Chyba funkce _X|  
-|[exp](concurrency-precise-math-namespace-functions.md#exp)|Přetíženo. Vypočítá exponenciální argumentu základní e|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Přetíženo. Vypočítá exponenciální argumentu základních-10|  
-|[exp10f –](concurrency-precise-math-namespace-functions.md#exp10f)|Vypočítá exponenciální argumentu základních-10|  
-|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Přetíženo. Vypočítá exponenciální argumentu základní-2|  
-|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Vypočítá exponenciální argumentu základní-2|  
-|[expf](concurrency-precise-math-namespace-functions.md#expf)|Vypočítá exponenciální argumentu základní e|  
+|[ASIN](concurrency-precise-math-namespace-functions.md#asin)|Přetíženo. Vypočítá arkussinus argumentu|  
+|[asinf –](concurrency-precise-math-namespace-functions.md#asinf)|Vypočítá arkussinus argumentu|  
+|[asinh –](concurrency-precise-math-namespace-functions.md#asinh)|Přetíženo. Vypočte hyperbolický arkussinus argumentu|  
+|[asinhf –](concurrency-precise-math-namespace-functions.md#asinhf)|Vypočte hyperbolický arkussinus argumentu|  
+|[Atan](concurrency-precise-math-namespace-functions.md#atan)|Přetíženo. Vypočítá arkustangens argumentu|  
+|[atan2](concurrency-precise-math-namespace-functions.md#atan2)|Přetíženo. Vypočítá arkustangens výrazu _Y/_X|  
+|[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|Vypočítá arkustangens výrazu _Y/_X|  
+|[atanf –](concurrency-precise-math-namespace-functions.md#atanf)|Vypočítá arkustangens argumentu|  
+|[atanh –](concurrency-precise-math-namespace-functions.md#atanh)|Přetíženo. Vypočte hyperbolický arkustangens argumentu|  
+|[atanhf –](concurrency-precise-math-namespace-functions.md#atanhf)|Vypočte hyperbolický arkustangens argumentu|  
+|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Přetíženo. Vypočítá reálné kořenové datové krychle argumentu|  
+|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Vypočítá reálné kořenové datové krychle argumentu|  
+|[Ceil –](concurrency-precise-math-namespace-functions.md#ceil)|Přetíženo. Vypočítá horní mez argumentu|  
+|[ceilf –](concurrency-precise-math-namespace-functions.md#ceilf)|Vypočítá horní mez argumentu|  
+|[copysign –](concurrency-precise-math-namespace-functions.md#copysign)|Přetíženo. Vytvoří hodnotu s velikost proměnné _X a _y znaménko|  
+|[copysignf –](concurrency-precise-math-namespace-functions.md#copysignf)|Vytvoří hodnotu s velikost proměnné _X a _y znaménko|  
+|[Cos](concurrency-precise-math-namespace-functions.md#cos)|Přetíženo. Vypočítá kosinus argumentu|  
+|[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Vypočítá kosinus argumentu|  
+|[COSH –](concurrency-precise-math-namespace-functions.md#cosh)|Přetíženo. Vypočítá hodnotu hyperbolického kosinu argumentu|  
+|[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Vypočítá hodnotu hyperbolického kosinu argumentu|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Přetíženo. Vypočítá hodnotu kosinus pro číslo pí \* proměnné _X|  
+|[cospif –](concurrency-precise-math-namespace-functions.md#cospif)|Vypočítá hodnotu kosinus pro číslo pí \* proměnné _X|  
+|[erf](concurrency-precise-math-namespace-functions.md#erf)|Přetíženo. Vypočítá chybovou funkci proměnné _X|  
+|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Přetíženo. Vypočítá doplňkovou chybovou funkci proměnné _X|  
+|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Vypočítá doplňkovou chybovou funkci proměnné _X|  
+|[erfcinv –](concurrency-precise-math-namespace-functions.md#erfcinv)|Přetíženo. Vypočítá inverzní doplňkovou chybovou funkci proměnné _X|  
+|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Vypočítá inverzní doplňkovou chybovou funkci proměnné _X|  
+|[erff](concurrency-precise-math-namespace-functions.md#erff)|Vypočítá chybovou funkci proměnné _X|  
+|[erfinv –](concurrency-precise-math-namespace-functions.md#erfinv)|Přetíženo. Vypočítá inverzní chybovou funkci proměnné _X|  
+|[erfinvf –](concurrency-precise-math-namespace-functions.md#erfinvf)|Vypočítá inverzní chybovou funkci proměnné _X|  
+|[exp](concurrency-precise-math-namespace-functions.md#exp)|Přetíženo. Vypočítá exponenciální funkci argumentu base-e|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Přetíženo. Vypočítá základní-10 exponenciálním argumentu|  
+|[exp10f –](concurrency-precise-math-namespace-functions.md#exp10f)|Vypočítá základní-10 exponenciálním argumentu|  
+|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Přetíženo. Vypočítá exponenciální argumentu base-2|  
+|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Vypočítá exponenciální argumentu base-2|  
+|[expf](concurrency-precise-math-namespace-functions.md#expf)|Vypočítá exponenciální funkci argumentu base-e|  
 |[expm1](concurrency-precise-math-namespace-functions.md#expm1)|Přetíženo. Vypočítá exponenciální funkci argumentu o základu e a odečte 1.|  
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Vypočítá exponenciální funkci argumentu o základu e a odečte 1.|  
-|[fabs](concurrency-precise-math-namespace-functions.md#fabs)|Přetíženo. Vrátí absolutní hodnotu argumentu|  
+|[fabs –](concurrency-precise-math-namespace-functions.md#fabs)|Přetíženo. Vrátí absolutní hodnotu argumentu|  
 |[fabsf –](concurrency-precise-math-namespace-functions.md#fabsf)|Vrátí absolutní hodnotu argumentu|  
-|[fdim –](concurrency-precise-math-namespace-functions.md#fdim)|Přetíženo. Určuje kladné rozdíl mezi argumenty|  
-|[fdimf –](concurrency-precise-math-namespace-functions.md#fdimf)|Určuje kladné rozdíl mezi argumenty|  
-|[Floor](concurrency-precise-math-namespace-functions.md#floor)|Přetíženo. Vypočítá podlaží argumentu|  
-|[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Vypočítá podlaží argumentu|  
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|Přetíženo. Výpočetní (_X * _Y) + _Z –, zaokrouhlené jako jednu Ternární operaci.|  
-|[fmaf –](concurrency-precise-math-namespace-functions.md#fmaf)|Výpočetní (_X * _Y) + _Z –, zaokrouhlené jako jednu Ternární operaci.|  
-|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Přetíženo. Určit maximální číselná hodnota, která jsou argumenty|  
-|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Určit maximální číselná hodnota, která jsou argumenty|  
-|[Fmin](concurrency-precise-math-namespace-functions.md#fmin)|Přetíženo. Určení minimální číselná hodnota z argumentů|  
-|[fminf –](concurrency-precise-math-namespace-functions.md#fminf)|Určení minimální číselná hodnota z argumentů|  
-|[fmod – funkce (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Přetíženo. Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
-|[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Vypočítá zbytek _X/_Y s plovoucí desetinnou čárkou|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Přetíženo. Klasifikuje hodnota argumentu jako nula NaN, nekonečné, normální subnormal,|  
-|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Přetíženo. Získá mantisa a exponent _X|  
-|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Získá mantisa a exponent _X|  
-|[hypot –](concurrency-precise-math-namespace-functions.md#hypot)|Přetíženo. Vypočítá druhou odmocninu čísla součet kvadratických _X a _Y|  
-|[hypotf –](concurrency-precise-math-namespace-functions.md#hypotf)|Vypočítá druhou odmocninu čísla součet kvadratických _X a _Y|  
-|[ilogb –](concurrency-precise-math-namespace-functions.md#ilogb)|Přetíženo. Extrahování exponent _X jako hodnotu podepsaný int|  
-|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrahování exponent _X jako hodnotu podepsaný int|  
-|[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Přetíženo. Určuje, zda argument má hodnotu konečné|  
-|[isinf –](concurrency-precise-math-namespace-functions.md#isinf)|Přetíženo. Určuje, zda je argument nekonečna|  
-|[isNaN](concurrency-precise-math-namespace-functions.md#isnan)|Přetíženo. Určuje, zda je argument NaN.|  
-|[isnormal –](concurrency-precise-math-namespace-functions.md#isnormal)|Přetíženo. Určuje, zda je argument normální|  
-|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Přetíženo. Vypočítá reálné číslo z mantisa a exponent|  
-|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Vypočítá reálné číslo z mantisa a exponent|  
-|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Přetíženo. Vypočítá přirozený logaritmus absolutní hodnotu gama argumentu|  
-|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Vypočítá přirozený logaritmus absolutní hodnotu gama argumentu|  
-|[Protokolu](concurrency-precise-math-namespace-functions.md#log)|Přetíženo. Vypočítá základní e logaritmus argumentu|  
-|[log10](concurrency-precise-math-namespace-functions.md#log10)|Přetíženo. Vypočítá logaritmus o základu 10 argument|  
-|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Vypočítá logaritmus o základu 10 argument|  
-|[log1p –](concurrency-precise-math-namespace-functions.md#log1p)|Přetíženo. Vypočítá základní e logaritmus 1 plus argument|  
-|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Vypočítá základní e logaritmus 1 plus argument|  
-|[log2](concurrency-precise-math-namespace-functions.md#log2)|Přetíženo. Vypočítá logaritmus o základu 2 argumentu|  
-|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Vypočítá logaritmus o základu 2 argumentu|  
-|[logb –](concurrency-precise-math-namespace-functions.md#logb)|Přetíženo. Extrahuje exponent _X, jako číslo se znaménkem hodnoty ve formátu s plovoucí desetinnou čárkou|  
-|[logbf –](concurrency-precise-math-namespace-functions.md#logbf)|Extrahuje exponent _X, jako číslo se znaménkem hodnoty ve formátu s plovoucí desetinnou čárkou|  
-|[logf –](concurrency-precise-math-namespace-functions.md#logf)|Vypočítá základní e logaritmus argumentu|  
-|[modf –](concurrency-precise-math-namespace-functions.md#modf)|Přetíženo. Rozdělí _X do zlomkové a částí celé číslo.|  
-|[modff](concurrency-precise-math-namespace-functions.md#modff)|Rozdělí _X do zlomkové a částí celé číslo.|  
-|[NaN.](concurrency-precise-math-namespace-functions.md#nan)|Vrátí quiet NaN|  
-|[nanf –](concurrency-precise-math-namespace-functions.md#nanf)|Vrátí quiet NaN|  
-|[nearbyint –](concurrency-precise-math-namespace-functions.md#nearbyint)|Přetíženo. Zaokrouhlí argument na celočíselnou hodnotu ve formátu s plovoucí desetinnou čárkou, pomocí aktuální směr zaokrouhlení.|  
-|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Zaokrouhlí argument na celočíselnou hodnotu ve formátu s plovoucí desetinnou čárkou, pomocí aktuální směr zaokrouhlení.|  
-|[nextafter –](concurrency-precise-math-namespace-functions.md#nextafter)|Přetíženo. Zjistit další reprezentovat hodnotu, v typu funkce, po _X ve směru _Y|  
-|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Zjistit další reprezentovat hodnotu, v typu funkce, po _X ve směru _Y|  
-|[Phi –](concurrency-precise-math-namespace-functions.md#phi)|Přetíženo. Vrátí kumulativní distribuční funkci argumentu|  
+|[fdim –](concurrency-precise-math-namespace-functions.md#fdim)|Přetíženo. Určuje pozitivní rozdíl mezi argumenty|  
+|[fdimf –](concurrency-precise-math-namespace-functions.md#fdimf)|Určuje pozitivní rozdíl mezi argumenty|  
+|[Dolní mez](concurrency-precise-math-namespace-functions.md#floor)|Přetíženo. Vypočítá dolní mez argumentu|  
+|[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Vypočítá dolní mez argumentu|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|Přetíženo. COMPUTE (_X \* _Y) + _Z zaoblení jako jedna operace Ternární|  
+|[fmaf –](concurrency-precise-math-namespace-functions.md#fmaf)|COMPUTE (_X \* _Y) + _Z zaoblení jako jedna operace Ternární|  
+|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Přetíženo. Určí maximální číselnou hodnotu argumentů|  
+|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Určí maximální číselnou hodnotu argumentů|  
+|[Fmin –](concurrency-precise-math-namespace-functions.md#fmin)|Přetíženo. Určí minimální číselnou hodnotu argumentů|  
+|[fminf –](concurrency-precise-math-namespace-functions.md#fminf)|Určí minimální číselnou hodnotu argumentů|  
+|[fmod – funkce (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Přetíženo. Vypočítá zbytek s plovoucí desetinnou čárkou z výrazu _X/_Y|  
+|[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Vypočítá zbytek s plovoucí desetinnou čárkou z výrazu _X/_Y|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Přetíženo. Klasifikuje hodnota argumentu, protože NaN, nekonečné, Normální, subnormal, nula|  
+|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Přetíženo. Načte mantisu a exponent proměnné _X|  
+|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Načte mantisu a exponent proměnné _X|  
+|[hypot –](concurrency-precise-math-namespace-functions.md#hypot)|Přetíženo. Vypočítá druhou odmocninu součet kvadratických hodnot _X a _Y|  
+|[hypotf –](concurrency-precise-math-namespace-functions.md#hypotf)|Vypočítá druhou odmocninu součet kvadratických hodnot _X a _Y|  
+|[ilogb –](concurrency-precise-math-namespace-functions.md#ilogb)|Přetíženo. Extrahovat jako hodnotu podepsaný int exponent proměnné _X|  
+|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Extrahovat jako hodnotu podepsaný int exponent proměnné _X|  
+|[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Přetíženo. Určuje, zda má argument konečnou hodnotu|  
+|[isinf –](concurrency-precise-math-namespace-functions.md#isinf)|Přetíženo. Určí, zda je argument nekonečno|  
+|[isNaN –](concurrency-precise-math-namespace-functions.md#isnan)|Přetíženo. Určí, zda je argument NaN|  
+|[isnormal –](concurrency-precise-math-namespace-functions.md#isnormal)|Přetíženo. Určí, zda je argument normální|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Přetíženo. Vypočítá reálné číslo z mantisy a exponentu|  
+|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Vypočítá reálné číslo z mantisy a exponentu|  
+|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Přetíženo. Vypočítá absolutní hodnotu argumentu gama přirozený logaritmus|  
+|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Vypočítá absolutní hodnotu argumentu gama přirozený logaritmus|  
+|[protokol](concurrency-precise-math-namespace-functions.md#log)|Přetíženo. Vypočítá logaritmus argumentu o základu e|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Přetíženo. Vypočítá logaritmus argumentu o základu 10|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Vypočítá logaritmus argumentu o základu 10|  
+|[log1p –](concurrency-precise-math-namespace-functions.md#log1p)|Přetíženo. Vypočítá logaritmus o základu e 1 plus argumentu|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Vypočítá logaritmus o základu e 1 plus argumentu|  
+|[log2](concurrency-precise-math-namespace-functions.md#log2)|Přetíženo. Vypočítá logaritmus argumentu o základu 2|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Vypočítá logaritmus argumentu o základu 2|  
+|[logb –](concurrency-precise-math-namespace-functions.md#logb)|Přetíženo. Extrahuje exponent proměnné _X jako celé číslo se znaménkem hodnoty ve formátu s plovoucí desetinnou čárkou|  
+|[logbf –](concurrency-precise-math-namespace-functions.md#logbf)|Extrahuje exponent proměnné _X jako celé číslo se znaménkem hodnoty ve formátu s plovoucí desetinnou čárkou|  
+|[logf –](concurrency-precise-math-namespace-functions.md#logf)|Vypočítá logaritmus argumentu o základu e|  
+|[modf –](concurrency-precise-math-namespace-functions.md#modf)|Přetíženo. Rozdělí _X na frakce a celá čísla.|  
+|[modff](concurrency-precise-math-namespace-functions.md#modff)|Rozdělí _X na frakce a celá čísla.|  
+|[NaN](concurrency-precise-math-namespace-functions.md#nan)|Vrátí tichý NaN|  
+|[nanf –](concurrency-precise-math-namespace-functions.md#nanf)|Vrátí tichý NaN|  
+|[nearbyint –](concurrency-precise-math-namespace-functions.md#nearbyint)|Přetíženo. Zaokrouhlí číslo argumentu na celočíselnou hodnotu ve formátu s plovoucí desetinnou čárkou, pomocí aktuálního směr zaokrouhlení.|  
+|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Zaokrouhlí číslo argumentu na celočíselnou hodnotu ve formátu s plovoucí desetinnou čárkou, pomocí aktuálního směr zaokrouhlení.|  
+|[nextafter –](concurrency-precise-math-namespace-functions.md#nextafter)|Přetíženo. Určení v typu funkce následující reprezentovatelnou hodnotu po _X ve směru _y|  
+|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Určení v typu funkce následující reprezentovatelnou hodnotu po _X ve směru _y|  
+|[(Phi)](concurrency-precise-math-namespace-functions.md#phi)|Přetíženo. Vrátí kumulativní distribuční funkci argumentu|  
 |[phif –](concurrency-precise-math-namespace-functions.md#phif)|Vrátí kumulativní distribuční funkci argumentu|  
-|[Pow](concurrency-precise-math-namespace-functions.md#pow)|Přetíženo. Vypočítá _X mocninu _Y|  
-|[powf –](concurrency-precise-math-namespace-functions.md#powf)|Vypočítá _X mocninu _Y|  
+|[Pow](concurrency-precise-math-namespace-functions.md#pow)|Přetíženo. Vypočítá proměnnou _X umocněnou exponentem _y|  
+|[powf –](concurrency-precise-math-namespace-functions.md#powf)|Vypočítá proměnnou _X umocněnou exponentem _y|  
 |[probit –](concurrency-precise-math-namespace-functions.md#probit)|Přetíženo. Vrátí inverzní kumulativní distribuční funkci argumentu|  
 |[probitf](concurrency-precise-math-namespace-functions.md#probitf)|Vrátí inverzní kumulativní distribuční funkci argumentu|  
-|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Přetíženo. Vrátí vzájemné kořenové datové krychle argumentu|  
-|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Vrátí vzájemné kořenové datové krychle argumentu|  
+|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Přetíženo. Vrátí převrácenou hodnotu argumentu kořenové datové krychle|  
+|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Vrátí převrácenou hodnotu argumentu kořenové datové krychle|  
 |[Zbývající](concurrency-precise-math-namespace-functions.md#remainder)|Přetíženo. Vypočítá zbytek: _X REM _Y|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Vypočítá zbytek: _X REM _Y|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Přetíženo. Vypočítá zbytek stejné jako _X REM _Y. Také vypočítá nižší 23 bity celočíselný koeficient _X/_Y a poskytuje stejné znaménko jako _X nebo _Y tuto hodnotu. Tato hodnota podepsaný držitelem je uložený v celé číslo, na kterou _Quo odkazuje.|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Vypočítá zbytek stejné jako _X REM _Y. Také vypočítá nižší 23 bity celočíselný koeficient _X/_Y a poskytuje stejné znaménko jako _X nebo _Y tuto hodnotu. Tato hodnota podepsaný držitelem je uložený v celé číslo, na kterou _Quo odkazuje.|  
-|[Zaokrouhlit](concurrency-precise-math-namespace-functions.md#round)|Přetíženo. Zaokrouhlí _X na nejbližší celé číslo|  
-|[roundf –](concurrency-precise-math-namespace-functions.md#roundf)|Zaokrouhlí _X na nejbližší celé číslo|  
-|[rsqrt –](concurrency-precise-math-namespace-functions.md#rsqrt)|Přetíženo. Vrátí vzájemné druhé odmocniny argumentu|  
-|[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Vrátí vzájemné druhé odmocniny argumentu|  
-|[scalb –](concurrency-precise-math-namespace-functions.md#scalb)|Přetíženo. Vynásobí _X podle flt_radix – k _Y napájení|  
-|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Vynásobí _X podle flt_radix – k _Y napájení|  
-|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Přetíženo. Vynásobí _X podle flt_radix – k _Y napájení|  
-|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Vynásobí _X podle flt_radix – k _Y napájení|  
-|[signbit –](concurrency-precise-math-namespace-functions.md#signbit)|Přetíženo. Určuje, zda je záporné znaménko _X|  
-|[signbitf –](concurrency-precise-math-namespace-functions.md#signbitf)|Určuje, zda je záporné znaménko _X|  
-|[Sin](concurrency-precise-math-namespace-functions.md#sin)|Přetíženo. Vypočítá hodnotu sinus argumentu|  
-|[sincos –](concurrency-precise-math-namespace-functions.md#sincos)|Přetíženo. Vypočítá sinus a kosinus hodnotu _X|  
-|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Vypočítá sinus a kosinus hodnotu _X|  
-|[sinf –](concurrency-precise-math-namespace-functions.md#sinf)|Vypočítá hodnotu sinus argumentu|  
-|[SINH](concurrency-precise-math-namespace-functions.md#sinh)|Přetíženo. Vypočítá hodnotu hyperbolický sinus argumentu|  
-|[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Vypočítá hodnotu hyperbolický sinus argumentu|  
-|[sinpi –](concurrency-precise-math-namespace-functions.md#sinpi)|Přetíženo. Vypočítá sinus hodnotu čísla pí * _X|  
-|[sinpif –](concurrency-precise-math-namespace-functions.md#sinpif)|Vypočítá sinus hodnotu čísla pí * _X|  
-|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Přetíženo. Vypočítá kořenu squre argumentu|  
-|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Vypočítá kořenu squre argumentu|  
-|[Tan](concurrency-precise-math-namespace-functions.md#tan)|Přetíženo. Vypočítá tečný hodnotu argumentu|  
-|[tanf –](concurrency-precise-math-namespace-functions.md#tanf)|Vypočítá tečný hodnotu argumentu|  
-|[TANH](concurrency-precise-math-namespace-functions.md#tanh)|Přetíženo. Vypočítá hyperbolický tangens hodnotu argumentu|  
-|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Vypočítá hyperbolický tangens hodnotu argumentu|  
-|[tanpi –](concurrency-precise-math-namespace-functions.md#tanpi)|Přetíženo. Vypočítá tečný hodnotu čísla pí * _X|  
-|[tanpif –](concurrency-precise-math-namespace-functions.md#tanpif)|Vypočítá tečný hodnotu čísla pí * _X|  
-|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Přetíženo. Vypočítá gama funkce _X|  
-|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Vypočítá gama funkce _X|  
-|[TRUNC](concurrency-precise-math-namespace-functions.md#trunc)|Přetíženo. Zkrátí argument pro komponentu celé číslo|  
-|[truncf –](concurrency-precise-math-namespace-functions.md#truncf)|Zkrátí argument pro komponentu celé číslo|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Přetíženo. Vypočítá zbytek stejné jako proměnné _X REM _Y. Také vypočítá dolní 23 bitů proměnné _X/_Y celočíselného podílu a poskytuje stejné znaménko jako výrazu _X/_Y tuto hodnotu. Tato hodnota se znaménkem je uložený v celé číslo, na které podle hodnoty _Quo.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Vypočítá zbytek stejné jako proměnné _X REM _Y. Také vypočítá dolní 23 bitů proměnné _X/_Y celočíselného podílu a poskytuje stejné znaménko jako výrazu _X/_Y tuto hodnotu. Tato hodnota se znaménkem je uložený v celé číslo, na které podle hodnoty _Quo.|  
+|[Zaokrouhlit](concurrency-precise-math-namespace-functions.md#round)|Přetíženo. Zaokrouhlí číslo _X na nejbližší celé číslo.|  
+|[roundf –](concurrency-precise-math-namespace-functions.md#roundf)|Zaokrouhlí číslo _X na nejbližší celé číslo.|  
+|[rsqrt –](concurrency-precise-math-namespace-functions.md#rsqrt)|Přetíženo. Vrátí převrácenou hodnotu druhé odmocniny argumentu|  
+|[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Vrátí převrácenou hodnotu druhé odmocniny argumentu|  
+|[scalb –](concurrency-precise-math-namespace-functions.md#scalb)|Přetíženo. Vynásobí hodnotu proměnné _X tak FLT_RADIX power _Y|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Vynásobí hodnotu proměnné _X tak FLT_RADIX power _Y|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Přetíženo. Vynásobí hodnotu proměnné _X tak FLT_RADIX power _Y|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Vynásobí hodnotu proměnné _X tak FLT_RADIX power _Y|  
+|[signbit –](concurrency-precise-math-namespace-functions.md#signbit)|Přetíženo. Určuje, zda je záporné znaménko proměnné _X|  
+|[signbitf –](concurrency-precise-math-namespace-functions.md#signbitf)|Určuje, zda je záporné znaménko proměnné _X|  
+|[Sin](concurrency-precise-math-namespace-functions.md#sin)|Přetíženo. Vypočítá hodnotu sinu argumentu|  
+|[sincos –](concurrency-precise-math-namespace-functions.md#sincos)|Přetíženo. Vypočítá hodnotu sinu a kosinu proměnné _x|  
+|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Vypočítá hodnotu sinu a kosinu proměnné _x|  
+|[sinf –](concurrency-precise-math-namespace-functions.md#sinf)|Vypočítá hodnotu sinu argumentu|  
+|[SINH –](concurrency-precise-math-namespace-functions.md#sinh)|Přetíženo. Vypočítá hodnotu hyperbolického sinu argumentu|  
+|[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Vypočítá hodnotu hyperbolického sinu argumentu|  
+|[sinpi –](concurrency-precise-math-namespace-functions.md#sinpi)|Přetíženo. Vypočítá hodnotu sinu pí \* proměnné _X|  
+|[sinpif –](concurrency-precise-math-namespace-functions.md#sinpif)|Vypočítá hodnotu sinu pí \* proměnné _X|  
+|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Přetíženo. Vypočítá kořenové squre argumentu|  
+|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Vypočítá kořenové squre argumentu|  
+|[Tan](concurrency-precise-math-namespace-functions.md#tan)|Přetíženo. Vypočítá hodnotu tangentu argumentu|  
+|[tanf –](concurrency-precise-math-namespace-functions.md#tanf)|Vypočítá hodnotu tangentu argumentu|  
+|[TANH –](concurrency-precise-math-namespace-functions.md#tanh)|Přetíženo. Vypočítá hodnotu hyperbolického tangentu argumentu|  
+|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Vypočítá hodnotu hyperbolického tangentu argumentu|  
+|[tanpi –](concurrency-precise-math-namespace-functions.md#tanpi)|Přetíženo. Vypočítá hodnotu tangentu pí \* proměnné _X|  
+|[tanpif –](concurrency-precise-math-namespace-functions.md#tanpif)|Vypočítá hodnotu tangentu pí \* proměnné _X|  
+|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Přetíženo. Vypočítá funkce gamma proměnné _x|  
+|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Vypočítá funkce gamma proměnné _x|  
+|[TRUNC –](concurrency-precise-math-namespace-functions.md#trunc)|Přetíženo. Ořízne argument na celé číslo součásti|  
+|[truncf –](concurrency-precise-math-namespace-functions.md#truncf)|Ořízne argument na celé číslo součásti|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** amp_math.h  

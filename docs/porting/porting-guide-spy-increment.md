@@ -1,5 +1,5 @@
 ---
-title: 'Průvodce přenosem: Spy ++ | Microsoft Docs'
+title: 'Průvodce přenosem: Spy ++ | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,66 +12,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848775"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208806"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
-Tato přenosem Případová studie slouží k získáte představu o jaké typické přenosem projekt je stejně jako typy problémů, může dojít k a některé obecné tipy a triky pro adresování přenosem problémy. Smyslem není jako spolehlivý Průvodce přenosem, protože možností portování projektu velmi mnohem závisí na specifika kódu.  
+Tento přenos případovou studii – slouží k získáte představu o jaké typické přenosem projekt je jako typů problémů můžete setkat, a některé obecné tipy a triky pro účely řešení problémů s přenosem. Není má určené jako úplnou příručku k přenesení, protože funkce přenesení do projektu z velké části závisí na konkrétním kódu.  
   
 ## <a name="spy"></a>Spy++  
- Nástroje Spy ++ je často používaný diagnostický nástroj grafického uživatelského rozhraní pro plochu Windows, která poskytuje všem druhům informací o prvky uživatelského rozhraní na ploše systému Windows. Zobrazuje úplný hierarchii systému windows a poskytuje přístup k metadatům o každé okno a řízení. Tuto aplikaci užitečné má dodávané pomocí sady Visual Studio pro mnoho let. Zjistili jsme, stará verze to, který byl naposledy zkompilovat ve Visual C++ verze 6.0 a přesně do sady Visual Studio 2015. Prostředí pro Visual Studio 2017 by měl být téměř shodné.
+ Spy ++ je často používaný diagnostický nástroj grafického uživatelského rozhraní pro plochu Windows, která poskytuje nejrůznější informace o prvcích uživatelského rozhraní na ploše Windows. Ukazuje kompletní hierarchie systému windows a poskytuje přístup k metadatům o každé okno a ovládací prvek. Tato aplikace užitečné byla odeslaná pomocí sady Visual Studio po mnoho let. Zjistili jsme, stará verze jeho poslední kompilaci v aplikaci Visual C++ 6.0 a přenést ho do sady Visual Studio 2015. Prostředí sady Visual Studio 2017 by měl být téměř shodné.
   
- Jsme považován za tento případ typická pro přenos aplikací klasické pracovní plochy Windows využívající rozhraní MFC a rozhraní API Win32 hlavně pro původní projekty, které nebyly aktualizovány při každém vydání Visual C++ od Visual C++ verze 6.0.  
+ Společnost Microsoft považovat za tento případ jako typická pro portování aplikací klasické pracovní plochy Windows, používající knihovnu MFC a rozhraní API systému Win32, zejména u starých projektů, které nebyly aktualizovány s každou vydanou verzí jazyka Visual C++ od Visual C++ 6.0.  
   
-##  <a name="convert_project_file"></a> Krok 1. Převádění souboru projektu.  
- Soubor projektu, dvě staré .dsw soubory z Visual C++ verze 6.0, převést snadno bez problémů, které vyžadují další pozornost. Aplikace nástroje Spy ++ je jeden projekt. Druhá je SpyHk, které jsou napsané v jazyce C, podpůrné knihovny DLL. Složitější projekty nemusí upgradovat snadno, jak je popsáno [zde](../porting/visual-cpp-porting-and-upgrading-guide.md).  
+##  <a name="convert_project_file"></a> Krok 1. Převádí se projektový soubor.  
+ Soubor projektu, dvě staré .dsw soubory Visual C++ 6.0, jednoduše převést bez problémů, které vyžadují další pozornost. Jeden projekt je aplikace nástroje Spy ++. Druhá je SpyHk napsané v jazyce C, podpůrné knihovny DLL. Složitější projekty upgradovat stejně snadno, jak je popsáno [tady](../porting/visual-cpp-porting-and-upgrading-guide.md).  
   
- Po dokončení upgradu dva projekty naše řešení hledá takto:  
+ Po provedení upgradu dvou projektů, vypadal náš řešení toto:  
   
  ![Nástroji Spy&#43; &#43; řešení](../porting/media/spyxxsolution.PNG "SpyxxSolution")  
   
- Máme dva projekty, jeden s velkým počtem C++ soubory a jiné knihovny DLL, která je napsána v C.  
+ Máme dva projekty, jednu s velkým množstvím souborů C++ a další knihovny DLL, která je napsána v jazyce C.  
   
-##  <a name="header_file_problems"></a> Krok 2. Záhlaví souboru problémy  
- Při sestavování nově převedený projekt, jedním z nejdůležitějších věcí, které budete často zjistíte je, že nebyly nalezeny soubory hlaviček, které používá váš projekt.  
+##  <a name="header_file_problems"></a> Krok 2. Hlavička souboru problémy  
+ Při vytváření nově převedeného projektu, jedním z prvních věcí, které se často stává je, že nebyly nalezeny soubory hlaviček, které používá váš projekt.  
   
- Byl jeden ze souborů, které se nenašel v nástroji Spy ++ verstamp.h. Z hledání v Internetu jsme určili, to pochází DAO SDK, technologie zastaralá data. Jsme chtěli zjistit, jaké symboly byly používá z hlavičkový soubor, pokud byl tento soubor skutečně potřeba, nebo zda tyto symboly nebyly definované jinam, takže jsme označeno jako komentář deklaraci hlavičky souboru a překompilovat. Stane se z odhlašování došlo je jen jeden symbol, který je potřeba, VER_FILEFLAGSMASK.  
+ Byl jeden ze souborů, které se nenašel v nástroji Spy ++ verstamp.h. Ze vyhledávání na Internetu můžeme určit, pochází ze sady SDK rozhraní DAO, technologie zastaralá data. Chtěli jsme se zjistit, jaké symboly byly použity z tohoto souboru záhlaví, zda tento soubor byl opravdu potřebujete, nebo pokud tyto symboly nebyly definovány jinde, takže můžeme zakomentované deklaraci záhlaví souboru a znovu zkompilovat. Ukazuje je jen jeden symbol, který je potřeba, VER_FILEFLAGSMASK.  
   
 ```  
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK  
 ```  
   
- Nejjednodušší způsob, jak najít v souborech k dispozici zahrnout symbol je používání funkce najít v souborech (Ctrl + Shift + F) a zadejte **adresáře Include Visual C++**. Jsme našli v ntverp.h. Jsme nahradit verstamp.h zahrnout ntverp.h a tato chyba není dostupné.  
+ Nejjednodušší způsob, jak najít symbol v souborech zahrnutí k dispozici je používání funkce najít v souborech (Ctrl + Shift + F) a zadejte **adresáře souborů k zahrnutí Visual C++**. Našli jsme ji v ntverp.h. Jsme nahradit verstamp.h zahrnout ntverp.h a zmizel k této chybě.  
   
-##  <a name="linker_output_settings"></a> Krok 3. Nastavení výstupní soubor linkeru  
- Starší projekty někdy nutné soubory umístěné v neobvyklé umístění, které mohou způsobovat problémy po upgradu. V takovém případě máme $(solutiondir) – přidejte do cesty k zahrnutí ve vlastnostech projektu zajistit, že Visual Studio můžete najít některé soubory hlavičky, které jsou umístěny existuje, a nikoli v jednom ze složky projektu.  
+##  <a name="linker_output_settings"></a> Krok 3. Nastavení OutputFile linkeru  
+ Starší projekty někdy nutné soubory umístěné v neobvyklé umístění, které mohou způsobovat problémy po dokončení upgradu. V tomto případě máme přidat $ (SolutionDir) do cesty zahrnutí ve vlastnostech projektu zajistit, že Visual Studio najdete některé soubory s hlavičkami, které jsou zde umístěny, nikoli v jednom ze složky projektu.  
   
- MSBuild complains, že vlastnost Link.OutputFile neodpovídá hodnoty TargetPath a TargetName vystavování MSB8012.  
+ Nástroj MSBuild si bude stěžovat na, že vlastnost Link.OutputFile neodpovídá hodnoty TargetPath a TargetName vydávání MSB8012.  
   
 ```Output  
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).  
 ```  
   
- **Link.OutputFile** je výstup sestavení (EXE, DLL, např.) a je obvykle vytvářejí na základě $(TargetDir)$(TargetName)$(TargetExt), udělíte cesta, název souboru a rozšíření. Toto je běžnou chybou při migraci projekty z původního Visual C++ sestavení nástroj (vcbuild.exe) do nového nástroje sestavení (MSBuild.exe). Vzhledem k tomu, že v sadě Visual Studio 2010 došlo ke změně nástroj pro sestavení, může dojít, tento problém vždy, když migrujete projektu Project 2010 2010 nebo novější verze. Základní problém je, že Průvodce migrací projektu neaktualizuje **Link.OutputFile** hodnotu vzhledem k tomu, že vždy není možné určit, co by měl mít hodnotu na základě jiných nastavení projektu. Proto je obvykle nutné nastavit ručně. Další podrobnosti najdete v tématu to [post](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) na blogu Visual C++.  
+ **Link.OutputFile** je výstup sestavení (EXE, DLL, třeba) a je obvykle vytvořen z $(TargetDir)$(TargetName)$(TargetExt) uvedením cesty, názvu souboru a přípony. To je běžné chyby při migraci projektů ze staré Visual C++ sestavení nástroje (vcbuild.exe) nový nástroj pro sestavení (MSBuild.exe). Protože došlo ke změně nástroj pro sestavení v sadě Visual Studio 2010, můžete narazit na tento problém pokaždé, když se migrovat projekt Project 2010 2010 nebo novější verzi. Základní problém je, že v Průvodci projektem migrace neprovede aktualizaci **Link.OutputFile** hodnotu, protože není vždy možné určit, co by měl mít hodnotu na základě jiné nastavení projektu. Proto je obvykle nutné nastavit ručně. Další podrobnosti najdete v tomto [příspěvku](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) na blogu Visual C++.  
   
- V takovém případě **Link.OutputFile** v převedený projektu byla nastavena na.\Debug\Spyxx.exe a.\Release\Spyxx.exe nástroje Spy ++ projektu, v závislosti na konfiguraci. Nejvhodnější dokument je jednoduše nahradit tyto hodnoty pevně zakódované $(TargetDir)$(TargetName)$(TargetExt) u všech konfigurací. Pokud to nefunguje, můžete přizpůsobit odtud nebo změny vlastností v části Obecné, kde jsou tyto hodnoty nastavené (vlastnosti jsou **výstupního adresáře**, **cílová**, a  **Cíl rozšíření**. Mějte na paměti, že pokud vlastnost prohlížíte používá makra, můžete zvolit **upravit** v rozevíracím seznamu se zprovoznit dialogové okno se zobrazuje posledním řetězci s provedeny náhrady makro. Všechny dostupné makra a jejich aktuální hodnoty můžete zobrazit výběrem **makra** tlačítko.  
+ V takovém případě **Link.OutputFile** vlastnost v převedeného projektu byla nastavena na.\Debug\Spyxx.exe a.\Release\Spyxx.exe nástroje Spy ++ projektu, v závislosti na konfiguraci. Nejvhodnější je jednoduše nahradit tyto hodnoty pevně zakódované $(TargetDir)$(TargetName)$(TargetExt) u všech konfigurací. Pokud to nepomůže, můžete přizpůsobit z něj nebo změnit v části Obecné, kde jsou tyto hodnoty nastaveny vlastnosti (vlastnosti jsou **výstupní adresář**, **název cílového**, a  **Cíl rozšíření**. Mějte na paměti, pokud vlastnost si prohlížíte používá makra, které můžete zvolit **upravit** v rozevíracím seznamu a zobrazte dialogové okno, které se zobrazují posledním řetězci uvedené s provedeny náhrady – makro. Všechna dostupná makra a jejich aktuální hodnoty můžete zobrazit výběrem **makra** tlačítko.  
   
-##  <a name="updating_winver"></a> Krok 4. Aktualizace na cílovou verzi systému Windows  
- Další chyba označuje, že WINVER verzi není podporován v prostředí MFC. WINVER pro systém Windows XP je 0x0501.  
+##  <a name="updating_winver"></a> Krok 4. Aktualizuje se cílová verze Windows  
+ Další chyba udává, že verze WINVER již není podporována v knihovně MFC. Příkaz WINVER pro Windows XP je 0x0501.  
   
 ```Output  
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Windows XP je podporován společností Microsoft, takže i když ho cílení je povolena v sadě Visual Studio 2015, by měl být postupné omezení podpory pro něj ve svých aplikacích a podporou uživatelům použít nové verze systému Windows.  
+ Windows XP je již nejsou podporovány společností Microsoft, takže i v případě, že její nastavení jako cíle může v sadě Visual Studio 2015, by měl být překážkou podporu pro ně ve svých aplikacích a podporu uživatelé přijmout nové verze Windows.  
   
- Chcete-li odstranit chyby, definovat WINVER aktualizací **vlastnosti projektu** nastavení na nejnižší verze systému Windows, které jsou aktuálně chcete cílit. Najít tabulku hodnot pro různé verze Windows [zde](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx).  
+ Chyba zbavit, definujte WINVER aktualizací **vlastnosti projektu** nastavení na nejnižší verze Windows aktuálně chcete cílit. Najít tabulku s hodnotami pro různé verze Windows [tady](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx).  
   
- Soubor stdafx.h obsahoval některé z těchto definice maker.  
+ Souboru stdafx.h obsahovala některé z těchto definice maker.  
   
 ```cpp  
 #define WINVER       0x0500  // these defines are set so that we get the  
@@ -80,20 +80,20 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 ```  
   
- WINVER se nastaví na systém Windows 7. Je snadnější čtení kód později Pokud používáte makro pro systém Windows 7 (_WIN32_WINNT_WIN7), nikoli hodnotu samotnou (0x0601).  
+ Příkaz WINVER nastavíme na Windows 7. Je snazší přečíst kód později použití makra pro Windows 7 (_WIN32_WINNT_WIN7), ne samotná (0x0601) hodnota.  
   
 ```cpp  
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="linker_errors"></a> Krok 5. Chybami linkeru  
- Tyto změny sestavení projektu SpyHk (DLL) ale způsobí chybu linkeru.  
+##  <a name="linker_errors"></a> Krok 5. Chyby linkeru  
+ Tyto změny projektu SpyHk (DLL) sestavení, ale způsobí chybu linkeru.  
   
 ```  
 LINK : warning LNK4216: Exported entry point _DLLEntryPoint@12  
 ```  
   
- Vstupní bod pro knihovny DLL nesmí exportovat. Vstupní bod je určena pouze k volání zavaděčem při knihovnu DLL prvním načtení do paměti, takže by nemělo být v tabulce exportu, což je pro ostatní volající. Potřebujeme zajistit nemá `__declspec(dllexport)` – direktiva k němu připojen. V spyxxhk.c budeme muset odebrat ze dvou míst, deklarace a definice DLLEntryPoint. Nikdy byly provedeny se použije tato direktiva, ale předchozí verze kompilátoru a linkeru není příznak jako problém. V novějších verzích linkeru poskytnout upozornění.  
+ Vstupní bod pro knihovnu DLL se nesmí exportovat. Vstupní bod je určena pouze k zavaděčem volat, pokud knihovna DLL je prvním načtení do paměti, proto to nesmí být v exportní tabulce, která je pro ostatní volající. Potřebujeme Ujistěte se, že nemá `__declspec(dllexport)` – direktiva k němu připojená. V spyxxhk.c musíme ho odebrat ze dvou míst, deklarace a definice vstupní bod DLLEntryPoint. Nikdy proveden použití této direktivy, ale předchozí verze kompilátoru a linkeru nelze označit jako problém. Novější verze linkeru poskytnout upozornění.  
   
 ```cpp  
 // deleted __declspec(dllexport)  
@@ -101,21 +101,21 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
 ```  
   
- Projekt C DLL, SpyHK.dll, teď sestavení a propojuje bez chyby.  
+ Projektu knihovny DLL jazyka C, SpyHK.dll, teď vytvoří a propojí bez chyb.  
   
 ##  <a name="outdated_header_files"></a> Krok 6. Více zastaralé soubory hlaviček  
- V tuto chvíli jsme začátek práce na hlavní spustitelný projekt, Spyxx.  
+ V tuto chvíli můžeme začít pracovat na hlavní spustitelný projekt Spyxx.  
   
- Nebyl nalezen pár dalších zahrnout soubory: ctl3d.h a penwin.h. Může být užitečné pro vyhledávání v Internetu a pokouší se určit, co zahrnuté záhlaví, někdy informace není to užitečné. Zjistili jsme, ctl3d.h se součást Exchange Development Kit a poskytuje podporu pro určité styl ovládacích prvků v systému Windows 95, a penwin.h má vztah k okno pera Computing zastaralá rozhraní API. V takovém případě můžeme jednoduše komentář #include řádek a řešit nedefinované symboly, jako jsme to udělali s verstamp.h. Všechno, co se má vztah k 3D ovládací prvky nebo pera Computing byla odebrána z projektu.  
+ Nebyl nalezen pár dalších souborů k zahrnutí: ctl3d.h a penwin.h. Může být užitečné při hledání na Internetu a pokouší se určit, co zahrnuje záhlaví, někdy informace není to užitečné. Jsme zjistili, že ctl3d.h se součást Exchange Development Kit a zajistili podporu stylu ovládacích prvků ve Windows 95 a vztahuje se penwin.h okno pera výpočty, zastaralé rozhraní API. V tomto případě můžeme jednoduše komentář #include řádek a řešil nedefinované symboly, jako jsme to udělali s verstamp.h. Vše, co souvisí s 3D ovládací prvky nebo pera computingu byla odebrána z projektu.  
   
- Vzhledem k projektu s mnoha kompilace chyb, které jsou postupně odstraňuje, není realistické najít všechny používá zastaralá rozhraní API hned, když odeberete #include – direktiva. Jsme nebyla zjišťovat okamžitě, ale spíše na některé pozdější místo byla přijata chyba, WM_DLGBORDER nebyla definována. Ve skutečnosti pouze jeden, je mnoho nedefinované symboly, které pocházejí z ctl3d.h. Jakmile jste jsme určili, že má vztah k rozhraní API zastaralé, jsme odebrali všechny odkazy v kódu na ni.  
+ Zadaný projekt s mnoha chyby kompilace, které jsou postupně vyloučení, není realistické najít všechna použití zastaralé rozhraní API, okamžitě, když odeberete #include. Jsme nezjistili to okamžitě, ale spíše na některé později přišel do chybu, že WM_DLGBORDER nebyla definovaná. Ve skutečnosti pouze jedna je mnoho nedefinované symboly, které pocházejí z ctl3d.h. Jakmile jsme jste zjistili, že má vztah k rozhraní API zastaralé, jsme odebrali všechny odkazy v kódu k němu.  
   
-##  <a name="updating_iostreams_code"></a> Krok 7. Aktualizace staré iostreams kódu  
- Další chyba je běžné s původním C++ kód, který používá iostreams.  
+##  <a name="updating_iostreams_code"></a> Krok 7. Aktualizuje se starším kódem iostreams  
+ Další chyba je běžné u starého kódu C++, který používá iostreams.  
   
- mstream.h(40): závažná chyba C1083: Nelze otevřít vložený soubor: 'iostream.h': podobný soubor nebo adresář  
+ mstream.h(40): závažná chyba C1083: nejde otevřít vložený soubor: 'iostream.h': žádný odpovídající soubor nebo adresář  
   
- Problém je, že má staré knihovny iostreams odebrat a nahradit. Máme nahraďte staré iostreams novější standardy.  
+ Tento problém je, že původní knihovny iostreams byl odebrán a nahrazen. Máme nahraďte staré iostreams novější standardy.  
   
 ```cpp  
 #include <iostream.h>  
@@ -133,16 +133,16 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
 ```  
   
- Díky této změně máme problémy s ostrstream, který se už používá. Odpovídající nahrazení je ostringstream –. Pokusíme přidání typedef pro ostrstream, aby se zabránilo změny kódu příliš mnoho alespoň jako spuštění.  
+ Díky této změně jsme máte problémy s ostrstream –, který se už používá. Ostringstream je vhodné náhrada. Jsme zkuste přidat definice typu u ostrstream – aby se zabránilo změny kódu příliš mnoho alespoň jako spuštění.  
   
 ```cpp  
 typedef std::basic_ostringstream<TCHAR> ostrstream;  
   
 ```  
   
- Aktuálně projektu je sestaven pomocí znakové sady MBCS (vícebajtový znaková sada), takže `char` je datový typ odpovídající znaku. Ale povolit jednodušší aktualizace kód na kódování Unicode UTF-16, budeme aktualizovat na `TCHAR`, který přeloží na `char` nebo `wchar_t` podle toho, jestli **znaková sada** v nastavení projektu je nastavena na Znakové sady MBCS nebo Unicode.  
+ Aktuálně je projekt vytvořen pomocí znakové sady MBCS (vícebajtovou znakovou sadu), takže `char` je datový typ odpovídající znak. Však umožňuje jednodušší aktualizace kódu Unicode UTF-16, aktualizujeme tuto hodnotu na `TCHAR`, která se přeloží na `char` nebo `wchar_t` podle toho, jestli **znaková sada** v nastavení projektu je nastavena na Znakové sady MBCS a Unicode.  
   
- Několik dalších částí kódu je nutné aktualizovat.  Ios_base – bylo nahrazeno ios základní třídy a jsme nahrazený ostream – je basic_ostream\<T >. Přidáme dva další definice TypeDef a zkompiluje v této části.  
+ Několik jiných částí kódu je potřeba aktualizovat.  Ios_base – bylo nahrazeno ios základní třídy a jsme nahradit ostream je basic_ostream –\<T >. Přidáme dva další – definice TypeDef a zkompiluje v této části.  
   
 ```cpp  
 typedef std::basic_ostream<TCHAR> ostream;  
@@ -150,21 +150,21 @@ typedef ios_base ios;
   
 ```  
   
- Pomocí těchto – definice TypeDef je pouze dočasné řešení. Pro více trvalé řešení budeme může aktualizovat každý odkaz na rozhraní API přejmenován nebo zastaralá.  
+ Pomocí těchto – definice TypeDef je pouze dočasné řešení. Pro více trvalé řešení může aktualizujeme každý odkaz na rozhraní API přejmenovaných nebo zastaralé.  
   
- Zde je další chyby.  
+ Tady je další chyba.  
   
 ```Output  
 error C2039: 'freeze': is not a member of 'std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char>>'  
 ```  
   
- Další problém je, že tento basic_stringbuf nemá metoda ukotvit. Aby se zabránilo nevrácenou pamětí v původním ostream – se používá metoda ukotvit. Teď, když používáme nové ostringstream – jsme není nutné ho. Jsme můžete odstranit volání ukotvit.  
+ Dalším problémem je, že tento basic_stringbuf – nemá metodu zablokování. Metoda zablokování umožňuje zabránit nevracení paměti v původní ostream. Teď, když používáme nové ostringstream ten nepotřebujeme. Odstraníme volání ukotvit.  
   
 ```cpp  
 //rdbuf()->freeze(0);  
 ```  
   
- Sousední řádků došlo k následující dva chybám. První complains o používání zakončení, což je manipulator staré knihovny iostream vstupně-výstupní operace, která přidává zakončením hodnotu null na řetězec.  Druhý tyto chyby vysvětluje, že výstup str – metoda nemůže být přiřazen jiný const ukazatel.  
+ Sousední řádků došlo k následující dva chybám. První si bude stěžovat na využívání skončí, což je manipulátor staré iostream – knihovna vstupně-výstupních operací, který ukončovací znak null přidá na řetězec.  Druhá tyto chyby vysvětluje, výstup str – metoda nemůže být přiřazen nekonstantního ukazatele.  
   
 ```cpp  
 // Null terminate the string in the buffer and  
@@ -179,7 +179,7 @@ LPSTR psz = str();
 2>mstream.cpp(167): error C2065: 'ends': undeclared identifier2>mstream.cpp(168): error C2440: 'initializing': cannot convert from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'LPSTR'  
 ```  
   
- Pomocí nové knihovny datového proudu, není potřeba končí, vzhledem k tomu, že řetězec má vždy ukončené hodnotou null, tak, aby řádku lze odebrat. Pro druhý problém problém je, že teď str() nevrací ukazatele na pole znaků řetězce; Vrátí typ std::string. Řešení, aby druhý je změnit typ na LPCSTR a použít metodu c_str() k žádosti o ukazatele.  
+ Pomocí nové knihovny datového proudu, není potřeba skončí, protože řetězec je vždy zakončený hodnotou null, tak, aby řádek můžete odebrat. Pro druhý problém je problém, který teď str() nevrací ukazatel na pole znaků pro řetězec; Vrátí typ std::string. Řešení, aby druhý je změnit typ na LPCSTR a použít metodu c_str() požádat o ukazatel.  
   
 ```cpp  
 //*this << ends;  
@@ -187,7 +187,7 @@ LPCTSTR psz = str().c_str();
   
 ```  
   
- K chybě, která nám puzzled nějakou dobu došlo k chybě na tento kód.  
+ K chybě, která nám puzzled nějakou dobu došlo k chybě pro tento kód.  
   
 ```cpp  
 MOUT << _T(" chUser:'") << chUser  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- Makro `MOUT` přeloží na * g_pmout, což je objekt typu `mstream`. Třída mstream je odvozena od třídy řetězec standardní výstup `std::basic_ostream<TCHAR>.` ale s _T kolem řetězcový literál, který jsme chápat v rámci přípravy pro převod na kódování Unicode, rozlišení přetížení operátoru << selže s následující chybou zpráva:  
+ Makro `MOUT` přeloží na \*g_pmout, což je objekt typu `mstream`. Mstream třída odvozena ze třídy řetězec standardního výstupu `std::basic_ostream<TCHAR>.` ale s _T kolem řetězcový literál, který jsme do v rámci přípravy pro převod do kódu Unicode, rozlišení přetížení pro operátor << selže s následující chybou zpráva:  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
@@ -249,7 +249,7 @@ MOUT << _T(" chUser:'") << chUser
 1>  winmsgs.cpp(4612): note: while trying to match the argument list '(CMsgStream, const wchar_t [10])'  
 ```  
   
- Existuje mnoho operátor << definice, že tento druh chyby mohou být první pohled poněkud složité. Po přesněji prohlížení k dispozici přetížení, uvidíte, že většina z nich jsou důležité a vypadající přesněji na `mstream` třídy definice myslíme, že následující funkce, které Věříme, že by měla být volána v tomto případě.  
+ Existuje mnoho operátor << definice, že tento druh chyby může být vám nemusí nahánět strach. Po bližším pohledu dostupná přetížení, vidíme, že většina z nich jsou relevantní a vypadající lépe na `mstream` třídy definice, jsme identifikovali následující funkci, která by se v tomto případě by měla být volána.  
   
 ```cpp  
 mstream& operator<<(LPTSTR psz)  
@@ -259,18 +259,18 @@ mstream& operator<<(LPTSTR psz)
   
 ```  
   
- Z důvodu není volán totiž řetězcový literál má typ `const wchar_t[10]` jak vidíte z poslední řádek tohoto dlouho chybová zpráva, takže převod na jiný const ukazatel není automatické. Tento operátor ale neměli upravovat vstupní parametr, tak, aby lépe odpovídající typ parametru LPCTSTR (`const char*` při kompilaci jako MBCS, a `const wchar_t*` jako Unicode), není LPTSTR (`char*` při kompilaci jako MBCS, a `wchar_t*` jako Unicode). Provedení této změny opravy této chyby.  
+ Důvod není volána totiž řetězcového literálu má typ `const wchar_t[10]` jak je vidět z poslední řádek dlouhé zobrazila proto převod na ukazatel na nekonstantní není automatické. Ale tento operátor neměli měnit vstupní parametr, je vhodnější typ parametru LPCTSTR (`const char*` při kompilaci jako znakovou sadu MBCS, a `const wchar_t*` jako kódování Unicode), ne LPTSTR (`char*` při kompilaci jako znakovou sadu MBCS, a `wchar_t*` jako Kódování Unicode). Provedení této změny řeší tuto chybu.  
   
- Tento typ převodu byla povolena v kompilátoru starší, méně přísná, ale novější shoda změny vyžadují více správný kód.  
+ Tento typ převodu byla povolena v rámci starší, méně striktní kompilátor ale více poslední změny shody vyžadují více správný kód.  
   
-##  <a name="stricter_conversions"></a> Krok 8. Převody více striktní kompilátoru  
- Můžeme také získat mnoho chyb takto:  
+##  <a name="stricter_conversions"></a> Krok 8. Převody přísnější kompilátoru  
+ Máme k dispozici také mnoho chyb vypadat asi takto:  
   
 ```  
 error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::* )(CPoint)' to 'LRESULT (__thiscall CWnd::* )(CPoint)'  
 ```  
   
- V mapy zpráv, který je jednoduše makro dojde k chybě:  
+ V mapování zprávy, která je jednoduše – makro dojde k chybě:  
   
 ```cpp  
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)  
@@ -279,7 +279,7 @@ ON_WM_NCHITTEST() // Error occurs on this line.
 END_MESSAGE_MAP()  
 ```  
   
- Přejít k definici této makro, vidíte, že odkazuje na funkci OnNcHitTest.  
+ Přechod na definici toto makro, vidíme, že odkazuje na funkci OnNcHitTest.  
   
 ```cpp  
 #define ON_WM_NCHITTEST() \  
@@ -288,7 +288,7 @@ END_MESSAGE_MAP()
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },  
 ```  
   
- Tento problém souvisí se neshoda v má ukazatel na funkci typy členů. Vzhledem k tomu, který je platný převod odvozené základní, není problém převod CHotLinkCtrl jako typ třídy CWnd jako typ třídy. Problém je návratový typ: Celé_číslo vs. LRESULT. LRESULT přeloží na LONG_PTR, což je ukazatel 64-bit nebo ukazatel 32-bit, v závislosti na binární typ cíle, takže Celé_číslo nepřevede k tomuto typu. To je běžné při upgradu kód napsaný před 2005 vzhledem k tomu, že návratový typ mnoho metody map zpráv změněn z Celé_číslo na LRESULT v sadě Visual Studio 2005 jako součást změny 64-bit kompatibility. Nemůžeme změnit návratový typ z Celé_číslo v následujícím kódu na LRESULT:  
+ Problém souvisí se neshoda v ukazatel na členské funkce typů. Problém není převod z CHotLinkCtrl jako typ třídy CWnd jako typ třídy, protože to je platný převod odvozené base. Problém je návratový typ: UINT vs. LRESULT. LRESULT přeloží na LONG_PTR, což je 64bitového ukazatele nebo 32bitového ukazatele, v závislosti na binární typ cíle, UINT nejde převést na tento typ. Toto není, při upgradu kódu napsaného před 2005 od návratového typu mnoho metod mapy zpráv změny z UINT k LRESULT v sadě Visual Studio 2005 jako součást změny 64bitovou kompatibilitou. Můžeme změnit návratový typ z UINT v následujícím kódu na LRESULT:  
   
 ```cpp  
 afx_msg UINT OnNcHitTest(CPoint point);  
@@ -300,53 +300,53 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);  
 ```  
   
- Vzhledem k tomu, že jsou přibližně deset výskyty této funkce ve různé třídy odvozené od CWnd, je vhodné použít **přechod na definici** (klávesové: F12) a **přejít na deklaraci** (klávesové: Ctrl + F12) při kurzor je na funkci v editoru a najděte tyto přejděte do jim **najít Symbol** okno nástroje. **Přejděte do definice** je obvykle užitečnější dvou. **Přejděte na deklaraci** bude deklarace najít než definice deklarace, jako je například třída friend – deklarace třídy nebo předávat odkazy.  
+ Protože je přibližně deset výskyty této funkce v různé třídy odvozené z CWnd, je vhodné použít **přejít k definici** (klávesnice: F12) a **přejít na deklaraci** (klávesnice: Ctrl + F12) při kurzor je u funkce v editoru a najděte tyto a přejděte k nim z **najít Symbol** panelu nástrojů. **Přejít k definici** je obvykle další užitečné z nich. **Přejděte do deklarace** bude deklarace najít než definování deklarace, jako je například prohlášení třídy typu friend třídy nebo předávat odkazy.  
   
-##  <a name="mfc_changes"></a> Krok 9. Změny MFC  
- Další chyba také má vztah k typu změněné deklarace a také výskytu v makru.  
+##  <a name="mfc_changes"></a> Krok 9. Změny knihovny MFC  
+ Další chyba také vztahuje na typ změny deklarace a také dochází v makru.  
   
 ```Output  
 error C2440: 'static_cast': cannot convert from 'void (__thiscall CFindWindowDlg::* )(BOOL,HTASK)' to 'void (__thiscall CWnd::* )(BOOL,DWORD)'  
 ```  
   
- Problém je, že druhý parametr CWnd::OnActivateApp změnám z HTASK DWORD. K této změně došlo v 2002 verzi sady Visual Studio, Visual Studio .NET.  
+ Problém je, že druhý parametr CWnd::OnActivateApp změnil z HTASK DWORD. Ve verzi Visual Studio, Visual Studio .NET 2002 došlo k této změně.  
   
 ```cpp  
 afx_msg void OnActivateApp(BOOL bActive, HTASK hTask);  
 ```  
   
- Budeme muset aktualizovat deklarace OnActivateApp v odvozených třídách odpovídajícím způsobem následujícím způsobem:  
+ Musíme aktualizovat deklarace OnActivateApp v odvozených třídách odpovídajícím způsobem následujícím způsobem:  
   
 ```cpp  
 afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);  
 ```  
   
- Snažíme se v tuto chvíli ke zkompilování projektu. Existuje několik upozornění fungovat prostřednictvím, ale a jsou volitelné části upgradu, jako je například převod z MBCS do kódu Unicode nebo zvýšení zabezpečení pomocí funkce zabezpečení CRT.  
+ V tuto chvíli nemůžeme ke kompilaci projektu. Existuje několik upozornění pro seznámení se základními, ale a existují volitelné části inovace, jako je například převod ze znakové sady MBCS do kódu Unicode nebo zvýšení zabezpečení pomocí zabezpečení CRT funkce.  
   
-##  <a name="compiler_warnings"></a> Krok 10. Adresování upozornění kompilátoru  
- Chcete-li získat úplný seznam upozornění, měli byste udělat **znovu vytvořit všechny** na řešení spíše než obyčejnou sestavení, stačí, abyste měli jistotu, že vše, co dříve zkompilovat bude zopakovat, vzhledem k tomu, že pouze získat upozornění sestavy z aktuální kompilace. Další otázka se jestli souhlasíte aktuální úroveň pro upozornění nebo používat vyšší úroveň pro upozornění.  Pokud přenášíte velké množství kódu, zejména původní kód, může být vhodné pomocí vyšší úroveň pro upozornění.  Můžete také chtít začít s výchozí úroveň pro upozornění a poté zvýšit úroveň pro upozornění k získání všech upozornění. Pokud používáte /Wall, dostanete upozornění. v systému soubory hlaviček, mnoho lidí používá /W4 získat většinu upozornění na svůj kód bez získávání upozornění pro systémové hlavičky. Pokud chcete upozornění objeví jako chyby, přidejte wdn možnost. Tato nastavení jsou v části C/C++ dialogové okno Vlastnosti projektu.  
+##  <a name="compiler_warnings"></a> Krok 10. Vyřešení upozornění kompilátoru  
+ Pokud chcete získat úplný seznam upozornění, byste měli dělat **sestavit vše znovu** na řešení a nikoli běžné sestavení, pro jistotu této vše, co dříve zkompilován se překompilují, protože dostanete upozornění hlášení jenom z aktuálního kompilace. Další otázkou je, zda se má přijmout aktuální úroveň upozornění nebo používat vyšší úroveň pro upozornění.  Pokud přenášíte velké množství kódu, zejména starý kód, může být vhodné používat vyšší úroveň pro upozornění.  Můžete také chtít začít s výchozí úroveň upozornění a poté zvýšit úroveň pro upozornění zobrazíte všechna upozornění. Pokud používáte wall, dostanete upozornění v systému souborů záhlaví, tak mnoho lidí použijte/W4 získat většinu upozornění na kód bez zobrazují upozornění pro záhlaví systému. Pokud chcete upozornění jako chyby, přidejte parametr /WX. Tato nastavení jsou v části C/C++ v dialogovém okně Vlastnosti projektu.  
   
- Jednu z metod ve třídě CSpyApp vyvolá upozornění o funkci, která již není podporována.  
+ Jednou z metod ve třídě CSpyApp vyvolá upozornění o funkci, která se už nepodporuje.  
   
 ```cpp  
 void SetDialogBkColor() {CWinApp::SetDialogBkColor(::GetSysColor(COLOR_BTNFACE));}  
 ```  
   
- Upozornění je následující.  
+ Upozornění je následujícím způsobem.  
   
 ```Output  
 warning C4996: 'CWinApp::SetDialogBkColor': CWinApp::SetDialogBkColor is no longer supported. Instead, handle WM_CTLCOLORDLG in your dialog  
 ```  
   
- Zpráva WM_CTLCOLORDLG již zpracovaných v nástroji Spy ++ kódu, tak byla vyžadována pouze změna odstranit všechny odkazy na SetDialogBkColor, které už nepotřebují.  
+ Zpráva WM_CTLCOLORDLG byla již zpracována v kódu nástroje Spy ++, proto byla vyžadována pouze změna odstranit všechny odkazy na SetDialogBkColor, které už nepotřebujete.  
   
- Další upozornění se přehledné opravit komentářů na název proměnné. Dostali jsme následující upozornění:  
+ Další upozornění se snadno vyřešit okomentováním odpovídajícího název proměnné. Dostali jsme následující upozornění:  
   
 ```Output  
 warning C4456: declaration of 'lpszBuffer' hides previous local declaration  
 ```  
   
- Kód, který vytváří to zahrnuje makra.  
+ Zahrnuje kód, který vytvoří toto makro.  
   
 ```cpp  
 DECODEPARM(CB_GETLBTEXT)  
@@ -374,21 +374,21 @@ DECODEPARM(CB_GETLBTEXT)
   
 ```  
   
- Použití makra jako tento kód se obvykle byl kód těžší udržovat. V takovém případě makra obsahují deklarace proměnných. Makro parametr je definován následujícím způsobem:  
+ Použití maker jako tento kód se obvykle učinit kód obtížné udržovat. V takovém případě makra obsahují deklarace proměnné. PARAMETR makra je definovaná následujícím způsobem:  
   
 ```cpp  
 #define PARM(var, type, src)type var = (type)src  
 ```  
   
- Proto získá deklarovat proměnnou lpszBuffer dvakrát ve stejné funkci. Není tento straightfoward Chcete-li tento problém opravit, jako by šlo, pokud kód nebyly použití maker (jednoduše odebrat druhý deklaraci typu). Protože se jedná, máme velice nepříjemná volba museli rozhodnout, zda chcete přepsat kód makro jako obyčejnou kód (úloha zdlouhavé a které by mohly mít náchylný) nebo zakázat upozornění.  
+ Proto získá lpszBuffer proměnná deklarovaná dvakrát ve stejné funkci. Není tento straightfoward na tento problém vyřešit, jako kdyby byl, pokud kód nepoužili makra (jednoduše odebrat druhý deklarace typu). Protože se jedná, máme unfortunate volba museli rozhodovat, jestli se má přepsat kódu maker jako běžný kódu (úloha únavné a potenciálně náchylné) nebo zakázat upozornění.  
   
- V takovém případě jsme opt zakázat upozornění. Můžete to přidáním pragma následujícím způsobem:  
+ V tomto případě jsme možnost zakázat upozornění. To jde udělat tak, že přidáte pragma následujícím způsobem:  
   
 ```cpp  
 #pragma warning(disable : 4456)  
 ```  
   
- Při zakazování upozornění, můžete chtít omezit zakázání ovlivňuje přesně takový kód, že vytváří upozornění, aby se zabránilo potlačení upozornění, když ho může poskytují užitečné informace. Nemůžeme přidat kód pro obnovení upozornění právě po řádku, která ho vytvořila, nebo ještě lepší, protože toto upozornění se zobrazí v makru, použijte `__pragma` – klíčové slovo, které funguje v makrech (`#pragma` nefunguje v makrech).  
+ Při zakazování upozornění, můžete chtít omezit zakázat projeví pouze kód, který vytvoří upozornění, aby se zabránilo potlačení upozornění, když ho může poskytují užitečné informace. Můžeme přidat kód pro obnovení upozornění bezprostředně po řádku, která ho vytvořila, nebo ještě lepší, protože toto varování se objeví v makru, použít `__pragma` – klíčové slovo, které funguje v makrech (`#pragma` nefunguje v makrech).  
   
 ```cpp  
 #define PARM(var, type, src)__pragma(warning(disable : 4456))  \  
@@ -397,7 +397,7 @@ __pragma(warning(default : 4456))
   
 ```  
   
- Další upozornění vyžaduje některé revize kódu. GetVersion – rozhraní API Win32 (a GetVersionEx) je zastaralý.  
+ Další upozornění vyžaduje některé revize kódu. GetVersion rozhraní API systému Win32 (a GetVersionEx) je zastaralý.  
   
 ```Output  
 warning C4996: 'GetVersion': was declared deprecated  
@@ -411,11 +411,11 @@ DWORD dwWindowsVersion = GetVersion();
   
 ```  
   
- Následují velké kód, který ověří dwWindowsVersion hodnotu k určení, zda jsme spuštěné v systému Windows 95 a kterou verzi systému Windows NT. Vzhledem k tomu, že se všechny zastaralé, jsme odebrat kód a řešit všechny odkazy na tyto proměnné.  
+ To je následována velké množství kódu, který prověří dwWindowsVersion hodnotu, která určí, zda máme spuštěnou na Windows 95 a kterou verzi systému Windows NT. Protože se jedná všechny zastaralé, můžeme odebrat kód a řešit všechny odkazy na tyto proměnné.  
   
- Článek [změny verze operačního systému ve Windows 8.1 a Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx) vysvětluje situaci.  
+ Tento článek [změny verze operačního systému ve Windows 8.1 a Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx) vysvětluje situace.  
   
- Metod ve třídě CSpyApp dotaz na verzi operačního systému: IsWindows9x, IsWindows4x a IsWindows5x. Je to dobrý výchozí bod předpokládají, že verze systému Windows, který plánujeme zajistit podporu (Windows 7 a novější) jsou všechny zavřete na systému Windows NT 5 jako daleko technologie používá tento starší aplikace problémem. Použití těchto metod se řešení s omezeními starší operační systémy. Proto jsme změnili tyto metody vrátí hodnotu TRUE pro IsWindows5x a FALSE pro jiné.  
+ Metody ve třídě CSpyApp, které se dotazují na verzi operačního systému: IsWindows9x, IsWindows4x a IsWindows5x. Dobrým výchozím bodem je předpokládat, že verze Windows, který plánujeme podporu (Windows 7 a novější) jsou všechny zavřít, že jde o 5 Windows NT jako úplně technologie používané v této starší aplikace. Používá tyto metody se vypořádat s omezeními starší operační systémy. Proto jsme změnili tyto metody, vrátí hodnotu TRUE pro IsWindows5x a hodnotu FALSE pro ostatní.  
   
 ```cpp  
 BOOL IsWindows9x() {/*return(m_bIsWindows9x);*/ return FALSE;  }  
@@ -424,7 +424,7 @@ BOOL IsWindows5x() {/*return(m_bIsWindows5x);*/ return TRUE;  }
   
 ```  
   
- Která zůstane jen na několika místech, kde byly přímo používány interní proměnné. Vzhledem k tomu, že jsme odebrali tyto proměnné, se nám získat několik chyb, které mají explicitně řešit.  
+ Který zbývá jen na několika místech, kde byly vnitřních proměnných použít přímo. Protože jsme odebrali těchto proměnných, získáme několik chyb, které musí řešit explicitně.  
   
 ```Output  
 error C2065: 'm_bIsWindows9x': undeclared identifier  
@@ -438,7 +438,7 @@ void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)
   
 ```  
   
- Jsme může nahradit toto volání metody nebo jednoduše pass hodnotu TRUE a odeberte starý zvláštní případ pro systém Windows 9 x.  
+ Jsme může nahraďte volání metody nebo jednoduše předejte hodnotu TRUE a odeberte staré zvláštní případ pro Windows 9 x.  
   
 ```cpp  
 void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)  
@@ -448,19 +448,19 @@ void CSpyApp::OnUpdateSpyProcesses(CCmdUI *pCmdUI)
   
 ```  
   
- Poslední upozornění na výchozí úrovni (3) obsahuje dělat s bitfield.  
+ Poslední upozornění na výchozí úrovni (3) souvisí se bitového pole.  
   
 ```Output  
 treectl.cpp(1656): warning C4463: overflow; assigning 1 to bit-field that can only hold values from -1 to 0  
 ```  
   
- Kód, který spustí toto je následující.  
+ Kód, který aktivuje to vypadá takto.  
   
 ```cpp  
 m_bStdMouse = TRUE;  
 ```  
   
- Prohlášení o m_bStdMouse naznačuje, že je bitfield.  
+ Deklarace m_bStdMouse naznačuje, že se jedná bitového pole.  
   
 ```cpp  
 class CTreeListBox : public CListBox  
@@ -479,93 +479,93 @@ class CTreeListBox : public CListBox
   
 ```  
   
- Tento kód byla zapsána před typu bool předdefinované byl podporován v jazyce Visual C++. V takový kód BOOL byla typedef pro int. Typ int je typ se znaménkem a bitová reprezentace podepsaný int, je použít první bit jako přihlašovací bit, tak bitfield typu int možné interpretovat jako představující 0 nebo -1, co byla pravděpodobně není určena.  
+ Tento kód byl zapsán před integrované logický typ je podporován v jazyce Visual C++. Takový kód BOOL jste definice typu int. Typ int je typ se znaménkem a bitové reprezentace podepsaný int, je použít první bit jako bit znaménka tak bitového pole typu int může být interpretován jako představující 0 nebo -1, pravděpodobně není co byl určen.  
   
- Nebude vědět prohlížením kód důvodu jedná se o bitová pole. Byla cílem udržet co nejmenší velikost objektu, nebo je k dispozici kdekoli kde binární rozložení objektu slouží? Jsme změnili tyto členům BOOL obyčejnou vzhledem k tomu, že vidíte nebyl z nějakého důvodu pro použití bitfield. Pomocí bitová pole udržet co nejmenší velikost objektu není zaručena. To závisí na tom, jak kompilátor rozložen typ.  
+ Byste vlastně nevěděli o pohledem na kód proto jde o bitová pole. Záměr udržet co nejmenší velikost objektu, nebo existuje je kdekoli ve kterém se používá binární rozložení objektu? Jsme změnili tyto běžné členy BOOL, protože jsme nezobrazila z jakéhokoli důvodu pro použití bitového pole. Použití bitová pole, která udržuje velikost objektu malé nemusí fungovat. To závisí na tom, jak kompilátor rozložen typ.  
   
- Může vás zajímat, pokud pomocí standardní typu bool v rámci mohou být užitečné. Řadu původní kód vzory, jako je typu BOOL byly vymyšlený k řešení problémů, které byly později Vyřešeno v standard C++, tak, aby změna z BOOL na předdefinovaný typ bool jenom jeden příklad takové změny, zvažte provádění po získání kódu původně spuštěna v nové verzi.  
+ Může vás zajímat, pokud pomocí standardního typu bool v celém by mohl být užitečný. Mnohé z původní kód vzory, třeba typ BOOL byly vymyšlený k řešení problémů, které byly později vyřešit ve standardním jazyce C++, takže změna z typu BOOL na předdefinovaný typ bool je pouze jeden příklad takové změny, můžete si dělat po odeslání kódu na začátku spuštění v nové verzi.  
   
- Jakmile jsme jste vyřešit všechny výstrahy, které se zobrazují na výchozí úrovni (úroveň 3) jsme změnili na úroveň 4 k zachycení několik dalších upozornění. První, zobrazí se následujícím způsobem:  
+ Jakmile jsme jste řešeny všechna upozornění, které se zobrazí na výchozí úrovni (úroveň 3) jsme změnili na úrovně 4 pro zachycení několika dalších upozornění. První, kdo se zobrazí se takto:  
   
 ```Output  
 warning C4100: 'nTab': unreferenced formal parameter  
 ```  
   
- Kód, který vytváří toto upozornění se následujícím způsobem.  
+ Kód, který vytváří tato upozornění byla následujícím způsobem.  
   
 ```cpp  
 virtual void OnSelectTab(int nTab) {};  
 ```  
   
- Vypadá to dostatečně neškodné, ale vzhledem k tomu, že jsme chtěli čisté kompilace sadou /W4 a wdn, můžeme jednoduše označeno jako komentář název proměnné, zároveň je nechává v zájmu přehlednosti.  
+ Vypadá to, že dostatečně neškodné, ale protože jsme chtěli čisté kompilace sadou/W4 a /WX, můžeme jednoduše označené jako komentář název proměnné, se v něm pro účely čitelnosti.  
   
 ```cpp  
 virtual void OnSelectTab(int /*nTab*/) {};  
 ```  
   
- Další upozornění, které jsme obdrželi byly užitečné pro obecné kód čištění. Existuje několik implicitní převody z `int` nebo `unsigned int` k `WORD` (což je typedef pro `unsigned short`). Ty zahrnují možné ztrátě dat. Jsme přidali přetypování na `WORD` v těchto případech.  
+ Další varování, které jsme obdrželi byly užitečné pro vyčištění obecné kódu. Existuje mnoho implicitní převody z `int` nebo `unsigned int` k `WORD` (což je definice typu `unsigned short`). Ty zahrnují může dojít ke ztrátě dat. Přidali jsme přetypování na `WORD` v těchto případech.  
   
- Další úroveň 4 upozornění, které jsme tu pro tento kód byl:  
+ Další upozornění úrovně 4, které nám dává pro tento kód byl:  
   
 ```Output  
 warning C4211: nonstandard extension used: redefined extern to static  
 ```  
   
- Tento problém nastane, když proměnná byla deklarována nejprve `extern`, později deklarovaný `static`. Význam tyto dvě specifikátory třídy úložiště se vzájemně vylučují, ale je to povoleno jako rozšíření Microsoft. Pokud jste chtěli kód přenosný na jiné kompilátory nebo jste chtěli kompilovat s /Za (režim kompatibility ANSI), změníte deklarace do mají odpovídající specifikátory třídy úložiště.  
+ Tento problém nastane, pokud nejprve proměnná byla deklarovaná `extern`, později deklarované `static`. Se vzájemně vylučují význam tyto dva specifikátory třídy úložiště, ale je to povoleno jako rozšíření společnosti Microsoft. Pokud chcete získat kód pro jeho přenositelnost na jiné kompilátory, nebo jste chtěli kompilován s možností /Za (Kompatibilita s ANSI), by se změnit deklarace mít odpovídající specifikátory třídy úložiště.  
   
-##  <a name="porting_to_unicode"></a> Krok 11. Portování ze MBCS do kódu Unicode
+##  <a name="porting_to_unicode"></a> Krok 11. Portování ze znakové sady MBCS do kódu Unicode
 
- Všimněte si, že na světě Windows když říkáme kódování Unicode, jsme obvykle znamená UTF-16. Jiné operační systémy, jako je například Linux pomocí znakové sady UTF-8, ale Windows obecně neexistuje. MBCS verze knihovny MFC byla zrušena v sadě Visual Studio 2013 a 2015, ale už se nepoužívá v Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, před provedením kroku k ve skutečnosti portu kód MBCS do kódu Unicode UTF-16, chceme může dočasně omezit upozornění, že je zastaralá MBCS, aby bylo možné provádět další činnosti nebo portování dokud vhodnou dobu odložit. Aktuální kód používá MBCS a chcete-li pokračovat, je potřeba nainstalovat verzi ANSI/MBCS MFC. Místo velké knihovny MFC není součástí výchozí sady Visual Studio **vývoj aplikací s jazykem C++** instalace, takže musíte ji vybrat z volitelných komponent v instalačním programu. V tématu [MFC MBCS DLL – doplněk](../mfc/mfc-mbcs-dll-add-on.md). Jakmile si stáhnout tuto a restartujte Visual Studio, můžete zkompilovat a propojit s verzí MFC MBCS, ale se jich zbavit upozornění o rozhraní MBCS Pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat **NO_WARN_MBCS_MFC_DEPRECATION**do seznamu předdefinovaná makra v části preprocesoru vlastnosti projektu, nebo na začátku souboru stdafx.h záhlaví nebo jiné běžné hlavičky souborů.  
+ Všimněte si, že na světě Windows, když říkáme kódování Unicode, obvykle myslíme UTF-16. Jiné operační systémy, jako je Linux používat kódování UTF-8, ale Windows obecně neuvádí. Verze MBCS MFC se přestala nabízet v sadě Visual Studio 2013 a 2015, ale již není již v sadě Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, před provedením kroku k opravdu portu znakové sady MBCS kódu Unicode UTF-16, chceme může dočasně eliminovat upozornění, že se již nepoužívá znakové sady MBCS, aby bylo možné provádět další operace nebo odložit přenesení do vhodnou dobu. Aktuální kód používá znakovou sadu MBCS a chcete-li pokračovat, potřebujeme nainstalovat verzi ANSI/znakové sady MBCS MFC. Docela rozsáhlá knihovna MFC není součástí výchozí sady Visual Studio **vývoj desktopových aplikací pomocí C++** instalace, takže musí být vybrán z volitelné součásti v instalačním programu. Zobrazit [MFC MBCS DLL – doplněk](../mfc/mfc-mbcs-dll-add-on.md). Jakmile stáhněte si tuto aplikaci a restartujte aplikaci Visual Studio, můžete zkompilovat a propojit s verzí knihovny MFC znakové sady MBCS, ale k získání identifikátorů rid varování o znakové sady MBCS, pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat **NO_WARN_MBCS_MFC_DEPRECATION**na seznam předdefinovaných maker v preprocesoru části Vlastnosti projektu, nebo na začátku souboru stdafx.h záhlaví nebo jiných společný soubor hlaviček.  
   
- Nyní je k dispozici chybami linkeru.  
+ Nyní je k dispozici některé chyby linkeru.  
   
 ```Output  
 fatal error LNK1181: cannot open input file 'mfc42d.lib'  
 ```  
   
- LNK1181 dochází, protože na verzi zastaralé statické knihovny mfc je zahrnuta v linkeru vstup. Není to povinné už, protože jsme můžete propojit MFC dynamicky, takže potřebujeme odeberte všechny statické knihovny MFC z vlastnosti vstupu v části Linker vlastností projektu. Tento projekt je také pomocí možnosti /NODEFAULTLIB a místo toho jsou uvedeny všechny závislosti knihovny.  
+ LNK1181 dochází, protože obsahuje zastaralý statickou knihovnu verzi knihovny mfc linker input. Není nutné zobrazovat, protože jsme dynamicky propojí knihovnu MFC, potřebujeme jenom odebrat všechny statické knihovny MFC z vstupní vlastnosti v části Linker vlastností projektu. Tento projekt také používá parametr/NODEFAULTLIB a místo toho vypíše všechny závislosti knihoven.  
   
 ```  
 msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\SpyHk55.lib;%(AdditionalDependencies)  
 ```  
   
- Nyní dejte nám ve skutečnosti aktualizujte kód staré vícebajtové znakovou sadu (MBCS) na kódování Unicode. Vzhledem k tomu, že toto je aplikace systému Windows, důvěrně svázané s platformou Windows desktop jsme se portu na kódování Unicode UTF-16, které používá systém Windows. Při psaní kódu pro různé platformy nebo portování aplikace systému Windows na jiné platformě, můžete zvážit portování do znakové sady UTF-8, které se často používá v jiných operačních systémech.  
+ Teď nám skutečně aktualizujte starý kód vícebajtové znakové sady (MBCS) do kódování Unicode. Protože jde o aplikaci Windows, úzce vázané na desktopové platformy Windows, jsme se port na Unicode UTF-16, který používá Windows. Při psaní kódu napříč platformami nebo přenesení aplikací Windows pro jiné platformy, můžete chtít zvážit přenos na UTF-8, který je běžně používaný v jiných operačních systémech.  
   
- Portování do kódu Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost zkompilovat do MBCS nebo ne.  Pokud Chceme mít možnost pro podporu MBCS, bychom měli použít Tchar – makro jako typ znak, který přeloží na buď `char` nebo `wchar_t`, v závislosti na tom, jestli je definována _MBCS nebo _UNICODE během kompilace. Přepnutí na Tchar – a Tchar – verzích různých rozhraních API místo `wchar_t` a jeho přidružené rozhraní API znamená, že můžete vrátit zpět na verzi MBCS kódu jednoduše tak, že definujete _MBCS makro místo _UNICODE. Kromě Tchar – existuje různých verzí Tchar – například často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** změňte **znaková sada** vlastnost z **použití MBCS Znaková sada** k **použít sadu znak Unicode**. Toto nastavení ovlivňuje, které makro je předdefinovaná během kompilace. Je makro kódování UNICODE a _UNICODE – makro. Vlastnosti projektu ovlivňuje i konzistentně. Záhlaví systému Windows pomocí kódování UNICODE, kde hlavičky Visual C++, jako je například MFC použít _UNICODE, ale pokud je definován, dalších vždy definována.  
+ Portování do Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost kompilace do znakové sady MBCS, nebo ne.  Pokud chcete mít možnost pro podporu znakové sady MBCS, bychom měli použít makra TCHAR jako typ znaku, který se přeloží na buď `char` nebo `wchar_t`, v závislosti na tom, jestli _MBCS nebo _UNICODE definovalo během kompilace. Přepnutí do Tchar – a TCHAR verzích různá rozhraní API namísto `wchar_t` a jeho přidružené rozhraní API znamená, že můžete vrátit na verzi znakové sady MBCS kódu jednoduše tak, že definice makra _MBCS místo _UNICODE. Kromě TCHAR existuje širokou škálu TCHAR verze jako je často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** oddíl, změna **znaková sada** vlastnost z **pomocí znakové sady MBCS Znaková sada** k **použít znakovou sadu Unicode**. Toto nastavení má vliv, které – makro je předdefinovaná během kompilace. Je UNICODE makra a makra _UNICODE. Vlastnost projektu ovlivňuje konzistentně. Záhlaví Windows používat kódování UNICODE, kde _UNICODE použít záhlaví Visual C++, jako je například knihovny MFC, ale v případě, že je definován, druhá je vždy definována.  
   
- Dobrou [průvodce](http://msdn.microsoft.com/library/cc194801.aspx) portování z MBCS do kódu Unicode UTF-16 pomocí Tchar – existuje. Vybereme možnost této trasy. Nejprve se nám změnit **znaková sada** vlastnost **použití Unicode znaková sada** a projekt znovu sestavte.  
+ Vhodná [průvodce](http://msdn.microsoft.com/library/cc194801.aspx) pomocí TCHAR existuje pro přenos ze znakové sady MBCS do kódu Unicode UTF-16. Můžeme vybrat tuto trasu. Nejprve Změníme **znaková sada** vlastnost **pomocí Unicode znaková sada** a sestavte projekt znovu.  
   
- Některé místech kód již používali `TCHAR`, zdá v očekávání nakonec Podpora kódování Unicode. Některé nebyly. Jsme hledali instancí `CHAR`, což je definice typu char a nahrazené většina z nich s Tchar –. Také jsme hledán `sizeof (CHAR)`. Vždy, když jsme změnili z `CHAR` k `TCHAR`, jsme obvykle měl změnit na `sizeof(TCHAR)` vzhledem k tomu, že to se často používá k určení počtu znaků v řetězci. Pomocí nesprávného typu zde nevytváří chybu kompilátoru, takže je vhodné platícího kousek pozornost tento případ.  
+ Některá místa v kódu už dřív používali `TCHAR`, zjevně čekat na případná nakonec podporu kódování Unicode. Některé nebyly. Jsme hledali instance `CHAR`, což je definice typu char a nahradil většina z nich s TCHAR. Kromě toho jsme hledán `sizeof (CHAR)`. Vždy, když jsme změnili z `CHAR` k `TCHAR`, obvykle jsme museli změnit na `sizeof(TCHAR)` vzhledem k tomu, že to se často používá k určení počtu znaků v řetězci. Pomocí nesprávného typu tady nevytváří chybu kompilátoru, proto je vhodné platit hodně pozornost tento případ.  
   
- Tohoto typu chyby je velmi běžné právě po přepnutí na kódování Unicode.  
+ Tohoto typu chyby je velmi běžné bezprostředně po přepnutí do kódu Unicode.  
   
 ```Output  
 error C2664: 'int wsprintfW(LPWSTR,LPCWSTR,...)': cannot convert argument 1 from 'CHAR [16]' to 'LPWSTR'  
 ```  
   
- Tady je příklad kódu, který vytváří toto:  
+ Tady je příklad kódu, který vytvoří toto:  
   
 ```cpp  
 wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);  
 ```  
   
- Jsme uveďte _T kolem řetězec literálu odebrat chyba.  
+ Máme _T kolem řetězec literálu odebrat chyby.  
   
 ```cpp  
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- _T – makro má za následek provedení literálu kompilace řetězec jako `char` řetězec nebo `wchar_t` řetězec, v závislosti na nastavení MBCS nebo UNICODE. Pokud chcete nahradit všechny řetězce _T v sadě Visual Studio, poprvé otevřete **rychle nahradit** (klávesnice: Ctrl + F) pole nebo **nahradit v souborech** (klávesnice: Ctrl + Shift + H), zvolte **použití regulárních Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako Nahrazovací text. Pokud již máte _T – makro kolem některé řetězce, tento postup se ji znovu přidejte a setkat i případy, kdy nechcete _T, například při použití `#include`, takže je vhodné použít **nahradit další** místo  **Nahraďte všechny**.  
+ _T – makro má vliv na provádění řetězec literálu kompilovat jako `char` řetězec nebo `wchar_t` řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce _T v sadě Visual Studio, nejprve otevřete **rychlého nahrazení** (klávesnice: Ctrl + F) pole nebo **nahrazování v souborech** (klávesnice: Ctrl + Shift + H), klikněte na tlačítko **použijte regulární Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte _T – makro kolem některé řetězce, tento postup přidá ho znovu a setkat i případy, kdy nechcete _T, jako je například při použití `#include`, takže je vhodné použít **nahradit další** spíše než  **Nahradit vše**.  
   
- Tato konkrétní funkce [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx), je ve skutečnosti definován v záhlaví systému Windows a v dokumentaci pro doporučí, že ho nelze použít, z důvodu přetečení možné vyrovnávací paměti. Pro je uvedena velikost `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob pro funkce, které chcete zkontrolovat, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do ní. Najdete v další části o přenos do zabezpečení CRT, ve kterém jsme jiné podobné problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
+ Tato funkce [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx), je ve skutečnosti definovány v záhlaví Windows a v dokumentaci pro doporučí, že se nepoužívají, z důvodu přetečení vyrovnávací paměti je to možné. Není uvedena velikost pro `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob, jak funkce, zkontrolujte, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do něj. Viz následující část o převodu na zabezpečení CRT, ve kterém jsme podobnými problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
- Další běžnou chybou, které se zobrazí v převodu na kódování Unicode je to.  
+ Další běžnou chybou, který se zobrazí při převodu do kódování Unicode je to.  
   
 ```Output  
 error C2440: '=': cannot convert from 'char *' to 'TCHAR *'  
 ```  
   
- Kód, který ho generuje vypadá takto:  
+ Kód, který ho vytvořila vypadá takto:  
   
 ```cpp  
 pParentNode->m_szText = new char[strTitle.GetLength() + 1];  
@@ -573,7 +573,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- I když _tcscpy – funkce byl použit, což je Tchar – strcpy – funkce pro kopírování řetězec, byl vyrovnávací paměti, která byla přidělena `char` vyrovnávací paměti. Snadno se změní na Tchar –.  
+ I když _tcscpy – funkce byla použita, což je TCHAR strcpy – funkce pro kopírování řetězce, vyrovnávací paměť, která byla přidělena byla `char` vyrovnávací paměti. Snadno se změní na TCHAR.  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,13 +581,13 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Podobně jsme změnili `LPSTR` (dlouho ukazatel na řetězec) a `LPCSTR` (dlouho ukazatel na konstantní řetězec) k `LPTSTR` (dlouho ukazatel Tchar – řetězec) a `LPCTSTR` (dlouho ukazatel na konstantní řetězec Tchar –), při oprávněných z Chyba kompilátoru. Jsme zvolili Nedělejte nahrazení pomocí globální Hledat a nahradit, protože každé situaci měl prověřit, jednotlivě. V některých případech `char` chtěli verze, například při zpracování určitých Windows zpráv, které používat struktury systému Windows, které mají příponu A. V rozhraní Windows API příponu A znamená ASCII nebo ANSI (a platí také pro MBCS) a příponou W znamená široké znaky, nebo Unicode UTF-16. Tato vzoru pro pojmenovávání se používá v hlavičkách Windows, ale jsme také a potom ji v kódu nástroje Spy ++ když jsme měli přidat Unicode verze funkce, která již byla definována ve pouze MBCS verzi.  
+ Podobně, jsme změnili `LPSTR` (dlouhým ukazatelem na řetězec) a `LPCSTR` (dlouhým ukazatelem na konstanty typu řetězec) do `LPTSTR` (dlouhým ukazatelem na řetězec TCHAR) a `LPCTSTR` (dlouhým ukazatelem na konstanty typu řetězec TCHAR), při garantována Chyba kompilátoru. Zvolili jsme Nedělejte nahrazení pomocí globálního hledání a nahrazení, protože obě situace museli posuzují jednotlivě. V některých případech `char` chtěla verze, například při zpracování některých Windows zpráv, která může použít Windows struktury, které mají příponu A. V rozhraní Windows API příponu A znamená, že ASCII a ANSI (a platí také pro znakové sady MBCS) a příponu W znamená široké znaky nebo Unicode UTF-16. Tento vzorec pojmenování se používá v hlavičkách Windows, ale jsme také a potom ho v kódu nástroje Spy ++ při museli jsme přidat Unicode verze funkce, která již byla definována v pouze verzi znakové sady MBCS.  
   
- V některých případech nám museli nahradit typ má být použit na verzi, která přeloží správně (WNDCLASS místo WNDCLASSA např.).  
+ V některých případech jsme museli nahradit typ má být použit na verzi, která řeší správně (WNDCLASS místo WNDCLASSA příkladu).  
   
- V řadě případů jsme museli používat obecná verzi (makro) Win32 API jako GetClassName (namísto GetClassNameA). V příkazu switch obslužné rutiny zpráv, některé zprávy jsou konkrétní MBCS nebo Unicode, v těchto případech, jsme musel měnit kód explicitně volání MBCS verze, protože jsme nahradit funkce obecně s názvem se a W specifické funkce a přidat makro pro Obecný název, který se přeloží na správné A nebo W název založený na tom, zda je definována kódování UNICODE.  V mnoha části kódu když jsme přešli na definovat _UNICODE, W verze je nyní vybrali i v případě verze A je co je chtěli.  
+ V řadě případů jsme museli používat obecná verzi (makro) rozhraní Win32 API, jako je GetClassName (namísto GetClassNameA). V příkazu switch obslužné rutiny zpráv, některé zprávy jsou specifické pro znakovou sadu MBCS a Unicode, v těchto případech, abychom museli měnit kód explicitně volat verzi znakové sady MBCS, protože jsme nahradit obecně pojmenované funkce a a W konkrétní funkce a přidá makro pro Obecný název, který se překládá na správný A nebo název W založený na tom, jestli je definována kódování UNICODE.  Ve mnoho částí kódu když jsme přešli k definování _UNICODE, W verze je teď vybrán i v případě verze A je co chtěli.  
   
- Nejsou k dispozici na několika místech, kde museli věnovat zvláštní akce. Jakékoli použití WideCharToMultiByte nebo MultiByteToWideChar může vyžadovat bližší pohled. Zde je příkladem, kde se používá WideCharToMultiByte.  
+ Nejsou k dispozici na několika místech, kde musel být přijata zvláštní akce. Jakékoli použití WideCharToMultiByte nebo MultiByteToWideChar může vyžadovat podívat podrobněji. Tady je jeden příklad, ve kterém se WideCharToMultiByte používal.  
   
 ```cpp  
 BOOL C3dDialogTemplate::GetFont(CString& strFace, WORD& nFontSize)  
@@ -613,7 +613,7 @@ BOOL C3dDialogTemplate::GetFont(CString& strFace, WORD& nFontSize)
   
 ```  
   
- Chcete-li to vyřešit, jsme měli zjistit, že důvod, proč k tomu bylo potřeba bylo kopírování široká znaková řetězec reprezentující název písmo do vnitřní vyrovnávací paměť CString, strFace. To vyžaduje mírně odlišný kód pro vícebajtové CString řetězce jako široká znaková CString řetězce, takže jsme přidali #ifdef v tomto případě.  
+ Proto jsme měli pochopit, že z důvodů, proč k tomu bylo potřeba zkopírovat řetězec širokého znaku představující název písma do vnitřní vyrovnávací paměť z CString, strFace. To vyžaduje mírně odlišný kód pro vícebajtové řetězce CString jako řetězce širokého znaku CString, proto jsme přidali #ifdef v tomto případě.  
   
 ```cpp  
 #ifdef _MBCS  
@@ -627,33 +627,33 @@ strFace.ReleaseBuffer();
   
 ```  
   
- Samozřejmě místo wcscpy – jsme skutečně by měl použít wcscpy_s –, bezpečnější verze. Tuto situaci řeší v další části.  
+ Samozřejmě namísto wcscpy – jsme skutečně používali wcscpy_s – bezpečnější verze. Další část se věnuje toto.  
   
- Pro kontrolu našich pracovních jsme použití vícebajtových znaková sada obnovit znaková sada a ujistěte se, že kód stále shromažďování, použití MBCS, jakož i kódování Unicode. Needless znamená průchodu úplné testu musí provést u rekompilované aplikace po tyto změny.  
+ Ke kontrole naší práci jsme by měl obnovit znaková sada použití vícebajtové znakové sady a ujistěte se, že kód stále zkompiluje, pomocí znakové sady MBCS a Unicode. Needless znamená pass celý test by měl provést u rekompilované aplikace po provedení těchto změn.  
   
- V našem pracují se toto řešení nástroje Spy ++ trvalo o dvou dnů pro vývojář průměrná C++ převést kód na kódování Unicode. Retesting čas neobsahuje.  
+ V naší práci s tímto řešením nástroje Spy ++, jakou trvalo asi dvou pracovních dnů pro vývojáře průměrné C++ k převodu kódu Unicode. Který neobsahuje retesting čas.  
   
-##  <a name="porting_to_secure_crt"></a> Krok 12. Portování používat zabezpečení CRT  
- Portování kódu pro použití zabezpečeného verze funkcí CRT (verze s příponou _Malá) je další. V takovém případě je funkce nahraďte _M verze a potom obvykle přidat parametry velikost vyrovnávací paměti vyžaduje další obecné strategie. V mnoha případech jde přehledné vzhledem k tomu, že velikost je známý. V ostatních případech, kde velikost není ihned k dispozici, je potřeba přidat další parametry funkce, která používá funkci CRT nebo možná zkontrolujte využití cílové vyrovnávací paměti a najdete v části co odpovídající velikost jsou omezení.  
+##  <a name="porting_to_secure_crt"></a> Krok 12. Portování do použijte zabezpečení CRT  
+ Portování kódu použít bezpečné verze funkcí CRT (verze s příponou _Malá) se chystá. V takovém případě je funkce nahradit verzí _Malá a poté obvykle, přidejte parametry velikost požadované vyrovnávací paměti další obecná strategie. V mnoha případech jde jednoduché vzhledem k tomu, že se označuje velikost. V ostatních případech, kde velikost není okamžitě k dispozici, je potřeba přidat další parametry pro funkci, která používá funkce CRT, nebo možná prozkoumat využití vyrovnávací paměti cílového a naleznete v tématu co odpovídající velikost mezní hodnoty.  
   
- Visual C++ poskytuje podvodné, aby bylo snazší získat zabezpečený kód bez přidání tolik parametrů velikost a který je pomocí šablony přetížení. Vzhledem k tomu, že tato přetížení jsou šablony, že jsou dostupná pouze při kompilování jako C++, není jako C. Spyxxhk je projekt C, takže nebudou fungovat efektu pro tento.  Však není Spyxx a používáme podvodné. Základem je na místě, kde se bude zkompilován v každém souboru projektu, například v stdafx.h přidá řádek takto:  
+ Trik, aby bylo snazší získat kód zabezpečení bez přidání parametrů velikost poskytuje jazyk Visual C++, a to je pomocí přetížení šablon. Protože tato přetížení šablon, jejich jsou dostupné jenom při kompilaci jako C++, nepřináší C. Spyxxhk je projekt C tak zdvih nebude fungovat, který.  Ale není Spyxx a používáme zdvih. Trik, jak zajistit, je na místě, kde ji se zkompiluje do každého souboru projektu, například v souboru stdafx.h přidejte řádek podobný následujícímu:  
   
 ```cpp  
 #define _CRT_SECURE_TEMPLATE_OVERLOADS 1  
 ```  
   
- Když definujete, vždy, když vyrovnávací paměť je pole, namísto nezpracovaná ukazatele, je její velikosti odvodit z typ pole a který slouží jako parametr velikosti, aniž by bylo nutné ho zadat. Který pomáhá omezit složitosti přepisování kód. Je třeba nahradit název funkce _M verzí, ale který často se dá dělat formou vyhledávání a operace nahrazování.  
+ Když definujete, pokaždé, když je pole vyrovnávací paměť, místo nezpracovaný ukazatel, jeho velikost je odvozen z typu pole a, který se používá jako parametr velikosti, aniž byste museli zadávat. Která pomáhá omezit složitost přepisování kódu. Stále je nutné nahradit název funkce s verzí _Malá, ale, který často to provést pomocí vyhledávání a nahrazení operace.  
   
- Návratové hodnoty některé funkce změnit. Například _itoa_s – (a _itow_s – a _itot_s – makro) vrátí kód chyby (errno_t), nikoli řetězec. Proto v těchto případech je nutné přesunout volání _itoa_s – na samostatném řádku a nahraďte ji metodou identifikátor do vyrovnávací paměti.  
+ Návratové hodnoty některé funkce změnit. Například _itoa_s – (a _itow_s – a _itot_s – makro) vrátí kód chyby (errno_t), namísto řetězce. Takže v těchto případech budete muset přesunout volání _itoa_s – na samostatném řádku a nahraďte ji metodou identifikátor přípravné vyrovnávací paměti.  
   
- Některé běžné případy: pro memcpy – při přechodu k memcpy_s – jsme přidali často velikost strukturu byly zkopírovány na. Podobně pro většinu řetězce a vyrovnávacích pamětí, velikost pole nebo vyrovnávací paměti je snadno určit deklaraci vyrovnávací paměti nebo hledání, kde byla původně přidělit vyrovnávací paměť. Pro některé situace je nutné určit, jak velký vyrovnávací paměti je ve skutečnosti k dispozici, a pokud tyto informace není k dispozici v rámci oboru funkce, který upravujete, by měl být přidán jako dodatečný parametr a volající kód by měl být upraven na Zadejte informace.  
+ Některé běžné příklady: pro memcpy, při přechodu k memcpy_s –, jsme přidali často velikost struktury je zkopírován do. Podobně pro většinu řetězce a vyrovnávací paměti, velikost pole nebo vyrovnávací paměti se snadno určuje od deklarace vyrovnávací paměti nebo hledáním, kde byla původně přidělené vyrovnávací paměti. V některých situacích je potřeba určit, jak velký objem vyrovnávací paměti je ve skutečnosti k dispozici, a pokud tyto informace není k dispozici v oboru funkce, který modifikujte, by měl být přidán jako další parametr a volající kód by měl být upraven na Zadejte informace.  
   
- Pomocí těchto postupů převést kódu pro použití zabezpečeného funkcí CRT trvalo asi půl za den. Pokud si zvolíte možnost Ne přetížení šablony a k přidání parametrů velikost ručně, by pravděpodobně trvat dvakrát nebo třikrát delší dobu.  
+ Pomocí následujících postupů, jakou trvalo přibližně půl za den pro převod kód, který použije zabezpečené funkce CRT. Pokud jste vybrali možnost přetížení šablon a ručně přidejte parametry velikosti, by pravděpodobně využijte dvakrát nebo třikrát déle.  
   
-##  <a name="deprecated_forscope"></a> Krok 13. /Zc:forScope-je zastaralý.  
- Od verze Visual C++ verze 6.0 kompilátor vyhovuje aktuální standard, což omezí obor proměnných deklarovaných ve smyčce do oboru smyčky. Možnost kompilátoru [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**vynutit dodržování pro obor cyklu for** ve vlastnostech projektu) určuje, zda bude ohlášena za chybu. Jsme by měl aktualizovat kódu jako vyhovující a přidejte deklarace právě mimo smyčku. Aby se zabránilo provedení změn kódu, můžete změnit toto nastavení v části jazyk C++ vlastností projektu a **žádné (/Zc:forScope-)**. Nicméně, mějte na paměti, **/Zc:forScope-** může být odebrán v budoucí verzi Visual C++, takže nakonec váš kód bude nutné změnit tak, aby odpovídala na standardní.  
+##  <a name="deprecated_forscope"></a> Kroku 13. /Zc:forScope-je zastaralý.  
+ Od verze Visual C++ 6.0 kompilátor odpovídá aktuální standardu, který omezuje obor proměnné deklarované ve smyčce do oboru smyčky. Možnost kompilátoru [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**vynutit dodržování standardu pro obor cyklu for** ve vlastnostech projektu) určuje, zda bude ohlášena za chybu. Aktualizujeme by měl náš kód, aby splňovala podmínky shody a přidejte deklarace pouze mimo smyčku. Aby se zabránilo provedení změn kódu, můžete změnit nastavení v části jazyk C++ vlastností projektu a **žádné (/Zc:forScope-)**. Nicméně, mějte na paměti, která **/Zc:forScope-** v budoucí verzi jazyka Visual C++, takže nakonec bude nutné změnit tak, aby odpovídal standardu váš kód může být odstraněna.  
   
- Tyto problémy jsou je poměrně snadné ho opravit, ale v závislosti na kódu, může to ovlivnit velké množství kódu. Zde je typické problém.  
+ Tyto problémy jsou relativně snadno to vyřešíme, ale v závislosti na vašem kódu, může to ovlivnit velké množství kódu. Zde je typický problém.  
   
 ```cpp  
 int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const  
@@ -665,13 +665,13 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ```  
   
- Výše uvedený kód vytvoří následující chyba:  
+ Výše uvedený kód vygeneruje chybu:  
   
 ```Output  
 'n': undeclared identifier  
 ```  
   
- K tomu dochází, protože kompilátor se nepoužívá možnost kompilátoru, která povolené kód, který není v souladu se standardní C++. Ve verzi standard se deklarace proměnné uvnitř smyčky omezuje jeho oboru smyčky pouze, takže běžnou praxí pomocí smyčky čítač mimo smyčky vyžaduje, aby deklaraci čítač také přesunout mimo smyčky, jako v následujícím kódu revidované :  
+ K tomu dochází, protože kompilátor se nepoužívá možnost kompilátoru, která kód, který již splňuje C++ standard. Ve standardu deklarace proměnné uvnitř smyčka omezuje jeho rozsah smyčky, takže běžnou praxí pomocí čítače cyklů mimo smyčku vyžaduje, aby deklarace čítač také přesunout mimo smyčku, stejně jako v následujícím upravený kód :  
   
 ```cpp  
 int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const  
@@ -685,8 +685,8 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ```  
   
 ## <a name="summary"></a>Souhrn  
- Portování nástroje Spy ++ z původní kódu Visual C++ verze 6.0 nejnovější kompilátoru trvalo asi 20 hodin kódování o týden v průběhu času. Nemůžeme upgradovat přímo přes osm verze produktu Visual Studio 6.0 na Visual Studio 2015. To se teď doporučený postup pro všechny upgrady v projektech malé i velké.  
+ Portování nástroje Spy ++ od původního kódu Visual C++ 6.0 na nejnovější kompilátor trvalo asi 20 hodin kódování o týden v průběhu času. Budeme upgradovat přímo přes osm verzemi produktu Visual Studio 6.0 na Visual Studio 2015. Teď je to doporučený postup pro všechny upgrady na projektech malé i velké.  
   
 ## <a name="see-also"></a>Viz také  
- [Portování a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+ [Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [Předchozí Případová studie: COM Spy](../porting/porting-guide-com-spy.md)

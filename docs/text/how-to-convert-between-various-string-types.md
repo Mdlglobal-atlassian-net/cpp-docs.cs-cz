@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: převod mezi různými typy řetězců | Microsoft Docs'
+title: 'Postupy: převody mezi různými typy řetězců | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d54cafaa2f0b4d3db79e8b4c8fc381457952794
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861224"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208328"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Postupy: Převody mezi různými typy řetězců
-Toto téma ukazuje, jak převést různými typy řetězců Visual C++ do jiných řetězců. Zahrnout typy řetězců, které jsou uvedeny `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), a <xref:System.String?displayProperty=fullName>. Ve všech případech přišla kopii řetězec převést na nový typ. Některé změny provedené nový řetězec nebude mít vliv na původním řetězcem a naopak.  
+Toto téma ukazuje, jak převést různé řetězcové typy jazyka Visual C++ do jiných řetězců. Typy řetězců, které jsou pokryty, zahrnují `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), a <xref:System.String?displayProperty=fullName>. Ve všech případech je kopie řetězce vytvořena při převodu na nový typ. Všechny změny nového řetězce neovlivní původní řetězec a naopak.  
   
-## <a name="converting-from-char-"></a>Převod z typu char *  
+## <a name="converting-from-char-"></a>Převod z char \*  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `char *` na jiný typ řetězec uvedený výše. A `char *` řetězec (také označované jako řetězec ve stylu jazyka C) používá k označení konec řetězec prázdný znak. Řetězce ve stylu jazyka C obvykle vyžadují jeden bajt na znak, ale můžete také použít dva bajty. V následujících příkladech `char *` řetězce jsou někdy označovány jako řetězce vícebajtových znaků z důvodu řetězec data, která vyplývají z převodu z řetězců v kódu Unicode. Jednotné jednobajtové a vícebajtové znakové (`MBCS`) funkce mohou pracovat s `char *` řetězce.  
+ Tento příklad ukazuje, jak převést `char *` na jiné typy řetězce, uvedené výše. A `char *` řetězce (označované také jako řetězec stylu C) používá znak null k označení konce řetězce. Řetězce ve stylu jazyka C obvykle vyžadují jeden bajt na znak, ale můžete také použít dva bajty. V příkladech níže `char *` řetězce jsou někdy označovány jako vícebajtové znakové řetězce z důvodu řetězcových dat, které vyplývají z převodu z Unicode řetězců. Jednobajtové a vícebajtové znak (`MBCS`) funkce může pracovat s `char *` řetězce.  
   
 ### <a name="code"></a>Kód  
   
@@ -128,12 +128,12 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-wchart-"></a>Převod z wchar_t *  
+## <a name="converting-from-wchart-"></a>Převod z wchar_t \*  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `wchar_t *` na jiný typ řetězec uvedený výše. Některé typy řetězců, včetně `wchar_t *`, implementovat široká znaková formáty. Převést řetězec o délce vícebajtové a široké znak formátu, můžete použít volání funkce jedné jako `mbstowcs_s` nebo vyvolání konstruktoru pro třídu, například `CStringA`.  
+ Tento příklad ukazuje, jak převést `wchar_t *` na jiné typy řetězce, uvedené výše. Některé typy řetězců, včetně `wchar_t *`, implementují formáty širokého znaku. Převést řetězec mezi vícebajtovým formátem a formátem širokého znaku, můžete použít volání jediné funkce, například `mbstowcs_s` nebo vyvolání konstruktoru pro třídu, jako je `CStringA`.  
   
 ### <a name="code"></a>Kód  
   
@@ -258,7 +258,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `_bstr_t` na jiný typ řetězec uvedený výše. `_bstr_t` Objekt je způsob, jak zapouzdřit širokou znak `BSTR` řetězce. Řetězce BSTR má hodnotu délky a nepoužívá znak hodnoty null pro ukončení řetězce, ale požadovaný typ řetězec převést na může požadovat ukončující hodnotu null.  
+ Tento příklad ukazuje, jak převést `_bstr_t` na jiné typy řetězce, uvedené výše. `_bstr_t` Objekt je způsob, jak zapouzdřit širokého znaku `BSTR` řetězce. Řetězec BSTR má hodnotu délky a nepoužívá znak null pro ukončení řetězce, ale typ řetězce, který převádíte může požadovat ukončující znak null.  
   
 ### <a name="code"></a>Kód  
   
@@ -359,7 +359,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `CComBSTR` na jiný typ řetězec uvedený výše. Podobně jako _bstr_t `CComBSTR` objekt je způsob, jak zapouzdřit řetězce BSTR. Řetězce BSTR má hodnotu délky a nepoužívá znak hodnoty null pro ukončení řetězce, ale požadovaný typ řetězec převést na může požadovat ukončující hodnotu null.  
+ Tento příklad ukazuje, jak převést `CComBSTR` na jiné typy řetězce, uvedené výše. Podobně jako _bstr_t `CComBSTR` objekt je způsob, jak zapouzdřit řetězce BSTR. Řetězec BSTR má hodnotu délky a nepoužívá znak null pro ukončení řetězce, ale typ řetězce, který převádíte může požadovat ukončující znak null.  
   
 ### <a name="code"></a>Kód  
   
@@ -470,9 +470,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `CString` na jiný typ řetězec uvedený výše. `CString` je založena na Tchar – typ dat, která zase závisí na tom, zda je symbol `_UNICODE` je definována. Pokud `_UNICODE` není definován, `TCHAR` je definován jako char a `CString` obsahuje vícebajtový řetězec; Pokud `_UNICODE` definované, `TCHAR` je definován `wchar_t` a `CString` obsahuje široké znaky řetězec.  
+ Tento příklad ukazuje, jak převést `CString` na jiné typy řetězce, uvedené výše. `CString` je založena na datovém typu TCHAR, který závisí na tom, zda symbol `_UNICODE` je definována. Pokud `_UNICODE` není definován, `TCHAR` je definován jako znak a `CString` obsahuje vícebajtový řetězec znaků; Pokud `_UNICODE` je definován, `TCHAR` je definován jako `wchar_t` a `CString` obsahuje širokého znaku řetězec.  
   
- `CStringA` je vícebajtových vždy řetězce verze `CString`, `CStringW` je pouze verze široká znaková řetězec. Ani `CStringA` ani `CStringW` použít `_UNICODE` k určení, jak by měli kompilovat. `CStringA` a `CStringW` se používají v tomto příkladu k objasnění malé rozdíly v přidělení velikosti vyrovnávací paměti a zpracování výstupu.  
+ `CStringA` je vždy vícebajtovou řetězce verze `CString`, `CStringW` je jedinou verzí řetězce širokého znaku. Ani `CStringA` ani `CStringW` použít `_UNICODE` k určení, jak mají kompilovat. `CStringA` a `CStringW` se v tomto příkladu používají k objasnění menších rozdílů v přidělení velikosti vyrovnávací paměti a zpracování výstupu.  
   
 ### <a name="code"></a>Kód  
   
@@ -619,7 +619,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `basic_string` na jiný typ řetězec uvedený výše.  
+ Tento příklad ukazuje, jak převést `basic_string` na jiné typy řetězce, uvedené výše.  
   
 ### <a name="code"></a>Kód  
   
@@ -711,12 +711,12 @@ Hello, World! (CStringW)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-systemstring"></a>Převod z typu System::String  
+## <a name="converting-from-systemstring"></a>Převod z System::String  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést z široké znaku (Unicode) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) na jiný typ řetězec uvedený výše.  
+ Tento příklad ukazuje, jak převést ze širokého znaku (Unicode) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) na jiné typy řetězce, uvedené výše.  
   
 ### <a name="code"></a>Kód  
   
@@ -820,14 +820,14 @@ Hello, World! (basic_string)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [ATL a MFC řetězec převodních maker](../atl/reference/string-conversion-macros.md)   
- [CString operace vztahující se k řetězce stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
+ [ATL a MFC – makra převodu řetězců](../atl/reference/string-conversion-macros.md)   
+ [CString – operace týkající se řetězců ve stylu C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
  [Postupy: převod standardního řetězce na typ System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
  [Postupy: převod typu System::String na standardní řetězec](../dotnet/how-to-convert-system-string-to-standard-string.md)   
  [Postupy: převod typu System::String na wchar_t * nebo char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
  [Programování pomocí třídy CComBSTR](../atl/programming-with-ccombstr-atl.md)   
- [mbstowcs_s –, _mbstowcs_s_l –](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [wcstombs_s –, _wcstombs_s_l –](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
- [strcpy_s – wcscpy_s –, _mbscpy_s –](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strcat_s – wcscat_s –, _mbscat_s –](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
+ [mbstowcs_s _mbstowcs_s_l –](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [wcstombs_s – _wcstombs_s_l –](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
+ [strcpy_s wcscpy_s –, _mbscpy_s –](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strcat_s wcscat_s –, _mbscat_s –](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
  [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

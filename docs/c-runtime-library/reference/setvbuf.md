@@ -1,5 +1,5 @@
 ---
-title: setvbuf – | Microsoft Docs
+title: setvbuf – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c516932eb8d50fb8c9fdbe6f8c48a3f590b1ffb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 279fb5f7c400a3c7160a9dc66c6cfce7ccaf2bc4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408481"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208494"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -57,37 +57,37 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 *Vyrovnávací paměti*<br/>
-Uživatel, který přidělené vyrovnávací paměti.
+Uživatel přidělené vyrovnávací paměti.
 
 *Režim*<br/>
 Režim ukládání do vyrovnávací paměti.
 
 *Velikost*<br/>
-Velikost vyrovnávací paměti v bajtech. Povolený rozsah: 2 < = *velikost* < = INT_MAX (2147483647). Interně hodnota zadaná pro *velikost* se zaokrouhlí směrem dolů na nejbližší násobek. 2.
+Velikost vyrovnávací paměti v bajtech. Povolený rozsah: 2 < = *velikost* < = INT_MAX (2147483647). Interně, hodnota zadaná pro *velikost* se zaokrouhlí směrem dolů na nejbližší násobek 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 V případě úspěchu vrátí hodnotu 0.
 
-Pokud *datového proudu* je **NULL**, nebo pokud *režimu* nebo *velikost* je mimo platný změnu, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, tato funkce vrátí hodnotu -1 a nastaví je povoleno spuštění **errno** k **einval –**.
+Pokud *datového proudu* je **NULL**, nebo pokud *režimu* nebo *velikost* je mimo platný změnu, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu -1 a nastaví **errno** k **EINVAL**.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Setvbuf –** funkce umožňuje programu řídit i ukládání do vyrovnávací paměti a velikost vyrovnávací paměti *datového proudu*. *datový proud* musí odkazovat na otevření souboru, který neprošel vstupně-výstupní operace, protože byl otevřen. Toto pole ukazuje *vyrovnávací paměti* slouží jako vyrovnávací paměť, pokud je **NULL**, v takovém případě **setvbuf –** používá automaticky přidělené vyrovnávací paměti o délce  *velikost*/2 * 2 bajtů.
+**Setvbuf –** funkce umožňuje program, který řídí, jak ukládání do vyrovnávací paměti a velikost pro vyrovnávací paměti *stream*. *datový proud* musí odkazovat na otevřený soubor, který nebylo podrobeno vstupně-výstupní operace, protože byl otevřen. Pole odkazované *vyrovnávací paměti* slouží jako vyrovnávací paměť, pokud se nejedná **NULL**v takovém případě **setvbuf –** používá automaticky přidělené vyrovnávací paměti o délce  *velikost*/2 \* 2 bajty.
 
-Musí být v režimu **_iofbf –**, **_iolbf –**, nebo **_ionbf –**. Pokud *režimu* je **_iofbf –** nebo **_iolbf –**, pak *velikost* se používá jako velikost vyrovnávací paměti. Pokud *režimu* je **_ionbf –**, datový proud je bez vyrovnávací paměti a *velikost* a *vyrovnávací paměti* jsou ignorovány. Hodnoty pro *režimu* a jejich významy jsou:
+Musí být v režimu **_IOFBF**, **_IOLBF**, nebo **_IONBF**. Pokud *režimu* je **_IOFBF** nebo **_IOLBF**, pak *velikost* se používá jako velikost vyrovnávací paměti. Pokud *režimu* je **_IONBF**, je datový proud bez vyrovnávací paměti a *velikost* a *vyrovnávací paměti* jsou ignorovány. Hodnoty pro *režimu* a jejich význam:
 
 |*režim* hodnota|Význam|
 |-|-|
-**_IOFBF –**|Úplné ukládání do vyrovnávací paměti; To znamená *vyrovnávací paměti* slouží jako vyrovnávací paměť a *velikost* se používá jako velikost vyrovnávací paměti. Pokud *vyrovnávací paměti* je **NULL**, automaticky přiděleného vyrovnávací paměti *velikost* dlouho bajty se používá.
-**_IOLBF –**|U některých systémů tímto způsobem řádek ukládání do vyrovnávací paměti. Pro Win32 chování je však stejný jako **_iofbf –** – úplné ukládání do vyrovnávací paměti.
-**_IONBF –**|Žádné vyrovnávací paměť je použít, bez ohledu na to *vyrovnávací paměti* nebo *velikost*.
+**_IOFBF**|Úplné ukládání do vyrovnávací paměti; To znamená *vyrovnávací paměti* slouží jako vyrovnávací paměť a *velikost* se používá jako velikost vyrovnávací paměti. Pokud *vyrovnávací paměti* je **NULL**, automaticky přidělené vyrovnávací paměti *velikost* bajty se používá.
+**_IOLBF**|U některých systémů získáte řádku ukládání do vyrovnávací paměti. Ale pro Win32, chování je stejné jako **_IOFBF** – úplné ukládání do vyrovnávací paměti.
+**_IONBF**|Žádné vyrovnávací paměť je použit, bez ohledu na to *vyrovnávací paměti* nebo *velikost*.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,11 +95,11 @@ Musí být v režimu **_iofbf –**, **_iolbf –**, nebo **_ionbf –**. Pokud 
 |-------------|---------------------|
 |**setvbuf**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -138,9 +138,9 @@ int main( void )
 'stream2' now has no buffer
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

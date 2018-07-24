@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027937"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209297"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>Poznámky
 
-`swap` má použít v preference pro můžu **ter_swap**, která byla součástí standardu jazyka C++ z důvodu zpětné kompatibility. Pokud `Fit1` a `Fit2` dopředných iterátorů, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` (* `Fit1`, \* `Fit2` ).
+`swap` má použít v preference pro můžu **ter_swap**, která byla součástí standardu jazyka C++ z důvodu zpětné kompatibility. Pokud `Fit1` a `Fit2` dopředných iterátorů, jsou pak `iter_swap` ( `Fit1`, `Fit2` ), je ekvivalentní `swap` ( \* `Fit1`, \* `Fit2` ).
 
 Typy hodnot iterátorů předání vstupních musí mít stejnou hodnotu.
 

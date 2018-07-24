@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958475"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208829"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; funkce
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*Str* std::string, char *, řetězec literálu nebo nezpracovaný řetězcový literál nebo celou verzi některé z těchto (např. std::wstring, wchar_t\*).
+*Str* std::string, char\*, řetězcový literál nebo nezpracovaný řetězcový literál nebo celou verzi některé z těchto (např. std::wstring, wchar_t\*).
 
 *Oddělovač* A uživatelem zadaného znaku nebo širokého znaku, použít jako oddělovač pro začátek a konec řetězce.
 

@@ -1,5 +1,5 @@
 ---
-title: Přehled zařazování v jazyku C++ | Microsoft Docs
+title: Přehled zařazování v jazyce C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,40 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 747d9a67f7796b5a62115acf55343370aea77bdf
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079157"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207862"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Přehled zařazování v jazyku C++
-Ve smíšeném režimu někdy musí zařazování data mezi nativní a spravovaná typy. Visual Studio 2008 zavedená *knihovny zařazování* pomohou zařazování a převést data v jednoduchý způsob.  Knihovny zařazování obsahuje sadu funkcí a `marshal_context` třídu, která provádět zařazování pro běžné typy. Knihovny je definován v záhlaví v těchto **zahrnují/msclr –** adresáře vaší verze sady Visual Studio:
+Ve smíšeném režimu někdy musíte zařazování dat mezi nativními a spravovanými typy. Visual Studio 2008 zavedené *zařazovací knihovna* umožňující zařazování a převádí data v jednoduché.  Zařazovací knihovna se skládá ze sady funkcí a `marshal_context` třídy, které provádějí zařazování pro běžné typy. Knihovny je definován v těchto záhlavích v **zahrnují/msclr –** adresář pro vaši verzi sady Visual Studio:
 
 |Záhlaví|Popis|  
 |---------------|-----------------|
-|Marshal.h|`marshal_context` Třída a kontext volné zařazování funkce|
+|Marshal.h|`marshal_context` třídy a volného kontext zařazování funkce|
 |marshal_atl.h| Funkce pro zařazování typů knihovny ATL|
-|marshal_cppstd.h|Funkce pro zařazování standardní typy C++|
-|marshal_windows.h|Funkce pro zařazování typy systému Windows|
+|marshal_cppstd.h|Funkce pro zařazování typů standardní C++|
+|marshal_windows.h|Funkce pro zařazování typů Windows|
 
 
-Výchozí cesta pro **msclr –** složka je přibližně toto podle toho, která edice máte a číslo sestavení:
+Výchozí cesta pro **msclr –** složka je asi takhle nějak. v závislosti na tom, jakou verzi máte a číslo sestavení:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
- Můžete použít knihovny zařazování bez ohledu [marshal_context – třída](../dotnet/marshal-context-class.md). Některé převody vyžadují kontextu. Jiné převody lze implementovat pomocí [marshal_as](../dotnet/marshal-as.md) funkce. V následující tabulce jsou uvedeny aktuální převody podporována, zda vyžaduje kontextu a jaké zařazování soubor je nutné zahrnout:  
+ Můžete použít zařazovací knihovna, s nebo bez něj [marshal_context Class](../dotnet/marshal-context-class.md). Některé převody vyžadují kontextu. Ostatní převody, které je možné implementovat pomocí [marshal_as](../dotnet/marshal-as.md) funkce. V následující tabulce jsou uvedeny aktuální převodů podporovaných, zda vyžaduje kontext a jaké zařazování souboru je nutné zahrnout:  
   
 |Z typu|Na typ|Zařazování – metoda|Zahrnout soubor|  
 |---------------|-------------|--------------------|------------------|  
-|System::String ^|const char *|marshal_context –|Marshal.h|  
-|const char *|System::String ^|marshal_as|Marshal.h|  
-|Char *|System::String ^|marshal_as|Marshal.h|  
-|System::String ^|Const wchar_t *|marshal_context –|Marshal.h|  
-|Const wchar_t *|System::String ^|marshal_as|Marshal.h|  
-|wchar_t *|System::String ^|marshal_as|Marshal.h|  
+|System::String ^|const char \*|marshal_context –|Marshal.h|  
+|const char \*|System::String ^|marshal_as|Marshal.h|  
+|Char \*|System::String ^|marshal_as|Marshal.h|  
+|System::String ^|Const wchar_t\*|marshal_context –|Marshal.h|  
+|Const wchar_t \*|System::String ^|marshal_as|Marshal.h|  
+|wchar_t \*|System::String ^|marshal_as|Marshal.h|  
 |System::IntPtr|POPISOVAČ|marshal_as|marshal_windows.h|  
 |POPISOVAČ|System::IntPtr|marshal_as|marshal_windows.h|  
 |System::String ^|BSTR|marshal_context –|marshal_windows.h|  
@@ -71,18 +71,18 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |System::String ^|CComBSTR|marshal_as|marshal_atl.h|  
 |CComBSTR|System::String ^|marshal_as|marshal_atl.h|  
   
- Zařazování vyžaduje kontext, pouze pokud zařazování ze spravované v nativním režimu datové typy a nativního typu, který převádíte na nemá destruktor pro automatické čištění. Kontext zařazování zničí přidělené nativní datový typ v jeho destruktor. Převody, které vyžadují kontextu proto bude platit pouze dokud kontextu se odstraní. Pokud chcete uložit všechny zařazené hodnoty, je nutné zkopírovat hodnoty na vlastní proměnné.  
+ Zařazování vyžaduje kontext pouze při zařazení ze spravované do nativní datové typy a nativní typ, který převádíte na nemá destruktor pro automatické čištění. Zařazování kontextu zničí přidělené nativního datového typu ve svém destruktoru. Převody, které vyžadují kontext proto bude platit pouze do kontextu se odstraní. Chcete-li uložit všechny hodnoty zařazené, musíte zkopírovat hodnoty do vlastní proměnné.  
   
 > [!NOTE]
->  Pokud jste vložili `NULL`s ve vašem řetězci výsledek zařazování řetězec není zaručena. Vložený `NULL`s může způsobit, že řetězec, který má být zkrácen nebo může být zachována.  
+>  Pokud jste vložili `NULL`s do řetězce, výsledek zařazování řetězce není zaručena. Vložený `NULL`s může způsobit, že řetězec, který má být zkrácen nebo může být zachována.  
   
-Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace záhlaví zahrnout:  
+Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace zahrnout záhlaví:  
   
  `#include "msclr\marshal_cppstd.h"`  
   
- Knihovny zařazování je rozšiřitelný, takže můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování najdete v tématu [postupy: rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).  
+ Knihovna zařazování je rozšiřitelný, kde můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování, naleznete v tématu [postupy: rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).  
   
- V dřívějších verzích, může zařazování dat s použitím [vyvolání platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Další informace o `PInvoke`, najdete v části [volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md).  
+ V dřívějších verzích by mohla zařazování dat s využitím [vyvolání platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Další informace o `PInvoke`, naleznete v tématu [volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Knihovna podpory C++](../dotnet/cpp-support-library.md)   

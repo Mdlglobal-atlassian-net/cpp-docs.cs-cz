@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885448"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209219"
 ---
 # <a name="ccomptrbase-class"></a>Ccomptrbase – třída
 Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny založené na modelu COM. paměti.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|Operátor přetypování.|  
 |[CComPtrBase::operator!](#operator_not)|Operátor NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|& – Operátor.|  
-|[CComPtrBase::operator *](#operator_star)|* – Operátor.|  
+|[CComPtrBase::operator *](#operator_star)|Operátor \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Větší-než operátor.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Operátor rovnosti.|  
 |[CComPtrBase::operator ->](#operator_ptr)|Operátor ukazatele na členy.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí adresu objektu, na které odkazují `CComPtrBase` objektu.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * – Operátor.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ Operátor \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu PRAVDA, pokud ukazatel spravuje aktuální objekt je menší než ukazatel, ke kterému je porovnávána.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  Operátor přetypování.  
   
 ```  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880944"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208660"
 ---
 # <a name="cfiletime-class"></a>Cfiletime – třída
 Tato třída poskytuje metody pro správu přidružené k souboru hodnoty data a času.  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |Členské proměnné|Počet intervalů o délce 100 nanosekund|  
 |---------------------|-----------------------------------------|  
 |Milisekundy|10,000|  
-|Sekunda|Milisekundy * 1 000|  
-|Minuta|Druhý * 60|  
-|Hodina|Minutu * 60|  
-|Den|Hodina * 24|  
-|Týden|Den * 7|  
+|Sekunda|Milisekundy \* 1 000|  
+|Minuta|Druhý \* 60|  
+|Hodina|Minuta \* 60|  
+|Den|Hodina \* 24|  
+|Týden|Den \* 7|  
   
  **Poznámka:** všechny systémy souborů lze zaznamenat vytvoření a čas posledního přístupu a ne všechny systémy souborů je zaznamenat stejným způsobem. Vytvořte například v systému souborů FAT Windows NT, čas s rozlišením 10 milisekund, čas zápisu rozlišením 2 sekundy a čas přístupu s rozlišením 1 den (data access). V systému souborů NTFS čas přístupu s rozlišením 1 hodina. Kromě toho FAT zaznamenává časy na disku v místním čase, ale systém souborů NTFS zaznamenává ve standardu UTC, časy na disku. Další informace najdete v tématu [časy](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
   

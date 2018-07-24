@@ -1,5 +1,5 @@
 ---
-title: Regulární výrazy (C++) | Microsoft Docs
+title: Regulární výrazy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,65 +16,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1491d99c21628207e19f34676e16863cc24e07d3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862988"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209017"
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 
-Standardní knihovna C++ podporuje více gramatika regulární výraz. Toto téma popisuje dostupné gramatika rozdíly při použití regulárních výrazů.
+Standardní knihovny C++ podporuje více gramatikách regulárního výrazu. Toto téma popisuje gramatiku změny k dispozici při používání regulárních výrazů.
 
-## <a name="regexgrammar"></a> Gramatika regulární výraz
+## <a name="regexgrammar"></a> Gramatika regulárních výrazů
 
-Regulární výraz gramatika používat je ve zadán pomocí jednoho z `std::regex_constants::syntax_option_type` hodnot výčtu. Tyto regulární výraz gramatika jsou definovány v std::regex_constants:
+Gramatika regulárních výrazů používat podle určena pomocí jednoho z `std::regex_constants::syntax_option_type` hodnot výčtu. Tyto gramatikách regulárního výrazu jsou definovány v std::regex_constants:
 
-- `ECMAScript`: Toto je nejblíže k gramatika, používané jazyky rozhraní .NET a používání jazyka JavaScript.
-- `basic`: POSIX základní regulární výrazy nebo BRE.
+- `ECMAScript`: Toto je nejblíže gramatiky používá JavaScript a jazyky .NET.
+- `basic`: Základní regulární výrazy POSIX nebo BRE.
 - `extended`: POSIX rozšířené regulární výrazy nebo ERE.
 - `awk`: Toto je `extended`, ale má další řídicí sekvence pro netisknutelné znaky.
-- `grep`: Toto je `basic`, ale také umožňuje nový řádek (\n) znaků jednotlivé změny.
-- `egrep`: Toto je `extended`, ale také to umožňuje znaky nového řádku jednotlivé změny.
+- `grep`: Toto je `basic`, ale umožňuje také znaku nového řádku ('\n') znaků k oddělení alternací.
+- `egrep`: Toto je `extended`, ale umožňuje také znaky nového řádku k oddělení alternací.
 
-Ve výchozím nastavení, pokud není zadaný žádný gramatika `ECMAScript` se předpokládá. Je možné zadat pouze jeden gramatika.
+Ve výchozím nastavení, pokud není zadána žádná gramatika `ECMAScript` se předpokládá, že. Je možné zadat jenom jedna gramatika.
 
-Kromě gramatika můžete použít několik příznaky:
-- `icase`: Ignorovat velká / při kontrole shody.
-- `nosubs`: Ignorujte označený odpovídá (tj. výrazy v závorkách); jsou uloženy žádné nahrazení.
-- `optimize`: Zkontrolujte odpovídající rychlejší, na úkor větší konstrukce času.
-- `collate`: Pomocí pořadí kolace národní prostředí – velká a malá písmena (například rozsahy ve formátu "[a-z]").
+Kromě gramatiku můžete použít několik příznaků:
+- `icase`: Ignorujte velikost písmen při porovnávání.
+- `nosubs`: Ignorujte označené shody (tj. výrazy v závorkách); jsou uloženy žádné nahrazení.
+- `optimize`: Ujistěte se, rychlejší, odpovídající na úkor větší době konstrukce.
+- `collate`: Použijte v pořadí řazení citlivé na národní prostředí (například. rozsahy ve formátu "[a-z]").
 
-Příznaky nula nebo více může nelze kombinovat s gramatika určit způsob chování modul regulární výraz. Pokud jenom příznaky jsou nastaveny, `ECMAScript` se předpokládá, že jako gramatiky.
+Nula nebo více příznaků lze kombinovat s gramatiky k určení chování modulu regulárních výrazů. Pokud pouze příznaky jsou zadané, `ECMAScript` se předpokládá, že jako gramatiky.
 
 ### <a name="element"></a>Prvek
 
 Prvek může být jeden z následujících:
 
-- *Obyčejnou znak* odpovídající ve stejném v pořadí cíl.
+- *Běžný znak* , který odpovídá stejnému znaku v cílové sekvenci.
 
-- A *zástupný znak* ,., který odpovídá jakémukoliv znaku v pořadí cíl kromě nového řádku.
+- A *zástupný znak* '.', který odpovídá libovolnému znaku v cílové sekvenci, s výjimkou nového řádku.
 
-- A *závorka výraz* ve tvaru "[`expr`]", který odpovídá znak nebo element kolace v pořadí cíl, která je také v sadě definované výraz `expr`, nebo ve tvaru "[^`expr`]", který odpovídá znak nebo element kolace v pořadí cíl, který není v sadě definované výraz `expr`.
+- A *párování výraz* ve formátu "[`expr`]", který odpovídá znaku nebo prvku kolace v cílové sekvenci, která je také do množiny definované výrazem `expr`, nebo ve formátu "[^`expr`]", který odpovídá znaku nebo prvku kolace v cílové sekvenci, který není v sadě definována výrazem `expr`.
 
-     Výraz `expr` může obsahovat libovolnou kombinaci z následujících akcí:
+     Výraz `expr` může obsahovat libovolnou kombinaci následujících akcí:
 
-    -   Jednotlivý znak. Přidá tento znak do sady definované `expr`.
+    -   Jednotlivý znak. Přidá daný znak do množiny definované `expr`.
 
-    -   A *znak rozsah* ve tvaru "`ch1`-`ch2`". Přidá znaky, které jsou reprezentované pomocí hodnoty v rozsahu uzavřené [`ch1`, `ch2`] do sady definované `expr`.
+    -   A *rozsah znaků* ve tvaru "`ch1`-`ch2`". Přidá znaky, které jsou reprezentovány hodnotami v uzavřeném intervalu [`ch1`, `ch2`] do množiny definované `expr`.
 
-    -   A *znak třída* ve tvaru "[:`name`:]". Přidá do sady definované znaky ve třídě s názvem `expr`.
+    -   A *třídy znaků* ve formátu "[:`name`:]". Přidá znaky v pojmenované třídě do množiny definované `expr`.
 
-    -   *Ekvivalenční třída* ve tvaru "[=`elt`=]". Přidá kompletování prvky, které odpovídají `elt` do sady definované `expr`.
+    -   *Třída ekvivalence* ve formátu "[=`elt`=]". Přidá kolační prvky, které jsou ekvivalentem `elt` do množiny definované `expr`.
 
-    -   A *kompletování symbol* ve tvaru "[.`elt`.]". Přidá element kolace `elt` do sady definované `expr`.
+    -   A *kolační symbol* ve formátu "[.`elt`.]". Přidá kolační prvek `elt` do množiny definované `expr`.
 
 - *Ukotvení*. Ukotvení „^“ odpovídá začátku cílové sekvence; ukotvení „$“ odpovídá konci cílové sekvence.
 
-A *zachycení skupiny* ve tvaru "( *dílčím výrazu* )", nebo "\\( *dílčím výrazu* \\)" v `basic` a `grep`, které odpovídá pořadí znaků v pořadí cíl, který má odpovídající vzoru mezi oddělovače.
+A *skupina zachycení* ve formátu "( *dílčí výraz* )", nebo "\\( *dílčí výraz* \\)" v `basic` a `grep`, který odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači.
 
-- *Identity řídicí* ve tvaru "\\`k`", který odpovídá znak `k` v pořadí cíl.
+- *Řídicí znak identity* ve tvaru "\\`k`", který odpovídá znaku `k` v cílové sekvenci.
 
 Příklady:
 
@@ -88,97 +88,97 @@ Příklady:
 
 - „(a)“ odpovídá cílové sekvenci „a“ a přidružuje skupinu zachycení 1 k dílčí sekvenci „a“, ale neodpovídá cílovým sekvencím „B“, „b“ nebo „c“.
 
-V `ECMAScript`, `basic`, a `grep`, může být také element *zpět odkaz* ve tvaru "\\`dd`", kde `dd` představuje desetinnou hodnotu N, která odpovídá posloupnost znaky v cílové pořadí který je stejný jako posloupnosti znaků, který má odpovídající n. *skupiny zachycení*. Například „(a)\1“ odpovídá cílové sekvenci „aa“, protože první (a jediná) skupina zachycení odpovídá počáteční sekvenci „a“ a \1 odpovídá závěrečné sekvenci „a“.
+V `ECMAScript`, `basic`, a `grep`, element může být také *zpětný odkaz* ve tvaru "\\`dd`", kde `dd` představuje desítkovou hodnotu N, která odpovídá posloupnosti znaky v cílové sekvenci, který je stejný jako posloupnost znaků, které odpovídá n-té *skupina zachycení*. Například „(a)\1“ odpovídá cílové sekvenci „aa“, protože první (a jediná) skupina zachycení odpovídá počáteční sekvenci „a“ a \1 odpovídá závěrečné sekvenci „a“.
 
-V `ECMAScript`, element může být také jeden z následujících akcí:
+V `ECMAScript`, element může být také jednu z následujících akcí:
 
-- A *skupiny bez zachycení* ve tvaru "(?: *dílčím výrazu* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači.
+- A *skupina bez zachycení* ve formátu "(?: *dílčí výraz* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači.
 
-- Omezené *souboru formátu řídicí* formuláře "\f", "\n", "\r", "\t" nebo "\v". Tyto odpovídají znaku posunu strany, novému řádku, návratovému znaku, horizontálnímu, resp. vertikálnímu tabulátoru v cílové sekvenci.
+- Omezené *řídicí znak formátu souboru* z formátu "\f", "\n", "\r", "\t" nebo "\v". Tyto odpovídají znaku posunu strany, novému řádku, návratovému znaku, horizontálnímu, resp. vertikálnímu tabulátoru v cílové sekvenci.
 
-- A *kladnou assert* ve tvaru "(= *dílčím výrazu* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači, ale nemění pozici shody v cílové sekvenci.
+- A *kladný kontrolní výraz* ve formátu "(= *dílčí výraz* )". Odpovídá sekvenci znaků v cílové sekvenci, které odpovídá vzorec mezi oddělovači, ale nemění pozici shody v cílové sekvenci.
 
-- A *záporné assert* ve tvaru "(! *dílčím výrazu* ) ". Odpovídá jakékoli sekvenci znaků v cílové sekvenci, která neodpovídá vzorci mezi oddělovači a nemění pozici shody v cílové sekvenci.
+- A *záporný kontrolní výraz* ve formátu "(! *dílčí výraz* ) ". Odpovídá jakékoli sekvenci znaků v cílové sekvenci, která neodpovídá vzorci mezi oddělovači a nemění pozici shody v cílové sekvenci.
 
-- A *šestnáctková řídicí sekvence* ve tvaru "\x`hh`". Odpovídá znaku v pořadí cíl, která je reprezentována dvě hexadecimální číslice `hh`.
+- A *šestnáctková řídicí sekvence* ve formátu "\x`hh`". Odpovídá znaku v cílové sekvenci, který je reprezentován dvěma šestnáctkovými číslicemi `hh`.
 
-- A *unicode řídicí sekvence* ve tvaru "\u`hhhh`". Odpovídá znaku v pořadí target, která je reprezentována čtyři hexadecimální číslice `hhhh`.
+- A *řídicí sekvence unicode* ve formátu "\u`hhhh`". Odpovídá znaku v cílové sekvenci, který je reprezentován čtyřmi šestnáctkovými číslicemi `hhhh`.
 
-- A *řídit – řídicí sekvence* ve tvaru "\c`k`". Řídicí znak, který se nazývá ve znak, který odpovídá `k`.
+- A *řídit řídicí sekvence* ve formátu "\c`k`". Odpovídá řídicímu znaku, který je pojmenován podle znaku `k`.
 
-- A *hranice slova assert* ve tvaru "\b". Odpovídá po aktuální pozici v pořadí cíl ihned po *hranice slova*.
+- A *výraz hranice slova* ve formátu "\b". Odpovídá, pokud aktuální pozice v cílové sekvenci je ihned po *hranice slova*.
 
-- A *hranice záporné slova assert* ve tvaru "\B". Odpovídá, pokud aktuální pozici v pořadí cíl není ihned po *hranice slova*.
+- A *kontrolní výraz hranice slova negativní* ve formátu "\B". Odpovídá, pokud aktuální pozice v cílové sekvenci je ihned po *hranice slova*.
 
-- A *řídicí znak dsw* ve tvaru "\d", "\D", "\s", "\S", "\w", "\W". Poskytuje krátký název pro třídu znaků.
+- A *řídicí znak dsw* ve formátu "\d", "\D", "\s", "\S", "\w", "\W". Poskytuje krátký název pro třídu znaků.
 
 Příklady:
 
 - „(?:a)“ odpovídá cílové sekvenci „a“, ale „(?:a) \1“ je neplatné, protože není k dispozici žádná skupina zachycení 1.
 
-- "(=a)" odpovídá pořadí cíl "a". Kladný kontrolní výraz odpovídá počáteční sekvenci „a“ v cílové sekvenci a závěrečné „a“ v regulárním výrazu odpovídá počáteční sekvenci „a“ v cílové sekvenci.
+- "(=a)" odpovídá cílové sekvenci "a". Kladný kontrolní výraz odpovídá počáteční sekvenci „a“ v cílové sekvenci a závěrečné „a“ v regulárním výrazu odpovídá počáteční sekvenci „a“ v cílové sekvenci.
 
-- "(!a)" neodpovídá cílové sekvence "a".
+- "(!a)" neodpovídá cílové sekvenci "a".
 
-- "a\b." odpovídá pořadí cíl "~", ale neodpovídá cílové sekvence "ab".
+- "a\b." odpovídá cílové sekvenci "~", ale neodpovídá cílové sekvenci "ab".
 
-- "a\B." odpovídá pořadí cíl "ab", ale neodpovídá cílové sekvence "~".
+- "a\B." odpovídá cílové sekvenci "ab", ale neodpovídá cílové sekvenci "~".
 
-V `awk`, element může být také jeden z následujících akcí:
+V `awk`, element může být také jednu z následujících akcí:
 
-- A *souboru formátu řídicí* ve tvaru "\\\\", "\a", "\b", "\f", "\n", "\r", "\t" nebo "\v". Tyto odpovídají zpětnému lomítku, upozornění, klávese Backspace, znaku posunu strany, novému řádku, návratovému znaku, horizontálnímu, resp. vertikálnímu tabulátoru v cílové sekvenci.
+- A *řídicí znak formátu souboru* ve tvaru "\\\\", "\a", "\b", "\f", "\n", "\r", "\t" nebo "\v". Tyto odpovídají zpětnému lomítku, upozornění, klávese Backspace, znaku posunu strany, novému řádku, návratovému znaku, horizontálnímu, resp. vertikálnímu tabulátoru v cílové sekvenci.
 
-- *Osmičková řídicí sekvence* ve tvaru "\\`ooo`". Odpovídá znaku v pořadí cíl, jejichž reprezentace je hodnota reprezentována jednu, dvě nebo tři osmičková číslice `ooo`.
+- *Osmičkové řídicí sekvence* ve tvaru "\\`ooo`". Odpovídá znaku v cílové sekvenci, jehož vyjádření je hodnota reprezentovaná jeden, dvěma nebo třemi osmičkovými číslicemi `ooo`.
 
 ### <a name="repetition"></a>Opakování
 
-Libovolný element, jinak než *kladnou assert*, *záporné assert*, nebo *ukotvení* může následovat počet opakování. Nejobecnější typ počtu opakování má podobu "{`min`,`max`}", nebo "\\{`min`,`max`\\}" v `basic` a `grep`. Element, který následuje tento formulář počtu opakování odpovídá alespoň `min` následných výskytů a ne víc než `max` následných výskyty sekvenci, která odpovídá elementu. Například "{2,3}" odpovídá pořadí cíl "aa" a cíl pořadí "aaa", ale není pořadí cíl cíl pořadí "a" nebo "aaaa".
+Libovolný prvek jiný než *kladný kontrolní výraz*, *záporný kontrolní výraz*, nebo *ukotvení* může být následován počtem opakování. Nejobecnější typ počtu opakování má podobu "{`min`,`max`}", nebo "\\{`min`,`max`\\}" v `basic` a `grep`. Element, který je následován touto formou počtu opakování, odpovídá minimálně `min` po sobě jdoucím výskytům a ne více než `max` po sobě jdoucím výskytům sekvence, která odpovídá elementu. Například "{2,3}" odpovídá cílové sekvenci "aa" a cílové sekvenci "aaa", ale nikoli cílové sekvenci "a" nebo cílové sekvenci "aaaa".
 
 Počet opakování může mít také jednu z následujících forem:
 
 - "{`min`}", nebo "\\{`min`\\}" v `basic` a `grep`. Ekvivalentní "{`min`,`min`}".
 
-- "{`min`,}", nebo "\\{`min`,\\}" v `basic` a `grep`. Ekvivalentní "{`min`, bez vazby}".
+- "{`min`,}", nebo "\\{`min`,\\}" v `basic` a `grep`. Ekvivalentní "{`min`, unbounded}".
 
-- "*". Ekvivalentní „{0,unbounded}“.
+- "\*". Ekvivalentní „{0,unbounded}“.
 
 Příklady:
 
-- "{2}" odpovídá pořadí cíl "aa", ale není pořadí cíl cíl pořadí "a" nebo "aaa".
+- "{2}" odpovídá cílové sekvenci "aa", ale nikoli cílové sekvenci "a" nebo cílové sekvenci "aaa".
 
-- "{2,}" odpovídá pořadí cíl "aa", cílový pořadí "aaa" a podobně, ale neodpovídá cílové sekvence "a".
+- "{2,}" odpovídá cílové sekvenci "aa", cílové sekvenci "aaa" a tak dále, ale neodpovídá cílové sekvenci "a".
 
-- „a*“ odpovídá cílové sekvenci „“, cílové sekvenci „a“, cílové sekvenci „aa“ atd.
+- "\*" odpovídá cílové sekvenci "", cílové sekvenci "a", cílové sekvenci "aa" a tak dále.
 
-Pro všechny gramatika s výjimkou `basic` a `grep`, počet opakování můžete také provést jednu z následujících podob:
+Pro všechny gramatiky s výjimkou `basic` a `grep`, počet opakování může mít také jednu z následujících forem:
 
 - "?". Ekvivalentní "{0,1}".
 
-- "+". Ekvivalent "{1, bez vazby}".
+- "+". Ekvivalentní "{1, unbounded}".
 
 Příklady:
 
-- "a"? odpovídá pořadí cíl "" a pořadí cíl "a", ale není pořadí cíl "aa".
+- "a"? odpovídá cílové sekvenci "" a cílové sekvenci "a", ale nikoli cílové sekvenci "aa".
 
 - „a+“ odpovídá cílové sekvenci „a“, cílové sekvenci „aa“ atd., ale nikoli cílové sekvenci „“.
 
-V `ECMAScript`, všech formulářů počtu opakování může následovat znak '?', který označuje *typu non-greedy opakování*.
+V `ECMAScript`, všemi formami počtu opakování může následovat znak "?", který udává *opakování bez metody greedy*.
 
 ### <a name="concatenation"></a>Zřetězení
 
-Regulární výraz elementů s nebo bez *počtu opakování*, může být zřetězen do formuláře delší regulární výrazy. Výsledný výraz odpovídá cílové sekvenci, která je zřetězením sekvencí odpovídajících jednotlivým prvkům. Například "{2,3}b" odpovídá pořadí cíl "aab" a cíl pořadí "aaab", ale neodpovídá pořadí cíl "ab" nebo cílové sekvence "aaaab".
+Prvky regulárního výrazu, s nebo bez něj *počtů opakování*, mohou být zřetězeny do delších regulárních výrazů. Výsledný výraz odpovídá cílové sekvenci, která je zřetězením sekvencí odpovídajících jednotlivým prvkům. Například "{2,3}b" odpovídá cílové sekvenci "aab" a cílové sekvenci "aaab", ale neodpovídá cílové sekvenci "ab" nebo cílové sekvenci "aaaab".
 
 ### <a name="alternation"></a>Alternace
 
-Ve všech gramatika regulární výraz s výjimkou `basic` a `grep`, zřetězených regulárního výrazu může následovat znak '&#124;' a jiné zřetězených regulární výraz. Tímto způsobem lze spojit libovolný počet zřetězených regulárních výrazů. Výsledný výraz odpovídá jakékoli cílové sekvenci, která odpovídá jednomu nebo více zřetězeným regulárním výrazům.
+Ve všech gramatikách regulárního výrazu s výjimkou `basic` a `grep`, může za zřetězeným regulárním výrazem následovat znak "&#124;" a jiný zřetězený regulární výraz. Tímto způsobem lze spojit libovolný počet zřetězených regulárních výrazů. Výsledný výraz odpovídá jakékoli cílové sekvenci, která odpovídá jednomu nebo více zřetězeným regulárním výrazům.
 
-Když více než jeden z zřetězených regulární výrazy odpovídá cílové sekvence `ECMAScript` vybere první zřetězených regulární výrazy, který odpovídá pořadí jako shody (*nejprve odpovídat*); dalších regulární výraz gramatika vybrat tu, která dosáhne *nejdelší shody*. Například "ab&#124;cd" odpovídá pořadí cíl "ab" a cíl pořadí "cd", ale neodpovídá pořadí cíl "abd" nebo cílové sekvence "acd".
+Když více zřetězeným regulárním výrazům odpovídá cílové sekvenci, `ECMAScript` vybere první ze zřetězených regulárních výrazů, který odpovídá sekvenci jako shodu (*první shoda*); druhé Vyberte si metodu, která dosahuje gramatikách regulárního výrazu *nejdelší shody*. Například "ab&#124;cd" odpovídá cílové sekvenci "ab" a cílové sekvenci "cd", ale neodpovídá cílové sekvenci "abd" nebo cílové sekvenci "acd".
 
-V `grep` a `egrep`, znak nového řádku (\n) lze použít k oddělení změny.
+V `grep` a `egrep`, lze znak nového řádku ('\n') lze použít k oddělení alternací.
 
 ### <a name="subexpression"></a>Dílčí výraz
 
-V `basic` a `grep`, je sloučen dílčím výrazu. V ostatních gramatikách regulárního výrazu je dílčí výraz změnou.
+V `basic` a `grep`, je dílčí výraz zřetězení. V ostatních gramatikách regulárního výrazu je dílčí výraz změnou.
 
 ## <a name="grammarsummary"></a> Souhrn gramatiky
 
@@ -186,13 +186,13 @@ Následující tabulka shrnuje funkce, které jsou k dispozici v různých grama
 
 |Prvek|Základní|rozšířené|ECMAScript|grep|egrep|awk|
 |-------------|---------|---------|----------|----------|-----------|---------|
-|alternace pomocí '&#124;.||+|+||+|+|
+|alternace pomocí "&#124;.||+|+||+|+|
 |alternace pomocí „\n“||||+|+||
 |ukotvení|+|+|+|+|+|+|
 |zpětný odkaz|+||+|+|||
 |výraz závorky|+|+|+|+|+|+|
 |skupina zachycení používající „()“||+|+||+|+|
-|zaznamenání pomocí skupiny "\\(\\)"|+|||+|||
+|Skupina zachycení používající "\\(\\)"|+|||+|||
 |řídicí sekvence|||+||||
 |řídicí znak dsw|||+||||
 |řídicí znak formátu souboru|||+|||+|
@@ -207,7 +207,7 @@ Následující tabulka shrnuje funkce, které jsou k dispozici v různých grama
 |Kladný kontrolní výraz|||+||||
 |opakování pomocí "{}"||+|+||+|+|
 |opakování pomocí "\\{\\}"|+|||+|||
-|opakování pomocí „*“|+|+|+|+|+|+|
+|opakování pomocí "\*.|+|+|+|+|+|+|
 |opakování pomocí „?“ a „+“||+|+||+|+|
 |řídicí sekvence Unicode|||+||||
 |zástupný znak|+|+|+|+|+|+|
@@ -221,7 +221,7 @@ Ukotvení odpovídá pozici v cílovém řetězci, nikoli znaku. „^“ odpoví
 
 ### <a name="back-reference"></a>Zpětný odkaz
 
-Zpětný odkaz je zpětné lomítko, za kterým následuje desítkovou hodnotu N. Odpovídá obsahu n. *skupiny zachycení*. Hodnota N nesmí být větší než počet skupin zachycení, které zpětnému odkazu předcházejí. V `basic` a `grep`, hodnota N je dáno desítková číslice, který následuje zpětné lomítko. V `ECMAScript`, hodnota N je dáno desetinných míst, které okamžitě postupujte podle zpětné lomítko. Proto v `basic` a `grep`, hodnota N se nikdy více než 9, i když regulární výraz má více než devět zachycení skupin. V `ECMAScript`, N hodnotu bez vazby.
+Zpětný odkaz je zpětné lomítko, za kterým následuje Desítková hodnota N. Odpovídá obsahu n-té *skupina zachycení*. Hodnota N nesmí být větší než počet skupin zachycení, které zpětnému odkazu předcházejí. V `basic` a `grep`, je hodnota n určena podle desítková číslice, který následuje za zpětným lomítkem. V `ECMAScript`, hodnota N je určena všemi desítkovými čísly, které bezprostředně následují zpětné lomítko. Proto v `basic` a `grep`, je hodnota N se nikdy víc než 9, i když má více než devět skupin zachycení regulárních výrazů. V `ECMAScript`, je hodnota N je bez vazby.
 
 Příklady:
 
@@ -229,13 +229,13 @@ Příklady:
 
 - „(a)\2“ není platné.
 
-- "((((a))) \10 b" má odlišný význam `basic` a v `ECMAScript`. V `basic` "\1" je zpětný odkaz. Zpětný odkaz odpovídá obsahu první skupiny zachycení (to znamená skupiny, která začíná na „(b“ a končí posledním znakem „)“ a předchází zpětnému odkazu) a závěrečný znak 0 odpovídá běžnému znaku 0. V `ECMAScript`, je zpětný odkaz "\10". Odpovídá desáté skupině zachycení, tedy té nejvíce uvnitř.
+- "(b (((a))) \10" má v různé významy `basic` a `ECMAScript`. V `basic` je zpětný odkaz "\1". Zpětný odkaz odpovídá obsahu první skupiny zachycení (to znamená skupiny, která začíná na „(b“ a končí posledním znakem „)“ a předchází zpětnému odkazu) a závěrečný znak 0 odpovídá běžnému znaku 0. V `ECMAScript`, je zpětný odkaz "\10". Odpovídá desáté skupině zachycení, tedy té nejvíce uvnitř.
 
 ### <a name="bracket-expression"></a>Výraz závorky
 
-Výraz závorky definuje sadu znaků a *kompletování elementy*. Když výraz závorky začíná znakem ,^ʻ, porovnávání je úspěšné, pokud žádné prvky v množině neodpovídají aktuálnímu znaku v cílové sekvenci. Porovnání je jinak úspěšné, pokud jakýkoli z prvků v množině odpovídá aktuálnímu prvku v cílové sekvenci.
+Výraz závorky definuje množinu znaků a *kolační prvky*. Když výraz závorky začíná znakem ,^ʻ, porovnávání je úspěšné, pokud žádné prvky v množině neodpovídají aktuálnímu znaku v cílové sekvenci. Porovnání je jinak úspěšné, pokud jakýkoli z prvků v množině odpovídá aktuálnímu prvku v cílové sekvenci.
 
-Sadu znaků může být definovaná výpis libovolnou kombinaci *jednotlivé znaky*, *znak rozsahy*, *znak třídy*, *ekvivalenční třídy*, a *kompletování symboly*.
+Množinu znaků lze definovat uvedením jakékoli kombinace *jednotlivých znaků*, *znak rozsahy*, *znaku třídy*, *ekvivalence třídy*, a *kolačních symbolů*.
 
 ### <a name="capture-group"></a>Skupina zachycení
 
@@ -251,14 +251,14 @@ Příklady:
 
 ### <a name="character-class"></a>Třída znaků
 
-Třída znaků ve výrazu závorky přidá všechny znaky v pojmenované třídě do množiny znaků, která je definována výrazem závorky. Chcete-li vytvořit třídu znaků, použijte „[:“, dále název třídy a nakonec „:]“. Interně jsou názvy tříd znaků rozpoznány voláním `id = traits.lookup_classname`. Znak `ch` patří takové na třídu, pokud `traits.isctype(ch, id)` vrací hodnotu true. Výchozí hodnota `regex_traits` šablona podporuje názvy tříd v následující tabulce.
+Třída znaků ve výrazu závorky přidá všechny znaky v pojmenované třídě do množiny znaků, která je definována výrazem závorky. Chcete-li vytvořit třídu znaků, použijte „[:“, dále název třídy a nakonec „:]“. Vnitřně jsou názvy tříd znaků rozpoznávány voláním `id = traits.lookup_classname`. Znak `ch` patří do takové třídy, pokud `traits.isctype(ch, id)` vrací hodnotu true. Výchozí hodnota `regex_traits` šablona podporuje názvy tříd v následující tabulce.
 
 |Název třídy|Popis|
 |----------------|-----------------|
 |„alnum“|malá písmena, velká písmena a číslice|
 |„alpha“|malá písmena a velká písmena|
 |„blank“|mezera nebo tabulátor|
-|„cntrl“|*souboru formátu řídicí* znaků|
+|„cntrl“|*řídicí znak formátu souboru* znaků|
 |„digit“|číslice|
 |„graph“|malá písmena, velká písmena, číslice a interpunkce|
 |„lower“|malá písmena|
@@ -297,11 +297,11 @@ Kolační prvek je sekvence více znaků, která je zpracovávána jako jeden zn
 
 ### <a name="collating-symbol"></a>Kolační symbol
 
-Přidá symbol kompletování ve výrazu závorky *kompletování element* do sady, který je definován výrazem závorky. Chcete-li vytvořit kompletování symbol, použijte "[." následovaný kompletování element následuje ".]".
+Kolační symbol ve výrazu závorky přidá *kolační prvek* do sady, která je definována výrazem závorky. Chcete-li vytvořit kolační symbol, použijte "[." dále kolační prvek a nakonec "."].
 
 ### <a name="control-escape-sequence"></a>Řídicí sekvence
 
-Řídicí sekvence je zpětné lomítko následované písmenem „c“ a poté jedním z písmen od „a“ do „z“ nebo od „A“ do „Z“. Odpovídá řídicímu znaku ASCII, který je pojmenován podle daného písmena. Příklad: "\ci" odpovídá pořadí cíl "\x09", protože \<ctrl-i > má hodnotu 0x09.
+Řídicí sekvence je zpětné lomítko následované písmenem „c“ a poté jedním z písmen od „a“ do „z“ nebo od „A“ do „Z“. Odpovídá řídicímu znaku ASCII, který je pojmenován podle daného písmena. Například "\ci" odpovídá cílové sekvenci "\x09", protože \<ctrl-i > má hodnotu 0x09.
 
 ### <a name="dsw-character-escape"></a>Řídicí znak DSW
 
@@ -313,18 +313,18 @@ Přidá symbol kompletování ve výrazu závorky *kompletování element* do sa
 |„\D“|„[^[:d:]]“|„[^[:digit:]]“|
 |„\s“|„[[:s:]]“|„[[:space:]]“|
 |„\S“|„[^[:s:]]“|„[^[:space:]]“|
-|„\w“|„[[:w:]]“|„[a-zA-Z0-9_]“*|
-|„\W“|„[^[:w:]]“|„[^a-zA-Z0-9_]“*|
+|„\w“|„[[:w:]]“|"[-zA-Z0-9_]"\*|
+|„\W“|„[^[:w:]]“|"[^-zA-Z0-9_]"\*|
 
-*znaková sada ASCII
+\*Znaková sada ASCII
 
 ### <a name="equivalence-class"></a>Třída ekvivalence
 
-Přidá třídu ekvivalenční ve výrazu závorky všechny znaky a *kompletování elementy* , které jsou ekvivalentem kompletování elementu v definici třídy ekvivalenční do sady, který je definován výrazem závorky. Chcete-li vytvořit třídu ekvivalence, použijte „[=“, dále kolační prvek a nakonec „=]“. Interně dva elementy kompletování `elt1` a `elt2` odpovídají Pokud `traits.transform_primary(elt1.begin(), elt1.end()) == traits.transform_primary(elt2.begin(), elt2.end())`.
+Třída ekvivalence ve výrazu závorky přidá všechny znaky a *kolační prvky* , které jsou ekvivalentní kolačnímu prvku v definici třídy ekvivalence množině, která je definována výrazem závorky. Chcete-li vytvořit třídu ekvivalence, použijte „[=“, dále kolační prvek a nakonec „=]“. Interně jsou dva kolační prvky `elt1` a `elt2` jsou ekvivalentní Pokud `traits.transform_primary(elt1.begin(), elt1.end()) == traits.transform_primary(elt2.begin(), elt2.end())`.
 
 ### <a name="file-format-escape"></a>Řídicí znak formátu souboru
 
-Řídicí formát souboru se skládá z obvykle C jazyk znak – řídicí sekvence, "\\\\", "\a", "\b", "\f", "\n", "\r", "\t", "\v". Tyto mají obvykle významy, to znamená, zpětné lomítko, výstrahy, backspace, informační kanál formuláře, nového řádku, znaky CR, vodorovné kartě a vertikální tabulátor, v uvedeném pořadí. V `ECMAScript`, "\a" a "\b" nejsou povoleny. ("\\\\" je povolena, ale je identity řídicí, není řídicí formátu souboru).
+Řídicí znak formátu souboru se skládá z obvyklé C jazyka znak sekvence escape, "\\\\", "\a", "\b", "\f", "\n", "\r", "\t", "\v". Ty mají obvyklý význam, to znamená, zpětné lomítko, upozornění, backspace, posun, nový řádek, návrat vozíku, horizontálního tabulátoru a vertikální tabulátor. V `ECMAScript`, "\a" a "\b" nejsou povoleny. ("\\\\" může, ale je řídicí znak identity, ne řídicí znak formátu souboru).
 
 ### <a name="hexadecimal-escape-sequence"></a>Šestnáctková řídicí sekvence
 
@@ -334,9 +334,9 @@ Přidá třídu ekvivalenční ve výrazu závorky všechny znaky a *kompletová
 
 Řídicí znak identity je zpětné lomítko následované jedním znakem. Odpovídá danému znaku. Je vyžadován, když má znak zvláštní význam; pomocí řídicího znaku identity je zvláštní výraz odebrán. Příklad:
 
-- "\*" odpovídá pořadí cíl "aaa", ale neodpovídá cílové sekvence "\*".
+- "\*" odpovídá cílové sekvenci "aaa", ale neodpovídá cílové sekvenci "\*".
 
-- "\\\*" neodpovídá cílové sekvence "aaa", ale odpovídá pořadí cíl "\*".
+- "\\\*" neodpovídá cílové sekvenci "aaa", ale odpovídá cílové sekvenci "\*".
 
 Množina znaků, které jsou v řídicím znaku identity povoleny, závisí na gramatice regulárního výrazu, viz následující tabulka.
 
@@ -344,8 +344,8 @@ Množina znaků, které jsou v řídicím znaku identity povoleny, závisí na g
 |-------------|----------------------------------------|
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
 |`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
-|`awk`|`extended` Plus {' "', '/'}|
-|`ECMAScript`|Všechny znaky kromě těch, které mohou být součástí identifikátoru. Obvykle obsahuje písmena, číslice, '$', '\_' a unicode řídicí sekvence. Další informace naleznete ve specifikacích jazyka ECMAScript.|
+|`awk`|`extended` a navíc {"" ","/"}|
+|`ECMAScript`|Všechny znaky kromě těch, které mohou být součástí identifikátoru. Obvykle obsahuje písmena, číslice, "$", "\_" a řídicí sekvence unicode. Další informace naleznete ve specifikacích jazyka ECMAScript.|
 
 ### <a name="individual-character"></a>Jednotlivý znak
 
@@ -359,7 +359,7 @@ Příklady:
 
 - „[a^bc]“ odpovídá cílovým sekvencím „a“, „b“, „c“ a „^“, ale nikoli cílové sekvenci „d“.
 
-Ve všech gramatika regulární výraz s výjimkou `ECMAScript`, pokud ']' je první znak, který následuje otevření ' [' nebo je první znak, který následuje počátečního ' ^', představuje sám sebe.
+Ve všech gramatikách regulárního výrazu s výjimkou `ECMAScript`, pokud "]" je první znak, který následuje otevírací ' [' nebo je první znak, který následuje po počátečním ' ^', představuje sám sebe.
 
 Příklady:
 
@@ -369,29 +369,29 @@ Příklady:
 
 - „[^]abc]“ odpovídá cílové sekvenci „d“, ale nikoli cílovým sekvencím „a“, „b“, „c“ nebo „]“.
 
-V `ECMAScript`, použijte '\\]' představující znak ']' ve výrazu závorky.
+V `ECMAScript`, použijte '\\]' k reprezentaci znaku ']' ve výrazu závorky.
 
 Příklady:
 
 - „[]a“ odpovídá cílové sekvenci „a“, protože výraz závorky je prázdný.
 
-- "[\\] abc]" odpovídá pořadí cíl "a", "b", "c" a "]", ale není pořadí cíl "d".
+- "[\\] [abc]" odpovídá cílovým sekvencím "a", "b", "c" a "]", ale nikoli cílové sekvenci "d".
 
 ### <a name="negative-assert"></a>Záporný kontrolní výraz
 
-Záporný kontrolní výraz odpovídá všemu kromě svého obsahu. Nespotřebovává žádné znaky v cílové sekvenci. Například "(! aa)(a*)" odpovídá pořadí cíl "a" a partnerů zachycení skupina 1 se dalším "a". Neodpovídá cílové sekvenci „aa“, ale cílové sekvenci „aaa“.
+Záporný kontrolní výraz odpovídá všemu kromě svého obsahu. Nespotřebovává žádné znaky v cílové sekvenci. Například "(!aa) (\*)" odpovídá cílové sekvenci "a" a přiřazuje skupinu zachycení 1 k dílčí sekvenci "a". Neodpovídá cílové sekvenci „aa“, ale cílové sekvenci „aaa“.
 
 ### <a name="negative-word-boundary-assert"></a>Záporný kontrolní výraz hranice slova
 
-Assert hranic záporná word odpovídá, pokud aktuální pozici v cílový řetězec není ihned po *hranice slova*.
+Záporná hranice slova odpovídá, pokud aktuální pozice v cílovém řetězci nenásleduje ihned za *hranice slova*.
 
 ### <a name="non-capture-group"></a>Skupina bez zachycení
 
-Skupina bez zachycení označuje svůj obsah jako jednu jednotku v gramatice regulárního výrazu, ale neoznačuje popiskem cílový text. Například "(a)(?:b)\*(c)" odpovídá cílové textu "abbc" a přidruží zachycení skupina 1 dalším ""a zachycení skupiny 2 s dalším "c".
+Skupina bez zachycení označuje svůj obsah jako jednu jednotku v gramatice regulárního výrazu, ale neoznačuje popiskem cílový text. Například "(a)(?:b)\*(c)" odpovídá cílovému textu "abbc" a přiřadí skupinu zachycení 1 k dílčí sekvenci ""a skupinu zachycení 2 k dílčí sekvenci "c".
 
 ### <a name="non-greedy-repetition"></a>Opakování bez metody Greedy
 
-Opakování bez metody Greedy spotřebovává nejkratší dílčí sekvenci cílové sekvence, která odpovídá vzoru. Opakování s metodou Greedy spotřebovává nejdelší sekvenci. Například "(a+) (\*b)" odpovídá pořadí cíl "aaab". Je-li použito opakování bez metody Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „a“ na začátku cílové sekvence a skupinu zachycení 2 k dílčí sekvenci „aab“ na konci cílové sekvence. Je-li použita shoda s metodou Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „aaa“ a skupinu zachycení 2 k dílčí sekvenci „b“.
+Opakování bez metody Greedy spotřebovává nejkratší dílčí sekvenci cílové sekvence, která odpovídá vzoru. Opakování s metodou Greedy spotřebovává nejdelší sekvenci. Například "(a+) (\*b)" odpovídá cílové sekvenci "aaab". Je-li použito opakování bez metody Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „a“ na začátku cílové sekvence a skupinu zachycení 2 k dílčí sekvenci „aab“ na konci cílové sekvence. Je-li použita shoda s metodou Greedy, přiřadí skupinu zachycení 1 k dílčí sekvenci „aaa“ a skupinu zachycení 2 k dílčí sekvenci „b“.
 
 ### <a name="octal-escape-sequence"></a>Osmičková řídicí sekvence
 
@@ -401,27 +401,27 @@ Osmičková řídicí sekvence je zpětné lomítko následované jednou, dvěma
 
 Běžný znak je jakýkoli platný znak, který nemá v aktuální gramatice zvláštní význam.
 
-V `ECMAScript`, mají zvláštní význam následující znaky:
+V `ECMAScript`, mají následující znaky zvláštní význam:
 
-- ^  $  \  .  *  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
 
-V `basic` a `grep`, mají zvláštní význam následující znaky:
+V `basic` a `grep`, mají následující znaky zvláštní význam:
 
 - .   [   \
 
-Také v `basic` a `grep`, následující znaky mají zvláštní význam, když jsou použity v určitém kontextu:
+Také v `basic` a `grep`, mají následující znaky zvláštní význam, pokud jsou použity v konkrétním kontextu:
 
-- '\*"mají zvláštní význam ve všech případech kromě případů, kdy je první znak v regulárním výrazu nebo prvního znaku, který následuje počátečního ' ^' v regulárním výrazu, nebo pokud je první znak digitalizace skupiny nebo první znak, Následuje počátečního ' ^ "ve skupině pro zachycení.
+- "\*' má zvláštní význam ve všech případech, kromě případů, kdy je první znak v o regulární výraz nebo první znak, který následuje po počátečním ' ^' v regulárním výrazu, nebo pokud je to první znak digitalizace skupiny nebo první znak, který následuje po počátečním ' ^' ve skupině zachycení.
 
 - '^' má zvláštní význam, pokud je to první znak regulárního výrazu.
 
 - '$' má zvláštní význam, pokud je to poslední znak regulárního výrazu.
 
-V `extended`, `egrep`, a `awk`, mají zvláštní význam následující znaky:
+V `extended`, `egrep`, a `awk`, mají následující znaky zvláštní význam:
 
-- .   [   \   (   *   +   ?   {   &#124;
+- .   [   \   (   \*   +   ?   {   &#124;
 
-Také v `extended`, `egrep`, a `awk`, následující znaky mají zvláštní význam, když jsou použity v určitém kontextu.
+Také v `extended`, `egrep`, a `awk`, mají následující znaky zvláštní význam, pokud jsou použity v konkrétním kontextu.
 
 - ') má zvláštní význam v případě, že odpovídá předchozímu znaku '('.
 
@@ -429,7 +429,7 @@ Také v `extended`, `egrep`, a `awk`, následující znaky mají zvláštní vý
 
 - '$' má zvláštní význam, pokud je to poslední znak regulárního výrazu.
 
-Běžný znak odpovídá stejnému znaku v cílové sekvenci. Ve výchozím nastavení to znamená, že porovnání se zdaří, pokud jsou dva znaky zastoupeny stejnou hodnotou. V rozlišování velikosti písmen shodu, dva znaky `ch0` a `ch1` splněno, pokud `traits.translate_nocase(ch0) == traits.translate_nocase(ch1)`. V porovnání závislé na národním prostředí se dva znaky `ch0` a `ch1` splněno, pokud `traits.translate(ch0) == traits.translate(ch1)`.
+Běžný znak odpovídá stejnému znaku v cílové sekvenci. Ve výchozím nastavení to znamená, že porovnání se zdaří, pokud jsou dva znaky zastoupeny stejnou hodnotou. Ve velkých a malých písmen, dva znaky `ch0` a `ch1` splněno, pokud `traits.translate_nocase(ch0) == traits.translate_nocase(ch1)`. Porovnání citlivé na národní prostředí, dva znaky `ch0` a `ch1` splněno, pokud `traits.translate(ch0) == traits.translate(ch1)`.
 
 ### <a name="positive-assert"></a>Kladný kontrolní výraz
 
@@ -437,11 +437,11 @@ Kladný kontrolní výraz odpovídá svému obsahu, ale nespotřebovává žádn
 
 Příklady:
 
-- "(=AA) (\*)" odpovídá pořadí cíl "aaaa" a přidruží k dalším "aaaa" zachycení skupina 1.
+- "(=AA) (\*)" odpovídá cílové sekvenci "aaaa" a přiřadí skupinu zachycení 1 k dílčí sekvenci "aaaa".
 
-- "(aa) (\*)" odpovídá pořadí cíl "aaaa" a přidruží zachycení skupina 1 s dalším "aa" na začátku cílové pořadí a zachycení skupiny 2 s dalším "aa" na konci pořadí cíl.
+- "(aa) (\*)" odpovídá cílové sekvenci "aaaa" a přiřadí skupinu zachycení 1 k dílčí sekvenci "aa" na začátku k cílové sekvence a skupinu zachycení 2 k dílčí sekvenci "aa" na konci cílové sekvence.
 
-- "(=aa)(a)&#124;(a)" odpovídá pořadí cíl "a" a partnerů zachycení skupina 1 prázdnou sekvencí (protože se nezdařilo kladné assert) a zachycení skupiny 2 se dalším "a". Také odpovídá cílové sekvenci „aa“ a přiřadí skupinu zachycení 1 k dílčí sekvenci „aa“ a skupinu zachycení 2 k prázdné sekvenci.
+- "(=aa)(a)&#124;(a)" odpovídá cílové sekvenci "a" a přiřazuje skupinu zachycení 1 k prázdné sekvenci (protože kladný kontrolní výraz neuspěl) a skupinu zachycení 2 k dílčí sekvenci "a". Také odpovídá cílové sekvenci „aa“ a přiřadí skupinu zachycení 1 k dílčí sekvenci „aa“ a skupinu zachycení 2 k prázdné sekvenci.
 
 ### <a name="unicode-escape-sequence"></a>Řídicí sekvence Unicode
 
@@ -455,7 +455,7 @@ Zástupný znak odpovídá libovolnému znaku v cílovém výrazu, s výjimkou n
 
 Hranice slova se vyskytuje v následujících situacích:
 
-- Aktuální znak na začátek pořadí cíl a je mezi znaky aplikace word `A-Za-z0-9_.`
+- Aktuální znak je na začátku cílové sekvence a je jedním ze znaků slova `A-Za-z0-9_.`
 
 - Aktuální poloha znaku je za koncem cílové sekvence a poslední znak v cílové sekvenci je jedním ze znaků slova.
 
@@ -465,9 +465,9 @@ Hranice slova se vyskytuje v následujících situacích:
 
 ### <a name="word-boundary-assert"></a>Kontrolní výraz hranice slova
 
-Odpovídá assert hranic word při aktuální pozici v cílový řetězec ihned po *hranice slova*.
+Hranice slova odpovídá, pokud je aktuální pozice v cílovém řetězci ihned po *hranice slova*.
 
-## <a name="matchingandsearching"></a> Porovnávání a vyhledávání
+## <a name="matchingandsearching"></a> Párování a vyhledávání
 
 Aby regulární výraz odpovídal cílové sekvenci, musí celý regulární výraz odpovídat celé cílové sekvenci. Například regulární výraz „bcd“ odpovídá cílové sekvenci „bcd“, ale nikoli cílové sekvenci „abcd“ ani cílové sekvenci „bcde“.
 
@@ -479,7 +479,7 @@ Příklady:
 
 - Hledání regulárního výrazu "bcd" v cílové sekvenci "bcdbcd" je úspěšné a odpovídá prvním třem znakům.
 
-Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém umístění cílové sekvence, můžete odpovídající vzor vybrat dvěma způsoby. *Nejprve odpovídat* zvolí dalším, která byla nalezena první, pokud je nalezena shoda s regulárním výrazem. *Nejdéle odpovídat* zvolí nejdelší dalším od těch, které odpovídají v tomto umístění. Pokud existuje více než jedna dílčí sekvence, která má maximální délku, nejdelší shoda zvolí tu, která byla nalezena jako první. Například když se použije první shodu, vyhledejte regulární výraz "b&#124;bc" v cílové pořadí "abcd" odpovídá dalším "b", protože levé období alternace odpovídá této dalším; první shodu proto, zkuste není pravé období alternace. Při použití nejdelší shody stejné vyhledávání odpovídá „bc“, protože „bc“ je delší než „b“.
+Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém umístění cílové sekvence, můžete odpovídající vzor vybrat dvěma způsoby. *První shoda* zvolí dílčí sekvenci, která byla nalezena jako první při regulární výraz spárován. *Nejdelší shoda* zvolí nejdelší dílčí sekvenci z těch, které v daném umístění odpovídají. Pokud existuje více než jedna dílčí sekvence, která má maximální délku, nejdelší shoda zvolí tu, která byla nalezena jako první. Například když se použije první shoda, vyhledávání regulárního výrazu "b&#124;bc" v cílové sekvenci "abcd" odpovídá dílčí sekvenci "b", protože levý termín změny odpovídá dané dílčí sekvenci; proto první shoda nepokusí pravém termín změny. Při použití nejdelší shody stejné vyhledávání odpovídá „bc“, protože „bc“ je delší než „b“.
 
 Částečná shoda bude úspěšná, pokud shoda dosáhne konce cílové sekvence bez selhání, i když nedosáhla konce regulárního výrazu. Proto by po úspěchu částečné shody mohlo připojení znaků k cílové sekvenci způsobit pozdější selhání částečné shody. Po neúspěchu částečné shody však připojení znaků k cílové sekvenci nemůže způsobit pozdější úspěch částečné shody. Například v případě částečné shody odpovídá „ab“ cílové sekvenci „a“, ale nikoli „ac“.
 
@@ -487,15 +487,15 @@ Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém
 
 |Pravidla formátu jazyka ECMAScript|Pravidla formátu SED|Náhradní text|
 |-----------------------------|----------------------|----------------------|
-|"$&"|"&"|Posloupnost znaků, který odpovídá celé regulární výraz (`[match[0].first, match[0].second)`)|
+|"$&"|"&"|Sekvence znaků, která odpovídá celému regulárnímu výrazu (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (dolaru následované zpětné uvozovky)||Sekvence znaků, která předchází dalším, který odpovídá regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
-|„$'“ (znak dolaru následovaný počáteční uvozovkou)||Posloupnost znaků, který následuje dalším, který odpovídá regulárnímu výrazu (`[match.suffix().first, match.suffix().second)`)|
-|„$n“|„\n“|Posloupnost znaků, který odpovídá skupině zachycení na pozici `n`, kde `n` je číslo mezi 0 a 9 (`[match[n].first, match[n].second)`)|
+|"$\`" (znak dolaru následovaný závěrečnou uvozovkou)||Sekvence znaků, která předchází dílčí sekvenci odpovídající regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
+|„$'“ (znak dolaru následovaný počáteční uvozovkou)||Sekvence znaků, který následuje za dílčí sekvencí odpovídající regulárnímu výrazu (`[match.suffix().first, match.suffix().second)`)|
+|„$n“|„\n“|Sekvence znaků, který odpovídá skupině zachycení na pozici `n`, kde `n` je číslo mezi 0 a 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|„\n“|
-|„$nn“||Posloupnost znaků, který odpovídá skupině zachycení na pozici `nn`, kde `nn` je v rozmezí 10 až 99 (`[match[nn].first, match[nn].second)`)|
+|„$nn“||Sekvence znaků, který odpovídá skupině zachycení na pozici `nn`, kde `nn` je číslo mezi 10 a 99 (`[match[nn].first, match[nn].second)`)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

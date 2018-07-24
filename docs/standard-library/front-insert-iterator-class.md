@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964382"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207608"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator – třída
 
@@ -63,9 +63,9 @@ Kontejner musí splňovat požadavky pro sekvenci vložení do přední části,
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro vložení dopředu.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro vložení dopředu.|
 |[Operator ++](#op_add_add)|Zvýší `front_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro vložení dopředu.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro vložení dopředu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::Operator *
+## <a name="op_star"></a>  front_insert_iterator::Operator\*
 
 Přístupů přes ukazatel iterátoru vložení vrátí prvek, na který se zaměřuje.
 

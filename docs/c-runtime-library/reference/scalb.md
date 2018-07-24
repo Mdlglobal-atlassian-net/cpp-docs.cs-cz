@@ -1,5 +1,5 @@
 ---
-title: _scalb –, _scalbf | Microsoft Docs
+title: _scalb – _scalbf | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406261"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207517"
 ---
-# <a name="scalb-scalbf"></a>_scalb –, _scalbf
+# <a name="scalb-scalbf"></a>_scalb – _scalbf
 
-Argument měřítka ve power 2.
+Argument měřítka ve mocninou čísla 2.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,30 +64,30 @@ float _scalbf(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Dvojitá přesnost, s plovoucí desetinnou čárkou hodnota.
+Hodnota dvojitou přesností a plovoucí desetinnou čárkou.
 
 *exp*<br/>
-Exponent dlouhých celých čísel.
+Exponent dlouhé celé číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu exponenciálního v případě úspěchu. Na přetečení (v závislosti na znaménko *x*), **_scalb –** vrátí **huge_val –**; **errno** proměnná je nastavená na  **Erange –**.
+Pokud je úspěšná, vrátí hodnotu exponenciální. Při přetečení (v závislosti na znaménko *x*), **_scalb –** vrátí **HUGE_VAL**; **errno** proměnná je nastavená na  **ERANGE**.
 
-Další informace o tomto a ostatní návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Scalb –** funkce vypočítá hodnotu *x* * 2<sup>*exp*</sup>.
+**_Scalb –** funkce vypočítá hodnotu *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_scalb –**, **_scalbf**|\<float.h – >|
+|**_scalb –**, **_scalbf**|\<float.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

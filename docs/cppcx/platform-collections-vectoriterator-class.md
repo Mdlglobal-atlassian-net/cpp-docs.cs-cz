@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Collections::VectorIterator | Microsoft Docs
+title: 'Platform::Collections:: vectoriterator – třída | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,17 +15,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68198edb54c79d0872b3181d4ffe36df21a8cf02
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092529"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208468"
 ---
-# <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator – třída
-Poskytuje standardní knihovny šablon iterator pro objekty, které jsou odvozené z rozhraní Windows Runtime IVector.  
+# <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator – třída
+Pro objekty, které jsou odvozeny z rozhraní Windows Runtime IVector poskytuje iterátor standardní knihovny šablon.  
   
- VectorIterator je iterator proxy, která ukládá elementy typu VectorProxy\<T >. Objekt proxy serveru je však téměř žádné viditelné pro uživatelského kódu. Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ VectorIterator je proxy iterátor, který ukládá prvky typu VectorProxy\<T >. Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ class VectorIterator;
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typename VectorIterator šablony třídy.  
+ Vlastnost typename třídy VectorIterator šablony.  
   
 ### <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`difference_type`|Ukazatel rozdíl (ptrdiff_t –).|  
-|`iterator_category`|Kategorie iterator náhodným přístupem (:: std::random_access_iterator_tag).|  
-|`pointer`|Ukazatel na interní typ, Platform::Collections::Details::VectorProxy\<T >, která je potřeba pro implementaci VectorIterator.|  
-|`reference`|Odkaz na typ interní Platform::Collections::Details::VectorProxy\<T >,, to je nezbytné k provedení VectorIterator.|  
+|`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|  
+|`iterator_category`|Kategorie iterátor náhodného přístupu (:: std::random_access_iterator_tag).|  
+|`pointer`|Ukazatel na vnitřní typ Platform::Collections::Details::VectorProxy\<T >, která je požadované pro provádění VectorIterator.|  
+|`reference`|Odkaz na vnitřní typ Platform::Collections::Details::VectorProxy\<T >,,, který je požadované pro provádění VectorIterator.|  
 |`value_type`|`T` Typename.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
@@ -60,20 +60,20 @@ class VectorIterator;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[VectorIterator::operator-– operátor](#operator-minus)|Odečítá od buď zadaný počet elementů od aktuální iterator je nové iterator nebo zadaný iterator z aktuální iterator je počet elementů mezi iterátory.|  
-|[VectorIterator::operator – operátor](#operator-decrement)|Snižuje aktuální VectorIterator.|  
-|[VectorIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální VectorIterator se nerovná zadané VectorIterator.|  
-|[VectorIterator::operator * – operátor](#operator-dereference)|Získá odkaz na element určeného aktuální VectorIterator.|  
-|[VectorIterator::operator\[\]](#operator-at)|Získá odkaz na element, který je zadaný přestavění z aktuální VectorIterator.|  
-|[VectorIterator::operator + – operátor](#operator-plus)|Vrátí VectorIterator, který odkazuje na element v zadané posunutí ze zadaného VectorIterator.|  
-|[VectorIterator::operator ++ – operátor](#operator-increment)|Zvýší aktuální VectorIterator.|  
-|[VectorIterator::operator += – operátor](#operator-plus-assign)|Zvýší aktuální VectorIterator podle zadaného posunutí.|  
-|[VectorIterator::operator < – operátor](#operator-less-than)|Určuje, zda aktuální VectorIterator je menší než zadaný VectorIterator.|  
-|[VectorIterator::operator\<= – operátor](#operator-less-than-or-equals)|Určuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.|  
-|[VectorIterator::operator-= – operátor](#operator-subtract-assign)|Snižuje aktuální VectorIterator podle zadaného posunutí.|  
-|[VectorIterator::operator == – operátor](#operator-equality)|Určuje, zda je aktuální VectorIterator rovná zadané VectorIterator.|  
-|[VectorIterator::operator > – operátor](#operator-greater-than)|Určuje, zda aktuální VectorIterator je větší než zadaná VectorIterator.|  
-|[VectorIterator::operator -> – operátor](#operator-arrow)|Načte adresu odkazuje aktuální VectorIterator elementu.|  
+|[VectorIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|  
+|[VectorIterator::operator--– operátor](#operator-decrement)|Sníží aktuální VectorIterator.|  
+|[VectorIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální VectorIterator není roven zadané VectorIterator.|  
+|[VectorIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním VectorIterator.|  
+|[VectorIterator::operator\[\]](#operator-at)|Získá odkaz na prvek, který je zadaný posun z aktuální VectorIterator.|  
+|[VectorIterator::operator + – operátor](#operator-plus)|Vrátí VectorIterator, odkazující na prvek na zadané posunutí ze zadaného VectorIterator.|  
+|[VectorIterator::operator ++ – operátor](#operator-increment)|Aktuální VectorIterator zvýší.|  
+|[VectorIterator::operator += – operátor](#operator-plus-assign)|Zvětší aktuální VectorIterator podle zadaného posunu.|  
+|[VectorIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorIterator je nižší než zadané VectorIterator.|  
+|[VectorIterator::operator\<= – operátor](#operator-less-than-or-equals)|Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.|  
+|[VectorIterator::operator-= – operátor](#operator-subtract-assign)|Sníží aktuální VectorIterator podle zadaného posunu.|  
+|[VectorIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální VectorIterator rovná zadané VectorIterator.|  
+|[VectorIterator::operator > – operátor](#operator-greater-than)|Označuje, zda je aktuální VectorIterator větší než zadaný VectorIterator.|  
+|[VectorIterator::operator -> – operátor](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorIterator.|  
 |[VectorIterator::operator > = – operátor](#operator-greater-than-or-equal)|Určuje, zda aktuální VectorIterator je větší než nebo rovna hodnotě zadané VectorIterator.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -82,10 +82,10 @@ class VectorIterator;
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** collection.h  
   
- **Namespace:** Platform::Collections  
+ **Namespace:** Platform::Collections –  
 
 ## <a name="operator-arrow"></a>  VectorIterator::operator -&gt; – operátor
-Načte adresu odkazuje aktuální VectorIterator elementu.  
+Načte adresu elementu, který odkazuje aktuální VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -94,14 +94,14 @@ Detail::ArrowProxy<T> operator->() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota elementu, který je odkazován objektem aktuální VectorIterator.  
+ Hodnota elementu, který se odkazuje aktuální VectorIterator.  
   
- Typ vrácené hodnoty je neurčené vnitřní typ, který je vyžadován pro implementaci tohoto operátoru.  
+ Typ vrácené hodnoty je neurčená vnitřní typ, který se vyžaduje k provedení tohoto operátoru.  
   
 
 
-## <a name="operator-decrement"></a>  VectorIterator::operator – operátor
-Snižuje aktuální VectorIterator.  
+## <a name="operator-decrement"></a>  VectorIterator::operator--– operátor
+Sníží aktuální VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -112,17 +112,17 @@ VectorIterator operator--(int);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- První snižuje syntaxe a poté vrátí aktuální VectorIterator. Druhý syntaxe vrátí kopii aktuální VectorIterator a snižují se vždy aktuální VectorIterator.  
+ První syntaxe sníží a poté vrátí aktuální VectorIterator. Druhá syntaxe vrátí kopii aktuální VectorIterator a sníží aktuální VectorIterator.  
   
 ### <a name="remarks"></a>Poznámky  
  První syntaxe VectorIterator předem decrements aktuální VectorIterator.  
   
- Druhý syntaxe po decrements aktuální VectorIterator. `int` Typu v druhé syntaxi označuje po snížení operaci, nebyl operand skutečné celé číslo.  
+ Druhá syntaxe po decrements aktuální VectorIterator. `int` v druhé syntaxi označuje operaci po snížení, není skutečný celočíselný operand.  
   
 
 
-## <a name="operator-dereference"></a>  VectorIterator::operator * – operátor
-Načte adresu určeného aktuální VectorIterator elementu.  
+## <a name="operator-dereference"></a>  VectorIterator::operator\* – operátor
+Načte adresu určeném aktuálním VectorIterator elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -131,12 +131,12 @@ reference operator*() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Element určeného aktuální VectorIterator.  
+ Element určeném aktuálním VectorIterator.  
   
 
 
 ## <a name="operator-equality"></a>  VectorIterator::operator == – operátor
-Určuje, zda je aktuální VectorIterator rovná zadané VectorIterator.  
+Určuje, zda aktuální VectorIterator rovná zadané VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -149,12 +149,12 @@ bool operator==(const VectorIterator& other) const;
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se rovná aktuální VectorIterator `other`, jinak hodnota `false`.  
+ `true` Pokud se rovná aktuální VectorIterator `other`; v opačném případě `false`.  
   
 
 
 ## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; – operátor
-Určuje, zda aktuální VectorIterator je větší než zadaná VectorIterator.  
+Označuje, zda je aktuální VectorIterator větší než zadaný VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -168,7 +168,7 @@ bool operator>(const VectorIterator& other) const
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je větší než aktuální VectorIterator `other`, jinak hodnota `false`.  
+ `true` Pokud je větší než aktuální VectorIterator `other`; v opačném případě `false`.  
   
 
 
@@ -187,11 +187,11 @@ bool operator>=(const VectorIterator& other) const
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud aktuální VectorIterator je větší než nebo rovna hodnotě `other`, jinak hodnota `false`.    
+ `true` Pokud aktuální VectorIterator je větší než nebo rovna hodnotě `other`; v opačném případě `false`.    
 
 
 ## <a name="operator-increment"></a>  VectorIterator::operator ++ – operátor
-Zvýší aktuální VectorIterator.  
+Aktuální VectorIterator zvýší.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -201,17 +201,17 @@ VectorIterator operator++(int);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- První syntaxe zvýší a vrátí aktuální VectorIterator. Druhý syntaxe vrátí kopii aktuální VectorIterator a pak zvýší aktuální VectorIterator.  
+ První syntaxe zvýší hodnotu a vrátí aktuální VectorIterator. Druhá syntaxe vrátí kopii objektu aktuální VectorIterator a potom zvýší aktuální VectorIterator.  
   
 ### <a name="remarks"></a>Poznámky  
  První syntaxe VectorIterator předem zvýší aktuální VectorIterator.  
   
- Druhý syntaxe po zvýší aktuální VectorIterator. `int` Typu v druhé syntaxi označuje po přírůstek operaci, nebyl operand skutečné celé číslo.  
+ Druhá syntaxe po zvýší aktuální VectorIterator. `int` v druhé syntaxi označuje operaci po přírůstku není skutečný celočíselný operand.  
   
 
 
 ## <a name="operator-inequality"></a>  VectorIterator::operator! = – operátor
-Určuje, zda aktuální VectorIterator se nerovná zadané VectorIterator.  
+Určuje, zda aktuální VectorIterator není roven zadané VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -224,12 +224,12 @@ bool operator!=(const VectorIterator& other) const;
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud aktuální VectorIterator není rovno `other`, jinak hodnota `false`.  
+ `true` Pokud aktuální VectorIterator není roven `other`; v opačném případě `false`.  
   
 
 
 ## <a name="operator-less-than"></a>  VectorIterator::operator&lt; – operátor
-Určuje, zda aktuální VectorIterator je menší než zadaný VectorIterator.  
+Označuje, zda aktuální VectorIterator je nižší než zadané VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -243,12 +243,12 @@ bool operator<(const VectorIterator& other) const
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je aktuální VectorIterator menší než `other`, jinak hodnota `false`.  
+ `true` Pokud je aktuální VectorIterator menší než `other`; v opačném případě `false`.  
   
 
 
 ## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;= – operátor
-Určuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.  
+Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -262,12 +262,12 @@ bool operator<=(const VectorIterator& other) const
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud aktuální VectorIterator je menší než nebo rovno `other`, jinak hodnota `false`.  
+ `true` Pokud aktuální VectorIterator je menší než nebo rovna `other`; v opačném případě `false`.  
   
 
 
 ## <a name="operator-minus"></a>  VectorIterator::operator-– operátor
-Odečítá od buď zadaný počet elementů od aktuální iterator je nové iterator nebo zadaný iterator z aktuální iterator je počet elementů mezi iterátory.  
+Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -280,18 +280,18 @@ difference_type operator-(const VectorIterator& other) const;
   
 ### <a name="parameters"></a>Parametry  
  `n`  
- Počet elementů.  
+ Počet prvků.  
   
  `other`  
  Jiné VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí první syntaxe operátor VectorIterator objekt, který je `n` elementy menší než aktuální VectorIterator. Druhý syntaxe operátor vrátí počet prvků mezi aktuální a `other` VectorIterator.  
+ Syntaxe první operátor vrací objekt VectorIterator, který je `n` prvky menší než aktuální VectorIterator. Syntaxe druhý operátor vrátí počet prvků mezi aktuálním a `other` VectorIterator.  
   
 
 
 ## <a name="operator-plus-assign"></a>  VectorIterator::operator += – operátor
-Zvýší aktuální VectorIterator podle zadaného posunutí.  
+Zvětší aktuální VectorIterator podle zadaného posunu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -309,7 +309,7 @@ VectorIterator& operator+=(difference_type n);
 
 
 ## <a name="operator-plus"></a>  ectorIterator::operator + – operátor
-Vrátí VectorIterator, který odkazuje na element v zadané posunutí ze zadaného VectorIterator.  
+Vrátí VectorIterator, odkazující na prvek na zadané posunutí ze zadaného VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -326,26 +326,26 @@ inline VectorIterator<T> operator+(
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- V druhé syntaxe typename VectorIterator.  
+ V druhém syntaxi typename VectorIterator.  
   
  `n`  
  Posunutí celé číslo.  
   
  `i`  
- V druhé syntaxe VectorIterator.  
+ V druhém syntaxi VectorIterator.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V první syntaxe VectorIterator, který odkazuje na element v zadané posunutí z aktuální VectorIterator.  
+ V první syntaxe VectorIterator, který odkazuje na element na zadaný posun z aktuální VectorIterator.  
   
- V druhé syntaxi VectorIterator, který odkazuje na element v zadaný posun od začátku parametr `i`.  
+ V druhém syntaxi VectorIterator, který odkazuje na element na zadaný posun od začátku parametru `i`.  
   
 ### <a name="remarks"></a>Poznámky  
- V prvním příkladu syntaxe  
+ První příklad syntaxe  
   
 
 
 ## <a name="operator-minus-equals"></a>  VectorIterator::operator-= – operátor
-Snižuje aktuální VectorIterator podle zadaného posunutí.  
+Sníží aktuální VectorIterator podle zadaného posunu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -363,7 +363,7 @@ VectorIterator& operator-=(difference_type n);
 
 
 ## <a name="operator-at"></a>  VectorIterator::operator\[\]
-Získá odkaz na element, který je zadaný přestavění z aktuální VectorIterator.  
+Získá odkaz na prvek, který je zadaný posun z aktuální VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -376,11 +376,11 @@ reference operator[](difference_type n) const;
  Posunutí celé číslo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Element, který je posunout o `n` elementy z aktuální VectorIterator.  
+ Prvek, který je posunout o `n` prvky z aktuální VectorIterator.  
   
 
 
-## <a name="ctor"></a>  VectorIterator::VectorIterator – konstruktor
+## <a name="ctor"></a>  VectorIterator::VectorIterator konstruktor
 Inicializuje novou instanci třídy VectorIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -397,10 +397,10 @@ explicit VectorIterator(
  IVector\<T > objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- V prvním příkladu syntaxe je výchozí konstruktor. V druhém příkladu syntaxe je explicitní konstruktor, který se používá pro konstrukci VectorIterator z IVector\<T > objektu.  
+ První příklad syntaxe je výchozí konstruktor. Druhý příklad syntaxe je explicitní konstruktor, který se používá ke konstrukci VectorIterator ze IVector\<T > objektu.  
   
 
 
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963521"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207916"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator – třída
 
@@ -68,9 +68,9 @@ Třída ostream_iterator musí splňovat požadavky na výstupní iterátor. Alg
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x`.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x`.|
 |[Operator ++](#op_add_add)|Nefunkční operátor přírůstku, který vrátí `ostream_iterator` na stejný objekt, který adresoval před voláním operace.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro zápis do výstupního proudu.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zápis do výstupního proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::Operator =
 
-Operátor přiřazení používaný k implementaci výrazu output_iterator * `i`  =  `x` pro zápis do výstupního proudu.
+Operátor přiřazení používaný k implementaci výrazu output_iterator \* `i`  =  `x` pro zápis do výstupního proudu.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ Operátor vloží *val* do výstupního datového proudu přidružená k objektu
 
 ### <a name="remarks"></a>Poznámky
 
-Požadavky na výstupní iterátor, který `ostream_iterator` musí splňovat vyžadují pouze výraz * `ii`  =  `t` platné a neříká nic o operátor nebo operátor = sami. Tento členský operátor vrátí `*this`.
+Požadavky na výstupní iterátor, který `ostream_iterator` musí splňovat vyžadují pouze výraz \* `ii`  =  `t` platné a neříká nic o operátor nebo operátor = sami. Tento členský operátor vrátí `*this`.
 
 ### <a name="example"></a>Příklad
 

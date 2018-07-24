@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958617"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209001"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator – třída
 
@@ -63,9 +63,9 @@ Kontejner musí splňovat požadavky pro sekvenci vložení do zadní části, j
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro zpětné vložení.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zpětné vložení.|
 |[Operator ++](#op_add_add)|Zvýší `back_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x` pro zpětné vložení.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zpětné vložení.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -191,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::Operator *
+## <a name="op_star"></a>  back_insert_iterator::Operator\*
 
 Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* *můžu* = *x*.
 

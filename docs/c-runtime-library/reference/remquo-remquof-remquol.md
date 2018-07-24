@@ -1,5 +1,5 @@
 ---
-title: remquo – remquof –, remquol – | Microsoft Docs
+title: remquo – remquof –, remquol – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406999"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207650"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
-Vypočítá zbytek dvě celočíselné hodnoty a ukládá hodnotu celého čísla se přihlaste a přibližný odhad podílu v umístění zadaném v parametr.
+Vypočítá zbytek dvou celočíselných hodnot a uloží hodnotu celého čísla se znaménkem a přibližnou velikosti podílu v umístění zadaném v parametr.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,31 +64,31 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 ### <a name="parameters"></a>Parametry
 
 *počet*<br/>
-Čítači.
+Čítač.
 
 *denom*<br/>
 Jmenovatel.
 
 *současný*<br/>
-Ukazatel na celočíselnou hodnotu, která má přihlašovací a přibližný odhad podílu ukládat.
+Ukazatel na celé číslo k uložení hodnoty se znaménkem a přibližnou velikostí podílu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**remquo –** vrátí s plovoucí desetinnou čárkou zbytek *x* / *y*. Pokud hodnota *y* je 0,0, **remquo –** vrátí quiet NaN. Informace o reprezentace quiet NaN pomocí **printf** rodiny, viz [printf _printf_l –, wprintf, _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
+**remquo –** Vrátí zbytek s plovoucí desetinnou čárkou z *x* / *y*. Pokud hodnota *y* je 0,0, **remquo –** vrátí tichý NaN. Informace o reprezentaci tichého NaN **printf** řady, viz [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Remquo –** funkce vypočítá s plovoucí desetinnou čárkou zbývající *f* z *x* / *y* tak, aby *x*   =  *i* * *y* + *f*, kde *i* je celé číslo , *f* má stejné znaménko jako *x*a absolutní hodnotu *f* je menší než absolutní hodnotu *y*.
+**Remquo –** funkce vypočítá zbytek s plovoucí desetinnou čárkou *f* z *x* / *y* tak, aby *x*   =  *můžu* \* *y* + *f*, kde *můžu* je celé číslo , *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
 
-C++ umožňuje přetížení, takže můžete volat přetížení **remquo –** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **remquo –** vždy přebírá dva **dvojité** argumentů a vrátí **dvojité**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **remquo –** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **remquo –** vždy má dva **double** argumenty a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Funkce|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |--------------|---------------------|-|
-|**remquo –**, **remquof –**, **remquol –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**remquo –**, **remquof –**, **remquol –**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -115,7 +115,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

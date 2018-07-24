@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957695"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208673"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;komplexní&gt; operátory
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  Operator *
+## <a name="op_star"></a>  – Operátor\*
 
 Vynásobí dvě komplexní čísla, jeden nebo oba z nich může patřit do dílčí typ pro reálné a imaginární části.
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*levé* první dva komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou * operaci.
+*levé* první dva komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
 
-*správné* druhé dvě komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou * operaci.
+*správné* druhé dvě komplexní čísla nebo čísla, která má typ parametru pro komplexní čísla, která se bude vynásobené hodnotou \* operace.
 
 ### <a name="return-value"></a>Návratová hodnota
 

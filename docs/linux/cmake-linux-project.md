@@ -1,7 +1,8 @@
 ---
 title: Konfigurace projektu Linux CMake v sadě Visual Studio | Dokumentace Microsoftu
+description: Konfigurace projektu Linux CMake v sadě Visual Studio
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +15,17 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 285c1fcd38ef20ea38fe03e2cbd27f77469775cf
-ms.sourcegitcommit: 30192458404618039fdadddf37dc269baa559860
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39182535"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207784"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
 **Visual Studio 2017 verze 15.4 nebo novější**  
-Při instalaci úlohy pro Linux C++ CMake podpoře pro Linux je standardně vybraná. Teď můžete pracovat na svém stávajícím základu kódu, který používá CMake bez nutnosti převádět na projekt sady Visual Studio. Je-li vašeho základu kódu napříč platformami, je cílem Windows a Linuxem z Visual Studia.
+Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně vybraná podpora CMake pro Linux. Teď můžete pracovat na svém stávajícím základu kódu, který používá CMake bez nutnosti převádět na projekt sady Visual Studio. Je-li vašeho základu kódu napříč platformami, je cílem Windows a Linuxem z Visual Studia.
 
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 

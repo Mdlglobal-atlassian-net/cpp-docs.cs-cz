@@ -1,4 +1,31 @@
-`task_group` Třída reprezentuje kolekci paralelní práce, která může být čekali nebo došlo ke zrušení.  
+---
+title: task_group – třída | Dokumentace Microsoftu
+ms.custom: ''
+ms.date: 07/20/2018
+ms.technology:
+- cpp-concrt
+ms.topic: reference
+f1_keywords:
+- task_group
+- PPL/concurrency::task_group
+- PPL/concurrency::task_group::task_group
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_group class
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208985"
+---
+# <a name="taskgroup-class"></a>task_group – třída
+`task_group` Třída reprezentuje kolekci paralelní práce, které mohou čekat nebo bylo zrušeno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -12,21 +39,21 @@ class task_group;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[task_group](#ctor)|Přetíženo. Vytvoří nový `task_group` objektu.|  
-|[~ task_group – destruktor](#dtor)|Zničí `task_group` objektu. Předpokládá se, že buď volání `wait` nebo `run_and_wait` metoda pro objekt před destruktor provádění, pokud je destruktor je prováděna v důsledku kvůli výjimce unwinding zásobníku.|  
+|[task_group](#ctor)|Přetíženo. Sestaví nový `task_group` objektu.|  
+|[~ task_group – destruktor](#dtor)|Odstraní `task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před destruktor prováděný, pokud je destruktor se provádí v důsledku uvolnění z důvodu výjimky zásobníku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Zrušit](#cancel)|Díky usilovně pokus o zrušení podstromu pracovní root v této skupině úloh. Každý úkol naplánovat na skupině úloh bude získat zrušena přechodně Pokud je to možné.|  
-|[is_canceling –](#is_canceling)|Informuje o volající, jestli je skupina úkolů aktuálně in the midst of zrušení. To nemusí znamenat, který `cancel` byla volána metoda `task_group` objektu (i když například tato metoda vrátí vyfiltrování určitě `true`). Může být tento případ, `task_group` objektu provádí vložené a další skupinu úkolů až ve stromové struktuře pracovní byla zrušena. V případech, například tyto kde můžete určit modulu runtime dopředu, který zrušení bude procházet přes tento `task_group` objekt, `true` bude vrácen také.|  
-|[Spustit](#run)|Přetíženo. Naplánuje úlohu na `task_group` objektu. Pokud `task_handle` objekt je předán jako parametr, který se `run`, volající zodpovídá za správu životnost `task_handle` objektu. Provedení menší také než použití verzi, která vytvoří odkaz na verzi metody, která přijímá odkaz na objekt funkce, jako parametr zahrnuje přidělení haldy uvnitř modul runtime, který může být `task_handle` objektu. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
-|[run_and_wait](#run_and_wait)|Přetíženo. Plány úlohy ke spuštění vložené na kontext volání s pomocí `task_group` objekt pro podporu úplné zrušení. Funkce pak čeká, dokud všechny práci `task_group` objekt buď dokončit nebo byla zrušena. Pokud `task_handle` objekt je předán jako parametr, který se `run_and_wait`, volající zodpovídá za správu životnost `task_handle` objektu.|  
-|[Počkej](#wait)|Čeká, dokud všechny práci `task_group` objekt buď dokončit nebo byla zrušena.|  
+|[Zrušit](#cancel)|Díky nezaručené pokus o zrušení podstromě pracovní kořenovým adresářem v této skupině úloh. Každá úloha naplánována na skupinu úloh bude zrušena přechodně Pokud je to možné.|  
+|[is_canceling –](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `task_group` objektu, `true` vrátí se také.|  
+|[Spuštění](#run)|Přetíženo. Naplánuje úlohy na `task_group` objektu. Pokud `task_handle` objekt je předán jako parametr `run`, volající zodpovídá za správu životnosti `task_handle` objektu. Provést menší a od používání verze, která přebírá odkaz na verzi metody, která přebírá odkaz na objekt funkce, jako parametr zahrnuje přidělení haldy uvnitř modulu runtime, který může být `task_handle` objektu. Verze, která přebírá parametr `_Placement` způsobí, že na tendenční směrem k provádění v místě určeném v parametru úlohy.|  
+|[run_and_wait](#run_and_wait)|Přetíženo. Naplánuje úlohy spustit vložené na kontext volání za pomoci `task_group` objekt pro zrušení plnou podporu. Funkce vyčká, dokud všechny práce na `task_group` objekt buď dokončí nebo byla zrušena. Pokud `task_handle` objekt je předán jako parametr `run_and_wait`, volající zodpovídá za správu životnosti `task_handle` objektu.|  
+|[Počkej](#wait)|Počká, dokud nebudou všechny práce na `task_group` objekt buď dokončí nebo byla zrušena.|  
   
 ## <a name="remarks"></a>Poznámky  
- Na rozdíl od výraznou omezené `structured_task_group` třídy, `task_group` třída je mnohem víc obecné konstrukce. Nemá žádné omezení popsaného [structured_task_group](structured-task-group-class.md). `task_group` objekty může bezpečně používané v rámci celé vláken a využitím volného tvaru. Nevýhodou `task_group` konstrukce je, že nemusí provádět společně s `structured_task_group` vytvořit pro úlohy, které provedení malé množství práce.  
+ Na rozdíl od velmi omezeném `structured_task_group` třídy, `task_group` třídy je mnohem více obecné konstrukce. Nemá žádný z těchto omezení popsal [structured_task_group](structured-task-group-class.md). `task_group` objekty může bezpečně použít napříč vlákny a využít způsoby volného tvaru. Nevýhodou `task_group` konstruktor je, že nemusí fungovat stejně jako `structured_task_group` vytvořit pro úlohy, které provádějí malé množství práce.  
   
  Další informace najdete v tématu [paralelismus](../task-parallelism-concurrency-runtime.md).  
   
@@ -40,7 +67,7 @@ class task_group;
   
 ##  <a name="cancel"></a> Zrušit 
 
- Díky usilovně pokus o zrušení podstromu pracovní root v této skupině úloh. Každý úkol naplánovat na skupině úloh bude získat zrušena přechodně Pokud je to možné.  
+ Díky nezaručené pokus o zrušení podstromě pracovní kořenovým adresářem v této skupině úloh. Každá úloha naplánována na skupinu úloh bude zrušena přechodně Pokud je to možné.  
   
 ```  
 void cancel();  
@@ -51,21 +78,21 @@ void cancel();
   
 ##  <a name="is_canceling"></a> is_canceling – 
 
- Informuje o volající, jestli je skupina úkolů aktuálně in the midst of zrušení. To nemusí znamenat, který `cancel` byla volána metoda `task_group` objektu (i když například tato metoda vrátí vyfiltrování určitě `true`). Může být tento případ, `task_group` objektu provádí vložené a další skupinu úkolů až ve stromové struktuře pracovní byla zrušena. V případech, například tyto kde můžete určit modulu runtime dopředu, který zrušení bude procházet přes tento `task_group` objekt, `true` bude vrácen také.  
+ Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `task_group` objektu, `true` vrátí se také.  
   
 ```  
 bool is_canceling();  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Sdělení, zda `task_group` objektu je in the midst of zrušení (nebo záruku, že být zanedlouho).  
+ Údaj o tom, zda `task_group` objekt je uprostřed zrušení (nebo je zaručeno, že bude za chvíli).  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [zrušení](../cancellation-in-the-ppl.md).  
   
-##  <a name="run"></a> Spustit 
+##  <a name="run"></a> Spuštění 
 
- Naplánuje úlohu na `task_group` objektu. Pokud `task_handle` objekt je předán jako parametr, který se `run`, volající zodpovídá za správu životnost `task_handle` objektu. Provedení menší také než použití verzi, která vytvoří odkaz na verzi metody, která přijímá odkaz na objekt funkce, jako parametr zahrnuje přidělení haldy uvnitř modul runtime, který může být `task_handle` objektu. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.  
+ Naplánuje úlohy na `task_group` objektu. Pokud `task_handle` objekt je předán jako parametr `run`, volající zodpovídá za správu životnosti `task_handle` objektu. Provést menší a od používání verze, která přebírá odkaz na verzi metody, která přebírá odkaz na objekt funkce, jako parametr zahrnuje přidělení haldy uvnitř modulu runtime, který může být `task_handle` objektu. Verze, která přebírá parametr `_Placement` způsobí, že na tendenční směrem k provádění v místě určeném v parametru úlohy.  
   
 ```  
 template<  
@@ -101,27 +128,27 @@ void run(
   
 ### <a name="parameters"></a>Parametry  
  `_Function`  
- Typ objektu funkce, která bude volána provést text popisovač úloh.  
+ Typ objektu funkce, která bude volána k provedení tělo popisovač úkolu.  
   
  `_Func`  
- Funkci, která bude volána k vyvolání text úlohy. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátor volání funkce s podpisem `void operator()()`.  
+ Funkce, která bude volána k vyvolání tělo úkolu. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
   
  `_Placement`  
- Odkaz na umístění, kde úloha reprezentována `_Func` parametr má být spuštěn.  
+ Odkaz na umístění, ve kterém úloha reprezentována `_Func` parametrů by se měl spustit.  
   
  `_Task_handle`  
- Popisovač pro pracovní naplánován. Všimněte si, že má volající odpovědnost za dobu životnosti tohoto objektu. Modul runtime bude pokračovat očekávat, že za provozu, dokud buď `wait` nebo `run_and_wait` byla volána metoda v tomto `task_group` objektu.  
+ Popisovač se plánované práce. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude očekávat, že chcete za provozu, dokud buď `wait` nebo `run_and_wait` byla volána metoda v tomto `task_group` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Modul runtime naplánuje zadaná pracovní funkce spustit později, což může být po volání funkce vrátí hodnotu. Tato metoda používá [task_handle](task-handle-class.md) objekt pro uložení kopie zadaná pracovní funkce. Proto se v vaší kopie tohoto objektu funkce nezobrazí žádné změny stavu v objektu funkce, kterou předáte této metodě. Kromě toho se ujistěte, že doba platnosti objektů, které předáte ukazatel nebo odkaz na tuto funkci pracovní zůstává v platnosti, do pracovní funkce vrátí hodnotu.  
+ Modul runtime plánuje spouštění na pozdější dobu, což může být po volání funkce vrátí zadaný pracovní funkce. Tato metoda používá [task_handle –](task-handle-class.md) objekt pro uložení kopie zadané pracovní funkce. Proto změny stavu, ke kterým dochází v objekt funkce, který můžete předat této metodě se nezobrazí v kopii tohoto objektu funkce. Kromě toho Ujistěte se, že doba platnosti objektů, které můžete předat ukazatelem nebo odkazem na pracovní funkce nadále platné, dokud pracovní funkce vrátí.  
   
- Pokud `task_group` destructs v důsledku z výjimku unwinding zásobníku, není nutné zaručit, že volání nebyly provedeny buď `wait` nebo `run_and_wait` metoda. V takovém případě destruktoru správně zruší a čekání na úlohu reprezentována `_Task_handle` parametr k dokončení.  
+ Pokud `task_group` destructs v důsledku uvolnění z výjimky zásobníku, nepotřebujete k zajištění, že má bylo provedeno volání buď `wait` nebo `run_and_wait` metody. V takovém případě se zrušit a čekání na úlohu reprezentována destruktor odpovídajícím způsobem `_Task_handle` parametr dokončit.  
   
- Vyvolá metoda [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) výjimka, pokud úloha zpracovat dané podle `_Task_handle` parametr již bylo naplánováno na objekt úlohy skupiny prostřednictvím `run` metoda a došlo žádné uplynulého volání buď `wait` nebo `run_and_wait` metoda na této skupině úloh.  
+ Metoda vyvolá [invalid_multiple_scheduling –](invalid-multiple-scheduling-class.md) výjimku, pokud úloha zpracování určené pomocí `_Task_handle` parametr již byla plánována do objektu skupiny úloh prostřednictvím `run` – metoda a jestli se žádné intervenující volání na buď `wait` nebo `run_and_wait` metoda na této skupině úloh.  
   
 ##  <a name="run_and_wait"></a> run_and_wait – 
 
- Plány úlohy ke spuštění vložené na kontext volání s pomocí `task_group` objekt pro podporu úplné zrušení. Funkce pak čeká, dokud všechny práci `task_group` objekt buď dokončit nebo byla zrušena. Pokud `task_handle` objekt je předán jako parametr, který se `run_and_wait`, volající zodpovídá za správu životnost `task_handle` objektu.  
+ Naplánuje úlohy spustit vložené na kontext volání za pomoci `task_group` objekt pro zrušení plnou podporu. Funkce vyčká, dokud všechny práce na `task_group` objekt buď dokončí nebo byla zrušena. Pokud `task_handle` objekt je předán jako parametr `run_and_wait`, volající zodpovídá za správu životnosti `task_handle` objektu.  
   
 ```  
 template<  
@@ -141,30 +168,30 @@ task_group_status run_and_wait(
   
 ### <a name="parameters"></a>Parametry  
  `_Function`  
- Typ objektu funkce, která bude volána k provedení text úlohy.  
+ Typ objektu funkce, která bude volána k provedení tělo úkolu.  
   
  `_Task_handle`  
- Popisovač pro úlohu, která se spustí vložené na kontext volání. Všimněte si, že má volající odpovědnost za dobu životnosti tohoto objektu. Modul runtime bude pokračovat očekávat, že za provozu, dokud `run_and_wait` metoda dokončí provádění.  
+ Popisovač pro úlohy, které se používají ke spouštění vložený kontext volání. Všimněte si, že má volající odpovědnost za dobu života tohoto objektu. Modul runtime bude pokračovat očekávat, že živé až `run_and_wait` metoda dokončí provádění.  
   
  `_Func`  
- Funkci, která bude volána k vyvolání text práce. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátor volání funkce s podpisem `void operator()()`.  
+ Funkce, která bude volána k vyvolání tělo práce. To může být výraz lambda nebo jiného objektu, která podporuje verzi operátoru volání funkce s podpisem `void operator()()`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Údaj o tom, zda byla splněna čekání nebo skupině úloh byla zrušena, z důvodu operace explicitní zrušit nebo výjimku hlášeny z jednoho z jeho úlohy. Další informace najdete v tématu [task_group_status](concurrency-namespace-enums.md#task_group_status).  
+ Údaj o tom, jestli bylo čekání uspokojeno nebo skupina úloh se zrušila, kvůli operaci zrušit explicitní nebo výjimky z jednoho z jejích úkolů. Další informace najdete v tématu [task_group_status –](concurrency-namespace-enums.md#task_group_status).  
 
   
 ### <a name="remarks"></a>Poznámky  
- Všimněte si, že jeden nebo více úloh naplánovaných k tomuto `task_group` objekt může spustit vložené na kontext volání.  
+ Všimněte si, že jedna nebo více úloh naplánovaných pro toto `task_group` objekt může spustit vložené na kontext volání.  
   
- Pokud jeden nebo více úloh naplánovaných k tomuto `task_group` objekt vyvolá výjimku, použije modul runtime vyberte jeden takové výjimky jeho výběru a šířit z volání `run_and_wait` metoda.  
+ Pokud jeden nebo více následujících úloh naplánovaných pro toto `task_group` objekt dojde k výjimce, modul runtime vybere jeden takový výjimka jeho výběru a šířit z volání `run_and_wait` metody.  
   
- Po návratu z `run_and_wait` metodu `task_group` objektu modulu runtime obnoví objekt do čistého stavu, kde ji můžete znovu použít. To zahrnuje i situace, kde `task_group` objekt byl zrušen.  
+ Po návratu z `run_and_wait` metoda `task_group` objektu, modul runtime obnoví objekt do čistého stavu, kde ho můžete znovu použít. Jedná se o tento případ kde `task_group` byl zrušen.  
   
- V cestě k ostatním provádění, máte pověření k volání této metody nebo `wait` metody před destruktoru objektu `task_group` provede.  
+ V ostatním cesta spuštění, je nutné pověření k buď tuto metodu volat nebo `wait` metody před destruktor `task_group` spustí.  
   
-##  <a name="ctor"></a> task_group 
+##  <a name="ctor"></a> task_group – 
 
- Vytvoří nový `task_group` objektu.  
+ Sestaví nový `task_group` objektu.  
   
 ```  
 task_group();  
@@ -176,44 +203,44 @@ task_group(
   
 ### <a name="parameters"></a>Parametry  
  `_CancellationToken`  
- Token zrušení pro přidružit k této skupině úloh. Když je zrušeno token, budou zrušeny skupiny úloh.  
+ Token zrušení pro přidružení k této skupině úloh. Skupiny úloh se zruší, pokud je token zrušen.  
   
 ### <a name="remarks"></a>Poznámky  
- Konstruktor, který přebírá token zrušení vytvoří `task_group` , budou zrušeny, když se zruší zdrojový přidružené k tokenu. Token zrušení explicitní poskytuje také izoluje této skupiny úloh ze implicitní zrušení z nadřazené skupiny s token jiné nebo žádné token.  
+ Vytvoří konstruktor, který přijímá token zrušení `task_group` , která budou zrušeny při zrušení zdroje přidružené k tokenu. Také poskytuje explicitní rušícího tokenu izoluje této skupiny úloh ze implicitní zrušení z nadřazené skupiny s tokenem jiný nebo žádný token.  
   
-##  <a name="dtor"></a> ~ task_group 
+##  <a name="dtor"></a> ~ task_group – 
 
- Zničí `task_group` objektu. Předpokládá se, že buď volání `wait` nebo `run_and_wait` metoda pro objekt před destruktor provádění, pokud je destruktor je prováděna v důsledku kvůli výjimce unwinding zásobníku.  
+ Odstraní `task_group` objektu. Očekává se, že volání buď `wait` nebo `run_and_wait` metodu na objekt před destruktor prováděný, pokud je destruktor se provádí v důsledku uvolnění z důvodu výjimky zásobníku.  
   
 ```  
 ~task_group();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Jestliže destruktoru běží jako výsledek normální spuštění (například není unwinding zásobníku kvůli výjimce) a ani `wait` ani `run_and_wait` metod, může vyvolat destruktoru [missing_wait](missing-wait-class.md) došlo k výjimce.  
+ Pokud spuštění destruktoru v důsledku normálního provedení (například není uvolnění zásobníku z důvodu výjimky) a ani `wait` ani `run_and_wait` metod, destruktor může vyvolat [missing_wait –](missing-wait-class.md) došlo k výjimce.  
   
 ##  <a name="wait"></a> Počkej 
 
- Čeká, dokud všechny práci `task_group` objekt buď dokončit nebo byla zrušena.  
+ Počká, dokud nebudou všechny práce na `task_group` objekt buď dokončí nebo byla zrušena.  
   
 ```  
 task_group_status wait();  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Údaj o tom, zda byla splněna čekání nebo skupině úloh byla zrušena, z důvodu operace explicitní zrušit nebo výjimku hlášeny z jednoho z jeho úlohy. Další informace najdete v tématu [task_group_status](concurrency-namespace-enums.md#task_group_status).  
+ Údaj o tom, jestli bylo čekání uspokojeno nebo skupina úloh se zrušila, kvůli operaci zrušit explicitní nebo výjimky z jednoho z jejích úkolů. Další informace najdete v tématu [task_group_status –](concurrency-namespace-enums.md#task_group_status).  
 
   
 ### <a name="remarks"></a>Poznámky  
- Všimněte si, že jeden nebo více úloh naplánovaných k tomuto `task_group` objekt může spustit vložené na kontext volání.  
+ Všimněte si, že jedna nebo více úloh naplánovaných pro toto `task_group` objekt může spustit vložené na kontext volání.  
   
- Pokud jeden nebo více úloh naplánovaných k tomuto `task_group` objekt vyvolá výjimku, použije modul runtime vyberte jeden takové výjimky jeho výběru a šířit z volání `wait` metoda.  
+ Pokud jeden nebo více následujících úloh naplánovaných pro toto `task_group` objekt dojde k výjimce, modul runtime vybere jeden takový výjimka jeho výběru a šířit z volání `wait` metody.  
   
- Volání metody `wait` na `task_group` objekt se obnoví do čistého stavu, kde ji můžete znovu použít. To zahrnuje i situace, kde `task_group` objekt byl zrušen.  
+ Volání `wait` na `task_group` objekt se obnoví do čistého stavu, kde ho můžete znovu použít. Jedná se o tento případ kde `task_group` byl zrušen.  
   
- V cestě k ostatním provádění, máte pověření k volání této metody nebo `run_and_wait` metody před destruktoru objektu `task_group` provede.  
+ V ostatním cesta spuštění, je nutné pověření k buď tuto metodu volat nebo `run_and_wait` metody před destruktor `task_group` spustí.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [structured_task_group – třída](structured-task-group-class.md)   
  [task_handle – třída](task-handle-class.md)

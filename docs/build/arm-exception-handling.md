@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027963"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209115"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -248,25 +248,25 @@ V následující tabulce jsou uvedeny mapování kódy unwind operační kódy. 
 
 |1 bajt|Bajtů 2|Bajtů 3|Bajtů 4|Opsize|Vysvětlení|
 |------------|------------|------------|------------|------------|-----------------|
-|00 7F||||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x7F) * 4|
+|00 7F||||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x7F) \* 4|
 |80 BF|00 FF|||32|`pop   {r0-r12, lr}`<br /><br /> kde LR záznam není vyjmut Pokud kód & 0x2000 a r r0 – 12 jsou odebrány-li odpovídající bit nastaven v 0x1FFF & kódu|
 |C0 CF||||16|`mov   sp,rX`<br /><br /> kde X je 0x0F & kódu|
 |D0 D7||||16|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 4 a LR záznam není vyjmut Pokud 0x04 & kódu|
 |D8 DF||||32|`pop   {r4-rX,lr}`<br /><br /> kde X je (kód & 0x03) + 8 a LR záznam není vyjmut Pokud 0x04 & kódu|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> kde X je (kód & 0x07) + 8|
-|E8 EB|00 FF|||32|`addw  sp,sp,#X`<br /><br /> kde X je (kód & 0x03FF) * 4|
+|E8 EB|00 FF|||32|`addw  sp,sp,#X`<br /><br /> kde X je (kód & 0x03FF) \* 4|
 |ES ED|00 FF|||16|`pop   {r0-r7,lr}`<br /><br /> kde LR vyjmut, pokud kód & 0x0100 a r0 – r7 jsou odebrány-li odpovídající bit nastaven v 0x00FF & kódu|
 |EE|00 0F|||16|specifické pro společnost Microsoft|
 |EE|10-FF|||16|K dispozici|
-|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> kde X je (kód & 0x000F) * 4|
+|EF|00 0F|||32|`ldr   lr,[sp],#X`<br /><br /> kde X je (kód & 0x000F) \* 4|
 |EF|10-FF|||32|K dispozici|
 |F0 F4||||-|K dispozici|
 |F5|00 FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S (kód & 0x00F0) >> 4 a E je 0x000F & kódu|
 |F6|00 FF|||32|`vpop  {dS-dE}`<br /><br /> Pokud je S ((Code & 0x00F0) >> 4) + 16 a E je (kód & 0x000F) + 16|
-|F7|00 FF|00 FF||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) * 4|
-|F8|00 FF|00 FF|00 FF|16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) * 4|
-|F9|00 FF|00 FF||32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) * 4|
-|DM|00 FF|00 FF|00 FF|32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) * 4|
+|F7|00 FF|00 FF||16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
+|F8|00 FF|00 FF|00 FF|16|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
+|F9|00 FF|00 FF||32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFF) \* 4|
+|DM|00 FF|00 FF|00 FF|32|`add   sp,sp,#X`<br /><br /> kde X je (kód & 0x00FFFFFF) \* 4|
 |FB||||16|Nop (16 bitů)|
 |FC||||32|Nop (32bitová verze)|
 |FD||||16|end + 16bitová nop v epilogu|
@@ -751,3 +751,4 @@ Function:
 
 [Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  
 [Běžné problémy s migrací ARM v prostředí Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
+

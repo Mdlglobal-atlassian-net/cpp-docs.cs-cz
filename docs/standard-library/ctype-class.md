@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954770"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208634"
 ---
 # <a name="ctype-class"></a>ctype – třída
 
@@ -275,7 +275,7 @@ Ukazatel na první znak v rozsahu, který neodpovídá zadané masce. Pokud žá
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce vrátí ukazatel na nejmenší `ptr` v rozsahu [ `first`, `last`) pro kterou [do_is –](#do_is)( `maskVal`, * `ptr`) má hodnotu true.
+Chráněná členská funkce vrátí ukazatel na nejmenší `ptr` v rozsahu [ `first`, `last`) pro kterou [do_is –](#do_is)( `maskVal`, \* `ptr`) má hodnotu true.
 
 ### <a name="example"></a>Příklad
 
@@ -306,7 +306,7 @@ Ukazatel na první znak v rozsahu, který neodpovídá zadané masce. Pokud žá
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce vrátí ukazatel na nejmenší `ptr` v rozsahu [ `first`, `last`) pro kterou [do_is –](#do_is)( `maskVal`, * `ptr`) má hodnotu false.
+Chráněná členská funkce vrátí ukazatel na nejmenší `ptr` v rozsahu [ `first`, `last`) pro kterou [do_is –](#do_is)( `maskVal`, \* `ptr`) má hodnotu false.
 
 ### <a name="example"></a>Příklad
 

@@ -1,7 +1,7 @@
 ---
-title: Stránky vlastností projektu Linux | Microsoft Docs
+title: Stránky vlastností projektu jazyka C++ Linux projektu v sadě Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +12,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: ac222eb89cd0d2fee27e67fdb0c9ffb6a06fbc26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f6f7361a32e69461f6420cd94a1b7b34ceedd83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324009"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208738"
 ---
 # <a name="linux-project-property-page-reference"></a>Odkaz na stránku vlastností projektu Linux
 
-Tato část obsahuje referenční obsah pro stránky vlastností v projektu Visual C++ Linux.
+Tato část obsahuje referenční obsah pro stránky vlastností v projektu Visual C++ v Linuxu.
 
 - [Obecné vlastnosti (Linux)](prop-pages/general-linux.md)
 - [Vlastnosti ladění (Linux)](prop-pages/debugging-linux.md)

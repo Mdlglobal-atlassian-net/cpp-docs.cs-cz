@@ -1,5 +1,5 @@
 ---
-title: scalbn –, scalbnf –, scalbnl, scalbln, scalblnf, scalblnl | Microsoft Docs
+title: scalbn – scalbnf –, scalbnl, scalbln, scalblnf, scalblnl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -46,16 +46,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407074"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209453"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Integrální možností flt_radix – vynásobí číslo s plovoucí desetinnou čárkou.
+Integrální sílu FLT_RADIX vynásobí číslo s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -112,23 +112,23 @@ Exponent celé číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Scalbn –** funkce vrátí hodnotu *x* * **flt_radix –**<sup>exp</sup> při úspěšné. Na přetečení (v závislosti na znaménko *x*), **scalbn –** vrátí **huge_val –**; **errno** nastavena na hodnotu **erange –** .
+**Scalbn –** vrátí funkce hodnotu *x* \* **FLT_RADIX**<sup>exp</sup> po úspěšném provedení. Při přetečení (v závislosti na znaménko *x*), **scalbn –** vrátí **HUGE_VAL**; **errno** nastavena na hodnotu **ERANGE** .
 
-Další informace o **errno** a možná chyba návratové hodnoty, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o **errno** a možnou chybu návratové hodnoty, najdete v článku [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Flt_radix –** je definována v \<float.h – > jako nativní s plovoucí desetinnou čárkou základ –; v systémech binárního souboru má hodnotu 2, a **scalbn –** je ekvivalentní [ldexp –](ldexp.md).
+**FLT_RADIX** je definována v \<float.h > jako nativní s plovoucí desetinnou čárkou základ číselné soustavy; v systémech binárního souboru, má hodnotu 2, a **scalbn –** je ekvivalentní [ldexp –](ldexp.md).
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **scalbn –** a **scalbln** , přijmout a vrátit **float** nebo **dlouho** **dvojité** typy. V programu C **scalbn –** má vždy **dvojité** a **int** a vrátí **dvojité**, a **scalbln**má vždy **dvojité** a **dlouho** a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **scalbn –** a **scalbln** , která používají a vrací **float** nebo **dlouhé** **double** typy. V programu jazyka C **scalbn –** vždy přijímá **double** a **int** a vrátí **double**, a **scalbln**vždy přijímá **double** a **dlouhé** a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**scalbn –**, **scalbnf –**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<Math.h >|\<cmath – >|
+|**scalbn –**, **scalbnf –**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -154,7 +154,7 @@ int main( void )
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

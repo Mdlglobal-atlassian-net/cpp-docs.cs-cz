@@ -1,5 +1,5 @@
 ---
-title: struktura UNWIND_CODE | Microsoft Docs
+title: UNWIND_CODE – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,128 +12,128 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 068acacf88e9ac968b34c26bf76657fd33adf4f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 919568b5b1f7feba403a4bdbc838f69ca5da70e5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390096"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207771"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
-Unwind kódu se používá k zaznamenání posloupnost operací v prologu, které ovlivňují stálé registry a konfigurace. Každá položka kódu má následující formát:  
+Unwind kódu se používá k zaznamenání posloupnost operací v úvodní části, které by ovlivnily stálé registry a RSP. Každá položka kód má následující formát:  
   
 |||  
 |-|-|  
 |UBYTE|Posunutí v prologu|  
-|UBYTE: 4|Unwind kód operace|  
+|UBYTE: 4|Kód operace unwind|  
 |UBYTE: 4|Informace o operaci|  
   
- Toto pole je seřazen podle sestupném pořadí posun v prologu.  
+ Pole je seřazeno sestupně posun v prologu.  
   
  **Posunutí v prologu**  
- Posun od začátku prologu konce instrukce, který provádí tuto operaci, plus 1 (to znamená, posun začátku další instrukce).  
+ Posun od začátku této úvodní části koncem instrukce, který provádí tuto operaci, plus 1 (to znamená posun počáteční další instrukci).  
   
- **Unwind kód operace**  
- Poznámka: Určité operace kódy vyžadují nepodepsaný posun na hodnotu v rámci místní zásobníku. Tento posun je z počátku pevné přidělení zásobníku (nejnižší adresy). Pokud je pole registru rámce v UNWIND_INFO nula, je tento posun z konfigurace. Pokud je pole registru rámce nenulové, je to posun od kde nacházel konfigurace při FP reg bylo vytvořeno. To se rovná reg FP mínus posun reg FP (16 * posun registru rámce v UNWIND_INFO). Pokud se používá FP reg, pak všechny unwind kód trvá Posun musí použít pouze po navázání FP reg v prologu.  
+ **Kód operace unwind**  
+ Poznámka: Určité operační kódy vyžadovat posun bez znaménka na hodnotu v místní zásobníku. Tento posun je od samého začátku (nejnižší adresu) pevné přidělení zásobníku. Pokud pole registru rámce v UNWIND_INFO je nula, je tento posun z RSP. Pokud pole registru rámce je nenulová, jedná se posun od kdy nacházel RSP při FP reg bylo vytvořeno. Se rovná reg FP minus posun reg FP (16 \* registru rámce posun v UNWIND_INFO). Pokud použijete FP reg pak veškerý kód unwind trvá Posun musí použít pouze po navázání FP reg v prologu.  
   
- U všech operačních kódů s výjimkou UWOP_SAVE_XMM128 a UWOP_SAVE_XMM128_FAR posun bude vždy násobkem 8, protože všechny hodnoty zásobníků jsou uloženy v rozsahu 8 bajtů (zásobník samotný je vždy zarovnán na 16 bajtů). Pro operaci kódy, které berou krátký posun (méně než 512 kB) konečný USHORT v uzlech pro tento kód obsahuje posun dělený 8. Pro operaci kódy, které berou dlouhý posun (512 kB < = posun < 4GB), poslední dva uzly USHORT pro tento kód uložení posun (ve formátu little endian).  
+ Pro všechny operační kódy s výjimkou UWOP_SAVE_XMM128 a UWOP_SAVE_XMM128_FAR posun bude vždy jednat o násobek 8, protože všechny hodnoty zásobníku, které vás zajímají jsou uloženy na hranice 8 bajtů (samotného zásobník je vždy 16 bajtů zarovnána). Pro operační kódy, které berou krátké posun (méně než 512 kB) obsahuje finální USHORT uzly pro tento kód posun dělený 8. Pro operační kódy, které trvat dlouho posun (512 kB < = posun < 4GB), poslední dva uzly USHORT pro tento kód volí posun (ve formátu little endian).  
   
- U operačních kódů UWOP_SAVE_XMM128 a UWOP_SAVE_XMM128_FAR posun bude vždy násobkem 16, vzhledem k tomu, že všechny operace XMM 128-bit musí proběhnout u paměti, zarovnané 16 bajtů. Měřítko 16 se tedy používá pro UWOP_SAVE_XMM128, jejímu posunutí menší než 1 milion.  
+ Pro operační kódy UWOP_SAVE_XMM128 a UWOP_SAVE_XMM128_FAR posun bude vždy násobkem 16, protože všechny operace XMM 128 bitů se musí vyskytovat na paměti, zarovnané 16 bajtů. Koeficient 16 se proto používá pro UWOP_SAVE_XMM128, s umožněním posuny menší než 1 milion.  
   
- Kód operace unwind je jedním z těchto:  
+ Kód operace unwind je jedním z následujících akcí:  
   
  UWOP_PUSH_NONVOL (0) 1 uzel  
   
- Push stálého registru integer, dekrementace konfigurace číslem 8. Informace o operaci je číslo registru. Všimněte si, že z důvodu omezení na epilogu funkce unwind kódy UWOP_PUSH_NONVOL musí být nejdříve uveden v prologu a odpovídajícím způsobem, poslední v unwind kódu. Relativní řazení se vztahuje na všechny ostatní kódy unwind s výjimkou UWOP_PUSH_MACHFRAME.  
+ Nabízená oznámení registru stálé celých čísel, snížením RSP o 8. Informace o operaci se číslo do registru. Všimněte si, že z důvodu omezení na který kódy unwind UWOP_PUSH_NONVOL musí být nejdříve uveden v prologu a odpovídajícím způsobem, poslední v kódu unwind. Relativní řazení se vztahuje na všechny ostatní kódy unwind s výjimkou UWOP_PUSH_MACHFRAME.  
   
- UWOP_ALLOC_LARGE (1) 2 nebo 3 uzly  
+ UWOP_ALLOC_LARGE (1) 2 a 3 uzly  
   
- Přidělte oblasti velké velikosti v zásobníku. Existují dva způsoby. Pokud se informace o operaci rovná 0, pak je velikost přidělení dělená 8 se zaznamenává v dalším slotu umožněním přidělení až 512 kB - 8. Pokud informace o operaci se rovná 1, pak bez měřítka velikost přidělení se zaznamená do následujících dvou sloty ve formátu little endian umožněním přidělení až 4GB - 8.  
+ Přidělte oblasti velké velikosti v zásobníku. Existují dva typy. Pokud se o operaci rovná 0, pak je velikost přidělení dělený 8 je zaznamenán v dalším slotem umožňuje přidělení až 512 kB – 8. Pokud operace informace, které se rovná 1, pak bez měřítka velikosti alokace je zaznamenán v následujících dvou sloty ve formátu little endian, což přidělení až 4GB - 8.  
   
  UWOP_ALLOC_SMALL (2) 1 uzel  
   
- Přidělení prostoru malé velikosti v zásobníku. Velikost přidělení je pole informace o operaci * 8 + 8, povolení přidělení od 8 do 128 bajtů.  
+ Přidělení prostoru malé velikosti v zásobníku. Pole informace o operaci se velikost přidělení \* 8 + 8, povolení přidělení od 8 do 128 bajtů.  
   
- Unwind kód pro přidělení zásobníku měli vždycky používat co nejkratší možné kódování:  
+ Přidělení zásobníku unwind kód by měl vždy používat co nejkratší možné kódování:  
   
 |||  
 |-|-|  
-|**Velikost alokační**|**Unwind kódu**|  
+|**Velikost alokační**|**Uvolnění kódu**|  
 |8 až 128 bajtů|UWOP_ALLOC_SMALL|  
-|136 až 512K – 8 bajtů|UWOP_ALLOC_LARGE, informace o operaci = 0|  
-|512 kB až 4G – 8 bajtů|UWOP_ALLOC_LARGE, informace o operaci = 1|  
+|136 na 512 kB – 8 bajtů|UWOP_ALLOC_LARGE, informace o operaci = 0|  
+|512 kB až 4G - 8 bajtů|UWOP_ALLOC_LARGE, informace o operaci = 1|  
   
  UWOP_SET_FPREG (3) 1 uzel  
   
- Vytvořte registr ukazatele na rámec nastavením registru na některé posun aktuální konfigurace. Posun je rovna hodnotě registru rámce posunutí (škálovat) pole v UNWIND_INFO * 16, což umožňuje posun od 0 do 240. Použití Posun umožňuje vytvoření ukazatel na rámec, který odkazuje na středu pevné přidělení zásobníku, pomáhá kód hustotu tím, že další přístupů k použití krátké instrukce formulářů. Všimněte si, že pole informace o operaci je vyhrazen a neměl by se používat.  
+ Vytvořte registr ukazatele na rámec nastavením registru na některé posun aktuální RSP. Posun je rovna hodnotě registru rámce (škálován) pole posunu v UNWIND_INFO \* 16, což umožňuje posun od 0 do 240. Použití Posun umožňuje zřízení ukazatel na rámec, který odkazuje na střední pevné přidělení zásobníku, pomáhá hustota kód tím, že další přístupy k použití krátkých instrukce formulářů. Všimněte si, že pole informace o operaci je vyhrazen a neměl by se používat.  
   
  UWOP_SAVE_NONVOL (4) 2 uzly  
   
- Uložte stálého registru integer v zásobníku pomocí MOV namísto PUSH. Především slouží k zmenšujícímu obalení, uložení stálého registru do zásobníku na pozici, který se předtím použil. Informace o operaci je číslo registru. Posun zásobníku škálovat podle 8 je zaznamenán v dalším slotu kódu unwind operace, jak je popsáno v poznámce výše.  
+ Uložení stálé celé číslo registru do zásobníku MOV místo PUSH. To se používá především pro shrink-wrapping, kde je uložen stálé registru do zásobníku v pozici, která byla dříve přidělena. Informace o operaci se číslo do registru. Posun škálovat podle 8 zásobníku je zaznamenán v příštích unwind operační kód datovou oblast, jak je popsáno v poznámce výše.  
   
  UWOP_SAVE_NONVOL_FAR (5) 3 uzly  
   
- Uložení stálé celé číslo registru do zásobníku s dlouhým posunem pomocí MOV namísto PUSH. Především slouží k zmenšujícímu obalení, uložení stálého registru do zásobníku na pozici, který se předtím použil. Informace o operaci je číslo registru. Posun zásobníku bez měřítka se zaznamenává v příštích dvou unwind kód operace slotů, jak je popsáno v poznámce výše.  
+ Uložení stálé celé číslo registru do zásobníku s dlouhým posunem MOV místo PUSH. To se používá především pro shrink-wrapping, kde je uložen stálé registru do zásobníku v pozici, která byla dříve přidělena. Informace o operaci se číslo do registru. Posun bez měřítka zásobníku je zaznamenán v následujících dvou unwind operační kód sloty, jak je popsáno v poznámce výše.  
   
  UWOP_SAVE_XMM128 (8) 2 uzly  
   
- Uložení všech 128 bitů stálého registru XMM do zásobníku. Informace o operaci je číslo registru. Posun zásobníku škálovat podle 16 je zaznamenán v dalším slotu.  
+ Uložte všechny 128 bitů stálý XMM registr v zásobníku. Informace o operaci se číslo do registru. Posun škálovat podle 16 zásobníku je zaznamenán v dalším slotu.  
   
  UWOP_SAVE_XMM128_FAR (9) 3 uzly  
   
- Uložení všech 128 bitů stálého registru XMM do zásobníku s dlouhým posunem. Informace o operaci je číslo registru. Posun zásobníku bez měřítka se zaznamená do následujících dvou sloty.  
+ Uložte všechny 128 bitů stálý XMM registr v zásobníku s dlouhým posunem. Informace o operaci se číslo do registru. Posun bez měřítka zásobníku je zaznamenán v následujících dvou sloty.  
   
  UWOP_PUSH_MACHFRAME (10) 1 uzel  
   
- Posun zásobníku počítače.  To se používá k zaznamenání účinku přerušení hardwaru nebo výjimky. Existují dva způsoby. Pokud se informace o operaci rovná 0, následující bylo posunuto v zásobníku:  
+ Vložit blok počítače.  To se používá k zaznamenání účinek přerušení hardwaru nebo výjimky. Existují dva typy. Pokud se o operaci rovná 0, následující bylo vloženo do zásobníku:  
   
 |||  
 |-|-|  
-|KONFIGURACE + 32|SS|  
-|KONFIGURACE + 24|Původní konfigurace|  
-|KONFIGURACE + 16|EFLAGS|  
-|KONFIGURACE + 8|CS|  
-|KONFIGURACE|RIP|  
+|RSP + 32|SS|  
+|RSP + 24|Starý RSP|  
+|RSP + 16|EFLAGS|  
+|RSP + 8|CS|  
+|RSP|KOPÍROVÁNÍ|  
   
- Pokud se informace o operaci rovná 1, pak toto místo toho se nabídne:  
+ Pokud se o operaci rovná 1, pak toto místo toho bylo vloženo:  
   
 |||  
 |-|-|  
-|KONFIGURACE + 40|SS|  
-|KONFIGURACE + 32|Původní konfigurace|  
-|KONFIGURACE + 24|EFLAGS|  
-|KONFIGURACE + 16|CS|  
-|KONFIGURACE + 8|RIP|  
-|KONFIGURACE|Kód chyby|  
+|RSP + 40|SS|  
+|RSP + 32|Starý RSP|  
+|RSP + 24|EFLAGS|  
+|RSP + 16|CS|  
+|RSP + 8|KOPÍROVÁNÍ|  
+|RSP|Kód chyby:|  
   
- Tento kód unwind vždy zobrazí ve fiktivní prologu, který se spustí ve skutečnosti, ale místo toho se zobrazuje před skutečným vstupním bodem rutiny přerušení a existuje pouze k dispozici místo pro simulaci vložení rámce počítače. UWOP_PUSH_MACHFRAME zaznamenává tuto simulaci, která označuje, že je počítač koncepčně provedl následující:  
+ Tento kód unwind vždy zobrazí ve fiktivní prologu, který je ve skutečnosti nikdy proveden, ale místo toho se zobrazí před skutečné vstupní bod rutiny přerušení a existuje jenom k poskytování místo, kde můžete simulovat nasdílení změn počítače rámce. Zaznamenává UWOP_PUSH_MACHFRAME tuto simulaci, která indikuje, že počítač má koncepčně provedli následující:  
   
- POP – návratovou hodnotu RIP z horní části zásobníku do *Temp*  
+ Vyvolat přes POP RIP návratovou hodnotu z horní části zásobníku do *Temp*  
   
  Push SS  
   
- Push původní konfigurace  
+ Starý RSP nabízených oznámení  
   
  Push EFLAGS  
   
- Push CS  
+ CS nabízených oznámení  
   
  Push *Temp*  
   
- Push kód chyby (Pokud op info rovná 1)  
+ Vložit kód chyby (Pokud se informace op rovná 1)  
   
- Simulovaná operace UWOP_PUSH_MACHFRAME snižuje konfigurace podle 40 (op info rovná 0) nebo 48 (op info rovná 1).  
+ Sníží operace služby simulované UWOP_PUSH_MACHFRAME RSP podle 40 (informace o op se rovná 0) nebo 48 (informace o op se rovná 1).  
   
  **Informace o operaci**  
- Význam těchto 4 bitů závisí na kódu operace. Ke kódování registru pro obecné účely (integer), se používá následující mapování:  
+ Význam těchto 4 bitů, závisí na kódu operace. Ke kódování registru pro obecné účely (integer), se používá následující mapování:  
   
 |||  
 |-|-|  
 |0|RAX|  
 |1|RCX|  
-|2|RDX –|  
+|2|RDX|  
 |3|RBX|  
-|4|KONFIGURACE|  
+|4|RSP|  
 |5|RBP|  
 |6|RSI|  
 |7|RDI|  

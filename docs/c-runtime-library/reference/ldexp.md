@@ -1,5 +1,5 @@
 ---
-title: ldexp – ldexpf –, ldexpl | Microsoft Docs
+title: ldexp – ldexpf –, ldexpl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401413"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208412"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp – ldexpf –, ldexpl
 
-Vynásobí celočíselný násobek dvou číslo s plovoucí desetinnou čárkou.
+Vynásobí číslo s plovoucí desetinnou čárkou integrální mocninou čísla 2.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,21 +90,21 @@ Exponent celé číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Ldexp –** funkce vrátí hodnotu *x* * 2<sup>*exp* </sup> v případě úspěchu. Na přetečení a v závislosti na znaménko *x*, **ldexp –** vrátí **huge_val –**; **errno** nastavena na hodnotu **erange –** .
+**Ldexp –** vrátí funkce hodnotu *x* \* 2<sup>*exp* </sup> v případě úspěšného ověření. Při přetečení a v závislosti na znaménko *x*, **ldexp –** vrátí **HUGE_VAL**; **errno** nastavena na hodnotu **ERANGE** .
 
-Další informace o **errno** a možná chyba návratové hodnoty, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o **errno** a možnou chybu návratové hodnoty, najdete v článku [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ldexp –** trvají **float** nebo **dlouho** **dvojité** typy. V programu C **ldexp –** má vždy **dvojité** a **int** a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ldexp –** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **ldexp –** vždy přijímá **double** a **int** a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**ldexp –**, **ldexpf –**, **ldexpl**|\<Math.h >|\<cmath – >|
+|**ldexp –**, **ldexpf –**, **ldexpl**|\<Math.h >|\<cmath >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -130,7 +130,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

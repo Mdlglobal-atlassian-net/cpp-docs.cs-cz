@@ -1,5 +1,5 @@
 ---
-title: Redistribuce ovládacích prvků ActiveX jazyka Visual C++ | Microsoft Docs
+title: Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331016"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207954"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++
-Visual C++ verze 6.0 poskytuje ovládací prvky ActiveX, které můžete použít v aplikacích, které pak znovu distribuovat. Tyto ovládací prvky jsou již zahrnuty v jazyce Visual C++. Podle licenční smlouvy pro Visual C++ verze 6.0 je možné znovu distribuovat tyto ovládací prvky s aplikace vyvinuté v jazyce Visual C++.  
+Visual C++ 6.0 poskytuje ovládací prvky ActiveX, které můžete použít v aplikacích, které je pak znovu distribuovat. Tyto ovládací prvky jsou již zahrnuty v jazyce Visual C++. Podle licenční smlouvy pro Visual C++ 6.0 je možné znovu distribuovat tyto ovládací prvky s aplikace vyvinuté v jazyce Visual C++.  
   
 > [!NOTE]
->  Visual C++ verze 6.0 je podporován společností Microsoft.  
+>  Visual C++ 6.0 je již nejsou podporovány společností Microsoft.  
   
- Seznam distribuovatelné ovládací prvky ActiveX jazyka Visual C++ 6.0 naleznete v Common\Redist\Redist.txt na disk 1 z disku CD produktu Visual C++ verze 6.0.  
+ Seznam distribuovatelné součásti Visual C++ 6.0 ovládacích prvků ActiveX naleznete v tématu Common\Redist\Redist.txt na disku: 1 z disku CD produktu Visual C++ 6.0.  
   
- Při distribuci aplikací, je nutné nainstalovat a zaregistrovat .ocx pro ovládací prvek ActiveX (s použitím Regsvr32.exe). Kromě toho můžete Ujistěte se, že cílový počítač má aktuální verze následujících systému souborů (hvězdička označuje, že soubor musí být zaregistrovaný):  
+ Při distribuci aplikací, musíte nainstalovat a zaregistrovat .ocx ovládacího prvku ActiveX (pomocí Regsvr32.exe). Kromě toho nezapomeňte, že aktuální verze následující systémových souborů (hvězdička znamená, že soubor musí být zaregistrované) má cílový počítač:  
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   
- Pokud tyto knihovny DLL nejsou k dispozici v cílovém systému, budete muset získat jejich aktualizaci pomocí předepsaných mechanismus pro aktualizaci odpovídající operační systém. Můžete si stáhnout nejnovější aktualizace service Pack pro operační systémy Windows z [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
+ Pokud tyto knihovny DLL nejsou k dispozici v cílovém systému, musíte je aktualizovat pomocí předepsané mechanismus pro aktualizaci odpovídající operační systém. Můžete stáhnout nejnovější aktualizace service Pack pro operační systémy Windows z [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
- Pokud vaše aplikace používá jednu z ovládacích prvků ActiveX, které připojuje k databázi, musíte mít Microsoft Data Access Components (MDAC) nainstalované v cílovém systému. Další informace najdete v tématu [Redistribuce pomocných souborů databáze](../ide/redistributing-database-support-files.md).  
+ Pokud vaše aplikace používá jednu z ovládací prvky ActiveX, které se připojí k databázi, musíte mít Microsoft Data Access Components (MDAC) nainstalované v cílovém systému. Další informace najdete v tématu [Redistribuce pomocných souborů databáze](../ide/redistributing-database-support-files.md).  
   
- Při použití ovládacího prvku ActiveX, který se připojuje k databázi, budete také muset replikovat název zdroje dat na cílovém počítači. To provedete prostřednictvím kódu programu s funkcemi, jako například `ConfigDSN`.  
+ Při použití ovládacího prvku ActiveX, který se připojuje k databázi, je také potřeba replikovat název zdroje dat na cílovém počítači. Můžete to lze provést prostřednictvím kódu programu pomocí funkce, jako `ConfigDSN`.  
   
- Některé distribuovatelné ovládací prvky ActiveX mají další závislosti. Pro každý .ocx soubor v adresáři Os\System na disku CD produktu Visual C++ verze 6.0 existuje také .dep soubor. Pro každý soubor .ocx, který chcete znovu distribuovat vyhledejte jeden nebo více položek používá v odpovídajícím .dep souboru. Pokud soubor je uveden, je třeba zkontrolovat, zda je soubor v cílovém počítači. Všechny knihovny DLL podporující přímo soubor .ocx musí být registrované. (Pro úspěšné Regsvr32.exe, cílový počítač musí napřed obsahovat všechny knihovny DLL staticky načte ovládacího prvku.) Kromě toho pokud knihovny DLL, která je uvedena jako závislost má také .dep soubor v adresáři Os\System na disku CD Visual C++ verze 6.0, musíte také prozkoumat .dep soubor pro položky používá.  
+ Některé distribuovatelné ovládací prvky ActiveX mají další závislosti. Pro každý .ocx soubor v adresáři Os\System na disku CD produktu Visual C++ 6.0 je také .dep soubor. Pro každý soubor .ocx, který chcete znovu distribuovat vyhledejte v odpovídajícím souboru .dep jednu nebo více položek používá. Pokud je uvedený soubor, ujistěte se, že soubor je v cílovém počítači. Všechny knihovny DLL přímo podporuje soubor .ocx musí být zaregistrovaní. (Pro úspěšné Regsvr32.exe, cílový počítač musí nejprve obsahovat všechny knihovny DLL staticky načte ovládacího prvku.) Kromě toho pokud knihovnu DLL, která je uvedena jako závislost také obsahuje soubor .dep v Os\System na disku CD Visual C++ 6.0, musíte také prozkoumat .dep soubor pro použití položky.  
   
 ## <a name="see-also"></a>Viz také  
  [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)

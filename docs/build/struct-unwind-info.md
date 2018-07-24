@@ -1,5 +1,5 @@
 ---
-title: struktura UNWIND_INFO | Microsoft Docs
+title: UNWIND_INFO – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,79 +12,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b17a79905ffc7814e2aecf92e90f3db526453f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6046dffd74824b05c7b7b10be57bb0b2274ffdc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383238"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207569"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
-Informace o struktuře unwind dat se používá k zaznamenání účinků funkce, která má ukazatel na zásobník a kde jsou uloženy nezávislé registry v zásobníku:  
+Datová struktura informací o uvolnění se používá k zaznamenání efekty, které funkce má ukazatel na zásobník a kde jsou uloženy do zásobníku stálé registry:  
   
 |||  
 |-|-|  
 |UBYTE: 3|Version|  
 |UBYTE: 5|Příznaky|  
-|UBYTE|Velikost prologu|  
-|UBYTE|Počet unwind kódů|  
+|UBYTE|Velikost kódu prologu|  
+|UBYTE|Počet kódy unwind|  
 |UBYTE: 4|Rámec registru|  
-|UBYTE: 4|Posun rámce registru (rozšířená)|  
-|Ushort – * n|Pole unwind kódů|  
-|proměnná|Lze buď formuláře (1) nebo (2) níže|  
+|UBYTE: 4|Odsazení rámce registr (škálovat)|  
+|USHORT \* n|Pole kódy unwind|  
+|proměnná|Buď formuláře (1) nebo (2) níže může být|  
   
  (1) obslužná rutina výjimky  
   
 |||  
 |-|-|  
-|ULONG –|Adresa obslužná rutina výjimky|  
-|proměnná|Obslužné rutiny pro konkrétní jazyk data (volitelné)|  
+|ULONG|Adresa obslužné rutiny výjimek|  
+|proměnná|Data obslužné rutiny pro konkrétní jazyk (volitelné)|  
   
  (2) zřetězené Unwind Info  
   
 |||  
 |-|-|  
-|ULONG –|Počáteční adresa funkce|  
-|ULONG –|Koncová adresa funkce|  
-|ULONG –|Adresa unwind info|  
+|ULONG|Počáteční adresa – funkce|  
+|ULONG|Koncová adresa – funkce|  
+|ULONG|Adresa unwind info|  
   
- Struktura UNWIND_INFO musí být typu DWORD v paměti. Význam každé pole je následující:  
+ UNWIND_INFO struktura musí být typu DWORD v paměti. Význam jednotlivých polí vypadá takto:  
   
  **Verze**  
- Číslo verze unwind dat, aktuálně 1.  
+ Číslo verze dat uvolnění nepovedlo aktuálně 1.  
   
- **Příznaky**  
+ **příznaky**  
  Aktuálně jsou definovány tři příznaky:  
   
- UNW_FLAG_EHANDLER Funkce má obslužnou rutinu výjimky, která by měla být volána při vyhledávání pro funkce, které potřebují k zjištění výjimek.  
+ UNW_FLAG_EHANDLER funkce je obslužnou rutinu výjimky, která by měla být volána při vyhledávání pro funkce, které muset zkoumat výjimky.  
   
- UNW_FLAG_UHANDLER Funkce má obslužné rutiny ukončení, která by měla být volána, když unwinding výjimku.  
+ UNW_FLAG_UHANDLER Funkce má obslužné rutiny ukončení, která by měla být volána při uvolnění výjimku.  
   
- UNW_FLAG_CHAININFO unwind info struktura není primární jeden postup. Zřetězené unwind místo toho informace, že položka je obsah předchozí položky RUNTIME_FUNCTION. Zobrazí se následující text vysvětlení zřetězené struktury unwind info. Pokud je nastavený tento příznak, je potřeba smazat příznaky UNW_FLAG_EHANDLER a UNW_FLAG_UHANDLER. Pole rámce registrace a -stack přidělení navíc musí mít stejné hodnoty jako primární unwind info.  
+ UNW_FLAG_CHAININFO unwind info struktura není primární jedné postupem. Zřetězené unwind místo toho informace, že položka je obsah předchozí RUNTIME_FUNCTION položky. Zobrazí se následující text vysvětlení zřetězené struktury unwind info. Pokud je tento příznak nastaven, musí být zrušeno UNW_FLAG_EHANDLER a UNW_FLAG_UHANDLER příznaky. Pole přidělení registru a – zásobník snímků taky, musí mít stejné hodnoty jako primární unwind info.  
   
- **Velikost prologu**  
- Délka funkce prologu v bajtech.  
+ **Velikost kódu prologu**  
+ Délka sekvence prologu funkce v bajtech.  
   
- **Počet unwind kódů**  
- Toto je počet patic v unwind kódů. Všimněte si, že některé unwind kódy (například UWOP_SAVE_NONVOL) vyžadují více než jeden slot v poli.  
+ **Počet kódy unwind**  
+ Toto je počet slotů v kódy unwind. Všimněte si, že některé parsovat kódy unwind (například UWOP_SAVE_NONVOL) vyžadují více než jedné pozice v poli.  
   
  **Rámec registru**  
- Pokud nenulové hodnoty, potom funkce používá ukazatel na rámec a toto pole je počet stálý registr použít jako ukazatel rámečku, pomocí stejné kódování pro pole informace o operaci UNWIND_CODE uzlů.  
+ Pokud nenulovou hodnotu, použije funkce na ukazatel na rámec, a toto pole je počet stálé registr používaný jako ukazatel na rámec, pomocí stejné kódování pro pole informace o operaci UNWIND_CODE uzlů.  
   
  **Posun (škálovat) registru rámce**  
- Pokud je pole rámce registru nenulové, to je měřítko posunu z konfigurace, který se použije pro FP reg, když se zjistí. Skutečný FP reg je nastaven na možnost konfigurace a 16 * toto číslo, což umožňuje posun od 0 do 240. To umožňuje odkazující FP reg do středu přidělení místní zásobníku pro dynamický rámec zásobníku, umožňující lepší hustoty kódu prostřednictvím kratší pokyny (Další pokyny můžete použít podepsaný posunutí tvaru 8bitové).  
+ Pokud pole rámce registru je nenulová, jedná se škálován posun od RSP, které platí pro FP registru, když se zjistí. Skutečné FP registru je nastavena na RSP + 16 \* toto číslo, což umožňuje posun od 0 do 240. To umožňuje odkazující FP reg doprostřed přidělení místního zásobníku pro dynamické zásobníku, umožňující lepší hustoty kódu prostřednictvím kratší pokyny (Další pokyny slouží formuláři znaménkem posunutí 8 bitů).  
   
- **Pole unwind kódů**  
- Toto je pole položek, které popisují účinek prologu na stálé registry a konfigurace. Najdete v části na UNWIND_CODE význam jednotlivých položek. Pro účely zarovnání bude mít toto pole vždy sudý počet položek s potenciálně nepoužívanou závěrečnou položkou (v takovém případě pole bude jeden déle, než je uvedeno podle počtu pole unwind kódů).  
+ **Pole kódy unwind**  
+ Toto je pole položek, který vysvětluje efekt prologu na stálé registry a RSP. V části na UNWIND_CODE pro význam jednotlivých položek. Pro účely zarovnání bude toto pole mít vždy sudý počet položek s poslední položka potenciálně nevyužité (v takovém případě bude pole jednoho déle, než je uvedeno podle počtu pole kódy unwind).  
   
- **Adresa obslužná rutina výjimky**  
- To je ukazatel relativní bitové kopie do obslužné rutiny funkce pro konkrétní jazyk výjimky nebo ukončení (Pokud je příznak UNW_FLAG_CHAININFO zrušte a jeden z příznaků UNW_FLAG_EHANDLER nebo UNW_FLAG_UHANDLER je nastavena).  
+ **Adresa obslužné rutiny výjimek**  
+ To je ukazatel relativní bitové kopie do obslužné rutiny funkce pro konkrétní jazyk výjimce nebo ukončení (Pokud UNW_FLAG_CHAININFO příznak není zaškrtnut a příznaky UNW_FLAG_EHANDLER nebo UNW_FLAG_UHANDLER nastavený).  
   
  **Data obslužné rutiny pro konkrétní jazyk**  
- Jedná se o data obslužné rutiny výjimek specifické pro jazyk funkce. Formát tato data je neurčené a kompletně určen obslužná rutina výjimky konkrétní používán.  
+ Jedná se o data obslužné rutiny výjimek specifické pro jazyk funkce. Formát dat je tento parametr zadán a zcela určeno obslužnou rutinu výjimky používá.  
   
  **Zřetězené Unwind Info**  
- Pokud je nastavený příznak UNW_FLAG_CHAININFO Struktura UNWIND_INFO končí se třemi UWORD.  Tyto UWORD představují RUNTIME_FUNCTION informace pro funkci zřetězené unwind.  
+ Pokud je nastavený příznak UNW_FLAG_CHAININFO Struktura UNWIND_INFO končí řetězcem tři UWORD.  Tyto UWORD představují RUNTIME_FUNCTION informace o funkci zřetězené unwind.  
   
 ## <a name="see-also"></a>Viz také  
  [Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)

@@ -1,5 +1,5 @@
 ---
-title: fmod, fmodf –, fmodl | Microsoft Docs
+title: fmod – fmodf –, fmodl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,14 +39,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399033"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207530"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf –, fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod – fmodf –, fmodl
 
 Vypočítá zbytek s plovoucí desetinnou čárkou.
 
@@ -82,21 +82,21 @@ Hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fmod** vrátí s plovoucí desetinnou čárkou zbytek *x* / *y*. Pokud hodnota *y* je 0,0, **fmod** vrátí quiet NaN. Informace o reprezentace quiet NaN pomocí **printf** rodiny, viz [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod –** Vrátí zbytek s plovoucí desetinnou čárkou z *x* / *y*. Pokud hodnota *y* je 0,0, **fmod** vrátí tichý NaN. Informace o reprezentaci tichého NaN **printf** řady, viz [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Fmod** funkce vypočítá s plovoucí desetinnou čárkou zbývající *f* z *x* / *y* tak, aby *x*  =  *i* * *y* + *f*, kde *i* celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnotu *f* je menší než absolutní hodnotu *y*.
+**Fmod** funkce vypočítá zbytek s plovoucí desetinnou čárkou *f* z *x* / *y* tak, aby *x*  =  *můžu* \* *y* + *f*, kde *můžu* je celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
 
-C++ umožňuje přetížení, takže můžete volat přetížení **fmod** , přijmout a vrátit **float** a **dlouho** **dvojité** hodnoty. V programu C **fmod** vždy přebírá dva **dvojité** argumentů a vrátí **dvojité**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **fmod** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **fmod** vždy má dva **double** argumenty a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fmod**, **fmodf –**, **fmodl**|\<Math.h >|
+|**fmod –**, **fmodf –**, **fmodl**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -120,7 +120,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

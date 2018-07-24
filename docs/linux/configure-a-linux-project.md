@@ -1,5 +1,5 @@
 ---
-title: Konfigurace projektu C++ Linux v sadě Visual Studio | Microsoft Docs
+title: Konfigurace projektu C++ Linux v sadě Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/28/2018
 ms.reviewer: ''
@@ -14,85 +14,85 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422677"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207899"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
-Toto téma popisuje postup konfigurace projektu Visual Studio Linux. Informace o projektech CMake Linux najdete v tématu [konfigurace projektu CMake Linux ](cmake-linux-project.md).
+Toto téma popisuje postup konfigurace projektu C++ Linux v sadě Visual Studio. Informace o Linuxové projekty CMake v sadě Visual Studio najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
 
-## <a name="general-settings"></a>Obecná nastavení
-Pro projekt Linux pomocí sady Visual Studio můžete nakonfigurovat různé možnosti.  Pokud chcete zobrazit tyto možnosti, vyberte **Projekt > vlastnosti** nabídky, nebo klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a vyberte **vlastnosti** v místní nabídce. **Obecné** nastavení se zobrazí.
+## <a name="general-settings"></a>Obecné nastavení
+Širokou škálu možností je nakonfigurovat pro Linux projekt pomocí sady Visual Studio.  Chcete-li zobrazit tyto možnosti, vyberte **projektu > vlastnosti** nabídek nebo kliknutím pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti** v místní nabídce. **Obecné** nastavení se zobrazí.
 
 ![Obecná konfigurace](media/settings_general.png)
 
-Ve výchozím nastavení je spustitelný soubor (.out) vytvořené s nástroj.  K vytvoření statické nebo dynamické knihovny nebo použít existující soubor pravidel, pomocí **typ konfigurace** výběr.
+Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem.  Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** výběru.
 
 ## <a name="remote-settings"></a>Nastavení vzdáleného přístupu
-Chcete-li změnit nastavení, která se týkají vzdáleného počítače se systémem Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v **Obecné** nastavení:
+Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v **Obecné** nastavení:
 
-* Můžete změnit cílové počítače se systémem Linux **vzdáleného počítače sestavení** položku.  To vám umožní vybrat jedno z připojení, které jste vytvořili dříve.  Pokud chcete vytvořit nový záznam, najdete [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
+* Chcete-li změnit cílový počítač s Linuxem, použijte **vzdálený počítač sestavení** položka.  To vám umožní vybrat jedno z připojení, které jste předtím vytvořili.  Chcete-li vytvořit nový záznam, přejděte prosím sem [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
 
-* **Vzdáleného sestavení kořenového adresáře** Určuje, kde je projekt založený na vzdáleného počítače se systémem Linux kořenové umístění.  To bude jako výchozí **~/projects** není-li změnit.
+* **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře.  To bude ve výchozím nastavení **~/projects** není-li změnit.
 
-* **Vzdáleného adresáře sestavení projektu** je, kde budou vytvořeny tento konkrétní projekt na vzdáleného počítače se systémem Linux.  To bude jako výchozí **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt, v kořenovém adresáři nastavit výše.
+* **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
 
 > [!NOTE]
-> Chcete-li změnit výchozí C a C++ kompilátory nebo Linkeru a Archiver používanou pro sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** části a **Linkeru > Obecné** části.  To může být nastaven na použít konkrétní verzi RSZ nebo i kompilátoru Clang, například.
+> Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba.
 
 ## <a name="include-directories-and-intellisense-support"></a>Zahrnout adresáře a podporu technologie IntelliSense
 
-**Visual Studio 2017 15.6 a starší verze:** Visual Studio ve výchozím nastavení, nezahrnuje žádné úrovni systému zahrnout soubory z počítače se systémem Linux.  Například v položky **/usr/zahrnují** directory nejsou k dispozici v sadě Visual Studio.
-Pro úplnou [IntelliSense](/visualstudio/ide/using-intellisense) podporu, budete muset zkopírujte tyto soubory do vhodného umístění ve svém vývojovém počítači a Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovací bod služby (kopie Secure) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  Pro předchozí verze systému Windows, můžete použít něco jako [PSCP (PuTTY zabezpečení kopie)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+**Visual Studio 2017 verze 15.6 a starší:** ve výchozím nastavení, Visual Studio nezahrnuje všech souborů include úrovni systému z počítače s Linuxem.  Příklad položky v **/usr/include** adresáře nejsou k dispozici v sadě Visual Studio.
+Úplné [IntelliSense](/visualstudio/ide/using-intellisense) podpory, budete muset zkopírovat tyto soubory do umístění ve svém vývojovém počítači a sady Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovacího bodu služby (Secure Copy) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  U předchozích verzí systému Windows, například použít něco jako [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
-Můžete zkopírovat soubory pomocí příkazu, který je podobný následujícímu:
+Zkopírujte soubory s použitím příkazu, který je podobný následujícímu:
 
 `scp -r linux_username@remote_host:/usr/include .`
 
-Samozřejmě, nahraďte **linux_username** a **remote_host** hodnoty výše pro co je vhodné pro vaše vlastní prostředí.
+Samozřejmě, nahraďte **linux_username** a **remote_host** hodnoty vyšší než co je vhodné pro vaše vlastní prostředí.
 
-Po zkopírování souborů, použijte **adresáře VC ++** položky v okně Vlastnosti projektu říct sadě Visual Studio, kde najít zahrnout další soubory, které byly právě zkopírovali.
+Po zkopírování souborů, použijte **adresáře VC ++** položky ve vlastnostech projektu sady Visual Studio zjistit, kde najdete další vložené soubory, které byly zkopírovány pouze.
 
 ![Adresáře VC ++](media/settings_directories.png)
 
-**Visual Studio 2017 verze 15.7 a novější:** najdete v části [spravovat vzdálené hlavičky pro IntelliSense](#remote_intellisense).
+**Visual Studio 2017 verze 15.7 nebo novější:** naleznete v tématu [Správa vzdálených hlaviček IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopírovat zdroje
-Při vytváření, ke zdrojovým souborům na váš vývojový počítač jsou zkopírovány do počítače se systémem Linux a zkompilovat existuje.  Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v výše uvedené nastavení.  Však další zdroje lze také přidat do seznamu, nebo zkopírování zdroje může být vypnuto zcela, což je výchozí nastavení pro projektu souboru pravidel.
+Při sestavování, jsou zdrojové soubory na vašem počítači zkopírují do počítače s Linuxem a zkompilovány existuje.  Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v nastavení výše.  Však další zdroje můžete také přidat do seznamu nebo kopírování zdrojů může být vypnuto úplně, což je výchozí nastavení pro projektu souboru pravidel.
 
-* **Zdroje pro kopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače.  Ve výchozím nastavení **@(SourcesToCopyRemotely)** výchozí nastavení pro všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory asset nebo prostředků, jako jsou bitové kopie.
+* **Zdroje ke zkopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače.  Ve výchozím nastavení **@(SourcesToCopyRemotely)** ve výchozím nastavení všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory prostředků nebo prostředek, jako jsou obrázky.
 
-* **Kopírovat zdroje** lze zapnout a vypnout povolení a zakázání kopírování zdrojové soubory na vzdáleném počítači.
+* **Kopírovat zdroje** lze zapnout a vypnout můžete povolit nebo zakázat kopírování zdrojových souborů do vzdáleného počítače.
 
-* **Další zdroje pro kopírování** umožňuje přidat další zdrojové soubory, které budou zkopírovány do vzdáleného systému.  Můžete zadat seznam oddělený středníkem, nebo můžete použít **: =** syntaxe k zadání názvu místních a vzdálených používat:
+* **Další zdroje ke zkopírování** vám umožní přidávat další zdrojové soubory, které budou zkopírovány do vzdáleného systému.  Středníkem oddělený seznam můžete zadat, nebo můžete použít **: =** syntaxe pro určení názvu místních a vzdálených používat:
 
   `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Události sestavení
-Vzhledem k tomu, že všechny kompilace se děje ve vzdáleném počítači, několik dalších událostí sestavení jsou přidané do části události sestavení v okně Vlastnosti projektu.  Jedná se o **vzdáleného události před sestavením**, **vzdáleného událost před propojením**, a **vzdáleného události po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých kroků v proces.
+Protože všechny kompilace se děje ve vzdáleném počítači, několik dalších události sestavení se přidaly do části události sestavení ve vlastnostech projektu.  Jedná se o **Vzdálená událost před sestavením**, **Vzdálená událost před propojením**, a **Vzdálená událost po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých krocích proces.
 
 ![Události sestavení](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense pro vzdálené hlavičky (Visual Studio 2017 verze 15.7 a novější)
+## <a name="remote_intellisense"></a> Technologie IntelliSense pro vzdálených hlaviček (Visual Studio 2017 verze 15.7 nebo novější)
 
-Když přidáte nové připojení v **Správce připojení**, Visual Studio automaticky rozpozná zahrnout adresáře pro kompilátor ve vzdáleném systému. Visual Studio pak Zpráva prolétne a zkopíruje tyto soubory do adresáře na místní počítač se systémem Windows. Potom při každém použití připojení v sadě Visual Studio nebo CMake projektu hlavičky v těchto adresářů slouží k na poskytovat technologii IntelliSense.
+Při přidání nového připojení v **Správce připojení**, sada Visual Studio automaticky zjistí adresáře vložených souborů pro kompilátor ve vzdáleném systému. Visual Studio pak zips a zkopíruje soubory do adresáře na místním počítači Windows. Potom při každém použití připojení v sadě Visual Studio nebo CMake projektu, se záhlaví v těchto adresářích používají k zajištění technologie IntelliSense.
 
-Tato funkce závisí na počítač Linux s zip nainstalována. Zip můžete nainstalovat pomocí tohoto příkazu výstižný get:
+Tato funkce závisí na počítači s Linuxem s zip nainstalované. Zip můžete nainstalovat pomocí tohoto příkazu apt-get:
 
 ```cmd
 apt install zip
 ```
 
-Chcete-li spravovat vaše mezipaměť záhlaví, přejděte na **nástroje > Možnosti, křížové platformy > Správce připojení > Správce IntelliSense vzdálené hlavičky**. Po provedení změn v tomto počítači Linux aktualizace mezipaměti záhlaví, vyberte vzdáleného připojení a pak vyberte **aktualizace**. Vyberte **odstranit** odebrat hlavičky bez odstranění samotného připojení. Vyberte **prozkoumat** otevřete místní adresář v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stáhnout hlavičky pro existující připojení, která byla vytvořena starší než verze 15.3, vyberte připojení a pak vyberte **Stáhnout**.
+Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti, různé platformy > Správce připojení > vzdáleného správce IntelliSense záhlaví**. Aktualizace hlaviček mezipaměti po provedení změny na počítač s Linuxem, vyberte vzdáleného připojení a pak vyberte **aktualizovat**. Vyberte **odstranit** odebrat záhlaví bez odstranění samotného připojení. Vyberte **prozkoumat** otevření místní adresáře v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stáhnout hlavičky pro existující připojení, který byl vytvořen starší než verze 15.3, vyberte připojit a pak vyberte **Stáhnout**.
 
-![Vzdálené záhlaví IntelliSense](media/remote-header-intellisense.png)
+![Vzdálené hlaviček IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Viz také
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
 [C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)  
 [Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Kopírovat zdroje vlastnosti projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
-[Vytvoření vlastnosti události (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Kopírovat projekt vlastností zdrojů (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Vytvořit událost vlastnosti (Linux C++)](../linux/prop-pages/build-events-linux.md)

@@ -1,7 +1,8 @@
 ---
-title: Nasazení, spustit a spusťte ladění svého projektu Linux | Microsoft Docs
+title: Nasazení, spuštění a ladění projektu C++ Linux v sadě Visual Studio | Dokumentace Microsoftu
+description: Popisuje, jak kompilovat, spouštění a ladění kódu na vzdálené cílové z uvnitř projektu Linux C++ v sadě Visual Studio.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,84 +13,84 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338052"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207676"
 ---
-# <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spustit a spusťte ladění svého projektu Linux
+# <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spuštění a ladění projektu Linux
 
-Po vytvoření projektu Linux a jste se připojili k projektu pomocí [Správce připojení systému Linux](../linux/connect-to-your-remote-linux-computer.md), můžete spustit a ladění projektu. Kompilovat, spouštění a ladění kódu na vzdálené cíli.
+Po vytvoření projektu Linux C++ v sadě Visual Studio a jste se připojili pomocí projektu [Správce připojení systému Linux](../linux/connect-to-your-remote-linux-computer.md), můžete spustit a ladit projekt. Kompilace, spuštění a ladění kódu na vzdálené cílové.
 
 Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 
-* Ladění pomocí tradičních funkcích nástroje Visual Studio, například zarážky, sledovat windows a ukazatele myši na proměnnou. Těmito metodami může ladění jako za normálních okolností byste pro jiné typy projektů.
-* Zobrazit výstup z cílový počítač ve speciální okna konzoly Linux. Můžete také použít konzolu k odeslání vstupní k cílovému počítači.
+* Ladění pomocí tradiční funkce aplikace Visual Studio, jako je například zarážky, oknech kukátka a ukazatele myši nad proměnnou. Použití těchto metod, může ladit běžným způsobem pro ostatní typy projektů.
+* Zobrazit výstup z cílový počítač ve speciální okno konzoly systému Linux. Můžete také použít konzolu k odeslání vstupní k cílovému počítači.
 
-## <a name="debug-your-linux-project"></a>Spusťte ladění svého projektu Linux
+## <a name="debug-your-linux-project"></a>Ladění projektu Linux
 
 1. Vyberte režim ladění v **ladění** stránku vlastností.
 
-    GDB slouží k ladění aplikací spuštěných v systému Linux.  Nicméně to spustit ve dvou různých režimech, které je možné vybrat z **režim ladění** možnost v projektu **ladění** stránky vlastností:
+    GDB slouží k ladění aplikace běžící na Linuxu.  Ale to můžete spustit ve dvou různých režimech, které můžete vybrat z **režim ladění** možnost v projektu **ladění** stránky vlastností:
 
     ![Možnosti GDB](media/settings_debugger.png)
 
-    - V **gdbserver** režimu GDB běží místně, který se připojuje k gdbserver spuštěná ve vzdáleném systému.  Všimněte si, že se jedná pouze režimu, který podporuje v okně konzoly Linux.
+    - V **gdbserver** režimu GDB spouštíte místně, která se připojuje k gdbserver běží na vzdáleném systému.  Všimněte si, že se jedná o jediný režim, který podporuje v okně konzoly systému Linux.
 
-    - V **gdb** režimu ladicího programu sady Visual Studio jednotky GDB ve vzdáleném systému, což je více kompatibilní, pokud v místní verzi GDB není kompatibilní s verzí nainstalované v cílovém počítači. |
+    - V **gdb** režimu jednotky ladicího programu sady Visual Studio GDB ve vzdáleném systému, který je kompatibilní více, pokud v místní verzi GDB není kompatibilní s verzí nainstalované v cílovém počítači. |
 
     > [!NOTE] 
-    > Pokud není možné zadat zarážky v režimu ladění gdbserver, zkuste gdb režimu. musí být nejprve gdb [nainstalován](../linux/download-install-and-setup-the-linux-development-workload.md) na vzdálené cíli.
+    > Pokud se nemůžete k dosažení zarážky v ladění režimu gdbserver, zkuste režimu gdb použije. musí být nejprve gdb [nainstalované](../linux/download-install-and-setup-the-linux-development-workload.md) na vzdálené cílové.
 
-2. Vyberte vzdálený cíl přes standardní **ladění** panelu nástrojů v sadě Visual Studio.
+2. Vyberte vzdálený cíl pomocí standardní **ladění** nástrojů v sadě Visual Studio.
 
-    Když vzdálený cíl je k dispozici, zobrazí se, že ho uvedené podle názvu nebo IP adresu.
+    Při vzdálené cílové je k dispozici, zobrazí se, že je uvedená podle názvu nebo IP adresu.
 
-    ![Vzdálený cíl](media/remote_target.png)
+    ![Vzdálené cílové](media/remote_target.png)
 
-    Pokud jste se ještě nepřipojili k vzdáleného cíli, zobrazí se instrukce používat [Správce připojení systému Linux](../linux/connect-to-your-remote-linux-computer.md) pro připojení k vzdálené cíl.
+    Pokud jste se ještě nepřipojili na vzdálené cílové, zobrazí se pokyn k použití [Správce připojení systému Linux](../linux/connect-to-your-remote-linux-computer.md) pro připojení k vzdálené cílové.
 
-    ![Vzdálené architektura](media/architecture.png)
+    ![Vzdálené architektury](media/architecture.png)
 
-3. Sada vědět zarážek klikněte v levém oddělovací mezery u některých kódu, které spustí.
+3. Spustí sadu zarážku kliknutím v levém hřbetu kódu, které znáte.
 
-    Červené tečky, zobrazí se na řádek kódu, kde nastavit bod přerušení.
+    Červená tečka se zobrazí na řádku kódu, kde nastavit zarážku.
 
-4. Stiskněte klávesu **F5** (nebo **ladění > Spustit ladění**) spustit ladění.
+4. Stisknutím klávesy **F5** (nebo **ladit > Spustit ladění**) pro spuštění ladění.
 
-    Při spuštění ladění aplikace je před spuštěním kompilovány na vzdálený cíl. Všechny chyby kompilace se objeví v **seznam chyb** okno.
+    Při spuštění ladění bude uložena zkompilovaná aplikace na vzdálené cílové před spuštěním. Chyby při kompilaci se zobrazí v **seznam chyb** okna.
 
-    Pokud nejsou žádné chyby, spustí aplikaci a ladicí program se pozastaví u zarážky.
+    Pokud nejsou žádné chyby, aplikace se spustí a ladicí program se pozastaví na zarážce.
 
-    ![Stiskněte tlačítko zarážky](media/hit_breakpoint.png)  
+    ![Na zarážku](media/hit_breakpoint.png)  
 
-    Nyní můžete pracovat s aplikací v stisknutím příkaz klíče, jako je aktuální stav, zobrazit proměnné a krok prostřednictvím kódu **F10** nebo **F11**.
+    Teď můžete pracovat s aplikací v stisknutím klávesy příkazu, jako je aktuální stav, zobrazit proměnné a procházejte kódem po krocích **F10** nebo **F11**.
 
-4. Pokud chcete použít konzolu Linux k interakci s vaší aplikací, vyberte **ladění > konzole Linux**.
+4. Pokud chcete použít konzolu pro Linux pro interakci s vaší aplikací, vyberte **ladit > Konzola Linuxu**.
 
-  ![Nabídce konzoly Linux](media/consolemenu.png)
+  ![Konzola Linuxu nabídky](media/consolemenu.png)
 
-  Tato konzola zobrazit žádný výstup konzoly z cílového počítače a také provést vstupní a odeslat do cílového počítače.
+  Tato konzola zobrazit žádný výstup konzoly z cílového počítače a také trvat vstupní a odeslat do cílového počítače.
 
-  ![Okno konzoly Linux](media/consolewindow.png)
+  ![Okno konzoly systému Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>Konfigurace dalších možností ladění
+## <a name="configure-other-debugging-options"></a>Nakonfigurovat další možnosti ladění
 
-* Argumenty příkazového řádku se dá předat do spustitelného souboru pomocí **Program argumenty** položku v projektu **ladění** stránku vlastností.
+* Argumenty příkazového řádku může být předán spustitelného souboru pomocí **argumenty programu** položky v projektu **ladění** stránku vlastností.
   
-  ![Program argumenty](media/settings_programarguments.png)
+  ![Argumenty programu](media/settings_programarguments.png)
 
-* Ladicí program konkrétní možnosti se dá předat do GDB pomocí **další příkazy ladicí program** položka.  Například můžete chtít ignorovat sigill – signály (Neplatná instrukce).  Můžete použít **zpracování** příkaz dosáhnout.  přidáním následujícího **další příkazy ladicí program** položku jako v příkladu nahoře:
+* Možnosti ladicího programu pro konkrétní mohou být předány GDB pomocí **další příkazy ladicího programu** položka.  Můžete například chtít ignorovat SIGILL signály (Neplatná instrukce).  Můžete použít **zpracování** příkaz, který můžete toho dosáhnout.  přidáním následujícího **další příkazy ladicího programu** položka, jak je uvedeno výše:
 
   ```handle SIGILL nostop noprint```
 
 ## <a name="next-steps"></a>Další kroky
 
-* Chcete-li ladit ARM zařízení v systému Linux, najdete v části tohoto příspěvku blogu: [ladění vložené zařízení ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+* Chcete-li ladit ARM zařízení v systému Linux, najdete v tomto blogovém příspěvku: [ladění vestavěného zařízení ARM v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-* K ladění pomocí **připojit k procesu** příkazů najdete v tématu tohoto příspěvku blogu: [Linux C++ zatížení vylepšení systému projektu okna konzoly Linux, rsync a připojit k procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
+* Chcete-li ladit pomocí **připojit k procesu** příkazu, najdete v tomto blogovém příspěvku: [úlohy pro C++ Linux vylepšení systém projektu, okna konzoly systému Linux, rsync a připojit k procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
-## <a name="see-also"></a>Viz také
-[C++ – ladění vlastnosti (Linux C++)](../linux/prop-pages/debugging-linux.md).
+## <a name="see-also"></a>Viz také:
+[Vlastnosti (C++ pro Linux) ladění C++](../linux/prop-pages/debugging-linux.md).

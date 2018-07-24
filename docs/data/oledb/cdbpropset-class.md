@@ -1,5 +1,5 @@
 ---
-title: CDBPropSet – třída | Microsoft Docs
+title: CDBPropSet – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,57 +9,175 @@ f1_keywords:
 - CDBPropSet
 - ATL.CDBPropSet
 - ATL::CDBPropSet
+- CDBPropSet::AddProperty
+- CDBPropSet.AddProperty
+- AddProperty
+- ATL::CDBPropSet::AddProperty
+- ATL.CDBPropSet.AddProperty
+- CDBPropSet.CDBPropSet
+- CDBPropSet::CDBPropSet
+- ATL::CDBPropSet::CDBPropSet
+- ATL.CDBPropSet.CDBPropSet
+- CDBPropSet.operator=
+- ATL::CDBPropSet::operator=
+- ATL.CDBPropSet.operator=
+- CDBPropSet::operator=
+- ATL.CDBPropSet.SetGUID
+- CDBPropSet.SetGUID
+- ATL::CDBPropSet::SetGUID
+- SetGUID
+- CDBPropSet::SetGUID
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDBPropSet class
+- AddProperty method
+- CDBPropSet class, constructor
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
+- SetGUID method
+- AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d75715ed0dc65fbbf5b581bfea48816e5bd00ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096324"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207835"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
-Dědí z **DBPROPSET** struktury a přidá konstruktor, který inicializuje klíčová pole a taky `AddProperty` přístup metodě.  
+Dědí z `DBPROPSET` struktury a přidá konstruktor, který inicializuje pole klíče i na `AddProperty` přístup k metodě.  
   
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDBPropSet : public tagDBPROPSET  
 ```  
-  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** také atldbcli.h  
+
 ## <a name="members"></a>Členové  
   
 ### <a name="methods"></a>Metody  
   
 |||  
 |-|-|  
-|[AddProperty –](../../data/oledb/cdbpropset-addproperty.md)|Přidá k vlastností nastavenou vlastnost.|  
-|[CDBPropSet](../../data/oledb/cdbpropset-cdbpropset.md)|Konstruktor|  
-|[Setguid –](../../data/oledb/cdbpropset-setguid.md)|Nastaví **guidPropertySet** pole z **DBPROPSET** struktury.|  
+|[addProperty](#addproperty)|Přidá vlastnost sady vlastností.|  
+|[CDBPropSet](#cdbpropset)|Konstruktor|  
+|[Setguid –](#setguid)|Nastaví `guidPropertySet` pole `DBPROPSET` struktury.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](../../data/oledb/cdbpropset-operator-equal.md)|Přiřadí obsah jednu vlastnost nastavit na jiný.|  
+|[operátor =](#op_equal)|Přiřadí obsah jednu vlastnost nastavena na jiný.|  
   
 ## <a name="remarks"></a>Poznámky  
- OLE DB pomocí poskytovatelů a spotřebitelé **DBPROPSET** struktury předat pole `DBPROP` struktury. Každý `DBPROP` struktura představuje jednu vlastnost, která můžete nastavit.  
+ Použití poskytovatelů a příjemců OLE DB `DBPROPSET` struktury předat pole `DBPROP` struktury. Každý `DBPROP` struktura představuje jedinou vlastností, které je možné nastavit.  
+
+## <a name="addproperty"></a> CDBPropSet::AddProperty
+Přidá vlastnost sady vlastností.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+bool AddProperty(DWORD dwPropertyID,   
+   constVARIANT& var,   
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
+   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
+   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *dwPropertyID*  
+ [in] ID vlastnosti mají být přidány. Použitý k inicializaci `dwPropertyID` z `DBPROP` struktury přidána do sady vlastností.  
+  
+ *var*  
+ [in] Hodnotu typu variant použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+ *szValue*  
+ [in] Řetězec použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+ *bValue*  
+ [in] A `BYTE` nebo logická hodnota, které se používají k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+ *nHodnota*  
+ [in] Celočíselná hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+ *fltValue*  
+ [in] Použitý k inicializaci hodnoty vlastnosti pro hodnotu s plovoucí desetinnou čárkou `DBPROP` struktury přidána do sady vlastností.  
+  
+ *dblValue*  
+ [in] Dvojité přesnosti s plovoucí desetinnou čárkou hodnota použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+ *cyValue*  
+ [in] Hodnota měny CY použitý k inicializaci hodnoty vlastnosti pro `DBPROP` struktury přidána do sady vlastností.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ **Hodnota TRUE** vlastnost úspěšně přidal. V opačném případě **false**. 
+
+## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      CDBPropSet(const GUID& guid);  
+
+CDBPropSet(const CDBPropSet& propset);  
+
+CDBPropSet();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *identifikátor GUID*  
+ [in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.  
+  
+ *Sada vlastností*  
+ [in] Jiné `CDBPropSet` objekt pro konstrukci kopie.  
+
+## <a name="setguid"></a> CDBPropSet::SetGUID
+Nastaví `guidPropertySet` pole `DBPROPSET` struktury.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *identifikátor GUID*  
+ [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury.  
+  
+### <a name="remarks"></a>Poznámky  
+ Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropset-cdbpropset.md) také.  
+
+## <a name="op_equal"></a> CDBPropSet::operator =
+Přiřadí obsah jednu vlastnost nastavena na jinou sadu vlastností.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+```  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CDBPropIDSet – třída](../../data/oledb/cdbpropidset-class.md)   
- [Struktura DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)   
- [Struktura DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Cdbpropidset – třída](../../data/oledb/cdbpropidset-class.md)   
+ [Struktura DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
+ [Struktura DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958250"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207718"
 ---
 # <a name="ostreambufiterator-class"></a>Třída ostreambuf_iterator
 
@@ -78,7 +78,7 @@ Třída ostreambuf_iterator musí splňovat požadavky na výstupní iterátor. 
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x`.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x`.|
 |[Operator ++](#op_add_add)|Nefunkční operátor přírůstku, který vrátí `ostreambuf_iterator` na stejný objekt, který adresoval před voláním operace.|
 |[operátor =](#op_eq)|Operátor vloží znak do přidružené vyrovnávací paměti datového proudu.|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::Operator *
+## <a name="op_star"></a>  ostreambuf_iterator::Operator\*
 
 Nefunkční operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* *můžu* = *x*.
 

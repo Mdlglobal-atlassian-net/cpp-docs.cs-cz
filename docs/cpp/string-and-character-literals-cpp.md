@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942091"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208546"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězců a znaků a nabízí způsobů, jak vyjádřit jednu hodnotu literálu každý z těchto typů. Ve zdrojovém kódu express obsah vaší znakové a řetězcové literály pomocí znakové sady. Univerzální názvy znaků a řídicích znaků umožňují express libovolný řetězec za použití pouze základní zdrojové znakové sady. Nezpracovaný Textový literál vám umožní předcházet pomocí řídicí znaky a je možné vyjádřit všech typů řetězcových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět další konstrukci nebo převod kroky.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Všimněte si, že `strlen()` a `wcslen()` nezahrnují velikost ukončující prázdný znak, jehož velikost odpovídá velikost elementu na řetězcový typ.: jeden bajtů na řetězec char*, dva bajty na wchar_t\* nebo char16_t\* řetězce, a čtyři bajtů na char32_t\* řetězce.  
+ Všimněte si, že `strlen()` a `wcslen()` neobsahují velikost ukončujícího znaku null, jejichž velikost se rovná velikosti elementu typu řetězec: jeden bajt na znak\* string, dva bajty na wchar_t\* nebo char16_t\*řetězce a čtyři bajty v char32_t\* řetězce.  
   
  Maximální délka řetězce literálu je 65535 bajtů. Toto omezení platí pro úzké i široké řetězcové literály.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Řetězcové literály s univerzální názvy znaků  
- Nativní (bez –) literály nezpracovaných řetězců mohou používat univerzální názvy znaků k zastupování libovolného znaku tak dlouho, dokud univerzální název znaku může být zakódován jako jeden nebo více znaků v typu řetězec.  Například univerzální název znaku představující znak rozšířené nemůže být kódovaný v úzký řetězcový pomocí znakovou stránku ANSI, ale může být zakódován v úzkém řetězce v některých vícebajtové znakové stránky, nebo řetězce UTF-8 nebo širokého řetězce. V C ++ 11, je rozšířená podpora kódování Unicode char16_t * a char32_t\* typy řetězců:  
+ Nativní (bez –) literály nezpracovaných řetězců mohou používat univerzální názvy znaků k zastupování libovolného znaku tak dlouho, dokud univerzální název znaku může být zakódován jako jeden nebo více znaků v typu řetězec.  Například univerzální název znaku představující znak rozšířené nemůže být kódovaný v úzký řetězcový pomocí znakovou stránku ANSI, ale může být zakódován v úzkém řetězce v některých vícebajtové znakové stránky, nebo řetězce UTF-8 nebo širokého řetězce. Podpora kódování Unicode je v C ++ 11, prodloužena char16_t\* a char32_t\* typy řetězců:  
   
 ```cpp  
 // ASCII smiling face  

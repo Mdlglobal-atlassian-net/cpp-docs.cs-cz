@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947521"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208559"
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory diskutované v [deklarace a definice](declarations-and-definitions-cpp.md), poskytují informace o vlastnostech, jako je například typ nebo třída úložiště. Modifikátory diskutované v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravují deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- může vypadat jako deklarace **int** ukazatele a funkci vracející `int*`, ale není to.  To proto, že operátor * je součástí deklarátoru proměnné `i`, nikoli součástí deklarátoru funkce `f`.  
+ může vypadat jako deklarace **int** ukazatele a funkci vracející `int*`, ale není to.  Důvodem je, \* je součástí deklarátoru `i`, nikoli součástí deklarátoru `f`.  
   
  **Zjednodušení syntaxe deklarátoru pomocí direktivy typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - a *operátoru ukazatele* patří:  
   
-  - * [kvalifikátory cv]  
-  - & [kvalifikátory cv]:: vnořené specifikátorem názvu * [kvalifikátory cv]  
+  - \* [kvalifikátory cv]  
+  - & [kvalifikátory cv]:: vnořené specifikátorem názvu \* [kvalifikátory cv]  
 
   
  Protože může deklarátor obsahovat deklarátory, lze pomocí výše zmíněných pravidel vytvořit složitější odvozené typy jako pole ukazatelů či funkce vracející pole ukazatelů na funkce.  Chcete-li utvořit každý z kroků konstrukce, začněte s identifikátorem představujícím základní datový typ a použijte výše zmíněné pravidlo syntaxe s předchozím výrazem jako deklarátor `declarator`.  Pořadí použití pravidel syntaxe by mělo být opačné oproti způsobu, jak je výraz vyjádřen v angličtině.  Pokud použití *operátoru ukazatele* pravidlo syntaxe na výraz pole nebo funkce použít závorky, pokud má ukazatel na pole nebo funkce, jako poslední řádek v tabulce níže.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |pole o 10|`(*i)[10]`|4|  
 |ukazatelích na|`*((*i)[10])`|6, a potom 5|  
   
- Při použití většího počtu modifikátorů ukazatelů, referencí, polí nebo funkcí se deklarátory mohou výrazně komplikovat.  Téma [interpretace složitějších Deklarátorů](../c-language/interpreting-more-complex-declarators.md) popisuje, jak číst složitější syntaxi deklarátorů.  Téma se vztahuje na C a C++, ačkoli v jazyce C++, kdekoli * se používá k označení ukazatel, úplný název, například MyClass::\* slouží k určení ukazatele na člen třídy.
+ Při použití většího počtu modifikátorů ukazatelů, referencí, polí nebo funkcí se deklarátory mohou výrazně komplikovat.  Téma [interpretace složitějších Deklarátorů](../c-language/interpreting-more-complex-declarators.md) popisuje, jak číst složitější syntaxi deklarátorů.  Téma se vztahuje na C a C++, ačkoli v jazyce C++, kdekoli \* se používá k označení ukazatel, úplný název, například MyClass::\* slouží k určení ukazatele na člen třídy.

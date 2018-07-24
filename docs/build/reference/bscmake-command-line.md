@@ -1,5 +1,5 @@
 ---
-title: Příkazový řádek BSCMAKE | Microsoft Docs
+title: BscMake – příkazový řádek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866d2960acdd89c3015470ef3971307ba162cd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b79f7e7c181112877c795f3601e8211e70403563
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369494"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207744"
 ---
 # <a name="bscmake-command-line"></a>Příkazový řádek BSCMAKE
-Pokud chcete spustit BSCMAKE, použijte následující syntaxi příkazového řádku:  
+Chcete-li spustit nástroje BSCMAKE, použijte následující syntaxi příkazového řádku:  
   
 ```  
 BSCMAKE [options] sbrfiles  
 ```  
   
- Možnosti může vyskytovat pouze v `options` pole na příkazovém řádku.  
+ Možnosti může objevit pouze v `options` na příkazovém řádku.  
   
- *Sbrfiles* pole určuje jeden nebo více souborů .sbr vytvořené kompilátoru nebo assembleru. Oddělte názvy souborů .sbr mezerami nebo karty. Je nutné zadat rozšíření; neexistuje žádná výchozí hodnota. Můžete zadat cestu s názvem, a můžete použít zástupné znaky operačního systému (* a?).  
+ *Sbrfiles* pole určuje jeden nebo více soubory .sbr vytvořené kompilátoru nebo assembleru. Názvy soubory .sbr oddělte mezerami či tabulátory. Je nutné zadat rozšíření; neexistuje žádná výchozí hodnota. Můžete zadat cestu s názvem, a můžete použít zástupné znaky operačního systému (\* a?).  
   
- Během přírůstkové sestavení můžete určit nové soubory .sbr, které není součástí původní sestavení. Pokud chcete, aby všechny příspěvky zůstat v soubor s informacemi o procházení, je nutné zadat všechny soubory .sbr (včetně zkrácený soubory), které byly původně použity k vytvoření souboru BSC programem. Pokud vynecháte souboru .sbr, odeberou se tento soubor příspěvku soubor s informacemi o procházení.  
+ Během přírůstkového sestavení můžete určit nové soubory .sbr, které nejsou součástí původní sestavení. Pokud chcete, aby všechny příspěvky tak si zachováte informačního souboru procházení, je nutné zadat všechny soubory .sbr (včetně souborů zkrácený), které byly původně použili k vytvoření souboru .bsc. Vynecháte-li soubor .sbr, odeberou se tento soubor příspěvek do informačního souboru procházení.  
   
- Nezadávejte soubor zkrácený .sbr pro úplné sestavení. Úplné sestavení vyžaduje příspěvky ze všech souborů zadaný .sbr. Před provedením úplné sestavení, znovu zkompiluje projekt a vytvořte nový soubor .sbr pro každý soubor prázdný.  
+ Není zadán soubor .sbr zkrácený pro úplného buildu. Úplné sestavení vyžaduje příspěvků všechny soubory .sbr zadané. Před provedením úplného buildu se znovu zkompilovat projekt a vytvořte nový soubor .sbr pro každý soubor prázdný.  
   
- Tento příkaz spustí BSCMAKE k sestavení do souboru s názvem MAIN.bsc z tři soubory .sbr:  
+ Následující příkaz spustí BSCMAKE k vytvoření souboru s názvem MAIN.bsc z tři soubory .sbr:  
   
 ```  
 BSCMAKE main.sbr file1.sbr file2.sbr  
 ```  
   
- Související informace najdete v tématu [soubor příkazů BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) a [možnosti BSCMAKE](../../build/reference/bscmake-options.md).  
+ Související informace naleznete v tématu [soubor příkazů BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) a [bscmakee – možnosti](../../build/reference/bscmake-options.md).  
   
 ## <a name="see-also"></a>Viz také  
  [BSCMAKE – referenční dokumentace](../../build/reference/bscmake-reference.md)

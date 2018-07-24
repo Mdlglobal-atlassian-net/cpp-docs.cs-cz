@@ -1,5 +1,5 @@
 ---
-title: Concurrency::Direct3D – obor názvů funkcí (a) | Microsoft Docs
+title: Funkce oboru názvů Concurrency::Direct3D (AMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,24 +28,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693725"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208949"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce Concurrency::Direct3D – obor názvů (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce oboru názvů Concurrency::Direct3D (AMP)
 ||||  
 |-|-|-|  
-|[Abs](#abs)|[svorka](#clamp)|[countbits –](#countbits)|
+|[Abs](#abs)|[Stažení](#clamp)|[countbits –](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh –](#firstbithigh)|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[MAD –](#mad)|[make_array](#make_array)|[šumu](#noise)|  
-|[radiánech](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|  
-|[saturate –](#saturate)|[sign](#sign)|[smoothstep –](#smoothstep)|  
+|[RADIANS](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|  
+|[Saturate](#saturate)|[sign](#sign)|[smoothstep –](#smoothstep)|  
 |[Krok](#step)|[umax](#umax)|[umin –](#umin)|  
 
 ## <a name="requirements"></a>Požadavky
@@ -65,8 +65,8 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí absolutní hodnotu argumentu.  
   
-##  <a name="clamp"></a>  svorka  
- Vypočítá hodnotu první zadaného argumentu těsně na definované druhý a třetí argument zadaný rozsah.  
+##  <a name="clamp"></a>  Stažení  
+ Vypočítá hodnotu prvního zadaného argumentu připnutého k oblasti definované druhý a třetí zadaný argument.  
   
 ```  
 inline float clamp(
@@ -83,19 +83,19 @@ inline int clamp(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Hodnota, která má být těsně  
+ Hodnota, která má být přichycena  
   
  `_Min`  
- Dolní mez montážní rozsahu.  
+ Dolní mez rozsahu upnutí.  
   
  `_Max`  
- Horní mez montážní rozsahu.  
+ Horní mez rozsahu upnutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Clamped hodnota `_X`.  
+ Přichycená hodnota parametru `_X`.  
   
 ##  <a name="countbits"></a>  countbits –  
- Spočítá počet sadu bitů _X  
+ Spočítá počet nastavených bitů v proměnné _X  
   
 ```  
 inline unsigned int countbits(unsigned int _X) restrict(amp);
@@ -106,10 +106,10 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
  Hodnota celé číslo bez znaménka  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet sadu bitů v _X  
+ Vrátí počet nastavených bitů v proměnné _X  
 
 ## <a name="create_accelerator_view"></a> create_accelerator_view –  
-Vytvoří [accelerator_view](accelerator-view-class.md) objekt z ukazatel na rozhraní Direct3D zařízení.  
+Vytvoří [accelerator_view](accelerator-view-class.md) objekt z ukazatele na rozhraní zařízení Direct3D.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -126,30 +126,30 @@ accelerator_view create_accelerator_view(
   
 #### <a name="parameters"></a>Parametry  
  `_Accelerator`  
- Accelerator, na kterém má být vytvořen nový accelerator_view.  
+ Akcelerátor, na kterém má být vytvořen nový objekt accelerator_view.  
   
  `_D3D_device`  
- Ukazatel rozhraní Direct3D zařízení.  
+ Ukazatel na rozhraní zařízení Direct3D.  
   
  `_Disable_timeout`  
- Logický parametr, který určuje, zda by mělo být zakázáno časový limit pro nově vytvořený accelerator_view. To odpovídá příznak D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pro vytvoření Direct3D – zařízení a slouží k označení, pokud se operační systém by měl povolit úlohy, které trvat déle než 2 sekundy provést bez resetování zařízení podle časového limitu systému Windows mechanismus detekce a obnovení. Pokud je potřeba časově náročné úkoly na accelerator_view se doporučuje použít tento příznak.  
+ Parametr logické hodnoty, která určuje, zda by mělo být zakázáno časový limit pro nově vytvořený objekt accelerator_view. To odpovídá příznaku D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pro vytváření zařízení Direct3D a slouží k označení, pokud operační systém by měl umožnit pracovní vytížení, které trvat déle než 2 sekundy bez resetování zařízení za časový limit Windows mechanismus detekce a obnovení. Použití tohoto příznaku se doporučuje, když potřebujete provádět časově náročné úlohy v zobrazení accelerator_view.  
   
  `_Qmode`  
- [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) má být použit pro nově vytvořený accelerator_view. Tento parametr má výchozí hodnotu `queuing_mode_automatic`.  
+ [Queuing_mode –](concurrency-namespace-enums-amp.md#queuing_mode) má být použit pro nově vytvořený objekt accelerator_view. Tento parametr má výchozí hodnotu `queuing_mode_automatic`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `accelerator_view` Objekt vytvořený z rozhraní zařízení předaný Direct3D.  
+ `accelerator_view` Objekt vytvořený z předaného rozhraní zařízení Direct3D.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce vytvoří novou `accelerator_view` objekt z existující ukazatel na rozhraní Direct3D zařízení. Pokud je úspěšné volání funkce, se zvýší počet odkazů parametr prostřednictvím `AddRef` volání rozhraní. Objekt můžete bezpečně uvolnit, když už se nevyžaduje v kódu DirectX. Pokud selže volání metody, [runtime_exception](runtime-exception-class.md) je vyvolána výjimka.  
+ Tato funkce vytvoří nový `accelerator_view` objekt ze stávajícího ukazatele na rozhraní zařízení Direct3D. Pokud bude volání funkce úspěšné, je počet odkazů parametru zvýšen prostřednictvím `AddRef` volání do rozhraní. Když je už nebude potřeba v rámci DirectX kódu, můžete jej bezpečně uvolnit objektu. Pokud selže volání metody [runtime_exception](runtime-exception-class.md) je vyvolána výjimka.  
   
- `accelerator_view` Objekt, který vytvoříte pomocí této funkce je zaručeno bezpečné používání vláken. Souběžné používání musí synchronizovat `accelerator_view` objektu. Rozcházejí souběžných využití `accelerator_view` objekt a rozhraní nezpracovaná ID3D11Device způsobí, že nedefinované chování.  
+ `accelerator_view` Objekt, který vytvoříte pomocí této funkce je bezpečné pro vlákna. Je nutné synchronizovat souběžné použití objektu `accelerator_view` objektu. Nesynchronizované souběžné použití objektu `accelerator_view` objektu a hrubého rozhraní ID3D11Device způsobuje nedefinované chování.  
   
- Modul runtime C++ AMP poskytuje podrobné informace o chybě v režimu ladění pomocí vrstvě D3D ladění, pokud použijete `D3D11_CREATE_DEVICE_DEBUG` příznak.  
+ Modul runtime C++ AMP poskytuje podrobné informace o chybě v režimu ladění pomocí vrstvy rozhraní D3D ladění, pokud použijete `D3D11_CREATE_DEVICE_DEBUG` příznak.  
   
   
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock –  
- Získejte zámek na accelerator_view za účelem provádění bezpečně D3D operací s prostředky, které jsou sdíleny s accelerator_view. Accelerator_view a všechny prostředky C++ AMP přidružené k této accelerator_view interně trvat tento zámek při provádění operací a bude blokovat, zatímco jiné vlákno obsahuje zámek D3D přístup. Tato zámek je tohoto nerekurzivního: je nedefinovaný chování pro volání této funkce z vlákna, která již obsahuje zámek. Je definován chování k provádění operací na accelerator_view nebo všech dat kontejneru přidruženého k accelerator_view z vlákna, která obsahuje zámek D3D přístup. Další informace najdete v části scoped_d3d_access_lock, třídu stylu RAII na obor D3D přístup zámek.  
+ Získejte zámek na accelerator_view pro účely bezpečného provádění operací D3D na prostředcích sdílených s accelerator_view. Prostředky accelerator_view a všechny prostředky C++ AMP, vnitřně přidružené s tímto prostředkem accelerator_view přijmou toto uzamčení při provádění operací a budou blokovat, zatímco jiné vlákno drží zámek přístupu D3D. Tento zámek je nerekurzivní: zavolat tuto funkci z vlákna již obsahujícího zámek vyvolá nedefinované chování. To je nedefinované chování k provádění operací na objektu accelerator_view nebo jakémkoli kontejneru dat spojeném s objektem accelerator_view z vlákna, které drží zámek přístupu D3D. Další informace naleznete v tématu scoped_d3d_access_lock, třídě stylu RAII pro obor zámku přístupu D3D.  
   
 ```  
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -157,10 +157,10 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parametry  
  `_Av`  
- Accelerator_view k uzamčení.  
+ Accelerator_view pro uzamčení.  
   
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock  
- Pokuste se získat zámek D3D přístup accelerator_view bez blokování.  
+ Pokus o získání zámku přístupu D3D na accelerator_view bez blokování.  
   
 ```  
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -168,13 +168,13 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parametry  
  `_Av`  
- Accelerator_view k uzamčení.  
+ Accelerator_view pro uzamčení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud se získal zámek, nebo hodnotu NEPRAVDA, pokud je aktuálně uchovávat jiné vlákno.  
+ Hodnota TRUE, pokud byl získán zámek, nebo hodnotu NEPRAVDA, pokud je právě načtený v jiném vlákně.  
   
 ##  <a name="d3d_access_unlock"></a>  d3d_access_unlock –  
- Uvolní zámek D3D přístup na danou accelerator_view. Pokud volající vlákno nemá zámek accelerator_view výsledky nejsou definovány.  
+ Uvolněte zámek přístupu D3D na daný objekt accelerator_view. Pokud volající vlákno není držitelem zámku objektu accelerator_view nejsou výsledky definovány.  
   
 ```  
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -182,10 +182,10 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parametry  
  `_Av`  
- Accelerator_view, pro kterou se uvolnit zámek.  
+ Accelerator_view, pro kterou má uvolní zámek.  
   
 ##  <a name="firstbithigh"></a>  firstbithigh –  
- Získá umístění první sada bit v _X, počínaje bit s nejvyšším pořadím a pro cestu k bitové nejnižší pořadí.  
+ Zjistí umístění prvního nastaveného bitu v _X, počínaje bitu s nejvyšším pořadím a přesunem směrem k bitu s nejnižším pořadím.  
   
 ```  
 inline int firstbithigh(int _X) restrict(amp);
@@ -196,10 +196,10 @@ inline int firstbithigh(int _X) restrict(amp);
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Umístění první bitová sada  
+ Umístění prvního nastaveného bitu  
   
 ##  <a name="firstbitlow"></a>  firstbitlow –  
- Získá umístění první sada bit v _X, počínaje bit nejnižší pořadí a práci směrem k bit s nejvyšším pořadím.  
+ Zjistí umístění prvního nastaveného bitu v _X, počínaje bitu s nejnižším pořadím a přesunem směrem k bitu s nejvyšším pořadím.  
   
 ```  
 inline int firstbitlow(int _X) restrict(amp);
@@ -210,10 +210,10 @@ inline int firstbitlow(int _X) restrict(amp);
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí první nastavit chvíli umístění  
+ Vrátí umístění prvního nastaveného bitu  
   
 ##  <a name="get_buffer"></a>  get_buffer –  
- Získáte rozhraní vyrovnávací paměti Direct3D – základní zadané pole.  
+ Získejte rozhraní vyrovnávací paměti Direct3D základního zadaného pole.  
   
 ```  
 template<
@@ -226,19 +226,19 @@ IUnknown *get_buffer(
   
 ### <a name="parameters"></a>Parametry  
  `value_type`  
- Typ elementů v poli.  
+ Typ prvků v poli.  
   
  `_Rank`  
- Pořadí pole.  
+ Řád objektu array.  
   
  `_Array`  
- Pole na Direct3D – accelerator_view, pro který je vrácen základní rozhraní Direct3D vyrovnávací paměti.  
+ Pole accelerator_view rozhraní Direct3D, pro který je vrácen základní vyrovnávací paměti rozhraní Direct3D.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní IUnknown odpovídající do vyrovnávací paměti Direct3D – základní pole.  
+ Ukazatel rozhraní IUnknown odpovídající vyrovnávací paměti rozhraní Direct3D podkládající pole.  
   
 ##  <a name="imax"></a>  Imax –  
- Určit maximální číselná hodnota, která jsou argumenty  
+ Určí maximální číselnou hodnotu argumentů  
   
 ```  
 inline int imax(
@@ -254,10 +254,10 @@ inline int imax(
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí maximální hodnotu číselného argumenty  
+ Vrátit maximální číselnou hodnotu argumentů  
   
 ##  <a name="imin"></a>  imin –  
- Určení minimální číselná hodnota z argumentů  
+ Určí minimální číselnou hodnotu argumentů  
   
 ```  
 inline int imin(
@@ -273,10 +273,10 @@ inline int imin(
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí minimální hodnotu číselného argumenty  
+ Vrátit minimální číselnou hodnotu argumentů  
   
 ##  <a name="is_timeout_disabled"></a>  is_timeout_disabled –  
- Vrátí logický příznak indikující, pokud je pro zadaný accelerator_view zakázané časový limit. To odpovídá příznak D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pro vytvoření Direct3D zařízení.  
+ Vrátí příznak logické hodnoty označující, pokud vypršení časového limitu je zakázáno pro zadaný accelerator_view. To odpovídá příznaku D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT pro vytváření zařízení Direct3D.  
   
 ```  
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -284,13 +284,13 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
   
 ### <a name="parameters"></a>Parametry  
  `_Accelerator_view`  
- Accelerator_view, pro který má být dotazována časový limit zakázané nastavení.  
+ Accelerator_view, pro který nastavení deaktivovaného časového limitu, je možné dotazovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Logický příznak indikující, pokud je pro zadaný accelerator_view zakázané časový limit.  
+ Příznak logické hodnoty označující, pokud vypršení časového limitu je zakázáno pro zadaný accelerator_view.  
   
 ##  <a name="mad"></a>  mad  
- Vypočítá součin první a druhý zadaný argument a potom přidá třetí zadaného argumentu.  
+ Vypočítá součin prvního a druhého zadaného argumentu, poté přičte třetí zadaný argument.  
   
 ```  
 inline float mad(
@@ -319,19 +319,19 @@ inline unsigned int mad(
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- První zadaného argumentu.  
+ Prvního zadaného argumentu.  
   
  `_Y`  
- Druhý zadaného argumentu.  
+ Druhý zadaný argument.  
   
  `_Z`  
- Třetí zadaného argumentu.  
+ Třetí zadaný argument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výsledek `_X`  *  `_Y`  +  `_Z`.  
+ Výsledek `_X` \* `_Y`  +  `_Z`.  
   
 ##  <a name="make_array"></a>  make_array –  
- Vytvořte pole z Direct3D – ukazatele rozhraní vyrovnávací paměti.  
+ Vytvoří pole z ukazatele na rozhraní vyrovnávací paměti rozhraní Direct3D.  
   
 ```  
 template<
@@ -346,25 +346,25 @@ array<value_type, _Rank> make_array(
   
 ### <a name="parameters"></a>Parametry  
  `value_type`  
- Typ elementu pole, který se má vytvořit.  
+ Typ elementu pole, které chcete vytvořit.  
   
  `_Rank`  
- Pořadí pole, který se má vytvořit.  
+ Řád objektu array má být vytvořen.  
   
  `_Extent`  
- Rozsah popisující obrazec agregace pole.  
+ Objekt extent popisující tvar množiny pole.  
   
  `_Rv`  
- Zobrazení akcelerátoru D3D, na kterém má být vytvořen pole.  
+ Zobrazení akcelerátoru D3D, na kterém se má vytvořit pole.  
   
  `_D3D_buffer`  
- IUnknown – ukazatele rozhraní D3D vyrovnávací paměti k vytvoření pole z.  
+ Ukazatel na rozhraní IUnknown vyrovnávací paměti rozhraní D3D k vytvoření pole z.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pole vytvořené pomocí zadané vyrovnávací paměti Direct3D.  
+ Pole vytvořené pomocí zadané vyrovnávací paměti rozhraní Direct3D.  
   
 ##  <a name="noise"></a>  šumu  
- Generuje náhodná hodnota pomocí algoritmu Perlin šumu  
+ Vygeneruje náhodnou hodnotu pomocí algoritmu Perlinova šumu.  
   
 ```  
 inline float noise(float _X) restrict(amp);
@@ -372,13 +372,13 @@ inline float noise(float _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- S plovoucí desetinnou čárkou, ze které se mají vygenerovat Perlin šumu  
+ S plovoucí desetinnou čárkou, ze kterého se má generovat Perlinova šumu  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací hodnotu šumu Perlin v rozsahu od -1 a 1  
+ Vrátí hodnotu The Perlinova šumu v rozsahu mezi -1 a 1  
   
-##  <a name="radians"></a>  radiánech  
- Převede _X z stupňů radiánech  
+##  <a name="radians"></a>  RADIANS  
+ Převede proměnnou _X ze stupňů na radiány.  
   
 ```  
 inline float radians(float _X) restrict(amp);
@@ -389,10 +389,10 @@ inline float radians(float _X) restrict(amp);
  Hodnota s plovoucí desetinnou čárkou  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí _X převést z stupňů na radiánech  
+ Vrátí hodnotu proměnné _X ze stupňů na radiány  
   
 ##  <a name="rcp"></a>  rcp  
- Pomocí rychlé aproximace vypočítá vzájemné zadaného argumentu.  
+ Vypočte střídavost zadaného argumentu pomocí rychlého odhadu.  
   
 ```  
 inline float rcp(float _X) restrict(amp);
@@ -403,13 +403,13 @@ inline double rcp(double _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `_X`  
- Hodnota, pro které chcete výpočetní vzájemné.  
+ Hodnota, pro které chcete vypočítat převrácenou hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vzájemná zadaného argumentu.  
+ Převrácená hodnota zadaného argumentu.  
   
 ##  <a name="reversebits"></a>  reversebits –  
- Obrátí pořadí bity v _X  
+ Obrátí pořadí bitů v proměnné _X  
   
 ```  
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
@@ -420,10 +420,10 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
  Hodnota celé číslo bez znaménka  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu s pořadím bit vrátit v _X  
+ Vrátí hodnotu s pořadí bitů v proměnné _X  
   
-##  <a name="saturate"></a>  saturate –  
- Svorky _X v rozsahu 0 až 1  
+##  <a name="saturate"></a>  Saturate  
+ Omezí hodnotu proměnné _X z rozsahu 0 až 1  
   
 ```  
 inline float saturate(float _X) restrict(amp);
@@ -434,10 +434,10 @@ inline float saturate(float _X) restrict(amp);
  Hodnota s plovoucí desetinnou čárkou  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí _X těsně v rozsahu 0 až 1  
+ Vrátí hodnotu proměnné _X omezen v rozsahu 0 až 1  
   
-##  <a name="sign"></a>  Přihlášení  
- Vrátí znaménko zadaného argumentu.  
+##  <a name="sign"></a>  přihlášení  
+ Určuje znak zadaného argumentu.  
   
 ```  
 inline int sign(int _X) restrict(amp);
@@ -451,7 +451,7 @@ inline int sign(int _X) restrict(amp);
  Znaménko argumentu.  
   
 ##  <a name="smoothstep"></a>  smoothstep –  
- Vrátí smooth interpolace Hermite mezi 0 a 1, pokud _X je v rozsahu [_min –, _maximální].  
+ Vrátí smooth Hermitovu interpolaci mezi 0 a 1, pokud _X je v rozsahu [_Min, _Max].  
   
 ```  
 inline float smoothstep(
@@ -471,10 +471,10 @@ inline float smoothstep(
  Hodnota s plovoucí desetinnou čárkou  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu 0, pokud _X je menší než _min –; 1, pokud _X je větší než _maximální; jinak hodnotu mezi 0 a 1, pokud _X je v rozsahu [_min –, _maximální]  
+ Vrátí hodnotu 0, pokud _X je menší než _Min; 1, pokud je větší než _Max; proměnné _X v opačném případě hodnota mezi 0 a 1, pokud _X je v rozsahu [_Min, _Max]  
   
 ##  <a name="step"></a>  Krok  
- Porovná dvě hodnoty, vrácení 0 nebo 1 na základě toho, která hodnota větší  
+ Porovná dvě hodnoty a vrátí hodnotu 0 nebo 1 podle toho, která hodnota je větší  
   
 ```  
 inline float step(
@@ -490,10 +490,10 @@ inline float step(
  Hodnota s plovoucí desetinnou čárkou  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu 1, pokud _X je větší než nebo rovno _Y; 0, jinak hodnota  
+ Vrátí hodnotu 1, pokud je proměnné _X větší než nebo rovna hodnotě _Y; jinak 0.  
   
-##  <a name="umax"></a>  UMAX –  
- Určit maximální číselná hodnota, která jsou argumenty  
+##  <a name="umax"></a>  UMAX  
+ Určí maximální číselnou hodnotu argumentů  
   
 ```  
 inline unsigned int umax(
@@ -509,10 +509,10 @@ inline unsigned int umax(
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí maximální hodnotu číselného argumenty  
+ Vrátit maximální číselnou hodnotu argumentů  
   
 ##  <a name="umin"></a>  umin –  
- Určení minimální číselná hodnota z argumentů  
+ Určí minimální číselnou hodnotu argumentů  
   
 ```  
 inline unsigned int umin(
@@ -528,7 +528,7 @@ inline unsigned int umin(
  Celočíselná hodnota  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí minimální hodnotu číselného argumenty  
+ Vrátit minimální číselnou hodnotu argumentů  
   
 ## <a name="see-also"></a>Viz také  
  [Concurrency::direct3d – obor názvů](concurrency-direct3d-namespace.md)

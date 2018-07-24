@@ -1,5 +1,5 @@
 ---
-title: Grafika (C++ AMP) | Microsoft Docs
+title: Grafické prvky (C++ AMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,71 +12,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e91f762a6f340d4fe0dcc513dea850b977e0524c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695363"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208725"
 ---
 # <a name="graphics-c-amp"></a>Grafické prvky (C++ AMP)
-Obsahuje několik rozhraní API v C++ AMP [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) obor názvů, který můžete použít pro přístup k podpoře texture na grafickými procesory. Jsou některé běžné scénáře:  
+C++ AMP obsahuje několik rozhraní API v [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) obor názvů, který můžete použít pro přístup k podpoře textur na GPU. Jsou uvedeny některé obvyklé scénáře:  
   
--   Můžete použít [texture](../../parallel/amp/reference/texture-class.md) třída jako kontejner dat pro výpočty a zneužití *prostorových polohu* texture mezipaměti a rozložení GPU hardwaru. Prostorové polohu je vlastnost datové prvky, které se fyzicky blízko sebe navzájem.  
+-   Můžete použít [textury](../../parallel/amp/reference/texture-class.md) třídy jako datový zásobník pro výpočet a využití *prostorová lokalita* mezipaměti textur a rozložení hardwarové GPU. Prostorová lokalita je vlastnost datových prvků, které jsou fyzicky blízko u sebe navzájem.  
   
--   Modul runtime umožňuje efektivní spolupráci s shadery bez výpočtů. Pixelů, vrchol, teselace a trupu shadery často využívat nebo vytvářet textury, které můžete použít v vaší C++ AMP výpočty.  
+-   Modul runtime poskytuje efektivní spolupráci s nevýpočetními shadery. Pixel, vrchol, teselace a shadery trupu často spotřebovávají nebo vytvářejí textury, které můžete použít v rámci výpočtů C++ AMP.  
   
--   Grafické rozhraní API v C++ AMP poskytují alternativní způsoby pro přístup k dílčí aplikace word sbalené vyrovnávací paměti. Textury, které mají formáty, které představují *texels* (texture elementy), se skládají z 8bitové nebo 16bitové skalárních hodnot povolit přístup k úložišti takové zabalená data.  
+-   Grafické rozhraní API v jazyce C++ AMP poskytují alternativní způsoby přístupu k zabaleným vyrovnávacím pamětem Sub-Word. Textury, které mají formáty představující *texely* (prvky textur), které se skládají z 8bitovými nebo 16bitovými skaláry, umožňují přístup k takovémuto zabalenému úložišti.  
   
-## <a name="the-norm-and-unorm-types"></a>Norm a unorm typy  
- `norm` a `unorm` typy jsou Skalární typy, které omezí rozsah `float` hodnoty, to se označuje jako *upínací*. Tyto typy lze explicitně sestavit od ostatních typů skalární. V přetypování, hodnota nejprve vložena do `float` a pak těsně příslušných oblast, která je povolena norm [-1.0, 1.0] nebo unorm [0,0, 1.0]. Přetypování z +/-infinity vrátí +/-1. Přetypování z NaN není definován. Norm být implicitně konstruovat z unorm a nedochází ke ztrátě dat. Implicitní převod operátorovi float je definována v těchto typů. Binární operátory jsou definované mezi tyto typy a jiné předdefinované Skalární typy, jako `float` a `int`: +, -, *, /, ==,! =, >, \<, > =, < =. Jsou podporovány také složené operátory přiřazení: +=,-=, \*= / =. Operátor unární negace (-) je pro typy norm definované.  
+## <a name="the-norm-and-unorm-types"></a>Typy norm a unorm  
+ `norm` a `unorm` typy jsou Skalární typy, které omezují rozsah `float` hodnoty, to se označuje jako *upnutí*. Tyto typy lze explicitně zkonstruovat z jiných skalárních typů. Při přetypování je hodnota nejdříve přetypována na `float` a následně upnutá k příslušné oblasti, kterou může norm [-1.0, 1.0] nebo unorm [0.0, 1.0]. Přetypování z +/-nekonečno vrátí +/-1. Přetypování z NaN není definováno. Metoda norm může implicitně vytvořený z unorm a nedochází ke ztrátě dat. Operátor implicitního převodu na float je definován na těchto typech. Binární operátory jsou definovány mezi těmito typy a jinými předdefinovanými skalárními typy, jako `float` a `int`: +, -, \*, /, ==,! =, >, \<, > =, < =. Operátory přiřazení sloučení jsou také podporovány: +=,-=, \*=, / =. Operátor unární negace (-) je definován pro typy norm.  
   
-## <a name="short-vector-library"></a>Vektor krátké knihovna  
- Krátké knihovna vektoru obsahuje některé funkce [vektoru typ](http://go.microsoft.com/fwlink/p/?linkid=248500) která je definována v HLSL a obvykle se používá k definování texels. Krátký vektor je datová struktura, která obsahuje jeden až čtyři hodnoty stejného typu. Podporované typy jsou `double`, `float`, `int`, `norm`, `uint`, a `unorm`. V následující tabulce jsou uvedeny názvy typů. Pro každý typ je také odpovídající `typedef` podtržítko, nebude mít v názvu. Typy, které mají podtržítka jsou v [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby se jsou oddělena od podobně názvem základní typy, jako `__int8` a `__int16`.  
+## <a name="short-vector-library"></a>Knihovna krátkých vektorů  
+ Krátká vektorová knihovna poskytuje některé funkce [typ vektoru](http://go.microsoft.com/fwlink/p/?linkid=248500) , který je definován v HLSL a obvykle se používá k definování texelů. Krátký vektor je datová struktura, která obsahuje jednu až čtyři hodnoty stejného typu. Podporované typy jsou `double`, `float`, `int`, `norm`, `uint`, a `unorm`. Názvy typů jsou uvedeny v následující tabulce. Pro každý typ existuje také odpovídající `typedef` , který neobsahuje v názvu podtržítko. Typy obsahující podtržítka jsou [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby zřetelné oddělení od podobně pojmenovaných základních typů jako `__int8` a `__int16`.  
   
 ||Délka 2|Délka 3|Délka 4|  
 |-|--------------|--------------|--------------|  
-|double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|  
-|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> FLOAT4|  
-|int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|  
-|norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|  
-|uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|  
-|unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|  
+|double|double_2 –<br /><br /> double2|double_3 –<br /><br /> double3|double_4 –<br /><br /> double4|  
+|float|float_2 –<br /><br /> float2|float_3 –<br /><br /> float3|float_4 –<br /><br /> FLOAT4|  
+|int|int_2 –<br /><br /> int2|int_3 –<br /><br /> int3|int_4 –<br /><br /> int4|  
+|norm|norm_2 –<br /><br /> norm2|norm_3 –<br /><br /> norm3|norm_4 –<br /><br /> norm4|  
+|uint|uint_2 –<br /><br /> uint2|uint_3 –<br /><br /> uint3|uint_4 –<br /><br /> uint4|  
+|unorm|unorm_2 –<br /><br /> unorm2|unorm_3 –<br /><br /> unorm3|unorm_4 –<br /><br /> unorm4|  
   
 ### <a name="operators"></a>Operátory  
- Pokud operátor je definována mezi dvěma krátké vektory, pak je také definován mezi krátké vektoru a skalární hodnota. Navíc jeden z nich musí být splněné:  
+ Pokud mezi dvěma vektory definován operátor, pak je také definován mezi krátkým vektorem a skalární. Navíc jeden z nich musí být splněné:  
   
--   Typ skalární hodnota musí být stejný jako typ elementu krátké vektoru.  
+-   Typ skaláru musí být stejný jako typ prvku krátkého vektoru.  
   
--   Typ skalárních můžete implicitně převést na typ elementu vektoru pomocí pouze jeden převod definovaný uživatelem.  
+-   Typ skaláru lze implicitně převést na typ prvku vektoru pomocí pouze jednoho uživatelem definovaného převodu.  
   
- Operace probíhá component-wise mezi jednotlivé komponenty krátké vektoru a skalárních. Zde jsou platné operátory:  
+ Operace se provádí s ohledem na komponentu mezi každou součástí krátkého vektoru a skaláru. Zde jsou platné operátory:  
   
-|Typ – operátor|Platné typy|  
+|Typ operátoru|Platné typy|  
 |-------------------|-----------------|  
-|Binární operátory|Platná pro všechny typy: +, -, *, /,<br /><br /> Platné typy celého čísla: %, ^, &#124;&, <\<, >><br /><br /> Dva vektory musí mít stejnou velikost a výsledkem je vektor stejnou velikost.|  
-|Relační operátory|Platná pro všechny typy: == a! =|  
-|Operátor složené přiřazení|Platná pro všechny typy: +=,-=, * = / =<br /><br /> Platné typy celého čísla: % =, ^ =, &#124;= & =, <\<=, >> =|  
-|Operátory přírůstku a snížení|Platná pro všechny typy: ++, –<br /><br /> Předpona a operátory jsou platné.|  
-|Bitový operátor NOT (~)|Platné na typy celého čísla.|  
-|Unární – operátor|Platná pro všechny typy kromě `unorm` a `uint`.|  
+|Binární operátory|Platné pro všechny typy: +, -, \*, /,<br /><br /> Platné pro všechny celočíselné typy: %, ^, &#124;&, <\<, >><br /><br /> Dva vektory musí mít stejnou velikost a výsledkem je vektor stejné velikosti.|  
+|Relační operátory|Platné pro všechny typy: == a! =|  
+|Složený operátor přiřazení|Platné pro všechny typy: +=,-=, \*=, / =<br /><br /> Platné pro všechny celočíselné typy: % =, ^ =, &#124;= & =, <\<=, >> =|  
+|Operátory přírůstku a snížení|Platné pro všechny typy: ++,--<br /><br /> Předpona i přípona jsou platné.|  
+|Bitový operátor NOT (~)|Platí pro všechny celočíselné typy.|  
+|Unární operátor - – operátor|Platné pro všechny typy s výjimkou `unorm` a `uint`.|  
   
-### <a name="swizzling-expressions"></a>Swizzling výrazy  
- Podporuje krátké knihovna vektoru `vector_type.identifier` přistupujícího objektu konstrukce pro přístup k součástem krátké vektoru. `identifier`, Což se označuje jako *swizzling výraz*, určuje součástí vektoru. Výraz může být hodnotu l nebo r-value. Může být jednotlivé znaky v identifikátoru: x, y, z a w; g, b, nebo r a. "x" a "r" znamená nula tý součásti, "y" a "g" střední první součást a tak dále. (Všimněte si, že "x" a "r" nelze použít ve stejný identifikátor.) Tedy "rgba" a "xyzw" vrátí stejný výsledek. Přístupové objekty jedné součásti jako je například "x" a "y" jsou typy skalární hodnotu. Přístupové objekty více součásti jsou typy krátké vektoru. Například pokud vytvoříte `int_4` vektor, který je s názvem `fourInts` a má hodnoty 2, 4, 6 a 8, pak `fourInts.y` vrátí celé číslo 4 a `fourInts.rg` vrátí `int_2` objekt, který obsahuje hodnoty 2 a 4.  
+### <a name="swizzling-expressions"></a>Výrazy swizzling  
+ Knihovna krátkých vektorů podporuje `vector_type.identifier` konstrukci přístupového objektu pro přístup ke komponentám krátkého vektoru. `identifier`, Což se označuje jako *výraz swizzling*, určuje součásti vektoru. Výraz může být l hodnotou nebo r-hodnotou. Jednotlivé znaky v identifikátoru mohou být: x, y, z a w; nebo r, g, b a. "x" a "r" znamenají nultou komponentu, "y" a "g" znamenají první komponentu a tak dále. (Všimněte si, že "x" a "r" nelze použít ve stejném identifikátoru.) Proto "rgba" a "xyzw" vrací stejný výsledek. Jednoduchým součástem, jako je například "x" a "y", jsou skalární hodnotové typy. Ke složeným součástem jsou typy krátkého vektoru. Například, pokud vytvoříte `int_4` vektor, který se jmenuje `fourInts` a hodnotami 2, 4, 6 a 8, pak `fourInts.y` vrátí celé číslo 4 a `fourInts.rg` vrátí `int_2` objekt, který obsahuje hodnoty 2 a 4.  
   
-## <a name="texture-classes"></a>Texture – třídy  
- Mnoho grafickými procesory mít hardwaru a mezipaměti, které jsou optimalizovány načíst pixelů a texels a k vykreslení obrázků a textury. [Texture\<T, N >](../../parallel/amp/reference/texture-class.md) třída, která je třídu kontejneru pro objekty texel, zpřístupňuje funkce texture tyto grafickými procesory. Texel může být:  
+## <a name="texture-classes"></a>Třídy textur  
+ Mnoho grafických karet využívá hardware a, které jsou optimalizovány pro načtení pixelů a texelů a pro vykreslení obrazů a textur. [Textury\<T, N >](../../parallel/amp/reference/texture-class.md) třídu, která je třídou kontejneru pro objekty texelu, zpřístupňuje funkce textury tyto GPU. Texel může být:  
   
 -   `int`, `uint`, `float`, `double`, `norm`, Nebo `unorm` skalární.  
   
--   Krátký vektor, který má dva nebo čtyři součásti. Jedinou výjimkou je `double_4`, což není povolené.  
+-   Krátký vektor, který má dvě nebo čtyři součásti. Jedinou výjimkou je `double_4`, což není povoleno.  
   
- `texture` Objekt může mít pořadí 1, 2 nebo 3. `texture` Objekt se dají zachytit pouze pomocí odkazu v argument lambda volání `parallel_for_each`. Textury jsou uloženy na GPU jako Direct3D – texture objekty. Další informace o textury a texels v Direct3D – najdete v tématu [Úvod do textury v Direct3D – 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
+ `texture` Objekt může mít řád 1, 2 nebo 3. `texture` Objektu můžete zachycen pouze odkazem v lambda výrazu volání `parallel_for_each`. Textura je uložena v GPU jako objekty textur rozhraní Direct3D. Další informace o texturách a texelech v Direct3D naleznete v tématu [Úvod do textur v Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
- Typ texel, které používáte, může být jedním z mnoha texture formáty, které se používají v programováním grafiky. Například formátu RGBA využít 32 bity s 8 bitů každý pro R, G, B a skalární elementy. Texture hardwaru grafické karty mají přístup k jednotlivé prvky založené na formátu. Například můžete hardwaru texture Pokud používáte formát RGBA, extrahujte každý prvek 8bitové do formuláře 32-bit. V C++ AMP můžete nastavit bity za skalární element vaší texel tak, aby bez použití bitovým posunutím automaticky přístup jednotlivé skalární elementy v kódu.  
+ Typ texelu, který používáte, může být jeden z mnoha formátů textur, které se používají v programování grafiky. Například formát RGBA může používat 32 bitů s 8 bity pro R, G, B a skalární prvky. Hardware textury grafické karty může přistupovat k jednotlivým prvkům založeným na formátu. Například může hardware textury Pokud používáte formát RGBA, extrahovat každý 8bitový prvek do 32bitové podoby. V jazyce C++ AMP můžete nastavit bity na skalární prvek texelu tak, aby může automaticky přistupovat k jednotlivým skalárním prvkům v kódu bez použití bitového řazení.  
   
 ### <a name="instantiating-texture-objects"></a>Vytváření instancí objektů textury  
- Je možné deklarovat objekt texture bez inicializace. Následující příklad kódu deklaruje několik texture objekty.  
+ Je možné deklarovat objekt textury bez inicializace. Následující příklad kódu deklaruje několik objektů textury.  
   
 ```cpp  
 #include <amp.h>  
@@ -101,7 +101,7 @@ void declareTextures() {
   
 ```  
   
- Můžete také použít konstruktor deklarovat a inicializovat `texture` objektu. Následující příklad kódu vytvoří `texture` objekt z vektor `float_4` objekty. Bity za skalární element nastavena na výchozí hodnoty. Nemůžete použít tento konstruktor s `norm`, `unorm`, nebo krátké vektorů `norm` a `unorm`, protože nemají výchozí bity za skalární elementu.  
+ Můžete také použít konstruktor deklarovat a inicializovat `texture` objektu. Následující příklad kódu vytvoří instanci `texture` objekt z vektoru objektu `float_4` objekty. Bity na skalární prvek je nastavena na výchozí hodnotu. Nelze použít tento konstruktor s `norm`, `unorm`, nebo krátké vektory `norm` a `unorm`, protože nemají výchozí počet bitů na skalární prvek.  
   
 ```cpp  
 #include <amp.h>  
@@ -122,7 +122,7 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
 }  
 ```  
   
- Můžete také deklarace a inicializace `texture` objekt pomocí konstruktoru přetížení, které přijímá ukazatel zdrojová data, velikost zdroje dat v bajtech a bity za skalární elementu.  
+ Můžete také deklarovat a inicializovat `texture` objektu pomocí přetížení konstruktoru, který bere ukazatel na zdroj dat, velikost dat v bajtech a bity na skalární prvek.  
   
 ```cpp  
 void createTextureWithBPC() { // Create the source data.  
@@ -136,18 +136,18 @@ void createTextureWithBPC() { // Create the source data.
 }  
 ```  
   
- Textury v těchto příkladech se vytvářejí na výchozí zobrazení akcelerátoru výchozí. Můžete použít další přetížení konstruktoru, pokud chcete určit `accelerator_view` objektu. Nelze vytvořit objekt texture na akcelerátor procesoru.  
+ Textury v těchto příkladech jsou vytvořeny ve výchozím zobrazení výchozího akcelerátoru. Můžete použít další přetížení konstruktoru, pokud chcete zadat `accelerator_view` objektu. Nelze vytvořit objekt textury na akcelerátoru procesoru.  
   
- Existují omezení velikosti jednotlivých dimenze `texture` objektu, jak je znázorněno v následující tabulce. Pokud překročí mezní hodnoty, je vygenerována chyba spuštění.  
+ Existují omezení velikosti jednotlivých rozměrů `texture` objektu, jak je znázorněno v následující tabulce. Pokud překročíte limity, je vygenerována chyba za běhu.  
   
-|Textura|Velikost omezenou na dimenzi|  
+|Textura|Omezení velikosti na dimenzi|  
 |-------------|---------------------|  
-|Texture\<T, 1 >|16384|  
-|Texture\<T, 2 >|16384|  
-|Texture\<T, 3 >|2048|  
+|Textura\<T, 1 >|16384|  
+|Textura\<T, 2 >|16384|  
+|Textura\<T, 3 >|2048|  
   
-### <a name="reading-from-texture-objects"></a>Čtení z Texture objektů  
- Můžete číst z `texture` objekt pomocí [texture::operator\[\]](reference/texture-class.md#operator_at), [texture:: Operator() – operátor](reference/texture-class.md#operator_call), nebo [Texture::Get – metoda](reference/texture-class.md#get). Dva operátory vrátit hodnotu, není odkaz. Proto nemůže zapisovat do `texture` objekt pomocí `texture::operator\[\]`.  
+### <a name="reading-from-texture-objects"></a>Čtení z objektů textury  
+ Můžete číst z `texture` s použitím [texture::operator\[\]](reference/texture-class.md#operator_at), [texture:: operator() – operátor](reference/texture-class.md#operator_call), nebo [Texture::Get – metoda](reference/texture-class.md#get). Dva operátory vrací hodnotu, ne odkaz. Proto nelze zapisovat do `texture` s použitím `texture::operator\[\]`.  
   
 ```cpp  
 void readTexture() {  
@@ -182,7 +182,7 @@ void readTexture() {
  
 ```  
   
- Následující příklad kódu ukazuje, jak ukládání texture kanály v krátké vektoru, a poté přístup k jednotlivé skalární elementy jako vlastnosti krátké vektoru.  
+ Následující příklad kódu ukazuje způsob uložení kanálů textury v krátkém vektoru a pak přístup k jednotlivým skalárním prvkům jako vlastnosti krátkého vektoru.  
   
 ```cpp  
 void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
@@ -211,30 +211,30 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
  
 ```  
   
- Následující tabulka uvádí platný bitů na kanál pro každý typ vektoru řazení.  
+ V následující tabulce jsou uvedeny platné bity na kanál pro každý typ vektoru řazení.  
   
-|Texture datový typ|Platný bity za skalární – element|  
+|Datový typ textury|Platné bity na skalární prvek|  
 |-----------------------|-----------------------------------|  
-|int, int_2, int_4<br /><br /> uint, uint_2, uint_4|8, 16, 32|  
-|int_3 uint_3|32|  
-|plovoucí desetinná čárka, float_2, float_4|16, 32|  
-|float_3|32|  
-|Dvojitý, double_2|64|  
-|Norm, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|  
+|int, int_2 –, int_4 –<br /><br /> uint, uint_2 –, uint_4 –|8, 16, 32|  
+|int_3 – uint_3 –|32|  
+|float, float_2 –, float_4|16, 32|  
+|float_3 –|32|  
+|double_2 – Double|64|  
+|Norm a norm_2 –, norm_4 –<br /><br /> unorm, unorm_2 –, unorm, 4|8, 16|  
   
-### <a name="writing-to-texture-objects"></a>Zápis do Texture objekty  
- Použití [Texture::set –](reference/texture-class.md#set) metoda k zápisu do `texture` objekty. Objekt texture může být jen pro čtení nebo pro čtení a zápis. Pro objekt texture být možné číst a zapisovat musí být splněny následující podmínky:  
+### <a name="writing-to-texture-objects"></a>Zapisování do objektů textury  
+ Použití [texture::set](reference/texture-class.md#set) metody zapsat do `texture` objekty. Objekt textury může být jen pro čtení nebo pro čtení a zápisu. Pro objekt textury na čtení a zápis musí být splněny následující podmínky:  
 
   
--   T má jenom jednu skalární součást. (Krátký vektory nejsou povoleny.)  
+-   T má pouze jednu skalární součást. (Krátké vektory nejsou povoleny.)  
   
 -   T není `double`, `norm`, nebo `unorm`.  
   
 -   `texture::bits_per_scalar_element` Vlastnost je 32.  
   
- Pokud nejsou všechny tři nastavena hodnota true, pak se `texture` objekt je jen pro čtení. První dvě podmínky jsou kontrolovány během kompilace. Pokud máte kód, který se pokouší o zápis do je vygenerována chyba kompilace `readonly` texture objektu. Podmínky pro `texture::bits_per_scalar_element` je zjištěna v době běhu a generuje modul runtime [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) výjimka, pokud se pokusíte zapsat do jen pro čtení `texture` objektu.  
+ Pokud nejsou všechny tři splněny, pak bude `texture` objekt je jen pro čtení. První dvě podmínky jsou kontrolovány během kompilace. Pokud máte kód, který se pokouší o zápis, je vygenerována chyba kompilace `readonly` objektu textury. Podmínka pro `texture::bits_per_scalar_element` je zjištěna v době běhu a modul runtime generuje [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) výjimku, pokud se pokusíte napsat jen pro čtení `texture` objektu.  
   
- Následující příklad kódu zapíše objekt texture hodnoty.  
+ Následující příklad kódu zapíše hodnoty do objektu textury.  
   
 ```cpp  
 void writeTexture() {  
@@ -251,7 +251,7 @@ void writeTexture() {
 ```  
   
 ### <a name="copying-texture-objects"></a>Kopírování objektů textury  
- Můžete kopírovat mezi objekty texture pomocí [kopie](reference/concurrency-namespace-functions-amp.md#copy) funkce nebo [copy_async –](reference/concurrency-namespace-functions-amp.md#copy_async) fungovat, jak je znázorněno v následujícím příkladu kódu.  
+ Můžete kopírovat mezi objekty textury s použitím [kopírování](reference/concurrency-namespace-functions-amp.md#copy) funkce nebo [copy_async –](reference/concurrency-namespace-functions-amp.md#copy_async) fungovat, jak je znázorněno v následujícím příkladu kódu.  
   
 ```cpp  
 void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
@@ -278,24 +278,24 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
  
 ```  
   
- Můžete také zkopírovat z jednoho texture na jiný pomocí [Texture::copy_to –](reference/texture-class.md#copy_to) metoda. Dva textury může být na různých accelerator_views. Pokud zkopírujete `writeonly_texture_view` objektu, ale data se zkopírují na odpovídající `texture` objektu. Bity za skalární elementu a v rozsahu musí být stejná ve zdrojové a cílové `texture` objekty. Pokud tyto požadavky nejsou splněny, modul runtime vyvolá výjimku.  
+ Můžete také zkopírovat z jedné textury do jiné pomocí [texture::copy_to](reference/texture-class.md#copy_to) metody. Obě textury mohou být na různých accelerator_views. Při kopírování do `writeonly_texture_view` objektu, jsou data zkopírována do základního `texture` objektu. Bity na skalární prvek a rozsah musí být stejná na zdrojových a cílových `texture` objekty. Pokud tyto požadavky nejsou splněny, modul runtime vyvolá výjimku.  
 
   
-## <a name="texture-view-classes"></a>Texture třídy zobrazení  
- Zavádí C++ AMP [texture_view – třída](../../parallel/amp/reference/texture-view-class.md) v [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Texture zobrazení podporují stejné typy texel a pořadí jako [texture – třída](../../parallel/amp/reference/texture-class.md), ale na rozdíl od textury, poskytují přístup k funkcím další hardware, jako je například texture vzorkování a mipmaps. Texture zobrazení podporují přístup jen pro čtení, jen pro zápis a čtení a zápis v základních datech texture.  
+## <a name="texture-view-classes"></a>Třídy zobrazení textur  
+ C ++ AMP představuje [texture_view – třída](../../parallel/amp/reference/texture-view-class.md) v [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Zobrazení textury podporují stejné typy a řazení texel jako [texture – třída](../../parallel/amp/reference/texture-class.md), ale na rozdíl od textur poskytují přístup k dalším funkcím hardwaru například vzorkování textury a mipmapy. Zobrazení textury podporují přístup jen pro čtení, pouze pro zápis a čtení i zápis v podkladových datech textury.  
   
--   Poskytuje přístup jen pro čtení `texture_view<const T, N>` specializace šablony, které podporuje prvky, které mají 1, 2 nebo 4 součásti, texture vzorkování a dynamické přístup k rozsah mipmap úrovní, které jsou určeny, když je vytvořena instance zobrazení.  
+-   Přístup jen pro čtení je poskytován `texture_view<const T, N>` textury specializace šablony, které podporují prvky, které mají 1, 2 nebo 4 komponenty, vzorkování a dynamický přístup k rozsahu úrovní mipmap, které jsou určeny při vytváření instance zobrazení.  
   
--   Poskytuje přístup jen pro zápis Nespecializovaný šablony třídy `texture_view<T, N>`, který podporuje prvky, které mají součásti 2 nebo 4 a přistupovat k jedné úrovni mipmap, které určil, když je vytvořena instance zobrazení. Vzorkování nepodporuje.  
+-   Přístup jen pro zápis je poskytován základě nespecializované šablony třídy `texture_view<T, N>`, která podporuje prvky, které mají 2 nebo 4 komponenty a mají přístup k jedné úrovni mipmap určené při vytváření instance zobrazení. Vzorkování není podporováno.  
   
--   Poskytuje přístup pro čtení a zápis Nespecializovaný šablony třídy `texture_view<T, N>`, který, jako je textury, podporuje prvky, které mají jenom jedna součást; zobrazení můžete přístup jednu úroveň mipmap, které určil, když je vytvořena instance. Vzorkování nepodporuje.  
+-   Přístup pro čtení a zápis je poskytován šablonu na základě nespecializované třídy `texture_view<T, N>`, která, stejně jako textury, podporuje prvky, které mají pouze jednu komponentu, zobrazení může přistupovat k jedné úrovni mipmap, která je určena, když je vytvořena instance. Vzorkování není podporováno.  
   
- Texture zobrazení se podobá zobrazení pole, ale neposkytuje funkci správy a přesun dat, [array_view – třída](../../parallel/amp/reference/array-view-class.md) nabízí v porovnání s [array – třída](../../parallel/amp/reference/array-class.md). A `texture_view` jsou přístupné pouze na zobrazení akcelerátoru, kde se nachází v základních datech texture.  
+ Zobrazení textury jsou podobná zobrazením polí, ale neposkytují funkci správy a pohybu dat, která [array_view – třída](../../parallel/amp/reference/array-view-class.md) nabízí v porovnání [array – třída](../../parallel/amp/reference/array-class.md). A `texture_view` je přístupný pouze na akcelerátoru zobrazení, ve které se nachází v podkladových datech textury.  
   
-### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view zastaralé  
- Pro [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP zavádí lepší podporu pro texture funkce hardwaru, například vzorkování a mipmaps, který nelze nepodporuje [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md). Nově přináší `texture_view` třída podporuje nadmnožinou funkce v `writeonly_texture_view`; v důsledku toho `writeonly_texture_view` je zastaralý.  
+### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view – nepoužívané  
+ Pro [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP přináší lepší podporu funkcí hardwaru pro textury jako je odběr vzorků a Mipmap, které nemusí být podporovány [writeonly_texture_view – třída](../../parallel/amp/reference/writeonly-texture-view-class.md). Nově zavedená `texture_view` třída podporuje nadmnožinu funkcí v `writeonly_texture_view`; v důsledku toho `writeonly_texture_view` je zastaralý.  
   
- Doporučujeme, abyste – aspoň pro nový kód – používaný `texture_view` do funkce přístupu, který byl dříve poskytované `writeonly_texture_view`. Porovnejte následující příklady dvě kódu, které zapsat do texture objekt, který má dvě součásti (int_2). Všimněte si, že v obou případech zobrazení, `wo_tv4`, musí být zachyceny hodnotu ve výrazu lambda. Tady je příklad, který používá nastavení nové `texture_view` třídy:  
+ Doporučujeme – alespoň pro nový kód –, který používáte `texture_view` pro přístup k funkcím, které byly dříve poskytovány pomocí `writeonly_texture_view`. Porovnejte následující dva příklady, které se zápis do objektu textury, která má dvě součásti (int_2). Všimněte si, že v obou případech platí, zobrazení `wo_tv4`, musí být zachyceno hodnotou ve výrazu lambda. Tady je příklad, který používá novou `texture_view` třídy:  
   
 ```cpp  
 void write2ComponentTexture() {  
@@ -311,7 +311,7 @@ void write2ComponentTexture() {
 }  
 ```  
   
- A tady je nepoužívané `writeonly_texture_view` třídy:  
+ A zde je zastaralá `writeonly_texture_view` třídy:  
   
 ```  
 void write2ComponentTexture() {  
@@ -327,12 +327,12 @@ void write2ComponentTexture() {
 }  
 ```  
   
- Jak můžete vidět, ukázky kódu dva jsou téměř shodná při všechny, které byste je na úroveň primární mipmap zápisu. Pokud jste použili `writeonly_texture_view` ve stávající kód a nemáte v plánu pro zlepšení, že kód, nemusíte ho změnit. Ale pokud uvažujete o uvedení tento kód předat dál, doporučujeme přepište ho na použití `texture_view` protože vylepšení v ní podporují nové funkce texture hardwaru. Přečtěte si další informace o tyto nové funkce.  
+ Jak vidíte, dva příklady jsou téměř identické, pokud všechny prováděné činnosti provádějí zapisuje do na úrovni primární mipmapy. Pokud jste použili `writeonly_texture_view` v existujícím kódu a neplánujete vylepšit, že kód, není nutné ho změnit. Nicméně pokud uvažujete o převedení tohoto kódu vpřed, doporučujeme přepsat ho pomocí `texture_view` protože vylepšení v něm podporují nové funkce textury hardwaru. Přečtěte si další informace o těchto nových funkcí.  
   
- Další informace o vyřazení nástroje `writeonly_texture_view`, najdete v části [přehled návrhu zobrazení Texture v C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.  
+ Další informace o zavržení `writeonly_texture_view`, naleznete v tématu [přehled návrhu zobrazení textury v C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.  
   
 ### <a name="instantiating-texture-view-objects"></a>Vytváření instancí objektů zobrazení textury  
- Deklarace `texture_view` je podobná deklarace `array_view` přidružená `array`. Následující příklad kódu deklaruje několik `texture` objekty a `texture_view` objekty, které jsou spojeny s nimi.  
+ Deklarace `texture_view` je podobná deklaraci `array_view` , který je přidružený `array`. Následující příklad kódu deklaruje několik `texture` objekty a `texture_view` objekty, které jsou s nimi spojeny.  
   
 ```  
 #include <amp.h>  
@@ -359,19 +359,19 @@ void declareTextureViews()
 }  
 ```  
   
- Všimněte si, jak zobrazit texturou s typem elementu bez const a má jedna součást je pro čtení a zápis, ale texture zobrazení je jiný const s typem elementu, ale má více než jeden componenent jsou jen pro zápis. Typy const element Texture zobrazení jsou vždy jen pro čtení, ale pokud je typ elementu není const, pak počet součástí v elementu Určuje, zda je pro čtení a zápis (1 součást) nebo pouze pro zápis (více součástí).  
+ Všimněte si, jak zobrazení textury jejíž typ elementu je nekonstantní a má jednu součást je pro čtení i zápis, ale zobrazení textury, jejíž typ elementu je nekonstantní, ale má více než jednu součást jsou jen pro zápis. Zobrazení textur typů prvků const jsou vždy jen pro čtení, ale pokud je typ prvku nekonstantní, pak počet součástí v prvku určuje, zda je pro čtení i zápis (1 komponenta) nebo pouze pro zápis (více komponent).  
   
- Typ elementu `texture_view`– jeho const obchodní a také počet komponent má – také hrají roli při určování, zda zobrazení podporuje texture vzorkování, a jak je přístupná mipmap úrovně:  
+ Typ elementu `texture_view`– jeho const-ness a také počet komponent, které má, také hraje roli při určování, zda zobrazení podporuje vzorkování textury a jak je přístupný úrovní mipmap:  
   
-|Typ|Součásti|Číst|Write|Vzorkování|Mipmap přístup|  
+|Typ|Součásti|Číst|Write|Vzorkování|Přístup Mipmap|  
 |----------|----------------|----------|-----------|--------------|-------------------|  
-|texture_view\<const T, N >|1, 2, 4|Ano|Ne (1)|Ano|Ano, indexovanou. Rozsah určí při vytvoření instance.|  
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Ano<br /><br /> Ne (2)|Ano<br /><br /> Ano|Ne (1)<br /><br /> Ne (1)|Ano, jedna úroveň. Úroveň určí při vytvoření instance.<br /><br /> Ano, jedna úroveň. Úroveň určí při vytvoření instance.|  
+|texture_view\<const T, N >|1, 2, 4|Ano|Ne (1)|Ano|Ano, indexovatelné. Rozsah je určena při instanci.|  
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Ano<br /><br /> Ne (2)|Ano<br /><br /> Ano|Ne (1)<br /><br /> Ne (1)|Ano, jedna úroveň. Úroveň je určena při instanci.<br /><br /> Ano, jedna úroveň. Úroveň je určena při instanci.|  
   
- Z této tabulky uvidíte, že zobrazení jen pro čtení texture plně podporují nové možnosti za nebude moci zapisovat do zobrazení. V tom, že mají přístup pouze jedna úroveň mipmap jsou omezené zapisovatelné texture zobrazení. Zobrazení pro čtení a zápis texture jsou specializované i více než zapisovatelné těch, protože zvyšují požadavek, že typ elementu texture zobrazení má jenom jedna součást. Všimněte si, že vzorkování není podporována pro zobrazení s možností zápisu texture protože se jedná o operaci čtení.  
+ Z této tabulky uvidíte, že zobrazení textur jen pro čtení plně podporují nové možnosti výměnou nemůže zapisovat do zobrazení. Zapisovatelné zobrazení textur jsou omezeny v tom, že jsou přístup pouze k jedné úrovni mipmap. Zobrazení textur pro čtení a zápis jsou ještě více specializované než ty výhradně zapisovatelné, protože přidávají požadavek, aby typ prvku zobrazení textury měl pouze jednu komponentu. Všimněte si, že vzorkování není podporováno pro zobrazení textury s možností zápisu, protože se jedná operaci čtení.  
   
-### <a name="reading-from-texture-view-objects"></a>Čtení ze Texture objekty zobrazení  
- Čtení dat unsampled texture prostřednictvím zobrazení texture je stejně jako jeho čtení z texture samostatně, ale textury jsou zachycenou referenční, zatímco texture zobrazení jsou zachyceny hodnotu. Následující příklady dvě kódu ukazují; první pomocí `texture` pouze:  
+### <a name="reading-from-texture-view-objects"></a>Čtení z objektů zobrazení textury  
+ Čtení nevzorkovaných textury dat prostřednictvím zobrazení textury je stejné jako čtení z textury, s tím rozdílem, že textury jsou zachycovány na základě odkazu, zatímco zobrazení textury jsou zachyceny hodnotou. Následující dva příklady ukazují; Nejprve je potřeba pomocí `texture` pouze:  
   
 ```  
 void write2ComponentTexture() {  
@@ -385,7 +385,7 @@ void write2ComponentTexture() {
 }  
 ```  
   
- A zde je stejný, s výjimkou teď používá `texture_view` třídy:  
+ A zde je stejný příklad, s tím rozdílem, že nyní používá `texture_view` třídy:  
   
 ```  
 void write2ComponentTexture() {  
@@ -400,16 +400,16 @@ void write2ComponentTexture() {
 
 }  
 ```  
- Texture zobrazení, jehož elementy jsou založené na typy s plovoucí desetinnou čárkou – například float, float_2 nebo float_4 – můžete také pro čtení s použitím vzorkování texture Pokud chcete využít výhod podpory hardwaru pro různé režimy filtrování a adresování režimy. C++ AMP podporuje dva filtrování režimy, které jsou nejběžnější způsoby výpočetní – bod filtrování (nejbližší sousedním) a lineární filtrování (váženým průměrem) – a čtyři adresování režimy – uzavřen, zrcadlení, těsně a ohraničení. Další informace o adresování režimech najdete v tématu [address_mode – výčet](reference/concurrency-graphics-namespace-enums.md#address_mode).  
+ Texture – zobrazení, jehož prvky jsou založeny na typech s plovoucí desetinnou čárkou, například float, float_2 – nebo float_4 – lze také číst pomocí odběru vzorků textury výhod hardwarové podpory pro různé režimy filtrování a adresování. C++ AMP podporuje dva režimy filtrování, které jsou nejčastější ve výpočetních scénářích – bod filtrování (Nejbližší soused) a lineární filtrování (vážený průměr) – a čtyři režimy adresování – zabalené, zrcadlené, omezen a ohraničení. Další informace o režimech adresování naleznete v tématu [address_mode – výčet](reference/concurrency-graphics-namespace-enums.md#address_mode).  
   
- Kromě režimy, které podporuje C++ AMP přímo můžete pomocí zprostředkovatele komunikace s objekty rozhraní API přijmout texture sampler, který byl vytvořen přímo pomocí platformy API přístup další filtrování a adresování režimů základní platformy. Direct3D – například podporuje další filtrování režimy například volba filtrování a můžou použít jiný režim adresování Každá dimenze texturou. Můžete vytvořit texture sampler zabalené svisle, vodorovně zrcadlení a vzorkovat jejichž souřadnice s volba filtrování pomocí rozhraní API Direct3D – a pak ho využít ve vašem kódu C++ AMP pomocí `make_sampler` spolupráce rozhraní API. Další informace najdete v části [Texture vzorkování v C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.  
+ Kromě režimů, které přímo podporují C++ AMP může přístup ostatním režimům filtrování a režimům adresování základní platformy pomocí rozhraní API zprostředkovatele pro osvojení vzorkovače textury, který byl vytvořen přímo pomocí rozhraní API platformy. Direct3D například podporuje jiné režimy filtrování, například anizotropní filtrování a můžete použít jiný režim adresování pro každou dimenzi textury. Můžete vytvořit vzorkovač textury, jehož souřadnice jsou zabaleny svisle, zrcadleny vodorovně a vzorkovány pomocí anizotropního filtrování pomocí rozhraní API Direct3D a pak ho využít ve svém kódu C++ AMP pomocí `make_sampler` vzájemné spolupráce rozhraní API. Další informace najdete v části [vzorkování textur v c ++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.  
   
- Texture zobrazení také podporují čtení mipmaps. Zobrazení jen pro čtení texture, (ty, které mají const typ elementu) nabízejí nejvíce flexibilitu, protože rozsah mip úrovně, které určí při vytvoření instance se dá dynamicky vzorkovat a vzhledem k tomu, že jsou podporovány elementy, které mají 1, 2 nebo 4 součásti. Čtení a zápis texture zobrazení, která mají prvky, které mají jednu součást také podporují mipmaps, ale jenom úrovně, který určí při vytvoření instance. Další informace najdete v tématu [Texture s Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na paralelní programování v blogu nativního kódu.  
+ Zobrazení textury také podporují čtení Mipmap. Zobrazení textur jen pro čtení (těch, které mají konstantní typ prvku) nabízí největší flexibilitu, protože rozsah úrovně mip, která je určena při instanci, lze dynamicky vzorkovat, a protože jsou podporovány prvky, které mají 1, 2 nebo 4 komponenty. Zobrazení textury pro čtení i zápis, která mají prvky, které mají jednu komponentu, také podporují mipmapy, ale pouze pro úroveň, která je určena při instanci. Další informace najdete v tématu [textury s Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na paralelní programování v blogu nativního kódu.  
   
-### <a name="writing-to-texture-view-objects"></a>Zápis do Texture objekty zobrazení  
- Použití [texture_view::Get – metoda](reference/texture-view-class.md#get) k zápisu do základní `texture` prostřednictvím `texture_view` objektu. Texture zobrazení může být jen pro čtení, čtení a zápis nebo jen pro zápis. Pro zobrazení texture být zapisovatelný musí mít typ elementu, který je jiný const; pro zobrazení texture čtení a zápis její typ elementu musí rovněž mít pouze jednu součást. Texture zobrazení, jinak je jen pro čtení. Můžete pouze jeden mipmap úroveň přístupu tohoto texturou v čase prostřednictvím texture zobrazení a úroveň je zadána při vytváření instance zobrazení.  
+### <a name="writing-to-texture-view-objects"></a>Zapisování do objektů zobrazení textury  
+ Použití [texture_view::Get – metoda](reference/texture-view-class.md#get) k zápisu do základní `texture` prostřednictvím `texture_view` objektu. Zobrazení textury může být jen pro čtení, čtení a zápis nebo jen pro zápis. Pro zobrazení textury jako zapisovatelné musí mít typ elementu, který je nekonstantní; pro zobrazení textury na čtení a zápis musí jeho typ elementu také mít pouze jednu komponentu. V opačném případě je zobrazení textury jen pro čtení. Je možné jenom přístup k jedné úrovni mipmap textury najednou prostřednictvím zobrazení textury a úroveň je určena při vytváření instance zobrazení.  
   
- Tento příklad ukazuje, jak k zápisu do podrobné mipmap sekundu většinu úroveň texture, který má 4 mipmap úrovně. Úroveň nejpodrobnější mipmap je 0.  
+ Tento příklad ukazuje, jak zapisovat druhé nejvíce podrobné úrovně mipmap textury, která má 4 úrovně mipmap. Nejpodrobnější úroveň mipmap je úroveň 0.  
   
 ```  
 // Create a texture that has 4 mipmap levels : 16x16, 8x8, 4x4, 2x2  
@@ -429,7 +429,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Interoperabilita  
 
- Modul runtime C++ AMP podporuje spolupráci mezi `texture<T,1>` a [ID3D11Texture1D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraní](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metoda trvá `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture –](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metoda trvá `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.  
+ Runtime C++ AMP podporuje interoperabilitu mezi `texture<T,1>` a [ID3D11Texture1D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) přijímá metodu `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) přijímá metodu `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [double_2 – třída](../../parallel/amp/reference/double-2-class.md)   

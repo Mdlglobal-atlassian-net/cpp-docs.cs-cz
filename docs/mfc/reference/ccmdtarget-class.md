@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027651"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208686"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 Základní třída architektury zpráva – mapa knihovny Microsoft Foundation Class.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  Ukazatel na ukazatel `ITypeInfo` rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- HRESULT označující úspěchu nebo neúspěchu volání. V případě úspěchu, * *ppTypeInfo* odkazuje na rozhraní typu informací.  
+ HRESULT označující úspěchu nebo neúspěchu volání. V případě úspěšného ověření \* *ppTypeInfo* odkazuje na rozhraní typu informací.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Získá ukazatel na knihovnu typů.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Ukazatel na ukazatel `ITypeLib` rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- HRESULT označující úspěchu nebo neúspěchu volání. V případě úspěchu, * *ppTypeLib* odkazuje na typ rozhraní knihovny.  
+ HRESULT označující úspěchu nebo neúspěchu volání. V případě úspěšného ověření \* *ppTypeLib* odkazuje na typ rozhraní knihovny.  
   
 ### <a name="remarks"></a>Poznámky  
  Odvozené třídy by měly přepsat tuto členskou funkci (Pokud přepsána nebyla, `GetTypeLib` vrátí TYPE_E_CANTLOADLIBRARY). Použití [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, která také implementuje `GetTypeInfoCount` a `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* hodnota|*pExtra* hodnota|  
 |-------------------|--------------------|  
-|CN_COMMAND|[Ccmdui –](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|Ccmdui – *|  
-|CN_OLECOMMAND|[Colecmdui –](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[Ccmdui –](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|Ccmdui –\*|  
+|CN_OLECOMMAND|[Colecmdui –](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Příklad  

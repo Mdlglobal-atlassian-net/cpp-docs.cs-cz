@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 atomic – konstrukce | Microsoft Docs
+title: 2.6.4 atomic – konstrukce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,47 +12,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688125"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208130"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic – konstrukce
-`atomic` – Direktiva zajišťuje, atomicky, aktualizaci umístění konkrétní paměti místo vystavení možnost více souběžných vláken zápis. Syntaxe `atomic` – Direktiva vypadá takto:  
+`atomic` Směrnice zajišťuje atomicky, aktualizaci umístění konkrétní paměťové místo vystavení možnost více souběžných vláken pro zápis. Syntaxe `atomic` direktivy je následující:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- Příkaz výrazu musí mít jednu z následujících podob:  
+ Příkaz výrazu musí mít jednu z následujících forem:  
   
- *x binop*= *expr*  
+ *x binop*= *výraz*  
   
  x ++  
   
  ++ x  
   
- x –  
+ x--  
   
- – x  
+ --x  
   
- V předchozím výrazy:  
+ V předchozích výrazů:  
   
--   *x* je výraz lvalue s skalárního typu.  
+-   *x* je výraz l-hodnota s skalárního typu.  
   
--   *Expr* je výraz s skalárního typu a neodkazuje objektu určeném *x*.  
+-   *výraz* je výraz s skalárního typu a neodkazuje objektu určeném *x*.  
   
--   `binop` není přetížené operátor a je jedním z +, *, -, / &, ^, &#124;, <\<, nebo >>.  
+-   `binop` není přetíženého operátoru a je jedním z +, \*, -, / &, ^, &#124;, <\<, nebo >>.  
   
- I když je definované implementací jestli implementace nahradí všechny `atomic` direktivy s **kritické** direktivy, které mají stejnou jedinečný *název*, `atomic` – direktiva Povolí lepší optimalizace. Často hardwaru pokyny jsou k dispozici, můžete provést atomic aktualizace s nejmenším režie.  
+ I když je definováno implementací Určuje, zda implementace nahradí všechny `atomic` direktivy s **kritické** direktivy, které mají stejný jedinečný *název*, `atomic` – direktiva povolení lepší optimalizace. Často hardwarové pokyny jsou k dispozici, které můžete provádět atomické aktualizace s minimálními nároky.  
   
- Zatížení a ukládání objektu určeném *x* jsou atomic; vyhodnocení *expr* není atomic. Abyste se vyhnuli časování, by měly být chráněné všechny aktualizace umístění paralelně s `atomic` direktivy, kromě těch, které jsou známé jako bezplatné časování.  
+ Zatížení a úložiště objektu určeném *x* jsou atomické, vyhodnocení *expr* není atomické. Aby nedošlo ke konfliktům časování, by měly být chráněné všechny aktualizace umístění paralelně s `atomic` direktiv, kromě těch, které jsou známé jako zdarma ke konfliktům časování.  
   
- Omezení `atomic` – direktiva jsou následující:  
+ Omezení `atomic` směrnice jsou následující:  
   
--   Atomic všude, kde x umístění úložiště v rámci programu musí mít kompatibilní typ.  
+-   Musí mít kompatibilní typ atomic všude, kde x umístění úložiště v celém programu.  
   
 ## <a name="examples"></a>Příklady:  
   

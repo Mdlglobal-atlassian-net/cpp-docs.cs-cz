@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337444"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209128"
 ---
 # <a name="cdaoworkspace-class"></a>Cdaoworkspace – třída
 Spravuje relace s názvem databáze chráněné heslem od přihlášení po odhlášení jednoho uživatele.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parametry  
  *lpszDefaultUser*  
- Výchozí uživatelské jméno. Uživatelské jméno může mít délku 1 až 20 znaků a obsahovat abecední znaky, znaky s diakritikou, čísla, mezery a symboly, s výjimkou: "(uvozovky) / (lomítko), \ (zpětné lomítko), \[ \] (závorek): (dvojtečka), &#124; () kanál), \< (méně – znaménko), > (větší – znaménko), + (znaménko plus) = (rovná znaménko), (středník), (čárka) (otazník) * (hvězdička) úvodní mezery a řídicí znaky (ASCII 00 do ASCII 31). Související informace naleznete v tématu "Vlastnost UserName" v nápovědě k DAO.  
+ Výchozí uživatelské jméno. Uživatelské jméno může mít délku 1 až 20 znaků a obsahovat abecední znaky, znaky s diakritikou, čísla, mezery a symboly, s výjimkou: "(uvozovky) / (lomítko), \ (zpětné lomítko), \[ \] (závorek): (dvojtečka), &#124; () kanál), \< (méně – znaménko), > (větší – znaménko), + (znaménko plus) = (rovná znaménko), (středník), (čárka) (otazník), \* (hvězdička) úvodní mezery a řídicí znaky (ASCII 00 do ASCII 31). Související informace naleznete v tématu "Vlastnost UserName" v nápovědě k DAO.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí uživatelské jméno, které jste nastavili platí pro nové pracovní prostory vytvořené po volání. Při vytváření dalších pracovních prostorů, není nutné zadat uživatelské jméno [vytvořit](#create) volání.  

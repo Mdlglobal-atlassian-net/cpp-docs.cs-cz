@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954627"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208523"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator – třída
 
@@ -69,8 +69,8 @@ Tato třída adaptéru se používá v případě potřeby k oddělení přiděl
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `ii`  =  `x`.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu iterátoru úložiště * `i`  =  `x` pro ukládání do paměti.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `ii`  =  `x`.|
+|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu iterátoru úložiště \* `i`  =  `x` pro ukládání do paměti.|
 |[Operator ++](#op_add_add)|Operátory preincrement a následného zvýšení u iterátorů úložiště.|
 
 ## <a name="requirements"></a>Požadavky
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 Typ je synonymum pro parametr šablony `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::Operator *
+## <a name="op_star"></a>  raw_storage_iterator::Operator\*
 
 Operátor přesměrování používaný k implementaci výrazu iterátoru úložiště \* *ii* = *x*.
 

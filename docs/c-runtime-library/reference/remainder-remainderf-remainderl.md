@@ -1,5 +1,5 @@
 ---
-title: zbývající, remainderf –, remainderl | Microsoft Docs
+title: remainderf – zbývající, remainderl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406664"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209414"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
-Vypočítá zbytek podíl dvou hodnot s plovoucí desetinnou čárkou, zaokrouhlí na nejbližší hodnotu integrálu.
+Vypočítá zbytek z podílu dvou hodnot s plovoucí desetinnou čárkou, zaokrouhlí na nejbližší celočíselnou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,28 +64,28 @@ long double remainder( long double x, long double y ); /* C++ only */
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Čítači.
+Čítač.
 
 *y*<br/>
 Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S plovoucí desetinnou čárkou zbytek *x* / *y*. Pokud hodnota *y* je 0,0, **zbývající** vrátí quiet NaN. Informace o reprezentace quiet NaN pomocí **printf** rodiny, viz [printf _printf_l –, wprintf, _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
+Zbytek s plovoucí desetinnou čárkou z *x* / *y*. Pokud hodnota *y* je 0,0, **zbývající** vrátí tichý NaN. Informace o reprezentaci tichého NaN **printf** řady, viz [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Zbývající** funkce Výpočet zbytku s plovoucí desetinnou čárkou *r* z *x* / *y* tak, aby *x*   =  *n* * *y* + *r*, kde *n*je v poli hodnota na nejbližší celé číslo *x* / *y* a *n*i je vždy, když &#124; *n*  -  *x* / *y* &#124; = 1/2. Když *r* = 0, *r* má stejné znaménko jako *x*.
+**Zbývající** funkce vypočítá zbytek s plovoucí desetinnou čárkou *r* z *x* / *y* tak, aby *x*   =  *n* \* *y* + *r*, kde *n*je v hodnotě na nejbližší celé číslo *x* / *y* a *n*sudé pokaždé, když &#124; *n*  -  *x* / *y* &#124; = 1/2. Když *r* = 0, *r* má stejné znaménko jako *x*.
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **zbývající** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **zbývající** vždy přebírá dva **dvojité** argumentů a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **zbývající** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **zbývající** vždy má dva **double** argumenty a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Funkce|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |--------------|---------------------|-|
-|**zbývající**, **remainderf –**, **remainderl**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**zbývající**, **remainderf –**, **remainderl**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -109,7 +109,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

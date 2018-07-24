@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337418"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209167"
 ---
 # <a name="cdrawingmanager-class"></a>Cdrawingmanager – třída
 `CDrawingManager` Třída implementuje složité algoritmy kreslení.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda se nezdaří s chybou, pokud buď *k1* nebo *k2* je menší než nula. Pokud se oba tyto parametry jsou nastaveny na hodnotu 0, vrátí metoda `RGB(0, 0, 0)`.  
   
- Vážený poměr se počítá pomocí následujícího vzorce: (barvou1 * k1 + barva2 \* k2) /(k1 + k2). Po vážený poměr se určí, metoda počítá světelnost pro smíšený barvu. Potom vynásobí světelnost podle *dblLumRatio*. Pokud je hodnota větší než 1.0, metoda nastaví světelnost pro smíšený barvu na novou hodnotu. V opačném případě světelnost nastavena na 1.0.  
+ Vážený poměr se počítá pomocí následujícího vzorce: (barvou1 \* k1 + barva2 \* k2) /(k1 + k2). Po vážený poměr se určí, metoda počítá světelnost pro smíšený barvu. Potom vynásobí světelnost podle *dblLumRatio*. Pokud je hodnota větší než 1.0, metoda nastaví světelnost pro smíšený barvu na novou hodnotu. V opačném případě světelnost nastavena na 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Zdrojový řadič domény obsah uvnitř daného obdélník se otočí o 90 stupňů.  

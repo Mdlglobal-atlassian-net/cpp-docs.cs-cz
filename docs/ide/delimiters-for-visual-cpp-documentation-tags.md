@@ -1,5 +1,5 @@
 ---
-title: Oddělovače pro dokumentační značky jazyka Visual C++ | Microsoft Docs
+title: Oddělovače pro dokumentační značky ve Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337571"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208572"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Oddělovače pro dokumentační značky ve Visual C++
-Použití značky dokumentace vyžaduje oddělovače, které označují kompilátoru kde komentáře dokumentace k zahájení a ukončení.  
+Použití dokumentační značky vyžaduje oddělovače, které označují kompilátoru kde Dokumentační komentář začíná a končí.  
   
- Můžete použít následující typy oddělovače s dokumentační značky XML:  
+ Můžete použít následující typy oddělovače se značkami dokumentace XML:  
   
  `///`  
- Toto je formulář, který je zobrazeno v příkladech dokumentace a použít šablony projektů Visual C++.  
+ Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  
   
  `/** */`  
  Jedná se o Víceřádkový oddělovače.  
   
- Existují některé formátování pravidla při použití `/** */` oddělovače:  
+ Existují některé formátování při použití pravidla `/** */` oddělovače:  
   
--   Pro řádek, který obsahuje `/**` oddělovač, pokud zbývající řádku je prázdné znaky, řádek není zpracován pro komentáře. Pokud je první znak mezer, že prázdný znak je ignorován a zbytek řádku je zpracovat. V opačném celý text řádku po `/**` oddělovač zpracovávány jako součást komentář.  
+-   Pro řádek, který obsahuje `/**` oddělovač, pokud zbytek řádku je prázdný znak řádku není zpracovávána pro poznámky. Pokud je první znak prázdným znakem, že znak bílého prostoru řádku je ignorován a zbytek řádku je zpracovat. V opačném případě celý text řádku po `/**` oddělovač zpracovávány jako součást komentář.  
   
--   Pro řádek, který obsahuje `*/` oddělovač, pokud je pouze mezera až `*/` oddělovač, daného řádku je ignorováno. Jinak hodnota textu v řádku než `*/` oddělovač zpracovávány jako součást komentář, dodržování pravidel porovnávání popsané v následující odrážka.  
+-   Pro řádek, který obsahuje `*/` oddělovač, pokud existuje jenom prázdné znaky až `*/` oddělovač, tento řádek se ignoruje. V opačném případě text na řádku až `*/` oddělovač zpracovávány jako součást komentář porovnávání vzorů podle pravidel popsaných v následující odrážky.  
   
--   Řádků po ten, který začíná `/**` oddělovač, kompilátor hledá společný vzorek na začátku každého řádku, která se skládá z mezer volitelné a znak hvězdičky (`*`), za nímž následují další volitelné mezer. Pokud kompilátor najde společnou sadu znaků na začátku každého řádku, se budou ignorovat tento vzor pro všechny řádky po `/**` oddělovač, než a případně včetně řádek, který obsahuje `*/` oddělovač.  
+-   Pro řádky za ten, který začíná `/**` oddělovač, hledá kompilátor běžný vzor na začátku každého řádku, který se skládá z volitelné prázdné místo a hvězdičku (`*`) a po něm další volitelné prázdné znaky. Pokud kompilátor najde společnou sadu znaků na začátku každého řádku, bude ignorovat tento vzor pro všechny řádky za `/**` oddělovač, až po a pravděpodobně včetně řádek, který obsahuje `*/` oddělovač.  
   
  Příklady:  
   
--   Část pouze následující komentář, který bude zpracován je řádek, který začíná `<summary>`. Následující formáty dvě značky vytvoří stejné komentáře:  
+-   Řádek, který začíná je jediná součást následující komentář, který se zpracuje `<summary>`. Následující dvě značky formáty vytvoří stejný komentáře:  
   
     ```  
     /**  
@@ -51,7 +51,7 @@ Použití značky dokumentace vyžaduje oddělovače, které označují kompilá
     /** <summary>text</summary> */  
     ```  
   
--   Kompilátor použije vzorec "*" Ignorovat na začátku druhé a třetí řádky.  
+-   Kompilátor použije vzor " \* " na začátku druhé a třetí řádky ignorovat.  
   
     ```  
     /**  
@@ -59,7 +59,7 @@ Použití značky dokumentace vyžaduje oddělovače, které označují kompilá
      *  text </summary>*/  
     ```  
   
--   Kompilátor vyhledá žádné vzor v tohoto komentáře, protože neexistuje žádný hvězdičky na druhém řádku. Proto veškerý text na řádcích druhé a třetí až do `*/`, budou zpracovány jako součást komentář.  
+-   Kompilátor najde žádný vzor v tento komentář, protože neexistuje žádný hvězdičku na druhém řádku. Proto se veškerý text na řádcích druhé a třetí až do `*/`, bude zpracována jako součást komentář.  
   
     ```  
     /**  
@@ -67,7 +67,7 @@ Použití značky dokumentace vyžaduje oddělovače, které označují kompilá
        text </summary>*/  
     ```  
   
--   Kompilátor vyhledá žádné vzor v tohoto komentáře dvou důvodů. První je žádný řádek, který začíná konzistentní počet mezer před hvězdičku. Druhý páté řádek začíná na kartě, který neodpovídá prostory. Proto všechny text z druhého řádku až `*/` budou zpracovány jako součást komentář.  
+-   Kompilátor vyhledá žádný model v tento komentář dvou důvodů. Nejprve neexistuje žádný řádek, který začíná konzistentní počet mezer před hvězdičku. Za druhé pátý řádek začíná kartu, která se neshoduje s mezery. Proto veškerý text z druhého řádku až `*/` se zpracuje jako součást komentář.  
   
     ```  
     /**  
