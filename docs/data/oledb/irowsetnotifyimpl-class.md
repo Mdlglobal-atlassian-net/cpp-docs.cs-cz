@@ -1,5 +1,5 @@
 ---
-title: IRowsetNotifyImpl – třída | Microsoft Docs
+title: IRowsetNotifyImpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,31 +9,46 @@ f1_keywords:
 - ATL.IRowsetNotifyImpl
 - ATL::IRowsetNotifyImpl
 - IRowsetNotifyImpl
+- IRowsetNotifyImpl.OnFieldChange
+- IRowsetNotifyImpl::OnFieldChange
+- OnFieldChange
+- IRowsetNotifyImpl::OnRowChange
+- IRowsetNotifyImpl.OnRowChange
+- OnRowChange
+- OnRowsetChange
+- IRowsetNotifyImpl::OnRowsetChange
+- IRowsetNotifyImpl.OnRowsetChange
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetNotifyImpl class
+- OnFieldChange method
+- OnRowChange method
+- OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 860b735863acbcac869a4a297984084946aaf028
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b39a5428fa5ba57e38e0190255ac0dcf60b1a5e
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106255"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233708"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl – třída
-Implementuje a zaregistruje [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) na příjemce (také označované jako "jímka"), aby ho mohl zpracovávat oznámení.  
+Implementuje a zaregistruje [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) na spotřebitele (označované také jako "jímka") tak, aby se zpracování oznámení.  
   
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -41,20 +56,88 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
   
 |||  
 |-|-|  
-|[Onfieldchange –](../../data/oledb/irowsetnotifyimpl-onfieldchange.md)|Upozorní příjemce všechny změny na hodnotu sloupce.|  
-|[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|Upozorní spotřebitele první změna na řádek nebo všechny změny, která má vliv na celý řádek.|  
-|[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|Upozorní příjemce všechny změny ovlivňující celou sadu řádků.|  
+|[Onfieldchange –](#onfieldchange)|Upozorní příjemce všechny změny hodnoty sloupce.|  
+|[OnRowChange](#onrowchange)|Upozorní příjemce změny první řádek nebo sady změn, které má vliv na celý řádek.|  
+|[OnRowsetChange](#onrowsetchange)|Oznámí uživateli všechny změny, které mají vliv celá sada řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- V tématu [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bodu připojení pro příjemce.  
+ Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.  
   
- `IRowsetNotifyImpl` poskytuje implementaci pro fiktivní `IRowsetNotify`, s prázdnou funkce pro `IRowsetNotify` metody [onfieldchange –](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [onrowchange –](https://msdn.microsoft.com/en-us/library/ms722694.aspx), a [onrowsetchange –](https://msdn.microsoft.com/en-us/library/ms722669.aspx). Pokud jste z této třídy dědit při implementaci `IRowsetNotify` rozhraní, můžete implementovat jenom metody, které potřebujete. Potřebujete poskytovat prázdný implementace pro jiné metody sami.  
+ `IRowsetNotifyImpl` poskytuje implementaci pro fiktivní `IRowsetNotify`, s prázdné funkce pro `IRowsetNotify` metody [onfieldchange –](https://msdn.microsoft.com/library/ms715961.aspx), [onrowchange –](https://msdn.microsoft.com/library/ms722694.aspx), a [onrowsetchange –](https://msdn.microsoft.com/library/ms722669.aspx). Pokud je zděděn z této třídy při implementaci `IRowsetNotify` rozhraní, můžete implementovat pouze metody, které potřebujete. Také budete muset poskytnout prázdná implementace pro jiné metody sami.  
+
+## <a name="onfieldchange"></a> IRowsetNotifyImpl::OnFieldChange
+Upozorní příjemce všechny změny hodnoty sloupce.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+STDMETHOD(OnFieldChange)(   
+/* [in] */ IRowset* /* pRowset */,  
+/* [in] */ HROW /* hRow */,  
+/* [in] */ DBORDINAL /* cColumns */,  
+/* [size_is][in] */ DBORDINAL /* rgColumns */ [] ,  
+/* [in] */ DBREASON /* eReason */,  
+/* [in] */ DBEVENTPHASE /* ePhase */,  
+/* [in] */ BOOL /* fCantDeny */)  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) pro popisy parametrů.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Zobrazit [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) pro vrácení hodnoty popisy.  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato metoda zabalí [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.  
+
+## <a name="onrowchange"></a> IRowsetNotifyImpl::OnRowChange
+Upozorní příjemce změny první řádek nebo sady změn, které má vliv na celý řádek.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+STDMETHOD(OnRowChange)(   
+/* [in] */ IRowset* /* pRowset */,  
+/* [in] */ DBCOUNTITEM /* cRows */,  
+/* [size_is][in] */ const HROW /* rghRows*/ [] ,  
+/* [in] */ DBREASON /* eReason */,  
+/* [in] */ DBEVENTPHASE /* ePhase */,  
+/* [in] */ BOOL /* fCantDeny */)  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) pro popisy parametrů.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Zobrazit [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) pro vrácení hodnoty popisy.  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato metoda zabalí [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti. 
+
+## <a name="onrowsetchange"></a> IRowsetNotifyImpl::OnRowsetChange
+Oznámí uživateli všechny změny, které mají vliv celá sada řádků.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+   STDMETHOD(OnRowsetChange)(   
+/* [in] */ IRowset* /* pRowset */,  
+/* [in] */ DBREASON /* eReason */,  
+/* [in] */ DBEVENTPHASE /* ePhase */,  
+/* [in] */ BOOL /* fCantDeny */)  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) pro popisy parametrů.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Zobrazit [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) pro vrácení hodnoty popisy.  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato metoda zabalí [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)   
  [IRowsetNotifyCP – třída](../../data/oledb/irowsetnotifycp-class.md)

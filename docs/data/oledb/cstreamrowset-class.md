@@ -1,5 +1,5 @@
 ---
-title: CStreamRowset – třída | Microsoft Docs
+title: CStreamRowset – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,42 @@ f1_keywords:
 - CStreamRowset
 - ATL.CStreamRowset<TAccessor>
 - ATL.CStreamRowset
+- CStreamRowset::CStreamRowset
+- CStreamRowset.CStreamRowset
+- ATL.CStreamRowset.CStreamRowset
+- ATL::CStreamRowset::CStreamRowset
+- CStreamRowset
+- CStreamRowset<TAccessor>::CStreamRowset
+- ATL::CStreamRowset<TAccessor>::CStreamRowset
+- CStreamRowset<TAccessor>.Close
+- ATL.CStreamRowset<TAccessor>.Close
+- CStreamRowset::Close
+- CStreamRowset<TAccessor>::Close
+- ATL::CStreamRowset::Close
+- ATL.CStreamRowset.Close
+- ATL::CStreamRowset<TAccessor>::Close
+- CStreamRowset.Close
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStreamRowset class
+- CStreamRowset class, constructor
+- Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3365767ed36bcdc45e87f08fb038500fa9ac6d82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0aad7fe25205d4cf31cbe76db3f1fb441858858
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100028"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233396"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset – třída
-Použít v `CCommand` nebo `CTable` deklarace.  
+Používáno `CCommand` nebo `CTable` deklarace.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,9 +55,12 @@ template <class TAccessor = CAccessorBase>
 class CStreamRowset  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `TAccessor`  
+### <a name="parameters"></a>Parametry  
+ *TAccessor*  
  Třídu přistupujícího objektu.  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -48,11 +68,11 @@ class CStreamRowset
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Konstruktor Vytvoří a inicializuje `CStreamRowset` objektu.|  
-|[Zavřete](../../data/oledb/cstreamrowset-close.md)|Verze [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) ukazatel rozhraní ve třídě.|  
+|[CStreamRowset](#cstreamrowset)|Konstruktor Vytvoří a inicializuje `CStreamRowset` objektu.|  
+|[Zavřít](#close)|Verze [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) ukazatel rozhraní ve třídě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CStreamRowset` ve vaší `CCommand` nebo `CTable` deklarace, např.:  
+ Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:  
   
  [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
@@ -60,18 +80,35 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Vrátí `ISequentialStream` ukazatele, který je uložen v `m_spStream`. Pak použijete **čtení** metoda pro načtení dat (Unicode string) ve formátu XML. Příklad:  
+ `ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:  
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 provádí XML formátování a vrátí všechny sloupce a všechny řádky sady řádků jako jeden řetězec XML.  
+ SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.  
   
 > [!NOTE]
 >  Tato funkce funguje pouze s SQL Server 2000.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** také atldbcli.h  
+## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+Vytvoří a inicializuje `CStreamRowset` objektu.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+CStreamRowset();  
+  
+```  
+
+## <a name="close"></a> CStreamRowset::Close
+Verze [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) ukazatel rozhraní ve třídě.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+void Close();  
+  
+```  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

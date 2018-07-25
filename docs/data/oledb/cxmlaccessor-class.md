@@ -1,5 +1,5 @@
 ---
-title: CXMLAccessor – třída | Microsoft Docs
+title: CXMLAccessor – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,31 +9,46 @@ f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
 - ATL.CXMLAccessor
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
 dev_langs:
 - C++
 helpviewer_keywords:
 - CXMLAccessor class
+- GetXMLColumnData method
+- GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 916e9dbe4e142192e4e716f57f97d5bd6865c709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25d02b5b8b86a70f63dc2b0ca8d2ba9cb60066b
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102905"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233410"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor – třída
-Umožňuje přístup ke zdrojům dat jako řetězce data, když nemáte žádné znalosti schéma úložiště dat (podkladová struktura).  
+Umožňuje přístup ke zdrojům dat jako řetězce dat, když nemají žádné informace o schématu úložiště dat (podkladová struktura).  
   
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
+
+## <a name="requirements"></a>Požadavky  
+ **Hlavička**: také atldbcli.h  
   
 ## <a name="members"></a>Členové  
   
@@ -41,25 +56,76 @@ class CXMLAccessor : public CDynamicStringAccessorW
   
 |||  
 |-|-|  
-|[GetXMLColumnData –](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Načte informace o sloupci.|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Načte celý obsah tabulky po řádcích.|  
+|[GetXMLColumnData –](#getxmlcolumndata)|Načte informace o sloupci.|  
+|[GetXMLRowData](#getxmlrowdata)|Načte celý obsah tabulky po řádcích.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ale `CXMLAccessor` se liší od `CDynamicStringAccessorW` , převede ji všechna data z úložiště dat jako (s příznakem) data ve formátu XML. To je užitečné zejména pro výstup na používajícím XML webové stránky. Názvy značek XML bude co nejblíže odpovídat úložiště dat názvy sloupců.  
+ Ale `CXMLAccessor` se liší od `CDynamicStringAccessorW` , převede všechna data z úložiště dat jako ve formátu XML (označené) data. To je užitečné zejména pro výstup do webových stránek s ohledem na XML. Názvy značek XML se co nejpřesněji odpovídají názvy sloupců dat úložiště.  
   
- Použití `CDynamicAccessor` metody získat informace o sloupci. Tato informace o sloupci použijete k vytvoření dynamicky přistupujícího objektu v době běhu.  
+ Použití `CDynamicAccessor` metody získat informace o sloupci. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu.  
   
- Informace o sloupci je uložen do vyrovnávací paměti, vytvořit a spravovat touto třídou. Získání informací pomocí sloupce [GetXMLColumnData –](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) nebo získat data sloupce po řádcích pomocí [GetXMLRowData –](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
+ Informace o sloupci je uložená do vyrovnávací paměti, vytvářet a spravovat touto třídou. Získání informací pomocí sloupce [GetXMLColumnData](#getxmlcolumndata) nebo získat sloupce dat podle řádků pomocí [GetXMLRowData](#getxmlrowdata).  
   
 ## <a name="example"></a>Příklad  
  [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
+Načte informace o typu sloupců tabulky jako řetězec ve formátu XML data podle sloupce.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví**: také atldbcli.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *strOutput*  
+ [out] Odkaz na vyrovnávací paměti řetězce obsahující informace o typu sloupce, který se má načíst. Řetězec je formátováno s názvy značek XML, které odpovídají názvy sloupců dat úložiště.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Jeden standardní hodnoty HRESULT.  
+  
+### <a name="remarks"></a>Poznámky  
+ Následuje ukázka, jak informace o typu sloupce je ve formátu XML. `type` Určuje datový typ sloupce. Všimněte si, že datové typy, které jsou založeny na typech dat OLE DB, nejsou u databáze, ke kterému přistupujete.  
+  
+ `<columninfo>`  
+  
+ `<column type = I2/> ColumnName`  
+  
+ `</columninfo>` 
+
+## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
+Načte celý obsah tabulky jako řetězec ve formátu XML dat po řádku.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+HRESULT GetXMLRowData(CSimpleStringW& strOutput,   
+   bool bAppend = false) throw();  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ *strOutput*  
+ [out] Odkaz na vyrovnávací paměť obsahující data tabulky, který se má načíst. Jeho data formátovaná jako data řetězce s názvy značek XML, které odpovídají názvy sloupců dat úložiště.  
+  
+ *bAppend*  
+ [in] Logická hodnota určující, jestli se má připojit řetězec za účelem výstupní data.  
+  
+### <a name="return-value"></a>Návratová hodnota  
+ Jeden standardní hodnoty HRESULT.  
+  
+### <a name="remarks"></a>Poznámky  
+ Následuje ukázka, jak data řádku je ve formátu XML. `DATA` níže představuje data řádku. Použití přesunutí metody pro přechod na požadovaný řádek.  
+  
+ `<row>`  
+  
+ `<column name>DATA</column name>`  
+  
+ `</row>`   
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor – třída](../../data/oledb/caccessor-class.md)   
  [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)   
