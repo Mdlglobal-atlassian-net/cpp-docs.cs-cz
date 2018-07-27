@@ -1,5 +1,5 @@
 ---
-title: ISessionPropertiesImpl – třída | Microsoft Docs
+title: Isessionpropertiesimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,33 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - ISessionPropertiesImpl
+- ISessionPropertiesImpl::GetProperties
+- ISessionPropertiesImpl.GetProperties
+- GetProperties
+- ISessionPropertiesImpl.SetProperties
+- SetProperties
+- ISessionPropertiesImpl::SetProperties
 dev_langs:
 - C++
 helpviewer_keywords:
 - ISessionPropertiesImpl class
+- GetProperties method
+- SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 62b1321c9d7d50ff2cd459b395efa1e8147a06ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3759b67ef5d9ee9832649b3b0d516dbfb04440b
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106035"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322017"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
-Představuje implementaci objektu [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) rozhraní.  
+Poskytuje implementaci [ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,12 +44,15 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
    public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Vlastní třídy odvozené od `ISessionPropertiesImpl`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Vaše třída odvozena od `ISessionPropertiesImpl`.  
   
- `PropClass`  
- Uživatelská vlastnost třídu, která použije se výchozí hodnota `T`.  
+ *PropClass*  
+ Uživatelská vlastnost třídy, která výchozí hodnota je *T*.  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -49,15 +60,40 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
   
 |||  
 |-|-|  
-|[GetProperties –](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Vrátí seznam vlastností ve skupině vlastnost relace, která jsou aktuálně nastavené v relaci.|  
-|[SetProperties –](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Nastaví vlastnosti ve skupině vlastností relace.|  
+|[GetProperties](#getproperties)|Vrátí seznam vlastností ve skupině vlastností relace, které jsou aktuálně nastavená na relaci.|  
+|[SetProperties –](#setproperties)|Nastaví vlastnosti ve skupině vlastností relace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Povinné rozhraní na relací. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapy sady vlastností](../../data/oledb/begin-propset-map.md). Mapy sady vlastností musí být zadán v třídě relace.  
+ Povinné rozhraní na relace. Tato třída implementuje vlastnosti relace voláním statické funkce definované [mapy sady vlastností](../../data/oledb/begin-propset-map.md). Mapa set vlastnosti musí být zadán v třídě relace.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+Vrátí seznam vlastností v `DBPROPSET_SESSION` skupiny vlastností, které jsou aktuálně nastavená na relaci.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [ISessionProperties::GetProperties](https://msdn.microsoft.com/library/ms723643.aspx) v *referenční informace pro OLE DB programátory*. 
+
+## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+Nastaví vlastnosti `DBPROPSET_SESSION` skupiny vlastností.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [ISessionProperties::SetProperties](https://msdn.microsoft.com/library/ms714405.aspx) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
