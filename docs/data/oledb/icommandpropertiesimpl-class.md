@@ -1,5 +1,5 @@
 ---
-title: ICommandPropertiesImpl – třída | Microsoft Docs
+title: Icommandpropertiesimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,33 @@ f1_keywords:
 - ICommandPropertiesImpl
 - ATL.ICommandPropertiesImpl
 - ATL::ICommandPropertiesImpl
+- ICommandPropertiesImpl::GetProperties
+- ICommandPropertiesImpl.GetProperties
+- GetProperties
+- ICommandPropertiesImpl.SetProperties
+- ICommandPropertiesImpl::SetProperties
+- SetProperties
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICommandPropertiesImpl class
+- GetProperties method
+- SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25be1548bd41f832a007f102c138fc01f8818774
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f170aa27cdc52b98729b0953568575292f6f6b
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098998"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269583"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl – třída
-Představuje implementaci objektu [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) rozhraní.  
+Poskytuje implementaci [ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,12 +45,15 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Vaše třídy odvozené od  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Vaši třídu odvozenou z  
   
- `PropClass`  
- Třídě vlastnosti.  
+ *PropClass*  
+ Vaše vlastnosti třídy.  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -50,15 +61,43 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
   
 |||  
 |-|-|  
-|[GetProperties –](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Vrátí seznam vlastností ve skupině vlastností sady řádků, která jsou momentálně požadováno pro sadu řádků.|  
-|[SetProperties –](../../data/oledb/icommandpropertiesimpl-setproperties.md)|Nastaví vlastnosti ve skupině vlastností sady řádků.|  
+|[GetProperties](#getproperties)|Vrátí seznam vlastností ve skupině vlastností sady řádků, které jsou aktuálně požadovány v sadě řádků.|  
+|[SetProperties –](#setproperties)|Nastaví vlastnosti ve skupině vlastností sady řádků.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je povinná na příkazy. Poskytuje implementaci statickou funkci definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) makro.  
+ Toto je povinná na příkazy. Implementace poskytuje statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) – makro.  
+
+## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+Vrátí všechny požadované vlastnosti sady pomocí příkazu Vlastnosti mapy.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [ICommandProperties::GetProperties](https://msdn.microsoft.com/library/ms723119.aspx) v *referenční informace pro OLE DB programátory*.  
+  
+### <a name="remarks"></a>Poznámky  
+ Zobrazit [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+  
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+Nastaví vlastnosti pro objekt příkazu.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [ICommandProperties::SetProperties](https://msdn.microsoft.com/library/ms711497.aspx) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

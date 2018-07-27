@@ -1,5 +1,5 @@
 ---
-title: IDBCreateCommandImpl – třída | Microsoft Docs
+title: Idbcreatecommandimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,29 @@ f1_keywords:
 - ATL::IDBCreateCommandImpl
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
+- IDBCreateCommandImpl.CreateCommand
+- CreateCommand
+- IDBCreateCommandImpl::CreateCommand
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBCreateCommandImpl class
+- CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cc032a488626f2d366152f2d2b70b2539b9137b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ffc92cecb3b28423aa2e869171f730c956996cd
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101523"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269748"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl – třída
-Představuje implementaci objektu [IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx) rozhraní.  
+Poskytuje implementaci [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,12 +41,15 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Objekt relace odvozen od `IDBCreateCommandImpl`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Relace objekt odvozený od `IDBCreateCommandImpl`.  
   
- `CommandClass`  
- Třídě příkaz.  
+ *CommandClass*  
+ Vaší třídy příkazu.  
+
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -50,14 +57,31 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
   
 |||  
 |-|-|  
-|[CreateCommand](../../data/oledb/idbcreatecommandimpl-createcommand.md)|Vytvoří nový příkaz.|  
+|[CreateCommand](#createcommand)|Vytvoří nový příkaz.|  
   
 ## <a name="remarks"></a>Poznámky  
  Volitelné rozhraní objektu relace získat nový příkaz.  
+
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+Vytvoří nový příkaz a vrátí požadované rozhraní.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+### <a name="syntax"></a>Syntaxe  
+  
+```cpp
+      STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppvCommand);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Zobrazit [IDBCreateCommand::CreateCommand](https://msdn.microsoft.com/library/ms709772.aspx) v *referenční informace pro OLE DB programátory*.  
+  
+ Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:  
+  
+|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|  
+|--------------------------------|------------------------------------------------|  
+|*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
