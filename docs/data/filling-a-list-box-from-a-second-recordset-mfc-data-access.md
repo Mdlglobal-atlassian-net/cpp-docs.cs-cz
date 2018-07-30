@@ -1,5 +1,5 @@
 ---
-title: Naplnění seznamu z druhé sady záznamů (MFC Data Access) | Microsoft Docs
+title: Naplnění seznamu druhou sadou záznamů (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090643"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339767"
 ---
-# <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Naplnění seznamu z druhé sady záznamů (Data MFC Access)
-Ve výchozím nastavení je přidružen jeden záznamů objekt, jehož pole jsou namapované na ovládací prvky zobrazení záznamu zobrazení záznamů. V některých případech můžete chtít put pole se seznamem nebo pole se seznamem řízení v zobrazení záznamu a vyplňte v něm hodnotami z druhého objekt sady záznamů. Uživatel může použít pole se seznamem a vyberte novou kategorii informace zobrazené v zobrazení záznamů. Toto téma vysvětluje, jak a kdy k tomu.  
+# <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Naplnění seznamu druhou sadou záznamů (přístup k datům MFC)
+Ve výchozím zobrazení záznamů souvisí s objektem jedné sady záznamů, jejichž pole jsou namapované na ovládací prvky zobrazení záznamu. Někdy můžete chtít umístit seznamu nebo pole se seznamem ovládacího prvku v zobrazení záznamu a naplnit hodnotami z druhého objektu sady záznamů. Uživatele můžete použít pole se seznamem vyberte novou kategorii informací, které mají zobrazit v zobrazení záznamů. Toto téma vysvětluje, jak a kdy k tomu.  
   
 > [!TIP]
->  Mějte na paměti naplnění – pole se seznamem nebo pole se seznamem ze zdroje dat může být pomalé. Preventivní opatření proti pokusu vyplnění ovládacího prvku ze sady záznamů s velkému počtu záznamů.  
+>  Mějte na paměti vyplnění pole se seznamem nebo seznamu pole ze zdroje dat může být pomalé. Opatření proti pokusu vyplníte ovládací prvek ze sady záznamů s velké množství záznamů.  
   
- Model pro toto téma se skládá z primární sady záznamů, které doplní ovládacích prvků formuláře, dokud sekundární sada záznamů nenaplní pole se seznamem nebo pole se seznamem. Výběr řetězec z pole se seznamem způsobí, že vaše programu Requery – primární záznamů založené na co nebyla vybrána. Následující postup používá pole se seznamem, ale platí stejně pro pole se seznamem.  
+ Model pro toto téma se skládá z primární záznamů, který vyplní ovládací prvky formuláře, když sekundární záznamů vyplní pole se seznamem nebo pole se seznamem. Výběr řetězce z pole se seznamem způsobí, že program k requery primární záznamů podle co byla vybrána. Následující postup používá pole se seznamem, ale platí také pro pole se seznamem.  
   
-#### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Chcete-li vyplnit pole se seznamem nebo seznamu z druhé sady záznamů  
+#### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>K vyplnění pole se seznamem nebo seznamu z druhé sady záznamů  
   
 1.  Vytvořit objekt sady záznamů ([CRecordset](../mfc/reference/crecordset-class.md).  
   
-2.  Získání ukazatele na [CComboBox](../mfc/reference/ccombobox-class.md) objekt ovládacího prvku pole se seznamem.  
+2.  Získat ukazatel [CComboBox](../mfc/reference/ccombobox-class.md) objekt pro prvek pole se seznamem.  
   
-3.  Prázdné pole se seznamem všech předchozích obsahu.  
+3.  Prázdná pole se seznamem jakékoli předchozí obsah.  
   
-4.  Pohyb všechny záznamy v sadě záznamů volání [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pro každý řetězec z aktuální záznam, který chcete přidat do pole se seznamem.  
+4.  Přesuňte si všechny záznamy v sadě záznamů volání [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pro každý řetězec z aktuální záznam, který chcete přidat do pole se seznamem.  
   
-5.  Inicializujte výběr v pole se seznamem.  
+5.  Inicializujte výběr v poli se seznamem.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  
@@ -74,10 +74,10 @@ void CSectionForm::OnInitialUpdate()
 }  
 ```  
   
- Tato funkce využívá druhé sady záznamů, `m_courseSet`, který obsahuje záznam pro každý kurz, kterou nabízí a `CComboBox` řízení, `m_ctlCourseList`, který je uložen ve třídě zobrazení záznamu.  
+ Tato funkce využívá druhé sady záznamů `m_courseSet`, který obsahuje záznam pro každou hodnoceného a `CComboBox` ovládacího prvku, `m_ctlCourseList`, které je uložený ve třídě zobrazení záznamu.  
   
- Získá funkce `m_courseSet` z dokumentu a otevře ji. Pak vyprázdní `m_ctlCourseList` a pomocí posouvá `m_courseSet`. Pro každý záznam volá funkci pole se seznamem `AddString` – členská funkce přidání hodnota ID kurzu ze záznamu. Nakonec kód nastaví se seznamem se výběr pole.  
+ Získá funkce `m_courseSet` z dokumentu a otevře jej. Pak vyprázdní `m_ctlCourseList` a procházení `m_courseSet`. Pro každý záznam, volá funkci pole se seznamem `AddString` členské funkce a přidejte požadovanou hodnotu ID kurzu ze záznamu. Nakonec kód nastaví pole se seznamem výběru pole.  
   
 ## <a name="see-also"></a>Viz také  
- [Zobrazení záznamů (Data MFC Access)](../data/record-views-mfc-data-access.md)   
+ [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)   
  [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

@@ -1,5 +1,5 @@
 ---
-title: Určení typu přístupového objektu | Microsoft Docs
+title: Určení typu přístupového objektu použití | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 89a55127b8f7e5e0e7d338a9e7ba4f85e8c568d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104006"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340440"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Určení použitého typu přístupového objektu
-Můžete určit typy dat pro sadu řádků v době kompilace nebo za běhu.  
+V době kompilace nebo za běhu, můžete určit typy dat pro sadu řádků.  
   
- Pokud potřebujete určit datové typy při kompilaci, použijte statické přístupového objektu (například `CAccessor`). Datové typy můžete určit ručně nebo pomocí průvodce příjemcem knihovny ATL technologie OLE DB.  
+ Pokud je potřeba určit datové typy v době kompilace, použijte statického následovníka (například `CAccessor`). Datové typy, které můžete určit ručně nebo pomocí průvodce příjemcem ATL OLE DB.  
   
- Pokud je nutné určit typy dat za běhu, použijte dynamický (`CDynamicAccessor` nebo jejích podřízených objektech) nebo ruční přistupující objekt (`CManualAccessor`). V těchto případech můžete volat `GetColumnInfo` na sadě řádků k vrácení informací vazba sloupce, ze kterého můžete určit typy.  
+ Pokud je potřeba určit datové typy v době běhu, použít dynamickou (`CDynamicAccessor` nebo její podřízené jednotce) nebo ruční přístupového objektu (`CManualAccessor`). V těchto případech můžete volat `GetColumnInfo` pro řádků vrátit informace o vazbě sloupec, ze kterého můžete určit typy.  
   
  Následující tabulka uvádí typy přístupových objektů, které jsou součástí šablony příjemce. Každý přistupující objekt má své výhody a nevýhody. V závislosti na vaší situaci jeden typ přístupového objektu by měl vyhovovat vašim potřebám.  
   
-|Třída přístupového objektu|Vazba|Parametr|Komentář|  
+|Přístupový objekt třídy|Vazba|Parametr|Komentář|  
 |--------------------|-------------|---------------|-------------|  
-|`CAccessor`|Vytvořte záznam uživatele s `COLUMN_ENTRY` makra. Makra vazby datového člena v tomto záznamu na přistupující objekt. Při vytváření sady řádků, nesmí nevázaných sloupců.|Ano, pomocí **PARAM_MAP** makro položku. Jednou vázán, nelze parametry.|Nejrychlejší přistupující objekt z důvodu malou část kódu.|  
-|`CDynamicAccessor`|Automatické.|Ne.|Užitečné, pokud neznáte typ dat v sadě řádků.|  
-|`CDynamicParameterAccessor`|Automatické, ale může být [přepsat](../../data/oledb/overriding-a-dynamic-accessor.md).|Ano, pokud zprostředkovatel podporuje `ICommandWithParameters`. Parametry navázat automaticky.|Nižší než `CDynamicAccessor` ale užitečná pro volání obecných uložených procedur.|  
-|**CDynamicStringAccessor [A, W]**|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data.|  
-|`CManualAccessor`|Ruční pomocí `AddBindEntry`.|Ručně pomocí `AddParameterEntry`.|Velmi rychlé; parametry a sloupce vázány pouze jednou. Můžete určit typ data se mají použít. (Viz [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ukázku příklad.) Vyžaduje více kódu než `CDynamicAccessor` nebo `CAccessor`. Je to spíše jako přímé volání OLE DB.|  
-|`CXMLAccessor`|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data a zformátuje ho jako značky jazyka XML data.|  
+|`CAccessor`|S makry COLUMN_ENTRY vytvořte záznam uživatele. Makra svázat datový člen v daném záznamu přistupujícího objektu. Když se v sadě řádků, sloupců nelze odvázat.|Ano, s použitím makra PARAM_MAP. Jednou vázán, nelze odvázat parametry.|Nejrychlejší přistupující objekt z důvodu malé množství kódu.|  
+|`CDynamicAccessor`|Automatické.|Ne.|Je užitečné, pokud si nejste jisti typ dat v sadě řádků.|  
+|`CDynamicParameterAccessor`|Automaticky, ale může být [přepsat](../../data/oledb/overriding-a-dynamic-accessor.md).|Ano, pokud poskytovatel podporuje `ICommandWithParameters`. Parametry automaticky svázán.|Pomalejší než `CDynamicAccessor` ale užitečná pro volání obecné uložené procedury.|  
+|`CDynamicStringAccessor[A,W]`|Automatické.|Ne.|Načte data z úložiště dat jako řetězec data.|  
+|`CManualAccessor`|Ruční použití `AddBindEntry`.|Ručně pomocí `AddParameterEntry`.|Velmi rychlé zpracování; parametry a sloupce vázané jenom jednou. Můžete určit typ data se mají použít. (Viz [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) Vzorový příklad.) Vyžaduje další kód než `CDynamicAccessor` nebo `CAccessor`. Je to spíše jako přímé volání OLE DB.|  
+|`CXMLAccessor`|Automatické.|Ne.|Načte data z úložiště dat jako řetězce data a ji naformátuje jako XML příznakem data.|  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)

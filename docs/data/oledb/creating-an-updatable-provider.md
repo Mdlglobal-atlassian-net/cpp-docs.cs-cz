@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954581"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340635"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 
@@ -30,7 +30,7 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
   
  Toto téma předpokládá, že začínáte s funkční zprostředkovatele. Existují dva kroky k vytvoření aktualizovatelného zprostředkovatele. Nejprve musíte rozhodnout, jak poskytovatel provede změny úložiště dat; Určuje, zda konkrétně změny jsou okamžitě provést nebo odložena až do vydání příkazu k aktualizaci. V části "[provádění aktualizovat poskytovatele](#vchowmakingprovidersupdatable)" popisuje změny a nastavení, musíte udělat v kódu zprostředkovatele.  
   
- V dalším kroku je nutné zajistit, aby že váš poskytovatel obsahuje všechny funkce pro podporu všechno, co ho může požádat příjemce. Pokud chce aktualizujte úložiště dat příjemce, musí obsahovat kód, který přenese data do úložiště dat zprostředkovatele. Například můžete provádět tyto operace na zdroj dat použít knihovny Run-Time jazyka C nebo MFC. V části "[zápisu do zdroje dat](#vchowwritingtothedatasource)" popisuje, jak zapsat do zdroje dat, řešil `NULL` a výchozí hodnoty a nastavit příznaky sloupce.  
+ V dalším kroku je nutné zajistit, aby že váš poskytovatel obsahuje všechny funkce pro podporu všechno, co ho může požádat příjemce. Pokud chce aktualizujte úložiště dat příjemce, musí obsahovat kód, který přenese data do úložiště dat zprostředkovatele. Například můžete provádět tyto operace na zdroj dat použít knihovny Run-Time jazyka C nebo MFC. V části "[zápisu do zdroje dat](#vchowwritingtothedatasource)" popisuje, jak zapsat do zdroje dat, řešení s hodnotou NULL a výchozí hodnoty a nastavit příznaky sloupce.  
   
 > [!NOTE]
 >  UpdatePV je příkladem aktualizovatelného zprostředkovatele. UpdatePV je stejný jako MyProv, ale s podporou.  
@@ -55,7 +55,7 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
   
      Přidat `IRowsetChangeImpl` k použití této formy řetězec dědičnosti:  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
   
      Přidat `IRowsetUpdate` k použití této formy řetězec dědičnosti:  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředk
   
 4.  V mapě sadu vlastností měli byste také zahrnout všechna následující nastavení, jak se objeví pod:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

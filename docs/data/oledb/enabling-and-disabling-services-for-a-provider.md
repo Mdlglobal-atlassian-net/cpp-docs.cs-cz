@@ -1,5 +1,5 @@
 ---
-title: Povolování a zakazování služeb pro zprostředkovatele | Microsoft Docs
+title: Povolování a zakazování služeb pro zprostředkovatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef36e35234aa4878e30e70748a5b2ba2975c38dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33099729"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340687"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Povolování a zakazování služeb pro zprostředkovatele
-Jednotlivé služby rozhraní OLE DB můžete povolit nebo zakázat ve výchozím nastavení pro všechny aplikace, která přistupují k jednoho zprostředkovatele. To se provádí přidáním **OLEDB_SERVICES** položky registru zprostředkovatele je CLSID, s `DWORD` hodnota určuje služby, které chcete povolit nebo zakázat, jak je znázorněno v následující tabulce.  
+Jednotlivé služby rozhraní OLE DB můžete povolit nebo zakázat ve výchozím nastavení pro všechny aplikace, které přistupují k jednoho zprostředkovatele. To se provádí tak, že přidáte položku registru OLEDB_SERVICES CLSID zprostředkovatele s `DWORD` hodnota určuje služby, které chcete povolit nebo zakázat, jak je znázorněno v následující tabulce.  
   
 |Povolené výchozí služby|Hodnota – klíčové slovo|  
 |------------------------------|-------------------|  
 |Všechny služby (výchozí)|0xFFFFFFFF|  
-|Všechny kromě sdružování a AutoEnlistment|0xFFFFFFFE|  
-|Všechny kromě kurzoru klienta|0xfffffffb|  
-|Všechny kromě sdružování AutoEnlistment a klienta kurzoru|0xfffffff0|  
-|Žádné služby|0x00000000|  
+|Všechny s výjimkou sdružování a AutoEnlistment|0xFFFFFFFE|  
+|Všechny s výjimkou klientský kurzor|0xfffffffb|  
+|Všechny s výjimkou sdružování AutoEnlistment a klientský kurzor|0xfffffff0|  
+|Žádné služby.|0x00000000|  
 |Žádné agregace všechny služby jsou zakázány|\<chybí klíč >|  
   
 ## <a name="see-also"></a>Viz také  

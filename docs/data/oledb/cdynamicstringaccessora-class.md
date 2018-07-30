@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA – třída | Microsoft Docs
+title: CDynamicStringAccessorA – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096480"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341020"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA – třída
-Umožňuje přístup ke zdroji dat, pokud nemáte žádné znalosti schématu databáze (podkladová struktura).  
+Umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (podkladová struktura).  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,16 +34,16 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obě požadavku, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce data, ale `CDynamicStringAccessor` požadavky ANSI řetězcová data.  
+ Oba požadavku, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce dat, ale `CDynamicStringAccessor` požadavky ANSI data řetězce.  
   
- `CDynamicStringAccessorA` dědí **GetString** a `SetString` z `CDynamicStringAccessor`. Při použití těchto metod v `CDynamicStringAccessorA` objekt, ***BaseType*** je **CHAR**.  
+ `CDynamicStringAccessorA` dědí `GetString` a `SetString` z `CDynamicStringAccessor`. Při použití těchto metod v `CDynamicStringAccessorA` objektu, ***BaseType*** je **CHAR**.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví**: také atldbcli.h  
+ **Hlavička**: také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor – třída](../../data/oledb/caccessor-class.md)   
  [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [CManualAccessor – třída](../../data/oledb/cmanualaccessor-class.md)   

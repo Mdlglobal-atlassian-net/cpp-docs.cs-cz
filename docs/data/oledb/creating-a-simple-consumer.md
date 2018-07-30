@@ -1,5 +1,5 @@
 ---
-title: Vytvoření jednoduchého příjemce | Microsoft Docs
+title: Vytvoření jednoduchého příjemce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,98 +15,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 711aaaff2bc4e012ba4c4ef78465f06c51b9d307
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9f7c5a51765e2ce29df503aeefa9f850b71b1d4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098521"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339851"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
-Pomocí Průvodce projektu knihovny ATL a průvodce příjemcem knihovny ATL technologie OLE DB vygenerujte příjemce technologie OLE DB šablony.  
+Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvodce příjemcem ATL OLE DB.  
   
-#### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB  
+### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB  
   
-1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu**.  
+1.  Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
      **Nový projekt** zobrazí se dialogové okno.  
   
-2.  V podokně typy projektů, klikněte **projekty Visual C++** složku a pak klikněte na tlačítko **projektu Win32** ikona v podokně šablon. V **název** pole, zadejte název projektu, například **MyCons**.  
+2.  V podokně typy projektů, klikněte **projekty Visual C++** složku a pak klikněte na tlačítko **projekt Win32** ikony v podokně šablon. V **název** zadejte název projektu, například **MyCons**.  
   
-3.  Click **OK**.  
+3.  Klikněte na tlačítko **OK**.  
   
-     Zobrazí se Průvodce projektem Win32.  
+     Zobrazí se Průvodce projektu Win32.  
   
-4.  Na **nastavení aplikace** vyberte **Konzolová aplikace**a potom vyberte **přidat podporu pro knihovny ATL**.  
+4.  Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat podporu ATL**.  
   
-5.  Klikněte na tlačítko **Dokončit** zavřete průvodce a vygenerování projektu.  
+5.  Klikněte na tlačítko **Dokončit** zavřete průvodce a generování projektu.  
   
- Potom pomocí průvodce příjemcem knihovny ATL technologie OLE DB přidání objektu příjemce technologie OLE DB.  
+ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.  
   
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem knihovny ATL technologie OLE DB  
+#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem ATL OLE DB  
   
-1.  V zobrazení tříd, klikněte pravým tlačítkem `MyCons` projektu.  
+1.  V zobrazení tříd klikněte pravým tlačítkem myši `MyCons` projektu.  
   
-2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na **přidat třídu**.  
+2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
   
      **Přidat třídu** zobrazí se dialogové okno.  
   
-3.  V podokně kategorie, klikněte na **Visual C++**, klikněte na tlačítko **ATL příjemce technologie OLE DB** v podokně šablon a pak klikněte na ikonu **otevřete**.  
+3.  V podokně kategorie, klikněte na tlačítko **Visual C++**, klikněte na tlačítko **příjemce ATL OLE DB** v podokně šablon a pak klikněte na ikonu **otevřít**.  
   
-     Zobrazí se průvodce příjemcem knihovny ATL technologie OLE DB.  
+     Zobrazí se průvodce příjemcem ATL OLE DB.  
   
-4.  Klikněte **zdroj dat** tlačítko.  
+4.  Klikněte na tlačítko **zdroj dat** tlačítko.  
   
      **Vlastnosti propojení dat** zobrazí se dialogové okno.  
   
 5.  V **vlastnosti propojení dat** dialogové okno pole, postupujte takto:  
   
-    -   Na **zprostředkovatele** určete zprostředkovatele OLE DB.  
+    -   Na **poskytovatele** kartu, zadejte zprostředkovatele OLE DB.  
   
-    -   Na **připojení** kartě, zadejte název serveru, přihlašovací ID a heslo pro zdroj dat a databáze na serveru.  
-  
-    > [!NOTE]
-    >  Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dvě přepínací tlačítka: **integrované zabezpečení systému Windows NT použití** a **použít určité uživatelské jméno a heslo**.  
+    -   Na **připojení** kartu, zadejte název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.  
   
     > [!NOTE]
-    >  Pokud vyberete **použít určité uživatelské jméno a heslo**, máte možnost uložení hesla (pomocí **povolit uložení hesla** políčko); však tato možnost není zabezpečený. Je vhodné vybrat **integrované zabezpečení systému Windows NT použití**; tato volba používá systém Windows NT ověřit vaši identitu.  
+    >  Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **integrované zabezpečení Windows NT použití** a **použít konkrétní uživatelské jméno a heslo**.  
   
     > [!NOTE]
-    >  Pokud nemůžete použít integrované zabezpečení Windows NT, měli byste použít aplikaci na střední vrstvě pro vyzvání uživatele k zadání hesla nebo k uložení hesla v umístění s mechanismy zabezpečení k ochraně jeho (místo ve zdrojovém kódu).  
+    >  Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, máte možnost uložení hesla (pomocí **povolit uložení hesla** zaškrtávací políčko), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost používá k ověření vaší identity systému Windows NT.  
   
-     Po výběru zprostředkovatele a další nastavení, klikněte na tlačítko **Test připojení** ověření výběru z předchozích dialogové okno stránek. Pokud **výsledky** pole sestavy `Test connection succeeded`, klikněte na tlačítko **OK** k vytvoření propojení data.  
+    > [!NOTE]
+    >  Pokud nemůžete použít Windows NT integrované zabezpečení, používejte aplikace střední vrstvy vyzvat uživatele k zadání hesla nebo k uložení hesla v umístění s mechanismy zabezpečení, které zvýší jeho ochranu (místo ve zdrojovém kódu).  
   
-     **Vyberte objekt databáze** zobrazí se dialogové okno.  
+     Po výběru poskytovatele a další nastavení, klikněte na **Test připojení** ověření výběru z předchozího stránek dialogového okna. Pokud **výsledky** pole sestavy `Test connection succeeded`, klikněte na tlačítko **OK** pro vytvoření odkazu data.  
   
-6.  Vyberte tabulky, zobrazení nebo uložené proceduře pomocí ovládacího prvku strom. Pro účely tohoto postupu vyberte z databáze Northwind tabulky produktů.  
+     **Vyberte databázový objekt** zobrazí se dialogové okno.  
   
-7.  Click **OK**. Vrátí průvodce příjemcem knihovny ATL technologie OLE DB.  
+6.  Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu vyberte tabulku produktů z databáze Northwind.  
   
-8.  Dokončení Průvodce názvy pro `Class` a **soubor h** na základě názvu tabulky a zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.  
+7.  Klikněte na tlačítko **OK**. Vrátí průvodce příjemcem ATL OLE DB.  
   
-9. Vymazat **Attributed** políčko tak, aby průvodce vytvoří příjemce kódu pomocí [tříd šablon technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) místo výchozího [atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md).  
+8.  Názvy pro dokončení průvodce `Class` a **souboru .h** na základě názvu tabulky, zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.  
   
-10. V části **typ**, vyberte **příkaz**.  
+9. Zrušte **Atributovaný** zaškrtněte políčko, aby průvodce vytvoří příjemce kódu pomocí [tříd šablon technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) místo výchozího [atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
-     Průvodce vytvoří [CCommand](../../data/oledb/ccommand-class.md)– na základě příjemce, pokud vyberete **příkaz** nebo [CTable](../../data/oledb/ctable-class.md)– na základě příjemce, pokud vyberete **tabulky**. Třída tabulky nebo příkaz nazývá po vybraný objekt, ale můžete upravit název.  
+10. V části **typ**vyberte **příkaz**.  
   
-11. V části **podporu**, ponechte **změnu**, **vložit**, a **odstranit** políčka prázdná.  
+     Průvodce vytvoří [CCommand](../../data/oledb/ccommand-class.md)– na základě uživatelů, pokud vyberete **příkaz** nebo [CTable](../../data/oledb/ctable-class.md)– na základě uživatelů, pokud vyberete **tabulky**. Vybraný objekt má stejný název třídy příkazu nebo tabulky, ale můžete upravit název.  
   
-     Vyberte **změnu**, **vložit**, a **odstranit** zaškrtávací políčka pro podporu změn, vkládání a odstraňování záznamů v dané sadě řádků, pokud je to nutné. Další informace o zápisu dat do data ukládat najdete v tématu [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).  
+11. V části **podporu**, nechat **změnu**, **vložit**, a **odstranit** políčka prázdná.  
   
-12. Klikněte na tlačítko **Dokončit** pro vytvoření příjemce.  
+     Vyberte **změnu**, **vložit**, a **odstranit** zaškrtávací políčka pro podporu změn, vkládání a odstraňování záznamů v dané sadě řádků, pokud je to nutné. Další informace o zápisu dat do dat úložiště, najdete v článku [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).  
   
- Průvodce vytvoří příkaz třídy a třídy uživatelského záznamu, jak je znázorněno v [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md). Třída příkazu bude mít název, který jste zadali v `Class` pole v průvodci (v tomto případě `CProducts`), a třída uživatelského záznamu bude mít název ve tvaru "*ClassName*přistupujícího objektu" (v tomto případě `CProductsAccessor`).  
+12. Klikněte na tlačítko **Dokončit** vytvořte příjemce.  
+  
+ Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak je znázorněno v [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md). Třídy příkazů bude mít název, který jste zadali v `Class` pole v průvodci (v tomto případě `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (v tomto případě `CProductsAccessor`).  
   
 > [!NOTE]
->  Průvodce uloží do souboru Products.h následující řádek:  
+>  Průvodce umístí do souboru Products.h následující řádek:  
   
-```  
+```cpp  
 #error Security Issue: The connection string may contain a password  
 ```  
   
 > [!NOTE]
->  Tento řádek brání aplikaci příjemce v kompilaci a upozorní, zkontrolujte připojovací řetězec pro pevně hesla. Po zkontrolování připojovací řetězec, můžete odebrat tento řádek kódu.  
+>  Tento řádek znemožňuje spotřebitele aplikaci v kompilaci a vám připomene zkontrolovat pevně kódovaná hesla v připojovacím řetězci. Po kontrole připojovací řetězec, můžete odebrat tento řádek kódu.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

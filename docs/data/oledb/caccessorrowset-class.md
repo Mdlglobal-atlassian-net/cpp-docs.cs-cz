@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181182"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340726"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
 Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jedné třídě.  
@@ -55,7 +55,7 @@ Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jed
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Konstruktor|  
 |[Zavřít](#close)|Zavře sadu řádků a všechny přistupující objekty.|  
 |[Freerecordmemory –](#freerecordmemory)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.|  
-|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Poznámky  
  Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.  
@@ -91,7 +91,6 @@ Vytvoří vazbu, pokud jste zadali `bBind` jako **false** v [CCommand::Open](../
   
 ```cpp
 HRESULT Bind();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -104,7 +103,6 @@ Inicializuje `CAccessorRowset` objektu.
   
 ```cpp
 CAccessorRowset();  
-  
 ```  
 
 ## <a name="close"></a> CAccessorRowset::Close
@@ -114,7 +112,6 @@ Uvolní všechny aktivní přístupové objekty a sady řádků.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -127,7 +124,6 @@ Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.
   
 ```cpp
 void FreeRecordMemory();  
-  
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
@@ -136,16 +132,16 @@ Získá informace o sloupci z otevřené sady řádků.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
-   DBCOLUMNINFO** ppColumnInfo,  
-   LPOLESTR* ppStrings) const;  
-
-HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
    DBCOLUMNINFO** ppColumnInfo);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní HRESULT.  
@@ -153,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Poznámky  
  Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.  
   
- Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) v *OLE DB referenční informace pro programátory*.  
+ Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   

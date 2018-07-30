@@ -1,5 +1,5 @@
 ---
-title: CNoRowset – třída | Microsoft Docs
+title: Cnorowset – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098157"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339559"
 ---
 # <a name="cnorowset-class"></a>CNoRowset – třída
-Lze použít jako šablonu argumentu (`TRowset`) pro [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md).  
+Můžete použít jako argument šablony (`TRowset`) pro [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,32 +38,32 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `TAccessor`  
+### <a name="parameters"></a>Parametry  
+ *TAccessor*  
  Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
   
 ## <a name="remarks"></a>Poznámky  
  Použití `CNoRowset` jako argument šablony, pokud příkaz nevrací sadu řádků.  
   
- `CNoRowset` implementuje metodu se zakázaným inzerováním, z nichž každý odpovídají jiné metody přistupující objekt třídy:  
+ `CNoRowset` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
   
--   **BindFinished** -Určuje, po dokončení vazby (vrátí `S_OK`).  
+-   `BindFinished` -Určuje po dokončení vazby (vrátí `S_OK`).  
   
--   **Zavřít** -uvolní řádky a aktuální IRowset rozhraní.  
+-   `Close` -Uvolní řádků a aktuální IRowset rozhraní.  
   
--   `GetIID` -Načte ID rozhraní bod připojení.  
+-   `GetIID` -Načte rozhraní ID bodu připojení.  
   
--   **Getinterface –** -načte rozhraní.  
+-   `GetInterface` -Načte rozhraní.  
   
--   `GetInterfacePtr` -Načte ukazatele zapouzdřené rozhraní.  
+-   `GetInterfacePtr` -Načte zapouzdřený ukazatel rozhraní.  
   
--   **SetAccessor** -nastaví ukazatel na přistupující objekt.  
+-   `SetAccessor` – Nastaví ukazatel na přistupujícím objektu.  
   
--   **SetupOptionalRowsetInterfaces** -nastaví volitelné rozhraní pro sadu řádků.  
+-   `SetupOptionalRowsetInterfaces` – Nastaví volitelné rozhraní pro sadu řádků.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

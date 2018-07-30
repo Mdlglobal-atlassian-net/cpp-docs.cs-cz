@@ -1,5 +1,5 @@
 ---
-title: Správce rozhraní ODBC | Microsoft Docs
+title: Správce rozhraní ODBC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,44 +22,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b214ba3513f95533e3892fb93ad9298c44415d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090192"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340521"
 ---
 # <a name="odbc-administrator"></a>Správce rozhraní ODBC
-Správce rozhraní ODBC registruje a konfiguruje [zdroje dat](../../data/odbc/data-source-odbc.md) k dispozici místně nebo v síti. Vytvoření kódu v aplikacích, které vaši uživatelé připojí ke zdrojům dat pomocí průvodců informace poskytnuté správcem rozhraní ODBC.  
+Správce rozhraní ODBC zaregistruje a nakonfiguruje [zdroje dat](../../data/odbc/data-source-odbc.md) k dispozici, místně nebo v síti. Vytvořit kód ve svých aplikacích, které vaši uživatelé připojí ke zdrojům dat pomocí průvodců informace poskytnuté správcem rozhraní ODBC.  
   
- Nastavit zdroje dat ODBC pro použití s třídy knihovny MFC nebo třídy MFC objekt DAO (Data Access), musíte nejprve registrovat a nakonfigurujte zdroj dat. K přidání a odebrání zdrojů dat použijte Správce rozhraní ODBC. V závislosti na ovladač ODBC můžete také vytvořit nové zdroje dat.  
+ Nastavení zdroje dat rozhraní ODBC pro třídy knihovny MFC rozhraní ODBC nebo třídy knihovny MFC objektu pro přístup k datům (DAO), musíte nejprve zaregistrovat a konfigurace zdroje dat. Přidání a odebrání zdrojů dat pomocí Správce rozhraní ODBC. V závislosti na ovladač ODBC můžete také vytvořit nové zdroje dat.  
   
- Správce rozhraní ODBC je nainstalována během instalace. Pokud jste zvolili **vlastní** instalace a nevybrali žádné ovladače ODBC v **možnosti databáze** dialogové okno, musíte spustit instalaci znovu a nainstalujte potřebné soubory.  
+ Správce rozhraní ODBC je nainstalovat během instalace. Pokud jste zvolili **vlastní** instalace a nevybrali žádné ovladače rozhraní ODBC v **možnosti databáze** dialogové okno, musíte spustit instalaci znovu a nainstalujte potřebné soubory.  
   
- Během instalace vybrat, které chcete instalaci ovladače ODBC. Později můžete nainstalovat další ovladače, které se dodávají spolu s Visual C++ pomocí Visual C++ instalační program.  
+ Během instalace si můžete vybrat ovladače rozhraní ODBC, které chcete nainstalovat. Později můžete nainstalovat další ovladače, které se dodávají s jazykem Visual C++ pomocí programu instalace aplikace Visual C++.  
   
- Pokud chcete instalaci ovladače ODBC, které se nedodává s Visual C++, musíte spustit instalační program, který doprovází ovladač.  
+ Pokud chcete instalaci ovladače rozhraní ODBC, které se nedodává s jazykem Visual C++, musíte spustit instalační program, který doprovází ovladače.  
   
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>K instalaci ovladače ODBC, které jsou dodávány pomocí Visual C++  
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Chcete-li nainstalovat ovladače rozhraní ODBC, které se dodávají s jazykem Visual C++  
   
-1.  Spusťte instalaci z disku CD-ROM distribuční Visual C++.  
+1.  Spusťte instalaci z disku CD-ROM distribuce Visual C++.  
   
-     Otevření dialogového okna v instalační program je se zobrazí.  
+     Otevírání dialogové okno instalačního programu se zobrazí.  
   
-2.  Klikněte na tlačítko **Další** v každém dialogovém, dokud se nedostanete **možnosti instalace** dialogové okno. Vyberte **vlastní**a potom klikněte na `Next`.  
+2.  Klikněte na tlačítko **Další** v každém dialogovém, dokud se nedostanete **možnosti instalace** dialogové okno. Vyberte **vlastní**a potom klikněte na tlačítko **Další**.  
   
-3.  Zrušte zaškrtnutí všech políček v **instalace Microsoft Visual C++** dialogové okno s výjimkou **možnosti databáze** zaškrtněte políčko a potom klikněte na **podrobnosti** zobrazíte **Možnosti databáze** dialogové okno.  
+3.  Zrušte zaškrtnutí všech políček v **instalace Microsoft Visual C++** dialogové okno s výjimkou **možnosti databáze** zaškrtněte políčko a potom klikněte na tlačítko **podrobnosti** zobrazíte **Možnosti databáze** dialogové okno.  
   
-4.  Vymazat **Microsoft Data Access Objects** zaškrtněte políčko **ovladače ODBC Microsoft** zaškrtněte políčko a potom klikněte na **podrobnosti**.  
+4.  Zrušte **Microsoft Data Access Objects** zaškrtněte políčko **ovladače ODBC Microsoft** zaškrtněte políčko a potom klikněte na tlačítko **podrobnosti**.  
   
      **Ovladače ODBC Microsoft** zobrazí se dialogové okno.  
   
-5.  Vyberte ovladače, které chcete nainstalovat a potom klikněte na **OK** dvakrát.  
+5.  Vyberte ovladače, kterou chcete nainstalovat a potom klikněte na **OK** dvakrát.  
   
-6.  Klikněte na tlačítko **Další** na zbývajících dialogových oknech zahájíte instalaci. Instalační program vás upozorní, po dokončení instalace.  
+6.  Klikněte na tlačítko **Další** na zbývajících dialogových oknech a spusťte tak instalaci. Instalační program vás upozorní, když je instalace dokončena.  
   
- Při instalaci ovladačů, můžete nakonfigurovat zdroje dat pomocí Správce rozhraní ODBC. Ikona ODBC zjistíte v Ovládacích panelech.  
+ Při instalaci ovladače, můžete nakonfigurovat zdroj dat pomocí Správce rozhraní ODBC. Ikona ODBC zjistíte v Ovládacích panelech.  
   
 ## <a name="see-also"></a>Viz také  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [Otevřete připojení k databázi (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace šablony zprostředkovatele OLE DB | Microsoft Docs
+title: Referenční dokumentace šablony OLE DB poskytovatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,105 +17,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 040e8a5e244b7978a2b9ead394e243207939655c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112417"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340414"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenční dokumentace k šablonám zprostředkovatelů OLE DB
-Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB, je možné seskupit do následujících kategorií. Referenční materiál také obsahuje informace o [makra pro šablony zprostředkovatele technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
+Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou být seskupeny do následujících kategorií. Referenční materiál obsahuje také informace o [makra pro šablony zprostředkovatele technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
   
- Třídy používají následující konvence: třídy s názvem se vzorkem **IWidgetImpl** by poskytnout implementaci rozhraní **IWidget**.  
+ Třídy používají následujícími zásadami vytváření názvů: třída s názvem se vzorem `IWidgetImpl` by poskytnout implementaci rozhraní `IWidget`.  
   
 ## <a name="session-classes"></a>Třídy relace  
- [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)  
- Vytvoří novou relaci z objekt zdroje dat a vrátí požadované rozhraní v nově vytvořené relace. Povinné rozhraní na objekty zdroje dat.  
+ [Idbcreatesessionimpl –](../../data/oledb/idbcreatesessionimpl-class.md)  
+ Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní na nově vytvořené relace. Povinné rozhraní na objekty zdroje dat  
   
- [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)  
- Implementuje vlastnosti relace voláním statickou funkci definované mapy sady vlastností. Mapy sady vlastností musí být zadán v třídě relace. Povinné rozhraní na relací.  
+ [Isessionpropertiesimpl –](../../data/oledb/isessionpropertiesimpl-class.md)  
+ Implementuje vlastnosti relace voláním statické funkce definované mapou sady vlastností. Mapa set vlastnosti musí být zadán v třídě relace. Povinné rozhraní na relace.  
   
 ## <a name="rowset-classes"></a>Třídy sady řádků  
- [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)  
+ [CRowsetImpl –](../../data/oledb/crowsetimpl-class.md)  
   
- Poskytuje standardní implementace sady řádků OLE DB bez nutnosti vícenásobná dědičnost mnoho implementaci rozhraní. Jedinou metodou, pro které je nutné zadat, je implementace **Execute**.  
+ Poskytuje standardní implementace technologie OLE DB sady řádků bez nutnosti vícenásobná dědičnost mnoho implementace rozhraní. Jedinou metodou, pro kterou je nutné zadat implementace je `Execute`.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Poskytuje výchozí implementaci pro popisovač řádku, který je používán `IRowsetImpl` třídy. Popisovač řádku je logicky jedinečný kód pro řádek, výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požadované v `IRowsetImpl::GetNextRows`.  
+ Poskytuje výchozí implementaci pro popisovač řádku, který je používán `IRowsetImpl` třídy. Popisovač řádku jsou logicky jedinečný klíčová slova pro řádek výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požaduje v `IRowsetImpl::GetNextRows`.  
   
- [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
- OLE DB vyžaduje poskytovatelům implementovat **HACCESSOR**, což je značka na pole **DBBINDING** struktury. Poskytuje **HACCESSOR**s, které jsou adresy **BindType** struktury. Povinné na příkazy a sady řádků.  
+ [IAccessorImpl –](../../data/oledb/iaccessorimpl-class.md)  
+ OLE DB vyžaduje poskytovatele, jak implementovat `HACCESSOR`, což je značka na pole `DBBINDING` struktury. Poskytuje `HACCESSOR`, které jsou adresy `BindType` struktury. Povinné na příkazy a sady řádků.  
   
- [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
- Delegáti statické funkce definované mapu sloupců poskytovatele. Povinné rozhraní na příkazy a sady řádků.  
+ [Icolumnsinfoimpl –](../../data/oledb/icolumnsinfoimpl-class.md)  
+ Delegáty pro statické funkce definované mapou sloupec zprostředkovatele. Povinné rozhraní sady řádků a příkazy.  
   
- [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
- Poskytuje informace o dostupnosti převody typů v příkazu nebo pro sadu řádků. Povinné na příkazy, sady řádků a sady řádků index. Implementuje **IConvertType** rozhraní delegováním k objektu převod poskytl OLE DB.  
+ [Iconverttypeimpl –](../../data/oledb/iconverttypeimpl-class.md)  
+ Poskytuje informace o dostupnosti převody typů příkazu nebo pro sadu řádků. Povinné na příkazy, sady řádků a index sady řádků. Implementuje `IConvertType` rozhraní delegováním převodu objektu poskytnutých OLE DB.  
   
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)  
- Implementuje **IDBSchemaRowset** rozhraní a funkce šablonou creator `CreateSchemaRowset`.  
+ Implementuje `IDBSchemaRowset` rozhraní a funkce přepsaly creator `CreateSchemaRowset`.  
   
- [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)  
- Otevře a vrací sadu řádků, který zahrnuje všechny řádky z jedné základní tabulky nebo indexu. Povinné rozhraní pro objekt relace.  
+ [Iopenrowsetimpl –](../../data/oledb/iopenrowsetimpl-class.md)  
+ Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu. Povinné rozhraní pro objekt relace.  
   
- [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementuje OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) rozhraní, která umožňuje aktualizaci hodnot sloupců v existujících řádků, odstranění řádků a vkládání nových řádků.  
+ [IRowsetChangeImpl –](../../data/oledb/irowsetchangeimpl-class.md)  
+ Implementuje rozhraní OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
   
- [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` , ale taky umožňuje vlastnosti OLE DB **DBPROPCANSCROLLBACKWARDS** a **DBPROPCANFETCHBACKWARDS**.  
+ [Irowsetcreatorimpl –](../../data/oledb/irowsetcreatorimpl-class.md)  
+ Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS` a `DBPROPCANFETCHBACKWARDS`.  
   
- [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
- Implementuje **IRowsetIdentity** rozhraní, což vám umožní porovnat, zda jsou dva řádky dat identické nebo ne.  
+ [Irowsetidentityimpl –](../../data/oledb/irowsetidentityimpl-class.md)  
+ Implementuje `IRowsetIdentity` rozhraní, které vám umožní porovnat, zda dva řádky dat jsou stejné, nebo ne.  
   
  [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md)  
- Představuje implementaci objektu `IRowset` rozhraní, což je rozhraní pro základní sady řádků.  
+ Poskytuje implementaci `IRowset` rozhraní, což je rozhraní základní sady řádků.  
   
- [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)  
- Implementuje vlastnosti sady řádků pomocí vlastnosti nastavit mapy definovaný ve třídě příkaz. Povinné rozhraní na sady řádků.  
+ [Irowsetinfoimpl –](../../data/oledb/irowsetinfoimpl-class.md)  
+ Implementuje vlastnosti sady řádků pomocí vlastnosti nastavit mapování definované ve třídě příkazu. Povinné rozhraní na sady řádků.  
   
- [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementuje OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) rozhraní, která načte libovolný řádky ze sady řádků. Pro podporu technologie OLE DB záložky v sadě řádků, zkontrolujte řádků z této třídy dědit.  
+ [IRowsetLocateImpl –](../../data/oledb/irowsetlocateimpl-class.md)  
+ Implementuje rozhraní OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) rozhraní, která načte libovolné řádky ze sady řádků. Pro podporu technologie OLE DB záložky v sadě řádků, ujistěte se, v sadě řádků z této třídy dědit.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementuje vysílání funkce pro navedení naslouchací procesy ve spojovacím bodě **IID_IRowsetNotify** změny obsah sady řádků. Příjemci, které zpracovávají oznámení implementovat [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) a zaregistrovat ho v tomto bodě připojení.  
+ Implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků. Implementovat příjemce, kteří zpracování oznámení [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) , zaregistrujte je v bodě připojení.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementuje OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) rozhraní, která umožňuje příjemci sdělovat změny provedené s [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) do zdroje dat a vrátit zpět změny před samotným přenosem.  
+ Implementuje rozhraní OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) do zdroje dat a vrátit zpět změny před samotným přenosem.  
   
 ## <a name="command-classes"></a>Třídy příkazů  
  [Icommandimpl –](../../data/oledb/icommandimpl-class.md)  
- Představuje implementaci objektu `ICommand` rozhraní. Toto rozhraní není viditelný, ale jsou zpracována **ICommandTextImpl**. Povinné rozhraní pro objekt příkazu.  
+ Poskytuje implementaci `ICommand` rozhraní. Toto rozhraní není viditelný, ale zařizuje služba `ICommandTextImpl`. Povinné rozhraní pro objekt příkazu.  
   
- [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)  
- Tato implementace **ICommandProperties** rozhraní poskytuje statické funkce definované `BEGIN_PROPSET_MAP` makro. Povinné na příkazy.  
+ [Icommandpropertiesimpl –](../../data/oledb/icommandpropertiesimpl-class.md)  
+ Tato implementace `ICommandProperties` rozhraní poskytuje statické funkce definované `BEGIN_PROPSET_MAP` – makro. Povinné na příkazy.  
   
  [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)  
- Nastaví, ukládá a vrátí text příkazu. Povinné na příkazy.  
+ Nastaví, ukládá a vrací text příkazu. Povinné na příkazy.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  
- Vytvoří nový příkaz z objektu session a vrátí požadované rozhraní na nově vytvořený příkaz. Volitelné rozhraní na objekty relace.  
+ Vytvoří nový příkaz z objektu relace a vrací požadovaná rozhraní na nově vytvořený příkaz. Volitelné rozhraní pro objekty relace.  
   
  Další příkaz třídy jsou `IColumnsInfoImpl` a `IAccessorImpl`, které jsou popsány v části třídy sady řádků výše.  
   
 ## <a name="data-source-classes"></a>Třídy zdroje dat  
  [Idbinitializeimpl –](../../data/oledb/idbinitializeimpl-class.md)  
- Vytvoří nebo odstraní připojení k příjemce. Povinné rozhraní na objekty zdroje dat a volitelné rozhraní na výčty.  
+ Vytvoří a odstraní připojení ke spotřebiteli. Povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory.  
   
- [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties` je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro výčty. Ale pokud enumerátor zpřístupní **IDBInitialize**, musí vystavit `IDBProperties` (Vlastnosti zdroje dat).  
+ [Idbpropertiesimpl –](../../data/oledb/idbpropertiesimpl-class.md)  
+ `IDBProperties` je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní `IDBInitialize`, musí vystavit `IDBProperties` (Vlastnosti zdroje dat).  
   
- [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
- Získá ukazatele rozhraní pro objekt zdroje dat. Povinné rozhraní v relaci.  
+ [Igetdatasourceimpl –](../../data/oledb/igetdatasourceimpl-class.md)  
+ Získá ukazatel na objekt zdroje dat rozhraní. Povinné rozhraní v relaci.  
   
-## <a name="other-classes"></a>Ostatní třídy  
- [CUtlProps](../../data/oledb/cutlprops-class.md)  
- Implementuje vlastnosti pro celou řadu vlastností rozhraní OLE DB (například `IDBProperties`, **ISessionProperties**, a `IRowsetInfo`).  
+## <a name="other-classes"></a>Jiné třídy  
+ [CUtlProps –](../../data/oledb/cutlprops-class.md)  
+ Implementuje vlastnosti pro celou řadu vlastností rozhraní technologie OLE DB (například `IDBProperties`, `ISessionProperties`, a `IRowsetInfo`).  
   
- [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
+ [Ierrorrecordsimpl –](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementuje OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) rozhraní, přidání záznamů do a načítání záznamů ze člena.  
+ Implementuje rozhraní OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) rozhraní, přidání záznamů do a načtení záznamů z datového členu.  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace šablony příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Šablony OLE DB](../../data/oledb/ole-db-templates.md)

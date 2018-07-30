@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 558578a82f1906d7481abebc5e1f1719b1983724
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269934"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339793"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl – třída
 Poskytuje implementaci [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) objektu.  
@@ -66,7 +66,7 @@ Vrátí ukazatel rozhraní objektu zdroje dat, která byla relace vytvořena.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetDataSource)(REFIID riid,   
+STDMETHOD(GetDataSource)(REFIID riid,   
    IUnknown ** ppDataSource);  
 ```  
   

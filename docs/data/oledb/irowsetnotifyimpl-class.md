@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b39a5428fa5ba57e38e0190255ac0dcf60b1a5e
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a20be1a92c93be38d901f58339bb02b24cf2661f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233708"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339952"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl – třída
 Implementuje a zaregistruje [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) na spotřebitele (označované také jako "jímka") tak, aby se zpracování oznámení.  
@@ -120,7 +120,7 @@ Oznámí uživateli všechny změny, které mají vliv celá sada řádků.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-   STDMETHOD(OnRowsetChange)(   
+STDMETHOD(OnRowsetChange)(   
 /* [in] */ IRowset* /* pRowset */,  
 /* [in] */ DBREASON /* eReason */,  
 /* [in] */ DBEVENTPHASE /* ePhase */,  

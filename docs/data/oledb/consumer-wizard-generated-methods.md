@@ -1,5 +1,5 @@
 ---
-title: Metody generované v Průvodci příjemcem | Microsoft Docs
+title: Metody generované v Průvodci příjemcem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,39 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098599"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340877"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
-Průvodce příjemcem knihovny ATL technologie OLE DB a Průvodce aplikací MFC generovat určité funkce, kterých byste měli vědět. Všimněte si, že některé metody jsou implementované jinak v s atributy projekty, takže se několik aspektů; každý případ je popsané níže. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
+Průvodce příjemcem ATL OLE DB a Průvodce aplikací MFC generovat určité funkce, které byste měli vědět. Všimněte si, že některé metody jsou implementovány odlišně v projektech s atributy, tedy několik upozornění; každý případ je popsané níže. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll` zdroj dat, sadu řádků, se otevře a spustí záložky, pokud jsou k dispozici.  
+-   `OpenAll` Otevře se zdroji dat sady řádků a zapne záložky, pokud jsou k dispozici.  
   
--   `CloseAll` Zavře všechny otevřené sady řádků a uvolní všechny spuštění příkazu.  
+-   `CloseAll` Zavře všechny otevřené sady řádků a uvolní všech provedení příkazu.  
   
--   `OpenRowset` je volána OpenAll k otevření sady řádků příjemce nebo sady řádků.  
+-   `OpenRowset` je volán OpenAll otevřete příjemce sady řádků nebo sady řádků.  
   
--   `GetRowsetProperties` načte ukazatel nastavit vlastnosti, které lze nastavit vlastností sady řádků.  
+-   `GetRowsetProperties` načte ukazatel na nastavit pomocí vlastnosti, které můžete nastavit vlastnost sady řádků.  
   
 -   `OpenDataSource` Otevře se zdroji dat pomocí inicializačního řetězce, které jste zadali v **vlastnosti propojení dat** dialogové okno.  
   
--   `CloseDataSource` Zavře zdroj dat odpovídajícím způsobem.  
+-   `CloseDataSource` zdroj dat se zavře vhodným způsobem.  
   
-## <a name="openall-and-closeall"></a>OpenAll a CloseAll  
+## <a name="openall-and-closeall"></a>OpenAll – a CloseAll  
   
-```  
+```cpp  
 HRESULT OpenAll();   
 
 void CloseAll();  
 ```  
   
- Následující příklad ukazuje, jak můžete volat `OpenAll` a `CloseAll` při spuštění stejného příkazu opakovaně. Porovnání příklad kódu v [CCommand::Close](../../data/oledb/ccommand-close.md), který zobrazí variace, zavolá **Zavřít** a `ReleaseCommand` místo `CloseAll`.  
+ Následující příklad ukazuje, jak můžete volat `OpenAll` a `CloseAll` při spuštění stejného příkazu opakovaně. Porovnání v příkladu kódu v [CCommand::Close](../../data/oledb/ccommand-close.md), který zobrazuje změnu, která volá `Close` a `ReleaseCommand` místo `CloseAll`.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
    HRESULT hr;  
@@ -89,18 +89,18 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Všimněte si, že pokud definujete `HasBookmark` metody `OpenAll` kód nastaví vlastnost DBPROP_IRowsetLocate; zajistěte, aby toto provádíte pouze pokud váš poskytovatel podporuje dané vlastnosti.  
+ Všimněte si, že definujete `HasBookmark` metody `OpenAll` kódu nastaví vlastnost DBPROP_IRowsetLocate, ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
-```  
+```cpp  
 // OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** volá tuto metodu za účelem otevření sady řádků nebo sady řádků v příjemci. Obvykle není potřeba volat `OpenRowset` Pokud chcete pracovat s více zdrojů dat nebo relací nebo sady řádků. `OpenRowset` je deklarován v souboru záhlaví třídy příkazu nebo tabulky:  
+ `OpenAll` volá tuto metodu za účelem otevření sady řádků nebo sady řádků v příjemci. Obvykle není potřeba volat `OpenRowset` Pokud budete chtít pracovat s více zdroji dat a relace a sady řádků. `OpenRowset` je deklarována v souboru hlaviček třídy příkazu nebo tabulky:  
   
 ```  
 // OLE DB Template version:  
@@ -115,9 +115,9 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Tuto metodu implementovat atributy jinak. Tato verze přebírá objekt relace a příkaz řetězec, který použije se výchozí hodnota příkaz řetězec zadaný v db_command, i když můžete předat jiný. Všimněte si, že pokud definujete `HasBookmark` metody `OpenRowset` kód nastaví vlastnost DBPROP_IRowsetLocate; zajistěte, aby toto provádíte pouze pokud váš poskytovatel podporuje dané vlastnosti.  
+ Tuto metodu implementovat atributy odlišně. Tato verze má objekt relace a příkaz řetězec, který se použije výchozí příkaz řetězec zadaný v db_command, i když lze předat jiné. Všimněte si, že definujete `HasBookmark` metody `OpenRowset` kódu nastaví vlastnost DBPROP_IRowsetLocate, ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
   
-```  
+```cpp  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)  
 {  
@@ -134,15 +134,15 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 }  
 ```  
   
-## <a name="getrowsetproperties"></a>GetRowsetProperties –  
+## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
-```  
+```cpp 
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Tato metoda načte ukazatel na sadu vlastností sady řádků; Chcete-li nastavit vlastnosti, například DBPROP_IRowsetChange můžete použít tento ukazatel. `GetRowsetProperties` se používá v třídě uživatelského záznamu následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
+ Tato metoda načte ukazatel na sadu vlastností v sadě řádků; Chcete-li nastavit vlastnosti, jako je DBPROP_IRowsetChange můžete použít tento ukazatel. `GetRowsetProperties` se používá ve třídě záznamů uživatele následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -153,18 +153,18 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Neměli byste definovat globální konfiguraci `GetRowsetProperties` metoda vzhledem k tomu může dojít ke konfliktu s ten definované v průvodci. Upozorňujeme, že to je generované v Průvodci metodu, kterou dostanete s použitím šablon a s atributy projekty; Tento kód není vloží atributy.  
+ Neměli byste definovat globální `GetRowsetProperties` protože by mohla v konfliktu s tím definována metoda průvodcem. Všimněte si, že se jedná o metody generované v průvodci, který můžete začít s projekty bez vizuálního vzhledu a s atributy; atributy nejsou vložit tento kód.  
   
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource a CloseDataSource  
   
-```  
+```cpp  
 HRESULT OpenDataSource();   
 
 void CloseDataSource();  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Definuje metody, průvodce `OpenDataSource` a `CloseDataSource`; `OpenDataSource` volání [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
+ Průvodce definuje metody `OpenDataSource` a `CloseDataSource`; `OpenDataSource` volání [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Vytvoření příjemce OLE DB pomocí průvodce](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

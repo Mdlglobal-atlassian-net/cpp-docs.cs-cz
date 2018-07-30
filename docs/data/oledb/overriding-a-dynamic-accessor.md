@@ -1,5 +1,5 @@
 ---
-title: Přepsání dynamického přístupového objektu | Microsoft Docs
+title: Přepsání dynamického přístupového objektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107854"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340027"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Přepsání dynamického přístupového objektu
-Při použití dynamického přístupového objektu jako `CDynamicAccessor`, příkaz **otevřete** metoda vytvoří přistupující objekt automaticky, založeného na informace o sloupci otevřené sady řádků. Můžete přepsat dynamického přístupového objektu k řízení, přesně jak je vázána sloupce.  
+Při použití dynamického přístupového objektu jako `CDynamicAccessor`, příkaz `Open` metoda vytvoří přístupový objekt automaticky, založeného na informace o sloupci otevřené sady řádků. Můžete přepsání dynamického přístupového objektu k řízení, přesně jak jsou vázané sloupce.  
   
- Přepsání dynamického přístupového objektu, předejte **false** jako poslední parametr `CCommand::Open` metoda. Zabrání se tak **otevřete** z automaticky vytvoření přistupujícího objektu. Potom můžete volat `GetColumnInfo` a volání `AddBindEntry` pro každý sloupec, který chcete vytvořit vazbu. Následující kód ukazuje, jak to udělat:  
+ Přepsání dynamického přístupového objektu, předejte **false** jako poslední parametr `CCommand::Open` metody. To zabraňuje `Open` od vytvoření automaticky přistupujícího objektu. Potom můžete zavolat `GetColumnInfo` a volat `AddBindEntry` pro každý sloupec, který chcete vytvořit vazbu. Následující kód ukazuje, jak to udělat:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

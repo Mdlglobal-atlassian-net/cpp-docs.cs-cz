@@ -1,5 +1,5 @@
 ---
-title: Předávání testů shodnosti technologie OLE DB | Microsoft Docs
+title: Předávání testů shodnosti technologie OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11677e6295956de768c7ebc0c113d775b066bb0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0288e1517bf89ec6ff8a2067311c3641d8d7113c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110461"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340913"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
-Chcete-li více konzistentní zprostředkovatelé, Data Access SDK poskytuje sadu testů shodnosti technologie OLE DB. Testy zkontrolujte všechny aspekty svého poskytovatele a získáte přiměřenou jistotu, že váš zprostředkovatel funguje podle očekávání. Můžete najít testů shodnosti technologie OLE DB na Microsoft Data Access SDK. Tato část se zaměřuje na věcí, které byste měli udělat předávání testů shodnosti. Informace o spuštění testů shodnosti technologie OLE DB naleznete v sadě SDK.  
+Chcete-li poskytovatele konzistentnější, Data Access SDK poskytuje sadu testů shodnosti technologie OLE DB. Testy zkontrolujte všechny aspekty vašeho poskytovatele a poskytují rozumné záruku, že vaše zprostředkovatel funguje podle očekávání. Testů shodnosti technologie OLE DB můžete najít v sadě Microsoft Data Access SDK. Tato část se zaměřuje na věci, které byste měli udělat pro předávání testů shodnosti. Informace o spuštění testů shodnosti technologie OLE DB najdete v sadě SDK.  
   
 ## <a name="running-the-conformance-tests"></a>Spuštění testů shodnosti  
- Ve Visual C++ 6.0 přidali šablony zprostředkovatele technologie OLE DB počet zapojených funkcí, které vám umožní zkontrolujte hodnoty a vlastnosti. Většina těchto funkcí byly přidány v reakci na testů shodnosti.  
+ Ve Visual C++ 6.0 přidali šablony zprostředkovatele OLE DB počet zapojených funkcí, které umožňují zkontrolovat hodnoty a vlastnosti. Většina těchto funkcí byly přidány v reakci na testů shodnosti.  
   
 > [!NOTE]
->  Je nutné přidat několik ověřovacích funkcí pro váš poskytovatel předávání testů shodnosti technologie OLE DB.  
+>  Budete muset přidat několik ověřovací funkce pro předávání testů shodnosti technologie OLE DB poskytovatele.  
   
- Tento zprostředkovatel vyžaduje dvě rutiny ověřování. První rutina `CRowsetImpl::ValidateCommandID`, je součástí vaší třídy sady řádků. Při vytváření sady řádků je volána metodou šablony zprostředkovatele. Ukázka používá tuto rutinu příjemci říct, že nepodporuje indexy. První volání je `CRowsetImpl::ValidateCommandID` (Všimněte si, že používá zprostředkovatel **_RowsetBaseClass** typedef přidat v mapě rozhraní pro `CMyProviderRowset` v [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md), takže není nutné Zadejte tyto dlouhé řádky argumenty šablony). Pak se vraťte **DB_E_NOINDEX** Pokud není parametr indexu **NULL** (to znamená, chce příjemce na nás použít index). Další informace o ID příkazů najdete v OLE DB specifikaci a vyhledejte **IOpenRowset::OpenRowset**.  
+ Tento poskytovatel vyžaduje dvě rutiny ověřování. První rutina `CRowsetImpl::ValidateCommandID`, je součástí vaší třídy sady řádků. Je volána při vytváření sady řádků šablony zprostředkovatele. Ukázka používá tato rutina příjemci říct, že nepodporuje indexy. První volání `CRowsetImpl::ValidateCommandID` (Všimněte si, že poskytovatel použije `_RowsetBaseClass` typedef přidán v mapě rozhraní pro `CMyProviderRowset` v [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md), takže není potřeba psát tyto dlouhé řádky šablony argumenty). Pokud parametr indexu není NULL, pak se vraťte DB_E_NOINDEX (označuje, že uživatel chce používat indexu v USA). Další informace o ID příkazů najdete v příslušné specifikaci OLE DB a hledejte `IOpenRowset::OpenRowset`.  
   
- Následující kód je **ValidateCommandID –** ověření rutiny:  
+ Následující kód je `ValidateCommandID` ověření rutinu:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
@@ -57,30 +57,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- Šablony zprostředkovatele volají `OnPropertyChanged` metoda vždy, když někdo změní vlastnost na **DBPROPSET_ROWSET** skupiny. Pokud chcete zpracovat vlastnosti pro další skupiny, je přidáte do příslušného objektu (to znamená, **DBPROPSET_SESSION** kontroly přejděte `CMyProviderSession` třídy).  
+ Šablony zprostředkovatele volají `OnPropertyChanged` metoda pokaždé, když někdo změní vlastnost na `DBPROPSET_ROWSET` skupiny. Pokud chcete zpracovávat vlastnosti pro jiné skupiny, je přidáte do příslušného objektu (to znamená, `DBPROPSET_SESSION` kontroly přejdou do `CMyProviderSession` třídy).  
   
- Kód nejdřív zkontroluje, zda je vlastnost propojena do jiného. Pokud je vlastnost zřetězená, nastaví **DBPROP_BOOKMARKS** vlastnost na hodnotu True. Příloha C specifikace OLE DB obsahuje informace o vlastnostech. Tyto informace taky poznáte, jestli je vlastnost zřetězená do jiné.  
+ Kód nejprve zkontroluje, zda je vlastnost propojený na jiný. Když se tato vlastnost je zřetězená, nastaví `DBPROP_BOOKMARKS` vlastnost na hodnotu True. Příloha C specifikaci OLE DB obsahuje informace o vlastnostech. Tyto informace také zjistíte, zda je vlastnost zřetězené do jiného.  
   
- Můžete také přidat `IsValidValue` rutiny do vašeho kódu. Volání šablony `IsValidValue` při pokusu o nastavení vlastnosti. Tato metoda by se mělo přepsat, pokud požadujete další zpracování při nastavení hodnoty vlastnosti. Může mít jednu z těchto metod pro každou sadu vlastností.  
+ Můžete také přidat `IsValidValue` rutiny do vašeho kódu. Volání šablony `IsValidValue` při pokusu o nastavení vlastnosti. Tato metoda by se mělo přepsat, pokud vyžadují další zpracování při nastavení hodnoty vlastnosti. Můžete mít jednu z těchto metod pro každou sadu vlastností.  
   
-## <a name="threading-issues"></a>Problémy dělení na vlákna  
- Ve výchozím nastavení Průvodce zprostředkovatele OLE DB v průvodci zprostředkovatele OLE DB ATL generuje kód pro zprostředkovatele pro spuštění v modelu typu apartment. Pokud se uživatel pokusí spustit tento kód s testů shodnosti, obdržíte nejprve selhání. To je vzhledem k tomu, že Ltm.exe, nástroj, který slouží ke spuštění testů shodnosti technologie OLE DB, použije se výchozí hodnota volného vláken. Kód Průvodce zprostředkovatele technologie OLE DB výchozí modelu objektu apartment výkonu a snadného použití.  
+## <a name="threading-issues"></a>Potíže s vlákny  
+ Ve výchozím nastavení OLE DB Provider průvodce v průvodce zprostředkovatelem ATL OLE DB generuje kód pro zprostředkovatele pro spuštění v modelu objektu apartment. Při pokusu o spuštění tohoto kódu s testů shodnosti, získáte počáteční selhání. To je vzhledem k tomu bezplatné Ltm.exe, nástroj používaný ke spuštění testů shodnosti technologie OLE DB, výchozí hodnota je typu. Kód průvodce zprostředkovatelem technologie OLE DB výchozí model apartment pro výkon a jednoduché používání.  
   
  Chcete-li tento problém, můžete buď změnit LTM nebo změnit zprostředkovatele.  
   
-#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Chcete-li změnit LTM pro spuštění v objektu apartment režimu vláken  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Chcete-li změnit LTM ke spuštění v objektu apartment režimu vláken  
   
-1.  V hlavní nabídce LTM klikněte na tlačítko **nástroje**a potom klikněte na **možnosti**.  
+1.  V hlavní nabídce LTM **nástroje**a potom klikněte na tlačítko **možnosti**.  
   
-2.  Na **Obecné** změňte model vláken z **volné zařazování** k **Apartment Threaded**.  
+2.  Na **Obecné** kartu, změňte model vláken ze **bezplatné vláken** k **s vlákny typu Apartment**.  
   
- Chcete-li změnit zprostředkovatele pro spuštění v režimu Volné zařazování:  
+ Chcete-li změnit váš poskytovatel pro spuštění v režimu volného vláken:  
   
--   V projektu poskytovatele vyhledávání pro všechny instance `CComSingleThreadModel` a nahraďte ho `CComMultiThreadModel`, což by mělo být v záhlaví svých datového zdroje, relace a sady řádků.  
+-   Hledání ve vašem projektu zprostředkovatele všechny výskyty `CComSingleThreadModel` a nahraďte ho hodnotou `CComMultiThreadModel`, který by měl být v hlavičkách zdroj, relace a sady řádků vaše data.  
   
--   Ve vašem souboru .rgs změňte model vláken z **Apartment** k **i**.  
+-   V souboru .rgs změnit model vláken ze **objektu Apartment** k **obě**.  
   
--   Postupujte podle správných pravidel programování pro programování volného zřetězení (tedy uzamknout zápisy).  
+-   Postupujte podle správné pravidel programování volných vláken programování (to znamená, že zámek zápisu).  
   
 ## <a name="see-also"></a>Viz také  
  [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: Příkaz obslužné rutiny pro záznam posouvání (MFC Data Access) | Microsoft Docs
+title: Příkaz obslužné rutiny pro záznam posouvání (přístup k datům MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089376"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340325"
 ---
-# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Obslužné rutiny příkazů pro záznam posouvání (Data MFC Access)
-[CRecordView](../mfc/reference/crecordview-class.md) třída poskytuje výchozí příkaz pro následující standardní příkazy zpracování:  
+# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Obslužné rutiny příkazů pro záznam posouvání (přístup k datům MFC)
+[CRecordView](../mfc/reference/crecordview-class.md) třída poskytuje výchozí zpracování příkazů pro následující standardní příkazy:  
   
--   **ID_RECORD_MOVE_FIRST**  
+-   ID_RECORD_MOVE_FIRST  
   
--   **ID_RECORD_MOVE_LAST**  
+-   ID_RECORD_MOVE_LAST  
   
--   **ID_RECORD_MOVE_NEXT**  
+-   ID_RECORD_MOVE_NEXT  
   
--   **ID_RECORD_MOVE_PREV**  
+-   ID_RECORD_MOVE_PREV  
   
- `OnMove` – Členská funkce poskytuje výchozí příkaz zpracování pro všechny čtyři příkazy, které se pohybují mezi záznamy. Tyto příkazy jsou používány, RFX (nebo DFX) načte nový záznam do sady záznamů v polích a DDX přesune hodnoty do ovládacích prvků záznamů formuláře. Informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../data/odbc/record-field-exchange-rfx.md).  
+ `OnMove` Členskou funkci poskytuje výchozí příkaz zpracování pro všechny čtyři příkazy, které se pohybují mezi záznamy. Tyto příkazy jsou používány, RFX (nebo DFX) načte nový záznam do sady záznamů v polích a DDX přesune hodnoty do ovládacích prvků formuláře záznamu. Informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
->  Nezapomeňte použít tyto identifikátory standardních příkazů pro všechny objekty uživatelského rozhraní přidružené příkazy standardní záznamu navigace.  
+>  Nezapomeňte použít tyto identifikátory standardních příkazů pro všechny objekty uživatelského rozhraní přidružené k standardní navigace mezi příkazy.  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora navigace v zobrazení záznamů](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+ [Podpora navigace v zobrazení záznamu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Filtrování záznamů (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Filtrování záznamů (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b4860726fa77d7b852290d8ea4680fe1bbbd86f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1196bc41022a3202a55ad1ba5c208b8a8fdbbcc5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091800"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340609"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Sada záznamů: Filtrování záznamů (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Toto téma vysvětluje, jak filtrovat sadu záznamů tak, aby vybral pouze konkrétní podmnožinu dostupných záznamů. Můžete například vybrat pouze oddíly třídy pro konkrétní kurz, jako je například MATH101. Filtr je podmínka vyhledávání definované obsah SQL **kde** klauzule. Pokud systém připojí k příkazu SQL sady záznamů, **kde** klauzule omezí výběr.  
+ Toto téma vysvětluje, jak filtrovat sadu záznamů tak, aby vybral jenom konkrétní podmnožinu dostupných záznamů. Například můžete chtít vybrat pouze oddíly třídy pro konkrétní kurz, jako je například MATH101. Filtr je podmínka vyhledávání definované obsah SQL **kde** klauzuli. Pokud systém připojí k příkazu SQL sady záznamů, **kde** klauzule omezí výběr.  
   
- Je nutné vytvořit filtr objekt sady záznamů, co vytvoříte objekt, ale před voláním jeho **otevřete** – členská funkce (nebo před voláním **Requery –** – členská funkce pro existující sady záznamů objekt, jehož **otevřete** – členská funkce byla volána dříve).  
+ Po vytvoření objektu, ale před voláním, je nutné vytvořit objekt sady záznamů filtr jeho `Open` členskou funkci (nebo před voláním `Requery` členské funkce pro existující sady záznamů objekt, jehož `Open` má členská funkce byla volána dříve).  
   
-#### <a name="to-specify-a-filter-for-a-recordset-object"></a>K zadání filtru pro objekt sady záznamů  
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Chcete-li zadat filtr pro objekt sady záznamů  
   
-1.  Vytvořte nový objekt sady záznamů (nebo připravte volání **Requery** pro existující objekt).  
+1.  Vytvořit nový objekt sady záznamů (nebo se připravte a volat `Requery` pro existující objekt).  
   
-2.  Nastavte hodnotu objektu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) – datový člen.  
+2.  Nastavte hodnotu vlastnosti objektu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datový člen.  
   
-     Filtr je řetězec ukončené hodnotou null, který obsahuje obsah SQL **kde** klauzule, ale nikoli klíčové slovo **kde**. Například použijte:  
+     Tento filtr je řetězec zakončený hodnotou null, který obsahuje obsah SQL **kde** klauzule, ale nikoli klíčové slovo **kde**. Například použijte:  
   
     ```  
     m_pSet->m_strFilter = "CourseID = 'MATH101'";  
@@ -52,19 +52,19 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     ```  
   
     > [!NOTE]
-    >  Řetězcový literál "MATH101" se zobrazí s apostrofech výše. Ve specifikaci ODBC SQL jednoduchých uvozovek a slouží k označení znak řetězcový literál. Podívejte se do dokumentace ovladač ODBC pro požadavky z hlediska stylu citací vaší databázového systému v této situaci. Tato syntaxe je také popsána dále téměř na konci tohoto tématu.  
+    >  Řetězcový literál "MATH101" se zobrazí s jednoduchých uvozovek nahoře. Ve specifikaci ODBC SQL jednoduchých uvozovek a slouží k označení znak literálu. Zkontrolujte dokumentaci ovladače rozhraní ODBC pro použití apostrofů požadavky systému DBMS v této situaci. Tato syntaxe je také popsáno dále téměř na konci tohoto tématu.  
   
-3.  Nastavte další možnosti, které potřebujete, například pořadí řazení, režim uzamčení nebo parametry. Zadání parametru je obzvláště užitečná. Informace o parametrizaci filtru najdete v tématu [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+3.  Nastavte další možnosti, které potřebujete, jako je například pořadí řazení, režim uzamčení nebo parametry. Zadání parametru je obzvláště užitečné. Informace o parametrizaci filtru najdete v tématu [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-4.  Volání **otevřete** nového objektu (nebo **Requery** pro objekt, který dříve otevřen).  
-  
-> [!TIP]
->  Pomocí parametrů do filtru je možná nejefektivnější metoda pro načtení záznamů.  
+4.  Volání `Open` pro nový objekt (nebo `Requery` dřív otevřených objektu).  
   
 > [!TIP]
->  Sada záznamů filtry jsou užitečné pro [připojení](../../data/odbc/recordset-performing-a-join-odbc.md) tabulky a pro používání [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) na základě informací získaných nebo vypočtených za běhu.  
+>  Pomocí parametrů filtru je možná nejefektivnější metoda pro načtení záznamů.  
   
- Sada záznamů vybere pouze záznamy, které splňují podmínku vyhledávání, které zadáte. Můžete například zadat filtr kurzu popsané výše (za předpokladu, že proměnné `strCourseID` nastaveno, například na "MATH101"), postupujte takto:  
+> [!TIP]
+>  Sada záznamů filtry jsou užitečné pro [propojení](../../data/odbc/recordset-performing-a-join-odbc.md) tabulky a pro použití [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) na základě informací získaných nebo vypočítat v době běhu.  
+  
+ Sada záznamů vybere jen takové záznamy, které splňují zadané podmínky hledání. Například zadejte filtr kurzu popsané výše (za předpokladu, že proměnné `strCourseID` teď nastavené, například "MATH101"), postupujte takto:  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -80,22 +80,22 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
   
  Sada záznamů obsahuje záznamy pro všechny oddíly tříd pro MATH101.  
   
- Všimněte si, jak byl nastaven řetězec filtru v příkladu výše, používá proměnnou string. Toto je typické použití. Ale Předpokládejme, že chcete zadat hodnotu literálu 100 pro ID kurzu. Následující kód ukazuje, jak nastavit řetězec filtru správně s literálovou hodnotou:  
+ Všimněte si, jak byl nastaven řetězec filtru v příkladu výše, pomocí proměnné řetězce. Toto je typická využití. Ale Předpokládejme, že chcete zadat hodnotu literálu 100 pro ID kurzu. Následující kód ukazuje, jak nastavit správně s literálovou hodnotou řetězec filtru:  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- Všimněte si použití jednoduchých uvozovkách znaků; Pokud jste nastavili řetězec filtru přímo, je řetězec filtru **není**:  
+ Všimněte si použití jednoduché uvozovky znaků. Pokud nastavíte řetězec filtru přímo, je řetězec filtru **není**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- Použití uvozovek výše odpovídá specifikaci ODBC, ale některé DBMS mohou vyžadovat další znaky uvozovek za sebou. Další informace najdete v tématu [SQL: přizpůsobení vaše SQL příkazu záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
+ Uvozovky u výše uvedené odpovídá specifikaci rozhraní ODBC, ale některé systémy DBMS můžou vyžadovat další znaky uvozovek. Další informace najdete v tématu [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 > [!NOTE]
->  Pokud se rozhodnete přepsat výchozí řetězec SQL sady záznamů předáním svůj vlastní řetězec SQL k **otevřete**, by neměl nastavit filtr, pokud má váš vlastní řetězec **kde** klauzule. Další informace o přepsání výchozího SQL najdete v tématu [SQL: přizpůsobení vaše SQL příkazu záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
+>  Pokud budete chtít přepsat výchozí řetězec SQL sady záznamů předáním vlastní řetězec SQL `Open`, by neměla nastavit filtr, pokud má váš vlastní řetězec **kde** klauzuli. Další informace o přepsání výchozího SQL najdete v tématu [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   

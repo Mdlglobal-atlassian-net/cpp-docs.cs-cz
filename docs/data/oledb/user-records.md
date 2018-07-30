@@ -1,5 +1,5 @@
 ---
-title: Uživatelské záznamy | Microsoft Docs
+title: Záznamy uživatelů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109804"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339669"
 ---
 # <a name="user-records"></a>Uživatelské záznamy
-Použití statické přístupového objektu (tedy přistupující objekt odvozený z **CAccessor)**, váš příjemce musí mít uživatelský záznam. Záznamu uživatele je C++ třídu, která obsahuje elementy data pro zpracování vstupu nebo výstupu. Průvodce příjemcem knihovny ATL technologie OLE DB generuje záznamu uživatele pro vaše příjemce. Metody můžete přidat do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.  
+Pro použití statického následovníka (to znamená, přístupový objekt odvozený od `CAccessor`), vaše spotřebitel musí mít uživatelský záznam. Záznam uživatele je třída C++, který obsahuje prvky dat ke zpracování vstupu nebo výstupu. Průvodce příjemcem ATL OLE DB vytvoří záznam uživatele pro vaše příjemce. Přidat metody do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.  
   
- Následující kód ukazuje záznam ukázka, která zpracovává příkazy. V záznamu uživatele `BEGIN_COLUMN_MAP` představuje sadu řádků dat předaný příjemce od zprostředkovatele. `BEGIN_PARAM_MAP` představuje sadu parametrů příkazu. Tento příklad používá [CCommand](../../data/oledb/ccommand-class.md) třídy pro zpracování parametrů příkazu. Datové členy v položek mapování představují posun do jednoho souvislého bloku paměti pro každou instanci třídy. `COLUMN_ENTRY` Makra odpovídají `PROVIDER_COLUMN_ENTRY` makra na straně zprostředkovatele.  
+ Následující kód ukazuje ukázkové záznam, který zpracovává příkazy. V záznamu uživatele BEGIN_COLUMN_MAP představuje sadu řádků data předaná příjemci z zprostředkovatele. BEGIN_PARAM_MAP představuje sadu parametrů příkazu. Tento příklad používá [CCommand](../../data/oledb/ccommand-class.md) třídy pro zpracování parametry příkazu. Datové členy v mapě položky představují posun do souvislý blok paměti pro každou instanci třídy. COLUMN_ENTRY makra odpovídají PROVIDER_COLUMN_ENTRY makra na straně zprostředkovatele.  
   
- Další informace o **COLUMN_MAP** a **PARAM_MAP** makra, najdete v části [makra pro šablony příjemce technologie OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Další informace o COLUMN_MAP a PARAM_MAP najdete v tématu [makra pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -63,15 +63,15 @@ END_PARAM_MAP()
 };  
 ```  
   
-## <a name="wizard-generated-user-records"></a>Generované průvodcem uživatelské záznamy  
- Pokud používáte průvodce příjemcem knihovny ATL technologie OLE DB pro vygenerování příjemce, máte možnost použití šablony technologie OLE DB nebo OLE DB atributy. Generovaný kód se liší v každém případu. Další informace o tomto kódu najdete v tématu [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md).  
+## <a name="wizard-generated-user-records"></a>Generované průvodcem uživatelských záznamů  
+ Pokud používáte průvodce příjemcem ATL OLE DB pro vygenerování příjemce, máte na výběr mezi používáním šablony technologie OLE DB nebo OLE DB atributy. Generovaný kód je v každém případě liší. Další informace o tomto kódu najdete v tématu [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md).  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>Podpora uživatelského záznamu pro několik přístupových objektů  
- Podrobné informace o scénářích, ve kterých budete muset použít několik přístupových objektů, najdete v části [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+ Podrobné informace o scénářích, ve kterých je potřeba použít několik přístupových objektů, naleznete v tématu [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- Následující příklad ukazuje uživatelský záznam upravit tak, aby podporují několik přístupových objektů na sadě řádků. Místo `BEGIN_COLUMN_MAP` a `END_COLUMN_MAP`, používá [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) a [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pro každý přistupující objekt. `BEGIN_ACCESSOR` Makro Určuje číslo přistupujícího objektu (posun od nuly) a zda je přistupující objekt automaticky přistupující objekt. Volání načtel `GetData` k načtení dat automaticky na volání [MoveNext](../../data/oledb/crowset-movenext.md). Manuální přístupové objekty vyžadují, abyste explicitně načíst data. Manuální přistupující objekt použijte, pokud vytváříte vazbu na velkých objemů dat pole (například rastrový obrázek), které možná nebudete chtít načíst pro každý záznam.  
+ Následující příklad ukazuje záznam uživatele, pro podporu více přístupových objektů v dané sadě řádků změnit. Místo BEGIN_COLUMN_MAP a END_COLUMN_MAP používá [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) a [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pro každý přistupující objekt. BEGIN_ACCESSOR – makro Určuje číslo přístupového objektu (posun od nuly) a zda je přistupující objekt automaticky přistupující objekt. Volání načtel `GetData` k načtení dat automaticky na volání [MoveNext](../../data/oledb/crowset-movenext.md). Manuální přístupových objektů vyžadují, abyste explicitně načíst data. Pokud se vazba na pole velkých objemů dat (např. rastrový obrázek), které možná nebudete chtít načíst pro každý záznam, použijte manuální přistupující objekt.  
   
-```  
+```cpp  
 class CMultiArtists  
 {  
 public:  
@@ -94,4 +94,4 @@ END_ACCESSOR_MAP()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

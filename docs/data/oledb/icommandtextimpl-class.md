@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269488"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340290"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl – třída
 Poskytuje implementaci pro [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) rozhraní.  
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ### <a name="parameters"></a>Parametry  
  *T*  
- Příkaz třída odvozená z **icommandtextimpl –**. 
+ Příkaz třída odvozená z `ICommandTextImpl`. 
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** altdb.h  
@@ -82,7 +82,7 @@ Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../da
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+STDMETHOD(GetCommandText)(GUID * pguidDialect,   
    LPOLESTR * ppwszCommand);  
 ```  
   
@@ -95,7 +95,7 @@ Nastaví text příkazu, nahraďte existující text příkazu.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
    LPCOLESTR pwszCommand);  
 ```  
   
@@ -109,7 +109,6 @@ Ukládá příkaz textový řetězec.
   
 ```cpp
 CComBSTR m_strCommandText;  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  

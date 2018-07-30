@@ -1,5 +1,5 @@
 ---
-title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC) | Microsoft Docs'
+title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d7cae3b05c20736a2e271b574569bcac4d5cdc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fcc5c6aae86aea005aef50f9083aeb718f64b19
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094602"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340264"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
 Toto téma vysvětluje, jak k provádění transakcí v sadě záznamů.  
   
 > [!NOTE]
->  Je podporován pouze jedna úroveň transakce; transakce nelze vnořit.  
+>  Je podporován pouze jednu úroveň transakce; nelze vnořovat transakce.  
   
 #### <a name="to-perform-a-transaction-in-a-recordset"></a>K provedení transakcí v sadě záznamů  
   
-1.  Volání `CDatabase` objektu **metody BeginTrans** – členská funkce.  
+1.  Volání `CDatabase` objektu `BeginTrans` členskou funkci.  
   
-2.  Nemáte-li hromadné načítání řádků, volání **AddNew/Update**, **upravit nebo aktualizovat**, a **odstranit** jeden nebo více objektů sady záznamů ze stejné členské funkce databáze tolikrát, kolikrát podle potřeby. Další informace najdete v tématu [sada záznamů: přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musí se napsat vlastní funkce se aktualizovat zdroj dat.  
+2.  Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`, a `Delete` členské funkce jeden nebo více objektů sady záznamů ze stejné databáze tolikrát, kolikrát podle potřeby. Další informace najdete v tématu [sada záznamů: přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce k aktualizaci zdroje dat.  
   
-3.  Nakonec zavolejte `CDatabase` objektu **CommitTrans** – členská funkce. Pokud dojde k chybě v jedné aktualizace nebo jste se rozhodli zrušit změny, zavolejte jeho **vrácení zpět** – členská funkce.  
+3.  Nakonec proveďte volání `CDatabase` objektu `CommitTrans` členskou funkci. Pokud dojde k chybě v jedné aktualizace nebo se rozhodnete zrušit změny, zavolejte jeho `Rollback` členskou funkci.  
   
- Následující příklad používá dvě sady záznamů odstranit Studentova registrace z registrační databáze školy, student odebráním všechny třídy, ve kterých je student zapsán. Protože **odstranit** volání v obou sadách záznamů musí proběhnout úspěšně, je požadována transakce. Příklad předpokládá existenci `m_dbStudentReg`, členské proměnné typu `CDatabase` již připojen ke zdroji dat a tříd sady záznamů `CEnrollmentSet` a `CStudentSet`. `strStudentID` Proměnná obsahuje hodnotu získaný od uživatele.  
+ Dvě sady záznamů z registrační databáze školy, odebrání všechny třídy, ve kterých se zaregistruje studenta studenta odstranit registrace student získal v následujícím příkladu. Vzhledem k tomu, `Delete` volání v obou sadách záznamů musí proběhnout úspěšně, je požadována transakce. Příklad předpokládá existenci `m_dbStudentReg`, členské proměnné typu `CDatabase` již připojen ke zdroji dat a tříd sady záznamů `CEnrollmentSet` a `CStudentSet`. `strStudentID` Proměnná obsahuje hodnotu získaný od uživatele.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -89,10 +89,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  Volání metody **metody BeginTrans** znovu bez volání **CommitTrans** nebo **vrácení zpět** chybu.  
+>  Volání `BeginTrans` znovu bez volání `CommitTrans` nebo `Rollback` chybu.  
   
 ## <a name="see-also"></a>Viz také  
  [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [Transakce: Vliv transakcí na aktualizace (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
  [CDatabase – třída](../../mfc/reference/cdatabase-class.md)   
  [CRecordset – třída](../../mfc/reference/crecordset-class.md)

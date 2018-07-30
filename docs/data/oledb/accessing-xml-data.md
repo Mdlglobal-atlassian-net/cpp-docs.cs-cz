@@ -1,5 +1,5 @@
 ---
-title: Přístup k datům XML | Microsoft Docs
+title: Přístup k datům XML | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,64 +20,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3abe00adee2a88d0414d688984232422a5bcfc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 006b3d05db35aa690e02ab68056732a48acb11c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093399"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340534"
 ---
 # <a name="accessing-xml-data"></a>Přístup k datům XML
 Existují dvě samostatné metody načítání dat XML ze zdroje dat: jeden používá [CStreamRowset](../../data/oledb/cstreamrowset-class.md) a jiné účely [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
   
-|Funkce|CStreamRowset|CXMLAccessor|  
+|Funkce|CStreamRowset –|CXMLAccessor –|  
 |-------------------|-------------------|------------------|  
-|Velikost přenášených dat|Načte data ze všech sloupců a řádků najednou.|Načte data ze všech sloupců, ale pouze jeden řádek v čase. Je nutné přejít řádky pomocí metody, jako `MoveNext`.|  
-|Formátování řetězce|SQL Server formátuje řetězec XML a odešle ho k příjemce.|Načte data pro sadu řádků v nativním formátu (počet požadavků, které zprostředkovatel odeslat jako řetězců v kódu Unicode) a potom vytvoří řetězec obsahující data ve formátu XML.|  
-|Kontrola nad formátováním|Máte nějaké úroveň kontroly nad formátování řetězec XML nastavením některé vlastnosti specifické pro službu SQL Server 2000.|Nemáte žádnou kontrolu nad formátem generované řetězec XML.|  
+|Přenesené množství dat.|Načte data ze všech sloupců a řádků najednou.|Načte data ze všech sloupců, ale pouze jeden řádek v čase. Je nutné přejít řádky pomocí metod, jako například `MoveNext`.|  
+|Formátování řetězce|SQL Server formáty řetězec XML a odešle ji příjemci.|Načte sada řádků data v nativním formátu (počet požadavků, které zprostředkovatel odeslat ho jako řetězce Unicode) a poté sestaví řetězec obsahující data ve formátu XML.|  
+|Kontrola nad formátováním|Máte určitou úroveň kontroly nad formátování řetězce XML tak, že nastavíte některé vlastnosti specifické pro SQL Server 2000.|Nemáte žádnou kontrolu nad formátem vygenerovaný řetězec XML.|  
   
- Při `CStreamRowset` poskytuje další celkově efektivnější způsob načítání dat ve formátu XML, je podporován pouze serverem SQL Server 2000.  
+ Zatímco `CStreamRowset` poskytuje další celkové efektivní způsob načítání dat ve formátu XML, je podporován pouze serverem SQL Server 2000.  
   
 ## <a name="retrieving-xml-data-using-cstreamrowset"></a>Načítání dat XML pomocí CStreamRowset  
- Zadáte [CStreamRowset](../../data/oledb/cstreamrowset-class.md) jako typ sady řádků ve vaší `CCommand` nebo `CTable` deklarace. Můžete ho s vlastními přistupujícího objektu nebo žádný přistupující objekt, například:  
+ Zadáte [CStreamRowset](../../data/oledb/cstreamrowset-class.md) jako typ sady řádků ve vašich `CCommand` nebo `CTable` deklarace. Můžete ji použijete s vlastním přístupový objekt nebo přístupovou metodu, například:  
   
-```  
+```cpp  
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;  
 ```  
   
  -nebo-  
   
-```  
+```cpp  
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Obvykle při volání `CCommand::Open` (určení, například `CRowset` jako `TRowset` třída), získá `IRowset` ukazatel. `ICommand::Execute` Vrátí `IRowset` ukazatele, který je uložen v `m_spRowset` členem `CRowset` objektu. Metody, jako `MoveFirst`, `MoveNext`, a `GetData` používají tento ukazatel načíst data.  
+ Obvykle při volání `CCommand::Open` (například určení `CRowset` jako `TRowset` třídy), získá `IRowset` ukazatel. `ICommand::Execute` Vrátí `IRowset` ukazatel, který je uložený v `m_spRowset` člena `CRowset` objektu. Metody jako `MoveFirst`, `MoveNext`, a `GetData` k načtení dat použít tento ukazatel.  
   
- Naopak při volání `CCommand::Open` (ale zadat `CStreamRowset` jako `TRowset` třída), `ICommand::Execute` vrátí `ISequentialStream` ukazatele, který je uložen v `m_spStream` dat členem [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Pak použijete `Read` metoda pro načtení dat (Unicode string) ve formátu XML. Příklad:  
+ Naopak pokud voláte `CCommand::Open` (ale zadat `CStreamRowset` jako `TRowset` třídy), `ICommand::Execute` vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream` datový člen třídy [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:  
   
-```  
+```cpp  
 myCmd.m_spStream->Read()  
 ```  
   
- SQL Server 2000 provádí formátování XML a vrátí všechny sloupce a všechny řádky sady řádků jako jeden řetězec XML.  
+ SQL Server 2000 provede formátování, XML a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.  
   
- Pro příklad použití `Read` metodu, najdete v části "Přidání podpory XML příjemci" v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md).  
+ Příklad použití `Read` metody, naleznete v části "Přidání podpory XML příjemci" v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Podpora XML pomocí `CStreamRowset` pracuje pouze se SQL Server 2000 a vyžaduje, abyste měli zprostředkovatele OLE DB pro SQL Server 2000 (instalovanou se MDAC).  
+>  Podpora XML pomocí `CStreamRowset` pracuje pouze se SQL Server 2000 a vyžaduje, abyste měli zprostředkovatele OLE DB Provider pro SQL Server 2000 (instalovanou se MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Načítání dat XML pomocí CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) umožňuje přístup k datům ze zdroje dat jako řetězce data při nemají žádné informace o úložišti dat. schématu. `CXMLAccessor` funguje jako `CDynamicStringAccessorW` s tím rozdílem, že první převede všechna data z úložiště dat jako (s příznakem) data ve formátu XML. Názvy značek XML shodovat s názvy sloupců úložiště dat co nejblíže.  
+ [CXMLAccessor –](../../data/oledb/cxmlaccessor-class.md) umožňuje přístup k datům ze zdroje dat jako řetězce dat při nemají žádné informace o schématu datové úložiště. `CXMLAccessor` funguje jako `CDynamicStringAccessorW` s tím rozdílem, že předchozí převede všechna data z úložiště dat jako ve formátu XML (označené) data. Názvy značek XML shodovat s názvy sloupců v úložišti dat co nejpřesněji.  
   
- Použití `CXMLAccessor` stejně jako jakoukoli jinou přístupovou třídu, předání jako parametru šablony k `CCommand` nebo `CTable`:  
+ Použití `CXMLAccessor` stejně jako jiná třída přístupový objekt, předejte ji jako parametr šablony `CCommand` nebo `CTable`:  
   
-```  
+```cpp  
 CTable<CXMLAccessor, CRowset> rs;  
 ```  
   
- Použití [GetXMLRowData –](../../data/oledb/cxmlaccessor-getxmlrowdata.md) a načtení dat z jednoho řádku tabulky najednou, přejděte řádky pomocí metody, jako `MoveNext`, například:  
+ Použití [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) pro načtení dat z jednoho řádku tabulky v čase a vyhledání řádků pomocí metod, jako `MoveNext`, například:  
   
-```  
+```cpp  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
 
@@ -92,7 +92,7 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 }  
 ```  
   
- Můžete použít [GetXMLColumnData –](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) načíst informace o sloupci (datový typ) jako data na řetězec ve formátu XML.  
+ Můžete použít [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) načíst informace o sloupci (datový typ) jako řetězec ve formátu XML data.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)

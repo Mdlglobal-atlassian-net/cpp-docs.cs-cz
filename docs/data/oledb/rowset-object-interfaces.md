@@ -1,5 +1,5 @@
 ---
-title: Rozhraní objektu sady řádků | Microsoft Docs
+title: Rozhraní objektu sady řádků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aaed092d0a67c80852216b6342d32820c7028c4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8a1a5f5256087a8869426489fe01250b16fc598
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112755"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340508"
 ---
 # <a name="rowset-object-interfaces"></a>Rozhraní objektu sady řádků
-V následující tabulce jsou povinné a nepovinné rozhraní definované v objektu sady řádků OLE DB.  
+V následující tabulce jsou uvedeny povinných a volitelných rozhraní určené v objektu sady řádků OLE DB.  
   
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)|Povinné|Ano|  
-|[IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|Povinné|Ano|  
-|[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)|Povinné|Ano|  
-|[IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)|Povinné|Ano|  
-|[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|Povinné|Ano|  
-|[IChapteredRowset](https://msdn.microsoft.com/en-us/library/ms718180.aspx)|Nepovinné|Ne|  
-|[IColumnsInfo2](https://msdn.microsoft.com/en-us/library/ms712953.aspx)|Nepovinné|Ne|  
-|[IColumnsRowset](https://msdn.microsoft.com/en-us/library/ms722657.aspx)|Nepovinné|Ne|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Nepovinné|Ano (prostřednictvím ATL)|  
-|[IDBAsynchStatus](https://msdn.microsoft.com/en-us/library/ms709832.aspx)|Nepovinné|Ne|  
-|[IGetRow](https://msdn.microsoft.com/en-us/library/ms718047.aspx)|Nepovinné|Ne|  
-|[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)|Nepovinné|Ano|  
-|[IRowsetChapterMember](https://msdn.microsoft.com/en-us/library/ms725430.aspx)|Nepovinné|Ne|  
-|[IRowsetCurrentIndex](https://msdn.microsoft.com/en-us/library/ms709700.aspx)|Nepovinné|Ne|  
-|[IRowsetFind](https://msdn.microsoft.com/en-us/library/ms724221.aspx)|Nepovinné|Ne|  
-|[IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx)|Nepovinné (ale požadované pro zprostředkovatele úrovně 0)|Ano|  
-|[IRowsetIndex](https://msdn.microsoft.com/en-us/library/ms719604.aspx)|Nepovinné|Ne|  
-|[IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)|Nepovinné|Ano|  
-|[IRowsetRefresh](https://msdn.microsoft.com/en-us/library/ms714892.aspx)|Nepovinné|Ne|  
-|[IRowsetScroll](https://msdn.microsoft.com/en-us/library/ms712984.aspx)|Nepovinné|Ne|  
-|[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)|Nepovinné|Ano|  
-|[IRowsetView](https://msdn.microsoft.com/en-us/library/ms709755.aspx)|Nepovinné|Ne|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Nepovinné|Ano|  
-|[IRowsetBookmark](https://msdn.microsoft.com/en-us/library/ms714246.aspx)|Nepovinné|Ne|  
+|[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)|Povinné|Ano|  
+|[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Povinné|Ano|  
+|[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)|Povinné|Ano|  
+|[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)|Povinné|Ano|  
+|[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Povinné|Ano|  
+|[IChapteredRowset](https://msdn.microsoft.com/library/ms718180.aspx)|Nepovinné|Ne|  
+|[IColumnsInfo2](https://msdn.microsoft.com/library/ms712953.aspx)|Nepovinné|Ne|  
+|[IColumnsRowset](https://msdn.microsoft.com/library/ms722657.aspx)|Nepovinné|Ne|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Nepovinné|Ano (pomocí knihovny ATL)|  
+|[IDBAsynchStatus](https://msdn.microsoft.com/library/ms709832.aspx)|Nepovinné|Ne|  
+|[IGetRow](https://msdn.microsoft.com/library/ms718047.aspx)|Nepovinné|Ne|  
+|[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)|Nepovinné|Ano|  
+|[IRowsetChapterMember](https://msdn.microsoft.com/library/ms725430.aspx)|Nepovinné|Ne|  
+|[IRowsetCurrentIndex](https://msdn.microsoft.com/library/ms709700.aspx)|Nepovinné|Ne|  
+|[IRowsetFind](https://msdn.microsoft.com/library/ms724221.aspx)|Nepovinné|Ne|  
+|[IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)|Nepovinné (ale vyžaduje pro poskytovatele úroveň 0)|Ano|  
+|[IRowsetIndex](https://msdn.microsoft.com/library/ms719604.aspx)|Nepovinné|Ne|  
+|[IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)|Nepovinné|Ano|  
+|[IRowsetRefresh](https://msdn.microsoft.com/library/ms714892.aspx)|Nepovinné|Ne|  
+|[IRowsetScroll](https://msdn.microsoft.com/library/ms712984.aspx)|Nepovinné|Ne|  
+|[IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)|Nepovinné|Ano|  
+|[IRowsetView](https://msdn.microsoft.com/library/ms709755.aspx)|Nepovinné|Ne|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Nepovinné|Ano|  
+|[IRowsetBookmark](https://msdn.microsoft.com/library/ms714246.aspx)|Nepovinné|Ne|  
   
- Implementuje objekt generované v Průvodci řádků `IAccessor`, `IRowset`, a `IRowsetInfo` prostřednictvím dědičnosti. `IAccessorImpl` Váže oba výstupní sloupce. `IRowset` Rozhraní zpracovává načtené řádky a data. `IRowsetInfo` Rozhraní zpracovává vlastnosti řádků.  
+ Implementuje objekt generované v Průvodci řádků `IAccessor`, `IRowset`, a `IRowsetInfo` prostřednictvím dědičnosti. `IAccessorImpl` Váže oba výstupní sloupce. `IRowset` Rozhraní zpracovává načtené řádky a data. `IRowsetInfo` Rozhraní zpracovává vlastnosti sady řádků.  
   
 ## <a name="see-also"></a>Viz také  
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

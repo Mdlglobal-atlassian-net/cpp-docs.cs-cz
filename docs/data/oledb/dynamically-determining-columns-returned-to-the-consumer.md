@@ -1,5 +1,5 @@
 ---
-title: Dynamické určování sloupců vrácených příjemci | Microsoft Docs
+title: Dynamické určování sloupců vrácených příjemci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107936"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340453"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamické určování sloupců vrácených příjemci
-Makra PROVIDER_COLUMN_ENTRY obvykle zpracovávají **IColumnsInfo::GetColumnsInfo** volání. Ale vzhledem k tomu, že příjemce může zvolit použití záložek, zprostředkovatele musí být možné změnit sloupců vrácených v závislosti na tom, jestli příjemce požádá o záložku.  
+PROVIDER_COLUMN_ENTRY makra obvykle zpracovávají `IColumnsInfo::GetColumnsInfo` volání. Ale protože příjemce rozhodnout, že chcete používat záložky, zprostředkovatele musí být změnit sloupců vrácených v závislosti na tom, zda uživatel požádá o záložku.  
   
- Zpracování **IColumnsInfo::GetColumnsInfo** volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CAgentMan` uživatele záznam v souboru MyProviderRS.h a nahraďte ji metodou vlastní definici `GetColumnInfo` funkce:  
+ Zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CAgentMan` uživatel záznam v souboru MyProviderRS.h a nahraďte ho vlastní definice `GetColumnInfo` funkce:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -51,9 +51,9 @@ public:
   
  V dalším kroku implementovat `GetColumnInfo` fungovat v MyProviderRS.cpp, jak je znázorněno v následujícím kódu.  
   
- `GetColumnInfo` kontroluje, nejprve Pokud vlastnost OLE DB **DBPROP_BOOKMARKS** nastavena. GET pro vlastnost `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvořila sadu řádků, které je třída, kde je uložena mapa vlastností. `GetColumnInfo` přiřadí typ ukazatel `pThis` ukazatel na `RMyProviderRowset` ukazatel.  
+ `GetColumnInfo` kontroluje, první Pokud vlastnost OLE DB `DBPROP_BOOKMARKS` nastavena. Chcete-li získat vlastnost, `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvoří sadu řádků, což je třída ukládat mapy vlastností. `GetColumnInfo` zaokrouhlovat `pThis` ukazatel `RMyProviderRowset` ukazatele.  
   
- Zkontrolujte **DBPROP_BOOKMARKS** vlastnost `GetColumnInfo` používá `IRowsetInfo` rozhraní, které můžete získat voláním `QueryInterface` na `pRowset` rozhraní. Jako alternativu, můžete použít ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metoda místo.  
+ Hledat `DBPROP_BOOKMARKS` vlastnost `GetColumnInfo` používá `IRowsetInfo` rozhraní, které lze získat voláním `QueryInterface` na `pRowset` rozhraní. Jako alternativu můžete použít knihovny ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metoda místo.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +114,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- Tento příklad používá statické pole tak, aby obsahovala informace o sloupci. Pokud příjemce nechce sloupec záložky, jedna položka v poli se nepoužívá. Pro zpracování informací, můžete vytvořit dvě pole makra: ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX trvá další parametr `flags`, který je nutný v případě, že určíte sloupec záložky.  
+ Tento příklad používá statického pole obsahující informace o sloupci. Pokud uživatel nechce sloupec záložky, jedna položka v poli se nepoužívá. Pro zpracování informací, vytvoříte dvě pole makra: ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX přijímá parametr navíc `flags`, který je nutný v případě, že určíte sloupec záložky.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -145,15 +145,15 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- V `GetColumnInfo` funkce makro záložky se používá takto:  
+ V `GetColumnInfo` funkce, makro záložky se používá takto:  
   
-```  
+```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,   
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Teď můžete zkompilovat a spustit rozšířené zprostředkovatele. Testování zprostředkovatele, upravte zkušebního příjemce, jak je popsáno v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md). Spusťte test příjemce s poskytovatelem. Ověřte, že zkušební příjemce obdrží správné řetězce od poskytovatele, po kliknutí **spustit** tlačítka na **zkušební příjemce** dialogové okno.  
+ Teď můžete zkompilovat a spustit Vylepšený zprostředkovatel služeb. Otestovat poskytovateli, upravte test příjemce, jak je popsáno v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md). Spusťte test příjemce s tímto poskytovatelem. Ověřte, že příjemce testů obdrží správné řetězce od poskytovatele po kliknutí **spustit** tlačítko **zkušební příjemce** dialogové okno.  
   
 ## <a name="see-also"></a>Viz také  
  [Rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)

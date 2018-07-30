@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f37390b4ab5db4cb3b519c801052c4b02102af6
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269793"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339780"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 Poskytuje výchozí implementaci pro popisovač řádku, který je používán [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md) třídy.  
@@ -93,7 +93,6 @@ Přidá počet odkazů na existující popisovač řádku způsobem bezpečným 
   
 ```cpp
 DWORD AddRefRow();  
-  
 ```  
 
 ## <a name="compare"></a> CSimpleRow::Compare
@@ -118,7 +117,7 @@ Konstruktor
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CSimpleRow(DBCOUNTITEM iRowsetCur);  
+CSimpleRow(DBCOUNTITEM iRowsetCur);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -135,7 +134,6 @@ Verze řádků způsobem bezpečným pro vlákno.
   
 ```cpp
 DWORD ReleaseRow();  
-  
 ```  
 
 ## <a name="dwref"></a> CSimpleRow::m_dwRef
@@ -145,7 +143,6 @@ Počet odkazů na existující popisovač řádku.
   
 ```cpp
 DWORD m_dwRef;  
-  
 ```  
 
 ## <a name="irowset"></a> CSimpleRow::m_iRowset
@@ -155,7 +152,6 @@ Index řádků reprezentující kurzor.
   
 ```cpp
 KeyType m_iRowset;  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  
