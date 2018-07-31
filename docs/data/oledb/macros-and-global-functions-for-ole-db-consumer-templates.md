@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5d9105492af55547794023c3574fb626d470828
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: a915a581a574193918f86f80083d3202c9949674
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250664"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338145"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra a globální funkce pro šablony příjemců OLE DB
 Šablony příjemce technologie OLE DB zahrnují následující makra a globální funkce:  
@@ -197,7 +197,7 @@ Vypíše informace o záznamu chyby technologie OLE DB pro zařízení s výpise
 #### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
+inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -305,7 +305,6 @@ Označuje konec položky přistupujícího objektu.
   
 ```cpp
 END_ACCESSOR()  
-  
 ```  
   
 #### <a name="remarks"></a>Poznámky  
@@ -321,7 +320,6 @@ Označuje konec položky přístupového objektu map.
   
 ```cpp
 END_ACCESSOR_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Poznámky  
@@ -335,7 +333,7 @@ Označuje začátek toho položku mapování sloupců.
   
 #### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 BEGIN_COLUMN_MAP(x)  
 ```  
   
@@ -362,7 +360,6 @@ BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozs�
   
 ```cpp
 BLOB_ENTRY(nOrdinal, IID, flags, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -388,7 +385,6 @@ BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozs�
   
 ```cpp
 BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -453,8 +449,7 @@ Použít k vytvoření vazby binární rozsáhlý objekt s BEGIN_COLUMN_MAP nebo
 #### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)  
-  
+BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)   
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -586,7 +581,6 @@ Vytvoří vazbu sloupec záložky.
   
 ```cpp
 BOOKMARK_ENTRY(variable)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -652,7 +646,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_ENTRY(nOrdinal, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -683,7 +676,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -732,7 +724,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_LENGTH(nOrdinal, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -763,7 +754,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -797,7 +787,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -831,7 +820,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -868,7 +856,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -908,7 +895,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -945,7 +931,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v databázi.
   
 ```cpp
 COLUMN_ENTRY_STATUS(nOrdinal, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -976,7 +961,6 @@ Představuje vazbu na konkrétní sloupec v databázi. Podporuje *typ* parametru
   
 ```cpp
 COLUMN_ENTRY_TYPE (nOrdinal, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -999,7 +983,6 @@ Představuje vazbu na konkrétní sloupec v databázi. Podporuje *typ* a *veliko
   
 ```cpp
 COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1025,7 +1008,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME(pszName, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1088,7 +1070,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME_LENGTH(pszName, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1270,7 +1251,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME_TYPE(pszName, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1293,7 +1273,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1322,7 +1301,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1348,7 +1326,6 @@ Představuje vazbu na sadě řádků na konkrétní sloupec v dané sadě řádk
   
 ```cpp
 COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1374,7 +1351,6 @@ Označuje konec položky mapování sloupce.
   
 ```cpp
 END_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Poznámky  
@@ -1393,7 +1369,6 @@ Určuje příkaz, který se použije k vytvoření sady řádků při použití 
   
 ```cpp
 DEFINE_COMMAND(x, szCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1418,7 +1393,6 @@ Určuje příkaz, který se použije k vytvoření sady řádků při použití 
   
 ```cpp
 DEFINE_COMMAND_EX(x, wszCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1443,7 +1417,6 @@ Označuje začátek položek mapování parametrů.
   
 ```cpp
 BEGIN_PARAM_MAP(x)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -1463,7 +1436,6 @@ Označuje konec položek mapování parametrů.
   
 ```cpp
 END_PARAM_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Příklad  
@@ -1476,7 +1448,6 @@ Určuje COLUMN_ENTRY makra, které SET_PARAM_TYPE – makro vstupní, výstupní
   
 ```cpp
 SET_PARAM_TYPE(type)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  

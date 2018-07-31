@@ -1,5 +1,5 @@
 ---
-title: Požadavky ovladače ODBC pro dynamické sady | Microsoft Docs
+title: Požadavky ovladače ODBC pro dynamické sady | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9fad26440cea2c8ec2efd7d07dacb83547252e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2b7d6d5f3bb0f88c8b46596309498b2d0529abb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089230"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336498"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Požadavky ovladače ODBC pro dynamické sady
-V databázové třídy MFC rozhraní ODBC jsou dynamické sady sady záznamů s dynamické vlastnosti; jejich zůstaly synchronizované se zdrojem dat určitými způsoby. Dynamické sady MFC (ale ne dopředné sady záznamů) vyžadují ovladače ODBC s přizpůsobením API úrovně 2. Pokud ovladač pro vaše [zdroj dat](../../data/odbc/data-source-odbc.md) vyhovuje API úrovně 1 nastavit, když můžete nadále používat snímky v aktualizovatelné i jen pro čtení a dopředné sady záznamů, ale ne dynamické sady. Ovladač úrovně 1 však může podporovat dynamické sady, pokud ji podporuje rozšířené načítání a kurzory řízené.  
+Třídy databází MFC ODBC dynamické sady jsou sady záznamů s dynamické vlastnosti; zůstaly synchronizované se zdrojem dat určitým způsobem. Dynamické knihovny MFC (ale ne pouze vpřed) vyžadují ovladač rozhraní ODBC s přizpůsobením API úrovně 2. Pokud ovladač pro vaše [zdroj dat](../../data/odbc/data-source-odbc.md) odpovídá API úrovně 1 nastavení, můžete stále použít snímky aktualizovatelné i jen pro čtení a pouze vpřed, ale ne dynamické sady. Ale ovladače úrovně 1 může podporovat dynamické sady podporuje rozšířené načítání a kurzory řízené.  
   
- V terminologii rozhraní ODBC dynamické sady a snímky jsou označovány jako kurzory. Kurzor je mechanismus používaný pro udržování přehledu o pozici v sadě záznamů. Další informace o požadavcích ovladače pro dynamické sady najdete v tématu [dynamická sada](../../data/odbc/dynaset.md). Další informace o kurzory najdete v tématu [připojení ODBC (Open Database)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK v dokumentaci k webu MSDN.  
+ V terminologii rozhraní ODBC snímky a dynamické sady jsou označovány jako ukazatele. Kurzor je mechanismus používaný pro uchování záznamu o jeho pozice v sadě záznamů. Další informace o požadavcích na ovladače pro dynamické sady najdete v tématu [dynamická sada](../../data/odbc/dynaset.md). Další informace o kurzory, najdete v článku [připojení ODBC (Open Database)](https://msdn.microsoft.com/library/ms710252.aspx) sady SDK v dokumentaci MSDN.  
   
 > [!NOTE]
->  Ovladač ODBC pro aktualizovatelné sady záznamů, musí podporovat příkazy umístěných aktualizací nebo **:: SQLSetPos** funkce rozhraní API ODBC. Pokud jsou podporované, používá MFC **:: SQLSetPos** pro efektivitu. Pro snímky, případně můžete použít knihovny kurzor, který poskytuje vyžaduje podporu pro aktualizovatelné snímky (statické kurzory a příkazy umístěné aktualizace).  
+>  Pro aktualizovatelné sady záznamů, ovladač rozhraní ODBC musí podporovat příkazy umístěných aktualizací nebo `::SQLSetPos` funkce ODBC API. Pokud jsou podporované, knihovna MFC používá `::SQLSetPos` efektivitu. Pro snímky, můžete alternativně použít knihovna kurzorů rozhraní, které poskytuje vyžaduje podporu pro aktualizovatelné (statický kurzor a příkazy umístěné aktualizace).  
   
 ## <a name="see-also"></a>Viz také  
  [ODBC – základy](../../data/odbc/odbc-basics.md)

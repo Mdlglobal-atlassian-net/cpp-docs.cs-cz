@@ -1,5 +1,5 @@
 ---
-title: Načtení objektu BLOB | Microsoft Docs
+title: Načtení objektu BLOB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105202"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339272"
 ---
 # <a name="retrieving-a-blob"></a>Načtení objektu BLOB
-Můžete načíst binární rozsáhlý objekt (binární rozsáhlý OBJEKT) různými způsoby. Můžete použít **DBTYPE_BYTES** k načtení objektu BLOB jako sekvenci bajtů, nebo použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) v *referenční příručka programátora technologie OLE DB*.  
+Můžete načíst binární velkých objektů (BLOB) různými způsoby. Můžete použít `DBTYPE_BYTES` k načtení objektu BLOB jako sekvence bajtů nebo můžete použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](https://msdn.microsoft.com/library/ms711511.aspx) v *OLE DB referenční informace pro programátory*.  
   
- Následující kód ukazuje, jak načíst objekt BLOB pomocí `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vám umožní určit rozhraní a příznaky použité pro rozhraní. Po otevření v tabulce, kód zavolá **čtení** opakovaně na `ISequentialStream` čtení bajtů z objektu BLOB. Volání kódu **verze** k uvolnění ukazatele rozhraní před voláním `MoveNext` k získání dalšího záznamu.  
+ Následující kód ukazuje, jak načíst objekt BLOB pomocí `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vám umožní určit rozhraní a příznaky použité pro rozhraní. Po otevření tabulce Kód volá `Read` opakovaně na `ISequentialStream` čtení bajtů z objektu BLOB. Kód volá `Release` k uvolnění rozhraní ukazatele před voláním `MoveNext` k získání dalšího záznamu.  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  
@@ -57,7 +57,7 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Další informace o makra, které zpracovávají data objektů BLOB, najdete v části "Makra mapy sloupec" v [makra a globální funkce pro šablony příjemce technologie OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Další informace o makra, které zpracovávají data objektů BLOB, naleznete v části "Makra Map sloupec" v [makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)   

@@ -1,5 +1,5 @@
 ---
-title: Podpora transakcí v prostředí OLE DB | Microsoft Docs
+title: Podpora transakcí v prostředí OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,45 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110338"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338707"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Podpora transakcí v prostředí OLE DB
-A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak skupinu nebo dávky, řadu aktualizací ke zdroji dat, takže buď všechny úspěšné a jsou najednou, nebo (Pokud některá z nich selže) žádná není potvrzena a celá transakce bude vrácena zpět. Tento proces zajišťuje integritu výsledku na datovém zdroji.  
+A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak seskupit nebo služby batch, řadu aktualizací ke zdroji dat tak, aby všechny úspěšné a usilujeme o to najednou, nebo (Pokud některá z nich selže), žádná není potvrzena a celá transakce bude vrácena zpět. Tento proces zajistí integritu výsledek pro zdroj dat.  
   
- OLE DB podporuje transakce s následující tři metody:  
+ OLE DB podporuje transakce pomocí následujících tří metod:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
   
--   [Metody ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
   
-## <a name="relationship-of-sessions-and-transactions"></a>Vztah relací a transakcí  
- Objekt jednoho datového zdroje můžete vytvořit jeden nebo více objektů relace, z nichž každá může být uvnitř nebo mimo rozsah transakcí v daném okamžiku.  
+## <a name="relationship-of-sessions-and-transactions"></a>Vztah mezi relacemi a transakce  
+ Objekt jednoho datového zdroje můžete vytvořit jeden nebo více objektů relace, z nichž každá může být uvnitř nebo mimo obor transakce v daném okamžiku.  
   
- Pokud relace nevstupuje transakce, všechny práci v rámci této relace v úložišti dat se okamžitě potvrdí při každém volání metody. (To se někdy označuje jako režimu automatického zápisu nebo implicitní režimu.)  
+ Když relace není zadejte transakce, veškerou práci prováděnou v rámci této relace v úložišti dat okamžitě potvrzeny při každém volání metody. (To se někdy označuje jako automatický zápis nebo implicitní režimu.)  
   
- Když relaci zadá transakci, všechny práci v této relaci na úložiště dat je součástí této transakce a je potvrzené nebo přerušena jako na jednu jednotku. (To se někdy označuje jako režim ručního potvrzování.)  
+ Když je relace zadá transakci, veškerou práci prováděnou v úložišti dat v rámci této relace je součástí této transakce a potvrzena nebo zrušena jako jeden celek. (To se někdy označuje jako ruční potvrzováním režim.)  
   
- Podpora transakcí je specifický pro zprostředkovatele. Pokud používáte poskytovatele podporuje transakce, objekt relace, který podporuje **ITransaction** a **ITransactionLocal** můžete zadat jednoduchý (tedy bez vnoření) transakce. Třída šablon technologie OLE DB [CSession](../../data/oledb/csession-class.md) podporuje tato rozhraní a je doporučeným způsobem, jak implementovat podporu transakce v jazyce Visual C++.  
+ Podpora transakcí je specifický pro zprostředkovatele. Pokud používáte poskytovatele podporuje transakce, objekt relace, který podporuje `ITransaction` a `ITransactionLocal` můžete zadat jednoduchý (to znamená bez vnoření) transakce. Třída šablony technologie OLE DB [CSession](../../data/oledb/csession-class.md) podporuje tato rozhraní a je doporučený způsob implementace podpora transakcí v jazyce Visual C++.  
   
 ## <a name="starting-and-ending-the-transaction"></a>Počáteční a koncovou transakce  
- Volání `StartTransaction`, **potvrdit**, a **Abort** metody v objektu sady řádků v příjemci.  
+ Volání `StartTransaction`, `Commit`, a `Abort` metody v objektu sady řádků v příjemci.  
   
- Volání metody **ITransactionLocal::StartTransaction** spustí novou místní transakce. Při spuštění transakce se změny provedou následující operace neaplikují ve skutečnosti k úložišti dat dokud potvrzení transakce.  
+ Volání `ITransactionLocal::StartTransaction` spustí novou místní transakci. Při spuštění transakce zákonného následné operace se uplatní se všechny změny ve skutečnosti do úložiště dat. dokud potvrzení transakce.  
   
- Volání metody **metody ITransaction::Commit** nebo **ITransaction::Abort** končí transakce. **Potvrdit** způsobí, že všechny změny v rozsahu transakcí má být použita k úložišti dat. **Abort** příčiny všechny změny v rámci oboru transakce budou zrušeny a úložiště dat je nacházela ve stavu měl před zahájením transakce.  
+ Volání `ITransaction::Commit` nebo `ITransaction::Abort` končí transakce. `Commit` způsobí, že všechny změny v rámci oboru transakce u úložiště dat. `Abort` způsobí, že všechny změny v rámci oboru transakce budou zrušeny a úložiště dat se nacházela ve stavu došlo před spuštěním transakce.  
   
 ## <a name="nested-transactions"></a>Vnořené transakce  
- A [vnořené transakce](https://msdn.microsoft.com/en-us/library/ms716985.aspx) dojde při spuštění nové místní transakce v rámci aktivní transakce. Novou transakci je spuštěn jako vnořenou transakci v aktuální transakci. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` při již existuje aktivní transakce na relaci vrátí **XACT_E_XTIONEXISTS**.  
+ A [vnořená transakce](https://msdn.microsoft.com/library/ms716985.aspx) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Distribuované transakce  
- Distribuovaná transakce je transakci, která aktualizuje distribuovaná data; To znamená, data na více systémů počítači v síti. Pokud chcete podporovat transakce přes distribuovaného systému, používejte rozhraní .NET Framework, nikoli podporu transakce OLE DB.  
+ Distribuované transakce je transakce, která aktualizuje distribuovaných dat; To znamená, že data ve více než jeden síťový počítač systému. Pokud chcete zajistit podporu transakcí v distribuovaném systému, používejte rozhraní .NET Framework než transakce podporu technologie OLE DB.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)

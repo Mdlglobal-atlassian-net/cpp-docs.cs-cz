@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1aa70a8efea82660632cf0219c76009eea44f606
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269810"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337239"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl – třída
 Poskytuje implementaci [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) rozhraní.  
@@ -82,7 +82,7 @@ Vrátí metadata sloupce vyžadované většina uživatelů.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
    DBCOLUMNINFO** prgInfo,  
    OLECHAR** ppStringsBuffer);  
 ```  
@@ -96,7 +96,7 @@ Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifiku
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
    const DBID rgColumnIDs[],  
    DBORDINAL rgColumns[]);  
 ```  

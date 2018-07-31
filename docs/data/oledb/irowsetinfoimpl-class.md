@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ccf4d6b34362d4c8b7875319af444f755d741e7
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322033"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337070"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl – třída
 Poskytuje implementaci pro [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) rozhraní.  
@@ -85,7 +85,7 @@ Vrátí aktuální nastavení pro vlastnosti v `DBPROPSET_ROWSET` skupiny.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
    const DBPROPIDSET rgPropertyIDSets[],  
    ULONG* pcPropertySets,  
    DBPROPSET** prgPropertySets);  
@@ -100,7 +100,7 @@ Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložk
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
    REFIID riid,  
    IUnknown** ppReferencedRowset);  
 ```  
@@ -114,7 +114,7 @@ Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili t
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetSpecification )(REFIID riid,  
+STDMETHOD (GetSpecification )(REFIID riid,  
    IUnknown** ppSpecification);  
 ```  
   

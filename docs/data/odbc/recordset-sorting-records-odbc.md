@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Řazení záznamů (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Řazení záznamů (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ddb92016b7b911fc86f2feab27a698ce7fa55c45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c78603e12aec7653e7c5c62d9a0282241ccda99e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090270"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337827"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Sada záznamů: Řazení záznamů (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Toto téma vysvětluje, jak řadit sady záznamů. Můžete zadat jeden nebo více sloupců, na jejichž základě řadíte a můžete určit vzestupném nebo sestupném pořadí (`ASC` nebo **DESC**; `ASC` je výchozí nastavení) pro každý zadaný sloupec. Například pokud zadáte dva sloupce, záznamy jsou seřazeny nejprve na první sloupec s názvem a pak na druhý sloupec s názvem. SQL **Order** klauzule definuje řazení. Pokud systém připojí **Order** dotaz klauzule SQL sady záznamů, klauzule ovládacích prvků výběr je řazení.  
+ Toto téma vysvětluje, jak řadit sady záznamů. Můžete určit jeden nebo více sloupců, na kterém chcete založit řazení, a můžete určit vzestupném nebo sestupném pořadí (**ASC** nebo **DESC**; **ASC** je výchozí nastavení) pro každý zadaný sloupec. Například pokud chcete zadat dva sloupce, položky jsou seřazeny nejprve na první sloupec s názvem a pak na druhý sloupec s názvem. SQL **klauzule ORDER BY** klauzule definuje řazení. Když připojí rozhraní **klauzule ORDER BY** dotazování klauzule SQL sady záznamů, klauzule ovládací prvky výběru uživatele řazení.  
   
- Po vytvoření objektu, ale před voláním musíte vytvořit pořadí řazení sady záznamů jeho **otevřete** – členská funkce (nebo před voláním **Requery –** – členská funkce pro existující objekt sady záznamů jejichž **otevřete** – členská funkce byla volána dříve).  
+ Po vytvoření objektu, ale před voláním, je nutné vytvořit sadu záznamů řazení jeho `Open` členskou funkci (nebo před voláním `Requery` členské funkce pro existující sady záznamů objekt, jehož `Open` členskou funkci bylo volá se dříve).  
   
 #### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Chcete-li určit pořadí řazení pro objekt sady záznamů  
   
-1.  Vytvořte nový objekt sady záznamů (nebo připravte volání **Requery** pro některý ze stávajících).  
+1.  Vytvořit nový objekt sady záznamů (nebo se připravte a volat `Requery` pro některý z existujících).  
   
-2.  Nastavte hodnotu objektu [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) – datový člen.  
+2.  Nastavte hodnotu vlastnosti objektu [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) datový člen.  
   
-     Řazení je řetězce ukončené hodnotou null. Obsahuje obsah **Order** klauzule, ale nikoli klíčové slovo **Order**. Například použijte:  
+     Řazení je řetězec zakončený hodnotou null. Obsahuje obsah **klauzule ORDER BY** klauzule, ale nikoli klíčové slovo **klauzule ORDER BY**. Například použijte:  
   
     ```  
     recordset.m_strSort = "LastName DESC, FirstName DESC";  
@@ -49,13 +49,13 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";  
     ```  
   
-3.  Nastavte další možnosti, které potřebujete, jako je například filtr, režim uzamčení nebo parametry.  
+3.  Nastavte další možnosti, které potřebujete, jako je filtr, režim uzamčení nebo parametry.  
   
-4.  Volání **otevřete** nového objektu (nebo **Requery** pro existující objekt).  
+4.  Volání `Open` pro nový objekt (nebo `Requery` pro existující objekt).  
   
- Vybrané záznamy jsou řazeny uvedené. Například seřadit sadu záznamy studentů v sestupném pořadí podle příjmení, pak křestní jméno, postupujte takto:  
+ Vybrané záznamy jsou řazeny podle zadání. Například k řazení sady záznamů studentů v sestupném pořadí podle příjmení a pak křestní jméno, postupujte takto:  
   
-```  
+```cpp  
 // Construct the recordset  
 CStudentSet rsStudent( NULL );  
 // Set the sort  
@@ -64,10 +64,10 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );  
 ```  
   
- Sada záznamů obsahuje všechny záznamy studenty, seřazené v sestupném pořadí (Z až A) podle příjmení a pak podle křestní jméno.  
+ Sada záznamů obsahuje všechny záznamy student, seřazeny v sestupném pořadí (Z až A) podle příjmení, pak podle křestního jména.  
   
 > [!NOTE]
->  Pokud se rozhodnete přepsat výchozí řetězec SQL sady záznamů předáním svůj vlastní řetězec SQL k **otevřete**, nenastavujte řazení, pokud má váš vlastní řetězec **Order** klauzule.  
+>  Pokud budete chtít přepsat výchozí řetězec SQL sady záznamů předáním vlastní řetězec SQL `Open`, nenastavujte řazení, pokud má vlastní řetězec **klauzule ORDER BY** klauzuli.  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   

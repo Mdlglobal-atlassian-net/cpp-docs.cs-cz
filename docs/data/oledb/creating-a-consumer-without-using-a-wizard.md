@@ -1,5 +1,5 @@
 ---
-title: Vytvoření příjemce bez použití Průvodce | Microsoft Docs
+title: Vytvoření příjemce bez použití Průvodce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,72 +15,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c2d79af8acaff835e8500f1f1d67870c4b63e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097689"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339903"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
-V následujícím příkladu se předpokládá, že přidáváte podporu příjemce technologie OLE DB do existujícího projektu knihovny ATL. Pokud chcete přidat do aplikace MFC podporu příjemce technologie OLE DB, byste měli spustit Průvodce aplikací MFC, který vytvoří nezbytné všechny podporu a vyvolá MFC rutiny, které jsou nezbytné ke spuštění aplikace.  
+V následujícím příkladu se předpokládá, že přidáte podporu příjemce technologie OLE DB do existujícího projektu ATL. Pokud chcete přidat podporu příjemce technologie OLE DB pro aplikace knihovny MFC, by měl spustit Průvodce aplikací MFC, která vytvoří nezbytné veškerou podporu a vyvolá rutiny knihovny MFC, které jsou nezbytné ke spuštění aplikace.  
   
- Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce příjemcem knihovny ATL technologie OLE DB:  
+ Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce příjemcem ATL OLE DB:  
   
--   V souboru Stdafx.h připojte následující `#include` příkazy:  
+-   V souboru Stdafx.h připojte `#include` příkazy:  
   
-    ```  
+    ```cpp  
     #include <atlbase.h>  
     #include <atldbcli.h>  
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- Příjemce prostřednictvím kódu programu, obvykle provádí následující posloupnost operací:  
+ Příjemce prostřednictvím kódu programu, obvykle provádí následující pořadí operací:  
   
--   Vytvořte třídu záznam uživatele, která sváže sloupce do místní proměnné. V tomto příkladu `CMyTableNameAccessor` je třída uživatelského záznamu (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapu sloupce a parametr mapy. Declare – datový člen v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; pro každou z těchto datových členů deklarujte také datového člena a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+-   Vytvořte třídu záznam uživatele, který váže sloupce pro lokální proměnné. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapování sloupců a parametr mapy. Deklarovat v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; datový člen pro každou z těchto datových členů také deklarujte datový člen stav a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Pokud píšete vlastní příjemce, data proměnné musí předcházet proměnné stavu a délka.  
+    >  Pokud píšete vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
   
--   Vytvoří instanci zdroje dat a relace. Rozhodnout, jaký typ přistupujícího objektu a sady řádků používat, a potom vytvořte instanci sady řádků pomocí [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md):  
+-   Vytvořit instanci zdroje dat a relace. Rozhodnout, jaký typ přístupového objektu a sady řádků a potom vytvořte instanci sady řádků pomocí [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md):  
   
-    ```  
+    ```cpp  
     CDataSource ds;  
     CSession ss;  
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   Volání **funkce CoInitialize** k inicializaci modelu COM. To se obvykle nazývá v hlavní kódu. Příklad:  
+-   Volání `CoInitialize` inicializovat COM. To je obvykle volána v hlavní kód. Příklad:  
   
-    ```  
+    ```cpp  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
 -   Volání [CDataSource::Open](../../data/oledb/cdatasource-open.md) nebo jednu z jeho variant.  
   
--   Otevřít připojení ke zdroji dat, otevřete relaci a otevřete a inicializaci sady řádků (a pokud příkaz, také provést):  
+-   Otevřete připojení ke zdroji dat, otevřete relaci a otevřete a inicializaci sady řádků (a pokud příkaz, také ho spustit):  
   
-    ```  
+    ```cpp  
     hr = ds.Open();  
     hr = ss.Open(ds);  
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předávat je jako parametr, který se `rs.Open`. Příklad způsobu provedení, naleznete v GetRowsetProperties v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
+-   Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr `rs.Open`. Příklad, jak to lze provést, naleznete v tématu GetRowsetProperties v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
   
--   Sada řádků teď můžete načíst nebo manipulovat s daty.  
+-   Nyní můžete v sadě řádků načtení/práce s daty.  
   
--   Pokud vaše aplikace se provádí, zavře připojení, relace a sady řádků:  
+-   Po dokončení se vaše aplikace, ukončete připojení, relace a sady řádků:  
   
-    ```  
+    ```cpp  
     rs.Close();  
     ss.Close();  
     ds.Close();  
     ```  
   
-     Pokud používáte příkaz, můžete chtít volání `ReleaseCommand` po **Zavřít**. Příklad kódu v [CCommand::Close](../../data/oledb/ccommand-close.md) ukazuje způsob volání **Zavřít** a `ReleaseCommand`.  
+     Pokud použijete příkaz, můžete chtít volat `ReleaseCommand` po `Close`. Příklad kódu v [CCommand::Close](../../data/oledb/ccommand-close.md) ukazuje, jak volat `Close` a `ReleaseCommand`.  
   
--   Volání **CoUnInitialize** k inicializaci modelu COM. To se obvykle nazývá v hlavní kódu.  
+-   Volání `CoUnInitialize` k inicializaci modelu COM. To je obvykle volána v hlavní kód.  
   
     ```  
     CoUninitialize();  

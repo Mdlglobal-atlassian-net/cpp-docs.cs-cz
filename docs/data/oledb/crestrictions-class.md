@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa95eb630fac2fe30014e378cc79bdbac285dbdb
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233500"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337167"
 ---
 # <a name="crestrictions-class"></a>CRestrictions – třída
 Obecná třída, která vám umožní zadat omezení pro sad řádků schématu.  
@@ -39,10 +39,10 @@ Obecná třída, která vám umožní zadat omezení pro sad řádků schématu.
 ```cpp
 template <class T, short nRestrictions, const GUID* pguid>  
 class CRestrictions : 
-        public CSchemaRowset <T, nRestrictions>  
+   public CSchemaRowset <T, nRestrictions>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *T*  
  Třída použitá pro přistupující objekt.  
   

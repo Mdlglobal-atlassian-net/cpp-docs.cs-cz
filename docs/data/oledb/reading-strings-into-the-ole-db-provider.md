@@ -1,5 +1,5 @@
 ---
-title: Načítání řetězců do zprostředkovatele OLE DB | Microsoft Docs
+title: Načítání řetězců do zprostředkovatele OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110165"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337057"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
-`RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Zprostředkovatel obdrží název souboru a uloží jej v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. Jinak, otevře se soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců čtení, `Execute` vytvoří instanci záznamu uživatele (`CAgentMan`) a umístí ji do pole.  
+`RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
   
- Pokud soubor nelze otevřít, `Execute` musí vracet **DB_E_NOTABLE**. Vrátí-li **E_FAIL** místo toho zprostředkovatele nebude pracovat s mnoha příjemci a nebude předat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
+ Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Upravená `Execute` funkce vypadá takto:  
+ Upravený `Execute` funkce vypadá takto:  
   
 ### <a name="code"></a>Kód  
   

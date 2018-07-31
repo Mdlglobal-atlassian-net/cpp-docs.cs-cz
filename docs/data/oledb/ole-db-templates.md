@@ -1,5 +1,5 @@
 ---
-title: Šablony technologie OLE DB | Microsoft Docs
+title: Šablony technologie OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109570"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339433"
 ---
 # <a name="ole-db-templates"></a>Šablony OLE DB
-Šablony technologie OLE DB usnadnění přístupu k datům OLE DB. Visual C++ poskytuje šablony třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Můžete vytvořit šablony příjemce Visual C++ pro zápis aplikace klienta (příjemce) technologie OLE DB a šablony zprostředkovatele psát aplikace serveru (zprostředkovatel).  
+Šablony technologie OLE DB usnadňují přístup k datům OLE DB. Visual C++ poskytuje šablony třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Můžete použít šablony příjemce Visual C++ pro zápis aplikace klienta (příjemce) technologie OLE DB a šablony zprostředkovatele pro zápis aplikace serveru (poskytovatel).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Obsahuje odkazy na šablony příjemce technologie OLE DB tříd uvedených podle použití.  
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md)  
+ Obsahuje odkazy na šablony příjemce technologie OLE DB třídy seřazeny podle použití.  
   
- [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
- Obsahuje odkazy na šablony zprostředkovatele technologie OLE DB tříd uvedených podle použití.  
+ [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
+ Obsahuje odkazy na šablony zprostředkovatele technologie OLE DB třídy seřazeny podle použití.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Popisuje, co je technologie OLE DB a univerzální přístup k datům v OLE DB.  
   
- [Referenční příručka programátora prostředí OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Obsahuje odkazy na dokumentaci k Windows SDK v OLE DB.  
+ [Referenční informace pro OLE DB programátory](https://msdn.microsoft.com/library/ms713643.aspx)  
+ Obsahuje odkazy na dokumentaci k sadě Windows SDK na technologie OLE DB.  
   
- [Ukázky šablon OLE DB](../../visual-cpp-samples.md)  
- Obsahuje odkazy na šablony technologie OLE DB vzorků, které ukazují, jak používat technologie OLE DB ve vašich projektů.  
+ [OLE DB – Ukázky šablon](../../visual-cpp-samples.md)  
+ Obsahuje odkazy na Ukázky šablon technologie OLE DB, které ukazují, jak používat technologie OLE DB ve vašich projektech.  
   
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Popisuje koncepční materiály o šablony příjemce technologie OLE DB.  
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)  
+ Tento článek popisuje koncepční materiály o šablony příjemce technologie OLE DB.  
   
- [Šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Popisuje koncepční materiály o šablony zprostředkovatele technologie OLE DB.  
+ [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
+ Tento článek popisuje koncepční materiály o šablony zprostředkovatele technologie OLE DB.  
   
  [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
- Popisuje vytvoření příjemce technologie OLE DB šablony s nebo bez průvodce příjemcem knihovny ATL technologie OLE DB.  
+ Popisuje vytvoření šablony technologie OLE DB příjemce s nebo bez průvodce příjemcem ATL OLE DB.  
   
  [Vytvoření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/creating-a-simple-read-only-provider.md)  
- Popisuje vytvoření jednoduchého zprostředkovatele pouze pro čtení, čte dvojici řetězců.  
+ Popisuje vytvoření jednoduchého zprostředkovatele pouze pro čtení, který čte dvojice řetězců.  
   
  [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)  
- Popisuje vytváření zprostředkovatele, které může zapisovat do úložiště dat.  
+ Popisuje vytváření zprostředkovatele, které lze zapsat do úložiště.  
   
  [Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)  
- Popisuje zjednodušené rozhraní vložení kódu podle OLE DB – šablony příjemce pro vytváření pracovních OLE DB.  
+ Tento článek popisuje zjednodušené rozhraní se vložit kód založený na spotřebitele šablony technologie OLE DB pro vytváření pracovních technologie OLE DB.  
   
- [Referenční dokumentace Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
- Poskytuje referenční materiál pro knihovny serveru ATL, sadu na základě šablon C++ třídy, které zjednodušují programování COM – objekty.  
+ [Odkaz na aktivní šablony knihovny (ATL)](../../atl/atl-com-desktop-components.md)  
+ Poskytuje referenční materiál pro knihovnu ATL sady založené na šablonách třídy jazyka C++, které zjednodušují programování objektů modelu COM.  
   
  [Ladění](/visualstudio/debugger/debugging-in-visual-studio)  
- Obsahuje odkazy na používání ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložené procedury.
+ Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.

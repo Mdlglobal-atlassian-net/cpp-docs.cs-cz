@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cbafe7f43d8a6c7acfaccb52fd22b595bdd0ec4
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322095"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337706"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl – třída
 Implementuje rozhraní OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) rozhraní, které umožňují testování pro řádek identitu.  
@@ -67,7 +67,7 @@ Porovná dvě popisovačů řádků zjistěte odkazují na stejný řádek.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(IsSameRow )(HROW hThisRow,  
+STDMETHOD(IsSameRow )(HROW hThisRow,  
    HROW hThatRow);  
 ```  
   

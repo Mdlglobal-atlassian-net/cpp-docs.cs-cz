@@ -50,12 +50,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269921"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336485"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl – třída
 Poskytuje implementaci pro [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) rozhraní.  
@@ -106,7 +106,6 @@ Konstruktor
   
 ```cpp
 IDBInitializeImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -118,7 +117,7 @@ Inicializuje objekt zdroje dat připravuje se podpora jeho vlastnosti.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(Initialize)(void);  
+STDMETHOD(Initialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -130,7 +129,7 @@ Místa data objektu v neinicializovaném stavu zdroje uvolněním interním pros
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(Uninitialize)(void);  
+STDMETHOD(Uninitialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -143,13 +142,12 @@ Zdroje dat příznaky.
   
 ```cpp
 DWORD m_dwStatus;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
  Tyto příznaky zadat nebo informací o stavu různých atributů pro objekt zdroje dat. Obsahuje jeden nebo více z následujících **výčtu** hodnoty:  
   
-```  
+```cpp  
 enum DATASOURCE_FLAGS {  
     DSF_MASK_INIT     = 0xFFFFF00F,  
     DSF_PERSIST_DIRTY = 0x00000001,  
@@ -169,10 +167,7 @@ Ukazatel na objekt implementace pro informace o vlastnostech DB.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-CUtlPropInfo<  
-T  
->* m_pCUtlPropInfo;  
-  
+CUtlPropInfo< T >* m_pCUtlPropInfo;  
 ```  
   
 ## <a name="see-also"></a>Viz také  

@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321952"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338337"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 Poskytuje implementaci `IRowset` rozhraní.  
@@ -177,7 +177,7 @@ Přidá počet odkazů na existující popisovač řádku.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Pomocná metoda volána [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.m
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Načte data z dané sadě řádků kopii řádku.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Vrátí stav DBSTATUS příznaky pro zadané pole.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Načte řádky postupně, pamatovat předchozí pozici.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ Konstruktor
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -307,7 +306,7 @@ Verze řádků.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Přemístí pozici na počáteční pozici; To znamená vytvořit svůj postoj p
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -338,7 +337,7 @@ Nastaví příznaky DBSTATUS stavu pro zadané pole.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Označuje, zda poskytovatel podporuje načítání zpětně.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -379,7 +377,6 @@ Označuje, zda zprostředkovatel může mít jeho posunout kurzor zpětně.
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -392,7 +389,6 @@ Bitový příznak, který umožňuje určit, pokud pozice kurzoru je definována
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -405,7 +401,6 @@ Index tak, aby v sadě řádků reprezentující kurzor.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
@@ -414,9 +409,7 @@ Mapy popisovačů řádků, které jsou aktuálně obsaženy poskytovatelem v re
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,5 +1,5 @@
 ---
-title: Použití více přístupových objektů pro sadu řádků | Microsoft Docs
+title: Použití více přístupových objektů pro sadu řádků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,45 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a30108ec344091631094cd55f6a3bd3f0f4a4a54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d6d41bb705559711187b58243772b668734b16
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111312"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336710"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Použití více přístupových objektů pro sadu řádků
-Existují tři základní scénáře, ve kterých budete muset použít několik přístupových objektů:  
+Existují tři základní scénáře, ve kterých je potřeba použít několik přístupových objektů:  
   
--   **Více sad řádků pro čtení a zápis.** V tomto scénáři můžete mít tabulku s primární klíč. Chcete mít možnost číst všechny sloupce v řádku, včetně primární klíč. Chcete být schopni zapisovat data pro všechny sloupce kromě primárního klíče (protože nemůže zapisovat do sloupec primárního klíče). V takovém případě můžete nastavit dva přístupové objekty:  
+-   **Více sad řádků pro čtení a zápisu.** V tomto scénáři máte tabulku s primárním klíčem. Chcete být schopni číst všechny sloupce v řádku, včetně primární klíč. Chcete být schopni zapisovat data pro všechny sloupce kromě primárního klíče (protože nelze zapisovat do sloupec primárního klíče). V takovém případě můžete nastavit dva přistupující objekty:  
   
     -   Přistupující objekt 0 obsahuje všechny sloupce.  
   
     -   Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.  
   
--   **Výkon.** V tomto scénáři obsahovat jeden nebo více sloupců velké množství dat, například grafiky, zvuk nebo video soubory. Pokaždé, když přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkého množství dat, protože je to proto by zpomalit výkon aplikace.  
+-   **Výkon.** Jeden nebo více sloupců v tomto scénáři obsahovat velké množství dat, například grafika, zvuk nebo video soubory. Pokaždé, když se přesunete na řádek, pravděpodobně nechcete k načtení sloupec se souborem velkých objemů dat, protože to uděláte tak by zpomalit výkon vaší aplikace.  
   
-     Můžete nastavit samostatné přistupující objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkého množství dat a automaticky; načítá data z těchto sloupců Toto je automatický přistupující objekt. Druhý přistupující objekt načítá pouze se sloupcem obsahující velkého množství dat, ale nenačítá data z tohoto sloupce automaticky. Můžete mít další metody aktualizace nebo načítání velkých dat na vyžádání.  
+     Můžete nastavit samostatný přístupové objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkými daty a automaticky; načítá data z těchto sloupců Toto je automaticky přistupujícího objektu. Druhý přístupový objekt načte pouze sloupec obsahující velkých objemů dat, ale nenačítá data z tohoto sloupce automaticky. Může mít jiné metody, aktualizaci nebo načítání velkých dat na vyžádání.  
   
-    -   Přistupující objekt 0 je automatický přistupující objekt; načte všechny sloupce kromě toho s velkými datovými.  
+    -   Přistupující objekt 0 je automatické přistupující objekt; načte všechny sloupce kromě toho s velkými daty.  
   
-    -   Přistupující objekt 1 není automatický přistupující objekt; načítá sloupec s velkými datovými.  
+    -   Přistupující objekt 1 není automatické přistupující objekt; načte sloupec s velkými daty.  
   
-     Argument automaticky použijte k určení, zda je přistupující objekt automaticky.  
+     Argument automaticky použijte k určení, zda je automaticky přistupujícího objektu.  
   
--   **Více sloupců ISequentialStream.** V tomto scénáři máte více než jeden sloupec obsahující `ISequentialStream` data. Každý přistupující objekt je však omezená na jedno `ISequentialStream` datového proudu. Pokud chcete tento problém vyřešit, nastavte několik přístupových objektů, každý obsahující jeden `ISequentialStream` ukazatel.  
+-   **Více ISequentialStream sloupců.** V tomto scénáři máte více než jeden sloupec obsahující `ISequentialStream` data. Každý přistupující objekt je však omezená na jednu `ISequentialStream` datového proudu. Pokud chcete tento problém vyřešit, nastavte několik přístupových objektů, každý obsahující jednu `ISequentialStream` ukazatele.  
   
- Obvykle vytvoříte přistupující objekty pomocí [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Můžete také [db_accessor](../../windows/db-accessor.md) atribut. (Přístupové objekty jsou popsány dále v [uživatelských záznamů](../../data/oledb/user-records.md).) Makra nebo atribut určete, zda přistupující objekt je automatický nebo přistupujícího objektu bez automaticky:  
+ Obvykle vytvoříte pomocí přístupových objektů [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Můžete také použít [db_accessor](../../windows/db-accessor.md) atribut. (Přístupové objekty jsou popsány dále v [uživatelských záznamů](../../data/oledb/user-records.md).) Makra nebo atribut určete, jestli má přistupující objekt automatické nebo přístupový objekt bez automaticky:  
   
--   V automatickém přistupujícím objektu přesunout metody **MoveFirst**, `MoveLast`, `MoveNext`, a `MovePrev` načíst data pro všechny sloupce zadané automaticky. Přistupující objekt 0 by měl být automatický přistupující objekt.  
+-   Automatické přístupového objektu, přesunutí metody `MoveFirst`, `MoveLast`, `MoveNext`, a `MovePrev` načíst data pro všechny sloupce zadané automaticky. Přistupující objekt 0 by měla být automatická přistupujícího objektu.  
   
--   V přistupujícím objektem bez automatické načtení není proběhnout, dokud nebude explicitně volání metody, jako **aktualizace**, **vložit**, **načíst**, nebo **odstranit**. Ve scénářích popsané výše nemusí chcete načíst všechny sloupce při každém přesunu. Můžete umístit jeden nebo více sloupců v samostatných přistupujícího objektu a je nutné zajistit splnění přistupujícím objektem bez automaticky, jak je uvedeno níže.  
+-   V přístupový objekt bez automatické načítání nedojde dokud explicitně volání metody, jako `Update`, `Insert`, `Fetch`, nebo `Delete`. Ve scénářích je popsáno výše nebudete chtít načíst všechny sloupce v každém přesunu. Můžete umístit jeden nebo více sloupců v samostatných přístupového objektu a zkontrolujte, zda neautomatický přistupující objekt, jak je znázorněno níže.  
   
- Následující příklad používá několik přístupových objektů číst a zapisovat do tabulky úlohy databázi systému SQL Server pubs použití více přístupových objektů. Toto je nejběžnější použití více přístupových objektů; viz výše "více sad řádků pro čtení a zápis" scénář.  
+ Následující příklad používá několik přístupových objektů číst a zapisovat do tabulky databáze pubs systému SQL Server, použití více přístupových objektů úloh. Toto je nejběžnější použití více přístupových objektů; Podívejte se na výše uvedeném scénáři "více sad řádků pro čtení a zápisu".  
   
- Třídy uživatelského záznamu je následující. Nastavuje dva přistupující objekty: přistupující objekt 0 obsahuje pouze sloupec primárního klíče (ID) a přistupující objekt 1 obsahuje jiné sloupce.  
+ Třída uživatelského záznamu je následujícím způsobem. Nastaví dva přistupující objekty: přístupový objekt 0 obsahuje pouze sloupec primárního klíče (ID) a přístupového objektu 1 obsahuje další sloupce.  
   
-```  
+```cpp  
 class CJobs  
 {  
 public:  
@@ -89,9 +89,9 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Hlavní kód je následující. Volání metody `MoveNext` automaticky načte data z ID sloupec primárního klíče pomocí přistupující objekt 0. Poznámka: Jak **vložit** metoda téměř end používá přistupující objekt 1 předejdete zápis do sloupec primárního klíče.  
+ Hlavní kódu vypadá takto. Volání `MoveNext` automaticky načte data z ID sloupec primárního klíče pomocí přístupového objektu 0. Poznámka: Jak `Insert` metoda poblíž používá koncový přístupového objektu 1, aby zápis na sloupec primárního klíče.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
     // Initalize COM  

@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Parametrizace sady záznamů (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Parametrizace sady záznamů (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,58 +18,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fc360a334aeef0cfdd3b1698eaf5dd74cab6583
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098547"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338028"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Sada záznamů: Parametrizace sady záznamů (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- V některých případech můžete chtít bude moci vybrat záznamy v době běhu pomocí informací o jste vypočítali nebo získali od vašeho koncového uživatele. Sada záznamů parametry umožňují dosažení tohoto cíle.  
+ Někdy můžete chtít mít možnost vybrat záznamy v době běhu, pomocí informací o mít počítané nebo získané z koncového uživatele. Sada záznamů parametry umožňují dosažení tohoto cíle.  
   
  Toto téma vysvětluje:  
   
--   [Účel parametrizované sady záznamů](#_core_parameterized_recordsets).  
+-   [Účelem parametrizované záznamů](#_core_parameterized_recordsets).  
   
 -   [Kdy a proč můžete chtít Parametrizace sady záznamů](#_core_when_to_use_parameters).  
   
--   [Jak deklarovat parametr datových členů v třídu sady záznamů](#_core_parameterizing_your_recordset_class).  
+-   [Tom, jak deklarovat parametr datové členy ve své třídě záznamů](#_core_parameterizing_your_recordset_class).  
   
 -   [Jak předat informace o parametrech objekt sady záznamů v době běhu](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a> Parametrizované sady záznamů  
- Parametrizované sady záznamů umožňuje předat informace o parametrech v době běhu. To má dva důležité efekty:  
+##  <a name="_core_parameterized_recordsets"></a> Parametry sady záznamů  
+ Parametrizované záznamů umožňuje předat informace o parametrech v době běhu. To má dvě důležité důsledky:  
   
--   Výsledkem může být vyšší rychlost provádění.  
+-   Výsledkem může být lepší rychlostí provádění.  
   
--   Umožňuje vytvoření dotazu v době běhu na základě informací není k dispozici v době návrhu, například informace získané z vašeho uživatele nebo vypočtených za běhu.  
+-   To umožňuje sestavení dotazu v době běhu na základě informací není k dispozici v době návrhu, jako jsou informace získané z vaší uživatelské nebo vypočítat v době běhu.  
   
- Při volání **otevřete** spusťte dotaz, používá sada záznamů informace o parametrech k dokončení jeho **SQL SELECT** příkaz. Můžete parametrizovat všechny sady záznamů.  
+ Při volání `Open` sady záznamů a spusťte dotaz, použije informace o parametrech k dokončení jeho **SQL SELECT** příkazu. Všechny sady záznamů můžete parametrizovat.  
   
-##  <a name="_core_when_to_use_parameters"></a> Pokud chcete používat parametry  
- Typické použití parametrů patří:  
+##  <a name="_core_when_to_use_parameters"></a> Kdy použít parametry  
+ Obvyklá využití pro parametry patří:  
   
--   Předání argumentů běhu pro předdefinovaný dotaz.  
+-   Předávání argumentů za běhu pro předdefinovaný dotaz.  
   
-     Předat parametry do uložené procedury, je nutné zadat úplný vlastní ODBC **volání** příkaz – se zástupnými symboly parametru – při volání **otevřete**, přepsání příkazu SQL sady záznamů výchozí. Další informace najdete v tématu [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) v *knihovny tříd* a [SQL: přizpůsobení vaše SQL příkazu záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) a [ Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).  
+     Pro předání parametrů uložené procedury, je nutné zadat úplnou vlastní ODBC **volání** příkaz – se zástupnými symboly parametru – při volání `Open`, přepisuje výchozí příkaz SQL sady záznamů. Další informace najdete v tématu [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) v *knihovny tříd* a [SQL: SQL příkazu přizpůsobení sady záznamů (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) a [ Sada záznamů: Deklarování třídy pro předdefinovaný dotaz (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).  
 
   
--   Efektivní provádění mnoha opakovaných dotazů s jiným parametrem informace.  
+-   Efektivní provádění mnoha opakovaných dotazů s informace o různých parametrech.  
   
-     Například pokaždé, když koncový uživatel vyhledává informace pro konkrétní student v databázi registrací studentů, můžete název nebo ID Studentova jako parametr získaný od uživatele. Potom při volání sady záznamů **Requery –** – členská funkce dotaz vybere pouze tento Studentova záznam.  
+     Například pokaždé, když koncový uživatel vyhledá informace o konkrétní studentů v registrační databázi student, určíte název nebo ID studenta jako parametr získaný od uživatele. Potom, voláte sady záznamů `Requery` členskou funkci, dotaz vybere pouze student získal záznam.  
   
-     Řetězec filtru sady záznamů, které jsou uložené v **m_strFilter**, může vypadat například takto:  
+     Řetězec filtru sady záznamů, které jsou uložené v `m_strFilter`, může vypadat třeba takto:  
   
     ```  
     "StudentID = ?"  
     ```  
   
-     Předpokládejme, že obdržíte ID student v proměnné `strInputID`. Pokud nastavíte parametr na `strInputID` (například studenty ID 100) hodnotu proměnné je vázána na parametr zástupný symbol reprezentována "?" v řetězci filtru.  
+     Předpokládejme, že můžete získat ID studenta v proměnné `strInputID`. Pokud nastavíte parametr na `strInputID` (například ID studenta 100) hodnota proměnné je vázán na zástupný symbol parametr, který je reprezentován "?" v řetězci filtru.  
   
-     Hodnota parametru přiřadíte takto:  
+     Hodnota parametru také přiřadíte tímto způsobem:  
   
     ```  
     strInputID = "100";  
@@ -84,31 +84,31 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
                                        // for some drivers  
     ```  
   
-     Informace o tom, jak použití uvozovek v řetězcích filtrů, naleznete v [sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
+     Informace o tom, jak správně používat uvozovky řetězce filtru, naleznete v tématu [sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-     Hodnota parametru je pokaždé jiný Requery – sady záznamů pro nové ID student.  
+     Hodnota tohoto parametru je pokaždé jiný requery záznamů pro nové ID studenta.  
   
     > [!TIP]
-    >  Použití parametru je efektivnější než jednoduše filtru. Pro parametrizované sady záznamů, musí databáze zpracovat SQL **vyberte** příkaz pouze jednou. Pro filtrovanou sadu záznamů bez parametrů **vyberte** musí být příkaz zpracován pokaždé, když provedete **Requery** s novou hodnotou filtru.  
+    >  Pomocí parametru je mnohem efektivnější než jednoduše filtr. Pro parametry sady záznamů, musí zpracovat databázi SQL **vyberte** příkaz pouze jednou. Pro filtrovanou sadu záznamů bez parametrů **vyberte** je potřeba zpracovat příkaz pokaždé, když `Requery` s novou hodnotu filtru.  
   
  Další informace o filtrech najdete v tématu [sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizace vaší třídy sady záznamů  
   
 > [!NOTE]
->  Tato část se týká objektů odvozených od `CRecordset` v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, implementace parametrů je podobný proces. Další informace najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Tato část se týká objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, implementace parametry je podobný proces. Další informace najdete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Než vytvoříte třídu sady záznamů, určete, jaké parametry, je nutné, jaké jsou jejich datové typy a jak je sada záznamů použije.  
+ Než vytvoříte třídu sady záznamů, zjistit, jaké parametry se budete potřebovat, jaké jsou jejich datové typy a jak je využívá sadu záznamů.  
   
-#### <a name="to-parameterize-a-recordset-class"></a>O parametrizaci třídy sady záznamů  
+#### <a name="to-parameterize-a-recordset-class"></a>Chcete-li parametrizovat třídy sady záznamů  
   
-1.  Spustit [průvodce příjemcem knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** třídu vytvořte.  
+1.  Spustit [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** pro vytvoření třídy.  
   
-2.  Zadejte pole datových členů pro sloupce sady záznamů.  
+2.  Zadejte pole datových členů pro sady záznamů sloupce.  
   
-3.  Poté, co průvodce zapíše třídu do souboru ve vašem projektu, přejděte do souboru h a ručně přidat jeden nebo více parametry datových členů do deklaraci třídy. Přidání může vypadat podobně jako v následujícím příkladu, součástí třídy snímku navržený tak, aby odpovědět dotaz "které studenti, kteří jsou ve třídě pokročilých?"  
+3.  Poté, co průvodce zapíše třídy do souboru ve vašem projektu, přejděte k souboru .h a ručně přidejte jeden nebo více parametry datových členů pro deklaraci třídy. Přidání může vypadat přibližně jako v následujícím příkladu, část třídy snímku navržené tak, aby zodpovědět "které studenty ve třídě vedoucí?"  
   
-    ```  
+    ```cpp  
     class CStudentSet : public CRecordset  
     {  
     // Field/Param Data  
@@ -121,46 +121,46 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
     };  
     ```  
   
-     Přidání členů parametr dat po generované v Průvodci pole datových členů. Konvence je slovo "Param" připojit k název každého parametru definovaný uživatelem.  
+     Přidejte datové členy vašeho parametru po datové členy generované průvodcem pole. Tato konvence je přidat slovo "Parametrů" pro každý název parametru definovaný uživatelem.  
   
-4.  Změnit [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definice členské funkce v souboru. Přidejte volání funkce RFX pro každý parametr datového člena, které jste přidali do třídy. Informace o psaní vašich funkcí RFX najdete v tématu [výměna polí záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Předcházejte volání RFX pro parametry pomocí jednoho volání:  
+4.  Upravit [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definice členské funkce v souboru .cpp. Přidejte volání funkce RFX pro každý parametr datový člen, který jste přidali do třídy. Informace o vytváření funkcí RFX najdete v tématu [výměna polí záznamu: jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md). Předcházejte volání funkce RFX parametrů pomocí jediného volání pro:  
   
     ```  
     pFX->SetFieldType( CFieldExchange::param );  
     // RFX calls for parameter data members  
     ```  
   
-5.  V konstruktoru vaší třídy sady záznamů, zvyšte počet parametrů, `m_nParams`.  
+5.  V konstruktoru třídy sady záznamů, zvyšte počet parametrů `m_nParams`.  
   
      Informace najdete v tématu [výměna polí záznamu: práce s kódem průvodce](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).  
   
-6.  Při psaní kódu, který vytvoří objekt sady záznamů této třídy, umístěte "?" symbol (otazník) v každé místo vašich řetězců příkazů SQL, kde parametr má být nahrazen.  
+6.  Když píšete kód, který vytvoří objekt sady záznamů této třídy, umístěte "?" (otazník) v každé místo v řetězci příkaz SQL, kde parametr má být nahrazen.  
   
-     V době běhu "?" zástupné symboly jsou vyplněny v pořadí, podle hodnoty parametru předáte. První parametr datového člena nastavit po [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) volání nahradí první "?"v řetězci SQL, druhý parametr datového člena nahradí druhý"?", a tak dále.  
+     V době běhu "?" jsou vyplněny zástupné symboly v pořadí, ve hodnoty parametrů můžete předat. Po první datový člen parametr nastavit [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) volání nahradí první "?"v řetězci SQL, druhý parametr datový člen nahradí druhý"?", a tak dále.  
   
 > [!NOTE]
->  Parametr pořadí je důležité: pořadí RFX volání pro parametry v vaší `DoFieldExchange` funkce musí odpovídat pořadí zástupných symbolů parametrů ve vašem řetězci SQL.  
+>  Je důležité pořadí parametrů: pořadí RFX volání pro parametry v vaše `DoFieldExchange` funkce musí odpovídat pořadí parametrů zástupné symboly v řetězce jazyka SQL.  
   
 > [!TIP]
 
->  Pro práci s největší pravděpodobností řetězec je řetězec zadáte (pokud existuje) pro zadanou třídu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) – datový člen, ale některé ovladače ODBC mohou povolit parametry v jiných klauzulích SQL.  
+>  Nejpravděpodobnější řetězec pro práci s je řetězec zadáte (pokud existuje) pro danou třídu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datový člen, ale některé ovladače rozhraní ODBC mohou povolit parametry v jiných klauzulích SQL.  
   
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Předávání hodnot parametrů v době běhu  
- Musíte zadat hodnoty parametrů před voláním **otevřete** (pro nový objekt sady záznamů) nebo **Requery –** (pro již existující).  
+ Před voláním musíte zadat hodnoty parametrů `Open` (pro nový objekt sady záznamů) nebo `Requery` (pro existující).  
   
-#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Chcete-li předat hodnoty parametrů objektu sady záznamů v době běhu  
+#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>K předání hodnot parametru do objektu záznamů v době běhu  
   
 1.  Vytvořte objekt sady záznamů.  
   
-2.  Příprava řetězec nebo řetězce, například **m_strFilter** řetězec, obsahující příkazu SQL, nebo její části. Uveďte "?" zástupné symboly, kde je informace o parametru přejít.  
+2.  Příprava řetězec nebo řetězce, jako `m_strFilter` řetězec, který obsahuje příkaz SQL nebo jeho části. Umístit "?" zástupné symboly, ve kterém je informace o parametrech přejít.  
   
-3.  Hodnota parametru runtime přiřadíte každý parametr datového člena objektu.  
+3.  Datový člen každý parametr objektu přiřadíte hodnotu parametru za běhu.  
   
-4.  Volání **otevřete** – členská funkce (nebo **Requery –**, pro existující sady záznamů).  
+4.  Volání `Open` členskou funkci (nebo `Requery`, pro existující sady záznamů).  
   
- Předpokládejme například, že chcete zadejte řetězec filtru pro sady záznamů pomocí informací získaných v době běhu. Předpokládejme, kterou jste vytvořili sadu záznamů třídy `CStudentSet` dříve – názvem `rsStudents` – a teď chcete znovu spustit dotaz pro konkrétní typ student informace.  
+ Předpokládejme například, že chcete zadat řetězec filtru pro sady záznamů pomocí informace získané za běhu. Předpokládejme, kterou jste vytvořili sadu záznamů třídy `CStudentSet` dříve – volá `rsStudents` – a teď chcete znovu spustit dotaz pro konkrétní druh informací studentů.  
   
-```  
+```cpp  
 // Set up a filter string with   
 // parameter placeholders  
 rsStudents.m_strFilter = "GradYear <= ?";  
@@ -177,12 +177,12 @@ if( !rsStudents.Requery( ) )
     return FALSE;  
 ```  
   
- Sada záznamů obsahuje záznamy pro tyto studenty, jejichž záznamy splňovat podmínky zadaný filtr, který byl vytvořen z parametrů běhu. V takovém případě sada záznamů obsahuje záznamy všech pokročilých studentů.  
+ Sada záznamů obsahuje záznamy pro tyto studenty, jejichž záznamy splňují podmínky určené filtr, který byl vytvořen z parametrů běhu. V takovém případě sada záznamů obsahuje záznamy pro vedoucí Všichni studenti.  
   
 > [!NOTE]
->  V případě potřeby můžete nastavit hodnotu datového členu parametru na hodnotu Null, pomocí [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Podobně můžete zkontrolovat, zda je parametr datového člena Null pomocí [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).  
+>  V případě potřeby můžete nastavit hodnotu datového členu parametr na hodnotu Null, pomocí [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Podobně můžete zkontrolovat, zda datový člen parametr má hodnotu Null, pomocí [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Sada záznamů: Přidávání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
  [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

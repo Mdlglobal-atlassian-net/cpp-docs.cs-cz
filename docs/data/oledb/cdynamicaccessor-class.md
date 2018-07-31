@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 072820f556f8e4d43a88daaeb8b50ac56db9ab5d
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233383"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338243"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
 Umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (základní strukturu vaší databáze).  
@@ -216,7 +216,7 @@ Vytvoří a inicializuje `CDynamicAccessor` objektu.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000);  
 ```  
   
@@ -239,7 +239,6 @@ Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](ht
   
 ```cpp
 void Close() throw();  
-  
 ```  
 
 ## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
@@ -249,7 +248,6 @@ Načte objekt BLOB zpracování hodnotu aktuálního řádku.
   
 ```cpp
 const DBBLOBHANDLINGENUM GetBlobHandling() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -262,7 +260,6 @@ Získá maximální velikost objektu BLOB v bajtech.
   
 ```cpp
 const DBLENGTH GetBlobSizeLimit() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -294,7 +291,6 @@ Získá počet sloupců.
   
 ```cpp
 DBORDINAL GetColumnCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -307,7 +303,7 @@ Načte vlastnosti sloupce.
   
 ```cpp
 bool GetColumnFlags(DBORDINAL nColumn,   
-  DBCOLUMNFLAGS* pFlags) const throw();  
+   DBCOLUMNFLAGS* pFlags) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -360,7 +356,7 @@ Načte název pro určený sloupec.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
+LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -377,7 +373,7 @@ Načte datový typ zadaný sloupec.
   
 ```cpp
 bool GetColumnType(DBORDINAL nColumn,   
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -397,7 +393,7 @@ Načte délku zadaného sloupce.
   
 ```cpp
 bool GetLength(DBORDINAL nColumn,   
-  DBLENGTH* pLength) const throw();  
+   DBLENGTH* pLength) const throw();  
 
 bool GetLength(const CHAR* pColumnName,   
    DBLENGTH* pLength) const throw();  
@@ -428,7 +424,7 @@ Získá číslo sloupce, název sloupce.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool GetOrdinal(const CHAR* pColumnName,  
+bool GetOrdinal(const CHAR* pColumnName,  
    DBORDINAL* pOrdinal) const throw();  
 
 bool GetOrdinal(const WCHAR* pColumnName,  
@@ -452,7 +448,7 @@ Načte stav pro určený sloupec.
   
 ```cpp
 bool GetStatus(DBORDINAL nColumn,   
-  DBSTATUS* pStatus) const throw();  
+   DBSTATUS* pStatus) const throw();  
 
 bool GetStatus(const CHAR* pColumnName,  
    DBSTATUS* pStatus) const throw();  
@@ -525,7 +521,7 @@ Nastaví objekt BLOB zpracování hodnotu aktuálního řádku.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
+bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -549,7 +545,7 @@ Nastaví maximální velikost objektu BLOB v bajtech.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetBlobSizeLimit(DBLENGTH nBlobSize);  
+void SetBlobSizeLimit(DBLENGTH nBlobSize);  
 ```  
   
 #### <a name="parameters"></a>Parametry  

@@ -1,5 +1,5 @@
 ---
-title: Zadání parametrizovaného dotazu | Microsoft Docs
+title: Zadání parametrizovaného dotazu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104572"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339533"
 ---
 # <a name="issuing-a-parameterized-query"></a>Zadání parametrizovaného dotazu
-Následující příklad vydává jednoduché parametrizovaného dotazu, který načte záznamy s polem věku (která je větší než 30) z tabulky v databázi Microsoft Access. Pro podporu parametru, musí mít uživatelský záznam další mapy. Následující kód v projektu knihovny ATL používá `CCommand` místo `CTable` třída používaná v předchozím příkladu [procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md).  
+V následujícím příkladu vystavuje jednoduché parametrický dotaz, který načte záznamy s polem stáří (která je větší než 30) z tabulky v databázi Microsoft Access. Pro podporu parametru, musí mít uživatelský záznam další mapy. Následující kód v projektu ATL, použije `CCommand` místo na třídě `CTable` třída používaná v předchozím příkladu [procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Uživatelský záznam `CArtists`, vypadá podobně jako tento:  
+ Uživatelský záznam `CArtists`, vypadá přibližně takto:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

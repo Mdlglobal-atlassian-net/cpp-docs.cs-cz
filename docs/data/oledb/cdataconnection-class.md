@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207799"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338256"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 Spravuje připojení ke zdroji dat.  
@@ -133,8 +133,7 @@ Vytvoří a inicializuje `CDataConnection` objektu.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ Vytvoří kopii existující datové připojení.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -202,7 +201,6 @@ Určuje, zda aktuální relace je otevřený, nebo ne.
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -215,7 +213,6 @@ Určuje, zda aktuální relace je otevřený, nebo ne.
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -228,7 +225,6 @@ Vrátí odkaz na obsaženého objektu `CDataSource` objektu.
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -248,7 +244,6 @@ Vrací ukazatel na obsaženého objektu `CDataSource` objektu.
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -263,7 +258,6 @@ Vrátí odkaz na obsaženého objektu `CSession` objektu.
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -283,7 +277,6 @@ Vrací ukazatel na obsaženého objektu `CSession` objektu.
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  

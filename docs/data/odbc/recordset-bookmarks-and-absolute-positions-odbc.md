@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Záložky a absolutní umístění (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Záložky a absolutní umístění (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,17 +32,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84288a5da836661bfda5720872008adf248fb246
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091314"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338324"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Sada záznamů: Záložky a absolutní umístění (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Při procházení sady záznamů, často potřebují způsob vrácení na konkrétní záznam. Záložky a absolutní umístění záznam poskytují takové dvě metody.  
+ Během procházení záznamů, často potřebují způsob, jak vrácení konkrétního záznamu. Záložky a absolutní pozici záznamu zadejte tyto dvě metody.  
   
  Toto téma vysvětluje:  
   
@@ -50,16 +50,16 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Jak nastavit aktuální záznam pomocí absolutní umístění](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> Záložky v knihovně MFC rozhraní ODBC  
- Záložka jednoznačně identifikuje záznam. Při procházení sady záznamů nelze vždy spoléhat na absolutní umístění záznamu vzhledem k tomu, že záznamy lze odstranit ze sady záznamů. Spolehlivě ke sledování pozici záznamu je použití jeho záložky. Třída `CRecordset` poskytuje členské funkce pro:  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> Záložky v rozhraní MFC ODBC  
+ Záložka jednoznačně identifikuje záznam. Když si projdete sady záznamů, nelze vždy spoléhat na absolutní pozici záznam vzhledem k tomu může být odstraní záznamy ze sady záznamů. Spolehlivě udržovat přehled o pozici záznam se má používat své záložky. Třída `CRecordset` poskytuje členské funkce:  
   
--   Získání záložky na aktuální záznam, takže ho můžete uložit do proměnné ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
+-   Získání záložky aktuální záznam, abyste mohli uložit do proměnné ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
   
--   Rychlé přesunutí na daný záznam zadáním její záložky, kterou jste uložili dříve v proměnné ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
+-   Přesunutí rychle na daný záznam tak, že zadáte jeho záložky, kterou jste uložili dříve v proměnné ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
   
- Následující příklad ukazuje, jak používat tyto členské funkce k označení záznam na aktuální záznam a později vrátit:  
+ Následující příklad ukazuje, jak používat tyto členské funkce Označit aktuální záznam a později vrátit k ní:  
   
-```  
+```cpp  
 // rs is a CRecordset or  
 // CRecordset-derived object  
   
@@ -72,21 +72,21 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- Není potřeba extrahovat základní datový typ z [CDBVariant – třída](../../mfc/reference/cdbvariant-class.md) objektu. Přiřadit hodnotu s `GetBookmark` a vrátíte se na tuto záložku pomocí `SetBookmark`.  
+ Není potřeba extrahovat příslušný datový typ z [CDBVariant – třída](../../mfc/reference/cdbvariant-class.md) objektu. Přiřadí hodnotu s `GetBookmark` a vraťte se na tuto záložku pomocí `SetBookmark`.  
   
 > [!NOTE]
->  V závislosti na vašich ovladač ODBC a typ sady záznamů nemusí být podporován záložky. Můžete snadno zjistit, zda jsou podporovány záložky voláním [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Pokud jsou záložky podporovány, je nutné explicitně zvolit jejich implementaci zadáním **CRecordset::useBookmarks** možnost [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) – členská funkce. Také byste měli zkontrolovat zachování záložek po určité operace sady záznamů. Například pokud jste **Requery** sady záznamů, záložky může již nebude platný. Volání [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolujte, zda můžete bezpečně volat `SetBookmark`.  
+>  V závislosti na váš ovladač ODBC a typ sady záznamů nemusí být podporován záložky. Můžete také snadno zjistit, zda jsou podporovány záložky voláním [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Pokud jsou záložky podporovány, je nutné explicitně zvolit implementovat tak, že zadáte `CRecordset::useBookmarks` možnost [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) členskou funkci. Také byste měli zkontrolovat trvalost záložky po určitých operacích sady záznamů. Například pokud jste `Requery` sady záznamů záložky již nemusí být platný. Volání [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) ke kontrole, jestli může bezpečně volat `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Absolutní umístění v knihovně MFC rozhraní ODBC  
- Kromě záložek třídy `CRecordset` vám umožní nastavit na aktuální záznam zadáním pořadové umístění. Tomu se říká absolutní umístění.  
-  
-> [!NOTE]
->  Absolutní umístění není k dispozici na dopředné sady záznamů. Další informace o dopředné sady záznamů najdete v tématu [záznamů (ODBC)](../../data/odbc/recordset-odbc.md).  
-  
- Chcete-li přesunout ukazatel aktuální záznam pomocí absolutní umístění, volejte [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Pokud předáte hodnotu na `SetAbsolutePosition`, záznam odpovídající, pořadové číslo pozice stane aktuálním záznamem.  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Absolutní umístění v rozhraní MFC ODBC  
+ Kromě záložek třídy `CRecordset` vám umožní nastavit tak, že zadáte pořadového aktuální záznam. Tomu se říká absolutní pozici.  
   
 > [!NOTE]
->  Absolutní umístění záznamu je potenciálně nespolehlivé. Pokud uživatel odstraní záznamy ze sady záznamů, změní se pořadová čísla všech následných záznamů. Záložky jsou uvedeny doporučené metody pro přesun na aktuální záznam. Další informace najdete v tématu [záložky v knihovně MFC rozhraní ODBC](#_core_bookmarks_in_mfc_odbc).  
+>  Absolutní umístění není k dispozici sady záznamů s posouváním pouze vpřed. Další informace o pouze vpřed, naleznete v tématu [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md).  
+  
+ Chcete-li ukazatel aktuální záznam pomocí absolutní pozici, zavolejte [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Pokud předáte hodnotu `SetAbsolutePosition`, záznam odpovídající, že pořadí se stává aktuálním záznamem.  
+  
+> [!NOTE]
+>  Absolutní pozici záznamu je potenciálně nespolehlivým. Pokud uživatel odstraní záznamy ze sady záznamů, pořadové číslo pozice změny následujících záznamů. Záložky se doporučené metody pro přesouvání aktuální záznam. Další informace najdete v tématu [záložky v rozhraní MFC ODBC](#_core_bookmarks_in_mfc_odbc).  
   
  Další informace o navigaci v sadě záznamů najdete v tématu [sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   

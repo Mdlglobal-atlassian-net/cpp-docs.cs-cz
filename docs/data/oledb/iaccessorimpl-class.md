@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0ac22d8ee45209ad6a20dcb34a75c06dd9b80b58
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269885"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338776"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
 Poskytuje implementaci [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) rozhraní.  
@@ -62,8 +62,8 @@ Poskytuje implementaci [IAccessor](https://msdn.microsoft.com/library/ms719672.a
 
 ```cpp
 template <class T, 
-          class BindType = ATLBINDINGS,
-          class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
+   class BindType = ATLBINDINGS,
+   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
@@ -107,7 +107,6 @@ Konstruktor
   
 ```cpp
 IAccessorImpl();  
-  
 ```  
 
 ## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
@@ -116,7 +115,7 @@ Přidá počet odkazů na existující přistupující objekt.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
+STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
    DBREFCOUNT* pcRefCount);  
 ```  
   
@@ -129,7 +128,7 @@ Vytvoří ze sady vazby přistupující objekt.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
+STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
    DBCOUNTITEM cBindings,  
    const DBBINDING rgBindings[],  
    DBLENGTH cbRowSize,  
@@ -146,7 +145,7 @@ Vrátí základní sloupce vazby od uživatele v přistupujícím objektu.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
+STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
    DBACCESSORFLAGS* pdwAccessorFlags,  
    DBCOUNTITEM* pcBindings,  
    DBBINDING** prgBindings);  
@@ -161,7 +160,7 @@ Uvolní přistupující objekt.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
+STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
    DBREFCOUNT* pcRefCount);  
 ```  
   

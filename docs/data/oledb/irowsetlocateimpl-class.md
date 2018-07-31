@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322173"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338386"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl – třída
 Implementuje rozhraní OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) rozhraní, která načte libovolné řádky ze sady řádků.  
@@ -128,7 +128,7 @@ Porovná dva záložky.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmark1,  
    const BYTE* pBookmark1,  
    DBBKMARK cbBookmark2,  
@@ -158,7 +158,7 @@ Načte řádky od řádku určený posun od záložku.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
    HCHAPTER hReserved2,  
    DBBKMARK cbBookmark,  
    const BYTE* pBookmark,  
@@ -182,7 +182,7 @@ Načte jeden nebo více řádků, které odpovídají zadaným záložky.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
@@ -205,7 +205,7 @@ Vrátí hodnotu hash hodnoty pro zadaný záložky.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
@@ -226,7 +226,6 @@ Pole záložky.
   
 ```cpp
 CAtlArray<DBROWCOUNT> m_rgBookmarks;  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  

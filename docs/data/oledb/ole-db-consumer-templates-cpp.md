@@ -1,5 +1,5 @@
 ---
-title: Šablony příjemce technologie OLE DB (C++) | Microsoft Docs
+title: Šablony příjemce technologie OLE DB (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112105"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339396"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
-Šablony příjemce technologie OLE DB podporují specifikaci verzi 2.6 OLE DB. (Šablony příjemce technologie OLE DB jsou testovány proti 2.6 technologie OLE DB, ale nepodporují každé rozhraní ve specifikaci.) Šablony příjemce minimalizovat kód, který musí zapsat implementace příjemce technologie OLE DB. Šablony poskytují:  
+Šablony příjemce technologie OLE DB podporují specifikaci verze 2.6 OLE DB. (Šablony příjemce technologie OLE DB je testován vůči 2.6 technologie OLE DB, ale nepodporují každé rozhraní ve specifikaci). Šablony příjemce minimalizovat množství kódu, který musíte napsat k implementaci příjemce technologie OLE DB. Šablony poskytují:  
   
 -   Snadný přístup k funkcím technologie OLE DB a snadnou integraci s použitím knihovny ATL a MFC.  
   
--   Jednoduchý vazební model pro parametry databáze a sloupce.  
+-   Model jednoduché vazby pro parametry a sloupce databáze.  
   
--   Nativní datové typy C/C++ pro programování technologie OLE DB.  
+-   Nativní datových typů jazyka C/C++ pro programování technologie OLE DB.  
   
- Pokud chcete používat šablony technologie OLE DB, měli seznámit pomocí šablon C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [referenční příručka programátora technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms718124.aspx).  
+ Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](https://msdn.microsoft.com/library/ms718124.aspx).  
   
- Šablony technologie OLE DB podporují existující model objektu OLE DB místo přidání nového objektu modelu. Horní vrstva tříd v šablony příjemce technologie OLE DB paralelní součásti definované ve specifikaci OLE DB. Návrh šablony příjemce technologie OLE DB zahrnuje pokročilé funkce, jako je například několik přístupových objektů pro sadu řádků. Použití šablon a vícenásobná dědičnost díky knihovny malé a flexibilní.  
+ Šablony technologie OLE DB podporovat existující objektový model OLE DB místo přidání nového objektu modelu. Horní vrstva tříd v šablony příjemce technologie OLE DB paralelní součásti definovaných ve specifikaci OLE DB. Návrh šablony příjemce technologie OLE DB zahrnuje pokročilé funkce, jako je několik přístupových objektů pro sadu řádků. Použití šablon a vícenásobná dědičnost činí knihovnu malé a flexibilní.  
   
 ## <a name="how-ole-db-consumers-access-data"></a>Jak příjemce technologie OLE DB přistupovat k datům  
- Příjemci používají několik druhů objektů, které jsou popsány v následujících tématech:  
+ Zákazníci používají několik typů objektů, které jsou popsány v následujících tématech:  
   
 -   [Zdroje dat a relace](../../data/oledb/data-sources-and-sessions.md)  
   
@@ -49,24 +49,24 @@ ms.locfileid: "33112105"
   
 -   [Uživatelské záznamy](../../data/oledb/user-records.md)  
   
- Předtím, než příjemce nebude nic, nejprve vyberte zprostředkovatele OLE DB, který je vhodný pro typ databáze, kterou potřebujete pro přístup k (například SQL, Oracle, rozhraní ODBC a MSDS). K tomu obvykle použijte čítač (viz [CEnumerator](../../data/oledb/cenumerator-class.md) jak je uvedeno v [zdroje dat a relace](../../data/oledb/data-sources-and-sessions.md)).  
+ Předtím, než uživatel provede cokoli, nejprve vyberte zprostředkovatele OLE DB, která je vhodná pro typ databáze, kterou je potřeba přístup (například SQL, Oracle, ODBC a MSDS). K tomuto účelu použijete obvykle enumerátor (viz [CEnumerator](../../data/oledb/cenumerator-class.md) jak je uvedeno v [zdroje dat a relace](../../data/oledb/data-sources-and-sessions.md)).  
   
- [Objekt zdroje dat](../../data/oledb/data-sources-and-sessions.md) poskytuje informace o připojení, která je požadovaná pro připojení ke zdroji dat, který jste vybrali. Objekt zdroje dat obsahuje také informace o ověřování (například přihlašovací jména a hesla), který se používá k udělení oprávnění k přístupu ke zdroji dat uživatelům. Objekt zdroje dat vytvoří připojení k databázi a poté vytvoří jeden nebo více objektů relace. Každý [objektu session](../../data/oledb/data-sources-and-sessions.md) spravuje vlastní interakce s databází (to znamená, dotazování a načítání dat) a provede tyto transakce nezávisle na jiné existující relací.  
+ [Objektu zdroje dat](../../data/oledb/data-sources-and-sessions.md) poskytuje informace o připojení, která je potřebná pro připojení ke zdroji dat, který jste vybrali. Objekt zdroje dat obsahuje také informace o ověřování (například přihlašovací jména a hesla), který se používá k udělení oprávnění pro přístup ke zdroji dat uživatelům. Objekt zdroje dat vytvoří připojení k databázi a potom vytvoří jeden nebo více relací objektů. Každý [objektu relace](../../data/oledb/data-sources-and-sessions.md) spravuje svou vlastní interakce s databází (to znamená, dotazování a načítání dat) a provádí tyto transakce nezávisle na jiných existující relace.  
   
- Relace vytvoří objekty sady řádků a příkaz. [Objekt příkazu](../../data/oledb/commands-and-tables.md) umožňuje uživatelům interakci s databází, například pomocí příkazů SQL. [Objektu sady řádků](../../data/oledb/accessors-and-rowsets.md) je sada dat, který můžete přejít a ve kterém můžete [aktualizaci, odstranění a vložení řádků](../../data/oledb/updating-rowsets.md).  
+ Relace vytváří objekty příkazu a sady řádků. [Objekt příkazu](../../data/oledb/commands-and-tables.md) umožňuje uživatelům interakci s databází, například pomocí příkazů SQL. [Objektu sady řádků](../../data/oledb/accessors-and-rowsets.md) je sada dat, který můžete procházet a ve kterém můžete [aktualizovat, odstranit a vložit řádky](../../data/oledb/updating-rowsets.md).  
   
- Příjemce technologie OLE DB váže sloupců v tabulkách databáze s lokálními proměnnými; k tomu použije [přistupujícího objektu](../../data/oledb/accessors-and-rowsets.md), který obsahuje mapu způsob uložení dat v rámci příjemce. Mapy obsahuje sadu vazeb mezi sloupců tabulky a místní vyrovnávací paměti (proměnné) v aplikaci příjemce.  
+ Příjemce technologie OLE DB váže sloupců v tabulkách databáze s lokálními proměnnými; k tomuto účelu se používá [přistupující objekt](../../data/oledb/accessors-and-rowsets.md), která obsahuje mapu způsob uložení dat v rámci příjemce. Na mapě se skládá z sadu vazeb mezi sloupce tabulky a místní vyrovnávací paměti (proměnné) v aplikaci příjemce.  
   
- Jednou z důležité koncepce při práci s příjemci je, že deklarujete dvě třídy v příjemce: [třídy příkazu (nebo tabulky)](../../data/oledb/commands-and-tables.md) a [třída uživatelského záznamu](../../data/oledb/user-records.md). Sada řádků přistupujete prostřednictvím třídu příkazu (nebo tabulky), která dědí z třídy sady řádků i třídu přistupujícího objektu. Třída záznamu uživatele obsahuje mapu vazby sady řádků se popisuje výš.  
+ Jeden důležitý koncept při práci se zákazníky, je deklarovat dvě třídy do příjemce: [příkazu (nebo tabulky) třídy](../../data/oledb/commands-and-tables.md) a [třídy uživatelského záznamu](../../data/oledb/user-records.md). Máte přístup k dané sadě řádků prostřednictvím příkazu (nebo tabulky) třídy, která dědí z třídy sady řádků i třídu přistupujícího objektu. Třída záznamu uživatele obsahuje mapu vazby sady řádků popsaných výše.  
   
  Další informace naleznete v následujících tématech:  
   
 -   [Vytvoření příjemce OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
   
--   [Běžné OLE DB scénáře (příklady)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
+-   [Běžné technologie OLE DB scénáře (příklady)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – programování](../../data/oledb/ole-db-programming.md)   
  [Přístup k datům](../data-access-in-cpp.md)   
- [Dokumentaci k sadě SDK OLE DB](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [Referenční příručka programátora prostředí OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [Dokumentace k sadě SDK technologie OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [Referenční informace pro OLE DB programátory](https://msdn.microsoft.com/library/ms713643.aspx)

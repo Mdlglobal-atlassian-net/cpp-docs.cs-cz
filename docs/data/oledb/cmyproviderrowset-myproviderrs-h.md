@@ -1,5 +1,5 @@
 ---
-title: CMyProviderRowset (MyProviderRS.H) | Microsoft Docs
+title: CMyProviderRowset (MyProviderRS.H) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bfd7c927342790fee3be2b5a7d48bccba3ea168
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 936c8fe849e2eb92b8eb46170fc3e67842ad6beb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097338"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338847"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
-Průvodce generuje položku pro objektu sady řádků. V takovém případě se nazývá `CMyProviderRowset`. `CMyProviderRowset` Třída dědí z třídy zprostředkovatele OLE DB názvem `CRowsetImpl`, který implementuje všechna rozhraní, které jsou nezbytné pro objektu sady řádků. Následující kód ukazuje řetězec dědičnosti pro `CRowsetImpl`:  
+Průvodce vytvoří položku pro objektu sady řádků. V takovém případě se nazývá `CMyProviderRowset`. `CMyProviderRowset` Třída dědí ze třídy zprostředkovatele OLE DB volá `CRowsetImpl`, který implementuje všechna potřebná rozhraní objektu sady řádků. Následující kód ukazuje řetězec dědičnosti pro `CRowsetImpl`:  
   
-```  
+```cpp  
 template <class T, class Storage, class CreatorClass,   
    class ArrayType = CAtlArray<Storage>>  
 class CMyRowsetImpl:  
@@ -37,13 +37,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T >>  
 ```  
   
- `CRowsetImpl` používá také `IAccessor` a `IColumnsInfo` rozhraní. Používá tato rozhraní pro výstup pole v tabulkách. Třída také poskytuje implementaci pro **IRowsetIdentity**, což umožňuje příjemci zjistit, zda jsou dva řádky identické. `IRowsetInfo` Rozhraní implementuje vlastnosti objektu sady řádků. **IConvertType** rozhraní umožňuje poskytovateli vyřešte rozdíly mezi datovými typy požadoval příjemce a používaných zprostředkovatelem.  
+ `CRowsetImpl` také používá `IAccessor` a `IColumnsInfo` rozhraní. Tato rozhraní se používá pro výstupní pole tabulky. Třída rovněž poskytuje implementaci pro `IRowsetIdentity`, která umožňuje příjemci k určení, zda dva řádky jsou identické. `IRowsetInfo` Rozhraní implementuje vlastnosti objektu sady řádků. `IConvertType` Rozhraní umožňuje poskytovatelem a vyřešit rozdíly mezi datovými typy požadoval uživatel a používaných zprostředkovatelem.  
   
- `IRowset` Rozhraní ve skutečnosti zpracovává načítání data. Příjemce nejprve volá metodu s názvem `GetNextRows` pro vrácení popisovače na řádek, označuje jako **HROW**. Příjemce potom volá **IRowset::GetData** s třídou **HROW** načíst požadovaná data.  
+ `IRowset` Rozhraní ve skutečnosti zpracovává data načítání. Příjemce nejprve volá metodu s názvem `GetNextRows` se vraťte na řádek, označované jako popisovač `HROW`. Pak zavolá příjemce `IRowset::GetData` s ním `HROW` načíst požadovaná data.  
   
- `CRowsetImpl` také trvá několik parametrů šablony. Tyto parametry umožňují určit, jak `CRowsetImpl` třída zpracovává data. `ArrayType` Argument umožňuje určit, jaký mechanismus úložiště se používá k ukládání dat řádku. **RowClass** parametr určuje, jaké třída obsahuje **HROW**.  
+ `CRowsetImpl` také přijímá několik parametrů šablony. Tyto parametry umožňují určit, jak `CRowsetImpl` třída zpracovává data. `ArrayType` Argument umožňuje určit, jaký mechanismus úložiště se používá k ukládání dat řádku. *RowClass* parametr určuje, jaké třída obsahuje `HROW`.  
   
- **RowsetInterface** parametr můžete také použít `IRowsetLocate` nebo `IRowsetScroll` rozhraní. `IRowsetLocate` a `IRowsetScroll` rozhraní obě dědí z `IRowset`. Šablony zprostředkovatele technologie OLE DB tedy musí zadat zvláštní zpracování těchto rozhraní. Pokud chcete použít některou z těchto rozhraní, budete muset použít tento parametr.  
+ *RowsetInterface* parametr umožňuje použít také `IRowsetLocate` nebo `IRowsetScroll` rozhraní. `IRowsetLocate` a `IRowsetScroll` obě dědí z rozhraní `IRowset`. Šablony zprostředkovatele OLE DB proto musíte zadat speciální zpracování pro tato rozhraní. Pokud chcete použít některou z těchto rozhraní, budete muset použít tento parametr.  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory generované průvodcem zprostředkovatele](../../data/oledb/provider-wizard-generated-files.md)

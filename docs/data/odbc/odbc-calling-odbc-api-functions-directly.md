@@ -1,5 +1,5 @@
 ---
-title: 'ODBC: Volání rozhraní API ODBC funkce přímo | Microsoft Docs'
+title: 'ODBC: Volání rozhraní API ODBC přímo funguje | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,35 +23,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089711"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336592"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Přímé volání funkcí rozhraní API ODBC
-Databázové třídy poskytují jednodušší rozhraní k [zdroj dat](../../data/odbc/data-source-odbc.md) než rozhraní ODBC. Třídy v důsledku toho není zapouzdření rozhraní API ODBC. Pro všechny funkce, která spadá mimo schopnosti tříd musí volat funkce rozhraní API ODBC přímo. Například musí volat funkce katalogu rozhraní ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**a jiné) přímo.  
+Databázové třídy poskytují jednodušší rozhraní [zdroj dat](../../data/odbc/data-source-odbc.md) než rozhraní ODBC. V důsledku toho třídy není zapouzdřovat všechny možnosti rozhraní API ODBC. Pro všechny funkce, která spadá mimo vlastnosti třídy je nutné volat funkce rozhraní API ODBC přímo. Například lze zavolat funkce katalogu rozhraní ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`a další) přímo.  
   
 > [!NOTE]
->  Zdroje dat ODBC jsou přístupné prostřednictvím třídy knihovny MFC rozhraní ODBC, jak je popsáno v tomto tématu nebo třídy MFC objekt DAO (Data Access).  
+>  Zdroje dat rozhraní ODBC jsou přístupné prostřednictvím třídy knihovny MFC rozhraní ODBC, jak je popsáno v tomto tématu, nebo třídy knihovny MFC objekt DAO (Data Access).  
   
- K volání funkce rozhraní API ODBC přímo, je nutné provést stejné kroky, které bude trvat, pokud jste volali bez rozhraní. Tyto kroky:  
+ Voláním funkce rozhraní API ODBC přímo, je nutné provést stejné kroky, které byste prováděli, pokud jste volali bez rozhraní framework. Tyto kroky:  
   
 -   Přidělení úložiště pro výsledky, které vrátí volání.  
   
--   Předat ODBC **HDBC** nebo **HSTMT** zpracování, v závislosti na parametru signatury funkce. Použití [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) makro pro načtení popisovače ODBC.  
+-   Předejte ODBC `HDBC` nebo `HSTMT` zpracovat, v závislosti na parametru signatury funkce. Použití [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) – makro pro načtení popisovače ODBC.  
   
-     Členské proměnné **CDatabase::m_hdbc** a **CRecordset::m_hstmt** jsou k dispozici, takže není nutné přidělit a inicializovat sami.  
+     Členské proměnné `CDatabase::m_hdbc` a `CRecordset::m_hstmt` jsou k dispozici, takže není potřeba přidělit a inicializovat sami.  
   
--   Možné volání dalších funkcí rozhraní ODBC se připravit nebo následnou akci hlavní volání.  
+-   Například volání další funkce ODBC se připravit nebo zpracovat hlavní výzvou.  
   
 -   Po dokončení zrušit přidělení úložiště.  
   
- Další informace o těchto krocích najdete v tématu [připojení ODBC (Open Database)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK v dokumentaci k webu MSDN.  
+ Další informace o těchto krocích najdete v článku [připojení ODBC (Open Database)](https://msdn.microsoft.com/library/ms710252.aspx) sady SDK v dokumentaci MSDN.  
   
- Kromě těchto kroků budete muset udělat dodatečné kroky, chcete-li zkontrolovat návratové hodnoty funkce, ujistěte se, že váš program není čekání na asynchronní volání dokončit a tak dále. Tyto poslední kroky můžete zjednodušit pomocí `AFX_SQL_ASYNC` a `AFX_SQL_SYNC` makra. Další informace najdete v tématu [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *odkaz knihovny MFC*.  
+ Kromě těchto kroků budete muset udělat dodatečné kroky, chcete-li zkontrolovat vrácené hodnoty funkce, ujistěte se, že váš program nečeká na asynchronní volání dokončí a tak dále. Poslední takto můžete zjednodušit pomocí AFX_SQL_ASYNC a AFX_SQL_SYNC makra. Další informace najdete v tématu [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *odkaz knihovny MFC*.  
 
-  
 ## <a name="see-also"></a>Viz také  
  [ODBC – základy](../../data/odbc/odbc-basics.md)

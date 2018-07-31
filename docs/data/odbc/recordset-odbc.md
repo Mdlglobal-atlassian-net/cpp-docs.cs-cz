@@ -1,5 +1,5 @@
 ---
-title: Sada záznamů (ODBC) | Microsoft Docs
+title: Sada záznamů (ODBC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,65 +24,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c59de3c5db2e1ec658a09279cb42e2833a4109e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b2e26ebfc3c8ebbb2d64e499c4d49db0e3fc25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092480"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338282"
 ---
 # <a name="recordset-odbc"></a>Sada záznamů (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- A [CRecordset](../../mfc/reference/crecordset-class.md) objekt představuje sadu záznamy ze zdroje dat vybraná. Záznamy lze z:  
+ A [CRecordset](../../mfc/reference/crecordset-class.md) objekt představuje sadu záznamů ze zdroje dat vybrané. Záznamy lze z:  
   
 -   Tabulka.  
   
 -   Dotaz.  
   
--   Uložené procedury, která přistupuje k jedné nebo více tabulek.  
+-   Uloženou proceduru, která přistupuje k jedné nebo více tabulek.  
   
- Příklad sady záznamů na základě v tabulce je "všem zákazníkům,", který přistupuje k tabulce zákazníka. Příklad dotazu je "všechny faktury Jan Smith." Příkladem záznamů založené na uložené procedury (někdy nazývané předdefinovaný dotaz) je "všechny nesplacené účty," který vyvolá uloženou proceduru v databázi back-end. Sady záznamů se můžete zapojit do dvou nebo více tabulek z jednoho zdroje dat, ale není tabulky z různých zdrojů.  
-  
-> [!NOTE]
->  Informace o odvození třídy sady záznamů s průvodců najdete v tématu [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) a [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+ Příklad sady záznamů na základě tabulky je "všem zákazníkům,", který přistupuje k tabulky se zákazníky. Příklad dotazu je "všechny faktury Jan Novák." Příklad sady záznamů podle uložené procedury (říká se jim předdefinovaný dotaz) je "všechno nedobytné účtů" který volá uloženou proceduru v databázi back-end. Dva nebo více tabulek ze stejného zdroje dat, ale ne tabulek z různých zdrojů dat. můžete připojit na sadu záznamů.  
   
 > [!NOTE]
->  Některé ovladače ODBC podporují zobrazení databáze. Zobrazení v tomto smyslu je dotaz původně vytvořen pomocí SQL `CREATE VIEW` příkaz. Průvodci aktuálně nepodporují zobrazení, ale je možné code tato podpora sami.  
+>  Informace o odvození třídy sady záznamů s průvodci, najdete v části [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) a [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
-##  <a name="_core_recordset_capabilities"></a> Funkce sady záznamů  
+> [!NOTE]
+>  Některé ovladače rozhraní ODBC podporu zobrazení databáze. Zobrazení v tomto smyslu je dotaz původně vytvořené pomocí SQL `CREATE VIEW` příkazu. Průvodci aktuálně nepodporují zobrazení, ale je možné tato podpora kódu sami.  
+  
+##  <a name="_core_recordset_capabilities"></a> Možnosti sady záznamů  
  Všechny objekty sady záznamů sdílet následující možnosti:  
   
--   Pokud zdroj dat není jen pro čtení, můžete určit, aby sady záznamů [aktualizovat](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [připojitelná](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), nebo jen pro čtení. Pokud je sada záznamů aktualizovatelná, můžete vybrat pesimistické nebo optimistické [uzamčení](../../data/odbc/recordset-locking-records-odbc.md) způsoby, které poskytuje ovladač poskytuje vhodnou podporu uzamčení. Pokud je zdroj dat jen pro čtení, bude sada záznamů jen pro čtení.  
+-   Pokud zdroj dat není jen pro čtení, můžete určit, že sady záznamů být [aktualizovat](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [připojitelná](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), nebo jen pro čtení. Pokud sada záznamů je možné aktualizovat, můžete optimistického nebo pesimistického [uzamčení](../../data/odbc/recordset-locking-records-odbc.md) metody, k dispozici ovladač poskytuje vhodnou podporu uzamčení. Pokud zdroj dat je jen pro čtení, bude sada záznamů jen pro čtení.  
   
--   Můžete volat členské funkce [scroll](../../data/odbc/recordset-scrolling-odbc.md) prostřednictvím vybrané záznamy.  
+-   Můžete volat členské funkce pro [posuvníku](../../data/odbc/recordset-scrolling-odbc.md) si vybrané záznamy.  
   
--   Můžete [filtru](../../data/odbc/recordset-filtering-records-odbc.md) záznamy, abyste omezili záznamy, které jsou vybrány z jsou k dispozici.  
+-   Je možné [filtr](../../data/odbc/recordset-filtering-records-odbc.md) záznamy, abyste omezili záznamy, které jsou vybrány z jsou k dispozici.  
   
--   Můžete [řazení](../../data/odbc/recordset-sorting-records-odbc.md) záznamy ve vzestupném nebo sestupném pořadí podle jednoho nebo více sloupců.  
+-   Je možné [řazení](../../data/odbc/recordset-sorting-records-odbc.md) záznamy ve vzestupném nebo sestupném pořadí podle jednoho nebo více sloupců.  
   
--   Můžete [Parametrizace](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) sadu záznamů pro získání výběru sady záznamů v době běhu.  
+-   Je možné [parametrizovat](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) záznamů pro kvalifikaci záznamů výběr v době běhu.  
   
 ##  <a name="_core_snapshots_and_dynasets"></a> Snímky a dynamické sady  
- Existují dva hlavní typy sad záznamů: [snímky](../../data/odbc/snapshot.md) a [dynamické sady](../../data/odbc/dynaset.md). Obě jsou podporovány třídou `CRecordset`. Každý sdílí stejné charakteristiky všech sad záznamů, ale každý taky ji rozšiřuje na běžné funkce v svým vlastním způsobem. Snímky poskytují statické zobrazení dat a jsou užitečné pro sestavy a jiné situace, ve kterých chcete zobrazit data tak, jak byly v určitou dobu. Dynamické sady jsou užitečné, pokud chcete aktualizace provedené jinými uživateli mají být zobrazeny v sadě záznamů bez nutnosti znovu spustit dotaz nebo aktualizovat sadu záznamů. Snímky a dynamické sady může být v aktualizovatelné nebo jen pro čtení. Odrážel záznamy přidání nebo odstranění jiných uživatelů, zavolejte [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
+ Existují dva hlavní typy sad záznamů: [snímky](../../data/odbc/snapshot.md) a [dynamické sady](../../data/odbc/dynaset.md). Obě jsou podporovány třídou `CRecordset`. Každý sdílí běžné vlastnosti všech sad záznamů, ale také každý svým vlastním způsobem rozšiřuje běžné funkce. Snímky poskytovat statické zobrazení dat a jsou užitečné pro sestavy a jiné situace, ve kterých chcete zobrazit data jako existovala v určitou dobu. Dynamické sady jsou užitečné, pokud chcete, aby aktualizace provedené jinými uživateli mají být zobrazeny v sadě záznamů bez nutnosti requery nebo aktualizovat sadu záznamů. Snímky a dynamické sady může být možné aktualizovat nebo jen pro čtení. Přidání záznamů nebo volání odstraněné jinými uživateli [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery).  
   
- `CRecordset` také umožňuje dva typy sad záznamů: dynamické sady záznamů a dopředné sady záznamů. Dynamické sady záznamů jsou podobné dynamické sady; ale dynamické sady záznamů odrážel všechny záznamy při přidání nebo odstranění bez volání `CRecordset::Requery`. Z tohoto důvodu dynamické sady záznamů jsou obvykle levnější s ohledem na doba zpracování na databázového systému a mnoho ovladačů ODBC je nepodporují. Naproti tomu dopředné sady záznamů poskytují nejúčinnější metodu přístupu k datům pro sady záznamů, které nevyžadují aktualizace nebo zpětné posouvání. Můžete například použít dopředná sada záznamů pro migraci dat z jednoho zdroje dat na jiný, kde je potřeba jenom procházet data směrem vpřed. Chcete-li použít dopředné záznamů, musíte udělat obě z následujících akcí:  
+ `CRecordset` také umožňuje dva typy sad záznamů: dynamické sady záznamů a pouze vpřed. Dynamické sady záznamů jsou podobné dynamické sady; ale dynamické promítne záznamy, které přidána nebo odstraněna bez volání `CRecordset::Requery`. Z tohoto důvodu dynamické sady záznamů jsou obecně nákladné s ohledem na doba zpracování na správce databáze a mnoho ovladačů ODBC je nepodporují. Naproti tomu poskytují dopředné sady záznamů nejefektivnější metoda přístupu k datům pro sady záznamů, které nevyžadují žádné aktualizace nebo zpětné posouvání. Můžete například použít záznamů s posouváním pouze vpřed pro migraci dat z jednoho zdroje dat do jiného, kde je potřeba jenom procházet data ve směru dopředu. Použití záznamů s posouváním pouze vpřed, proveďte oba následující kroky:  
   
--   Předat možnosti **CRecordset::forwardOnly** jako `nOpenType` parametr [otevřete](../../mfc/reference/crecordset-class.md#open) – členská funkce.  
+-   Možnost předat `CRecordset::forwardOnly` jako *nOpenType* parametr [otevřít](../../mfc/reference/crecordset-class.md#open) členskou funkci.  
   
--   Zadejte **CRecordset::readOnly** v `dwOptions` parametr **otevřete**.  
+-   Zadejte `CRecordset::readOnly` v *dwOptions* parametr `Open`.  
   
     > [!NOTE]
-    >  Informace o požadavky ovladače ODBC pro dynamické sady podpory najdete v tématu [ODBC](../../data/odbc/odbc-basics.md). Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v části [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
+    >  Informace o požadavky ovladače ODBC pro dynamické sady podpory najdete v tématu [ODBC](../../data/odbc/odbc-basics.md). Seznam ovladačů ODBC zahrnuté v této verzi systému Visual C++ a informace o získání dalších ovladačů najdete v tématu [seznam ovladačů ODBC](../../data/odbc/odbc-driver-list.md).  
   
 ##  <a name="_core_your_recordsets"></a> Vaše sady záznamů  
- Pro každý odlišné tabulka, zobrazení nebo uložené procedury, jež chcete získat přístup, je obvykle definovat třídy odvozené od `CRecordset`. (Výjimkou jsou připojení k databázi, ve které jedna sada záznamů představuje sloupce ze dvou nebo více tabulek.) Pokud odvodíte třídu sady záznamů, povolíte mechanismus pole záznamu (exchange – RFX) nebo mechanismus pole záznamu (Bulk RFX) systému exchange, podobné mechanismus dialogové okno dat systému exchange (DDX). RFX a Bulk RFX zjednodušují přenos dat ze zdroje dat do sady záznamů; RFX navíc ke zdroji dat přenáší data ze sady záznamů. Další informace najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ Pro každou odlišné tabulky, zobrazení nebo uložené procedury, jež chcete získat přístup, obvykle definují třídy odvozené od `CRecordset`. (Výjimkou je připojení k databázi, ve které jedna sada záznamů představuje sloupci ze dvou nebo více tabulek). Při odvození třídy sady záznamů, povolíte mechanismus pole záznamu (RFX) systému exchange nebo hromadné mechanismem výměny (Bulk RFX) pole záznamu, které jsou podobné mechanismem výměny (DDX) dat dialogového okna. Přenos dat ze zdroje dat do sady záznamů; Zjednodušte RFX a Bulk RFX RFX navíc přenáší data ze sady záznamů ke zdroji dat. Další informace najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Objekt sady záznamů umožňuje přístup do všech vybraných záznamech. Můžete procházet více vybraných záznamů pomocí `CRecordset` členské funkce, jako například `MoveNext` a `MovePrev`. Objekt sady záznamů ve stejnou dobu, představuje pouze jeden z vybraných záznamů na aktuální záznam. Deklarováním sada záznamů třída členské proměnné, které odpovídají na sloupce tabulky nebo záznamy, které jsou výsledkem dotazu databáze můžete zkontrolovat pole na aktuální záznam. Informace o datových členů sady záznamů najdete v tématu [sada záznamů: architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  
+ Objekt sady záznamů poskytuje přístup do všech vybraných záznamech. Při procházení několika vybraných záznamů pomocí `CRecordset` členské funkce, jako například `MoveNext` a `MovePrev`. Objekt sady záznamů ve stejnou dobu, představuje pouze jednu z vybraných záznamů aktuální záznam. Pole aktuální záznam můžete zkoumat deklarováním záznamů členské proměnné třídy, které odpovídají sloupcům tabulky nebo záznamy, které jsou výsledkem databázového dotazu. Informace o datových členů sady záznamů najdete v tématu [sada záznamů: architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).  
   
- Následující témata vysvětlují, podrobnosti o používání objektů sady záznamů. Témata jsou uvedeny v funkčních kategorií a v přirozeném pořadí tak, aby povolovala sekvenční čtení.  
+ Následující témata popisují podrobnosti o použití objektů sady záznamů. Témata jsou uvedeny v funkčních kategorií a přirozeném pořadí tak, aby povolovala sekvenční čtení.  
   
-### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Témata o způsobech otevření, čtení a uzavírání sad záznamů  
+### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Témata o mechanismu otevření, čtení a uzavírání sad záznamů  
   
 -   [Sada záznamů: Architektura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)  
   
@@ -100,7 +100,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
-### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Témata o způsobu úpravy sady záznamů  
+### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Témata týkající se způsobu úpravy sad záznamů  
   
 -   [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)  
   
@@ -108,7 +108,7 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
-### <a name="topics-about-somewhat-more-advanced-techniques"></a>Témata o trochu pokročilejší techniky  
+### <a name="topics-about-somewhat-more-advanced-techniques"></a>Témata o trochu více pokročilé techniky  
   
 -   [Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
@@ -122,13 +122,13 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
   
 -   [Sada záznamů: Získávání součtů a jiných souhrnných výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### <a name="topics-about-how-recordsets-work"></a>Témata o fungování sady záznamů  
+### <a name="topics-about-how-recordsets-work"></a>Témata týkající se fungování sad záznamů  
   
 -   [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
 -   [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [Otevřete připojení k databázi (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)

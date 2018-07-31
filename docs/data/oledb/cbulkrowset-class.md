@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207624"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337719"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 Načítá a zpracovává řádků pro práci s daty hromadně načtením více popisovačů řádků pomocí jediného volání.  
@@ -166,7 +166,6 @@ Volání [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx)
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -179,7 +178,6 @@ Vytvoří novou `CBulkRowset` objekt a nastaví výchozí počet řádků na 10.
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
@@ -189,7 +187,6 @@ Načte první řádek dat.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -202,7 +199,6 @@ Přejde na poslední řádek.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -215,7 +211,6 @@ Načte další řádek dat.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -228,7 +223,6 @@ Přesune se na předchozí řádek.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -240,7 +234,7 @@ Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tu
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Načte řádky začínající od desetinné pozice v dané sadě řádků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Volání [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -300,7 +293,7 @@ Nastaví počet popisovačů řádků, které jsou načítána pro každé volá
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  

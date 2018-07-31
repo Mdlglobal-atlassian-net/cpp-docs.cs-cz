@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 207128da3e46da492ebc812b68d9ef09847045e5
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: cf7cde624eeaa8a65ba5d5a2b4729ee94847d0e9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322121"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338178"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP – třída
 Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx).  

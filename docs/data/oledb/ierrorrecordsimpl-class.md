@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269683"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338116"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 Implementuje rozhraní OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) rozhraní, přidání záznamů do a načtení záznamů z datového členu ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) typu **catlarray – <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ Získá řetězec popisu chyby z záznam chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -154,7 +154,7 @@ Získá chybu identifikátoru GUID z záznam chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -170,7 +170,7 @@ Získá ID kontextové nápovědy z záznam chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -186,7 +186,7 @@ Získá název cesty souboru nápovědy z záznam chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -202,7 +202,7 @@ Získá zdrojový kód, který způsobil chybu z záznam chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -218,7 +218,7 @@ Přidá záznam do objektu Chyba OLE DB.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ Vrátí základní informace o této chybě, jako je například návratový kó
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ Vrací ukazatel na rozhraní pro objekt vlastních chyb.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ Vrátí [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) ukazatel 
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ Vrátí parametry chyby.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ Vrátí počet záznamů v záznamu objektu OLE DB.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -300,10 +300,7 @@ Pole Chyba záznamů.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>Viz také  

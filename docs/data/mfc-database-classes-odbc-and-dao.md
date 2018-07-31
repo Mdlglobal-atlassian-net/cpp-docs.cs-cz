@@ -1,5 +1,5 @@
 ---
-title: MFC – databázové třídy (rozhraní ODBC a DAO) | Microsoft Docs
+title: MFC – databázové třídy (rozhraní ODBC a DAO) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ef8331142550424641b00742d302caedc2974a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94202eab788d376abf80866beafe74c52180474f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088112"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336574"
 ---
 # <a name="mfc-database-classes"></a>MFC – databázové třídy 
 > [!NOTE]
->  Společnost Microsoft doporučuje používat ODBC přes 13 ovladač Microsoft ODBC (nebo novější) pro systém SQL Server pro nové projekty. DAO již není podporována.    
+>  Společnost Microsoft doporučuje používat ODBC přes 13 ovladače ODBC Microsoft (nebo novější) pro SQL Server pro nové projekty. DAO se už nepodporuje.    
 
  Další informace naleznete v následujících tématech:  
--   [Technologie silniční mapu jako data Access](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+-   [Data Access technologie podrobný popis](https://msdn.microsoft.com/library/ms810810.aspx) 
 
--   [13.1 ovladač ODBC pro SQL Server, které jsou vydané](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) 13 ovladač Microsoft ODBC pro SQL Server se má použít k vytvoření nové aplikace nebo vylepšují existující aplikace, které potřebují využívat výhod nových funkcí SQL Server 2016.
+-   [ODBC Driver 13.1 pro SQL Server vydaný](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) 13 ovladač Microsoft ODBC pro SQL Server by měl použít k vytvoření nové aplikace nebo existující aplikace, které je potřeba využívat nové funkce SQL serveru 2016.
   
 -   [Rozhraní ODBC a knihovna MFC](../data/odbc/odbc-and-mfc.md)  
   
 -   [Použití databázových tříd s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [Použití databázových tříd bez objektů Document a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [Použití databázových tříd bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přístup k datům programování (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+ [Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)

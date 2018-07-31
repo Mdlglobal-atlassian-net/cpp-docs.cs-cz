@@ -1,5 +1,5 @@
 ---
-title: Snímek | Microsoft Docs
+title: Snímek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,37 +22,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 309c81e8d370b61ba3a44d9253cda4fa9b84b6cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb3f2f63d60cd5120479a66eea1fe6bdee91b8ac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094761"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338204"
 ---
 # <a name="snapshot"></a>Snímek
-Snímek je sada záznamů, které odráží statické zobrazení dat, která existovala v době vytvoření snímku. Když otevřete snímku a přesunout do všech záznamů, obsahuje sadu záznamů a jejich hodnoty se nezmění, dokud znovu sestavit snímku voláním **Requery –**.  
+Snímek je záznamů, který odráží statické zobrazení dat, který existoval v době vytvoření snímku. Při otevření snímku a přechod na všechny záznamy, obsahuje sadu záznamů a jejich hodnoty se nezmění, dokud je znovu sestavit snímku voláním `Requery`.  
   
 > [!NOTE]
->  Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC. Pokud používáte tříd MFC rozhraní DAO místo třídy knihovny MFC rozhraní ODBC, přečtěte si téma [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) popis sady záznamů typu snímek.  
+>  Toto téma platí pro třídy knihovny MFC rozhraní ODBC. Pokud používáte tříd DAO knihovny MFC namísto třídy knihovny MFC rozhraní ODBC, přečtěte si téma [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open) popis sady záznamů typ snímku.  
   
- Snímky v aktualizovatelné nebo jen pro čtení můžete vytvořit s třídami databází. Na rozdíl od dynamická sada lze aktualizovat snímek nezohledňuje změny k zaznamenání hodnoty od jiných uživatelů, ale ji zobrazit aktualizace a odstranění provedené vašeho programu. Záznamy přidané do snímku nebudou viditelné ve snímku dokud zavoláte **Requery –**.  
+ Aktualizovatelné nebo jen pro čtení snímky, můžete vytvořit s databázovými třídami. Na rozdíl od dynamických sad aktualizovatelné snímek neodráží změny pro záznam hodnot provedené ostatními uživateli, ale odrážejí, aktualizace a odstranění provedených váš program. Záznamy přidané do snímku nebudou viditelné ve snímku až do okamžiku volání `Requery`.  
   
 > [!TIP]
->  Snímek se statickým kurzorem rozhraní ODBC. Statický kurzor Nezískávat ve skutečnosti řádek dat. dokud přejděte na tento záznam. Aby se zajistilo, že jsou všechny záznamy okamžitě načíst, můžete posuňte na konec sady záznamů a posuňte se k první záznam, který chcete zobrazit. Upozorňujeme však, že posouvání na konec vyžaduje další režii a může snížit výkon.  
+>  Snímek je v rozhraní ODBC statický kurzor. Statický kurzor nezobrazí ve skutečnosti řádek dat. dokud přejděte k tomuto záznamu. Pokud chcete mít jistotu, že jsou všechny záznamy načíst okamžitě, můžete posunout na konec objektu sady záznamů a poté přejděte k první záznam, který chcete zobrazit. Upozorňujeme, že na konec posouvání vyžaduje další režii a může snížit výkon.  
   
- Snímky jsou nejužitečnější, pokud je nutné pevné data během operací, jako jsou při generování sestavy nebo provádění výpočtů. I tak zdroj dat může značně rozcházejí ze snímku, takže je vhodné k opětovnému sestavení čas od času.  
+ Snímky jsou nejvíc hodí v situaci, pokud potřebujete data, která mají zachovat pevná během operací, jako při generování sestav, nebo provádět výpočty. I tak zdroj dat můžete značně odchýlit ze snímku, proto je vhodné k opětovnému sestavení čas od času.  
   
- Podpora snímků je založena na knihovny kurzorů ODBC, která poskytuje statické kurzory a umístěné aktualizace (vyžaduje aktualizovatelnosti) pro všechny ovladače úrovně 1. Knihovna kurzorů DLL musí být načtena v paměti pro tuto podporu. Když vytvoříte `CDatabase` objekt a volání jeho `OpenEx` – členská funkce, je nutné zadat **CDatabase::useCursorLib** možnost `dwOptions` parametr. Když zavoláte **otevřete** ve výchozím nastavení je načtena – členská funkce knihovna kurzorů. Pokud používáte dynamické sady místo snímky, nechcete způsobit kurzoru knihovnu, která má být načten.  
+ Podpora snímků je založena na knihovna kurzorů rozhraní ODBC, který obsahuje statický kurzor a umístěné aktualizace (třeba aktualizovatelnosti) pro všechny ovladače úrovně 1. Knihovna kurzorů rozhraní DLL musí být načten v paměti pro tuto podporu. Při sestavování `CDatabase` objektu a volání jeho `OpenEx` členskou funkci, je nutné zadat `CDatabase::useCursorLib` možnost *dwOptions* parametru. Při volání `Open` ve výchozím nastavení je načtena členskou funkci, knihovna kurzorů rozhraní. Pokud používáte dynamické sady místo snímky, nechcete způsobit, že knihovna kurzorů, který se má načíst.  
   
- Snímky jsou k dispozici pouze v případě, že byl načten knihovny kurzorů ODBC, kdy `CDatabase` objekt byl zkonstruován nebo ovladač ODBC používáte podporuje statické kurzory.  
-  
-> [!NOTE]
->  Pro některé ovladače ODBC snímků (statické kurzory) nemusí být možné aktualizovat. Zkontrolujte dokumentaci ovladače pro podporované typy kurzorů a souběžnosti typy, které podporují. Chcete-li zaručit aktualizovatelné snímky, ujistěte se, načtení knihovna kurzorů do paměti při vytváření `CDatabase` objektu. Další informace najdete v tématu [ODBC: knihovny kurzorů ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+ Snímky jsou k dispozici pouze v případě, že byla načtena knihovna kurzorů rozhraní ODBC, kdy `CDatabase` objekt byl vytvořen nebo ovladač ODBC používáte podporuje statický kurzor.  
   
 > [!NOTE]
->  Pokud chcete použít snímky a dynamické sady, musíte je založit na dva různé `CDatabase` objekty (dvě různá připojení).  
+>  U některých ovladačů rozhraní ODBC nemusí být aktualizovatelné snímky (statický kurzor). Zkontrolujte dokumentaci ovladače pro podporované typy kurzoru a souběžnosti typy, které podporují. Pokud chcete zajistit aktualizovatelné, ujistěte se, že načtení knihovna kurzorů rozhraní do paměti při vytváření `CDatabase` objektu. Další informace najdete v tématu [ODBC: Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Další informace o sdílené složce snímky vlastnosti s všechny sady záznamů najdete v tématu [záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Další informace o rozhraní ODBC a snímky, včetně knihovny kurzorů ODBC, najdete v části [ODBC](../../data/odbc/odbc-basics.md).  
+> [!NOTE]
+>  Pokud chcete použít snímky a dynamické sady, musíte je vytvořit na dva různé `CDatabase` objekty (dvě různá připojení).  
+  
+ Další informace o sdílené složce snímků vlastnosti s všechny sady záznamů najdete v tématu [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Další informace o rozhraní ODBC a snímky, včetně knihovna kurzorů rozhraní ODBC, naleznete v tématu [ODBC](../../data/odbc/odbc-basics.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: CAccessor – třída | Microsoft Docs
+title: CAccessor – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,38 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093906"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337414"
 ---
 # <a name="caccessor-class"></a>CAccessor – třída
 Představuje jeden z typů přistupujícího objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Třída záznamu uživatele.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Třída uživatelského záznamu.  
   
 ## <a name="remarks"></a>Poznámky  
- Používá se při záznamu je staticky vázán ke zdroji dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.  
+ Používá se při záznamu je staticky svázán se zdrojem dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.  
   
- Tento typ přistupující objekt použijte, když víte strukturu a typ databáze.  
+ Pomocí tohoto typu přístupového objektu, když víte, struktury a typ databáze.  
   
- Pokud vaše přistupujícího objektu obsahuje pole, které odkazují na paměti (například `BSTR` nebo rozhraní), musí být vydání, zavolejte členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před dalším záznam pro čtení.  
+ Pokud váš přístupový objekt obsahuje pole, které odkazují na paměť (například `BSTR` nebo rozhraní), který musí být uvolněn zavolat členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před další záznam pro čtení.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** také atldbcli.h  
   
 ## <a name="see-also"></a>Viz také  
- [Šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

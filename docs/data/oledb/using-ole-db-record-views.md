@@ -1,5 +1,5 @@
 ---
-title: Použití zobrazení záznamů technologie OLE DB | Microsoft Docs
+title: Použití zobrazení záznamů technologie OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d98b2f95c9b06d748b7486955b03f34f41e9ab57
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111270"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339510"
 ---
 # <a name="using-ole-db-record-views"></a>Použití zobrazení záznamů technologie OLE DB
-Pokud chcete zobrazit data sady řádků OLE DB v aplikaci MFC, měli byste použít třídu MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Objekt zobrazení záznamu vytvořit z `COleDBRecordView` umožňuje zobrazit záznamy databáze v MFC – ovládací prvky. Zobrazení záznamů je přímo připojený k objektu sady řádků technologie OLE DB, který je vytvořený z zobrazení formuláře dialogové okno `CRowset` třídy šablony. Získání popisovače na objektu sady řádků je jednoduchý:  
+Pokud chcete zobrazit data sady řádků OLE DB v aplikaci knihovny MFC, měli byste použít třídy MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Vytvořit zobrazení záznamu objekt z `COleDBRecordView` umožňuje zobrazit záznamy databáze v MFC – ovládací prvky. Zobrazení záznamů je přímo připojený k objektu sady řádků technologie OLE DB, který je vytvořený z formulářové zobrazení dialogového okna `CRowset` šablony třídy. Získání popisovač objektu sady řádků je jednoduchý:  
   
-```  
+```cpp  
 COleDBRecordView myRecordView;  
 ...  
 // CProductAccessor is a user record class  
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- V zobrazení je zobrazeno pole `CRowset` objektu v ovládacích prvcích dialogovém okně. `COleDBRecordView` Objektu používá dialogové okno Exchange DDX (Data) a navigačních funkce součástí `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, a `MoveLast`) k automatizaci přesouvání dat mezi ovládacími prvky na formuláři a pole sady řádků. `COleDBRecordView` uchovává informace o pozici uživatele v dané sadě řádků tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní a zdroje [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) metoda pro aktualizaci na aktuální záznam před přesunutím do jiné.  
+ Zobrazí pole `CRowset` objektu v ovládacích prvcích v dialogovém okně. `COleDBRecordView` Objekt používá dialogové okno Data DDX (Exchange) a navigační funkce součástí `CRowset` (`MoveFirst`, `MoveNext`, `MovePrev`, a `MoveLast`) k automatizaci přesouvání dat mezi ovládacími prvky ve formuláři pole a sady řádků. `COleDBRecordView` uchovává informace o poloze uživatele v dané sadě řádků tak, aby uživatelské rozhraní a poskytuje lze aktualizovat zobrazení záznamu [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) aktualizovat aktuální záznam před přesunutím do jiné.  
   
- Můžete použít funkce DDX s **COleDbRecordView** získat data přímo ze záznamů databáze a zobrazit ji v dialogovém okně ovládacího prvku. Byste měli používat **DDX_\***  metody (například `DDX_Text`), nikoli **DDX_Field –\***  funkce (například `DDX_FieldText`) s **COleDbRecordView** .  
+ Můžete použít funkce DDX s `COleDbRecordView` získat data přímo ze sady záznamů databáze a zobrazit je v ovládacím prvku dialogu. Byste měli použít **DDX_\***  metody (jako `DDX_Text`), nikoli **DDX_Field –\***  funkce (například `DDX_FieldText`) s `COleDbRecordView`.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití přístupových objektů](../../data/oledb/using-accessors.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Jak AddNew, Edit a Delete (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Funkce operací AddNew, Edit a Delete fungování (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,141 +28,141 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52b469a53d48dcde8c28c0a0c984598875684778
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094127"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338311"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Sada záznamů: Funkce operací AddNew, Edit a Delete (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Toto téma vysvětluje, jak `AddNew`, **upravit**, a **odstranit** členské funkce třídy `CRecordset` fungovat. Obsahuje následující témata:  
+ Toto téma vysvětluje, jak `AddNew`, `Edit`, a `Delete` členské funkce třídy `CRecordset` fungovat. Probíraná témata zahrnují:  
   
--   [Jak funguje přidávání záznamů](#_core_adding_a_record)  
+-   [Jak přidat záznamy](#_core_adding_a_record)  
   
--   [Viditelnost přidaných záznamů](#_core_visibility_of_added_records)  
+-   [Přehled o přidání záznamů](#_core_visibility_of_added_records)  
   
--   [Jak funguje úpravy záznamů](#_core_editing_an_existing_record)  
+-   [Jak funguje Hromadná úprava záznamů](#_core_editing_an_existing_record)  
   
--   [Princip odstraňování záznamů](#_core_deleting_a_record)  
+-   [Princip odstranění záznamů](#_core_deleting_a_record)  
   
 > [!NOTE]
->  Toto téma se vztahuje na objekty, které jsou odvozené z `CRecordset` v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Jako doplněk si můžete přečíst [výměna polí záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), který popisuje odpovídající roli RFX v operacích aktualizace.  
+ Jako doplněk, můžete chtít číst [výměna polí záznamu: jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md), která popisuje odpovídající role RFX v operacích aktualizace.  
   
 ##  <a name="_core_adding_a_record"></a> Přidání záznamu  
 
- Přidávání nového záznamu do sady záznamů zahrnuje volání sady záznamů [AddNew](../../mfc/reference/crecordset-class.md#addnew) – členská funkce, nastavení hodnoty nový záznam pole datových členů a volání [aktualizace](../../mfc/reference/crecordset-class.md#update) – členská funkce pro zápis záznam ke zdroji dat.  
+ Přidání nového záznamu do sady záznamů zahrnuje volání sady záznamů [AddNew](../../mfc/reference/crecordset-class.md#addnew) členská funkce, nastavení hodnot datové členy nového záznamu a volání [aktualizace](../../mfc/reference/crecordset-class.md#update) členskou funkci pro zápis záznam, který ke zdroji dat.  
   
  Podmínkou pro volání `AddNew`, sadě záznamů nesmí být otevřena jen pro čtení. `CanUpdate` a `CanAppend` členské funkce umožňují určit tyto podmínky.  
   
  Při volání `AddNew`:  
   
--   Záznam v upravené vyrovnávací paměti je uložený, tak jeho obsah může být obnovena, pokud byla operace zrušena.  
+-   Záznam ve vyrovnávací paměti pro úpravy je uložen, tak jeho obsah je možné obnovit, pokud operace se zrušila.  
   
--   Pole datových členů jsou označeny, takže je možné detekovat změny v nich později. Pole dat, jsou označeny také členy čisté (beze změny) a nastavte na hodnotu Null.  
+-   Datové členy polí jsou označeny příznakem, takže je možné zjistit změny v jejich později. Vyčistit data pole, které jsou členy jsou také označené (beze změny) a nastavte na hodnotu Null.  
   
- Po zavolání metody `AddNew`vyrovnávací paměť pro úpravu představuje nový, prázdný záznam, připravený k vyplnění hodnotami. To provedete ručně nastavte hodnoty přiřazením k nim. Místo zadání aktuální hodnoty dat pro pole, můžete volat `SetFieldNull` zadejte hodnotu Null.  
+ Po zavolání `AddNew`, vyrovnávací paměť pro úpravu představuje nový, prázdný záznam, budete připraveni k vyplní hodnoty. K tomuto účelu ručně nastavte hodnoty tak, že jim přiřadíte. Místo určení hodnoty Skutečná data pro pole, můžete volat `SetFieldNull` zadat hodnotu Null.  
   
- Chcete-li potvrdit změny, zavolejte **aktualizace**. Při volání **aktualizace** pro nový záznam:  
+ Potvrďte provedené změny, můžete volat `Update`. Při volání `Update` pro nový záznam:  
   
--   Pokud ovladač ODBC podporuje **:: SQLSetPos** funkce rozhraní API ODBC, MFC přidat záznam ve zdroji dat pomocí funkce. S **:: SQLSetPos**, může MFC přidat záznam efektivněji, protože nemá sestavit a zpracování příkazu jazyka SQL.  
+-   Pokud ovladač rozhraní ODBC podporuje `::SQLSetPos` knihovny MFC rozhraní ODBC API funkce přidat záznam ve zdroji dat pomocí funkce. S `::SQLSetPos`, můžete MFC přidejte záznam efektivněji, protože nemá sestavit a zpracovat příkaz jazyka SQL.  
   
--   Pokud **:: SQLSetPos** nelze použít, MFC provádí následující:  
+-   Pokud `::SQLSetPos` nemůže být použit, MFC, provede následující:  
   
-    1.  Pokud nejsou nalezeny žádné změny, **aktualizace** neprovede žádnou akci a vrátí hodnotu 0.  
+    1.  Pokud nejsou nalezeny žádné změny, `Update` neprovede žádnou akci a vrátí hodnotu 0.  
   
-    2.  Pokud se změní, **aktualizace** vytvoří SQL **vložit** příkaz. Sloupce reprezentované všechny změny pole datových členů jsou uvedeny v **vložit** příkaz. Chcete-li vynutit zahrnutí sloupce, zavolejte [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) – členská funkce:  
+    2.  Pokud existují změny, `Update` konstrukce SQL **vložit** příkazu. Sloupce reprezentované všechny datové členy nečistých polí jsou uvedeny v **vložit** příkazu. Chcete-li vynutit sloupce mají být zahrnuty, zavolejte [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) členské funkce:  
   
         ```  
         SetFieldDirty( &m_dataMember, TRUE );  
         ```  
   
-    3.  **Aktualizace** potvrdí nový záznam – **vložit** spustit příkaz a záznam je potvrzen do tabulky zdroje dat (a sada záznamů, pokud není snímek), pokud probíhá transakce.  
+    3.  `Update` Potvrzení nového záznamu – **vložit** je proveden příkaz a záznam je potvrzen do tabulky zdroje dat (a sady záznamů, pokud není snímek), pokud probíhá transakce.  
   
-    4.  Je obnoven uložené záznam do vyrovnávací paměti pro úpravy. Záznam, který byl aktuální před `AddNew` volání je aktuální znovu bez ohledu na to jestli **vložit** úspěšně spustit příkaz.  
-  
-    > [!TIP]
-    >  Pro úplnou kontrolu nad nový záznam, proveďte následující postup: nastavte hodnoty všechna pole, které budou mít hodnoty a explicitně nastavit všechna pole, které zůstanou Null voláním `SetFieldNull` pomocí ukazatele na pole a parametr **TRUE**  (výchozí). Pokud chcete zajistit, že pole není zapsáno do zdroje dat, volání `SetFieldDirty` pomocí ukazatele na pole a parametr **FALSE**a neměňte hodnotu pole. Pokud chcete zjistit, zda pole může mít hodnotu Null, volání `IsFieldNullable`.  
+    4.  Uložený záznam se obnoví do vyrovnávací paměti pro úpravy. Záznam, který byl aktuální před `AddNew` volání je aktuální znovu bez ohledu na to, jestli se **vložit** příkazu se provedl úspěšně.  
   
     > [!TIP]
-    >  Zjistit, kdy datových členů sady záznamů, změňte hodnotu, používá MFC **PSEUDO_NULL** hodnotu pro každý typ dat, který chcete uložit v sadě záznamů. Pokud musíte explicitně nastavit pole na **PSEUDO_NULL** hodnota a pole se stane již označeno jako Null, musíte také zavolat `SetFieldNull`, předávání na adresu v poli první parametr a **FALSE**v druhý parametr.  
+    >  Pro úplnou kontrolu nad nový záznam, proveďte následující postup: nastavení hodnot všech polí, které se mají hodnoty a explicitně nastavit všechna pole, která zůstane Null voláním `SetFieldNull` s ukazatelem na pole a parametr PRAVDA (výchozí). Pokud chcete mít jistotu, že pole není zapsána do zdroje dat, zavolejte `SetFieldDirty` s ukazatelem na pole a parametru hodnotu FALSE a nijak nemění hodnoty tohoto pole. Chcete-li zjistit, jestli pole může mít hodnotu Null, zavolejte `IsFieldNullable`.  
   
-##  <a name="_core_visibility_of_added_records"></a> Viditelnost přidaných záznamů  
- Když je přidaný záznam viditelné pro sady záznamů Přidání záznamů se někdy zobrazují a někdy nejsou viditelné v závislosti na dvě věci:  
+    > [!TIP]
+    >  Ke zjištění při změně hodnoty datových členů sady záznamů, knihovna MFC používá hodnotu PSEUDO_NULL na každý datový typ, který můžete uložit do sady záznamů. Pokud pole musíte explicitně nastavit na hodnotu PSEUDO_NULL a pole se stane s již být označeny Null, je nutné volat `SetFieldNull`, předávání na adresu pole v první parametr a hodnotu FALSE ve druhém parametru.  
+  
+##  <a name="_core_visibility_of_added_records"></a> Přehled o přidání záznamů  
+ Pokud je přidaný záznam viditelné pro sady záznamů? Přidání záznamů v některých případech se zobrazí a někdy se nezobrazí, v závislosti na dvě věci:  
   
 -   Jaké ovladače je schopen.  
   
--   Jaké rozhraní můžete využít výhod.  
+-   Co rozhraní můžete využít.  
   
- Pokud ovladač ODBC podporuje **:: SQLSetPos** funkce rozhraní API ODBC, MFC pomocí funkce přidat záznamy. S **:: SQLSetPos**, přidat záznamy jsou viditelné pro žádné aktualizovat sadu záznamů MFC. Bez podpory pro tuto funkci přidat záznamy nejsou viditelné a musíte **Requery** k jejich zobrazení. Pomocí **:: SQLSetPos** je také efektivnější.  
+ Pokud ovladač rozhraní ODBC podporuje `::SQLSetPos` funkce ODBC API, knihovna MFC používá funkci přidat záznamy. S `::SQLSetPos`, přidat záznamy jsou viditelné pro všechny aktualizovat záznamů knihovny MFC. Bez podpory pro funkci přidali záznamy nejsou viditelné a je nutné volat `Requery` k jejich zobrazení. Pomocí `::SQLSetPos` je také mnohem efektivnější.  
   
-##  <a name="_core_editing_an_existing_record"></a> Úprava existujícího záznamu  
- Úprava existujícího záznamu v sadě záznamů zahrnuje posunutí na záznam, volání sady záznamů [upravit](../../mfc/reference/crecordset-class.md#edit) – členská funkce, nastavení hodnoty nový záznam pole datových členů a volání [aktualizovat](../../mfc/reference/crecordset-class.md#update)– členská funkce zapsat změněné záznam ke zdroji dat.  
+##  <a name="_core_editing_an_existing_record"></a> Úprava existující záznam  
+ Úprava existující záznam v sadě záznamů zahrnuje posouvání na záznam, volání sady záznamů [upravit](../../mfc/reference/crecordset-class.md#edit) členská funkce, nastavení hodnot datové členy nového záznamu a volání [aktualizovat](../../mfc/reference/crecordset-class.md#update)členskou funkci k zápisu do zdroje dat změněného záznamu.  
   
- Podmínkou pro volání **upravit**, musí být sady záznamů, aktualizovat a na záznam. `CanUpdate` a `IsDeleted` členské funkce umožňují určit tyto podmínky. Záznam na aktuální záznam nesmí mít smazaný a musí být záznamy v sadě záznamů (obě `IsBOF` a `IsEOF` vrátit 0).  
+ Podmínkou pro volání `Edit`, aktualizovat a záznamu musí být sada záznamů. `CanUpdate` a `IsDeleted` členské funkce umožňují určit tyto podmínky. Aktuální záznam také nesmí být odstraněný a musí být záznamy v sadě záznamů (obojí `IsBOF` a `IsEOF` vrátí 0).  
   
- Při volání **upravit**, záznam v upravené vyrovnávací paměti (aktuální záznam) je uložen. Hodnoty uložené záznam později slouží ke zjištění, zda pole byly změněny.  
+ Při volání `Edit`, záznam ve vyrovnávací paměti pro úpravy (aktuální záznam) je uložen. Záznam uložené hodnoty se později používají ke zjištění, zda pole byly změněny.  
   
- Po zavolání metody **upravit**, vyrovnávací paměť pro úpravu stále představuje záznam na aktuální záznam, ale je nyní připravena přijímat změny pole datových členů. Chcete-li změnit záznam, ručně nastavit hodnoty žádné pole datových členů, které chcete upravit. Místo zadání aktuální hodnoty dat pro pole, můžete volat `SetFieldNull` zadejte hodnotu Null. Chcete-li potvrdit změny, volejte **aktualizace**.  
+ Po zavolání `Edit`, vyrovnávací paměť pro úpravu stále představuje aktuální záznam, ale je teď připravený k přijetí změn na pole datové členy. Chcete-li změnit záznamu, ručně nastavit hodnoty žádné datové členy pole, které chcete upravit. Místo určení hodnoty Skutečná data pro pole, můžete volat `SetFieldNull` zadat hodnotu Null. Pro potvrzení změn, volejte `Update`.  
   
 > [!TIP]
->  Chcete-li získat z `AddNew` nebo **upravit** režim, volání **přesunout** s parametrem **AFX_MOVE_REFRESH**.  
+>  Chcete-li získat z `AddNew` nebo `Edit` režimu, volání `Move` s parametrem *AFX_MOVE_REFRESH*.  
   
- Podmínkou pro volání **aktualizace**, sadě záznamů nesmí být prázdný a nesmí byl odstraněn záznam na aktuální záznam. `IsBOF`, `IsEOF`, a `IsDeleted` by měla vrátit 0.  
+ Podmínkou pro volání `Update`, sadě záznamů nesmí být prázdný a nesmí mít aktuální záznam odstraněn. `IsBOF`, `IsEOF`, a `IsDeleted` by měla vrátit 0.  
   
- Při volání **aktualizace** pro upravený záznam:  
+ Při volání `Update` upravovaného záznamu:  
   
--   Pokud ovladač ODBC podporuje **:: SQLSetPos** funkce rozhraní API ODBC, MFC aktualizovat záznam ve zdroji dat pomocí funkce. S **:: SQLSetPos**, porovná ovladač Vaši upravenou vyrovnávací paměť s odpovídající záznam na serveru, aktualizace záznamu na serveru, pokud jsou dva různé. S **:: SQLSetPos**, může MFC upravit záznam efektivněji, protože nemá sestavit a zpracování příkazu jazyka SQL.  
+-   Pokud ovladač rozhraní ODBC podporuje `::SQLSetPos` knihovny MFC rozhraní ODBC API funkce aktualizace záznamu ve zdroji dat pomocí funkce. S `::SQLSetPos`, porovná vaše úpravy vyrovnávací paměti s odpovídající záznam na serveru, aktualizace záznamu na serveru, pokud jsou dva různé ovladač. S `::SQLSetPos`, můžete MFC aktualizovat záznam efektivněji, protože nemá sestavit a zpracovat příkaz jazyka SQL.  
   
      -nebo-  
   
--   Pokud **:: SQLSetPos** nelze použít, MFC provádí následující:  
+-   Pokud `::SQLSetPos` nemůže být použit, MFC, provede následující:  
   
-    1.  Pokud zde nejsou žádné změny **aktualizace** neprovede žádnou akci a vrátí hodnotu 0.  
+    1.  Pokud zde nejsou žádné změny `Update` neprovede žádnou akci a vrátí hodnotu 0.  
   
-    2.  Pokud se změní, **aktualizace** vytvoří SQL **aktualizace** příkaz. Sloupce, uvedené v **aktualizace** příkaz jsou založené na pole datových členů, které se změnily.  
+    2.  Pokud existují změny, `Update` konstrukce SQL **aktualizace** příkazu. Sloupce uvedené v **aktualizace** příkazu jsou založeny na datové členy polí, které se změnily.  
   
-    3.  **Aktualizace** potvrdí změny – provede **aktualizace** příkaz – a záznam je změněn na datovém zdroji, ale není potvrzen pokud transakce probíhá (najdete v části [transakce: provádění transakcí v Sada záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) informace o tom, jak transakce na aktualizaci). Rozhraní ODBC uchovává kopii na záznam, který také změní.  
+    3.  `Update` potvrdí změny – provede **aktualizace** příkaz – záznam se změní na zdroj dat, ale není potvrzená, pokud transakce je v průběhu (naleznete v tématu [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) informace o tom, jak transakce ovlivňuje aktualizace). Rozhraní ODBC uchovává kopii tohoto záznamu, který se také změní.  
   
-    4.  Na rozdíl od proces `AddNew`, **upravit** procesu neobnoví uložené záznam. Upravený záznam zůstává na místě jako záznam na aktuální záznam.  
+    4.  Na rozdíl od procesu pro `AddNew`, `Edit` procesu neobnoví uložený záznam. Upravený záznam zůstává na místě jako aktuální záznam.  
   
     > [!CAUTION]
-    >  Když připravujete aktualizovat sadu záznamů voláním **aktualizace**, vezměte v potaz, že vaše sada záznamů obsahuje všechny sloupce, které představují primární klíč tabulky (nebo všechny sloupce všechny jedinečný index v tabulce nebo dostatečný počet sloupců na jednoznačně Určete řádek). V některých případech rozhraní slouží k identifikaci, který záznam v tabulce aktualizovat pouze vybrané sloupce ve vaší sadě záznamů. Bez všechny potřebné sloupce může být aktualizováno více záznamů v tabulce. V takovém případě vyvolá architektura výjimky při volání **aktualizace**.  
+    >  Při přípravě na sadu záznamů aktualizovat pomocí volání `Update`, Upozorňujeme, že vaše sada záznamů obsahuje všechny sloupce, které tvoří primární klíč tabulky (nebo všechny sloupce jakýkoli jedinečný index pro tabulku nebo dostatek sloupců k jednoznačné identifikaci řádek). V některých případech můžete použít rozhraní pouze vybrané sloupce ve vaší sadě záznamů pro identifikaci, který záznam v tabulce k aktualizaci. Bez všech potřebných sloupců může být aktualizován více záznamů v tabulce. V tomto případě rozhraní vyvolá výjimky při volání `Update`.  
   
     > [!TIP]
-    >  Když zavoláte `AddNew` nebo **upravit** po zavolání funkce dřív, ale před volání **aktualizace**, vyrovnávací paměť pro úpravu se aktualizují s uložené záznam, nových nebo upravených v nahrazení záznamu průběh. Toto chování poskytuje způsob k přerušení `AddNew` nebo **upravit** a začít další: Pokud zjistíte, že záznam v průběhu chybný, jednoduše volání **upravit** nebo `AddNew` znovu.  
+    >  Při volání `AddNew` nebo `Edit` po zavolání funkce dřív, ale před volání `Update`, aktualizují se uložené záznam nahrazení nové nebo upravené záznamu v průběhu vyrovnávací paměť pro úpravu. Toto chování poskytuje způsob, jak přerušení `AddNew` nebo `Edit` a zahájit novou: Pokud zjistíte, že záznam v průběhu chybný, jednoduše zavolejte `Edit` nebo `AddNew` znovu.  
   
 ##  <a name="_core_deleting_a_record"></a> Odstranění záznamu  
- Odstranění záznamu z sady záznamů zahrnuje posunutí na záznam a volání sady záznamů [odstranit](../../mfc/reference/crecordset-class.md#delete) – členská funkce. Na rozdíl od `AddNew` a **upravit**, **odstranit** nevyžaduje odpovídající volání **aktualizace**.  
+ Odstranění záznamu z sady záznamů zahrnuje posouvání na záznam a volání sady záznamů [odstranit](../../mfc/reference/crecordset-class.md#delete) členskou funkci. Na rozdíl od `AddNew` a `Edit`, `Delete` nevyžaduje odpovídající volání `Update`.  
   
- Podmínkou pro volání **odstranit**, musí být aktualizovat sadu záznamů a musí být na záznam. `CanUpdate`, `IsBOF`, `IsEOF`, A `IsDeleted` členské funkce umožňují určit tyto podmínky.  
+ Podmínkou pro volání `Delete`, třeba umožnit aktualizaci modelové sady záznamů a musí být na záznam. `CanUpdate`, `IsBOF`, `IsEOF`, A `IsDeleted` členské funkce umožňují určit tyto podmínky.  
   
- Při volání **odstranit**:  
+ Při volání `Delete`:  
   
--   Pokud ovladač ODBC podporuje **:: SQLSetPos** funkce rozhraní API ODBC, MFC odstranit záznam ve zdroji dat pomocí funkce. Pomocí **:: SQLSetPos** obvykle je efektivnější než při použití SQL.  
+-   Pokud ovladač rozhraní ODBC podporuje `::SQLSetPos` funkce ODBC API, knihovna MFC odstranění záznamu ve zdroji dat pomocí funkce. Pomocí `::SQLSetPos` obvykle je efektivnější než při použití SQL.  
   
      -nebo-  
   
--   Pokud **:: SQLSetPos** nelze použít, MFC provádí následující:  
+-   Pokud `::SQLSetPos` nemůže být použit, MFC, provede následující:  
   
-    1.  Na aktuální záznam v upravené vyrovnávací paměti není zálohován jako v `AddNew` a **upravit**.  
+    1.  Aktuální záznam ve vyrovnávací paměti úpravy se nezálohovují jako v `AddNew` a `Edit`.  
   
-    2.  **Odstranit** vytvoří SQL **odstranit** příkaz, který odstraní záznam.  
+    2.  `Delete` vytvoří SQL **odstranit** příkaz, který odstraní záznam.  
   
-         Aktuální záznam v upravené vyrovnávací paměti není uložen jako v `AddNew` a **upravit**.  
+         Aktuální záznam ve vyrovnávací paměti úpravy není uložen jako v `AddNew` a `Edit`.  
   
-    3.  **Odstranit** potvrdí odstranění – provede **odstranit** příkaz. Záznam je označen odstraněné ve zdroji dat a je-li záznam snímku v ODBC.  
+    3.  `Delete` potvrzení odstranění – provede **odstranit** příkazu. Záznam je označen odstraněný zdroj dat, a pokud záznamu snímku, v rozhraní ODBC.  
   
-    4.  Odstraněný záznam hodnoty jsou stále v pole datových členů sady záznamů, ale jsou označené pole datových členů, hodnotu Null a sady záznamů `IsDeleted` – členská funkce vrátí nenulovou hodnotu.  
+    4.  Odstraněný záznam hodnoty jsou stále v datové členy polí sady záznamů, ale datové členy polí jsou označeny Null a sady záznamů `IsDeleted` členská funkce vrátí nenulovou hodnotu.  
   
     > [!NOTE]
-    >  Po odstranění záznamu, měli přechod na jiný záznam k doplnění vyrovnávací paměti pro úpravy s daty v novém záznamu. Jedná se o chybu volat **odstranit** znovu nebo volat **upravit**.  
+    >  Po odstranění záznamu, byste měli přejít na jiný záznam pro doplňování vyrovnávací paměti pro úpravy s daty v novém záznamu. Jedná se o chybu volání `Delete` znovu nebo volat `Edit`.  
   
- Informace o příkazech SQL použít v operacích aktualizace najdete v tématu [SQL](../../data/odbc/sql.md).  
+ Informace o dotazech SQL použitých v operacích aktualizace najdete v tématu [SQL](../../data/odbc/sql.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   

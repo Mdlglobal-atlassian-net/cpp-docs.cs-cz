@@ -1,5 +1,5 @@
 ---
-title: Příjem oznámení | Microsoft Docs
+title: Přijímání oznámení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9e1dee5c63281c729cdb798a190938c6433aac0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdef616456b98086bf9490297d68c98596b2dca4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112313"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338967"
 ---
 # <a name="receiving-notifications"></a>Příjem oznámení
-OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k události. Tyto možnosti jsou popsány v [oznámení objektu technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) v *referenční příručka programátora technologie OLE DB*. Nastavení těchto událostí používá standardní mechanismus COM spojovacího bodu. Například ATL objekt, který chce načíst události prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` seznamu odvozených tříd a přes vystavení **COM_INTERFACE_ENTRY** makro.  
+OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k událostem. Tyto možnosti jsou popsány v [oznámení objektu OLE DB](https://msdn.microsoft.com/library/ms725406.aspx) v *OLE DB referenční informace pro programátory*. Nastavení těchto událostí používá standardní mechanismus bodu připojení COM. Například objekt knihovny ATL, který chce, aby se k načtení událostí prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` do seznamu odvozené třídy, která bude vystavená prostřednictvím COM_INTERFACE_ENTRY makra.  
   
- `IRowsetNotify` má tři metody, které lze volat v různé časy. Pokud chcete, aby odpovídal na pouze jednu z těchto metod, můžete použít [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) třídy, která vrátí **E_NOTIMPL** pro metody nejste zájem.  
+ `IRowsetNotify` má tři metody, které mohou být volány v různých časech. Pokud chcete reagovat na pouze jednu z těchto metod, můžete použít [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) třídu, která vrátí E_NOTIMPL pro metody, které vás nezajímají.  
   
- Při vytváření sady řádků se musí zjistit poskytovatele má objekt vrácený řádků pro podporu **IConnectionPointContainer**, který je nutný k nastavení oznámení.  
+ Když vytvoříte sadu řádků, je zapotřebí sdělit zprostředkovatele, který má objektu sady řádků vrácených pro podporu `IConnectionPointContainer`, který je nutný k nastavení oznámení.  
   
- Následující kód ukazuje, jak otevřít sadu řádků z objektu knihovny ATL a použít `AtlAdvise` funkce, nastavení oznámení jímky. `AtlAdvise` Vrátí souboru cookie, který se používá při volání `AtlUnadvise`.  
+ Následující kód ukazuje, jak otevřít v sadě řádků z objektu knihovny ATL a použít `AtlAdvise` funkce k nastavení jímky oznámení. `AtlAdvise` vrátí soubor cookie, který se používá při volání `AtlUnadvise`.  
   
-```  
+```cpp  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 
 propset.AddProperty(DBPROP_IConnectionPointContainer, true);  
   
-
 product.Open(session, _T("Products"), &propset);  
   
-
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   

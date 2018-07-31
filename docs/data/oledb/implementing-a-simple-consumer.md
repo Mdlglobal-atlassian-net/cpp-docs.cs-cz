@@ -1,5 +1,5 @@
 ---
-title: Implementace jednoduchého příjemce | Microsoft Docs
+title: Implementace jednoduchého příjemce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 841d982090503a1e72b1d6798a5f0eecdb543fe2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112560"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337163"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementace jednoduchého příjemce
-Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplikací knihovny MFC a průvodce příjemcem knihovny ATL technologie OLE DB pro vytvoření jednoduchého příjemce. V tomto příkladu má následující části:  
+Následující témata ukazují, jak upravit soubory vytvořené pomocí Průvodce aplikací knihovny MFC a průvodce příjemcem ATL OLE DB, vytvoření jednoduchého příjemce. V tomto příkladu má následující části:  
   
--   "Načítání dat pomocí příjemce" ukazuje, jak pro implementaci kódu v příjemci, který načte všechna data po řádcích z databázové tabulky.  
+-   "Načítání dat pomocí příjemce" ukazuje, jak implementovat kód v příjemci, který načte všechna data, řádek po řádku z databázové tabulky.  
   
--   "Přidání podpory záložky k příjemce" ukazuje, jak přidat podporu záložky k příjemce.  
+-   "Přidání podpory záložek příjemci" ukazuje, jak přidat podporu záložky příjemci.  
   
--   "Přidání podpory jazyka XML k příjemce" ukazuje, jak změnit kód příjemce, můžete data načtená řádků jako XML data.  
-  
-> [!NOTE]
->  Aplikaci příjemce, které jsou popsané v této části můžete použít k testování ukázkové zprostředkovatele MyProv a zprostředkovatele.  
+-   "Přidání podpory jazyka XML příjemci" ukazuje, jak upravit uživatelský kód pro výstup dat načtení sady řádků jako XML data.  
   
 > [!NOTE]
->  Chcete-li sestavit aplikaci příjemce, abyste otestovali MyProv (stejný zprostředkovatel popsané v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musí obsahovat podpora záložek, jak je popsáno v "Přidání podpory záložky k příjemce".  
+>  Aplikace příjemce popsané v této části můžete použít k testování ukázkové zprostředkovatele MyProv a poskytovatele.  
   
 > [!NOTE]
->  K vytvoření aplikace příjemce k testování zprostředkovatele, vynechte podpora záložek popsané v "Přidávání záložek podporují příjemci" a přejít na "Přidání podpory XML příjemci".  
+>  Jak vytvořit webovou aplikaci otestovat MyProv příjemce (stejný zprostředkovatel je popsáno v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musí obsahovat podporu záložku, jak je popsáno v "Přidání podpory záložek příjemci".  
+  
+> [!NOTE]
+>  Jak vytvořit aplikaci příjemce otestujte, vynechte podpora záložek podle "Přidání záložky podporují příjemci" a přeskočte k "Přidání podpory XML příjemci".  
   
 ## <a name="retrieving-data-with-the-consumer"></a>Načítání dat pomocí příjemce  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Chcete-li upravit aplikaci konzoly, aby používala příjemce technologie OLE DB  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Chcete-li změnit konzolovou aplikaci pro použití příjemce technologie OLE DB  
   
-1.  V MyCons.cpp změňte kód hlavní vložením bold text následujícím způsobem:  
+1.  V MyCons.cpp změníte hlavní kód vložením tučným písmem následujícím způsobem:  
   
-    ```  
+    ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
     #include "stdafx.h"  
@@ -55,39 +55,50 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
     ...  
     int main(int argc, char* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT(SUCCEEDED(hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   
+       CProducts rs;   
+       hr = rs.OpenAll();   
+       ATLASSERT(SUCCEEDED(hr ) );   
+       hr = rs.MoveFirst();   // Iterate through the rowset   
+       while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      
+         printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             
+           rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      
+         hr = rs.MoveNext();   }   
+       rs.Close();   
+       rs.ReleaseCommand();   
+       CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
-## <a name="adding-bookmark-support-to-the-consumer"></a>Přidání podpory záložky k příjemce  
- Záložka je sloupec, který jednoznačně identifikuje řádky v tabulce. Obvykle je sloupec klíče, ale ne vždy; je specifický pro zprostředkovatele. V této části se dozvíte, jak přidat podporu záložky. To pokud chcete udělat, musíte udělat následující ve třídě záznam uživatele:  
+## <a name="adding-bookmark-support-to-the-consumer"></a>Přidání podpory záložek příjemci  
+ Záložka je sloupec, který jednoznačně identifikuje řádky v tabulce. Obvykle je klíčový sloupec, ale ne vždy; je specifický pro zprostředkovatele. Tato část ukazuje, jak přidat podporu záložky. Uděláte to tak, musíte provést následující akce v třídě záznam uživatele:  
   
--   Vytvořit instanci záložky. Jedná se o objekty typu [CBookmark](../../data/oledb/cbookmark-class.md).  
+-   Vytvoření instance záložky. Jedná se o objekty typu [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Požádat o sloupec záložky od zprostředkovatele nastavením **DBPROP_IRowsetLocate** vlastnost.  
+-   Požádat o sloupec záložky v poskytovateli nastavením `DBPROP_IRowsetLocate` vlastnost.  
   
--   Přidání položky záložky do mapy sloupce s použitím [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) makro.  
+-   Přidání položky záložky v mapování sloupců s použitím [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) – makro.  
   
- Předchozí kroky poskytují podpora záložek a objekt záložku, se kterým chcete pracovat. Tento příklad kódu ukazuje záložku takto:  
+ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, se kterým chcete pracovat. Tento příklad kódu ukazuje záložku, následujícím způsobem:  
   
--   Otevření souboru pro zápis.  
+-   Otevřete soubor pro zápis.  
   
--   Výstupní data řádků do souboru po řádcích.  
+-   Sada řádků výstupní data do souboru po řádcích.  
   
--   Přesunutí kurzoru řádků na záložku voláním [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
+-   Přesunout kurzor řádků na záložku voláním [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
--   Výstup řádek označený záložkou připojen na konec souboru.  
+-   Výstup označenou záložkou a doplňujte řádek připojení na konec souboru.  
   
 > [!NOTE]
->  Pokud použijete tuto aplikaci příjemce k testování zprostředkovatele zprostředkovatele ukázkovou aplikaci, vynechte podpora záložek popsaných v této části.  
+>  Pokud pomocí této aplikace uživatelů otestovat vzorovou aplikaci zprostředkovatele poskytovatele, vynechte podpora záložek, které jsou popsané v této části.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Chcete-li vytvořit instanci záložky  
+#### <a name="to-instantiate-the-bookmark"></a>K vytvoření instance na záložku  
   
-1.  Přistupující objekt musí obsahovat objekt typu [CBookmark](../../data/oledb/cbookmark-class.md). `nSize` Parametr určuje velikost vyrovnávací paměti záložky v bajtech (obvykle 4 pro 32bitovou platformu) a 8 pro 64bitové platformy. Přidejte následující deklarace sloupec datových členů v třídě záznam uživatele:  
+1.  Přistupujícím objektu musí obsahovat objekt typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr určuje velikost vyrovnávací paměti záložek v bajtech (obvykle 4 pro platformy 32 bitů) a 8 pro 64bitové platformy. Přidejte následující deklarace na datové členy sloupců ve třídě záznam uživatele:  
   
-    ```  
+    ```cpp  
     //////////////////////////////////////////////////////////////////////  
     // Products.h  
     class CProductsAccessor  
@@ -98,11 +109,11 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>K žádosti o sloupec záložky od zprostředkovatele  
+#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Požádat o sloupec záložky od poskytovatele  
   
-1.  Přidejte následující kód v `GetRowsetProperties` metodu v třídě záznamů uživatele:  
+1.  Přidejte následující kód `GetRowsetProperties` metody ve třídě záznamů uživatele:  
   
-    ```  
+    ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
     void GetRowsetProperties(CDBPropSet* pPropSet)  
     {  
@@ -112,11 +123,11 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Chcete-li přidat položky záložky do mapy sloupce  
+#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Chcete-li přidat položky záložky a mapováním sloupců  
   
-1.  Přidejte následující položku na mapu sloupce ve třídě záznam uživatele:  
+1.  Přidejte následující položku do mapy sloupce ve třídě záznam uživatele:  
   
-    ```  
+    ```cpp  
     // Set a bookmark entry in the column map.  
     BEGIN_COLUMN_MAP(CProductsAccessor)  
        BOOKMARK_ENTRY(m_bookmark)   // Add bookmark entry  
@@ -126,11 +137,11 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Chcete-li používat záložky v hlavním kódu  
+#### <a name="to-use-a-bookmark-in-your-main-code"></a>Použití záložku v hlavním kódu  
   
-1.  V souboru MyCons.cpp z konzolové aplikace, které jste vytvořili změňte hlavní kód tímto. Použití záložek, kód hlavní musí vytvořit instanci vlastního objektu záložky (`myBookmark`); to je jiná záložka než v přistupujícího objektu (`m_bookmark`).  
+1.  V souboru MyCons.cpp z konzolové aplikace, kterou jste předtím vytvořili změňte hlavní kód trochu odlišná. Pokud chcete používat záložky, hlavní kód potřebuje k vytvoření instance objektu své vlastní záložky (`myBookmark`); to je jiná záložka od přístupového objektu (`m_bookmark`).  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -143,7 +154,7 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -197,24 +208,24 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
     }  
     ```  
   
- Další informace o záložky najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md). Příklady záložek jsou také uvedené v [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).  
+ Další informace o záložkách najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md). Příklady záložky jsou také uvedeny v [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).  
   
-## <a name="adding-xml-support-to-the-consumer"></a>Přidání podpory jazyka XML k příjemce  
- Jak je popsáno v [přístup k datům XML](../../data/oledb/accessing-xml-data.md), existují dva způsoby, jak načíst XML data ze zdroje dat: pomocí [CStreamRowset](../../data/oledb/cstreamrowset-class.md) nebo pomocí [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Tento příklad používá `CStreamRowset`, který je efektivnější, ale vyžaduje, abyste měli na počítači, na kterém spustíte této ukázkové aplikaci SQL Server 2000.  
+## <a name="adding-xml-support-to-the-consumer"></a>Přidání podpory jazyka XML pro příjemce  
+ Jak je popsáno v [přístup k datům XML](../../data/oledb/accessing-xml-data.md), existují dva způsoby, jak načíst XML data ze zdroje dat: použití [CStreamRowset](../../data/oledb/cstreamrowset-class.md) nebo pomocí [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Tento příklad používá `CStreamRowset`, což je mnohem efektivnější, ale je třeba SQL Server 2000 spuštěná na počítači, na kterém je spuštěn této ukázkové aplikaci.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Chcete-li upravit třídu příkazu dědění z CStreamRowset  
+#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Chcete-li změnit třídu příkazu dědit z CStreamRowset  
   
-1.  V aplikaci příjemce, který jste dříve vytvořili, změňte vaše `CCommand` deklarace k určení `CStreamRowset` jako třídu řádků takto:  
+1.  V příjemce aplikaci, kterou jste dříve vytvořili, změňte vaše `CCommand` pro určení `CStreamRowset` jako třídu řádků následujícím způsobem:  
   
-    ```  
+    ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Chcete-li upravit kód hlavní načíst a výstupní XML data  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Chcete-li změnit hlavní kód pro načítání a výstupní XML data  
   
-1.  V souboru MyCons.cpp z konzolové aplikace, které jste vytvořili změňte hlavní kód tímto:  
+1.  V souboru MyCons.cpp z konzolové aplikace, kterou jste předtím vytvořili změňte hlavní kód takto:  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -227,7 +238,7 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -249,7 +260,7 @@ Následující témata ukazují, jak upravit soubory vytvořené Průvodce aplik
        for (;;)  
        {  
           // Read sequential stream data into buffer  
-    HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
+          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
           if (FAILED (hr))  
              break;  
           // Output buffer to file  

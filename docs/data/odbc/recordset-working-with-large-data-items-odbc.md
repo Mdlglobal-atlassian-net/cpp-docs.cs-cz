@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Práce s velkými datovými položkami (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Práce s velkými datovými položkami (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,51 +19,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6845d2e3c1b1eac31486200a0f610037d4774626
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38915b3a10f1ed3e2a175687937b3b18a60a9be4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091732"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338490"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>Sada záznamů: Práce s velkými datovými položkami (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC a tříd MFC rozhraní DAO.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC a tříd DAO knihovny MFC.  
   
 > [!NOTE]
->  Pokud používáte tříd MFC rozhraní DAO, spravovat vaše velkými datovými položkami s třídou [CByteArray](../../mfc/reference/cbytearray-class.md) místo třída [CLongBinary](../../mfc/reference/clongbinary-class.md). Pokud používáte třídy knihovny MFC rozhraní ODBC se hromadné načítání řádků, použijte `CLongBinary` místo `CByteArray`. Další informace o hromadné načítání řádků najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Pokud používáte tříd DAO knihovny MFC, spravovat vaše velkými datovými položkami s třídou [CByteArray](../../mfc/reference/cbytearray-class.md) namísto třídy [CLongBinary](../../mfc/reference/clongbinary-class.md). Pokud používáte třídy knihovny MFC rozhraní ODBC s hromadné načítání řádků, použijte `CLongBinary` spíše než `CByteArray`. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Předpokládejme, že vaše databáze může ukládat velké částí dat, jako je například Bitmap (zaměstnanec fotografií, map, obrázky produktů, objekty OLE a tak dále). Tento typ dat je často označovány jako binární rozsáhlý objekt (nebo objektů BLOB), protože:  
+ Předpokládejme, že databáze můžete ukládat velké časti dat, jako je například rastrové obrázky (zaměstnance fotografie, map, obrázků produktů, objekty OLE a tak dále). Tento typ dat je často označovány jako binárních rozsáhlých objektů (nebo objektů BLOB), protože:  
   
--   Hodnota každého pole je velká.  
+-   Každá hodnota pole je velká.  
   
 -   Na rozdíl od jiných jednoduché datové typy a čísla nemá žádné předvídatelné velikost.  
   
--   Data jsou formless z hlediska vašeho programu.  
+-   Data jsou formless z pohledu aplikace.  
   
- Toto téma vysvětluje, co podporu databázové třídy poskytují pro práci s tyto objekty.  
+ Toto téma vysvětluje, jaké podporu poskytují databázových tříd pro práci s tyto objekty.  
   
-##  <a name="_core_managing_large_objects"></a> Správa rozsáhlé objekty  
- Sady záznamů mít dva způsoby, jak vyřešit speciální potíže správy binární rozsáhlé objekty. Třídu můžete použít [CByteArray](../../mfc/reference/cbytearray-class.md) nebo můžete použít třídu [CLongBinary](../../mfc/reference/clongbinary-class.md). Obecně platí `CByteArray` je upřednostňovaný způsob, jak spravovat velké binární data.  
+##  <a name="_core_managing_large_objects"></a> Správa velkých objektů  
+ Sady záznamů mají dva způsoby, jak vyřešit speciální ztížit správu binární rozsáhlé objekty. Můžete použít třídu [CByteArray](../../mfc/reference/cbytearray-class.md) nebo můžete použít třídu [CLongBinary](../../mfc/reference/clongbinary-class.md). Obecně platí `CByteArray` je upřednostňovaný způsob, jak spravovat velké binární data.  
   
- `CByteArray` vyžaduje další režii než `CLongBinary` , ale je více možností, jak je popsáno v [CByteArray třída](#_core_the_cbytearray_class). `CLongBinary` v stručně popisuje [The CLongBinary – třída](#_core_the_clongbinary_class).  
+ `CByteArray` vyžaduje další režii než `CLongBinary` , ale je více možností, jak je popsáno v [CByteArray – třída](#_core_the_cbytearray_class). `CLongBinary` je popsán v krátce [CLongBinary – třída](#_core_the_clongbinary_class).  
   
- Podrobné informace o používání `CByteArray` pracovat s velkými datovými položkami, najdete v tématu [Technická poznámka 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).  
+ Podrobné informace o používání `CByteArray` práci s velkými datovými položkami, naleznete v tématu [Technická poznámka 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).  
   
 ##  <a name="_core_the_cbytearray_class"></a> CByteArray – třída  
- `CByteArray` je jedním z třídy knihovny MFC kolekce. A `CByteArray` objekt ukládá dynamické pole bajtů – pole můžou růst podle potřeby. Třída poskytuje rychlý přístup podle indexu, stejně jako u předdefinované pole v jazyce C++. `CByteArray` objekty lze serializovat a zálohované k diagnostickým účelům. Třída poskytuje členské funkce pro získání a nastavení zadaných bajtů, vkládání a připojením bajtů a odebrání jednoho bajtu nebo všechny bajty. Tato zařízení zkontrolujte analýza jednodušší binární data. Pokud je binární objekt objekt OLE, můžete chtít fungovat prostřednictvím některé bajtů hlavičky k dosažení vlastním objektu.  
+ `CByteArray` je jedním z třídy kolekcí MFC. A `CByteArray` ukládá dynamická pole bajtů – pole můžou růst podle potřeby. Třída poskytující rychlý přístup podle indexu, stejně jako u předdefinované pole jazyka C++. `CByteArray` objekty lze serializovat a zálohované k diagnostickým účelům. Třída poskytuje členské funkce pro získání a nastavení zadaných bajtů, vkládání a přidávání bajtů a odebrání jednoho bajtu nebo všechny bajty. Tato zařízení provést, analýze binárních dat, jednodušší. Pokud binární objekt je objekt OLE, budete muset projít některé hlavičky bajtů na objekt, který vede.  
   
 ##  <a name="_core_using_cbytearray_in_recordsets"></a> Použití CByteArray v sadách záznamů  
- Tím, že členem pole datové sady záznamů typu `CByteArray`, poskytovat pevné základ, ze kterého [RFX](../../data/odbc/record-field-exchange-rfx.md) můžete spravovat přenos takového objektu sady záznamů a zdroje dat a prostřednictvím kterého můžete upravit data v objektu. RFX vyžaduje konkrétní lokality pro načtená data a budete potřebovat přístup k základní data.  
+ Tím, že pole datový člen třídy sady záznamů typu `CByteArray`, zadejte pevnou základ, ze kterého [RFX](../../data/odbc/record-field-exchange-rfx.md) můžete spravovat přenos takového objektu mezi sady záznamů a zdrojem dat a přes který můžete upravit data v objektu. RFX potřebuje určité lokalitě pro načtená data a potřebujete způsob, jak přistupovat k podkladová data.  
   
- Podrobné informace o používání `CByteArray` pracovat s velkými datovými položkami, najdete v tématu [Technická poznámka 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).  
+ Podrobné informace o používání `CByteArray` práci s velkými datovými položkami, naleznete v tématu [Technická poznámka 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).  
   
 ##  <a name="_core_the_clongbinary_class"></a> CLongBinary – třída  
- A [CLongBinary](../../mfc/reference/clongbinary-class.md) objektu je jednoduché prostředí kolem `HGLOBAL` zpracování na blok úložiště přidělené v haldě. Když se váže sloupec tabulky obsahující binární rozsáhlý objekt, RFX přiděluje `HGLOBAL` zpracování při potřebuje k přenosu dat na sadu záznamů a uloží popisovač v `CLongBinary` pole sady záznamů.  
+ A [CLongBinary](../../mfc/reference/clongbinary-class.md) objekt je jednoduchá prostředí kolem `HGLOBAL` popisovače blok úložiště přidělený k haldě. Když se váže na sloupec tabulky obsahující binární rozsáhlý objekt, přidělí RFX `HGLOBAL` řešit při přenosu dat do sady záznamů je potřeba a uloží popisovač v `CLongBinary` pole sady záznamů.  
   
- Pak použijete `HGLOBAL` zpracování, `m_hData`, pracovat s daty, samostatně, provozní na něm jako na žádném data. To je, kdy [CByteArray](../../mfc/reference/cbytearray-class.md) přidává funkce.  
+ Pak použijete `HGLOBAL` zpracování, `m_hData`, pracovat s daty, provozující, stejně jako na žádném data. Tady [CByteArray](../../mfc/reference/cbytearray-class.md) přidává funkce.  
   
 > [!CAUTION]
->  CLongBinary objekty nelze použít jako parametry ve volání funkce. Kromě toho, implementace, které zavolá **:: SQLGetData**, nutně zpomalí posouvání výkon posouvatelného snímku. To může také být pravdivá, když použijete **:: SQLGetData** volání sami načíst dynamické schéma sloupce.  
+>  CLongBinary – objekty nelze použít jako parametry volání funkce. Kromě toho, jejich implementaci, která volá `::SQLGetData`, nemusí být zpomaluje výkonu posunování posuvný snímku. To může také být pravdivá, když použijete `::SQLGetData` volání sami načíst dynamické schéma sloupce.  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   

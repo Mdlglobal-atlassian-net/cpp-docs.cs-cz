@@ -1,5 +1,5 @@
 ---
-title: Úprava dědičnosti třídy RMyProviderRowset | Microsoft Docs
+title: Úprava dědičnosti třídy RMyProviderRowset | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75acbc8370c1ea164c72aa6f0c61a95fe287e3d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 407406683f03dbba2d582b1ae24d5cc3bb8680a5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106229"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336462"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Úprava dědičnosti třídy RMyProviderRowset
-Chcete-li přidat `IRowsetLocate` rozhraní v příkladu jednoduchého zprostředkovatele pouze pro čtení, změňte dědičnost **RMyProviderRowset**. Na začátku **RMyProviderRowset** dědí z `CRowsetImpl`. Je potřeba upravit tak, aby dědí **CRowsetBaseImpl**.  
+Chcete-li přidat `IRowsetLocate` rozhraní příklad jednoduchého zprostředkovatele pouze pro čtení, změňte dědičnost `RMyProviderRowset`. Na začátku `RMyProviderRowset` dědí z `CRowsetImpl`. Je potřeba upravit tak, aby dědí `CRowsetBaseImpl`.  
   
  Chcete-li to provést, vytvořte novou třídu, `CMyRowsetImpl`, v souboru MyProviderRS.h:  
   
@@ -40,24 +40,24 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Nyní upravte mapu rozhraní modelu COM v souboru MyProviderRS.h být následujícím způsobem:  
+ Nyní upravte mapu rozhraní modelu COM v souboru MyProviderRS.h takto:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyRowsetImpl)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
    COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)  
 END_COM_MAP()  
 ```  
   
- Tím se vytvoří mapa rozhraní modelu COM, která informuje `CMyRowsetImpl` volat **QueryInterface** pro oba `IRowset` a `IRowsetLocate` rozhraní. Získat všechny ostatní sady řádků implementace třídy, mapa odkazuje `CMyRowsetImpl` třída zpět do **CRowsetBaseImpl** třídy definují šablony technologie OLE DB, mapa používá makro COM_INTERFACE_ENTRY_CHAIN, které sděluje Šablony technologie OLE DB kontrola knihovny COM mapování v **CRowsetBaseImpl** v reakci `QueryInterface` volání.  
+ Tím se vytvoří mapu rozhraní modelu COM, která říká `CMyRowsetImpl` volat `QueryInterface` pro obě `IRowset` a `IRowsetLocate` rozhraní. Chcete-li získat všechny ostatní sady řádků implementace třídy, odkazy mapy `CMyRowsetImpl` třídy zpět na `CRowsetBaseImpl` třídy definované šablony technologie OLE DB; na mapě používá makro COM_INTERFACE_ENTRY_CHAIN, který informuje šablony technologie OLE DB kontrolovat mapy modelu COM v `CRowsetBaseImpl` v reakci `QueryInterface` volání.  
   
- Nakonec propojí `RAgentRowset` k `CMyRowsetBaseImpl` změnou `RAgentRowset` dědění z `CMyRowsetImpl`, a to takto:  
+ Nakonec propojit `RAgentRowset` k `CMyRowsetBaseImpl` úpravou `RAgentRowset` dědit z `CMyRowsetImpl`, následujícím způsobem:  
   
-```  
+```cpp  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` Teď můžete použít `IRowsetLocate` rozhraní s využitím zbytek implementace pro třídu sady řádků.  
+ `RAgentRowset` Teď můžete použít `IRowsetLocate` rozhraní s využitím rest implementace třídy sady řádků.  
   
  Když to uděláte, můžete [dynamické určování sloupců vrácených příjemci](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   

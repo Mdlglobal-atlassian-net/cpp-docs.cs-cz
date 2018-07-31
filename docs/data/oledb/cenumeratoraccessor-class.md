@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233416"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339214"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 Používá [CEnumerator](../../data/oledb/cenumerator-class.md) pro přístup k datům z enumerátor sady řádků.  
@@ -89,7 +89,6 @@ Proměnná označující, zda je čítač nadřazené čítače, pokud je řáde
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -102,7 +101,6 @@ Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -115,7 +113,6 @@ Popis zdroje dat nebo enumerátor.
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -128,7 +125,6 @@ Název zdroje dat nebo enumerátor.
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -141,7 +137,6 @@ WCHAR m_szName[129];
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  

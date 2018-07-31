@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207582"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336937"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 Dědí z `DBPROPIDSET` struktury a přidá konstruktor, který inicializuje pole klíče i na [addpropertyid –](../../data/oledb/cdbpropidset-addpropertyid.md) přístup k metodě.  
@@ -88,7 +88,7 @@ Přidá ID vlastnosti ID sady vlastností.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool AddPropertyID(DBPROPID propid) throw();  
+bool AddPropertyID(DBPROPID propid) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -101,7 +101,7 @@ Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidProper
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);  
 
 CDBPropIDSet(const CDBPropIDSet& propidset);  
 
@@ -121,7 +121,7 @@ Nastaví pole identifikátoru GUID v `DBPROPIDSET` struktury.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -137,7 +137,7 @@ Přiřadí obsah jedno ID vlastnosti nastavena na jinou sadu vlastnost ID.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>Viz také  

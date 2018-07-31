@@ -1,5 +1,5 @@
 ---
-title: Dynamické vazby sloupců ve zprostředkovateli | Microsoft Docs
+title: Dynamické vazby sloupců ve zprostředkovateli | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 566a7248fabc1fcdb66224ccbc302e3f8038c5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101689"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336687"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamické vazby sloupců ve zprostředkovateli
-Zkontrolujte, zda že je skutečně potřebujete dynamická vazba sloupců. To může být nutné, protože:  
+Ujistěte se, že si opravdu potřebujete dynamická vazba sloupců. To může být nutné, protože:  
   
--   Sloupce sady řádků nejsou definovány v době kompilace.  
+-   Sady řádků sloupců nejsou definovány v době kompilace.  
   
--   Podporujete element například záložky, který přidá sloupce.  
+-   Podporujete element jako je například záložky, který přidá sloupce.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>K implementaci dynamická vazba sloupců  
   
-1.  Odeberte parametr **Provider Column Map**s z vašeho kódu.  
+1.  Odeberte parametr `PROVIDER_COLUMN_MAP`s z vašeho kódu.  
   
-2.  V záznamu uživatele (strukturu) přidejte následující prohlášení:  
+2.  V záznamu uživatele (struktury) přidejte následující deklarace:  
   
-    ```  
+    ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementace `GetColumnInfo` funkce. Tato funkce se stanoví, že budou jak informace jsou uloženy. Možná budete muset získat vlastnosti nebo jiné informace pro tuto funkci. Můžete chtít vytvořit makro, podobně jako [COLUMN_ENTRY](../../data/oledb/column-entry.md) makro, chcete-li přidat vlastní informace.  
+3.  Implementace `GetColumnInfo` funkce. Tato funkce se stanoví jak osobní údaje uloženy. Můžete potřebovat k získání vlastností nebo jiné informace pro tuto funkci. Můžete chtít vytvořit makro, podobně jako [COLUMN_ENTRY](../../data/oledb/column-entry.md) – makro, chcete-li přidat vlastní údaje.  
   
      Následující příklad ukazuje `GetColumnInfo` funkce.  
   
-    ```  
+    ```cpp  
     // Check the property flag for bookmarks, if it is set, set the zero  
     // ordinal entry in the column map with the bookmark information.  
     CAgentRowset* pRowset = (CAgentRowset*) pThis;  

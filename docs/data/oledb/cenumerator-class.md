@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9f8af45082f8b861b177c4e214a69e9b15799dd7
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233370"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336963"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
 Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
@@ -72,7 +72,7 @@ Vyhledá zadaný název mezi dostupných zprostředkovatelů.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      bool Find(TCHAR* szSearchName) throw();  
+bool Find(TCHAR* szSearchName) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -92,7 +92,6 @@ Analyzuje zobrazovaný název na extrahuje komponentu řetězec, který lze pře
   
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();  
-
 
 HRESULT GetMoniker(LPMONIKER* ppMoniker,   
    LPCTSTR lpszDisplayName) const throw();  
@@ -116,9 +115,7 @@ Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádk
 ```cpp
 HRESULT Open(LPMONIKER pMoniker) throw();  
 
-
 HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();  
-
 
 HRESULT Open(const CEnumerator& enumerator) throw();  
 ```  

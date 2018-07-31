@@ -1,5 +1,5 @@
 ---
-title: Vytvoření zprostředkovatele OLE DB | Microsoft Docs
+title: Vytvoření zprostředkovatele OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097104"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338789"
 ---
 # <a name="creating-an-ole-db-provider"></a>Vytvoření zprostředkovatele OLE DB
-Doporučený způsob vytvoření zprostředkovatele OLE DB je použít Průvodce pro vytvoření projektu knihovny ATL COM a zprostředkovatele a potom upravte soubory pomocí šablony technologie OLE DB. Jako nastavení vlastního zprostředkovatele, můžete Zakomentovat nežádoucí vlastnosti a přidat volitelné rozhraní.  
+Doporučeným způsobem vytvoření zprostředkovatele OLE DB je pomocí průvodců vytvořte projekt knihovny ATL modelu COM a zprostředkovatele a potom upravte soubory pomocí šablony technologie OLE DB. Při úpravách poskytovatele, můžete Zakomentovat nežádoucí vlastnosti a přidat volitelné rozhraní.  
   
  Základní kroky jsou následující:  
   
-1.  Průvodce projektem ATL použít k vytvoření základních souborů projektu a ATL průvodce OLE DB Provider pro vytvoření zprostředkovatele (vyberte **ATL zprostředkovatele technologie OLE DB** ze složky Visual C++ v **přidat třídu**).  
+1.  Můžete vytvořit soubor základního projektu a ATL OLE DB poskytovatele průvodce vytvořit zprostředkovatele Průvodce projektem ATL (vyberte **ATL OLE DB Provider** ze složky Visual C++ v **přidat třídu**).  
   
-2.  Změňte kód v `Execute` metoda v CMyProviderRS.h. Příklad, naleznete v části [čtení řetězců do zprostředkovatele OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
+2.  Změňte kód v `Execute` metoda v CMyProviderRS.h. Příklad najdete v tématu [čtení řetězce do zprostředkovatele OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
   
-3.  Mapy vlastností v souboru MyProviderDS.h, MyProviderSess.h a MyProviderRS.h upravte. Průvodce vytvoří mapy vlastností, které obsahují všechny vlastnosti, které může implementovat zprostředkovatele. Projít mapy vlastností a odeberte nebo komentář vlastnosti, které váš poskytovatel nemusí podporovat.  
+3.  Mapy vlastností v souboru MyProviderDS.h souboru MyProviderSess.h a MyProviderRS.h upravte. Průvodce vytvoří mapy vlastností, které obsahují všechny vlastnosti, které poskytovatel může implementovat. Projděte si mapy vlastností a odeberte nebo Odkomentujte vlastnosti, které není potřeba poskytovatele podpory.  
   
-4.  Aktualizujte Provider Column Map, který naleznete v souboru MyProviderRS.h. Příklad, naleznete v části [ukládání řetězců v OLE DB poskytovatel](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
+4.  Aktualizujte Provider Column Map, který se nachází v souboru MyProviderRS.h. Příklad najdete v tématu [ukládání řetězců v OLE DB Provider](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Jakmile budete připraveni k testování zprostředkovatele, můžete ji otestovat tak, že zkusíte se najít poskytovatele ve výčtu zprostředkovatele. Příklady testovací kód, který najde poskytovatele v výčet najdete v tématu [ukázky CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) a [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ukázky nebo příklad v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Až budete připravení k testování zprostředkovatele, takže ji můžete otestovat tak, že zkusíte najít poskytovatele ve výčtu zprostředkovatele. Příklady testovací kód, který najde poskytovatele ve výčtu, najdete v článku [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) a [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ukázky nebo v příkladu v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md).  
   
-6.  Taková rozhraní, které chcete přidáte. Příklad, naleznete v části [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+6.  Všechna další rozhraní, které chcete přidáte. Příklad najdete v tématu [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
     > [!NOTE]
-    >  Ve výchozím nastavení průvodců generovat kód, který je technologie OLE DB úrovně 0 kompatibilní. Aby se zajistilo, že vaše aplikace zůstává na úrovni 0 kompatibilní, neodebírejte žádné rozhraní vygenerované průvodcem z kódu.  
+    >  Ve výchozím nastavení průvodci generovat kód, který je technologie OLE DB úrovně 0 kompatibilní. Aby bylo zajištěno, že vaše aplikace zůstává na úrovni 0 kompatibilní, neodstraňujte žádné rozhraní generované v Průvodci z kódu.  
   
 ## <a name="see-also"></a>Viz také  
- [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)

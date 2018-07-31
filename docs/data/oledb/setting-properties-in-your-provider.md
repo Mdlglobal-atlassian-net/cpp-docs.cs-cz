@@ -1,5 +1,5 @@
 ---
-title: Nastavení vlastností ve zprostředkovateli | Microsoft Docs
+title: Nastavení vlastností ve zprostředkovateli | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5d43e452d0fffcb4dc6eddcae722f8056dbd39dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fedb77b6ede8d9fa843e7e7cdd344e03efecede
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109284"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337895"
 ---
 # <a name="setting-properties-in-your-provider"></a>Nastavení vlastností ve zprostředkovateli
-Pro vlastnost, kterou chcete najít skupinu vlastností a vlastnost ID. Další informace najdete v tématu [vlastnosti technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) v *referenční příručka programátora technologie OLE DB*.  
+Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) v *OLE DB referenční informace pro programátory*.  
   
- V kódu zprostředkovatele je vygenerovat průvodcem najdete mapa vlastností odpovídající skupině vlastností. Název skupiny vlastností obvykle odpovídá názvu objektu. Vlastnosti příkazu a sady řádků lze nalézt v příkazu nebo sady řádků; Vlastnosti zdroje a inicializace dat naleznete v objektu zdroje dat.  
+ V kódu zprostředkovatele generované průvodcem knihovnou vyhledejte mapování vlastnosti odpovídající vlastnosti skupiny. Název skupiny vlastností obvykle odpovídá názvu objektu. Vlastnosti příkazu a sady řádků lze nalézt v příkazu nebo sady řádků; Vlastnosti datového zdroje a inicializace naleznete v objektu zdroje dat.  
   
- Vlastnosti mapy, přidejte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) makro. PROPERTY_INFO_ENTRY_EX mají čtyři parametry:  
+ Vlastnosti mapy, přidejte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) – makro. PROPERTY_INFO_ENTRY_EX přebírá čtyři parametry:  
   
--   ID vlastnosti odpovídající vaší vlastnosti. Nejprve sedm znaky ("DBPROP_") je nutné odebrat z před název vlastnosti. Pokud chcete přidat například **DBPROP_MAXROWS**, předat `MAXROWS` jako první prvek. Pokud se jedná vlastní vlastnost, předejte úplný název identifikátor GUID (například `DBMYPROP_MYPROPERTY`).  
+-   ID vlastnosti odpovídající vaší vlastnosti. Prvních 7 znaků ("DBPROP_") je třeba odebrat z přední části názvu vlastnosti. Pokud chcete přidat například `DBPROP_MAXROWS`, předejte `MAXROWS` jako prvního prvku. Pokud se jedná vlastní vlastnost, předejte úplný název identifikátoru GUID (například `DBMYPROP_MYPROPERTY`).  
   
--   Typ varianty vlastnosti (v [vlastnosti technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) v *referenční příručka programátora technologie OLE DB*). Zadejte **typ VT_** typu (například `VT_BOOL` nebo `VT_I2`) odpovídající na datový typ.  
+-   Typ varianty vlastnosti (v [vlastnosti technologie OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) v *OLE DB referenční informace pro programátory*). Zadejte odpovídající typ VT_ typ (například VT_BOOL nebo VT_I2) do datového typu.  
   
--   Příznaky znamená, zda je vlastnost pro čtení a zápis a skupiny, do které patří. Následující kód například označuje vlastnost pro čtení a zápis patří do skupiny řádků:  
+-   Příznaky, které označují, zda je vlastnost pro čtení a pro zápis a skupiny, do které patří. Například následující kód označuje vlastnost pro čtení a zápis patří do skupiny řádků:  
   
     ```  
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE  
     ```  
   
--   Hodnotu vlastnosti. To může být **VARIANT_FALSE** logická hodnota. Zadejte nebo má nulovou hodnotu pro typ integer, např. Vlastnost má tuto hodnotu, pokud se změní.  
+-   Základní hodnoty vlastnosti. To může být `VARIANT_FALSE` logickou hodnotu typu nebo má nulovou hodnotu pro typ integer, třeba. Vlastnost má tuto hodnotu, pokud se změní.  
   
     > [!NOTE]
-    >  Některé vlastnosti jsou připojené nebo zřetězené na další vlastnosti, jako je například záložky nebo aktualizaci. Pokud příjemce nastaví jednu vlastnost na hodnotu true, může být také nastavena jinou vlastnost. Šablony zprostředkovatele technologie OLE DB podporují prostřednictvím metody [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).  
+    >  Některé vlastnosti jsou připojené nebo připojený k jiné vlastnosti, jako je například záložek nebo aktualizaci. Pokud příjemce jednu vlastnost nastaví na hodnotu true, může být také nastavena jiné vlastnosti. Šablony zprostředkovatele OLE DB podporují prostřednictvím metody [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).  
   
-## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Vlastnosti ignorovat zprostředkovatele Microsoft OLE DB  
+## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Vlastnosti nastavení ignoruje zprostředkovatele Microsoft OLE DB  
  Zprostředkovatele Microsoft OLE DB ignorovat následující vlastnosti OLE DB:  
   
--   **DBPROP_MAXROWS** funguje výhradně u zprostředkovatelé jen pro čtení (to znamená, kde DBPROP_IRowsetChange a DBPROP_IRowsetUpdate jsou false); jinak tato vlastnost není podporována.  
+-   `DBPROP_MAXROWS` funguje pouze pro zprostředkovatele pouze pro čtení (to znamená, kde DBPROP_IRowsetChange a DBPROP_IRowsetUpdate jsou false); jinak tato vlastnost není podporována.  
   
--   **DBPROP_MAXPENDINGROWS** je ignorován; zprostředkovatele určuje vlastní limit.  
+-   `DBPROP_MAXPENDINGROWS` se ignoruje; zprostředkovatel určuje vlastní omezení.  
   
--   **DBPROP_MAXOPENROWS** je ignorován; zprostředkovatele určuje vlastní limit.  
+-   `DBPROP_MAXOPENROWS` se ignoruje; zprostředkovatel určuje vlastní omezení.  
   
--   **DBPROP_CANHOLDROWS** je ignorován; zprostředkovatele určuje vlastní limit.  
+-   `DBPROP_CANHOLDROWS` se ignoruje; zprostředkovatel určuje vlastní omezení.  
   
 ## <a name="see-also"></a>Viz také  
  [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

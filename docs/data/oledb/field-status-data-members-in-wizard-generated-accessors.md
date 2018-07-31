@@ -1,5 +1,5 @@
 ---
-title: Pole členové stavu pole v přístupových objektech generovaných průvodcem | Microsoft Docs
+title: Pole Datoví členové stavu v přístupových objektech generovaných průvodcem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104396"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336437"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
-Při použití průvodce příjemcem knihovny ATL technologie OLE DB pro vytvoření příjemce, Průvodce vytvoří datový člen v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců. Každý člen dat je typu `DWORD` a obsahuje hodnotu stavu odpovídající její příslušné pole.  
+Při použití průvodce příjemcem ATL OLE DB vytvořte příjemce, Průvodce vytvoří datový člen ve třídě uživatel záznam pro každé pole, které jste zadali v mapě sloupců. Každý datový člen je typu `DWORD` a obsahuje stav hodnota odpovídající jeho odpovídající pole.  
   
- Například pro člena dat *m_OwnerID*, Průvodce generuje člena další data pro stav pole (*dwOwnerIDStatus*) a další pro délka pole (*dwOwnerIDLength*). Také vytváří mapu sloupců s `COLUMN_ENTRY_LENGTH_STATUS` položky.  
+ Například pro datový člen *m_OwnerID*, průvodce vygeneruje další datové členy stavu pole (*dwOwnerIDStatus*) a jinou pro délky pole (*dwOwnerIDLength*). Také vygeneruje mapu sloupců s COLUMN_ENTRY_LENGTH_STATUS položky.  
   
  To je ukázáno v následujícím kódu:  
   
-```  
+```cpp  
 [db_source("insert connection string")]  
 [db_command(" \  
    SELECT \  
@@ -79,24 +79,24 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  Pokud změníte třídu záznamu uživatele nebo napsat vlastní příjemce, data proměnné musí předcházet proměnné stavu a délka.  
+>  Pokud změníte název třídy záznamu uživatele nebo napsat vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
   
- Můžete použít hodnoty stavu pro účely ladění. Pokud kód vygenerovaný průvodce příjemcem knihovny ATL technologie OLE DB generuje chyby kompilace, jako **DB_S_ERRORSOCCURRED** nebo **DB_E_ERRORSOCCURRED**, měli byste nejprve podívat na aktuální hodnoty pole stavu datové členy. Ty, které mají nenulové hodnoty odpovídají sloupcům problematické.  
+ Můžete použít hodnoty stavu pro účely ladění. Pokud kód vygenerovaný průvodce příjemcem ATL OLE DB generuje chyby kompilace, jako je například DB_S_ERRORSOCCURRED nebo DB_E_ERRORSOCCURRED, měli nejdřív podívat na aktuální hodnoty datoví členové stavu pole. Ty, které obsahují nenulové hodnoty odpovídají sloupcům problematické.  
   
- Hodnoty stavu můžete taky nastavit hodnotu NULL pro konkrétního pole. To vám pomůže v případech, ve kterých chcete odlišit hodnotu pole jako NULL spíše než nula. Je na vás rozhodnout, zda je platná hodnota nebo hodnota NULL a rozhodnout, jak vaše aplikace bude pracovat. OLE DB definuje **DBSTATUS_S_ISNULL** jako správný způsob zadání obecné hodnoty NULL. Pokud příjemce čte data a hodnota je null, pole stavu nastavená na **DBSTATUS_S_ISNULL**. Pokud příjemce chce nastavit hodnotu NULL, příjemce nastaví hodnotu stavu na **DBSTATUS_S_ISNULL** před voláním zprostředkovatele.  
+ Hodnoty stavu můžete použít také k nastavení hodnoty NULL pro určité pole. To vám pomůže v případech, ve kterých chcete odlišit hodnotu pole jako hodnotu NULL, spíše než nula. Je jenom na vás rozhodnout, zda je platná hodnota nebo hodnota NULL a rozhodnout, jak vaše aplikace bude pracovat. OLE DB definuje DBSTATUS_S_ISNULL jako správný způsob určení na obecné hodnotě NULL. Pokud příjemce čte data a hodnota je null, pole stavu nastavená na DBSTATUS_S_ISNULL. Pokud uživatel chce nastavit hodnotu NULL, příjemce nastaví stav hodnotu DBSTATUS_S_ISNULL před voláním metody zprostředkovatele.  
   
- Dále otevřete Oledb.h a vyhledejte **DBSTATUSENUM**. Pak můžete porovnat číselnou hodnotu nenulové hodnoty stavu proti **DBSTATUSENUM** hodnot výčtu. Pokud název výčtu není dostatečná říct, co je nesprávný, naleznete v tématu "Status" v části "Vytvoření vazby dat hodnoty" [OLE DB – Příručka pro vývojáře](http://go.microsoft.com/fwlink/p/?linkid=121548). Toto téma obsahuje tabulky použité při získání nebo nastavení data hodnoty stavu. Informace o hodnotami délky naleznete v tématu "Délka" ve stejném oddílu.  
+ Dále otevřete Oledb.h a vyhledejte `DBSTATUSENUM`. Pak můžete porovnat číselnou hodnotu nenulovou stavu proti `DBSTATUSENUM` hodnot výčtu. Pokud název výčtu nestačí říct, co je špatně, naleznete v tématu "Stavu" v části "Vytvoření vazby dat hodnoty" [Příručka programátora technologie OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548). Toto téma obsahuje tabulky stav hodnot použitá při načtení nebo nastavení data. Informace o hodnoty pro délku naleznete v tématu "Délku" ve stejném oddílu.  
   
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Načítání stavu sloupce nebo délka  
- Je možné načíst stav sloupce nebo délka sloupce s proměnnou délkou (zkontrolujte **DBSTATUS_S_ISNULL**, například):  
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Načítání délku nebo stav sloupce  
+ Můžete získat délku sloupce s proměnlivou délkou nebo stav sloupce (Chcete-li zkontrolovat DBSTATUS_S_ISNULL, například):  
   
--   Chcete-li získat délku, použijte `COLUMN_ENTRY_LENGTH` makro.  
+-   Chcete-li získat délku, použijte COLUMN_ENTRY_LENGTH – makro.  
   
--   Chcete-li získat stav, použijte `COLUMN_ENTRY_STATUS` makro.  
+-   Pokud chcete získat stav, použijte COLUMN_ENTRY_STATUS – makro.  
   
--   Chcete-li získat obojí, použijte `COLUMN_ENTRY_LENGTH_STATUS`, jak je uvedeno níže.  
+-   Obě získáte pomocí COLUMN_ENTRY_LENGTH_STATUS, jak je znázorněno níže.  
   
-```  
+```cpp  
 class CProducts  
 {  
 public:  
@@ -123,7 +123,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- Při použití `CDynamicAccessor`, délku a stav svázána automaticky. Chcete-li načíst hodnoty délky a stavu, použijte `GetLength` a **GetStatus** členské funkce.  
+ Při použití `CDynamicAccessor`, délku a stav je vázána pro vás automaticky. Chcete-li načíst hodnoty délky a stavu, použijte `GetLength` a `GetStatus` členské funkce.  
   
 ## <a name="see-also"></a>Viz také  
  [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

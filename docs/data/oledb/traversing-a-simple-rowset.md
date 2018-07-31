@@ -1,5 +1,5 @@
 ---
-title: Procházení jednoduché sady řádků | Microsoft Docs
+title: Procházení jednoduché sady řádků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102948"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336651"
 ---
 # <a name="traversing-a-simple-rowset"></a>Procházení jednoduché sady řádků
-Následující příklad ukazuje databáze rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu knihovny ATL načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access databáze pomocí zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě uživatelského záznamu `CArtists`. Otevře připojení, otevře se relace na připojení a otevře v tabulce v relaci.  
+Následující příklad ukazuje databázový rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu ATL, načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access database s využitím zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě záznamů uživatele `CArtists`. Otevře připojení, otevře relaci připojení a otevře se v tabulce v relaci.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Uživatelský záznam `CArtists`, vypadá podobně jako tento:  
+ Uživatelský záznam `CArtists`, vypadá přibližně takto:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

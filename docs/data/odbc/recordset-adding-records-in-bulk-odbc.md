@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Přidávání záznamů (ODBC) hromadné | Microsoft Docs'
+title: 'Sada záznamů: Přidávání záznamů (ODBC) hromadné | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089282"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337226"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>Sada záznamů: Hromadné přidávání záznamů (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- MFC [CRecordset](../../mfc/reference/crecordset-class.md) třída má nové optimalizace, které ke zlepšení efektivity při přidávání nové záznamy hromadně do tabulky.  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md) třída má nové optimalizace, které zvyšuje efektivitu při přidávání nových záznamů hromadné do tabulky.  
   
 > [!NOTE]
->  Toto téma se vztahuje na objekty, které jsou odvozené z `CRecordset` v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Nová možnost pro **dwOptions** parametru [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) – členská funkce **optimizeBulkAdd**, zvyšuje výkon, když přidáváte více záznamů po sobě bez volání **Requery –** nebo **Zavřít**. Pouze pole, které jsou chybná před první **aktualizace** volání jsou označeny jako nekonzistentní pro následné `AddNew` / **aktualizace** volání.  
+ Nová možnost pro *dwOptions* parametr [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) členskou funkci `optimizeBulkAdd`, zlepšuje výkon při přidávání více záznamů za sebou bez volání `Requery` nebo `Close`. Pouze pole, které jsou změny před první `Update` volání jsou označeny jako neaktualizovaní pro následné `AddNew` / `Update` volání.  
   
- Pokud chcete využít výhod používáte databázové třídy **:: SQLSetPos** rozhraní API ODBC funkce pro přidávání, úpravám a odstraňování záznamů, tato optimalizace je zbytečné.  
+ Pokud používáte databázové třídy výhod `::SQLSetPos` rozhraní API ODBC funkce pro přidání, úpravy a odstranění záznamů, tato optimalizace je zbytečné.  
   
- Pokud knihovny kurzorů ODBC je načtena, nebo ovladač ODBC nepodporuje přidání, úpravy a odstraňování prostřednictvím **:: SQLSetPos**, tato optimalizace měli zlepšit hromadné přidání výkonu. Chcete-li zapnout optimalizace, nastavte **dwOptions** parametr ve **otevřete** volání pro sady záznamů pro následující:  
+ Pokud je načtena knihovna kurzorů rozhraní ODBC nebo ovladač ODBC nepodporuje přidávání, úpravy a odstranění prostřednictvím `::SQLSetPos`, tyto optimalizace měl vylepšit hromadné přidání výkonu. Chcete-li na této optimalizace, nastavte *dwOptions* parametr `Open` volání pro sady záznamů pro následující:  
   
 ```  
 appendOnly | optimizeBulkAdd  
@@ -44,5 +44,5 @@ appendOnly | optimizeBulkAdd
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Sada záznamů: Přidávání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
  [Sada záznamů: Zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

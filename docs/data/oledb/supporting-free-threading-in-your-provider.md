@@ -1,5 +1,5 @@
 ---
-title: Podpora volných vláken ve zprostředkovateli | Microsoft Docs
+title: Podpora volných vláken ve zprostředkovateli | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108511"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336674"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Podpora volných vláken ve zprostředkovateli
-Všechny třídy zprostředkovatele OLE DB jsou bezpečné pro přístup z více vláken a položky registru jsou nastaveny odpovídajícím způsobem. Je vhodné podpora volných vláken na pomáhají zajistit vysokou úroveň výkonu v situacích s více uživateli. Zajistit, aby byl váš poskytovatel bezpečné pro přístup z více vláken, musíte ověřit, že je váš kód správně blokován. Při každém zápisu nebo ukládání dat, musíte zablokovat přístup s kritickými oddíly.  
+Všechny třídy zprostředkovatele OLE DB jsou bezpečné pro vlákna a položky registru se nastaví odpovídajícím způsobem. Je vhodné podpora volných vláken, které vám pomůžou zajistit vysokou úroveň výkonu v situacích s více uživateli. Zajistit, aby byl váš poskytovatel bezpečné pro vlákna, musíte ověřit, že váš kód správně blokované. Při každém zápisu nebo ukládání dat, třeba blokovat přístup s kritických oddílů.  
   
- Každý objekt šablony zprostředkovatele technologie OLE DB má své kritické oddíly. Chcete-li blokování snadnější, by měla být každou novou třídu vytvoříte třídu šablony trvá nadřazené třídy jako argument název.  
+ Každý objekt šablony zprostředkovatele OLE DB má svůj vlastní kritický oddíl. Chcete-li snadněji blokování, by měl být každou novou třídu vytvoříte třídu šablony s ohledem na nadřazenou třídu název jako argument.  
   
- Následující příklad ukazuje, jak blok kódu:  
+ Následující příklad ukazuje, jak blokovat kódu:  
   
-```  
+```cpp  
 template <class T>  
 class CMyObject<T> : public...  
   
@@ -47,9 +47,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Další informace o tom, jak chránit kritické oddíly s `Lock` a `Unlock`, najdete v části [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Další informace o tom, jak chránit kritické oddíly s `Lock` a `Unlock`, naleznete v tématu [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- Musíte také ověřit, že žádné metody přepíšete (například `Execute`) jsou bezpečné pro přístup z více vláken.  
+ Také je nutné ověřit, že všechny metody, můžete přepsat (například `Execute`) jsou bezpečné pro vlákna.  
   
 ## <a name="see-also"></a>Viz také  
  [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

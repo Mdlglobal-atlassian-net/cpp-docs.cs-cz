@@ -1,5 +1,5 @@
 ---
-title: Transakce (ODBC) | Microsoft Docs
+title: Transakce (ODBC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3acd47746d3a920b679fb5509c34e5978ad43eed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cb02b9bc9c9a8e151532e79ffbdbfb0d8ad4000
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094023"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337447"
 ---
 # <a name="transaction-odbc"></a>Transakce (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Transakce je způsob, jak skupinu nebo dávky, řadu aktualizací [zdroj dat](../../data/odbc/data-source-odbc.md) tak, aby byly všechny najednou, nebo žádná není potvrzena, pokud je vrácení transakce. Pokud nepoužijete transakce, jsou změny ke zdroji dat potvrzeny automaticky místo se potvrzovanou na požádání.  
-  
-> [!NOTE]
->  Ne všechny ovladače ODBC databáze podporovat transakce. Volání `CanTransact` členské funkce vaše [CDatabase](../../mfc/reference/cdatabase-class.md) nebo [CRecordset](../../mfc/reference/crecordset-class.md) objektem pro určení, zda ovladač podporuje transakce pro danou databázi. Všimněte si, že `CanTransact` nezjistíte zda zdroj dat poskytuje plnou podporu transakcí. Musíte také zavolat `CDatabase::GetCursorCommitBehavior` a `CDatabase::GetCursorRollbackBehavior` po **CommitTrans** a **vrácení zpět** chcete zkontrolovat dopad transakce na open `CRecordset` objektu.  
-  
- Volání `AddNew` a **upravit** členské funkce `CRecordset` vliv zdroj dat okamžitě při volání objektu **aktualizace**. **Odstranit** volání také se projeví okamžitě. Naproti tomu můžete použít transakce, který se skládá z více volání `AddNew`, **upravit**, **aktualizace**, a **odstranit**, které jsou prováděny, ale nikoli potvrdit až volání **CommitTrans** explicitně. Vytvořením transakce, můžete provést řadu těchto volání při zachování možnost vrátit je zpátky. Pokud je kritický zdroj není dostupný nebo jiné podmínky zabraňují dokončení celé transakce, můžete transakci místo potvrzení vrátit zpět. V takovém případě žádná ze změn, které patří do transakce ovlivní zdroj dat.  
+ Transakce je způsob, jak seskupit nebo dávka, řadu aktualizací služby [zdroj dat](../../data/odbc/data-source-odbc.md) tak, aby byly všechny najednou, nebo žádná není potvrzena, pokud vrátíte zpět transakce. Pokud nepoužijete transakce, změny do zdroje dat. usilujeme o to automaticky místo potvrzuje na vyžádání.  
   
 > [!NOTE]
->  V současné době třídy `CRecordset` nepodporuje aktualizace ke zdroji dat, pokud jste implementovali hromadné načítání řádků. To znamená, že nemůžete provádět volání `AddNew`, **upravit**, **odstranit**, nebo **aktualizace**. Můžete je však napsat vlastní funkce pro provádění aktualizací a pak zavolají tyto funkce v rámci dané transakci. Další informace o hromadné načítání řádků najdete v tématu [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Ne všechny ovladače rozhraní ODBC databáze podporu transakcí. Volání `CanTransact` členskou funkci vaše [CDatabase](../../mfc/reference/cdatabase-class.md) nebo [CRecordset](../../mfc/reference/crecordset-class.md) objektem pro určení, jestli ovladač podporuje transakce pro danou databázi. Všimněte si, že `CanTransact` není zjistíte, zda zdroj dat obsahuje plnou podporu transakcí. Musíte také zavolat `CDatabase::GetCursorCommitBehavior` a `CDatabase::GetCursorRollbackBehavior` po `CommitTrans` a `Rollback` chcete zkontrolovat dopad transakce na otevřený `CRecordset` objektu.  
+  
+ Volání `AddNew` a `Edit` členské funkce `CRecordset` ovlivní zdroj dat okamžitě při volání objektu `Update`. `Delete` volání také projeví okamžitě. Naproti tomu můžete použít transakci, který se skládá z více volání `AddNew`, `Edit`, `Update`, a `Delete`, které jsou prováděny, ale nikoli potvrdit až do okamžiku volání `CommitTrans` explicitně. Tím, že transakce, můžete provést řadu těchto volání při zachování možnost vrátit zpět změny. Pokud kritické prostředek není dostupný nebo některých jiných podmínek brání celá transakce nebránily dokončení, můžete místo jeho potvrzení transakce vrátit zpět. V takovém případě žádná ze změn, které patří k transakci ovlivní zdroj dat.  
   
 > [!NOTE]
->  Kromě toho, které mají vliv na sady záznamů, transakce ovlivňují příkazy SQL, které můžete přímo provádět také pomocí rozhraní ODBC **HDBC** přidružené k vaší `CDatabase` objekt nebo ODBC **HSTMT** na základě který **HDBC**.  
-  
- Transakce jsou zvláště užitečné, když máte více záznamů, které musí být aktualizovány současně. V takovém případě budete chtít vyhnout půl dokončit transakci, například jako může dojít, pokud předtím, než byla provedena poslední aktualizace došlo k výjimce. Seskupení těchto aktualizací do transakce umožňuje obnovení (vrácení) změny a vrátí záznamy do stavu před transakcí. Například pokud bankovní převod peněz z účtu A k účtu B, jak odstoupení od uložení A a b musí být zpracován fondů správně nebo celá transakce selhat.  
-  
- V databázové třídy provádět transakce prostřednictvím `CDatabase` objekty. A `CDatabase` objekt představuje připojení ke zdroji dat a který přidružený jeden nebo více sad záznamů `CDatabase` objekt pracovat v tabulkách databáze pomocí členské funkce sady záznamů.  
+>  V současné době třídy `CRecordset` nepodporuje aktualizace ke zdroji dat, pokud jste implementovali hromadné načítání řádků. To znamená, že nemůžete provádět volání `AddNew`, `Edit`, `Delete`, nebo `Update`. Můžete je ale napsat vlastní funkce pro provádění aktualizací a potom volání těchto funkcí v rámci dané transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Je podporována pouze jedna úroveň transakcí. Nelze vnořit transakce ani zahrnovat více databázové objekty.  
+>  Kromě by to ovlivnilo sady záznamů, transakce ovlivňují příkazy SQL, které můžete provést přímo za předpokladu, použijte rozhraní ODBC **HDBC** přidružené k vaší `CDatabase` objektu nebo ODBC **HSTMT** na základě který **HDBC**.  
   
- Následující témata obsahují další informace o tom, jak se provádí transakce:  
+ Transakce jsou zvláště užitečné v případě, že máte více záznamů, které musí být aktualizovány současně. V tomto případě chcete se vyhnout transakce napůl dokončený, například může dojít, pokud došlo k výjimce předtím, než byla provedena poslední aktualizace. Seskupení těchto aktualizací do transakce umožňuje obnovení změny (vrácení zpět) a vrátí záznamy do stavu před transakcí. Například pokud banka přenese peníze z účtu A k účtu B, stažení zálohy A a B musí být správně zpracovat fondů i musí selhat, celá transakce.  
+  
+ V databázové třídy provádět transakce prostřednictvím `CDatabase` objekty. A `CDatabase` objekt představuje připojení ke zdroji dat, a přidruženou jednu nebo více sad záznamů s `CDatabase` objekt pracovat v tabulkách databáze pomocí členské funkce sady záznamů.  
+  
+> [!NOTE]
+>  Je podporován pouze jednu úroveň transakce. Nelze vnořovat transakce ani může zahrnovat více databázových objektů.  
+  
+ Další informace o tom, jak se transakce provádějí v následujících tématech:  
   
 -   [Transakce: Provádění transakcí v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
   

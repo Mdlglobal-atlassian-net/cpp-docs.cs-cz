@@ -1,5 +1,5 @@
 ---
-title: Výstupní parametry | Microsoft Docs
+title: Výstupní parametry | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104383"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339023"
 ---
 # <a name="output-parameters"></a>Výstupní parametry
-Volání uložené procedury je podobná vyvolání příkazu SQL. Hlavní rozdíl je, že uložené procedury použít výstupní parametry (nebo "výstupní parametry") a návratové hodnoty.  
+Volání uložené procedury se podobá vyvolání příkazu SQL. Hlavní rozdíl je, že uložených procedur použijte výstupní parametry (nebo "výstupní parametry") a návratových hodnot.  
   
- V následující uložené procedury, první '? 'je návratovou hodnotu (phone) a druhá'?' je vstupní parametr (název):  
+ Těmito uloženou proceduru, první '? 'je návratová hodnota (telefon) a druhá'?' je vstupní parametr (název):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- Zadejte vstupní a výstupní parametry v mapě parametr:  
+ Zadat vstupní a výstupní parametry v mapě parametr:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- Aplikace musí zpracovávat výstup z uložené procedury. Různé zprostředkovatele OLE DB vrací výstupní parametry a návratové hodnoty v různou dobu během zpracování výsledku. Zprostředkovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) například není výstupní parametry a návratové kódy až po příjemce načte nebo nastaví výsledek vrácený uloženou proceduru zruší. Výstup se vrací v posledním TDS paketu ze serveru.  
+ Ke zpracování potřeba aplikace výstupu vráceného z uložené procedury. Různé technologie OLE DB – zprostředkovatelé vrátit výstupní parametry a návratové hodnoty v různých časech během zpracování výsledku. Zprostředkovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) například není výstupní parametry a návratové kódy až po příjemce načte nebo zruší sady výsledků vrácené procedurou. uložené. Výstup se vrací v posledním TDS paketu ze serveru.  
   
-## <a name="row-count"></a>Počet řádků.  
- Pokud použijete ke spuštění uložené procedury, která má výstupní parametry šablony příjemce technologie OLE DB, počet řádků není nastavena, dokud nezavřete sadu řádků.  
+## <a name="row-count"></a>Počet řádků  
+ Pokud používáte ke spuštění uložené procedury, která má výstupní parametry šablony příjemce technologie OLE DB, počet řádků není nastavená, dokud ho neukončíte sadu řádků.  
   
- Představte si třeba uložená procedura s sadu řádků a výstupním parametrem:  
+ Představte si třeba uložené procedury s sady řádků a výstupním parametrem:  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -62,7 +62,7 @@ as
 return 0  
 ```  
   
- @_rowcount Výstupní sestavy, kolik řádků ve skutečnosti vrátil tabulky test. Tuto uloženou proceduru však omezuje počet řádků, které mají být delší než 50. Například kdyby 100 řádků v testu rowcount by 50 (protože tento kód načte pouze prvních 50 řádků). Pokud by bylo pouze 30 řádků v tabulce, rowcount by byl 30. Je třeba volat **Zavřít** nebo **CloseAll** k naplnit výstupní parametr předtím načíst jeho hodnotu.  
+ @_rowcount Výstupní zprávy, kolik řádků z tabulky test skutečně vrácených. Tuto uloženou proceduru však omezuje počet řádků, které mají maximálně 50. Například pokud byly nějaké 100 řádků v testu, rowcount by 50 (protože je tento kód načte jenom prvních 50 řádků). Pokud byly nějaké pouze 30 řádky v tabulce, by rowcount 30. Je nutné volat `Close` nebo `CloseAll` k naplnění výstupní před načíst jeho hodnotu.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)
