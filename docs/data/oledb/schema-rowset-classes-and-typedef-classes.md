@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250651"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338295"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Třídy sady řádků schématu a definiční třídy typů
 Schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo byly vytvořeny podle konkrétního uživatele. Katalog může obsahovat jeden nebo více schémat, ale musí vždy obsahovat schéma volá INFORMATION_SCHEMA, který obsahuje zobrazení a domén informace schématu. Informace o schématu v OLE DB jsou načítány s použitím předdefinované sady řádků schématu a obsahuje typy, tabulky, sloupce, indexy, zobrazení, kontrolní výrazy a omezení, statistiky, znakových sad, řazení a domén.  

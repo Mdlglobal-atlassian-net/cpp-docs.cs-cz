@@ -1,5 +1,5 @@
 ---
-title: 'Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC) | Microsoft Docs'
+title: 'Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,58 +20,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae28f1bbaeb7eb44e50e9a698106229f1bf903b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092099"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338090"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Sada záznamů: Vytváření a uzavírání sad záznamů (rozhraní ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
- Pokud chcete použít sadu záznamů, vytvořte objekt sady záznamů a potom volejte jeho **otevřete** – členská funkce Spustit dotaz sady záznamů a vybrat záznamy. Když skončíte s sadu záznamů, zavřete a odstraňte objekt.  
+ Pokud chcete použít sadu záznamů, sestavte objekt sady záznamů a poté zavolejte jeho `Open` členskou funkci pro spuštění dotazu sadu záznamů a výběr záznamů. Po dokončení sady záznamů, zavřete a zničte objekt.  
   
  Toto téma vysvětluje:  
   
 -   [Kdy a jak vytvořit objekt sady záznamů](#_core_creating_recordsets_at_run_time).  
   
--   [Kdy a jak kvalifikovat chování sady záznamů jako parametrizování, filtrování, řazení nebo zamykání](#_core_setting_recordset_options).  
+-   [Kdy a jak se můžete kvalifikovat chování sady záznamů Parametrizace, filtrování, řazení nebo zamčením](#_core_setting_recordset_options).  
   
 -   [Kdy a jak zavřít objekt sady záznamů](#_core_closing_a_recordset).  
   
 ##  <a name="_core_creating_recordsets_at_run_time"></a> Vytvoření sady záznamů v době běhu  
- Před vytvořením objektů sady záznamů v programu, obvykle zápisu třídy sady záznamů specifické pro aplikaci. Další informace o tomto předběžném kroku najdete v tématu [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+ Než budete moct vytvořit objekty sady záznamů ve svém programu, obvykle zápisu třídy sady záznamů specifické pro aplikaci. Další informace o tomto předběžném kroku najdete v tématu [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
- Pokud je nutné vybrat záznamy ze zdroje dat, otevřete objekt dynamická sada nebo snímek. Typ objektu k vytvoření závisí na co musíte udělat s daty v aplikaci a na co ovladač ODBC podporuje. Další informace najdete v tématu [dynamická sada](../../data/odbc/dynaset.md) a [snímku](../../data/odbc/snapshot.md).  
+ Když je nutné vybrat záznamy ze zdroje dat, otevřete dynamická sada nebo snímek objektu. Typ objektu pro vytváření závisí na co je potřeba udělat s daty v aplikaci a na jaké ovladače rozhraní ODBC, podporuje. Další informace najdete v tématu [dynamická sada](../../data/odbc/dynaset.md) a [snímku](../../data/odbc/snapshot.md).  
   
-#### <a name="to-open-a-recordset"></a>Chcete-li otevřít sady záznamů  
+#### <a name="to-open-a-recordset"></a>Chcete-li otevřít sadu záznamů  
   
-1.  Sestavte objekt vaší `CRecordset`-odvozené třídy.  
+1.  Sestavte objekt vaše `CRecordset`-odvozené třídy.  
   
-     Můžete vytvořit objekt v haldě nebo na rámec zásobníku funkce.  
+     Můžete vytvořit objekt na haldě nebo funkce v zásobníku.  
   
 2.  Volitelně můžete změňte výchozí chování sady záznamů. Dostupné možnosti najdete v tématu [nastavení možností sady záznamů](#_core_setting_recordset_options).  
   
-3.  Volání objektu [otevřete](../../mfc/reference/crecordset-class.md#open) – členská funkce.  
+3.  Volání objektu [otevřít](../../mfc/reference/crecordset-class.md#open) členskou funkci.  
   
- V konstruktoru, můžete předat ukazatel `CDatabase` objektu nebo předejte **NULL** pomocí dočasného databázového objektu, který rozhraní framework vytvoří a otevře na základě připojovací řetězec vrácený [GetDefaultConnect – ](../../mfc/reference/crecordset-class.md#getdefaultconnect) – členská funkce. `CDatabase` Objekt již může být připojen ke zdroji dat.  
+ V konstruktoru, můžete předat ukazatel `CDatabase` objekt nebo hodnota NULL pro použití dočasného objektu databáze, které sestavují rozhraní a otevře založené na připojovací řetězec vrácený funkcí [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) členskou funkci. `CDatabase` Objekt může být již připojen ke zdroji dat.  
   
- Volání **otevřete** použije k výběru záznamy ze zdroje dat SQL. Na první záznam vybrané (pokud existuje) je aktuální záznam. Hodnoty polí tento záznam jsou uložené v objektu sady záznamů pole datových členů. Pokud nebyly vybrány žádné záznamy, jak `IsBOF` a `IsEOF` členské funkce vrátí 0.  
+ Volání `Open` používá k výběru záznamů ze zdroje dat SQL. První záznam (pokud existuje) je aktuální záznam. Hodnoty polí tento záznam se ukládají v objektu pole datových členů. Pokud nebyly vybrány žádné záznamy, jak `IsBOF` a `IsEOF` členské funkce vrátí 0.  
   
- Ve vašem [otevřete](../../mfc/reference/crecordset-class.md#open) volání, můžete:  
+ Ve vaší [otevřít](../../mfc/reference/crecordset-class.md#open) volání, můžete:  
   
--   Zadejte, zda je záznamů dynamická sada nebo snímek. Sady záznamů otevřete jako snímky ve výchozím nastavení. Nebo můžete zadat dopředné sady záznamů, které umožňují pouze posouvání vpřed, jeden záznam současně.  
+-   Zadejte, jestli je sada záznamů dynamická sada nebo snímku. Ve výchozím nastavení otevírat jako snímky sady záznamů. Nebo můžete zadat dopředné sady záznamů, což umožňuje posouváním pouze vpřed, jeden záznam v čase.  
   
-     Ve výchozím nastavení, používá výchozí typ uložené v sada záznamů `CRecordset` – datový člen **m_nDefaultType**. Průvodci napsat kód pro inicializaci **m_nDefaultType** typ sady záznamů, vyberte v průvodci. Místo přijetí toto výchozí nastavení, můžete nahradit jinou sadu záznamů typu.  
+     Ve výchozím nastavení používá sadu záznamů výchozí typ uložený do `CRecordset` datový člen `m_nDefaultType`. Průvodci napsat kód pro inicializaci `m_nDefaultType` typ sady záznamů, vyberte v průvodci. Místo přijímá toto výchozí nastavení, můžete použít jiný typ sady záznamů.  
   
--   Zadejte řetězec, která nahradí výchozí SQL **vyberte** příkaz, který vytváří sadu záznamů.  
+-   Zadejte řetězec, která nahradí výchozí SQL **vyberte** příkaz, který vytvoří sadu záznamů.  
   
--   Zadejte, zda je jen pro čtení, nebo pouze připojení záznamů. Sady záznamů povolit úplnou aktualizaci ve výchozím nastavení, ale můžete omezit, které k přidávání nových záznamů pouze nebo zakážete všechny aktualizace.  
+-   Určete, jestli sady záznamů je jen pro čtení nebo jen pro připojení. Sady záznamů povolit úplnou aktualizaci ve výchozím nastavení, ale můžete omezit, které k přidávání nových záznamů pouze nebo můžete zakázat všechny aktualizace.  
   
- Následující příklad ukazuje, jak otevřít objekt snímek jen pro čtení třídy `CStudentSet`, třídu specifické pro aplikaci:  
+ Následující příklad ukazuje, jak otevřít snímek jen pro čtení objektu třídy `CStudentSet`, třídu specifické pro aplikaci:  
   
-```  
+```cpp  
 // Construct the snapshot object  
 CStudentSet rsStudent( NULL );  
 // Set options if desired, then open the recordset  
@@ -80,39 +80,39 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...  
 ```  
   
- Po zavolání metody **otevřete**, použít členské funkce a data členů objekt pro práci se záznamy. V některých případech můžete chtít requery nebo aktualizovat sadu záznamů o změnách, k nimž došlo na datovém zdroji. Další informace najdete v tématu [sada záznamů: opětovné spuštění dotazu sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).  
+ Po zavolání `Open`, můžete členské funkce a datovým členům objektu práci se záznamy. V některých případech můžete chtít spustit dotaz nebo aktualizovat sadu záznamů na změny, ke kterým došlo ve zdroji dat. Další informace najdete v tématu [sada záznamů: opětovné spuštění dotazu sadu záznamů (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).  
   
 > [!TIP]
->  Připojovací řetězec, který použijete při vývoji nemusí být stejný řetězec připojení, který případné uživatelé potřebovat. Zobecňování vaší aplikace v tomto ohledu, najdete v části [zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
+>  Připojovací řetězec, který můžete použít při vývoji nemusí být stejný řetězec připojení, který konečné uživatelé potřebují. Zobecňování vaší aplikace v tomto ohledu, naleznete v tématu [zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
 ##  <a name="_core_setting_recordset_options"></a> Nastavení možností sady záznamů  
- Po sestavení objektu sady záznamů, ale před voláním **otevřete** vybrat záznamy, můžete chtít nastavit některé možnosti řízení chování sady záznamů. Pro všechny sady záznamů můžete:  
+ Po vytvoření objektu sady záznamů, ale před voláním `Open` pro výběr záznamů, můžete chtít nastavit několik možností, které řídí chování sady záznamů. Pro všechny sady záznamů můžete:  
   
--   Zadejte [filtru](../../data/odbc/recordset-filtering-records-odbc.md) omezit výběr záznamů.  
+-   Zadejte [filtr](../../data/odbc/recordset-filtering-records-odbc.md) omezit výběr záznamů.  
   
 -   Zadejte [řazení](../../data/odbc/recordset-sorting-records-odbc.md) pořadí záznamů.  
   
--   Zadejte [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) , můžete vybrat záznamů pomocí informací získaných nebo vypočtených za běhu.  
+-   Zadejte [parametry](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) tak můžete vybírat záznamy pomocí informací o získaných nebo vypočítat v době běhu.  
   
- Můžete také nastavit následující možnost splnění podmínek:  
+ Splnění podmínek, nastavit následující možnost:  
   
--   Pokud sada záznamů je aktualizovat a podporuje možnosti uzamčení, zadejte [uzamčení](../../data/odbc/recordset-locking-records-odbc.md) metodu používanou pro aktualizace.  
+-   Pokud sada záznamů je aktualizovat a podporuje možnosti uzamčení, zadejte [uzamčení](../../data/odbc/recordset-locking-records-odbc.md) metody používané pro aktualizace.  
   
 > [!NOTE]
->  Pokud chcete ovlivnit výběr záznamů, musíte nastavit tyto možnosti před voláním **otevřete** – členská funkce.  
+>  Vliv na výběr záznamu, musíte nastavit tyto možnosti před voláním `Open` členskou funkci.  
   
-##  <a name="_core_closing_a_recordset"></a> Zavírání sady záznamů  
- Až skončíte s sady záznamů, musíte dispose ho a navrátit její paměť.  
+##  <a name="_core_closing_a_recordset"></a> Zavření sady záznamů  
+ Po dokončení sady záznamů, musíte vyřadit a uvolnění paměti.  
   
-#### <a name="to-close-a-recordset"></a>Zavřete sady záznamů  
+#### <a name="to-close-a-recordset"></a>Zavřete sadu záznamů  
   
-1.  Volání jeho [Zavřít](../../mfc/reference/crecordset-class.md#close) – členská funkce.  
+1.  Volat jeho [Zavřít](../../mfc/reference/crecordset-class.md#close) členskou funkci.  
   
 2.  Zničte objekt sady záznamů.  
   
-     Pokud deklarovaný na rámec zásobníku funkce, objekt automaticky zničen při opuštění oboru. Jinak použijte **odstranit** operátor.  
+     Pokud jsou deklarovány v rámci zásobníku funkce, objekt je zničen automaticky, když objekt dostane mimo rozsah. Jinak použijte **odstranit** operátor.  
   
- **Zavřít** uvolní sady záznamů **HSTMT** zpracování. Toto nezničí objekt jazyka C++.  
+ `Close` sady záznamů se uvolní `HSTMT` zpracovat. Tato možnost nezničí objekt jazyka C++.  
   
 ## <a name="see-also"></a>Viz také  
  [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)   

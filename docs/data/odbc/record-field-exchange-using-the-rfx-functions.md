@@ -1,5 +1,5 @@
 ---
-title: 'Výměna polí záznamu: Použití funkcí RFX | Microsoft Docs'
+title: 'Výměna polí záznamu: Použití funkcí RFX | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,38 +21,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f834f9f52c8d01dbd7eb3ff54b794afc11630ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 606e6ecf45b96752b9af7627309a15c353c6b936
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092031"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339285"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Výměna polí záznamu: Použití funkcí RFX
-Toto téma vysvětluje, jak používat funkce RFX, které tvoří tělo vaší `DoFieldExchange` přepsat.  
+Toto téma vysvětluje, jak používat funkce RFX tvořící tělo vaše `DoFieldExchange` přepsat.  
   
 > [!NOTE]
->  Toto téma se vztahuje na třídy odvozené od třídy [CRecordset](../../mfc/reference/crecordset-class.md) v který řádek hromadné načítání se neimplementovala. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné RFX je podobná RFX. Chcete-li pochopit rozdíly, přečtěte si téma [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Toto téma platí pro třídy odvozené od [CRecordset](../../mfc/reference/crecordset-class.md) v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, je implementováno Hromadná výměna pole záznamu (Bulk RFX). Hromadné funkce RFX je podobný RFX. Pokud chcete znát rozdíly, přečtěte si téma [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Globální funkce RFX výměnu dat mezi sloupce na datový zdroj a pole datových členů ve vaší sadě záznamů. Zápis funkce RFX volání do sady záznamů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) – členská funkce. Toto téma popisuje funkce stručně a ukazuje datové typy, pro které RFX funkce jsou k dispozici. [Technická poznámka 43](../../mfc/tn043-rfx-routines.md) popisuje, jak napsat vlastní funkce RFX pro další datové typy.  
+ Globální funkce RFX výměnu dat mezi sloupce na datový zdroj a pole datové členy do sady záznamů. Zápis funkce RFX volá ve vaší sadě záznamů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) členskou funkci. Toto téma stručně popisuje funkce a jsou uvedeny datové typy, pro které RFX funkce jsou k dispozici. [Technická poznámka 43](../../mfc/tn043-rfx-routines.md) popisuje, jak psát vlastní funkce RFX pro další datové typy.  
   
 ##  <a name="_core_rfx_function_syntax"></a> Syntaxe funkce RFX  
- Jednotlivé funkce RFX přijímá tři parametry (a některé si volitelný parametr čtvrtý nebo pátý):  
+ Každá funkce RFX přijímá tři parametry (a některé provést volitelný parametr čtvrtého nebo pátého):  
   
--   Ukazatel [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objektu. Jednoduše předáte `pFX` ukazatel předaný `DoFieldExchange`.  
+-   Ukazatel [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objektu. Jednoduše předáte `pFX` předán ukazatel `DoFieldExchange`.  
   
--   Název sloupce tak, jak se zobrazí na datovém zdroji.  
+-   Název sloupce tak, jak se objeví ve zdroji dat.  
   
--   Název odpovídající pole datových členů nebo parametr datového člena ve třídě sady záznamů.  
+-   Název odpovídající pole datový člen nebo parametr datový člen ve třídě sady záznamů.  
   
--   (Volitelné) V některých funkcí, maximální délka řetězce nebo pole přenosu. Toto výchozí nastavení 255 bajtů, ale chcete ho změnit. Maximální velikost je založena na maximální velikost `CString` objektu – **INT_MAX** (2 147 483 647) bajtů – ale pravděpodobně narazíte na omezení ovladače před této velikosti.  
+-   (Volitelné) V některých funkcí, maximální délka řetězce nebo pole přenosu. Výchozí hodnota 255 bajtů, ale můžete ho změnit. Maximální velikost je založena na maximální velikost `CString` objektu – **INT_MAX** bajtů (2 147 483 647) – ale pravděpodobně narazíte na omezení ovladače před této velikosti.  
   
--   (Volitelné) V `RFX_Text` funkce, se někdy používá pátý parametr k určení datový typ sloupce.  
+-   (Volitelné) V `RFX_Text` funkci, někdy vám pátého parametru zadejte datový typ sloupce.  
   
- Další informace najdete v tématu v části funkce RFX [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *knihovny tříd*. Pro příklad, kdy budete chtít vytvořit speciální používání parametrů naleznete v tématu [sada záznamů: získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
+ Další informace najdete v tématu funkce RFX pod [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *knihovny tříd*. Když budete chtít vytvořit zvláštní příklad použití těchto parametrů naleznete v tématu [sada záznamů: získávání součtů a jiných agregačních výsledků (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a> RFX datové typy  
- Knihovna tříd poskytuje funkce RFX pro přenos mezi zdroji dat a vaše sady záznamů mnoha různými datovými typy. Následující seznam shrnuje funkce RFX podle datového typu. V případech, kdy musíte napsat vlastní funkce RFX vyberte z těchto funkcí podle datového typu.  
+##  <a name="_core_rfx_data_types"></a> Typy dat RFX  
+ Knihovna tříd poskytuje funkce RFX pro přenos mnoho různých typů dat mezi zdrojem dat a sadě záznamů. Následující seznam shrnuje funkce RFX podle datového typu. V případech, kdy musíte napsat vlastní volání funkcí RFX vyberte z těchto funkcí podle datového typu.  
   
 |Funkce|Datový typ|  
 |--------------|---------------|  
@@ -61,17 +61,17 @@ Toto téma vysvětluje, jak používat funkce RFX, které tvoří tělo vaší `
 |`RFX_Binary`|`CByteArray`|  
 |`RFX_Double`|**double**|  
 |`RFX_Single`|**float**|  
-|`RFX_Int`|`int`|  
+|`RFX_Int`|**int**|  
 |`RFX_Long`|**long**|  
 |`RFX_LongBinary`|`CLongBinary`|  
 |`RFX_Text`|`CString`|  
 |`RFX_Date`|`CTime`|  
   
 
- Další informace najdete v dokumentaci funkce RFX v [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *knihovny tříd*. Informace o mapování datové typy C++ do datových typů SQL, najdete v tabulce datových typů ANSI SQL na datové typy C++ v [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
+ Další informace najdete v dokumentaci funkce RFX v [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *knihovny tříd*. Informace o mapování datových typů jazyka C++ na datové typy SQL najdete v tabulce datové typy ANSI SQL na datové typy jazyka C++ v [SQL: SQL a datové typy C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
+ [Výměna polí záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [Výměna polí záznamu: Jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md)   
  [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
  [Sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   

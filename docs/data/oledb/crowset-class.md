@@ -211,7 +211,7 @@ f1_keywords:
 - CRowset<TAccessor>.UpdateAll
 - ATL.CRowset<TAccessor>.UpdateAll
 - UpdateAll
-- CRowset.UpdateAll
+- CRowset.UpdateAl
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d65f9c7c796724a77935693690ac73357867dab0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233513"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338230"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 Zapouzdřuje objektu sady řádků OLE DB a několika související rozhraní a poskytuje metody zpracování pro datové sady řádků.  
@@ -266,7 +266,7 @@ template <class TAccessor = CAccessorBase>
 class CRowset  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TAccessor*  
  Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
   
@@ -316,7 +316,6 @@ Volání [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx)
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -332,7 +331,6 @@ Uvolní řádků a aktuální [IRowset](https://msdn.microsoft.com/library/ms720
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -373,7 +371,7 @@ Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) [IRowset](http
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-      CRowset();   
+CRowset();   
 
 CRowset(IRowset* pRowset);  
 ```  
@@ -389,7 +387,6 @@ Volání [IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362
   
 ```cpp
 HRESULT Delete() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -402,7 +399,7 @@ Vyhledá další odpovídající řádek po zadanou záložkou.
   
 ```cpp
 HRESULT FindNextRow(DBCOMPAREOP op,   
-  BYTE* pData,   
+   BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
@@ -481,7 +478,6 @@ Načte data z dané sadě řádků kopii řádku.
 ```cpp
 HRESULT GetData() throw();   
 
-
 HRESULT GetData(int nAccessor) throw();  
 ```  
   
@@ -502,7 +498,7 @@ Načte data z aktuální řádek a umístí jej do zadané vyrovnávací paměti
   
 ```cpp
 HRESULT GetDataHere(int nAccessor,   
-  void* pBuffer) throw();  
+   void* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -525,7 +521,6 @@ Volání `IRowsetUpdate::GetOriginalData` k načtení dat naposledy načtených 
   
 ```cpp
 HRESULT GetOriginalData() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -610,7 +605,6 @@ Přesune kurzor počáteční pozice a načte počáteční řádek.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -626,7 +620,6 @@ Přesune kurzor na poslední řádek.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -643,7 +636,9 @@ Přesune kurzor na další záznam.
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp
-HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,   
+HRESULT MoveNext() throw();
+
+HRESULT MoveNext(LONG lSkip,   
    bool bForward= true) throw();  
 ```  
   
@@ -675,7 +670,6 @@ Přesune kurzor na předchozí záznam.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -748,7 +742,6 @@ Volání [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx
   
 ```cpp
 HRESULT ReleaseRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -761,7 +754,6 @@ Nastaví hodnoty dat do jednoho nebo více sloupců řádků.
   
 ```cpp
 HRESULT SetData() const throw();   
-
 
 HRESULT SetData(int nAccessor) const throw();  
 ```  

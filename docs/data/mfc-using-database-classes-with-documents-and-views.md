@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Použití databázových tříd s dokumenty a zobrazeními | Microsoft Docs'
+title: 'MFC: Použití databázových tříd s dokumenty a zobrazeními | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,58 +25,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fcaee376b53c1d592f02aafc830a35d72f64feeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 527de152f7eea9e71cb38a9ca2f51e15803df337
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091865"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337044"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Použití databázových tříd s dokumenty a zobrazeními
-Databázové třídy MFC můžete použít s nebo bez architektuře dokument/zobrazení. Toto téma klade důraz práce s dokumenty a zobrazení. Vysvětluje:  
+MFC – databázové třídy můžete použít i bez architekturu document/view. Toto téma zvýrazňuje práci s dokumenty a zobrazeními. Vysvětluje:  
   
--   [Tom, jak psát aplikace založené na formulářích](#_core_writing_a_form.2d.based_application) pomocí `CRecordView` objektu jako hlavní zobrazení v dokumentu.  
+-   [Postup při psaní aplikace založené na formulářích](#_core_writing_a_form.2d.based_application) pomocí `CRecordView` objektu jako hlavní zobrazení v dokumentu.  
   
--   [Jak používat objekty sady záznamů ve své dokumenty a zobrazení](#_core_using_recordsets_in_documents_and_views).  
+-   [Jak používat objekty sady záznamů v dokumentů a zobrazení](#_core_using_recordsets_in_documents_and_views).  
   
--   [Další důležité informace](#_core_other_factors).  
+-   [Ostatní úvahy](#_core_other_factors).  
   
- Alternativy naleznete v tématu [MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md).  
+ Alternativy, naleznete v tématu [knihovny MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md).  
   
-##  <a name="_core_writing_a_form.2d.based_application"></a> Zápis k aplikaci založené na formulářích  
- Mnoho aplikací přístup k datům jsou založené na formulářích. Uživatelské rozhraní je formulář obsahující ovládací prvky, ve kterých uživatel prověří, zadá nebo upravuje data. Aby aplikace formulář na základě použití třídy `CRecordView`. Po spuštění Průvodce aplikací knihovny MFC a vyberte **ODBC** typ klienta na **podpory databáze** stránka, projektu používá `CRecordView` pro třídu zobrazení.
+##  <a name="_core_writing_a_form.2d.based_application"></a> Zápis aplikace založené na formulářích  
+ Mnoho přístup k datům aplikací jsou založené na formulářích. Uživatelské rozhraní je formulář obsahující ovládací prvky, ve kterých uživatel prověří, zadá nebo upravuje data. Chcete-li vaše založené na formuláři aplikace, použijte třídu `CRecordView`. Když spustíte Průvodce aplikací knihovny MFC a vyberete **ODBC** typu klienta na **Podpora databáze** stránky, že projekt používá `CRecordView` pro danou třídu zobrazení.
   
- V aplikaci založené na formulářích, každý objekt zobrazení záznamu ukládá ukazatel na `CRecordset` objektu. V rámci pole záznamu (exchange – RFX) Frameworku výměny dat mezi sady záznamů a zdroj dat. Výměna dialogových dat (DDX) mechanismus výměnu dat mezi pole datových členů objektu sady záznamů a ovládací prvky na formuláři. `CRecordView` také poskytuje výchozí funkce obslužné rutiny příkazů pro navigaci mezi záznamy na formuláři.  
+ V aplikaci založené na formulářích, každý objekt zobrazení záznamu ukládá ukazatel `CRecordset` objektu. V rámci pole záznamu (RFX) systému exchange Frameworku vyměňuje data mezi sady záznamů a zdrojem dat. Výměna dialogových dat (DDX) mechanismus výměnu dat mezi datové členy polí objekt sady záznamů a ovládacích prvků na formuláři. `CRecordView` také poskytuje výchozí funkce obslužné rutiny příkazů pro navigaci mezi záznam ve formuláři.  
   
- Vytvoření aplikace založené na formulářích pomocí Průvodce aplikací, najdete v části [vytváření aplikací MFC založených na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) a [Podpora databáze, Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
+ Vytvoření aplikace založené na formulářích pomocí Průvodce aplikací najdete v tématu [vytvoření aplikace MFC založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) a [Podpora databáze, Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
- Úplné informace o formulářích, najdete v části [zobrazení záznamů](../data/record-views-mfc-data-access.md).  
+ Úplnou diskusi o formuláře, naleznete v tématu [zobrazení záznamů](../data/record-views-mfc-data-access.md).  
   
 ##  <a name="_core_using_recordsets_in_documents_and_views"></a> Použití sad záznamů v dokumentů a zobrazení  
- Mnoho jednoduché aplikace založené na formulářích nemusí dokumenty. Pokud vaše aplikace je složitější, budete pravděpodobně chtít použít dokument jako proxy server pro databázi, ukládání `CDatabase` objekt, který se připojuje ke zdroji dat. Aplikace založené na formulářích obvykle ukládají ukazatel na objekt sady záznamů v zobrazení. Jiné druhy databázových aplikací uložení sady záznamů a `CDatabase` objektu v dokumentu. Zde jsou některé možnosti pro použití v databázových aplikacích dokumentů:  
+ Mnoho jednoduché aplikace založené na formulářích nemusí dokumenty. Pokud vaše aplikace je složitější, budete pravděpodobně chtít použít dokumentu jako proxy server pro databázi, ukládání `CDatabase` objekt, který se připojuje ke zdroji dat. Aplikace založené na formulářích obvykle ukládají ukazatel na objekt sady záznamů v zobrazení. Uložení sady záznamů jiných typů databázových aplikací a `CDatabase` objektu v dokumentu. Zde jsou některé možnosti pro práci s dokumenty v databázové aplikace:  
   
--   Pokud se připojujete záznamů v místní kontextu, vytvořte `CRecordset` objekt místně v členské funkce dokumentu nebo zobrazení, podle potřeby.  
+-   Při přístupu k sadě záznamů v rámci místní, vytvořit `CRecordset` objektu místně v členské funkce dokumentu nebo zobrazení, podle potřeby.  
   
-     Objekt sady záznamů deklarujte jako místní proměnné ve funkci. Předat **NULL** do konstruktoru, což způsobí, že rozhraní k vytváření a otevírání dočasného `CDatabase` objektu za vás. Jako alternativu můžete předat ukazatel `CDatabase` objektu. Pomocí sady záznamů v rámci funkce a nechte jej ukončit automaticky při ukončení funkce.  
+     Objekt sady záznamů deklarujte jako místní proměnná ve funkci. Předat hodnotu NULL do konstruktoru, což způsobí, že rozhraní k vytváření a otevírání dočasný `CDatabase` objekt za vás. Jako alternativu můžete předat ukazatel `CDatabase` objektu. Pomocí sady záznamů v rámci této funkce a ten automaticky zničeny při ukončení funkce.  
   
-     Pokud předáte **NULL** do konstruktoru sady záznamů rozhraní používá informace vrácené sady záznamů `GetDefaultConnect` – členská funkce k vytvoření `CDatabase` objektu a otevřete ji. Průvodci implementují `GetDefaultConnect` za vás.  
+     Při předání hodnoty NULL do konstruktoru sady záznamů rozhraní používá informace o vrácené sady záznamů `GetDefaultConnect` členské funkci, která vytvoří `CDatabase` objektu a otevřete ho. Průvodci implementují `GetDefaultConnect` za vás.  
   
--   Pokud přistupujete k sadě záznamů během platnosti dokumentu, vložte jeden nebo více `CRecordset` objekty v dokumentu.  
+-   Při přístupu k sadě záznamů po celou dobu životnosti dokumentu, vložit jeden nebo více `CRecordset` objektů v dokumentu.  
   
-     Při inicializaci dokumentu nebo podle potřeby vytvořte objekty sady záznamů. Můžete napsat funkci, která vrací ukazatel na sadu záznamů, pokud již existuje nebo vytvoří a otevře sadu záznamů, pokud není ještě neexistuje. Zavřete, odstranit a znovu vytvořit sadu záznamů podle potřeby nebo volání jeho **Requery –** – členská funkce k aktualizaci záznamů.  
+     Objekty sady záznamů je možné vytvořte při inicializaci dokumentu nebo podle potřeby. Můžete například napsat funkci, která vrací ukazatel na sadu záznamů, pokud již existuje nebo vytvoří a otevře sadu záznamů, pokud ho ještě neexistuje. Zavřete, odstranit a podle potřeby znovu vytvořit sadu záznamů nebo volat jeho `Requery` členskou funkci k aktualizaci záznamů.  
   
--   Při přístupu ke zdroji dat během platnosti dokumentu, Vložit `CDatabase` objektu nebo uložte ukazatel `CDatabase` objektu v ní.  
+-   Při přístupu ke zdroji dat po celou dobu životnosti dokumentu, vložení `CDatabase` objekt nebo ukazatel na ukládání `CDatabase` objektu v něm.  
   
-     `CDatabase` Připojení ke zdroji dat spravuje objektu. Objekt je automaticky vytvořen během vytváření dokumentu a volání jeho **otevřete** – členská funkce při inicializaci dokumentu. Když vytváříte objekty sady záznamů v dokumentu členské funkce, předáte ukazatel v dokumentu `CDatabase` objektu. To přidruží zdrojem dat pro každou sadu záznamů. Objekt databáze je obvykle zničen při zavření dokumentu. Objekty sady záznamů jsou obvykle zničený, když opustí rozsah funkce.  
+     `CDatabase` Spravuje připojení ke zdroji dat objektu. Objekt je vytvořen automaticky při vytváření dokumentu a volání jeho `Open` členské funkce při inicializaci dokumentu. Při vytváření objektů sady záznamů v dokumentu členské funkce předat ukazatel dokument `CDatabase` objektu. To spojí každá sada záznamů s jeho zdrojovými daty. Databázový objekt je zničen obvykle při zavření dokumentu. Objekty sady záznamů jsou obvykle zničeny, když opustí rozsah funkce.  
   
 ##  <a name="_core_other_factors"></a> Další faktory  
- Aplikace založené na formulářích často nemají jakékoli použití pro rozhraní framework mechanismu serializace dokumentu, takže můžete chtít odebrat, zakázat nebo nahradit `New` a **otevřete** příkazy **soubor**nabídky. Najdete v článku [serializace: Serializace vs. Databáze vstupu a výstupu](../mfc/serialization-serialization-vs-database-input-output.md).  
+ Aplikace založené na formulářích často nemají jakékoli použití pro mechanismus serializace v rámci dokumentu, proto je vhodné k odebrání, zakázání nebo nahradit **nový** a **otevřít** příkazy na **Souboru** nabídky. Přečtěte si článek [serializace: Serializace vs. Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).  
   
- Můžete také provést použití mnoha možnosti uživatelského rozhraní, které podporují rozhraní. Například můžete použít více `CRecordView` objektů v rozděleném okně, otevřete více sad záznamů v různých více dokumentů (MDI) rozhraní podřízená okna a tak dále.  
+ Můžete také provést mnoho možností uživatelského rozhraní, které může podporovat rozhraní framework. Například můžete použít více `CRecordView` objekty v okno s rozdělovačem, otevřete více sad záznamů v různých více dokumentů (MDI) interface podřízená okna a tak dále.  
   
- Můžete chtít implementovat tisk bez ohledu zobrazení, jestli je implementováno formuláře s `CRecordView` nebo něco jiného. Odvozené třídy z `CFormView`, `CRecordView` nemá nepodporuje tisk, ale můžete přepsat `OnPrint` – členská funkce má povolit tisk. Další informace najdete v tématu třídy [CFormView](../mfc/reference/cformview-class.md).  
+ Může být potřeba implementovat tisk cokoli, co je v zobrazení, ať už jde o formulář implementuje pomocí `CRecordView` nebo něco jiného. Odvozené třídy z `CFormView`, `CRecordView` nemá nepodporuje tisk, ale můžete přepsat `OnPrint` členské funkce má povolit tisk. Další informace najdete v tématu třídy [CFormView](../mfc/reference/cformview-class.md).  
   
- Možná budete chtít vůbec používat dokumentů a zobrazení. V takovém případě najdete v části [MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md).  
+ Možná budete chtít vůbec používat dokumentů a zobrazení. V takovém případě naleznete v tématu [knihovny MFC: použití třídy databáze bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Třídami databází MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+ [MFC – databázové třídy (.. / data/mfc-database-classes-odbc-and-dao.md)

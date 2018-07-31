@@ -1,5 +1,5 @@
 ---
-title: 'Zdroj dat: Správa připojení (ODBC) | Microsoft Docs'
+title: 'Zdroj dat: Správa připojení (ODBC) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,78 +29,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 100c06773a8f0ffa79631339384bd4ec42fa4b52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e60a7b03c34106a51ed87269521524ef5889f9cf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091826"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339477"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Zdroj dat: Správa připojení (ODBC)
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
   
  Toto téma vysvětluje:  
   
--   [Postup konfigurace zdroje dat](#_core_configuring_a_data_source).  
+-   [Konfigurace zdroje dat](#_core_configuring_a_data_source).  
   
--   [Jak ovlivňuje prostředí s více uživateli zdrojem dat a jeho sady záznamů](#_core_working_in_a_multiuser_environment).  
+-   [Jak ovlivňuje víceuživatelské prostředí zdroj dat a jeho sady záznamů](#_core_working_in_a_multiuser_environment).  
   
--   [Proč zobecnit řetězec připojení ke zdroji dat](#_core_generalizing_the_connection_string).  
+-   [Proč zobecnit připojovací řetězec pro zdroj dat](#_core_generalizing_the_connection_string).  
   
 -   [Jak se připojit ke zdroji dat](#_core_connecting_to_a_specific_data_source).  
   
 -   [Jak se odpojit od zdroje dat](#_core_disconnecting_from_a_data_source).  
   
--   [Jak znovu použít objekt CDatabase](#_core_reusing_a_cdatabase_object).  
+-   [Postup opětovné použití objektu CDatabase](#_core_reusing_a_cdatabase_object).  
   
- Připojení ke zdroji dat znamená navazování komunikace s databázového systému pro přístup k datům. Při připojení ke zdroji dat z aplikace prostřednictvím ovladače ODBC ovladač navázalo připojení, místně nebo v síti.  
+ Připojení ke zdroji dat znamená navázání komunikací se systémem DBMS pro přístup k datům. Když se připojíte ke zdroji dat z aplikace prostřednictvím ovladače rozhraní ODBC, ovladač díky spojení za vás, místně nebo v síti.  
   
- Můžete připojit k libovolnému zdroji dat, pro které máte ovladače ODBC. Stejné ovladač ODBC pro jejich zdroje dat musí mít také uživatelů vaší aplikace. Další informace o redistribuci ovladačů ODBC najdete v tématu [Redistribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
+ Můžete připojit k libovolnému zdroji dat, pro který máte ovladač rozhraní ODBC. Uživatelům vaší aplikace musí mít také stejný ovladač rozhraní ODBC pro svůj zdroj dat. Další informace o redistribuci ovladačů rozhraní ODBC naleznete v tématu [Redistribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
   
 ##  <a name="_core_configuring_a_data_source"></a> Konfigurace zdroje dat  
- Správce rozhraní ODBC slouží ke konfiguraci zdroje dat. Můžete taky správce rozhraní ODBC po instalaci k přidání nebo odebrání datových zdrojů. Při vytváření aplikace, můžete nasměrovat uživatele pro správce rozhraní ODBC pro přidání zdroje dat nebo tuto funkci do své aplikace můžete vytvořit tak, že přímé volání rozhraní ODBC instalace. Další informace najdete v tématu [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md).  
+ Správce rozhraní ODBC se používá ke konfiguraci zdroje dat. Správce rozhraní ODBC můžete také použít po instalaci k přidání nebo odebrání zdroje dat. Při vytváření aplikací můžete nasměrovat uživatele na správce rozhraní ODBC a umožnit jim přidat zdroje dat nebo můžete začlenit tuto funkcionalitu do aplikace vytvořením přímého volání instalace rozhraní ODBC. Další informace najdete v tématu [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md).  
   
- Soubor aplikace Excel můžete použít jako zdroj dat a je nutné nakonfigurovat souboru tak, aby je zaregistrován a zobrazí se v **vybrat zdroj dat** dialogové okno.  
+ Soubor aplikace Excel můžete použít jako zdroj dat a je potřeba nakonfigurovat soubor tak, aby byl zaregistrován a zobrazí se v **vybrat zdroj dat** dialogové okno.  
   
 #### <a name="to-use-an-excel-file-as-a-data-source"></a>Chcete-li použít soubor aplikace Excel jako zdroj dat  
   
-1.  Konfigurace souboru s správce zdrojů dat ODBC.  
+1.  Nakonfigurujte soubor pomocí Správce zdrojů dat ODBC.  
   
-2.  Na **souborové DSN** , klikněte na **přidat**.  
+2.  Na **DSN souboru** klikněte na tlačítko **přidat**.  
   
-3.  V **vytvořit nový zdroj dat** dialogové okno, vyberte ovladač aplikace Excel a pak klikněte na tlačítko **Další**.  
+3.  V **vytvořit nový zdroj dat** dialogovém okně vyberte ovladač aplikace Excel a potom klikněte na tlačítko **Další**.  
   
 4.  Klikněte na tlačítko **Procházet**a vyberte název souboru, který se použije jako zdroj.  
   
 > [!NOTE]
->  Možná budete muset vybrat možnost **všechny soubory** v rozevírací nabídky k zobrazení souborů .xls.  
+>  Musíte vybrat **všechny soubory** v rozevírací nabídce pro zobrazení .xls souborů.  
   
-1.  Klikněte na tlačítko **Další**a potom klikněte na **Dokončit**.  
+1.  Klikněte na tlačítko **Další**a potom klikněte na tlačítko **Dokončit**.  
   
-2.  V **nastavení rozhraní ODBC Microsoft Excel** dialogovém okně vyberte verzi a databáze sešitu.  
+2.  V **nastavení rozhraní ODBC Microsoft Excel** dialogového okna, vyberte verzi a sešit databáze.  
   
-##  <a name="_core_working_in_a_multiuser_environment"></a> Práce v prostředí s více uživateli  
- Pokud více uživatelů připojení ke zdroji dat, data můžou změnit při manipulaci se ve vaší sady záznamů. Podobně změny může ovlivnit sady záznamů jiných uživatelů. Další informace najdete v tématu [sada záznamů: Jak sady záznamů aktualizace záznamů (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) a [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
+##  <a name="_core_working_in_a_multiuser_environment"></a> Práce ve víceuživatelském prostředí  
+ Pokud více uživatelů připojeno ke zdroji dat, mohou změnit data, zatímco manipulujete v sadě záznamů. Podobně mohou změny ovlivnit sady záznamů jiných uživatelů. Další informace najdete v tématu [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) a [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 ##  <a name="_core_generalizing_the_connection_string"></a> Zobecňování připojovacího řetězce  
- Průvodce použijte k navázání připojení ke zdroji dat výchozí připojovací řetězec. Toto připojení slouží k zobrazení tabulky a sloupce při vývoji aplikace. Tento výchozí připojovací řetězec však nemusí být vhodné pro vaši uživatelé připojení ke zdroji dat prostřednictvím vaší aplikace. Pro zdroje dat a cestu k umístění, kde může být například liší od verze použité při vývoji aplikace. V takovém případě by měl přeimplementovat [CRecordset::GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) člen funkce více obecné podoby a odstranit implementaci průvodcem. Například použijte jednu z následujících postupů:  
+ Průvodce používá výchozí propojovací řetězec k navázání připojení ke zdroji dat. Toto připojení použijete k zobrazení tabulky a sloupce, zatímco vyvíjíte aplikaci. Tento výchozí připojovací řetězec však nemusí být vhodný pro připojení vašich uživatelů ke zdroji dat prostřednictvím vaší aplikace. Například jejich zdroj dat a cesta k umístění může lišit od identifikátoru použitému při vývoji vaší aplikace. V takovém případě měli znovu implementovat [CRecordset::GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) členské funkce v obecnější podoby a odstranit implementaci průvodce. Například použijte jednu z následujících postupů:  
   
--   Registrovat a spravovat připojovací řetězce, pomocí Správce rozhraní ODBC.  
+-   Registrace a správa připojovacích řetězců pomocí Správce rozhraní ODBC.  
   
--   Upravit připojovací řetězec a název zdroje dat odeberte. Poskytuje rozhraní ODBC jako zdroj dat; v době běhu ODBC zobrazí dialogové okno s dotazem pro názvem a všechny ostatní požadované připojení zdroje dat.  
+-   Upravit připojovací řetězec a odeberte název datového zdroje. Architektura dodává rozhraní ODBC jako zdroj dat; v době běhu zobrazí dialogové okno s dotazem pro název a všechny ostatní požadované připojení zdroje dat rozhraní ODBC.  
   
--   Zadejte název zdroje dat pouze. Rozhraní ODBC požádá o ID uživatele a heslo, pokud je to nutné. Před generalizací, například připojovací řetězec vypadat třeba takto:  
+-   Zadejte název zdroje dat pouze. Rozhraní ODBC požádá o ID uživatele a heslo, pokud je to nutné. Například před zobecněním připojovací řetězec vypadá takto:  
   
-    ```  
+    ```cpp  
     CString CApp1Set::GetDefaultConnect()  
     {  
        return "ODBC;DSN=afx;Trusted_Connection=Yes;";  
     }  
     ```  
   
-     Tento připojovací řetězec určuje důvěryhodné připojení, která používá integrované zabezpečení Windows NT. Neměli byste, nezakódovávejte heslo nebo zadáte prázdné heslo, protože tím vytvoří slabá místa zabezpečení hlavní. Místo toho můžete poskytnout `GetDefaultConnect` nový připojovací řetězec tak, že požádá o ID uživatele a heslo.  
+     Tento připojovací řetězec určuje důvěryhodné připojení, která používá Windows NT integrované zabezpečení. Měli byste se vyhnout pevně kódováno pomocí hesla nebo zadání prázdného hesla, protože se tím vytvoří slabým zabezpečením. Místo toho můžete poskytnout `GetDefaultConnect` nový připojovací řetězec tak, aby se dotázal na ID uživatele a heslo.  
   
-    ```  
+    ```cpp  
     // User must select data source and supply user ID and password:  
         return "ODBC;";  
     // User ID and password required:  
@@ -111,34 +111,34 @@ Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";  
     ```  
   
-##  <a name="_core_connecting_to_a_specific_data_source"></a> Připojování ke konkrétní zdroj dat.  
- Pro připojení ke zdroji konkrétní data, zdroje dat musí již být nakonfigurován se [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md).  
+##  <a name="_core_connecting_to_a_specific_data_source"></a> Připojení ke konkrétnímu zdroji dat  
+ Pokud chcete připojit ke konkrétnímu zdroji dat, zdroji dat musí již být nakonfigurován se [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md).  
   
-#### <a name="to-connect-to-a-specific-data-source"></a>Pro připojení k konkrétní zdroj dat.  
+#### <a name="to-connect-to-a-specific-data-source"></a>K připojení ke konkrétnímu zdroji dat  
   
-1.  Vytvořit `CDatabase` objektu.  
+1.  Vytvoření `CDatabase` objektu.  
   
-2.  Volání jeho `OpenEx` nebo **otevřete** – členská funkce.  
+2.  Volat jeho `OpenEx` nebo `Open` členskou funkci.  
   
- Další informace o tom, jak zadat zdroj dat, pokud je jiný než ten, který jste zadali pomocí průvodce najdete v tématu [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) nebo [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) v *MFC Referenční dokumentace*.  
+ Další informace o způsobu určení zdroje dat, pokud je jiný než ten, který jste zadali pomocí průvodce najdete v tématu [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) nebo [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) v *knihovny MFC Referenční dokumentace*.  
   
 ##  <a name="_core_disconnecting_from_a_data_source"></a> Odpojení od zdroje dat  
- Je nutné zavřít všechny otevřené sady záznamů před voláním **zavřete** členské funkce `CDatabase`. V sadách záznamů přidružené `CDatabase` objektu, kterou chcete zavřít, všechny čekající `AddNew` nebo **upravit** došlo ke zrušení příkazů a všechny čekající transakce jsou vráceny zpět.  
+ Je nutné zavřít všechny otevřené sady záznamů před zavoláním funkce `Close` členskou funkci `CDatabase`. V přidružené sadě záznamů s `CDatabase` objektu, kterou chcete zavřít všechny čekající `AddNew` nebo `Edit` zrušení příkazů a všechny čekající transakce jsou vrácena zpět.  
   
 #### <a name="to-disconnect-from-a-data-source"></a>Odpojení od zdroje dat  
   
-1.  Volání `CDatabase` objektu [Zavřít](../../mfc/reference/cdatabase-class.md#close) – členská funkce.  
+1.  Volání `CDatabase` objektu [Zavřít](../../mfc/reference/cdatabase-class.md#close) členskou funkci.  
   
-2.  Objekt zrušte, pokud chcete znovu použít.  
+2.  Zničte objekt, pokud chcete znovu použít.  
   
 ##  <a name="_core_reusing_a_cdatabase_object"></a> Opětovné použití objektu CDatabase  
- Můžete opakovaně použít `CDatabase` objektu po odpojení od toho, zda používat se připojit ke stejnému zdroji dat nebo se připojit k jinému zdroji dat.  
+ Můžete opakovaně použít `CDatabase` objektu po odpojení od ho, ať už používáte ho chcete znovu připojit ke stejnému zdroji dat nebo se připojit k jinému zdroji dat.  
   
-#### <a name="to-reuse-a-cdatabase-object"></a>Chcete-li znovu použít objekt CDatabase  
+#### <a name="to-reuse-a-cdatabase-object"></a>Pro opětovné použití objektu CDatabase  
   
-1.  Zavřete původní připojení k objektu.  
+1.  Ukončete původní připojení objektu.  
   
-2.  Namísto zničení objektu volat jeho `OpenEx` nebo **otevřete** – členská funkce znovu.  
+2.  Namísto zničení objektu zavolejte jeho `OpenEx` nebo `Open` členskou funkci znovu.  
   
 ## <a name="see-also"></a>Viz také  
  [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)   
