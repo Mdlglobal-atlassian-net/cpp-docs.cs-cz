@@ -1,5 +1,5 @@
 ---
-title: multimap (STL/CLR) | Microsoft Docs
+title: multimap (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -107,15 +107,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 0dcbab8f6ced483c54b7eb3efed68efacd60c858
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079717"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376219"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `multimap` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
+Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `multimap` , spravovat řadu prvků, jako větve (téměř) s vyrovnáváním seřazených uzlů, každý ukládání jeden element. Element se skládá z klíče pro seřazení, pořadí a mapované hodnoty, které nenastane pravé.  
   
  V popisu níže `GValue` je stejný jako:  
   
@@ -123,13 +123,13 @@ ms.locfileid: "37079717"
   
  kde:  
   
- `GKey` je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je `Key^`  
+ `GKey` je stejný jako *klíč* Pokud je typ odkazu, v takovém případě je `Key^`  
   
- `GMapped` je stejný jako `Mapped` Pokud k tomu je typu ref, v takovém případě je `Mapped^`  
+ `GMapped` je stejný jako *mapované* Pokud je typ odkazu, v takovém případě je `Mapped^`  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class multimap  
@@ -145,11 +145,11 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Key  
- Typ elementu v řízené sekvenci komponenta klíče.  
+ *Key*  
+ Typ klíčovou komponentou elementu v řízené sekvenci.  
   
- Mapovat  
- Typ elementu v řízené sekvenci další součásti.  
+ *mapovat*  
+ Typ elementu v řízené sekvenci další komponenty.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<cliext – / map >  
@@ -162,92 +162,92 @@ template<typename Key,
 |---------------------|-----------------|  
 |[multimap::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|  
 |[multimap::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
-|[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
-|[multimap::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenost mezi dvěma prvky.|  
-|[multimap::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro kontejner.|  
-|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterace pro obecné rozhraní kontejneru.|  
-|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
-|[multimap::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|  
+|[multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|  
+|[multimap::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenosti mezi dvěma prvky.|  
+|[multimap::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|  
+|[multimap::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|  
+|[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|  
+|[multimap::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|  
 |[multimap::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|  
-|[multimap::key_compare (STL/CLR)](#key_compare)|Řazení delegáta pro dva klíče.|  
+|[multimap::key_compare (STL/CLR)](#key_compare)|Pořadí delegáta pro dva klíče.|  
 |[multimap::key_type (STL/CLR)](#key_type)|Typ klíče řazení|  
-|[multimap::mapped_type (STL/CLR)](#mapped_type)|Typ namapované hodnotu přidruženou každý klíč.|  
+|[multimap::mapped_type (STL/CLR)](#mapped_type)|Typ mapované hodnoty přiřazené ke každému klíči.|  
 |[multimap::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
-|[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ zpětné iterator pro řízené sekvenci.|  
-|[multimap::size_type (STL/CLR)](#size_type)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
-|[multimap::value_compare (STL/CLR)](#value_compare)|Řazení delegáta pro dvě hodnoty elementu.|  
+|[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|  
+|[multimap::size_type (STL/CLR)](#size_type)|Typ vzdálenosti (nezáporné) mezi dvěma prvky.|  
+|[multimap::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dvě hodnoty prvků.|  
 |[multimap::value_type (STL/CLR)](#value_type)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|  
 |[multimap::clear (STL/CLR)](#clear)|Odebere všechny prvky.|  
-|[multimap::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[multimap::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadanému klíči.|  
 |[multimap::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[multimap::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|  
 |[multimap::equal_range (STL/CLR)](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|  
 |[multimap::erase (STL/CLR)](#erase)|Odebere prvky v určených pozicích.|  
 |[multimap::find (STL/CLR)](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|  
 |[multimap::insert (STL/CLR)](#insert)|Přidá prvky.|  
-|[multimap::key_comp (STL/CLR)](#key_comp)|Zkopíruje řazení delegáta pro dva klíče.|  
-|[multimap::lower_bound (STL/CLR)](#lower_bound)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
+|[multimap::key_comp (STL/CLR)](#key_comp)|Zkopíruje pořadí delegáta pro dva klíče.|  
+|[multimap::lower_bound (STL/CLR)](#lower_bound)|Vyhledá počátek rozsahu, který odpovídá zadanému klíči.|  
 |[multimap::make_value (STL/CLR)](#make_value)|Vytvoří objekt hodnoty.|  
 |[multimap::multimap (STL/CLR)](#multimap)|Sestaví objekt kontejneru.|  
-|[multimap::rbegin (STL/CLR)](#rbegin)|Označuje začátek odstínech řízené sekvenci.|  
-|[multimap::rend (STL/CLR)](#rend)|Označuje konec odstínech řízené sekvenci.|  
+|[multimap::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|  
+|[multimap::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|  
 |[multimap::size (STL/CLR)](#size)|Spočítá počet prvků.|  
 |[multimap::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|  
-|[multimap::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
-|[multimap::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadaným klíčem.|  
-|[multimap::value_comp (STL/CLR)](#value_comp)|Zkopíruje řazení delegáta pro dvě hodnoty elementu.|  
+|[multimap::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
+|[multimap::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadanému klíči.|  
+|[multimap::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dvě hodnoty prvků.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[multimap::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvenci.|  
-|[operator!= (multimap) (STL/CLR)](#op_neq)|Určuje, zda `multimap` objekt není rovno jiné `multimap` objektu.|  
-|[operator< (multimap) (STL/CLR)](#op_lt)|Určuje, zda `multimap` objektu je menší než jiná `multimap` objektu.|  
-|[operator<= (multimap) (STL/CLR)](#op_lteq)|Určuje, zda `multimap` objektu je menší než nebo rovna do jiného `multimap` objektu.|  
-|[operator== (multimap) (STL/CLR)](#op_eq)|Určuje, zda `multimap` objekt rovná jiné `multimap` objektu.|  
-|[operator> (multimap) (STL/CLR)](#op_gt)|Určuje, zda `multimap` je větší než druhý objekt `multimap` objektu.|  
-|[operator>= (multimap) (STL/CLR)](#op_gteq)|Určuje, zda `multimap` objekt je větší než nebo rovna hodnotě jiného `multimap` objektu.|  
+|[multimap::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|  
+|[operator!= (multimap) (STL/CLR)](#op_neq)|Určuje, zda `multimap` není roven jinému objektu `multimap` objektu.|  
+|[operator< (multimap) (STL/CLR)](#op_lt)|Určuje, zda `multimap` je menší než jiný objekt `multimap` objektu.|  
+|[operator<= (multimap) (STL/CLR)](#op_lteq)|Určuje, zda `multimap` objekt je menší nebo rovna jiné `multimap` objektu.|  
+|[operator== (multimap) (STL/CLR)](#op_eq)|Určuje, zda `multimap` je roven jinému objektu `multimap` objektu.|  
+|[operator> (multimap) (STL/CLR)](#op_gt)|Určuje, zda `multimap` je větší než jiný objekt `multimap` objektu.|  
+|[operator>= (multimap) (STL/CLR)](#op_gteq)|Určuje, zda `multimap` objekt je větší než nebo roven jinému `multimap` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|<xref:System.Collections.IEnumerable>|Pořadí pomocí elementů.|  
-|<xref:System.Collections.ICollection>|Údržba skupiny elementů.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí prostřednictvím typové elementy.|  
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
-|ITree\<klíče, hodnota >|Udržujte obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|  
+|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|  
+|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|  
+|ITree\<klíč, hodnota >|Udržujte obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly. Vloží elementy na (téměř) vyrovnáváním stromové struktury, která udržuje seřazené změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy.  
+ Objekt přiděluje a uvolňuje úložiště pro sekvenci, ovládací prvky jako jednotlivé uzly. Vloží prvky do (téměř) s vyrovnáváním strom, který udržuje seřazený tím, že změna vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky.  
   
- Objekt řadí pořadí jimi řídí voláním objektu uložené delegáta typu [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte multimap; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k této uložené objekt voláním členské funkce [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
+ Objekt seřadí sekvence pomocí volání uloženého delegáta objekt typu [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Při vytváření objektu multimap; můžete zadat objekt uložené delegáta Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k tomuto uloženého objektu voláním členské funkce [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
   
- Takový objekt delegáta musí použít striktní slabé řazení klíče typu [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). To znamená, pro žádné dva klíče `X` a `Y`:  
+ Takový objekt delegáta musí uložit přísné slabé seřazení klíčů typu [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:  
   
- `key_comp()(X, Y)` Vrátí stejné logická hodnota způsobit při každém volání.  
+ `key_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.  
   
  Pokud `key_comp()(X, Y)` má hodnotu true, pak `key_comp()(Y, X)` musí mít hodnotu false.  
   
- Pokud `key_comp()(X, Y)` má hodnotu true, pak `X` se říká, že se seřadí před `Y`.  
+ Pokud `key_comp()(X, Y)` má hodnotu true, pak `X` říká, že je řazen před `Y`.  
   
- Pokud `!key_comp()(X, Y) && !key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že máte ekvivalentní řazení.  
+ Pokud `!key_comp()(X, Y) && !key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.  
   
- Pro libovolný element `X` který předchází `Y` v řízené sekvenci `key_comp()(Y, X)` je false. (Pro objekt delegáta výchozí klíče nikdy snížení hodnoty.) Na rozdíl od třídy šablony [mapy (STL/CLR)](../dotnet/map-stl-clr.md), objekt třídy šablony `multimap` nevyžaduje, aby klíče pro všechny elementy byly jedinečné. (Dvě nebo více klíčů může mít ekvivalentní řazení.)  
+ Pro libovolný element `X` , která předchází `Y` v řízené sekvenci `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta, klíče nikdy snížení hodnoty.) Na rozdíl od třídy šablony [mapy (STL/CLR)](../dotnet/map-stl-clr.md), objekt třídy šablony `multimap` nevyžaduje, aby byly jedinečné klíče pro všechny elementy. (Dva nebo více klíčů může mít odpovídající řazení.)  
   
- Každý prvek obsahuje samostatné klíč a hodnotu namapované. Pořadí je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odebírání libovolný element s několik operací, které jsou přímo úměrná logaritmus počet elementů v pořadí (logaritmické čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.  
+ Každý prvek obsahuje samostatný klíč a hodnotu pro mapovanou. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odstranění libovolný prvek s počtem operací úměrný logaritmu počtu prvků v sekvenci (logaritmické čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.  
   
- Multimap podporuje obousměrné iterátory, což znamená, že můžete tak, aby přiléhající elementy zadané iterátor, který označuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterator vrácený [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Tato iterator k dosažení poslední elementu v řízené sekvenci, můžete snížení, pokud je k dispozici. Můžete zvýšit multimap iterator k dosažení hlavního uzlu a pak se porovná rovna `end()`. Ale nemůže dereference iterator vrácený `end()`.  
+ Multimap podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit multimap iterátor, který má přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.  
   
- Všimněte si, že nemůže odkazovat na prvek multimap přímo zadané pořadí umístění – vyžadující iterator náhodný přístup.  
+ Všimněte si, že nemůže odkazovat na prvek multimap přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu.  
   
- Multimap iterator uloží popisovač pro jeho přidružený multimap uzel, který je pak uloží popisovač pro jeho přidružené kontejneru. Iterátory lze použít pouze jejich přidružené kontejnerové objekty. Tak dlouho, dokud jeho přidružený uzel multimap souvisí s některé multimap multimap iterator zůstává v platnosti. Kromě toho je platný iterator dereferencable – slouží k přístupu k nebo alter hodnota elementu se označí – tak dlouho, dokud není rovno `end()`.  
+ Multimap – iterátoru uloží popisovač do přidružené multimap uzlu, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Multimap – iterátoru zůstává v platnosti tak dlouho, dokud jeho přidružený uzel multimap souvisí s některé multimap. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.  
   
- Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
+ Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.  
   
 ## <a name="members"></a>Členové
 
@@ -256,12 +256,12 @@ Určuje začátek řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí obousměrného iterator, který určuje první elementu v řízené sekvenci nebo právě přesahuje za konec prázdnou sekvencí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -292,7 +292,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -306,12 +305,12 @@ Odebere všechny prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce efektivně volá [multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Použijte k zajištění, že řízené sekvenci je prázdný.  
+ Členská funkce efektivně volá [multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `())`. Použijete ji k zajištění, že je prázdná řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -348,7 +347,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -363,12 +361,12 @@ Typ konstantního iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T2` , může sloužit jako konstantní obousměrného iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní obousměrného iterátoru řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -392,7 +390,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -404,12 +401,12 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -436,7 +433,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -444,16 +440,16 @@ int main()
 ```  
 
 ## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator (STL/CLR)
-Typ konstantní zpětné iterator pro řízené sekvenci.  
+Typ konstantního zpětného iterátoru řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T4` , může sloužit jako konstantní zpětné iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -477,7 +473,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -489,16 +484,16 @@ Zjistí počet prvků odpovídající zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí počet prvků v řízené sekvenci, které mají ekvivalentní řazení s `key`. Použijte k určení počtu elementy aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce vrátí počet prvků v řízené sekvenci, která mají stejné pořadí s *klíč*. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -525,7 +520,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -536,16 +530,16 @@ count(L'C') = 0
 ```  
 
 ## <a name="difference_type"></a> multimap::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet element může být záporné.  
+ Typ, který popisuje element může být záporný počet.  
   
 ### <a name="example"></a>Příklad  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -594,12 +587,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda multimap je prázdný.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda je prázdný objektu multimap.  
   
 ### <a name="example"></a>Příklad  
   
@@ -629,7 +622,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -645,12 +637,12 @@ Určuje konec řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí iterator obousměrného této body právě přesahuje za konec řízené sekvenci. Můžete ji použít k získání iterátor, který označuje konec řízené sekvenci; jeho stav nemá není změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí obousměrný iterátor, který ukazuje za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -683,7 +675,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -697,16 +688,16 @@ Najde rozsah, který odpovídá zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 pair_iter_iter equal_range(key_type _Keyval);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Keyval`  
- Hodnota klíče pro vyhledávání.  
+ *_Keyval*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Metoda vrátí pár iterátory `-` [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`. Můžete použít k určení rozsahu elementů aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Metoda vrátí pár iterátorů `-` [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`. Použijete ji k určení rozsahu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -742,7 +733,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -756,33 +746,33 @@ Odebere prvky v určených pozicích.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
+ *první*  
  Začátek rozsahu vymazat.  
   
- klíč  
+ *Klíč*  
  Hodnota klíče vymazat.  
   
- poslední  
+ *poslední*  
  Konec rozsahu vymazat.  
   
- kde  
+ *kde*  
  Element vymazat.  
   
 ### <a name="remarks"></a>Poznámky  
- Odebere první členská funkce elementu řízené sekvenci, na kterou odkazuje `where`a vrátí iterátor, který označí první prvek zbývající nad rámec element odebrán, nebo [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()` Pokud neexistuje žádný takový prvek. Použijte k odebrání jediným elementem.  
+ První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*a vrátí iterátor, který určuje první prvek zbývající za prvkem, který odebere, nebo [multimap::end (STL / CLR)](../dotnet/multimap-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje. Použijete ji k odebrání jeden element.  
   
- Druhý členská funkce odebere elementy řízené sekvenci v rozsahu [`first`, `last`) a vrátí iterátor, který označí první prvek zbývající nad rámec všechny elementy odebrán, nebo `end()` Pokud žádný takový prvek existuje... Použijte k odebrání nula nebo více souvislý prvků.  
+ Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `end()` Pokud žádný takový prvek existuje... Použijete ji k odebrání nula nebo více souvislých prvků.  
   
- Třetí členská funkce odebere libovolného elementu řízené sekvenci, jehož klíč má ekvivalentní řazení do `key`a vrátí počet prvků odebrat. Použijete jej odeberte a počet všechny elementy, které odpovídají zadaným klíčem.  
+ Třetí členská funkce odstraní libovolný prvek řízenou sekvenci, jehož klíč má ekvivalentní řazení na *klíč*a vrátí počet prvků, které jsou odebrány. Použijete ho odebrat a spočítat všechny elementy, které odpovídají zadanému klíči.  
   
- Každý element vymazání trvá dobu úměrná logaritmus počet elementů v řízené sekvenci.  
+ Každý prvek mazání trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci.  
   
 ### <a name="example"></a>Příklad  
   
@@ -829,7 +819,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -847,16 +836,16 @@ Vyhledá prvek, který odpovídá zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud má minimálně jeden element v řízené sekvenci ekvivalentní řazení s `key`, – členská funkce vrátí iterovat určení jeden z těchto elementů; v opačném případě vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Použít aktuálně najít elementu v řízené sekvenci, která odpovídá zadanému klíči.  
+ Pokud má alespoň jeden element v řízené sekvenci s odpovídající řazení *klíč*, členská funkce vrátí iterátor určit jeden z těchto elementů; v opačném případě vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Použijete ji k aktuálně vyhledejte elementu v řízené sekvenci, která odpovídá zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -889,7 +878,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -900,18 +888,18 @@ find C = False
 ```  
 
 ## <a name="generic_container"></a> multimap::generic_container (STL/CLR)
-Typ generické rozhraní pro kontejner.  
+Typ obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -952,7 +940,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -963,18 +950,18 @@ int main()
 ```  
   
 ## <a name="generic_iterator"></a> multimap::generic_iterator (STL/CLR)
-Typ iterace pro použití s generické rozhraní pro kontejner.  
+Typ iterátoru pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1009,7 +996,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1019,18 +1005,18 @@ int main()
 ```  
 
 ## <a name="generic_reverse_iterator"></a> multimap::generic_reverse_iterator (STL/CLR)
-Typ zpětné iterator pro použití s generické rozhraní pro kontejner.  
+Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný zpětné iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1064,7 +1050,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1074,16 +1059,16 @@ int main()
 ```  
 
 ## <a name="generic_value"></a> multimap::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1117,7 +1102,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1131,7 +1115,7 @@ Přidá prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1140,33 +1124,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- vpravo  
- Výčet k vložení.  
+ *doprava*  
+ Výčet pro vložení.  
   
- Val  
- Hodnota klíče k vložení.  
+ *Val*  
+ Hodnota klíče pro vložení.  
   
- kde  
- Kde v kontejneru vložit (pouze pro pomocný parametr).  
+ *kde*  
+ Kde v kontejneru pro vložení (jenom pro pomocný parametr).  
   
 ### <a name="remarks"></a>Poznámky  
- Každý z členské funkce vloží sekvenci určeného zbývající operandy.  
+ Každá z členské funkce vloží pořadí určeném zbývající operandy.  
   
- První člen funkce vloží element s hodnotou `val`a vrátí iterátor, který označuje nově vloženou elementu. Použijte k vložení jediným elementem.  
+ První členská funkce vloží prvek s hodnotou *val*a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element.  
   
- Druhý členská funkce vloží element s hodnotou `val`pomocí `where` jako nápovědu (výkon) a vrátí iterátor, který označuje nově vloženou elementu. Použijte k vložení jednoho elementu, což může být přiléhající k elementu, které znáte.  
+ Druhá členská funkce vloží prvek s hodnotou *val*s použitím *kde* jako Nápověda (ke zlepšení výkonu) a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element, který může být vedle elementu, které už znáte.  
   
- Třetí členská funkce vloží sekvenci [`first`, `last`). Použijte k vložení počtu nula či více elementů zkopírovaných z jiného pořadí.  
+ Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více elementů zkopírovaných z jiné pořadí.  
   
- Čtvrtý – členská funkce vloží pořadí určené, které `right`. Použijte k vložení sekvenci popsaného enumerátor.  
+ Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.  
   
- Každý element vložení trvá dobu úměrná logaritmus počet elementů v řízené sekvenci. Vložení se může objevit v amortizovaný čas konstantní však zadána nápovědu, který určuje element přiléhající k kurzor.  
+ Každý prvek vložení trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci. Vložení situace může nastat v amortizovaném konstantním času, ale zadaný pomocného parametru, který určuje prvek vedle kurzor.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1228,7 +1212,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1247,12 +1230,12 @@ Typ iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T1` , může sloužit jako obousměrný iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako obousměrný iterátor, který řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1276,7 +1259,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1284,16 +1266,16 @@ int main()
 ```  
 
 ## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
-Zkopíruje řazení delegáta pro dva klíče.  
+Zkopíruje pořadí delegáta pro dva klíče.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí řazení delegát sloužící k uspořádání řízené sekvenci. Můžete použít k porovnání dvou klíčů.  
+ Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1328,7 +1310,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1342,17 +1323,17 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> multimap::key_compare (STL/CLR)
-Řazení delegáta pro dva klíče.  
+Pořadí delegáta pro dva klíče.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro delegáta, který určuje řazení klíče argumentů.  
+ Typ je synonymum pro delegáta, který určuje řazení klíče argumenty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1387,7 +1368,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1405,12 +1385,12 @@ Typ klíče řazení
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Key`.  
+ Typ je synonymum pro parametr šablony *klíč*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1437,7 +1417,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1445,20 +1424,20 @@ a b c
 ```  
   
 ## <a name="lower_bound"></a> multimap::lower_bound (STL/CLR)
-Najde začátek rozsahu, který odpovídá zadaným klíčem.  
+Vyhledá počátek rozsahu, který odpovídá zadanému klíči.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce určuje první prvek `X` v řízené sekvenci, který má ekvivalentní řazení do `key`. Pokud žádný takový prvek existuje, vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; jinak vrátí iterátor, který označuje `X`. Použijte jej k vyhledání na začátek pořadí prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce určuje první prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje `X`. Použijete ji k aktuálně vyhledejte na začátek pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1491,7 +1470,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1506,19 +1484,19 @@ Vytvoří objekt hodnoty.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče k použití.  
+ *Klíč*  
+ Hodnota klíče používat.  
   
- mapovat  
- Mapovat hodnotu k vyhledání.  
+ *mapovat*  
+ Mapovaná hledanou hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí hodnotu `value_type` objekt, jehož klíč je `key` a jehož namapované hodnota je `mapped`. Použitím ji k vytvoření objektu vhodný pro použití s několik dalších členské funkce.  
+ Členská funkce vrátí `value_type` objekt, jehož klíč je *klíč* a jejichž mapované hodnoty se *namapované*. Použijete ji k vytvoření objektu vhodný pro použití s několika další členské funkce.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1541,7 +1519,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1553,12 +1530,12 @@ Typ mapované hodnoty přiřazené ke každému klíči
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Mapped`.  
+ Typ je synonymum pro parametr šablony *mapované*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1585,7 +1562,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1597,7 +1573,7 @@ Sestaví objekt kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 multimap();  
 explicit multimap(key_compare^ pred);  
 multimap(multimap<Key, Mapped>% right);  
@@ -1613,66 +1589,66 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- Před  
- Řazení predikát pro řízené sekvenci.  
+ *Před*  
+ Řazení predikátu řízené sekvence.  
   
- vpravo  
- Objekt, nebo rozsah k vložení.  
+ *doprava*  
+ Objekt nebo rozsahu pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `multimap();`  
   
- Inicializuje výchozí řazení predikát řízené sekvenci bez prvků `key_compare()`. Se používá k určení prázdný počáteční řízené sekvenci, s výchozí řazení predikátu.  
+ Inicializuje výchozí řazení predikátu řízené sekvence bez prvků `key_compare()`. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikátu.  
   
  Konstruktor:  
   
  `explicit multimap(key_compare^ pred);`  
   
- Inicializuje řízené sekvenci bez prvků s řazení predikát `pred`. Se používá k určení prázdný počáteční řízené sekvenci, pomocí zadaného predikátu řazení.  
+ Inicializuje řízené sekvence bez prvků pořadí predikátem *před*. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát pořadí.  
   
  Konstruktor:  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt multimap `right`, s výchozí řazení predikátu.  
+ Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu multimap *správné*, s výchozí řazení predikátu.  
   
  Konstruktor:  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt multimap `right`, s výchozí řazení predikátu.  
+ Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu multimap *správné*, s výchozí řazení predikátu.  
   
  Konstruktor:  
   
  `template<typename InIter> multimap(InIter first, InIter last);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`), s výchozí řazení predikátu. Použít k vytvoření řízené sekvenci kopie jiné pořadí, výchozí řazení predikátu.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`), s výchozí řazení predikátu. Používejte aby řízené sekvence kopii jiné pořadí, s výchozí řazení predikátu.  
   
  Konstruktor:  
   
  `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`), s řazení predikát `pred`. Použít k vytvoření kopie jiné pořadí, pomocí zadaného predikátu řazení řízené sekvenci.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí se zadanou predikát pořadí řízené sekvence.  
   
  Konstruktor:  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`, s výchozí řazení predikátu. Použít k vytvoření kopie jiné pořadí popsaného enumerátor, s výchozí řazení predikát řízené sekvenci.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, s výchozí řazení predikátu. Použijete ji k vytvoření kopie jiné pořadí popsal čítače, s výchozí řazení predikátu řízené sekvence.  
   
  Konstruktor:  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`, s řazení predikát `pred`. Použít k vytvoření kopie jiné pořadí popsaného enumerátor pomocí zadaného predikátu řazení řízené sekvenci.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí popsal enumerátor se zadanou predikát pořadí řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1747,7 +1723,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1764,20 +1739,20 @@ size() = 0
 ```  
 
 ## <a name="op_as"></a> multimap::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
+ *doprava*  
  Kontejner pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1807,8 +1782,7 @@ int main()
         System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    } 
 ```  
   
 ```Output  
@@ -1817,16 +1791,16 @@ int main()
 ```  
 
 ## <a name="rbegin"></a> multimap::rbegin (STL/CLR)
-Označuje začátek odstínech řízené sekvenci.  
+Určuje začátek řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator, který určuje poslední elementu v řízené sekvenci nebo právě nad rámec začátku prázdnou sekvencí. Proto označí `beginning` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1857,7 +1831,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1871,12 +1844,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1903,7 +1876,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1911,16 +1883,16 @@ int main()
 ```  
   
 ## <a name="rend"></a> multimap::rend (STL/CLR)
-Označuje konec odstínech řízené sekvenci.  
+Určuje konec řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator této body právě nad rámec začátku řízené sekvenci. Proto označí `end` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` konec řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1953,7 +1925,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1963,16 +1934,16 @@ int main()
 ```  
 
 ## <a name="reverse_iterator"></a> multimap::reverse_iterator (STL/CLR)
-Typ zpětné iterator pro řízené sekvenci.  
+Typ "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T3` , může sloužit jako reverzní iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1996,7 +1967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2008,12 +1978,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2045,7 +2015,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2055,16 +2024,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> multimap::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2093,7 +2062,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2106,16 +2074,16 @@ Zamění obsah dvou kontejnerů.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner se Prohodit obsah s.  
+ *doprava*  
+ Kontejner pro obsah s.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce prohození řízené pořadí mezi `this` a `right`. Dělá to tak včas konstantní a vyvolá žádné výjimky. Můžete ho použít jako rychlý způsob, jak exchange obsah dva kontejnery.  
+ Členská funkce Zamění řízené sekvence mezi `this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2157,7 +2125,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2168,16 +2135,16 @@ int main()
 ```  
 
 ## <a name="to_array"></a> multimap::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2208,7 +2175,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2217,20 +2183,20 @@ int main()
 ```  
 
 ## <a name="upper_bound"></a> multimap::upper_bound (STL/CLR)
-Najde konec rozsahu, který odpovídá zadaným klíčem.  
+Najde konec rozsahu, který odpovídá zadanému klíči.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce určuje poslední element `X` v řízené sekvenci, který má ekvivalentní řazení do `key`. Pokud žádný takový prvek existuje, nebo pokud `X` je poslední elementu v řízené sekvenci, vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; jinak vrátí iterátor, který označí první prvek nad rámec `X`. Použijte jej k vyhledání konec pořadí prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce určuje poslední prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, nebo pokud `X` je po posledním prvku v řízené sekvenci vrátí [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje prvního prvku mimo `X`. Pomocí aktuálně najít konec pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2263,7 +2229,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2274,16 +2239,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
-Zkopíruje řazení delegáta pro dvě hodnoty elementu.  
+Zkopíruje pořadí delegáta pro dvě hodnoty prvků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí řazení delegát sloužící k uspořádání řízené sekvenci. Můžete použít k porovnání dvou hodnot elementu.  
+ Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dvě hodnoty prvků.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2310,7 +2275,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2320,17 +2284,17 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
 
 ## <a name="value_compare"></a> multimap::value_compare (STL/CLR)
-Řazení delegáta pro dvě hodnoty elementu.  
+Pořadí delegáta pro dvě hodnoty prvků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro delegáta, který určuje řazení její hodnota argumenty.  
+ Typ je synonymum pro delegáta, který určuje pořadí z argumentů hodnotu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2357,7 +2321,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2371,12 +2334,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ se jedná o synonymum `generic_value`.  
+ Typ je synonymum pro `generic_value`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2402,7 +2365,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2410,11 +2372,11 @@ int main()
 ```  
 
 ## <a name="op_neq"></a> Operator! = (multimap) (STL/CLR)
-Zobrazí seznam není rovno porovnání.  
+Seznam není rovno porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator!=(multimap<Key, Mapped>% left,  
@@ -2422,14 +2384,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left == right)`. Můžete použít k testování zda `left` není stejný jako seřazené `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2468,7 +2430,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2483,7 +2444,7 @@ Seznam menší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<(multimap<Key, Mapped>% left,  
@@ -2491,14 +2452,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true, pokud, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, `left[i] < right[i]`. Funkce `left->size() < right->size()` použijete k testování zda `left` je seřadí před `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2537,7 +2498,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2548,11 +2508,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operátor&lt;= (multimap) (STL/CLR)
-Seznam menší než nebo rovna porovnání.  
+Seznam menší nebo rovna porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<=(multimap<Key, Mapped>% left,  
@@ -2560,14 +2520,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(right < left)`. Můžete použít k testování zda `left` není objednaný po `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2606,7 +2566,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2617,11 +2576,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (multimap) (STL/CLR)
-Zobrazí seznam rovna porovnání.  
+Porovnání rovna seznamu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator==(multimap<Key, Mapped>% left,  
@@ -2629,14 +2588,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true pouze v případě, že daná pořadí řízené `left` a `right` mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Můžete použít k testování zda `left` je stejný jako seřazené `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2675,7 +2634,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2690,7 +2648,7 @@ Seznam je větší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>(multimap<Key, Mapped>% left,  
@@ -2698,14 +2656,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `right` `<` `left`. Můžete použít k testování zda `left` je objednaný po `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2744,7 +2702,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2759,7 +2716,7 @@ Seznam větší než nebo rovna porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>=(multimap<Key, Mapped>% left,  
@@ -2767,14 +2724,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left` `<` `right)`. Můžete použít k testování zda `left` není seřadí před `right` po dvou multimaps jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left` `<` `right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* když jsou dvě multimaps porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2813,7 +2770,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

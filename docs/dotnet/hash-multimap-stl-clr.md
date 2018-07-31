@@ -1,5 +1,5 @@
 ---
-title: hash_multimap (STL/CLR) | Microsoft Docs
+title: hash_multimap – (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -108,15 +108,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: e0da705b7d831c9aeea90f7ec13cd2a1a17717a9
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079887"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376232"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_multimap` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
+Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `hash_multimap` spravovat řadu prvků, jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojený seznam uzlů a každý uzel ukládání jeden element. Element se skládá z klíče pro seřazení, pořadí a mapované hodnoty, které nenastane pravé.  
   
  V popisu níže `GValue` je stejný jako:  
   
@@ -124,13 +124,13 @@ ms.locfileid: "37079887"
   
  kde:  
   
- `GKey` je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je `Key^`  
+ `GKey` je stejný jako *klíč* Pokud je typ odkazu, v takovém případě je `Key^`  
   
- `GMapped` je stejný jako `Mapped` Pokud k tomu je typu ref, v takovém případě je `Mapped^`  
+ `GMapped` je stejný jako *mapované* Pokud je typ odkazu, v takovém případě je `Mapped^`  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class hash_multimap  
@@ -146,11 +146,11 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Key  
- Typ elementu v řízené sekvenci komponenta klíče.  
+ *Key*  
+ Typ klíčovou komponentou elementu v řízené sekvenci.  
   
- Mapovat  
- Typ elementu v řízené sekvenci další součásti.  
+ *mapovat*  
+ Typ elementu v řízené sekvenci další komponenty.  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<cliext – / hash_map >  
@@ -163,29 +163,29 @@ template<typename Key,
 |---------------------|-----------------|  
 |[hash_multimap::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|  
 |[hash_multimap::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
-|[hash_multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
-|[hash_multimap::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenost mezi dvěma prvky.|  
-|[hash_multimap::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro kontejner.|  
-|[hash_multimap::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterace pro obecné rozhraní kontejneru.|  
-|[hash_multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
-|[hash_multimap::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|  
+|[hash_multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|  
+|[hash_multimap::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenosti mezi dvěma prvky.|  
+|[hash_multimap::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|  
+|[hash_multimap::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|  
+|[hash_multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|  
+|[hash_multimap::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|  
 |[hash_multimap::hasher (STL/CLR)](#hasher)|Hash delegáta pro klíč.|  
 |[hash_multimap::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|  
-|[hash_multimap::key_compare (STL/CLR)](#key_compare)|Řazení delegáta pro dva klíče.|  
+|[hash_multimap::key_compare (STL/CLR)](#key_compare)|Pořadí delegáta pro dva klíče.|  
 |[hash_multimap::key_type (STL/CLR)](#key_type)|Typ klíče řazení|  
-|[hash_multimap::mapped_type (STL/CLR)](#mapped_type)|Typ namapované hodnotu přidruženou každý klíč.|  
+|[hash_multimap::mapped_type (STL/CLR)](#mapped_type)|Typ mapované hodnoty přiřazené ke každému klíči.|  
 |[hash_multimap::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
-|[hash_multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ zpětné iterator pro řízené sekvenci.|  
-|[hash_multimap::size_type (STL/CLR)](#size_type)|Typ (nezáporné) vzdálenost mezi dvěma prvky.|  
-|[hash_multimap::value_compare (STL/CLR)](#value_compare)|Řazení delegáta pro dvě hodnoty elementu.|  
+|[hash_multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|  
+|[hash_multimap::size_type (STL/CLR)](#size_type)|Typ vzdálenosti (nezáporné) mezi dvěma prvky.|  
+|[hash_multimap::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dvě hodnoty prvků.|  
 |[hash_multimap::value_type (STL/CLR)](#value_type)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[hash_multimap::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|  
-|[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|Spočítá počet intervalů.|  
+|[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|Spočítá počet kbelíků.|  
 |[hash_multimap::clear (STL/CLR)](#clear)|Odebere všechny prvky.|  
-|[hash_multimap::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadaného klíče.|  
+|[hash_multimap::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadanému klíči.|  
 |[hash_multimap::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[hash_multimap::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|  
 |[hash_multimap::equal_range (STL/CLR)](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|  
@@ -194,67 +194,67 @@ template<typename Key,
 |[hash_multimap::hash_delegate (STL/CLR)](#hash_delegate)|Zkopíruje hash delegáta pro klíč.|  
 |[hash_multimap::hash_multimap (STL/CLR)](#hash_multimap)|Sestaví objekt kontejneru.|  
 |[hash_multimap::insert (STL/CLR)](#insert)|Přidá prvky.|  
-|[hash_multimap::key_comp (STL/CLR)](#key_comp)|Zkopíruje řazení delegáta pro dva klíče.|  
+|[hash_multimap::key_comp (STL/CLR)](#key_comp)|Zkopíruje pořadí delegáta pro dva klíče.|  
 |[hash_multimap::load_factor (STL/CLR)](#load_factor)|Spočítá průměrný počet prvků na kbelík.|  
-|[hash_multimap::lower_bound (STL/CLR)](#lower_bound)|Najde začátek rozsahu, který odpovídá zadaným klíčem.|  
+|[hash_multimap::lower_bound (STL/CLR)](#lower_bound)|Vyhledá počátek rozsahu, který odpovídá zadanému klíči.|  
 |[hash_multimap::make_value (STL/CLR)](#make_value)|Vytvoří objekt hodnoty.|  
 |[hash_multimap::max_load_factor (STL/CLR)](#max_load_factor)|Získá nebo nastaví maximální počet prvků na kbelík.|  
-|[hash_multimap::rbegin (STL/CLR)](#rbegin)|Označuje začátek odstínech řízené sekvenci.|  
+|[hash_multimap::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|  
 |[hash_multimap::rehash (STL/CLR)](#rehash)|Znovu vytvoří hashovací tabulku.|  
-|[hash_multimap::rend (STL/CLR)](#rend)|Označuje konec odstínech řízené sekvenci.|  
+|[hash_multimap::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|  
 |[hash_multimap::size (STL/CLR)](#size)|Spočítá počet prvků.|  
 |[hash_multimap::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|  
-|[hash_multimap::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
-|[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadaným klíčem.|  
-|[hash_multimap::value_comp (STL/CLR)](#value_comp)|Zkopíruje řazení delegáta pro dvě hodnoty elementu.|  
+|[hash_multimap::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
+|[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadanému klíči.|  
+|[hash_multimap::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dvě hodnoty prvků.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[hash_multimap::operator= (STL/CLR)](#op)|Nahradí řízené sekvenci.|  
+|[hash_multimap::operator= (STL/CLR)](#op)|Nahradí řízené sekvence.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|<xref:System.Collections.IEnumerable>|Pořadí pomocí elementů.|  
-|<xref:System.Collections.ICollection>|Údržba skupiny elementů.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí prostřednictvím typové elementy.|  
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
-|IHash\<klíče, hodnota >|Udržujte obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|  
+|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|  
+|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|  
+|IHash\<klíč, hodnota >|Udržujte obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly v obousměrných odkazovaného seznamu. Objekt k urychlení přístupu, také udržuje různých délka pole ukazatele do seznamu (zatřiďovací tabulku), efektivně spravovat celý seznam jako posloupnost podřízených seznamů, nebo intervalů. Vloží elementy na bloku, který udržuje seřazené změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy.  
+ Objekt přiděluje a uvolňuje úložiště pro ovládací prvky jako jednotlivé uzly v propojeném seznamu obousměrné pořadí. K urychlení přístupu, objekt také uchovává různé délky pole ukazatelů do seznamu (zatřiďovací tabulku), efektivní správa celý seznam jako posloupnost podseznamy, nebo intervalů. Vloží prvky do kontejneru, který udržuje seřazený tím, že změna vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky.  
   
- Objekt řadí každé sady jimi řídí voláním objektu uložené delegáta typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte hash_set; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<=(key_type, key_type)`.  
+ Objekt seřadí každého kbelíku pomocí volání uloženého delegáta objekt typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Můžete zadat objekt uložené delegáta při konstrukci hash_set; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<=(key_type, key_type)`.  
   
- Přístup k objektu uložené delegáta voláním členské funkce [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Takový objekt delegáta musí definovat ekvivalentní řazení mezi klíče typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). To znamená, pro žádné dva klíče `X` a `Y`:  
+ Přístup k uložené delegáta objektu voláním členské funkce [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Takový objekt delegáta musí definovat stejné pořadí mezi klíči typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:  
   
- `key_comp()(X, Y)` Vrátí stejné logická hodnota způsobit při každém volání.  
+ `key_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.  
   
- Pokud `key_comp()(X, Y) && key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že máte ekvivalentní řazení.  
+ Pokud `key_comp()(X, Y) && key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.  
   
- Jakékoli řazení pravidlo, které se chovají jako `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` nebo `operator==(key_type, key_type)` definuje eqivalent řazení.  
+ Žádné pořadí pravidlo, který se chová jako `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` nebo `operator==(key_type, key_type)` definuje eqivalent řazení.  
   
- Všimněte si, že kontejner je zajištěná pouze elementy jejichž klíče měly ekvivalentní řazení (a které hash na stejnou hodnotu celé číslo) sousedících v sadě. Na rozdíl od třídy šablony [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md), objekt třídy šablony `hash_multimap` nevyžaduje, aby klíče pro všechny elementy byly jedinečné. (Dvě nebo více klíčů může mít ekvivalentní řazení.)  
+ Všimněte si, že zajišťuje kontejneru pouze, že elementy jehož klíče mají ekvivalentní řazení (a které hodnotu hash na stejnou hodnotu celého čísla) sousedí v sadě. Na rozdíl od třídy šablony [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md), objekt třídy šablony `hash_multimap` nevyžaduje, aby byly jedinečné klíče pro všechny elementy. (Dva nebo více klíčů může mít odpovídající řazení.)  
   
- Určuje objekt sady, které by měl obsahovat k danému klíči řazení při volání objektu uložené delegáta typu [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Přístup k této uložené objekt voláním členské funkce [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` získat celočíselná hodnota, která závisí na hodnotu klíče. Objekt uložené delegáta můžete zadat, když vytvoříte hash_set; Pokud zadáte žádný objekt delegáta, výchozí hodnota je funkce `System::Object::hash_value(key_type)`. To znamená pro všechny klíče `X` a `Y`:  
+ Objekt určuje, které sadě by měl obsahovat daného klíče řazení pomocí volání uloženého delegáta objektu typu [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Přístup k tomuto uloženého objektu voláním členské funkce [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` získat celočíselnou hodnotu, která závisí na hodnotě klíče. Můžete zadat objekt uložené delegáta při konstrukci hash_set; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je funkce `System::Object::hash_value(key_type)`. To znamená pro všechny klíče `X` a `Y`:  
   
- `hash_delegate()(X)` vrátí stejný výsledek celé číslo při každém volání.  
+ `hash_delegate()(X)` Vrátí při každém volání stejný výsledek celého čísla.  
   
- Pokud `X` a `Y` mít ekvivalentní řazení, pak `hash_delegate()(X)` by měla vrátit stejný výsledek celé číslo jako `hash_delegate()(Y)`.  
+ Pokud `X` a `Y` mají ekvivalentní řazení, pak `hash_delegate()(X)` by měla vrátit stejný výsledek celého čísla jako `hash_delegate()(Y)`.  
   
- Každý prvek obsahuje samostatné klíč a hodnotu namapované. Pořadí je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odebírání libovolný element s několik operací, která je nezávislá počet elementů v pořadí (konstantní čas)--alespoň v nejvhodnější případů. Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.  
+ Každý prvek obsahuje samostatný klíč a hodnotu pro mapovanou. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odstranění libovolný prvek s několika operacemi, která je nezávislá počet prvků v sekvenci (konstantní čas) – alespoň v nejlepším případě. Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.  
   
- V případě hodnoty hash nejsou distribuovány jednotně, ale můžete degenerovanou tabulku hash. V extreme – funkce hash, který vždy vrací stejnou hodnotu – vyhledávání, vkládání a odebrání jsou úměrná počet elementů v pořadí (lineární čas). Kontejner endeavors zvolit funkce přiměřenou hodnotu hash, střední sady velikost a velikost zatřiďovací tabulku (celkový počet kbelíků), ale můžete přepsat některé nebo všechny tyto volby. Zobrazit, například funkce [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) a [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
+ Pokud se hodnoty hash nejsou rovnoměrně, ale můžete degenerovanou zatřiďovací tabulku. V krajních – pro funkci hash, která vždy vrátí stejnou hodnotu--je úměrný počtu prvků v sekvenci (lineární čas) vyhledávání, vkládání a odstranění. Kontejner endeavors zvolit přiměřené hashovací funkci, střední kontejneru velikost a velikost tabulky hash (celkový počet kbelíků), ale můžete přepsat některé nebo všechny tyto možnosti. Zobrazit, například funkce [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) a [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Hash_multimap podporuje obousměrné iterátory, což znamená, že můžete tak, aby přiléhající elementy zadané iterátor, který označuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterator vrácený [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`. Tato iterator k dosažení poslední elementu v řízené sekvenci, můžete snížení, pokud je k dispozici. Můžete zvýšit iterator hash_multimap k dosažení hlavního uzlu a pak se porovná rovna `end()`. Ale nemůže dereference iterator vrácený `end()`.  
+ Hash_multimap – podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit hash_multimap iterátor pro přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.  
   
- Všimněte si, že nemůže odkazovat na prvek hash_multimap přímo zadané pořadí umístění – vyžadující iterator náhodný přístup.  
+ Všimněte si, že nemůže odkazovat na prvek hash_multimap přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu.  
   
- Hash_multimap iterator uloží popisovač do přidružené hash_multimap uzlu, který je pak uloží popisovač pro jeho přidružené kontejneru. Iterátory lze použít pouze jejich přidružené kontejnerové objekty. Hash_multimap iterator zůstane platný tak dlouho, dokud je přidružen některé hash_multimap její přidružené hash_multimap uzel. Kromě toho je platný iterator dereferencable – slouží k přístupu k nebo alter hodnota elementu se označí – tak dlouho, dokud není rovno `end()`.  
+ Iterátor hash_multimap – uloží popisovač do přidružené hash_multimap – uzlu, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Pokud je jeho přidružené hash_multimap uzel přidružené nějaké hash_multimap – iterátor hash_multimap – zůstává v platnosti. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.  
   
- Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
+ Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.  
 
 ## <a name="members"></a>Členové
 
@@ -263,12 +263,12 @@ Určuje začátek řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí obousměrného iterator, který určuje první elementu v řízené sekvenci nebo právě přesahuje za konec prázdnou sekvencí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -299,7 +299,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -309,16 +308,16 @@ int main()
 ```  
 
 ## <a name="bucket_count"></a> hash_multimap::bucket_count (STL/CLR)
-Spočítá počet intervalů.  
+Spočítá počet kbelíků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 int bucket_count();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí aktuální počet intervalů. Můžete použít k určení velikosti zatřiďovací tabulku.  
+ Členské funkce vrátí aktuální počet kbelíků. Použijete ji k určení velikosti zatřiďovací tabulku.  
   
 ### <a name="example"></a>Příklad  
   
@@ -363,7 +362,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -386,12 +384,12 @@ Odebere všechny prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce efektivně volá [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap::begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap::end (STL/CLR) ](../dotnet/hash-multimap-end-stl-clr.md)`())`. Použijte k zajištění, že řízené sekvenci je prázdný.  
+ Členská funkce efektivně volá [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap::begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap::end (STL/CLR) ](../dotnet/hash-multimap-end-stl-clr.md)`())`. Použijete ji k zajištění, že je prázdná řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -428,7 +426,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -443,12 +440,12 @@ Typ konstantního iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T2` , může sloužit jako konstantní obousměrného iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní obousměrného iterátoru řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -472,7 +469,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -484,12 +480,12 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -516,7 +512,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -524,16 +519,16 @@ int main()
 ``` 
 
 ## <a name="const_reverse_iterator"></a> hash_multimap::const_reverse_iterator (STL/CLR)
-Typ konstantní zpětné iterator pro řízené sekvenci...  
+Typ konstantního zpětného iterátoru řízené sekvence...  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T4` , může sloužit jako konstantní zpětné iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -557,7 +552,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -569,16 +563,16 @@ Zjistí počet prvků odpovídající zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí počet prvků v řízené sekvenci, které mají ekvivalentní řazení s `key`. Použijte k určení počtu elementy aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce vrátí počet prvků v řízené sekvenci, která mají stejné pořadí s *klíč*. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -605,7 +599,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -616,16 +609,16 @@ count(L'C') = 0
 ```  
   
 ## <a name="difference_type"></a> hash_multimap::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet element může být záporné.  
+ Typ, který popisuje element může být záporný počet.  
   
 ### <a name="example"></a>Příklad  
   
@@ -660,7 +653,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -674,12 +666,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda hash_multimap je prázdný.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda hash_multimap je prázdný.  
   
 ### <a name="example"></a>Příklad  
   
@@ -709,7 +701,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -725,12 +716,12 @@ Určuje konec řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí iterator obousměrného této body právě přesahuje za konec řízené sekvenci. Můžete ji použít k získání iterátor, který označuje konec řízené sekvenci; jeho stav nemá není změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí obousměrný iterátor, který ukazuje za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -763,7 +754,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -777,16 +767,16 @@ Najde rozsah, který odpovídá zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  klíč  
- Hodnota klíče pro vyhledávání.  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pár iterátory `cliext::pair<iterator, iterator>(` [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`. Můžete použít k určení rozsahu elementů aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce vrátí pár iterátorů `cliext::pair<iterator, iterator>(` [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -822,7 +812,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -836,33 +825,33 @@ Odebere prvky v určených pozicích.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
+ *první*  
  Začátek rozsahu vymazat.  
   
- klíč  
+ *Klíč*  
  Hodnota klíče vymazat.  
   
- poslední  
+ *poslední*  
  Konec rozsahu vymazat.  
   
- kde  
+ *kde*  
  Element vymazat.  
   
 ### <a name="remarks"></a>Poznámky  
- Odebere první členská funkce elementu řízené sekvenci, na kterou odkazuje `where`a vrátí iterátor, který označí první prvek zbývající nad rámec element odebrán, nebo [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` Pokud neexistuje žádný takový prvek. Použijte k odebrání jediným elementem.  
+ První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*a vrátí iterátor, který určuje první prvek zbývající za prvkem, který odebere, nebo [hash_multimap::end () STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje. Použijete ji k odebrání jeden element.  
   
- Druhý členská funkce odebere elementy řízené sekvenci v rozsahu [`first`, `last`) a vrátí iterátor, který označí první prvek zbývající nad rámec všechny elementy odebrán, nebo `end()` Pokud žádný takový prvek existuje... Použijte k odebrání nula nebo více souvislý prvků.  
+ Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `end()` Pokud žádný takový prvek existuje... Použijete ji k odebrání nula nebo více souvislých prvků.  
   
- Třetí členská funkce odebere libovolného elementu řízené sekvenci, jehož klíč má ekvivalentní řazení do `key`a vrátí počet prvků odebrat. Použijete jej odeberte a počet všechny elementy, které odpovídají zadaným klíčem.  
+ Třetí členská funkce odstraní libovolný prvek řízenou sekvenci, jehož klíč má ekvivalentní řazení na *klíč*a vrátí počet prvků, které jsou odebrány. Použijete ho odebrat a spočítat všechny elementy, které odpovídají zadanému klíči.  
   
- Každý element vymazání trvá dobu úměrná logaritmus počet elementů v řízené sekvenci.  
+ Každý prvek mazání trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci.  
   
 ### <a name="example"></a>Příklad  
   
@@ -909,7 +898,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -927,16 +915,16 @@ Vyhledá prvek, který odpovídá zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud má minimálně jeden element v řízené sekvenci ekvivalentní řazení s `key`, – členská funkce vrátí iterovat určení jeden z těchto elementů; v opačném případě vrátí [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()`. Použít aktuálně najít elementu v řízené sekvenci, která odpovídá zadanému klíči.  
+ Pokud má alespoň jeden element v řízené sekvenci s odpovídající řazení *klíč*, členská funkce vrátí iterátor určit jeden z těchto elementů; v opačném případě vrátí [hash_multimap::end (STL/CLR) ](../dotnet/hash-multimap-end-stl-clr.md)`()`. Použijete ji k aktuálně vyhledejte elementu v řízené sekvenci, která odpovídá zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -969,7 +957,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -980,18 +967,18 @@ find C = False
 ```  
 
 ## <a name="generic_container"></a> hash_multimap::generic_container (STL/CLR)
-Typ generické rozhraní pro kontejner.  
+Typ obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IHash<GKey, GValue>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1032,7 +1019,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1043,18 +1029,18 @@ int main()
 ```  
 
 ## <a name="generic_iterator"></a> hash_multimap::generic_iterator (STL/CLR)
-Typ iterace pro použití s generické rozhraní pro kontejner.  
+Typ iterátoru pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1089,7 +1075,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1099,18 +1084,18 @@ int main()
 ```  
 
 ## <a name="generic_reverse_iterator"></a> hash_multimap::generic_reverse_iterator (STL/CLR)
-Typ zpětné iterator pro použití s generické rozhraní pro kontejner.  
+Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný zpětné iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1144,7 +1129,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1154,16 +1138,16 @@ int main()
 ``` 
 
 ## <a name="generic_value"></a> hash_multimap::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1197,7 +1181,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1211,12 +1194,12 @@ Vyhledá prvek, který odpovídá zadanému klíči.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 hasher^ hash_delegate();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí delegáta použitý k převedení hodnotou klíče na celé číslo. Použijte hodnoty hash klíče.  
+ Členská funkce vrátí delegáta použít pro převod na celé číslo s hodnotou klíče. Použijete ji k vytvoření hodnoty hash klíče.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1235,7 +1218,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1248,7 +1230,7 @@ Sestaví objekt kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 hash_multimap();  
 explicit hash_multimap(key_compare^ pred);  
 hash_multimap(key_compare^ pred, hasher^ hashfn);  
@@ -1270,87 +1252,87 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- hashfn  
- Hash – funkce pro mapování klíče intervalů.  
+ *hashfn*  
+ Hash – funkce pro mapování klíčů do kontejnerů.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- Před  
- Řazení predikát pro řízené sekvenci.  
+ *Před*  
+ Řazení predikátu řízené sekvence.  
   
- vpravo  
- Objekt, nebo rozsah k vložení.  
+ *doprava*  
+ Objekt nebo rozsahu pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `hash_multimap();`  
   
- Inicializuje výchozí řazení predikát řízené sekvenci bez prvků `key_compare()`a pomocí funkce výchozí hodnoty hash. Se používá k určení prázdný počáteční řízené sekvenci, s výchozí řazení funkce predikátu a hodnoty hash.  
+ Inicializuje výchozí řazení predikátu řízené sekvence bez prvků `key_compare()`a s výchozí funkce hash. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikát a hashovací funkce.  
   
  Konstruktor:  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- Inicializuje řízené sekvenci bez prvků s řazení predikát `pred`a pomocí funkce výchozí hodnoty hash. Se používá k určení prázdný počáteční řízené sekvenci, pomocí zadaného predikátu řazení a výchozí funkce hash.  
+ Inicializuje řízené sekvence bez prvků pořadí predikátem *před*a s výchozí funkce hash. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát řazení a výchozí funkce hash.  
   
  Konstruktor:  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- Inicializuje řízené sekvenci bez prvků s řazení predikát `pred`a pomocí funkce hash `hashfn`. Se používá k určení prázdný počáteční řízené sekvenci, pomocí zadané řazení funkce predikátu a hodnoty hash.  
+ Inicializuje řízené sekvence bez prvků pořadí predikátem *před*a hodnotu hash *hashfn*. Použít prázdnou počáteční řízenou sekvenci, určit se zadané pořadí predikát a hashovací funkce.  
   
  Konstruktor:  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu a pomocí funkce výchozí hodnoty hash. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí ovládaná objektem hash_multimap `right`, s výchozí řazení predikát a funkce hash.  
+ Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu a výchozí funkce hash. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu hash_multimap – *správné*s výchozí pořadí predikátem a funkce hash.  
   
  Konstruktor:  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu a pomocí funkce výchozí hodnoty hash. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí ovládaná objektem hash_multimap `right`, s výchozí řazení predikát a funkce hash.  
+ Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu a výchozí funkce hash. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu hash_multimap – *správné*s výchozí pořadí predikátem a funkce hash.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`), s výchozí řazení predikátu a pomocí funkce výchozí hodnoty hash. Použít k vytvoření řízené sekvenci kopie jiné pořadí, výchozí řazení funkce predikátu a hodnoty hash.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`), s výchozí řazení predikátu a výchozí funkce hash. Používejte aby řízené sekvence kopii jiné pořadí, s výchozí řazení predikát a hashovací funkce.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`), s řazení predikát `pred`a pomocí funkce výchozí hodnoty hash. Použít k vytvoření řízené sekvenci kopie jiné pořadí, pomocí zadaného predikátu řazení a výchozí funkce hash.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*a s výchozí funkce hash. Použijete ji k vytvoření kopie jiné pořadí se zadanou predikát řazení a výchozí funkce hash řízené sekvence.  
   
  Konstruktor:  
   
  `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`), s řazení predikát `pred`a pomocí funkce hash `hashfn`. Použít k vytvoření řízené sekvenci kopie jiné pořadí, pomocí zadané řazení funkce predikátu a hodnoty hash.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*a hodnotu hash *hashfn*. Použijte k vytvoření kopie jiné pořadí, pomocí zadané pořadí predikát a hashovací funkce řízené sekvence.  
   
  Konstruktor:  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`, s výchozí řazení predikátu a pomocí funkce výchozí hodnoty hash. Použít k vytvoření řízené sekvenci kopie jiné pořadí popsaného enumerátor, s výchozí řazení funkce predikátu a hodnoty hash.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, s výchozí řazení predikátu a výchozí funkce hash. Použijte k vytvoření kopie jiné pořadí popsal čítače, s výchozí řazení predikát a hashovací funkce řízené sekvence.  
   
  Konstruktor:  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`, s řazení predikát `pred`a pomocí funkce výchozí hodnoty hash. Použít k vytvoření řízené sekvenci kopie jiné pořadí popsaného enumerátor s zadaný řazení predikát a výchozí funkce hash.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*a s výchozí funkce hash. Použijte k vytvoření kopie jiné pořadí popsal enumerátor pomocí zadaného pořadí predikát a výchozí funkce hash řízené sekvence.  
   
  Konstruktor:  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`, s řazení predikát `pred`a pomocí funkce hash `hashfn`. Použít k vytvoření řízené sekvenci kopie jiné pořadí popsaného enumerátor pomocí zadané řazení funkce predikátu a hodnoty hash.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*a hodnotu hash *hashfn*. Použijte k vytvoření kopie jiné pořadí popsal čítače, pomocí zadané pořadí predikát a hashovací funkce řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1461,7 +1443,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1489,13 +1470,13 @@ Hash delegáta pro klíč.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje delegáta, který převede hodnotou klíče na celé číslo.  
+ Typ, který popisuje delegáta, který převede hodnotu klíče na celé číslo.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1514,7 +1495,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1527,7 +1507,7 @@ Přidá prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1536,33 +1516,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- vpravo  
- Výčet k vložení.  
+ *doprava*  
+ Výčet pro vložení.  
   
- Val  
- Hodnota klíče k vložení.  
+ *Val*  
+ Hodnota klíče pro vložení.  
   
- kde  
- Kde v kontejneru vložit (pouze pro pomocný parametr).  
+ *kde*  
+ Kde v kontejneru pro vložení (jenom pro pomocný parametr).  
   
 ### <a name="remarks"></a>Poznámky  
- Každý z členské funkce vloží sekvenci určeného zbývající operandy.  
+ Každá z členské funkce vloží pořadí určeném zbývající operandy.  
   
- První člen funkce vloží element s hodnotou `val`a vrátí iterátor, který označuje nově vloženou elementu. Použijte k vložení jediným elementem.  
+ První členská funkce vloží prvek s hodnotou *val*a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element.  
   
- Druhý členská funkce vloží element s hodnotou `val`pomocí `where` jako nápovědu (výkon) a vrátí iterátor, který označuje nově vloženou elementu. Použijte k vložení jednoho elementu, což může být přiléhající k elementu, které znáte.  
+ Druhá členská funkce vloží prvek s hodnotou *val*s použitím *kde* jako Nápověda (ke zlepšení výkonu) a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element, který může být vedle elementu, které už znáte.  
   
- Třetí členská funkce vloží sekvenci [`first`, `last`). Použijte k vložení počtu nula či více elementů zkopírovaných z jiného pořadí.  
+ Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více elementů zkopírovaných z jiné pořadí.  
   
- Čtvrtý – členská funkce vloží pořadí určené, které `right`. Použijte k vložení sekvenci popsaného enumerátor.  
+ Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.  
   
- Každý element vložení trvá dobu úměrná logaritmus počet elementů v řízené sekvenci. Vložení se může objevit v amortizovaný čas konstantní však zadána nápovědu, který určuje element přiléhající k kurzor.  
+ Každý prvek vložení trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci. Vložení situace může nastat v amortizovaném konstantním času, ale zadaný pomocného parametru, který určuje prvek vedle kurzor.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1624,7 +1604,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1643,12 +1622,12 @@ Typ iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T1` , může sloužit jako obousměrný iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako obousměrný iterátor, který řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1672,7 +1651,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1680,16 +1658,16 @@ int main()
 ``` 
 
 ## <a name="key_comp"></a> hash_multimap::key_comp (STL/CLR)
-Zkopíruje řazení delegáta pro dva klíče.  
+Zkopíruje pořadí delegáta pro dva klíče.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí řazení delegát sloužící k uspořádání řízené sekvenci. Můžete použít k porovnání dvou klíčů.  
+ Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1724,7 +1702,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1738,17 +1715,17 @@ compare(L'b', L'a') = True
 ```  
    
 ## <a name="key_compare"></a> hash_multimap::key_compare (STL/CLR)
-Řazení delegáta pro dva klíče.  
+Pořadí delegáta pro dva klíče.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro delegáta, který určuje řazení klíče argumentů.  
+ Typ je synonymum pro delegáta, který určuje řazení klíče argumenty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1783,7 +1760,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1801,12 +1777,12 @@ Typ klíče řazení
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Key`.  
+ Typ je synonymum pro parametr šablony *klíč*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1833,7 +1809,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1845,12 +1820,12 @@ Spočítá průměrný počet prvků na kbelík.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 float load_factor();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí hodnotu `(float)` [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`. Použijte k určení velikosti průměrná sady.  
+ Členská funkce vrátí `(float)` [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`. Použijete ji k určení velikosti průměrné intervalu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1895,7 +1870,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1914,20 +1888,20 @@ max_load_factor() = 0.25
 ```  
 
 ## <a name="lower_bound"></a> hash_multimap::lower_bound (STL/CLR)
-Najde začátek rozsahu, který odpovídá zadaným klíčem.  
+Vyhledá počátek rozsahu, který odpovídá zadanému klíči.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce určuje první prvek `X` v řízené sekvenci, která rozdělí do stejné sady jako `key` a má ekvivalentní řazení do `key`. Pokud žádný takový prvek existuje, vrátí [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; jinak vrátí iterátor, který označuje `X`. Použijte jej k vyhledání na začátek pořadí prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce určuje první prvek `X` v řízené sekvenci, který vytvoří hodnotu hash na stejném kontejneru jako *klíč* a má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, vrátí [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje `X`. Použijete ji k aktuálně vyhledejte na začátek pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1960,7 +1934,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1975,19 +1948,19 @@ Vytvoří objekt hodnoty.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče k použití.  
+ *Klíč*  
+ Hodnota klíče používat.  
   
- mapovat  
- Mapovat hodnotu k vyhledání.  
+ *mapovat*  
+ Mapovaná hledanou hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí hodnotu `value_type` objekt, jehož klíč je `key` a jehož namapované hodnota je `mapped`. Použitím ji k vytvoření objektu vhodný pro použití s několik dalších členské funkce.  
+ Členská funkce vrátí `value_type` objekt, jehož klíč je *klíč* a jejichž mapované hodnoty se *namapované*. Použijete ji k vytvoření objektu vhodný pro použití s několika další členské funkce.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2010,7 +1983,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2022,12 +1994,12 @@ Typ mapované hodnoty přiřazené ke každému klíči
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Mapped`.  
+ Typ je synonymum pro parametr šablony *mapované*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2054,7 +2026,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2066,19 +2037,19 @@ Získá nebo nastaví maximální počet prvků na kbelík.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- new_factor  
- Nové maximální načíst faktor, který chcete uložit.  
+ *new_factor*  
+ Nové maximální zatížení faktorem, který je ukládat.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce vrátí aktuální Multi-Factor uložené maximální zatížení. Můžete použít k určení velikosti maximální průměrná sady.  
+ První členská funkce vrátí aktuální faktor maximálního zatížení uložené. Použijete ji k určení velikosti maximální průměrná intervalu.  
   
- Druhý členská funkce nahrazuje faktory maximální zatížení úložiště s `new_factor`. Žádné automatické rehashing nastane, dokud následné vložení.  
+ Druhá členská funkce se nahradí faktor maximálního zatížení úložiště s *new_factor*. Žádné automatické rehashing dojde až do další vložit.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2123,7 +2094,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2142,20 +2112,20 @@ max_load_factor() = 0.25
 ``` 
 
 ## <a name="op"></a> hash_multimap::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
+ *doprava*  
  Kontejner pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2186,7 +2156,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2195,16 +2164,16 @@ int main()
 ```  
 
 ## <a name="rbegin"></a> hash_multimap::rbegin (STL/CLR)
-Označuje začátek odstínech řízené sekvenci.  
+Určuje začátek řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator, který určuje poslední elementu v řízené sekvenci nebo právě nad rámec začátku prázdnou sekvencí. Proto označí `beginning` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2235,7 +2204,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2249,12 +2217,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2281,7 +2249,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2293,12 +2260,12 @@ Znovu vytvoří hashovací tabulku.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void rehash();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce znovu sestaví zatřiďovací tabulku, zajistit, aby [hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). V opačném zatřiďovací tabulku zvětší velikost, podle potřeby po vložení. (Ho zmenšena, nikdy automaticky.) Použijete jej upravit velikost zatřiďovací tabulku.  
+ Členská funkce znovu vytvoří tabulku hash, zajistit, aby [hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). V opačném případě zatřiďovací tabulky zvětší velikost, pouze v případě potřeby po vložení. (To zmenšena, nikdy automaticky.) Použít a upravte velikost zatřiďovací tabulku.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2343,7 +2310,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2362,16 +2328,16 @@ max_load_factor() = 0.25
 ``` 
 
 ## <a name="rend"></a> hash_multimap::rend (STL/CLR)
-Označuje konec odstínech řízené sekvenci.  
+Určuje konec řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator této body právě nad rámec začátku řízené sekvenci. Proto označí `end` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` konec řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2404,7 +2370,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2414,16 +2379,16 @@ int main()
 ``` 
 
 ## <a name="reverse_iterator"></a> hash_multimap::reverse_iterator (STL/CLR)
-Typ zpětné iterator pro řízené sekvenci.  
+Typ "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T3` , může sloužit jako reverzní iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2447,7 +2412,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2459,12 +2423,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2496,7 +2460,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2506,16 +2469,16 @@ size() = 2 after adding 2
 ```   
 
 ## <a name="size_type"></a> hash_multimap::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2544,7 +2507,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2557,16 +2519,16 @@ Zamění obsah dvou kontejnerů.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void swap(hash_multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner se Prohodit obsah s.  
+ *doprava*  
+ Kontejner pro obsah s.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce prohození řízené pořadí mezi `this` a `right`. Dělá to tak včas konstantní a vyvolá žádné výjimky. Můžete ho použít jako rychlý způsob, jak exchange obsah dva kontejnery.  
+ Členská funkce Zamění řízené sekvence mezi `this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2608,7 +2570,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2619,16 +2580,16 @@ int main()
 ```  
 
 ## <a name="to_array"></a> hash_multimap::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2659,7 +2620,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2668,20 +2628,20 @@ int main()
 ```  
   
 ## <a name="upper_bound"></a> hash_multimap::upper_bound (STL/CLR)
-Najde konec rozsahu, který odpovídá zadaným klíčem.  
+Najde konec rozsahu, který odpovídá zadanému klíči.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- klíč  
- Hodnota klíče pro vyhledávání.  
+ *Klíč*  
+ Hodnota klíče pro hledání.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce určuje poslední element `X` v řízené sekvenci, která rozdělí do stejné sady jako `key` a má ekvivalentní řazení do `key`. Pokud žádný takový prvek existuje, nebo pokud `X` je poslední elementu v řízené sekvenci, vrátí [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; jinak vrátí iterátor, který označí první prvek nad rámec `X`. Použijte jej k vyhledání konec pořadí prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadaným klíčem.  
+ Členská funkce určuje poslední prvek `X` v řízené sekvenci, který vytvoří hodnotu hash na stejném kontejneru jako *klíč* a má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, nebo pokud `X` je po posledním prvku v řízené sekvenci vrátí [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje prvního prvku mimo `X`. Pomocí aktuálně najít konec pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2714,7 +2674,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2725,16 +2684,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> hash_multimap::value_comp (STL/CLR)
-Zkopíruje řazení delegáta pro dvě hodnoty elementu.  
+Zkopíruje pořadí delegáta pro dvě hodnoty prvků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí řazení delegát sloužící k uspořádání řízené sekvenci. Můžete použít k porovnání dvou hodnot elementu.  
+ Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dvě hodnoty prvků.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2761,7 +2720,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2771,17 +2729,17 @@ compare([L'b', 2], [L'a', 1]) = False
 ``` 
 
 ## <a name="value_compare"></a> hash_multimap::value_compare (STL/CLR)
-Řazení delegáta pro dvě hodnoty elementu.  
+Pořadí delegáta pro dvě hodnoty prvků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro delegáta, který určuje řazení její hodnota argumenty.  
+ Typ je synonymum pro delegáta, který určuje pořadí z argumentů hodnotu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2808,7 +2766,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2822,12 +2779,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ se jedná o synonymum `generic_value`.  
+ Typ je synonymum pro `generic_value`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2853,7 +2810,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

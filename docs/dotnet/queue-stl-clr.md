@@ -1,5 +1,5 @@
 ---
-title: fronty (STL/CLR) | Microsoft Docs
+title: fronty (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079704"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375994"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup první, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `queue` ke správě kontejner základní jako fronty.  
+Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, s přístupem k FIFO first-in. Můžete použít adaptér kontejneru `queue` ke správě základního kontejneru jako do fronty.  
   
- V popisu níže `GValue` je stejný jako `Value` Pokud k tomu je typu ref, v takovém případě je `Value^`. Podobně `GContainer` je stejný jako `Container` Pokud k tomu je typu ref, v takovém případě je `Container^`.  
+ V popisu níže `GValue` je stejný jako *hodnotu* Pokud je typ odkazu, v takovém případě je `Value^`. Obdobně `GContainer` je stejný jako *kontejneru* Pokud je typ odkazu, v takovém případě je `Container^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,14 +98,14 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Hodnota  
+ *Hodnota*  
  Typ elementu v řízené sekvenci  
   
- Kontejner  
+ *Kontejner*  
  Typ základního kontejneru.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – / fronty >  
+ **Záhlaví:** \<cliext – či fronty >  
   
  **Namespace:** cliext –  
 
@@ -116,7 +116,7 @@ template<typename Value,
 |[queue::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
 |[queue::container_type (STL/CLR)](#container_type)|Typ základního kontejneru.|  
 |[queue::difference_type (STL/CLR)](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[queue::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro adaptér kontejneru.|  
+|[queue::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro adaptér kontejneru.|  
 |[queue::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
 |[queue::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
 |[queue::size_type (STL/CLR)](#size_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
@@ -125,40 +125,40 @@ template<typename Value,
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[queue::assign (STL/CLR)](#assign)|Nahradí všechny elementy.|  
-|[queue::back (STL/CLR)](#back)|Přístup k posledním elementem.|  
+|[queue::back (STL/CLR)](#back)|Přistupuje k poslední prvek.|  
 |[queue::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[queue::front (STL/CLR)](#front)|Přístup k první prvek.|  
-|[queue::get_container (STL/CLR)](#get_container)|Přístup k podkladové kontejneru.|  
+|[queue::front (STL/CLR)](#front)|Přistupuje k první prvek.|  
+|[queue::get_container (STL/CLR)](#get_container)|Přistupuje k podkladové kontejneru.|  
 |[queue::pop (STL/CLR)](#pop)|Odebere první prvek.|  
-|[queue::push (STL/CLR)](#push)|Přidá nový posledním elementem.|  
+|[queue::push (STL/CLR)](#push)|Přidá nový poslední prvek.|  
 |[queue::queue (STL/CLR)](#queue)|Sestaví objekt kontejneru.|  
 |[queue::size (STL/CLR)](#size)|Spočítá počet prvků.|  
-|[queue::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
+|[queue::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[queue::back_item (STL/CLR)](#back_item)|Přístup k posledním elementem.|  
-|[queue::front_item (STL/CLR)](#front_item)|Přístup k první prvek.|  
+|[queue::back_item (STL/CLR)](#back_item)|Přistupuje k poslední prvek.|  
+|[queue::front_item (STL/CLR)](#front_item)|Přistupuje k první prvek.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[queue::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvenci.|  
-|[operator!= (queue) (STL/CLR)](#op_neq)|Určuje, zda `queue` objekt není rovno jiné `queue` objektu.|  
-|[operator< (queue) (STL/CLR)](#op_lt)|Určuje, zda `queue` objektu je menší než jiná `queue` objektu.|  
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Určuje, zda `queue` objektu je menší než nebo rovna do jiného `queue` objektu.|  
-|[operator== (queue) (STL/CLR)](#op_eq)|Určuje, zda `queue` objekt rovná jiné `queue` objektu.|  
-|[operator> (queue) (STL/CLR)](#op_gt)|Určuje, zda `queue` je větší než druhý objekt `queue` objektu.|  
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Určuje, zda `queue` objekt je větší než nebo rovna hodnotě jiného `queue` objektu.|  
+|[queue::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|  
+|[operator!= (queue) (STL/CLR)](#op_neq)|Určuje, zda `queue` není roven jinému objektu `queue` objektu.|  
+|[operator< (queue) (STL/CLR)](#op_lt)|Určuje, zda `queue` je menší než jiný objekt `queue` objektu.|  
+|[operator<= (queue) (STL/CLR)](#op_lteq)|Určuje, zda `queue` objekt je menší nebo rovna jiné `queue` objektu.|  
+|[operator== (queue) (STL/CLR)](#op_eq)|Určuje, zda `queue` je roven jinému objektu `queue` objektu.|  
+|[operator> (queue) (STL/CLR)](#op_gt)|Určuje, zda `queue` je větší než jiný objekt `queue` objektu.|  
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Určuje, zda `queue` objekt je větší než nebo roven jinému `queue` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|IQueue\<hodnota, kontejner >|Udržujte adaptér obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|IQueue\<hodnoty, kontejner >|Udržujte adaptér obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí jimi řídí prostřednictvím kontejner základní typu `Container`, který ukládá `Value` elementy a zvětšování na vyžádání. Objekt omezuje přístup jenom vkládání první prvek a odebrání posledním elementem, implementace ven first-in fronty (také označované jako fronty FIFO nebo jednoduše fronty).  
+ Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím základní kontejneru, typu `Container`, který ukládá `Value` elementy a roste na požádání. Objekt omezuje přístup jenom nasdílení změn první prvek a odebrání posledního prvku, implementace FIFO first-in queue (označované také jako do fronty FIFO nebo jednoduše fronty).  
   
 ## <a name="members"></a>Členové
 
@@ -167,16 +167,16 @@ Nahradí všechny elementy.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér vložit.  
+ *doprava*  
+ Adaptér kontejneru pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijete jej chcete-li změnit celý obsah fronty.  
+ Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijte ke změně celého obsahu do fronty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -215,16 +214,16 @@ a b c
 ```  
 
 ## <a name="back"></a> Queue::back (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na poslední elementu řízené sekvenci, která musí být neprázdný. Použít pro přístup k posledním elementem, když víte, že existuje.  
+ Členská funkce vrátí odkaz na poslední prvek řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -266,16 +264,16 @@ back() = c
 ```  
 
 ## <a name="back_item"></a> Queue::back_item (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje ke poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat posledním elementem, když víte, že existuje.  
+ Vlastnost má přístup k poslední prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,12 +318,12 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +360,7 @@ Typ základního kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -401,16 +396,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet element může být záporné.  
+ Typ, který popisuje element může být záporný počet.  
   
 ### <a name="example"></a>Příklad  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda je fronta prázdná.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda je fronta prázdná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -511,16 +504,16 @@ empty() = True
 ```  
 
 ## <a name="front"></a> Queue::front (STL/CLR)
-Přístup k první prvek.  
+Přistupuje k první prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na první prvek řízené sekvenci, která musí být neprázdný. Použít pro přístup k první prvek, když víte, že existuje.  
+ Členská funkce vrátí odkaz na první prvek řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k první prvek, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -562,16 +554,16 @@ front() = a
 ```  
 
 ## <a name="front_item"></a> Queue::front_item (STL/CLR)
-Přístup k první prvek.  
+Přistupuje k první prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje k první prvek řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat první prvek, když víte, že existuje.  
+ Vlastnost přistupuje k první prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu prvního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -613,17 +604,17 @@ front_item = a
 ```  
 
 ## <a name="generic_container"></a> Queue::generic_container (STL/CLR)
-Typ generické rozhraní pro adaptér kontejneru.  
+Typ obecné rozhraní pro adaptér kontejneru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru adaptér šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu adaptéru kontejner šablony.  
   
 ### <a name="example"></a>Příklad  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -675,16 +665,16 @@ a b c d e
 ```  
 
 ## <a name="generic_value"></a> Queue::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typu ref.)  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typ odkazu.)  
   
 ### <a name="example"></a>Příklad  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -732,16 +721,16 @@ a b c
 ```  
 
 ## <a name="get_container"></a> Queue::get_container (STL/CLR)
-Přístup k podkladové kontejneru.  
+Přistupuje k podkladové kontejneru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí základní kontejneru. Můžete použít k porušení omezení způsobené obálku kontejneru.  
+ Členská funkce vrátí základní kontejneru. Použijete ji obejít omezení vynucená obálkou kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -772,20 +760,20 @@ a b c
 ```  
 
 ## <a name="op_as"></a> Queue::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér pro kopírování.  
+ *doprava*  
+ Adaptér kontejneru pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -824,20 +811,20 @@ a b c
 ```  
 
 ## <a name="pop"></a> Queue::POP (STL/CLR)
-Odebere poslední element.  
+Odstraní poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce odebere poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej tak, aby zkrátil fronty podle jednoho prvku na pozadí.  
+ Členská funkce odstraní poslední prvek řízené sekvence, která musí být neprázdný. Použijte ke zkrácení fronty podle jeden element na pozadí.  
   
 ### <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -871,16 +857,16 @@ b c
 ```  
 
 ## <a name="push"></a> Queue::push (STL/CLR)
-Přidá nový posledním elementem.  
+Přidá nový poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce přidá element s hodnotou `val` na konci fronty. Použít pro připojení element do fronty.  
+ Členská funkce přidá element s hodnotou `val` na konci fronty. Použijete ji přidat element do fronty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -911,11 +896,11 @@ a b c
 ```  
 
 ## <a name="queue"></a> Queue::Queue (STL/CLR)
-Vytvoří objekt kontejneru adaptéru.  
+Sestaví objekt kontejneru adaptéru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,36 +908,36 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Objekt, který chcete kopírovat.  
+ *doprava*  
+ Kopírovaný objekt.  
   
- Zabalená  
- Zabalená kontejner používat.  
+ *Zabalená*  
+ Zabalená kontejner, aby používal.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `queue();`  
   
- Vytvoří prázdný zabalené kontejner. Se používá k určení prázdný počáteční řízené sekvenci.  
+ Vytvoří prázdný zabalené kontejner. Použijete ji k určení počáteční prázdnou řízenou sekvenci.  
   
  Konstruktor:  
   
  `queue(queue<Value, Container>% right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right.get_container()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt fronty `right`.  
+ Vytvoří zabalené kontejner, který je kopií `right.get_container()`. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objekt fronty *správné*.  
   
  Konstruktor:  
   
  `queue(queue<Value, Container>^ right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right->get_container()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt fronty `*right`.  
+ Vytvoří zabalené kontejner, který je kopií `right->get_container()`. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objekt fronty `*right`.  
   
  Konstruktor:  
   
  `explicit queue(container_type wrapped);`  
   
- používá existující kontejner `wrapped` jako zabalené kontejneru. Lze použít k sestavení frontu z existující kontejner.  
+ používá existující kontejner *zabalené* jako zabalené kontejner. Můžete použít k vytvoření fronty z existující kontejner.  
   
 ### <a name="example"></a>Příklad  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,12 +990,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1103,16 +1085,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> Queue::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1151,20 +1132,20 @@ size difference = 2
 ```  
 
 ## <a name="to_array"></a> Queue::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value`.  
+ Typ je synonymum pro parametr šablony *hodnota*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1235,8 +1215,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1244,11 +1223,11 @@ a b c
 ```  
 
 ## <a name="op_neq"></a> Operator! = (queue) (STL/CLR)
-Fronta není roven porovnání.  
+Fronta není rovno porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left == right)`. Můžete použít k testování zda `left` není stejný jako seřazené `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* při dvě fronty jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1317,7 +1295,7 @@ Fronty menší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true, pokud, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, `left[i] < right[i]`. Funkce `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` použijete k testování zda `left` je seřadí před `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* Když jsou dvě fronty porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1382,11 +1359,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operátor&lt;= (queue) (STL/CLR)
-Fronty menší než nebo rovna porovnání.  
+Menší nebo rovna fronty porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(right < left)`. Můžete použít k testování zda `left` není objednaný po `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* při dvě fronty jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1451,11 +1427,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (queue) (STL/CLR)
-Porovnání stejné fronty.  
+Porovnání rovna fronty.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true pouze v případě, že daná pořadí řízené `left` a `right` mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Můžete použít k testování zda `left` je stejný jako seřazené `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* při dvě fronty jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1524,7 +1499,7 @@ Fronta je větší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `right` `<` `left`. Můžete použít k testování zda `left` je objednaný po `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* při dvě fronty jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1589,11 +1563,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> operátor&gt;= (queue) (STL/CLR)
-Fronta větší než nebo roven hodnotě porovnání.  
+Fronta větší než nebo rovna porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left < right)`. Můžete použít k testování zda `left` není seřadí před `right` při dvě fronty jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left < right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* při dvě fronty jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

@@ -1,5 +1,5 @@
 ---
-title: Zásobník (STL/CLR) | Microsoft Docs
+title: zásobníku (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -69,21 +69,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 09368f3a43a5ba7a5a1c4247fdbbccdf345b0b21
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079730"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376206"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup poslední, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `stack` ke správě kontejner základní jako zásobník nabízená dolů.  
+Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, s přístupem k FIFO last-in. Můžete použít adaptér kontejneru `stack` ke správě základního kontejneru jako důkladné zásobníku.  
   
- V popisu níže `GValue` je stejný jako `Value` Pokud k tomu je typu ref, v takovém případě je `Value^`. Podobně `GContainer` je stejný jako `Container` Pokud k tomu je typu ref, v takovém případě je `Container^`.  
+ V popisu níže `GValue` je stejný jako *hodnotu* Pokud je typ odkazu, v takovém případě je `Value^`. Obdobně `GContainer` je stejný jako *kontejneru* Pokud je typ odkazu, v takovém případě je `Container^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class stack  
@@ -94,10 +94,10 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Hodnota  
+ *Hodnota*  
  Typ elementu v řízené sekvenci  
   
- Kontejner  
+ *Kontejner*  
  Typ základního kontejneru.  
 
 ## <a name="requirements"></a>Požadavky  
@@ -112,7 +112,7 @@ template<typename Value,
 |[stack::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
 |[stack::container_type (STL/CLR)](#container_type)|Typ základního kontejneru.|  
 |[stack::difference_type (STL/CLR)](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[stack::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro adaptér kontejneru.|  
+|[stack::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro adaptér kontejneru.|  
 |[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
 |[stack::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
 |[stack::size_type (STL/CLR)](#size_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
@@ -122,37 +122,37 @@ template<typename Value,
 |---------------------|-----------------|  
 |[stack::assign (STL/CLR)](#assign)|Nahradí všechny elementy.|  
 |[stack::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[stack::get_container (STL/CLR)](#get_container)|Přístup k podkladové kontejneru.|  
-|[stack::pop (STL/CLR)](#pop)|Odebere poslední element.|  
-|[stack::push (STL/CLR)](#push)|Přidá nový posledním elementem.|  
+|[stack::get_container (STL/CLR)](#get_container)|Přistupuje k podkladové kontejneru.|  
+|[stack::pop (STL/CLR)](#pop)|Odstraní poslední prvek.|  
+|[stack::push (STL/CLR)](#push)|Přidá nový poslední prvek.|  
 |[stack::size (STL/CLR)](#size)|Spočítá počet prvků.|  
 |[stack::stack (STL/CLR)](#stack)|Sestaví objekt kontejneru.|  
-|[stack::top (STL/CLR)](#top)|Přístup k posledním elementem.|  
-|[stack::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
+|[stack::top (STL/CLR)](#top)|Přistupuje k poslední prvek.|  
+|[stack::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[stack::top_item (STL/CLR)](#top_item)|Přístup k posledním elementem.|  
+|[stack::top_item (STL/CLR)](#top_item)|Přistupuje k poslední prvek.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[stack::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvenci.|  
-|[operator!= (stack) (STL/CLR)](#op_neq)|Určuje, zda `stack` objekt není rovno jiné `stack` objektu.|  
-|[operator< (stack) (STL/CLR)](#op_lt)|Určuje, zda `stack` objektu je menší než jiná `stack` objektu.|  
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Určuje, zda `stack` objektu je menší než nebo rovna do jiného `stack` objektu.|  
-|[operator== (stack) (STL/CLR)](#op_eq)|Určuje, zda `stack` objekt rovná jiné `stack` objektu.|  
-|[operator> (stack) (STL/CLR)](#op_gt)|Určuje, zda `stack` je větší než druhý objekt `stack` objektu.|  
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Určuje, zda `stack` objekt je větší než nebo rovna hodnotě jiného `stack` objektu.|  
+|[stack::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|  
+|[operator!= (stack) (STL/CLR)](#op_neq)|Určuje, zda `stack` není roven jinému objektu `stack` objektu.|  
+|[operator< (stack) (STL/CLR)](#op_lt)|Určuje, zda `stack` je menší než jiný objekt `stack` objektu.|  
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Určuje, zda `stack` objekt je menší nebo rovna jiné `stack` objektu.|  
+|[operator== (stack) (STL/CLR)](#op_eq)|Určuje, zda `stack` je roven jinému objektu `stack` objektu.|  
+|[operator> (stack) (STL/CLR)](#op_gt)|Určuje, zda `stack` je větší než jiný objekt `stack` objektu.|  
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Určuje, zda `stack` objekt je větší než nebo roven jinému `stack` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|IStack\<hodnota, kontejner >|Udržujte adaptér obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|IStack\<hodnoty, kontejner >|Udržujte adaptér obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí jimi řídí prostřednictvím kontejner základní typu `Container`, který ukládá `Value` elementy a zvětšování na vyžádání. Objekt omezuje přístup k vložení a odebrání právě posledním elementem, implementace poslední, v jakém byly vytvořeny fronty (také označované jako LIFO fronty, nebo zásobníku).  
+ Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím základní kontejneru, typu *kontejneru*, který ukládá *hodnotu* elementy a roste na požádání. Objekt omezuje přístup k vložení a odebrání právě posledního prvku, implementace fronty FIFO poslední dovnitř (označované také jako LIFO fronty nebo stack).  
  
 ## <a name="members"></a>Členové
 
@@ -161,16 +161,16 @@ Nahradí všechny elementy.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(stack<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér vložit.  
+ *doprava*  
+ Adaptér kontejneru pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijete jej chcete-li změnit celý obsah zásobníku.  
+ Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijte ke změně celého obsahu do zásobníku.  
   
 ### <a name="example"></a>Příklad  
   
@@ -200,7 +200,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -213,12 +212,12 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -244,7 +243,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -256,12 +254,12 @@ Typ základního kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Container`.  
+ Typ je synonymum pro parametr šablony *kontejneru*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -284,8 +282,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -293,16 +290,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet element může být záporné.  
+ Typ, který popisuje element může být záporný počet.  
   
 ### <a name="example"></a>Příklad  
   
@@ -340,7 +337,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -354,12 +350,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda zásobník je prázdný.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda zásobník je prázdný.  
   
 ### <a name="example"></a>Příklad  
   
@@ -391,7 +387,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -403,17 +398,17 @@ empty() = True
 ```  
   
 ## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
-Typ generické rozhraní pro adaptér kontejneru.  
+Typ obecné rozhraní pro adaptér kontejneru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IStack<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru adaptér šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu adaptéru kontejner šablony.  
   
 ### <a name="example"></a>Příklad  
   
@@ -454,7 +449,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -465,16 +459,16 @@ a b c d e
 ```  
   
 ## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typu ref.)  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typ odkazu.)  
   
 ### <a name="example"></a>Příklad  
   
@@ -512,7 +506,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -522,16 +515,16 @@ c b a
 ```  
   
 ## <a name="get_container"></a> Stack::get_container (STL/CLR)
-Přístup k podkladové kontejneru.  
+Přistupuje k podkladové kontejneru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí popisovač pro základní kontejner. Můžete použít k porušení omezení způsobené obálku kontejneru.  
+ Členská funkce vrátí obslužnou rutinu pro základní kontejneru. Použijete ji obejít omezení vynucená obálkou kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -555,7 +548,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -563,20 +555,20 @@ a b c
 ```  
 
 ## <a name="op_as"></a> Stack::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér pro kopírování.  
+ *doprava*  
+ Adaptér kontejneru pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -605,8 +597,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -615,16 +606,16 @@ a b c
 ```  
 
 ## <a name="pop"></a> Stack::POP (STL/CLR)
-Odebere poslední element.  
+Odstraní poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce odebere poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej tak, aby zkrátil zásobníku podle jednoho prvku na pozadí.  
+ Členská funkce odstraní poslední prvek řízené sekvence, která musí být neprázdný. Použijte ke zkrácení zásobníku o jeden element na pozadí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -653,7 +644,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -662,16 +652,16 @@ a b
 ```  
 
 ## <a name="push"></a> Stack::push (STL/CLR)
-Přidá nový posledním elementem.  
+Přidá nový poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vloží element s hodnotou `val` na konci řízené sekvenci. Použít pro připojení jiný element se zásobníkem.  
+ Členská funkce vloží prvek s hodnotou `val` na konci řízené sekvence. Použijete ji k připojení jiný element do zásobníku.  
   
 ### <a name="example"></a>Příklad  
   
@@ -694,7 +684,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -706,12 +695,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -741,7 +730,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -754,12 +742,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -792,7 +780,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -803,16 +790,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> Stack::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -842,7 +829,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -851,11 +837,11 @@ size difference = 2
 ```  
   
 ## <a name="stack"></a> Stack::Stack (STL/CLR)
-Vytvoří objekt kontejneru adaptéru.  
+Sestaví objekt kontejneru adaptéru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 stack();  
 stack(stack<Value, Container>% right);  
 stack(stack<Value, Container>^ right);  
@@ -863,36 +849,36 @@ explicit stack(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Objekt, který chcete kopírovat.  
+ *doprava*  
+ Kopírovaný objekt.  
   
- Zabalená  
- Zabalená kontejner používat.  
+ *Zabalená*  
+ Zabalená kontejner, aby používal.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `stack();`  
   
- Vytvoří prázdný zabalené kontejner. Se používá k určení prázdný počáteční řízené sekvenci.  
+ Vytvoří prázdný zabalené kontejner. Použijete ji k určení počáteční prázdnou řízenou sekvenci.  
   
  Konstruktor:  
   
  `stack(stack<Value, Container>% right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right.get_container()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí ovládaná objektem zásobníku `right`.  
+ Vytvoří zabalené kontejner, který je kopií `right.get_container()`. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objektu stack *správné*.  
   
  Konstruktor:  
   
  `stack(stack<Value, Container>^ right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right->get_container()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí ovládaná objektem zásobníku `*right`.  
+ Vytvoří zabalené kontejner, který je kopií `right->get_container()`. Můžete použít k určení počáteční řízené sekvence, která je kopii sekvence řízenou parametrem objektu stack `*right`.  
   
  Konstruktor:  
   
  `explicit stack(container_type% wrapped);`  
   
- používá existující kontejner `wrapped` jako zabalené kontejneru. Lze použít k sestavení zásobníku z existující kontejner.  
+ používá existující kontejner *zabalené* jako zabalené kontejner. Můžete použít k vytvoření zásobníku z existující kontejner.  
   
 ### <a name="example"></a>Příklad  
   
@@ -930,8 +916,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -942,16 +927,16 @@ size() = 0
 ```  
 
 ## <a name="to_array"></a> Stack::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
@@ -982,7 +967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -991,16 +975,16 @@ a b c
 ```  
 
 ## <a name="top"></a> Stack::top (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference top();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na poslední elementu řízené sekvenci, která musí být neprázdný. Použít pro přístup k posledním elementem, když víte, že existuje.  
+ Členská funkce vrátí odkaz na poslední prvek řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1032,7 +1016,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1042,16 +1025,16 @@ top() = c
 ```  
 
 ## <a name="top_item"></a> Stack::top_item (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type top_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje ke poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat posledním elementem, když víte, že existuje.  
+ Vlastnost má přístup k poslední prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1083,7 +1066,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1097,12 +1079,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value`.  
+ Typ je synonymum pro parametr šablony *hodnota*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1128,8 +1110,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1137,11 +1118,11 @@ c b a
 ```  
 
 ## <a name="op_neq"></a> Operator! = (stack) (STL/CLR)
-Zásobník nerovná porovnání.  
+Zásobník není rovno porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(stack<Value, Container>% left,  
@@ -1149,14 +1130,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left == right)`. Můžete použít k testování zda `left` není stejný jako seřazené `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1194,8 +1175,7 @@ int main()
     System::Console::WriteLine("[a b c] != [a b d] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1210,7 +1190,7 @@ Zásobník menší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(stack<Value, Container>% left,  
@@ -1218,14 +1198,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true, pokud, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, `left[i] < right[i]`. Funkce `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` použijete k testování zda `left` je seřadí před `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* Když jsou dva balíčky porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1263,8 +1243,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1275,11 +1254,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operátor&lt;= (stack) (STL/CLR)
-Menší než nebo rovna zásobníku porovnání.  
+Stack – menší nebo rovna porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(stack<Value, Container>% left,  
@@ -1287,14 +1266,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(right < left)`. Můžete použít k testování zda `left` není objednaný po `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1332,8 +1311,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1348,7 +1326,7 @@ Porovnání rovna zásobníku.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(stack<Value, Container>% left,  
@@ -1356,14 +1334,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true pouze v případě, že daná pořadí řízené `left` a `right` mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Můžete použít k testování zda `left` je stejný jako seřazené `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1401,8 +1379,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1413,11 +1390,11 @@ int main()
 ```  
   
 ## <a name="op_gt"></a> operátor&gt; (stack) (STL/CLR)
-Zásobník větší než porovnání.  
+Zásobník je větší než porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(stack<Value, Container>% left,  
@@ -1425,14 +1402,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `right` `<` `left`. Můžete použít k testování zda `left` je objednaný po `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1470,8 +1447,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1482,11 +1458,11 @@ int main()
 ```  
   
 ## <a name="op_gteq"></a> operátor&gt;= (stack) (STL/CLR)
-Zásobník větší než nebo rovna porovnání.  
+Stack – větší než nebo roven hodnotě porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(stack<Value, Container>% left,  
@@ -1494,18 +1470,18 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left < right)`. Můžete použít k testování zda `left` není seřadí před `right` při dva zásobníky jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left < right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* při dva balíčky jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cliext_stack_operator_ge.cpp   
 // compile with: /clr   
 #include <cliext/stack>   
@@ -1540,7 +1516,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1548,4 +1523,4 @@ int main()
  a b d  
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
-```  
+``` 

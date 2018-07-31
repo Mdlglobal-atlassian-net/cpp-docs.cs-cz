@@ -1,5 +1,5 @@
 ---
-title: funkční (STL/CLR) | Microsoft Docs
+title: funkční (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305901"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376362"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-Zahrnout hlavičku STL/CLR `<cliext/functional>` k definování počtu tříd šablon a související šablony Delegáti a funkce.  
+Zahrnout záhlaví STL/CLR `<cliext/functional>` definovat počet šablony třídy a delegáti související šablony a funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,48 +98,48 @@ Zahrnout hlavičku STL/CLR `<cliext/functional>` k definování počtu tříd š
   
 |Delegát|Popis|  
 |--------------|-----------------|  
-|[binary_delegate (STL/CLR)](#binary_delegate)|Delegát dva argument.|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegát dva argument vrací `void`.|  
-|[unary_delegate (STL/CLR)](#unary_delegate)|Delegát jeden argument.|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegát jeden argument vrací `void`.|  
+|[binary_delegate (STL/CLR)](#binary_delegate)|Delegát dvěma argumenty.|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Dvěma argumenty delegáta vrací **void**.|  
+|[unary_delegate (STL/CLR)](#unary_delegate)|Jednoargumentové delegáta.|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Jednoargumentové delegáta vrací **void**.|  
   
 |Třída|Popis|  
 |-----------|-----------------|  
-|[binary_negate (STL/CLR)](#binary_negate)|Functor k negate functor dva argument.|  
-|[binder1st (STL/CLR)](#binder1st)|Functor k vytvoření vazby první argument. argument dva functor.|  
-|[binder2nd (STL/CLR)](#binder2nd)|Functor k vytvoření vazby druhý argument. argument dva functor.|  
-|[divides (STL/CLR)](#divides)|Dělení functor.|  
-|[equal_to (STL/CLR)](#equal_to)|Rovnat functor porovnání.|  
-|[greater (STL/CLR)](#greater)|Větší functor porovnání.|  
-|[greater_equal (STL/CLR)](#greater_equal)|Porovnání větší nebo rovna functor.|  
-|[less (STL/CLR)](#less)|Menší functor porovnání.|  
-|[less_equal (STL/CLR)](#less_equal)|Porovnání menší nebo rovna functor.|  
-|[logical_and (STL/CLR)](#logical_and)|Logické a functor.|  
-|[logical_not (STL/CLR)](#logical_not)|Logické není functor.|  
-|[logical_or (STL/CLR)](#logical_or)|Logické nebo functor.|  
-|[minus (STL/CLR)](#minus)|Odečtena functor.|  
-|[modulus (STL/CLR)](#modulus)|MODULUS functor.|  
-|[multiplies (STL/CLR)](#multiplies)|Vynásobte functor.|  
-|[negate (STL/CLR)](#negate)|Functor vrátit argument Negované.|  
-|[not_equal_to (STL/CLR)](#not_equal_to)|Není rovno porovnání functor.|  
-|[plus (STL/CLR)](#plus)|Přidejte functor.|  
-|[unary_negate (STL/CLR)](#unary_negate)|Functor k negate functor jeden argument.|  
+|[binary_negate (STL/CLR)](#binary_negate)|Funktor, který se má negovat funktor dvěma argumenty.|  
+|[binder1st (STL/CLR)](#binder1st)|Funktor k vytvoření vazby prvního argumentu funktor dvěma argumenty.|  
+|[binder2nd (STL/CLR)](#binder2nd)|Funktor k vytvoření vazby druhého argumentu funktor dvěma argumenty.|  
+|[divides (STL/CLR)](#divides)|Rozdělte funktor.|  
+|[equal_to (STL/CLR)](#equal_to)|Porovnání rovna funktor.|  
+|[greater (STL/CLR)](#greater)|Větší porovnání funktor.|  
+|[greater_equal (STL/CLR)](#greater_equal)|Porovnání větší nebo rovna funktor.|  
+|[less (STL/CLR)](#less)|Méně porovnání funktor.|  
+|[less_equal (STL/CLR)](#less_equal)|Menší než nebo rovné porovnání funktor.|  
+|[logical_and (STL/CLR)](#logical_and)|Logické a funktor.|  
+|[logical_not (STL/CLR)](#logical_not)|Logické ne funktor.|  
+|[logical_or (STL/CLR)](#logical_or)|Logický OR funktor.|  
+|[minus (STL/CLR)](#minus)|Odečte funktor.|  
+|[modulus (STL/CLR)](#modulus)|MODULUS funktor.|  
+|[multiplies (STL/CLR)](#multiplies)|Vynásobte funktor.|  
+|[negate (STL/CLR)](#negate)|Funktor vrátit argument negovat.|  
+|[not_equal_to (STL/CLR)](#not_equal_to)|Není rovno porovnání funktor.|  
+|[plus (STL/CLR)](#plus)|Přidáte funktor.|  
+|[unary_negate (STL/CLR)](#unary_negate)|Funktor, který se má negovat funktor jedním argumentem.|  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|Generuje binder1st argument a functor.|  
-|[bind2nd (STL/CLR)](#bind2nd)|Generuje binder2nd argument a functor.|  
-|[not1 (STL/CLR)](#not1)|Generuje unary_negate pro functor.|  
-|[not2 (STL/CLR)](#not2)|Generuje binary_negate pro functor.|  
+|[bind1st (STL/CLR)](#bind1st)|Generuje binder1st – argument a funktor.|  
+|[bind2nd (STL/CLR)](#bind2nd)|Generuje binder2nd – argument a funktor.|  
+|[not1 (STL/CLR)](#not1)|Generuje unary_negate – pro funktor.|  
+|[not2 (STL/CLR)](#not2)|Generuje binary_negate – pro funktor.|  
    
 ## <a name="members"></a>Členové
 
-## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-Třída genereic popisuje dva argument delegáta. Můžete ji použít zadejte delegáta z hlediska její argument a návratové typy.  
+## <a name="binary_delegate"></a> binary_delegate – (STL/CLR)
+Třída genereic popisuje dvěma argumenty delegáta. Můžete ji použít delegátu, co se týče její argument a návratovým typem.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,17 +147,17 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- arg1  
+ *arg1*  
  Typ prvního argumentu.  
   
- arg2  
- Typ druhý argument.  
+ *arg2*  
+ Typ druhého argumentu.  
   
- Výsledek  
+ *výsledek*  
  Návratový typ.  
   
 ### <a name="remarks"></a>Poznámky  
- Delegát genereic popisuje dva argument funkce.  
+ Delegát genereic popisuje funkci se dvěma argumenty.  
   
  Všimněte si, že pro:  
   
@@ -165,7 +165,7 @@ generic<typename Arg1,
   
  `binary_delegate<int, int, int> Fun2;`  
   
- typy `Fun1` a `Fun2` jsou synonyma, při pro:  
+ typy `Fun1` a `Fun2` jsou synonyma, zatímco pro:  
   
  `delegate int Fun1(int, int);`  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,25 +208,25 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn – (STL/CLR)
-Třída genereic popisuje dva argument delegáta, který vrátí `void`. Můžete ji použít zadejte delegáta z hlediska jeho argumentem.  
+Třída genereic popisuje dvěma argumenty delegáta, který vrátí **void**. Můžete ji použít delegátu, co se týče svého argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- arg1  
+ *arg1*  
  Typ prvního argumentu.  
   
- arg2  
- Typ druhý argument.  
+ *arg2*  
+ Typ druhého argumentu.  
   
 ### <a name="remarks"></a>Poznámky  
- Delegát genereic popisuje dva argument funkci vracející `void`.  
+ Popisuje dvěma argumenty funkci, která vrací delegáta genereic **void**.  
   
  Všimněte si, že pro:  
   
@@ -235,7 +234,7 @@ generic<typename Arg1,
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- typy `Fun1` a `Fun2` jsou synonyma, při pro:  
+ typy `Fun1` a `Fun2` jsou synonyma, zatímco pro:  
   
  `delegate void Fun1(int, int);`  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -276,12 +274,12 @@ compare(a, b) = True
 compare(b, a) = False  
 ```  
 
-## <a name="binary_negate"></a> binary_negate (STL/CLR)
-Šablony třídy popisuje functor, vrátí logické při volání, není z jeho uložené functor dva argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené functor.  
+## <a name="binary_negate"></a> binary_negate – (STL/CLR)
+Třída šablony popisuje funktor, který po zavolání vrátí logické ne z jeho uložených funktor dvěma argumenty. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,32 +302,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Fun  
- Typ uložené functor.  
+ *Zábava*  
+ Typ uložené funktor.  
   
 ## <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
-|stored_function_type|Typ functor.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
+|stored_function_type|Typ funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|binary_negate|Vytvoří functor.|  
+|binary_negate|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type^() – operátor|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type^() – operátor|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor, uchovávající jiné functor dva argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí logické není z uložené functor volána s dva argumenty.  
+ Třída šablony popisuje dvěma argumenty funktor, který ukládá další funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí logické nejsou uložené funktor volat se dvěma argumenty.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st – (STL/CLR)
-Generuje `binder1st` argument a functor.  
+Generuje `binder1st` argument a funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parametry šablony  
- Arg  
+ *arg*  
  Typ argumentu.  
   
- Fun  
- Typ functor.  
+ *Zábava*  
+ Typ funktor.  
   
-#### <a name="function-parameters"></a>Funkční parametry  
- functor  
- Functor zabalit.  
+#### <a name="function-parameters"></a>Parametry funkce  
+ *funktor*  
+ Funktor zabalit.  
   
- left  
- První argument zabalení.  
+ *doleva*  
+ První argument zabalit.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce šablony vrátí [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Můžete ho použít jako pohodlný způsob, jak zabalit dva argument functor a svůj první argument v functor jeden argument, který volá s druhým argumentem.  
+ Šablona funkce vrátí [binder1st – (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty a svůj první argument v jednoargumentové funktor, který ji volá jako druhý argument.  
   
 ### <a name="example"></a>Příklad  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd – (STL/CLR)
-Generuje `binder2nd` argument a functor.  
+Generuje `binder2nd` argument a funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parametry šablony  
- Arg  
+ *arg*  
  Typ argumentu.  
   
- Fun  
- Typ functor.  
+ *Zábava*  
+ Typ funktor.  
   
-#### <a name="function-parameters"></a>Funkční parametry  
- functor  
- Functor zabalit.  
+#### <a name="function-parameters"></a>Parametry funkce  
+ *funktor*  
+ Funktor zabalit.  
   
- vpravo  
+ *doprava*  
  Druhý argument zabalit.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce šablony vrátí [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Můžete ho použít jako pohodlný způsob, jak zabalit dva argument functor a její druhý parametr v functor jeden argument, který volá s prvním argumentem.  
+ Šablona funkce vrátí [binder2nd – (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty a druhý argument do jednoargumentové funktor, který zavolá se první argument.  
   
 ### <a name="example"></a>Příklad  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -544,12 +539,12 @@ int main()
 0 -1  
 ```  
 
-## <a name="binder1st"></a> binder1st (STL/CLR)
-Šablony třídy popisuje jeden argument functor, pokud je volána, vrátí jeho uložené dva argument functor volána s jeho uložené první argument a druhý argument zadaný. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené functor.  
+## <a name="binder1st"></a> binder1st – (STL/CLR)
+Třída šablony popisuje jednoargumentové funktor, který po zavolání vrátí jeho uložené funktor dvěma argumenty volat uloženou první argument a druhý zadaný argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,32 +566,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Fun  
- Typ uložené functor.  
+ *Zábava*  
+ Typ uložené funktor.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
-|stored_function_type|Typ functor.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
+|stored_function_type|Typ funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|binder1st|Vytvoří functor.|  
+|binder1st|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type^() – operátor|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type^() – operátor|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje functor jeden argument, který ukládá dvě argument functor a první argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí výsledek volání uložené functor s uložené první argument a zadaný druhý argument.  
+ Třída šablony popisuje jednoargumentové funktor, který ukládá funktor dvěma argumenty a jako první argument. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí výsledek volání uložené funktor uložené první argument a druhý zadaný argument.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -647,12 +641,12 @@ int main()
 -1 0  
 ```  
 
-## <a name="binder2nd"></a> binder2nd (STL/CLR)
-Šablony třídy popisuje functor jeden argument, pokud je volána, vrátí jeho uložené dva argument functor volána s zadaný první argument a jeho uložené druhý argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené functor.  
+## <a name="binder2nd"></a> binder2nd – (STL/CLR)
+Třída šablony popisuje jednoargumentové funktor, který po zavolání vrátí jeho uložené funktor dvěma argumenty volat s první zadaný argument a jeho uložené druhý argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,32 +668,32 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Fun  
- Typ uložené functor.  
+ *Zábava*  
+ Typ uložené funktor.  
   
 ## <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
-|stored_function_type|Typ functor.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
+|stored_function_type|Typ funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|binder2nd|Vytvoří functor.|  
+|binder2nd|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type^() – operátor|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type^() – operátor|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje functor jeden argument, který ukládá dvě argument functor a druhý argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí výsledek volání uložené functor s zadaný první argument a uložené druhý argument.  
+ Třída šablony popisuje jednoargumentové funktor, který ukládá funktor dvěma argumenty a druhý argument. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí výsledek volání uložené funktor zadaný první argument a uložené druhý argument.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -751,11 +744,11 @@ int main()
 ```  
   
 ## <a name="divides"></a> vydělí (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí první argument rozdělené druhou. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který, při volání vrátí hodnotu prvního argumentu děleného po sekundách. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,31 +770,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumentů a návratovou hodnotu.  
+ *arg*  
+ Typ argumentů a vrácené hodnoty.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|divides|Vytvoří functor.|  
+|divides|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type^() – operátor|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type^() – operátor|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí první argument rozdělené druhou.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí prvního argumentu děleného po sekundách.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -849,12 +841,12 @@ int main()
 2 3  
 ```  
 
-## <a name="equal_to"></a> equal_to (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument rovná druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+## <a name="equal_to"></a> equal_to – (STL/CLR)
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že první argument je roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,31 +868,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|equal_to|Vytvoří functor.|  
+|equal_to|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type^() – operátor|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type^() – operátor|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument rovná druhé.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument je roven druhému.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> větší (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument je větší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud je první argument větší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,31 +966,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|greater|Vytvoří functor.|  
+|greater|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument je větší než druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument větší než druhý.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal – (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí hodnotu true pouze pokud první argument je větší než nebo rovna hodnotě druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který, při volání, vrací hodnotu true, pouze pokud je první argument větší než nebo roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,31 +1064,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|greater_equal|Vytvoří functor.|  
+|greater_equal|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument je větší než nebo rovna hodnotě druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument větší než nebo roven druhému.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1147,11 +1136,11 @@ int main()
 ```  
 
 ## <a name="less"></a> menší (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument je menší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud je první argument menší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,31 +1162,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|less|Vytvoří functor.|  
+|less|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument je menší než druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument menší než druhý.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal – (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí hodnotu true pouze pokud první argument je menší než nebo rovna druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který, při volání, vrací hodnotu true, pouze pokud je první argument menší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,31 +1260,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|less_equal|Vytvoří functor.|  
+|less_equal|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument je menší než nebo rovna druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument menší než druhý.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and – (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,31 +1358,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|logical_and|Vytvoří functor.|  
+|logical_and|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument a druhý test jako true.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument a druhý test jako true.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not – (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true, pouze pokud buď testy její argument jako false. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud její argument testuje hodnotu false. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,30 +1454,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|argument_type|Typ argumentu functor.|  
-|delegate_type|Typ obecný delegát.|  
-|result_type|Typ výsledku functor.|  
+|argument_type|Typ argumentu funktor.|  
+|delegate_type|Typ obecného delegátu.|  
+|result_type|Typ výsledku funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|logical_not|Vytvoří functor.|  
+|logical_not|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje functor jeden argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud testy její argument jako false.  
+ Třída šablony popisuje funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud její argument testuje hodnotu false.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or – (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že je argumentem první nebo druhý testy jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že argument první nebo druhé testy jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,31 +1543,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|logical_or|Vytvoří functor.|  
+|logical_or|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument nebo druhý testy jako true.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument nebo druhý testy jako true.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> minus (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí první argument minus druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který po zavolání vrátí první argument minus druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,31 +1641,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumentů a návratovou hodnotu.  
+ *arg*  
+ Typ argumentů a vrácené hodnoty.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|minus|Vytvoří functor.|  
+|minus|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí první argument minus druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument minus druhé.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1729,12 +1712,12 @@ int main()
 2 2  
 ``` 
 
-## <a name="modulus"></a> numerického zbytku (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí první argument modulo druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+## <a name="modulus"></a> modulo (STL/CLR)
+Třída šablony popisuje funktor, který po zavolání vrátí první argument modulo druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,31 +1739,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumentů a návratovou hodnotu.  
+ *arg*  
+ Typ argumentů a vrácené hodnoty.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|modulus|Vytvoří functor.|  
+|modulus|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí první argument modulo druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument modulo druhé.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1829,11 +1811,11 @@ int main()
 ```   
 
 ## <a name="multiplies"></a> Vynásobí (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí první argument časy druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který po zavolání vrátí první argument doby druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,31 +1837,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumentů a návratovou hodnotu.  
+ *arg*  
+ Typ argumentů a vrácené hodnoty.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|multiplies|Vytvoří functor.|  
+|multiplies|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí první argument časy druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument doby druhé.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1927,12 +1908,12 @@ int main()
 8 3  
 ```  
 
-## <a name="negate"></a> negate (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí její argument Negované. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+## <a name="negate"></a> negate – (STL/CLR)
+Třída šablony popisuje funktor, který po zavolání vrátí svůj argument negovat. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,30 +1933,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|argument_type|Typ argumentu functor.|  
-|delegate_type|Typ obecný delegát.|  
-|result_type|Typ výsledku functor.|  
+|argument_type|Typ argumentu funktor.|  
+|delegate_type|Typ obecného delegátu.|  
+|result_type|Typ výsledku funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|negate|Vytvoří functor.|  
+|negate|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje functor jeden argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí její argument Negované.  
+ Třída šablony popisuje funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí svůj argument negovat.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> not_equal_to – (STL/CLR)
-Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument není rovno druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud první argument není roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,31 +2022,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumenty.  
+ *arg*  
+ Typ argumentů.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|not_equal_to|Vytvoří functor.|  
+|not_equal_to|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí hodnotu true pouze pokud první argument není rovno druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument není roven druhému.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2115,25 +2094,25 @@ int main()
 ```   
 
 ## <a name="not1"></a> not1 – (STL/CLR)
-Generuje `unary_negate` pro functor.  
+Generuje `unary_negate` pro funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parametry šablony  
- Fun  
- Typ functor.  
+ *Zábava*  
+ Typ funktor.  
   
-#### <a name="function-parameters"></a>Funkční parametry  
- functor  
- Functor zabalit.  
+#### <a name="function-parameters"></a>Parametry funkce  
+ *funktor*  
+ Funktor zabalit.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce šablony vrátí [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Můžete ho použít jako vhodný způsob k zalomení jeden argument functor v functor, který doručí jeho logický operátor NOT.  
+ Šablona funkce vrátí [unary_negate – (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Můžete použít jako pohodlný způsob, jak zabalit funktor jedním argumentem v funktor, který zajišťuje jeho logický operátor NOT.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2184,25 +2162,25 @@ int main()
 ```  
 
 ## <a name="not2"></a> not2 – (STL/CLR)
-Generuje `binary_negate` pro functor.  
+Generuje `binary_negate` pro funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parametry šablony  
- Fun  
- Typ functor.  
+ *Zábava*  
+ Typ funktor.  
   
-#### <a name="function-parameters"></a>Funkční parametry  
- functor  
- Functor zabalit.  
+#### <a name="function-parameters"></a>Parametry funkce  
+ *funktor*  
+ Funktor zabalit.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce šablony vrátí [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Můžete ho použít jako vhodný způsob k zalomení dva argument functor v functor, který doručí jeho logický operátor NOT.  
+ Šablona funkce vrátí [binary_negate – (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty v funktor, který zajišťuje jeho logický operátor NOT.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2262,11 +2239,11 @@ int main()
 ```  
 
 ## <a name="plus"></a> plus (STL/CLR)
-Šablony třídy popisuje functor, při volání, vrátí první argument a druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
+Třída šablony popisuje funktor, který po zavolání vrátí první argument a druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,31 +2265,31 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
- Typ argumentů a návratovou hodnotu.  
+ *arg*  
+ Typ argumentů a vrácené hodnoty.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|delegate_type|Typ obecný delegát.|  
-|first_argument_type|Typ prvního argumentu functor.|  
-|result_type|Typ výsledku functor.|  
-|second_argument_type|Typ functor druhý argument.|  
+|delegate_type|Typ obecného delegátu.|  
+|first_argument_type|Typ prvního argumentu funktor.|  
+|result_type|Typ výsledku funktor.|  
+|second_argument_type|Typ druhého argumentu funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|plus|Vytvoří functor.|  
+|plus|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|operátor delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type operátor ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje dva argument functor. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí první argument a druhý.  
+ Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument a druhý.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2360,26 +2336,26 @@ int main()
 6 4  
 ```  
 
-## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-Třída genereic popisuje delegáta jeden argument. Můžete ji použít zadejte delegáta z hlediska její argument a návratové typy.  
+## <a name="unary_delegate"></a> unary_delegate – (STL/CLR)
+Třída genereic popisuje jeden argument delegáta. Můžete ji použít delegátu, co se týče její argument a návratovým typem.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
+ *arg*  
  Typ argumentu.  
   
- Výsledek  
+ *výsledek*  
  Návratový typ.  
   
 ### <a name="remarks"></a>Poznámky  
- Delegát genereic popisuje jeden argument funkce.  
+ Delegát genereic popisuje funkci jedním argumentem.  
   
  Všimněte si, že pro:  
   
@@ -2387,7 +2363,7 @@ generic<typename Arg,
   
  `unary_delegare<int, int> Fun2;`  
   
- typy `Fun1` a `Fun2` jsou synonyma, při pro:  
+ typy `Fun1` a `Fun2` jsou synonyma, zatímco pro:  
   
  `delegate int Fun1(int);`  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,21 +2400,21 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn – (STL/CLR)
-Třída genereic popisuje jeden argument delegáta, který vrátí `void`. Můžete ji použít zadejte delegáta z hlediska jeho typ argumentu.  
+Třída genereic popisuje jeden argument delegáta, který vrátí **void**. Můžete ji použít delegátu, z hlediska jeho typ argumentu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Arg  
+ *arg*  
  Typ argumentu.  
   
 ### <a name="remarks"></a>Poznámky  
- Delegát genereic popisuje jeden argument funkci vracející `void`.  
+ Popisuje jedním argumentem funkce, která vrací delegáta genereic **void**.  
   
  Všimněte si, že pro:  
   
@@ -2447,7 +2422,7 @@ generic<typename Arg>
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- typy `Fun1` a `Fun2` jsou synonyma, při pro:  
+ typy `Fun1` a `Fun2` jsou synonyma, zatímco pro:  
   
  `delegate void Fun1(int);`  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2485,12 +2459,12 @@ hash(a) = 5
 hash(b) = 22  
 ```  
 
-## <a name="unary_negate"></a> unary_negate (STL/CLR)
-Šablony třídy popisuje functor, vrátí logické při volání, není z jeho uloženého functor jeden argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené functor.  
+## <a name="unary_negate"></a> unary_negate – (STL/CLR)
+Třída šablony popisuje funktor, který po zavolání vrátí logické ne z jeho uložených funktor jedním argumentem. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,30 +2485,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Fun  
- Typ uložené functor.  
+ *Zábava*  
+ Typ uložené funktor.  
   
 ### <a name="member-functions"></a>Členské funkce  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
-|argument_type|Typ argumentu functor.|  
-|delegate_type|Typ obecný delegát.|  
-|result_type|Typ výsledku functor.|  
+|argument_type|Typ argumentu funktor.|  
+|delegate_type|Typ obecného delegátu.|  
+|result_type|Typ výsledku funktor.|  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|unary_negate|Vytvoří functor.|  
+|unary_negate|Sestaví funktor.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|Operator() –|Vypočítá požadované funkce.|  
-|delegate_type ^|Vrhá functor s delegátem.|  
+|Operator()|Vypočítá požadované funkce.|  
+|delegate_type ^|Přetypování funktor na delegáta.|  
   
 ### <a name="remarks"></a>Poznámky  
- Šablony třídy popisuje functor jeden argument, uchovávající jiné functor jeden argument. Definuje operátor členů `operator()` tak, aby objekt, kdy se nazývá jako funkce, vrátí logické není z uložené functor volána s argumentem.  
+ Třída šablony popisuje jednoargumentové funktor, který ukládá další funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí logické ne z uložené funktor volána s argumentem.  
   
- Objekt můžete předat také jako argument funkce, jejíž typ je `delegate_type^` a bude odpovídajícím způsobem převést.  
+ Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

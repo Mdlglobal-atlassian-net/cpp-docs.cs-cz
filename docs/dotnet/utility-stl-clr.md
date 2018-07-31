@@ -1,5 +1,5 @@
 ---
-title: Nástroj (STL/CLR) | Microsoft Docs
+title: nástroje (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -49,24 +49,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fcc97e5037898b3a9c39a6c72ed21b2c19a4c777
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: e1150fb6d3df325fd9d5d9b4180318fa029102c3
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306018"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375913"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
-Zahrnout hlavičku STL/CLR `<cliext/utility>` definovat šablony třídy `pair` a několik podpůrné funkce šablony.  
+Zahrnout záhlaví STL/CLR `<cliext/utility>` definice třídy šablony `pair` a několik podpůrných šablon funkcí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 #include <utility>  
 ```
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – / nástroj >  
+ **Záhlaví:** \<cliext – / nástroje >  
   
  **Namespace:** cliext –  
   
@@ -74,39 +74,39 @@ Zahrnout hlavičku STL/CLR `<cliext/utility>` definovat šablony třídy `pair` 
   
 |Třída|Popis|  
 |-----------|-----------------|  
-|[pair (STL/CLR)](#pair)|Zabalení pár elementů.|  
+|[pair (STL/CLR)](#pair)|Zabalení dvojici prvků.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[operator== (pair) (STL/CLR)](#op_eq)|Pár rovnat porovnání.|  
-|[operator!= (pair) (STL/CLR)](#op_neq)|Pár nerovná porovnání.|  
-|[operator< (pair) (STL/CLR)](#op_lt)|Pár menší než porovnání.|  
-|[operátor\<= (pair) (STL/CLR)](#op_lteq)|Spárujte menší než nebo rovna porovnání.|  
-|[operator> (pair) (STL/CLR)](#op_gt)|Pár větší než porovnání.|  
+|[operator== (pair) (STL/CLR)](#op_eq)|Porovnání rovna pár.|  
+|[operator!= (pair) (STL/CLR)](#op_neq)|Spárujte nerovná porovnání.|  
+|[operator< (pair) (STL/CLR)](#op_lt)|Dvojice menší než porovnání.|  
+|[operátor\<= (pair) (STL/CLR)](#op_lteq)|Pair – menší nebo rovna porovnání.|  
+|[operator> (pair) (STL/CLR)](#op_gt)|Dvojice větší než porovnání.|  
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Pár větší než nebo rovna porovnání.|  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
-|[make_pair (STL/CLR)](#make_pair)|Aby dvojice z dvojici hodnot.|  
+|[make_pair (STL/CLR)](#make_pair)|Proveďte pár z dvojice hodnot.|  
 
 ## <a name="members"></a>Členové
 
 ##<a name="pair"></a> pár (STL/CLR)
-Šablony třídy popisuje objekt, který zabalí dvojici hodnot.  
+Třída šablony popisuje objekt, který obtéká dvojici hodnot.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     ref class pair;  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- value1  
+ *Hodnota1*  
  Typ první zabalená hodnota.  
   
- Value2  
+ *Hodnota2*  
  Typ druhého zabalená hodnota.  
   
 ## <a name="members"></a>Členové  
@@ -118,20 +118,20 @@ template<typename Value1,
   
 |Člen objektu|Popis|  
 |-------------------|-----------------|  
-|[pair::first (STL/CLR)](#first)|První uložené hodnotu.|  
-|[pair::second (STL/CLR)](#second)|Druhá hodnota uložené.|  
+|[pair::first (STL/CLR)](#first)|První uloženou hodnotu.|  
+|[pair::second (STL/CLR)](#second)|Druhý uloženou hodnotu.|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[pair::pair (STL/CLR)](#pair_pair)|Vytvoří objekt dvojice.|  
-|[pair::swap (STL/CLR)](#swap)|Zamění obsah dvě dvojice.|  
+|[pair::swap (STL/CLR)](#swap)|Zamění obsah dvou dvojice.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[pair::operator= (STL/CLR)](#op_as)|Nahradí uložené dvojice hodnot.|  
+|[pair::operator= (STL/CLR)](#op_as)|Nahradí uloženou dvojice hodnot.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt ukládá dvojici hodnot. Tato třída šablony slouží ke kombinování dvou hodnot do jednoho objektu. Navíc objekt `cliext::pair` (zde popsané) ukládá pouze spravované typy; k uložení pár nespravované typy využívají `std::pair`, deklarované v `<utility>`.  
+ Objekt ukládají dvojice hodnot. Pomocí této třídy šablony kombinovat dvě hodnoty do jediného objektu. Kromě toho objekt `cliext::pair` (zde popsané) ukládá pouze spravované typy; k uložení pár nespravovaného typy používají `std::pair`, které jsou deklarovány v `<utility>`.  
 
 
 ## <a name="first"></a> Pair::First (STL/CLR)
@@ -139,7 +139,7 @@ První zabalená hodnota.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Value1 first;  
 ```  
   
@@ -163,7 +163,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -175,12 +174,12 @@ Typ první zabalená hodnota.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value1 first_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value1`.  
+ Typ je synonymum pro parametr šablony *hodnota1*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -198,8 +197,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -207,20 +205,20 @@ int main()
 ```  
 
 ## <a name="op_as"></a> Pair::Operator = (STL/CLR)
-Nahradí uložené dvojice hodnot.  
+Nahradí uloženou dvojice hodnot.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Pár ke kopírování.  
+ *doprava*  
+ Dvojice ke kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení uložené dvojice hodnot s kopie uložené dvojice hodnot v `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahrazení uložené dvojice hodnot kopie uložené dvojice hodnot v *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -239,8 +237,7 @@ int main()
     c2 = c1;   
     System::Console::WriteLine("[{0}, {1}]", c2.first, c2.second);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -253,7 +250,7 @@ Vytvoří objekt dvojice.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 pair();  
 pair(pair<Coll>% right);  
 pair(pair<Coll>^ right);  
@@ -261,37 +258,37 @@ pair(Value1 val1, Value2 val2);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Pár k uložení.  
+ *doprava*  
+ Dvojice k uložení.  
   
- Hodnota1  
- První hodnota k uložení.  
+ *Val1*  
+ První hodnota pro uložení.  
   
- hodnota2  
- Druhá hodnota, která k ukládání.  
+ *Val2*  
+ Druhá hodnota pro uložení.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `pair();`  
   
- Inicializuje uložené pár s sestavený výchozí hodnoty.  
+ Inicializuje uložený pár vytvořen výchozí hodnoty.  
   
  Konstruktor:  
   
  `pair(pair<Value1, Value2>% right);`  
   
- Inicializuje uložené pár s `right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
+ Inicializuje uložený pár s `right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- Inicializuje uložené pár s `right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
+ Inicializuje uložený pár s `right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
   
  Konstruktor:  
   
  `pair(Value1 val1, Value2 val2);`  
   
- Inicializuje uložené pár s s `val1` a `val2`.  
+ Inicializuje uložený pár s s *val1* a *val2*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -320,8 +317,7 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c4.first, c4.second);   
   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -332,16 +328,16 @@ int main()
 ```  
 
 ## <a name="second"></a> Pair::Second (STL/CLR)
-Druhý zabalená hodnota.  
+Druhá zabalená hodnota.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 Value2 second;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Objekt ukládá druhý zabalená hodnota.  
+ Objekt uchovává druhá zabalená hodnota.  
   
 ### <a name="example"></a>Příklad  
   
@@ -360,7 +356,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -372,12 +367,12 @@ Typ druhého zabalená hodnota.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value2 second_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value2`.  
+ Typ je synonymum pro parametr šablony *hodnota2*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -395,8 +390,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -404,20 +398,20 @@ int main()
 ```    
 
 ## <a name="swap"></a> Pair::swap (STL/CLR)
-Zamění obsah dvě dvojice.  
+Zamění obsah dvou dvojice.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Pár k výměně obsahu s.  
+ *doprava*  
+ Dvojice k výměně obsahu s.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce prohození uložené dvojice hodnot mezi `*this` a `right`.  
+ Členská funkce Zamění uložené dvojice hodnot mezi `*this` a *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -459,8 +453,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -470,32 +463,32 @@ x x x x x
 a b c  
 ```  
 
-## <a name="make_pair"></a> make_pair – (STL/CLR)
-Ujistěte se, `pair` z dvojici hodnot.  
+## <a name="make_pair"></a> make_pair (STL/CLR)
+Ujistěte se, `pair` z dvojice hodnot.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Value1`  
+ *Hodnota1*  
  Typ první zabalená hodnota.  
   
- `Value2`  
+ *Hodnota2*  
  Typ druhého zabalená hodnota.  
   
- `first`  
+ *první*  
  První hodnota zabalit.  
   
- `second`  
+ *Sekundy*  
  Druhá hodnota zabalit.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce šablony vrátí `pair<Value1, Value2>(first, second)`. Lze použít k sestavení `pair<Value1, Value2>` objekt z dvojici hodnot.  
+ Šablona funkce vrátí `pair<Value1, Value2>(first, second)`. Lze použít k sestavení `pair<Value1, Value2>` objekt z dvojice hodnot.  
   
 ### <a name="example"></a>Příklad  
   
@@ -513,7 +506,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c1.first, c1.second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -522,11 +514,11 @@ int main()
 ```  
 
 ## <a name="op_neq"></a> Operator! = (pair) (STL/CLR)
-Pár nerovná porovnání.  
+Spárujte nerovná porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator!=(pair<Value1, Value2>% left,  
@@ -534,14 +526,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left == right)`. Můžete použít k testování zda `left` není stejný jako seřazené `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -562,8 +554,7 @@ int main()
     System::Console::WriteLine("[x 3] != [x 4] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -574,11 +565,11 @@ int main()
 ```  
   
 ## <a name="op_lt"></a> operátor&lt; (pair) (STL/CLR)
-Pár menší než porovnání.  
+Dvojice menší než porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<(pair<Value1, Value2>% left,  
@@ -586,14 +577,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Můžete použít k testování zda `left` je seřazené před `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Pomocí něho můžete testovat, zda *levé* je seřazen před *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -614,8 +605,7 @@ int main()
     System::Console::WriteLine("[x 3] < [x 4] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -626,11 +616,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operátor&lt;= (pair) (STL/CLR)
-Spárujte menší než nebo rovna porovnání.  
+Pair – menší nebo rovna porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<=(pair<Value1, Value2>% left,  
@@ -638,14 +628,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(right < left)`. Můžete použít k testování zda `left` není objednaný po `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -666,8 +656,7 @@ int main()
     System::Console::WriteLine("[x 4] <= [x 3] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -678,11 +667,11 @@ int main()
 ```  
   
 ## <a name="op_eq"></a> Operator == (pair) (STL/CLR)
-Pár rovnat porovnání.  
+Porovnání rovna pár.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator==(pair<Value1, Value2>% left,  
@@ -690,14 +679,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `left.first ==` `right.first &&` `left.second ==` `right.second`. Můžete použít k testování zda `left` je stejný jako seřazené `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `left.first ==` `right.first &&` `left.second ==` `right.second`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -718,8 +707,7 @@ int main()
     System::Console::WriteLine("[x 3] == [x 4] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -730,11 +718,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> operátor&gt; (pair) (STL/CLR)
-Pár větší než porovnání.  
+Dvojice větší než porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>(pair<Value1, Value2>% left,  
@@ -742,14 +730,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `right` `<` `left`. Můžete použít k testování zda `left` je objednaný po `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -770,8 +758,7 @@ int main()
     System::Console::WriteLine("[x 4] > [x 3] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -786,7 +773,7 @@ Pár větší než nebo rovna porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>=(pair<Value1, Value2>% left,  
@@ -794,14 +781,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé pár k porovnání.  
   
- vpravo  
- Pravé pár k porovnání.  
+ *doprava*  
+ Správné pár k porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left < right)`. Můžete použít k testování zda `left` není seřadí před `right` když jsou dvě dvojice porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left < right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* když jsou dvě dvojice porovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -822,8 +809,7 @@ int main()
     System::Console::WriteLine("[x 3] >= [x 4] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -831,4 +817,4 @@ int main()
 [x, 4]  
 [x 3] >= [x 3] is True  
 [x 3] >= [x 4] is False  
-```  
+``` 

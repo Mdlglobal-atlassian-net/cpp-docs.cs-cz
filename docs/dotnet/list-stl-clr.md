@@ -1,5 +1,5 @@
 ---
-title: seznam (STL/CLR) | Microsoft Docs
+title: seznam (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -119,21 +119,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 8eb64c41db0e6062f2be636ddce7e8cefe0bb32b
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079783"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376287"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `list` spravovat pořadí elementů jako obousměrný odkazovaného seznamu uzlů, ukládání jeden element.  
+Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `list` , spravovat řadu prvků, jako obousměrný propojený seznam uzlů, každý ukládání jeden element.  
   
- V popisu níže `GValue` je stejný jako `Value` Pokud k tomu je typu ref, v takovém případě je `Value^`.  
+ V popisu níže `GValue` je stejný jako *hodnotu* Pokud je typ odkazu, v takovém případě je `Value^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     ref class list  
         :   public  
@@ -147,11 +147,11 @@ template<typename Value>
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Hodnota  
+ *Hodnota*  
  Typ elementu v řízené sekvenci  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – nebo jejich výpisu >  
+ **Záhlaví:** \<cliext – / list >  
   
  **Namespace:** cliext – 
 
@@ -161,84 +161,84 @@ template<typename Value>
 |---------------------|-----------------|  
 |[list::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|  
 |[list::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
-|[list::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantní zpětné iterator pro řízené sekvenci.|  
+|[list::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|  
 |[list::difference_type (STL/CLR)](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[list::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro kontejner.|  
-|[list::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterace pro obecné rozhraní kontejneru.|  
-|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ zpětné iterator pro obecné rozhraní kontejneru.|  
-|[list::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|  
+|[list::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|  
+|[list::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|  
+|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|  
+|[list::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|  
 |[list::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|  
 |[list::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
-|[list::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ zpětné iterator pro řízené sekvenci.|  
+|[list::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|  
 |[list::size_type (STL/CLR)](#size_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
 |[list::value_type (STL/CLR)](#value_type)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[list::assign (STL/CLR)](#assign)|Nahradí všechny elementy.|  
-|[list::back (STL/CLR)](#back)|Přístup k posledním elementem.|  
+|[list::back (STL/CLR)](#back)|Přistupuje k poslední prvek.|  
 |[list::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|  
 |[list::clear (STL/CLR)](#clear)|Odebere všechny prvky.|  
 |[list::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
 |[list::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|  
 |[list::erase (STL/CLR)](#erase)|Odebere prvky v určených pozicích.|  
-|[list::front (STL/CLR)](#front)|Přístup k první prvek.|  
-|[list::insert (STL/CLR)](#insert)|Přidá elementy na zadané pozici.|  
+|[list::front (STL/CLR)](#front)|Přistupuje k první prvek.|  
+|[list::insert (STL/CLR)](#insert)|Přidá prvky na zadané pozici.|  
 |[list::list (STL/CLR)](#list)|Sestaví objekt kontejneru.|  
-|[list::merge (STL/CLR)](#merge)|Sloučí dvě řízené pořadí řazení.|  
-|[list::pop_back (STL/CLR)](#pop_back)|Odebere poslední element.|  
+|[list::merge (STL/CLR)](#merge)|Sloučí dvě seřazené řízené sekvence.|  
+|[list::pop_back (STL/CLR)](#pop_back)|Odstraní poslední prvek.|  
 |[list::pop_front (STL/CLR)](#pop_front)|Odebere první prvek.|  
-|[list::push_back (STL/CLR)](#push_back)|Přidá nový posledním elementem.|  
-|[list::push_front (STL/CLR)](#push_front)|Přidá nový první prvek.|  
-|[list::rbegin (STL/CLR)](#rbegin)|Označuje začátek odstínech řízené sekvenci.|  
+|[list::push_back (STL/CLR)](#push_back)|Přidá nový poslední prvek.|  
+|[list::push_front (STL/CLR)](#push_front)|Přidá nový prvek první.|  
+|[list::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|  
 |[list::remove (STL/CLR)](#remove)|Odebere element se zadanou hodnotou.|  
-|[list::remove_if (STL/CLR)](#remove_if)|Odebere prvky, které předávají testu zadaný.|  
-|[list::rend (STL/CLR)](#rend)|Označuje konec odstínech řízené sekvenci.|  
-|[list::resize (STL/CLR)](#resize)|Změní počet elementů.|  
-|[list::reverse (STL/CLR)](#reverse)|Obrátí řízené sekvenci.|  
+|[list::remove_if (STL/CLR)](#remove_if)|Odebere prvky, které předávají zadaný testovací.|  
+|[list::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|  
+|[list::resize (STL/CLR)](#resize)|Počet prvků, které se změní.|  
+|[list::reverse (STL/CLR)](#reverse)|Obrátí řízené sekvence.|  
 |[list::size (STL/CLR)](#size)|Spočítá počet prvků.|  
-|[list::sort (STL/CLR)](#sort)|Řadí řízené sekvenci.|  
+|[list::sort (STL/CLR)](#sort)|Seřadí řízené sekvence.|  
 |[list::splice (STL/CLR)](#splice)|Restitches propojení mezi uzly.|  
 |[list::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|  
-|[list::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
-|[list::unique (STL/CLR)](#unique)|Odebere přiléhající prvky, které předávají testu zadaný.|  
+|[list::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
+|[list::unique (STL/CLR)](#unique)|Odebere sousedící prvky, které předávají zadaný testovací.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[list::back_item (STL/CLR)](#back_item)|Přístup k posledním elementem.|  
-|[list::front_item (STL/CLR)](#front_item)|Přístup k první prvek.|  
+|[list::back_item (STL/CLR)](#back_item)|Přistupuje k poslední prvek.|  
+|[list::front_item (STL/CLR)](#front_item)|Přistupuje k první prvek.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[list::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvenci.|  
-|[operator!= (list) (STL/CLR)](#op_neq)|Určuje, zda `list` objekt není rovno jiné `list` objektu.|  
-|[operator< (list) (STL/CLR)](#op_lt)|Určuje, zda `list` objektu je menší než jiná `list` objektu.|  
-|[operator<= (list) (STL/CLR)](#op_lteq)|Určuje, zda `list` objektu je menší než nebo rovna do jiného `list` objektu.|  
-|[operator== (list) (STL/CLR)](#op_eq)|Určuje, zda `list` objekt rovná jiné `list` objektu.|  
-|[operator> (list) (STL/CLR)](#op_gt)|Určuje, zda `list` je větší než druhý objekt `list` objektu.|  
-|[operator>= (list) (STL/CLR)](#op_gteq)|Určuje, zda `list` objekt je větší než nebo rovna hodnotě jiného `list` objektu.|  
+|[list::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|  
+|[operator!= (list) (STL/CLR)](#op_neq)|Určuje, zda `list` není roven jinému objektu `list` objektu.|  
+|[operator< (list) (STL/CLR)](#op_lt)|Určuje, zda `list` je menší než jiný objekt `list` objektu.|  
+|[operator<= (list) (STL/CLR)](#op_lteq)|Určuje, zda `list` objekt je menší nebo rovna jiné `list` objektu.|  
+|[operator== (list) (STL/CLR)](#op_eq)|Určuje, zda `list` je roven jinému objektu `list` objektu.|  
+|[operator> (list) (STL/CLR)](#op_gt)|Určuje, zda `list` je větší než jiný objekt `list` objektu.|  
+|[operator>= (list) (STL/CLR)](#op_gteq)|Určuje, zda `list` objekt je větší než nebo roven jinému `list` objektu.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|<xref:System.Collections.IEnumerable>|Pořadí pomocí elementů.|  
-|<xref:System.Collections.ICollection>|Údržba skupiny elementů.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí prostřednictvím typové elementy.|  
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
-|IList\<hodnota >|Udržujte obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|  
+|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|  
+|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|  
+|IList\<hodnotu >|Udržujte obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly v seznamu obousměrného odkaz. Elementy ho Přeuspořádá změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy. Proto je seznam vhodným kandidátem pro základní kontejner pro třídu šablony [fronty (STL/CLR)](../dotnet/queue-stl-clr.md) nebo třída šablony [zásobníku (STL/CLR)](../dotnet/stack-stl-clr.md).  
+ Objekt přiděluje a uvolňuje úložiště pro ovládací prvky jako jednotlivým uzlům v seznamu odkazů obousměrné pořadí. Ho znovu uspořádá prvky změnou vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky. Díky tomu se seznam je vhodným kandidátem pro základní kontejner pro třídu šablony [fronty (STL/CLR)](../dotnet/queue-stl-clr.md) nebo třída šablony [zásobníku (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- A `list` objekt podporuje obousměrné iterátory, což znamená, že můžete tak, aby přiléhající elementy zadané iterátor, který označuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterator vrácený [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Tato iterator k dosažení poslední elementu v řízené sekvenci, můžete snížení, pokud je k dispozici. Můžete zvýšit iterator seznamu k dosažení hlavního uzlu a bude potom porovnejte rovna `end()`. Ale nemůže dereference iterator vrácený `end()`.  
+ A `list` objekt podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit seznamu iterátor pro přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.  
   
- Všimněte si, že nemůže odkazovat na prvek seznamu přímo zadané pořadí umístění – vyžadující iterator náhodný přístup. Tak, aby seznam `not` použít jako základní kontejner pro třídu šablony [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
+ Všimněte si, že nemůže odkazovat na prvek seznamu přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu. Takže seznam *není* použít jako základní kontejner šablony třídy [priority_queue – (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Iterator seznamu uloží popisovač do uzlu přidružený seznam, který je pak uloží popisovač pro jeho přidružené kontejneru. Iterátory lze použít pouze jejich přidružené kontejnerové objekty. Iterator seznamu zůstane platný tak dlouho, dokud jeho přidružený seznam uzlu je přidružen některé seznamu. Kromě toho je platný iterator dereferencable – slouží k přístupu k nebo alter hodnota elementu se označí – tak dlouho, dokud není rovno `end()`.  
+ Iterátor seznamu uloží popisovač do uzlu přidružený seznam, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Iterátor seznamu je platná tak dlouho, dokud jeho přidružený seznam uzlu souvisí s některé seznamu. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.  
   
- Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
+ Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.  
   
 ## <a name="members"></a>Členové
 
@@ -247,7 +247,7 @@ Nahradí všechny elementy.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(size_type count, value_type val);  
 template<typename InIt>  
     void assign(InIt first, InIt last);  
@@ -255,27 +255,27 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- count  
+ *Počet*  
  Počet elementů k vložení.  
   
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- vpravo  
- Výčet k vložení.  
+ *doprava*  
+ Výčet pro vložení.  
   
- Val  
+ *Val*  
  Hodnota elementu, který chcete vložit.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce nahradí řízené sekvenci opakování `count` elementy hodnoty `val`. Použijete jej vyplníte kontejneru elementů všechny má stejnou hodnotu.  
+ První členská funkce nahradí řízené sekvence opakování *počet* prvků hodnoty *val*. Použijete ji k vyplnilo kontejner s prvky všechny mají stejnou hodnotu.  
   
- Pokud `InIt` je celočíselného typu, druhý členská funkce se chová stejně jako `assign((size_type)first, (value_type)last)`. Jinak nahradí řízené sekvenci s pořadím [`first`, `last`). Použijete jej aby řízené pořadí kopii jiného pořadí.  
+ Pokud `InIt` je celočíselný typ, druhá členská funkce se chová stejně jako `assign((size_type)first, (value_type)last)`. V opačném případě ji nahradí řízené sekvence sekvence [`first`, `last`). Použijete ji provést řízené sekvence kopii jiné pořadí.  
   
- Třetí členská funkce nahradí řízené sekvenci pořadí určených enumerátor `right`. Můžete použít k vytvoření kopie pořadí popsaného enumerátor řízené sekvenci.  
+ Třetí členská funkce nahradí řízené sekvence pořadí určeném enumerátor *správné*. Použijete ji k vytvořte kopii sekvence popsal enumerátor řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -313,7 +313,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -323,16 +322,16 @@ a b c
 ```  
  
 ## <a name="back"></a> list::back (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na poslední elementu řízené sekvenci, která musí být neprázdný. Použít pro přístup k posledním elementem, když víte, že existuje.  
+ Členská funkce vrátí odkaz na poslední prvek řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -363,7 +362,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -373,16 +371,16 @@ back() = c
 ```  
 
 ## <a name="back_item"></a> list::back_item (STL/CLR)
-Přístup k posledním elementem.  
+Přistupuje k poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje ke poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat posledním elementem, když víte, že existuje.  
+ Vlastnost má přístup k poslední prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu posledního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -413,7 +411,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -427,12 +424,12 @@ Určuje začátek řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí iterator náhodný přístup, který určuje první elementu v řízené sekvenci nebo právě přesahuje za konec prázdnou sekvencí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí iterátor náhodného přístupu, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -466,7 +463,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -481,12 +477,12 @@ Odebere všechny prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce efektivně volá [list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Použijte k zajištění, že řízené sekvenci je prázdný.  
+ Členská funkce efektivně volá [list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Použijete ji k zajištění, že je prázdná řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -522,7 +518,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -537,12 +532,12 @@ Typ konstantního iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T2` , může sloužit jako konstantní iterator náhodný přístup pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní iterátor s náhodným přístupem řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -565,7 +560,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -577,12 +571,12 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -608,7 +602,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -616,16 +609,16 @@ a b c
 ```  
 
 ## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
-Typ konstantní zpětné iterator pro řízené sekvenci...  
+Typ konstantního zpětného iterátoru řízené sekvence...  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T4` , může sloužit jako konstantní zpětné iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -649,7 +642,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -657,16 +649,16 @@ c b a
 ```  
 
 ## <a name="difference_type"></a> list::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet podepsaný elementu.  
+ Typ, který popisuje počet podepsaný prvků.  
   
 ### <a name="example"></a>Příklad  
   
@@ -700,7 +692,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -714,12 +705,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda seznam je prázdný.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda je seznam prázdný.  
   
 ### <a name="example"></a>Příklad  
   
@@ -748,7 +739,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -764,12 +754,12 @@ Určuje konec řízené sekvence.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí iterator náhodný přístup tohoto body právě přesahuje za konec řízené sekvenci. Můžete ji použít k získání iterátor, který označuje konec řízené sekvenci; jeho stav nemá není změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí iterátor náhodného přístupu, na kterou odkazuje přesně za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -804,7 +794,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -819,29 +808,29 @@ Odebere prvky v určených pozicích.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
+ *první*  
  Začátek rozsahu vymazat.  
   
- poslední  
+ *poslední*  
  Konec rozsahu vymazat.  
   
- kde  
+ *kde*  
  Element vymazat.  
   
 ### <a name="remarks"></a>Poznámky  
- Odebere první členská funkce elementu řízené sekvenci, na kterou odkazuje `where`. Použijte k odebrání jediným elementem.  
+ První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*. Použijete ji k odebrání jeden element.  
   
- Druhý členská funkce odebere elementy řízené sekvenci v rozsahu [`first`, `last`). Použijte k odebrání nula nebo více souvislý prvků.  
+ Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`). Použijete ji k odebrání nula nebo více souvislých prvků.  
   
- Obě členské funkce vrátí iterátor, který označí první prvek zbývající nad rámec všechny elementy odebrán, nebo [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` Pokud neexistuje žádný takový prvek.  
+ Obě členské funkce vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje.  
   
- Při mazání elementy, je počet kopií element lineární v počet elementů mezi koncem vymazání a blíž k uživateli konci pořadí. (Pokud mazání jeden či více elementů na libovolném konci sekvenci, žádné element kopie dojít k.)  
+ Při mazání prvků, je počet kopií prvku lineární v počtu prvků mezi koncem mazání a bližšího konci sekvence. (Při mazání jeden nebo více prvků na jednom konci pořadí, žádný element kopie nastat.)  
   
 ### <a name="example"></a>Příklad  
   
@@ -880,7 +869,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -892,16 +880,16 @@ size() = 1
 ```  
 
 ## <a name="front"></a> list::front (STL/CLR)
-Přístup k první prvek.  
+Přistupuje k první prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na první prvek řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat první prvek, když víte, že existuje.  
+ Členská funkce vrátí odkaz na první prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu prvního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -932,7 +920,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -942,16 +929,16 @@ front() = a
 ```  
 
 ## <a name="front_item"></a> list::front_item (STL/CLR)
-Přístup k první prvek.  
+Přistupuje k první prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje k první prvek řízené sekvenci, která musí být neprázdný. Použijete jej číst nebo zapisovat první prvek, když víte, že existuje.  
+ Vlastnost přistupuje k první prvek řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu prvního prvku, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -982,7 +969,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -992,18 +978,18 @@ front_item = a
 ```  
 
 ## <a name="generic_container"></a> list::generic_container (STL/CLR)
-Typ generické rozhraní pro kontejner.  
+Typ obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IList<generic_value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1046,7 +1032,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1057,18 +1042,18 @@ a b c d e
 ```  
 
 ## <a name="generic_iterator"></a> list::generic_iterator (STL/CLR)
-Typ iterace pro použití s generické rozhraní pro kontejner.  
+Typ iterátoru pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1104,7 +1089,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1114,17 +1098,17 @@ a a c
 ```  
 
 ## <a name="generic_reverse_iterator"></a> list::generic_reverse_iterator (STL/CLR)
-Typ zpětné iterator pro použití s generické rozhraní pro kontejner.  
+Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecný zpětné iterator, který lze použít s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1160,7 +1144,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1170,16 +1153,16 @@ a c c
 ```  
 
 ## <a name="generic_value"></a> list::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony.  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1215,7 +1198,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1225,11 +1207,11 @@ a a c
 ```  
 
 ## <a name="insert"></a> list::Insert (STL/CLR)
-Přidá elementy na zadané pozici.  
+Přidá prvky na zadané pozici.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 iterator insert(iterator where, value_type val);  
 void insert(iterator where, size_type count, value_type val);  
 template<typename InIt>  
@@ -1239,36 +1221,36 @@ void insert(iterator where,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- count  
+ *Počet*  
  Počet elementů k vložení.  
   
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- vpravo  
- Výčet k vložení.  
+ *doprava*  
+ Výčet pro vložení.  
   
- Val  
+ *Val*  
  Hodnota elementu, který chcete vložit.  
   
- kde  
- Kde v kontejneru vložit před.  
+ *kde*  
+ Kde v kontejneru vložit před  
   
 ### <a name="remarks"></a>Poznámky  
- Každý člen funkce vložení před element, na kterou odkazuje `where` v řízené sekvenci sekvenci určeného zbývající operandy.  
+ Každý člen funkce vložení před element, na které odkazuje *kde* v řízené sekvenci sekvence určené zbývající operandy.  
   
- První člen funkce vloží element s hodnotou `val` a vrátí iterátor, který označuje nově vloženou elementu. Použijete jej vložit jeden prvek před místo určené, které iterace.  
+ První členská funkce vloží prvek s hodnotou *val* a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jediný prvek před místo, kde došlo ke shodě podle iterátor.  
   
- Druhý členská funkce vloží opakování `count` elementy hodnoty `val`. Použijte k vložení nula nebo více souvislý prvků, které jsou všechny kopie stejnou hodnotu.  
+ Druhá členská funkce vloží opakování *počet* prvků hodnoty *val*. Použijete ji k vložení nula nebo více souvislých prvků, které jsou všechny kopie stejnou hodnotu.  
   
- Pokud `InIt` je typ integer třetí členská funkce se chová stejně jako `insert(where, (size_type)first, (value_type)last)`. Jinak, vloží sekvenci [`first`, `last`). Použijte k vložení nula nebo více souvislý prvků zkopírovaných z jiného pořadí.  
+ Pokud `InIt` je celočíselný typ, třetí členská funkce se chová stejně jako `insert(where, (size_type)first, (value_type)last)`. V opačném případě vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více souvislých prvků, které jsou kopírovány z jiné pořadí.  
   
- Čtvrtý – členská funkce vloží pořadí určené, které `right`. Použijte k vložení sekvenci popsaného enumerátor.  
+ Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.  
   
- Při vkládání jeden prvek, je počet kopií element lineární v počet elementů mezi kurzor a blíž k uživateli koncem pořadí. (Při vkládání jeden či více elementů na libovolném konci sekvenci, žádné element kopie dojít.) Pokud `InIt` je iterátor vstupní třetí členská funkce efektivně provádí jeden vložení pro každý prvek v pořadí. Jinak, při vkládání `N` elementy, je lineární v počtu kopií element `N` plus počet elementů mezi kurzor a blíž k uživateli koncem pořadí.  
+ Při vkládání jeden element, počet kopií prvku je lineární v počtu prvků mezi kurzoru a bližšího konci sekvence. (Při vkládání jeden nebo více prvků na jednom konci pořadí, žádný element kopie nastat.) Pokud `InIt` je vstupní iterátor, třetí členská funkce efektivně provede jednu vložení pro každý prvek v sekvenci. Jinak, při vkládání `N` prvky, počet kopií prvku je lineární `N` plus počet prvků mezi kurzoru a bližšího konci sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1328,7 +1310,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,12 +1326,12 @@ Typ iterátoru řízené sekvence
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T1` , může sloužit jako iterator náhodný přístup pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako iterátor náhodného přístupu řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1380,7 +1361,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1393,7 +1373,7 @@ Sestaví objekt kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 list();  
 list(list<Value>% right);  
 list(list<Value>^ right);  
@@ -1405,19 +1385,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `count`  
+ *Počet*  
  Počet elementů k vložení.  
   
- `first`  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- `last`  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- `right`  
- Objekt, nebo rozsah k vložení.  
+ *doprava*  
+ Objekt nebo rozsahu pro vložení.  
   
- `val`  
+ *Val*  
  Hodnota elementu, který chcete vložit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1426,31 +1406,31 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list();`  
   
- Inicializuje řízené sekvenci s žádné elementy. Se používá k určení prázdný počáteční řízené sekvenci.  
+ Inicializuje se žádné prvky řízené sekvence. Použijete ji k určení počáteční prázdnou řízenou sekvenci.  
   
  Konstruktor:  
   
  `list(list<Value>% right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right.begin()`, `right.end()`). Se používá k určení počáteční řízené sekvenci, který je kopií pořadí ovládaná objektem seznamu `right`.  
+ Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`). Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou objektem seznamu *správné*.  
   
  Konstruktor:  
   
  `list(list<Value>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím [`right->begin()`, `right->end()`). Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené list objekt, jehož popisovač `right`.  
+ Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`). Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou objektem seznamu, jehož popisovač je *správné*.  
   
  Konstruktor:  
   
  `explicit list(size_type count);`  
   
- Inicializuje řízené sekvenci s `count` elementy s hodnotou `value_type()`. Použijete jej vyplníte kontejneru elementů všechny má výchozí hodnotu.  
+ Inicializuje řízené sekvence s *počet* elementy s hodnotou `value_type()`. Použijete ji k vyplnilo kontejner s prvky všechny mají výchozí hodnotu.  
   
  Konstruktor:  
   
  `list(size_type count, value_type val);`  
   
- Inicializuje řízené sekvenci s `count` elementy s hodnotou `val`. Použijete jej vyplníte kontejneru elementů všechny má stejnou hodnotu.  
+ Inicializuje řízené sekvence s *počet* elementy s hodnotou *val*. Použijete ji k vyplnilo kontejner s prvky všechny mají stejnou hodnotu.  
   
  Konstruktor:  
   
@@ -1458,13 +1438,13 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- Inicializuje řízené sekvenci s pořadím [`first`, `last`). Použít k vytvoření kopie jiné pořadí řízené sekvenci.  
+ Inicializuje řízené sekvence s pořadím [`first`, `last`). Použijte k vytvoření kopie jiné pořadí řízené sekvence.  
   
  Konstruktor:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- Inicializuje řízené sekvenci s pořadím určené, které enumerátor `right`. Použít k vytvoření kopie jiné pořadí popsaného enumerátor řízené sekvenci.  
+ Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*. Použijete ji k vytvoření kopie jiné pořadí popsal enumerátor řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1519,7 +1499,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1533,29 +1512,29 @@ size() = 0
 ```  
 
 ## <a name="merge"></a> list::merge (STL/CLR)
-Sloučí dvě řízené pořadí řazení.  
+Sloučí dvě seřazené řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void merge(list<Value>% right);  
 template<typename Pred2>  
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Před  
- Porovnávače pro dvojice elementu.  
+ *Před*  
+ Procedura pro prvek dvojice.  
   
- vpravo  
- Kontejner sloučit v.  
+ *doprava*  
+ Sloučení v kontejneru.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce odebere všechny elementy z pořadí řízené `right` a vložte je v řízené sekvenci. Obě pořadí musí být dříve seřazené podle `operator<` – elementy nesmí snížení hodnoty v průběhu buď pořadí. Výsledné pořadí je také seřazené podle `operator<`. Sloučit dva pořadí, které se zvyšují v hodnotě do sekvence, které se také zvyšuje hodnotu použijete tuto funkci člen.  
+ První členská funkce odebere všechny prvky ze sekvence řízenou parametrem *správné* a vložit je do řízené sekvence. Oba pořadí musí být dříve seřazené podle `operator<` – elementy se nesmí zmenšovat v hodnotě po absolvování buď pořadí. Výsledné pořadí je také seřazené podle `operator<`. Tuto funkci člena můžete použít ke sloučení dvou sekvencí, které zvyšují v hodnotě v sekvenci, která se také zvýší v hodnotě.  
   
- Druhý členská funkce se chová stejně jako první, s tím rozdílem, že pořadí jsou seřazené podle `pred`  --  `pred(X, Y)` musí mít hodnotu false pro libovolný element `X` element, který následuje `Y` v pořadí. Použít sloučit dva pořadí řazení podle funkce predikátu nebo delegáta, který zadáte.  
+ Druhá členská funkce se chová stejně jako první, s tím rozdílem, že sekvence jsou řazeny podle `pred`  --  `pred(X, Y)` musí mít hodnotu false pro libovolný element `X` , který následuje prvku `Y` v sekvenci. Použijete ji chcete-li sloučit dvě pořadí řazení podle funkce predikátu nebo delegát, který zadáte.  
   
- Jak funkce provést stabilní sloučení – žádné pár elementů v některém z původní řízené pořadí je obrácený v výsledné řízené sekvenci. Navíc pokud pár elementů `X` a `Y` v řízené sekvenci výsledné má ekvivalentní řazení – `!(X < Y) && !(X < Y)` – element z původní řízené sekvenci se zobrazuje před element z pořadí řízené `right`.  
+ Jak funkce provést stabilní sloučení – žádná dvojice prvků v některém z původní řízené sekvence je obrácený ve výsledné řízené sekvence. Navíc pokud dvojici prvků `X` a `Y` ve výsledné řízené sekvence má stejné pořadí – `!(X < Y) && !(X < Y)` – prvek z původní řízené sekvence se zobrazí před elementem ze sekvence řízenou parametrem *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1613,7 +1592,6 @@ int main()
     System::Console::WriteLine("c1.size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1628,7 +1606,7 @@ c1.size() = 0
 ```  
 
 ## <a name="op_as"></a> list::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -1637,11 +1615,11 @@ list<Value>% operator=(list<Value>% right);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
+ *doprava*  
  Kontejner pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1670,7 +1648,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1679,16 +1656,16 @@ a b c
 ```  
 
 ## <a name="pop_back"></a> list::pop_back (STL/CLR)
-Odebere poslední element.  
+Odstraní poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop_back();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce odebere poslední elementu řízené sekvenci, která musí být neprázdný. Použijete jej tak, aby zkrátil seznamu podle jednoho prvku na pozadí.  
+ Členská funkce odstraní poslední prvek řízené sekvence, která musí být neprázdný. Použijte ke zkrácení seznamu jeden element na pozadí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1716,7 +1693,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1729,12 +1705,12 @@ Odebere první prvek.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop_front();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce Odebere první prvek řízené sekvenci, která musí být neprázdný. Použijete jej tak, aby zkrátil seznamu jednoho elementu vpředu.  
+ Členská funkce odstraní první prvek řízené sekvence, která musí být neprázdný. Použijte ke zkrácení seznamu jeden prvek v popředí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1762,7 +1738,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1771,16 +1746,16 @@ b c
 ```  
 
 ## <a name="push_back"></a> list::push_back (STL/CLR)
-Přidá nový posledním elementem.  
+Přidá nový poslední prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push_back(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vloží element s hodnotou `val` na konci řízené sekvenci. Použít pro připojení jiný element do seznamu.  
+ Členská funkce vloží prvek s hodnotou `val` na konci řízené sekvence. Můžete použít k připojení jiný element do seznamu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1802,7 +1777,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1810,16 +1784,16 @@ a b c
 ```  
   
 ## <a name="push_front"></a> list::push_front (STL/CLR)
-Přidá nový první prvek.  
+Přidá nový prvek první.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push_front(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vloží element s hodnotou `val` na začátku řízené sekvenci. Použít pro předřazení jiný element do seznamu.  
+ Členská funkce vloží prvek s hodnotou `val` na začátek řízené sekvence. Použijete ji k předřaďte jiný element do seznamu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1841,7 +1815,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1849,16 +1822,16 @@ c b a
 ```  
 
 ## <a name="rbegin"></a> list::rbegin (STL/CLR)
-Označuje začátek odstínech řízené sekvenci.  
+Určuje začátek řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator, který určuje poslední elementu v řízené sekvenci nebo právě nad rámec začátku prázdnou sekvencí. Proto označí `beginning` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` začátku řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1892,7 +1865,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1907,12 +1879,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1948,7 +1920,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1961,16 +1932,16 @@ Odebere element se zadanou hodnotou.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void remove(value_type val);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Val  
+ *Val*  
  Hodnota elementu, který chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce odebere elementu v řízené sekvenci pro kterou `((System::Object^)val)->Equals((System::Object^)x)` hodnotu true (pokud existuje). Použijete jej vymazat libovolně zvolený element se zadanou hodnotou.  
+ Členská funkce odstraní prvek v řízené sekvenci, pro kterou `((System::Object^)val)->Equals((System::Object^)x)` má hodnotu true (pokud existuje). Použijete ji vymazat libovolný prvek se zadanou hodnotou.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2004,7 +1975,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2014,21 +1984,21 @@ a c
 ```  
 
 ## <a name="remove_if"></a> list::remove_if (STL/CLR)
-Odebere prvky, které předávají testu zadaný.  
+Odebere prvky, které předávají zadaný testovací.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Pred1>  
     void remove_if(Pred1 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Před  
- Testování pro elementy odebrat.  
+ *Před*  
+ Test pro prvky, které chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce se odebere z řízené sekvenci (vymazáním) každý element `X` pro kterou `pred(X)` hodnotu true. Použijte k odebrání všech prvků, které splňují podmínku, které že zadáte jako funkce nebo delegáta.  
+ Členská funkce odebere z řízené sekvence (maže) každý prvek `X` pro kterou `pred(X)` má hodnotu true. Použijete ji k odebrání všech prvků, které splňují podmínku, že zadáte jako funkce nebo delegáta.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2066,7 +2036,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2076,16 +2045,16 @@ b b b
 ``` 
 
 ## <a name="rend"></a> list::rend (STL/CLR)
-Označuje konec odstínech řízené sekvenci.  
+Určuje konec řízené obrácené sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí zpětné iterator této body právě nad rámec začátku řízené sekvenci. Proto označí `end` zpětné pořadí. Můžete ji použít k získání iterátor, který označuje `current` konec řízené sekvenci vidět v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvenci.  
+ Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2120,7 +2089,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2131,24 +2099,24 @@ int main()
 ```  
 
 ## <a name="resize"></a> list::Resize (STL/CLR)
-Změní počet elementů.  
+Počet prvků, které se změní.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- new_size  
- Nová velikost řízené sekvenci.  
+ *new_size*  
+ Nová velikost řízené sekvence.  
   
- Val  
- Hodnota odsazení elementu.  
+ *Val*  
+ Hodnota elementu odsazení.  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce obou Ujistěte se, že [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` od nynějška vrátí `new_size`. Pokud je třeba provést řízené sekvenci déle, první členská funkce připojí elementy s hodnotou `value_type()`, zatímco druhý členská funkce připojí elementy s hodnotou `val`. Chcete-li řízené sekvenci kratší, oba členské funkce efektivně vymazat posledním elementem [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` časy. Můžete použít k zajištění, že řízené sekvenci má velikost `new_size`, ořezávání nebo odsazení aktuální řízené sekvenci.  
+ Členské funkce obou Ujistěte se, že [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` od nynějška vrátí *new_size*. Pokud je třeba provést řízené sekvence delší, první členská funkce přidá prvky s hodnotou `value_type()`, zatímco druhá členská funkce přidá prvky s hodnotou *val*. Chcete-li řízené sekvence kratší, i členské funkce efektivně vymazat poslední prvek [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` časy. Použít zajistit, že velikost řízené sekvence *new_size*, ořezávání nebo odsazení aktuální řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2178,7 +2146,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2189,16 +2156,16 @@ size() = 0
 ```  
 
 ## <a name="reverse"></a> list::reverse (STL/CLR)
-Obrátí řízené sekvenci.  
+Obrátí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void reverse();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce obrátí pořadí všechny elementy v řízené sekvenci. Použijete jej tak, aby odrážela seznam prvků.  
+ Členská funkce obrátí pořadí všech prvků v řízené sekvenci. Použijete ji tak, aby odrážely seznam prvků.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2226,7 +2193,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2235,16 +2201,16 @@ c b a
 ```  
 
 ## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
-Typ zpětné iterator pro řízené sekvenci.  
+Typ "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objekt neurčeného typu `T3` , může sloužit jako reverzní iterator pro řízené sekvenci.  
+ Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2274,7 +2240,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2287,12 +2252,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2324,7 +2289,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2335,16 +2299,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> list::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2373,7 +2337,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2382,26 +2345,26 @@ end()-begin() = 3
 ```
 
 ## <a name="sort"></a> list::sort (STL/CLR)
-Řadí řízené sekvenci.  
+Seřadí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void sort();  
 template<typename Pred2>  
     void sort(Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Před  
- Porovnávače pro dvojice elementu.  
+ *Před*  
+ Procedura pro prvek dvojice.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce pořadí prvků v řízené sekvenci tak, že jsou seřazené podle `operator<` – elementy nesnižujte v hodnotě v průběhu sekvenci. Používáte tuto funkci člen seřadit pořadí ve vzestupném pořadí.  
+ První členská funkce pořadí prvků v řízené sekvenci tak, že jsou řazeny podle `operator<` – elementy v hodnotě nesnižujte po absolvování sekvence. Tuto funkci člena použít k seřazení pořadí ve vzestupném pořadí.  
   
- Druhý členská funkce se chová stejně jako první, s tím rozdílem, že je pořadí řazení podle `pred`  --  `pred(X, Y)` je hodnota false pro libovolný element `X` element, který následuje `Y` v výsledné pořadí. Použít k seřazení pořadí, v pořadí, které zadáte funkce predikátu nebo delegáta.  
+ Druhá členská funkce se chová stejně jako první, s tím rozdílem, že je pořadí jsou seřazená podle `pred`  --  `pred(X, Y)` má hodnotu false pro libovolný element `X` , který následuje prvku `Y` ve výsledné pořadí. Použijete ji k seřazení pořadí v pořadí, které zadáte pomocí funkce predikátu nebo delegáta.  
   
- Jak funkce provést stabilní řazení – žádné pár elementů v původní řízené sekvenci je obrácený v výsledné řízené sekvenci.  
+ Jak provádět funkce stabilní řazení – žádná dvojice prvků v řízené sekvenci původní je obrácený ve výsledné řízené sekvence.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2435,7 +2398,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2449,7 +2411,7 @@ Restitch propojení mezi uzly.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void splice(iterator where, list<Value>% right);  
 void splice(iterator where, list<Value>% right,  
     iterator first);  
@@ -2458,24 +2420,24 @@ void splice(iterator where, list<Value>% right,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- první  
- Začátek rozsahu do splice.  
+ *první*  
+ Začátek rozsahu splice  
   
- poslední  
- Konec rozsahu do splice.  
+ *poslední*  
+ Konec rozsahu splice.  
   
- vpravo  
- Kontejner pro splice z.  
+ *doprava*  
+ Splice z kontejneru.  
   
- kde  
- Kde v kontejneru na splice před.  
+ *kde*  
+ Kde v kontejneru splice před.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce vloží pořadí řízené `right` před elementu v řízené sekvenci, na kterou odkazuje `where`. Také odebere všechny elementy z `right`. (`%right` nesmí být stejný jako `this`.) Použít na všechny jeden seznam splice do jiné.  
+ První členská funkce vloží sekvenci řízené *správné* před elementu v řízené sekvenci ukazuje *kde*. Zároveň se tím odebere všechny prvky z *správné*. (`%right` nesmí být stejný jako `this`.) Použijete ji k splice vše z jednoho seznamu do jiného.  
   
- Druhý členská funkce odebere element na kterou odkazuje `first` v řízené sekvenci `right` a vloží ho před elementu v řízené sekvenci na kterou odkazuje `where`. (Pokud `where` `==` `first` `||` `where` `== ++first`, žádná změna.) Použijete ho k splice jeden element jeden seznam do jiné.  
+ Druhá členská funkce odstraní prvek, na které odkazuje *první* v sekvenci řízené *správné* a vloží ho před elementu v řízené sekvenci ukazuje *kde* . (Pokud `where` `==` `first` `||` `where` `== ++first`, nedošlo k žádné změně.) Použijete ji k splice jeden element z jednoho seznamu do jiného.  
   
- Třetí členská funkce vloží Podoblast sady určené, které [`first`, `last`) z pořadí řízené `right` před elementu v řízené sekvenci, na kterou odkazuje `where`. Odebere také původní Podoblast sady z pořadí řízené `right`. (Pokud `right` `==` `this`, rozsah [`first`, `last`) nesmí obsahovat elementu, na kterou odkazuje `where`.) Použijete ho k splice dalším počtu nula či více elementů z jednoho seznamu do jiné.  
+ Třetí členská funkce vloží určený dílčí sadu [`first`, `last`) ze sekvence řízenou parametrem *správné* před elementu v řízené sekvenci ukazuje *kde*. Zároveň se tím odebere původní dílčí sadu ze sekvence řízenou parametrem *správné*. (Pokud `right` `==` `this`, rozsah [`first`, `last`) nesmí obsahovat prvek, na které odkazuje *kde*.) Použijete ji k splice dílčí sekvenci z nuly nebo více prvků z jednoho seznamu do jiného.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2522,7 +2484,6 @@ int main()
     System::Console::WriteLine("c2.size() = {0}", c2.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2540,16 +2501,16 @@ Zamění obsah dvou kontejnerů.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void swap(list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner se Prohodit obsah s.  
+ *doprava*  
+ Kontejner pro obsah s.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce prohození řízené pořadí mezi `*this` a `right`. Dělá to tak včas konstantní a vyvolá žádné výjimky. Můžete ho použít jako rychlý způsob, jak exchange obsah dva kontejnery.  
+ Členská funkce Zamění řízené sekvence mezi `*this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2587,7 +2548,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2598,16 +2558,16 @@ a b c
 ```   
 
 ## <a name="to_array"></a> list::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2637,7 +2597,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2646,24 +2605,24 @@ a b c
 ```  
 
 ## <a name="unique"></a> list::Unique (STL/CLR)
-Odebere přiléhající prvky, které předávají testu zadaný.  
+Odebere sousedící prvky, které předávají zadaný testovací.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void unique();  
 template<typename Pred2>  
     void unique(Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Před  
- Porovnávače pro dvojice elementu.  
+ *Před*  
+ Procedura pro prvek dvojice.  
   
 ### <a name="remarks"></a>Poznámky  
- První člen funkce se odebere z řízené sekvenci (vymazáním) každý element, který porovnává rovno jeho předchozí element – Pokud element `X` předchází element `Y` a `X == Y`, odebere – členská funkce `Y`. Použijete jej odebrat všechny kromě jednoho kopii každé dalším přiléhající elementů tohoto porovnání rovnosti. Všimněte si, že pokud řízené sekvenci je seřadit, například jako voláním [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, – členská funkce ponechá pouze elementy s jedinečné hodnoty. (Proto název).  
+ První členská funkce odebere z řízené sekvence (maže) každý element, který porovnává rovná jeho předchozí prvek – Pokud elementu `X` předchází element `Y` a `X == Y`, členská funkce odebere `Y`. Použijete ho odebrat všechny kopie krom jedné každý dílčí sekvenci sousedícími elementy tohoto porovnání rovnosti. Všimněte si, že pokud řízené sekvence je seřazen, například jak voláním [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, členské funkce ponechá pouze elementy s jedinečnými hodnotami. (Tedy název).  
   
- Druhý členská funkce se chová stejně jako první, s tím rozdílem, že jej odebere každý prvek `Y` následující element `X` pro kterou `pred(X, Y)`. Použijete jej odebrat všechny kromě jednoho kopii každé dalším přiléhající elementů, které vyhovují funkce predikátu nebo delegáta, který zadáte. Všimněte si, že pokud řízené sekvenci je seřadit, například jako voláním `sort(pred)`, – členská funkce ponechá pouze elementy, které nemají ekvivalentní řazení s jinými prvky.  
+ Druhá členská funkce se chová stejně jako první, s tím rozdílem, že odebere každý prvek `Y` následující element `X` pro kterou `pred(X, Y)`. Použijete ji odebrat všechny kopie krom jedné každý dílčí sekvenci sousedící prvky, které splňují predikát funkce nebo delegát, který zadáte. Všimněte si, že pokud řízené sekvence je seřazen, například jak voláním `sort(pred)`, členské funkce ponechá pouze prvky, které nemají ekvivalentní řazení s jinými prvky.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2700,7 +2659,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2714,12 +2672,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value`.  
+ Typ je synonymum pro parametr šablony *hodnota*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2746,7 +2704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2754,25 +2711,25 @@ a b c
 ``` 
 
 ## <a name="op_neq"></a> Operator! = (list) (STL/CLR)
-Zobrazí seznam není rovno porovnání.  
+Seznam není rovno porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator!=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left == right)`. Můžete použít k testování zda `left` není stejný jako seřazené `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2810,7 +2767,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2825,21 +2781,21 @@ Seznam menší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true, pokud, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, `left[i] < right[i]`. Funkce `left->size() < right->size()` použijete k testování zda `left` je seřadí před `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2877,7 +2833,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2888,25 +2843,25 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operátor&lt;= (list) (STL/CLR)
-Seznam menší než nebo rovna porovnání.  
+Seznam menší nebo rovna porovnání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(right < left)`. Můžete použít k testování zda `left` není objednaný po `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -2944,7 +2899,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2955,25 +2909,25 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (list) (STL/CLR)
-Zobrazí seznam rovna porovnání.  
+Porovnání rovna seznamu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp 
 template<typename Value>  
     bool operator==(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu true pouze v případě, že daná pořadí řízené `left` a `right` mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Můžete použít k testování zda `left` je stejný jako seřazené `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -3011,7 +2965,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3026,21 +2979,21 @@ Seznam je větší než porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `right` `<` `left`. Můžete použít k testování zda `left` je objednaný po `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -3078,7 +3031,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3093,21 +3045,21 @@ Seznam větší než nebo rovna porovnání.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- left  
+ *doleva*  
  Levé kontejner k porovnání.  
   
- vpravo  
- Správném kontejneru k porovnání.  
+ *doprava*  
+ Správném kontejneru pro porovnání.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor funkce vrátí hodnotu `!(left` `<` `right)`. Můžete použít k testování zda `left` není seřadí před `right` při dva seznamy jsou porovná s prvkem elementu.  
+ Vrátí funkci operátoru `!(left` `<` `right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* když dva seznamy jsou ve srovnání elementu pomocí elementu.  
   
 ### <a name="example"></a>Příklad  
   
@@ -3145,7 +3097,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3153,4 +3104,4 @@ int main()
  a b d  
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
-```  
+``` 

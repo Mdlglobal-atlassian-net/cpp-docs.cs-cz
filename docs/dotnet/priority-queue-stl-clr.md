@@ -1,5 +1,5 @@
 ---
-title: priority_queue (STL/CLR) | Microsoft Docs
+title: priority_queue – (STL/CLR) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -61,21 +61,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079528"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376034"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
-Šablony třídy popisuje objekt, který řídí různých délkou seřazené pořadí prvků, které má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě kontejner základní jako priority fronty.  
+Třída šablony popisuje objekt, který řídí různé délky seřazené řadu prvků, která má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě základního kontejneru jako prioritní fronty.  
   
- V popisu níže `GValue` je stejný jako `Value` Pokud k tomu je typu ref, v takovém případě je `Value^`. Podobně `GContainer` je stejný jako `Container` Pokud k tomu je typu ref, v takovém případě je `Container^`.  
+ V popisu níže `GValue` je stejný jako *hodnotu* Pokud je typ odkazu, v takovém případě je `Value^`. Obdobně `GContainer` je stejný jako *kontejneru* Pokud je typ odkazu, v takovém případě je `Container^`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class priority_queue  
@@ -85,14 +85,14 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Hodnota  
+ *Hodnota*  
  Typ elementu v řízené sekvenci  
   
- Kontejner  
+ *Kontejner*  
  Typ základního kontejneru.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – / fronty >  
+ **Záhlaví:** \<cliext – či fronty >  
   
  **Namespace:** cliext –  
 
@@ -103,67 +103,67 @@ template<typename Value,
 |[priority_queue::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|  
 |[priority_queue::container_type (STL/CLR)](#container_type)|Typ základního kontejneru.|  
 |[priority_queue::difference_type (STL/CLR)](#difference_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[priority_queue::generic_container (STL/CLR)](#generic_container)|Typ generické rozhraní pro adaptér kontejneru.|  
+|[priority_queue::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro adaptér kontejneru.|  
 |[priority_queue::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro adaptér kontejneru.|  
 |[priority_queue::reference (STL/CLR)](#reference)|Typ odkazu na prvek|  
 |[priority_queue::size_type (STL/CLR)](#size_type)|Typ vzdálenosti se znaménkem mezi dvěma prvky|  
-|[priority_queue::value_compare (STL/CLR)](#value_compare)|Řazení delegáta pro dva elementy.|  
+|[priority_queue::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dva prvky.|  
 |[priority_queue::value_type (STL/CLR)](#value_type)|Typ prvku|  
   
 |Členská funkce|Popis|  
 |---------------------|-----------------|  
 |[priority_queue::assign (STL/CLR)](#assign)|Nahradí všechny elementy.|  
 |[priority_queue::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|  
-|[priority_queue::get_container (STL/CLR)](#get_container)|Přístup k podkladové kontejneru.|  
+|[priority_queue::get_container (STL/CLR)](#get_container)|Přistupuje k podkladové kontejneru.|  
 |[priority_queue::pop (STL/CLR)](#pop)|Odebere element hghest priority.|  
 |[priority_queue::priority_queue (STL/CLR)](#priority_queue)|Sestaví objekt kontejneru.|  
-|[priority_queue::push (STL/CLR)](#push)|Přidá nového elementu.|  
+|[priority_queue::push (STL/CLR)](#push)|Přidá nový prvek.|  
 |[priority_queue::size (STL/CLR)](#size)|Spočítá počet prvků.|  
-|[priority_queue::top (STL/CLR)](#top)|Přístup k elementu nejvyšší prioritou.|  
-|[priority_queue::to_array (STL/CLR)](#to_array)|Zkopíruje řízené sekvenci do nové pole.|  
-|[priority_queue::value_comp (STL/CLR)](#value_comp)|Zkopíruje řazení delegáta pro dva elementy.|  
+|[priority_queue::top (STL/CLR)](#top)|Přistupuje k elementu nejvyšší prioritou.|  
+|[priority_queue::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|  
+|[priority_queue::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dva prvky.|  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|[priority_queue::top_item (STL/CLR)](#top_item)|Přístup k elementu nejvyšší prioritou.|  
+|[priority_queue::top_item (STL/CLR)](#top_item)|Přistupuje k elementu nejvyšší prioritou.|  
   
 |Operátor|Popis|  
 |--------------|-----------------|  
-|[priority_queue::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvenci.|  
+|[priority_queue::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|  
   
 ## <a name="interfaces"></a>Rozhraní  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|Duplicitní objekt.|  
-|IPriorityQueue\<hodnota, kontejner >|Udržujte adaptér obecné kontejneru.|  
+|<xref:System.ICloneable>|Duplicitní objektu.|  
+|IPriorityQueue\<hodnoty, kontejner >|Udržujte adaptér obecný kontejneru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt přiděluje a uvolní úložiště pro pořadí jimi řídí prostřednictvím kontejner základní typu `Container`, který ukládá `Value` elementy a zvětšování na vyžádání. Pořadí řazení jako haldy, s nejvyšší prioritou elementem (element nejvyšší) snadno přístupné a vyměnitelné udržuje. Objekt omezuje přístup k vložení nové prvky a odebrání právě nejvyšší prioritou elementu implementace priority fronty.  
+ Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím základní kontejneru, typu `Container`, který ukládá `Value` elementy a roste na požádání. Pořadí řazení jako haldu, s elementem nejvyšší prioritu (nejvyšší prvek) snadno dostupné a vyměnitelných uchová. Objekt omezuje přístup k vložení nové prvky a odebrání pouze nejvyšší prioritou elementu, implementace prioritní fronty.  
   
- Objekt řadí pořadí jimi řídí voláním objektu uložené delegáta typu [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte priority_queue; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<(value_type, value_type)`. Přístup k této uložené objekt voláním členské funkce [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
+ Objekt seřadí sekvence pomocí volání uloženého delegáta objekt typu [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Můžete zadat objekt uložené delegáta při konstrukci priority_queue –; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<(value_type, value_type)`. Přístup k tomuto uloženého objektu voláním členské funkce [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  
   
- Takový objekt delegáta musí použít striktní slabé řazení hodnoty typu [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). To znamená, pro žádné dva klíče `X` a `Y`:  
+ Takový objekt delegáta musí uložit přísné slabé seřazení u hodnot typu [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:  
   
- `value_comp()(X, Y)` Vrátí stejné logická hodnota způsobit při každém volání.  
+ `value_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.  
   
  Pokud `value_comp()(X, Y)` má hodnotu true, pak `value_comp()(Y, X)` musí mít hodnotu false.  
   
- Pokud `value_comp()(X, Y)` má hodnotu true, pak `X` se říká, že se seřadí před `Y`.  
+ Pokud `value_comp()(X, Y)` má hodnotu true, pak `X` říká, že je řazen před `Y`.  
   
- Pokud `!value_comp()(X, Y) && !value_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že máte ekvivalentní řazení.  
+ Pokud `!value_comp()(X, Y) && !value_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.  
   
- Pro libovolný element `X` který předchází `Y` v řízené sekvenci `key_comp()(Y, X)` je false. (Pro objekt delegáta výchozí klíče nikdy snížení hodnoty.)  
+ Pro libovolný element `X` , která předchází `Y` v řízené sekvenci `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta, klíče nikdy snížení hodnoty.)  
   
- Element nejvyšší prioritou, je proto jeden z elementů, které není seřadí před jiného elementu.  
+ Element nejvyšší priority je tedy jeden z prvků, které není řazen před jakýmkoli jiným prvkem.  
   
- Vzhledem k tomu, že základní kontejneru udržuje elementy seřadit jako haldy:  
+ Protože základní kontejneru udržuje prvky uspořádané jako haldu:  
   
- Kontejner musí podporovat iterátory náhodný přístup.  
+ Kontejner musí podporovat iterátory s náhodným přístupem.  
   
- Prvky s ekvivalentní řazení může být odebrány v jiném pořadí než byly; automaticky instalovat. (Řazení není stabilní.)  
+ Elementy ekvivalentní řazení může být odebrány v jiném pořadí, než byly nabídnuty. (Řazení není stabilní.)  
   
- Proto kandidáty pro základní kontejneru zahrnují [deque (STL/CLR)](../dotnet/deque-stl-clr.md) a [vektoru (STL/CLR)](../dotnet/vector-stl-clr.md).  
+ Proto kandidáty pro základní kontejner zahrnují [deque (STL/CLR)](../dotnet/deque-stl-clr.md) a [vektor (STL/CLR)](../dotnet/vector-stl-clr.md).  
   
 ## <a name="members"></a>Členové
   
@@ -172,16 +172,16 @@ Nahradí všechny elementy.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void assign(priority_queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér vložit.  
+ *doprava*  
+ Adaptér kontejneru pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijete jej chcete-li změnit celý obsah fronty.  
+ Členská funkce přiřadí `right.get_container()` do základního kontejneru. Použijte ke změně celého obsahu do fronty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -211,7 +211,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -224,16 +223,16 @@ Typ konstantního odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje konstantní odkaz na element.  
+ Typ, který popisuje konstantní odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cliext_priority_queue_const_reference.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -255,7 +254,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -267,7 +265,7 @@ Typ základního kontejneru.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -296,7 +294,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -304,16 +301,16 @@ c a b
 ```  
 
 ## <a name="difference_type"></a> priority_queue::difference_type (STL/CLR)
-Typy podepsaný vzdálenost mezi dvěma prvky.  
+Typ vzdálenosti se znaménkem mezi dvěma prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje počet element může být záporné.  
+ Typ, který popisuje element může být záporný počet.  
   
 ### <a name="example"></a>Příklad  
   
@@ -351,7 +348,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -365,12 +361,12 @@ Zkouší, zda nejsou přítomny žádné prvky.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí hodnotu true pro prázdný řízené sekvenci. Ta je ekvivalentní [priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Můžete použít k ověření, zda priority_queue je prázdný.  
+ Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda priority_queue – je prázdný.  
   
 ### <a name="example"></a>Příklad  
   
@@ -402,7 +398,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -414,17 +409,17 @@ empty() = True
 ```  
 
 ## <a name="generic_container"></a> priority_queue::generic_container (STL/CLR)
-Typ generické rozhraní pro kontejner.  
+Typ obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje obecné rozhraní pro tuto třídu kontejneru adaptér šablony.  
+ Typ, který popisuje obecné rozhraní pro tuto třídu adaptéru kontejner šablony.  
   
 ### <a name="example"></a>Příklad  
   
@@ -465,7 +460,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -476,16 +470,16 @@ e d b a c
 ```  
 
 ## <a name="generic_value"></a> priority_queue::generic_value (STL/CLR)
-Typ elementu pro použití s generické rozhraní pro kontejner.  
+Typ elementu pro použití s obecné rozhraní pro kontejner.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Popisuje typ objektu typu `GValue` , který popisuje element uložené hodnoty pro použití s obecné rozhraní pro tuto třídu kontejneru šablony. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typu ref.)  
+ Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje. (`GValue` je buď `value_type` nebo `value_type^` Pokud `value_type` je typ odkazu.)  
   
 ### <a name="example"></a>Příklad  
   
@@ -523,7 +517,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -533,16 +526,16 @@ c b a
 ```  
 
 ## <a name="get_container"></a> priority_queue::get_container (STL/CLR)
-Přístup k podkladové kontejneru.  
+Přistupuje k podkladové kontejneru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 container_type get_container();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí základní kontejneru. Můžete použít k porušení omezení způsobené obálku kontejneru.  
+ Členská funkce vrátí základní kontejneru. Použijete ji obejít omezení vynucená obálkou kontejneru.  
   
 ### <a name="example"></a>Příklad  
   
@@ -565,7 +558,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -573,20 +565,20 @@ c a b
 ```  
 
 ## <a name="op_as"></a> priority_queue::Operator = (STL/CLR)
-Nahradí řízené sekvenci.  
+Nahradí řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- vpravo  
- Kontejner adaptér pro kopírování.  
+ *doprava*  
+ Adaptér kontejneru pro kopírování.  
   
 ### <a name="remarks"></a>Poznámky  
- Kopie operátor člen `right` k objektu, vrátí `*this`. Můžete použít k nahrazení řízené sekvenci kopii v řízené sekvenci `right`.  
+ Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -615,8 +607,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -625,16 +616,16 @@ c a b
 ```  
 
 ## <a name="pop"></a> priority_queue::POP (STL/CLR)
-Odebere element nejvyšší proirity.  
+Odebere prvek nejvyšší proirity.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce odebere nejvyšší prioritou elementu řízené sekvenci, která musí být neprázdný. Použijete jej tak, aby zkrátil fronty podle jednoho prvku na pozadí.  
+ Členská funkce odstraní prvek nejvyšší prioritou řízené sekvence, která musí být neprázdný. Použijte ke zkrácení fronty podle jeden element na pozadí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -663,7 +654,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -672,11 +662,11 @@ b a
 ```  
 
 ## <a name="priority_queue"></a> priority_queue::priority_queue (STL/CLR)
-Vytvoří objekt kontejneru adaptéru.  
+Sestaví objekt kontejneru adaptéru.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 priority_queue();  
 priority_queue(priority_queue<Value, Container> right);  
 priority_queue(priority_queue<Value, Container> right);  
@@ -693,69 +683,69 @@ template<typename InIt>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- potřeba  
+ *pokračování*  
  Kontejner pro kopírování.  
   
- první  
- Začátek rozsahu k vložení.  
+ *první*  
+ Začátek rozsahu pro vložení.  
   
- poslední  
- Konec rozsahu k vložení.  
+ *poslední*  
+ Konec rozsahu pro vložení.  
   
- Před  
- Řazení predikát pro řízené sekvenci.  
+ *Před*  
+ Řazení predikátu řízené sekvence.  
   
- vpravo  
- Objekt, nebo rozsah k vložení.  
+ *doprava*  
+ Objekt nebo rozsahu pro vložení.  
   
 ### <a name="remarks"></a>Poznámky  
  Konstruktor:  
   
  `priority_queue();`  
   
- prázdný zabalené kontejner, vytvoří se výchozí řazení predikátu. Se používá k určení prázdný počáteční řízené sekvenci, s výchozí řazení predikátu.  
+ Vytvoří prázdný zabalené kontejner, s výchozí řazení predikátu. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikátu.  
   
  Konstruktor:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right.get_container()`, s řazení predikát `right.value_comp()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt fronty `right`, s stejné řazení predikátu.  
+ Vytvoří zabalené kontejner, který je kopií `right.get_container()`, pořadí predikátem `right.value_comp()`. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objekt fronty *správné*, stejné pořadí predikátem.  
   
  Konstruktor:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- Vytvoří zabalené kontejner, který je kopií `right->get_container()`, s řazení predikát `right->value_comp()`. Se používá k určení počáteční řízené sekvenci, který je kopií pořadí řízené objekt fronty `*right`, s stejné řazení predikátu.  
+ Vytvoří zabalené kontejner, který je kopií `right->get_container()`, pořadí predikátem `right->value_comp()`. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objekt fronty `*right`, stejné pořadí predikátem.  
   
  Konstruktor:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- Vytvoří prázdný zabalené kontejner, s řazení predikát `pred`. Se používá k určení prázdný počáteční řízené sekvenci, pomocí zadaného predikátu řazení.  
+ vytvoří kontejner prázdný zabalené pořadí predikátem *před*. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát pořadí.  
   
  Konstruktor:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- Vytvoří prázdný zabalené kontejner, s řazení predikát `pred`, pak předá všechny elementy `cont` se používá k určení počáteční řízené sekvenci z existující kontejner, pomocí zadaného predikátu řazení.  
+ vytvoří kontejner prázdný zabalené pořadí predikátem *před*, předá všechny prvky *pokračování* použilo ji k určení počáteční řízené sekvence z existující kontejner, se zadanou predikát pořadí.  
   
  Konstruktor:  
   
  `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- Vytvoří prázdný zabalené kontejner, s výchozí řazení predikát a pak doručí sekvenci [`first`, `last`). Se používá k určení počáteční řízené sekvenci ze zadaného eqeuence, pomocí zadaného predikátu řazení.  
+ Vytvoří prázdný zabalené kontejner, výchozí pořadí predikátem a pak sekvence nabízených oznámení [`first`, `last`). Použijete ji k určení počáteční řízené sekvence ze zadaného eqeuence se zadanou predikát pořadí.  
   
  Konstruktor:  
   
  `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- Vytvoří prázdný zabalené kontejner, s řazení predikát `pred`, pak předá sekvenci [`first`, `last`). Se používá k určení počáteční řízené sekvenci ze zadaného seqeuence, pomocí zadaného predikátu řazení.  
+ vytvoří kontejner prázdný zabalené pořadí predikátem *před*, předá sekvenci [`first`, `last`). Použijete ji k určení počáteční řízené sekvence ze zadaného seqeuence se zadanou predikát pořadí.  
   
  Konstruktor:  
   
  `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- Vytvoří prázdný zabalené kontejner, s řazení predikát `pred`, pak předá všechny elementy `cont` plus sekvenci [`first`, `last`). Se používá k určení počáteční řízené sekvenci z existující kontejner a zadaný seqeuence, pomocí zadaného predikátu řazení.  
+ vytvoří kontejner prázdný zabalené pořadí predikátem *před*, předá všechny prvky *pokračování* plus sekvenci [`first`, `last`). Použijete ji k určení počáteční řízené sekvence z existující kontejner a zadané seqeuence se zadanou predikát pořadí.  
   
 ### <a name="example"></a>Příklad  
   
@@ -839,7 +829,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -857,16 +846,16 @@ size() = 0
 ```  
   
 ## <a name="push"></a> priority_queue::push (STL/CLR)
-Přidá nového elementu.  
+Přidá nový prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vloží element s hodnotou `val` do řízené sekvenci a změní řízené sekvenci udržovat haldy oboru. Použít jej k přidání jiný element do fronty.  
+ Členská funkce vloží prvek s hodnotou `val` do řízené sekvence a změní pořadí řízené sekvence udržovat disciplína haldy. Použijete ji Pokud chcete přidat jiný element do fronty.  
   
 ### <a name="example"></a>Příklad  
   
@@ -889,7 +878,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -901,12 +889,12 @@ Typ odkazu na prvek
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje odkaz na element.  
+ Typ, který popisuje odkaz na element.  
   
 ### <a name="example"></a>Příklad  
   
@@ -936,7 +924,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,12 +936,12 @@ Spočítá počet prvků.
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí délku řízené sekvenci. Použijte k určení počtu elementy aktuálně v řízené sekvenci. Pokud všechny se zajímáte o tom, jestli má pořadí nenulové hodnoty velikosti, najdete v části [priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`.  
+ Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Příklad  
   
@@ -987,7 +974,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -998,16 +984,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
-Typ podepsaný vzdálenost mezi dvěma elementu.  
+Typ vzdálenosti se znaménkem mezi dvěma elementu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ popisuje element záporný počet.  
+ Typ, který popisuje počet prvků záporná.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1037,7 +1023,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1046,16 +1031,16 @@ size difference = 2
 ```  
   
 ## <a name="to_array"></a> priority_queue::to_array (STL/CLR)
-Zkopíruje řízené sekvenci do nové pole.  
+Zkopíruje do nového pole řízené sekvence.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí pole obsahující řízené sekvenci. Můžete ji použít k získání kopii řízené sekvenci v pole formuláře.  
+ Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1086,7 +1071,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1095,16 +1079,16 @@ c a b
 ```  
 
 ## <a name="top"></a> priority_queue::top (STL/CLR)
-Přístup k elementu nejvyšší prioritou.  
+Přistupuje k elementu nejvyšší prioritou.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 reference top();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí odkaz na element nejvyšší (nejvyšší priorita) řízené pořadí, které musí být neprázdný. Použít pro přístup k elementu nejvyšší prioritou, když víte, že existuje.  
+ Členská funkce vrátí odkaz na prvek nejvyšší (nejvyšší priorita) řízené sekvence, která musí být neprázdný. Použijete ho pro přístup k prvku nejvyšší prioritu, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1136,20 +1120,19 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="top_item"></a> priority_queue::top_item (STL/CLR)
-Přístup k elementu nejvyšší prioritou.  
+Přistupuje k elementu nejvyšší prioritou.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastnost přistupuje ke horní (nejvyšší priorita) elementu řízené sekvenci, která musí být neprázdný. Můžete použít ke čtení nebo zápisu elementu nejvyšší prioritou, když víte, že existuje.  
+ Vlastnost má přístup k elementu nahoře (nejvyšší priorita) řízené sekvence, která musí být neprázdný. Můžete použít ke čtení nebo zápisu elementu nejvyšší prioritu, když víte, že existuje.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1181,7 +1164,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1191,16 +1173,16 @@ top_item = c
 ```  
 
 ## <a name="value_comp"></a> priority_queue::value_comp (STL/CLR)
-Zkopíruje řazení delegáta pro dva elementy.  
+Zkopíruje pořadí delegáta pro dva prvky.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vrátí řazení delegát sloužící k uspořádání řízené sekvenci. Můžete použít k porovnání dvou hodnot.  
+ Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnání dvou hodnot.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1235,7 +1217,6 @@ int main()
         vcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1249,16 +1230,16 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="value_compare"></a> priority_queue::value_compare (STL/CLR)
-Řazení delegáta pro dvě hodnoty.  
+Pořadí delegáta pro dvě hodnoty.  
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 binary_delegate<value_type, value_type, int> value_compare;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro delegáta, který určuje, zda je první argument seřadí před druhý.  
+ Typ je synonymum pro delegáta, který určuje, zda první argument je řazen před druhým.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1293,7 +1274,6 @@ int main()
         vcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1311,12 +1291,12 @@ Typ prvku
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Typ je synonymum pro parametr šablony `Value`.  
+ Typ je synonymum pro parametr šablony *hodnota*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1343,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
