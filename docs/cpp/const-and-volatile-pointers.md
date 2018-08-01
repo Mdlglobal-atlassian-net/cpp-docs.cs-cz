@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947508"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408187"
 ---
 # <a name="const-and-volatile-pointers"></a>Ukazatelé const a volatile
 [Const](../cpp/const-cpp.md) a [volatile](../cpp/volatile-cpp.md) klíčová slova změnit způsob práce s ukazateli. **Const** – klíčové slovo určuje, že ukazatel myši se nemůže modifikovat po inicializaci; ukazatel je chráněn před úpravami.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- Deklarace proměnné `pch2` deklaruje ukazatel, pomocí kterého lze upravit konstantní objekt, a proto není povolena. Deklarace `pch3` Určuje, že **ukazatel** je konstanta, nikoli objekt; deklarace není povolena ze stejného důvodu `pch2` deklarace není povolena.  
+ Deklarace proměnné `pch2` deklaruje ukazatel, pomocí kterého lze upravit konstantní objekt, a proto není povolena. Deklarace `pch3` Určuje, že ukazatel myši je konstantní, nikoli objekt; deklarace není povolena ze stejného důvodu `pch2` deklarace není povolena.  
   
  Následujících osm přiřazení ukazuje přiřazování pomocí ukazatele a změnu hodnoty ukazatele z předchozích deklarací. Pro tuto chvíli předpokládejme, že pro proměnné `pch1` až `pch8` byla inicializace správná.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Předchozí příkaz deklaruje funkci [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), kde dva ze tří argumentů jsou typu ukazatele do **char**. Protože jsou argumenty jsou předány podle odkazu a podle hodnoty, funkce nebude měnit parametry `strDestination` a `strSource` Pokud `strSource` nebyl deklarován jako **const**. Deklarace `strSource` jako **const** volajícímu zajišťuje, že `strSource` nelze volanou funkcí změnit.  
   
 > [!NOTE]
->  Protože existuje standardní převod z *typename* **\*** k **const** *typename* **\***, je platný pro předání argumentu typu **char \***  k [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Ale opak není pravdou; Chcete-li odebrat neexistuje žádný implicitní převod **const** atribut z objektu nebo ukazatele.  
+>  Protože existuje standardní převod z *typename* **\*** k **const** *typename* **\***, je platný pro předání argumentu typu `char *` k [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Ale opak není pravdou; Chcete-li odebrat neexistuje žádný implicitní převod **const** atribut z objektu nebo ukazatele.  
   
  A **const** ukazatel daného typu lze přiřadit ukazateli stejného typu. Ukazatel, který ale není **const** nelze přiřadit **const** ukazatele. Následující kód ukazuje správná i nesprávná přiřazení:  
   
@@ -133,5 +133,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ukazatele](../cpp/pointers-cpp.md)

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40834c7c41bc19b395958b4a173a68bd014b2e70
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947641"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401779"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t – relační operátory
 **Specifické pro Microsoft**  
@@ -54,7 +54,6 @@ ms.locfileid: "37947641"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 bool operator!( ) const throw( );   
 bool operator==(const _bstr_t& str) const throw( );  
 bool operator!=(const _bstr_t& str) const throw( );  
@@ -69,5 +68,5 @@ bool operator>=(const _bstr_t& str) const throw( );
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

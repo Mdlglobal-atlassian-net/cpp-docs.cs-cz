@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947616"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404620"
 ---
 # <a name="exception-handling-differences"></a>Rozdíly ve zpracování výjimek
 Hlavní rozdíl mezi strukturovaným zpracováním výjimek a zpracování výjimek jazyka C++ je, že model zabývá typy zpracování výjimek jazyka C++, při C model zpracování strukturovaných výjimek se zabývá výjimkami jednoho typu – konkrétně  **unsigned int**. Výjimky jazyka C jsou označeny hodnotou unsigned integer, na rozdíl od výjimek jazyka C++, které jsou určeny typem dat. Jakmile je v jazyce C vyvolána výjimka, vykoná každý popisovač filtr, který prověří kontext výjimek jazyka C a určí, zda výjimku přijmout, předat ji jiné obslužné rutině, nebo ji ignorovat. Jakmile je vyvolána výjimka v jazyce C++, může být libovolného typu.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Aby bylo možné tuto třídu použít, je nutné nainstalovat vlastní funkci překladu výjimek jazyka C, která je volána mechanismem zpracování interních výjimek, při každém vyvolání výjimky jazyka C. V rámci funkce překladu lze vyvolat jakoukoli typovou výjimku (například `SE_Exception` typ nebo typ třídy odvozený z `SE_Exception`), které lze zachytit příslušné odpovídající C++ **catch** obslužné rutiny. Funkce překladu může jednoduše provést vrácení, což znamená, že nedošlo ke zpracování výjimky. Je-li samotná funkce překladu vyvolává výjimku jazyka C, [ukončit](../c-runtime-library/reference/terminate-crt.md) je volána.  
@@ -150,5 +149,5 @@ Caught a __try exception with SE_Exception.
 nSE = 0xc0000094  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Kombinace výjimek v jazycích C (strukturované) a C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)

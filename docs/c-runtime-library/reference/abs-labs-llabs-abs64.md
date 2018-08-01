@@ -1,5 +1,5 @@
 ---
-title: Abs, labs, llabs –, _abs64 – | Microsoft Docs
+title: Funkce ABS, praktická cvičení, llabs –, _abs64 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -46,16 +46,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391750"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408125"
 ---
-# <a name="abs-labs-llabs-abs64"></a>Abs, labs, llabs –, _abs64 –
+# <a name="abs-labs-llabs-abs64"></a>Funkce ABS, praktická cvičení, llabs –, _abs64 –
 
-Vypočítá absolutní hodnota argumentu.
+Vypočítá absolutní hodnotu argumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,27 +76,27 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
+*n*  
 Číselná hodnota.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Abs**, **labs**, **llabs –** a **_abs64 –** funkce vrátí absolutní hodnotu parametru *n*. Neexistuje žádný návratový chyby.
+**Abs**, **labs**, **llabs –** a **_abs64 –** funkce vrátí absolutní hodnotu parametru *n*. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **abs** , přijmout a vrátit **dlouho**, **dlouho** **dlouho**,  **float**, **dvojité**, a **dlouho** **dvojité** hodnoty. Tato přetížení, které jsou definovány v \<cmath – > záhlaví. V programu C **abs** vždy provede a vrátí typ int.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **abs** , která používají a vrací **dlouhé**, **dlouhé** **dlouhé**,  **float**, **double**, a **dlouhé** **double** hodnoty. Tato přetížení jsou definovány v \<cmath > záhlaví. V programu jazyka C **abs** vždy převezme a vrátí **int**.
 
-**Specifické pro Microsoft**: protože rozsahu záporné celých čísel, které může být reprezentovaný pomocí libovolného integrální typu je větší než rozsahu kladných celých čísel, které může být reprezentovaný pomocí tohoto typu, je možné poskytnout argument tyto Funkce, které nelze převést. Pokud se absolutní hodnota argumentu nemůže být reprezentovaná návratový typ **abs** funkce vrátí hodnotu argumentu beze změny. Konkrétně `abs(INT_MIN)` vrátí **int_min –**, `labs(LONG_MIN)` vrátí **long_min –**, `llabs(LLONG_MIN)` vrátí **LLONG_MIN**, a `_abs64(_I64_MIN)` Vrátí **_I64_MIN**. To znamená, že **abs** funkce nelze používat zaručit kladnou hodnotu.
+**Specifické pro Microsoft**: protože oblast záporných celých čísel, která lze znázornit pomocí libovolný integrální typ, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument do těchto Funkce, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, **abs** funkce vrátí nezměněnou hodnotu argumentu. Konkrétně `abs(INT_MIN)` vrátí `INT_MIN`, `labs(LONG_MIN)` vrátí `LONG_MIN`, `llabs(LLONG_MIN)` vrátí `LLONG_MIN`, a `_abs64(_I64_MIN)` vrátí `_I64_MIN`. To znamená, že **abs** funkce nelze používat k zajištění kladné hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadovaná hlavička v C++|
+|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|-----------------------|---------------------------|
-|**Abs**, **labs**, **llabs –**|\<Math.h > nebo \<stdlib.h >|\<cmath – >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|
+|**Abs**, **labs**, **llabs –**|\<Math.h > nebo \<stdlib.h >|\<cmath >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|
 |**_abs64**|\<stdlib.h>|\<cstdlib – > nebo \<stdlib.h >|
 
-Používat přetížené verze **abs** v jazyce C++, musíte zahrnout \<cmath – > záhlaví.
+Použití přetížené verze **abs** v jazyce C++, musíte zahrnout \<cmath > záhlaví.
 
 ## <a name="example"></a>Příklad
 
@@ -155,10 +155,10 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Převod dat](../../c-runtime-library/data-conversion.md)  
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

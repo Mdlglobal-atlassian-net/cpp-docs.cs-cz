@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940183"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403920"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
 
@@ -78,6 +78,7 @@ int main()
 
 Podmínky *l-hodnoty* a *rvalue* jsou často používány při odkazu na odkazy objektu. Další informace o referencích naleznete v tématu [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) a [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Viz také
-
- [Základní koncepty](../cpp/basic-concepts-cpp.md) [deklarátor odkazu Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+## <a name="see-also"></a>Viz také:
+ [Základní koncepty](../cpp/basic-concepts-cpp.md)  
+ [Deklarátor odkazu l-hodnoty: &](../cpp/lvalue-reference-declarator-amp.md)  
+ [Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

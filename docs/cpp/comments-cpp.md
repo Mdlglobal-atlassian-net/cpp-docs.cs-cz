@@ -1,5 +1,5 @@
 ---
-title: Komentáře (C++) | Microsoft Docs
+title: Komentáře (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919c40dce53dd5d1c8847287099c61c3e1b229cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411751"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405055"
 ---
 # <a name="comments-c"></a>Komentáře (C++)
-Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Komentáře v testování můžete nastavit určité řádků kódu neaktivní; ale `#if` / `#endif` preprocesor – direktivy fungují lépe pro tento protože můžete obklopit kód, který obsahuje komentáře, ale nelze je vnořovat komentáře.  
+Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Můžete použít komentáře při testování nastavit některé řádky kódu jako neaktivní; ale `#if` / `#endif` direktivy preprocesoru fungují lépe, protože je možné ohraničit kód, který obsahuje komentáře, ale komentáře nelze vnořovat.  
   
  Komentář v jazyce C++ je zapsán některým z následujících způsobů:  
   
@@ -35,5 +35,5 @@ Komentář je text, který kompilátor ignoruje, ale je užitečný pro program�
   
  Znaky komentáře (`/*`, `*/` a `//`) nemají žádný zvláštní význam v rámci znakové konstanty, textového literálu ani komentáře. Komentáře zapsané pomocí první syntaxe proto nelze vnořovat.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Lexikální konvence](../cpp/lexical-conventions.md)

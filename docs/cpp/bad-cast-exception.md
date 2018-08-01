@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947486"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401364"
 ---
 # <a name="badcast-exception"></a>bad_cast – výjimka
-Výjimka `bad_cast` je vyvolána operátorem `dynamic_cast` jako výsledek neúspěšného přetypování na typ odkazu.  
+**Bad_cast –** výjimku **dynamic_cast** operátor jako výsledek neúspěšného přetypování na typ odkazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Rozhraní výjimky `bad_cast` je následující:  
+ Rozhraní pro **bad_cast –** je:  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- Následující kód obsahuje příklad neúspěšného přetypování `dynamic_cast`, které vyvolá výjimku `bad_cast`.  
+ Následující kód obsahuje příklad neúspěšného **dynamic_cast** , které vyvolá **bad_cast –** výjimky.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- Výjimka je vyvolána, protože přetypovaný objekt (Shape) není odvozen ze zadaného typu přetypování (Circle). Aby se zabránilo výjimky, přidejte tyto deklarace k **hlavní**:  
+ Výjimka je vyvolána, protože přetypovaný objekt (Shape) není odvozen ze zadaného typu přetypování (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:  
   
 ```cpp 
 Circle circle_instance;  
@@ -91,7 +91,7 @@ Circle& ref_circle = circle_instance;
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

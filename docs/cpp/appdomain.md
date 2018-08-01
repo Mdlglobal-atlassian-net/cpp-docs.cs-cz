@@ -1,5 +1,5 @@
 ---
-title: doména AppDomain | Microsoft Docs
+title: doména AppDomain | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52108e79a50d596dbb1f1afdfb2f64b93421d860
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 52b371d0dedc03c3f14ede1472221077d081ae8f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705228"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402299"
 ---
 # <a name="appdomain"></a>appdomain
 
-Určuje, že každou doménu aplikace spravované aplikace musí mít svůj vlastní kopii konkrétní globální proměnné nebo statické členské proměnné. V tématu [domény aplikace a jazyk Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.
+Určuje, zda každá aplikační doména vaší spravované aplikace by měla mít svou vlastní kopii určité globální proměnné nebo statické členské proměnné. Zobrazit [aplikačních doménách a Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.
 
-Každá doména aplikací má vlastní kopii proměnné na appdomain. Konstruktor proměnné objektu třídy appdomain je spuštěn, když je načteno do domény aplikace sestavení a destruktoru je spuštěn, když je odpojen domény aplikace.
+Každá doména aplikace má vlastní kopii proměnné na úrovni appdomain. Konstruktor třídy proměnnou domény aplikace se spustí, až je sestavení načteno do domény aplikace a destruktor je spuštěn, když je doména aplikace uvolněna.
 
-Pokud chcete, aby všechny domény aplikace v rámci procesu v modulu common language runtime sdílet globální proměnné, použijte `__declspec(process)` modifikátor. `__declspec(process)` Výsledkem je ve výchozím nastavení v části [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+Pokud chcete všechny domény aplikace uvnitř procesu v modulu common language runtime sdílet globální proměnné, použijte `__declspec(process)` modifikátor. `__declspec(process)` je používána ve výchozím nastavení v části [/CLR](../build/reference/clr-common-language-runtime-compilation.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-`__declspec(appdomain)` je platný pouze při mezi **/CLR** – možnosti kompilátoru se používá. Může být označen pouze globální proměnné, statické členské proměnné nebo statické místní proměnné `__declspec(appdomain)`. Jedná se o chybu použít `__declspec(appdomain)` pro statické členy spravované typy, protože mají vždy toto chování.
+`__declspec(appdomain)` je platná pouze při některou **/CLR** – možnosti kompilátoru je používá. Může být označena pouze globální proměnné, statické členské proměnné nebo statické místní proměnné `__declspec(appdomain)`. Jedná se o chybu, chcete-li použít `__declspec(appdomain)` na statické členy třídy spravované typy, protože mají vždy toto chování.
 
-Pomocí `__declspec(appdomain)` je podobný používání [vláken místní úložiště (TLS)](../parallel/thread-local-storage-tls.md). Vlákna jsou vlastní úložiště, stejně jako domény aplikace. Pomocí `__declspec(appdomain)` zajišťuje globální proměnná má svou vlastní úložiště v každé doméně aplikace vytvořené pro tuto aplikaci.
+Pomocí `__declspec(appdomain)` podobá se to používání [vlákna místní úložiště (TLS)](../parallel/thread-local-storage-tls.md). Vlákna mají své vlastní úložiště, jako tomu aplikačních doménách. Pomocí `__declspec(appdomain)` zajišťuje globální proměnná má své vlastní úložiště v jednotlivých doménách aplikace vytvořené pro tuto aplikaci.
 
-Existují určitá omezení kombinování použití jednotlivých procesů a proměnných domény aplikace; v tématu [proces](../cpp/process.md) Další informace.
+Existují omezení směšování využívání podle procesu a proměnné domény aplikace; Zobrazit [procesu](../cpp/process.md) Další informace.
 
-Při spuštění programu, například všechny proměnné na proces se inicializují a potom se inicializují všechny proměnné na appdomain. Proto když probíhá inicializace proměnné na proces, ho nemůže záviset na hodnotu žádné proměnné pro aplikační doménu. Je chybný zvykem kombinovat používání (přiřazení) jednotlivých appdomain a proces proměnné.
+Při spuštění programu, například všechny proměnné na úrovni jednotlivého procesu se inicializují pak všechny proměnné na úrovni appdomain se inicializují. Proto při inicializaci proměnné na úrovni jednotlivého procesu ji nemůže záviset na hodnotu kterékoli proměnné na aplikační domény. Je špatný postup kombinovat použití (přiřazení) podle domény aplikace a proměnné procesu.
 
-Informace o tom, jak volat funkci v doméně konkrétní aplikaci najdete v tématu [call_in_appdomain – funkce](../dotnet/call-in-appdomain-function.md).
+Informace o tom, jak volat funkci ve specifické aplikační doméně najdete v tématu [call_in_appdomain – funkce](../dotnet/call-in-appdomain-function.md).
 
 ## <a name="example"></a>Příklad
 
@@ -145,6 +145,5 @@ __declspec(process) CGlobal::~CGlobal destructor
 ```
 
 ## <a name="see-also"></a>Viz také:
-
-- [__declspec](../cpp/declspec.md)
-- [Klíčová slova](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)  
+[Klíčová slova](../cpp/keywords-cpp.md)  

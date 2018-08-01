@@ -1,5 +1,5 @@
 ---
-title: noalias | Microsoft Docs
+title: noalias | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420116"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404392"
 ---
 # <a name="noalias"></a>noalias
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-`noalias` znamená, že volání funkce upravit nebo odkazovat viditelné globální stav a pouze upraví paměti ukazuje *přímo* parametry ukazatele (první úrovně indirections).
+**noalias** znamená, že volání funkce neupravuje nebo neodkazuje na globální stav a pouze upravuje paměť odkazovanou na *přímo* parametry ukazatele (nepřímé odkazy na první úrovni).
 
-Pokud je funkce označena jako `noalias`, optimalizátor může předpokládat, že kromě parametrů samotných jsou odkazována pouze nepřímá odkazování parametrů ukazatele nebo jsou upraveny uvnitř funkce. Stav globální viditelnosti je sada všech dat, která nejsou definována nebo odkazována mimo rozsah kompilace a jejich adresa není přebrána. Kompilace obor je všechny zdrojové soubory ([/ltgc (vytváření kódu v době propojování)](../build/reference/ltcg-link-time-code-generation.md) sestavení) nebo jeden zdrojový soubor (jinou hodnotu než **/ltgc** sestavení).
+Pokud je funkce označena jako **noalias**, optimalizátor může předpokládat, že kromě parametrů samotných pouze nepřímá odkazování parametrů ukazatele jsou odkazovaná nebo upraveny uvnitř funkce. Stav globální viditelnosti je sada všech dat, která nejsou definována nebo odkazována mimo rozsah kompilace a jejich adresa není přebrána. Oborem kompilace jsou všechny zdrojové soubory ([parametru/LTCG (generování kódu při propojování odkaz)](../build/reference/ltcg-link-time-code-generation.md) sestavení) nebo jeden zdrojový soubor (jinou hodnotu než**parametru/LTCG** sestavení).
 
-`noalias` Poznámky platí jenom v rámci obsah opatřen poznámkami funkce. Označení funkce jako `__declspec(noalias)` nemá vliv aliasy ukazatele vráceným funkcí.
+**Noalias** poznámky platí jenom v těle funkce s poznámkami. Označení funkci tak, aby **__declspec(noalias)** nemá vliv na aliasing ukazatele vrácené funkcí.
 
-Další poznámky, která může ovlivnit aliasy, najdete v části [__declspec(restrict)](../cpp/restrict.md).
+Další poznámky, které můžou ovlivnit aliasing, naleznete v tématu [__declspec(restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `__declspec(noalias)`.
+Následující příklad ukazuje použití **__declspec(noalias)**.
 
-Když funkce `multiply` , přistupuje paměti je poznámkou `__declspec(noalias)`, říká kompilátoru tuto funkci nelze změnit stav globální kromě prostřednictvím ukazatele ve svém seznamu parametr.
+Když funkce `multiply` , je opatřen přístupy do paměti **__declspec(noalias)**, sděluje kompilátoru, že tato funkce neupravuje globálním stavem, s výjimkou ukazatelů jejího seznamu parametrů.
 
 ```C
 // declspec_noalias.c
@@ -108,8 +108,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také
-
-[__declspec](../cpp/declspec.md)  
-[Klíčová slova](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+## <a name="see-also"></a>Viz také:
+ [__declspec](../cpp/declspec.md)  
+ [Klíčová slova](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

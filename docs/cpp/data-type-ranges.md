@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d55a2102299957a40cd9f742f91868ee2b5b849b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940638"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407673"
 ---
 # <a name="data-type-ranges"></a>Rozsahy datového typu
 Visual C++ 32bitové a 64bitové kompilátory rozpoznají typy v tabulce dále v tomto článku.  
@@ -77,33 +77,33 @@ Visual C++ 32bitové a 64bitové kompilátory rozpoznají typy v tabulce dále v
   
 |Název typu|Bajty|Další názvy|Rozsah hodnot|  
 |---------------|-----------|-----------------|---------------------|  
-|int|4|podepsaná|-2 147 483 648 do 2 147 483 647|  
-|unsigned int|4|nepodepsaná|0 do 4 294 967 295|  
-|__int8|1|char|-128 až 127|  
-|__int8 bez znaménka|1|unsigned char|0 až 255|  
-|__int16|2|krátký, short podepsané int, int krátké|-32 768 do 32 767|  
-|__int16 bez znaménka|2|krátká celočíselná unsigned short bez znaménka|0 až 65 535|  
-|__int32|4|podepsaná, podepsaný int, int|-2 147 483 648 do 2 147 483 647|  
-|__int32 bez znaménka|4|bez znaménka, unsigned int|0 do 4 294 967 295|  
-|__int64|8|Long long podepsáno long long|-9,223,372,036,854,775,808 k 9,223,372,036,854,775,807|  
-|unsigned __int64|8|unsigned long long.|0 na 18,446,744,073,709,551,615|  
-|bool|1|žádná|PRAVDA nebo NEPRAVDA|  
-|char|1|žádná|-128 až 127 ve výchozím nastavení<br /><br /> 0 až 255 při kompilaci pomocí [/J](../build/reference/j-default-char-type-is-unsigned.md)|  
-|podepsané char|1|žádná|-128 až 127|  
-|unsigned char|1|žádná|0 až 255|  
-|short|2|krátká celočíselná, podepsaný krátká celočíselná|-32 768 do 32 767|  
-|unsigned short|2|unsigned short int|0 až 65 535|  
-|long|4|Long int, long int podepsané|-2 147 483 648 do 2 147 483 647|  
-|unsigned long|4|unsigned long int|0 do 4 294 967 295|  
-|long long|8|žádný (ale ekvivalentní k __int64)|-9,223,372,036,854,775,808 k 9,223,372,036,854,775,807|  
-|unsigned long long.|8|žádný (ale ekvivalentní k nepodepsanému __int64)|0 na 18,446,744,073,709,551,615|  
-|enum|Se liší|žádná| |  
-|float|4|žádná|3, 4e +/-38 (7 číslic)|  
-|double|8|žádná|1, 7E +/-308 (15 číslic)|  
-|long double|stejné jako datový typ double|žádná|Stejné jako datový typ double|  
-|wchar_t|2|__wchar_t|0 až 65 535|  
+|**int**|4|**podepsané**|-2 147 483 648 do 2 147 483 647|  
+|**unsigned int**|4|**bez znaménka**|0 do 4 294 967 295|  
+|**__int8**|1|**char**|-128 až 127|  
+|**__int8 bez znaménka**|1|**unsigned char**|0 až 255|  
+|**__int16**|2|**krátký**, **krátká celočíselná**, **podepsané krátká celočíselná**|-32 768 do 32 767|  
+|**__int16 bez znaménka**|2|**unsigned short**, **unsigned short int**|0 až 65 535|  
+|**__int32**|4|**podepsané**, **znaménkem**, **int**|-2 147 483 648 do 2 147 483 647|  
+|**__int32 bez znaménka**|4|**bez znaménka**, **int bez znaménka**|0 do 4 294 967 295|  
+|**__int64**|8|**Long long**, **podepsáno long long**|-9,223,372,036,854,775,808 k 9,223,372,036,854,775,807|  
+|**unsigned __int64**|8|**unsigned long long.**|0 na 18,446,744,073,709,551,615|  
+|**bool**|1|žádná|**false** nebo **true**|  
+|**char**|1|žádná|-128 až 127 ve výchozím nastavení<br /><br /> 0 až 255 při kompilaci pomocí [/J](../build/reference/j-default-char-type-is-unsigned.md)|  
+|**podepsané char**|1|žádná|-128 až 127|  
+|**unsigned char**|1|žádná|0 až 255|  
+|**short**|2|**krátká celočíselná**, **podepsané krátká celočíselná**|-32 768 do 32 767|  
+|**short bez znaménka**|2|**unsigned short int**|0 až 65 535|  
+|**long**|4|**Long int**, **podepsané long int**|-2 147 483 648 do 2 147 483 647|  
+|**unsigned long**|4|**unsigned long int**|0 do 4 294 967 295|  
+|**Long long**|8|žádný (ale ekvivalentní k **__int64**)|-9,223,372,036,854,775,808 k 9,223,372,036,854,775,807|  
+|**unsigned long long.**|8|žádný (ale ekvivalentní k **unsigned __int64**)|0 na 18,446,744,073,709,551,615|  
+|**enum**|Se liší|žádná| |  
+|**float**|4|žádná|3, 4e +/-38 (7 číslic)|  
+|**double**|8|žádná|1, 7E +/-308 (15 číslic)|  
+|**typ long double**|stejné jako **double**|žádná|Stejné jako **double**|  
+|**wchar_t**|2|**__wchar_t**|0 až 65 535|  
   
- V závislosti na způsobu jejich použití, proměnná `__wchar_t` označuje buď typ širokého znaku nebo typ vícebajtového znaku. Použití `L` předponu před znak nebo řetězec konstanty k označení celého znaku typu konstanty.  
+ V závislosti na způsobu jejich použití, proměnná **__wchar_t** označuje buď typ širokého znaku nebo typ vícebajtového znaku. Použití `L` předponu před znak nebo řetězec konstanty k označení celého znaku typu konstanty.  
   
  **podepsané** a **bez znaménka** jsou modifikátory používané s jakýmkoli integrálním typem s výjimkou **bool**. Všimněte si, že **char**, **podepsané char**, a **unsigned char** jsou tři odlišné typy pro potřeby mechanismů, jako jsou přetížení nebo šablony.  
   
@@ -115,6 +115,6 @@ Visual C++ 32bitové a 64bitové kompilátory rozpoznají typy v tabulce dále v
   
  Rozsah výčtových typů se liší v závislosti na kontextu jazyka a zadaných příznaků kompilátoru. Další informace najdete v tématu [deklarace výčtů v jazyce C](../c-language/c-enumeration-declarations.md) a [výčty](../cpp/enumerations-cpp.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Základní typy](../cpp/fundamental-types-cpp.md)

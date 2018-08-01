@@ -1,5 +1,5 @@
 ---
-title: ACOS, acosf –, acosl – | Microsoft Docs
+title: Funkce ACOS, acosf –, acosl – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -41,16 +41,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392767"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401935"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
-Vypočítá Arkus.
+Vypočítá arkuskosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,34 +67,34 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnoty rozsahu -1 a 1, pro které chcete vypočítat Arkus kosinus (inverzní kosinus).
+*x*  
+Hodnota mezi -1 a 1, pro které chcete vypočítat Arkus kosinus (inverzní kosinus).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Acos** funkce vrátí Arkus kosinus *x* v rozsahu od 0 do pí radiánech.
+**Acos** funkce vrátí hodnotu Arkus kosinus *x* v rozsahu 0 až pí radiánů.
 
-Ve výchozím nastavení pokud *x* je menší než -1 nebo větší než 1, **acos** vrátí neomezené.
+Ve výchozím nastavení pokud *x* je menší než -1 nebo větší než 1, **acos** vrátí nekonečno.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NEPLATNÝ**|**_DOMAIN –**|
-|ROZMEZÍ QNAN, IND|žádná|**_DOMAIN –**|
-|&#124;x&#124;>1|**NEPLATNÝ**|**_DOMAIN –**|
+|± ∞|NEPLATNÝ|_DOMÉNA|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|&#124;x&#124;>1|NEPLATNÝ|_DOMÉNA|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **acos** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **acos** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **acos** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **acos** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
 |**ACOS**, **acosf –**, **acosl –**|\<Math.h >|\<errno.h>|
 
 ## <a name="example"></a>Příklad
 
-Tento program vyzve k zadání hodnotu v rozsahu -1 do 1. Vytvoření vstupní hodnoty mimo tento rozsah **_domain –** chybové zprávy. Pokud je zadána platná hodnota, program vytiskne Arkus sinus a Arkus kosinus tuto hodnotu.
+Tento program vyzve k zadání hodnoty v rozsahu -1 do 1. Vytvoření vstupní hodnoty mimo tento rozsah `_DOMAIN` chybové zprávy. Pokud je zadána platná hodnota, program vytiskne Arkus sinus a kosinus tuto hodnotu.
 
 ```C
 // crt_asincos.c
@@ -142,12 +142,12 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[Cos, cosf –, cosl –](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[Cos cosf –, cosl –](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

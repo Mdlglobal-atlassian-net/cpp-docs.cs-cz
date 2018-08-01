@@ -1,5 +1,5 @@
 ---
-title: Přístup ke členu | Microsoft Docs
+title: Přístup ke členu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420080"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402364"
 ---
 # <a name="member-access"></a>Přístup ke členu
-Přístup ke členu třída je řízena přetížení operátor přístupu členů (**->**). Tento operátor je v tomto použití považován za unární operátor a funkce přetíženého operátoru musí být členskou funkcí třídy. Deklarace takové funkce je tedy následující:  
+Přístup ke členům třídy lze řídit přetěžováním operátor přístupu členů (**->**). Tento operátor je v tomto použití považován za unární operátor a funkce přetíženého operátoru musí být členskou funkcí třídy. Deklarace takové funkce je tedy následující:  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- kde *typu třídy* je název třídy, do které patří tento operátor. Funkce operátoru přístupu ke členům musí být nestatickou členskou funkcí.  
+ kde *typu třídy* je název třídy, do které tento operátor patří. Funkce operátoru přístupu ke členům musí být nestatickou členskou funkcí.  
   
  Tento operátor se používá (často ve spojení s operátorem přesměrování ukazatele) k implementaci „chytrých ukazatelů“, které ověřují ukazatele před použitím přesměrování nebo počtu.  
   
  **.** operátor přístupu členů nemohou být přetíženy.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetížení operátoru](../cpp/operator-overloading.md)

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 343aa01d9f8e7b3146976fe046c6b2d7473ca1ec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941285"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407244"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-Specifikátor typu `decltype` vrací typ zadaného výrazu. `decltype` Specifikátor, spolu s typu [auto – klíčové slovo](../cpp/auto-cpp.md), je užitečný především pro vývojáře, kteří vytvářejí knihovny šablon. Použití **automaticky** a `decltype` k deklarování šablony funkce, jejíž návratový typ závisí na typech šablony argumentů. Nebo použijte **automaticky** a `decltype` k deklarování šablony funkce, která zabalí volání další funkce a potom vrátí návratový typ zabalené funkce.  
+**Decltype** specifikátor typu vrací typ zadaného výrazu. **Decltype** specifikátor, spolu s typu [auto – klíčové slovo](../cpp/auto-cpp.md), je užitečný především pro vývojáře, kteří vytvářejí knihovny šablon. Použití **automaticky** a **decltype** k deklarování šablony funkce, jejíž návratový typ závisí na typech šablony argumentů. Nebo použijte **automaticky** a **decltype** k deklarování šablony funkce, která zabalí volání další funkce a potom vrátí návratový typ zabalené funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ decltype( expression )
  Typ *výraz* parametru.  
   
 ## <a name="remarks"></a>Poznámky  
- Specifikátor typu `decltype` je podporován v jazyce Visual C++ 2010 nebo novější verzi a lze jej použít s nativním nebo spravovaným kódem. `decltype(auto)` (C ++ 14) je podporováno v sadě Visual Studio 2015 a novější.  
+ **Decltype** specifikátor typu je podporováno v aplikaci Visual C++ 2010 nebo novější verze a jde použít s nativním nebo spravovaným kódem. `decltype(auto)` (C ++ 14) je podporováno v sadě Visual Studio 2015 a novější.  
   
  Kompilátor používá následující pravidla pro určení typu *výraz* parametru.  
   
@@ -55,7 +55,7 @@ decltype( expression )
   
 -   Pokud *výraz* parametr je [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` je typ *výraz*. Pokud *výraz* parametr je [l-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` je [odkaz lvalue](../cpp/lvalue-reference-declarator-amp.md) typu *výraz*.  
   
- Následující příklad kódu ukazuje některá použití specifikátoru typu `decltype`. Nejprve předpokládejme, že jste nakódovali následující příkazy.  
+ Následující příklad kódu ukazuje některá použití **decltype** specifikátoru typu. Nejprve předpokládejme, že jste nakódovali následující příkazy.  
   
 ```cpp  
 int var;  
@@ -64,7 +64,7 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- Dále zkontrolujte typy, které jsou vráceny pomocí čtyř příkazů `decltype` v následující tabulce.  
+ Dále zkontrolujte typy, které jsou vráceny pomocí čtyř **decltype** příkazy v následující tabulce.  
   
 |Příkaz|Typ|Poznámky|  
 |---------------|----------|-----------|  
@@ -76,16 +76,16 @@ const A* a = new A();
 ## <a name="decltype-and-auto"></a>Klíčová slova Decltype a Auto  
  V C ++ 14, můžete použít `decltype(auto)` bez koncové návratového typu k deklarování šablony funkce, jejíž návratový typ závisí na typech šablony argumentů.  
   
- V C ++ 11, můžete použít `decltype` specifikátor na koncovým návratovým typem, spolu s typu **automaticky** – klíčové slovo k deklarování šablony funkce, jejíž návratový typ závisí na typech šablony argumentů. Zvažte například následující příklad kódu, ve kterém návratový typ šablony funkce závisí na typech šablony argumentů. V příkladu kódu *neznámý* zástupný text označuje, že návratový typ nelze zadat.  
+ V C ++ 11, můžete použít **decltype** specifikátor na koncovým návratovým typem, spolu s typu **automaticky** – klíčové slovo k deklarování šablony funkce, jejíž návratový typ závisí na typech šablony argumenty. Zvažte například následující příklad kódu, ve kterém návratový typ šablony funkce závisí na typech šablony argumentů. V příkladu kódu *neznámý* zástupný text označuje, že návratový typ nelze zadat.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- Použití specifikátoru typu `decltype` umožňuje vývojáři získat typ výrazu, který šablona funkce vrátí. Použití *alternativní syntaxi deklarace funkce* , která je uvedena dále, **automaticky** – klíčové slovo a `decltype` specifikátor pro deklaraci typu *pozdně zadaný* Návratový typ. Pozdně určený návratový typ je určen při kompilaci deklarace, nikoli když je kódován.  
+ Po zavedení služby **decltype** specifikátor typu umožňuje vývojáři získat typ výrazu, který šablona funkce vrátí. Použití *alternativní syntaxi deklarace funkce* , která je uvedena dále, **automaticky** – klíčové slovo a **decltype** specifikátor pro deklaraci typu  *pozdně zadaný* návratového typu. Pozdně určený návratový typ je určen při kompilaci deklarace, nikoli když je kódován.  
   
- Následující prototyp znázorňuje syntaxi alternativní deklarace funkce. Všimněte si, že **const** a **volatile** kvalifikátory a **throw** [specifikace výjimky](../cpp/exception-specifications-throw-cpp.md) jsou volitelné. *Function_body* zástupný text představuje složený příkaz, který určuje, co funkce dělá. Osvědčeným postupem je *výraz* zástupný symbol v `decltype` příkazu by měl odpovídat výrazu určeném příkazem **vrátit** příkazu, pokud existuje, v *function_body* .  
+ Následující prototyp znázorňuje syntaxi alternativní deklarace funkce. Všimněte si, že **const** a **volatile** kvalifikátory a **throw** [specifikace výjimky](../cpp/exception-specifications-throw-cpp.md) jsou volitelné. *Function_body* zástupný text představuje složený příkaz, který určuje, co funkce dělá. Osvědčeným postupem je *výraz* zástupný symbol v **decltype** příkazu by měl odpovídat výrazu určeném příkazem **vrátit** příkazu, pokud existují v *function_body*.  
   
  **Automatické** *Název_funkce* **(** *parametry*<sub>optimalizované</sub> **)**  **Const**<sub>optimalizované</sub> **volatile**<sub>optimalizované</sub> **->** **decltype (** *výraz* **)** **throw**<sub>optimalizované</sub> **{** *function_body* **};**  
   
@@ -101,16 +101,15 @@ auto myFunc(T&& t, U&& u) -> decltype (forward<T>(t) + forward<U>(u))
 template<typename T, typename U>  
 decltype(auto) myFunc(T&& t, U&& u)   
         { return forward<T>(t) + forward<U>(u); };  
-  
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>Klíčové slovo decltype a přesměrování funkce (C ++ 11)  
  Funkce předávání zaobalují volání dalších funkcí. Zvažte šablonu funkce, která předává své argumenty nebo výsledky výrazu, který zahrnuje tyto argumenty, jiné funkci. Kromě toho funkce předávání vrátí výsledek volání další funkce. V tomto scénáři by měl návratový typ funkce předávání být stejný jako návratový typ zabalené funkce.  
   
- V tomto scénáři nelze odpovídající typ výrazu zapsat bez specifikátoru typu `decltype`. Specifikátor typu `decltype` umožňuje obecné funkce předávání, protože neztratí potřebné informace o tom, zda funkce vrací odkaz. Příklad kódu funkce předávání naleznete v předchozím příkladu šablony funkce `myFunc`.  
+ V tomto scénáři nelze odpovídající typ výrazu bez zapisovat **decltype** specifikátoru typu. **Decltype** specifikátor typu umožňuje obecné funkce předávání, protože neztratí požadované informace o tom, zda funkce vrací typ reference. Příklad kódu funkce předávání naleznete v předchozím příkladu šablony funkce `myFunc`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu deklaruje pozdně zadaný návratový typ šablony funkce `Plus()`. Funkce `Plus` zpracuje své dva operandy s přetížením `operator+`. V důsledku toho interpretace operátoru plus (+) a návratový typ funkce `Plus` závisí na typech argumentů funkce.  
+ Následující příklad kódu deklaruje pozdně zadaný návratový typ šablony funkce `Plus()`. `Plus` Funkce zpracuje své dva operandy s **operátor +** přetížení. V důsledku toho interpretace operátoru plus (+) a návratový typ funkce `Plus` závisí na typech argumentů funkce.  
   
 ```cpp  
 // decltype_1.cpp  
@@ -210,4 +209,3 @@ static_assert(test2, "PASS2");
  Jazyk Visual C++ 2010 nebo novější verze.  
   
  `decltype(auto)` vyžaduje Visual Studio 2015 nebo novější.  
-  

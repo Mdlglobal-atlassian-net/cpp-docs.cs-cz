@@ -1,5 +1,5 @@
 ---
-title: Přenositelnost u rozhraní ABI (moderní verze jazyka C++) | Microsoft Docs
+title: Přenositelnost u rozhraní ABI (moderní verze jazyka C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419658"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402348"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Přenositelnost u rozhraní ABI (moderní verze jazyka C++)
-Použití dostatečně přenosné typy a pravidla týkající se na binární rozhraní hranice. "Přenosné type" je předdefinovaný typ C nebo struktura, která obsahuje jenom vestavěné typy C. Typy tříd lze použít pouze když volající a volaný dohodnou na rozložení, volání konvence atd. To je možné pouze, pokud jsou obě kompilovat s stejné kompilátoru a nastavení kompilátoru.  
+Použití dostatečně přenosné typy a pravidla týkající se na binární rozhraní hranice. "Přenosné type" je předdefinovaný typ jazyka C nebo struktura, která obsahuje pouze předdefinované typy jazyka C. Typy tříd jde použít jenom při volajícím a volaným shodnout na rozložení, volání konvence atd. To je možné, pouze když obě jsou kompilovány pomocí stejného kompilátoru a nastavení kompilátoru.  
   
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Postup vyrovnání třídu pro přenositelnost jazyka C  
- Když volající může kompilovat s jinou kompilátoru/jazyk a potom "zploštění" k **extern "C"** rozhraní API pomocí konkrétní konvence volání:  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Jak sloučit třídy pro přenositelnost jazyka C  
+ Když volající může být kompilována s jinou kompilátoru a jazyk a pak "sloučit" k **extern "C"** rozhraní API s konkrétní konvence volání:  
   
 ```cpp  
 // class widget {  
@@ -39,7 +39,7 @@ extern "C" {        // functions using explicit "this"
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

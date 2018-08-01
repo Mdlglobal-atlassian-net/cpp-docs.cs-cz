@@ -1,5 +1,5 @@
 ---
-title: Výchozí argumenty | Microsoft Docs
+title: Výchozí argumenty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408647"
 ---
 # <a name="default-arguments"></a>Výchozí argumenty
-V mnoha případech obsahují funkce argumenty, které jsou tak zřídka používané, že bude stačit výchozí hodnota. Zařízení výchozího argumentu umožňuje zadání pouze těch argumentů funkce, které mají v daném volání význam. Pro ilustraci tento koncept, podívejte se na příklad uvedené v [přetížení funkcí](../cpp/function-overloading.md).  
+V mnoha případech obsahují funkce argumenty, které jsou tak zřídka používané, že bude stačit výchozí hodnota. Zařízení výchozího argumentu umožňuje zadání pouze těch argumentů funkce, které mají v daném volání význam. Pro ilustraci tohoto konceptu Uvažujme příklad uvedený v [přetížení funkce](../cpp/function-overloading.md).  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  V mnoha aplikacích mohou být pro `prec` poskytnuty přiměřené výchozí hodnoty, což eliminuje potřebu dvou funkcí:  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- Implementace `print` funkce se mírně změní tak, aby odrážela skutečnost, že existuje jenom jeden takové funkce pro typ **dvojité**:  
+ Provádění `print` funkce se mírně změní tak, aby odrážely skutečnost, že existuje pouze jedna funkce pro typ **double**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  K vyvolání nové funkce `print` je třeba použít následující kód:  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Výchozí argumenty jsou používány pouze ve voláních funkce, kde jsou vynechány koncové argumenty – musejí to být poslední argumenty. Proto je následující kód neplatný:  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   Výchozí argument nelze předefinovat v pozdější deklaraci, dokonce ani v případě, kdy je opětovná definice totožná s původní. Proto následující kód generuje chybu:  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Pro ukazatele na funkce lze zadat výchozí argumenty. Příklad:  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>Viz také  
- 

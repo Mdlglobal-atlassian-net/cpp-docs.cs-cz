@@ -1,5 +1,5 @@
 ---
-title: Bod deklarace v C++ | Microsoft Docs
+title: Bod deklarace v C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42f43e6187e19df6e9c1111c0e92aa4b9929199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408701"
 ---
 # <a name="point-of-declaration-in-c"></a>Bod deklarace v C++
-Název se považuje deklarovat ihned po jeho deklarátor, ale před jeho inicializátoru (volitelné). (Další informace o deklarátory najdete v tématu [deklarace a definice](declarations-and-definitions-cpp.md).)  
+Název se považuje za deklarovat ihned po jeho deklarátor, ale před jeho vlastním inicializátoru (volitelné). (Další informace o deklarátorech naleznete v tématu [deklarace a definice](declarations-and-definitions-cpp.md).)  
   
- Vezměte v úvahu v tomto příkladu:  
+ Podívejte se například:  
   
-```  
+```cpp 
 // point_of_declaration1.cpp  
 // compile with: /W1   
 double dVar = 7.0;  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- Pokud bod deklarace byly *po* inicializace a pak místní `dVar` bude inicializována tak, aby 7.0, hodnotu globální proměnné `dVar`. Nicméně, protože se nejedná o případ, `dVar` je inicializováno nedefinovanou hodnotu.  
+ Bod deklarace byly *po* inicializace a potom místní `dVar` by inicializovány na hodnotu globální proměnné 7.0 `dVar`. Nicméně, protože se nejedná o případ, `dVar` je inicializován na nedefinovanou hodnotu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozsah](../cpp/scope-visual-cpp.md)

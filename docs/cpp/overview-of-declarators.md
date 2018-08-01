@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208559"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404935"
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory diskutované v [deklarace a definice](declarations-and-definitions-cpp.md), poskytují informace o vlastnostech, jako je například typ nebo třída úložiště. Modifikátory diskutované v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravují deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - deklarátoru ukazatele-– operátor   
   - (deklarátor)  
 
-  
 - a *operátoru ukazatele* patří:  
   
   - \* [kvalifikátory cv]  
   - & [kvalifikátory cv]:: vnořené specifikátorem názvu \* [kvalifikátory cv]  
 
-  
  Protože může deklarátor obsahovat deklarátory, lze pomocí výše zmíněných pravidel vytvořit složitější odvozené typy jako pole ukazatelů či funkce vracející pole ukazatelů na funkce.  Chcete-li utvořit každý z kroků konstrukce, začněte s identifikátorem představujícím základní datový typ a použijte výše zmíněné pravidlo syntaxe s předchozím výrazem jako deklarátor `declarator`.  Pořadí použití pravidel syntaxe by mělo být opačné oproti způsobu, jak je výraz vyjádřen v angličtině.  Pokud použití *operátoru ukazatele* pravidlo syntaxe na výraz pole nebo funkce použít závorky, pokud má ukazatel na pole nebo funkce, jako poslední řádek v tabulce níže.  
   
  Následující příklad ukazuje tvorbu „ukazatele na pole 10 ukazatelů na typ int“.  

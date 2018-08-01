@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d5ee7e0b9679fc4fd4e4cd9c541c38dd4446e47c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947518"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404363"
 ---
 # <a name="raise"></a>__raise
 Zvýrazní stranu volání události.  
@@ -30,9 +30,7 @@ Zvýrazní stranu volání události.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 __raise method-declarator;  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
@@ -69,7 +67,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracování událostí](../cpp/event-handling.md)   
  [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

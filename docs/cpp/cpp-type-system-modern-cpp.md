@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027271"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407858"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 Koncept *typ* je v jazyce C++ velmi důležitý. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Mezi typy patří **int** pro ukládání integrálních hodnot, **double** k ukládání hodnot s plovoucí desetinnou čárkou (označované také jako *skalární* datové typy), nebo standardní knihovna tříd [std::basic_string](../standard-library/basic-string-class.md) pro ukládání textu. Můžete vytvořit vlastní typ definováním **třídy** nebo **struktura**. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  
@@ -41,7 +41,6 @@ Koncept *typ* je v jazyce C++ velmi důležitý. Všechny proměnné, argumenty 
  Následující příklad ukazuje některé jednoduché deklarace proměnných s popisem každé z nich. Příklad také ukazuje, jak kompilátor používá informace o typu k tomu, aby povolil nebo zakázal určité následné operace s proměnnou.  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Základní (vestavěné) typy  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  **Const** kvalifikátor je často používána v deklaracích funkcí a proměnných a "správnost const" je důležitý koncept v jazyce C++; v podstatě znamená použití **const** k zajištění v době kompilace úpravě hodnot. Další informace najdete v tématu [const](../cpp/const-cpp.md).  
   
- A **const** se liší od své nekonstantní verze; například `const int` je odlišný od typu **int**. Můžete použít C++ **const_cast** operátor v těch výjimečných případech, kdy je třeba odebrat *const-ness* z proměnné. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ A **const** se liší od své nekonstantní verze; například **const int** je odlišný od typu **int**. Můžete použít C++ **const_cast** operátor v těch výjimečných případech, kdy je třeba odebrat *const-ness* z proměnné. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>Typy řetězců  
- Přesněji řečeno jazyk C++ nemá žádný typ integrované řetězec; **char** a `wchar_t` ukládají jednotlivé znaky – třeba deklarovat více těchto typů aproximace řetězce, přidávání ukončující hodnotu null (například ASCII `'\0'`) jeden prvek pole za posledním platným znak (také nazývané *řetězce ve stylu C*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní C++ máme typy standardní knihovny `std::string` (pro 8bitové **char**-řetězce znaků typu) nebo `std::wstring` (pro 16bitové `wchar_t`-řetězce znaků typu). Tyto kontejnery standardní knihovny C++ lze považovat za nativní typy řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní prostředí pro sestavení C++. Jednoduše použít `#include <string>` – direktiva tyto typy dostupné v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.  
+ Přesněji řečeno jazyk C++ nemá žádný typ integrované řetězec; **char** a **wchar_t** ukládají jednotlivé znaky – třeba deklarovat více těchto typů aproximace řetězce, přidávání ukončující hodnotu null (například ASCII `'\0'`) k prvku pole za za posledním platným znakem (také nazývané *řetězce ve stylu C*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní C++ máme typy standardní knihovny `std::string` (pro 8bitové **char**-řetězce znaků typu) nebo `std::wstring` (pro 16bitové **wchar_t**-řetězce znaků typu). Tyto kontejnery standardní knihovny C++ lze považovat za nativní typy řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní prostředí pro sestavení C++. Jednoduše použít `#include <string>` – direktiva tyto typy dostupné v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.  
   
 ## <a name="user-defined-types"></a>Uživateli definované typy  
  Při definování **třídy**, **struktura**, **sjednocení**, nebo **výčtu**, tato konstrukce použita ve zbytku kódu jako by šlo o základní typ. . Má známou velikost v paměti a na kontrolu doby kompilace a doby trvání programu při běhu se vztahují některá pravidla týkající se způsobu jeho použití. Nejdůležitější rozdíly mezi základními typy a typy definovanými uživateli jsou následující:  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  Základní princip, který byste měli znát, je, že deklarací proměnné nezpracovaného ukazatele se přidělí pouze paměť potřebná k uložení adresy umístění v paměti, na které bude ukazatel odkazovat při zrušení reference. Přidělení paměti pro samotnou hodnotu dat (také nazývané *záložní úložiště*) není v tomto okamžiku nepřidělí. Jinými slovy, deklarováním proměnné nezpracovaného ukazatele vytváříte proměnnou adresy v paměti, nikoli skutečnou datovou proměnnou. Zrušení reference na proměnnou ukazatele, aniž byste se ujistili, že proměnná obsahuje platnou adresu záložního úložiště, způsobí v programu nedefinované chování (obvykle závažnou chybu). Následující příklad ukazuje tento druh chyby:  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  V příkladu dochází ke zrušení reference na typ ukazatele bez přidělení paměti, kde by byla uložena skutečná celočíselná data, a bez přidělení platné adresy v paměti. Následující kód tyto chyby opravuje:  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  Příklad opraveného kódu používá místní zásobník paměti k vytvoření základní úložiště `pNumber` odkazuje na. Pro jednoduchost používáme základní typ. V praxi záložním úložištěm pro ukazatele jsou většinu uživatelem definované typy, které jsou dynamicky přiřazovány do oblasti paměti pojmenované *haldy* (nebo *volné úložiště*) pomocí **nové** výrazu klíčového slova (v programování ve stylu C, starší `malloc()` byla použita funkce knihovny C runtime). Po přidělení, tyto proměnné jsou obvykle označovány jako objekty, zejména v případě, že jsou založeny na definici třídy. Paměť přidělená k **nové** musí být odstraněna odpovídajícím **odstranit** – příkaz (nebo pokud jste použili `malloc()` funkce k přidělení funkce modulu runtime jazyka C `free()`).  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  Je však snadné zapomenout odstranit dynamicky přiřazované objekty-zejména v komplexním kódu, který způsobí chybu prostředků zvanou *nevracení paměti*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Je téměř vždy lepší využít obtékání ukazatele raw [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky uvolní paměť při vyvolání jeho destruktoru (když kód vzroste mimo rozsah pro inteligentní ukazatele); pomocí inteligentních ukazatelů můžete prakticky Eliminujte celé třídy chyb ve vašich programech C++. V následujícím příkladu předpokládejme `MyClass` je uživatelem definovaný typ, který má veřejnou metodu `DoSomeWork();`  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  Další informace o inteligentních ukazatelích naleznete v tématu [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md).  
@@ -175,7 +167,7 @@ void someFunction() {
 |[Typy hodnot](../cpp/value-types-modern-cpp.md)|Popisuje *typů hodnot* a problémy týkající se jejich použití.|  
 |[Převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Popisuje běžné problémy při převodu typů a ukazuje, jak se jim vyhnout.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

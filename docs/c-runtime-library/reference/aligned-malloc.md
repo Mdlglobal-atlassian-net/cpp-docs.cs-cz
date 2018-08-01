@@ -1,5 +1,5 @@
 ---
-title: _aligned_malloc – | Microsoft Docs
+title: _aligned_malloc | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393144"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405211"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
-Přidělí paměť na hranici zadané zarovnání.
+Přidělí paměť v zadaných hranicích zarovnání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,23 +55,23 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-Velikost velikost paměti požadované přidělení.
+*Velikost*  
+Velikost požadované alokace paměti.
 
-*Zarovnání*<br/>
-Zarovnání hodnota, která musí být celé číslo mocninou 2.
+*Zarovnání*  
+Hodnota zarovnání, které musí být celočíselnou mocninou 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatele na blok paměti, který byl přidělen nebo **NULL** Pokud operace se nezdařila. Ukazatele není násobkem *zarovnání*.
+Ukazatele na blok paměti, která byla přidělena nebo hodnota NULL, pokud operace se nezdařila. Ukazatel je násobkem *zarovnání*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_malloc –** je založena na [malloc –](malloc.md).
+**_aligned_malloc** vychází [malloc](malloc.md).
 
-**_aligned_malloc –** je označena `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné a že má ukazatel vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
+**_aligned_malloc** je označen `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné a Vrácený ukazatel není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
 
-Tato funkce nastaví **errno** k **enomem –** Pokud přidělení paměti se nezdařilo nebo pokud byla větší než požadovaná velikost **_heap_maxreq –**. Další informace o **errno**, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Navíc **_aligned_malloc –** ověří jeho parametry. Pokud *zarovnání* není mocninou 2 nebo *velikost* rovná nule, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **NULL** a nastaví **errno** k **einval –**.
+Tato funkce nastaví `errno` k `ENOMEM` Pokud přidělení paměti se nezdařilo nebo pokud byla větší než požadovaná velikost `_HEAP_MAXREQ`. Další informace o `errno`, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Navíc **_aligned_malloc** ověří jeho parametry. Pokud *zarovnání* není mocninou čísla 2 nebo *velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu NULL a nastaví `errno` k `EINVAL`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -161,6 +161,6 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 This pointer, 3280891, is offset by 5 on alignment of 16
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Zarovnání dat](../../c-runtime-library/data-alignment.md)<br/>
+[Zarovnání dat](../../c-runtime-library/data-alignment.md)  

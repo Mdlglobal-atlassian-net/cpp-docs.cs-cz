@@ -1,5 +1,5 @@
 ---
-title: Překlad názvů u závislých typů | Microsoft Docs
+title: Překlad názvů u závislých typů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419908"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402683"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozlišení názvů u závislých typů
-Použití **typename** pro kvalifikované názvy v definicích šablonu pro oznámení kompilátoru, identifikuje zadaný kvalifikovaný název typu. Další informace najdete v tématu [typename](../cpp/typename.md).  
+Použití **typename** pro kvalifikované názvy v definicích šablon pro oznámení kompilátoru, že daný kvalifikovaný název identifikuje typ. Další informace najdete v tématu [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Vyhledávání názvu pro názvy závislých prvků prozkoumá názvy z kontextu definice šablony – v následujícím příkladu by tento kontext najít `myFunction(char)`– a kontextu vytvoření instance šablony. V následujícím příkladu je vytvořena šablona instance v hlavní; Proto `MyNamespace::myFunction` viditelná z místa, vytváření instancí a je vybráno jako lepší shodu. Pokud by byla funkce `MyNamespace::myFunction` přejmenována, došlo by k zavolání funkce `myFunction(char)`.  
+ Název vyhledávání nezávislých názvů zkontroluje názvy pro kontext definice šablony — v následujícím příkladu by tento kontext nalezl `myFunction(char)`– a kontext vytvoření instance šablony. V následujícím příkladu je vytvořena šablona instance ve funkci main. Proto `MyNamespace::myFunction` viditelná z místa vytvoření instance a je zvolena jako vhodnější shoda. Pokud by byla funkce `MyNamespace::myFunction` přejmenována, došlo by k zavolání funkce `myFunction(char)`.  
   
  Všechny názvy jsou vyhodnoceny jako závislé názvy. Přesto je doporučeno používat plně kvalifikované názvy, může-li dojít k jakýmkoli konfliktům.  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>Odstraňování mnohoznačnosti šablon  
- Aplikace [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] vynucuje pro odstraňování mnohoznačnosti s klíčovým slovem „template“ pravidla standardu C++98/03/11. V následujícím příkladu by Visual C++ 2010 přijmout neodpovídající řádky a řádky vyhovující.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] přijme jenom vyhovující řádky.  
+ Aplikace [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] vynucuje pro odstraňování mnohoznačnosti s klíčovým slovem „template“ pravidla standardu C++98/03/11. V následujícím příkladu bude přijímat Visual C++ 2010 neodpovídající řádky a odpovídající řádky.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] přijímá pouze odpovídající řádky.  
   
 ```cpp  
 #include <iostream>  
@@ -129,5 +129,5 @@ int main() {
   
  Shoda s pravidly odstraňování mnohoznačnosti je požadována, protože jazyk C++ standardně předpokládá, že typ `AY::Rebind` není šablona, proto kompilátor interpretuje následující znak „`<`“ jako znak „menší než“. Pro správnou analýzu znaku „`Rebind`“ jako ostré závorky musí kompilátor vědět, že typ `<` je šablona.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Překlad názvů](../cpp/templates-and-name-resolution.md)

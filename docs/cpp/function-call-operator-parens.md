@@ -1,5 +1,5 @@
 ---
-title: 'Operátor volání funkce: () | Microsoft Docs'
+title: 'Operátor volání funkce: () | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408587"
 ---
 # <a name="function-call-operator-"></a>Operátor volání funkce: ()
-Výraz operátory a operátor volání funkce **()**, určuje volání funkce.  
+Výraz přípony následován operátorem volání funkce **()**, určuje volání funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,41 +38,41 @@ postfix-expression
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Argumenty, které mají operátor volání funkce jsou nula nebo více výrazů, které jsou oddělené čárkami – skutečné argumenty funkce.  
+ Argumenty pro operátor volání funkce se nula nebo více výrazů oddělených čárkami, skutečné argumenty funkce.  
   
- *Operátory výraz* adresu funkce (například identifikátor funkce nebo hodnota ukazatel na funkci), se musí vyhodnotit a *seznam argumentů výraz* je seznam výrazů (oddělené čárkami) jejichž hodnoty (argumenty) jsou předaný funkci. *Seznam argumentů výraz* argument nesmí být prázdné.  
+ *Postfix-expression* se musí vyhodnotit na adresu funkce (například identifikátor funkce nebo hodnota ukazatele na funkci), a *argument-expression-list* je seznamem výrazů (oddělených čárkami) jehož hodnoty (argumenty) jsou předány funkci. *Argument-expression-list* argument může být prázdný.  
   
- *Operátory výraz* musí být jedním z těchto typů:  
+ *Postfix-expression* musí být jeden z těchto typů:  
   
--   Funkce vrácení typu `T`. Je také příklad prohlášení  
+-   Funkce vracející typ `T`. Příklad deklarace  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
--   Ukazatel na funkci vrácení typu `T`. Je také příklad prohlášení  
+-   Ukazatel na funkci vracející typ `T`. Příklad deklarace  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
--   Odkaz na funkci vrácení typu `T`. Je také příklad prohlášení  
+-   Odkaz na funkci vracející typ `T`. Příklad deklarace  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
--   Ukazatele na člena funkce dereference vracejících typ `T`. Jsou například volání funkcí  
+-   Ukazatel na členskou funkci vracející typ přístupu přes ukazatel `T`. Příklad volání funkcí jsou  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu volání funkce standardní knihovny `strcat_s` s tři argumenty:  
+ Následující příklad volá funkce standardní knihovny `strcat_s` s tři argumenty:  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -104,7 +105,7 @@ Welcome to C++
 ## <a name="function-call-results"></a>Výsledky volání funkce  
  Volání funkce vyhodnocuje r-hodnotu, pokud není funkce deklarována jako typ odkazu. Funkce s návratovým typem ve formě odkazu vyhodnocují l-hodnoty a lze je použít na levé straně příkazu přiřazení následujícím způsobem:  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- Předchozí kód definuje třídu s názvem `Point`, který obsahuje privátní data objekty představující *x* a *y* souřadnice. Tyto datové objekty musejí být upraveny a jejich hodnoty načteny. Tento program je pouze jednou z několika možností pro takovou třídu. Použití funkcí `GetX` a `SetX` nebo `GetY` a `SetY` představuje další možnost.  
+ Předcházející kód definuje třídu s názvem `Point`, který obsahuje privátní dat objektů, které představují *x* a *y* souřadnice. Tyto datové objekty musejí být upraveny a jejich hodnoty načteny. Tento program je pouze jednou z několika možností pro takovou třídu. Použití funkcí `GetX` a `SetX` nebo `GetY` a `SetY` představuje další možnost.  
   
  Funkce vracející typy tříd, ukazatele na typy tříd nebo odkazy na typy tříd lze použít jako levý operand pro operátory výběru členů. Proto je platný následující kód:  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -179,9 +180,9 @@ int main() {
 }  
 ```  
   
- Funkce lze volat rekurzivně. Další informace o deklaracích funkcí najdete v tématu [funkce](functions-cpp.md). Související materiálu je v [Program a propojení](../cpp/program-and-linkage-cpp.md).  
+ Funkce lze volat rekurzivně. Další informace o deklaracích funkcí naleznete v tématu [funkce](functions-cpp.md). Související materiál se nachází v [Program a propojení](../cpp/program-and-linkage-cpp.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy přípony](../cpp/postfix-expressions.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Volání funkcí](../c-language/function-call-c.md)   

@@ -1,5 +1,5 @@
 ---
-title: vlastnosti (C++) | Microsoft Docs
+title: vlastnosti (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408608"
 ---
 # <a name="property-c"></a>property (C++)
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Tento atribut lze použít pro nestatické „virtuální datové členy“ v definici třídy nebo struktury. Kompilátor zpracovává tyto „virtuální datové členy“ jako datové členy změnou jejich odkazů na volání funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Když kompilátor uvidí datový člen deklarovat s Tento atribut na pravé straně operátoru výběru členů ("**.**"nebo"**->**"), převede ji na operace **získat** nebo **put** funkci, v závislosti na tom, jestli je takový výraz hodnotou l nebo r-value. V další komplikovanější kontextů, jako například "`+=`", přepište provádí provádění obou **získat** a **put**.  
+ Když kompilátor narazí na datový člen deklarovaný pomocí tohoto atributu na pravé straně operátoru výběru členů ("**.**"nebo"**->**"), převede operaci `get` nebo `put` funkce, v závislosti na tom, jestli je takový výraz l hodnotou nebo r-hodnotou. U více komplikovaných kontextů, jako například "`+=`", je provedena revize pomocí `get` a `put`.  
   
  Tento atribut lze použít také v deklaraci prázdného pole v definici třídy nebo struktury. Příklad:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
  Výše uvedený příkaz označuje, že `x[]` lze použít s jedním nebo více indexy pole. V tomto případě bude `i=p->x[a][b]` převeden na `i=p->GetX(a, b)` a `p->x[a][b] = i` bude převeden na `p->PutX(a, b, i);`  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  
@@ -74,6 +74,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [__declspec](../cpp/declspec.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

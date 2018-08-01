@@ -1,5 +1,5 @@
 ---
-title: Operátory přiřazení | Microsoft Docs
+title: Operátory přiřazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408584"
 ---
 # <a name="assignment-operators"></a>Operátory přiřazení
 ## <a name="syntax"></a>Syntaxe  
@@ -61,11 +62,11 @@ assignment-operator : one of
 ## <a name="remarks"></a>Poznámky  
  Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem. Existují tři typy operací přiřazení: 
 
-1. jednoduché přiřazení, ve kterém je hodnota Druhý operand uložené v objektu určeného první operand. 1. složené přiřazení, ve kterém se provádí aritmetické, shift nebo bitové operace před ukládání výsledek.
-1. Přesuňte přiřazení (pro typy třídy) v prostředky, ke kterým se přenáší bez kopírování.
+1. jednoduché přiřazení, ve kterém je hodnota druhého operandu uložena v objektu určeném prvním operandem. 1. složené přiřazení, ve kterém aritmetický, posunu nebo bitová operace provádí před uložením výsledku.
+1. které prostředky jsou přeneseny bez kopírování přesuňte přiřazení (pro typy tříd).
 
 
-Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = operátory jsou složené operátory přiřazení.  
+Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = složené operátory přiřazení jsou operátory.  
   
 ### <a name="assignment-operators"></a>Operátory přiřazení  
   
@@ -82,7 +83,7 @@ Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = 
 |**&=**|Získá bitový AND prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**^=**|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**\|=**|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
-|**&&=**| Operátor Move assignment (třída pouze pro typy). Je-li druhý operand rvalue, přesuňte její prostředky první operand (bez kopírování). V tématu [přesunutí konstruktory a operátory přiřazení](move-constructors-and-move-assignment-operators-cpp.md) Další informace.|
+|**&&=**| Operátor přiřazení přesunutí (třída pouze pro typy). Pokud je druhý operand je typu rvalue, jeho prostředky přesunout do prvního operandu (bez kopírování). Zobrazit [konstruktory přesunutí a operátory přiřazení přesunutí](move-constructors-and-move-assignment-operators-cpp.md) Další informace.|
   
  **Klíčová slova operátorů**  
   
@@ -94,11 +95,11 @@ Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = 
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Existují dva způsoby pro přístup k tato klíčová slova operátorů v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+ Existují dva způsoby přístupu k těmto klíčovým slovům operátorů v programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -125,11 +126,11 @@ int main() {
   
  Objekty typů const a volatile lze přiřadit l-hodnotám typů, které jsou pouze typu volatile nebo typům, které jsou const, nikoli však volatile.  
   
- Přiřazení k objektům typu třídy (typy struct, union a class) je prováděno pomocí funkce operátoru pojmenování =. Výchozí chování této funkce operátoru je provedení bitového kopírování. Toto chování lze však změnit pomocí přetížených operátorů. (Viz [přetížený operátory](../cpp/operator-overloading.md) Další informace.)  
+ Přiřazení k objektům typu třídy (typy struct, union a class) je prováděno pomocí funkce operátoru pojmenování =. Výchozí chování této funkce operátoru je provedení bitového kopírování. Toto chování lze však změnit pomocí přetížených operátorů. (Viz [přetížené operátory](../cpp/operator-overloading.md) Další informace.)  
   
  Objekt libovolné jednoznačně odvozené třídy z dané základní třídy lze přiřadit k objektu základní třídy. Opačně to neplatí, protože mezi odvozenou třídou a základní třídou existuje explicitní převod, který však neexistuje mezi základní a odvozenou třídou. Příklad:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  U objektů typu třídy se přiřazení liší od inicializace. Pro ilustraci různých přiřazení a inicializací uvažujme následující kód  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  Předchozí kód zobrazí inicializátor. Zavolá konstruktor `UserType2`, který přebírá argument typu `UserType1`. Vzhledem ke kódu  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  může příkaz přiřazení  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,22 +190,22 @@ B = A;
 -   Dále je třeba zavolat konstruktor `UserType2::UserType2` za předpokladu, že takový konstruktor existuje a přebírá argument `UserType1` a zkopíruje výsledek.  
   
 ## <a name="compound-assignment"></a>Složené přiřazení  
- Složené přiřazení operátory, uvedené v tabulce v [operátory přiřazení](../cpp/assignment-operators.md), jsou zadány ve tvaru *e1* `op` =  *e2*, kde *e1* je upravitelnými l hodnota není const typu a *e2* je jedním z následujících akcí:  
+ Operátory složeného přiřazení, uvedené v tabulce v [operátory přiřazení](../cpp/assignment-operators.md), jsou uvedeny ve tvaru *e1* `op` =  *e2*, kde *e1* je upravitelná l hodnota nekonstantního typu a *e2* je jedním z následujících akcí:  
   
 -   Aritmetický typ  
   
 -   Ukazatel, pokud `op` je + nebo -  
   
- *E1* `op` =  *e2* formulář chovat jako *e1* *= e1* `op` *e2*, ale *e1* vyhodnotí pouze jednou.  
+ *E1* `op` =  *e2* formulář chovat jako *e1* *= e1* `op` *e2*, ale *e1* se vyhodnotí pouze jednou.  
   
  Složené přiřazení výčtového typu vygeneruje chybovou zprávu. Je-li levý operand typu ukazatele, pravý operand musí být typu ukazatele nebo musí být konstantním výrazem vyhodnoceným na hodnotu 0. Je-li levý operand celočíselný typ, nesmí být pravý operand typu ukazatele.  
   
 ## <a name="result-of-assignment-operators"></a>Výsledek operátorů přiřazení  
- Operátory přiřazení návratová hodnota objektu určeného levý operand po přiřazení. Výsledný typ je typ levý operand. Výsledkem výrazu přiřazení je vždy l hodnota. Tyto operátory mít asociativnost zprava doleva. Levý operand musí být upravitelnými l hodnota.  
+ Operátory přiřazení vrací hodnotu objektu určeném levým operandem po přiřazení. Výsledný typ je typ levého operandu. Výsledek výrazu přiřazení je vždy l hodnotou. Tyto operátory mají asociativitu zprava doleva. Levý operand musí být upravitelná l hodnota.  
   
- V jazyce C na ANSI výsledek přiřazení výrazu není l hodnota. Proto právní výraz C++ `(a += b) += c` není povolen v C.  
+ Ve standardu ANSI C výsledek výrazu přiřazení není l hodnotou. Proto platný výraz jazyka C++ `(a += b) += c` je neplatné. v jazyce C.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operátory přiřazení v jazyce C](../c-language/c-assignment-operators.md)

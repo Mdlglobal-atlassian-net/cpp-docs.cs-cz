@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947516"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404594"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t – třída
 **Specifické pro Microsoft**  
   
- A `_com_ptr_t` objekt zapouzdřuje ukazatele rozhraní modelu COM a se nazývá "inteligentní" ukazatel. Spravuje této třídy šablony a pomocí volání funkce zrušení přidělení prostředků `IUnknown` členské funkce: `QueryInterface`, `AddRef`, a `Release`.  
+ A **_com_ptr_t** objekt zapouzdřuje ukazatele rozhraní modelu COM a se nazývá "inteligentní" ukazatel. Spravuje této třídy šablony a pomocí volání funkce zrušení přidělení prostředků `IUnknown` členské funkce: `QueryInterface`, `AddRef`, a `Release`.  
   
- Inteligentní ukazatel je obvykle odkazuje v definici typedef poskytované _COM_SMARTPTR_TYPEDEF makra. Toto makro přijímá název rozhraní a IID a deklaruje jako specializaci té `_com_ptr_t` s názvem rozhraní a příponu `Ptr`. Příklad:  
+ Inteligentní ukazatel je obvykle odkazuje v definici typedef poskytované _COM_SMARTPTR_TYPEDEF makra. Toto makro přijímá název rozhraní a IID a deklaruje jako specializaci té **_com_ptr_t** s názvem rozhraní a příponu `Ptr`. Příklad:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- deklaruje `_com_ptr_t` specializace `IMyInterfacePtr`.  
+ deklaruje **_com_ptr_t** specializace `IMyInterfacePtr`.  
   
  Sada [funkce šablony](../cpp/relational-function-templates.md), nejsou členy této šablony třídy, podporu porovnání s inteligentním ukazatelem na pravé straně operátoru porovnání.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Vytvoří `_com_ptr_t` objektu.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Vytvoří **_com_ptr_t** objektu.|  
   
 ### <a name="low-level-operations"></a>Operace nízké úrovně  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operátor =](../cpp/com-ptr-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího `_com_ptr_t` objektu.|  
+|[operátor =](../cpp/com-ptr-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího **_com_ptr_t** objektu.|  
 |[operátory ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Porovná objekt inteligentního ukazatele k jiným inteligentním ukazatelem, nezpracovaný ukazatel rozhraní, nebo hodnota NULL.|  
 |[– Extraktory](../cpp/com-ptr-t-extractors.md)|Extrahuje zapouzdřený ukazatel rozhraní COM.|  
   
@@ -72,5 +72,5 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

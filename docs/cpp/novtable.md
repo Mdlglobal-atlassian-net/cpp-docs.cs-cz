@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947634"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406965"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -30,7 +30,7 @@ ms.locfileid: "37947634"
   
  Tato forma **__declspec** lze použít pro všechny deklarace tříd, ale bude použito pouze na rozhraní třídy, tedy třídy, které se nikde nebude vytvořena instance samostatně. **__Declspec** zastaví kompilátoru generování kódu inicializace konstruktoru vfptr a destruktoru třídy. V mnoha případech jsou tímto odebrány odkazy na tabulku vtable, které jsou přidruženy ke třídě a budou tedy odebrány linkerem. Použití této formy atributu **__declspec** může vést k významnému snížení velikosti kódu.  
   
- Při pokusu o vytvoření instance třídy označené jako `novtable` a následném přístupu k členu třídy obdržíte zprávu o narušení přístupu (AV).  
+ Při pokusu o vytvoření instance třídy označené **novtable** a poté přístup člena třídy, zobrazí se narušení přístupu (AV).  
   
 ## <a name="example"></a>Příklad  
   
@@ -63,6 +63,6 @@ In Y
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [__declspec](../cpp/declspec.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

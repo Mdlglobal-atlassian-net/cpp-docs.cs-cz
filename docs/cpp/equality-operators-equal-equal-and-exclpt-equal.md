@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 073e642b99dea4eb6f77fd1e79731713748f1f61
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947685"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403112"
 ---
 # <a name="equality-operators--and-"></a>Operátory rovnosti: == a !=
 ## <a name="syntax"></a>Syntaxe  
@@ -69,7 +69,7 @@ int main() {
   
  Operátory rovnosti můžete porovnat ukazatelů na členy stejného typu. Porovnání jsou provedeny převody ukazatele na člen. Ukazatelé na členy je také možné porovnat s konstantním výrazem vyhodnoceným na hodnotu 0.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
  [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Relační operátory a operátory rovnosti jazyka C](../c-language/c-relational-and-equality-operators.md)

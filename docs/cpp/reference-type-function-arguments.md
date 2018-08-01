@@ -1,5 +1,5 @@
 ---
-title: Argumenty funkce typu odkazu | Microsoft Docs
+title: Argumenty funkce typu odkazu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408605"
 ---
 # <a name="reference-type-function-arguments"></a>Argumenty funkce typu odkazu
 Často je efektivnější funkcím předávat reference namísto velkých objektů. To umožňuje kompilátoru předat adresu objektu při zachování syntaxe, která by byla použita k přístupu k objektu. Prohlédněte si následující příklad používající strukturu `Date`:  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -66,17 +67,17 @@ int main()
 }  
 ```  
   
- Předchozí kód ukazuje, že členů struktury předaná odkaz ke kterým se přistupuje pomocí operátoru výběru členů (**.**) místo výběru členů operátor ukazatele (**->**).  
+ Předchozí kód ukazuje, že členy struktury předané referencí jsou zpřístupněny pomocí operátoru výběru členů (**.**) namísto operátoru volby členu ukazatel (**->**).  
   
- I když argumentů předaných jako odkazové typy sledovat syntaxe typů bez ukazatele, zachovávají jedna důležité charakteristika typů ukazatele: jejich lze měnit, pokud deklarovaný jako **const**. Jelikož účelem předcházejícího kódu není upravit objekt `GDate`, je vhodnějším prototypem funkce tento prototyp:  
+ Ačkoli argumenty předané jako typy referencí používají syntaxi typů typech bez ukazatele, zachovávají důležitou vlastnost typů ukazatelů: lze, pokud nejsou deklarovány jako je **const**. Jelikož účelem předcházejícího kódu není upravit objekt `GDate`, je vhodnějším prototypem funkce tento prototyp:  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   
  Tento prototyp zaručuje, že funkce `JulianFromGregorian` nezmění svůj argument.  
   
- Všechny funkce deklaraci jako trvá odkazového typu může přijmout objekt stejného typu místo ní, protože je standardní převod z *typename* k * typename ***&**.  
+ Všechny funkce prototyp přijímá typ odkazu může přijmout objekt stejného typu na jeho místo, protože existuje standardní převod z *typename* na * typename ***&**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Odkazy](../cpp/references-cpp.md)

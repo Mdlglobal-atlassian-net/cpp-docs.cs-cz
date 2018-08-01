@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d0ab1e052b3e6d843813c33e5444fc3c08796d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947700"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402088"
 ---
 # <a name="continue-statement-c"></a>continue – příkaz (C++)
 Vynutí přenos řízení na kontrolní výraz nejmenší nadřazené [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), nebo [při](../cpp/while-statement-cpp.md) smyčky.  
@@ -68,6 +68,6 @@ before the continue
 after the do loop  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Jump – příkazy](../cpp/jump-statements-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

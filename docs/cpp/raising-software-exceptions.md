@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947677"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405185"
 ---
 # <a name="raising-software-exceptions"></a>Vyvolávání výjimek softwaru
 Některé nejběžnější zdroje chyb programu nejsou systémem označeny jako výjimky. Například při pokusu o přidělení bloku paměti při nedostatku paměti nevyvolá funkce API nebo modul runtime výjimku, ale vrátí kód chyby.  
@@ -60,7 +60,7 @@ Některé nejběžnější zdroje chyb programu nejsou systémem označeny jako 
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Po definování kódu výjimky jej lze použít pro vyvolání výjimky. Následující kód například vyvolá výjimku STATUS_INSUFFICIENT_MEM jako reakci na problém s přidělováním paměti:  
+ Po definování kódu výjimky jej lze použít pro vyvolání výjimky. Například následující kód vyvolá `STATUS_INSUFFICIENT_MEM` výjimky v reakci na problém s přidělováním paměti:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  
@@ -80,6 +80,6 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)   
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

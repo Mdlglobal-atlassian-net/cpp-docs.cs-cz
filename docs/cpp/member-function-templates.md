@@ -1,5 +1,5 @@
 ---
-title: Šablony členských funkcí | Microsoft Docs
+title: Šablony členských funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7eeed732f8d9e69dd2571b69cf1c7247a38991
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419976"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404223"
 ---
 # <a name="member-function-templates"></a>Šablony členských funkcí
 
@@ -95,7 +95,7 @@ int main()
   
  Šablony členské funkce nemohou být virtuálními funkcemi a nemohou přepsat virtuální funkce ze základní třídy, pokud jsou deklarovány pomocí stejného názvu jako virtuální funkce základní třídy.  
   
-Následující příklad ukazuje šablonované uživatelem definovaný převod:  
+Následující příklad ukazuje bez vizuálního vzhledu uživatelem definovaného převodu:  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -115,6 +115,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také
-
+## <a name="see-also"></a>Viz také:
  [Šablony funkcí](../cpp/function-templates.md)

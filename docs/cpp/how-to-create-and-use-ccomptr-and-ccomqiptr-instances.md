@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026906"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407953"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Postupy: Vytváření a používání instancí objektů CComPtr a CComQIPtr
 V klasickém programování Windows jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji řečeno, jako serverů modelu COM). Mnoho součásti operačního systému Windows jsou implementovány jako serverů modelu COM a knihovny v tomto formuláři zadejte velkého počtu přispěvatelů. Informace o základy modelu COM naleznete v tématu [modelu COM (Component Object)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -41,5 +41,5 @@ V klasickém programování Windows jsou knihovny často implementovány jako ob
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034813"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402696"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů weak_ptr
 Někdy musí objekt uložit cestu pro přístup k objektu `shared_ptr` aniž by došlo k navýšení počtu odkazů. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instancí.  
@@ -90,5 +90,5 @@ Press any key
 
  Jako experiment upravte vektor `others` bude `vector<shared_ptr<Controller>>`a potom ve výstupu Všimněte si, že nejsou vyvolány žádné destruktory při `TestRun` vrátí.  
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)

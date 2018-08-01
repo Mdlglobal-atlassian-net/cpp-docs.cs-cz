@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: bee63ace276863a30c4ec81d970ba3bf5fd29e40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939946"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405282"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists – příkaz
 **__If_not_exists** příkaz testuje, jestli existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.  
@@ -38,8 +38,8 @@ statements
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`identifier`|Identifikátor, jehož existence bude testována.|  
-|`statements`|Jeden nebo více příkazů, které budou spuštěny, pokud `identifier` neexistuje.|  
+|*identifikátor*|Identifikátor, jehož existence bude testována.|  
+|*Příkazy*|Jeden nebo více příkazů, které budou spuštěny, pokud *identifikátor* neexistuje.|  
   
 ## <a name="remarks"></a>Poznámky  
   
@@ -59,7 +59,7 @@ statements
 ## <a name="example"></a>Příklad  
  Příklad použití **__if_not_exists**, naleznete v tématu [__if_exists – příkaz](../cpp/if-exists-statement.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [__if_exists – příkaz](../cpp/if-exists-statement.md)

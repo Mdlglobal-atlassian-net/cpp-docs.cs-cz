@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 988d46b3f4b2e20ff14227fda70a6f39ac95756c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939426"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402894"
 ---
 # <a name="iteration-statements-c"></a>Příkazy iterace (C++)
 Příkazy iterace způsobit, že příkazy (nebo složené příkazy) má být proveden nulakrát nebo vícekrát, v souladu s kritérií ukončení smyčky. Pokud tyto příkazy jsou složené příkazy, jsou provedeny v pořadí, kromě případů, kdy buď [přerušení](../cpp/break-statement-cpp.md) příkaz nebo [pokračovat](../cpp/continue-statement-cpp.md) příkaz dochází.  
@@ -38,5 +38,5 @@ Příkazy iterace způsobit, že příkazy (nebo složené příkazy) má být p
   
  Část příkazu iterace příkazu nemůže být deklarace. Může však být složeného příkazu, který obsahuje deklaraci.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947622"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403716"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
 Deklarace zavádějí názvy v programu, například názvy proměnných, obory názvů, třídy a funkce. Deklarace také zadat informace o typu, jakož i další vlastnosti objektu, který je byl deklarován. Název musí být deklarován před jeho použitím; v jazyce C++ bod, ve kterém je název deklarován Určuje, zda je viditelný pro kompilátor. Nelze se odkazovat na funkci nebo třídu, která je deklarována někdy později v jednotce kompilace; můžete použít *předat dál deklarace* jsme toto omezení.  
@@ -61,7 +61,6 @@ public:
  Některé deklarace, které nejsou definicemi jsou:  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  
@@ -94,6 +93,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Základní koncepty](../cpp/basic-concepts-cpp.md)   
  [Bod deklarace](../cpp/point-of-declaration-in-cpp.md)

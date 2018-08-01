@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947726"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407585"
 ---
 # <a name="argument-definitions"></a>Definice argumentů
 Argumenty v prototypu  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  První argument příkazového řádku je vždy `argv` **[1]** a poslední je `argv` **[** `argc` – 1 **]**.  
   
 > [!NOTE]
->  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName –](http://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.  
+>  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv` **[0]** nemusí být spustitelný soubor s názvem; použijte [GetModuleFileName –](http://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.  
   
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  *envp*  
- *Envp* pole, které je běžným rozšířením mnoha systémů UNIX, se používá v Microsoft C++. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem položku NULL. Mohou být deklarovány jako pole ukazatelů na **char (char** \*envp [] č.**)** nebo jako ukazatel na ukazatele na **char (char** \* \* envp **)**. Pokud program používá **wmain** místo **hlavní**, použijte **wchar_t** datový typ místo **char**. Blok prostředí předaný **hlavní** a **wmain** je "zmrazená" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání **putenv** nebo `_wputenv`, aktuální prostředí (vrácené `getenv` / `_wgetenv` a `_environ` /  `_wenviron` proměnná) změní, ale blok odkazovaný parametrem envp se nezmění. Zobrazit [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) Další informace o potlačení zpracování prostředí. Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.  
+ *Envp* pole, které je běžným rozšířením mnoha systémů UNIX, se používá v Microsoft C++. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem položku NULL. Mohou být deklarovány jako pole ukazatelů na **char (char** \*envp [] č.**)** nebo jako ukazatel na ukazatele na **char (char** \* \* envp **)**. Pokud program používá `wmain` místo `main`, použijte `wchar_t` datový typ místo **char**. Blok prostředí předaný `main` a `wmain` je "zmrazená" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání `putenv` nebo `_wputenv`, aktuální prostředí (vrácené `getenv` / `_wgetenv` a `_environ` /  `_wenviron` proměnná) bude Změna, ale blok odkazovaný parametrem envp se nezmění. Zobrazit [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) Další informace o potlačení zpracování prostředí. Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.  
   
 **Specifické pro END Microsoft**  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití *argc*, *argv*, a *envp* argumenty **hlavní**:  
+ Následující příklad ukazuje způsob použití *argc*, *argv*, a *envp* argumenty `main`:  
   
 ```cpp 
 // argument_definitions.cpp  
@@ -80,5 +79,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [main: spuštění programu](../cpp/main-program-startup.md)

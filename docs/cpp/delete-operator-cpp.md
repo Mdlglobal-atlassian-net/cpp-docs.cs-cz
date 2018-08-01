@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f4f563a424fd5a019b2094f931236f4af6f0ecb4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947520"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407725"
 ---
 # <a name="delete-operator-c"></a>delete – operátor (C++)
 Zruší přidělení bloku paměti.  
@@ -97,8 +97,7 @@ int main()
   
  Pro objekty typu třídy ([třídy](../cpp/class-cpp.md), [struktura](../cpp/struct-cpp.md), nebo [sjednocení](../cpp/unions.md)), je vyvolán globální operátor delete. Začne-li výraz delete jednočlenným operátorem rozlišení rozsahu (::), název funkce navracení je pro objekty typu třídy řešen v globálním oboru. V opačném případě operátor delete vyvolá destruktor objektu před zrušením přidělení paměti (pokud není ukazatel null). Operátor delete lze definovat na základě každé třídy. Neexistuje-li pro zadanou třídu žádná taková definice, je vyvolán globální operátor delete. Je-li výraz delete používán k zrušení přidělení objektu třídy, jehož statický typ má virtuální destruktor, je funkce zrušení přidělení řešena prostřednictvím virtuálního konstruktoru dynamického typu objektu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Operátory new a delete](../cpp/new-and-delete-operators.md)   
- 

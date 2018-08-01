@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e800bd3100fa0199534f3e9bdf6646aa0ffc6860
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1edf990697aa6becca0ad377f18e8f7045c96a4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940895"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401841"
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
 **Specifické pro Microsoft**  
@@ -31,9 +31,7 @@ ms.locfileid: "37940895"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 DWORD HelpContext( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -44,5 +42,5 @@ DWORD HelpContext( ) const throw( );
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_com_error – třída](../cpp/com-error-class.md)

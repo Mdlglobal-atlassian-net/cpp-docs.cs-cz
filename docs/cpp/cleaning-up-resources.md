@@ -1,5 +1,5 @@
 ---
-title: Vymazání prostředků | Microsoft Docs
+title: Vymazání prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408509"
 ---
 # <a name="cleaning-up-resources"></a>Vymazání prostředků
-Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, že blok příkazu `__try` byl přerušen dříve, než byly veškeré prostředky přiděleny, takže ne všechny prostředky byly otevřeny.  
+Při provádění obslužné rutiny ukončení nemusíte před voláním rutiny ukončení vědět, které prostředky jsou ve skutečnosti přiděleny. Je možné, **__try** bloku příkazu byl přerušen dříve, než byly veškeré prostředky přiděleny, tak, aby všechny prostředky byly otevřeny.  
   
  Proto byste dříve, než přikročíte k zpracování vyčištění při ukončení, měli z důvodu bezpečnosti zkontrolovat, které prostředky jsou skutečně otevřené. Doporučený postup je:  
   
 1.  Inicializovat popisovače na hodnotu NULL.  
   
-2.  Přidělit prostředky v bloku příkazu `__try`. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.  
+2.  V **__try** příkaz blokovat, přidělit prostředky. Pokud je prostředek přidělen, jsou popisovače nastaveny na kladné hodnoty.  
   
-3.  V bloku příkazu `__finally` uvolněte každý prostředek, jehož odpovídající popisovač nebo proměnná příznaku je nenulová nebo není NULL.  
+3.  V **__finally** blok příkazů, uvolněte každý prostředek, jehož odpovídající popisovač nebo proměnná příznaku je nenulová nebo not NULL.  
   
 ## <a name="example"></a>Příklad  
- Například, následující kód používá popisovač ukončení pro uzavření tří souborů a bloku paměti, které byly přiděleny v příkazu `__try`. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.  
+ Například následující kód používá popisovač ukončení pro uzavření tří souborů a bloku paměti, které byly přiděleny v **__try** blok příkazů. Před vyčištěním prostředků kód nejprve zkontroluje, zda tyto prostředky byly přiděleny.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  
@@ -77,6 +78,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

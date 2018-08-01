@@ -1,5 +1,5 @@
 ---
-title: proces | Microsoft Docs
+title: proces | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b36ec42447aa076d0623707951f82b7b9c95d563
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fdad177231c02d2e6f6fad171ae1811ecb9ccc6c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704903"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407179"
 ---
 # <a name="process"></a>zpracování
 
-Určuje, že proces spravované aplikace by měl používat jednu kopii určité globální proměnné, statické členské proměnné nebo statické místní proměnné sdílené ve všech doménách aplikace v procesu. To se primárně určen pro použití při kompilaci s **/CLR: pure**, který je ve Visual Studio 2017 zastaralá a není podporována v Visual Studio 2017. Při kompilaci s **/CLR**, jsou statické a globální proměnné na proces ve výchozím nastavení a nemusíte používat `__declspec(process)`.
+Určuje, že proces spravované aplikace by měl používat jednu kopii určité globální proměnné, statické členské proměnné nebo statické místní proměnné sdílené ve všech doménách aplikace v procesu. To byla primárně určena pro použití při kompilaci s **/CLR: pure**, které jsou zastaralé v sadě Visual Studio 2017 a v sadě Visual Studio 2017 není podporován. Při kompilaci s **/CLR**, globální a statické proměnné na úrovni jednotlivého procesu ve výchozím nastavení a není nutné používat **__declspec(process)**.
 
-Modifikátorem `__declspec(process)` může být označena pouze globální, statická členská nebo statická místní proměnná nativního typu.
+Může být označena pouze globální proměnné, statické členské proměnné nebo statické místní proměnná nativního typu **__declspec(process)**.
 
-`process` je platný pouze při kompilaci s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+**proces** je platná jenom při kompilaci s [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
-Pokud chcete domén aplikace, které chcete mít svůj vlastní kopii globální proměnné, použijte [appdomain](../cpp/appdomain.md).
+Pokud chcete, aby každá doména aplikace měla vlastní kopii globální proměnné, použijte [appdomain](../cpp/appdomain.md).
 
-V tématu [domény aplikace a jazyk Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.
+Zobrazit [aplikačních doménách a Visual C++](../dotnet/application-domains-and-visual-cpp.md) Další informace.
 
 ## <a name="see-also"></a>Viz také:
-
-- [__declspec](../cpp/declspec.md)
-- [Klíčová slova](../cpp/keywords-cpp.md)
+ [__declspec](../cpp/declspec.md)  
+ [Klíčová slova](../cpp/keywords-cpp.md)

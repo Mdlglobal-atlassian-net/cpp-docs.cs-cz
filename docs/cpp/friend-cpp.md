@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942078"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407014"
 ---
 # <a name="friend-c"></a>friend (C++)
 V některých případech je snazší udělit přístup na úrovni členů funkcím, které nejsou členy třídy nebo u všech členů v samostatné třídě. Pouze implementátora třídy lze deklarovat kdo jeho přáteli. Funkci nebo třídu nelze deklarovat samotného jako přátelská libovolné třídy. V definici třídy, použijte **friend** – klíčové slovo a názvu funkce bez členů nebo jiné třídy jí udělit přístup k soukromým a chráněným členům třídy. V definici šablony parametr typu mohou být deklarovány jako přátelská.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- První formulář zavádí novou třídu F, pokud žádná existující třída s tímto názvem nebyla v nejvnitřnější obor názvů.  **C ++ 11**: Druhá forma nezavádí nové třídy; můžete použít, pokud třída již byla deklarována, a musí být použit při deklaraci parametru typu šablony nebo definice typu jako přátelská.  
+ První formulář zavádí novou třídu F, pokud žádná existující třída s tímto názvem nebyla v nejvnitřnější obor názvů. **C ++ 11**: Druhá forma nezavádí nové třídy; můžete použít, pokud třída již byla deklarována, a musí být použit při deklaraci parametru typu šablony nebo definice typu jako přátelská.  
   
  Použití `class friend F` při odkazovaný typ nebyl dosud byla deklarována:  
   
@@ -244,5 +244,5 @@ Důsledky přátelské relace
   
  Spřátelené funkce definované uvnitř deklarací třídy nejsou v rozsahu považovány za nadřazené třídy. Jsou v rozsahu souboru.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Klíčová slova](../cpp/keywords-cpp.md)

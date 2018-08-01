@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b3c4592255c56aae6bc4d959757164fd9c11f2a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940196"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407806"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmy (moderní verze jazyka C++)
 Pro moderní programování C++ doporučujeme použít algoritmy [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md). Tady jsou některé důležité příklady:  
@@ -69,16 +69,16 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ### <a name="range-based-for-loops"></a>Na základě rozsahu smyček for  
  Rozsahový **pro** smyčky je funkcí C ++ 11, jazyk, nikoli algoritmů standardní knihovny C++. Ale to si zaslouží zmínku v této diskuzi o smyčkách. Založený na rozsahu **pro** smyčky jsou rozšíření **pro** – klíčové slovo a poskytují pohodlný a účinný způsob, jak psát smyčky, které iterují v rozsahu hodnot. Jsou předdefinované pro kontejnery standardní knihovny C++, řetězce a pole vycházející z rozsahu **pro** smyčky. Pokud chcete povolit tuto novou syntaxi iterace pro váš typ definovaný uživatelem, přidejte následující podporu:  
   
--   A **začít** metodu, která vrátí iterátor na začátek struktury a **end** metodu, která vrátí iterátor na konec struktury.  
+-   A `begin` metodu, která vrátí iterátor na začátek struktury a `end` metodu, která vrátí iterátor na konec struktury.  
   
 -   Podpora v iterátoru pro tyto metody: ** – operátor *** **operátor! =**, a **operator ++** (verze předpony).  
   
  Tyto metody mohou být členy nebo samostatné funkce.  
   
 ## <a name="random-numbers"></a>Náhodná čísla  
- Není žádný tajný klíč, který staré CRT **rand()** funkce má mnoho vad, které mají byla Dlouze prodiskutovány komunitou C++. V moderním jazyce C++ nemusíte řešit tyto nedostatky – nemusíte vytvářet vlastní rovnoměrně distribuovaný generátor náhodných čísel, ani – protože nástroje pro rychlé a snadné vytváření jsou k dispozici ve standardní knihovně jazyka C++, jak je znázorněno v [ \<náhodné >](../standard-library/random.md).  
+ Není žádný tajný klíč, který staré CRT `rand()` funkce má mnoho vad, které mají byla Dlouze prodiskutovány komunitou C++. V moderním jazyce C++ nemusíte řešit tyto nedostatky – nemusíte vytvářet vlastní rovnoměrně distribuovaný generátor náhodných čísel, ani – protože nástroje pro rychlé a snadné vytváření jsou k dispozici ve standardní knihovně jazyka C++, jak je znázorněno v [ \<náhodné >](../standard-library/random.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

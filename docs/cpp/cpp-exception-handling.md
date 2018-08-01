@@ -1,5 +1,5 @@
 ---
-title: Zpracovávání výjimek v jazyce C++ | Microsoft Docs
+title: Zpracování výjimek jazyka C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ce782000ac1767034d00aa3e0280b8e3820e3d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51c41fb9d6261da31c8a1028abac69d82b93e898
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413905"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402013"
 ---
 # <a name="c-exception-handling"></a>Zpracovávání výjimek v jazyce C++
 Jazyk C++ obsahuje integrovanou podporu pro vyvolávání a zachycování výjimek. Při programování v jazyce C++ byste téměř vždy měli používat integrovanou podporu výjimek jazyka C++ popsanou v tomto oddíle.  
   
- Pokud chcete povolit C++ zpracování výjimek v kódu, použijte [/EHsc](../build/reference/eh-exception-handling-model.md).  
+ Pokud chcete povolit ve vašem kódu zpracování výjimek jazyka C++, použijte [/EHsc](../build/reference/eh-exception-handling-model.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  Tato diskuse o zpracování výjimek jazyka C++ obsahuje:  
@@ -45,7 +45,7 @@ Jazyk C++ obsahuje integrovanou podporu pro vyvolávání a zachycování výjim
 -   [Kombinace výjimek v jazycích C (strukturované) a C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
   
 ## <a name="support-for-earlier-mfc-exceptions"></a>Podpora starších výjimek knihovny MFC  
- Od verze 4.0 MFC začal pomocí zpracování mechanismus výjimek C++. I když jste v novém kódu vedeni k používání zpracování výjimek jazyka C++, knihovna MFC verze 4.0 a novější zachovává makra z předchozích verzí knihovny MFC z důvodu kompatibility se starším kódem. Tato makra a nový mechanismus lze také kombinovat. Informace na kombinování makra a zpracovávání výjimek v jazyce C++ a převádění staré kódu pro použití nového mechanismu, najdete v článcích [výjimky: použití makrech MFC a výjimky jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) a [výjimky: převádění z rozhraní MFC Makra výjimek](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starší výjimky maker knihovny MFC, pokud je stále používáte, se vyhodnotí jako klíčová slova výjimek jazyka C++. V tématu [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
+ Od verze 4.0 knihovna MFC začaly využívat mechanismus zpracování výjimek jazyka C++. I když jste v novém kódu vedeni k používání zpracování výjimek jazyka C++, knihovna MFC verze 4.0 a novější zachovává makra z předchozích verzí knihovny MFC z důvodu kompatibility se starším kódem. Tato makra a nový mechanismus lze také kombinovat. Informace o kombinování maker a zpracování výjimek jazyka C++ a o převodu starého kódu pro použití s novým mechanismem naleznete v článcích [výjimky: použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) a [výjimky: převádění z knihovny MFC Makra výjimek](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starší výjimky maker knihovny MFC, pokud je stále používáte, se vyhodnotí jako klíčová slova výjimek jazyka C++. Zobrazit [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)

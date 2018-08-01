@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 69d1713b0cc8e1d5d53d3b30f3dd48a0b54a3782
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939361"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401958"
 ---
 # <a name="based-grammar"></a>__based – gramatika
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -45,5 +45,5 @@ ms.locfileid: "37939361"
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Základní ukazatele](../cpp/based-pointers-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Explicitní specializace šablon funkcí | Microsoft Docs
+title: Explicitní specializace šablon funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410730"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407686"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Explicitní specializace šablon funkcí
 Pomocí šablony funkce lze definovat zvláštní chování konkrétního typu poskytnutím explicitní specializace (přepsáním) šablony funkce daného typu. Příklad:  
@@ -32,7 +32,7 @@ Pomocí šablony funkce lze definovat zvláštní chování konkrétního typu p
 template<> void MySwap(double a, double b);  
 ```  
   
- Toto prohlášení umožňuje definovat různé funkce pro **dvojité** proměnné. Jako funkce bez šablony, převody standardní typu (například povýšení proměnné typu **float** k **dvojité**) se použijí.  
+ Tato deklarace umožňuje definovat různé funkce pro **double** proměnné. Nešablonové funkce, převody standardních typů, jako je (například povýšením proměnné typu **float** k **double**) se použijí.  
   
 ## <a name="example"></a>Příklad  
   
@@ -60,5 +60,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Šablony funkcí](../cpp/function-templates.md)

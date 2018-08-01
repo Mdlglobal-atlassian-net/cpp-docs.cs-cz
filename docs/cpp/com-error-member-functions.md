@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919276e7a32399185256c38cb146158420aeded5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dccbf5cb312dcbced034ad2987b7f9a620b8d161
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942013"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404698"
 ---
 # <a name="comerror-member-functions"></a>_com_error – členské funkce
-Informace o tom, `_com_error` členské funkce, najdete v článku [_com_error – třída](../cpp/com-error-class.md).  
+Informace o tom, **_com_error –** členské funkce, najdete v článku [_com_error – třída](../cpp/com-error-class.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_com_error – třída](../cpp/com-error-class.md)

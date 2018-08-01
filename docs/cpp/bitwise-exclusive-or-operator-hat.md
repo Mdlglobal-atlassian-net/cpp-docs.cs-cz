@@ -1,5 +1,5 @@
 ---
-title: 'Bitový exkluzivní operátor OR: ^ | Microsoft Docs'
+title: 'Bitový exkluzivní operátor OR: ^ | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409849"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406673"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitový exkluzivní operátor OR: ^
 ## <a name="syntax"></a>Syntaxe  
@@ -35,12 +35,12 @@ expression ^ expression
 ```  
   
 ## <a name="remarks"></a>Poznámky  
-Bitový exkluzivní operátor OR (**^**) porovnává každý bit jeho první operand odpovídající bit její druhý operand. Pokud je jeden bit 0 a dalších bit je 1, 1 je nastavena odpovídající výsledek bit. Odpovídající bit výsledek, jinak hodnota nastavena na hodnotu 0.  
+Bitový exkluzivní operátor OR (**^**) porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud jeden bit na hodnotu 0 a dalších bit na hodnotu 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.  
   
-Celočíselné typy musí být oba operandy k bitový exkluzivní operátor OR. Obvyklé aritmetické převody zahrnutých v [standardní převody](standard-conversions.md) se použijí pro operandy.  
+Oba operandy bitový exkluzivní operátor OR musí být integrální typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md) jsou na operandy použity.  
   
-## <a name="operator-keyword-for-"></a>Operator – klíčové slovo pro ^  
-**Xor** operátor je ekvivalentem text **^**. Existují dva způsoby pro přístup **xor** operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor ^  
+**Xor** operátor je textový ekvivalent operátoru **^**. Existují dva způsoby přístupu k **xor** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
   
 ## <a name="example"></a>Příklad  
   
@@ -58,7 +58,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

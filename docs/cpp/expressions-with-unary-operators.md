@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 78808ba4ce8d54ecc8e88516ae5f9b2521f50979
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941155"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403976"
 ---
 # <a name="expressions-with-unary-operators"></a>Výrazy s unárními operátory
 Unární operátory pracují na pouze jeden operand ve výrazu. Unární operátory jsou následující:  
@@ -86,5 +86,5 @@ Unární operátory pracují na pouze jeden operand ve výrazu. Unární operát
   
  *Allocation-expression* odkazuje **nové** operátor. *Zrušení přidělení výraz* odkazuje na **odstranit** operátor. Další informace najdete v tématech dříve v tomto tématu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Typy výrazů](../cpp/types-of-expressions.md)

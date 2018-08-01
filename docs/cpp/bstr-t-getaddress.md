@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941194"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408463"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Specifické pro Microsoft**  
@@ -31,21 +31,19 @@ ms.locfileid: "37941194"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 BSTR* GetAddress( );  
-  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Ukazatel na objekt `BSTR` obalený objektem `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- Funkce `GetAddress` ovlivňuje všechny objekty `_bstr_t` sdílející objekt `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a a **operátoru =**.  
+ **GetAddress** ovlivní všechny `_bstr_t` objekty tuto sdílenou složku `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a a **operátoru =**.  
   
 ## <a name="example"></a>Příklad  
- Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití `GetAddress`.  
+ Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití **GetAddress**.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: _aligned_free – | Microsoft Docs
+title: _aligned_free – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393365"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402445"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
-Uvolní blok paměti, který byl přidělen s [_aligned_malloc –](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md).
+Uvolní blok paměti, která byla přidělena pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,13 +54,13 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Parametry
 
-*memblock* ukazatele na blok paměti, který byl vrácen do **_aligned_malloc –** nebo **_aligned_offset_malloc –** funkce.
+*memblock* ukazatele na blok paměti, která se vrátila `_aligned_malloc` nebo `_aligned_offset_malloc` funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_free –** je označena `__declspec(noalias)`, což znamená, že funkce záruku, že nechcete upravit globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
+**_aligned_free –** je označen `__declspec(noalias)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
 
-Tuto funkci nelze ověřit její parametr, na rozdíl od jiných funkcí CRT _aligned. Pokud *memblock* je **NULL** ukazatele, tato funkce jednoduše provede žádná akce. Změny jsou **errno** a nevyvolá obslužná rutina neplatný parametr. Pokud dojde k chybě ve funkci kvůli pomocí funkcí _aligned není dříve přidělit blok paměti nebo dojde k chybě synchronizace paměti z důvodu některých nepředpokládaného calamity, funkce generuje sestavy ladění z [_RPT, _RPTF, _RPTW, _ Rptfw – makra](rpt-rptf-rptw-rptfw-macros.md).
+Tuto funkci nelze ověřit svůj parametr, na rozdíl od jiných funkcí CRT _aligned. Pokud *memblock* je ukazatel s hodnotou NULL, tato funkce provede jednoduše žádná akce. Nezmění `errno` a vyvolá obslužnou rutinu neplatného parametru. Pokud dojde k chybě ve funkci kvůli pomocí dříve _aligned funkce přidělení bloku paměti nebo chybné zarovnání paměti dochází kvůli některé nepředvídaných calamity, funkce vygeneruje sestavu ladění z [_RPT, _RPTF, _RPTW, _ Rptfw – makra](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,8 +70,8 @@ Tuto funkci nelze ověřit její parametr, na rozdíl od jiných funkcí CRT _al
 
 ## <a name="example"></a>Příklad
 
-Další informace najdete v tématu [_aligned_malloc –](aligned-malloc.md).
+Další informace najdete v tématu [_aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Zarovnání dat](../../c-runtime-library/data-alignment.md)<br/>
+[Zarovnání dat](../../c-runtime-library/data-alignment.md)  

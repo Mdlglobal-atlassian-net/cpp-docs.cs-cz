@@ -1,5 +1,5 @@
 ---
-title: 'Deferenční operátor: * | Microsoft Docs'
+title: 'Deferenční operátor: * | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408626"
 ---
 # <a name="indirection-operator-"></a>Deferenční operátor: *
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 * cast-expression  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Deferenční operátor unární (**\***) dereferences ukazatel; to znamená, převede hodnotu ukazatel na hodnotu l. Operand operátoru indirection musí být ukazatel typu. Výsledkem výrazu indirection je typ, ze kterého je odvozený typ ukazatele. Použití **\*** operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
+ Operátor unární dereference (**\***) přistoupí přes ukazatel; to znamená, převede hodnotu ukazatele na l hodnotou. Operand operátoru dereference musí být ukazatel na typ. Výsledek výrazu dereference je typ, ze kterého je odvozen typ ukazatele. Použití **\*** operátor v tomto kontextu se liší od jeho význam jako binární operátor, který je násobení.  
   
  Ukazuje-li operand na funkci, je výsledkem označení funkce. Ukazuje-li na umístění úložiště, je výsledkem l-hodnota označující umístění úložiště.  
   
- Deferenční operátor lze kumulativně dereference ukazatele na ukazatele. Příklad:  
+ Operátor dereference lze kumulativně dereference ukazatele na ukazatele. Příklad:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -58,7 +58,7 @@ int main() {
 }  
 ```  
   
- Pokud je hodnota ukazatele je neplatná, výsledkem nedefinovaný. Následující seznam zahrnuje některé z nejběžnějších situací, které zneplatňují hodnotu ukazatele.  
+ Pokud je hodnota ukazatele neplatná, výsledek není definován. Následující seznam zahrnuje některé z nejběžnějších situací, které zneplatňují hodnotu ukazatele.  
   
 -   Ukazatel je nulový.  
   
@@ -68,8 +68,8 @@ int main() {
   
 -   Ukazatel určuje adresu, která není používána spuštěným programem.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Adresa operátoru: &](../cpp/address-of-operator-amp.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operátor address-of: &](../cpp/address-of-operator-amp.md)   
  [Dereferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md)

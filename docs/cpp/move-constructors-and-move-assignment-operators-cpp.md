@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028148"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405568"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 Toto téma popisuje, jak zapisovat *konstruktor přesunu* a operátor přiřazení přesunu pro třídu jazyka C++. Konstruktor přesunu umožňuje prostředků, které vlastní objektem r-hodnoty k přesunutí do lvalue bez kopírování. Další informace o sémantice pohybu naleznete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  Tento příklad vytvoří následující výstup:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Před Visual Studio 2010 tento příklad vytváří následující výstup:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Pokud zadáte konstruktor move a operátor přiřazení přesunu pro třídu, můžete vyloučit redundantní kód zápisem konstruktoru přesunutí, aby volání operátoru přiřazení přesunutí. Následující příklad ukazuje přepracovanou verzi konstruktoru přesunu, který volá operátor přiřazení přesunu:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -316,6 +315,6 @@ MemoryBlock(MemoryBlock&& other)
   
  [Std::move](../standard-library/utility-functions.md#move) funkce zachová vlastnost rvalue *jiných* parametru.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Deklarátor odkazu hodnoty r: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
  [\<Nástroje > přesunout](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

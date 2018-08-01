@@ -1,5 +1,5 @@
 ---
-title: Konvence předávání a pojmenování argumentů | Microsoft Docs
+title: Konvence předávání a pojmenování argumentů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,43 +23,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413483"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404038"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Konvence předávání a pojmenování argumentů
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Kompilátory jazyka Visual C++ umožňují zadat konvence pro předání argumentů a návratové hodnoty mezi funkcemi a volající. Ne všechny konvence jsou dostupné na všech podporovaných platformách a některé konvence použít implementace specifické pro platformu. Ve většině případů klíčová slova nebo přepínače kompilátoru, která nepodporované konvence na konkrétní platformu, jsou ignorovány a používá výchozí konvenci platformy.  
+ Kompilátory jazyka Visual C++ umožňují určit konvence pro předávání argumentů a návratové hodnoty mezi funkcemi a volajícími. Ne všechny konvence jsou k dispozici na všech podporovaných platformách a některé konvence využívají implementace specifické pro platformu. Ve většině případů klíčová slova nebo přepínače kompilátoru určující nepodporovanou úmluvu na jednotlivých platformách jsou ignorovány a používá se výchozí konvence platformy.  
   
- Na x86 plaftorms, všechny argumenty jsou rozšířit na 32 bitů, když jsou předávány. Návratové hodnoty jsou také rozšířit na 32 bitů a vrátí EAX registrace, s výjimkou struktury 8 bajtů, které jsou následně vráceny ve dvojici registrace EDX:EAX. Větší struktury se vrátí v registru EAX jako ukazatele na skrytá vrátit struktury. Parametry jsou vloženy do zásobníku zprava doleva. Struktury, které nejsou pracovními stanicemi soustředěnými kolem nejsou k dispozici v registrech.  
+ Na x86 platformách, všechny argumenty jsou rozšířeny na 32 bitů, pokud jsou předány. Vrácené hodnoty jsou také rozšířeny na 32 bitů a vráceny v registru eax, kromě 8bytových struktur, které jsou následně vráceny v rejstříku páru edx: eax. Větší struktury jsou vráceny v registru eax jako ukazatele pro skryté struktury vrácení. Parametry jsou vloženy do zásobníku zprava doleva. Struktury, které nejsou pod, nebudou vráceny v registrech.  
   
- Kompilátor generuje prologu a zaregistruje Kód epilogu k uložení a obnovení ESI, EDI, EBX a EBP, pokud se používají ve funkci.  
+ Kompilátor generuje kódu prologu a epilogu k uložení a obnovení registrů ESI, EDI, EBX a EBP zaregistruje, pokud jsou použity ve funkci.  
   
 > [!NOTE]
->  Pokud struktury, sjednocení nebo třída se vrátí z funkce hodnotou, všechny definice typu musí být stejné, jinak se pravděpodobně nezdaří program za běhu.  
+>  Pokud struktura, unie nebo třída je vrácen z funkce hodnotou, všechny definice typu musí být stejné, jinak program může v době běhu selhat.  
   
- Informace o tom, jak definovat vlastní kód prolog a epilog funkce najdete v tématu [volání holé funkce](../cpp/naked-function-calls.md).  
+ Informace o tom, jak definovat vlastní kód prologu a epilogu funkce naleznete v tématu [volání nahé funkce](../cpp/naked-function-calls.md).  
   
- Informace o výchozích konvencí volání v kódu, který najdete v části cíle x64 platformy [přehled x64 konvence volání](../build/overview-of-x64-calling-conventions.md). Informace o volání konvence problémy v kódu, která je cílena ARM platformy najdete v tématu [běžné Visual C++ problémy s migrací ARM](../build/common-visual-cpp-arm-migration-issues.md).  
+ Informace o výchozích konvencích volání v kódu, který najdete v článku cíle x64 platformy [přehled x64 konvence volání](../build/overview-of-x64-calling-conventions.md). Informace o potížích konvence volání v kódu, který cílí na platformy ARM naleznete v tématu [běžné Visual C++ ARM problémy s migrací](../build/common-visual-cpp-arm-migration-issues.md).  
   
  Kompilátor Visual C/C++ jsou podporovány následující konvence volání.  
   
-|– Klíčové slovo|Vymazání zásobníku|Předávání parametrů|  
+|Klíčové slovo|Vymazání zásobníku|Předávání parametrů|  
 |-------------|-------------------|-----------------------|  
-|[__cdecl](../cpp/cdecl.md)|volající|Nabízení parametry v zásobníku, v opačném pořadí (zprava doleva)|  
-|[__clrcall](../cpp/clrcall.md)|není k dispozici|Načíst parametry do zásobníku výraz CLR v pořadí (zleva doprava).|  
-|[__stdcall](../cpp/stdcall.md)|Volaný|Nabízení parametry v zásobníku, v opačném pořadí (zprava doleva)|  
-|[__fastcall](../cpp/fastcall.md)|Volaný|Uložené v registrech, pak posunuto v zásobníku|  
-|[__thiscall](../cpp/thiscall.md)|Volaný|Nabídnutých v zásobníku; **to** uložené v ECX ukazatele|  
-|[__vectorcall](../cpp/vectorcall.md)|Volaný|Uložené v registrech, pak posunuto v zásobníku v obráceném pořadí (zprava doleva)|  
+|[__cdecl](../cpp/cdecl.md)|Volající|Posune parametry zásobníku v opačném pořadí (zprava doleva)|  
+|[__clrcall](../cpp/clrcall.md)|není k dispozici|Načítejte parametry do zásobníku výrazu CLR v pořadí (zleva doprava).|  
+|[__stdcall](../cpp/stdcall.md)|/ Volaný|Posune parametry zásobníku v opačném pořadí (zprava doleva)|  
+|[__fastcall](../cpp/fastcall.md)|/ Volaný|Uloží v registrech, poté vloženo do stohu|  
+|[__thiscall](../cpp/thiscall.md)|/ Volaný|Posunuto v zásobníku; **to** ukazatel uložen v ECX|  
+|[__vectorcall](../cpp/vectorcall.md)|/ Volaný|Uloží v registrech a odešle do zásobníku v opačném pořadí (zprava doleva)|  
   
- Související informace najdete v tématu [zastaralé konvence volání](../cpp/obsolete-calling-conventions.md).  
+ Související informace naleznete v tématu [zastaralé konvence volání](../cpp/obsolete-calling-conventions.md).  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konvence volání](../cpp/calling-conventions.md)

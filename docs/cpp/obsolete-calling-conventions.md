@@ -1,5 +1,5 @@
 ---
-title: Zastaralé konvence volání | Microsoft Docs
+title: Zastaralé konvence volání | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,20 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d2a6188cf9d8c8283a6c03a2ca6c701e28baf0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419843"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403417"
 ---
 # <a name="obsolete-calling-conventions"></a>Zastaralé konvence volání
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- **__Pascal**, **__fortran**, a **__syscall** konvence volání již nejsou podporovány. Jejich funkce lze simulovat pomocí jedné z podporovaných konvencí volání a vhodné možnosti linkeru.  
+ **__Pascal**, **__fortran**, a **__syscall** již nejsou podporovány konvence volání. Jejich funkce lze simulovat pomocí jedné z podporovaných konvencí volání a vhodné možnosti linkeru.  
   
- \<odkazující na Windows > teď podporuje **WINAPI** makro, což znamená, že je k příslušné konvence volání pro cíl. Použití **WINAPI** kde dřív používal **PASCAL** nebo **__far \__pascal**.  
+ \<Windows.h > nyní podporuje makro WINAPI, které se přeloží na odpovídající konvenci volání pro cíl. Použití rozhraní WINAPI, kde jste dříve používali PASCAL nebo **__far \__pascal**.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)

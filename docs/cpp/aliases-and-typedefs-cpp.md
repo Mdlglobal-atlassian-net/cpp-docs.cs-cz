@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947594"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404974"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy a definice Typedef (C++)
 Můžete použít *deklarace aliasu* deklarovat název, který chcete použít jako synonymum pro dřív deklarovaného typu. (Tento mechanismus se také nazývá neformálně *alias typu*). Tento mechanismus lze také použít k vytvoření *šablonu aliasů*, což může být zvláště užitečná pro vlastních alokátorů.  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `identifier`  
+ *identifikátor*  
  Název aliasu.  
   
- `type`  
+ *Typ*  
  Identifikátor typu, kterou vytváříte alias.  
   
  Alias nezavádí nový typ a nelze změnit význam existujícím názvem typu.  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

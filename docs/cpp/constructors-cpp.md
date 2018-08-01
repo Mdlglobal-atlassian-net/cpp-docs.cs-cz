@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940882"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403060"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -30,7 +30,6 @@ Přizpůsobit, jak se inicializují členy třídy nebo volání funkce, když j
 Konstruktory volitelně může trvat člena seznamu init. Toto je efektivnější způsob, jak inicializovat členy třídy než přiřazení hodnoty v těle konstruktoru. Následující příklad ukazuje třídu `Box` s třemi přetížené konstruktory. Poslední dva použijte seznamy členů init:
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 Při deklaraci instance třídy kompilátor volí, která konstruktoru na základě pravidel rozlišení přetížení:
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - Konstruktory mohou být deklarovány jako **vložené**, [explicitní](#explicit_constructors), **friend** nebo [constexpr](#constexpr_constructors).
@@ -87,7 +83,6 @@ Konstruktor můžou mít seznam inicializátorů členů, která inicializuje č
 Pomocí seznamu intializer členů je upřednostňované nad přiřazením hodnoty v těle konstruktoru, protože přímo inicializuje člen. Následující příklad ukazuje inicializátor členu obsahuje seznam všech **identifier(argument)** výrazech za dvojtečku:
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 Pokud se spoléháte na implicitní výchozí konstruktor, je potřeba inicializovat členů v definici třídy, jak je znázorněno v předchozím příkladu. Bez těchto inicializátorů členů by být inicializována a volání Volume() byste mohli vytvořit hodnotu uvolňování paměti. Obecně je vhodné k inicializaci členy tímto způsobem, i když není spoléhat na implicitní výchozí konstruktor.
@@ -141,7 +135,6 @@ Pokud se spoléháte na implicitní výchozí konstruktor, je potřeba inicializ
 Kompilátor může zabránit generování implicitní výchozí konstruktor tak, že definujete ho jako [odstranit](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 Pokud třída nemá žádný výchozí konstruktor, pole objektů této třídy nemůže být vytvořeno pomocí syntaxe samostatných hranatých závorek. Například s ohledem na předchozí blok kódu nemůže být pole oken deklarováno takto:
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 Ale můžete použít sadu inicializačních seznamů pro inicializaci pole objektů pole:
@@ -205,7 +196,6 @@ A *kopírovací konstuktor* inicializace objektu tak, že zkopírujete hodnoty �
 Kopírovací konstruktor může mít jednu z těchto podpisy:
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Kompilátor volí konstruktor přesunutí v určitých situacích, kde objekt je
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 Pokud třída nedefinuje konstruktor přesunutí, kompilátor vygeneruje implicitní jeden, pokud není žádný uživatelem deklarované kopírovacího konstruktoru, operátor přiřazení kopie, operátor přiřazení přesunu nebo destruktor. Pokud není definován žádný konstruktor přesunu explicitní nebo implicitní, pomocí operace, které by jinak použijte konstruktor přesunutí konstruktoru kopie. Pokud třída deklaruje přenosový konstruktor nebo operátor přiřazení přesunutí, implicitně deklarovanou kopírovací konstuktor je definovaný jako odstraněný.
@@ -338,7 +325,6 @@ Konstruktoru mohou být deklarovány jako [constexpr](constexpr-cpp.md) Pokud
 - všechny nestatické datové členy a podřízených objektů základní třídy jsou inicializovány;
 - Pokud třída je (a) s variant členů sjednocení nebo (b) má anonymní sjednocení, pouze jeden z členů sjednocení inicializovaný.
 - Každý nestatický datový člen typu třídy a všech podřízených objektů základní třídy mají konstruktor constexpr
-
 
 ## <a name="init_list_constructors"></a> Inicializátor seznamu konstruktory
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 Tyto převody může být užitečné v některých případech ale častěji může vést k drobným ale závažné chyby v kódu. Obecně platí, měli byste použít **explicitní** – klíčové slovo v konstruktor (a operátory definované uživatelem), aby se zabránilo tento druh implicitní převod typu:
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ Konstruktor provádí svou práci v tomto pořadí:
 Následující příklad zobrazuje pořadí, ve kterém jsou volány základní třídy a konstruktory členů v konstruktoru pro odvozenou třídu. Nejprve se volá základní konstruktor, poté se inicializují členy základní třídy v pořadí, v jakém se zobrazují v deklaraci třídy, a poté je volán odvozený konstruktor.
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 Zde je výstup:
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. Konstruktory základní třídy jsou volány v pořadí podle odvození – například pokud ClassA je odvozeno od ClassB, které je odvozeno od ClassC, je nejprve volán konstruktor ClassC, poté konstruktor ClassB a nakonec konstruktor ClassA.
+Konstruktor odvozené třídy vždy volá konstruktor základní třídy, aby se před provedením jakékoli další práce mohl spolehnout na zcela konstruované základní třídy. Konstruktory základní třídy jsou volány v pořadí podle odvození – například pokud `ClassA` je odvozen z `ClassB`, který je odvozen z `ClassC`, `ClassC` konstruktor je jako první, pak bude `ClassB` konstruktoru, pak bude `ClassA` konstruktoru.
 
 Pokud základní třída nemá výchozí konstruktor, musíte zadat parametry konstruktoru základní třídy v konstruktoru odvozené třídy:
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 Můžete očekávat následující výstup:
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> Virtuální funkce v konstruktorech
@@ -587,7 +566,7 @@ int main() {
 
 Zde je výstup:
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 Příkaz using přináší do oboru všechny konstruktory ze základní třídy s výjimkou těch, které mají stejnou signaturu jako konstruktorů v odvozené třídě. Obecně je nejvhodnější použít dědičné konstruktorů nebo konstruktorů při odvozená třída nedeklaruje žádné nové datové členy.
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 Odvozená třída nemůže dědit z více základních tříd, pokud tyto základní třídy mají konstruktory se stejnou signaturou.

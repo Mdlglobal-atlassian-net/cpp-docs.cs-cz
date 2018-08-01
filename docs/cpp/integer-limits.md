@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174025fc1a44ce0db96a5a7038502dfabe90bfd6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940131"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406016"
 ---
 # <a name="integer-limits"></a>Omezení typu Integer
 
@@ -58,6 +58,5 @@ Pokud hodnota přesahuje reprezentace největší celé číslo, Microsoft kompi
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
-
-[Plovoucí omezení](../cpp/floating-limits.md)  
+## <a name="see-also"></a>Viz také:
+ [Plovoucí omezení](../cpp/floating-limits.md)  

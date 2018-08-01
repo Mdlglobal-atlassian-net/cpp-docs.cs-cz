@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947614"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404051"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení přípony: ++ a --
 ## <a name="syntax"></a>Syntaxe  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- Účinkem použití příponového operátoru inkrementace (`++`) je zvýšení hodnoty operandu o jednu jednotku příslušného typu. Obdobně, účinkem použití příponového operátoru dekrementace (**--**) je, že je snížení hodnoty operandu o jednu jednotku příslušného typu.  
+ Účinkem použití příponového operátoru Inkrementace (**++**) je, že je zvýšení hodnoty operandu o jednu jednotku příslušného typu. Obdobně, účinkem použití příponového operátoru dekrementace (**--**) je, že je snížení hodnoty operandu o jednu jednotku příslušného typu.  
   
  Je důležité si uvědomit, že příponový zvýšení nebo snížení výraz vyhodnocen jako hodnota výrazu *před* aplikací použitím daného operátoru. Dojde k operaci zvýšení nebo snížení *po* operand je vyhodnocen. K tomuto problému dochází pouze v případě výskytu příponové operace inkrementace či dekrementace v kontextu rozsáhlejšího výrazu.  
   
@@ -81,7 +81,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy přípony](../cpp/postfix-expressions.md)   
  [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operátory inkrementace a dekrementace přípony jazyka C](../c-language/c-postfix-increment-and-decrement-operators.md)

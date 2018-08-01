@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c592607732eb5558ce74edb7b71adbc023b2ae52
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939023"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402280"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Specifické pro Microsoft**  
@@ -31,18 +31,16 @@ ms.locfileid: "37939023"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 GUID GUID( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek `IErrorInfo::GetGUID` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Pokud ne `IErrorInfo` objekt zaznamenán, vrátí GUID_NULL.  
+ Vrátí výsledek `IErrorInfo::GetGUID` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Pokud ne `IErrorInfo` objekt zaznamenán, vrátí `GUID_NULL`.  
   
 ## <a name="remarks"></a>Poznámky  
  Jakékoli neúspěchy při volání `IErrorInfo::GetGUID` metoda se ignoruje.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_com_error – třída](../cpp/com-error-class.md)

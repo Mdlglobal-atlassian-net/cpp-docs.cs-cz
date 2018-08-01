@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027245"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404922"
 ---
 # <a name="bstrt-class"></a>_bstr_t – třída
 **Specifické pro Microsoft**  
   
- A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Třída spravuje a pomocí volání funkce zrušení přidělení prostředků `SysAllocString` a `SysFreeString` a dalších `BSTR` rozhraní API. `_bstr_t` Třída používá počítání odkazů, aby se zabránilo nadměrnému zatížení.  
+ A `_bstr_t` zapouzdřuje objektu [datový typ BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Třída spravuje a pomocí volání funkce zrušení přidělení prostředků `SysAllocString` a `SysFreeString` a dalších `BSTR` rozhraní API. **_Bstr_t** třída používá počítání odkazů, aby se zabránilo nadměrnému zatížení.  
   
 ### <a name="construction"></a>Konstrukce  
   
@@ -66,5 +66,5 @@ ms.locfileid: "39027245"
   
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

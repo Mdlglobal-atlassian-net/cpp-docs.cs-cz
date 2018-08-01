@@ -1,5 +1,5 @@
 ---
-title: 'Operátor přetypování: () | Microsoft Docs'
+title: 'Operátor přetypování: () | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408512"
 ---
 # <a name="cast-operator-"></a>Operátor přetypování: ()
 Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétní situaci.  
@@ -27,19 +28,17 @@ Přetypování poskytuje způsob explicitního převodu typu objektu v konkrétn
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Jakýkoli unární výraz je považován za výraz přetypování.  
+ Libovolný výraz unární se považuje za výraz přetypování.  
   
- Kompilátor zpracovává *výraz cast* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Přetypování typu explicitní jsou omezené stejná pravidla, které určují důsledky implicitní převody. Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů.  
+ Kompilátor zpracovává *výrazem přetypování* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezena stejnými pravidly, která určují účinky implicitních převodů. Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -59,7 +58,7 @@ int main()
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -127,9 +126,9 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operátor převodu explicitního typu:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Operátory přetypování](../cpp/casting-operators.md)   
  [Operátory přetypování](../c-language/cast-operators.md)

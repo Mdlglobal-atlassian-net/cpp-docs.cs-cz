@@ -1,5 +1,5 @@
 ---
-title: Abort – funkce | Microsoft Docs
+title: Abort – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/01/2017
 ms.technology:
@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408022"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403619"
 ---
 # <a name="abort-function"></a>abort – funkce
 
-**Abort** funkce, také deklarován v souboru standardní zahrnout \<stdlib.h >, ukončí programu C++. Rozdíl mezi **ukončete** a **abort** je, že **ukončete** umožňuje zpracování ukončení běhu jazyka C++ proběhla (globální objekt destruktory bude volána), zatímco **abort** program okamžitě ukončí. Další informace najdete v tématu [abort](../c-runtime-library/reference/abort.md) v *referenční dokumentace běhové knihovny*.
+**Přerušit** deklarovaná také ve standardním vloženém souboru \<stdlib.h >, ukončuje program jazyka C++. Rozdíl mezi `exit` a **přerušit** je, že `exit` umožňuje zpracování ukončení za běhu jazyka C++ uskutečnit (globální objekt zavolány destruktory), zatímco **přerušit** Ukončí program okamžitě. Další informace najdete v tématu [přerušit](../c-runtime-library/reference/abort.md) v *Run-Time Library Reference*.
 
-## <a name="see-also"></a>Viz také
-
+## <a name="see-also"></a>Viz také:
 [Ukončení programu](../cpp/program-termination.md)

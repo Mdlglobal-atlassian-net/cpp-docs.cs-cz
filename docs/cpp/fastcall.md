@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f50239d42c164e2f9c6876e26389eb60e710ed34
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32bb8ac2fa453159b501ddc848348952b8d4468
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940092"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401727"
 ---
 # <a name="fastcall"></a>__fastcall
 **Specifické pro Microsoft**  
@@ -76,6 +76,6 @@ typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fl
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

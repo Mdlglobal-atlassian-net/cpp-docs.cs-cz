@@ -1,7 +1,7 @@
 ---
-title: 'Bitový inkluzivní operátor OR: || Microsoft Docs'
+title: 'Bitový inkluzivní operátor OR: || Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,49 +20,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc43460bc2c20262156bfdc6bd7f69a693c222f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75cb922f2bd5cc6da2666a59bd0827b7ec013bf2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408719"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Bitový inkluzivní operátor OR: |
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-expression   
-|  
- expression  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Bitový inkluzivní operátor OR (**&#124;**) porovnává každý bit jeho první operand odpovídající bit její druhý operand. Pokud je buď bit 1, odpovídající výsledek bit nastavená na 1. Odpovídající bit výsledek, jinak hodnota nastavena na hodnotu 0.  
-  
- Oba operandy bitového inkluzivního operátoru OR musí být celočíselné typy. Obvyklé aritmetické převody zahrnutých v [standardní převody](standard-conversions.md) se použijí pro operandy.  
-  
-## <a name="operator-keyword-for-124"></a>Operator – klíčové slovo pro&#124;  
- `bitor` Operátor je ekvivalentem text **&#124;**. Existují dva způsoby pro přístup `bitor` operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// expre_Bitwise_Inclusive_OR_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate bitwise inclusive OR  
-#include <iostream>  
-using namespace std;  
-  
-int main() {  
-   unsigned short a = 0x5555;      // pattern 0101 ...  
-   unsigned short b = 0xAAAA;      // pattern 1010 ...  
-  
-   cout  << hex << ( a | b ) << endl;   // prints "ffff" pattern 1111 ...  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Bitové operátory jazyka C](../c-language/c-bitwise-operators.md)
 
+## <a name="syntax"></a>Syntaxe
+
+> *Expression1* **|** *expression2*
+
+## <a name="remarks"></a>Poznámky
+
+Bitový inkluzivní operátor OR (**&#124;**) porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud buď bit na hodnotu 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.
+
+Oba operandy bitového inkluzivního operátoru OR musí být celočíselné typy. Obvyklé aritmetické převody uvedené v [standardní převody](standard-conversions.md) jsou na operandy použity.
+
+## <a name="operator-keyword-for-124"></a>Klíčové slovo pro operátor&#124;
+
+**Bitor** operátor je textový ekvivalent operátoru **&#124;**. Existují dva způsoby přístupu k **bitor** operátor ve svých programech: zahrnutím souboru hlaviček \<soubor iso646.h >, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).
+
+## <a name="example"></a>Příklad
+
+```cpp
+// expre_Bitwise_Inclusive_OR_Operator.cpp
+// compile with: /EHsc
+// Demonstrate bitwise inclusive OR
+#include <iostream>
+using namespace std;
+
+int main() {
+   unsigned short a = 0x5555;      // pattern 0101 ...
+   unsigned short b = 0xAAAA;      // pattern 1010 ...
+
+   cout  << hex << ( a | b ) << endl;   // prints "ffff" pattern 1111 ...
+}
+```
+
+## <a name="see-also"></a>Viz také:
+ [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [Bitové operátory jazyka C](../c-language/c-bitwise-operators.md)  

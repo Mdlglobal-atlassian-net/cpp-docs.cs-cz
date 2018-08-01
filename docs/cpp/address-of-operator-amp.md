@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958582"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406003"
 ---
 # <a name="address-of-operator-amp"></a>Operátor address-of: &amp;
 ## <a name="syntax"></a>Syntaxe  
@@ -37,7 +37,7 @@ ms.locfileid: "38958582"
   
  Operátor address-of lze použít pouze pro proměnné základních, struktury, třídy, nebo typy sjednocení, které jsou deklarovány na úrovni rozsahu souboru, nebo na indexované reference polí. V těchto výrazech lze konstantní výraz, který neobsahuje operátor address-of přičíst k nebo odečíst od výrazu adresy.  
   
- Při použití funkce nebo l hodnotami, výsledek výrazu je typ ukazatele (r) odvozen od typu operandu. Například, pokud je operand typu **char**, výsledek výrazu je typu ukazatele do **char**. Operátoru address-of, u **const** nebo **volatile** objektů, je vyhodnocen jako **typ const \***  nebo **přechodný typ \*** , kde **typ** je typ původní objekt.  
+ Při použití funkce nebo l hodnotami, výsledek výrazu je typ ukazatele (r) odvozen od typu operandu. Například, pokud je operand typu **char**, výsledek výrazu je typu ukazatele do **char**. Operátoru address-of, u **const** nebo **volatile** objektů, je vyhodnocen jako `const type *` nebo `volatile type *`, kde **typ** je typ původní objekt.  
   
  Při použití operátoru address-of na úplný název, výsledek závisí na tom, zda *kvalifikovaný název* Určuje statický člen. Pokud ano, výsledkem je ukazatel na typ zadaný v deklaraci člena. Pokud člen není statické, výsledkem je ukazatel na člen *název* třídy indikován *kvalifikovaný název třídy*. (Viz [primární výrazy](../cpp/primary-expressions.md) Další informace o tom *kvalifikovaný název třídy*.) Následující fragment kódu ukazuje, jak výsledek liší v závislosti na tom, zda je statický člen:  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,11 +109,11 @@ int main() {
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output  
 25  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Deklarátor odkazu lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   

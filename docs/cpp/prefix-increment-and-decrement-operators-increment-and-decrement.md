@@ -1,5 +1,5 @@
 ---
-title: 'Operátory přírůstku a snížení předpony: ++ a--| Microsoft Docs'
+title: 'Operátory přírůstku a snížení předpony: ++ a--| Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1af68c630717a71df11e4ac22b96058356354f1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408653"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení předpony: ++ a --
 ## <a name="syntax"></a>Syntaxe  
@@ -38,15 +39,15 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátor přírůstku předpony (`++`) přičítá jeho operand; tato zvýšena hodnota je výsledkem výrazu. Operand musí být hodnota l není typu **const**. Výsledkem je hodnota l stejného typu jako operand.  
+ Prefixový operátor Inkrementace (**++**) z nich se má jeho operand; přidá tuto hodnotu zvýšena je výsledek výrazu. Operand musí být l hodnota není typu **const**. Výsledkem je l hodnota stejného typu jako operand.  
   
- Operátor snížení předpony (**--**) je podobná operátor přírůstku předponu, s tím rozdílem, že se odečte jedním operand a výsledkem je tato hodnota odečte.  
+ Operátor dekrementace předpony (**--**) je obdobou operátoru Inkrementace předponu, s tím rozdílem, že operand je sníží o jedna a výsledkem je tato hodnota odečítají.  
 
- **Visual Studio 2017 verze 15.3 a novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operátoru přírůstek nebo snížení nesmí být typu `bool`.
+ **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): operand operátoru Inkrementace nebo dekrementace nemůže být typu **bool**.
   
- Jak předponu a operátory přírůstku a snížení operátory ovlivnit operandy. Klíčovým rozdílem mezi nimi je pořadí, ve kterém přírůstek nebo snížení probíhá vyhodnocení výrazu. (Další informace najdete v tématu [operátory přípony přírůstku a snížení](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Ve formuláři, předpony přírůstek nebo snížení probíhá před hodnota je použita ve vyhodnocení výrazu, tak hodnota výrazu se liší od hodnoty operand. Ve formuláři, operátory přírůstek nebo snížení probíhá po hodnota se používá při vyhodnocení výrazu, tak hodnota výrazu je stejná jako hodnota operandu. Například následující programu výtisků "`++i = 6`":  
+ Jak předpony a přípony přírůstek a snížení operátory ovlivnit jejich operandy. Klíčovým rozdílem mezi nimi je v tom pořadí, ve kterém zvýšení nebo snížení dojde při vyhodnocení výrazu. (Další informace najdete v tématu [operátory Příponové operátory Inkrementace a dekrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Ve formuláři předponu zvýšení nebo snížení dojde před hodnota bude použita ve vyhodnocení výrazu, tak hodnota tohoto výrazu se liší od hodnoty operandu. V příponový tvar zvýšení nebo snížení dojde po hodnota se používá ve vyhodnocení výrazu, takže hodnota výrazu je stejná jako hodnota operandu. Například následující program vytiskne "`++i = 6`":  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -59,11 +60,11 @@ int main() {
 }  
 ```  
   
- Operand typu integrální nebo plovoucí je zvýšena nebo snížena na celé číslo 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatele je zvýšena nebo snížena velikost objektu, který ho adresy. Body zvýšena ukazatele na další objekt; odečte ukazatel odkazuje na objekt předchozí.  
+ Typ s plovoucí desetinnou čárkou nebo celočíselné operandy je zvýšena nebo snížena celočíselnou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatel, je zvýšena nebo snížena velikost objektu, který se zaměřuje. Zvýšena ukazatel odkazuje na další objekt. snížen ukazatel odkazuje na předchozí objekt.  
   
- Protože operátory přírůstku a snížení mít vedlejší účinky, pomocí výrazů s operátory zvýšení nebo snížení hodnoty v [makro preprocesoru](../preprocessor/macros-c-cpp.md) může mít nežádoucí výsledky. Vezměte v úvahu v tomto příkladu:  
+ Protože operátory Inkrementace a dekrementace mají vedlejší účinky, pomocí operátorů zvýšení nebo snížení v výrazy [preprocesor makro](../preprocessor/macros-c-cpp.md) může mít nežádoucí výsledky. Podívejte se například:  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators2.cpp  
 #define max(a,b) ((a)<(b))?(b):(a)  
   
@@ -74,18 +75,18 @@ int main()
 }  
 ```  
   
- Makro zasahuje do:  
+ Makro rozšíří na:  
   
-```  
+```cpp 
 k = ((++i)<(j))?(j):(++i);  
 ```  
   
- Pokud `i` je větší než nebo rovno `j` nebo menší než `j` o 1, se se zvýší dvakrát.  
+ Pokud `i` je větší než nebo rovna hodnotě `j` nebo menší než `j` o 1, to se zvýší dvakrát.  
   
 > [!NOTE]
->  Vložených funkcí jazyka C++ jsou vhodnější makra v mnoha případech, protože se vyhnete vedlejší účinky, jako jsou zde popsané a povolit jazyk, který chcete provést podrobnější kontrola typu.  
+>  Vložených funkcí jazyka C++ jsou upřednostňovány vůči makra v mnoha případech, protože odstraňují vedlejší účinky, jako jsou zde popsané a povolit jazyk, který chcete provést podrobnější kontrolu typu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operátory inkrementace a dekrementace předpony](../c-language/prefix-increment-and-decrement-operators.md)

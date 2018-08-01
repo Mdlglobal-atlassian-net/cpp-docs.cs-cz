@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30d17c929316efe5e3b6c8c71f90591bb05868c3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940248"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401405"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Specifické pro Microsoft**  
@@ -31,18 +31,16 @@ ms.locfileid: "37940248"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 BSTR Detach( ) throw;  
-  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
  `BSTR` zabalený pomocí `_bstr_t`.  
   
 ## <a name="example"></a>Příklad  
- Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití `Detach`.  
+ Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití **odpojit**.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

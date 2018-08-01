@@ -1,5 +1,5 @@
 ---
-title: Zpracování událostí v nativním kódu C++ | Microsoft Docs
+title: Zpracování událostí v nativním kódu C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414178"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405779"
 ---
 # <a name="event-handling-in-native-c"></a>Zpracování událostí v nativním kódu C++
 
-Při zpracování událostí nativní C++, nastavíte zdroj a event přijímače událostí pomocí [event_source –](../windows/event-source.md) a [event_receiver –](../windows/event-receiver.md) atributy, zadání `type` = `native`. Tyto atributy povolit třídy, na které se použijí k vyvolání události a zpracování události v kontextu nativní, modelu COM.
+V nativním C++ zpracování událostí, nastavíte událost zdroj a příjemce události pomocí [event_source](../windows/event-source.md) a [event_receiver](../windows/event-receiver.md) atributy, určení `type` = `native`. Tyto atributy umožňují třídy, na které se vztahují, vyvolat a zpracovat události v kontextu nativní, modelu COM.
 
 ## <a name="declaring-events"></a>Deklarace událostí
 
-V třída zdroje událostí, použijte [__event](../cpp/event.md) – klíčové slovo v deklaraci metody pro metodu jako událost deklarovat. Ujistěte se, zda jste deklarovat metodu, ale nejsou definovány. Uděláte to tak vygeneruje chybu kompilátoru protože kompilátor definuje metodu implicitně když je proveden do událost. Nativní události může být metody s nula nebo více parametrů. Návratový typ může být typ void nebo libovolný celočíselný typ.  
+V třídě zdroje události, použijte [__event](../cpp/event.md) – klíčové slovo v deklaraci metody, chcete-li deklarovat metodu jako událost. Ujistěte se, že chcete-li deklarovat metodu, ale není definován. Provedete to tak vygeneruje chybu kompilátoru, protože kompilátor definuje metodu implicitně, když se provádí na událost. Nativní události může být nula nebo více parametrů metody. Návratový typ může být typ void nebo libovolný celočíselný typ.  
   
 ## <a name="defining-event-handlers"></a>Definice obslužných rutin událostí
 
@@ -35,15 +35,15 @@ V třídě příjemce události definujte obslužné rutiny událostí, což jso
   
 ## <a name="hooking-event-handlers-to-events"></a>Připojení obslužných rutin událostí k událostem  
 
-Také v třída příjemce událostí, použijete funkci vnitřní [__hook](../cpp/hook.md) pro přidružení událostí obslužné rutiny událostí a [__unhook](../cpp/unhook.md) zrušení přidružení události z obslužné rutiny událostí. Lze připojit několik událostí k obslužné rutině události nebo několik obslužných rutin událostí k události.  
+Také v třídě příjemce události, pomocí vnitřní funkce [__hook](../cpp/hook.md) pro přidružení událostí k obslužné rutiny událostí a [__unhook](../cpp/unhook.md) zrušení přidružení událostí z obslužných rutin událostí. Lze připojit několik událostí k obslužné rutině události nebo několik obslužných rutin událostí k události.  
   
 ## <a name="firing-events"></a>Vyvolání událostí  
 
-Chcete-li aktivovat událost, stačí zavolat metodu deklarované jako událost události třída zdroje. Pokud byly obslužné rutiny připojeny k této události, budou tyto obslužné rutiny zavolány.  
+Chcete-li vyvolat událost, jednoduše zavolejte metodu deklarován jako událost v případě zdrojové třídy. Pokud byly obslužné rutiny připojeny k této události, budou tyto obslužné rutiny zavolány.  
   
 ### <a name="native-c-event-code"></a>Kód nativní události C++  
 
-Následující příklad ukazuje, jak aktivovat události v nativním kódu C++. Chcete-li příklad zkompilovat a spustit, přečtěte si komentáře v kódu.  
+Následující příklad ukazuje, jak vyvolat událost v nativním kódu C++. Chcete-li příklad zkompilovat a spustit, přečtěte si komentáře v kódu.  
   
 ## <a name="example"></a>Příklad  
   
@@ -98,7 +98,5 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.  
 ```  
   
-## <a name="see-also"></a>Viz také
-
-[Zpracování událostí](../cpp/event-handling.md)  
-
+## <a name="see-also"></a>Viz také:
+ [Zpracování událostí](../cpp/event-handling.md)  

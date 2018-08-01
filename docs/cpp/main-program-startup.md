@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939221"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401479"
 ---
 # <a name="main-program-startup"></a>main: nastavení programu
-Speciální funkce s názvem `main` je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovacího modelu, můžete použít `wmain`, což je verze širokého znaku `main`.  
+Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovacího modelu, můžete použít `wmain`, což je verze širokého znaku **hlavní**.  
   
- `main` Není kompilátorem předdefinované funkce. Musí být zadána textu programu.  
+ **Hlavní** není kompilátorem předdefinované funkce. Musí být zadána textu programu.  
   
- Syntaxe deklarace pro `main` je  
+ Syntaxe deklarace pro **hlavní** je  
   
 ```cpp 
 int main();  
@@ -59,14 +59,14 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na `main` Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
+ Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na **hlavní** Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.  
   
- Další možností `main` a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete `main` nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy `main` nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.  
+ Další možností **hlavní** a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete **hlavní** nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy **hlavní** nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.  
   
 **Specifické pro END Microsoft**  
  Typy pro `argc` a `argv` jsou definovány jazykem. Názvy `argc`, `argv`, a `envp` tradičních, avšak nemusejí kompilátorem. Další informace a příklad najdete v tématu [definice argumentů](../cpp/argument-definitions.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)   
  [Main – omezení funkce](../cpp/main-function-restrictions.md)   

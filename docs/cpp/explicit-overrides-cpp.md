@@ -1,5 +1,5 @@
 ---
-title: Explicitní přepsání (C++) | Microsoft Docs
+title: Explicitní přepsání (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408722"
 ---
 # <a name="explicit-overrides-c"></a>Explicitní přepsání (C++)
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Pokud je deklarovaná stejné virtuální funkce ve dvou nebo více [rozhraní](../cpp/interface.md) a pokud je třída odvozená z těchto rozhraní, můžete přepsat explicitně jednotlivé virtuální funkce.  
+ Pokud je stejná virtuální funkce deklarována ve dvou nebo více [rozhraní](../cpp/interface.md) a je-li třída odvozena z těchto rozhraní, můžete explicitně přepsat každou virtuální funkci.  
   
- Informace o explicitní přepsání ve spravovaném kódu pomocí nové syntaxe spravovaného, najdete v části [explicitní přepsání](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Informace o explicitních přepsáních ve spravovaném kódu pomocí nové spravované syntaxe, naleznete v tématu [explicitní přepsání](../windows/explicit-overrides-cpp-component-extensions.md).  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje, jak použít explicitní přepsání:  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  
@@ -126,5 +127,5 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Dědičnost](../cpp/inheritance-cpp.md)

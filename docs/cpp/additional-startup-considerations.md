@@ -1,5 +1,5 @@
 ---
-title: Důležité informace o další spuštění | Microsoft Docs
+title: Důležité informace o dalších spuštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c23f18a04010ba62d3651344464ff1668b2127d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409719"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405068"
 ---
 # <a name="additional-startup-considerations"></a>Další důležité informace o spuštění
-V jazyce C++ může tvorba a rušení objektů zahrnovat spouštění uživatelského kódu. Proto je důležité si uvědomit, které inicializacích dojít před vstupem do **hlavní** a které destruktory jsou vyvolány po ukončení z **hlavní**. (Podrobné informace o vytváření a odstraňování objektů najdete v tématu [konstruktory](../cpp/constructors-cpp.md) a [destruktory](../cpp/destructors-cpp.md).)  
+V jazyce C++ může tvorba a rušení objektů zahrnovat spouštění uživatelského kódu. Proto je důležité pochopit, kterým inicializacím dochází před vstupem do `main` a které destruktory jsou vyvolány po ukončení `main`. (Podrobné informace o tvorbě a rušení objektů naleznete v tématu [konstruktory](../cpp/constructors-cpp.md) a [destruktory](../cpp/destructors-cpp.md).)  
   
- Následující inicializacích provést před zápisem na **hlavní**:  
+ Následujícím inicializacím dochází před vstupem do `main`:  
   
 -   Výchozí inicializace statických dat na hodnotu nula. Všechna statická data bez explicitních inicializátorů jsou před spuštěním jakéhokoli jiného kódu nastaveny na hodnotu nula, včetně inicializací za běhu. Statické datové členy musí být explicitně definovány.  
   
--   Inicializace globálních statických objektů v jednotce převodu. K tomu může dojít, buď před vstupem do **hlavní** nebo před prvním použití jakékoli funkce nebo objekt v objektu překlad jednotky.  
+-   Inicializace globálních statických objektů v jednotce převodu. K tomu může dojít buď před vstupem do `main` nebo před prvním použitím libovolné funkce nebo objektu v jednotce převodu daného objektu.  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- V aplikaci Microsoft C++ jsou globální statické objekty inicializovat před vstupem do **hlavní**.  
+ V programu Microsoft C++ jsou globální statické objekty inicializovány před vstupem do `main`.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
  Globální statické objekty jsou vzájemně závislé, v jiných jednotkách převodu však mohou zapříčinit nesprávné chování.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Spuštění a ukončení](../cpp/startup-and-termination-cpp.md)

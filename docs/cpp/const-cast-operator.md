@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5ba0312b255b2957c815bb5f26c97a668d4f7b6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947629"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403021"
 ---
 # <a name="constcast-operator"></a>const_cast – operátor
 Odebere **const**, **volatile**, a **__unaligned** atributy ze třídy.  
@@ -29,17 +29,15 @@ Odebere **const**, **volatile**, a **__unaligned** atributy ze třídy.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 const_cast <type-id> (expression)  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
  Ukazatel na libovolný typ objektu nebo ukazatel na datový člen lze explicitně převést na typ, který je totožný s výjimkou **const**, **volatile**, a **__unaligned** kvalifikátory. Pro ukazatele a odkazy bude výsledek odkazovat na původní objekt. Pro ukazatele na datové členy bude výsledek odkazovat na stejný člen jako původní (nepřetypovaný) ukazatel na datový člen. V závislosti na typu odkazovaného objektu mohou operace zápisu skrz výsledný ukazatel, odkaz nebo ukazatel na datový člen mít za následek nedefinované chování.  
   
- Operátor `const_cast` nelze použít pro přímé přepsání konstantního stavu konstantní proměnné.  
+ Nelze použít **const_cast** operátor pro přímé přepsání konstantního stavu konstantní proměnné.  
   
- `const_cast` Operátor převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.  
+ **Const_cast** operátor převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.  
   
 ## <a name="example"></a>Příklad  
   
@@ -72,8 +70,8 @@ int main() {
 }  
 ```  
   
- Na řádku obsahujícím operátor `const_cast`, datový typ **to** ukazatel `const CCTest *`. `const_cast` Operátor změní datový typ **to** ukazatel na `CCTest *`, umožňuje změnu členu `number` má být upraven. Toto přetypování trvá pouze po zbytek příkazu, ve kterém se zobrazí.  
+ Na řádku obsahujícím operátor **const_cast**, datový typ **to** ukazatel `const CCTest *`. **Const_cast** operátor změní datový typ **to** ukazatel na `CCTest *`, umožňuje změnu členu `number` má být upraven. Toto přetypování trvá pouze po zbytek příkazu, ve kterém se zobrazí.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Operátory přetypování](../cpp/casting-operators.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

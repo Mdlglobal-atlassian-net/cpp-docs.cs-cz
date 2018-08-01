@@ -1,5 +1,5 @@
 ---
-title: Třídy šablon | Microsoft Docs
+title: Šablony třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415683"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405091"
 ---
 # <a name="class-templates"></a>Šablony třídy
-Toto téma popisuje pravidla, které jsou specifické pro šablony třídy C++.  
+Toto téma popisuje pravidla, která jsou specifická pro šablony třídy jazyka C++.  
   
 ## <a name="member-functions-of-class-templates"></a>Členské funkce tříd šablon  
  Členské funkce mohou být definovány uvnitř nebo vně šablony třídy. Jsou-li definovány mimo šablonu třídy, jsou definovány jako šablony funkcí.  
@@ -81,13 +81,12 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>Šablony vnořené třídy  
- Šablony může být definován v rámci třídy nebo šablony třídy, v takovém případě označují se jako člen šablony. Člen šablony, které jsou třídy jsou označovány jako šablony vnořené třídy. Člen šablony, které jsou funkce, které jsou popsané v [šablony členských funkcí](../cpp/member-function-templates.md).  
+ Šablony mohou být definovány v rámci třídy nebo šablony třídy, v takovém případě se označují jako členské šablony. Členské šablony, které jsou třídy jsou označovány jako šablony vnořené třídy. Členské šablony, které jsou funkce jsou popsány v [šablony členských funkcí](../cpp/member-function-templates.md).  
   
- Šablony vnořené třídy jsou deklarovány jako šablony třídy uvnitř oboru vnější třídy. Může být definováno uvnitř nebo vně nadřazených tříd.  
+ Šablony vnořené třídy jsou deklarovány jako šablony třídy v oboru z vnější třídy. Mohou být definovány uvnitř nebo vně nadřazené třídy.  
   
  Následující kód ukazuje šablony vnořené třídy uvnitř běžné třídy.  
   
@@ -202,7 +201,7 @@ X<T>::Y<U>::~Y()
  Místní třídy nemohou mít členské šablony.  
   
 ## <a name="template-friends"></a>Šablona – friends  
- Šablony třídy může mít [přátel](friend-cpp.md). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
+ Šablony třídy mohou mít [přátel](friend-cpp.md). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
   
  V následujícím příkladu je definována spřátelená funkce jako šablona funkce uvnitř šablony třídy. Tento kód vytvoří verzi spřátelené funkce pro všechny instance šablony. Tato konstrukce je užitečná, závisí-li spřátelená funkce na stejných parametrech šablony, na kterých závisí třída.  
   
@@ -418,8 +417,8 @@ A
 a  
 ```  
   
-## <a name="reuse-of-template-parameters"></a>Opakované použití parametry šablony  
- Parametry šablony lze znovu použít v seznamu parametrů šablony. Například je povoleno následující kód:  
+## <a name="reuse-of-template-parameters"></a>Opětovné použití parametrů šablony  
+ Parametry šablony lze znovu použít v seznamu parametrů šablony. Například následující kód je povolen:  
   
 ```cpp  
 // template_specifications2.cpp  
@@ -444,5 +443,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Šablony](../cpp/templates-cpp.md)

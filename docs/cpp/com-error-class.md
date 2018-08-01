@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026631"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407758"
 ---
 # <a name="comerror-class"></a>_com_error – třída
 **Specifické pro Microsoft**  
   
- A `_com_error` objekt představuje podmínku výjimky vyhledat pomocí funkce obálky zpracování chyb v souborech hlaviček generovaných z knihovny typů nebo jeden z třídy COM support. `_com_error` Třída zapouzdří kód chyby: HRESULT a všechny přidružené `IErrorInfo Interface` objektu.  
+ A **_com_error** objekt představuje podmínku výjimky vyhledat pomocí funkce obálky zpracování chyb v souborech hlaviček generovaných z knihovny typů nebo jeden z třídy COM support. **_Com_error** třída zapouzdří kód chyby: HRESULT a všechny přidružené `IErrorInfo Interface` objektu.  
   
 ### <a name="construction"></a>Konstrukce  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Vytvoří `_com_error` objektu.|  
+|[_com_error](../cpp/com-error-com-error.md)|Vytvoří **_com_error** objektu.|  
   
 ### <a name="operators"></a>Operátory  
   
 |||  
 |-|-|  
-|[operátor =](../cpp/com-error-operator-equal.md)|Přiřadí existující `_com_error` objektu na jiný.|  
+|[operátor =](../cpp/com-error-operator-equal.md)|Přiřadí existující **_com_error** objektu na jiný.|  
   
 ### <a name="extractor-functions"></a>Extraktor funkcí  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026631"
   
 |||  
 |-|-|  
-|[Chybová zpráva](../cpp/com-error-errormessage.md)|Získá řetězcovou zprávu pro HRESULT uložený ve `_com_error` objektu.|  
+|[Chybová zpráva](../cpp/com-error-errormessage.md)|Získá řetězcovou zprávu pro HRESULT uložený ve **_com_error** objektu.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode k Mapovačů HRESULT  
   
@@ -78,6 +78,6 @@ ms.locfileid: "39026631"
   
  `Lib:` comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)   
  [Rozhraní IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

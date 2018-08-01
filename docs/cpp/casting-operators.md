@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941622"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407523"
 ---
 # <a name="casting-operators"></a>Operátory přetypování
 Existuje několik operátorů přetypování specifických pro jazyk C++. Účelem těchto operátorů je odstranit některé nejasnosti a nebezpečí spojená s původními přetypováními jazyka C. Těmito operátory jsou:  
@@ -35,7 +35,7 @@ Existuje několik operátorů přetypování specifických pro jazyk C++. Účel
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) použít k tvorbě ověřitelného kódu MSIL.  
   
- Operátory `const_cast` a `reinterpret_cast` používejte jako poslední možnost, protože představují stejné nebezpečí jako stará přetypování. Pro úplné nahrazení starých přetypování jsou však stále zapotřebí.  
+ Použití **const_cast** a **reinterpret_cast** jako poslední možnost, protože tyto operátory představují stejné nebezpečí jako stará přetypování. Pro úplné nahrazení starých přetypování jsou však stále zapotřebí.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetypování](../cpp/casting.md)

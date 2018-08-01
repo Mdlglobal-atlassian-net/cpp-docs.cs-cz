@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941181"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405480"
 ---
 # <a name="namespaces-c"></a>Obory názvů (C++)
 Obor názvů je deklarativní oblast, která nabízí obor na identifikátory (názvy typů, funkce, proměnné atd) uvnitř. Obory názvů slouží k uspořádání kódu do logických skupin a zabránit kolize názvů, které mohou nastat, zejména v případě, že vašeho základu kódu obsahuje více knihoven. Všechny identifikátory v oboru názvů jsou navzájem viditelné bez kvalifikace. Identifikátory mimo obor názvů, můžete přistupovat ke členům pomocí plně kvalifikovaný název pro jednotlivé identifikátory, třeba `std::vector<std::string> vec;`, nebo podle [using – deklarace](../cpp/using-declaration.md) pro jednoho identifikátoru (`using std::string`), nebo [direktiva using](../cpp/namespaces-cpp.md#using_directives) pro všechny identifikátory v oboru názvů (`using namespace std;`). Kód v souborech hlaviček vždy používejte plně kvalifikovaný obor názvů.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  Použít using – direktiva všechno, co vám v oboru názvů do oboru:  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> direktivy using  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Implementace funkce v contosodata.cpp by měl použít plně kvalifikovaný název, i v případě, že umístíte `using` direktiv v horní části souboru:  
+ Implementace funkce v contosodata.cpp by měl použít plně kvalifikovaný název, i v případě, že umístíte **pomocí** direktiv v horní části souboru:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  Pomocí vložených oborů názvů jako mechanismus správy verzí můžete spravovat změny veřejné rozhraní knihovny. Můžete například vytvořit jeden nadřazený obor názvů a zapouzdřují jednotlivé verze rozhraní v svůj vlastní obor názvů, vnořené uvnitř nadřazeného objektu. Obor názvů, který obsahuje verzi nejnovějšího nebo upřednostňované je kvalifikován jako vložený a proto je vystavena jako by šlo přímým členem nadřazený obor názvů. Klientský kód, který vyvolá Parent::Class bude automaticky svázán s novým kódem. Klienti, kteří dávají přednost používání starší verze k němu přístup pomocí plně kvalifikovanou cestu k vnořené oboru názvů, který má tento kód.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Aliasy Namespace  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>anonymní nebo nepojmenované obory názvů  
@@ -277,5 +270,5 @@ namespace
   
  To se označuje jako obor názvů služby Nepojmenovaná nebo anonymní, a to je užitečné, když chcete skrytí deklarace proměnných kódu v jiných souborech (tedy můžete svým uživatelům umožnit vnitřní propojení) bez nutnosti vytvářet pojmenovaného oboru názvů. Veškerý kód ve stejném souboru můžete zobrazit identifikátory v nepojmenovaného oboru názvů ale identifikátory, spolu s oboru názvů, nejsou viditelné mimo tento soubor, nebo přesněji mimo jednotky překladu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Deklarace a definice](declarations-and-definitions-cpp.md)

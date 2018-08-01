@@ -1,5 +1,5 @@
 ---
-title: Deference na typech pole | Microsoft Docs
+title: Deference na typech pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ae5f97d0136ecf86506d03a63b9bb92aa28daa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418836"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406156"
 ---
 # <a name="indirection-on-array-types"></a>Deference na typech pole
-Použití deferenční operátor (**\***) na *n*– typ dimenzí pole vypočítá *n*jednorozměrné pole.-1. Pokud *n* je 1, scalar (nebo element pole), je vhodné.  
+Použití operátoru dereference (**\***) na *n*-rozměrný typ pole vrátí *n*-1 rozměrné pole. Pokud *n* 1, je vhodné skalární hodnota (nebo prvek pole).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Pole](../cpp/arrays-cpp.md)

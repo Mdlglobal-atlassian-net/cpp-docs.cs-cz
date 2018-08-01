@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30910f6850fc3728ee101ab0662638fdebcd3775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947608"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405441"
 ---
 # <a name="break-statement-c"></a>break – příkaz (C++)
 **Přerušení** příkaz ukončí vykonávání nejbližšího obklopujícího cyklu nebo podmíněného příkazu, ve kterém se zobrazí. Řízení se předá příkazu, který následuje po konci příkazu.  
@@ -158,7 +158,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Jump – příkazy](../cpp/jump-statements-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [continue – příkaz](../cpp/continue-statement-cpp.md)

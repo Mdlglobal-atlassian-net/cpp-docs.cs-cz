@@ -1,5 +1,5 @@
 ---
-title: Operátor čárky:, | Microsoft Docs
+title: Operátor čárky:, | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408644"
 ---
 # <a name="comma-operator-"></a>Operátor čárky: ,
 Umožňuje seskupení dvou příkazů tam, kde se očekává jen jeden příkaz.  
@@ -28,12 +29,11 @@ Umožňuje seskupení dvou příkazů tam, kde se očekává jen jeden příkaz.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 expression , expression  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátor čárky má asociativnost zleva doprava. Dva příkazy oddělené čárkou jsou vyhodnoceny zleva doprava. Levý operand je vyhodnocen vždy a před vyhodnocením pravého operandu jsou dokončeny všechny vedlejší účinky.  
+ Operátor čárka je asociativní zleva doprava. Dva příkazy oddělené čárkou jsou vyhodnoceny zleva doprava. Levý operand je vyhodnocen vždy a před vyhodnocením pravého operandu jsou dokončeny všechny vedlejší účinky.  
   
  V některých kontextech, například v seznamech argumentů funkcí, mohou být čárky použity jako oddělovače. Nezaměňujte použití čárky jako oddělovače s jejím použitím jako operátoru. Tato dvě použití jsou zcela odlišná.  
   
@@ -41,11 +41,11 @@ expression , expression
   
  *E1* , *e2*  
   
- Typ a hodnotu výrazu jsou typu a hodnoty *e2*; výsledek vyhodnocení *e1* se zahodí. Je-li pravý operand l-hodnotou, je i tento výsledek l-hodnotou.  
+ Typ a hodnota výrazu jsou typu a hodnoty *e2*; výsledek vyhodnocení výrazu *e1* se zahodí. Je-li pravý operand l-hodnotou, je i tento výsledek l-hodnotou.  
   
  Na místech, kde se čárka obvykle používá jako oddělovač (například ve vlastních argumentech funkcí nebo v inicializátorech agregace), musí být operátor čárky a jeho operandy uzavřeny do závorek. Příklad:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -72,7 +72,7 @@ int main () {
 30  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operátor sekvenčního vyhodnocení](../c-language/sequential-evaluation-operator.md)

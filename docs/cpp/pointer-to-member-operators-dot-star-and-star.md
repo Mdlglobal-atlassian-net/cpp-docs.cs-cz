@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408578"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatelů na členy: .* a -&gt;*
 ## <a name="syntax"></a>Syntaxe  
@@ -36,9 +37,9 @@ expression ->* expression
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátory ukazatelů na členy. * a ->\*, vrátí hodnotu člena určité třídy pro zadaný objekt na levé straně výrazu.  Pravá strana musí udávat člen třídy.  Následující příklad ukazuje způsob použití těchto operátorů:  
+ Operátory pointer-to-member. * a ->\*, vrátí hodnotu konkrétního členu třídy pro objekt zadaný na levé straně výrazu.  Pravá strana musí udávat člen třídy.  Následující příklad ukazuje způsob použití těchto operátorů:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  Binární operátor .* kombinuje svůj první operand, který musí být typu objektu třídy, se svým druhým operandem, který musí být typu ukazatele na člen.  
   
- Binární operátor -> * kombinuje jeho první operand, který musí být ukazatel na objekt typu třídy, se druhý operand, který musí být typu ukazatele na člena.  
+ Binární operátor -> * kombinuje svůj první operand, který musí být ukazatel na objekt typu třídy, se svým druhým operandem, který musí být typu pointer-to-member.  
   
  Ve výrazu obsahujícím operátor .* musí být první operand typu třídy ukazatele zadaného ve druhém operandu, pro nějž musí být první operand zároveň přístupný, nebo přístupného typu jednoznačně odvozeného z dané třídy, pro kterou také musí být přístupný.  
   
- Ve výrazu obsahující-> * První operand v musí být typu "ukazatel na typu třídy" typu zadán Druhý operand operátoru, nebo ho musí být typu jednoznačně odvozen od třídy.  
+ Ve výrazu obsahujícím-> * operátor, první operand musí být typu "ukazatel na typ třídy" typu zadán ve druhém operandu, nebo ji musí být typu jednoznačně odvozeného z dané třídy.  
   
 ## <a name="example"></a>Příklad  
  Vezměte v úvahu následující třídy a část programu:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- Výsledkem. * nebo ->\* operátory ukazatelů na členy je objekt, nebo funkce typ zadaný v deklaraci ukazatele na člena. V předchozím příkladu je tedy výsledkem výrazu `ADerived.*pmfnFunc1()` ukazatel na funkci vracející typ void. Je-li druhý operand l-hodnotou, je i tento výsledek l-hodnotou.  
+ Výsledkem. * nebo ->\* operátory pointer-to-member je objekt nebo funkce typu zadaného v deklaraci ukazatele na člen. V předchozím příkladu je tedy výsledkem výrazu `ADerived.*pmfnFunc1()` ukazatel na funkci vracející typ void. Je-li druhý operand l-hodnotou, je i tento výsledek l-hodnotou.  
   
 > [!NOTE]
 >  Je-li výsledkem jednoho z operátorů ukazatele na člen funkce, lze jej použít pouze jako operand operátoru volání funkce.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

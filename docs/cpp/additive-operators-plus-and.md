@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947719"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402747"
 ---
 # <a name="additive-operators--and--"></a>Operátory sčítání: + a -
 ## <a name="syntax"></a>Syntaxe  
@@ -115,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  Kód ve tvaru `pIntArray = pIntArray + 1` se v programech jazyka C++ nachází jen zřídka. K provedení zvýšení jsou vhodnější tvary `pIntArray++` nebo `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Odečtení ukazatele  
- Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání poskytuje podepsaných integrálních výsledek typu **ptrdiff_t** (definované ve standardním vloženém souboru \<stddef.h >).  
+ Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání poskytuje podepsaných integrálních výsledek typu `ptrdiff_t` (definované ve standardním vloženém souboru \<stddef.h >).  
   
  Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Hodnota odčítání je ukazatel (*n* - *můžu*) tý prvek pole, ve kterém *n* elementu ukazuje původní ukazatel a *můžu* je celočíselná hodnota druhého operandu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
  [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Sčítací operátory jazyka C](../c-language/c-additive-operators.md)

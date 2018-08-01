@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 91fded4380875515da81b87c5ffd74665df01b21
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961438"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408024"
 ---
 # <a name="event-handling"></a>Zpracování událostí
 Zpracování událostí se primárně podporuje pro třídy COM (třídy jazyka C++, které implementují objekty modelu COM, obvykle pomocí tříd knihovny ATL nebo [coclass](../windows/coclass.md) atributu).  Další informace najdete v tématu [zpracování událostí v modulu COM](../cpp/event-handling-in-com.md).  
@@ -41,6 +41,6 @@ Zpracování událostí se primárně podporuje pro třídy COM (třídy jazyka 
 |[__hook](../cpp/hook.md)|Přidruží metodu obslužné rutiny události.|  
 |[__unhook](../cpp/unhook.md)|Dissociates metodu obslužné rutiny z události.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   

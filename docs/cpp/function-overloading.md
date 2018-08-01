@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947535"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406568"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Toto nastavení se nazývá *přetížené* funkce. Přetížené funkce umožňují poskytnout různé sémantiky funkce, v závislosti na typech a počtu argumentů. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  Předchozí příkaz vytvoří dvě sady:  
   
-|Sada 1: Kandidátské funkce, které mají první Argument typu zlomku|Sada 2: Release Candidate funkce jejichž druhý Argument může být převeden na typ int|  
+|Sada 1: Kandidátské funkce, které mají první Argument typu zlomku|Sada 2: Release Candidate funkce jejichž druhý Argument může být převeden na typ **int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Varianty 1|Varianty 1 (**int** lze převést na **dlouhé** pomocí standardního převodu)|  
 |Varianty 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  Předchozí volání funkce vytvoří následující sady:  
   
-|Sada 1: Release Candidate funkce, že jste první Argument typu int|Sada 2: Release Candidate funkce, že máte druhý Argument typu int|  
+|Sada 1: Release Candidate funkce, že jste první Argument typu **int**|Sada 2: Release Candidate funkce, že máte druhý Argument typu **int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Varianty 2 (**int** lze převést na **dlouhé** pomocí standardního převodu)|Varianty 1 (**int** lze převést na **dlouhé** pomocí standardního převodu)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Porovná pomocí standardních převodů. Všechny sekvence nejsou klasifikovány jako přesnou shodu nebo shodou pomocí propagačních akcí, která obsahuje jenom standardní převody a převody jednoduchého dotazu je klasifikován tak shoda pomocí standardních převodů. V rámci této kategorie se použijí následující pravidla:  
   
-    -   Převod z ukazatele na odvozenou třídu na ukazatel na přímou nebo nepřímou základní třídou je vhodnější pro převod na **void \***  nebo **const void \*** .  
+    -   Převod z ukazatele na odvozenou třídu na ukazatel na přímou nebo nepřímou základní třídou je vhodnější pro převod na `void *` nebo `const void *`.  
   
     -   Převod z ukazatele na odvozenou třídu na ukazatel na základní třídu vytváří lepší shodu, čím blíž je základní třídou přímou základní třídu. Předpokládejme, že hierarchie tříd je, jak je znázorněno na následujícím obrázku.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Omezení přetížení  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Předchozí dvě funkce mít seznamy argumentů identické. `PSTR` je synonymum pro typ **char \*** . Tento kód v oboru člena, vygeneruje chybu.  
+     Předchozí dvě funkce mít seznamy argumentů identické. `PSTR` je synonymum pro typ `char *`. Tento kód v oboru člena, vygeneruje chybu.  
   
 -   Výčtové typy jsou různé typy a slouží k rozlišení mezi přetížených funkcí.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Funkce (C++)](../cpp/functions-cpp.md)

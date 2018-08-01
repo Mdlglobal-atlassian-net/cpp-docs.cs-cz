@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7dc931e643235bc6edb4a1121628ac5185b76cc7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939816"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402546"
 ---
 # <a name="compiler-com-support-classes"></a>Třídy podpory kompilátoru modelu COM
 **Specifické pro Microsoft**  
@@ -38,7 +38,7 @@ ms.locfileid: "37939816"
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Podpora kompilátoru modelu COM](../cpp/compiler-com-support.md)   
  [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

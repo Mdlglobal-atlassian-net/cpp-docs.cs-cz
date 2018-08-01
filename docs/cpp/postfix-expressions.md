@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947717"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403138"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých příponové operátory následují za primárním výrazem. Příponové operátory jsou uvedeny v následující tabulce.  
@@ -34,13 +34,12 @@ Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých p
 |[Operátor volání funkce](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operátor převodu explicitního typu](../cpp/explicit-type-conversion-operator-parens.md)|*Název typu* **)**|  
 |[Operátor přístupu členů](../cpp/member-access-operators-dot-and.md)|**.** Nebo **->**|  
-|[Příponový operátor Inkrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Příponový operátor Inkrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Příponový operátor dekrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Následující syntaxe popisuje možné výrazy přípony:  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Ve výše uvedeném výrazu je func primární výraz, func(1) je výraz přípony funkce, func(1)->GetData je výraz přípony určující člena třídy, func(1)->GetData() je jiný výraz přípony funkce a celý výraz je výraz přípony zvyšující návratovou hodnotu funkce GetData.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Pak následuje volání funkce GetValue() dané třídy a poté zvýšení vrácené hodnoty.  
+ Ve výše uvedeném výrazu `func` je primární výraz `func(1)` je výraz přípony funkce `func(1)->GetData` je výraz přípony určující člena třídy, `func(1)->GetData()` je jiný výraz přípony funkce a celý výraz je výraz přípony zvyšující návratovou hodnotu funkce GetData.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Poté zavolejte `GetValue()` dané třídy, poté zvýšení vrácené hodnoty.  
   
  Výrazy uvedené výše jsou výrazy přiřazení, což znamená, že výsledkem těchto výrazů musí být hodnota r-value.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Předchozí program deklaruje funkci `print`, která přijímá dva argumenty. Nicméně druhý argument, `terminator`, má výchozí hodnotu, `"\n"`. V `main`, první dvě volání na `print` umožňují výchozímu druhému argumentu dodat novému řádku ukončení tištěného řetězce. Třetí volání určuje explicitní hodnotu pro druhý argument. Zobrazí se výstup z programu  
+ Předchozí program deklaruje funkci `print`, která přijímá dva argumenty. Nicméně druhý argument, *ukončovací znak*, má výchozí hodnotu, `"\n"`. V `main`, první dvě volání na `print` umožňují výchozímu druhému argumentu dodat novému řádku ukončení tištěného řetězce. Třetí volání určuje explicitní hodnotu pro druhý argument. Zobrazí se výstup z programu  
   
 ```Output 
 hello,  
@@ -199,5 +198,5 @@ world!
 good morning, sunshine.  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Typy výrazů](../cpp/types-of-expressions.md)

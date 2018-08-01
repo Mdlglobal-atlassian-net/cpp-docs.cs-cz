@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947727"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403466"
 ---
 # <a name="class-member-overview"></a>Přehled členů třídy
 Třídy nebo struktury se skládá z jejích členů. Práce, která nemá třídu provádí její členské funkce. Stav, který uchovává je uložen v její datové členy. Inicializace členů se provádí tak, že konstruktory a vyčištění práce, jako je například uvolnění paměti a uvolnění prostředků provádí destruktory. V C ++ 11 a novějším datové členy můžete (a obvykle by měl) inicializovat v bodě deklarace.  
@@ -124,7 +124,6 @@ Další informace najdete v tématu [speciálních členských funkcí](../cpp/s
  V C ++ 11 a novějším nestatická členská deklarátory mohou obsahovat inicializátory.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  
@@ -174,5 +173,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  Název třídy `CanInit2` musí předcházet identifikátor `i`, čímž určíte, že definovaný identifikátor `i` je členem třídy `CanInit2`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

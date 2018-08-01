@@ -1,5 +1,5 @@
 ---
-title: Operátory přístup členy:. a -&gt; | Microsoft Docs
+title: Operátory přístupu členů:. a -&gt; | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408524"
 ---
-# <a name="member-access-operators--and--gt"></a>Operátory přístup členy:. a -&gt;
+# <a name="member-access-operators--and--gt"></a>Operátory přístupu členů:. a -&gt;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -39,18 +40,18 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátory pro přístup ke člen **.** a **->** slouží k odkazování na členů struktury, sjednocení a tříd. Výrazy členského přístupu mají hodnotu typu vybraného členu.  
+ Operátory přístupu členů **.** a **->** slouží k odkazování na členy struktur, sjednocení a tříd. Výrazy členského přístupu mají hodnotu typu vybraného členu.  
   
  Existují dva typy výrazů členského přístupu:  
   
-1.  Ve formuláři první *operátory výraz* reprezentuje hodnotu struktura, třídy nebo typu union a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota operace je u *název* a pokud je hodnotou l *operátory výraz* je l hodnota.  
+1.  V prvním *postfix-expression* představuje hodnotu struktury, třídy nebo typu sjednocení a *název* pojmenovává člen zadané struktury, sjednocení nebo třídy. Hodnotu operace má *název* a je l hodnotou, pokud *postfix-expression* l-hodnotou.  
   
-2.  Ve formuláři druhý *operátory výraz* představuje ukazatel struktury, sjednocení nebo třída, a *název* názvy členem zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnota. **->** Operátor dereferences ukazatele. Proto výrazy * e ***->** `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory **->** nebo **\*** jsou přetížené).  
+2.  Druhý typ *postfix-expression* představuje ukazatel na strukturu, sjednocení nebo třídy, a *název* pojmenovává člen zadané struktury, sjednocení nebo třídy. Hodnota je u *název* a je l hodnotou. **->** Operátor provádí dereferenci ukazatele. Proto výrazy * e ***->** `member` a **(\****e***)**.`member` (kde *e* představuje ukazatel) poskytují stejné výsledky (s výjimkou při operátory **->** nebo **\*** jsou přetížené).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje obě formy operátoru pro přístup k členu.  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -82,8 +83,8 @@ int main() {
 2/1/2000  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy přípony](../cpp/postfix-expressions.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
  [Členy struktury a sjednocení](../c-language/structure-and-union-members.md)

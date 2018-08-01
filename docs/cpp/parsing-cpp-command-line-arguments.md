@@ -1,5 +1,5 @@
 ---
-title: Analýza argumentů příkazového řádku jazyka C++ | Microsoft Docs
+title: Analýza argumentů příkazového řádku jazyka C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408650"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C++
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Kód spuštění Microsoft C/C++ používá následující pravidla při interpretaci argumenty zadána na příkazovém řádku operačního systému:  
+ Spouštěcí kód Microsoft C/C++ používá při interpretaci argumentů příkazového řádku operačního systému následující pravidla:  
   
--   Argumenty jsou odděleny prázdný znak, který je mezeru nebo na kartě.  
+-   Argumenty jsou odděleny prázdným znakem, který je mezera nebo tabulátor.  
   
--   Znak pomocí kurzoru (^) není rozpoznán jako řídicí znak nebo oddělovač. Znak je zpracován úplně analyzátorem příkazového řádku v operačním systému před předáním `argv` pole v programu.  
+-   Znak stříšky (^) nebyl rozpoznán jako řídicí znak ani oddělovač. Znak, který je zcela zpracovat analyzátor příkazového řádku v operačním systému před předáním `argv` pole v programu.  
   
--   Řetězec v uvozovkách ("*řetězec*") interpretována jako jeden argument, bez ohledu na to, obsažené v prázdné znaky. Řetězec v uvozovkách, lze jej vkládat v argumentu.  
+-   Řetězec v dvojitých uvozovkách ("*řetězec*") je interpretován jako jeden argument, bez ohledu na prázdné znaky uvnitř. Řetězec v uvozovkách, může být vložen do argumentu.  
   
--   Uvozovky uvedené zpětným lomítkem (\\") je interpretován jako znak dvojitých uvozovek (").  
+-   Znak dvojitých uvozovek předcházený zpětným lomítkem (\\") je interpretován jako znak dvojitých uvozovek (").  
   
--   Zpětná lomítka se interpretují oznámena, pokud se okamžitě předcházet uvozovky.  
+-   Zpětná lomítka jsou interpretovány literálně, pokud jsou bezprostředně předcházet dvojité uvozovky.  
   
--   Pokud sudý počet zpětná lomítka následuje uvozovky, jeden zpětné lomítko je umístěn v `argv` pole pro každý pár zpětná lomítka a dvojité uvozovky se interpretuje jako oddělovač řetězec.  
+-   Je-li sudý počet zpětných lomítek následován znakem dvojitých uvozovek, jedno zpětné lomítko je umístěn v `argv` pole pro každý pár zpětných lomítek a dvojitých uvozovek, je interpretován jako oddělovač řetězců.  
   
--   Pokud lichý počet zpětná lomítka následuje uvozovky, jeden zpětné lomítko je umístěn v `argv` pole pro každý pár zpětná lomítka a dvojité uvozovky se "escape" ve zbývajících zpětné lomítko, způsobuje literálu uvozovky (" ) umístit do `argv`.  
+-   Je-li lichý počet zpětných lomítek následován znakem dvojitých uvozovek, jedno zpětné lomítko je umístěn v `argv` pole pro každý pár zpětných lomítek a dvojitá uvozovka není "uvozeno uvozovacím znakem" ve zbývajících zpětné lomítko způsobí znak dvojitých uvozovek (" ) se mají umístit na `argv`.  
   
 ## <a name="example"></a>Příklad  
- Následující program ukazuje, jak příkazového řádku argumenty se předávají:  
+ Následující program ukazuje, jak příkazového řádku argumenty jsou předány:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -66,18 +67,18 @@ int main( int argc,      // Number of strings in array argv
 }  
 ```  
   
- Následující tabulka uvádí příklad vstup a očekávaný výstup, ukázka pravidla v předchozím seznamu.  
+ Následující tabulka uvádí příklad vstupu a očekávaný výstup, ukázka pravidla v předchozím seznamu.  
   
-### <a name="results-of-parsing-command-lines"></a>Výsledky analýzy příkazy na příkazových řádcích  
+### <a name="results-of-parsing-command-lines"></a>Výsledky analýzy příkazové řádky  
   
-|Vstup příkazového řádku|argv – [1]|argv – [2]|argv – [3]|  
+|Vstup příkazového řádku|argv [1]|argv [2]|argv [3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [main: spuštění programu](../cpp/main-program-startup.md)

@@ -1,5 +1,5 @@
 ---
-title: Pole ve výrazech | Microsoft Docs
+title: Pole ve výrazech | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e57a97d9be3ef6245c09c6112caf72318fe784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408692"
 ---
 # <a name="arrays-in-expressions"></a>Pole ve výrazech
-Jakmile identifikátor typu pole se zobrazí ve výrazu jiné než `sizeof`, adresa (**&**), nebo inicializace odkazu, je převedena na ukazatel na první prvek pole. Příklad:  
+Když identifikátor typu pole objeví ve výrazu jiné než `sizeof`, adresy (**&**), nebo inicializace odkazu, je převeden na ukazatel na první prvek pole. Příklad:  
   
-```  
+```cpp 
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
  Ukazatel `psz` odkazuje na první prvek pole `szError1`. Všimněte si, že pole, narozdíl od ukazatelů, nejsou upravitelné l-hodnoty. Proto je následující přiřazení neplatné:  
   
-```  
+```cpp 
 szError1 = psz;  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Pole](../cpp/arrays-cpp.md)

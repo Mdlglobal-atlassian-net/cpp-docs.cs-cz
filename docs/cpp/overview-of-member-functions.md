@@ -1,5 +1,5 @@
 ---
-title: Přehled členských funkcí | Microsoft Docs
+title: Přehled členských funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b34be19c5fe67c087579e3d1cf0643d5afd71dc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21de116740161a965bd4790eff751d10cf878b79
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408623"
 ---
 # <a name="overview-of-member-functions"></a>Přehled členských funkcí
-Členské funkce jsou statické nebo nestatické. Chování statické členské funkce se liší od jiných členské funkce, protože žádná implicitní statické členské funkce **to** argument. Nestatické členské funkce mají **to** ukazatel. Členské funkce, statické i nestatické, lze definovat v deklaraci třídy nebo mimo ni.  
+Členské funkce jsou statické nebo nestatické. Chování statických členských funkcí se liší od jiných členských funkcí, protože statické členské funkce nemají žádný implicitní ukazatel **to** argument. Nestatické členské funkce mají **to** ukazatele. Členské funkce, statické i nestatické, lze definovat v deklaraci třídy nebo mimo ni.  
   
- Pokud je členská funkce definována uvnitř deklarace třídy, považuje se za vloženou funkci a není potřeba kvalifikovat název funkce pomocí názvu třídy. I když funkcí definovaných v deklaracích třídy jsou již považovány za vložené funkce, můžete použít **vložené** – klíčové slovo dokumentu kódu.  
+ Pokud je členská funkce definována uvnitř deklarace třídy, považuje se za vloženou funkci a není potřeba kvalifikovat název funkce pomocí názvu třídy. Přestože funkce definované uvnitř deklarací tříd jsou již považovány za vložené funkce, můžete použít **vložené** – klíčové slovo pro zdokumentování kódu.  
   
  Následuje příklad deklarování funkce v deklaraci třídy:  
   
-```  
+```cpp 
 // overview_of_member_functions1.cpp  
 class Account  
 {  
@@ -51,11 +52,11 @@ int main()
 }  
 ```  
   
- Pokud definice členské funkce mimo deklaraci třídy, se zpracovává jako vložená funkce pouze v případě, že je explicitně deklarován jako **vložené**. Kromě toho musí být název funkce v definici kvalifikován názvem třídy pomocí operátoru rozlišení oboru (`::`).  
+ Pokud je definice členské funkce mimo deklaraci třídy, je považován za vloženou funkci pouze v případě, že je explicitně deklarována jako **vložené**. Kromě toho musí být název funkce v definici kvalifikován názvem třídy pomocí operátoru rozlišení oboru (`::`).  
   
  V následujícím příkladu je deklarace třídy `Account` stejná jako předchozí deklarace této třídy s tím rozdílem, že je funkce `Deposit` definována mimo deklaraci třídy:  
   
-```  
+```cpp 
 // overview_of_member_functions2.cpp  
 class Account  
 {  
@@ -81,4 +82,3 @@ int main()
 >  Ačkoli lze členské funkce definovat uvnitř deklarace třídy nebo samostatně, po definování třídy již nelze do této třídy přidat žádné další členské funkce.  
   
  Třídy obsahující členské funkce mohou mít mnoho deklarací, ale samotné členské funkce musejí být v programu definovány pouze jednou. Více definic vygeneruje v době propojování chybovou zprávu. Pokud třída obsahuje definice vložené funkce, musejí být definice této funkce shodné z důvodu tohoto pravidla „jedné definice“.  
-  

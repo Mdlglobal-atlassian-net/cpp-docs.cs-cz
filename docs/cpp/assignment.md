@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c6343d7be23e633fe383343bd7f154d5cc9bb234
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960983"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407608"
 ---
 # <a name="assignment"></a>Přiřazení
 Operátor přiřazení (**=**) je, přesněji řečeno, binární operátor. Jeho deklarace je stejná jako u ostatních binárních operátorů, s následujícími výjimkami:  
@@ -62,5 +62,5 @@ int main()
 pt1 = pt2 = pt3;  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetížení operátoru](../cpp/operator-overloading.md)

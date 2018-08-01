@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947538"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407712"
 ---
 # <a name="nested-class-declarations"></a>Vnořené deklarace tříd
 Třída může být deklarována v rámci jiné třídy. Tato třída se nazývá „vnořená třída“. Vnořené třídy jsou považovány za součást oboru ohraničující třídy a jsou k dispozici pro použití v daném oboru. Pro odkazování na vnořenou třídu z jiného oboru než jejího bezprostředně ohraničujícího oboru je třeba použít plně kvalifikovaný název.  
@@ -212,5 +212,5 @@ int GetExtendedErrorStatus( char *message )
   
  S předchozím rozhraním může několik tříd použít služby této funkce pomocí předání paměťového umístění, kam chtějí zkopírovat chybovou zprávu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

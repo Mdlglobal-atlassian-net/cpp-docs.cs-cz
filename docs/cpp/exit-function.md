@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce4272ecfee4b3d02d8bf79f7816200a392c9735
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941077"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404825"
 ---
 # <a name="exit-function"></a>exit – funkce
-`exit` Funkce deklarovaná ve standardním vloženém souboru \<stdlib.h >, ukončuje program jazyka C++.  
+**Ukončit** funkce deklarovaná ve standardním vloženém souboru \<stdlib.h >, ukončuje program jazyka C++.  
   
- Hodnota zadaná jako argument pro `exit` je vrácena operačnímu systému jako návratový nebo ukončovací kód programu. Dle konvence návratový kód nula znamená, že byl program dokončen úspěšně.  
+ Hodnota zadaná jako argument **ukončit** je vrácena operačnímu systému jako návratový nebo ukončovací kód programu. Dle konvence návratový kód nula znamená, že byl program dokončen úspěšně.  
   
 > [!NOTE]
 >  Můžete použít konstanty EXIT_FAILURE a EXIT_SUCCESS definované v \<stdlib.h >, indikující úspěch nebo neúspěch programu.  
   
- Vydání **vrátit** příkaz z `main` je ekvivalentní volání funkce `exit` funkce s návratovou hodnotou jako svůj argument.  
+ Vydání **vrátit** příkaz z `main` je ekvivalentní volání funkce **ukončit** funkce s návratovou hodnotou jako svůj argument.  
   
  Další informace najdete v tématu [ukončit](../c-runtime-library/reference/exit-exit-exit.md) v *Run-Time Library Reference*.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ukončení programu](../cpp/program-termination.md)

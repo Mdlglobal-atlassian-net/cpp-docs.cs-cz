@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954190"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408213"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na *The manuálu C++ s poznámkami odkaz* od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.  
@@ -59,16 +59,16 @@ Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vít
  Výraz, null, složený příkaz, výběr, iterace, skok a deklarace.  
   
  [Deklarace a definice](declarations-and-definitions-cpp.md)  
- Specifikátory paměťových tříd, definice funkce, inicializace, výčty, třídy, struktury a deklarace unie a typedef. Také vložené funkce, klíčové slovo const, obory názvů.  
+ Specifikátory paměťových tříd, definice funkce, inicializace, výčty, **třídy**, **struktura**, a **sjednocení** deklarace, a **– typedef**  deklarace. Navíc **vložené** funkce, **const** – klíčové slovo, obory názvů.  
   
  [Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)  
- Úvod do tříd, struktur a union. Také členské funkce, zvláštní členské funkce, datové členy, bitová pole, tento ukazatel, vnořené třídy.  
+ Úvod do tříd, struktur a union. Také členské funkce, zvláštní členské funkce, datové členy, bitová pole, **to** ukazatel, vnořené třídy.  
   
  [Odvozené třídy](../cpp/inheritance-cpp.md)  
- Jednotná a vícenásobná dědičnost, virtuální funkce, více základních tříd, abstraktní třídy, pravidla rozsahu. Navíc __super a \__rozhraní klíčová slova.  
+ Jednotná a vícenásobná dědičnost, **virtuální** funkce, více základních tříd, **abstraktní** třídy, pravidla rozsahu. Také **__super** a **__interface** klíčová slova.  
   
  [Řízení přístupu členů](../cpp/member-access-control-cpp.md)  
- Řízení přístupu ke členům třídy: klíčová slova Public, Private a Protected. Přátelské funkce a třídy.  
+ Řízení přístupu ke členům třídy: **veřejné**, **privátní**, a **chráněné** klíčová slova. Přátelské funkce a třídy.  
   
  [Přetížení](operator-overloading.md)  
  Přetížené operátory, pravidla přetížení operátoru.  
@@ -80,16 +80,16 @@ Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vít
  `#error` Direktiva, **static_assert** – klíčové slovo, `assert` – makro.  
   
  [Šablony](../cpp/templates-cpp.md)  
- Specifikace šablony, šablony funkce, šablony třídy, klíčové slovo pro název typu, šablony vs. makra, šablony a inteligentní ukazatele.  
+ Specifikace šablony, šablony funkce, šablony třídy **typename** – klíčové slovo, šablony vs. makra, šablony a inteligentní ukazatele.  
   
  [Zpracování událostí](../cpp/event-handling.md)  
  Deklarování událostí a obslužných rutin událostí.  
   
  [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modifikátory specifické pro jazyk C++ společnosti Microsoft. Paměť adresování, konvence volání, nahé funkce, rozšířené atributy třídy úložiště (__declspec), \__w64.  
+ Modifikátory specifické pro jazyk C++ společnosti Microsoft. Paměť adresování, konvence volání, **naked** funkce, rozšířené atributy třídy úložiště (**__declspec**), **__w64**.  
   
  [Vkládaný assembler](../assembler/inline/inline-assembler.md)  
- Použití jazyku sestavení a jazyku C++ v blocích __asm.  
+ Použití jazyku sestavení a C++ v **__asm** bloky.  
   
  [Podpora kompilátoru COM](../cpp/compiler-com-support.md)  
  Odkaz na třídy specifické pro společnost Microsoft a globální funkce používané pro podporu typů modelu COM.  
@@ -115,5 +115,5 @@ Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vít
  [Knihovny Visual C++](../standard-library/cpp-standard-library-reference.md)  
  Seznam odkazů na referenční spouštěcí stránky pro různé knihovny jazyka Visual C++.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

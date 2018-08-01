@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941548"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406039"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
 Na rozdíl od spravovaných jazyků nemá C++ kolekce paměti (GC), který automaticky uvolní prostředky bez delší používané paměti při spuštění programu. V jazyce C++ správu prostředků přímo souvisí s životního cyklu objektu. Tento dokument popisuje faktory, které ovlivňují dobu života objektu v jazyce C++ a jak ho spravovat.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Použití `unique_ptr` jedinečné vlastnictví, například v *ukazatel na implementaci* idiom. (Viz [ukazatel na implementaci pro zapouzdření za kompilace](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Ujistěte se, `unique_ptr` primární cílem všechny explicitní **nové** výrazy.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Když se vyžaduje optimalizace výkonu, budete nejspíš muset použít *dobře zapouzdřený* vlastnící ukazatele a explicitního volání odstranit. Příkladem je při implementaci nízké úrovně datovou strukturu.  
@@ -90,7 +88,7 @@ void functionUsingWidget () {
   
  Používejte opatrně statickou životnost (globální statické, místní statické funkce) vzhledem k tomu může dojít k problémům. Co se stane, když se vyvolá výjimku konstruktoru na globální objekt? Obvykle aplikace chyby způsobem, který může být obtížné ladit. Pořadí konstrukce je problematické pro objekty statickou životnost a není bezpečná pro souběžnost. Nejenže je konstrukce objektu problém, pořadí zničení může být složité, zejména v případě, že je zahrnuta polymorfismu. I v případě, že objekt nebo proměnná není polymorfní a nemá komplexní konstrukce/destrukce řazení, je stále problém souběžnosti bezpečné pro vlákna. Aplikace s více podprocesy nelze bezpečně upravovat data v statické objekty bez nutnosti místní úložiště vláken, zámky prostředků a jiné zvláštní opatření.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: bad_typeid – výjimka | Microsoft Docs
+title: bad_typeid – výjimka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408590"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid – výjimka
-`bad_typeid` Výjimku [typeid – operátor](../cpp/typeid-operator.md) při operand pro `typeid` je NULOVÝ ukazatel.  
+**Bad_typeid –** výjimku [operátor typeid](../cpp/typeid-operator.md) při operand **typeid** je ukazatel s hodnotou NULL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Rozhraní výjimky `bad_typeid` je následující:  
+ Rozhraní pro **bad_typeid –** je:  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- Následující příklad ukazuje `typeid` operátor vyvolání `bad_typeid` výjimka.  
+ Následující příklad ukazuje **typeid** operátor vyvolání **bad_typeid –** výjimky.  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,10 +78,10 @@ catch (bad_typeid){
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output 
 Object is NULL  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Informace běhového typu](../cpp/run-time-type-information.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

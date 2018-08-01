@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953392"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402569"
 ---
 # <a name="goto-statement-c"></a>goto – příkaz (C++)
 **Goto** příkaz bezpodmínečně přenese ovládací prvek na příkaz s popiskem podle zadaného identifikátoru.  
@@ -85,6 +85,6 @@ Outer loop executing. i = 3
 Jumped to stop. i = 3  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Jump – příkazy](../cpp/jump-statements-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

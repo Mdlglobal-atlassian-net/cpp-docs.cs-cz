@@ -1,5 +1,5 @@
 ---
-title: Zarovnání (deklarace C++) | Microsoft Docs
+title: Zarovnání (deklarace C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,29 +12,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408629"
 ---
 # <a name="alignment-c-declarations"></a>Zarovnání (deklarace C++)
-Jedna z nízké úrovně funkcí jazyka C++, je možnost určit přesné zarovnání objektů v paměti, aby maximální využití výhod architektura konkrétní hardware. Ve výchozím nastavení kompilátoru zarovnán členy třídy a struktury na jejich velikost: bool a char je zarovnán jeden bajt hranice, krátké na dva bajty, int na čtyř bajtů, dlouho, double a long double na 8 bajtů. Ve většině scénářů máte nikdy dělat starosti s zarovnání, protože výchozí zarovnání již optimální. V některých případech ale můžete dosáhnout výrazné vylepšení výkonu, nebo úspory paměti zadáním vlastních zarovnání pro datové struktury. Před Visual Studio 2015 se používá __alignof – klíčová slova specifická pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spouštění v sadě Visual Studio 2015 by měl používat C ++ 11 standardní klíčová slova [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nové klíčová slova chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci k tato rozšíření platí také pro nové klíčová slova. V tématu [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standardní C++ neurčuje okolních chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže potřebujete použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.  
+Jednou z nízké úrovně funkcí jazyka C++ je schopnost určit přesné zarovnání objektů v paměti maximálně využijí architektury konkrétní hardware. Ve výchozím nastavení, kompilátor zarovná členy třídy a struktury na jejich velikost: bool a char jsou zarovnány jeden hranice jeden bajt, short na dva bajty, int na čtyři bajty, long long double a long double na osm bajtů. Ve většině případů budete muset nikdy být obeznámeni s zarovnání, protože je již optimální výchozí zarovnání. V některých případech však můžete dosáhnout výrazné zlepšení výkonu, nebo úspory paměti tak, že zadáte vlastní zarovnání datových struktur. Visual Studio 2015 můžete použít klíčová slova __alignof specifických pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spuštění v sadě Visual Studio 2015 používejte C ++ 11 standard klíčových slov [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nová klíčová slova se chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci pro tato rozšíření platí také pro nová klíčová slova. Zobrazit [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standard jazyka C++ neurčuje balení chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže budete stále muset použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.  
   
- Poskytuje standardní knihovna C++ [aligned_storage – třída](../standard-library/aligned-storage-class.md) pro přidělování paměti pro datové struktury s vlastní zarovnání a [aligned_union – třída](../standard-library/aligned-union-class.md) pro určení zarovnání sjednocení s Destruktory nebo netriviální konstruktory.  
+ Poskytuje standardní knihovny C++ [aligned_storage – třída](../standard-library/aligned-storage-class.md) pro přidělení paměti pro datové struktury s vlastní zarovnání a [aligned_union – třída](../standard-library/aligned-union-class.md) pro určení zarovnání pro sjednocení s netriviálními konstruktory a destruktory.  
   
-## <a name="about-alignment"></a>O zarovnání  
- Zarovnání je vlastností adresu paměti, vyjádřené jako adresu číselné modulo power 2. Například adresa 0x0001103F modulo 4 je 3; tuto adresu říká, že je pro zarovnání na 4n + 3, kde 4 udává zvolené power 2. Zarovnání adresu závisí na zvolené power dva. Stejnou adresu modulo 8 je 7. Adresu říká, že je pro zarovnání na X, pokud je jeho zarovnání Xn + 0.  
+## <a name="about-alignment"></a>Informace o zarovnání  
+ Zarovnání je vlastností adresu paměti, vyjádřené jako číselné adresu modulo mocninou čísla 2. Například adresa 0x0001103F modulo 4 je 3; tuto adresu se říká, že pro zarovnání na 4n + 3, kde označuje zvolený Mocnina 2, 4. Zarovnání adresu závisí zvoleném mocninou čísla 2. Stejnou adresu modulo 8 je 7. Adresa se říká, že pro zarovnání na X, pokud je jeho zarovnání Xn + 0.  
   
- Procesory spouštění instrukcí které pracují na data uložená v paměti a data jsou označených adresami v paměti. Kromě jeho adresy jeden datum také má velikost. Datum je volána přirozeně zarovnané, pokud jeho adresy je zarovnán na velikost a chybně zarovnaných jinak. Pokud je adresa použitá pro jeho rozpoznání je zarovnána na 8 například přirozeně zarovnána 8 bajtů dat s plovoucí desetinnou čárkou.  
+ Procesory spouštění instrukcí, které pracují s daty uloženými v paměti a data jsou identifikována podle jejich adresy v paměti. Kromě jeho adresu jedné datum má také velikost. Datum je volána přirozeně zarovnané, pokud jeho adresu zarovnán na jejich velikost a chybně zarovnaných jinak. Pokud je adresa použitá k jeho identifikaci zarovnán na 8 například přirozeně zarovnána 8 bajtů datum s plovoucí desetinnou čárkou.  
   
- Kompilátoru zpracování dat alignmentDevice kompilátory pokus o přidělení data způsobem, který brání chybné zarovnání data.  
+ Kompilátor zpracování kompilátory alignmentDevice dat došlo k pokusu o přidělení data způsobem, který brání chybné data.  
   
- Jednoduché datové typy kompilátor přiřadí adresy, které jsou násobky velikost v bajtech datového typu. Proto kompilátor přiřazuje adresy proměnné typu long, které jsou násobky čtyři, nastavení bitů dolní dvě adresy na nulu.  
+ Pro jednoduché datové typy kompilátor přiřadí adresy, které jsou násobky velikost v bajtech datového typu. Proto kompilátor přiřadí adresy proměnné typu long, které jsou násobky čtyř, nastavení dva bity dolní adresy na nulu.  
   
- Kromě toho kompilátor ohraničí struktury v tak, aby přirozeně každý prvek struktury. Vezměte v úvahu x_ struktura struktura v následujícím příkladu kódu:  
+ Kromě toho kompilátor vyplní struktury tak, aby přirozeně zarovná každý prvek struktury. Vezměte v úvahu x_ struktury struktura v následujícím příkladu kódu:  
   
-```  
+```cpp 
 struct x_  
 {  
    char a;     // 1 byte  
@@ -45,11 +46,11 @@ struct x_
   
 ```  
   
- Kompilátor ohraničí tato struktura přirozeně vynutit zarovnání.  
+ Kompilátor vyplní tato struktura přirozeně vynutit zarovnání.  
   
  Následující příklad kódu ukazuje, jak kompilátor umístí vyplněný struktury v paměti: kopírování  
   
-```  
+```cpp 
 // Shows the actual memory layout  
 struct x_  
 {  
@@ -60,18 +61,17 @@ struct x_
    char d;           // 1 byte  
    char _pad1[1];    // padding to make sizeof(x_) multiple of 4  
 }  
-  
 ```  
   
-1.  Obě deklarace vrátí sizeof(struct x_) 12 bajtů.  
+1.  Obě deklarace vrátit sizeof(struct x_) jako 12 bajtů.  
   
-2.  Druhý deklarace obsahuje dva elementy odsazení:  
+2.  Druhý deklarace obsahuje dva prvky odsazení:  
   
-3.  Char – _pad0 [3], chcete-li zarovnat člen b int na hranici čtyř bajtů  
+3.  Char – _pad0 [3] pro zarovnání členských b int na hranici čtyř bajtů  
   
-4.  Char – _pad1 [1], chcete-li zarovnat elementy pole _x struktura struktura panelu [3];  
+4.  Char – _pad1 [1] pro zarovnání prvků pole struktury _x struktura panelu [3];  
   
-5.  Odsazení zarovnává elementy panelu [3] způsobem, který umožňuje přirozené přístup.  
+5.  Odsazení se zarovná elementy panelu [3] způsobem, který umožňuje přístup k fyzické.  
   
  Následující příklad kódu ukazuje na panelu rozložení [3] pole:  
   
@@ -98,8 +98,7 @@ adr offset   element
 0x0020   short c;  
 0x0022   char d;  
 0x0023   char _pad1[1];  
-  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zarovnání struktury dat](http://en.wikipedia.org/wiki/Data_structure_alignment)

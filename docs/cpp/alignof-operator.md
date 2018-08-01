@@ -1,5 +1,5 @@
 ---
-title: __alignof – operátor | Microsoft Docs
+title: __alignof – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408536"
 ---
 # <a name="alignof-operator"></a>__alignof – operátor
-Zavádí c ++ 11 `alignof` operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro maximální přenositelnost použijte operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.  
+C ++ 11 zavádí **alignof** operátor, který vrátí zarovnání, v bajtech zadaného typu. Pro zajištění maximální přenositelnosti používali operátor alignof místo __alignof – operátor specifické pro společnost Microsoft.  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- Vrátí hodnotu typu **size_t –** tedy požadavek zarovnání typu.  
+ Vrátí hodnotu typu `size_t` to znamená požadavek zarovnání typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
@@ -46,34 +47,34 @@ Zavádí c ++ 11 `alignof` operátor, který vrátí zarovnání, v bajtech zada
   
 |Výraz|Hodnota|  
 |----------------|-----------|  
-|**__alignof – (char)**|1|  
-|**__alignof – (krátký)**|2|  
-|**__alignof – (int)**|4|  
-|**__alignof – ( \__int64)**|8|  
-|**__alignof – (float)**|4|  
-|**__alignof – (double)**|8|  
-|**__alignof – (char\* )**|4|  
+|**__alignof (char)**|1|  
+|**__alignof (krátký)**|2|  
+|**__alignof (int).**|4|  
+|**__alignof ( \__int64)**|8|  
+|**__alignof (float)**|4|  
+|**__alignof (double)**|8|  
+|**__alignof (char\* )**|4|  
   
- Hodnota `__alignof` je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:  
+ **__Alignof** hodnota je stejná jako hodnota `sizeof` pro základní typy. Uvažme však tento příklad:  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- V tomto případě je hodnota `__alignof` požadavkem zarovnání největšího prvku ve struktuře.  
+ V takovém případě **__alignof** hodnota je požadavkem zarovnání největšího prvku ve struktuře.  
   
  Podobně pro  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
- `__alignof(S)` se rovná `32`.  
+ `__alignof(S)` je rovno `32`.  
   
- Jedno použití `__alignof` by bylo parametrem pro jednu z vlastních rutin přidělení paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.  
+ Jedním použitím **__alignof** by bylo parametrem pro jednu z vlastních rutin přidělení paměti. Například s ohledem na následující definovanou strukturu `S` lze volat rutinu přidělení paměti s názvem `aligned_malloc` pro přidělení paměti na hranici určitého zarovnání.  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
@@ -91,12 +92,12 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)  
   
- Další informace o rozdíly v zarovnání v kódu pro x86 a x64 najdete v tématu:  
+ Další informace o rozdílech v souladu v kódu pro x86 a x64 najdete v tématu:  
   
 -   [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

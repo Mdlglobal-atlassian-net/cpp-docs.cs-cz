@@ -1,5 +1,5 @@
 ---
-title: Numerické limity (C++) | Microsoft Docs
+title: Numerické limity (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7a5c61e0eda0269e42d69d25b64b7c12bab0c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1806b71208dccedee4b93429510e297bfbc3f348
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419662"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408174"
 ---
 # <a name="numerical-limits-c"></a>Numerické limity (C++)
-Dva standardní vložené soubory, \<Limits.h – > a \<float.h – >, definovat numerické limity nebo minimální a maximální hodnoty, které mohou být uloženy proměnné daného typu. Tyto minimálních a maximální hodnoty jsou zaručit přenosný na C++ compiler, který používá stejné reprezentace dat jako ANSI c \<Limits.h – > zahrnout soubor definuje [numerické limity pro integrální typy](../cpp/integer-limits.md), a \<float.h – > definuje [numerické limity pro plovoucí typy](../cpp/floating-limits.md).  
+Dva standardní vložené soubory, \<limits.h > a \<float.h >, definují číselné limity nebo minimální a maximální hodnoty, které může obsahovat proměnnou daného typu. Tyto minimální a maximální hodnoty je zaručena jeho přenositelnost na jakýkoli kompilátor jazyka C++, který používá stejnou reprezentaci dat jako standard ANSI C. \<Limits.h > zahrnout soubor definuje [číselné limity pro celočíselné typy](../cpp/integer-limits.md), a \<float.h > definuje [číselné limity pro typy s plovoucí desetinnou čárkou](../cpp/floating-limits.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Základní koncepty](../cpp/basic-concepts-cpp.md)

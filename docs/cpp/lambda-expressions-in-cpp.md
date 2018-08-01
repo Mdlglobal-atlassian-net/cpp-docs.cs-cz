@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941964"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402962"
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 V C ++ 11 a novějším výraz lambda – často označované jako *lambda*– nabízí pohodlný způsob definice objektu anonymní funkce ( *uzavření*) přímo na místě, kde je vyvolána nebo předat jako argument na funkci. Výrazy lambda se obvykle používají k zapouzdření pár řádků kódu, které se předá algoritmy nebo asynchronní metody. Tento článek definuje výrazy lambda, porovnává je s jinými programovacími technikami, popisuje jejich výhody a představuje základní příklad.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  Tento obrázek ukazuje část výrazu lambda:  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Chcete-li použít výrazy lambda v těle metody třídy, předejte `this` ukazatele klauzuli zachycení zajistíte přístup k metodám a datovým členům ohraničující třídy. 
+ Chcete-li použít výrazy lambda v těle metody třídy, předejte **to** ukazatele klauzuli zachycení zajistíte přístup k metodám a datovým členům ohraničující třídy. 
  
 **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **to** ukazatele může být zachyceno hodnotou zadáním `*this` v klauzuli zachycení. Zaznamenávání hodnota znamená, že celý *uzavření*, které je objekt anonymní funkce tohoto encapulates výraz lambda, je zkopírován do každé volání webu, kde vyvolání lambda. Zachycení podle hodnoty je užitečné, když bude výraz lambda vykonán v paralelní a asynchronní operace, zejména u určité architektury hardwaru, jako je například technologie NUMA. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  V **C++ 14**, pokud typ parametru je obecný, můžete použít klíčové slovo auto jako specifikátoru typu. To instruuje kompilátor, aby vytvořit operátor volání funkce jako šablona. Každá instance automaticky v seznamu parametrů je ekvivalentní odlišný typ parametru.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Výraz lambda je implicitně `constexpr` Pokud výsledek splňuje požadavky `constexpr` funkce:
 ```cpp
@@ -375,7 +372,7 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
   
  Visual Studio podporuje kromě funkce C ++ 11 Standard lambda, jsou výrazy lambda, které jsou omni převoditelné na ukazatele funkcí, které používají libovolné konvence volání.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Objekty funkcí ve standardní knihovně C++](../standard-library/function-objects-in-the-stl.md)   
  [Volání funkce](../cpp/function-call-cpp.md)   

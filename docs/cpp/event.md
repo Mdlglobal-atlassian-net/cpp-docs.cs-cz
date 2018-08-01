@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947615"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407822"
 ---
 # <a name="event"></a>__event
 Deklaruje událost.  
@@ -31,7 +31,6 @@ Deklaruje událost.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-in-native-cpp.md) ukázkový kód.  
   
 ## <a name="com-events"></a>Události COM  
- Události modelu COM jsou rozhraní. Parametry metody v rozhraní zdroje událostí musí být `in` parametry (ale to se nevynucuje přísně), protože `out` parametr není užitečné, když vícesměrové vysílání. Bude vydáno upozornění úrovně 1, pokud používáte `out` parametru.  
+ Události modelu COM jsou rozhraní. Parametry metody v rozhraní zdroje událostí musí být *v* parametry (ale to se nevynucuje přísně), protože *si* parametr není užitečné, když vícesměrové vysílání. Bude vydáno upozornění úrovně 1, pokud používáte *si* parametru.  
   
  Návratový typ je obvykle HRESULT nebo **void**, ale může být libovolný integrální typ, včetně **výčtu**. Při události používá integrálních návratový typ a vrací nenulovou hodnotu, obslužná rutina události, je chybový stav, ve kterém případ vyvolanou událost zruší volání delegáty. Všimněte si, že kompilátor automaticky označí jako rozhraní zdroje událostí [zdroj](../windows/source-cpp.md) v generované IDL.  
   
@@ -133,7 +132,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracování událostí](../cpp/event-handling.md)   
  [event_source –](../windows/event-source.md)   

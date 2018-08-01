@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947493"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405954"
 ---
 # <a name="final-specifier"></a>final – specifikátor
 Můžete použít **konečné** – klíčové slovo pro označení virtuálních funkcí, které nelze přepsat v odvozené třídě. Lze jej také použít k označení tříd, ze kterých nelze dědit.  
@@ -29,7 +29,6 @@ Můžete použít **konečné** – klíčové slovo pro označení virtuálníc
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 function-declaration final;  
 class class-name final base-classes  
 ```  
@@ -70,6 +69,6 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [override – specifikátor](../cpp/override-specifier.md)

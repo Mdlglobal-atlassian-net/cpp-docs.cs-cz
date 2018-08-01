@@ -1,5 +1,5 @@
 ---
-title: Přetížení operátoru | Microsoft Docs
+title: Přetížení operátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,173 +21,171 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eae4b7cc2211462b097efbefca580b796d573c59
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408572"
 ---
 # <a name="operator-overloading"></a>Přetížení operátoru
-`operator` – Klíčové slovo deklaruje funkci zadání co `operator-symbol` znamená při použití instance třídy. To dává operátor více než jeden význam, nebo "přetížení" jej. Kompilátor rozlišuje mezi různé významy operátoru prověřením typy operandů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-type operator operator-symbol ( parameter-list )  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Můžete změnit definici funkce nejvíce integrovaných operátory globálně nebo na základě třídy třídy. Přetížené operátory jsou implementovány jako funkce.  
-  
- Název přetížené operátor je `operator x`, kde `x` je operátor, jak se objevuje v následující tabulce. Například k přetížení operátor sčítání, definujete funkci s názvem `operator+`. Stejně tak, aby přetížení operátoru přidání/přiřazení `+=`, definovat funkci s názvem `operator+=`.  
-  
-### <a name="redefinable-operators"></a>Které lze znovu definovat operátory  
-  
-|Operátor|Název|Typ|  
-|--------------|----------|----------|  
-|`,`|Čárka|binární|  
-|`!`|Logická NEGACE|Unární|  
-|`!=`|Nerovnost|binární|  
-|`%`|Modulus|binární|  
-|`%=`|Přiřazení modulus|binární|  
-|`&`|Bitový operátor AND|binární|  
-|`&`|Adresa|Unární|  
-|`&&`|Logický operátor AND|binární|  
-|`&=`|Přiřazení bitového operátoru AND|binární|  
-|`( )`|Volání funkce|—|  
-|`( )`|Operátor přetypování|Unární|  
-|`*`|Násobení|binární|  
-|`*`|Zrušení ukazatele|Unární|  
-|`*=`|Přiřazení násobení|binární|  
-|`+`|Sčítání|binární|  
-|`+`|Unární Plus|Unární|  
-|`++`|Přírůstek <sup>1</sup>|Unární|  
-|`+=`|Přiřazení sčítání|binární|  
-|`-`|Odčítání|binární|  
-|`-`|Unární negace|Unární|  
-|`--`|Snížení <sup>1</sup>|Unární|  
-|`-=`|Přiřazení odčítání|binární|  
-|`->`|Výběr členů|binární|  
-|`->*`|Výběr ukazatele na člena|binární|  
-|`/`|Dělení|binární|  
-|`/=`|Přiřazení dělení|binární|  
-|`<`|Menší než|binární|  
-|`<<`|Posun doleva|binární|  
-|`<<=`|Přiřazení posunutí doleva|binární|  
-|`<=`|Menší nebo rovno|binární|  
-|`=`|Přiřazení|binární|  
-|`==`|Rovnost|binární|  
-|`>`|Větší než|binární|  
-|`>=`|Větší nebo rovno|binární|  
-|`>>`|Posun doprava|binární|  
-|`>>=`|Přiřazení posunutí doprava|binární|  
-|`[ ]`|Dolní index pole|—|  
-|`^`|Exkluzivní OR|binární|  
-|`^=`|Exkluzivní OR přiřazení|binární|  
-|`&#124;`|Bitový inkluzivní operátor OR|binární|  
-|`&#124;=`|Přiřazení s bitovým operátorem OR|binární|  
-|`&#124;&#124;`|Logický operátor OR|binární|  
-|`~`|Doplněk|Unární|  
-|`delete`|`Delete`|—|  
-|`new`|`New`|—|  
-|`conversion operators`|operátory převodu|Unární|  
-  
- 1 dvě verze unární zvýšit a snížení existovat: preincrement a postincrement.  
-  
- V tématu [obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md) Další informace. Omezení u různých kategorií přetížené operátory jsou popsány v následujících tématech:  
-  
--   [Unární operátory](../cpp/overloading-unary-operators.md)  
-  
--   [Binární operátory](../cpp/binary-operators.md)  
-  
--   [Přiřazení](../cpp/assignment.md)  
-  
--   [Volání funkcí](../cpp/function-call-cpp.md)  
-  
--   [Podskripty](../cpp/subscripting.md)  
-  
--   [Přístup ke členu – třída](../cpp/member-access.md)  
-  
--   [Přírůstek a snížení](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
-  
--   [Převody typů definovaných uživatelem](../cpp/user-defined-type-conversions-cpp.md)  
-  
- Operátory uvedené v následující tabulce nemohou být přetíženy. V tabulce jsou zahrnuty preprocesoru symboly `#` a `##`.  
-  
-### <a name="nonredefinable-operators"></a>Nonredefinable operátory  
-  
-|||  
-|-|-|  
-|`Operator`|`Name`|  
-|`.`|Výběr členů|  
-|`.*`|Výběr ukazatele na člena|  
-|`::`|Rozlišení rozsahu|  
-|`? :`|Podmiňovací operátor|  
-|`#`|Preprocesor – převést na řetězec|  
-|`##`|Preprocesor řetězení|  
-  
- I když přetížené operátory se obvykle implicitně nazývají kompilátorem vyskytne v kódu, se může vyvolat explicitně stejným způsobem jako člen nebo je volána funkce nečlenský:  
-  
-```  
-Point pt;  
-pt.operator+( 3 );  // Call addition operator to add 3 to pt.  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad přetížení `+` operátor přidat dva komplexní čísla a vrátí výsledek.  
-  
-```  
-// operator_overloading.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-struct Complex {  
-   Complex( double r, double i ) : re(r), im(i) {}  
-   Complex operator+( Complex &other );  
-   void Display( ) {   cout << re << ", " << im << endl; }  
-private:  
-   double re, im;  
-};  
-  
-// Operator overloaded using a member function  
-Complex Complex::operator+( Complex &other ) {  
-   return Complex( re + other.re, im + other.im );  
-}  
-  
-int main() {  
-   Complex a = Complex( 1.2, 3.4 );  
-   Complex b = Complex( 5.6, 7.8 );  
-   Complex c = Complex( 0.0, 0.0 );  
-  
-   c = a + b;  
-   c.Display();  
-}  
-```  
-  
-## <a name="output"></a>Výstup  
-  
-```  
-6.8, 11.2  
-```  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
-1.  [Obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md)  
-  
-2.  [Přetížení unárních operátorů](../cpp/overloading-unary-operators.md)  
-  
-3.  [Binární operátory](../cpp/binary-operators.md)  
-  
-4.  [Přiřazení](../cpp/assignment.md)  
-  
-5.  [Volání funkcí](../cpp/function-call-cpp.md)  
-  
-6.  [Podskripty](../cpp/subscripting.md)  
-  
-7.  [Přístup ke členu](../cpp/member-access.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+
+**Operátor** – klíčové slovo deklaruje funkci určíte, co *symbol operátoru* znamená, že při použití u instance třídy. Operátor, který poskytuje více než jeden význam, nebo "přetížení" ho. Kompilátor rozlišuje mezi různé významy operátor prozkoumáním typy jeho operandů.
+
+## <a name="syntax"></a>Syntaxe
+
+> *typ* **operátor** *symbol operátoru* **(** *seznam parametrů* **)**
+
+## <a name="remarks"></a>Poznámky
+
+Funkce nejvíce integrovaných operátory možné předefinovat globálně nebo na základě třídy třídy. Přetížené operátory jsou implementovány jako funkce.
+
+Název přetíženého operátoru je **operátor** *x*, kde *x* je operátor, který se zobrazí v následující tabulce. Pro přetížení operátoru sčítání, můžete definovat funkci s názvem **operátor +**. Podobně, přetížení operátoru sčítání/přiřazení **+=**, definovat funkci s názvem **operator +=**.
+
+### <a name="redefinable-operators"></a>Které lze znovu definovat operátory
+
+|Operátor|Název|Typ|
+|--------------|----------|----------|
+|**,**|Čárka|binární|
+|**\!**|Logický operátor NOT|Unární|
+|**\!=**|Nerovnost|binární|
+|**%**|Modulus|binární|
+|**%=**|Přiřazení modulus|binární|
+|**&**|Bitový operátor AND|binární|
+|**&**|Adresa|Unární|
+|**&&**|Logický operátor AND|binární|
+|**&=**|Přiřazení bitového operátoru AND|binární|
+|**( )**|Volání funkce|—|
+|**( )**|Operátor přetypování|Unární|
+|**&#42;**|Násobení|binární|
+|**&#42;**|Přesměrování ukazatele|Unární|
+|**&#42;=**|Přiřazení násobení|binární|
+|**+**|Sčítání|binární|
+|**+**|Unární Plus|Unární|
+|**++**|Přírůstek <sup>1</sup>|Unární|
+|**+=**|Přiřazení sčítání|binární|
+|**-**|Odčítání|binární|
+|**-**|Unární negace|Unární|
+|**--**|Snížení <sup>1</sup>|Unární|
+|**-=**|Přiřazení odčítání|binární|
+|**->**|Výběr členů|binární|
+|**->&#42;**|Výběr pointer-to-member|binární|
+|**/**|Dělení|binární|
+|**/=**|Přiřazení dělení|binární|
+|**\<**|Menší než|binární|
+|**<<**|Posun doleva|binární|
+|**<<=**|Přiřazení posunutí doleva|binární|
+|**<=**|Menší nebo rovno|binární|
+|**=**|Přiřazení|binární|
+|**==**|Rovnost|binární|
+|**>**|Větší než|binární|
+|**>=**|Větší nebo rovno|binární|
+|**>>**|Posun doprava|binární|
+|**>>=**|Operátor posunutí doprava|binární|
+|**[ ]**|Dolní index pole|—|
+|**^**|Exkluzivní operátor OR|binární|
+|**^=**|Exkluzivní OR přiřazení|binární|
+|**&#124;**|Bitový inkluzivní operátor OR|binární|
+|**&#124;=**|Přiřazení s bitovým operátorem OR|binární|
+|**&#124;&#124;**|Logický operátor OR|binární|
+|**~**|Doplněk|Unární|
+|**delete**|Odstranit|—|
+|**new**|Nový|—|
+|operátory převodu|operátory převodu|Unární|
+
+<sup>1</sup> zvýšit dvě verze Unární a operátory snížení existovat: preinkrement a postinkrement.
+
+Zobrazit [obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md) Další informace. Omezení pro různé kategorie přetížené operátory jsou popsány v následujících tématech:
+
+- [Unární operátory](../cpp/overloading-unary-operators.md)
+
+- [Binární operátory](../cpp/binary-operators.md)
+
+- [Přiřazení](../cpp/assignment.md)
+
+- [Volání funkcí](../cpp/function-call-cpp.md)
+
+- [Podskripty](../cpp/subscripting.md)
+
+- [Přístup ke členům třídy](../cpp/member-access.md)
+
+- [Inkrementace a dekrementace](../cpp/increment-and-decrement-operator-overloading-cpp.md).
+
+- [Převody typů definovaných uživatelem](../cpp/user-defined-type-conversions-cpp.md)
+
+Nemohou být přetíženy operátory uvedené v následující tabulce. Tabulka obsahuje symboly preprocesoru **#** a **##**.
+
+### <a name="nonredefinable-operators"></a>Operátory Nonredefinable
+
+|Operátor|Název|
+|-|-|
+|**.**|Výběr členů|
+|**.&#42;**|Výběr pointer-to-member|
+|**::**|Rozlišení rozsahu|
+|**? :**|Podmiňovací operátor|
+|**#**|Preprocesoru převést na řetězec|
+|**##**|Zřetězit preprocesoru|
+
+I když přetížené operátory jsou obvykle nevolá implicitně kompilátorem vyskytne v kódu, mohou být volány explicitně stejným způsobem jako člen nebo nečlenské funkce se volá:
+
+```cpp
+Point pt;
+pt.operator+( 3 );  // Call addition operator to add 3 to pt.
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad přetížení **+** operátor přidáte komplexní dvě čísla a vrátí výsledek.
+
+```cpp
+// operator_overloading.cpp
+// compile with: /EHsc
+#include <iostream>
+using namespace std;
+
+struct Complex {
+   Complex( double r, double i ) : re(r), im(i) {}
+   Complex operator+( Complex &other );
+   void Display( ) {   cout << re << ", " << im << endl; }
+private:
+   double re, im;
+};
+
+// Operator overloaded using a member function
+Complex Complex::operator+( Complex &other ) {
+   return Complex( re + other.re, im + other.im );
+}
+
+int main() {
+   Complex a = Complex( 1.2, 3.4 );
+   Complex b = Complex( 5.6, 7.8 );
+   Complex c = Complex( 0.0, 0.0 );
+
+   c = a + b;
+   c.Display();
+}
+```
+
+```Output
+6.8, 11.2
+```
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+- [Obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md)
+
+- [Přetížení unárních operátorů](../cpp/overloading-unary-operators.md)
+
+- [Binární operátory](../cpp/binary-operators.md)
+
+- [Přiřazení](../cpp/assignment.md)
+
+- [Volání funkcí](../cpp/function-call-cpp.md)
+
+- [Podskripty](../cpp/subscripting.md)
+
+- [Přístup ke členu](../cpp/member-access.md)
+
+## <a name="see-also"></a>Viz také:
+ [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
  [Klíčová slova](../cpp/keywords-cpp.md)

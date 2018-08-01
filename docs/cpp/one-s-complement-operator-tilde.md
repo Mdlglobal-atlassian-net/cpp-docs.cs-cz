@@ -1,5 +1,5 @@
 ---
-title: 'Jeden&#39;s vlastní operátor doplňku: ~ | Microsoft Docs'
+title: 'Jeden&#39;s vlastní operátor doplňku: ~ | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408635"
 ---
 # <a name="one39s-complement-operator-"></a>Jeden&#39;s vlastní operátor doplňku: ~
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
  Jeden z operátorů doplňku (`~`), někdy nazývaný operátor „bitového doplňku“, vrací jedničkový bitový doplněk svého operandu. To znamená, že každý bit, který je 1 v operandu, je 0 ve výsledku. A naopak, každý bit, který je 0 v operandu, je 1 ve výsledku. Operand operátoru jedničkového doplňku musí být celočíselného typu.  
   
 ## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor ~  
- Operátor `compl` je textový ekvivalent operátoru `~`. Existují dva způsoby pro přístup `compl` operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md).  
+ **Compl** operátor je textový ekvivalent operátoru `~`. Existují dva způsoby přístupu k **compl** operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -59,9 +59,9 @@ int main () {
   
  V tomto příkladu je nová hodnota přiřazená proměnné `y` jedničkovým doplňkem hodnoty bez znaménka 0xFFFF nebo 0x0000.  
   
- Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. V tématu [standardní převody](standard-conversions.md) Další informace o tom, jak se provádí povýšení.  
+ Celočíselné povýšení proběhne na celočíselných operandech a výsledný typ je typ, na který je operand povýšen. Zobrazit [standardní převody](standard-conversions.md) Další informace o tom, jak je povýšení provedeno.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Unární aritmetické operátory](../c-language/unary-arithmetic-operators.md)

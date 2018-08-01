@@ -1,5 +1,5 @@
 ---
-title: Rozšíření Microsoft | Microsoft Docs
+title: Rozšíření Microsoft | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,44 +14,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419820"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408372"
 ---
 # <a name="microsoft-extensions"></a>Rozšíření Microsoft
-*příkaz asm*:  
- **__asm***sestavení instrukce* **;** OPT    
+*příkazu asm*:  
+ **__asm***instrukci sestavení* **;** Odhlásit se    
   
- **__asm {***seznam sestavení instrukce***};** OPT      
+ **__asm {***sestavení seznam instrukcí-***};** Odhlásit se      
   
- *seznam sestavení instrukce*:  
- *sestavení instrukce* **;** OPT  
+ *sestavení seznam instrukcí-*:  
+ *instrukci sestavení* **;** Odhlásit se  
   
- *sestavení instrukce* **;** *seznam sestavení instrukce* **;** OPT  
+ *instrukci sestavení* **;** *sestavení seznam instrukcí-* **;** Odhlásit se  
   
- *MS modifikátor list*:  
- *MS modifikátor ms modifikátor list*opt  
+ *MS seznam-modifikátorů-*:  
+ *Modifikátor MS ms seznam-modifikátorů-* optimalizované  
   
- *MS modifikátor*:  
+ *Modifikátor MS*:  
  **__cdecl**  
   
  **__fastcall**  
   
  **__stdcall**  
   
- **__syscall** (vyhrazené pro budoucí implementace)  
+ **__syscall** (vyhrazeno pro budoucí implementace)  
   
- **__oldcall** (vyhrazené pro budoucí implementace)  
+ **__oldcall** (vyhrazeno pro budoucí implementace)  
   
- **__unaligned** (vyhrazené pro budoucí implementace)  
+ **__unaligned** (vyhrazeno pro budoucí implementace)  
   
  *na základě – modifikátor*  
   
  *na základě modifikátor*:  
- **__based (** *na základě typu* **)**  
+ **__based (** *základní typ* **)**  
   
  *na základě typu*:  
  *Jméno*  

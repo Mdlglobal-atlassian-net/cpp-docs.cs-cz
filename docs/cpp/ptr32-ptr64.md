@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941701"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406530"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -80,5 +80,4 @@ int main()
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
-
-- [Základní typy](../cpp/fundamental-types-cpp.md)
+ [Základní typy](../cpp/fundamental-types-cpp.md)

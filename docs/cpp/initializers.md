@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939858"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408161"
 ---
 # <a name="initializers"></a>Inicializátory
 Inicializátor určuje počáteční hodnotu proměnné. Můžete inicializovat proměnné v těchto kontextech:  
@@ -46,7 +46,6 @@ Inicializátor určuje počáteční hodnotu proměnné. Můžete inicializovat 
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Inicializátory mohou mít tyto formy:  
@@ -93,7 +92,7 @@ Inicializátor určuje počáteční hodnotu proměnné. Můžete inicializovat 
   
 -   Proměnné typu CHAR jsou inicializovány na hodnotu `'\0'`.  
   
--   Ukazatele jsou inicializovány na `nullptr`.  
+-   Ukazatele jsou inicializovány na hodnotu **nullptr**.  
   
 -   Pole, [POD](../standard-library/is-pod-class.md) třídy, struktury a sjednocení mají své členy inicializovány na hodnotu nula.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Kopírovat inicializaci  
@@ -533,4 +531,3 @@ Graf rozhodnutí inicializace typů odkazů
   
 ### <a name="initialization-of-external-variables"></a>Inicializace externích proměnných  
  Deklarace automatické, statických a externích proměnných mohou obsahovat inicializátory. Deklarace externích proměnných však mohou obsahovat inicializátory, pouze v případě, že proměnné nejsou deklarovány jako **extern**.
-  

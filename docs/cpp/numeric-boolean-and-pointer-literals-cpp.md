@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947625"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405516"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Číselné literály, logické a literály typu ukazatele (C++)
 Literál je prvek programu, který představuje hodnotu přímo. Tento článek se týká literály celočíselného typu s plovoucí desetinnou čárkou, logické a ukazatele. Informace o literálech řetězců a znaků naleznete v tématu [řetězcové a znakové literály (C++)](../cpp/string-and-character-literals-cpp.md). Můžete také definovat vlastní literály založené na kteroukoli z těchto kategorií; Další informace najdete v části [uživatelem definované literály (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  Někdy je důležité, abyste kompilátoru literálem interpretace nebo jaké konkrétní typ, abyste k němu. To provedete přidáním předpony nebo přípony literálu. Například předponu 0 x instruuje kompilátor, aby čísla, která ji následuje jako šestnáctkovou hodnotu, například 0x35 interpretovat. Přípona ULL instruuje kompilátor, aby považovat za hodnotu **unsigned long long.** typ, stejně jako v 5894345ULL. Podívejte se v následujících částech úplný seznam předpon a přípon, pro každý typ literálu.  
@@ -129,7 +128,6 @@ void func( long double );
  Binární literál je možné zadat tak použití `0B` nebo `0b` předponu, za nímž následuje posloupnost 1 a uživatele 0:  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,12 +138,11 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  V předchozím příkladu může být vhodnější použít pojmenované konstanty, která přenáší jasný význam, například "MAXIMUM_ERROR_THRESHOLD". A pokud vrácená hodnota, která se zobrazuje "Success" tak, že koncoví uživatelé, pak může být vhodnější použít pojmenované řetězcová konstanta, která mohou být uloženy v jednom umístění v souboru z kde může být lokalizována do jiných jazyků. Použití pojmenované konstanty pomáhá ostatním také sobě a porozumění záměru kódu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Lexikální pravidla](../cpp/lexical-conventions.md)   
  [Textové literály jazyka C++](../cpp/string-and-character-literals-cpp.md)   
  [Uživateli definované literály jazyka C++](../cpp/user-defined-literals-cpp.md)

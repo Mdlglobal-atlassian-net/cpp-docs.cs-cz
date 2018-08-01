@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f722d1c4e8fc3d534403c2d18713e64dc2069011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939673"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404896"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Specifické pro Microsoft**  
@@ -31,18 +31,16 @@ ms.locfileid: "37939673"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _bstr_t Source() const;  
-  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí výsledek `IErrorInfo::GetSource` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledný BSTR je zapouzdřen v objektu `_bstr_t`. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.  
+ Vrátí výsledek `IErrorInfo::GetSource` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledná `BSTR` zapouzdřena v `_bstr_t` objektu. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
  Jakékoli neúspěchy při volání `IErrorInfo::GetSource` metoda se ignoruje.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_com_error – třída](../cpp/com-error-class.md)

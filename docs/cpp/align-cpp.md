@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940725"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405867"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ Kompilátor nepodporuje zaručit ani pokus o zachovávají atribut zarovnání d
 
 Nelze určit zarovnání pro parametry funkce. Data, která má atribut zarovnání je předán podle hodnoty v zásobníku, jeho zarovnání je řízeno konvence volání. Pokud zarovnání dat je důležité ve volané funkci, zkopírujte do správně zarovnané paměti před použitím parametru.
 
-Bez `__declspec(align(#))`, kompilátor obecně Zarovná data na přirozené hranice v závislosti na cílový procesor a množství dat, až 4bajtových hranicích na 32bitové procesory a hranice 8 bajtů na 64bitové procesory. Data v třídách nebo strukturách jsou zarovnána v dané třídy nebo struktury alespoň na jejich přirozené zarovnání a aktuální nastavení balení (z #pragma **pack** nebo **/zp** – možnost kompilátoru).
+Bez `__declspec(align(#))`, kompilátor obecně Zarovná data na přirozené hranice v závislosti na cílový procesor a množství dat, až 4bajtových hranicích na 32bitové procesory a hranice 8 bajtů na 64bitové procesory. Data v třídách nebo strukturách jsou zarovnána v dané třídy nebo struktury alespoň na jejich přirozené zarovnání a aktuální nastavení balení (z #pragma `pack` nebo `/Zp` – možnost kompilátoru).
 
 Tento příklad ukazuje použití `__declspec(align(#))`:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-Zarovnání, když je paměť přidělena v haldě, závisí na která funkce přidělení bude volána.  Například, pokud používáte **malloc**, výsledek závisí na velikosti operandu. Pokud *arg* > = 8, je paměť vrácena zarovnán na 8 bajtů. Pokud *arg* < 8, zarovnání paměti vrátí se o první mocninu 2 menší než *arg*. Například pokud používáte malloc(7), zarovnání je 4 bajty.
+Zarovnání, když je paměť přidělena v haldě, závisí na která funkce přidělení bude volána.  Například, pokud používáte `malloc`, výsledek závisí na velikosti operandu. Pokud *arg* > = 8, je paměť vrácena zarovnán na 8 bajtů. Pokud *arg* < 8, zarovnání paměti vrátí se o první mocninu 2 menší než *arg*. Například pokud používáte malloc(7), zarovnání je 4 bajty.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definování nových typů pomocí __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak align spolupracuje s balením dat
 
-**/Zp** – možnost kompilátoru a **pack** – Direktiva pragma mají vliv na dodací údaje pro členy struktury a sjednocení. Tento příklad ukazuje, jak **/zp** a `__declspec(align(#))` spolupracují:
+`/Zp` – Možnost kompilátoru a `pack` – Direktiva pragma mají vliv na dodací údaje pro členy struktury a sjednocení. Tento příklad ukazuje, jak `/Zp` a `__declspec(align(#))` spolupracují:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-Následující tabulka uvádí posun pro každého člena podle různých **/zp** (nebo #pragma **pack**) hodnotami, zobrazení jejich interakce.
+Následující tabulka uvádí posun pro každého člena podle různých `/Zp` (nebo #pragma `pack`) hodnotami, zobrazení jejich interakce.
 
 |Proměnná|/Zp1|/Zp2|/Zp4|/ Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ Posun objektu je založeno na posunu na předchozí objekt a aktuální nastaven
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
-
 [__declspec](../cpp/declspec.md)  
 [Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)  
 [Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)  

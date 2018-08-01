@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957383"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407384"
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 Řízení přístupu vám umožňují oddělit [veřejné](../cpp/public-cpp.md) rozhraní třídy z [privátní](../cpp/private-cpp.md) podrobnosti implementace a [chráněné](../cpp/protected-cpp.md) členy, které jsou určeny pouze pro použití podle odvozené třídy. Specifikátor přístupu se vztahuje na všechny členy deklarované za ním až do dalšího specifikátoru přístupu.  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  Přístup k výchozím **privátní** ve třídě, a **veřejné** v struktura nebo sjednocení. Specifikátory přístupu ve třídě může být libovolný počet pokusů o použít v libovolném pořadí. Přidělení úložiště pro objekty typů třídy je závislé na implementaci, ale je zaručeno, že členům budou přiřazeny postupné vyšší adresy paměti mezi specifikátory přístupu.  
@@ -229,5 +228,5 @@ Přístup podél cest grafu dědičnosti
   
  Na obrázku je název deklarovaný ve třídě `VBase` vždy dosažen prostřednictvím třídy `RightPath`. Pravá cesta je přístupnější, protože třída `RightPath` deklaruje třídu `VBase` jako veřejnou základní, zatímco třída `LeftPath` deklaruje třídu `VBase` jako soukromou.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

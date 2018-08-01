@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947512"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405941"
 ---
 # <a name="ifexists-statement"></a>__if_exists – příkaz
 **__If_exists** příkaz testuje, jestli existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.  
@@ -40,8 +40,8 @@ statements
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`identifier`|Identifikátor, jehož existence bude testována.|  
-|`statements`|Jeden nebo více příkazů, které budou spuštěny, pokud `identifier` existuje.|  
+|*identifikátor*|Identifikátor, jehož existence bude testována.|  
+|*Příkazy*|Jeden nebo více příkazů, které budou spuštěny, pokud *identifikátor* existuje.|  
   
 ## <a name="remarks"></a>Poznámky  
   
@@ -129,7 +129,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [__if_not_exists – příkaz](../cpp/if-not-exists-statement.md)

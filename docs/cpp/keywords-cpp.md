@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a84e14cbac5eb04e63f85708e3ca8ae100ec56ab
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940446"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406318"
 ---
 # <a name="keywords-c"></a>Klíčová slova (C++)
 Klíčová slova jsou předdefinované, vyhrazené identifikátory, které mají speciální význam. Nelze je použít jako identifikátory v programu. Následující klíčová slova jsou vyhrazena pro Microsoft C++. Názvy začínající podtržítkem jsou rozšíření společnosti Microsoft.  
@@ -102,6 +102,6 @@ Klíčová slova jsou předdefinované, vyhrazené identifikátory, které mají
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Lexikální pravidla](../cpp/lexical-conventions.md)   
  [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

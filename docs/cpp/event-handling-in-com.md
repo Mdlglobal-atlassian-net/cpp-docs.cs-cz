@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947525"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406864"
 ---
 # <a name="event-handling-in-com"></a>Zpracování událostí v modelu COM
 Při zpracování událostí modelu COM nastavíte událost zdroj a příjemce události pomocí [event_source](../windows/event-source.md) a [event_receiver](../windows/event-receiver.md) atributy, určení `type` = `com`. Tyto atributy vloží příslušný kód pro vlastní, odeslání a duální rozhraní umožňující třídám, na které se vztahují, vyvolat a zpracovat události prostřednictvím přípojných bodů modelu COM.  
   
 ## <a name="declaring-events"></a>Deklarace událostí  
- V třídě zdroje události, použijte [__event](../cpp/event.md) – klíčové slovo v deklaraci rozhraní, chcete-li deklarovat metody tohoto rozhraní jako události. Události tohoto rozhraní jsou aktivovány, pokud je zavoláte jako metody rozhraní. Metody v rozhraních událostí mohou mít nula nebo více parametrů (které by všechny měly být `in` parametry). Návratový typ může být typ void nebo libovolný celočíselný typ.  
+ V třídě zdroje události, použijte [__event](../cpp/event.md) – klíčové slovo v deklaraci rozhraní, chcete-li deklarovat metody tohoto rozhraní jako události. Události tohoto rozhraní jsou aktivovány, pokud je zavoláte jako metody rozhraní. Metody v rozhraních událostí mohou mít nula nebo více parametrů (které by všechny měly být *v* parametry). Návratový typ může být typ void nebo libovolný celočíselný typ.  
   
 ## <a name="defining-event-handlers"></a>Definice obslužných rutin událostí  
  V třídě příjemce události definujte obslužné rutiny událostí, což jsou metody s podpisy (návratové typy, úmluvy volání a argumenty) odpovídajícími události, kterou budou zpracovávat. Pro události COM konvence volání nemají stejné. Zobrazit [události modelu COM závislé na rozložení](#vcconeventhandlingincomanchorlayoutdependentcomevents) níže podrobnosti.  
@@ -216,5 +216,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zpracování událostí](../cpp/event-handling.md)

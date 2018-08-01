@@ -1,5 +1,5 @@
 ---
-title: Výrazy s binárními operátory | Microsoft Docs
+title: Výrazy s binárními operátory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414673"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406816"
 ---
 # <a name="expressions-with-binary-operators"></a>Výrazy s binárními operátory
 Binární operátory pracují ve výrazu na dvou operandech. Binární operátory jsou:  
   
--   [Multiplikativní operátory](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
+-   [Operátory násobení](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
   
     -   Násobení (*)  
   
@@ -44,9 +44,9 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
   
     -   Posunutí doprava (>>)  
   
-    -   Posunutí doleva (<<)  
+    -   Operátor posunu vlevo (<<)  
   
--   [Rovnosti a relační operátory](../cpp/relational-operators-equal-and-equal.md)  
+-   [Relační operátory a operátory rovnosti](../cpp/relational-operators-equal-and-equal.md)  
   
     -   Menší než (\<)  
   
@@ -62,17 +62,17 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
   
 -   Bitové operátory  
   
-    -   [Bitové operace AND (&)](../cpp/bitwise-and-operator-amp.md)  
+    -   [Bitový operátor AND (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Bitový exkluzivní OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Bitový exkluzivní operátor OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Bitový inkluzivní nebo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Bitový inkluzivní OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Logické operátory  
   
-    -   [Logické AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
+    -   [Logický operátor AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [Logické OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [Logický operátor OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [Operátory přiřazení](../cpp/assignment-operators.md)  
   
@@ -88,17 +88,17 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
   
     -   Přiřazení modulus (%=)  
   
-    -   Levé přiřazení posunutí (<\<=)  
+    -   Operátor posunutí doleva (<\<=)  
   
-    -   Přiřazení posunutí doprava (>> =)  
+    -   Operátor posunutí doprava (>> =)  
   
-    -   Přiřazení bitové operace AND (& =)  
+    -   Přiřazení bitového operátoru AND (& =)  
   
     -   Přiřazení bez bitového operátoru OR (^=)  
   
-    -   Bitový inkluzivní přiřazení OR (&#124;=)  
+    -   Bitový inkluzivní OR přiřazení (&#124;=)  
   
--   [Operátor čárky](../cpp/comma-operator.md) (,)  
+-   [Operátor čárka](../cpp/comma-operator.md) (,)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Typy výrazů](../cpp/types-of-expressions.md)

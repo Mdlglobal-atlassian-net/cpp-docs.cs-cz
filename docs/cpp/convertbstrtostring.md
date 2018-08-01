@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: db1f512b10bdedffa5b6978b735c881dc21370ce
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947593"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406699"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Specifické pro Microsoft**  
   
- Převede `BSTR` hodnota, která se **char \*** .  
+ Převede `BSTR` hodnota, která se `char *`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
@@ -40,7 +39,7 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
  Proměnná BSTR.  
   
 ## <a name="remarks"></a>Poznámky  
- `ConvertBSTRToString` přidělí řetězec, který je potřeba odstranit.  
+ **Convertbstrtostring –** přiděluje řetězec je nutné odstranit.  
   
 ## <a name="example"></a>Příklad  
   
@@ -75,5 +74,5 @@ char * text: Test
   
  **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

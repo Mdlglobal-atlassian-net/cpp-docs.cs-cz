@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939309"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407400"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ Přípony nebo předpony **--** operátor nelze použít na proměnné tohoto ty
  **Bool** typ se účastní integrální propagace. R-value typu **bool** lze převést na hodnotu r-value typu **int**, se stávají FALSE nula a TRUE jedna. Jako odlišný typ se **bool** účastní řešení přetížení.  
   
 ## <a name="see-also"></a>Viz také:
-
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
-[Základní typy](../cpp/fundamental-types-cpp.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)  
+[Základní typy](../cpp/fundamental-types-cpp.md)  

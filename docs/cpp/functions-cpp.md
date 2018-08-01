@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940318"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404607"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -82,7 +82,7 @@ Požadované části deklarace funkce jsou:
 
 Volitelné části deklarace funkce jsou:
 
-1. **constexpr**, což znamená, že návratová hodnota funkce je konstantní hodnotu nelze vypočítat v době kompilace.
+1. `constexpr`, což znamená, že návratová hodnota funkce je konstantní hodnotu nelze vypočítat v době kompilace.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Volitelné části deklarace funkce jsou:
 
      Další informace najdete v tématu [vložené funkce](../cpp/inline-functions-cpp.md).
 
-1. A **noexcept** výraz, který určuje, zda funkce může vyvolat výjimku. V následujícím příkladu se funkce nevyvolá výjimku pokud `is_pod` výraz vyhodnocen jako **true**.
+1. A `noexcept` výraz, který určuje, zda funkce může vyvolat výjimku. V následujícím příkladu se funkce nevyvolá výjimku pokud `is_pod` výraz vyhodnocen jako **true**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Volitelné části deklarace funkce jsou:
 
 1. (Pouze pro členské funkce) Kvalifikátory cv, které určují, jestli je funkce **const** nebo **volatile**.
 
-1. (Pouze pro členské funkce) **virtuální**, **přepsat**, nebo **konečné**. **virtuální** Určuje, že funkci můžete přepsat v odvozené třídě. **Přepsat** znamená, že je funkce v odvozené třídě přepisování virtuální funkce. **poslední** znamená, že funkce nelze přepsat v libovolné další odvozené třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
+1. (Pouze pro členské funkce) **virtuální**, `override`, nebo `final`. **virtuální** Určuje, že funkci můžete přepsat v odvozené třídě. `override` znamená to, že je funkce v odvozené třídě přepisování virtuální funkce. `final` znamená, že funkce nelze přepsat v libovolné další odvozené třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
 
 1. (pouze pro členské funkce) **statické** použít na člen funkce znamená, že funkce není přidružené žádné instance objektů třídy.
 
@@ -170,7 +170,7 @@ Proměnné deklarované uvnitř těla označují jako lokální proměnné nebo 
 
 Můžete deklarovat členské funkce jako **const** k určení, že funkce nejsou povolené ke změně hodnot žádné datové členy třídy. Deklarováním jako členskou funkci **const**, pomáhají kompilátoru vynutit *správnost const*. Pokud někdo omylem pokusí úpravy objektu pomocí funkce deklarovaná jako **const**, vyvolá chybu kompilátoru. Další informace najdete v tématu [const](const-cpp.md).
 
-Deklarování funkce jako **constexpr** když hodnota vytvoří pravděpodobně se dá určit v době kompilace. Funkce constexpr obecně je vyhodnocen rychleji než normální funkce. Další informace najdete v tématu [constexpr](constexpr-cpp.md).
+Deklarování funkce jako `constexpr` když hodnota vytvoří pravděpodobně se dá určit v době kompilace. Funkce constexpr obecně je vyhodnocen rychleji než normální funkce. Další informace najdete v tématu [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Šablony funkcí
 
@@ -269,11 +269,11 @@ Když **automaticky** se používá ve spojení s koncovým návratovým typem, 
 
 Proměnná, která je deklarována uvnitř těla funkce se volá *lokální proměnná* nebo jednoduše *místní*. Místní hodnoty nestatických viditelné pouze uvnitř těla funkce a pokud jsou deklarovány v zásobníku dostanou mimo rozsah při ukončení funkce. Při vytvoření místní proměnné a vrácení podle hodnoty, kompilátor může obvykle provádět optimalizaci návratovou hodnotu, aby operace zbytečnému kopírování. Pokud vrátíte lokální proměnná podle odkazu, kompilátor vygeneruje upozornění, protože jakýkoliv pokus o volajícím použít tento odkaz dojde po zlikvidování místní.
 
-V jazyce C++ mohou být deklarovány místní proměnné jako statické. Proměnná je viditelná jen v uvnitř těla funkce, ale pro všechny instance funkce existuje jedna kopie proměnné. Místní statické objekty jsou zničeny při ukončení zrušeny pomocí **atexit**. Nebyl-li statický objekt vytvořen, protože průběh řízení aplikace obešel jeho deklaraci, není proveden žádný pokus o zrušení objektu.
+V jazyce C++ mohou být deklarovány místní proměnné jako statické. Proměnná je viditelná jen v uvnitř těla funkce, ale pro všechny instance funkce existuje jedna kopie proměnné. Místní statické objekty jsou při ukončení zrušeny pomocí `atexit`. Nebyl-li statický objekt vytvořen, protože průběh řízení aplikace obešel jeho deklaraci, není proveden žádný pokus o zrušení objektu.
 
 ##  <a name="type_deduction"></a> Odvození typu v návratové typy (C ++ 14)
 
-V C ++ 14, můžete použít **automaticky** abyste instruovali kompilátor odvodit návratový typ z těla funkce bez zadání koncovým návratovým typem. Všimněte si, že **automaticky** vždy odvodí k vrácení podle hodnot. Použití **automatické & &** abyste instruovali kompilátor k odvození odkaz.
+V C ++ 14, můžete použít **automaticky** abyste instruovali kompilátor odvodit návratový typ z těla funkce bez zadání koncovým návratovým typem. Všimněte si, že **automaticky** vždy odvodí k vrácení podle hodnot. Použití `auto&&` abyste instruovali kompilátor k odvození odkaz.
 
 V tomto příkladu **automaticky** jako kopii nekonstantní hodnotu Součet lhs a zarovnání indirekce rhs se dá odvodit.
 
@@ -434,11 +434,10 @@ int (*myFunction(char* s))(int);
 
 Předchozí deklarace je ekvivalentem deklarace pomocí direktivy typedef výše.
 
-## <a name="see-also"></a>Viz také
-
-- [Přetížení funkce](../cpp/function-overloading.md)
-- [Funkce se seznamy argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Explicitně přednastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Výchozí argumenty](../cpp/default-arguments.md)
-- [Vložené funkce](../cpp/inline-functions-cpp.md)
+## <a name="see-also"></a>Viz také:
+ [Přetížení funkce](../cpp/function-overloading.md)  
+ [Funkce se seznamy argumentů proměnných](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [Explicitně přednastavené a odstraněné funkce](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [Vyhledávání názvu závislého na argumentu (Koenig) ve funkcích](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [Výchozí argumenty](../cpp/default-arguments.md)  
+ [Vložené funkce](../cpp/inline-functions-cpp.md)

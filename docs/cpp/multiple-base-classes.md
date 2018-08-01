@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955462"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406188"
 ---
 # <a name="multiple-base-classes"></a>Vícenásobné třídy Base
 Třídu lze odvodit z více než jedné základní třídy. V modelu vícenásobné dědičnosti (kde jsou třídy odvozeny z více než jedné základní třídy) základní třídy určeny pomocí *základní seznam* prvku gramatiky. Lze například určit deklaraci třídy pro `CollectionOfBook` odvozenou z `Collection` a z `Book`:  
@@ -97,9 +97,9 @@ Rozložení objektů s virtuální a nevirtuální dědičností
 > [!NOTE]
 >  Virtuální dědičnost poskytuje v porovnání s nevirtuální dědičností významné výhody ve velikosti. Může však zavést další režii zpracování.  
   
- Přepisuje-li odvozená třída virtuální funkci, kterou třída dědí z virtuální základní třídy, a pokud konstruktor nebo destruktor odvozené základní třídy tuto funkci volá pomocí ukazatele na virtuální základní třídu, kompilátor může do tříd s virtuálními základy zavést dodatečná skrytá pole „vtordisp“. Možnost kompilátoru /vd0 potlačuje přidání skrytého členu vtordisp pro přesunutí konstruktoru či destruktoru. Možnost kompilátoru /vd1 je ve výchozím nastavení povoluje tam, kde je jich zapotřebí. Členy vtordisp vypněte pouze v případě, že jste si jisti, že všechny konstruktory a destruktory třídy volají virtuální funkce virtuálně.  
+ Přepisuje-li odvozená třída virtuální funkci, kterou třída dědí z virtuální základní třídy, a pokud konstruktor nebo destruktor odvozené základní třídy tuto funkci volá pomocí ukazatele na virtuální základní třídu, kompilátor může do tříd s virtuálními základy zavést dodatečná skrytá pole „vtordisp“. `/vd0` – Možnost kompilátoru potlačuje přidání skrytého členu vtordisp pro konstruktor nebo destruktor. `/vd1` – Možnost kompilátoru, výchozí, povolí je, kde jsou zapotřebí. Členy vtordisp vypněte pouze v případě, že jste si jisti, že všechny konstruktory a destruktory třídy volají virtuální funkce virtuálně.  
   
- Možnost kompilátoru /vd ovlivňuje celý modul kompilace. Použití **vtordisp** direktivy pragma potlačit a potom znovu povolit pole vtordisp na základě třídy třídy:  
+ `/vd` – Možnost kompilátoru ovlivňuje celý modul kompilace. Použití `vtordisp` direktivy pragma potlačit a potom znovu povolit `vtordisp` pole na základě třídy třídy:  
   
 ```cpp 
 #pragma vtordisp( off )  
@@ -217,5 +217,5 @@ Virtuální vs. Nevirtuální odvození
   
  Na obrázku způsobí přístup k libovolnému členu třídy `A` prostřednictvím nevirtuální základní třídy nejednoznačnost. Kompilátor nemá žádné informace, které vysvětlují použití podobjektu souvisejícího s třídou `B` nebo podobjektu souvisejícího s třídou `C`. Nicméně, když je třída `A` zadána jako virtuální základní třída, je jasné, ke kterému podobjektu je přistupováno.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Dědičnost](../cpp/inheritance-cpp.md)

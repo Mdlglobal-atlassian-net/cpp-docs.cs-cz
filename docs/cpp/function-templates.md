@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c871ae13e333d8d3f7fa1bf0cce29bc1309d0c62
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941064"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403362"
 ---
 # <a name="function-templates"></a>Šablony funkcí
 Šablony třídy definují skupinu souvisejících tříd, které jsou založeny na typech argumentů předaných při vytváření instance třídy. Šablony funkce jsou podobné jako šablony třídy, ale definují skupinu funkcí. Pomocí šablon funkce lze určit sadu funkcí, které jsou založeny na stejném kódu, ale pracují s různými typy nebo třídami. Následující šablona funkce zamění dvě položky:  
@@ -39,7 +39,7 @@ int main() {
   
  Tento kód definuje skupinu funkcí, které zamění hodnoty argumentů. Z této šablony lze vytvořit funkce, které budou provádět záměnu **int** a **dlouhé** typy a také uživatelem definovaných typů. Šablona funkce `MySwap` dokonce provede záměnu tříd, pokud je správně definován kopírovací konstruktor a operátor přiřazení těchto tříd.  
   
- Kromě toho šablony funkce zabrání v záměně objektů různých typů, protože kompilátor zná typy ** a *b* parametry v době kompilace.  
+ Kromě toho šablony funkce zabrání v záměně objektů různých typů, protože kompilátor zná typy *a* a *b* parametry v době kompilace.  
   
  Přestože lze tuto funkci pomocí ukazatelů typu void provést pomocí nešablonové funkce, verze s šablonou je typově bezpečná. Vezměte v úvahu následující volání:  
   
@@ -66,7 +66,7 @@ int main(int j) {
   
  Pokud je argument šablony explicitně zadán, jsou provedeny normální implicitní převody pro převod argumentu funkce na typ odpovídající parametrům šablony funkce. Ve výše uvedeném příkladu kompilátor převede `char j` na typ **int**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Šablony](../cpp/templates-cpp.md)   
  [Vytváření instancí šablon funkce](../cpp/function-template-instantiation.md)   
  [Explicitní vytváření instancí](../cpp/explicit-instantiation.md)   

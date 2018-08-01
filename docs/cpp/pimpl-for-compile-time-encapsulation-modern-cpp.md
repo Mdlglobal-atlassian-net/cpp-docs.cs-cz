@@ -1,5 +1,5 @@
 ---
-title: Pimpl pro zapouzdření kompilaci (moderní verze jazyka C++) | Microsoft Docs
+title: Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420152"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404652"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
-*Pimpl stylu* jde o techniku moderní C++ skrýt implementace, chcete-li minimalizovat párování a k oddělení rozhraní. Pimpl je zkratka pro "ukazatel na implementaci." Může už se seznamte s koncept, ale víte, že jiné názvy jako Cheshiru Cat nebo brány Firewall kompilátoru stylu.  
+*Ukazatel na implementaci idiom* je moderní C++ techniku ke skrytí implementace, chcete-li minimalizovat párování a k oddělení rozhraní. Ukazatel na implementaci je zkratka pro "ukazatel na implementaci." Může již být seznámení s konceptem, ale znáte jiné názvy jako idiom Cheshiru Cat nebo brány Firewall kompilátoru.  
   
-## <a name="why-use-pimpl"></a>Proč používat pimpl?  
- Zde je, jak stylu pimpl vylepšit životního cyklu softwaru:  
+## <a name="why-use-pimpl"></a>Proč používat ukazatel na implementaci?  
+ Zde je, jak vylepšit idiom ukazatel na implementaci životního cyklu vývoje softwaru:  
   
--   Minimalizace kompilace závislosti.  
+-   Minimalizace závislostí kompilace.  
   
--   Oddělení rozhraní a implementace.  
+-   Oddělení rozhraní a implementaci.  
   
 -   Přenositelnost.  
   
-## <a name="pimpl-header"></a>Pimpl záhlaví  
+## <a name="pimpl-header"></a>Ukazatel na implementaci záhlaví  
   
 ```cpp  
 // my_class.h  
@@ -40,13 +40,12 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- Stylu pimpl zabraňuje cascades opětovné sestavení a rozložení křehká objektu. Dobře je vhodná pro typy (přechodně) oblíbených.  
+ Idiom ukazatel na implementaci vyhýbá cascades opětovné sestavení a křehký objekt rozložení. Je vhodná pro (přechodně) oblíbených typů.  
   
-## <a name="pimpl-implementation"></a>Implementace Pimpl  
- Definování `impl` – třída v souboru.  
+## <a name="pimpl-implementation"></a>Ukazatel na implementaci implementace  
+ Definovat `impl` třída v souboru .cpp.  
   
 ```cpp  
 // my_class.cpp  
@@ -60,10 +59,10 @@ my_class::my_class(): pimpl( new impl )
 }  
 ```  
   
-## <a name="best-practices"></a>Doporučené postupy  
- Zvažte, jestli se má přidat podporu pro jiný vyvolávání specializace odkládacího souboru.  
+## <a name="best-practices"></a>Osvědčené postupy  
+ Zvažte, jestli se má přidat podporu pro specializaci non-throwing. prohození.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

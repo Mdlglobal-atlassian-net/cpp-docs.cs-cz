@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940757"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406660"
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Pouze jeden z předchozí dvě různými formami může být k dispozici pro danou třídu. První formulář přijímá jeden argument typu **void \*** , který obsahuje ukazatel na objekt, který chcete uvolnit. Druhý formulář – velikostí dealokace – přebírá dva argumenty, první z nich je ukazatelem na blok paměti určený k uvolnění a druhý z nich je počet bajtů k přidělení. Návratový typ obě formy **void** (**operátor delete** nemůže vracet hodnotu).  
+ Pouze jeden z předchozí dvě různými formami může být k dispozici pro danou třídu. První formulář přijímá jeden argument typu `void *`, který obsahuje ukazatel na objekt, který chcete uvolnit. Druhý formulář – velikostí dealokace – přebírá dva argumenty, první z nich je ukazatelem na blok paměti určený k uvolnění a druhý z nich je počet bajtů k přidělení. Návratový typ obě formy **void** (**operátor delete** nemůže vracet hodnotu).  
   
  Záměrem druhý formulář je k urychlení vyhledávání ke kategorii správnou velikost pro objekt, který má být odstraněna, který je často není uložen téměř přidělení samotného a pravděpodobně bez mezipaměti; druhý typ je zvláště užitečné, když **operátor delete** funkce ze základní třídy se používá k odstranění objektu odvozené třídy.  
   
- **Operátor delete** je funkce statická, proto nemůže být virtuální. `operator delete` Funkce dodržuje řízení přístupu, jak je popsáno v [řízení přístupu členů](../cpp/member-access-control-cpp.md).  
+ **Operátor delete** je funkce statická, proto nemůže být virtuální. **Operátor delete** funkce dodržuje řízení přístupu, jak je popsáno v [řízení přístupu členů](../cpp/member-access-control-cpp.md).  
   
  Následující příklad ukazuje definované uživatelem **operátor new** a **operátor delete** funkce navržené tak, aby přidělování a navrácení paměti protokolu:  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

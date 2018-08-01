@@ -1,5 +1,5 @@
 ---
-title: Základní koncepty (C++) | Microsoft Docs
+title: Základní koncepty (C++) | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409573"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403573"
 ---
 # <a name="basic-concepts--c"></a>Základní koncepty (C++)
-Tato část vysvětluje koncepty, které jsou důležité k porozumění C++. Programátory v jazyce C bude obeznámeni s mnoha tyto koncepty, ale existují některé jemně lišit, které můžou způsobit neočekávané program výsledky. V následujících tématech jsou zahrnuty:  
+Tato část vysvětluje koncepty, které jsou důležité k porozumění C++. Programátorů v jazyce C bude zkušenosti s mnoha těchto konceptů, ale jsou drobné rozdíly, které může způsobit neočekávané program výsledky. Jsou zahrnuty v následujících tématech:  
   
 -   [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)  
   
--   [Obor C++ objekt nebo funkce](../cpp/scope-visual-cpp.md)  
+-   [Rozsahu objekt jazyka C++ nebo – funkce](../cpp/scope-visual-cpp.md)  
   
--   [Definice a propojení pravidla programu](../cpp/program-and-linkage-cpp.md)  
+-   [Pravidla pro definice a propojení programu](../cpp/program-and-linkage-cpp.md)  
   
 -   [Spuštění a ukončení](../cpp/startup-and-termination-cpp.md)  
   
--   [Hodnoty L a hodnoty r](../cpp/lvalues-and-rvalues-visual-cpp.md)  
+-   [L-hodnot a r hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)  
   
 -   [Dočasné objekty](../cpp/temporary-objects.md)  
   
@@ -40,7 +40,7 @@ Tato část vysvětluje koncepty, které jsou důležité k porozumění C++. Pr
   
 -   [alignof a alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [Trivial standard rozložení a POD typy](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [Triviální standardního rozložení a typy POD](../cpp/trivial-standard-layout-and-pod-types.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

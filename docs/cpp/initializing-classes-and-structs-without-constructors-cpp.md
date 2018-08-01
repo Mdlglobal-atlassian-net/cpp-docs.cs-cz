@@ -1,5 +1,5 @@
 ---
-title: Inicializace tříd a struktur bez konstruktorů (C++) | Microsoft Docs
+title: Inicializace tříd a struktur bez konstruktorů (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a547dbe4d5668439ea3002249568962a50a0036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bca7ef417a633f186f2b7ca6f7d92af37e780420
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408689"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Inicializace tříd a struktur bez konstruktorů (C++)
-Není vždy nutné definovat konstruktor pro třídu, zejména ty, které jsou poměrně jednoduché. Uživatele můžete inicializovat objekty třídě nebo struktuře pomocí jednotná inicializace, jak je znázorněno v následujícím příkladu:  
+Není vždy nutné definovat konstruktor pro třídu, zejména těch, které je poměrně jednoduchá. Uživatelé můžou inicializace objektů třídy nebo struktury pomocí jednotnou inicializaci, jak je znázorněno v následujícím příkladu:  
   
-```  
+```cpp 
 #include "stdafx.h"  
 #include <Windows.h>  
   
@@ -63,11 +64,10 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
- Upozorňujeme, že když třídě nebo struktuře nemá žádný konstruktor, můžete poskytovat prvky seznamu v pořadí, že jsou ve třídě deklarované členy. Pokud třída má konstruktor, zadejte elementy v pořadí parametrů.  
+ Všimněte si, že při třídě nebo struktuře nemá žádný konstruktor, zadáte seznam prvky v pořadí, členů jsou deklarovány ve třídě. Pokud třída nemá konstruktor, poskytují prvky v pořadí parametrů.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
  [Konstruktory](../cpp/constructors-cpp.md)

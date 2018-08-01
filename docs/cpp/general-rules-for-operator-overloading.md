@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947529"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403453"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Obecná pravidla přetížení operátoru
 Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Nicméně se nevztahují na [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou pokryty samostatně.  
@@ -59,7 +59,7 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
   
 -   Přetížené operátory nemohou mít výchozí argumenty.  
   
--   Všechny přetížené operátory s výjimkou přiřazení (`operator=`) jsou zděděny z odvozených tříd.  
+-   Všechny přetížené operátory s výjimkou přiřazení (**operátoru =**) jsou zděděny z odvozených tříd.  
   
 -   První argument přetížených operátorů členské funkce je vždy typu třídy objektu, pro který je operátor vyvolán (třída, ve které je operátor deklarován nebo třída odvozená z této třídy). Pro první argument nejsou k dispozici žádné převody.  
   
@@ -72,10 +72,10 @@ var++;
 ++var;  
 ```  
   
- Tuto identitu nelze dovolávat pro typy tříd, které přetěžují operátory. Kromě toho některé požadavky zahrnují použití těchto operátorů pro základní typy, které jsou zmírněny pro přetížené operátory. Například operátor přiřazení/sčítání `+=` vyžaduje, aby byl levý operand při použití na základní typy l-hodnotou. V případě, že je operátor přetížen, neexistuje žádný takový požadavek.  
+ Tuto identitu nelze dovolávat pro typy tříd, které přetěžují operátory. Kromě toho některé požadavky zahrnují použití těchto operátorů pro základní typy, které jsou zmírněny pro přetížené operátory. Například operátor přiřazení/sčítání **+=**, vyžaduje levý operand l hodnota. při použití na základní typy; neexistuje žádný takový požadavek při přetížení operátoru.  
   
 > [!NOTE]
 > V rámci konzistence je při definování přetížených operátorů často nejlepší postupovat podle modelu předdefinovaných typů. Liší-li se významně sémantika přetíženého operátoru od jeho významu v jiných kontextech, může být více matoucí než užitečný.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetížení operátoru](../cpp/operator-overloading.md)

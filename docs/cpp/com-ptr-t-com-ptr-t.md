@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939068"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403823"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Specifické pro Microsoft**  
   
- Vytvoří `_com_ptr_t` objektu.  
+ Vytvoří **_com_ptr_t** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Při hodnotě TRUE se `AddRef` nazývá se zvýší počet odkazů zapouzdřený ukazatel rozhraní.  
   
  *prohlášení CP*  
- A `_com_ptr_t` objektu.  
+ A **_com_ptr_t** objektu.  
   
  *p*  
- Nezpracovaný ukazatel rozhraní, jehož typ se liší od typu inteligentního ukazatele tohoto objektu `_com_ptr_t`.  
+ Nezpracovaný ukazatel rozhraní, jehož typ se liší od typu inteligentního ukazatele tohoto **_com_ptr_t** objektu.  
   
  *varSrc*  
  A `_variant_t` objektu.  
@@ -170,5 +170,5 @@ explicit _com_ptr_t(
  *pOuter*  
  Vnější Neznámá pro [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

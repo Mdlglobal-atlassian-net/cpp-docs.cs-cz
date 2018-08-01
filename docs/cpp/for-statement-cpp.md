@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940816"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401571"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C++)
 Spustí příkaz opakovaně, dokud podmínka nebude nepravda. Informace o podle rozsahu je pro příkaz, naleznete v tématu [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Ve výchozím nastavení v části [/Ze](../build/reference/za-ze-disable-language-extensions.md), proměnná deklarovaná ve **pro** smyčky zůstává v oboru až do **pro** smyčky ukončení nadřazeného oboru.  
   
- [/ Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) povoluje standardní chování proměnných deklarovaných ve smyčkách for, aniž by bylo nutné určit/za.  
+ [/ Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) povoluje standardní chování proměnných deklarovaných ve smyčkách for aniž byste museli zadat `/Za`.  
   
- Je také možné použít rozdíly oboru **pro** smyčky k předeklarování proměnných v rámci/ze následujícím způsobem:  
+ Je také možné použít rozdíly oboru **pro** smyčky k předeklarování proměnných v rámci `/Ze` následujícím způsobem:  
   
 ```cpp  
 // for_statement5.cpp  
@@ -153,7 +153,7 @@ int main(){
   
  Toto lépe napodobuje standardní chování proměnné deklarované ve **pro** smyčku, která vyžaduje proměnné deklarované v **pro** smyčky po jejím dokončení dostaly mimo obor. Pokud je proměnná deklarována v **pro** smyčky, kompilátor ji interně zvýší úroveň na místní proměnnou **pro** oboru nadřazeném smyčce i v případě, že místní proměnná se stejným názvem již existuje.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [while – příkaz (C++)](../cpp/while-statement-cpp.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026699"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408109"
 ---
 # <a name="c-constant-expressions"></a>Výrazy konstant v jazyce C++
 A *konstantní* hodnota je 1, která se nezmění. Jazyk C++ poskytuje dvě klíčová slova, které umožňují vyjádřit záměr, že objekt není určen má být upraven a k vynucení tohoto záměru.  
@@ -53,9 +53,9 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-Explicitní převody na integrální typy jsou platné v konstantních výrazech; všechny ostatní typy a odvozené typy jsou neplatné s výjimkou při používat jako operandy `sizeof` operátor.  
+Explicitní převody na integrální typy jsou platné v konstantních výrazech; všechny ostatní typy a odvozené typy jsou neplatné s výjimkou při používat jako operandy **sizeof** operátor.  
   
 Operátor čárky a operátory přiřazení nelze použít v konstantních výrazech.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Typy výrazů](../cpp/types-of-expressions.md)

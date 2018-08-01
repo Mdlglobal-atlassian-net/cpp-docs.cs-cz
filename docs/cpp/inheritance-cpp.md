@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3181369f492f82fca1590e07655e728dbbcd40ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b75140879f44423e73c343f7567cc830d97a7b5e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958595"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403125"
 ---
 # <a name="inheritance--c"></a>Dědičnost (C++)
 Tento oddíl vysvětluje, jak lze pomocí odvozených tříd vytvářet rozšiřitelné programy.  
@@ -61,5 +61,5 @@ Po značce (názvu) třídy zadejte dvojtečku následovanou seznamem základní
   
  [__Super](../cpp/super.md) a [__interface](../cpp/interface.md) klíčová slova jsou popsané v této části.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

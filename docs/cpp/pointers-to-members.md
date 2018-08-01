@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947694"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407777"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- V předchozím příkladu `pwCaption` je ukazatel na člena třídy `Window` , který má typ **char\***. Typ `pwCaption` je `char * Window::* `. Další fragment kódu deklaruje ukazatele na `SetCaption` a `GetCaption` členské funkce.  
+ V předchozím příkladu `pwCaption` je ukazatel na člena třídy `Window` , který má typ `char*`. Typ `pwCaption` je `char * Window::* `. Další fragment kódu deklaruje ukazatele na `SetCaption` a `GetCaption` členské funkce.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  Rozdíl mezi **.\***  a **-> \*** operátory (operátory pointer-to-member) je, že **.\***  operátor vybere členů zadaný objekt nebo odkaz na objekt, zatímco **-> \*** operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorech naleznete v tématu [výrazy s operátory Pointer-to-Member](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Typ člena je výsledek operátory pointer-to-member – v takovém případě **char \*** .  
+ Typ člena je výsledek operátory pointer-to-member – v takovém případě `char *`.  
   
  Následující fragment kódu vyvolává členské funkce `GetCaption` a `SetCaption` pomocí ukazatele na členy:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Viz také  
- 

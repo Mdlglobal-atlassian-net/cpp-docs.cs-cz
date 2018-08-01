@@ -1,5 +1,5 @@
 ---
-title: Volání (C++) funkce | Microsoft Docs
+title: Funkce volání (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408695"
 ---
 # <a name="function-call-c"></a>Volání funkcí (C++)
 Operátor volání funkce je při vyvolání pomocí závorek binárním operátorem.  
@@ -33,23 +34,22 @@ Operátor volání funkce je při vyvolání pomocí závorek binárním operát
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- V tomto kontextu `primary-expression` je první operand a `expression-list`, druhý operand je seznam argumentů, může být prázdný. Operátor volání funkce se používá pro operace, které vyžadují více parametrů. Toto funguje, protože `expression-list` je místo jedné operand seznam. Operátor volání funkce musí být nestatická členská funkce.  
+ V tomto kontextu `primary-expression` je první operand a `expression-list`, případně prázdný seznam argumentů, je druhý operand. Operátor volání funkce se používá pro operace, které vyžadují více parametrů. Tento postup funguje, protože `expression-list` je seznam místo jediného operandu. Operátor volání funkce musí být nestatická členská funkce.  
   
  Operátor volání funkce nemění v případě přetížení způsob, jakým jsou funkce volány. Místo toho upravuje, jak se operátor interpretuje při použití na objekty daného typu třídy. Například následující kód by obvykle neměl význam:  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
- Zadaný operátor příslušné přetížené volání funkce, ale tuto syntaxi slouží k posunutí `x` koordinaci 3 jednotky a `y` koordinaci 2 jednotky. Následující kód ukazuje takovou definici:  
+ Zadaný operátor odpovídající přetížená volání funkce, ale tato syntaxe umožňuje posun `x` koordinovat 3 jednotky a `y` koordinovat 2 jednotky. Následující kód ukazuje takovou definici:  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  
@@ -70,7 +70,7 @@ int main()
   
  Je třeba poznamenat, že operátor volání funkce je použit na název objektu, nikoli na název funkce.  
   
- Můžete také přetížení operátor volání funkce pomocí ukazatel na funkci (spíše než samotná funkce).  
+ Můžete také přetížit operátor volání funkce pomocí ukazatele na funkci (spíše než samotné funkce).  
   
 ```cpp  
 typedef void(*ptf)();  
@@ -92,5 +92,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetížení operátoru](../cpp/operator-overloading.md)

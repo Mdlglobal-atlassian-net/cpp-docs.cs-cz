@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938938"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405039"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe výrazu lambda
 Tento článek popisuje syntaxi a konstrukční prvky výrazů lambda. Popis výrazů lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>Komentáře  
  V příkladu, třetí argument **for_each** funkce je výraz lambda. `[&evenCount]` Část určuje klauzuli zachycení výrazu, `(int n)` určuje seznam parametrů a zbývající část určuje tělo výrazu.  
   
 ## <a name="example-2-using-a-function-object"></a>Příklad 2: Použití objektu funkce  
- Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto výrazu lambda, spolu s **for_each** produkuje stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v `vector` objektu. Pro uchování stavu operace `FunctorClass` třídy úložiště `m_evenCount` proměnné podle odkazu jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce `operator()`. Kompilátor jazyka Visual C++ vygeneruje kód, který je srovnatelné velikosti a výkonu jako kód výrazu lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.  
+ Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto výrazu lambda, spolu s **for_each** produkuje stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v `vector` objektu. Pro uchování stavu operace `FunctorClass` třídy úložiště `m_evenCount` proměnné podle odkazu jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce **operator()**. Kompilátor jazyka Visual C++ vygeneruje kód, který je srovnatelné velikosti a výkonu jako kód výrazu lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.  
   
- Další informace o `operator()`, naleznete v tématu [volání funkce](../cpp/function-call-cpp.md). Další informace o **for_each** funkce naleznete v tématu [for_each](../standard-library/algorithm-functions.md#for_each).  
+ Další informace o **operator()**, naleznete v tématu [volání funkce](../cpp/function-call-cpp.md). Další informace o **for_each** funkce naleznete v tématu [for_each](../standard-library/algorithm-functions.md#for_each).  
   
 ### <a name="code"></a>Kód  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>Výstup  
@@ -166,10 +164,9 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Příklady výrazů Lambda](../cpp/examples-of-lambda-expressions.md)   
  [Generovat](../standard-library/algorithm-functions.md#generate)   

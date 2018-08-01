@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939738"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407231"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 V moderním jazyce C++, ve většině scénářů je použití výjimky upřednostňovaný způsob hlášení a zpracování logických chyb a chyb za běhu. To platí zejména když zásobník může obsahovat několik volání funkce mezi funkce, která zjistí chyby a funkci, která se má kontext k určení, jak ji zpracovat. Výjimky představují formální, dobře definovaný způsob kód, který zjistí chyby, předat tuto informací výše v zásobníku volání.  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  Výjimky v C++ se podobají těm v jazycích, jako je C# nebo Java. V **zkuste** blokovat, pokud je výjimka *vyvolána* bude *zachycena* prvním přiřazeným **catch** bloku, jehož typ odpovídá typu došlo k výjimce. Jinými slovy spuštění přejde z **throw** příkazu **catch** příkazu. Pokud není nalezen žádný použitelný blok catch, `std::terminate` je vyvolána a program je ukončen. V jazyce C++ může být vyvolán libovolný typ; ale doporučujeme, abyste vyvolali typ odvozený přímo nebo nepřímo ze `std::exception`. V předchozím příkladu, typ výjimky [invalid_argument](../standard-library/invalid-argument-class.md), je definován ve standardní knihovně v [ \<stdexcept – >](../standard-library/stdexcept.md) hlavičkový soubor. C++ neposkytuje a nevyžaduje, **nakonec** blok k Ujistěte se, že jsou všechny prostředky uvolněny, pokud je vyvolána výjimka. Získávání prostředků je idiom inicializace (RAII), který používá inteligentní ukazatele, poskytuje požadované funkce vyčištění prostředků. Další informace najdete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md). Informace o mechanismu uvolnění zásobníku C++ naleznete v tématu [výjimky a Unwinding zásobníku](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
@@ -97,14 +96,14 @@ int main()
  Výjimky a kontrolní výrazy jsou dva odlišné mechanismy pro detekci chyb za běhu v programu. Použijte nepodmíněné výrazy pro testování podmínek během vývoje, který by měl mít nikdy hodnotu true, pokud váš kód je správný. Neexistuje žádný smysl zpracovávat takové chyby pomocí výjimky, protože chyby označují, že něco v kódu má být opraveno a nereprezentuje podmínku, která má program obnovit v době běhu. Metoda assert zastaví provedení u příkazu, takže si můžete prohlédnout stav programu v ladicím programu; Výjimka pokračuje v provádění od první vhodné catch obslužné rutiny. Pomocí výjimky chybové stavů, které mohou nastat za běhu i v případě, že váš kód je správný, například "soubor nebyl nalezen" nebo "nedostatek"paměti. Můžete chtít obnovit z těchto podmínek, i v případě obnovení pouze výstupů zprávy do protokolu a ukončení programu. Vždy kontrolujte argumenty pro veřejné funkce pomocí výjimek. I v případě, že je vaše funkce bez chyb, pravděpodobně nemáte úplnou kontrolu nad argumenty, které uživatel může předat do ní.  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Výjimky jazyka C++ a výjimky Windows SEH  
- Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v výjimky jazyka C++, s tím rozdílem, že SEH používá `__try`, `__except`, a `__finally` vytvoří místo **zkuste** a **catch**. V jazyce Visual C++ jsou výjimky C++ implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.  
+ Programy jazyka C i C++ mohou používat strukturovaných výjimek (SEH) mechanismu v operačním systému Windows pro zpracování. Základní pojmy v SEH se podobají těm v výjimky jazyka C++, s tím rozdílem, že SEH používá **__try**, **__except**, a **__finally** vytvoří místo **zkuste** a **catch**. V jazyce Visual C++ jsou výjimky C++ implementovány pro SEH. Při psaní kódu jazyka C++ však použijte synax výjimek C++.  
   
  Další informace o knihovnách SEH naleznete v tématu [strukturovaného zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   
 ## <a name="exception-specifications-and-noexcept"></a>Specifikace výjimek a noexcept  
  Specifikace výjimek byly zavedeny v C++ jako způsob, jak určit výjimky, které může funkce vyvolat. Specifikace výjimek však ukázaly jako problematické v praxi a jsou zastaralé v C ++ 11 koncept standardu. Doporučujeme, abyste nepoužívejte specifikace výjimek s výjimkou `throw()`, což znamená, že funkce umožňuje žádné únikové výjimky. Pokud je nutné použít specifikace výjimek typu `throw(` *typ*`)`, mějte na paměti, že Visual C++ se liší od standardu určitým způsobem. Další informace najdete v tématu [specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specifikátor byl představen v C ++ 11 upřednostňovaná alternativa k `throw()`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: rozhraní mezi kódem výjimek a ostatním kódem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
