@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947715"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406250"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
 Výčet je uživatelem definovaný typ, který se skládá z sadu pojmenovaných integrálních konstant nazývaných enumerátory.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  Enumerátor `Diamonds` je přiřazena hodnota `1`. Následující čítače, pokud jim není uvedena explicitní hodnota, získávají hodnotu z předchozího výčtu navýšenou o jeden. V předchozím příkladu `Hearts` by měla hodnotu 2, `Clubs` by obsahovat 3 a tak dále.  
   
- Každý výčet je považován za konstantu a musí mít jedinečný název v rámci oboru kde `enum` definován (pro výčty bez oboru) nebo v rámci samotného výčtu (pro výčty v oboru). Hodnoty, použité pro názvy nemusí být jedinečný. Například pokud deklarace výčtu mimo obor `Suit` je toto:  
+ Každý výčet je považován za konstantu a musí mít jedinečný název v rámci oboru kde **výčtu** definován (pro výčty bez oboru) nebo v rámci **výčtu** samotného (pro výčty v oboru). Hodnoty, použité pro názvy nemusí být jedinečný. Například pokud deklarace výčtu mimo obor `Suit` je toto:  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  Přetypování vyžaduje převedení **int** do oboru nebo typu nevymezeného výčtu. Můžete však povýšit čítač mimo obor na celočíselnou hodnotu bez přetypování.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  Všimněte si, že na řádku `hand = account_num;` stále způsobuje chybu, ke které dochází u výčtů bez oboru, jak je uvedeno výše. Je povoleno s explicitním přetypováním. Nicméně s oborem výčtů pokus o převod do dalšího příkazu `account_num = Suit::Hearts;`, již není povolen bez explicitního přetypování. 
@@ -190,6 +187,6 @@ int main()
 }
 ``` 
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Deklarace výčtů v jazyce C](../c-language/c-enumeration-declarations.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

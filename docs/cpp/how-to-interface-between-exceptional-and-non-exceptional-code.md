@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940115"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407969"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
 Tento článek popisuje, jak implementovat konzistentní zpracování výjimek v modulu jazyka C++ a také způsob převodu těchto výjimek z chybových kódů na hranicích výjimek.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Volání výjimečného Nevýjimečným kódem  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Při převodu z výjimek na chybové kódy jedním potenciálním problémem je, že kódy chyb často neobsahují bohatost informací, které mohou ukládat výjimky. Chcete-li to vyřešit, můžete poskytnout **catch** blok pro každý typ výjimky, která by mohla být vyvolána a provádět protokolování pro zaznamenání podrobnosti o výjimce, než je převedena na chybový kód. Tento přístup může vytvořit velké množství opakování kódu, pokud více funkcí používá stejnou sadu **catch** bloky. Dobrým způsobem, jak zabránit opakování kódu, je refaktoring bloků do jedné soukromé funkce nástroje, který implementuje **zkuste** a **catch** a ostatní porty blokuje přijímá objekt funkce, která je volána v **zkuste** bloku. V každé veřejné funkci předejte kód funkci nástroje jako lambda výraz.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  Následující příklad ukazuje, jak zapsat lambda výraz, který definuje funktor. Když je funktor definovaný "vloženě" pomocí lambda výrazu, je často čitelnější než by bylo, pokud by byl zapsán jako objekt pojmenované funkce.  
@@ -237,11 +234,10 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Postupy: Návrh s ohledem na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)

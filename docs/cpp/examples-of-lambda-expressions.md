@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947533"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404958"
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 Tento článek ukazuje, jak můžete použít výrazy lambda v programech. Přehled výrazů lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md). Další informace o struktuře výrazu lambda naleznete v tématu [Lambda Expression Syntax](../cpp/lambda-expression-syntax.md).  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Výstup  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Výstup  
@@ -276,7 +274,6 @@ int main()
  Můžete použít **to** ukazatel explicitně ve funkci, jak je znázorněno zde:  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  Můžete také zachytit **to** ukazatel implicitně:  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Výstup  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> Použití výrazů Lambda se šablonami  
   
 ### <a name="example"></a>Příklad  
- Protože výrazy lambda mají typ, můžete je použít s šablonami jazyka C++. Následující příklad ukazuje `negate_all` a `print_all` funkce. `negate_all` Funkce použije unární `operator-` na každý prvek `vector` objektu. `print_all` Funkce vypíše všechny prvky v `vector` objekt do konzoly.  
+ Protože výrazy lambda mají typ, můžete je použít s šablonami jazyka C++. Následující příklad ukazuje `negate_all` a `print_all` funkce. `negate_all` Funkce použije unární **operator -** na každý prvek `vector` objektu. `print_all` Funkce vypíše všechny prvky v `vector` objekt do konzoly.  
   
 ### <a name="code"></a>Kód  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Výstup  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>Výstup  
@@ -519,7 +510,7 @@ Hello!
   
  [[v tomto článku](#top)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Syntaxe výrazů lambda](../cpp/lambda-expression-syntax.md)   
  [Automaticky](../cpp/auto-cpp.md)   
