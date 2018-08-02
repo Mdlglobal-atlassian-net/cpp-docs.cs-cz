@@ -1,5 +1,5 @@
 ---
-title: tile_static – klíčové slovo | Microsoft Docs
+title: tile_static – klíčové slovo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422160"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461872"
 ---
 # <a name="tilestatic-keyword"></a>tile_static – klíčové slovo
-Klíčové slovo `tile_static` se používá k deklaraci proměnné, ke které lze přistupovat všemi vlákny v rozložení vláken. Životnost proměnné začíná, jakmile vykonávání dosáhne bodu deklarace, a končí při návratu funkce jádra. Další informace o používání bloků, najdete v části [pomocí dlaždice](../parallel/amp/using-tiles.md).  
+**Tile_static** – klíčové slovo se používá k deklaraci proměnné, který je přístupný všechna vlákna v dlaždici vlákna. Životnost proměnné začíná, jakmile vykonávání dosáhne bodu deklarace, a končí při návratu funkce jádra. Další informace o použití dlaždic naleznete v tématu [pomocí dlaždice](../parallel/amp/using-tiles.md).  
   
- Klíčové slovo `tile_static` má následující omezení:  
+ **Tile_static** – klíčové slovo má následující omezení:  
   
 -   Lze jej použít pouze pro proměnné, které jsou ve funkci mající modifikátor `restrict(amp)`.  
   
 -   Nelze jej použít pro proměnné, které jsou typu ukazatel nebo odkaz.  
   
--   Proměnná `tile_static` nemůže mít inicializátor. Výchozí konstruktory a destruktory nejsou vyvolány automaticky.  
+-   A **tile_static** proměnná nemůže mít inicializátor. Výchozí konstruktory a destruktory nejsou vyvolány automaticky.  
   
--   Hodnota neinicializované proměnné `tile_static` není definována.  
+-   Hodnota neinicializované **tile_static** proměnná není definovaná.  
   
--   Je-li proměnná `tile_static` deklarována v grafu volání, který pochází z neparalelního volání `parallel_for_each`, je vygenerováno upozornění a chování proměnné není definováno.  
+-   Pokud **tile_static** je proměnná deklarována v grafu volání, který pochází z neparalelního volání `parallel_for_each`, vygeneruje se upozornění a chování proměnné není definováno.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak lze proměnnou `tile_static` použít k shromažďování dat napříč více vlákny v dlaždici.  
+ Následující příklad ukazuje způsob **tile_static** proměnná slouží k shromažďování dat napříč více vlákny v dlaždici.  
   
 ```cpp  
 // Sample data:  
@@ -150,11 +150,10 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md)   
- [Přehled produktu C++ AMP](../parallel/amp/cpp-amp-overview.md)   
+ [Přehled modelu C++ AMP](../parallel/amp/cpp-amp-overview.md)   
  [parallel_for_each – funkce (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [Návod: Násobení matic](../parallel/amp/walkthrough-matrix-multiplication.md)

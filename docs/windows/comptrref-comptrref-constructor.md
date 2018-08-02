@@ -1,5 +1,5 @@
 ---
-title: Comptrref::comptrref – konstruktor | Microsoft Docs
+title: Comptrref::comptrref – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870656"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463629"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ptr`  
- Základní hodnota jiného ComPtrRef objektu.  
+ *ptr*  
+ Zadaná hodnota jiného **comptrref –** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy ComPtrRef ze zadaného ukazatele k jinému objektu ComPtrRef.  
+ Inicializuje novou instanci třídy **comptrref –** třídy z zadaný ukazatel na jiný **comptrref –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -48,5 +48,5 @@ ComPtrRef(
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtrRef – třída](../windows/comptrref-class.md)   
+ [Comptrref – třída](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

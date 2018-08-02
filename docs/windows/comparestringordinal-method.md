@@ -1,5 +1,5 @@
 ---
-title: Comparestringordinal – metoda | Microsoft Docs
+title: Comparestringordinal – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860808"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464048"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,22 +34,22 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `lhs`  
+ *lhs*  
  První HSTRING k porovnání.  
   
- `rhs`  
+ *Zarovnání indirekce RHS*  
  Druhý HSTRING k porovnání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 |Hodnota|Podmínka|  
 |-----------|---------------|  
-|-1|`lhs` je menší než `rhs`.|  
-|0|`lhs` se rovná `rhs`.|  
-|1|`lhs` je větší než `rhs`.|  
+|-1|*LHS* je menší než *zarovnání indirekce rhs*.|  
+|0|*LHS* rovná *zarovnání indirekce rhs*.|  
+|1|*LHS* je větší než *zarovnání indirekce rhs*.|  
   
 ## <a name="remarks"></a>Poznámky  
- Porovná dva objekty zadaného HSTRING a vrátí celé číslo, které označuje jejich relativní pozici v pořadí řazení.  
+ Porovná dva objekty zadané HSTRING a vrátí celé číslo určující jejich relativní umístění v pořadí řazení.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

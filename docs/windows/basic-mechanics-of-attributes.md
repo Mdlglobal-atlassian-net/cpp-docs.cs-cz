@@ -1,5 +1,5 @@
 ---
-title: Základní mechanismy atributů | Microsoft Docs
+title: Základní mechanismy atributů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3bb7ff68f9c17f7b90261c2c96630911454842a5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864931"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462489"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
-Existují tři způsoby, jak vložit atributy do projektu. První můžete je ručně do zdrojového kódu. Druhý můžete vložit pomocí mřížku vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání okno Vlastnosti a různých průvodců najdete v tématu [vytváření a správa projekty Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
+Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
   
- Jako dříve, při sestavení projektu kompilátor analyzuje každý C++ zdrojový soubor, který vytvořil soubor objektu. Ale když kompilátor zaznamená atributu, je analyzovat a syntakticky ověřit. Kompilátor pak zavolá dynamicky poskytovatele atribut pro vložení kódu a provádět další úpravy v době kompilace. Implementace zprostředkovatele se liší v závislosti na typu atributu. Například Atlprov.dll implementují související ATL atributy.  
+ Jako dříve, při sestavení projektu, kompilátor analyzuje každý zdrojový soubor jazyka C++, vytváření soubor objektu. Ale když kompilátor narazí atribut, je analyzovat a syntakticky ověřit. Kompilátor poté zavolá dynamicky poskytovatele atributu vložení kódu a provádět další úpravy v době kompilace. Implementace zprostředkovatele se liší v závislosti na typu atributu. Například Atlprov.dll implementují související ATL atributy.  
   
- Následující obrázek ukazuje vztah mezi kompilátoru a poskytovatele atribut.  
+ Následující obrázek ukazuje vztah mezi kompilátoru a poskytovatele atributu.  
   
- ![Součást atribut komunikace](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
+ ![Atribut komunikace komponent](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
   
 > [!NOTE]
->  Použití atributu nezmění obsah zdrojového souboru. Během ladění relace je jenom čas, kdy kód vygenerovaný atribut je viditelné. Kromě toho pro každý zdrojový soubor v projektu, může generovat textový soubor, který se zobrazí výsledky nahrazení atribut. Další informace o tomto postupu najdete v tématu [/Fx (sloučení vloženého kódu)](../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
+>  Použití atributu nezmění obsah zdrojového souboru. Kód vygenerovaný atributu je viditelné se pouze během relace ladění. Kromě toho pro každý zdrojový soubor v projektu, můžete vygenerovat textový soubor, který zobrazuje výsledky atribut nahrazení. Další informace o tomto postupu najdete v tématu [/Fx (sloučení vloženého kódu)](../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Většina C++ konstrukce, jako je mít atributy sada vlastností, které definuje jejich správné využití. To se označuje jako kontext atribut a je určeno v tabulce kontext atribut pro každý atribut referenční téma. Například [třída typu coclass](../windows/coclass.md) atribut lze použít pouze do existující třídy nebo struktura, nikoli [cpp_quote –](../windows/cpp-quote.md) atribut, který lze vložit kdekoli v rámci C++ zdrojového souboru.  
+ Jako většina konstruktory jazyka C++ mít atributy sadu vlastností, která definuje jejich správné použití. To se označuje jako kontext atribut a je určena v tabulce atribut kontextu pro každý atribut referenční téma. Například [coclass](../windows/coclass.md) atribut lze použít pouze na existující třída nebo struktura, nikoli [cpp_quote –](../windows/cpp-quote.md) atribut, který může vložit na libovolné místo v rámci zdrojový soubor jazyka C++.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../windows/attributed-programming-concepts.md)

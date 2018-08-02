@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 27522cb4d3bb15912b7988e0152a121616480330
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947606"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464831"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast – operátor
 Umožňuje převod všech ukazatelů na jiný typ ukazatele. Umožňuje také převést libovolný integrální typ na libovolný typ ukazatele a naopak.  
@@ -87,6 +87,6 @@ Output:
   
  **Reinterpret_cast** umožňuje zacházet jako s integrálním typem ukazatele. Výsledek je následně bitově posunutý a je na něj použita logická funkce XOR, aby se vytvořil jedinečný index (jedinečný s vysokým stupněm pravděpodobnosti). Index je následně zkrácen standardem přetypování ve stylu jazyka C na návratový typ funkce.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Operátory přetypování](../cpp/casting-operators.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208546"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466940"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězců a znaků a nabízí způsobů, jak vyjádřit jednu hodnotu literálu každý z těchto typů. Ve zdrojovém kódu express obsah vaší znakové a řetězcové literály pomocí znakové sady. Univerzální názvy znaků a řídicích znaků umožňují express libovolný řetězec za použití pouze základní zdrojové znakové sady. Nezpracovaný Textový literál vám umožní předcházet pomocí řídicí znaky a je možné vyjádřit všech typů řetězcových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět další konstrukci nebo převod kroky.  
@@ -146,7 +146,7 @@ int main() {
   
  **Specifické pro Microsoft**  
   
- K vytvoření hodnoty z běžný znak literálu, (ta bez předpony), kompilátor převede znak nebo posloupnost znaků mezi jednoduchými uvozovkami na 8bitové hodnoty v rámci 32bitové celé číslo. Více znaků v literálu vyplnit odpovídající bajtů podle potřeby od nejvyšší k nejnižší. Chcete-li vytvořit **char** hodnota, kompilátor má nejnižší bajt. Chcete-li vytvořit `wchar_t` nebo `char16_t` hodnota, kompilátor má nižší řád slova. Kompilátor vás upozorní, že výsledek je zkrácen, pokud všechny bity jsou nastaveny nad přiřazené bajtů nebo word.  
+ K vytvoření hodnoty z běžný znak literálu, (ta bez předpony), kompilátor převede znak nebo posloupnost znaků mezi jednoduchými uvozovkami na 8bitové hodnoty v rámci 32bitové celé číslo. Více znaků v literálu vyplnit odpovídající bajtů podle potřeby od nejvyšší k nejnižší. Chcete-li vytvořit **char** hodnota, kompilátor má nejnižší bajt. Chcete-li vytvořit **wchar_t** nebo `char16_t` hodnota, kompilátor má nižší řád slova. Kompilátor vás upozorní, že výsledek je zkrácen, pokud všechny bity jsou nastaveny nad přiřazené bajtů nebo word.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Široké řetězcové literály  
- Široký řetězcový literál je pole zakončené znakem null konstanty `wchar_t` , který má předponu "`L`" a obsahuje libovolný grafický znak kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Široký řetězcový literál může obsahovat řídicí sekvence je uvedena výše a všechny univerzální název znaku.  
+ Široký řetězcový literál je pole zakončené znakem null konstanty **wchar_t** , který má předponu "`L`" a obsahuje libovolný grafický znak kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Široký řetězcový literál může obsahovat řídicí sekvence je uvedena výše a všechny univerzální název znaku.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Specifické pro Microsoft**  
   
- V jazyce Visual C++ můžete použít textový literál k inicializaci ukazatele na nekonstantní **char** nebo `wchar_t`. To je povoleno v kódu C99, ale je zastaralé v C ++ 98 odebírají a v C ++ 11. Pokus upravit řetězec způsobuje narušení přístupu, jako v následujícím příkladu:  
+ V jazyce Visual C++ můžete použít textový literál k inicializaci ukazatele na nekonstantní **char** nebo **wchar_t**. To je povoleno v kódu C99, ale je zastaralé v C ++ 98 odebírají a v C ++ 11. Pokus upravit řetězec způsobuje narušení přístupu, jako v následujícím příkladu:  
   
 ```cpp  
 wchar_t* str = L"hello";  
@@ -399,7 +399,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Znakové sady](../cpp/character-sets.md)   
  [Číselné literály, logické a literály typu ukazatele](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Uživateli definované literály](../cpp/user-defined-literals-cpp.md)

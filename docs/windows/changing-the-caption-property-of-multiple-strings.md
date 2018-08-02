@@ -1,5 +1,5 @@
 ---
-title: Změna vlastnosti titulku vícenásobných řetězců | Microsoft Docs
+title: Změna vlastnosti titulku vícenásobných řetězců | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d97cc278841f8b25636622bcb5fdc9a03a42751
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d2c53825cab6b14234bd030ae9167b20c30bd5b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860278"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467222"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Změna vlastnosti titulku vícenásobných řetězců
-Následující postup ukazuje, jak chcete-li změnit vlastnosti titulku vícenásobných řetězců.  
+Následující postup ukazuje, jak změnit vlastnosti titulku vícenásobných řetězců.  
   
-### <a name="to-change-the-caption-property-of-multiple-strings"></a>Chcete-li změnit vlastnosti titulku vícenásobných řetězců  
+### <a name="to-change-the-caption-property-of-multiple-strings"></a>Změna vlastnosti titulku vícenásobných řetězců  
   
-1.  Otevřít tabulku řetězec poklepáním na ikonu v [zobrazení prostředků](../windows/resource-view-window.md).  
+1.  Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](../windows/resource-view-window.md).  
   
-     **Poznámka:** Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+     **Poznámka:** Pokud projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Vyberte řetězce, které chcete změnit tak, že podržíte stisknutou **CTRL** klíče a klepněte na každé z nich.  
+2.  Vyberte řetězců, které chcete změnit současným **CTRL** klíče při klepnutí na každé z nich.  
   
-3.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), zadejte novou hodnotu pro vlastnost, kterou chcete změnit.  
+3.  V [okno vlastností](/visualstudio/ide/reference/properties-window), zadejte novou hodnotu pro vlastnost, kterou chcete změnit.  
   
-4.  Stiskněte klávesu **ENTER**.  
+4.  Stisknutím klávesy **ENTER**.  
   
- Informace o přidávání zdrojů do spravovaných projekty (ty, které cílí modul common language runtime), najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti, najdete v části [návod: lokalizace Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití zdrojů pro lokalizaci s technologií ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Požadavky**  
   

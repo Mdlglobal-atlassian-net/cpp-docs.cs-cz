@@ -1,5 +1,5 @@
 ---
-title: Createclassfactory – funkce | Microsoft Docs
+title: Createclassfactory – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870470"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461322"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory – funkce
-Vytvoří objekt factory, který vytváří instance pro zadanou třídu.  
+Vytvoří objekt factory, který vytvoří instance dané třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `flags`  
- Kombinace jednoho nebo více [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.  
+ *příznaky*  
+ Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.  
   
- `entry`  
- Ukazatel na [creatormap –](../windows/creatormap-structure.md) obsahující inicializace a registrační informace o parametru `riid`.  
+ *entry*  
+ Ukazatel [creatormap –](../windows/creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.  
   
- `riid`  
- Odkaz na rozhraní ID.  
+ *riid*  
+ Odkaz na identifikátor rozhraní.  
   
- `ppFactory`  
- Pokud tato operace dokončí úspěšně, ukazatel na objekt pro vytváření tříd.  
+ *ppFactory*  
+ Pokud se tato operace dokončí úspěšně, ukazatel na objekt pro vytváření tříd.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Chybu assert jsou vydávány, pokud parametr šablony `Factory` není odvozen z rozhraní IClassFactory.  
+ Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IClassFactory`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

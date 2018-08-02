@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 38c3f60f7460a3d03f16141b5629bfc2d6183cae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947523"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462372"
 ---
 # <a name="user-defined-literals--c"></a>Uživateli definované literály (C++)
 Existuje pět hlavních kategorií literálů: celé číslo, znak, s plovoucí desetinnou čárkou, řetězec, logická hodnota a ukazatele.  Počínaje C++ 11, můžete definovat vlastní literálů na základě těchto kategorií k poskytování syntaktické klávesové zkratky pro společné idiomy a zvýšení typové bezpečnosti. Řekněme například, že máte třídu vzdálenost. Můžete definovat literál pro kilometrů a jinou pro mil a podporovat uživatele k explicitnímu měrné jednotky jednoduše napsáním: automatické d = 42.0_km nebo automaticky d = 42.0_mi. Neexistuje žádné výhody výkonu nebo nevýhodou uživateli definované literály jsou především ke zvýšení pohodlí nebo pro odvození typu v době kompilace. Standardní knihovna obsahuje uživateli definované literály std:string, std::complex a jednotky v čase a dobu trvání operace v \<chrono > hlavičky:  
@@ -31,7 +31,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ```  
   
 ## <a name="user-defined-literal-operator-signatures"></a>Podpisy uživatelem definovaný operátor literálu  
- Implementovat uživatelem definovaného literálu definováním `operator""` v oboru názvů s jedním z následujících forem:  
+ Implementovat uživatelem definovaného literálu definováním **operátor ""** v oboru názvů s jedním z následujících forem:  
   
 ```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
@@ -51,7 +51,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  Operátor názvy v předchozím příkladu jsou zástupné symboly pro jakýkoli název můžete zadat; vedoucí znaku podtržítka ale povinné. (Standardní knihovna může definovat literály bez podtržítko.) Návratový typ je, kde si přizpůsobit převod nebo jiné operace, která provádí literál. Kromě toho některé z těchto operátorů lze definovat jako `constexpr`.  
   
 ## <a name="cooked-literals"></a>Vařené literály  
- Ve zdroji kód jakékoli literál, zda uživatelem nebo Ne, jako je v podstatě posloupnost alfanumerické znaky, `101`, nebo `54.7`, nebo `"hello"` nebo `true`. Kompilátor interpretuje pořadí jako celé číslo, float const char\* řetězec a tak dále. Uživatelem definovaného literálu, který přijímá jako vstup zadejte cokoli, co kompilátor přiřazená hodnota literálu je spor neformálně označované jako *vařené literál*. Všechny operátory výše, s výjimkou `_r` a `_t` jsou vařená literály. Například literál `42.0_km` by svázat operátor s názvem _km, který měl podobné _b a literál podpis `42_km` by svázat operátor podobný _a podpisem.  
+ Ve zdroji kód jakékoli literál, zda uživatelem nebo Ne, jako je v podstatě posloupnost alfanumerické znaky, `101`, nebo `54.7`, nebo `"hello"` nebo **true**. Kompilátor interpretuje pořadí jako celé číslo, float const char\* řetězec a tak dále. Uživatelem definovaného literálu, který přijímá jako vstup zadejte cokoli, co kompilátor přiřazená hodnota literálu je spor neformálně označované jako *vařené literál*. Všechny operátory výše, s výjimkou `_r` a `_t` jsou vařená literály. Například literál `42.0_km` by svázat operátor s názvem _km, který měl podobné _b a literál podpis `42_km` by svázat operátor podobný _a podpisem.  
   
  Následující příklad ukazuje, jak uživateli definované literály vstupní kontroly mohou pobídnout volající k explicitnímu svůj vstup. K vytvoření `Distance`, musí uživatel explicitně zadat kilometrech nebo mil pomocí vhodné uživatelem definovaného literálu. Samozřejmě můžete také dosažení stejného výsledku jiným způsobem, ale uživateli definované literály jsou míň podrobné než alternativ.  
   
@@ -184,5 +184,4 @@ operator "" _dump_raw(const char*)        : ===>42<===
 operator "" _dump_raw(const char*)        : ===>3.1415926<===  
 operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
-  
 ```

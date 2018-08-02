@@ -1,5 +1,5 @@
 ---
-title: Argtraitshelper – struktura | Microsoft Docs
+title: Argtraitshelper – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857698"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466634"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
- Delegát rozhraní.  
+ *TDelegateInterface*  
+ Rozhraní delegáta.  
   
 ## <a name="remarks"></a>Poznámky  
- Pomáhá definovat běžné vlastnosti delegáta argumenty.  
+ Pomáhá definovat běžné vlastnosti argumenty delegátů.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -54,7 +54,7 @@ struct ArgTraitsHelper;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args – konstanta](../windows/argtraitshelper-args-constant.md)|Pomáhá [argtraits::args –](../windows/argtraits-args-constant.md) zachovat počet parametrů na metodu Invoke rozhraní delegáta.|  
+|[ArgTraitsHelper::args – konstanta](../windows/argtraitshelper-args-constant.md)|Pomáhá [ArgTraits::args](../windows/argtraits-args-constant.md) zachovat počet parametrů na `Invoke` metoda rozhraní delegáta.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ArgTraitsHelper`  

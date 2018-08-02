@@ -1,5 +1,5 @@
 ---
-title: Rozlišení šablon a názvů | Microsoft Docs
+title: Rozlišení šablon a názvů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422810"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464217"
 ---
 # <a name="templates-and-name-resolution"></a>Rozlišení šablon a názvů
 
@@ -83,6 +83,5 @@ V definicích šablon existují tři typy názvů.
   
  Výrazy závislosti na typu nebo závislosti na hodnotě jsou výrazy zahrnující proměnné, které jsou závislé na typu nebo závislé na hodnotě. Tyto výrazy mohou mít sémantiku, která se liší v závislosti na parametrech použitých v šabloně.  
   
-## <a name="see-also"></a>Viz také
-
+## <a name="see-also"></a>Viz také:
  [Šablony](../cpp/templates-cpp.md)

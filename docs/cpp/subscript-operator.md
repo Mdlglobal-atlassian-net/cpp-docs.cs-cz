@@ -1,5 +1,5 @@
 ---
-title: 'Operátor dolního indexu: | Microsoft Docs'
+title: 'Operátor dolního indexu: | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbdeac996320d885e4d6e131dcb735ac369b09f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467518"
 ---
 # <a name="subscript-operator"></a>Operátor dolního indexu:
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 postfix-expression [ expression ]  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátory výraz (který může být také výraz primární) následuje operátor dolního indexu, **[]**, určuje pole indexování.  
+ Výraz přípony (může to také být primární výraz) za nímž následuje operátor dolního indexu **[] č.**, určuje indexování pole.  
   
- Informace o spravovaných polí najdete v tématu [pole](../windows/arrays-cpp-component-extensions.md).  
+ Informace o spravovaných polí naleznete v tématu [pole](../windows/arrays-cpp-component-extensions.md).  
   
- Obvykle hodnota reprezentována *operátory výraz* je hodnota ukazatele, jako je například identifikátorem pole a *výraz* je integrální hodnota (včetně výčtových typů). Ale všechny možnosti, které je vyžadován syntakticky jeden z výrazů se ukazatel typu a dalších být integrální typu. Proto integrální hodnotou může být v *operátory výraz* pozice a hodnota ukazatele s hodnotou může být v závorkách v *výraz* nebo dolního indexu pozice. Předpokládejme následující fragment kódu:  
+ Obvykle hodnota reprezentovaná *postfix-expression* je hodnota ukazatele, jako je například identifikátor pole a *výraz* je celé číslo (včetně výčtových typů). Všechny možnosti, které je však vyžaduje syntakticky je jeden z výrazů být typu ukazatele a druhý být celočíselného typu. Proto může být celočíselná hodnota v *postfix-expression* pozice a hodnota ukazatele může být v závorkách v *výraz* nebo dolní index pozice. Předpokládejme následující fragment kódu:  
   
-```  
+```cpp 
 int nArray[5] = { 0, 1, 2, 3, 4 };  
 cout << nArray[2] << endl;            // prints "2"  
 cout << 2[nArray] << endl;            // prints "2"  
@@ -50,23 +50,23 @@ cout << 2[nArray] << endl;            // prints "2"
   
  **\*((** *e2* **)** *+* **(***e1***))**  
   
- Adresa poskytuje podle výrazu není *e2* bajtů z adresy *e1*. Místo toho je adresu škálovat na yield další objekt v poli *e2*. Příklad:  
+ Adresa výsledkem výrazu není *e2* bajtů z adresy *e1*. Místo toho je adresa škálovat na další objekt v poli *e2*. Příklad:  
   
-```  
+```cpp 
 double aDbl[2];  
 ```  
   
- Adresy `aDb[0]` a `aDb[1]` jsou od sebe 8 bajtů – velikost objekt typu **dvojité**. Škálování podle typu objektu je provedeno automaticky podle jazyka C++ a je definována v [doplňkové operátory](../cpp/additive-operators-plus-and.md) kde popsané sčítání a odečítání operandy typu ukazatele.  
+ Adresy `aDb[0]` a `aDb[1]` jsou od sebe 8 bajtů – velikost objektu typu **double**. Škálování podle typu objektu se automaticky stará jazyka C++ a je definován v [operátory součtu](../cpp/additive-operators-plus-and.md) kde je popsána sčítání a odčítání operandy typu ukazatel.  
   
  Výraz dolního indexu může mít také více dolních indexů následovně:  
   
- *Expression1* **[***Výraz2***] [***expression3***]**...  
+ *Expression1* **[***expression2***] [***expression3***]**...  
   
- Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1 ***[*** Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *Výraz2* forms výraz ukazatel; potom *expression3* se přidá do této ukazatele – výraz k vytvoření nové ukazatele – výraz, a tak dále, dokud se přidal poslední výraz dolního indexu. Deferenční operátor (**\***) se použijí po poslední dolního indexu výraz vyhodnocen, pokud hodnota konečné ukazatele adresy typu pole.  
+ Výrazy dolního indexu se přiřazují zleva doprava. Krajní levé výraz dolního indexu *expression1 ***[*** Výraz2***]**, je první vyhodnocen. Adresa, která je výsledkem přidání *expression1* a *expression2* tvoří výraz ukazatele; potom *expression3* se přidá k tomuto výrazu ukazatele a vytvoří nový výraz ukazatele, a tak dále, dokud se přidala posledního výrazu dolního indexu. Operátor dereference (**\***) se použijí po vyhodnocení posledního výrazu dolního indexu, pokud hodnota konečné ukazatele odkazuje typ pole.  
   
- Výrazy s více dolní indexy odkazovat na elementy vícerozměrná pole. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole. Následující příklad deklaruje a inicializuje jednoduché dvourozměrná pole znaků:  
+ Výrazy s více dolními indexy odkazují na prvky vícedimenzionální pole. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole. Následující příklad deklaruje a inicializuje jednoduché dvourozměrné pole znaků:  
   
-```  
+```cpp 
 // expre_Subscript_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,9 +84,9 @@ int main() {
 ```  
   
 ## <a name="positive-and-negative-subscripts"></a>Kladné a záporné dolní indexy  
- První prvek pole je prvek 0. Rozsah C++ pole je od *pole*[0] k *pole*[*velikost* - 1]. Jazyk C++ však podporuje kladné a záporné dolní indexy. Záporné dolní indexy musí spadat do pole hranice; Pokud ne, mohou být nepředvídatelné výsledky. Následující kód ukazuje pole kladné a záporné dolní indexy:  
+ První prvek pole je prvek 0. Rozsah pole jazyka C++ je od *pole*[0] do *pole*[*velikost* - 1]. Jazyk C++ však podporuje kladné a záporné dolní indexy. Záporné dolní indexy musí spadat do hranice pole; Pokud tomu tak není, jsou výsledky nepředvídatelné. Následující kód ukazuje pole kladné a záporné dolní indexy:  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -107,13 +107,13 @@ int main() {
 }  
 ```  
   
- Záporné dolní index v řádku lasta můžete vytvořit Chyba spuštění, protože odkazuje adresu nižší 256 bajtů v paměti, než je počátek pole. Ukazatele `midArray` je inicializováno středu `intArray`; proto je možné použít obě pole kladné a záporné indexy, které na ní. Chyby dolního indexu pole negenerují chyby v době kompilace, ale vedou k nepředvídatelným výsledkům.  
+ Záporný dolní index v řádku lasta můžete vytvořit chyb za běhu, protože odkazuje adresu 256 bajtů nižší v paměti, než je počátek pole. Ukazatel `midArray` je inicializován ve středu `intArray`; proto je možné používat oba kladné a záporné pole indexů na něj. Chyby dolního indexu pole negenerují chyby v době kompilace, ale vedou k nepředvídatelným výsledkům.  
   
- Operátor dolního indexu je komutativní. Proto výrazy *pole*[*index*] a *pole*[*pole*] je zaručena ekvivalentní tak dlouho, dokud dolní index operátor není přetížený (viz [přetížené operátory](../cpp/operator-overloading.md)). První forma je nejběžnějším způsobem kódování, ale funguje kterákoli z nich.  
+ Operátor dolního indexu je komutativní. Proto výrazy *pole*[*index*] a *pole*[*pole*] je zaručeno, že jako ekvivalentní, pokud je to dolního indexu není přetížen operátor (viz [přetížené operátory](../cpp/operator-overloading.md)). První forma je nejběžnějším způsobem kódování, ale funguje kterákoli z nich.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy přípony](../cpp/postfix-expressions.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Pole](../cpp/arrays-cpp.md)   
  [Jednorozměrná pole](../c-language/one-dimensional-arrays.md)   
  [Vícerozměrná pole](../c-language/multidimensional-arrays-c.md)

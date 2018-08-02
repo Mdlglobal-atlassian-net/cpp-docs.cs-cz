@@ -1,5 +1,5 @@
 ---
-title: Activationfactorycallback – funkce | Microsoft Docs
+title: Activationfactorycallback – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857321"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461390"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback – funkce
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,19 +37,19 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `activationId`  
- Zpracování na řetězec, který určuje název třídy modulu runtime.  
+ *activationid –*  
+ Zpracování na řetězec, který určuje název třídy runtime.  
   
- `ppFactory`  
- Po této operaci dokončení aktivace objekt factory, která odpovídá parametru `activationId`.  
+ *ppFactory*  
+ Pokud tato operace dokončí, objekt factory pro aktivaci, který odpovídá parametru *activationid –*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující selhání. Hodnoty HRESULT pravděpodobně selhání jsou CLASS_E_CLASSNOTAVAILABLE a E_INVALIDARG.  
+ S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. HRESULT – selhání pravděpodobně jsou CLASS_E_CLASSNOTAVAILABLE a E_INVALIDARG.  
   
 ## <a name="remarks"></a>Poznámky  
  Získá objekt factory aktivace pro ID zadaná aktivace.  
   
- Prostředí Windows Runtime volá tuto funkci zpětného volání k vyžádání objektu zadaného jeho název třídy modulu runtime.  
+ Modul Windows Runtime volá tuto funkci zpětného volání pro žádost o objekt, který má název třídy runtime.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

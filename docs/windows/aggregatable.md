@@ -1,5 +1,5 @@
 ---
-title: agregovatelné | Microsoft Docs
+title: agregovatelné | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d80b2fb707145f698e8d9bb883059478c3da10b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863823"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467193"
 ---
 # <a name="aggregatable"></a>aggregatable
-Označuje, že třída podporuje agregace.  
+Označuje, že třída podporuje agregaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ aggregatable(   
+[ aggregatable(   
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *Hodnota* (volitelné)  
- Parametr k označení, když se dají agregovat objekt COM:  
+ Parametr označuje, kdy se dají agregovat objektu COM:  
   
--   **Nikdy** objektu COM nelze agregovat.  
+-   **Nikdy** objekt COM nemůže být agregován.  
   
 -   **povolené** objekt COM lze vytvořit přímo, nebo se dají agregovat. Toto nastavení je výchozí.  
   
--   **vždy** objektu COM nelze vytvořit přímo a lze pouze agregovat. Při volání `CoCreateInstance` pro tento objekt, je třeba zadat objekt totožný **IUnknown** rozhraní (řízení **IUnknown**).  
+-   **vždy** objekt COM nelze vytvořit přímo a pouze se dají agregovat. Při volání `CoCreateInstance` pro tento objekt, je nutné zadat objekt agregovat `IUnknown` rozhraní (řízení `IUnknown`).  
   
 ## <a name="remarks"></a>Poznámky  
- **Agregovatelné** atribut C++ má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) MIDL atribut. To znamená, že bude úspěšné kompilátor **agregovatelné** atribut prostřednictvím generovaného .idl souboru.  
+ **Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.  
   
- Tento atribut vyžaduje, aby [třída typu coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít stejného elementu. Pokud se používá jakékoli jeden atribut, budou automaticky použita další dvě. Například pokud **progid** se použije, **vi_progid –** a **třída typu coclass** jsou také použít.  
+ Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
  **Projekty knihovny ATL**  
   
- Pokud tento atribut se používá v rámci projekt, který používá ATL chování změny atributů. Kromě popsané chování atribut také přidá jeden z následujících makra k třídě cíle:  
+ Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Kromě výše popsaným chování atribut přidá také jednu z následujících makra do cílové třídy:  
   
-|Hodnota parametru|Vložené – makro|  
+|Hodnota parametru|Vložené: – makro|  
 |---------------------|--------------------|  
-|**Nikdy**|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|**Povoleno**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|**Vždy**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|*Nikdy*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|*Povoleno*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|*Vždy*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregatable.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -83,15 +82,15 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Jeden nebo více z následujících: **třída typu coclass**, **progid**, nebo **vi_progid –**.|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558)   

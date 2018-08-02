@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ff0716359c715431f9887f50be06e592d57787e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947510"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463909"
 ---
 # <a name="using-arrays-c"></a>Použití polí (C++)
 Můžete přistupovat k jednotlivým prvkům pole pomocí operátoru dolního indexu pole (`[ ]`). Pokud je jednorozměrné pole použito ve výrazu, který nemá žádný index, název pole vyhodnotí ukazatel na první prvek v poli.  
@@ -57,5 +57,5 @@ int main() {
   
  V předchozím kódu `multi` je trojrozměrné pole typu **double**. `p2multi` Ukazatel odkazuje na pole typu **double** o velikosti tři. V tomto příkladu se používá pole s jeden, dva a třemi dolními indexy. Ačkoli je běžnější určit všechny dolní indexy, stejně jako `cout` příkaz, je někdy užitečné vybrat určitou podmnožinu prvků pole, jak je znázorněno v příkazech, které následují `cout`.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Pole](../cpp/arrays-cpp.md)

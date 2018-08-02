@@ -1,5 +1,5 @@
 ---
-title: vazbu | Microsoft Docs
+title: s možností vazby | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861802"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467141"
 ---
 # <a name="bindable"></a>bindable
-Označuje, že vlastnost podporuje datovou vazbu.  
+Označuje, že vlastnost podporuje datové vazby.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Vazbu** atribut C++ má stejné funkce jako [vazbu](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL atribut. Můžete ji použít v vlastnosti definované s [propget –](../windows/propget.md), [propput –](../windows/propput.md), nebo [propputref](../windows/propputref.md) atributy, případně je možné ručně definovat vazbu metoda.  
+ **Umožňujících vazbu** C++ atribut má stejné funkce jako [umožňujících vazbu](http://msdn.microsoft.com/library/windows/desktop/aa366738) atribut MIDL. Lze ji použít v vlastnosti definované [propget](../windows/propget.md), [propput](../windows/propput.md), nebo [propputref](../windows/propputref.md) atributy, nebo můžete ručně definovat metodu s možností vazby.  
   
- Následující ukázky MFC ukazují použití **vazbu**:  
+ Následující ukázky knihovny MFC ukazují použití **umožňujících vazbu**:  
   
--   [Ovládací prvky – ukázky: Na základě MFC ActiveX – ovládací prvky](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Ukázky ovládacích prvků: Ovládací prvky ActiveX založené na knihovně MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Str ukázka: Ovládací prvek ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [KR ukázka: Ovládací prvek ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Ukázka TESTHELP: Ovládací prvek ActiveX s popisy tlačítek a Nápověda](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Ukázka TESTHELP: Ovládací prvek ActiveX s popisy tlačítek a Nápověda](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje, jak můžete použít **vazbu** u vlastnosti:  
+ Následující kód ukazuje, jak můžete **umožňujících vazbu** u vlastnosti:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -76,9 +74,9 @@ __interface IPropDemo : IDispatch {
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -87,6 +85,6 @@ __interface IPropDemo : IDispatch {
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
  [defaultbind –](../windows/defaultbind.md)   
- [displaybind –](../windows/displaybind.md)   
- [immediatebind –](../windows/immediatebind.md)   
+ [displaybind](../windows/displaybind.md)   
+ [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   

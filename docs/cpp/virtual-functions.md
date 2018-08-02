@@ -1,5 +1,5 @@
 ---
-title: Virtuální funkce | Microsoft Docs
+title: Virtuální funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467521"
 ---
 # <a name="virtual-functions"></a>Virtuální funkce
 Virtuální funkce je členská funkce, která bude znovu definována v odvozených třídách. Při odkazování na objekt odvozené třídy pomocí ukazatele nebo odkazu na základní třídu lze pro daný objekt volat virtuální funkci a spustit verzi odvozené třídy funkce.  
   
  Virtuální funkce zajišťují, že je pro objekt volána správná funkce bez ohledu na výraz použitý k volání funkce.  
   
- Předpokládejme, že základní třída obsahuje funkce deklarované jako [virtuální](../cpp/virtual-cpp.md) a odvozená třída definuje stejné funkce. Funkce z odvozené třídy je vyvolána u objektů odvozené třídy i v případě, že je volána pomocí ukazatele nebo odkazu na základní třídu. Následující příklad ukazuje základní třídu, která poskytuje implementaci funkce `PrintBalance` a dvou odvozených tříd:  
+ Předpokládejme, že základní třídu obsahující funkci deklarovanou jako [virtuální](../cpp/virtual-cpp.md) a odvozená třída definuje stejnou funkci. Funkce z odvozené třídy je vyvolána u objektů odvozené třídy i v případě, že je volána pomocí ukazatele nebo odkazu na základní třídu. Následující příklad ukazuje základní třídu, která poskytuje implementaci funkce `PrintBalance` a dvou odvozených tříd:  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  Následující příklad ukazuje chování virtuální a nevirtuální funkce při volání prostřednictvím ukazatelů:  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  Bez ohledu na to, zda je funkce `NameOf` volána prostřednictvím ukazatele na typ `Base` nebo ukazatele na typ `Derived`, volá funkci pro typ `Derived`. Volá funkci pro typ `Derived`, protože `NameOf` je virtuální funkce a obě funkce `pBase` a `pDerived` odkazují na objekt typu `Derived`.  
   
- Virtuální funkce jsou volat pouze pro objekty typy tříd, proto nelze deklarovat globální nebo statické funkce jako **virtuální**.  
+ Protože jsou virtuální funkce volány pouze pro objekty typů tříd, nelze deklarovat globální nebo statické funkce jako **virtuální**.  
   
- **Virtuální** – klíčové slovo lze použít v případě deklarace přepsání v odvozené třídě, funkce, ale není nutné; přepsání virtuální funkce jsou vždy virtuální.  
+ **Virtuální** – klíčové slovo se dá použít při deklarování funkcí přepsání v odvozené třídě, ale je zbytečné; přepsání virtuálních funkcí jsou vždy virtuální.  
   
- Virtuální funkce v základní třídě musí být definován, pokud jsou deklarovány pomocí *čistý specifikátor*. (Další informace o čisté virtuální funkce najdete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md).)  
+ Virtuální funkce v základní třídě musí být definovány, jestliže nejsou deklarovány pomocí *pure-specifier*. (Další informace o čistě virtuálních funkcích naleznete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md).)  
   
  Mechanismus volání virtuální funkce lze potlačit explicitním kvalifikováním názvu funkce pomocí operátoru rozlišení oboru (`::`). Zvažte dřívější příklad týkající se třídy `Account`. Pro zavolání funkce `PrintBalance` v základní třídě použijte následující kód:  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  Obě volání funkce `PrintBalance` v předchozím příkladu potlačují mechanismus volání virtuální funkce.  
-  

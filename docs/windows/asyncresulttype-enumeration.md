@@ -1,5 +1,5 @@
 ---
-title: AsyncResultType – výčet | Microsoft Docs
+title: Asyncresulttype – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863306"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465282"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType – výčet
-Určuje typ výsledku vrácený metodou GetResults().  
+Určuje typ výsledku vrácený `GetResults()` metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,8 +39,8 @@ enum AsyncResultType;
   
 |Název|Popis|  
 |----------|-----------------|  
-|`MultipleResults`|Sada více výsledků, které jsou uvedené progresivně mezi počáteční stav a předtím, než se nazývá Close().|  
-|`SingleResult`|Jeden výsledek, který se zobrazí po dokončení události dojde.|  
+|`MultipleResults`|Sada více výsledků, které jsou uvedeny postupně mezi `Start` stavu a před `Close()` je volána.|  
+|`SingleResult`|Jeden výsledek, který se zobrazí, když dojde k událost Complete.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::get_status – metoda | Microsoft Docs
+title: Asyncbase::get_status – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46854ddfd6891efa2f205649d4b6410cc401e7fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863358"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460955"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status – metoda
-Načte hodnotu, která určuje stav asynchronní operace.  
+Načte hodnotu označující stav asynchronní operace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `status`  
- Umístění, kde je stav k uložení. Další informace najdete v tématu Windows::Foundation::AsyncStatus výčtu.  
+ *Stav*  
+ Umístění, kde má být uložen stav. Další informace najdete v tématu Windows::Foundation::AsyncStatus výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném E_ILLEGAL_METHOD_CALL.  
+ S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda implementuje IAsyncInfo::get_Status.  
+ Tato metoda implementuje `IAsyncInfo::get_Status`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

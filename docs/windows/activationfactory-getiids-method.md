@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::getiids – metoda | Microsoft Docs
+title: Activationfactory::getiids – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855507"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463521"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids – metoda
-Načte pole ID implementovaných rozhraní.  
+Načte pole ID implementovaného rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `iidCount`  
- Když tato operace dokončí, počet interace ID v `iids` pole.  
+ *iidCount*  
+ Když tato operace dokončí, počet ID uživatelského rozhraní v *IID* pole.  
   
- `iids`  
+ *IID*  
  Po dokončení této operace implementované pole ID rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující selhání. E_OUTOFMEMORY je možné selhání HRESULT.  
+ S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. E_OUTOFMEMORY je možné selhání hodnoty HRESULT.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

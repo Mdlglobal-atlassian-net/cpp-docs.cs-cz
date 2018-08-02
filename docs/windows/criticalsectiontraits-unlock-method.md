@@ -1,5 +1,5 @@
 ---
-title: Criticalsectiontraits::Unlock – metoda | Microsoft Docs
+title: Criticalsectiontraits::Unlock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883495"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466007"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock – metoda
-Se specializuje šablonu CriticalSection tak, aby podporoval uvolnit vlastnictví objektu zadaného kritická sekce.  
+Specializuje criticalsection – šablony tak, aby podporoval uvolňující vlastnictví objektu zadaného kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `cs`  
- Ukazatel na objekt kritická sekce.  
+ *cs*  
+ Ukazatel na objekt kritický oddíl.  
   
 ## <a name="remarks"></a>Poznámky  
  *Typ* Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.  
   
- Další informace najdete v tématu "LeaveCriticalSection funkce" v části "Synchronizace funkcí" v dokumentaci rozhraní API systému Windows.  
+ Další informace najdete v tématu "LeaveCriticalSection funkce" v části "Synchronizace funkce" dokumentaci k rozhraní Windows API.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

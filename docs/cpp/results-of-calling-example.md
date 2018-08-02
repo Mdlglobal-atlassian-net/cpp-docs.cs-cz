@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939104"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465688"
 ---
 # <a name="results-of-calling-example"></a>Příklad výsledků volání
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
@@ -32,7 +32,7 @@ ms.locfileid: "37939104"
  Název upravený funkce jazyka C je "_MyFunc."  
   
  ![Konvenci volání CDECL](../cpp/media/vc37i01.gif "vc37I01")  
-Konvenci volání __cdecl  
+**__Cdecl** konvence volání  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall a thiscall  
  Dekorovaného názvu C (**__stdcall**) je "_MyFunc@20." Název C++ dekorovaných je speciální.  
@@ -48,5 +48,5 @@ Konvence volání __fastcall
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příklad volání: prototyp a volání funkce](../cpp/calling-example-function-prototype-and-call.md)

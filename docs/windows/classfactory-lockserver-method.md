@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::lockserver – metoda | Microsoft Docs
+title: ClassFactory::lockserver – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860317"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462703"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer – metoda
-Zvýší nebo sníží počet základní objekty, které sleduje aktuální objekt ClassFactory.  
+Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální **ClassFactory –** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `fLock`  
- `true` Chcete-li zvýšit počet sledovaných objektů. `false` se sníží počet sledovaných objektů.  
+ *hejna*  
+ **Hodnota TRUE** se zvýší počet sledovaných objektů. **false** se sníží počet sledovaných objektů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném E_FAIL.  
+ S_OK v případě úspěchu; v opačném případě E_FAIL.  
   
 ## <a name="remarks"></a>Poznámky  
- ClassFactory uchovává informace o objekty v instanci základní třídy [modulu](../windows/module-class.md) třídy.  
+ ClassFactory – uchovává informace o objekty v základní instance [modulu](../windows/module-class.md) třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

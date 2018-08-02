@@ -1,5 +1,5 @@
 ---
-title: Comptr::asweak – metoda | Microsoft Docs
+title: Comptr::asweak – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870074"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465219"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak – metoda
-Načte slabé odkaz na aktuální objekt.  
+Získá nestálý odkaz na aktuální objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pWeakRef`  
- Když tato operace dokončí, ukazatel na slabé referenční objekt.  
+ *pWeakRef*  
+ Když tato operace dokončí, ukazatel na objekt nestálý odkaz.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

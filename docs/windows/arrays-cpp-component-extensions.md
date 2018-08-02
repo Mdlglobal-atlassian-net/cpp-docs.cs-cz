@@ -1,5 +1,5 @@
 ---
-title: Pole (rozšíření komponent C++) | Microsoft Docs
+title: Pole (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,34 +23,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862719"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461686"
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
-`Platform::Array<T>` Typ v jazyce C + +/ CX, nebo `array` – klíčové slovo v jazyce C + +/ CLI, deklaruje pole zadaného typu a počáteční hodnota.  
+`Platform::Array<T>` Typu v jazyce C + +/ CX nebo **pole** – klíčové slovo v jazyce C + +/ CLI, deklaruje pole určeného typu a počáteční hodnota.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
- Pole musí být deklarován pomocí modifikátoru popisovač objektu (^) po ukončovací lomená závorka (>) v deklaraci.  
- Počet elementů pole není součástí typu. Jednu proměnnou pole mohou odkazovat na pole různých velikostí.  
+ Pole musí být deklarován pomocí modifikátoru popisovač objektu (^) po pravé ostré závorky (>) v deklaraci.  
+ Počet prvků pole, které není součástí typu. Jednu proměnnou pole mohou odkazovat na pole různých velikostí.  
   
- Na rozdíl od standardní C++ předplatné není synonymum pro aritmetika ukazatele a není komutativní.  
+ Na rozdíl od standardní C++ vytváření dolních indexů není synonymum pro aritmetika ukazatele a není komutativní.  
   
- Další informace o polích najdete v tématu:  
+ Další informace o polích naleznete v tématu:  
   
 -   [Postupy: Používání polí v jazyce C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
     
 -   [Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Pole jsou členy `Platform` oboru názvů. Pole může být pouze jednorozměrné.  
+ Pole jsou členy `Platform` oboru názvů. Pole může být jenom jednorozměrné.  
   
 ### <a name="syntax"></a>Syntaxe  
   
- V prvním příkladu syntaxe používá `ref new` agregační – klíčové slovo přidělit pole. V druhém příkladu deklaruje místní pole.  
+ První příklad syntaxe používá **ref nové** agregační – klíčové slovo pro přidělení matici. Druhý příklad deklaruje místního pole.  
   
 ```  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
@@ -60,33 +60,33 @@ ms.locfileid: "33862719"
     {initialization-list [,...]}  
 ```  
   
- *Kvalifikátory* [Nepovinné]  
- Jeden nebo více těchto specifikátory třídy úložiště: [měnitelný](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).  
+ *Kvalifikátory* [volitelný]  
+ Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).  
   
- `array-type`  
- Typ proměnné pole. Platné typy jsou třídy prostředí Windows Runtime a základní typy, ref třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).  
+ *Typ pole*  
+ Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).  
   
- `rank` [Nepovinné]  
+ *pořadí* [volitelný]  
  Počet rozměrů pole. Musí být 1.  
   
- `identifier`  
+ *identifikátor*  
  Název proměnné pole.  
   
- `initialization-type`  
- Typ hodnoty, které inicializovat pole. Obvykle `array-type` a `initialization-type` jsou stejného typu. Typy však může být různé, pokud je převod z `initialization-type` k `array-type`– například pokud `initialization-type` je odvozený od `array-type`.  
+ *typ inicializace*  
+ Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* jsou stejného typu. Však mohou být typy lišit, když existuje převod z *typ inicializace* k *typ pole*– například pokud *typ inicializace* je odvozen z *typ pole*.  
   
- `initialization-list` [Nepovinné]  
- Čárkami oddělený seznam hodnot v složené závorky, které inicializovat elementy pole. Například pokud `rank-size-list` byly `(3)`, který deklaruje jednorozměrné pole 3 elementů `initialization list` může být `{1,2,3}`.  
+ *inicializační seznam* [volitelný]  
+ Čárkami oddělený seznam hodnot ve složených závorkách, které inicializaci prvků pole. Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jednorozměrné pole prvků 3 *inicializačního seznamu* může být `{1,2,3}`.  
   
 ### <a name="remarks"></a>Poznámky  
   
- V době kompilace může zjistit, jestli typ je počítáno odkaz na pole s `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ V době kompilace může zjistit, zda je typ pole s počítáním referencí s `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
   
 ### <a name="examples"></a>Příklady  
- Následující příklad vytvoří jednorozměrné pole, které má 100 elementy.  
+ Následující příklad vytvoří jednorozměrné pole, která má 100 elementů.  
   
 ```cpp  
 // cwr_array.cpp  
@@ -104,7 +104,7 @@ int main() {
   
 ### <a name="syntax"></a>Syntaxe  
   
- V prvním příkladu syntaxe používá `gcnew` – klíčové slovo přidělit pole. V druhém příkladu deklaruje místní pole.  
+ První příklad syntaxe používá **gcnew** – klíčové slovo pro přidělení matici. Druhý příklad deklaruje místního pole.  
   
 ```  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
@@ -114,48 +114,48 @@ int main() {
     {initialization-list [,...]}  
 ```  
   
- *Kvalifikátory* [Nepovinné]  
- Jeden nebo více těchto specifikátory třídy úložiště: [měnitelný](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).  
+ *Kvalifikátory* [volitelný]  
+ Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).  
   
- `array-type`  
- Typ proměnné pole. Platné typy jsou třídy prostředí Windows Runtime a základní typy, ref třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (prostý stará data).  
+ *Typ pole*  
+ Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (obyčejná stará data).  
   
- `rank` [Nepovinné]  
- Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé pole je sám pole.  
+ *pořadí* [volitelný]  
+ Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.  
   
- `identifier`  
+ *identifikátor*  
  Název proměnné pole.  
   
- `initialization-type`  
- Typ hodnoty, které inicializovat pole. Obvykle `array-type` a `initialization-type` jsou stejného typu. Typy však může být různé, pokud je převod z `initialization-type` k `array-type`– například pokud `initialization-type` je odvozený od `array-type`.  
+ *typ inicializace*  
+ Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* jsou stejného typu. Však mohou být typy lišit, když existuje převod z *typ inicializace* k *typ pole*– například pokud *typ inicializace* je odvozen z *typ pole*.  
   
- `rank-size-list`  
- Čárkami oddělený seznam velikost Každá dimenze v poli. Případně pokud `initialization-list` je zadán parametr, kompilátor lze odvodit velikost Každá dimenze a `rank-size-list` lze vynechat. 
+ *pořadí seznamu velikost*  
+ Čárkami oddělený seznam velikosti jednotlivých rozměrů pole. Případně pokud *inicializačního seznamu* parametr zadán, kompilátor může odvodit velikost každého rozměru a *řazení seznamu velikost* lze vynechat. 
   
- `initialization-list` [Nepovinné]  
- Čárkami oddělený seznam hodnot v složené závorky, které inicializovat elementy pole. Nebo vnořený seznam s položkami oddělenými čárkou *Inicializace seznamu* položky, které inicializovat elementů v vícerozměrné.  
+ *inicializační seznam* [volitelný]  
+ Čárkami oddělený seznam hodnot ve složených závorkách, které inicializaci prvků pole. Nebo vnořený seznam oddělený čárkami *inicializačního seznamu* položky, které inicializaci prvků v vícerozměrné pole.  
   
- Například pokud `rank-size-list` byly `(3)`, který deklaruje jednorozměrné pole 3 elementů `initialization list` může být `{1,2,3}`. Pokud `rank-size-list` byly `(3,2,4)`, který deklaruje trojrozměrné 3 elementů v první dimenze, 2 prvky za sekundu a 4 elementy do třetího `initialization-list` může být `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
+ Například pokud *řazení seznamu velikost* byly `(3)`, který deklaruje jednorozměrné pole prvků 3 *inicializačního seznamu* může být `{1,2,3}`. Pokud *řazení seznamu velikost* byly `(3,2,4)`, který deklaruje třídimenzionální pole prvků 3 v prvním rozměru, 2 prvky za sekundu a 4 prvky v třetí, *inicializačního seznamu* může být `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Poznámky  
   
- `array` Probíhá [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
+ `array` Probíhá [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
   
- Jako standardní C++ indexy pole jsou od nuly, a pole je dolního indexu pomocí hranaté závorky ([]). Na rozdíl od standardní C++ jsou indexy vícerozměrné určené v seznamu indexy, které pro každý dimenzi namísto sadu operátory hranaté závorky ([]) pro každý dimenzi. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].  
+ Podobně jako standardní C++ indexy pole jsou počítány od nuly a pole je indexované pomocí hranatých závorek ([]). Na rozdíl od standardní C++ jsou uvedeny indexy vícerozměrné pole v seznamu indexů pro jednotlivé rozměry namísto sadu operátorů hranatých závorek ([]) pro jednotlivé rozměry. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].  
   
- Dědí všechny spravovaných polí `System::Array`. Žádné metody nebo vlastnosti z `System::Array` lze použít přímo do proměnné pole.  
+ Dědí všechny spravovaných polí `System::Array`. Všechny metody nebo vlastnosti z `System::Array` lze použít přímo k proměnné pole.  
   
- Pokud přidělíte pole, jehož typ elementu je ukazatel-na třídu spravovaných elementů jsou inicializovat 0.  
+ Když přidělíte pole, jehož typ prvku je ukazatel-spravovanou třídu prvky jsou inicializovány 0.  
   
- Pokud přidělíte pole, jehož typ elementu je typ hodnoty `V`, výchozí konstruktor pro `V` se použije pro každý element pole. Další informace najdete v tématu [rozhraní .NET Framework – ekvivalenty k nativním typy C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
+ Když přidělíte pole, jehož typ prvku je typ hodnoty `V`, výchozí konstruktor pro `V` se aplikuje na každý prvek pole. Další informace najdete v tématu [rozhraní .NET Framework – ekvivalenty nativních typů C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
   
- Při kompilaci, můžete zjistit, zda typ je běžné pole language runtime (CLR) s `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ V době kompilace, můžete zjistit, zda je typ common language runtime (CLR) pole `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
   
 ### <a name="examples"></a>Příklady  
- Následující příklad vytvoří jednorozměrné pole, které má 100 elementy a trojrozměrné, který má 3 elementy v první dimenzi, 5 elementy za sekundu a 6 elementů ve třetí.  
+ Následující příklad vytvoří jednorozměrné pole, která má 100 elementů a trojrozměrného pole, která má 3 elementů v prvním rozměru, 5 elementů do druhého a 6 prvků v třetí.  
   
 ```cpp  
 // clr_array.cpp  

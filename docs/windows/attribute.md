@@ -1,5 +1,5 @@
 ---
-title: atribut | Microsoft Docs
+title: atribut | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862059"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461806"
 ---
 # <a name="attribute"></a>– atribut
 Umožňuje vytvořit vlastní atribut.  
@@ -33,8 +33,7 @@ Umožňuje vytvořit vlastní atribut.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ attribute(  
+[ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
    Inherited=boolean  
@@ -43,34 +42,34 @@ Umožňuje vytvořit vlastní atribut.
   
 #### <a name="parameters"></a>Parametry  
  *AllowOn*  
- Určuje jazyk prvky, na které můžete použít vlastní atribut. Výchozí hodnota je **System::AttributeTargets::All** (viz [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
+ Určuje prvky jazyka, na které můžete použít vlastní atribut. Výchozí hodnota je `System::AttributeTargets::All` (viz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
- `AllowMultiple`  
- Určuje, zda vlastní atribut můžete opakovaně použít pro konstrukt. Výchozí hodnota je **FALSE**.  
+ *AllowMultiple*  
+ Určuje, zda vlastní atribut můžete opakovaně použít pro konstrukci. Výchozí hodnota je FALSE.  
   
- `Inherited`  
- Značí, zda atribut převezmou podtřídy. Kompilátor poskytuje žádné speciální podporu pro tuto funkci; Úloha atribut příjemců (třeba reflexe) je dodržovat tyto informace. Pokud `Inherited` je **TRUE**, zdědí atribut. Pokud `AllowMultiple` je **TRUE**, atribut budou se hromadit na odvozené člen; Pokud `AllowMultiple` je **FALSE**, atribut bude přepsat (nebo nahradit) v dědičnosti. Pokud `Inherited` je **FALSE**, nebude možné zdědit atribut. Výchozí hodnota je **TRUE**.  
+ *Zděděné*  
+ Určuje, zda je atribut má být zděděna podtřídy. Kompilátor neposkytuje žádnou zvláštní podporu pro tuto funkci; dodržovat tyto informace je práce pro atribut uživatele (například reflexe). Pokud *zděděné* má hodnotu TRUE, dědí atribut. Pokud *AllowMultiple* má hodnotu TRUE, atribut budou se hromadit na člena odvozené; Pokud *AllowMultiple* má hodnotu FALSE, atribut se přepsat (nebo nahradit) v dědičnosti. Pokud *zděděné* má hodnotu FALSE, nebude možné zdědit atribut. Výchozí hodnota je TRUE.  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  `attribute` Atribut je nyní zastaralý.  Běžné language runtime atribut System.Attribute k přímo použijte k vytvoření attirbutes definovaný uživatelem.  Další informace najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  `attribute` Atribut je nyní zastaralý.  Můžete vytvořit uživatelem definované attirbutes common language runtime atributu System.Attribute přímo.  Další informace najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Můžete definovat [vlastní atribut](../windows/custom-attributes-cpp.md) tím, že `attribute` atribut na spravované definici třídě nebo struktuře. Název třídy je vlastní atribut. Příklad:  
+ Můžete definovat [vlastního atributu](../windows/custom-attributes-cpp.md) tak, že `attribute` atributu na definici spravované třídy nebo struktury. Název třídy je vlastní atribut. Příklad:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- definuje atribut nazvaný MyAttr, který lze použít na parametry funkce. Třída musí být veřejné, pokud atribut má použít v jiné sestavení.  
+ definuje atribut s názvem `MyAttr` , který lze použít u funkčních parametrů. Třída musí být veřejné, pokud atribut se bude používat v jiných sestaveních.  
   
 > [!NOTE]
->  Pokud chcete zabránit kolize názvů, všechny názvy atributů implicitně končit "Atribut"; v tomto příkladu název atributu a třída je ve skutečnosti MyAttrAttribute, ale MyAttr a MyAttrAttribute zaměnitelné.  
+>  Pokud chcete zabránit kolizím obor názvů, implicitně končí všechny názvy atributů s "Atribut"; v tomto příkladu je název atributu a třídy ve skutečnosti `MyAttrAttribute`, ale `MyAttr` a `MyAttrAttribute` zaměnitelné.  
   
- Veřejné konstruktory třídy definují atributu nepojmenované parametry. Přetížené konstruktory povolit více způsobů určení atribut, aby vlastní atribut, který je definován následujícím způsobem:  
+ Veřejné konstruktory třídy definují nepojmenované parametry atributu. Přetížené konstruktory povolit více způsobů určení atributů, tak vlastní atribut, který je definován následujícím způsobem:  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- Veřejná data členy třídy a vlastnosti jsou volitelné parametry s názvem atributu:  
+ Veřejné datové členy třídy a vlastnosti jsou volitelné pojmenované parametry atributu:  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -112,13 +111,13 @@ public:
 ref class ClassC {};  
 ```  
   
- Seznam typů parametr možné atributů najdete v tématu [vlastní atributy](../windows/custom-attributes-cpp.md).  
+ Seznam typů parametrů polí možné atributů najdete v tématu [vlastní atributy](../windows/custom-attributes-cpp.md).  
   
- V tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md) podrobné informace o cíle atributů.  
+ Zobrazit [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md) diskuse o atribut cíle.  
   
- `attribute` Atribut má `AllowMultiple` parametr, který určuje, zda je vlastní atribut jedno použití nebo multiuse (může vyskytovat více než jednou u stejné entity).  
+ `attribute` Atribut má *AllowMultiple* parametr, který určuje, zda je vlastní atribut je jedno použití nebo multiuse (může objevit více než jednou ve stejné entity).  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -131,7 +130,7 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Vlastní atribut třídy jsou odvozené přímo nebo nepřímo od <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, které díky Identifikace definice atributu v metadatech rychlé a snadné. `attribute` Atribut znamená dědění ze System::Attribute, takže není nutné explicitní odvození:  
+ Vlastní atribut třídy jsou odvozené přímo nebo nepřímo z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, díky kterému budou Identifikace definice atributu v metadatech rychlé a snadné. `attribute` Atribut znamená dědičnosti z System::Attribute, takže není nutné explicitní odvození:  
   
 ```  
 [ attribute(Class) ]  
@@ -145,7 +144,7 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` je alias <xref:System.AttributeUsageAttribute?displayProperty=fullName> (ne atributAtribut; Toto je výjimka do atribut pravidla pojmenování).  
+ `attribute` je alias pro <xref:System.AttributeUsageAttribute?displayProperty=fullName> (ne atributAtribut; to je výjimka pravidlo pro pojmenování atributů).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -153,16 +152,16 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**Platí pro**|`ref` **Třída**, **ref struct**|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída ref class**, **ref struct**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_4.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -176,9 +175,9 @@ ref class MyClass {};
 ```  
   
 ## <a name="example"></a>Příklad  
- `Inherited` Pojmenovaný argument určuje, zda vlastní atribut použít na základní třídě se zobrazí na reflexi odvozené třídy.  
+ `Inherited` Pojmenovaný argument určuje, zda se zobrazí vlastní atribut na základní třídu použita na reflexi odvozené třídy.  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -218,4 +217,4 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)   
- [Vlastní atributy](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [Vlastní atributy](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

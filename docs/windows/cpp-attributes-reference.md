@@ -1,5 +1,5 @@
 ---
-title: C++ – referenční dokumentace atributů | Microsoft Docs
+title: Atributy odkaz C++ | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29c3aacf63396e96b4520fc849e082c6781e5d64
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460903"
 ---
 # <a name="c-attributes-reference"></a>Referenční dokumentace k atributům C++
-Microsoft definuje sadu atributů, které zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele knihoven DLL pro vložení kódu nebo změňte kód v soubory generované objektů.  
+Microsoft definuje sadu atributů, které zjednodušují programování v modelu COM a rozhraní .NET Framework common language runtime vývoje. Pokud zahrnete atributy ve zdrojových souborech, kompilátor funguje s poskytovatelem knihoven DLL pro vložení kódu nebo změnit kód v souborech generované objektů.  
   
- **Poznámka:** Pokud hledáte standardní atributy C++, přečtěte si téma [atributy](../cpp/attributes.md).  
+ **Poznámka:** Pokud hledáte atributy standard C++, naleznete v tématu [atributy](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Koncepty](../windows/attributed-programming-concepts.md)  
- Popisuje různé koncepty, které souvisí s atributy.  
+ Popisuje různé koncepty, které se vztahují na atributy.  
   
  [Atributy podle skupin](../windows/attributes-by-group.md)  
- Obsahuje odkazy na atribut referenční témata, seskupených podle funkce.  
+ Obsahuje odkazy na referenční témata, seskupené podle funkce atribut.  
   
  [Atributy podle použití](../windows/attributes-by-usage.md)  
  Obsahuje odkazy na referenční témata, seskupené podle použití atributu.  
@@ -42,9 +42,9 @@ Microsoft definuje sadu atributů, které zjednodušují programování COM a ro
   
 ## <a name="related-sections"></a>Související oddíly  
  [Programování s atributy](../windows/attributed-programming-concepts.md)  
- Poskytuje koncepční přehled atributů.  
+ Poskytuje koncepční přehled atributy.  
   
- [Referenční informace](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Referenční informace](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Obsahuje odkazy na témata popisující jazyk C a C++, knihovny poskytované aplikaci Visual C++, rozšířený objektový model Visual C++ a MASM (Microsoft Macro Assembler).  
   
  [Visual C++ – ukázky](../visual-cpp-samples.md)  

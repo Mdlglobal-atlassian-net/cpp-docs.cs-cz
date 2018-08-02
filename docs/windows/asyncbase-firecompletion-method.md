@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::firecompletion – metoda | Microsoft Docs
+title: Asyncbase::firecompletion – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859732"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467238"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion – metoda
-Volá obslužnou rutinu události dokončení nebo obnoví interní průběh delegáta.  
+Vyvolá obslužnou rutinu události dokončení nebo obnoví vnitřní průběh delegáta.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ virtual void FireCompletion();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- První verze součásti FireCompletion() obnoví proměnnou interní průběh delegáta. Druhá verze vyvolá obslužné rutiny události dokončení, pokud je dokončení asynchronní operace.  
+ První verze **FireCompletion()** obnoví vnitřní průběh proměnné delegáta. Druhá verze vyvolá obslužnou rutinu události dokončení pokud asynchronní operace nebude dokončena.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

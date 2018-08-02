@@ -1,5 +1,5 @@
 ---
-title: AsyncStatusInternal – výčet | Microsoft Docs
+title: Asyncstatusinternal – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863722"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464873"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal – výčet
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,22 +34,22 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Určuje mapování mezi interní výčty pro stav asynchronní operace a **Windows::Foundation::AsyncStatus** výčtu.  
+ Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.  
   
 ## <a name="members"></a>Členové  
- `_Created`  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: vytvořen  
+ *_Created*  
+ Ekvivalentní:: Windows::Foundation::AsyncStatus:: vytvořili  
   
- `_Started`  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: spustila  
+ *_Started*  
+ Ekvivalentní:: Windows::Foundation::AsyncStatus:: spuštění  
   
- `_Completed`  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: dokončena  
+ *_Completed*  
+ Ekvivalentní:: Windows::Foundation::AsyncStatus:: dokončeno  
   
- `_Cancelled`  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: zrušena  
+ *_Cancelled*  
+ Ekvivalentní:: Windows::Foundation::AsyncStatus:: zrušeno  
   
- `_Error`  
+ *_Podrobnosti*  
  Ekvivalentní:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>Požadavky  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9af76787780ebe2a25b3fab46ce1951085b8e8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b01e9799a1f8b03406750dca0b486c6c4d0f655
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947698"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466693"
 ---
 # <a name="staticcast-operator"></a>static_cast – operátor
 Převede *výraz* typu *id typu* pouze na základě typů, které jsou k dispozici ve výrazu.  
@@ -113,6 +113,6 @@ void f() {
   
  Z důvodu nebezpečí provádění nekontrolovaného přetypování nad relokačním kolektorem uvolnění paměti, použití **static_cast** by měly být pouze v kód kritickém pro výkon když jste si jisti, že bude správně fungovat. Pokud je nutné použít **static_cast** v režimu vydání, nahraďte ji [safe_cast](../windows/safe-cast-cpp-component-extensions.md) v sestavení ladění, aby byl zajištěn úspěch.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Operátory přetypování](../cpp/casting-operators.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

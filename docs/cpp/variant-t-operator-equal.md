@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d757c645ae131b88ffb99e571d1e08214eda8129
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947669"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462862"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Specifické pro Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37947669"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _variant_t& operator=(  
    const VARIANT& varSrc   
 );  
@@ -128,39 +127,39 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Poznámky  
  Operátor přiřadí novou hodnotu objektu `_variant_t`:  
   
--   **Operator = (***varSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.      
+-   **Operator = (***varSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.  
   
--   **Operator = (***pVarSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.      
+-   **Operator = (***pVarSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.  
   
 -   **Operator = (***var_t_Src***)** přiřadí existující `_variant_t` do objektu `_variant_t` objektu.      
   
--   **operátor = (***sSrc***)** přiřadí **krátký** celočíselnou hodnotu `_variant_t` objektu.      
+-   **operátor = (***sSrc***)** přiřadí **krátký** celočíselnou hodnotu `_variant_t` objektu.  
   
--   **operátor = (**`lSrc`**)** přiřadí **dlouhé** celočíselnou hodnotu `_variant_t` objektu.      
+-   **operátor = (**`lSrc`**)** přiřadí **dlouhé** celočíselnou hodnotu `_variant_t` objektu.  
   
--   **operátor = (***fltSrc***)** přiřadí **float** číselnou hodnotu `_variant_t` objektu.      
+-   **operátor = (***fltSrc***)** přiřadí **float** číselnou hodnotu `_variant_t` objektu.  
   
--   **operátor = (***dblSrc***)** přiřadí **double** číselnou hodnotu `_variant_t` objektu.      
+-   **operátor = (***dblSrc***)** přiřadí **double** číselnou hodnotu `_variant_t` objektu.  
   
--   **operátor = (***cySrc***)** přiřadí `CY` do objektu `_variant_t` objektu.      
+-   **operátor = (***cySrc***)** přiřadí `CY` do objektu `_variant_t` objektu.  
   
--   **operátor = (***bstrSrc***)** přiřadí `BSTR` do objektu `_variant_t` objektu.      
+-   **operátor = (***bstrSrc***)** přiřadí `BSTR` do objektu `_variant_t` objektu.  
   
--   **Operator = (***wstrSrc***)** přiřadí řetězec znakové sady Unicode `_variant_t` objektu.      
+-   **Operator = (***wstrSrc***)** přiřadí řetězec znakové sady Unicode `_variant_t` objektu.  
   
--   **Operator = (**`strSrc`**)** přiřadí vícebajtový řetězec `_variant_t` objektu.      
+-   **Operator = (**`strSrc`**)** přiřadí vícebajtový řetězec `_variant_t` objektu.  
   
--   **Operator = (** `bSrc` **)** přiřadí **bool** hodnota, která se `_variant_t` objektu.    
+-   **Operator = (** `bSrc` **)** přiřadí **bool** hodnota, která se `_variant_t` objektu.  
   
--   **operátor = (***pDispSrc***)** přiřadí `VT_DISPATCH` do objektu `_variant_t` objektu.      
+-   **operátor = (***pDispSrc***)** přiřadí `VT_DISPATCH` do objektu `_variant_t` objektu.  
   
--   **operátor = (***pIUnknownSrc***)** přiřadí `VT_UNKNOWN` do objektu `_variant_t` objektu.      
+-   **operátor = (***pIUnknownSrc***)** přiřadí `VT_UNKNOWN` do objektu `_variant_t` objektu.  
   
--   **Operator = (***decSrc***)** přiřadí `DECIMAL` hodnota, která se `_variant_t` objektu.      
+-   **Operator = (***decSrc***)** přiřadí `DECIMAL` hodnota, která se `_variant_t` objektu.  
   
--   **Operator = (** `bSrc` **)** přiřadí `BYTE` hodnota, která se `_variant_t` objektu.    
+-   **Operator = (** `bSrc` **)** přiřadí `BYTE` hodnota, která se `_variant_t` objektu.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_variant_t – třída](../cpp/variant-t-class.md)

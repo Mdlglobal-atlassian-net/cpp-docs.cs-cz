@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6c9d823b74762c4b35f25fd2daa94b5fc7c0ce32
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026562"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462024"
 ---
 # <a name="types-of-expressions"></a>Typy výrazů
 Výrazy jazyka C++ jsou rozděleny do několika kategorií:  
@@ -44,5 +44,5 @@ Výrazy jazyka C++ jsou rozděleny do několika kategorií:
   
 -   [Informace běhového typu](../cpp/run-time-type-information.md). Určete typ objektu při provádění programu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy](../cpp/expressions-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Creatormap – struktura | Microsoft Docs
+title: Creatormap – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873281"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464253"
 ---
 # <a name="creatormap-structure"></a>CreatorMap – struktura
-Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obsahuje informace o tom, jak inicializovat, zaregistrujte a zrušit registraci objekty.  
+ Obsahuje informace o tom, jak inicializovat, vytvářet a rušit registraci objektů.  
   
- Creatormap – obsahuje následující informace:  
+ **Creatormap –** obsahuje následující informace:  
   
--   Způsob inicializace, registrace a zrušení registrace objekty.  
+-   Tom, jak inicializovat, vytvářet a rušit registraci objektů.  
   
--   Jak k porovnání dat aktivace v závislosti na objekt COM nebo prostředí Windows Runtime classic.  
+-   Jak porovnat data aktivace v závislosti na objekt klasického modelu COM nebo prostředí Windows Runtime.  
   
 -   Informace o název objektu pro vytváření mezipaměti a server pro rozhraní.  
   
@@ -51,10 +51,10 @@ struct CreatorMap;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CreatorMap::activationId – datový člen](../windows/creatormap-activationid-data-member.md)|Představuje identifikovanou classic ID třídy modelu COM nebo prostředí Windows Runtime název ID objektu.|  
-|[CreatorMap::factoryCache – datový člen](../windows/creatormap-factorycache-data-member.md)|Uchovává creatormap – ukazatel na objekt pro vytváření mezipaměti.|  
-|[CreatorMap::factoryCreator – datový člen](../windows/creatormap-factorycreator-data-member.md)|Vytvoří objekt factory pro zadaný creatormap –.|  
-|[CreatorMap::serverName – datový člen](../windows/creatormap-servername-data-member.md)|Ukládá název serveru pro creatormap –.|  
+|[CreatorMap::activationId – datový člen](../windows/creatormap-activationid-data-member.md)|Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo názvu modulu Windows Runtime.|  
+|[CreatorMap::factoryCache – datový člen](../windows/creatormap-factorycache-data-member.md)|Ukládá ukazatel na objekt pro vytváření mezipaměti **creatormap –**.|  
+|[CreatorMap::factoryCreator – datový člen](../windows/creatormap-factorycreator-data-member.md)|Vytvoří objekt factory pro zadaný **creatormap –**.|  
+|[CreatorMap::serverName – datový člen](../windows/creatormap-servername-data-member.md)|Ukládá název serveru pro **creatormap –**.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CreatorMap`  

@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::iidcount – konstanta | Microsoft Docs
+title: ChainInterfaces::IidCount – konstanta | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859999"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463938"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount – konstanta
-Celkový počet rozhraní ID obsažené v rozhraní určeného parametry šablony `I0` prostřednictvím `I9`.  
+Celkový počet rozhraní ID, které jsou součástí rozhraní určené parametry šablony *I0* prostřednictvím *I9*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  Celkový počet ID rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- Parametry šablony `I0` a `I1` jsou povinné, parametry a `I2` prostřednictvím `I9` jsou volitelné. Počet IID každé rozhraní je obvykle 1.  
+ Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* prostřednictvím *I9* jsou volitelné. Počet IID každé rozhraní, které je obvykle 1.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

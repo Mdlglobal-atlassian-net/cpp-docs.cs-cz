@@ -1,5 +1,5 @@
 ---
-title: Šablona – Friends | Microsoft Docs
+title: Šablona – Friends | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422121"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466953"
 ---
 # <a name="template-friends"></a>Šablona – Friends
 
-Šablony třídy může mít [přátel](friend-cpp.md). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
+Šablony třídy mohou mít [přátel](friend-cpp.md). Třída, šablona třídy, funkce nebo šablona funkce může být přítelem třídy šablony. Přátelé mohou být také specializacemi šablony třídy nebo šablony funkce, nikoli však částečnými.  
   
-**C++ 11**: parametr typu lze deklarovat jako přítele pomocí formuláře `friend T;`.  
+**C++ 11**: parametr typu mohou být deklarovány jako friend pomocí formuláře `friend T;`.  
   
 ```cpp
 template <typename T>  
@@ -260,6 +260,5 @@ A
 a  
 ```  
   
-## <a name="see-also"></a>Viz také  
-
-[Výchozí argumenty](../cpp/default-arguments.md)
+## <a name="see-also"></a>Viz také:  
+ [Výchozí argumenty](../cpp/default-arguments.md)

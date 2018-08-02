@@ -1,5 +1,5 @@
 ---
-title: Creatormap::activationid – datový člen | Microsoft Docs
+title: Creatormap::activationid – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881793"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467128"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId – datový člen
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,14 +37,14 @@ union {
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `clsid`  
+ *identifikátor CLSID*  
  Identifikátor rozhraní.  
   
- `getRuntimeName`  
- Funkce, která načte Windows runtime název objektu.  
+ *getRuntimeName*  
+ Funkce, která načte název modulu runtime Windows objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Představuje objekt ID, které je identifikován classic ID třídy modelu COM nebo název modulu runtime systému Windows.  
+ Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo název modulu runtime Windows.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

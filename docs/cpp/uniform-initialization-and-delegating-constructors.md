@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939829"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465965"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednotná inicializace a delegování konstruktorů
 V moderním jazyce C++, můžete použít *složených závorek inicializace* pro každý typ, bez znaménko rovná se. Také vám pomůže Delegující konstruktory zjednodušit kód, když máte víc konstruktorů, které provádějí podobné úkoly.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Pokud třída má nevýchozí konstruktory, je pořadí, ve kterém se zobrazí odpovídající parametry v konstruktoru, není pořadí, ve kterém jsou členy deklarované pořadí, ve které třídy členů zobrazují v inicializátoru složenou závorku (stejně jako u `class_a` v předchozí příklad). Jinak Pokud typ nemá žádný konstruktor deklarovaný, pořadí, ve kterém se zobrazí členy v inicializátoru složenou závorku je stejné jako pořadí, ve kterém jsou deklarovány; v takovém případě můžete inicializovat tolik veřejné členy jak chcete, ale nelze přeskočit žádný člen. Následující příklad ukazuje pořadí, ve kterém se používá v inicializaci složenými, pokud neexistuje žádná deklarovaná konstruktor:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>objekt initializer_list konstruktory  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Třídy kontejnerů standardní knihovny a také `string`, `wstring`, a `regex`, mají `initializer_list` konstruktory. Následující příklady znázorňují způsob inicializace pomocí těchto konstruktorů uzavírat do složených závorek:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  Krocích předchozího příkladu, Všimněte si, že konstruktor `class_c(int, int, int)` nejprve volá konstruktor `class_c(int, int)`, která pak volá `class_c(int)`. Každá z konstruktorů provádí pouze práce, která neprovádí se konstruktory.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  Následující příklad ukazuje použití inicializátory nestatických dat člena. Všimněte si, že pokud konstruktor inicializuje také členem daného data, je přepsána inicializátor členu:  

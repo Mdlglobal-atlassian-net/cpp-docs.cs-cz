@@ -1,5 +1,5 @@
 ---
-title: Změna vlastností řetězce | Microsoft Docs
+title: Změna vlastností řetězce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4de63d1275a5e90b6b20ea46d1774bae3c2861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc8f0ec7c904355e3b5b4989a89fd13a7d9ad767
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860600"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464568"
 ---
 # <a name="changing-the-properties-of-a-string"></a>Změna vlastností řetězce
-### <a name="to-change-a-string-or-its-identifier"></a>Chcete-li změnit řetězec nebo jeho identifikátoru  
+### <a name="to-change-a-string-or-its-identifier"></a>Chcete-li změnit její identifikátor nebo řetězec  
   
-1.  Otevřít tabulku řetězec poklepáním na ikonu v [zobrazení prostředků](../windows/resource-view-window.md).  
+1.  Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Vyberte řetězec, který chcete upravit a dvakrát klikněte **ID**, **hodnotu**, nebo **popisek** sloupce. Nyní můžete:  
+2.  Vyberte řetězec, který chcete upravit a dvakrát klikněte **ID**, **hodnotu**, nebo **titulek** sloupce. Nyní můžete:  
   
-    -   Vyberte **ID** z **rozevíracího seznamu ID** seznamu nebo zadejte ID přímo na místě.  
+    -   Vyberte **ID** z **rozevírací seznam ID** seznamu nebo zadejte ID přímo na místě.  
   
-    -   Zadejte jiné číslo **hodnotu** sloupce.  
+    -   Zadejte jiné číslo v **hodnotu** sloupce.  
   
-    -   Zadejte úprav v **popisek** sloupce.  
+    -   Zadejte úpravy v operaci **titulek** sloupce.  
   
         > [!NOTE]
-        >  Můžete také upravit vlastnosti na řetězec v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+        >  Můžete také upravit vlastnosti řetězce v [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
- Informace o přidávání zdrojů do spravovaných projekty (ty, které cílí modul common language runtime), najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti, najdete v části [návod: lokalizace Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití zdrojů pro lokalizaci s technologií ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Požadavky**  
   
@@ -51,4 +51,3 @@ ms.locfileid: "33860600"
   
 ## <a name="see-also"></a>Viz také  
  [Editor řetězce](../windows/string-editor.md)   
-

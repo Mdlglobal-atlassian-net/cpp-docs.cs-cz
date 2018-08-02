@@ -1,5 +1,5 @@
 ---
-title: Comptr::CopyTo – metoda | Microsoft Docs
+title: Comptr::CopyTo – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870868"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464438"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo – metoda
-Kopie rozhraní zadané nebo aktuální přidružený tento ComPtr na zadaný ukazatel.  
+Zkopíruje aktuální nebo zadané rozhraní přidružené k tomuto **ComPtr** na zadaný ukazatel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
+ *U*  
  Název typu.  
   
- `ptr`  
- Když tato operace dokončí, ukazatel na požadované rozhraní.  
+ *ptr*  
+ Pokud tato operace dokončí, ukazatel na požadované rozhraní.  
   
- `riid`  
+ *riid*  
  Identifikátor rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT, která označuje, proč implicitní QueryInterface operace se nezdařila.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, který označuje důvod, proč implicitní `QueryInterface` operace se nezdařila.  
   
 ## <a name="remarks"></a>Poznámky  
- První funkce vrátí kopii ukazatele rozhraní přidružené k této ComPtr. Tato funkce vždy vrátí hodnotu S_OK.  
+ První funkce vrátí kopii objektu ukazatele na rozhraní přidružené k tomuto **ComPtr**. Tato funkce vždy vrátí hodnotu S_OK.  
   
- Funkce second provede operaci QueryInterface na rozhraní přidružené k této ComPtr pro rozhraní zadané `riid` parametr.  
+ Druhá funkce provádí `QueryInterface` operace v rozhraní přidružené k tomuto **ComPtr** pro rozhraní určené typem *riid* parametru.  
   
- Třetí funkce provede operaci QueryInterface na rozhraní přidružené k této ComPtr pro základní rozhraní `U` parametr.  
+ Třetí funkce provádí `QueryInterface` operace v rozhraní přidružené k tomuto **ComPtr** základního rozhraní *U* parametr.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

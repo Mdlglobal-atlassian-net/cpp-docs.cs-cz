@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941038"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462648"
 ---
 # <a name="typeinfo-class"></a>type_info – třída
-`type_info` Třída popisuje typ informace generované kompilátorem v rámci programu. Objekty této třídy účinně ukládají ukazatel na název typu. `type_info` Třídy také ukládá kódovanou hodnotu vhodnou pro porovnání dvou typů pro rovnost nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  
+**Type_info** třída popisuje typ informace generované kompilátorem v rámci programu. Objekty této třídy účinně ukládají ukazatel na název typu. **Type_info** třídy také ukládá kódovanou hodnotu vhodnou pro porovnání dvou typů pro rovnost nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  
   
- `<typeinfo>` Soubor hlaviček musí být zahrnut pro použití `type_info` třídy. Rozhraní pro `type_info` třída je:  
+ `<typeinfo>` Soubor hlaviček musí být zahrnut pro použití **type_info** třídy. Rozhraní pro **type_info** třída je:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- Nelze vytvořit instanci objektů `type_info` třídy přímo, protože tato třída má pouze soukromý kopírovací konstruktor. Jediný způsob, jak vytvořit (dočasný) `type_info` objektu je použít [typeid](../cpp/typeid-operator.md) operátor. Protože operátor přiřazení je také soukromý, nelze kopírovat ani přiřadit objekty třídy `type_info`.  
+ Nelze vytvořit instanci objektů **type_info** třídy přímo, protože tato třída má pouze soukromý kopírovací konstruktor. Jediný způsob, jak vytvořit (dočasný) **type_info** objektu je použít [typeid](../cpp/typeid-operator.md) operátor. Protože operátor přiřazení je také soukromý, nelze kopírovat ani přiřadit objekty třídy **type_info**.  
   
- `type_info::hash_code` Definuje funkci hash, která je vhodná pro mapování hodnot typu `typeinfo` k distribuci hodnot indexu.  
+ `type_info::hash_code` Definuje funkci hash, která je vhodná pro mapování hodnot typu **typeinfo** k distribuci hodnot indexu.  
   
- Operátory `==` a `!=` slouží k porovnání rovnosti a nerovnosti s jinými `type_info` objekty v uvedeném pořadí.  
+ Operátory `==` a `!=` slouží k porovnání rovnosti a nerovnosti s jinými **type_info** objekty v uvedeném pořadí.  
   
  Neexistuje žádná souvislost mezi pořadím řazení typů a vztahy dědičnosti. Použití `type_info::before` členskou funkci k určení pořadí řazení typů. Neexistuje žádná záruka, který `type_info::before` předá stejné výsledky v různých programech nebo dokonce během různých spuštění stejného programu. Tímto způsobem `type_info::before` je podobný adresy `(&)` operátor.  
   
@@ -56,5 +56,5 @@ public:
   
  Informace o typu se generuje pro polymorfní třídy pouze tehdy, pokud [/GR (povolení běhové informace o typu)](../build/reference/gr-enable-run-time-type-information.md) je zadána možnost kompilátoru.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Informace o typu modulu runtime](../cpp/run-time-type-information.md)

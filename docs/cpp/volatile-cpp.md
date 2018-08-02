@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 82ea6211a51bbe45fa1613dd7bb682f363783367
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940964"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461920"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Kvalifikátor typu, který můžete použít k deklaraci, že hardware může objekt upraveno v programu.  
@@ -32,7 +32,6 @@ Kvalifikátor typu, který můžete použít k deklaraci, že hardware může ob
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 volatile declarator ;  
 ```  
   
@@ -76,7 +75,7 @@ volatile declarator ;
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Const](../cpp/const-cpp.md)   
  [Ukazatelé const a volatile](../cpp/const-and-volatile-pointers.md)

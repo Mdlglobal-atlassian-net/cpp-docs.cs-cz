@@ -1,5 +1,5 @@
 ---
-title: Creatormap::factorycreator – datový člen | Microsoft Docs
+title: Creatormap::factorycreator – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882326"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465380"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator – datový člen
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,23 +38,23 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `currentflags`  
- Jeden z [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) výčty.  
+ *currentflags*  
+ Jeden z [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) enumerátory.  
   
- `entry`  
+ *entry*  
  Creatormap –.  
   
- `iidClassFactory`  
- Rozhraní ID objektu pro vytváření tříd.  
+ *iidClassFactory*  
+ ID rozhraní objekt pro vytváření tříd.  
   
- `factory`  
- Po dokončení operace, adresu objektu pro vytváření tříd.  
+ *objekt pro vytváření*  
+ Po dokončení operace, adresa objektu pro vytváření tříd.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoří objekt factory pro zadaný creatormap –.  
+ Vytvoří objekt pro vytváření pro zadaný creatormap –.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

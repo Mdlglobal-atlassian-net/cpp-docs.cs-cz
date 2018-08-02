@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947504"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466852"
 ---
 # <a name="temporary-objects"></a>Dočasné objekty
 V některých případech je pro kompilátor nezbytné vytvořit dočasné objekty. Tyto dočasné objekty mohou být vytvořeny z následujících důvodů:  
@@ -54,4 +54,3 @@ V některých případech je pro kompilátor nezbytné vytvořit dočasné objek
 |------------------------------|-----------------------|  
 |Výsledek vyhodnocení výrazu|Všechny dočasné objekty vytvořené jako výsledek vyhodnocení výrazu jsou zničeny na konci příkazu výrazu (to znamená, že v místě středníku), nebo na konci řídicích výrazů **pro**, **Pokud**, **při**, **proveďte**, a **přepnout** příkazy.|  
 |Inicializace **const** odkazy|Pokud není inicializátorem l-hodnota stejného typu jako inicializovaný odkaz, je vytvořen dočasný objekt základního typu objektu a inicializován inicializačním výrazem. Tento dočasný objekt je zničen okamžitě po zničení odkazu na objekt, ke kterému je vázán.|  
-  

@@ -1,5 +1,5 @@
 ---
-title: Comptr::releaseandgetaddressof – metoda | Microsoft Docs
+title: Comptr::releaseandgetaddressof – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d846a1fc41596812ca6e8578f25f9ae8115182
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883796"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464990"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf – metoda
-Uvolní rozhraní přidružené k této ComPtr a pak načte adresu [ptr_ –](../windows/comptr-ptr-data-member.md) datového člena, který obsahuje ukazatel na rozhraní, která byla vydána.  
+Uvolní rozhraní přidružené k tomuto **ComPtr** a potom načte adresu [ptr_ –](../windows/comptr-ptr-data-member.md) datový člen, který obsahuje ukazatel rozhraní, která byla vydána.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ T** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Na adresu [ptr_ –](../windows/comptr-ptr-data-member.md) data členem této ComPtr.  
+ Adresa [ptr_ –](../windows/comptr-ptr-data-member.md) datový člen tohoto **ComPtr**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -42,5 +42,5 @@ T** ReleaseAndGetAddressOf();
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)   
+ [Comptr – třída](../windows/comptr-class.md)   
  [ComPtr::ptr_ – datový člen](../windows/comptr-ptr-data-member.md)

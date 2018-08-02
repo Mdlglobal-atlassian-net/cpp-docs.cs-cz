@@ -1,5 +1,5 @@
 ---
-title: Třída AgileEventSource | Microsoft Docs
+title: Agileeventsource – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58eb96e3a0268d3ba70b60d9c315e935e19485f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858117"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462066"
 ---
-# <a name="agileeventsource-class"></a>AgileEventSource – třída
+# <a name="agileeventsource-class"></a>Agileeventsource – třída
 
-Představuje událost, která se vyvolá, což je součást, která je přístupná z libovolného vlákna agilní komponentou. Dědí z [EventSource](eventsource-class.md) a přepíše `Add` – členská funkce s parametrem další typ pro zadání možností, jak má být vyvolán agilní událostí.
+Představuje událost, která je vyvolána agilní komponentu, která je komponenta, která je přístupná z libovolného vlákna. Dědí z [EventSource](eventsource-class.md) a přepíše `Add` členskou funkci s parametrem další typu pro zadání možností pro vyvolání události agile.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,16 +37,16 @@ class AgileEventSource
 ```
 
 ## <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
+ *TDelegateInterface*  
 
  Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
- `TEventSourceOptions`  
- [InvokeModeOptions](invokemodeoptions-structure.md) stucture, jejichž invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
+ *TEventSourceOptions*  
+ [Invokemodeoptions –](invokemodeoptions-structure.md) stucture jehož invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Poznámky
 
-Valná většina součásti v prostředí Windows Runtime jsou agilní součásti. Další informace najdete v tématu [dělení na vlákna a zařazování (C + +/ CX)](../cppcx/threading-and-marshaling-c-cx.md).
+Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Další informace najdete v tématu [vláken a zařazování (C + +/ CX)](../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Valná většina součásti v prostředí Windows Runtime jsou agilní součást
 
 |Název|Popis|
 |----------|-----------------|
-|[AgileEventSource::Add – metoda](#add)|Obslužné rutiny události agilní reprezentována rozhraní zadaného delegáta sadu obslužných rutin událostí pro aktuální objekt AgileEventSource připojí.|
+|[AgileEventSource::Add – metoda](#add)|Připojí obslužnou rutinu události agilní reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální objekt agileeventsource –.|
 
 ## <a name="add"></a> AgileEventSource::Add – metoda
 
-Připojí obslužné rutiny události reprezentována rozhraní zadaného delegáta sadu obslužných rutin událostí pro aktuální [EventSource](eventsource-class.md) objektu.
+Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální [EventSource](eventsource-class.md) objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,17 +81,16 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parametry
 
-*delegateInterface*
+*delegateInterface*  
+Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
 
-Rozhraní objektu delegáta, který reprezentuje obslužnou rutinu události.
-
-*token* po této operaci dokončení popisovač, který představuje událost. Použijte tento token jako parametr metody Remove() k odstranění obslužné rutiny události.
+*Token*  
+Po dokončení této operace, popisovač, který představuje událost. Použijte tento token jako parametr do metody Remove() zahodíte obslužné rutiny události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
 
 
 ## <a name="see-also"></a>Viz také
-
  [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

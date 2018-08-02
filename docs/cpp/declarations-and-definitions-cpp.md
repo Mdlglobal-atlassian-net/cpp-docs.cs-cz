@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fdf87e9db7ecd419897615ab45cc967360b67fc2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403716"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462398"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
 Deklarace zavádějí názvy v programu, například názvy proměnných, obory názvů, třídy a funkce. Deklarace také zadat informace o typu, jakož i další vlastnosti objektu, který je byl deklarován. Název musí být deklarován před jeho použitím; v jazyce C++ bod, ve kterém je název deklarován Určuje, zda je viditelný pro kompilátor. Nelze se odkazovat na funkci nebo třídu, která je deklarována někdy později v jednotce kompilace; můžete použít *předat dál deklarace* jsme toto omezení.  
@@ -39,7 +39,7 @@ Deklarace zavádějí názvy v programu, například názvy proměnných, obory 
   
 5.  Je **typedef** příkazu.  
   
- Příkladem deklarace, které jsou také definice jsou:  
+Příkladem deklarace, které jsou také definice jsou:  
   
 ```cpp 
 // Declare and define int variables i and j.  
@@ -58,7 +58,7 @@ public:
 };  
 ```  
   
- Některé deklarace, které nejsou definicemi jsou:  
+Některé deklarace, které nejsou definicemi jsou:  
   
 ```cpp 
 extern int i;  

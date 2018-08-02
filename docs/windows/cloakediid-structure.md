@@ -1,5 +1,5 @@
 ---
-title: Cloakediid – struktura | Microsoft Docs
+title: Cloakediid – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856157"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461220"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid – struktura
-Šablon RuntimeClass, implementuje a chaininterfaces – označuje, že zadané rozhraní není dostupný v seznamu IID.  
+Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Rozhraní, které je skrytý (skryté).  
+ *T*  
+ Rozhraní, který je skrytý (skryté).  
   
 ## <a name="remarks"></a>Poznámky  
- Následuje příklad použití cloakediid –: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
+ Následuje příklad `CloakedIid` se používá: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `T`  

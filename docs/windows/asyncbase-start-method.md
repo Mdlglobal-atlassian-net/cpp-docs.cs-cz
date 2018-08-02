@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::Start – metoda | Microsoft Docs
+title: Asyncbase::Start – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860915"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463727"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start – metoda
 Spustí asynchronní operaci.  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud tato operace spustí nebo je již spuštěna; v opačném E_ILLEGAL_STATE_CHANGE.  
+ S_OK Pokud operaci spuštění nebo je již spuštěna; v opačném případě E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Poznámky  
- Start() je výchozí implementaci třídy IAsyncInfo::Start a nemá žádné samotnou práci. Ve skutečnosti spuštění asynchronní operaci, potlačení OnStart() čistý virtuální metody.  
+ **Start()** je výchozí implementace `IAsyncInfo::Start`, a nemá žádné samotnou práci. Ve skutečnosti spuštění asynchronní operace, přepsat `OnStart()` čistě virtuální metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

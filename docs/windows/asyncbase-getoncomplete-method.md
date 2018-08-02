@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::getoncomplete – metoda | Microsoft Docs
+title: Asyncbase::getoncomplete – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865107"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466569"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete – metoda
-Zkopíruje adresu aktuální obslužné rutiny události dokončení na zadanou proměnnou.  
+Adresa aktuálního obslužné rutiny události dokončení zkopíruje do zadané proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `completeHandler`  
- Umístění, kde jsou uložené na adresu aktuální obslužné rutiny události dokončení.  
+ *completeHandler*  
+ Umístění, kde je uložen adresu aktuální obslužné rutiny události dokončení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném E_ILLEGAL_METHOD_CALL.  
+ S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947596"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462216"
 ---
 # <a name="this-pointer"></a>this – ukazatel
 **To** ukazatel je ukazatel přístupný pouze v rámci nestatické členské funkce **třídy**, **struktura**, nebo **sjednocení** typu. Odkazuje na objekt, pro který je členská funkce volána. Statické členské funkce nemají **to** ukazatele.  
@@ -31,7 +31,6 @@ ms.locfileid: "37947596"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -199,6 +198,5 @@ int main()
 > [!NOTE]
 >  Konstruktory a destruktory nelze deklarovat jako **const** nebo **volatile**. Může však být vyvolána při **const** nebo **volatile** objekty.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Klíčová slova](../cpp/keywords-cpp.md)   
- 

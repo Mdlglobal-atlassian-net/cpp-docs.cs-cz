@@ -1,5 +1,5 @@
 ---
-title: Odkazy na ukazatele | Microsoft Docs
+title: Odkazy na ukazatele | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467494"
 ---
 # <a name="references-to-pointers"></a>Odkazy na ukazatele
 Odkazy na ukazatele mohou být deklarovány stejným způsobem jako odkazy na objekty. Deklarování odkazu na ukazatel vrací změnitelnou hodnotu, která se používá jako normální ukazatel.  
@@ -28,7 +29,7 @@ Odkazy na ukazatele mohou být deklarovány stejným způsobem jako odkazy na ob
   
  Funkce `Add1` a `Add2` jsou funkčně rovnocenné (i když nejsou volány stejně). Rozdíl je v tom, že funkce `Add1` používá dvojitou dereferenci, kdežto funkce `Add2` používá pohodlný odkaz na ukazatel.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   
@@ -166,5 +167,5 @@ where:
 Input is from stdin.  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Odkazy](../cpp/references-cpp.md)

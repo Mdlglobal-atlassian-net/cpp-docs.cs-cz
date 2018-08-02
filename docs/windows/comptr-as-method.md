@@ -1,5 +1,5 @@
 ---
-title: Comptr::AS – metoda | Microsoft Docs
+title: Comptr::AS – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857269"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461007"
 ---
 # <a name="comptras-method"></a>ComPtr::As – metoda
-Vrátí objekt ComPtr, který představuje rozhraní identifikovaný parametr určené šablony.  
+Vrátí **ComPtr** objekt, který představuje rozhraní identifikován parametrem určené šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -40,21 +39,20 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
- Rozhraní, které má být reprezentován parametrem `p`.  
+ *U*  
+ Rozhraní a nelze je reprezentovat podle parametrů *p*.  
   
- `p`  
- ComPtr objekt, který reprezentuje rozhraní určený parametrem `U`. Parametr `p` nesmí odkazovat na aktuální objekt ComPtr.  
+ *p*  
+ A **ComPtr** objekt, který představuje rozhraní určené typem parametru *U*. Parametr *p* nesmí odkazovat na aktuální **ComPtr** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- První šablona je formulář, který by měli používat v kódu. Druhá šablona je interní, specializace pomocné rutiny, která podporuje funkcí jazyka C++, jako [automaticky](../cpp/auto-cpp.md) zadejte odvození – klíčové slovo.  
+ První šablona je formulář, který by měl používat ve vašem kódu. Druhá šablona se osobní a specializace pomocné rutiny, podporující funkcí jazyka C++, jako [automaticky](../cpp/auto-cpp.md) klíčovým slovem odvození typu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

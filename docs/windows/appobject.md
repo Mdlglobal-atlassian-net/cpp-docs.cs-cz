@@ -1,5 +1,5 @@
 ---
-title: appobject – | Microsoft Docs
+title: appobject – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856970"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466368"
 ---
 # <a name="appobject"></a>appobject
-Identifikuje třída typu coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že jsou globálně dostupnou v této funkce a vlastnosti coclass [knihovny typů](../mfc/automation-clients-using-type-libraries.md).  
+Identifikuje coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že jsou globálně k dispozici v této funkce a vlastnosti třídy typu coclass [knihovny typů](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Appobject –** atribut C++ má stejné funkce jako [appobject –](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL atribut.  
+ **Appobject –** C++ atribut má stejné funkce jako [appobject –](http://msdn.microsoft.com/library/windows/desktop/aa366726) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje jednoduchý – třída definice sebou bloku atribut, který zahrnuje **appobject –**:  
+ Následující kód ukazuje předchází blok atribut, který obsahuje definici jednoduchou třídu **appobject –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,14 +60,14 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**coclass**|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|`coclass`|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941977"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466238"
 ---
 # <a name="static-members-c"></a>Statické členy (C++)
 Třídy mohou obsahovat statická členská data a členské funkce. Když je datový člen deklarován jako **statické**, pouze jedna kopie dat se zachová pro všechny objekty třídy.
@@ -86,5 +86,5 @@ long nBytes = Console.bytecount;
   
  Typ statického člena, který není kvalifikován pomocí názvu třídy. Proto typ `BufferedOutput::bytecount` je **dlouhé**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

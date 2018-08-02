@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dda9406909f3508472c11524402c37baa17a76b0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947599"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465786"
 ---
 # <a name="return-statement-c"></a>return – příkaz (C++)
 Ukončí provádění funkce a vrátí řízení volající funkci (nebo operačnímu systému, je-li řízení předáváno z funkce `main`). Provádění pokračuje ve volání funkce v okamžiku, ihned po volání.  
@@ -64,6 +64,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Jump – příkazy](../cpp/jump-statements-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

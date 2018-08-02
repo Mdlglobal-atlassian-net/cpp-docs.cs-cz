@@ -1,5 +1,5 @@
 ---
-title: Argtraits – struktura | Microsoft Docs
+title: Argtraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858039"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462040"
 ---
 # <a name="argtraits-structure"></a>ArgTraits – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -118,63 +118,63 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TMemberFunction`  
- TypeName parametr argtraits – struktura, která žádné podpis metody Invoke se nemůže shodovat.  
+ *TMemberFunction*  
+ {{Parametr TypeName pro argtraits – struktura, která se nesmí odpovídat čemukoli `Invoke` podpis metody.  
   
- `TDelegateInterface`  
- Delegát rozhraní.  
+ *TDelegateInterface*  
+ Rozhraní delegáta.  
   
- `TArg1`  
- Typ prvního argumentu metodu Invoke.  
+ *TArg1*  
+ Typ prvního argumentu `Invoke` metody.  
   
- `TArg2`  
- Typ druhý argument metodu Invoke.  
+ *TArg2*  
+ Typ druhého argumentu `Invoke` metody.  
   
- `TArg3`  
- Typ třetí argument metodu Invoke.  
+ *TArg3*  
+ Typ třetího argumentu `Invoke` metody.  
   
- `TArg4`  
- Typ čtvrtého argumentu metodu Invoke.  
+ *TArg4*  
+ Typ čtvrtého argumentu `Invoke` metody.  
   
- `TArg5`  
- Typ pátého argument metodu Invoke.  
+ *TArg5*  
+ Typ pátého argumentu `Invoke` metody.  
   
- `TArg6`  
- Typ šestého argument metodu Invoke.  
+ *TArg6*  
+ Typ šestého argumentu `Invoke` metody.  
   
- `TArg7`  
- Typ sedmého argument metodu Invoke.  
+ *TArg7*  
+ Typ sedmého argumentu `Invoke` metody.  
   
- `TArg8`  
- Typ argumentu nakrmeni metodu Invoke.  
+ *TArg8*  
+ Typ osmého argumentu `Invoke` metody.  
   
- `TArg9`  
- Typ devátý argument metodu Invoke.  
+ *TArg9*  
+ Typ devátého argumentu `Invoke` metody.  
   
 ## <a name="remarks"></a>Poznámky  
- `ArgTraits` Struktura deklaruje zadaného delegáta rozhraní a anonymní – členská funkce, který má zadaný počet parametrů.  
+ `ArgTraits` Struktura deklaruje delegáta zadané rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`Arg1Type`|Typedef pro TArg1.|  
-|`Arg2Type`|Typedef pro TArg2.|  
-|`Arg3Type`|Typedef pro TArg3.|  
-|`Arg4Type`|Typedef pro TArg4.|  
-|`Arg5Type`|Typedef pro TArg5.|  
-|`Arg6Type`|Typedef pro TArg6.|  
-|`Arg7Type`|Typedef pro TArg7.|  
-|`Arg8Type`|Typedef pro TArg8.|  
-|`Arg9Type`|Typedef pro TArg9.|  
+|`Arg1Type`|Definice typu pro TArg1.|  
+|`Arg2Type`|Definice typu pro TArg2.|  
+|`Arg3Type`|Definice typu pro TArg3.|  
+|`Arg4Type`|Definice typu pro TArg4.|  
+|`Arg5Type`|Definice typu pro TArg5.|  
+|`Arg6Type`|Definice typu pro TArg6.|  
+|`Arg7Type`|Definice typu pro TArg7.|  
+|`Arg8Type`|Definice typu pro TArg8.|  
+|`Arg9Type`|Definice typu pro TArg9.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ArgTraits::args – konstanta](../windows/argtraits-args-constant.md)|Udržuje počet počet parametrů na metodu Invoke rozhraní delegáta.|  
+|[ArgTraits::args – konstanta](../windows/argtraits-args-constant.md)|Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ArgTraits`  

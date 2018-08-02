@@ -1,5 +1,5 @@
 ---
-title: async_uuid – | Microsoft Docs
+title: async_uuid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856902"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466745"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Určuje identifikátor UUID, který přesměruje MIDL kompilátoru k definování synchronní a asynchronní verzích rozhraní modelu COM.  
+Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *uuid*  
- UUID, který určuje verzi rozhraní.  
+ Identifikátor UUID, který identifikuje verzi rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- **Async_uuid –** atribut C++ má stejné funkce jako [async_uuid –](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL atribut.  
+ **Async_uuid –** C++ atribut má stejné funkce jako [async_uuid –](http://msdn.microsoft.com/library/windows/desktop/aa366735) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -64,8 +63,8 @@ __interface ICustom {
 |||  
 |-|-|  
 |**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|**duální**, **dispinterface**|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

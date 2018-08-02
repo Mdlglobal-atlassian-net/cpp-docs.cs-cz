@@ -1,5 +1,5 @@
 ---
-title: Createactivationfactory – funkce | Microsoft Docs
+title: Createactivationfactory – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e842a13461757e26dd1aed663c590df4c1ba6c74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883427"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466345"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory – funkce
-Vytvoří objekt factory, který vytváří instance pro zadanou třídu, která může být aktivovaný pomocí prostředí Windows Runtime.  
+Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,27 +35,26 @@ template<typename Factory>
       _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `flags`  
- Kombinace jednoho nebo více [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.  
+ *příznaky*  
+ Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.  
   
- `entry`  
- Ukazatel na [creatormap –](../windows/creatormap-structure.md) obsahující inicializace a registrační informace o parametru `riid`.  
+ *entry*  
+ Ukazatel [creatormap –](../windows/creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.  
   
- `riid`  
- Odkaz na rozhraní ID.  
+ *riid*  
+ Odkaz na identifikátor rozhraní.  
   
- `ppFactory`  
- Pokud tato operace dokončí úspěšně, ukazatel na objekt pro vytváření aktivace.  
+ *ppFactory*  
+ Pokud se tato operace dokončí úspěšně, ukazatel na objekt factory pro aktivaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Chybu assert jsou vydávány, pokud parametr šablony `Factory` není odvozen z rozhraní IActivationFactory.  
+ Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IActivationFactory`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

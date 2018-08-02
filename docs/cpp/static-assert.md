@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6fa9b8fb7fe85aca21e90195534f33201bee59fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947693"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464931"
 ---
 # <a name="staticassert"></a>static_assert
 Testuje výraz softwaru v době kompilace. Pokud se zadaný výraz konstanty je FALSE, kompilátor zobrazí zadanou zprávu, pokud je zadáno a kompilace selže s chybou C2338; jinak deklarace nemá žádný vliv.  
@@ -42,15 +42,15 @@ static_assert( constant-expression );
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`constant-expression`|Celočíselný konstantní výraz, který lze převést na logickou hodnotu.<br /><br /> Pokud vyhodnocený výraz je nula (false), `string-literal` parametrů se zobrazí a kompilace selže s chybou. Pokud má výraz hodnotu nenulová (pravda), **static_assert** deklarace nemá žádný vliv.|  
-|`string-literal`|Zprávu, která se zobrazí, pokud `constant-expression` parametru je nula. Zpráva je řetězec znaků [základní znakové sadě](../c-language/ascii-character-set.md) kompilátoru; který je, nikoli [vícebajtové široké znaky](../c-language/multibyte-and-wide-characters.md).|  
+|*constant-expression*|Celočíselný konstantní výraz, který lze převést na logickou hodnotu.<br /><br /> Pokud vyhodnocený výraz je nula (false), *řetězcový literál* parametrů se zobrazí a kompilace selže s chybou. Pokud má výraz hodnotu nenulová (pravda), **static_assert** deklarace nemá žádný vliv.|  
+|*řetězcový literál*|Zprávu, která se zobrazí, pokud *konstantní výraz* parametru je nula. Zpráva je řetězec znaků [základní znakové sadě](../c-language/ascii-character-set.md) kompilátoru; který je, nikoli [vícebajtové široké znaky](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Poznámky  
- `constant-expression` Parametr **static_assert** představuje prohlášení *softwarové tvrzení*. Softwarové tvrzení Určuje podmínku, která očekáváte, že na hodnotu true v určitém místě v programu. Pokud je podmínka pravdivá, **static_assert** deklarace nemá žádný vliv. Pokud je podmínka NEPRAVDA, výraz se nezdaří, kompilátor zobrazí zprávu v `string-literal` parametr a kompilace selže s chybou. V sadě Visual Studio 2017 nebo novější je volitelný parametr řetězcový literál. 
+ *Konstantní výraz* parametr **static_assert** představuje prohlášení *softwarové tvrzení*. Softwarové tvrzení Určuje podmínku, která očekáváte, že na hodnotu true v určitém místě v programu. Pokud je podmínka pravdivá, **static_assert** deklarace nemá žádný vliv. Pokud je podmínka NEPRAVDA, výraz se nezdaří, kompilátor zobrazí zprávu v *řetězcový literál* parametr a kompilace selže s chybou. V sadě Visual Studio 2017 nebo novější je volitelný parametr řetězcový literál. 
   
- **Static_assert** deklarace testuje výraz softwaru v době kompilace. Naproti tomu [vyhodnocení makra, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro testuje výraz softwaru v době běhu a má náklady běhu prostor nebo čas. **Static_assert** deklarace je zvláště užitečná pro šablony ladění, protože argumenty šablony mohou být součástí `constant-expression` parametru.  
+ **Static_assert** deklarace testuje výraz softwaru v době kompilace. Naproti tomu [vyhodnocení makra, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro testuje výraz softwaru v době běhu a má náklady běhu prostor nebo čas. **Static_assert** deklarace je zvláště užitečná pro šablony ladění, protože argumenty šablony mohou být součástí *konstantní výraz* parametru.  
   
- Kompilátor ověří **static_assert** prohlášení o syntaktických chybách při výskytu prohlášení. Kompilátor vyhodnotí `constant-expression` parametr okamžitě, pokud není závislý na parametru šablony. V opačném případě kompilátor vyhodnocuje `constant-expression` parametr při vytváření instance šablony. V důsledku toho kompilátor může vydat diagnostickou zprávu jednou při výskytu prohlášení a znovu když šablona je vytvořena instance.  
+ Kompilátor ověří **static_assert** prohlášení o syntaktických chybách při výskytu prohlášení. Kompilátor vyhodnotí *konstantní výraz* parametr okamžitě, pokud není závislý na parametru šablony. V opačném případě kompilátor vyhodnocuje *konstantní výraz* parametr při vytváření instance šablony. V důsledku toho kompilátor může vydat diagnostickou zprávu jednou při výskytu prohlášení a znovu když šablona je vytvořena instance.  
   
  Můžete použít **static_assert** – klíčové slovo v oboru názvů, třídy nebo oboru bloku. ( **Static_assert** – klíčové slovo je technicky prohlášení, i když nezavádí nové jméno do programu, protože může být použito v oboru názvů.)  
   
@@ -64,7 +64,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```  
   
 ## <a name="description"></a>Popis  
- V následujícím příkladu **static_assert** má deklarace oboru třídy. **Static_assert** ověří, zda je parametr šablony *obyčejná stará data* typ (POD). Kompilátor ověří **static_assert** prohlášení, pokud je deklarovaná, ale není vyhodnocen `constant-expression` parametr až `basic_string` vytváření instance šablony třídy v `main()`.  
+ V následujícím příkladu **static_assert** má deklarace oboru třídy. **Static_assert** ověří, zda je parametr šablony *obyčejná stará data* typ (POD). Kompilátor ověří **static_assert** prohlášení, pokud je deklarovaná, ale není vyhodnocen *konstantní výraz* parametr do `basic_string` v vytvářeníinstancešablonytřídy`main()`.  
   
 ## <a name="example"></a>Příklad  
   
@@ -111,7 +111,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Kontrolní výraz a uživatelem zadané zprávy (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)   
  [#error – direktiva (C++)](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   

@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::Verify – metoda | Microsoft Docs
+title: Chaininterfaces::Verify – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860691"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466836"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify – metoda
-Ověřuje, že každé rozhraní definované parametry šablony `I0` prostřednictvím `I9` dědí z IUnknown nebo IInspectable a že `I0` dědí z `I1` prostřednictvím `I9`.  
+Ověřuje, že každé rozhraní určené parametry šablony *I0* prostřednictvím *I9* dědí z rozhraní IUnknown a/nebo IInspectable a že *I0* dědí z *I1* prostřednictvím *I9*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud se ověření nezdaří, `static_assert` vysílá chybová zpráva popisující chybu.  
+ Pokud se ověření nezdaří, **static_assert** vydá chybovou zprávu s popisem chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Parametry šablony `I0` a `I1` jsou povinné, parametry a `I2` prostřednictvím `I9` jsou volitelné.  
+ Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* prostřednictvím *I9* jsou volitelné.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

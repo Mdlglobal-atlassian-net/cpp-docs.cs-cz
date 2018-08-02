@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::cancastto – metoda | Microsoft Docs
+title: Chaininterfaces::cancastto – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860291"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461207"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo – metoda
-Určuje, zda zadaný rozhraní ID lze převést na každý specializací definované parametry jiné než výchozí šablony.  
+Určuje, zda ID zadané rozhraní může být převeden na jednotlivé specializace určené parametry jiné než výchozí šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `riid`  
+ *riid*  
  Identifikátor rozhraní.  
   
- `ppv`  
- Ukazatel na ID poslední rozhraní, která byla úspěšně přetypování.  
+ *ppv*  
+ Ukazatel na poslední ID rozhraní, který byl úspěšně převeden.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud se všechny operace přetypování úspěšně; v opačném `false`.  
+ **Hodnota TRUE** Pokud všechny operace přetypování bylo úspěšné; jinak **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

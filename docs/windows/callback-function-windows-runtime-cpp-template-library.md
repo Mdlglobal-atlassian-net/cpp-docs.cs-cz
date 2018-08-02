@@ -1,5 +1,5 @@
 ---
-title: Zpětné volání – funkce (knihovna šablon C++ prostředí Windows Runtime) | Microsoft Docs
+title: Zpětné volání – funkce (knihovna šablon C++ prostředí Windows Runtime) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860850"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461489"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Zpětné volání – funkce (knihovna šablon C++ prostředí Windows Runtime)
 Vytvoří objekt, jehož členská funkce je metoda zpětného volání.  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
- Parametr šablony, která určuje rozhraní delegáta pro volání při výskytu události.  
+ *TDelegateInterface*  
+ Parametr šablony určuje rozhraní delegáta pro volání při výskytu události.  
   
- `TCallback`  
- Parametr šablony, který určuje typ objektu, který představuje objekt a jeho členskou funkci zpětného volání.  
+ *TCallback*  
+ Parametr šablony určující typ objektu, který reprezentuje objekt a jeho členskou funkci zpětného volání.  
   
- `TCallbackObject`  
- Parametr šablony, který určuje objekt, jehož členská funkce je metoda se má volat při výskytu události.  
+ *TCallbackObject*  
+ Parametr šablony, který určuje objekt, jehož členská funkce je metoda volání při výskytu události.  
   
- `TArg1`  
- Parametr šablony, který určuje typ prvního argumentu metoda zpětného volání.  
+ *TArg1*  
+ Parametr šablony, který určuje typ prvního argumentu metody zpětného volání.  
   
- `TArg2`  
- Parametr šablony, která určuje typ druhý argument metoda zpětného volání.  
+ *TArg2*  
+ Parametr šablony, který určuje typ druhého argumentu metody zpětného volání.  
   
- `TArg3`  
- Parametr šablony, která určuje typ třetí argument metoda zpětného volání.  
+ *TArg3*  
+ Parametr šablony, který určuje typ třetího argumentu metody zpětného volání.  
   
- `TArg4`  
- Parametr šablony, která určuje typ čtvrtého argumentu metody zpětného volání.  
+ *TArg4*  
+ Parametr šablony, který určuje typ čtvrtého argumentu metody zpětného volání.  
   
- `TArg5`  
- Parametr šablony, která určuje typ pátého argumentu metody zpětného volání.  
+ *TArg5*  
+ Parametr šablony, který určuje typ pátého argumentu metody zpětného volání.  
   
- `TArg6`  
- Parametr šablony, která určuje typ šestého argumentu metody zpětného volání.  
+ *TArg6*  
+ Parametr šablony, který určuje typ šestého argumentu metody zpětného volání.  
   
- `TArg7`  
- Parametr šablony, která určuje typ sedmého argumentu metody zpětného volání.  
+ *TArg7*  
+ Parametr šablony, který určuje typ sedmého argumentu metody zpětného volání.  
   
- `TArg8`  
- Parametr šablony, který určuje typ argumentu nakrmeni metoda zpětného volání.  
+ *TArg8*  
+ Parametr šablony, který určuje typ osmého argumentu metody zpětného volání.  
   
- `TArg9`  
- Parametr šablony, která určuje typ deváté argumentu metody zpětného volání.  
+ *TArg9*  
+ Parametr šablony, který určuje typ devátého argumentu metody zpětného volání.  
   
- `callback`  
- Objekt, který reprezentuje objekt zpětného volání a jeho – členská funkce.  
+ *zpětné volání*  
+ Objekt představující objekt zpětného volání a jeho členskou funkci.  
   
- `object`  
+ *object*  
  Objekt, jehož členská funkce je volána, když dojde k události.  
   
- `method`  
- Funkce člena, který má být volána při výskytu události.  
+ *– Metoda*  
+ Členská funkci volat při výskytu události.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Objekt, jehož členská funkce je metoda zadaný zpětného volání.  
+ Objekt, jehož členská funkce je metoda zpětného volání zadané.  
   
 ## <a name="remarks"></a>Poznámky  
- Základní objekt delegáta musí být IUnknown, není IInspectable.  
+ Základ objektu delegáta musí být `IUnknown`, nikoli `IInspectable`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947507"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460942"
 ---
 # <a name="using-exit-or-return"></a>Používání příkazů exit nebo return
 Při volání **ukončit** nebo spuštění **vrátit** příkaz z `main`, statické objekty jsou zničeny v obráceném pořadí jejich inicializace. Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.  
@@ -78,5 +78,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Další důležité informace o ukončení](../cpp/additional-termination-considerations.md)

@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::Close – metoda | Microsoft Docs
+title: Asyncbase::Close – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f3f36656b9316fb6ad980349a836fad31c3a9a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d0798a6ef593e388ce7867ee9a55763be9ae890
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860792"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463356"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close – metoda
 Ukončí asynchronní operaci.  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK Pokud ukončí operaci, nebo je již uzavřen; v opačném E_ILLEGAL_STATE_CHANGE.  
+ S_OK Pokud operace ukončí nebo je již uzavřeno; v opačném případě E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Poznámky  
- Close() je výchozí implementaci třídy IAsyncInfo::Close a nemá žádné samotnou práci. Ve skutečnosti zavřít asynchronní operaci, potlačení OnClose() čistý virtuální metody.  
+ **Close()** je výchozí implementace `IAsyncInfo::Close`, a nemá žádné samotnou práci. Ve skutečnosti zavřete asynchronní operace, přepsat `OnClose()` čistě virtuální metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

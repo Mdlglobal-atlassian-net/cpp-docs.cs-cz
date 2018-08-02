@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947703"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463711"
 ---
 # <a name="unhook"></a>__unhook
 Dissociates metodu obslužné rutiny z události.  
@@ -31,8 +31,7 @@ Dissociates metodu obslužné rutiny z události.
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  Název rozhraní se unhooked z *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **true**.  
   
  *Zdroj*  
- Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli **event_receiver**, *zdroj* může být jedna z následujících akcí:  
+ Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:  
   
 -   Ukazatel objektu zdroje nativní události.  
   
--   **IUnknown**– na základě ukazatel (zdroj COM).  
+-   `IUnknown`– Na základě ukazatel (zdroj COM).  
   
 -   Spravovaný objekt ukazatele (pro spravované události).  
   
@@ -107,7 +106,7 @@ long  __unhook(
 ## <a name="example"></a>Příklad  
  Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-in-native-cpp.md) a [zpracování událostí v modulu COM](../cpp/event-handling-in-com.md) ukázek.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [klíčová slova](../cpp/keywords-cpp.md)   
  [event_source –](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   

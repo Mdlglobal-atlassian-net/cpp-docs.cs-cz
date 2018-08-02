@@ -1,5 +1,5 @@
 ---
-title: Předdefinované symboly ATL | Microsoft Docs
+title: Předdefinované symboly ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c00487b2bb7c7a67dfb81ffb638f5a46fc611bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 098ce812b18e64409e24d58675144f2c660bcdd7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863735"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465646"
 ---
 # <a name="atl-predefined-symbols"></a>Předdefinované symboly ATL
-Tyto symboly jsou definovány v ATL hlavičkových souborů, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly jsou používány především s dialogová okna. Pokud pracujete s dialogů a ovládacích prvků v [editoru dialogového okna](../windows/dialog-editor.md), tyto symboly se zobrazí v okně vlastnosti přidružené k běžné ovládací prvky. Například pokud vašem dialogovém okně tlačítko Zrušit, tento příkaz bude spojený s symbol IDCANCEL v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+Tyto symboly jsou definovány v souborech hlaviček knihovny ATL, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používá hlavně s dialogových oknech. Pokud pracujete s ovládacími prvky a dialogy v [editoru dialogového okna](../windows/dialog-editor.md), tyto symboly se zobrazí v **vlastnosti** okno, které jsou přidružené k běžné ovládací prvky. Například pokud má vaše dialogové okno **zrušit** tlačítko, zda příkaz bude spojená s symbol IDCANCEL v [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
 |||  
 |-|-|  
-|IDABORT|Řízení: Tlačítko dialogovém přerušení|  
-|IDC_STATIC|Řízení: Statické ovládací prvek|  
-|IDCANCEL|Ovládacího prvku: Tlačítko Zrušit pole dialogové okno|  
-|IDIGNORE|Řízení: Tlačítko dialogovém ignorovat|  
-|IDNO|Ovládací prvek: Žádné tlačítko dialogu|  
-|IDOK|Ovládacího prvku: Tlačítko pole OK dialogové okno|  
-|IDR_ACCELERATOR1|Prostředků: Tabulka akcelerátoru|  
-|IDRETRY|Řízení: Tlačítko dialogovém opakování|  
+|IDABORT|Ovládacího prvku: Tlačítko Přerušit pole dialogového okna|  
+|IDC_STATIC|Ovládacího prvku: Statický ovládací prvek|  
+|IDCANCEL|Ovládacího prvku: Tlačítko Storno pole dialogového okna|  
+|IDIGNORE|Ovládacího prvku: Tlačítko Ignorovat pole dialogového okna|  
+|IDNO|Ovládací prvek: Dialogové okno se neobjeví tlačítko|  
+|IDOK|Ovládacího prvku: Tlačítko pole OK dialogového okna|  
+|IDR_ACCELERATOR1|Prostředků: Tabulky akcelerátoru|  
+|IDRETRY|Ovládacího prvku: Tlačítko Opakovat pole dialogového okna|  
 |IDS_PROJNAME|Řetězec: Název aktuální aplikace|  
 |IDYES|Ovládací prvek: Dialogové okno Ano tlačítko.|  
   

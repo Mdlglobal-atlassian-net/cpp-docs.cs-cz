@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940492"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461699"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 I když Windows a Visual C++ podporují strukturovaných výjimek (SEH) zpracování, doporučujeme použít zpracování výjimek jazyka C++ podle standardu ISO, protože je kód větší přenositelnosti a flexibility. Nicméně v existujícím kódu nebo v určitých typech programů, můžete stále nejspíš muset použít SEH.  
@@ -72,7 +72,7 @@ I když Windows a Visual C++ podporují strukturovaných výjimek (SEH) zpracov�
 -   [Používání strukturovaného zpracování výjimek v jazyce C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Příklad  
- Jak je uvedeno výše, destruktory pro místní objekty se volají, pokud SEH lze použít v programu v jazyce C++ a jeho kompilace pomocí **/EH** možnost určité modifikátory – například **/EHsc** a   **/EHa**. Chování za běhu však nemusí být co očekáváte, že pokud také používáte výjimky jazyka C++. Následující příklad ukazuje tyto behaviorální rozdíly.  
+ Jak je uvedeno výše, destruktory pro místní objekty se volají, pokud SEH lze použít v programu v jazyce C++ a jeho kompilace pomocí `/EH` možnost určité modifikátory – například `/EHsc` a `/EHa`. Chování za běhu však nemusí být co očekáváte, že pokud také používáte výjimky jazyka C++. Následující příklad ukazuje tyto behaviorální rozdíly.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Pokud používáte **/EHsc** ke kompilaci tohoto kódu, ale ovládací prvek místního testovacího `CPPEX` je nedefinovaný, neexistuje žádný provádění `TestClass` destruktor a výstup vypadá takto:  
@@ -149,7 +148,7 @@ Executing SEH __except block
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [\<výjimky >](../standard-library/exception.md)   

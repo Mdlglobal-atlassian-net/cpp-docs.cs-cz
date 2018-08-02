@@ -1,5 +1,5 @@
 ---
-title: Zápis obslužné rutiny výjimek | Microsoft Docs
+title: Zápis obslužné rutiny výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d16d95cc246ad7ef0fe9f03c20e2652fe81aad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb06c23e17f16bdf33fe469327351105d6a4571c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421819"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461046"
 ---
 # <a name="writing-an-exception-handler"></a>Zápis obslužné rutiny výjimek
 Obslužné rutiny výjimek se obvykle používají jako reakce na konkrétní chyby. Pomocí syntaxe zpracování výjimek lze odfiltrovat všechny výjimky kromě těch, u kterých víte, jak se mají zpracovat. Ostatní výjimky by měly být předány jiné obslužné rutině (případně v knihovně modulu runtime nebo operačního systému) napsané pro vyhledání těchto specifických výjimek.  
   
  Obslužné rutiny výjimek používají příkaz try-except.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
 -   [Try-except – příkaz](../cpp/try-except-statement.md)  
   
@@ -39,5 +39,5 @@ Obslužné rutiny výjimek se obvykle používají jako reakce na konkrétní ch
   
 -   [Omezení obslužných rutin výjimek](../cpp/restrictions-on-exception-handlers.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

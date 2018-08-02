@@ -1,5 +1,5 @@
 ---
-title: Comptr::ptr_ – datový člen | Microsoft Docs
+title: Comptr::ptr_ – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880798"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465097"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ – datový člen
-Obsahuje ukazatel na rozhraní, které je přidružené a spravuje tento ComPtr.  
+Obsahuje ukazatel rozhraní, který je přidružený k a spravovaného touto **ComPtr**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `ptr_` je členem interní, chráněná data.  
+ **ptr_ –** je členem interní, chráněná data.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

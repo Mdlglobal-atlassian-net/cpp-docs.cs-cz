@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::Lock – metoda | Microsoft Docs
+title: Criticalsection::Lock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871322"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464545"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock – metoda
-Čeká na vlastnictví objektu zadaného kritická sekce. Funkce vrátí hodnotu, pokud volající vlákno je uděleno vlastnictví.  
+Čeká na vlastnictví objektu zadaného kritický oddíl. Funkce vrátí, pokud volající vlákno bylo uděleno vlastnictví.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,14 +38,14 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `cs`  
- Objekt zadaného uživatelem kritická sekce.  
+ *cs*  
+ Kritický oddíl uživatelem zadaného objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Zámek objekt, který lze použít k odemknutí aktuální kritická sekce.  
+ Zamknout objekt, který můžete použít k odemknutí aktuální kritický oddíl.  
   
 ## <a name="remarks"></a>Poznámky  
- První **zámku** funkce ovlivňuje aktuální objekt kritická sekce. Druhý **zámku** funkce ovlivňuje kritická sekce zadaného uživatelem.  
+ První **Zámek** aktuální objekt kritický oddíl má vliv na funkce. Druhá **Zámek** funkce ovlivňuje kritickou sekci zadané uživatelem.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: případ (C++) | Microsoft Docs
+title: případ (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860954"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464308"
 ---
 # <a name="case-c"></a>case (C++)
 Použít s [switch_type –](../windows/switch-type.md) atribut **sjednocení**.  
@@ -30,15 +30,14 @@ Použít s [switch_type –](../windows/switch-type.md) atribut **sjednocení**.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ case(  
+[ case(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *value*  
- Možné vstupní hodnota, pro které byste chtěli poskytnout zpracování. Typ **hodnota** může být jedna z následujících typů:  
+ Možná vstupní hodnota pro kterou chcete poskytnout zpracování. Typ **hodnotu** může být jedna z následujících typů:  
   
 -   `int`  
   
@@ -51,12 +50,12 @@ Použít s [switch_type –](../windows/switch-type.md) atribut **sjednocení**.
  nebo identifikátor takového typu.  
   
 ## <a name="remarks"></a>Poznámky  
- **Případ** atribut C++ má stejné funkce jako **případ** MIDL atribut. Tento atribut se používá pouze pro [switch_type –](../windows/switch-type.md) atribut.  
+ **Případ** C++ atribut má stejné funkce jako **případ** atribut MIDL. Tento atribut se používá pouze pro [switch_type –](../windows/switch-type.md) atribut.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje k využívání **případ** atribut:  
+ Následující kód ukazuje použití **případ** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,14 +78,14 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Platí pro**|Člen **třídy** nebo `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Člen **třídy** nebo **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atributy třídy](../windows/class-attributes.md)   

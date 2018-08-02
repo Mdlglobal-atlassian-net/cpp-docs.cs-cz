@@ -1,5 +1,5 @@
 ---
-title: Přidání, úpravy nebo odstranění ovládacích prvků | Microsoft Docs
+title: Přidání, úprava nebo odstranění ovládacích prvků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 715093e10d4ed2f72f5a2f6cf1f7ec93f7b5a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856710"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467362"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Přidání, úprava nebo odstranění ovládacích prvků
-Použití editoru dialogových oken, můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, například jeho ID, nebo zda je původně viditelný v době běhu.  
+Použití editoru dialogových oken, můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, třeba jeho ID, nebo zda je zpočátku viditelné v době běhu.  
   
- Rychle přidat registrované ovládacích prvků ActiveX do dialogového okna můžete použít místní nabídky v editoru dialogových oken a ovládacích prvků ActiveX můžete přidat do sady nástrojů pro rychlý přístup (Další informace najdete v tématu [dialogové okno přizpůsobení sady nástrojů](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)).  
+ Můžete rychle přidat registrované ovládacích prvků ActiveX do dialogového okna můžete použít místní nabídky v editoru dialogových oken a ovládacích prvků ActiveX můžete přidat do panelu nástrojů Rychlý přístup (Další informace najdete v tématu [dialogové okno přizpůsobení panelu nástrojů](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
   
 -   [Přidání ovládacího prvku do dialogového okna](adding-a-control-to-a-dialog-box.md)  
   
@@ -41,15 +41,15 @@ Použití editoru dialogových oken, můžete přidat, změnit velikost, upravit
   
 -   [Odstranění ovládacího prvku](deleting-a-control.md)  
   
--   [Zobrazení nebo skrytí okna nástrojů](showing-or-hiding-the-dialog-editor-toolbar.md)  
+-   [Zobrazí nebo skryje okno nástrojů](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky v dialogových oknech](controls-in-dialog-boxes.md)   
- [Přidání obslužných rutin událostí pro ovládací prvky dialogové okno](adding-event-handlers-for-dialog-box-controls.md)   
+ [Přidání obslužných rutin události pro ovládací prvky dialogového okna](adding-event-handlers-for-dialog-box-controls.md)   
  [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)
 

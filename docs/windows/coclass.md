@@ -1,5 +1,5 @@
 ---
-title: Třída typu coclass | Microsoft Docs
+title: Coclass | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,75 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867009"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463113"
 ---
 # <a name="coclass"></a>coclass
-Vytvoří objekt COM, které můžete implementovat rozhraní modelu COM.  
+Vytvoří objekt modelu COM, které můžete implementovat rozhraní modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [coclass]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Třída typu coclass** C++ atribut umístí do souboru generovaného .idl třída typu coclass konstrukce.  
+ **Coclass** C++ atribut umístí konstrukt coclass v souboru generovaného IDL.  
   
- Při definování coclass, můžete také zadat [uuid](../windows/uuid-cpp-attributes.md), [verze](../windows/version-cpp.md), [dělení na vlákna](../windows/threading-cpp.md), [vi_progid –](../windows/vi-progid.md), a [progid ](../windows/progid.md) atributy. Pokud není zadána kterákoli z nich, bude vygenerována.  
+ Při definování coclass, můžete také určit [uuid](../windows/uuid-cpp-attributes.md), [verze](../windows/version-cpp.md), [dělení na vlákna](../windows/threading-cpp.md), [vi_progid –](../windows/vi-progid.md), a [progid ](../windows/progid.md) atributy. Pokud některý z nich není zadán, bude vygenerována.  
   
- Pokud dva soubory hlaviček obsahovat tříd pomocí **třída typu coclass** atribut a nemáte zadejte identifikátor GUID, kompilátor použije stejný identifikátor GUID pro obě třídy a, bude výsledkem chyba MIDL.  Proto byste měli používat `uuid` atributu při použití **třída typu coclass**.  
+ Pokud dva soubory hlaviček obsahují třídy, které se **coclass** atribut a identifikátor GUID nezadávejte kompilátor použije stejný identifikátor GUID pro obě třídy a které způsobí chybu MIDL.  Proto byste měli použít `uuid` atribut při použití **coclass**.  
   
  **Projekty knihovny ATL**  
   
- Když tento atribut předchází třídu nebo strukturu definice v projektu knihovny ATL ho:  
+ Pokud tento atribut předchází definici třídy nebo struktury v projektu knihovny ATL ho:  
   
--   Vloží kód nebo data pro podporu automatické registrace pro objekt.  
+-   Vkládá kód nebo dat pro podporu automatické registrace pro objekt.  
   
--   Vloží kód nebo data pro podporu objekt třídy COM pro objekt.  
+-   Vkládá kód nebo dat pro podporu objekt pro vytváření tříd modelu COM pro objekt.  
   
--   Vloží kód nebo data k implementaci **IUnknown** a nastaví objekt na objekt COM vytvořitelné.  
+-   Vkládá kód nebo data k implementaci `IUnknown` a nastavte objekt vytvořitelný modelem COM objektu.  
   
- Konkrétně jsou přidány následující základní třídy na objekt cíle:  
+ Konkrétně následující základní třídy jsou přidány do cílového objektu:  
   
--   [Třída CComCoClass](../atl/reference/ccomcoclass-class.md) poskytuje model výchozí třídu objektu pro vytváření a agregaci pro objekt.  
+-   [Třídy CComCoClass](../atl/reference/ccomcoclass-class.md) poskytuje výchozí třídu objektu pro vytváření a agregace model pro objekt.  
   
--   [Třída CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) má šablony založené na třídě vláken modelu určeného [dělení na vlákna](../windows/threading-cpp.md) atribut. Pokud **dělení na vlákna** atribut není zadán, výchozí model vláken typu apartment.  
+-   [CComObjectRootEx – třída](../atl/reference/ccomobjectrootex-class.md) má šablony založené na třídě model dělení na vlákna určené [dělení na vlákna](../windows/threading-cpp.md) atribut. Pokud `threading` atribut není zadán, je výchozí model vláken typu apartment.  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) se přidá, pokud [noncreatable –](../windows/noncreatable.md) pro cílový objekt není zadán atribut.  
+-   [Iprovideclassinfo2impl –](../atl/reference/iprovideclassinfo2impl-class.md) se přidá [noncreatable](../windows/noncreatable.md) pro cílový objekt není zadán atribut.  
   
- Nakonec se nahradí jakékoli duální rozhraní, které není definován pomocí vložených IDL odpovídající [IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídy. Pokud duální rozhraní je definována v embedded IDL, konkrétní rozhraní v seznamu základní se nemění.  
+ Nakonec duální rozhraní, který není definován pomocí vložené IDL nahradí odpovídající [třídou IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídy. Pokud duální rozhraní je definováno v vložené IDL, zejména rozhraní v seznamu základních se nezmění.  
   
- **Třída typu coclass** atribut také zpřístupní následující funkce pomocí vloženého kódu nebo v případě `GetObjectCLSID`, jako statickou metodu v základní třídě `CComCoClass`:  
+ **Coclass** atribut rovněž provede následující funkce dostupné prostřednictvím vloženého kódu nebo v případě `GetObjectCLSID`, jako statickou metodu v základní třídě `CComCoClass`:  
   
--   `UpdateRegistry` zaregistruje tříd cílové třídy.  
+-   `UpdateRegistry` zaregistruje třídu továren cílové třídy.  
   
--   `GetObjectCLSID`, která má relaci k registraci, lze také získat CLSID cílové třídy.  
+-   `GetObjectCLSID`, která má vztah k registraci, také umožňuje získat identifikátor CLSID cílové třídy.  
   
--   **GetObjectFriendlyName** ve výchozím nastavení vrací řetězec ve formátu "\<*název cílové třídy*> `Object`". Pokud tato funkce je již přítomen, tam není přidaný. Přidejte tuto funkci k třídě cíle vrátit příjemnější název než ten, který automaticky generovány.  
+-   `GetObjectFriendlyName` ve výchozím nastavení vrací řetězec ve formátu "\<*název cílové třídy*> `Object`". Pokud tato funkce je již k dispozici, tam není přidaný. Přidejte tuto funkci do cílové třídy se vraťte lépe vyhovující název než ten, který automaticky generovány.  
   
--   **GetProgID**, která má relaci k registraci, vrátí řetězec zadaný [progid](../windows/progid.md) atribut.  
+-   `GetProgID`, která má vztah k registraci, vrátí řetězec zadaný [progid](../windows/progid.md) atribut.  
   
--   **GetVersionIndependentProgID** má stejné funkce jako **GetProgID**, ale vrátí řetězec zadaný s [vi_progid –](../windows/vi-progid.md).  
+-   `GetVersionIndependentProgID` má stejné funkce jako `GetProgID`, ale vrací řetězec zadaný s [vi_progid –](../windows/vi-progid.md).  
   
- Jsou provedeny následující změny, které se vztahují k mapu modelu COM, k třídě cíle:  
+ Cílové třídy jsou provedeny následující změny, které se vztahují k mapy modelu COM:  
   
--   Mapa modelu COM se přidá s položky pro všechny rozhraní, která je odvozena od třídy cíle a všechny položky, které jsou určené [COM – vstupní body rozhraní](../mfc/com-interface-entry-points.md) atribut nebo těch, které vyžadují [agregace](../windows/aggregates.md) atribut.  
+-   Mapy modelu COM se přidá s záznamy pro všechny cílové třídy je odvozen z rozhraní a všechny položky, které jsou určené [COM – vstupní body rozhraní](../mfc/com-interface-entry-points.md) atributu nebo jsou vyžadované [agregace](../windows/aggregates.md) atribut.  
   
--   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) makro se vloží do modelu COM mapy.
+-   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) – makro je vložen do objektu map COM.
   
- Název třída typu coclass vygenerovaných souborů .idl pro třídu, bude mít stejný název jako třída.  Například a odkazy na následující příklad a použijte pro přístup k ID třídy pro coclass CMyClass, v klientovi prostřednictvím soubor hlavičky generované MIDL CLSID_CMyClass.  
+ Název třídy typu coclass v souboru IDL pro třídu vygenerované bude mít stejný název jako třída.  Například a odkazuje na následující příklad a použijte pro přístup k ID třídy pro konstruktor coclass CMyClass, v klientovi v souboru hlavičky generované MIDL CLSID_CMyClass.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje způsob použití **třída typu coclass** atribut:  
+ Následující kód ukazuje způsob použití **coclass** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass1.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -101,9 +99,9 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Následující příklad ukazuje, jak přepsat výchozí implementaci funkci, která se zobrazí v kódu vloženy **třída typu coclass** atribut. V tématu [/Fx](../build/reference/fx-merge-injected-code.md) Další informace o zobrazení vloženého kódu. Všechny základní třídy nebo rozhraní, které používáte pro třídu se zobrazí ve vloženém kódu.   Dál platí Pokud třída je zahrnutá ve výchozím nastavení ve vloženém kódu a explicitně zadáte tuto třídu jako základ pro vaše třída typu coclass, zprostředkovatele atribut bude formulář zadaný v kódu.  
+ Následující příklad ukazuje, jak lze přepsat výchozí implementace funkce, která se zobrazí v kódu vloženy **coclass** atribut. Zobrazit [/Fx](../build/reference/fx-merge-injected-code.md) Další informace o zobrazení vloženého kódu. Všechny základní třídy nebo rozhraní, které můžete použít pro třídu se zobrazí ve vloženém kódu.   Dále pokud explicitně neurčíte tuto třídu jako základ pro váš coclass, třída je zahrnuta ve výchozím nastavení ve vloženém kódu atribut poskytovatel použije formulář určili ve svém kódu.  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -143,16 +141,16 @@ public:
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [COM – atributy](../windows/com-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Com – atributy](../windows/com-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [appobject](../windows/appobject.md)

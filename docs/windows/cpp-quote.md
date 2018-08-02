@@ -1,5 +1,5 @@
 ---
-title: cpp_quote – | Microsoft Docs
+title: cpp_quote – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871159"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463824"
 ---
 # <a name="cppquote"></a>cpp_quote
-Do souboru generovaného .idl vysílá zadaný řetězec bez znaky uvozovek za sebou.  
+Zadaný řetězec bez uvozovek znaků, vysílá do generovaného souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Příkaz*  
+ *– Příkaz*  
  Instrukce C.  
   
 ## <a name="remarks"></a>Poznámky  
- **Cpp_quote –** C++ atribut je užitečné, pokud je chcete umístit preprocesoru direktivě v souboru IDL.  
+ **Cpp_quote –** C++ atribut je užitečné, pokud chcete umístit direktivy preprocesoru v souboru IDL.  
   
- Můžete také použít **cpp_quote –** a generovat soubor .h jako součást MIDL kompilace. Například pokud máte soubor hlaviček C++, který používá C++ IDL – atributy, ale tento soubor nelze použít pro některé úlohy, potom ji můžete zkompilovat k vytvoření souboru MIDL generovaný .h, které by měly být možné používat.  
+ Můžete také použít **cpp_quote –** a generování souboru .h jako část kompilace MIDL. Například pokud máte soubor hlaviček jazyka C++, která používá C++ IDL – atributy, ale tento soubor nelze použít pro některé úlohy, pak ji můžete zkompilovat vytvořit generované MIDL. h: soubor, který byste měli použít.  
   
- **Cpp_quote –** atribut má stejné funkce jako [cpp_quote –](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL atribut.  
+ **Cpp_quote –** atribut má stejné funkce jako [cpp_quote –](http://msdn.microsoft.com/library/windows/desktop/aa366765) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
  Podívejte se na příklad pro [duální](../windows/dual.md) příklad použití použití **cpp_quote –**.  
@@ -56,9 +55,9 @@ Do souboru generovaného .idl vysílá zadaný řetězec bez znaky uvozovek za s
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

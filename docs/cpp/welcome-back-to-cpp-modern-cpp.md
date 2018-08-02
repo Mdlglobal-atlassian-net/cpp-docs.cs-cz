@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939374"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462359"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jedním z nejpoužívanějších programovacích jazyků na světě. Kvalitně napsané C++ programy jsou rychlé a efektivní. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření široké škály aplikací, od zábavných a vzrušujících her, přes vysoce výkonný vědecký software, ovladače zařízení, vložené programy a klientské aplikace Windows. Více než 20 let bylo C++ využíváno k řešení problémů, jako je tento a mnoho dalších. Co možná nevíte je, že rostoucí počet programátorů C++ mají složit staromódní programování ve stylu jazyka C včerejška a místo toho používají moderní jazyk C++.  
@@ -49,7 +49,6 @@ C++ je jedním z nejpoužívanějších programovacích jazyků na světě. Kval
  Samotný jazyk C++ prošel také vývojem. Porovnejte následující fragmenty kódu. Tento ukazuje, jak věci mají být používány v C++:  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  Zde je, jak lze provést totéž v moderním jazyce C++:  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  V moderním jazyce C++ nemusíte používat new/delete ani explicitní zpracování výjimek, protože můžete místo toho použít inteligentní ukazatele. Při použití **automaticky** odvození typu a [funkci lambda](../cpp/lambda-expressions-in-cpp.md), můžete napsat kód rychleji, upevnit ho a lépe ho chápat. A range-based **pro** smyčky je přehlednější, jednodušší a méně náchylná k neúmyslným chybám než C-style **pro** smyčky. Často používaný text spolu s minimálními řádky kódu můžete použít k zápisu do aplikace. A ujistěte se, že kód, bezpečným pro výjimky a paměť a mít žádné přidělování a navracení zpět nebo chybové kódy pro řešení.  
@@ -138,7 +135,7 @@ void f()
   
  Další informace najdete v článku StackOverflow [jaké idiomy v jazyce C++ jsou zastaralé v C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)  

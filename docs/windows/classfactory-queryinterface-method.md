@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::QueryInterface – metoda | Microsoft Docs
+title: ClassFactory::QueryInterface – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855985"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467089"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface – metoda
-Načte ukazatel na rozhraní určený parametrem.  
+Načte ukazatel na rozhraní určené typem parametru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `riid`  
+ *riid*  
  Identifikátor rozhraní.  
   
- `ppvObject`  
- Když tato operace dokončí, ukazatel na rozhraní určený parametrem `riid`.  
+ *ppvObject*  
+ Když tato operace dokončí, ukazatel na rozhraní určené typem parametru *riid*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující selhání.  
+ S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

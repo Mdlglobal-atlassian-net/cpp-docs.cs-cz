@@ -1,5 +1,5 @@
 ---
-title: agreguje | Microsoft Docs
+title: agregace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,51 +20,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857984"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466927"
 ---
 # <a name="aggregates"></a>aggregates
-Označuje, že objekt agreguje objektu určeného identifikátor CLSID.  
+Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `clsid`  
+ *identifikátor CLSID*  
  Určuje identifikátor CLSID agregovatelné objektu.  
   
- `variable_name`  
- Název proměnné, která má být vložen. Obsahuje tato proměnná **IUnknown** objektu agregaci.  
+ *variable_name*  
+ Název proměnné, která má být vložen. Tato proměnná obsahuje `IUnknown` objektu agregaci.  
   
 ## <a name="remarks"></a>Poznámky  
- Při použití objektu, **agregace** implementuje vnější obálku pro objekt agregovaný atribut C++ (zadáno v `clsid`).  
+ Při použití s objektem, **agregace** C++ atribut implementuje vnější obálky pro objekt agregaci (určená `clsid`).  
   
- Tento atribut vyžaduje, aby [třída typu coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít stejného elementu. Pokud se používá jakékoli jeden atribut, budou automaticky použita další dvě. Například pokud **progid** se použije, **vi_progid –** a **třída typu coclass** jsou také použít.  
+ Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
  **Projekty knihovny ATL**  
   
- Pokud tento atribut se používá v rámci projekt, který používá ATL chování změny atributů. Nejprve je přidána následující položka mapu COM cílového objektu:  
+ Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Nejprve se přidá následující položku do mapy modelu COM cílového objektu:  
   
 ```  
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
 ```  
   
- Druhý, [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) makro je taky přidaný.  
+ Druhý, [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) – makro je taky přidaný.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,18 +94,17 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ano|  
-|**Povinné atributy**|Jeden nebo více z následujících: **třída typu coclass**, **progid**, nebo **vi_progid –**.|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ano|  
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
- [COM – atributy](../windows/com-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Com – atributy](../windows/com-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [Agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

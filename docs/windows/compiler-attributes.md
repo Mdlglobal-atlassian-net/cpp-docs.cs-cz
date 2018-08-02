@@ -1,5 +1,5 @@
 ---
-title: Atributy kompilátoru | Microsoft Docs
+title: Atributy kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 02aa14eccddca4bc3631957d6aa3d3d1b2af6894
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860655"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463451"
 ---
 # <a name="compiler-attributes"></a>Atributy kompilátoru
-Atributy kompilátoru poskytují řadu funkcí.  
+Atributy kompilátoru poskytují širokou škálu funkcí.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|[emitidl](../windows/emitidl.md)|Určuje, zda všechny následné IDL – atributy zpracovat a uložena v souboru generovaného IDL.|  
+|[emitidl](../windows/emitidl.md)|Určuje, zda všechny následné IDL – atributy zpracování, který se umístí do generovaného souboru.|  
 |[event_receiver](../windows/event-receiver.md)|Vytvoří přijímače událostí.|  
-|[event_source](../windows/event-source.md)|Vytvoří zdroje událostí.|  
-|[export](../windows/export.md)|Způsobí, že datová struktura umístit do souboru.|  
-|[Implementuje](../windows/implements-cpp.md)|Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.|  
-|[importidl](../windows/importidl.md)|Vloží zadaný .idl soubor do souboru generovaného IDL.|  
-|[importlib](../windows/importlib.md)|Díky typy, které již byly kompilovány do jiného typu knihovny k dispozici pro knihovny typů vytváří.|  
-|[includelib –](../windows/includelib-cpp.md)|Způsobí, že mají být zahrnuty v souboru generovaného .idl .idl nebo .h soubor.|  
-|[library_block](../windows/library-block.md)|Umístí konstrukce uvnitř bloku souboru IDL knihovny.|  
-|[no_injected_text](../windows/no-injected-text.md)|Kompilátor brání vložení kódu v důsledku použití atributu.|  
-|[satype](../windows/satype.md)|Určuje datový typ **SAFEARRAY**.|  
-|[Verze](../windows/version-cpp.md)|Identifikuje na konkrétní verzi mezi více verzí třídy nebo rozhraní.|  
+|[event_source](../windows/event-source.md)|Vytvoří zdroj událostí.|  
+|[export](../windows/export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|  
+|[Implementuje](../windows/implements-cpp.md)|Určuje odesílajících rozhraních, které se musí být členy třídy typu IDL coclass.|  
+|[importidl](../windows/importidl.md)|Vloží zadaný souboru do generovaného souboru.|  
+|[importlib](../windows/importlib.md)|Díky typy, které již byly zkompilovány do jiné knihovny typů k dispozici pro vytváření knihovny typů.|  
+|[includelib –](../windows/includelib-cpp.md)|Způsobí, že soubor IDL nebo .h mají být zahrnuty v souboru generovaného IDL.|  
+|[library_block](../windows/library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|  
+|[no_injected_text](../windows/no-injected-text.md)|Zabrání kompilátoru vkládání kódu v důsledku použití atributu.|  
+|[satype](../windows/satype.md)|Určuje datový typ `SAFEARRAY`.|  
+|[Verze](../windows/version-cpp.md)|Určuje konkrétní verzi napříč několika verzemi rozhraní nebo tříd.|  
   
 ## <a name="see-also"></a>Viz také  
  [Atributy podle skupin](../windows/attributes-by-group.md)

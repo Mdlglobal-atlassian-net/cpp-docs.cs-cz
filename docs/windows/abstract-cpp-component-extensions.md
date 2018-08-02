@@ -1,5 +1,5 @@
 ---
-title: abstraktní (rozšíření komponent C++) | Microsoft Docs
+title: abstract (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857552"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463239"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (rozšíření komponent C++)
-`abstract` – Klíčové slovo deklaruje buď:  
+**Abstraktní** deklaruje klíčové slovo:  
   
--   Typ lze použít jako základní typ, ale samotný datový typ nelze vytvořit instanci.  
+-   Typ může sloužit jako základní typ, ale samotný datový typ se nedá vytvořit instance.  
   
--   Členské funkce typ lze definovat pouze v odvozeném typu.  
+-   Členské funkce typu lze definovat pouze v odvozeném typu.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
  **Syntaxe**  
   
 ```  
-  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
-  
 ```  
   
  **Poznámky**  
   
- První příklad syntaxe deklaruje třídu jako abstraktní. *Deklaraci třídy* součástí může být buď nativní deklarace C++ (`class` nebo `struct`), nebo deklaraci rozšíření C++ (`ref class` nebo `ref struct`) Pokud **/ZW** nebo **/CLR** – možnost kompilátoru je zadán.  
+ První příklad syntaxe deklaruje třídu jako abstraktní. *Deklarace třídy* komponenta může být buď nativní deklarace C++ (**třídy** nebo **struktura**), nebo deklaraci rozšíření jazyka C++ (**třídy ref class** nebo **ref struct**) Pokud `/ZW` nebo `/clr` je zadána možnost kompilátoru.  
   
- Druhý příklad syntaxe deklaruje virtuální členské funkce jako abstraktní. Deklarování abstraktní funkce je stejný jako deklarace ho čistou virtuální funkci. Deklarace členské funkce abstraktní také způsobí, že nadřazených tříd deklarovat abstraktní.  
+ Druhý příklad syntaxe deklaruje virtuální členskou funkci být abstraktní. Deklarace funkce abstract je stejné jako deklarování čistě virtuální funkce. Deklarace abstraktu funkce člena zároveň způsobí, že nadřazené třídy, která má být deklarováno jako abstraktní.  
   
- `abstract` – Klíčové slovo je podporována v nativní a specifické pro platformu kódu; to znamená, ji můžete zkompilovat bez ohledu **/ZW** nebo **/CLR** – možnost kompilátoru.  
+ **Abstraktní** – klíčové slovo je podporována v specifické pro platformu a nativního kódu; to znamená, ho můžete zkompilovat s nebo bez něj `/ZW` nebo `/clr` – možnost kompilátoru.  
   
- Pokud je abstraktní s typem, můžete zjistit v době kompilace `__is_abstract(type)` typ znak. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Pokud je abstraktní s typem, můžete zjistit v době kompilace `__is_abstract(type)` typovou vlastnost. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `abstract` – Klíčové slovo je kontextová přepsání specifikátor. Další informace o kontextově závislá klíčová slova, najdete v části [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md). Další informace o specifikátorů override najdete v tématu [postupy: deklarace specifikátorů Override v nativní kompilaci](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ **Abstraktní** – klíčové slovo je kontextové přepsání specifikátor. Další informace o kontextových klíčových slov najdete v tématu [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Další informace o specifikátorech přepisu naleznete v tématu [jak: deklarovat specifikátorů Override v nativní kompilaci](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Další informace najdete v tématu [Ref třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Další informace najdete v tématu [referenční třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
@@ -70,9 +68,9 @@ virtualreturn-typemember-function-identifier() abstract ;
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- Následující příklad kódu vygeneruje chybu, protože třída `X` je označena `abstract`.  
+ Následující příklad vygeneruje chybu, protože třída `X` je označen `abstract`.  
   
-```  
+```cpp  
 // abstract_keyword.cpp  
 // compile with: /clr  
 ref class X abstract {  
@@ -87,9 +85,9 @@ int main() {
   
  **Příklad**  
   
- Následující příklad kódu vygeneruje chybu, protože ji vytvoří nativní třídu, která je označena `abstract`. Tato chyba nastane, bez ohledu **/CLR** – možnost kompilátoru.  
+ Následující příklad kódu dojde k chybě, protože ho vytvoří instanci nativních tříd, který je označen `abstract`. K této chybě dojde, s nebo bez něj `/clr` – možnost kompilátoru.  
   
-```  
+```cpp  
 // abstract_keyword_2.cpp  
 class X abstract {  
 public:  
@@ -99,14 +97,13 @@ public:
 int main() {  
    X * MyX = new X; // C3622: 'X': a class declared as 'abstract'  
                     // cannot be instantiated. See declaration of 'X'}  
-  
 ```  
   
  **Příklad**  
   
- Následující příklad kódu vygeneruje chybu, protože funkce `f` obsahuje definice, ale je označen `abstract`. Poslední příkaz příklad ukazuje, že je ekvivalentní deklarace čistou virtuální funkci deklarace abstraktní virtuální funkce.  
+ Následující příklad vygeneruje chybu, protože funkce `f` obsahuje definice, ale je označen `abstract`. Poslední příkaz v příkladu ukazuje, že deklarace abstraktní virtuální funkce je ekvivalentní k deklarování čistě virtuální funkce.  
   
-```  
+```cpp  
 // abstract_keyword_3.cpp  
 // compile with: /clr  
 ref class X {  

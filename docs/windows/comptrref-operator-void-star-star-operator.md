@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bbe9f077fd0d80a831d319660be26090ad5411f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463850"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* – operátor
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Odstraní aktuální objekt comptrref –, přetypování ukazatel na rozhraní, která je reprezentována comptrref – objekt jako ukazatel na ukazatel- `void`a vrátí ukazatel přetypování.  
+ Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhraní, která je reprezentována **comptrref –** objektu jako ukazatel na ukazatel- **void**a pak vrátí ukazatel přetypování.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

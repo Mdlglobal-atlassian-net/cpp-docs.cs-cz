@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::gettrustlevel – metoda | Microsoft Docs
+title: Activationfactory::gettrustlevel – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854386"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466719"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel – metoda
-Získá objekt, který vytvoří instanci aktuální ActivationFactory úroveň důvěryhodnosti.  
+Získá úroveň důvěryhodnosti objektu, který aktuální **activationfactory –** vytvoří instanci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `trustLvl`  
- Když tato operace dokončí, úroveň důvěryhodnosti třídy runtime, která vytvoří instanci ActivationFactory.  
+ *trustLvl*  
+ Po dokončení této operace úroveň důvěryhodnosti modulu runtime třídy, která **activationfactory –** vytvoří instanci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak, jsou vydávány chybu kontrolní výraz a `trustLvl` je nastaven na FullTrust.  
+ S_OK v případě úspěchu; v opačném případě je vygenerován chybu kontrolní výraz a *trustLvl* je nastavena na FullTrust.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces::fillarraywithiid – metoda | Microsoft Docs
+title: Chaininterfaces::fillarraywithiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855939"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461033"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid – metoda
-Ukládá ID rozhraní definované `I0` parametr šablony do zadaného umístění v zadané pole rozhraní ID.  
+Ukládá ID rozhraní určené *I0* parametr šablony v zadaném umístění v zadaném poli ID rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `index`  
- Ukazatel na hodnotu index do `iids` pole.  
+ *index*  
+ Ukazatel na hodnotu indexu do *IID* pole.  
   
- `iids`  
+ *IID*  
  Pole ID rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  

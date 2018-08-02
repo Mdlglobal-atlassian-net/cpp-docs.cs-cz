@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::putoncomplete – metoda | Microsoft Docs
+title: Asyncbase::putoncomplete – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856069"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465600"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete – metoda
-Nastaví adresu dokončení obslužné rutiny události se zadanou hodnotou.  
+Nastaví adresu obslužné rutiny události dokončení se zadanou hodnotou.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `completeHandler`  
- Adresa, na kterou je nastavena obslužné rutiny události dokončení.  
+ *completeHandler*  
+ Adresy, ke kterému je nastavena obslužná rutina události dokončení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném E_ILLEGAL_METHOD_CALL.  
+ S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

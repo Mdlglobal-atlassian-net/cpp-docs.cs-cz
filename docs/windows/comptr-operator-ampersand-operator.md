@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator&amp; operátor | Microsoft Docs
+title: ComPtr::operator&amp; operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872403"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461559"
 ---
 # <a name="comptroperatoramp-operator"></a>ComPtr::operator&amp; – operátor
-Verze rozhraní přidružený k tomuto `ComPtr` objekt a potom načte adresu `ComPtr` objektu.  
+Uvolní rozhraní přidružené k tomuto **ComPtr** objekt a potom načte adresu **ComPtr** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,10 +36,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Slabé odkazy na aktuální `ComPtr`.  
+ Slabý odkaz na aktuální **ComPtr**.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se liší od [comptr::getaddressof –](../windows/comptr-getaddressof-method.md) v tom, že tato metoda uvolní odkaz na ukazatel rozhraní. Použití `ComPtr::GetAddressOf` když vyžadovat adresy ukazatele rozhraní, ale nechcete, aby k uvolnění tohoto rozhraní.  
+ Tato metoda se liší od [comptr::getaddressof –](../windows/comptr-getaddressof-method.md) v tom, že tato metoda uvolní odkaz na ukazatel rozhraní. Použití `ComPtr::GetAddressOf` když vyžadovat adresy ukazatel rozhraní, ale nechcete, aby k uvolnění rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

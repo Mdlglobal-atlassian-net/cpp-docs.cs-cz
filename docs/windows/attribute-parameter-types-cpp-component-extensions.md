@@ -1,5 +1,5 @@
 ---
-title: Atribut typy parametrů (C++ Component Extensions) | Microsoft Docs
+title: Atribut parametru typy (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860304"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466966"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Typy parametrů atributů (rozšíření komponent C++)
-Hodnoty předaný atributy musí být známo kompilátoru v době kompilace.  Parametry atributu může být z následujících typů:  
+Hodnoty předané metodě atributy musí být známo pro kompilátor v době kompilace.  Parametry atributu může být z následujících typů:  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **Char**, **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **krátký**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**, **int bez znaménka**  
   
--   `long`, `unsigned long`  
+-   **dlouhé**, **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **unsigned __int64**  
   
--   `float`, `double`  
+-   **float**, **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*` nebo `wchar_t*` nebo `System::String*`  
   
@@ -47,13 +47,13 @@ Hodnoty předaný atributy musí být známo kompilátoru v době kompilace.  Pa
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -77,11 +77,11 @@ ref struct MyStruct {
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Při zadávání atributy, všechny nepojmenované argumenty (poziční) musí předcházet všechny pojmenované argumenty.  
+ Při zadávání atributy, musí předcházet všechny nepojmenované argumenty (poziční) všechny pojmenované argumenty.  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -114,7 +114,7 @@ ref class ClassD {};   // Positional and named
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: Activatableclass – makra | Microsoft Docs
+title: Activatableclass – makra | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857461"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465854"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass – makra
 
-Naplní vnitřní mezipaměti, která obsahuje objekt factory, který můžete vytvořit instanci zadané třídy.
+Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,14 +57,14 @@ ActivatableClassWithFactoryEx(
 Název třídy pro vytvoření.  
 
 *objekt pro vytváření*  
-Objekt Factory, který vytvoří instanci zadané třídy.
+Objekt Factory, který vytvoří instanci dané třídy.
 
-*serverName*  
-Název, který určuje podmnožinu objektů Factory v modulu.
+*název_serveru*  
+Název, který určuje podmnožinu objektů pro vytváření v modulu.
 
 ## <a name="remarks"></a>Poznámky
 
-Nepoužívejte tyto makra pomocí klasického modelu COM, pokud nechcete použít `#undef` – direktiva zajistit, aby **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** definici makra se odebere.
+Nepoužívejte tato makra pomocí klasického modelu COM, pokud nechcete použít `#undef` směrnice a zkontrolujte, že **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** odebrat definici makra.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,5 +73,4 @@ Nepoužívejte tyto makra pomocí klasického modelu COM, pokud nechcete použí
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
-
 [Module – třída](../windows/module-class.md)

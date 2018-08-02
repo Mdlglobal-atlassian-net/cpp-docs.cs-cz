@@ -1,5 +1,5 @@
 ---
-title: Vlastní (C++) | Microsoft Docs
+title: Vlastní (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871624"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460929"
 ---
 # <a name="custom-c"></a>custom (C++)
-Definuje metadata pro objekt knihovny typů.  
+Definuje metadata pro objekt v knihovně typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,12 +41,12 @@ Definuje metadata pro objekt knihovny typů.
  Jedinečný identifikátor.  
   
  *value*  
- Hodnota, která mohou být umístěny na hodnotu typu variant.  
+ Hodnota, která můžou být přepnuté do hodnotu typu variant.  
   
 ## <a name="remarks"></a>Poznámky  
- **Vlastní** C++ atributu způsobí, že informace do knihovny typů. Budete potřebovat nástroj, který čte vlastní hodnotu z knihovny typů.  
+ **Vlastní** C++ atribut způsobí, že informace, které jde umístit do knihovny typů. Budete potřebovat nástroj, který čte vlastní hodnotu z knihovny typů.  
   
- **Vlastní** atribut má stejné funkce jako [vlastní](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL atribut.  
+ **Vlastní** atribut má stejné funkce jako [vlastní](http://msdn.microsoft.com/library/windows/desktop/aa366766) atribut MIDL.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -55,9 +54,9 @@ Definuje metadata pro objekt knihovny typů.
   
 |||  
 |-|-|  
-|**Platí pro**|Bez COM `interface`, **třída**, `enum`s, `idl_module` metody, členové rozhraní, rozhraní parametry `typedef`s, **– typ union**s, `struct`s|  
-|**Opakovatelných**|Ano|  
-|**Povinné atributy**|**Třída typu coclass** (při použití u třídy)|  
+|**Platí pro**|Non-COM **rozhraní**, **třídy**, **výčtu**s, `idl_module` metody, členy rozhraní, parametry rozhraní **typedef**s, **sjednocení**s, **struktura**s|  
+|**Opakovatelné**|Ano|  
+|**Vyžadované atributy**|**coclass** (při použití ve třídě)|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -65,8 +64,8 @@ Definuje metadata pro objekt knihovny typů.
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Samostatné atributy](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atributy parametru](../windows/parameter-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sémantika výrazů | Microsoft Docs
+title: Sémantika výrazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424122"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462739"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
-Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Operátorů a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikální pravidla](../cpp/lexical-conventions.md), znázorňuje vztahy C++ operátory kladou na výrazy.)  
+Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Priorita a asociativita operátora](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikální konvence](../cpp/lexical-conventions.md), znázorňuje vztahy C++ operátory kladou na výrazy.)  
   
 ## <a name="order-of-evaluation"></a>Pořadí vyhodnocení  
- Vezměte v úvahu v tomto příkladu:  
+ Podívejte se například:  
   
 ```cpp  
 // Order_of_Evaluation.cpp  
@@ -51,12 +51,12 @@ int main()
 54  
 ```  
   
- ![Pořadí vyhodnocení ve výrazu](../cpp/media/vc38zv1.gif "vc38ZV1")  
+ ![Pořadí vyhodnocení ve výrazech](../cpp/media/vc38zv1.gif "vc38ZV1")  
 Pořadí vyhodnocení výrazu  
   
  Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se stanoví pomocí přednosti a asociativity operátorů:  
   
-1.  Násobení (\*) má v tomto výrazu nejvyšší prioritu, proto je podvýraz `b * c` vyhodnocen jako první.  
+1.  Násobení (*) má v tomto výrazu nejvyšší prioritu, proto je podvýraz `b * c` vyhodnocen jako první.  
   
 2.  Sčítání (+) má další nejvyšší prioritu, takže hodnota proměnné `a` je přičtena k výsledku operace s proměnnými `b` a `c`.  
   
@@ -70,21 +70,21 @@ Pořadí vyhodnocení výrazu se závorkami
  Výrazy, například na výše uvedeném obrázku, jsou vyhodnoceny výhradně z hlediska jejich vedlejších účinků, v tomto případě pro přenos informací na standardní výstup zařízení.  
   
 ## <a name="notation-in-expressions"></a>Zápis ve výrazech  
- Jazyk C++ určuje určité kompatibility při zadávání operandy. Následující tabulka uvádí typy operandů přijatelné pro operátory, které vyžadují operandy typu *typu*.  
+ Jazyk C++ určuje určité kompatibility při zadávání operandy. Následující tabulka uvádí typy operandů přijatelné pro operátory, které vyžaduje operandy typu *typ*.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>Typy operandů přijatelné pro operátory  
   
-|Očekávaný typ|Povolené typy|  
+|Očekával se typ.|Povolené typy|  
 |-------------------|-------------------|  
 |*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|  
 |*Typ*\*|*Typ*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|  
 |`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|  
 |`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|  
   
- Protože předchozí pravidla lze vždy použít v kombinaci, můžete je nutné zadat const ukazatel na objekt volatile, kde je očekávána ukazatel.  
+ Protože předchozí pravidla je vždy použít v kombinaci, může být zadán ukazatel const volatile objekt, kde se očekává ukazatel.  
   
 ## <a name="ambiguous-expressions"></a>Nejednoznačné výrazy  
- Některé výrazy jsou ve svém významu nejednoznačné. Tyto výrazy se nejčastěji vyskytují, je-li hodnota objektu ve stejném výrazu změněna více než jednou. Tyto výrazy se spoléhají na určité pořadí vyhodnocování tam, kde jazyk žádné nedefinuje. Podívejte se na následující příklad:  
+ Některé výrazy jsou ve svém významu nejednoznačné. Tyto výrazy se nejčastěji vyskytují, je-li hodnota objektu ve stejném výrazu změněna více než jednou. Tyto výrazy se spoléhají na určité pořadí vyhodnocování tam, kde jazyk žádné nedefinuje. Vezměte v úvahu v následujícím příkladu:  
   
 ```  
 int i = 7;  
@@ -101,7 +101,7 @@ func( i, ++i );
   
 -   Levý operand logického operátoru AND (&&). Levý operand logického operátoru AND je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru AND vyhodnocen.  
   
--   Levý operand logický operátor OR (&#124;&#124;). Levý operand logického operátoru OR je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru OR vyhodnocen.  
+-   Levý operand logického operátoru OR (&#124;&#124;). Levý operand logického operátoru OR je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Není zaručeno, že bude pravý operand logického operátoru OR vyhodnocen.  
   
 -   Levý operand operátoru čárky. Levý operand logického operátoru čárky je kompletně vyhodnocen a všechny vedlejší účinky jsou před pokračováním dokončeny. Oba operandy operátoru čárky jsou vždy vyhodnoceny.  
   
@@ -121,5 +121,5 @@ func( i, ++i );
   
 -   Výraz v příkazu return. Výraz je vyhodnocován úplně a všechny vedlejší účinky jsou dokončeny před návratem řízení do funkce volání.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy](../cpp/expressions-cpp.md)

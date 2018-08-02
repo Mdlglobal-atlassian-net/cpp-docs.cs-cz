@@ -1,5 +1,5 @@
 ---
-title: Criticalsectiontraits::getinvalidvalue – metoda | Microsoft Docs
+title: Criticalsectiontraits::getinvalidvalue – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72c9dce0765029ee31e079315baec72afd16a46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf0d52769052a36c0b494d19204dd6c07f0b2404
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463382"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue – metoda
-Se specializuje šablonu CriticalSection tak, aby šablona vždy je neplatná.  
+Se specializuje **CriticalSection** šablony tak, aby šablona vždy je neplatná.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrací ukazatel na neplatný kritická sekce.  
+ Vždy vrátí ukazatel na neplatný kritický oddíl.  
   
 ## <a name="remarks"></a>Poznámky  
  *Typ* Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.  

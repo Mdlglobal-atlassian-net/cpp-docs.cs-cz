@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::Cancel – metoda | Microsoft Docs
+title: Asyncbase::Cancel – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0559f32315265a7db5543e8559097177c2a670fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464743"
 ---
 # <a name="asyncbasecancel-method"></a>AsyncBase::Cancel – metoda
 Zruší asynchronní operace.  
@@ -39,7 +39,7 @@ STDMETHOD(
  Ve výchozím nastavení vždy vrátí hodnotu S_OK.  
   
 ## <a name="remarks"></a>Poznámky  
- Cancel() je výchozí implementaci třídy IAsyncInfo::Cancel a nemá žádné samotnou práci. Pokud chcete skutečně zrušit asynchronní operaci, potlačení OnCancel() čistý virtuální metody.  
+ `Cancel()` je výchozí implementace `IAsyncInfo::Cancel`, a nemá žádné samotnou práci. Pokud chcete skutečně zrušit asynchronní operaci, přepsat `OnCancel()` čistě virtuální metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

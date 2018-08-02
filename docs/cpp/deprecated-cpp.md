@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408614"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466901"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 Toto téma se věnuje specifické pro Microsoft zastaralé declspec deklarace. Informace o C ++ 14 `[[deprecated]]` atribut a pokyny, kdy použít tento atribut vs. declspec specifické pro společnost Microsoft nebo direktivy pragma, najdete v části [C++ standardní atributy](attributes.md).
 
- S výjimkami uvedenými níže **zastaralé** nabízí stejné funkce jako deklarace [zastaralé](../preprocessor/deprecated-c-cpp.md) – Direktiva pragma:  
+S výjimkami uvedenými níže **zastaralé** nabízí stejné funkce jako deklarace [zastaralé](../preprocessor/deprecated-c-cpp.md) – Direktiva pragma:  
   
 -   **Zastaralé** deklarace umožňuje určit konkrétní podoby přetížení funkce jako zastaralé, kdežto forma direktivy pragma se vztahuje na všechny přetížené formy názvu funkce.  
   

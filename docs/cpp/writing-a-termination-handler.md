@@ -1,5 +1,5 @@
 ---
-title: Zápis obslužné rutiny ukončení | Microsoft Docs
+title: Zápis obslužné rutiny ukončení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,27 +21,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423233"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462830"
 ---
 # <a name="writing-a-termination-handler"></a>Zápis obslužné rutiny ukončení
 Na rozdíl od obslužné rutiny výjimky je obslužná rutina ukončení spuštěna vždy, bez ohledu na to, zda je chráněný blok kódu ukončen normálně. Jediným účelem obslužné rutiny ukončení by mělo být zajištění, že prostředky, jako například paměť, popisovače a soubory, jsou správně uzavřeny bez ohledu na to, jak část kódu dokončí provádění.  
   
  Obslužné rutiny ukončení používají příkaz try-finally.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
--   [Try-finally – příkaz](../cpp/try-finally-statement.md)  
+-   [Příkaz try-finally](../cpp/try-finally-statement.md)  
   
 -   [Vymazání prostředků](../cpp/cleaning-up-resources.md)  
   
--   [Načasování akce ve zpracování výjimek](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [Načasování akcí ve zpracování výjimek](../cpp/timing-of-exception-handling-a-summary.md)  
   
 -   [Omezení obslužných rutin ukončení](../cpp/restrictions-on-termination-handlers.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

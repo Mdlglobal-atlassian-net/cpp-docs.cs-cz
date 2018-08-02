@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940921"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466582"
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)  
   
@@ -228,7 +228,7 @@ Co je třeba mít na paměti `thread_local` specifikátor:
 
 -  Je nutné zadat `thread_local` pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejný soubor nebo samostatné soubory.
 
-Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cpp/thread.md) s tím rozdílem, že `__declspec(thread)` lze použít s definicí typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte `thread_local` vzhledem k tomu, že je součástí standardu C++ a proto je větší přenositelnost.
+Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cpp/thread.md) s tím rozdílem, že **__declspec(thread)** lze použít s definicí typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte `thread_local` vzhledem k tomu, že je součástí standardu C++ a proto je větší přenositelnost.
 
 ##  <a name="register"></a>  Registrace
 
@@ -321,6 +321,5 @@ Existuje několik bodů vědět o program:
 
 - Nakonec statické lokální proměnné jako `I3` zachovat jejich hodnoty doby trvání programu, ale jsou zničeny při ukončení programu.
 
-## <a name="see-also"></a>Viz také
-
+## <a name="see-also"></a>Viz také:
  [Deklarace a definice](../cpp/declarations-and-definitions-cpp.md)

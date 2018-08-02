@@ -1,5 +1,5 @@
 ---
-title: Podpora kompilátoru pro typové vlastnosti (C++ Component Extensions) | Microsoft Docs
+title: Podpora kompilátoru pro typové vlastnosti (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -71,31 +71,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862413"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463613"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Podpora kompilátoru pro typové vlastnosti (C++ Component Extensions)
-Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat různé vlastnosti typu.  
+Kompilátor podporuje *zadejte vlastnosti*, který označuje různé vlastnosti typu v době kompilace.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
  **Poznámky**  
   
- Typové vlastnosti jsou užitečné zejména pro programátory, kteří zápisu knihovny.  
+ Typové vlastnosti jsou zvláště užitečné pro programátory, kteří vytvářejí knihovny.  
   
- Následující seznam obsahuje typové vlastnosti, které jsou podporovány kompilátorem. Všechny vlastnosti návratový typ `false` Pokud není splněna podmínka uvedená v názvu typu znak.  
+ Následující seznam obsahuje typové, které jsou podporovány kompilátorem. Zadejte všechny vlastnosti vrátit **false** Pokud není splněná podmínka uvedená v názvu vlastnosti typu.  
   
- (V následujícím seznamu jsou zapsány příklady kódu jenom v jazyce C + +/ CLI. Ale odpovídající typ znak je podporováno také v [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] Pokud není uvedeno jinak. Termín, "typ platformy" odkazuje buď prostředí Windows Runtime nebo běžné typy runtime jazyka.)  
+ (V seznamu následující příklady kódu byly vytvořeny pouze v jazyce C + +/ CLI. Ale odpovídající typ vlastnosti je podporováno také v [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] Pokud není uvedeno jinak. Termín, "typ platformy" odkazuje na typy Windows Runtime nebo běžné language runtime typy.)  
   
 -   `__has_assign(` `type` `)`  
   
-     Vrátí hodnotu true Pokud platformy nebo nativní typ má operátor přiřazení kopírování.  
+     Vrátí true, pokud na platformu nebo nativní typ má operátor přiřazení kopie.  
   
     ```  
-  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -103,15 +102,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     int main() {  
     System::Console::WriteLine(__has_assign(R));  
     }  
-  
     ```  
   
 -   `__has_copy(` `type` `)`  
   
-     Vrátí hodnotu true Pokud platformy nebo nativní typ má kopírovacího konstruktoru.  
+     Vrátí true, pokud na platformu nebo nativní typ má konstruktor kopie.  
   
     ```  
-  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -119,15 +116,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     int main() {  
     System::Console::WriteLine(__has_copy(R));  
     }  
-  
     ```  
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Není podporováno v [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Vrátí hodnotu true Pokud typ CLR má finalizační metody. V tématu [destruktory a finalizační metody v tom, jak: definování a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Další informace.  
+     (Není podporováno v [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Vrátí true, pokud typ CLR má finalizační metodu. Zobrazit [destruktory a finalizační metody v tom, jak: definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Další informace.  
   
     ```  
-  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -138,15 +133,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     int main() {  
     Console::WriteLine(__has_finalizer(R));  
     }  
-  
     ```  
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     Pokud vrátí hodnotu true operátor přiřazení kopie má specifikace prázdný výjimka.  
+     Vrátí true, pokud má specifikaci výjimky prázdný operátor přiřazení kopie.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -156,15 +149,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_nothrow_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     Vrátí hodnotu true Pokud výchozí konstruktor má specifikace prázdný výjimka.  
+     Vrátí true, pokud má specifikaci prázdný výjimky výchozího konstruktoru.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -174,15 +165,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_nothrow_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     Vrátí hodnotu true Pokud konstruktor copy má specifikace prázdný výjimka.  
+     Vrátí true, pokud konstruktor kopie je specifikaci výjimky prázdný.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -192,15 +181,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_nothrow_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     Vrátí hodnotu true Pokud má typ operátor jednoduchého dotazu, generované kompilátorem přiřazení.  
+     Vrátí true, pokud má typ přiřazení triviální, vygeneruje kompilátor operátor.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -208,15 +195,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_trivial_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     Vrátí hodnotu true Pokud má tento typ jednoduchého dotazu, generované kompilátorem konstruktor.  
+     Vrátí true, pokud má typ jednoduchého dotazu, vygeneruje kompilátor konstruktor.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -224,15 +209,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_trivial_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     Vrátí hodnotu true Pokud má typ trivial, generované kompilátorem kopírovacího konstruktoru.  
+     Vrátí true, pokud typ má konstruktor kopie triviální, generovaný kompilátorem.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -240,15 +223,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_trivial_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     Vrátí hodnotu true Pokud má typ trivial, generované kompilátorem destruktor.  
+     Vrátí true, pokud má typ jednoduchého dotazu, vygeneruje kompilátor destruktor.  
   
-    ```  
-  
+    ``` cpp 
     // has_trivial_destructor.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -257,15 +238,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_trivial_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_user_destructor(` `type` `)`  
   
-     Vrátí hodnotu true Pokud platformy nebo nativní typ má destruktor deklarovaný uživatele.  
+     Vrátí true, pokud na platformu nebo nativní typ má destruktor uživatelem deklarované.  
   
-    ```  
-  
+    ```cpp
     // has_user_destructor.cpp  
   
     using namespace System;  
@@ -276,17 +255,15 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     int main() {  
     Console::WriteLine(__has_user_destructor(R));  
     }  
-  
     ```  
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     Vrátí hodnotu true Pokud má typ virtuální destruktor.  
+     Vrátí true, pokud typ má virtuální destruktor.  
   
-     `__has_virtual_destructor` virtuální destruktor je také funguje na typech platforem a všechny – destruktor uživatelem definované v typu platformy.  
+     `__has_virtual_destructor` funguje na typech platforem a uživatelem definovaný destruktor typu platformy je také virtuální destruktor.  
   
-    ```  
-  
+    ```cpp  
     // has_virtual_destructor.cpp  
     #include <stdio.h>  
     struct S {  
@@ -297,17 +274,15 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __has_virtual_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_abstract(` `type` `)`  
   
-     Vrátí hodnotu true Pokud abstraktní typ je typ. Další informace o nativní abstraktní typy najdete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).  
+     Vrátí true, pokud typ je typ abstraktní. Další informace o nativní abstraktní typy, najdete v části [abstraktní](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract` funguje i pro typy platformy. Rozhraní s nejméně jeden člen je abstraktní typ, stejně jako odkaz na typ s nejméně jeden člen abstraktní. Další informace o typech abstraktní platforem najdete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` funguje i pro typy platforem. Rozhraní s nejméně jeden člen je abstraktní typ, jako je typem odkazu s alespoň jeden abstraktní člen. Další informace o typech abstraktní platforem, naleznete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md)  
   
-    ```  
-  
+    ```cpp  
     // is_abstract.cpp  
     #include <stdio.h>  
     struct S {  
@@ -318,17 +293,15 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_abstract(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     Vrátí hodnotu true Pokud je první typ základní třídu druhého typu, pokud oba typy jsou stejné.  
+     Vrátí true, pokud první typ je základní třídou druhý typ, pokud oba typy jsou stejné.  
   
-     `__is_base_of` funguje taky na typech platforem. Například, vrátí hodnotu true, pokud je první typ [třída rozhraní](../windows/interface-class-cpp-component-extensions.md) a druhý typ implementuje rozhraní.  
+     `__is_base_of` funguje taky na typech platforem. Například se vrátí hodnota true, pokud je první typ [třída rozhraní](../windows/interface-class-cpp-component-extensions.md) a druhý typ implementuje rozhraní.  
   
-    ```  
-  
+    ```cpp
     // is_base_of.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -341,15 +314,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_base_of(S, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_class(` `type` `)`  
   
-     Typ nativní třídě nebo struktuře vrátí hodnotu PRAVDA.  
+     Vrátí true, pokud je typ nativní třídy nebo struktury.  
   
-    ```  
-  
+    ```
     #include <stdio.h>  
     struct S {};  
   
@@ -357,15 +328,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_class(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     Vrátí hodnotu true Pokud první typ může být převeden do druhého typu.  
+     Vrátí true, pokud první typ lze převést na typ druhého.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -377,28 +346,24 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_convertible_to(T, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_delegate(` `type` `)`  
   
-     Vrátí hodnotu true, pokud `type` je delegáta. Další informace najdete v tématu [delegáta (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  
+     Vrátí hodnotu true, pokud `type` je delegát. Další informace najdete v tématu [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
-  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
     }  
-  
     ```  
   
 -   `__is_empty(` `type` `)`  
   
-     Vrátí hodnotu true Pokud typ nemá žádné členy data instance.  
+     Vrátí true, pokud typ nemá žádné datové členy instance.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -408,15 +373,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_empty(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_enum(` `type` `)`  
   
-     Vrátí hodnotu true Pokud je typ nativní výčtu.  
+     Vrátí true, pokud typ je nativní výčet.  
   
-    ```  
-  
+    ```cpp
     // is_enum.cpp  
     #include <stdio.h>  
     enum E { a, b };  
@@ -432,15 +395,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_enum(S::E2) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_interface_class(` `type` `)`  
   
-     Vrátí hodnotu true Pokud předány rozhraní platformy. Další informace najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
+     Vrátí true, pokud je předán rozhraní platformy. Další informace najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
   
-    ```  
-  
+    ```cpp
     // is_interface_class.cpp  
   
     using namespace System;  
@@ -448,17 +409,15 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     int main() {  
     Console::WriteLine(__is_interface_class(I));  
     }  
-  
     ```  
   
 -   `__is_pod(` `type` `)`  
   
-     Typ třídy nebo sjednocení se žádný konstruktor nebo soukromé nebo chráněné členy nestatické, žádné základní třídy a bez virtuální funkce vrátí hodnotu PRAVDA. C++ standard části 8.5.1/1, 9 nebo 4 a 3.9/10 pro další informace najdete na pracovními stanicemi soustředěnými kolem.  
+     Vrátí true, pokud je typ třídy nebo sjednocení se žádný konstruktor nebo soukromé nebo chráněné nestatické členy žádné základní třídy a žádné virtuální funkce. C++ standard, oddíly 8.5.1/1, 9 nebo 4 a 3.9/10 pro další informace naleznete na tyto Pody.  
   
      `__is_pod` Vrátí hodnotu false na základní typy.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -466,15 +425,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_pod(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_polymorphic(` `type` `)`  
   
-     Vrátí hodnotu true pokud nativní typ virtuální funkce.  
+     Vrátí true, pokud je nativní typ má virtuální funkce.  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -484,57 +441,49 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_polymorphic(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_ref_array(` `type` `)`  
   
-     Vrátí hodnotu true Pokud předány pole platformy. Další informace najdete v tématu [pole](../windows/arrays-cpp-component-extensions.md).  
+     Vrátí true, pokud předané pole platformy. Další informace najdete v tématu [pole](../windows/arrays-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
     Console::WriteLine(__is_ref_array(array<int>));  
     }  
-  
     ```  
   
 -   `__is_ref_class(` `type` `)`  
   
-     Vrátí hodnotu true Pokud předány referenční třídy. Další informace o odkaz na uživatelem definované typy najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Vrátí true, pokud je předán odkaz na třídu. Další informace o typy odkazů definované uživatelem, naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     int main() {  
     Console::WriteLine(__is_ref_class(Buffer));  
     Console::WriteLine(__is_ref_class(R));  
     }  
-  
     ```  
   
 -   `__is_sealed(` `type` `)`  
   
-     Vrátí hodnotu PRAVDA, pokud je předán na platformy nebo nativní typ označena zapečetěné. Další informace najdete v tématu [zapečetěné](../windows/sealed-cpp-component-extensions.md).  
+     Vrátí hodnotu PRAVDA, pokud předaná platformy nebo nativní typ označen zapečetěné. Další informace najdete v tématu [zapečetěné](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
-  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
     }  
-  
     ```  
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Vrátí hodnotu PRAVDA, pokud je předaná hodnota typu, který neobsahuje žádné odkazy na haldě uvolňování paměti. Další informace o typech hodnotu definovanou uživatelem, najdete v části [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Vrátí true, pokud je předán typ hodnoty, který neobsahuje žádné odkazy na haldě uvolňování. Další informace o typech hodnotu definovanou uživatelem, naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -546,15 +495,13 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     Console::WriteLine(__is_simple_value_class(V));  
     Console::WriteLine(__is_simple_value_class(V2));  
     }  
-  
     ```  
   
 -   `__is_union(` `type` `)`  
   
-     Vrátí hodnotu true Pokud je typ spojení.  
+     Vrátí true, pokud je typ sjednocení.  
   
     ```  
-  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -565,27 +512,24 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
     __is_union(A) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_value_class(` `type` `)`  
   
-     Vrátí hodnotu true pokud předaný typ hodnoty. Další informace o typech hodnotu definovanou uživatelem, najdete v části [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Vrátí true, pokud je předán typ hodnoty. Další informace o typech hodnotu definovanou uživatelem, naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
     ```  
-  
     value struct V {};  
   
     int main() {  
     System::Console::WriteLine(__is_value_class(V));  
     }  
-  
     ```  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  **Poznámky**  
   
- `__has_finalizer(` *Typ* `)` typ znak není podporována, protože tato platforma nepodporuje finalizační metody.  
+ `__has_finalizer(` *Typ* `)` typovou vlastnost není podporována, protože tato platforma nepodporuje finalizační metody.  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
@@ -593,7 +537,7 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  **Poznámky**  
   
- (Používají se žádné poznámky specifických pro platformy pro tuto funkci.)  
+ (Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
@@ -601,9 +545,9 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- Následující příklad kódu ukazuje, jak chcete použít ke zveřejnění výšku kompilátoru typu pro šablonu – třída **/CLR** kompilace. Další informace najdete v tématu [prostředí Windows Runtime a spravované šablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Následující příklad kódu ukazuje, jak použít šablonu třídy vystavit vlastnosti kompilátoru typu pro **/CLR** kompilace. Další informace najdete v tématu [Windows Runtime a spravované šablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-```  
+```cpp  
 // compiler_type_traits.cpp  
 // compile with: /clr  
 using namespace System;  

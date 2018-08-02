@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase::operator IUnknown ** – operátor | Microsoft Docs
+title: ComPtrRefBase::operator IUnknown ** – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 816c71d2c14b373e63de2b2c8725eb87b40d91e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870312"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465812"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** – operátor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ operator IUnknown**() const;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Vrhá aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) data člena ukazatel k ukazatele k rozhraní IUnknown.  
+ Přetypování aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) na ukazatel na ukazatel – datový člen `IUnknown` rozhraní.  
   
- Pokud aktuální ComPtrRefBase není odvozena od IUnknown, jsou vydávány k chybě.  
+ Je vygenerován chybu, pokud aktuální **comptrrefbase –** není odvozen od `IUnknown`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -44,5 +44,5 @@ operator IUnknown**() const;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtrRefBase – třída](../windows/comptrrefbase-class.md)   
+ [Comptrrefbase – třída](../windows/comptrrefbase-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::addref – metoda | Microsoft Docs
+title: Activationfactory::addref – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 785a89b1a5a174fc5ce453a6d2f87a18c508edf6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854038"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462346"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef – metoda
-Zvýší počet odkazů aktuální objekt ActivationFactory.  
+Zvýší počet odkazů aktuálního **activationfactory –** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující selhání.  
+ S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

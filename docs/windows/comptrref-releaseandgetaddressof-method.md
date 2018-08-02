@@ -1,5 +1,5 @@
 ---
-title: Comptrref::releaseandgetaddressof – metoda | Microsoft Docs
+title: Comptrref::releaseandgetaddressof – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 631f27dc7124cfce655f6a254548335ca8f1039f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884004"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465406"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ InterfaceType** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní, která je reprezentována odstraněného objektu ComPtrRef.  
+ Ukazatel rozhraní, která je reprezentována pomocí odstraněným **comptrref –** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Odstraní aktuální objekt ComPtrRef a vrací ukazatel na ukazatel na rozhraní, která je reprezentována ComPtrRef objektu.  
+ Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -45,5 +45,5 @@ InterfaceType** ReleaseAndGetAddressOf();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtrRef – třída](../windows/comptrref-class.md)   
+ [Comptrref – třída](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

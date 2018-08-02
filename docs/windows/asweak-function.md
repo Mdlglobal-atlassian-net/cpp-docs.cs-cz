@@ -1,5 +1,5 @@
 ---
-title: Asweak – funkce | Microsoft Docs
+title: Asweak – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854821"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462622"
 ---
 # <a name="asweak-function"></a>AsWeak – funkce
-Načte slabé odkaz na zadané instanci.  
+Získá nestálý odkaz pro zadanou instanci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Ukazatel na typ parametru `p`.  
+ *T*  
+ Ukazatel na typ parametru *p*.  
   
- `p`  
+ *p*  
  Instance typu.  
   
- `pWeak`  
- Když tato operace dokončí, ukazatel na slabé odkaz na parametr `p`.  
+ *pWeak*  
+ Když tato operace dokončí, ukazatel na Slabý odkaz na parametr *p*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud je tato operace úspěšná. v opačném chybu HRESULT, která určuje příčinu selhání.  
+ S_OK, pokud je tato operace úspěšná; v opačném případě chybu HRESULT určující příčinu selhání.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

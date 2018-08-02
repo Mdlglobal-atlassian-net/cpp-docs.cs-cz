@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947536"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464159"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Specifické pro Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37947536"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **Unsigned int** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *i8Src*  
- __**Int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
+ **__Int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
   
  *ui8Src*  
  **Unsigned __int64** hodnota, která má být zkopírován do nové `_variant_t` objektu.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t – (_variant_t &***var_t_Src***)** sestaví `_variant_t` objektu z jiného `_variant_t` objektu.     Typ varianty se zachová.  
   
--   **_variant_t – (VARIANT &***varSrc* **, bool**`fCopy`**)** sestaví `_variant_t` objekt z existující `VARIANT` objekt.       Pokud `fCopy` je **false**, **VARIANT** objekt je připojen nový objekt bez vytvoření kopie.  
+-   **_variant_t – (VARIANT &***varSrc* **, bool**`fCopy`**)** sestaví `_variant_t` objekt z existující `VARIANT` objekt.       Pokud *fCopy* je **false**, **VARIANT** objekt je připojen nový objekt bez vytvoření kopie.  
   
 -   **_variant_t – (krátký***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** sestaví `_variant_t` objekt typu VT_I2 nebo VT_BOOL z **krátký** celočíselnou hodnotu.       Jakýkoli jiný `VARTYPE` způsobí chybu E_INVALIDARG.  
   
@@ -245,5 +244,5 @@ _variant_t(
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [_variant_t – třída](../cpp/variant-t-class.md)

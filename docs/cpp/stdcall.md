@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461462"
 ---
 # <a name="stdcall"></a>__stdcall
 **Specifické pro Microsoft**  
   
- **__Stdcall** konvence volání se používá pro volání funkce rozhraní Win32 API. Volaný vyčistí zásobník, aby mohl kompilátor **vararg** funkce **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce.  
+ **__Stdcall** konvence volání se používá pro volání funkce rozhraní Win32 API. Volaný vyčistí zásobník, aby mohl kompilátor `vararg` funkce **__cdecl**. Funkce, které používají konvenci volání k vyžadování prototypu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu má použití __**stdcall** výsledky ve všech `WINAPI` typů funkcí jako standardní volání:  
+ V následujícím příkladu, využívání **__stdcall** výsledky ve všech `WINAPI` typů funkcí jako standardní volání:  
   
 ```cpp  
 // Example of the __stdcall keyword  
@@ -82,6 +81,6 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)

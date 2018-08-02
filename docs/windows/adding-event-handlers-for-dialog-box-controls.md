@@ -1,5 +1,5 @@
 ---
-title: Přidání obslužných rutin událostí pro ovládací prvky dialogové okno | Microsoft Docs
+title: Přidání obslužných rutin události pro ovládací prvky dialogového okna | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb39e502ccc40531e72f761a414e4088de8b147d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121119"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463753"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna
 
-Pro projekt dialogových oken, které jsou spojeny s třídou můžete využít některé klávesových zkratek při vytváření obslužných rutin událostí. Dokáže rychle vytvořit obslužnou rutinu pro událost upozornění na výchozí ovládací prvek nebo pro všechny příslušné zpráv systému Windows.
+Pro projekt dialogová okna, které už jsou spojeny s třídou můžete využít výhod některé klávesové zkratky, při vytváření obslužných rutin událostí. Můžete rychle vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek nebo pro všechny příslušné zprávy Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Chcete-li vytvořit obslužnou rutinu pro událost upozornění na výchozí ovládací prvek
+## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Chcete-li vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek
 
-1. Dvakrát klikněte na ovládací prvek. Otevře se textovém editoru.
+1. Poklepejte na ovládací prvek. Do textového editoru otevře.
 
-2. Přidejte kód obslužné rutiny oznámení ovládacího prvku v textovém editoru.
+2. Přidejte ovládací prvek kód obslužné rutiny oznámení v textovém editoru.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Chcete-li vytvořit obslužnou rutinu pro všechny příslušné zpráv systému Windows
+## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Chcete-li vytvořit obslužnou rutinu pro všechny příslušné zprávy Windows
 
-1. Klikněte na ovládací prvek, pro které chcete ke zpracování události oznámení.
+1. Klepněte na ovládací prvek, pro kterou chcete zpracovat událost oznámení.
 
-2. V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), klikněte **ControlEvents** tlačítko Zobrazit seznam běžných události systému Windows přidruženého k ovládacímu prvku. Například standardní **OK** tlačítko **o** dialogové okno zobrazí následující události oznámení:
+2. V [okno vlastností](/visualstudio/ide/reference/properties-window), klikněte na tlačítko **ControlEvents** tlačítko a zobrazte seznam nejčastějších událostí Windows přidružený k ovládacímu prvku. Například standardní **OK** tlačítko **o** dialogové okno obsahuje následující události oznámení:
 
-   - **BN_CLICKED**
+   - BN_CLICKED
 
-   - **BN_DOUBLECLICKED**
+   - BN_DOUBLECLICKED
 
-   - **BN_KILLFOCUS**
+   - BN_KILLFOCUS
 
-   - **BN_SETFOCUS**
-
-    > [!NOTE]
-    > Případně vyberte dialogové okno a klikněte na **ControlEvents** tlačítko Zobrazit seznam běžných události systému Windows pro všechny ovládací prvky v dialogovém okně.
-
-3. V **vlastnosti** oken, klikněte v pravém sloupci vedle události pro zpracování a pak vyberte název události navrhované oznámení (například **OnBnClickedOK** popisovače **BN_CLICKED** ).
+   - BN_SETFOCUS
 
     > [!NOTE]
-    > Alternativně můžete zadat název obslužné rutiny události své volby, nikoli název obslužné rutiny události výchozí výběr.
+    > Můžete také vybrat dialogových oken a klikněte na tlačítko **ControlEvents** tlačítko a zobrazte seznam obvyklých událostí Windows pro všechny ovládací prvky v dialogovém okně.
 
-   Jakmile vyberete události, Visual Studio otevře textového editoru a zobrazí kód obslužné rutiny události. Například následující kód je přidána pro výchozí **OnBnClickedOK**:
+3. V **vlastnosti** okna, klikněte na tlačítko v pravém sloupci vedle událostí ke zpracování a pak vyberte název události navrhované oznámení (například **OnBnClickedOK** popisovače **BN_CLICKED** ).
+
+    > [!NOTE]
+    > Alternativně můžete zadat název obslužné rutiny události podle vašeho výběru, namísto výběru výchozí název obslužné rutiny události.
+
+   Jakmile vyberete událost Visual Studio textového editoru otevře a zobrazí kód obslužné rutiny události. Například následující kód se přidá výchozí **OnBnClickedOK**:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -66,9 +66,9 @@ Pro projekt dialogových oken, které jsou spojeny s třídou můžete využít 
     }
     ```
 
-Pokud chcete přidat obslužné rutiny události pro třídu jiné než jedna implementace dialogových oken, použijte [Průvodce obslužnou rutinou události](../ide/event-handler-wizard.md). Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).
+Pokud chcete přidat obslužnou rutinu události pro třídu jiné než jedna implementace dialogových oken, použijte [Průvodce obslužnou rutinou události](../ide/event-handler-wizard.md). Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).
 
-Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -83,4 +83,4 @@ Win32
 [Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)  
 [Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)  
 [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[Popisovač zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+[Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

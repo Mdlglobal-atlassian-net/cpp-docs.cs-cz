@@ -1,5 +1,5 @@
 ---
-title: Comptr::comptr – konstruktor | Microsoft Docs
+title: Comptr::comptr – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871172"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465367"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr – konstruktor
-Intializes novou instanci třídy ComPtr – třída. Přetížení zadejte výchozí, kopírovat, přesunout a převod konstruktory.  
+Inicializuje novou instanci třídy **ComPtr** třídy. Přetížení poskytují výchozí, kopírovat, přesunout a převod konstruktory.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,22 +59,22 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
- Typ parametru `other`.  
+ *U*  
+ Typ *jiných* parametru.  
   
- `other`  
- Objekt typu `U`.  
+ *Ostatní*  
+ Objekt typu *U*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- První konstruktor je výchozí konstruktor, který implictly vytvoří prázdný objekt. Druhý konstruktor Určuje [__nullptr](../windows/nullptr-cpp-component-extensions.md), které explicitně vytvoří prázdný objekt.  
+ První konstruktor je výchozí konstruktor, který vkládacím vytvoří prázdný objekt. Druhý konstruktor Určuje [__nullptr](../windows/nullptr-cpp-component-extensions.md), které explicitně vytvoří prázdný objekt.  
   
- Třetí konstruktoru vytvoří objekt z objektu určeného ukazatel.  
+ Třetí konstruktor vytvoří objekt v objektu určeném ukazatel.  
   
- Konstruktory čtvrté a páté jsou kopie konstruktorů. V páté konstruktoru zkopíruje objektu, když je převést na typ aktuální.  
+ Čtvrtý a pátý konstruktor je kopírovací konstruktory. Pátý konstruktor zkopíruje objekt je převést na typ aktuální.  
   
- Konstruktory šesté a sedmého jsou přesunutí konstruktory. Sedmého konstruktor přesune objekt, pokud je převést na typ aktuální.  
+ Šestý a sedmý konstruktor jsou konstruktorů. Sedmý konstruktor přesune objekt je převést na typ aktuální.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

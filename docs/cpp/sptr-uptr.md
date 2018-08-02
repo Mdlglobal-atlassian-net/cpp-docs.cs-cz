@@ -1,5 +1,5 @@
 ---
-title: __sptr __uptr | Microsoft Docs
+title: __sptr __uptr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca00f34f2b527ac7c2c6fc8ac4cccbdfc932fde3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467506"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
-## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Pro určení způsobu, kterým má kompilátor převést 32bitový ukazatel na 64bitový ukazatel, je třeba použít modifikátor `__sptr` nebo `__uptr`. 32bitový ukazatel je například převeden při přiřazení k proměnné 64bitového ukazatele, nebo pokud je k němu přistupováno přes ukazatel na 64bitovou platformu.  
+**Specifické pro Microsoft**  
+ Použití **__sptr** nebo **__uptr** modifikátor deklarace 32bitový ukazatel k určení, jak má kompilátor převést 32bitový ukazatel na 64bitový ukazatel. 32bitový ukazatel je například převeden při přiřazení k proměnné 64bitového ukazatele, nebo pokud je k němu přistupováno přes ukazatel na 64bitovou platformu.  
   
  Dokumentace společnosti Microsoft pro podporu 64bitových platforem někdy odkazuje na nejvýznamnější bit 32bitového ukazatele jako na bit znaménka. Ve výchozím nastavení používá kompilátor pro převod z 32bitového ukazatele na 64bitový ukazatel příponu znaménka. To znamená, že 32 nejméně významných bitů 64bitového ukazatele je nastaveno na hodnotu 32bitového ukazatele a nejvýznamnějších 32 bitů je nastaveno na bit znaménka 32bitového ukazatele. Tento převod poskytuje správné výsledky, pokud je bit znaménka 0, ale ne v případě, že je bit znaménka 1. Například 32bitová adresa 0x7FFFFFFF dává rovnocennou 64bitovou adresu 0x000000007FFFFFFF, ale 32bitová adresa 0x80000000 je nesprávně změněna na 0xFFFFFFFF80000000.  
   
- Modifikátor `__sptr` neboli podepsaný ukazatel určují, že převod ukazatele nastavuje nejvýznamnější bity 64bitového ukazatele na bit znaménka 32bitového ukazatele. Modifikátor `__uptr` neboli nepodepsaný ukazatel určují, že převod ukazatele nastavuje nejvýznamnější bity na nulu. Následující zobrazení deklarace `__sptr` a `__uptr` modifikátory použít s dvěma nekvalifikované ukazatele, dva ukazatele kvalifikovaný pomocí [__ptr32](../cpp/ptr32-ptr64.md) typu a parametr funkce.  
+ **__Sptr**, neboli podepsaný ukazatel, modifikátor Určuje, že převod ukazatele nastavuje nejvýznamnější bity 64bitového ukazatele na bit znaménka 32bitového ukazatele. **__Uptr**, nebo ukazatele bez znaménka, modifikátor Určuje, že převod nejvýznamnější bity na nulu. Následující deklarace zobrazují **__sptr** a **__uptr** modifikátory použít s dvěma nekvalifikovanými ukazateli, dvěma kvalifikovanými ukazateli s [__ptr32](../cpp/ptr32-ptr64.md) typu a funkce parametr.  
   
-```  
+```cpp 
 int * __sptr psp;  
 int * __uptr pup;  
 int * __ptr32 __sptr psp32;  
@@ -40,10 +41,10 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);  
 ```  
   
- Modifikátory `__sptr` a `__uptr` je třeba použít spolu s deklaracemi ukazatelů. Použijte modifikátory v pozici [kvalifikátor typu ukazatele](../c-language/pointer-declarations.md), což znamená, že modifikátor musí následovat hvězdičku. Nemůžete použít modifikátory s [ukazatelé na členy](../cpp/pointers-to-members.md). Modifikátory nemají vliv na deklarace neobsahující ukazatele.  
+ Použití **__sptr** a **__uptr** modifikátory s deklaracemi ukazatelů. Modifikátory je třeba použít v pozici [kvalifikátoru typu ukazatele](../c-language/pointer-declarations.md), což znamená, že modifikátor musí následovat po hvězdičce. Nejde použít modifikátory s [ukazatelů na členy](../cpp/pointers-to-members.md). Modifikátory nemají vliv na deklarace neobsahující ukazatele.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad deklarující 32bitové ukazatele, které používají modifikátory `__sptr` a `__uptr`, přiřadí každý 32bitový ukazatel k proměnné 64bitového ukazatele a následně zobrazí šestnáctkovou hodnotu každého 64bitového ukazatele. Příklad je zkompilován nativním 64bitovým kompilátorem a je spuštěn na 64bitové platformě.  
+ Následující příklad deklaruje 32bitové ukazatele, které používají **__sptr** a **__uptr** modifikátory, přiřadí každý 32bitový ukazatel k proměnné 64bitového ukazatele a následně zobrazí šestnáctkovou hodnotu každého 64 - ukazatel na bit. Příklad je zkompilován nativním 64bitovým kompilátorem a je spuštěn na 64bitové platformě.  
   
 ```cpp  
 // sptr_uptr.cpp  
@@ -92,7 +93,7 @@ p32s: p64 = FFFFFFFF87654321
 p32u: p64 = 0000000087654321  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md)

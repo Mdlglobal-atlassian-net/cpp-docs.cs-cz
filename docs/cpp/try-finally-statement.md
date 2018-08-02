@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947537"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464857"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 **Specifické pro Microsoft**  
   
- Následující syntaxe popisuje `try-finally` – příkaz:  
+ Následující syntaxe popisuje **try-finally** – příkaz:  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *compound-statement*  
   
- `try-finally` Příkaz je rozšířením společnosti Microsoft pro jazyky C a C++, které umožňuje cílovým aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. `try-finally` Příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.  
+ **Try-finally** příkaz je rozšířením společnosti Microsoft pro jazyky C a C++, které umožňuje cílovým aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. **Try-finally** příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.  
   
  Související informace a ukázky kódu najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md). Další informace o obecně zpracování strukturovaných výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Další informace o zpracování výjimek ve spravovaných aplikacích najdete v tématu [zpracování výjimek v/CLR](../windows/exception-handling-cpp-component-extensions.md).  
   
@@ -83,20 +83,20 @@ Pořadí provádění obslužné rutiny ukončení
 >  Try-finally chování se liší od jiných jazycích, které podporují použití **nakonec**, jako je C#.  Jediný **__try** může obsahovat buď, ale ne obě sady **__finally** a **__except**.  Pokud jsou obě být použity současně, vnějším zkuste – s výjimkou příkaz musíte uzavřít vnitřní příkaz try-finally.  Pravidla určující při každý blok se spustí se také liší.  
   
 ## <a name="the-leave-keyword"></a>Klíčové slovo __leave  
- **__Leave** – klíčové slovo je platné pouze uvnitř chráněné části `try-finally` příkazu a jeho účinkem je přechod na konec chráněné části. Běh programu pokračuje prvním příkazem v obslužné rutiny ukončení.  
+ **__Leave** – klíčové slovo je platné pouze uvnitř chráněné části **try-finally** příkazu a jeho účinkem je přechod na konec chráněné části. Běh programu pokračuje prvním příkazem v obslužné rutiny ukončení.  
   
  A **goto** příkaz lze také přejít mimo chráněnou část, ale sníží výkon, protože vyvolá odvíjení zásobníku. **__Leave** příkazu je mnohem efektivnější, protože nezpůsobí odvíjení zásobníku.  
   
 ## <a name="abnormal-termination"></a>Abnormální ukončení  
- Ukončení `try-finally` pomocí příkazu [longjmp](../c-runtime-library/reference/longjmp.md) funkci run-time je považován za abnormální ukončení. Není povoleno přejít do **__try** příkazu, ale právní přejít mimo něj. Všechny **__finally** příkazy, které jsou aktivní mezi bodem odeslání (normální ukončení **__try** bloku) a cíl ( **__except** block, který zpracovává výjimku) musí být spuštěn. Tomu se říká místní uvolnění.  
+ Ukončení **try-finally** pomocí příkazu [longjmp](../c-runtime-library/reference/longjmp.md) funkci run-time je považován za abnormální ukončení. Není povoleno přejít do **__try** příkazu, ale právní přejít mimo něj. Všechny **__finally** příkazy, které jsou aktivní mezi bodem odeslání (normální ukončení **__try** bloku) a cíl ( **__except** block, který zpracovává výjimku) musí být spuštěn. Tomu se říká místní uvolnění.  
   
  Pokud **zkuste** bloku je předčasně ukončen z jakéhokoli důvodu, včetně skok mimo blok, systém provádí přidružené **nakonec** bloku jako součást procesu odvíjení zásobníku. V takových případech [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) vrací funkce **true** -li volána zevnitř **nakonec** blokovat; v opačném případě vrátí **false**.  
   
- Obslužné rutiny ukončení není volána, pokud proces je ukončen průběhu provádění příkazu `try-finally` příkazu.  
+ Obslužné rutiny ukončení není volána, pokud proces je ukončen průběhu provádění příkazu **try-finally** příkazu.  
   
  **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   

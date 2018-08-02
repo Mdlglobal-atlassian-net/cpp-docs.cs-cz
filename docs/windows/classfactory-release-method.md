@@ -1,5 +1,5 @@
 ---
-title: ClassFactory::Release – metoda | Microsoft Docs
+title: ClassFactory::Release – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aa548bcca7f443a311e594eb3a68b4f7f2f03d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 293c95bb95feb1fa021fa742a90939c6680e7b0d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33866762"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460638"
 ---
 # <a name="classfactoryrelease-method"></a>ClassFactory::Release – metoda
-Snižuje počet odkaz na aktuální objekt ClassFactory.  
+Sníží počet odkaz pro aktuální **ClassFactory –** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující selhání.  
+ S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Operátor řešení rozsahu::: | Microsoft Docs'
+title: 'Operátor řešení rozsahu::: | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420937"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467076"
 ---
 # <a name="scope-resolution-operator-"></a>Operátor řešení rozsahu: ::
-Operátor řešení rozsahu `::` se používá k identifikaci a odstranit nejednoznačnost identifikátory používané v různých oborech. Další informace o rozsahu najdete v tématu [oboru](../cpp/scope-visual-cpp.md).  
+Operátor rozlišení rozsahu **::** slouží k identifikaci a rozlišení identifikátory použitými v různých rozsazích. Další informace o oboru, naleznete v tématu [oboru](../cpp/scope-visual-cpp.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +40,10 @@ enum struct :: identifier
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `identifier` Může být proměnné, funkce nebo hodnotu výčtu.  
+ `identifier` Může být proměnné, funkce nebo hodnoty výčtu.  
   
-## <a name="with-classes-and-namespaces"></a>S třídami a obory názvů  
- Následující příklad ukazuje, jak se používá operátor řešení rozsahu se obory názvů a třídy:  
+## <a name="with-classes-and-namespaces"></a>Pomocí třídy a obory názvů  
+ Následující příklad ukazuje, jak se operátor rozlišení rozsahu používá obory názvů a třídy:  
   
 ```cpp  
 namespace NamespaceA{  
@@ -62,12 +62,10 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
- Operátor řešení rozsahu bez kvalifikátor oboru odkazuje na obor názvů globální.  
+ Operátor rozlišení rozsahu bez kvalifikátoru oboru odkazuje na globální obor názvů.  
   
 ```cpp  
 namespace NamespaceA{  
@@ -89,7 +87,7 @@ int main() {
 }  
 ```  
   
- Operátor řešení rozsahu slouží k identifikaci členů oboru názvů, nebo obor názvů, který se jmenuje oboru názvů člen v pomocí direktiva zjistit. V následujícím příkladu můžete použít `NamespaceC` ke kvalifikaci `ClassB`, i když `ClassB` byla deklarována v oboru názvů `NamespaceB`, protože `NamespaceB` byla uvedené v `NamespaceC` pomocí direktiva.  
+ Operátor rozlišení rozsahu můžete použít k identifikaci členem oboru názvů, nebo k identifikaci oboru názvů, který se jmenuje člena oboru názvů pomocí směrnice. V následujícím příkladu můžete použít `NamespaceC` kvalifikovat `ClassB`, i když `ClassB` byl deklarován v oboru názvů `NamespaceB`, protože `NamespaceB` byl jmenovaný v `NamespaceC` pomocí směrnice.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,10 +107,9 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
- Můžete použít řetězy operátorů oboru rozlišení. V následujícím příkladu `NamespaceD::NamespaceD1` identifikuje vnořené obor názvů `NamespaceD1`, a `NamespaceE::ClassE::ClassE1` identifikuje vnořené třídy `ClassE1`.  
+ Můžete použít řetězy operátory oboru rozlišení. V následujícím příkladu `NamespaceD::NamespaceD1` identifikuje vnořené obory názvů `NamespaceD1`, a `NamespaceE::ClassE::ClassE1` identifikuje vnořené třídy `ClassE1`.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,11 +133,10 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
-## <a name="with-static-members"></a>S statické členy  
- Operátor řešení rozsahu musíte použít k volání statické členy třídy.  
+## <a name="with-static-members"></a>Se statickými členy  
+ Operátor rozlišení oboru musí použít k volání statické členy třídy.  
   
 ```cpp  
 class ClassG {  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
-## <a name="with-scoped-enumerations"></a>S vymezená výčty  
- Operátor oboru řešení používá taky hodnotami vymezená výčtu [deklarace výčtů](../cpp/enumerations-cpp.md), jako v následujícím příkladu:  
+## <a name="with-scoped-enumerations"></a>S výčty s vymezeným oborem  
+ Operátoru rozsahu rozlišení slouží také s hodnotami výčet s oborem [deklarace výčtů](../cpp/enumerations-cpp.md), jako v následujícím příkladu:  
   
 ```cpp  
 enum class EnumA{  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Viz také:  
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Obory názvů](../cpp/namespaces-cpp.md)   

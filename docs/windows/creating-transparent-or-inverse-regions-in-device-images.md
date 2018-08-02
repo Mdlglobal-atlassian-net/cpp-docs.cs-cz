@@ -1,5 +1,5 @@
 ---
-title: Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (Editor obrázků pro ikony) | Microsoft Docs
+title: Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,45 +30,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c8ebecf984254175a15075e8d8a4125f9fc5ec17
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882547"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462531"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (editor obrázků pro ikony)
-V [editor obrázků](../windows/image-editor-for-icons.md), má atribut transparentní počáteční obrázek ikony nebo kurzoru. I když jsou obdélníková ikonu a kurzor bitové kopie, mnoho se nezobrazí, protože částí obrázku jsou transparentní; základní bitovou kopii na obrazovce zobrazuje pomocí ikony nebo kurzoru. Při přetažení ikonu částí obrázku se mohou objevit v obráceným barev. Vytvoříte tento účinek nastavení barvy obrazovky a inverzní barvy v [barvy – okno](../windows/colors-window-image-editor-for-icons.md).  
+V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony nebo kurzoru bitová kopie má atribut transparentní. I když jsou obdélníkové obrázky ikon a kurzorů, mnoho se nezobrazí, protože části obrázku jsou transparentní; základní image na obrazovce zobrazí prostřednictvím ikony nebo kurzoru. Při přetažení ikonu, části obrázku se může vyskytovat obrácenou barvu. Vytvoření tohoto efektu tak, že nastavíte barvu obrazovky a inverzní barvy v [okno barvy](../windows/colors-window-image-editor-for-icons.md).  
   
- Barvy obrazovky a inverzní použijete ikony a kurzory buď utvářejí a barvu bitovou kopii odvozené nebo určit inverzní oblasti. Barvy označují částí obrázku s těmito atributy. Barvy, které představují atributy barvy obrazovky a inverzní barvy k úpravám, můžete změnit. Tyto změny neovlivňují vzhled ikony nebo kurzoru ve vaší aplikaci.  
+ Obrazovky a inverzní barvy použijete s ikonami a kurzory tvar a barva odvozené image nebo určují inverzní oblasti. Barvy označující části obrázku má tyto atributy. Můžete změnit barvy, které představují vlastnosti obrazovky a inverzní barev v úpravách. Tyto změny nemají vliv na vzhled ikony nebo kurzoru v aplikaci.  
   
 > [!NOTE]
->  Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-transparent-or-inverse-regions"></a>Vytvoření průhledných nebo obrácených oblastí  
   
-1.  V **barvy** okně klikněte na tlačítko **barvy obrazovky** selektor nebo **inverzní barvy** selektor.  
+1.  V **barvy** okna, klikněte na tlačítko **barvy obrazovky** selektor nebo **inverzní barvy** selektor.  
   
-2.  Použijte obrazovky nebo inverzní barvy na používání nástroje kreslení image. Další informace o nástrojů pro kreslení najdete v tématu [používání nástroje kreslení](using-a-drawing-tool-image-editor-for-icons.md).  
+2.  Použijte na obrazovce nebo inverzní barvy na používání nástroje kreslení obrázku. Další informace o kreslicích nástrojů najdete v tématu [používání nástroje kreslení](using-a-drawing-tool-image-editor-for-icons.md).  
   
-### <a name="to-change-the-screen-or-inverse-color"></a>Změna obrazovky nebo inverzní barvy  
+### <a name="to-change-the-screen-or-inverse-color"></a>Chcete-li změnit barvu obrazovky nebo inverzní  
   
 1.  Vyberte buď **barvy obrazovky** selektor nebo **inverzní barvy** selektor.  
   
-2.  Vyberte barvu ze **barvy** palety v **barvy** okno.  
+2.  Zvolte barvu z **barvy** paletu **barvy** okna.  
   
-     Doplňkové barvy je automaticky určeno pro jiné selektor.  
+     Doplňkovou barvu je automaticky určeno pro ostatní selektor.  
   
     > [!TIP]
-    >  Pokud dvakrát kliknete výběr barvy obrazovky nebo inverzní barvy [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) se zobrazí.  
+    >  Pokud dvakrát kliknete na volič barvy obrazovky nebo inverzní barvy [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) se zobrazí.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ikony a kurzory: prostředky obrázků pro zařízení s displejem](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-
+ [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

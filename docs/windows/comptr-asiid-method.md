@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025900"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465991"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID – metoda
-Vrátí objekt comptr –, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.  
+Vrátí **ComPtr** objekt, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `riid`  
+ *riid*  
  Identifikátor rozhraní.  
   
- `p`  
- Pokud objekt má rozhraní, jejichž ID se rovná `riid`, dvakrát nepřímé ukazatel na rozhraní určené typem `riid` parametr; jinak vrátí hodnotu, ukazatel na rozhraní IUnknown.  
+ *p*  
+ Pokud objekt má rozhraní, jejichž ID se rovná *riid*, dvakrát nepřímé ukazatel na rozhraní určené typem *riid* parametr; jinak vrátí hodnotu, ukazatel na `IUnknown`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  

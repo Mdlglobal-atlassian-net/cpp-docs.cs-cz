@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947610"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461517"
 ---
 # <a name="subscripting"></a>Předplatné
 Operátor dolního indexu (**[] č.**), třeba operátor volání funkce se považuje za binární operátor. Operátor dolního indexu musí být nestatickou členskou funkci, která přijímá jeden argument. Tento argument může být libovolného typu a Určuje dolní index požadované pole.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Komentáře  
- Když `i` dosáhne 10 v předchozí program `operator[]` zjistí, že celočíselných dolního indexu se používá a vydává chybovou zprávu.  
+ Když `i` dosáhne 10 v předchozí program **operator []** zjistí, že celočíselných dolního indexu se používá a vydává chybovou zprávu.  
   
- Všimněte si, že funkce `operator[]` vrací typ reference. To vede k jejímu l hodnotou, je možné využívat indexovaný výrazů na obou stranách operátory přiřazení.  
+ Všimněte si, že funkce **operator []** vrací typ reference. To vede k jejímu l hodnotou, je možné využívat indexovaný výrazů na obou stranách operátory přiřazení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přetížení operátoru](../cpp/operator-overloading.md)

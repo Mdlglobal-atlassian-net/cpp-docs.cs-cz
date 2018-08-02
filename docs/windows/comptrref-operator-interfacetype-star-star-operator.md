@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator InterfaceType ** – operátor | Microsoft Docs
+title: ComPtrRef::operator InterfaceType ** – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 416b30c55027debddc153c44e55c7a4be512703d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6401d78f0c410057d41a80f2345255d4876adb23
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870509"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464412"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** – operátor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ operator InterfaceType**();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Odstraní aktuální objekt ComPtrRef a vrací ukazatel na ukazatel na rozhraní, která je reprezentována ComPtrRef objektu.  
+ Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -42,5 +42,5 @@ operator InterfaceType**();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtrRef – třída](../windows/comptrref-class.md)   
+ [Comptrref – třída](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

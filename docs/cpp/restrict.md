@@ -1,5 +1,5 @@
 ---
-title: omezit | Microsoft Docs
+title: omezení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422885"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463678"
 ---
 # <a name="restrict"></a>restrict
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Při použití funkce deklarace nebo definice, která vrátí hodnotu typu ukazatele `restrict` říká kompilátoru, funkce vrátí objekt, který není *alias*, tedy odkazují jiné ukazatele. To umožňuje kompilátoru provést další optimalizace.
+Při použití u deklarace funkce nebo definice, která vrací typ ukazatele, **omezit** sděluje kompilátoru, že funkce vrátí objekt, který není *alias*, to znamená, odkazuje jiný ukazatele. To umožňuje kompilátoru provést další optimalizace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +36,21 @@ Při použití funkce deklarace nebo definice, která vrátí hodnotu typu ukaza
   
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor rozšíří `__declspec(restrict)`. Například CRT `malloc` funkce má `__declspec(restrict)` dekorace a proto kompilátor předpokládá, že ukazatele inicializována tak, aby umístění v paměti podle `malloc` nejsou také alias podle dříve existující ukazatele.
+Kompilátor šíří **__declspec(restrict)**. Například CRT `malloc` má funkce **__declspec(restrict)** dekorace a proto kompilátor předpokládá, že ukazatele inicializované do umístění v paměti podle `malloc` nejsou také alias podle dříve existující ukazatele.
 
-Kompilátor nekontroluje, že vrácený ukazatel není ve skutečnosti alias. Odpovědností vývojáře je zajistit, aby programátor nevytvořil alias na ukazatel, který je označen modifikátorem `restrict __declspec`.  
+Kompilátor nekontroluje, vrácený ukazatel není ve skutečnosti vytvořen alias. Je odpovědností vývojáře zajistit, aby programátor nevytvořil alias ukazatel označené **omezit __declspec** modifikátor.  
   
-Podobnou sémantiku na proměnné, najdete v části [__restrict](../cpp/extension-restrict.md).
+Podobné sémantiky proměnných naleznete v tématu [kvalifikátor __restrict](../cpp/extension-restrict.md).
  
-Další poznámky, která platí pro aliasy v rámci funkce, najdete v části [__declspec(noalias)](../cpp/noalias.md).
+Jinou anotaci, která se vztahuje pouze na aliasing v rámci funkce, najdete v části [__declspec(noalias)](../cpp/noalias.md).
   
-Informace o **omezit** – klíčové slovo, který je součástí C++ AMP, najdete v části [omezení (C++ AMP)](../cpp/restrict-cpp-amp.md).  
+Informace o tom, **omezit** – klíčové slovo, který je součástí C++ AMP, naleznete v tématu [omezení (C++ AMP)](../cpp/restrict-cpp-amp.md).  
  
 ## <a name="example"></a>Příklad  
 
-Následující příklad ukazuje použití `__declspec(restrict)`.
+Následující příklad ukazuje použití **__declspec(restrict)**.
 
-Když `__declspec(restrict)` se použije pro funkce, vrátí ukazatele, tato hodnota informuje kompilátor paměti ukazuje návratová hodnota není alias. V tomto příkladu následující ukazatele `mempool` a `memptr` jsou globální, takže kompilátor nemůže být se, že paměť použijí pro referenci není alias. Však se používají v rámci `ma` a jeho volající `init` způsobem, který vrátí paměti, která není v opačném případě odkazuje programu, takže `__decslpec(restrict)` pomáhají okně Optimalizace. Toto je podobná jak hlavičky CRT uspořádání přidělení funkce, jako `malloc` pomocí `__declspec(restrict)` k označení, že vždy vracet paměti, která nejde používat aliasy ukazateli existující.
+Když **__declspec(restrict)** se použije na funkci, vrátí ukazatel, to kompilátoru říká, že paměť odkazovanou na návratovou hodnotou není alias. V tomto příkladu ukazatelů `mempool` a `memptr` jsou globální, proto kompilátor nemůže být, že odkazují na paměť není alias. Nicméně se používají v rámci `ma` a jeho volající `init` způsobem, který vrátí paměti, které jinak neodkazuje na program, takže **__decslpec(restrict)** slouží ke snadnější Optimalizátor. Podobá se to jak záhlaví CRT uspořádání přidělení funkce, jako `malloc` pomocí **__declspec(restrict)** k označení, že vždy vrátí paměť řádně nelze používat aliasy pomocí existující ukazatelů.
 
 ```C
 // declspec_restrict.c
@@ -119,10 +119,9 @@ int main()
 }
 ```
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
-
-[Klíčová slova](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[__declspec(noalias)](../cpp/noalias.md)  
+## <a name="see-also"></a>Viz také:
+ [Klíčová slova](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [__declspec(noalias)](../cpp/noalias.md)  

@@ -1,5 +1,5 @@
 ---
-title: ClassFactory – třída | Microsoft Docs
+title: ClassFactory – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858390"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463863"
 ---
 # <a name="classfactory-class"></a>ClassFactory – třída
-Implementuje základních funkcí rozhraní IClassFactory.  
+Implementuje základní funkce `IClassFactory` rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `I0`  
- Rozhraní zeroth.  
+ *I0*  
+ ID nultého rozhraní.  
   
- `I1`  
+ *I1*  
  První rozhraní.  
   
- `I2`  
- Druhý rozhraní.  
+ *I2*  
+ Druhé síťové rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- Využívat `ClassFactory` k zajištění implementace vlastní objekt pro vytváření.  
+ Využívat `ClassFactory` poskytují implementace uživatelem definovaný objekt pro vytváření.  
   
- Následující programovací vzor ukazuje, jak používat [implementuje](../windows/implements-structure.md) struktura zadání víc než třemi rozhraní v továrně, třída.  
+ Následující programovací model popisuje způsob použití [implementuje](../windows/implements-structure.md) struktura určit více než tři rozhraní na objekt pro vytváření tříd.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ClassFactory::AddRef – metoda](../windows/classfactory-addref-method.md)|Zvýší počet odkazů pro aktuální objekt ClassFactory.|  
-|[ClassFactory::LockServer – metoda](../windows/classfactory-lockserver-method.md)|Zvýší nebo sníží počet základní objekty, které sleduje aktuální objekt ClassFactory.|  
-|[ClassFactory::QueryInterface – metoda](../windows/classfactory-queryinterface-method.md)|Načte ukazatel na rozhraní určený parametrem.|  
-|[ClassFactory::Release – metoda](../windows/classfactory-release-method.md)|Snižuje počet odkaz na aktuální objekt ClassFactory.|  
+|[ClassFactory::AddRef – metoda](../windows/classfactory-addref-method.md)|Zvýší počet odkazů pro aktuální objekt ClassFactory –.|  
+|[ClassFactory::LockServer – metoda](../windows/classfactory-lockserver-method.md)|Zvýší nebo sníží počet základní objekty, které jsou sledovány v aktuálním objektu ClassFactory –.|  
+|[ClassFactory::QueryInterface – metoda](../windows/classfactory-queryinterface-method.md)|Načte ukazatel na rozhraní určené typem parametru.|  
+|[ClassFactory::Release – metoda](../windows/classfactory-release-method.md)|Sníží počet referenční pro aktuální objekt ClassFactory –.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `I0`  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939206"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460869"
 ---
 # <a name="unions"></a>Sjednocení
 A **sjednocení** je uživatelem definovaný typ, ve kterém všichni členové sdílejí stejné místo v paměti. To znamená, že v každém okamžiku sjednocení může obsahovat více než jeden objekt ze svého seznamu členů. Také znamená, že bez ohledu na to, kolik členů má sjednocení, vždy používá pouze dostatek paměti k ukládání největšího členu.  
@@ -35,7 +35,7 @@ A **sjednocení** je uživatelem definovaný typ, ve kterém všichni členové 
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Jméno*  
  Název typu sjednocení.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  V předchozím příkladu mějte na paměti, že ve vstupní struktuře sjednocení nemá žádný název. Toto je anonymní sjednocení a její členy jsou přístupné, jako by byly přímé členy struktury. Další informace o anonymních sjednoceních naleznete v části níže.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Sjednocení nemůže ukládat odkazy. Sjednocení nepodporují dědičnosti, proto samotné sjednocení nejde použít jako základní třídy dědit z jiné třídy nebo obsahovat virtuální funkce.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  Sjednocení `NumericType` je v paměti uspořádáno (obecně) tak, jak ukazuje následující obrázek.  
@@ -654,11 +651,11 @@ Kromě omezení pro pojmenované sjednocení anonymní sjednocení jsou v soulad
   
 -   Musí být také deklarovány jako **statické** při deklaraci v oboru souboru nebo oboru názvů.  
   
--   Mohou mít pouze veřejné členy. Soukromé a chráněné členy v anonymních sjednoceních generují chyby.  
+-   Může mít pouze **veřejné** členy. **privátní** a **chráněné** členy v anonymních sjednoceních generují chyby.  
   
 -   Nemohou mít členské funkce.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)   
  [klíčová slova](../cpp/keywords-cpp.md)   
  [Třída](../cpp/class-cpp.md)   

@@ -21,18 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947714"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460890"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Unární operátory Plus a Negation: + a -
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 + cast-expression  
 - cast-expression  
 ```  
@@ -50,6 +49,6 @@ ms.locfileid: "37947714"
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  Unární negace bez znaménka se provádí tak, že se hodnota operandu od 2 ^ n, kde n je počet bitů v objektu daného typu bez znaménka.
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

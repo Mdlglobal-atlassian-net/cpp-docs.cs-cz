@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::trylock – metoda | Microsoft Docs
+title: Criticalsection::trylock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883949"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465419"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock – metoda
-Pokusy o zadání kritická sekce bez blokování. Pokud je volání úspěšné, volající vlákno převezme vlastnictví kritická sekce.  
+Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,14 +38,14 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `cs`  
- Objekt zadaného uživatelem kritická sekce.  
+ *cs*  
+ Kritický oddíl uživatelem zadaného objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Obsahuje nenulovou hodnotu, pokud byly úspěšně uloženy kritická sekce nebo aktuální vlákno již vlastní kritická sekce. Nula, pokud jiné vlákno již vlastní kritická sekce.  
+ Nenulovou hodnotu, pokud byly úspěšně uloženy kritický oddíl nebo aktuální vlákno již vlastní kritický oddíl. Nula v případě jiné vlákno již vlastní kritický oddíl.  
   
 ## <a name="remarks"></a>Poznámky  
- První **trylock –** funkce ovlivňuje aktuální objekt kritická sekce. Druhý **trylock –** funkce ovlivňuje kritická sekce zadaného uživatelem.  
+ První **trylock –** aktuální objekt kritický oddíl má vliv na funkce. Druhá **trylock –** funkce ovlivňuje kritickou sekci zadané uživatelem.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

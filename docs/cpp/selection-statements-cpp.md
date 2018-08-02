@@ -1,5 +1,5 @@
 ---
-title: Příkazy výběru (C++) | Microsoft Docs
+title: Příkazy výběru (C++) | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421270"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464425"
 ---
 # <a name="selection-statements-c"></a>Příkazy výběru (C++)
-Příkazy výběru C++, [Pokud](../cpp/if-else-statement-cpp.md) a [přepínač](../cpp/switch-statement-cpp.md), poskytovat prostředky k podmíněnému spuštění sekcí kódu.  
+Příkazy výběru jazyka C++, [Pokud](../cpp/if-else-statement-cpp.md) a [přepnout](../cpp/switch-statement-cpp.md), poskytují způsob podmíněného spuštění oddílů kódu.  
   
- [__If_exists –](../cpp/if-exists-statement.md) a [__if_not_exists –](../cpp/if-not-exists-statement.md) příkazy umožňují podmíněně zahrnují kód v závislosti na existenci symbol.  
+ [__If_exists](../cpp/if-exists-statement.md) a [__if_not_exists](../cpp/if-not-exists-statement.md) příkazy umožňují podmíněně zahrnout kód v závislosti na existenci symbolu.  
   
  Syntaxi každého příkazu naleznete v jednotlivých tématech.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)

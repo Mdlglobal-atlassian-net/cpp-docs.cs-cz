@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947636"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461885"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynucuje omezení kódu ve funkci a chování funkce v aplikacích používajících modul runtime C++ Accelerated Massive Parallelism (C++ AMP).  
@@ -93,7 +93,6 @@ Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynuc
  Následující příklad ukazuje způsob použití `restrict(amp)`klauzuli.  
   
 ```cpp 
-  
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   
   
@@ -109,9 +108,8 @@ void callFunctions() restrict(amp)
   
     // Calling a non-amp-restricted function is not allowed.  
     // functionNonAmp();   
-  
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

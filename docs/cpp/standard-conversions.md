@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028356"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462307"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 Jazyk C++ definuje převody mezi základními typy. Definuje také převody pro ukazatel, odkaz a pro odvozené typy ukazatele na člena. Tyto převody jsou označovány jako „standardní převody“. (Další informace o typech, standardních typů a odvozených typech naleznete v tématu [typy](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Objekty celočíselných typů se znaménkem lze převést na odpovídající typy bez znaménka. Když tyto převody nastanou, skutečný bitový vzor se nezmění. Změní se však interpretace dat. Vezměte v úvahu tento kód:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  V předchozím příkladu **podepsané řečeno**, `i`, je definována a inicializována na záporné číslo. Výraz `(u = i)` způsobí, že `i` pro převod na **unsigned short** před přiřazením k `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  Následující kód znázorňuje pravidla převodu, která jsou popsána v tabulce:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  Ukazatel `pA` je typu `A *`, což může být interpretován jako význam "ukazatel na objekt typu `A`." Členové `bObject` `(`například `BComponent` a `BMemberFunc`) jsou jedinečné pro typ `B` a proto jsou přístupná přes `pA`. `pA` Ukazatel umožňuje přístup jenom k těmto vlastnostem (členské funkce a data) objektu, které jsou definovány ve třídě `A`.  
   
 ### <a name="pointer-to-function"></a>Ukazatel na funkci  
- Ukazatel na funkci lze převést na typ **void \*** , pokud typ **void \***  je příliš velká pro tento ukazatel.  
+ Ukazatel na funkci lze převést na typ `void *`, pokud typ `void *` je příliš velká pro tento ukazatel.  
   
 ### <a name="pointer-to-void"></a>Ukazatel na typ void  
  Ukazatele na typ **void** lze převést na ukazatele na libovolný typ, ale pouze pomocí přetypování explicitního typu (na rozdíl od v jazyce C). (Viz [výrazy s převody explicitních typů](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) Další informace o převodech typů.) Ukazatel na libovolný typ může být implicitně převést na ukazatel na typ **void**. Ukazatel na neúplný objekt typu lze převést na ukazatel na **void** (implicitně) a zpět (explicitně). Výsledek takového převodu je roven hodnotě původního ukazatele. Objekt je považován za neúplný, pokud je deklarovaný, ale není k dispozici dostatek informací, na základě kterých lze určit jeho velikost nebo základní třídu.  
   
- Ukazatel na libovolný objekt, který není **const** nebo **volatile** lze implicitně převést na ukazatel typu **void \*** .  
+ Ukazatel na libovolný objekt, který není **const** nebo **volatile** lze implicitně převést na ukazatel typu `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>ukazatelé const a volatile  
  Jazyk C++ neposkytuje standardní převod z **const** nebo **volatile** typu na typ, který není **const** nebo **volatile**. Libovolné druhy převodu lze však určit pomocí přetypování explicitních typů (včetně převodů, které nejsou bezpečné).  
@@ -325,5 +322,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

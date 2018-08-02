@@ -1,5 +1,5 @@
 ---
-title: Activationfactory::activationfactory – konstruktor | Microsoft Docs
+title: Activationfactory::activationfactory – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a28ec3d12790c4315a517afde1770ecda78c4b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25277c2fc8dc4672422bd85f4197f770198f1978
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854935"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464798"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory – konstruktor
-Inicializuje ActivationFactory – třída.  
+Inicializuje **activationfactory –** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   

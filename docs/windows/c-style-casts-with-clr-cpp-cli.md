@@ -1,5 +1,5 @@
 ---
-title: Vrhá stylu jazyka C s - clr (C + +/ CLI) | Microsoft Docs
+title: Přetypování ve stylu jazyka C s volbou-clr (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860395"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464581"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Přetypování ve stylu jazyka pomocí možnosti /clr (C++/CLI)
 Následující téma se vztahuje pouze na modul Common Language Runtime.  
   
- Při použití s typy CLR, pokusí se kompilátor mapovat stylu jazyka C přetypovat na jednu z položky CAST uvedené níže, v uvedeném pořadí:  
+ Při použití s typy CLR, kompilátor se pokusí mapovat C-style přetypovat na některý přetypování níže uvedené v následujícím pořadí:  
   
-1.  const_cast –  
+1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast plus const_cast –  
+3.  safe_cast plus const_cast  
   
-4.  static_cast –  
+4.  static_cast  
   
-5.  static_cast plus const_cast –  
+5.  static_cast plus const_cast  
   
- Pokud žádná z výše uvedené položky CAST není platný, a pokud typ výrazu a typ cíle jsou typy CLR odkazů, mapuje přetypování ve stylu C runtime kontrola (castclass MSIL instrukce). Jinak přetypování ve stylu jazyka C považovány za neplatné a vydá k chybě.  
+ Pokud žádná z výše uvedené položky CAST není platný, a typ výrazu a cílový typ jsou odkazové typy CLR, přetypování C-style se mapuje na kontrolu za běhu programu-(castclass instrukce jazyka MSIL). V opačném případě přetypování C-style se považuje za neplatný a kompilátor vyvolá chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Přetypování ve stylu jazyka C se nedoporučuje. Při kompilaci s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), použijte [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+ Přetypování C-style se nedoporučuje. Při kompilaci s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), použijte [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- Následující příklad ukazuje přetypování ve stylu C, která se mapuje `const_cast`.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje přetypování ve stylu C, která se mapuje `safe_cast`.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje přetypování ve stylu C, která se mapuje `safe_cast` plus `const_cast`.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje **safe_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje přetypování ve stylu C, která se mapuje `static_cast`.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje přetypování ve stylu C, která se mapuje `static_cast` plus `const_cast`.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje **static_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje přetypování ve stylu C který se mapuje na spuštění kontroly.  
+ Následující příklad ukazuje přetypování ve stylu C, který se mapuje na kontrolu za běhu.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje neplatný C-styl přetypování, což způsobí, že kompilátor vystavit k chybě.  
+ Následující příklad ukazuje neplatné přetypování ve stylu C, což způsobí, že kompilátor Chcete-li k chybě.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

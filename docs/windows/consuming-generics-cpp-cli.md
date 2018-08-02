@@ -1,5 +1,5 @@
 ---
-title: Použití obecných typů (C + +/ CLI) | Microsoft Docs
+title: Použití obecných typů (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870816"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460488"
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
-Obecné typy vytvořené v jednom jazyce .NET je možné použít jinými jazyky rozhraní .NET. Na rozdíl od šablony obecný v kompilovaném sestavení stále zůstává Obecné. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a to i v jiném jazyce než sestavení, ve které byla definována obecného typu.  
+Obecné typy vytvořené v jednom jazyce .NET může použít v jiných jazycích rozhraní .NET. Na rozdíl od šablon obecný ve zkompilovaném sestavení stále zůstává obecný. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce než sestavení, ve kterém byl definován obecného typu.  
   
 ## <a name="example"></a>Příklad  
   
@@ -32,7 +32,7 @@ Obecné typy vytvořené v jednom jazyce .NET je možné použít jinými jazyky
   
 ### <a name="code"></a>Kód  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -91,11 +91,11 @@ public class CircularList<ItemType> {
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- V tomto příkladu spotřebuje sestavení vytvořené v C#.  
+ Tento příklad využívá sestavení vytvořené v jazyce C#.  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

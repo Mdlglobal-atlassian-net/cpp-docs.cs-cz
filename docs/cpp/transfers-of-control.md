@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947708"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464266"
 ---
 # <a name="transfers-of-control"></a>Přenosy ovládacích prvků
 Můžete použít **goto** příkazu nebo **případ** popisku v **přepnout** příkaz k určení programu, která je rozvětvena kolem inicializátoru. Takový kód je neplatný, dokud není deklarace, která obsahuje inicializátor v bloku, ohraničená blokem, v němž se nachází příkaz jump.  
@@ -60,4 +60,3 @@ int main()
  V předchozím příkladu **goto** příkaz se pokusí přenést řízení kolem inicializace `i`. Pokud však byly `i` deklarovány, ale nebyly inicializovány, byl by převod platný.  
   
  Objekty `total` a `ch`, které jsou deklarovány v bloku, která slouží jako *příkaz* z **při** prohlášení, jsou zničeny, když tento blok ukončen pomocí  **Konec** příkazu.  
-  

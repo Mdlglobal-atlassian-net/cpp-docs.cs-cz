@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181143"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462333"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* – operátor
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>Poznámky
 
-Přetypování aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) na ukazatel na ukazatel – datový člen rozhraní IInspectable.
+Přetypování aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) na ukazatel na ukazatel – datový člen `IInspectable` rozhraní.
 
-Chyba je vygenerován, pokud aktuální comptrrefbase – není odvozen od IInspectable.
+Je vygenerován chybu, pokud aktuální **comptrrefbase –** není odvozen od `IInspectable`.
 
 Toto přetypování je k dispozici pouze tehdy, pokud **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** je definována.
 
@@ -49,6 +49,5 @@ Toto přetypování je k dispozici pouze tehdy, pokud **&#95; &#95;WRL_CLASSIC_C
 **Namespace:** Microsoft::WRL:: details –
 
 ## <a name="see-also"></a>Viz také
-
 [Comptrrefbase – třída](../windows/comptrrefbase-class.md)   
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

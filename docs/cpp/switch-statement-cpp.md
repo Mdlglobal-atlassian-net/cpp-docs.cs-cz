@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947631"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462183"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C++)
 Umožňuje výběr mezi více částí kódu v závislosti na hodnotě integrálního výrazu.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  A **přepnout** příkaz mohou být vnořené. V takových případech **případ** nebo **výchozí** popisky přidružují k nejbližšímu **přepnout** příkaz, který je obklopuje.  
 
- 
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
  Microsoft C neomezuje počet případových hodnoty v **přepnout** příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v **přepnout** příkazu.  
   
@@ -172,7 +171,6 @@ int main(int argc, char *argv[])
   
 **Specifické pro END Microsoft**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)   
- 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939413"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465006"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: souhrn
 Obslužné rutiny ukončení provádí bez ohledu na to, jak **__try** se ukončí blok příkazů. Příčiny opuštění **__try** bloku, `longjmp` příkaz, který opuštění bloku a odvíjení zásobníku z důvodu zpracování výjimek.  
@@ -56,6 +56,6 @@ Obslužné rutiny ukončení provádí bez ohledu na to, jak **__try** se ukonč
   
     -   Řízení přejde na řádek kódu na konci této obslužné rutiny výjimky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zápis obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)   
  [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

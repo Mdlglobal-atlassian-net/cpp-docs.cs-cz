@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028135"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465470"
 ---
 # <a name="summary-of-scope-rules"></a>Souhrn pravidel rozsahu
 Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkci, musí být funkce jednoznačná vzhledem k počtu a typu parametrů. Pokud název zůstává jednoznačným, [přístup ke členu](../cpp/member-access-control-cpp.md) pravidla se použijí.  
@@ -76,5 +76,5 @@ Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je 
   
  Výchozí parametry jsou v oboru parametr, pro který jsou výchozí, jak je popsáno v předchozích dvou odstavcích. Avšak nemají přístup k lokálním proměnným nebo nestatickým členům třídy. Výchozí parametry jsou vyhodnoceny v okamžiku volání funkce, ale jsou vyhodnocovány v původním rozsahu deklarace funkce. Proto výchozí parametry pro členské funkce jsou vždy vyhodnoceny v oboru třídy.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Dědičnost](../cpp/inheritance-cpp.md)
