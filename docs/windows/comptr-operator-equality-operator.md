@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator == – operátor | Microsoft Docs
+title: ComPtr::operator == – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 703204541a05c260e77562729703677b98fb8e9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9750f0d49f4c7a580b2c99d0c833c5381ba20997
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883352"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467336"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== – operátor
-Určuje, zda dva objekty ComPtr jsou stejné.  
+Určuje, zda dva **ComPtr** objekty rovnají.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +42,19 @@ bool operator==(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `a`  
- Odkaz na objekt ComPtr.  
+ *a*  
+ Odkaz na **ComPtr** objektu.  
   
- `b`  
- Odkaz na jiný objekt ComPtr.  
+ *b*  
+ Odkaz na jiný **ComPtr** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- První operátor jsou `true` Pokud objekt `a` rovná objektu `b`, jinak hodnota `false`.  
+ První operátor výnosy **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.  
   
- Yield – operátory druhý a třetí `true` Pokud objekt `a` rovná `nullptr`, jinak hodnota `false`.  
+ Druhý a třetí operátory yield **true** Pokud objekt *a* rovná **nullptr**; v opačném případě **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

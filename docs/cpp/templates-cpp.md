@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947626"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463925"
 ---
 # <a name="templates-c"></a>Šablony (C++)
 Šablony jsou základem pro obecné programování v jazyce C++. Jako silně typovaný jazyk C++ vyžaduje všechny proměnné konkrétního typu, explicitně deklarován s programátor nebo kompilátor odvodit. Nicméně mnoho datových struktur a algoritmů vypadají stejně bez ohledu na to, jaký typ jsou nasazeny na. Šablony umožňují definovat operace třídy nebo funkce a nechat uživatele, určete, jaké konkrétní typy tyto operace by měla fungovat na.  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Výše uvedený kód Popisuje šablonu pro obecnou funkci s parametrem jednoho typu `T`, jejichž vrácení hodnoty a parametry (lhs a zarovnání indirekce rhs) volání jsou všechny tohoto typu. Parametr typu můžete pojmenovat všechno, co je třeba, ale podle konvence jeden velká písmena se běžně používají. `T` je parametr šablony; **typename** – klíčové slovo říká, že tento parametr je zástupný symbol pro typ. Pokud funkce je volána, kompilátor nahradí všechny instance `T` s konkrétní typ argumentu, který je zadán uživatel nebo odvodit kompilátorem. Proces, ve kterém kompilátor vygeneruje třídu nebo funkci ze šablony se označuje jako *vytváření instancí šablon*;   `minimum<int>` je instance šablony `minimum<T>`.  
+ Výše uvedený kód Popisuje šablonu pro obecnou funkci s parametrem jednoho typu *T*, jejichž vrácení hodnoty a parametry (lhs a zarovnání indirekce rhs) volání jsou všechny tohoto typu. Parametr typu můžete pojmenovat všechno, co je třeba, ale podle konvence jeden velká písmena se běžně používají. *T* je parametr šablony; **typename** – klíčové slovo říká, že tento parametr je zástupný symbol pro typ. Pokud funkce je volána, kompilátor nahradí všechny instance `T` s konkrétní typ argumentu, který je zadán uživatel nebo odvodit kompilátorem. Proces, ve kterém kompilátor vygeneruje třídu nebo funkci ze šablony se označuje jako *vytváření instancí šablon*; `minimum<int>` je instance šablony `minimum<T>`.  
   
  Jinde uživatel může deklarovat instanci šablony, která se specializuje na int. Předpokládejme, že get_a() a get_b() jsou funkce, které vrací celé číslo:  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- Ale protože je to šablonu funkce a kompilátor může odvodit typ `T` z argumentů `a` a `b`, můžete ji volat stejně jako běžné funkce:  
+ Ale protože je to šablonu funkce a kompilátor může odvodit typ `T` z argumentů *a* a *b*, můžete ji volat stejně jako běžné funkce:  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  Když kompilátor narazí, který tento poslední příkaz, ve které všechny výskyty generuje novou funkci *T* v šabloně je nahrazen **int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  Pravidla pro způsob kompilátor provede odvození typu v rámci šablony funkce jsou na základě pravidel pro běžné funkce. Další informace najdete v tématu [přetížení řešení z volání šablony funkce](../cpp/overload-resolution-of-function-template-calls.md).  
   
 ## <a id="type_parameters"></a> Parametry typu  
- V `minimum` šabloně výše, Všimněte si, že parametr typu `T` není kvalifikován žádným způsobem, dokud se používá v parametry volání funkce, kde jsou přidány const a kvalifikátory odkaz.  
+ V `minimum` šabloně výše, Všimněte si, že parametr typu *T* není kvalifikován žádným způsobem, dokud se používá v parametry volání funkce, kde jsou přidány const a kvalifikátory odkaz.  
   
  Neexistuje žádný praktický limit pro počet parametrů typu. Více parametrů oddělte čárkami:  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  Klíčové slovo **třídy** je ekvivalentní **typename** v tomto kontextu. Můžete vyjádřit jako v předchozím příkladu:  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  Chyba kompilátoru se vygeneruje, protože MyClass neposkytuje přetížení pro < – operátor.  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  Všimněte si syntaxi v deklaraci šablony. Hodnota size_t je předán jako argument šablony v době kompilace a musí být konstantní nebo výraz constexpr. Použijete ho následujícím způsobem:  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  Jiné typy hodnot včetně ukazatele a reference, je možné předat v jako parametry bez typu. Například můžete předat ukazatel na funkci nebo objektu funkce přizpůsobit některé operace uvnitř kód šablony.  
   
 ## <a id="template_parameters"></a> Šablony jako parametry šablony  
- Parametr šablony může být šablonou. V tomto příkladu MyClass2 má dva parametry šablony: Parametr typename `T` a parametr šablony `Arr`:  
+ Parametr šablony může být šablonou. V tomto příkladu MyClass2 má dva parametry šablony: Parametr typename *T* a parametr šablony *směrování žádostí na aplikace*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- Vzhledem k tomu, `Arr` parametr sám nemá žádný text, jeho názvy parametrů nejsou potřeba. Ve skutečnosti, jedná se o chybu k odkazování na `Arr`společnosti typename nebo třída názvy parametrů z těla `MyClass2`. Z tohoto důvodu `Arr`názvy parametrů typů lze vynechat, jak je znázorněno v tomto příkladu:  
+ Vzhledem k tomu, *směrování žádostí na aplikace* parametr sám nemá žádný text, jeho názvy parametrů nejsou potřeba. Ve skutečnosti, jedná se o chybu k odkazování na *směrování žádostí na aplikace*společnosti typename nebo třída názvy parametrů z těla `MyClass2`. Z tohoto důvodu *směrování žádostí na aplikace*názvy parametrů typů lze vynechat, jak je znázorněno v tomto příkladu:  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>Specializace šablony  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- Šablona může obsahovat libovolný počet specializace, za předpokladu, každý parametr speciálním typem je jedinečný.   Pouze šablony třídy mohou být částečně specializovaná. Všechny úplné a částečné specializace šablony musí být deklarovány v oboru názvů stejný jako původní šablony.  
+ Šablona může obsahovat libovolný počet specializace, za předpokladu, každý parametr speciálním typem je jedinečný. Pouze šablony třídy mohou být částečně specializovaná. Všechny úplné a částečné specializace šablony musí být deklarovány v oboru názvů stejný jako původní šablony.  
   
  Další informace najdete v tématu [specializace šablony](../cpp/template-specialization-cpp.md).

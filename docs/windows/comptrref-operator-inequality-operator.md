@@ -1,5 +1,5 @@
 ---
-title: ComPtrRef::operator! = – operátor | Microsoft Docs
+title: ComPtrRef::operator! = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883551"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462921"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= – operátor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `a`  
- Odkaz na objekt ComPtrRef.  
+ *a*  
+ Odkaz na **comptrref –** objektu.  
   
- `b`  
- Odkaz na jiný objekt ComPtrRef nebo ukazatel na anonymní objekt (`void*`).  
+ *b*  
+ Odkaz na jiný **comptrref –** objekt nebo ukazatel na anonymní objekt (`void*`).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- První operátor jsou `true` Pokud objekt `a` není roven objektu `b`, jinak hodnota `false`.  
+ První operátor výnosy **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.  
   
- Yield – operátory druhý a třetí `true` Pokud objekt `a` se nerovná `nullptr`, jinak hodnota `false`.  
+ Druhý a třetí operátory yield **true** Pokud objekt *a* není roven **nullptr**; v opačném případě **false**.  
   
- Yield – operátory čtvrté a páté `true` Pokud objekt `a` není roven objektu `b`, jinak hodnota `false`.  
+ Čtvrtý a pátý operátory yield **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- Určuje, zda dva objekty ComPtrRef nejsou stejné.  
+ Určuje, zda dva **comptrref –** objekty nejsou stejné.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
