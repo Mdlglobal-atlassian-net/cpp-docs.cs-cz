@@ -1,5 +1,5 @@
 ---
-title: Kontextově závislá klíčová slova (rozšíření komponent C++) | Microsoft Docs
+title: Kontextově závislá klíčová slova (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871520"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466121"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextově závislá klíčová slova (rozšíření komponent C++)
-*Kontextově závislá klíčová slova* jsou jazykové elementy, které jsou rozpoznány jenom v konkrétní kontexty. Mimo kontext určité kontextové klíčové slovo lze symbol definovaný uživatelem.  
+*Kontextově závislá klíčová slova* jsou prvky jazyka, které jsou rozpoznány pouze v určitém kontextu. Mimo určitý kontext může být kontextové klíčové slovo symbolem definovaným uživatelem.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
  **Poznámky**  
   
- Následuje seznam kontextově závislá klíčová slova:  
+ Následuje seznam kontextových klíčových slov:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33871520"
   
 -   [for each, in](../dotnet/for-each-in.md)  
   
--   [InitOnly](../dotnet/initonly-cpp-cli.md)  
+-   [InitOnly.](../dotnet/initonly-cpp-cli.md)  
   
 -   `internal`   
   
--   [Literál](../windows/literal-cpp-component-extensions.md)  
+-   [literál](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -54,14 +54,14 @@ ms.locfileid: "33871520"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` (součástí [obecné typy](../windows/generics-cpp-component-extensions.md))  
+-   `where` (součást [obecných typů](../windows/generics-cpp-component-extensions.md))  
   
- Pro účely čitelnost můžete omezit používání kontextově závislá klíčová slova jako uživatelem definované symboly.  
+ Pro účely čitelnosti můžete omezit použití kontextových klíčových slov jako uživatelem definované symboly.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  **Poznámky**  
   
- (Používají se žádné poznámky specifických pro platformy pro tuto funkci.)  
+ (Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
@@ -69,7 +69,7 @@ ms.locfileid: "33871520"
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  **Poznámky**  
   
- (Používají se žádné poznámky specifických pro platformy pro tuto funkci.)  
+ (Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru:   **/CLR**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871520"
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- Následující příklad kódu ukazuje, že v odpovídající kontext `property` kontextová – klíčové slovo lze použít k definování vlastností a proměnné.  
+ Následující příklad kódu ukazuje, že ve vhodném kontextu **vlastnost** kontextové klíčové slovo je možné definovat vlastnost a proměnnou.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

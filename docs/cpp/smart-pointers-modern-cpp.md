@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939881"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462248"
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 V moderním programování C++ standardní knihovna obsahuje *inteligentní ukazatele*, které se používají k zajištění, že programy jsou volné paměti a dalších prostředků a jsou bezpečné na výjimku.  
@@ -117,7 +117,7 @@ V moderním programování C++ standardní knihovna obsahuje *inteligentní ukaz
  [CAutoPtrList – třída](../atl/reference/cautoptrlist-class.md)  
  Třída, která zapouzdřuje metody pro práci se seznamem `CAutoPtr` uzly.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)   

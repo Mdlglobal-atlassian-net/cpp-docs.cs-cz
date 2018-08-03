@@ -1,5 +1,5 @@
 ---
-title: call_as | Microsoft Docs
+title: call_as | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860863"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465867"
 ---
 # <a name="callas"></a>call_as
-Umožňuje [místní](../windows/local-cpp.md) funkce nejde mapovat na vzdálené funkce tak, aby při vzdálené funkce je volána, místní funkce je volána.  
+Umožňuje [místní](../windows/local-cpp.md) funkce mají být namapovány na vzdálenou funkci tak, aby při vzdálené funkce je volána, je vyvolána lokální funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Funkce*  
- Místní funkce, kterou chcete volat při vzdálené funkce je volána.  
+ *– funkce*  
+ Lokální funkce, kterou chcete volat při vyvolání vzdálenou funkci.  
   
 ## <a name="remarks"></a>Poznámky  
- **Call_as** atribut C++ má stejné funkce jako [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL atribut.  
+ **Call_as** C++ atribut má stejné funkce jako [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje, jak můžete použít **call_as** k mapování funkce nonremotable (**f1**) na funkci učinit vzdáleným (**Remf1**):  
+ Následující kód ukazuje, jak můžete **call_as** mapovat funkci nonremotable (**f1**) na funkci lze používat vzdáleně (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +63,9 @@ __interface IMInterface {
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

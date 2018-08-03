@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947617"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462385"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Deklarátor odkazu hodnoty r: &amp;&amp;
 Obsahuje odkaz na výraz rvalue.  
@@ -29,7 +29,6 @@ Obsahuje odkaz na výraz rvalue.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Přesunutí sémantiky  
  Odkazy rvalue podporují implementaci *sémantiky přesunutí*, která může výrazně zvýšit výkon vašich aplikací. Přesunutí sémantik umožňuje napsat kód, který převede prostředky (například dynamicky přidělené paměti) z jednoho objektu na jiný. Přesunutí sémantik funguje, protože umožňuje převedení z dočasných objektů, které nelze odkazovat kdekoli v programu prostředků.  
   
- K implementaci sémantiky přesunutí obvykle poskytujete *konstruktor přesunutí* a volitelně operátor přiřazení přesunutí (`operator=`), do vaší třídy. Operace kopírování a přiřazení, jejichž zdroje jsou hodnoty rvalues pak automaticky využijí sémantiky přesunutí. Na rozdíl od konstruktoru výchozí kopie kompilátor neposkytuje výchozí konstruktor pro přesunutí. Další informace o tom, jak zapsat konstruktor přesunutí a jak ji používat ve vaší aplikaci najdete v tématu [konstruktory přesunutí a operátory přiřazení přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ K implementaci sémantiky přesunutí obvykle poskytujete *konstruktor přesunutí* a volitelně operátor přiřazení přesunutí (**operátoru =**), do vaší třídy. Operace kopírování a přiřazení, jejichž zdroje jsou hodnoty rvalues pak automaticky využijí sémantiky přesunutí. Na rozdíl od konstruktoru výchozí kopie kompilátor neposkytuje výchozí konstruktor pro přesunutí. Další informace o tom, jak zapsat konstruktor přesunutí a jak ji používat ve vaší aplikaci najdete v tématu [konstruktory přesunutí a operátory přiřazení přesunutí (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Můžete také použít běžné funkce přetížení a operátory k využití výhod přesunutí sémantiky. Visual C++ 2010 představuje přesunutí sémantiky do standardní knihovny C++. Například `string` třída implementuje operace, které provádějí přesunutí sémantiky. Zvažte následující příklad, který zřetězí několik řetězců a vytiskne výsledek:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Před Visual C++ 2010, každý volání `operator+` přiděluje a vrací nový dočasný `string` objektu (rvalue). `operator+` nedokáže připojit jeden řetězec k druhému, protože neví, zda jsou zdrojové řetězce lvalue nebo rvalue. Pokud jsou zdrojové řetězce obou hodnotami lvalues, mohou být odkazovány kdekoli v programu a nesmí být proto změněny. Pomocí odkazů rvalue `operator+` můžete upravit tak, aby převzal rvalues, které nelze odkazovat kdekoli v programu. Proto `operator+` může nyní přidat jeden řetězec do druhého. To může výrazně snížit počet přidělení dynamické paměti, která `string` třídy musí provádět. Další informace o `string` najdete v tématu [basic_string – třída](../standard-library/basic-string-class.md).  
+ Před Visual C++ 2010, každý volání **operátor +** přiděluje a vrací nový dočasný `string` objektu (rvalue). **Operator +** nedokáže připojit jeden řetězec k druhému, protože neví, zda jsou zdrojové řetězce lvalue nebo rvalue. Pokud jsou zdrojové řetězce obou hodnotami lvalues, mohou být odkazovány kdekoli v programu a nesmí být proto změněny. Pomocí odkazů rvalue **operátor +** můžete upravit tak, aby převzal rvalues, které nelze odkazovat kdekoli v programu. Proto **operátor +** může nyní přidat jeden řetězec do druhého. To může výrazně snížit počet přidělení dynamické paměti, která `string` třídy musí provádět. Další informace o `string` najdete v tématu [basic_string – třída](../standard-library/basic-string-class.md).  
   
  Přesunutí sémantik také pomáhá, když kompilátor nemůže vrátit hodnotu optimalizace (RVO) nebo s názvem vrátit hodnotu optimalizace (NRVO). V těchto případech kompilátor volá konstruktor přesunu, pokud jej definuje typ. Další informace o vrácení pojmenované optimalizace hodnot najdete v tématu [vrácení pojmenované optimalizace hodnot v aplikaci Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
@@ -410,7 +409,7 @@ print_type_and_value<string&>(string& t)
 ## <a name="summary"></a>Souhrn  
  Odkazy rvalue rozlišují mezi hodnotami lvalue od rvalue. Mohou pomoci zvýšit výkon vašich aplikací, vyloučením potřeby zbytečného přidělení a operace kopírování. Umožňují také napsat jednu verzi funkce, která přijímá libovolný argument a předá je do jiné funkce jako kdyby byla jiná funkce přímo volána.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
  [Deklarátor odkazu lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)   

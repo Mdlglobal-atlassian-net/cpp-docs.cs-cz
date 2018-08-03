@@ -1,5 +1,5 @@
 ---
-title: Comptrref::getaddressof – metoda | Microsoft Docs
+title: Comptrref::getaddressof – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883304"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462934"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Adresa ukazatel na rozhraní představuje aktuální objekt ComPtrRef.  
+ Adresa ukazatele na rozhraní reprezentované aktuální **comptrref –** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Načte adresu ukazatele rozhraní představuje aktuální objekt ComPtrRef.  
+ Načte adresu ukazatel rozhraní reprezentované aktuální **comptrref –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -45,5 +45,5 @@ InterfaceType* const * GetAddressOf() const;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ComPtrRef – třída](../windows/comptrref-class.md)   
+ [Comptrref – třída](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

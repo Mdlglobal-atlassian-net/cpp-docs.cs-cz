@@ -1,5 +1,5 @@
 ---
-title: ComPtr::operator = – operátor | Microsoft Docs
+title: ComPtr::operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871198"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466160"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= – operátor
-Přiřadí aktuální ComPtr hodnotu.  
+Přiřadí hodnotu k aktuální **ComPtr**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `U`  
+ *U*  
  Třída.  
   
- `other`  
- Ukazatelů, reference nebo rvalue odkaz na typ nebo jinou ComPtr.  
+ *Ostatní*  
+ Ukazatel, odkaz nebo odkaz rvalue na typ nebo jiný **ComPtr**.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Odkaz na aktuální ComPtr.  
+ Odkaz na aktuální **ComPtr**.  
   
 ## <a name="remarks"></a>Poznámky  
- První verze součásti tento operátor přiřadí aktuální ComPtr prázdnou hodnotu.  
+ První verze tohoto operátoru přiřadí aktuální prázdnou hodnotu **ComPtr**.  
   
- V druhé verze Pokud přiřazení ukazatel rozhraní není stejný jako aktuální ukazatel rozhraní ComPtr druhý ukazatel rozhraní přiřazen aktuální ComPtr.  
+ V druhém verzi, pokud přiřazení ukazatel rozhraní není stejný jako aktuální **ComPtr** ukazatel rozhraní, je druhý ukazatel rozhraní je přiřazen k aktuální **ComPtr**.  
   
- Ve třetí verzi přiřazení ukazatel rozhraní je přiřazený k aktuální ComPtr.  
+ Ve třetí verzi je přiřazení ukazatel rozhraní přiřazená aktuální **ComPtr**.  
   
- V Čtvrtá verze pokud ukazatel rozhraní přiřazení hodnoty není stejný jako aktuální ukazatel rozhraní ComPtr druhý ukazatel rozhraní přiřazen aktuální ComPtr.  
+ Ve čtvrtém verzi, pokud ukazatel rozhraní přiřazování hodnot není stejný jako aktuální **ComPtr** ukazatel rozhraní, je druhý ukazatel rozhraní je přiřazen k aktuální **ComPtr**.  
   
- Je pátá verze kopie operátor; odkaz na ComPtr je přiřazen k aktuální ComPtr.  
+ Je pátá verze kopírovacího operátoru; odkaz na **ComPtr** je přiřazen k aktuální **ComPtr**.  
   
- Šesté verze je kopie operátor, který používá přesunout sémantiku; deklarátor odkazu na ComPtr pokud přetypování a posléze přiřazeny k aktuální ComPtr je statický libovolného typu.  
+ Šestá verze je operátor kopie, která používá přesunutí sémantiky; Odkaz rvalue na **ComPtr** Pokud libovolného typu je statické přetypování a posléze přiřazeny k aktuální **ComPtr**.  
   
- Sedmého verze je kopie operátor, který používá přesunout sémantiku; rvalue odkaz na ComPtr typu `U` se statickou přetypovat pak a přiřadí do aktuální ComPtr.  
+ Sedmý verze je operátor kopie, která používá přesunutí sémantiky; Odkaz rvalue na **ComPtr** typu *U* je statické přetypování pak a přiřazeny k aktuální **ComPtr**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

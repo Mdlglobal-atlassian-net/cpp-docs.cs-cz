@@ -1,5 +1,5 @@
 ---
-title: Řetězec a I-O formátování (moderní verze jazyka C++) | Microsoft Docs
+title: Řetězec a formátování I/o (moderní verze jazyka C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49ece9fef9122d5e2811eeb70a0ea1cba81b2e33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422381"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464094"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
-C++ [iostreams](../standard-library/iostream.md) podporují formátovaný řetězec vstupně-výstupní operace. Například následující kód ukazuje, jak nastavit cout k formátování celé výstup v šestnáctkové soustavě, nejprve ukládání mimo aktuální stav a znovu nastavení později, protože po formátování stavu je předán cout, zůstane tímto způsobem, dokud nezměníte, ne jenom pro jeden řádek kódu.  
+C++ [iostreams](../standard-library/iostream.md) jsou schopny vstupu a výstupu formátovaných řetězců. Například následující kód ukazuje, jak nastavit cout k formátování výstupu v šestnáctkové soustavě, nejprve uložením mimo aktuální stav a opětovným nastavením později, protože jakmile formátování stavu je předání cout zůstane tak, jak, dokud není změněno, nikoli pouze pro jeden řádek celého čísla kódu.  
   
 ```cpp  
 #include <iostream>  
@@ -44,22 +44,21 @@ int main()
         << endl;  
     cout.copyfmt(state); // restore previous formatting  
 }  
-  
 ```  
   
- To může být zcela příliš komplikované v mnoha případech. Jako alternativu můžete použít Boost.Format z knihoven C++ nárůst, i když je nestandardní. Můžete si stáhnout všechny knihovny nárůst z [nárůst](http://www.boost.org/) webu.  
+ To může být v mnoha případech příliš obtížné. Jako alternativu můžete použít metodu Boost.Format z knihoven Boost C++, přestože je nestandardní. Všechny knihovny Boost můžete stáhnout [Boost](http://www.boost.org/) webu.  
   
  Některé výhody Boost.Format jsou:  
   
--   Bezpečné: Bezpečných a vyvolá výjimku pro chyby – například specifikace příliš málo nebo příliš mnoho položek.  
+-   Bezpečnost: Typově bezpečný a vyvolá výjimku – například specifikace příliš málo nebo příliš mnoho položek.  
   
--   Rozšiřitelné: Funguje pro libovolného typu, který Streamovat.  
+-   Rozšiřitelné: Funguje pro libovolný typ, který můžete Streamovat.  
   
--   Pohodlná: Standardní Posix a podobné řetězce formátu.  
+-   Pohodlné: Standard Posix a podobné formátovací řetězce.  
   
- I když Boost.Format je založený na C++ [iostreams](../standard-library/iostream-programming.md), které jsou bezpečné a rozšiřitelné, nejsou, optimalizovaný výkon. Pokud požadujete optimalizace výkonu, zvažte C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), které jsou rychlé a snadno se používá. Jsou to ale není rozšiřitelné nebo před ohrožení zabezpečení. (Existuje bezpečné verzí, ale jejich způsobit snížení výkonu mírné. Další informace najdete v tématu [printf_s –, _printf_s_l –, wprintf_s –, _wprintf_s_l –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) a [sprintf_s –, _sprintf_s_l –, swprintf_s –, _swprintf_s_l –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
+ I když je Boost.Format založen na knihovnách C++ [iostreams](../standard-library/iostream-programming.md), které jsou bezpečné a rozšiřitelné, a proto nejsou optimalizovány pro výkon. Pokud požadujete optimalizaci výkonu, zvažte v jazyku C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), které jsou rychlé a snadné použití. Však nejsou rozšiřitelné nebo bezpečné před chybami zabezpečení. (Existují bezpečné verze, ale způsobují mírné snížení výkonu. Další informace najdete v tématu [printf_s _printf_s_l –, wprintf_s – _wprintf_s_l –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) a [sprintf_s – _sprintf_s_l –, swprintf_s – _swprintf_s_l –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- Následující kód ukazuje některé nárůst formátování funkce.  
+ Následující kód ukazuje některé funkce formátování Boost.  
   
 ```cpp  
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
@@ -69,13 +68,12 @@ int main()
         cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
     // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
-  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)   
- [\<iostream >](../standard-library/iostream.md)   
+ [\<iostream – >](../standard-library/iostream.md)   
  [\<omezení >](../standard-library/limits.md)   
- [\<iomanip – >](../standard-library/iomanip.md)
+ [\<iomanip >](../standard-library/iomanip.md)

@@ -1,5 +1,5 @@
 ---
-title: Argtraits::args – konstanta | Microsoft Docs
+title: ArgTraits::args – konstanta | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855770"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466553"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args – konstanta
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Udržuje počet počet parametrů na metodu Invoke rozhraní delegáta.  
+ Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.  
   
 ## <a name="remarks"></a>Poznámky  
- Když `args` rovná -1 označuje může existovat žádná shoda pro podpis metody Invoke.  
+ Když `args` rovná -1 znamená, může být nalezena žádná shoda pro `Invoke` podpis metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

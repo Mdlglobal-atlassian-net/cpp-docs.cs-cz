@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947723"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465929"
 ---
 # <a name="user-defined-type-conversions-c"></a>Uživatelem definovaný typ převody (C++)
 A *převod* vytvoří novou hodnotu typu některé z hodnoty jiného typu. *Standardní převody* jsou integrované do jazyka C++ a podporu jeho předdefinovaných typů, případně můžete vytvořit *uživatelem definované převody* provádět převody na, z nebo mezi uživatelem definované typy.  
@@ -79,7 +79,7 @@ A *převod* vytvoří novou hodnotu typu některé z hodnoty jiného typu. *Stan
   
  **Explicitní** – klíčové slovo lze použít konstruktory převodu od verze C ++ 98 a funkce pro převod od verze C ++ 11. Následující části obsahují další informace o tom, jak používat **explicitní** – klíčové slovo.  
   
-##  <a name="ConvCTOR"></a> Konstruktory převodu  
+## <a name="ConvCTOR"></a> Konstruktory převodu  
  Konstruktory převodu definujte převody z typů definovaný uživatelem nebo předdefinovaný na typ definovaný uživatelem. Následující příklad ukazuje konstruktor převodu, který převede z předdefinovaného typu **double** pro uživatelem definovaný typ `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Všimněte si, že členské proměnné `amount` tvoří privátní a že veřejné převod funkce na typ **double** se používá jenom k vrácení hodnoty `amount`. Ve funkci `display_balance`, dojde k implicitní převod při hodnotu `balance` streamuje do standardního výstupu pomocí operátor vkládání datového proudu `<<`. Vzhledem k tomu, že je definován žádný operátor vkládání datového proudu pro uživatelem definovaný typ `Money`, ale je jedna pro předdefinovaný typ **double**, kompilátor může použít funkce pro převod z `Money` k **double** splňovat operátor vkládání datového proudu.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Tady funkce pro převod **operátor double** byl proveden explicitní a explicitní přetypování na typ **double** zavedl se ve funkci `display_balance` k provedení převodu. Pokud toto přetypování byly vynechány, kompilátor by nelze najít vhodný stream vložení operátoru `<<` pro typ `Money` a dojde k chybě.  
-  

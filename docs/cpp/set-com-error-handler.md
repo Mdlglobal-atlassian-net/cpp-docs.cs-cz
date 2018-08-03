@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 08d5df7893aa5390a6e577e3c26424864f7c3a8f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947624"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465763"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Specifické pro Microsoft**  
@@ -48,7 +48,7 @@ void __stdcall _set_com_error_handler(
  `IErrorInfo` objekt.  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení [_com_raise_error](../cpp/com-raise-error.md) zpracovává všechny chyby modelu COM. Toto chování lze změnit pomocí funkce `_set_com_error_handler` k volání vlastní funkce zpracování chyb.  
+ Ve výchozím nastavení [_com_raise_error](../cpp/com-raise-error.md) zpracovává všechny chyby modelu COM. Toto chování můžete změnit pomocí **_set_com_error_handler –** k volání vlastní funkce zpracování chyb.  
   
  Náhradní funkce musí mít podpis, který je ekvivalentní s funkcí `_com_raise_error`.  
   
@@ -98,5 +98,5 @@ Exception raised: Unable to establish the connection!
   
  **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru je na, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

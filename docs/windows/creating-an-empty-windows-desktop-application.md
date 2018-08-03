@@ -1,5 +1,5 @@
 ---
-title: Vytváření aplikací prázdný Windows Desktop | Microsoft Docs
+title: Vytváření aplikací klasické pracovní plochy Windows prázdný | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883991"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464360"
 ---
-# <a name="creating-an-empty-windows-desktop-application"></a>Vytváření aplikací prázdný Windows Desktop
-### <a name="to-create-an-empty-windows-desktop-application"></a>Chcete-li vytvořit prázdnou aplikaci systému Windows desktop  
+# <a name="creating-an-empty-windows-desktop-application"></a>Vytváření aplikací klasické pracovní plochy Windows prázdný
+### <a name="to-create-an-empty-windows-desktop-application"></a>Vytvoření prázdné desktopové aplikace Windows  
   
-1.  Z **soubor** nabídce vyberte možnost **nový, projekt**.  
+1.  Z **souboru** nabídce vyberte možnost **nový** > **projektu**.  
   
-2.  V levém podokně **nový projekt** dialogové okno, kliknutím na tlačítko **Win32** a v prostředním podokně vyberte **Konzolová aplikace Win32**.  
+2.  V levém podokně **nový projekt** dialogového okna, klikněte na **Win32** a v prostředním podokně vyberte **Konzolová aplikace Win32**.  
   
-3.  Zadejte název pro nový projekt, cestu k adresáři projektu a pak klikněte na tlačítko **OK**.  
+3.  Zadejte název nového projektu, cesta k adresáři projektu a pak klikněte na tlačítko **OK**.  
   
-4.  V [Win32 – Průvodce aplikací](../windows/win32-application-wizard.md), klikněte **nastavení aplikace** stránky. Vyberte **typ aplikace** chcete vytvořit s vaší souboru se zdrojovým kódem a pak vyberte **prázdný projekt** ve skupinovém rámečku **další možnosti**.  
+4.  V [Průvodce aplikací Win32](../windows/win32-application-wizard.md), klikněte na tlačítko **nastavení aplikace** stránky. Vyberte **typ aplikace** chcete vytvořit pomocí souboru zdrojového kódu a pak vyberte **prázdný projekt** zaškrtávací políčko v oblasti **další možnosti**.  
   
-5.  Click **OK**.  
+5.  Klikněte na tlačítko **OK**.  
   
- Projekt se objeví v **Průzkumníku řešení** se třemi adresáři obsahovat zdrojové soubory, soubory hlaviček a soubory prostředků.  
+ Projekt se objeví v **Průzkumníka řešení** s tři adresáři obsahuje zdrojové soubory, soubory hlaviček a soubory prostředků.  
   
- Dále můžete [přidat soubory do projektu Visual C++ prázdný](../windows/adding-files-to-an-empty-win32-applications.md).  
+ Teď můžete [přidat soubory do projektu Visual C++ prázdný](../windows/adding-files-to-an-empty-win32-applications.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

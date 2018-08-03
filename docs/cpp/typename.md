@@ -1,5 +1,5 @@
 ---
-title: TypeName | Microsoft Docs
+title: TypeName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6eebf038fbe3e5e18e3f2a1e8e7a2aa2554bf41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79ba7d0bda73762d04f0dd11668eb31c275ac03f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467524"
 ---
 # <a name="typename"></a>typename
-V definicích šablony poskytuje nápovědu pro kompilátor, je neznámý identifikátor typu. Seznamy parametrů šablony se používá pro určení typu parametru.  
+V definicích šablon poskytuje nápovědu pro kompilátor, že neznámý identifikátor je typ. V seznamech parametrů šablony slouží k určení typu parametru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 typename identifier;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- This – klíčové slovo musíte použít, pokud je název v definici šablony kvalifikovaný název, který závisí na šablonu argumentu; zadání je volitelné Pokud kvalifikovaný název není závislá. Další informace najdete v tématu [rozlišení šablon a názvů](../cpp/templates-and-name-resolution.md).  
+ Toto klíčové slovo musí použít, pokud kvalifikovaný název, který je závislý na argumentu šablony; je název v definici šablony je volitelný, pokud kvalifikovaný název není závislý. Další informace najdete v tématu [šablony a rozlišení názvů](../cpp/templates-and-name-resolution.md).  
   
- **TypeName** mohou být využívána libovolného typu kdekoli v šabloně deklarace a definice. Není povoleno v seznamu základních tříd, nejde-li o argument šablony základní třídy šablony.  
+ **TypeName** mohou využívat libovolným typem kdekoli v deklaraci šablony nebo definice. Není povoleno v seznamu základních tříd, nejde-li o argument šablony základní třídy šablony.  
   
-```  
+```cpp 
 template <class T>  
 class C1 : typename T::InnerType // Error - typename not allowed.  
 {};  
@@ -46,16 +46,16 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- **Typename** – klíčové slovo lze také místě **třída** v parametru šablony zobrazí. Například následující příkazy jsou sémanticky ekvivalentní:  
+ **Typename** – klíčové slovo lze také místo **třídy** v seznamech parametrů šablony. Například následující příkazy jsou sémanticky ekvivalentní:  
   
-```  
+```cpp 
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // typename.cpp  
 template<class T> class X  
 {  
@@ -67,6 +67,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Šablony](../cpp/templates-cpp.md)   
  [Klíčová slova](../cpp/keywords-cpp.md)
