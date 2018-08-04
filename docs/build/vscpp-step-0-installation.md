@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376056"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496555"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
@@ -43,7 +43,7 @@ Podrobnosti o místo na disku a požadavky na operační systém, najdete v čá
    > [Nainstalovat sadu Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Edice Community je pro jednotlivé vývojáře, školní výuka, vědecký výzkum a vývoj open source. Pro jiné účely, nainstalujte <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> nebo <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > Edice Community je pro jednotlivé vývojáře, školní výuka, vědecký výzkum a vývoj open source. Pro jiné účely, nainstalujte [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) nebo [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 1. Najdete soubor Instalační program stáhnout a spustit ho. Může se zobrazit v prohlížeči, nebo může být pro vás ve složce stažené soubory. Instalační program potřebuje správce oprávnění ke spuštění. Může se zobrazit **řízení uživatelských účtů** dialogové okno s výzvou, abyste udělili oprávnění, aby instalační program provádět změny systému, zvolte **Ano**. Pokud máte potíže, vyhledejte stažený soubor v Průzkumníku souborů klikněte pravým tlačítkem na ikonu instalační program a zvolte **spustit jako správce** v místní nabídce.
 

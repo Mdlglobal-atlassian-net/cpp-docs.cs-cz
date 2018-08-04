@@ -1,7 +1,7 @@
 ---
-title: Portování ze systému UNIX do Win32 | Microsoft Docs
+title: Portování ze systému UNIX do Win32 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,70 +20,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843285"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496672"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
-Při migraci aplikací ze systému UNIX do systému Windows, máte několik možností:  
+Migrace aplikací ze systému UNIX do Windows, máte několik možností:  
   
--   Použití knihovny systému UNIX do portu aplikací ze systému UNIX do Win32  
+-   Pomocí knihovny systému UNIX do portu aplikace ze systému UNIX do Win32  
   
--   Portování aplikací ze systému UNIX do Win32 nativně  
+-   Nativně portování aplikací ze systému UNIX do Win32  
   
--   Spouštění UNIX aplikací v systému Windows pomocí subsystému POSIX  
+-   Spouštění systému UNIX aplikací na Windows prostřednictvím podsystému POSIX  
   
 ## <a name="unix-libraries"></a>Knihovny systému UNIX  
- Jednou z možností UNIX programátory normálně zvažte, je použití knihovny systému UNIX jako třetích stran umožníte jejich kompilace kódu UNIX jako spustitelného souboru Win32. Několik komerční (a alespoň jeden veřejné domény) knihovny to udělat. Toto je možnost pro některé aplikace. Tyto knihovny portování výhodou je, že minimalizují počáteční úsilí pro přenos. Hlavní nevýhodou pro konkurenční softwarový produkt, je, že nativního portu Win32 aplikace bude obecně rychlejší a bude mít nevyhnutelně další funkce. Může být nevhodných aplikace, který krok mimo její prostředí systému UNIX, pokud je potřeba provádět volání Win32 získat další power ze systému Windows.  
+ Jednou z možností UNIX programátoři obvykle vezměte v úvahu používá unixových knihovny třetích stran, aby jejich UNIX kompilace kódu jako spustitelný soubor systému Win32. Několik obchodní (a aspoň jednu doménu public) knihovny udělat. Toto je možnost u některých aplikací. Výhodou těchto přenos knihoven je, že jejich minimalizovat úsilí pro počáteční přenos. Hlavní nevýhody konkurenční softwarového produktu, je, že nativního portu Win32 aplikace bude obecně rychlejší a bude mít nevyhnutelně další funkce. Může být není vhodný pro aplikaci, aby krok mimo jeho prostředí systému UNIX, pokud je potřeba provést volání Win32 získat větší výkon z Windows.  
   
- Následující seznam uvádí Microsoft a třetích stran pro přenos a podpora migrace UNIX pro aplikaci Visual C++:  
+ Následující seznam uvádí Microsoft a třetích stran pro přenos a podpora migrace systému UNIX do jazyka Visual C++:  
   
-### <a name="unix-migration-guides"></a>Příručky k migraci UNIX  
- Průvodce migrací UNIX vlastní aplikace obsahuje technickou nápovědu migrace kódu ze systému UNIX do Win32 prostředí.  
+### <a name="unix-migration-guides"></a>Průvodce migrací systému UNIX  
+ [Průvodce migrací aplikace vlastní UNIX](https://technet.microsoft.com/library/bb656290.aspx) poskytuje technickou pomoc s migrace kódu ze systému UNIX do Win32 prostředí.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- Průvodce projektem migrace Unix doplňuje Průvodce migrací UNIX vlastní aplikace poskytnutím vysokoúrovňové pomoci s přenesením podstatných projektů ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu. Průvodce může být stažen:  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [Průvodce projektem migrace Unix](https://technet.microsoft.com/library/bb656287.aspx) doplňuje Průvodce migrací systému UNIX vlastní aplikace tím, že poskytuje základní nápovědy na migraci podstatné projekty ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu.
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Služby Microsoft Windows pro UNIX (SFU)  
- Služby systému Windows pro UNIX (SFU) poskytuje celou řadu napříč platformami služby pro integraci systému Windows do existujících prostředí založené na systému UNIX. Služby pro systém UNIX poskytuje sdílení souborů, vzdálený přístup a správu, synchronizace hesel, společnou správu adresářů, společnou sadu nástrojů a prostředí.  
+ Služby systému Windows pro UNIX (SFU) poskytuje celou řadu multiplatformních služby pro integraci Windows do existující prostředí založené na systému UNIX. Služby pro systém UNIX poskytuje sdílení souborů, vzdálený přístup a správu, synchronizaci hesel, běžné správy adresáře, společnou sadu nástrojů a prostředí.  
   
- [Služby systému Windows pro UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)  
+ [Služby Windows pro systém UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)  
   
 ### <a name="interopsystemscom"></a>InteropSystems.com  
  [http://www.interopsystems.com/](http://www.interopsystems.com/)  
   
- Třetí straně lokality pro společnost poskytuje softwarem, který podporuje přenos ze systému UNIX do Win32.  
+ Server jiného výrobce pro společnost poskytující softwarem, který podporuje přenos ze systému UNIX do Win32.  
   
-### <a name="c-boost-web-site"></a>Nárůst C++ webu  
+### <a name="c-boost-web-site"></a>C++ Boost webové stránky  
  [http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)  
   
  [http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)  
   
-## <a name="porting-unix-applications-directly-to-win32"></a>Přenos aplikací systému UNIX přímo do Win32  
- Další možností je portování aplikací systému UNIX do Win32 přímo. Pomocí knihovny ANSI C/C++ a komerčních knihoven kompilátoru C, mnoho tradiční systému, který volání spoléhali na aplikací pro systém UNIX jsou k dispozici v aplikace Win32.  
+## <a name="porting-unix-applications-directly-to-win32"></a>Portování aplikací UNIX přímo do Win32  
+ Další možností je přenesení aplikací systému UNIX do Win32 přímo. Pomocí knihovny ANSI jazyka C/C++ a obchodní knihovny kompilátoru jazyka C, řadu tradiční systém, který volá spoléhal na podle aplikací systému UNIX jsou k dispozici v aplikacích Win32.  
   
- Výstupní model **stdio**– na základě aplikací není potřeba změnit, protože konzole Win32 napodobovat rozhraní API **stdio** modelu a verze *curses* existovat využívající rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
+ Výstupní model **stdio**– na základě aplikací není potřeba změnit od konzoly Win32 API napodobují **stdio** model a verze *curses* existují, které používají rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](http://msdn.microsoft.com/library/windows/desktop/ms686025).  
   
- Aplikace založené na soket Berkeley potřebují velmi málo změn fungovat jako aplikace Win32. Rozhraní Windows Sockets je navržené pro přenositelnost sokety BSD s minimálními změnami, které jsou popsány v úvodní části specifikace rozhraní WinSock.  
+ Aplikace založené na soketu Berkeley potřebovat velmi málo změny pracovních jako aplikace typu Win32. Rozhraní Windows Sockets je navržená pro přenositelnost sokety BSD, s minimálními změnami, které jsou popsány v úvodní části specifikace rozhraní WinSock.  
   
- Windows podporuje kompatibilní se standardem DCE RPC, takže jsou snadno použitelné aplikace založené na protokolu RPC. V tématu [RPC funkce](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
+ Windows podporuje CLS DCE, který RPC, tak, aby byly snadno použitelné aplikace založené na protokolu RPC. Zobrazit [RPC funkce](http://msdn.microsoft.com/library/windows/desktop/aa378623).  
   
- Jeden z největších oblasti rozdíl je v modelu procesu. Má UNIX **rozvětvení**; Win32 neexistuje. V závislosti na použití **rozvětvení** a základu kódu Win32 má dvě rozhraní API, které lze použít: **CreateProcess** a `CreateThread`. Aplikace systému UNIX, která větve, více kopií sám sebe může být přepracována ve Win32 více procesů nebo jeden proces s více vlákny. Pokud se používají více procesů, existují různé způsoby IPC, který slouží ke komunikaci mezi procesy (a případně aktualizaci kódu a data nový proces jako nadřazeným prvkem, pokud funkce, **rozvětvení** poskytuje je potřeba). Další informace o IPC, najdete v části [meziprocesová komunikace](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
+ Jedna z největších oblastí rozdíl je v modelu procesu. Se systémem UNIX **forku**; Win32 je nepodporuje. V závislosti na využívání **forku** a kódové základny Win32 má dvě rozhraní API, které je možné: **CreateProcess** a `CreateThread`. Aplikace systému UNIX, která větve více kopií sebe sama, může být přepracována v systému Win32 má více procesů nebo jednoho procesu s více vlákny. Pokud jsou používány více procesů, existují různé způsoby IPC, který slouží ke komunikaci mezi procesy, které (a možná se aktualizovat kód a data nového procesu vypadal nadřazeným prvkem, pokud funkce, která **forku** poskytuje je potřeba). Další informace o IPC najdete v tématu [meziprocesová komunikace](http://msdn.microsoft.com/library/windows/desktop/aa365574).  
   
- Systém Windows a UNIX Grafické modely se příliš neliší. UNIX používá X okno systému grafické uživatelské rozhraní, zatímco Windows používá GDI. Když koncept podobný, není jednoduché mapování X API GDI rozhraní API. Podpora OpenGL je však k dispozici pro migrace založené na systému UNIX OpenGL aplikací. A existují X klienty a servery pro systém Windows X. V tématu [kontexty zařízení](http://msdn.microsoft.com/library/windows/desktop/dd183553) informace o rozhraní GDI.  
+ Windows a UNIX Grafické modely se velmi liší. UNIX používá X okno systému grafického uživatelského rozhraní, zatímco Windows používá rozhraní GDI. Když je to podobný koncept, neexistuje jednoduchý mapování rozhraní API X GDI rozhraní API. Podpora OpenGL je ale k dispozici pro migraci aplikací založené na OpenGL systému UNIX. A jsou X klienti a servery pro Windows X. Zobrazit [kontexty zařízení](http://msdn.microsoft.com/library/windows/desktop/dd183553) informace o rozhraní GDI.  
   
- Základní aplikace systému UNIX, včetně mnoha aplikace CGI, měli snadno portu pro aplikaci Visual C++ v systému Windows. Funguje jako **otevřete**, `fopen`, **číst**, **zápisu** a ostatní jsou k dispozici v knihovně Visual C++ Runtime. Existuje také mapování 1: 1 mezi C UNIX rozhraní API a rozhraní API Win32: **otevřete** k **CreateFile**, **číst** k **ReadFile**, **zápisu** k **WriteFile**, `ioctl` k **DeviceIOControl**, **zavřete** k **CloseFile**a tak dále.  
+ Základní aplikace v systému UNIX, včetně mnoha aplikace CGI, by měl port snadno do prostředí Visual C++, které běží na Windows. Funkce jako **otevřete**, `fopen`, **čtení**, **zápisu** a ostatní jsou k dispozici v knihovně runtime Visual C++. Navíc existuje mapování 1: 1 mezi rozhraním API systému UNIX C a rozhraní API systému Win32: **otevřete** k **CreateFile**, **čtení** k **ReadFile**, **zápisu** k **WriteFile**, `ioctl` k **DeviceIOControl**, **zavřete** k **CloseFile**, a tak dále.  
   
-## <a name="windows-posix-subsystem"></a>Subsystém POSIX systému Windows  
- Jiný možnost UNIX programátory pohled na je subsystému POSIX systému Windows. Však podporuje pouze POSIX 1003.1, která byla pouze verze POSIX standardizované při vytvoření systému Windows NT. Od té doby došlo malá poptávka po rozšíření tohoto subsystému, protože většina aplikací mít byl převeden na Win32. Systém 1003.1 je zajímavý pro plně funkční aplikace, protože neobsahuje řadu funkcí (například ty ve verzi 1003.2 sítě podporu a tak dále). Složité aplikace, spuštěné v subsystému Windows POSIX nemají přístup k funkcím Windows k dispozici pro aplikace Win32, jako jsou soubory mapované paměti, sítě a grafiky. Aplikace, jako je VI, LS a GREP jsou hlavním cílem pro subsystému POSIX systému Windows.  
+## <a name="windows-posix-subsystem"></a>Subsystém Windows POSIX  
+ Možnost UNIX programátoři podívat je subsystém Windows POSIX. Však podporuje pouze 1003.1 POSIX, která byla pouze verze POSIX standardizované při vytvoření Windows NT. Od té doby došlo malé nároky pro rozšíření subsystému, protože většina aplikací se převedl do Win32. Systém 1003.1 je omezená relevantní pro plně funkční aplikace, protože nezahrnuje mnoho možností (například ve verzi 1003.2 podporu sítě a tak dále). Úplné vybrané aplikace spuštěné v subsystému Windows POSIX nebudou mít přístup k funkcím Windows k dispozici pro aplikace Win32, jako jsou soubory mapované paměti, sítě a grafiky. Aplikace, jako je GREP, VI a LS jsou hlavního cíle podsystému Windows POSIX.  
   
 ## <a name="see-also"></a>Viz také  
- [Průvodce Visual C++ přenosem a upgradováním](visual-cpp-change-history-2003-2015.md)   
- [UNIX](../c-runtime-library/unix.md)   
+ [Průvodce Visual C++ přenesením a upgradem](visual-cpp-change-history-2003-2015.md)   
+ [SYSTÉM UNIX](../c-runtime-library/unix.md)   
  [Odvozená pravidla](../build/inference-rules.md)
