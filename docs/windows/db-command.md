@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954978"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571435"
 ---
 # <a name="dbcommand"></a>db_command
 Vytvoří příkaz OLE DB.  
@@ -133,7 +133,7 @@ Pokud *bulk_fetch* je menší než 1, `SetRows` vrátí nulu.
 ## <a name="remarks"></a>Poznámky  
 **db_command** vytvoří [CCommand](../data/oledb/ccommand-class.md) objekt, který používá příjemce technologie OLE DB ke spuštění příkazu.  
   
-Můžete použít **db_command** s rozsahem třídy nebo funkce; Hlavní rozdíl je v oboru `CCommand` objektu. V oboru funkce data, jako jsou třeba vazby ukončit na konci funkce. Použití oboru třídy a funkce zahrnují třídy šablona příjemce technologie OLE DB **CCommand\<>**, ale liší se argumenty šablony pro případy funkce a třídy. V případě funkce bude proveden vazby **přistupující objekt** , která zahrnuje místní proměnné při použití třídy odvodí `CAccessor`-odvozené třídy jako argument. Když se použije jako atribut třídy **db_command** funguje ve spojení s **db_column**.  
+Můžete použít **db_command** s rozsahem třídy nebo funkce; Hlavní rozdíl je v oboru `CCommand` objektu. V oboru funkce data, jako jsou třeba vazby ukončit na konci funkce. Použití oboru třídy a funkce zahrnují třídy šablona příjemce technologie OLE DB `CCommand<>`, ale liší se argumenty šablony pro případy funkce a třídy. V případě funkce bude proveden vazby **přistupující objekt** , která zahrnuje místní proměnné při použití třídy odvodí `CAccessor`-odvozené třídy jako argument. Když se použije jako atribut třídy **db_command** funguje ve spojení s **db_column**.  
   
 **db_command** lze použít ke spuštění příkazů, které nevrací sadu výsledků dotazu.  
   

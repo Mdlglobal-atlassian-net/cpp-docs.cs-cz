@@ -1,5 +1,5 @@
 ---
-title: Event::Operator = – operátor | Microsoft Docs
+title: Event::Operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871120"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571295"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= – operátor
-Přiřadí zadaný odkaz na aktuální instanci události událostí.  
+Přiřadí zadaný **události** odkaz na aktuální **události** instance.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `h`  
- Rvalue – odkaz na instanci události.  
+ *h*  
+ Odkaz rvalue na **události** instance.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na aktuální instanci události.  
+ Ukazatel na aktuální **události** instance.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

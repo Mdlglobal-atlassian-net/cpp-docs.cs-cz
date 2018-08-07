@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Změna jazyka nebo podmínky prostředku během kopírování | Microsoft Docs'
+title: 'Postupy: Změna jazyka nebo podmínky prostředku během kopírování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880134"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570493"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Postupy: Změna jazyka nebo podmínky prostředku během kopírování
-Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka nebo podmínky vlastnost nebo obojí.  
+Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.  
   
--   Jazyk prostředku identifikuje právě tedy jazyk pro prostředek. Toto je používáno [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) k identifikaci prostředků, pro kterou se díváte. (Však prostředků může mít rozdíly pro každý jazyk, který nesouvisí se text, například akcelerátorů, které může fungovat jenom na japonské klávesnici nebo rastrového obrázku, který může být pouze vhodné pro čínštinu lokalizované sestavení atd.)  
+-   Určuje jazyk prostředku přesně to, jazyk prostředku. Toto je používáno [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) vám pomůže identifikovat prostředek, pro který potřebujete. (Ale prostředků může mít rozdíly pro každý jazyk, který nesouvisí se text, například akcelerátory, které může fungovat jenom na použití japonské klávesnice nebo rastrový obrázek, který může být pouze vhodné pro čínštinu lokalizované sestavení atd.)  
   
--   Podmínka ve zdroji je definovaný symbol, který identifikuje podmínce, pod kterým má být použita tato konkrétní kopie prostředku.  
+-   Podmínky prostředku je definovaný symbol, který určuje podmínku, pod kterým se má použít tento konkrétní kopie prostředku.  
   
- Jazyk a podmínky prostředku se zobrazí v závorkách za názvem prostředku v okně pracovního prostoru. V tomto příkladu používá prostředek s názvem IDD_AboutBox finština jako svůj jazyk a jeho podmínka je XX33.  
+ Jazyk a podmínky prostředku jsou uvedeny v závorkách za názvem prostředku v okně pracovního prostoru. V tomto příkladu používá prostředek s názvem IDD_AboutBox finština jako svůj jazyk a jeho stav je XX33.  
   
 ```  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat na existující prostředek a změnit jeho jazyka nebo podmínky  
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky  
   
-1.  V souboru .rc nebo v [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na prostředků, kterou chcete zkopírovat.  
+1.  V souboru .rc nebo v [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na prostředek, které chcete kopírovat.  
   
 2.  Zvolte **vložit kopii** z místní nabídky.  
   
-3.  V **vložit kopii** dialogové okno:  
+3.  V **vložit kopii prostředku** dialogové okno:  
   
-    -   Pro **jazyk** vyberte jazyk.  
+    -   Pro **jazyk** seznamu, vyberte jazyk.  
   
     -   V **podmínku** zadejte podmínku.  
   
-
-  
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

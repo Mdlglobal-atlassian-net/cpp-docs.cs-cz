@@ -1,5 +1,5 @@
 ---
-title: Hledání záznamu v tabulce akcelerátorů | Microsoft Docs
+title: Hledání záznamu v tabulce akcelerátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53cafe8533eac024f07482563ba2c24183963978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873206"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571373"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Hledání záznamu v tabulce akcelerátorů
-### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>K nalezení položky v tabulce otevřete akcelerátorů  
+### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Chcete-li najít záznam v tabulce akcelerátorů otevřít  
   
 1.  Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Klikněte na sloupec head abecedně seřaďte obsahu sloupce. Klikněte například na **ID** zobrazíte všechna ID v tabulce akcelerátorů abecedy.  
+2.  Klikněte na sloupec head k řazení obsahu sloupce podle abecedy. Klikněte například na **ID** zobrazíte všechna ID v tabulce akcelerátorů podle abecedy.  
   
- Potom můžete kontrolovat v seznamu a najít položku.  
+ Potom můžete vyhledat v seznamu a vyhledejte položku.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: EventSource::add – metoda | Microsoft Docs
+title: EventSource::add – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873235"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570379"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add – metoda
-Připojí reprezentována rozhraní zadaného delegáta sadu obslužných rutin událostí pro aktuální objekt EventSource obslužné rutiny události.  
+Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **EventSource** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +36,15 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `delegateInterface`  
- Rozhraní objektu delegáta, který reprezentuje obslužnou rutinu události.  
+### <a name="parameters"></a>Parametry  
+ *delegateInterface*  
+ Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.  
   
- `token`  
- Po dokončení této operace, popisovač, který představuje událost. Použít tento token jako parametr [Remove()](../windows/eventsource-remove-method.md) metoda vyřadí obslužné rutiny události.  
+ *Token*  
+ Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru [Remove()](../windows/eventsource-remove-method.md) metoda zahodíte obslužné rutiny události.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

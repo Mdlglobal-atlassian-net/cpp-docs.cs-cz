@@ -1,5 +1,5 @@
 ---
-title: soubor nápovědy | Microsoft Docs
+title: HelpFile – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570444"
 ---
 # <a name="helpfile"></a>helpfile
-Nastaví název souboru nápovědy knihovny typů.  
+Nastaví název souboru nápovědy pro knihovnu typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Název souboru*  
  Název souboru, který obsahuje témata nápovědy.  
   
 ## <a name="remarks"></a>Poznámky  
- **Soubor nápovědy** atribut C++ má stejné funkce jako [soubor nápovědy](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL atribut.  
+ **HelpFile –** C++ atribut má stejné funkce jako [HelpFile –](http://msdn.microsoft.com/library/windows/desktop/aa366853) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [modulu](../windows/module-cpp.md) příklad použití **soubor nápovědy**.  
+ Podívejte se na příklad pro [modulu](../windows/module-cpp.md) příklad, jak používat **HelpFile –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -52,9 +51,9 @@ Nastaví název souboru nápovědy knihovny typů.
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`, `typedef`, **třída**, metoda, vlastnost|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**rozhraní**, **typedef**, **třídy**, metoda, **vlastnost**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -62,8 +61,8 @@ Nastaví název souboru nápovědy knihovny typů.
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [HelpContext –](../windows/helpcontext.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpContext](../windows/helpcontext.md)   
  [helpstring](../windows/helpstring.md)   

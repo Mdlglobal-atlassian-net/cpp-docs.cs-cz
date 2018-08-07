@@ -1,5 +1,5 @@
 ---
-title: Obecná rozhraní (Visual C++) | Microsoft Docs
+title: Obecná rozhraní (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878694"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571172"
 ---
 # <a name="generic-interfaces-visual-c"></a>Obecná rozhraní (Visual C++)
-Omezení, které se vztahují na parametry typu na třídy jsou stejné jako ty, které se vztahují na parametry typu na rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
+Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- Pravidla, která řídí přetížení funkcí jsou stejné pro funkce v rámci obecných tříd nebo obecná rozhraní.  
+ Pravidla, která řídí funkce přetížení jsou stejné pro funkce v rámci obecných tříd nebo obecná rozhraní.  
   
- Implementace explicitního rozhraní členských rozhraní sestavené typy pracovat stejným způsobem jako s typy jednoduché rozhraní (viz následující příklady).  
+ Implementace explicitního rozhraní členských typů vybudované rozhraní pracovat stejným způsobem jako u typů jednoduché rozhraní (viz následující příklady).  
   
  Další informace o rozhraní najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
   
@@ -41,36 +41,36 @@ Omezení, které se vztahují na parametry typu na třídy jsou stejné jako ty,
   
 ## <a name="remarks"></a>Poznámky  
  *atributy* (volitelné)  
- Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
+ Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
   
  *klíč třídy*  
  **Třída** nebo **typename**  
   
- `type-parameter-identifier(s)`  
- Seznam identifikátorů oddělených čárkami.  
+ *Typ – parametr-identifikátory*  
+ Seznam identifikátorů oddělených čárkou.  
   
- `type-parameter-constraints-clauses`  
- Má podobu uvedený v [omezení obecných parametrů typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *Typ parametru omezení klauzule*  
+ Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *Modifikátory dostupnosti* (volitelné)  
- Modifikátory dostupnosti (například **veřejné, privátní**).  
+ Modifikátory (třeba **veřejné, privátní**).  
   
- *Identifikátor*  
+ *identifikátor*  
  Název rozhraní.  
   
  *Přehled základních* (volitelné)  
  Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.  
   
- *body rozhraní*  
+ *tělo rozhraní*  
  Deklarace členů rozhraní.  
   
  *deklarátory* (volitelné)  
- Deklarace proměnných vycházejících z tohoto typu.  
+ Deklarace proměnných na základě tohoto typu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak deklarace a vytvořit instanci obecné rozhraní. V příkladu obecné rozhraní `IList<ItemType>` je deklarován. Pak je implementováno modulem dvě obecné třídy `List1<ItemType>` a `List2<ItemType>`, s různými implementacemi.  
+ Následující příklad ukazuje, jak deklarovat a vytvoření instancí obecného rozhraní. V příkladu, její obecná rozhraní `IList<ItemType>` je deklarována. Je následně implementované dva obecné třídy `List1<ItemType>` a `List2<ItemType>`, se jedná o rozdílné implementace.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>Příklad  
- Tento příklad deklaruje obecné rozhraní `IMyGenIface`a dvě rozhraní neobecnou `IMySpecializedInt` a `ImySpecializedString`, který specialize `IMyGenIface`. Dvě specializované rozhraní jsou pak implementované dvě třídy `MyIntClass` a `MyStringClass`. Příklad ukazuje, jak specialize obecná rozhraní, vytváření instancí rozhraní obecné a neobecné a volání – explicitně implementovaná členy na rozhraní.  
+ V tomto příkladu deklaruje obecné rozhraní `IMyGenIface`a dvě obecné rozhraní `IMySpecializedInt` a `ImySpecializedString`, který specialize `IMyGenIface`. Dvě specializované rozhraní následně implementované dvě třídy `MyIntClass` a `MyStringClass`. Tento příklad ukazuje, jak specialize obecných rozhraní, vytváření instancí obecné a neobecné rozhraní a volat explicitně implementovaných členy rozhraní.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

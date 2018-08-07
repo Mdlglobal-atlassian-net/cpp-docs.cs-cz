@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení nebo změna barev (Editor obrázků pro ikony) | Microsoft Docs
+title: Přizpůsobení nebo změna barev (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,33 +26,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871234"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571282"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Přizpůsobení nebo změna barev (editor obrázků pro ikony)
-Editor obrázků [barevná paleta](../windows/colors-window-image-editor-for-icons.md) jeho otevření zobrazí 16 standardní barvy. Kromě zobrazených barvy můžete vytvořit své vlastní barvy. Pak můžete [uložení a načtení vlastní paletu barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Editor obrázků [barvy palety](../windows/colors-window-image-editor-for-icons.md) otevření zobrazí 16 standardní barvy. Kromě zobrazených barvy můžete vytvořit své vlastní barvy. Pak můžete [uložit a načíst vlastní paletu barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
-### <a name="to-change-colors-on-the-colors-palette"></a>Chcete-li změnit barvy na barevná paleta  
+### <a name="to-change-colors-on-the-colors-palette"></a>Chcete-li změnit barvy palety barev  
   
-1.  Z **Image** nabídce zvolte **upravit barvy**.  
+1.  Z **Image** nabídce zvolte **přizpůsobit barvy**.  
   
-2.  V [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), definujte barvu zadáním hodnoty RGB nebo HSL v příslušné textová pole nebo vybrat barvu v **přechodu barevné zobrazení** pole.  
+2.  V [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)definovat barvu tak, že zadáte hodnoty vyjadřující příslušná textová pole a výběr barvy v **přechodu barevné zobrazení** pole.  
   
-3.  Nastavit světelnost přesunutím posuvníku **světlost** panelu.  
+3.  Nastavte světelnost přesunutím posuvníku **světelnost** panelu.  
   
-4.  Jsou rozloženy mnoho vlastních barev. Pokud chcete plnou barvou nejblíže k tónovaná barva, dvakrát klikněte **barva** pole.  
+4.  Jsou rozloženy mnoho vlastních barev. Pokud chcete plnou barvu nejblíže tónovaná barva, dvakrát klikněte **barva** pole.  
   
-     Pokud se později rozhodnete, chcete tónovaná barva, přesuňte jezdec **světlost** panel nebo přesunout nitkových v **přechodu barevné zobrazení** políčko Obnovit rozklad.  
+     Pokud se později rozhodnete, chcete, aby tónovaná barva, nastavte posuvník **světelnost** pruhu nebo přesunutí mezi vlasy v **přechodu barevné zobrazení** obnovíte rozklad pole.  
   
-5.  Klikněte na tlačítko **OK** pro přidání nové barvy.  
+5.  Klikněte na tlačítko **OK** přidáte novou barvu.  
   
-
-  
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   

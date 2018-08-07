@@ -1,5 +1,5 @@
 ---
-title: Obecné třídy (C + +/ CLI) | Microsoft Docs
+title: Obecné třídy (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881397"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570669"
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
-Obecné třídy je deklarován v následující podobě:  
+Obecná třída je deklarována pomocí následující tvar:  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,43 +46,43 @@ class-body
  Ve výše uvedené syntaxe se používají následující termíny:  
   
  `attributes` (volitelné)  
- Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
+ Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
   
  *klíč třídy*  
- Buď `class` nebo `typename`  
+ Buď **třídy** nebo **typename**  
   
- *Typ-parametr-identifikátory*,  
- Seznam oddělený čárkami identifikátorů zadání názvy parametrů typu.  
+ *Typ – parametr-identifikátory*,  
+ Čárkou oddělený seznam identifikátorů určující názvy parametrů typu.  
   
- *omezení – klauzule*  
- Seznam (není oddělených čárkami) **kde** klauzule určující omezení pro parametry typu. Má podobu:  
+ *klauzule omezení*  
+ Seznam (nikoli oddělený čárkami) **kde** klauzule určující omezení pro parametry typu. Má podobu:  
   
- `where`  *identifikátor typu parametru*`:`*seznamu omezení*   `...`  
+ `where`  *identifikátor typu parametru*`:`*seznam omezení*   `...`  
   
  *seznam omezení*  
  *Třída nebo rozhraní*[`,` *...* ]  
   
  *Modifikátory dostupnosti*  
- Modifikátory dostupnosti pro obecná třída Pro prostředí Windows Runtime pouze povolené Modifikátor je `private`. Pro modul CLR, jsou povolené modifikátory `private` a `public`.  
+ Modifikátory dostupnosti pro obecná třída. Prostředí Windows Runtime je jediný povolený modifikátor **privátní**. Pro modul common language runtime, jsou povolené modifikátory **privátní** a **veřejné**.  
   
- *Identifikátor*  
- Název třídy Obecné, všechny platný identifikátor C++.  
+ *identifikátor*  
+ Název obecná třída libovolný platný identifikátor C++.  
   
  *Modifikátory* (volitelné)  
- Povolené modifikátory zahrnují `sealed` a **abstraktní**.  
+ Povolené modifikátory zahrnují **zapečetěné** a **abstraktní**.  
   
- *základní seznam*  
- Seznam obsahující jeden základní třídy a všechny implementují rozhraní, všechny oddělených čárkami.  
+ *Base-list*  
+ Seznam obsahující jednu základní třídu a žádné implementovaná rozhraní, všechny oddělených čárkami.  
   
- *text – třída*  
- Tělo třídy, která obsahuje pole, členské funkce atd.  
+ *Tělo třídy*  
+ Text třídu obsahující pole, členské funkce atd.  
   
- *Deklarátory*  
- Deklarace žádné proměnné tohoto typu. Příklad: `^` *identifikátor*[`,` ...]  
+ *deklarátory*  
+ Deklarace proměnných tohoto typu. Příklad: `^` *identifikátor*[`,` ...]  
   
- Obecné třídy takovéto můžou deklarovat (Všimněte si, že klíčové slovo **třída** lze namísto **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou určené v místě, kde typ. `HashTable<int, int>` je vytvořený typ obecného typu `HashTable<KeyType, ValueType>`. Počet různých sestavené typy konstruovat z jednoho obecného typu. Sestavené typy, které se vytvářejí na základě obecné třídy jsou zpracovány jako libovolný jiný typ třídy ref.  
+ Je možné deklarovat obecné třídy takovéto (Všimněte si, že klíčové slovo **třídy** může být použita místo **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou uvedeny v místě, kde typ. `HashTable<int, int>` konstruovaný typ obecného typu je `HashTable<KeyType, ValueType>`. Počet různých sestavené typy lze zkonstruovat z jednoho obecného typu. Sestavené typy vytvořený z obecné třídy jsou zpracovány stejně jako jakýkoli jiný typ referenční třídy.  
   
-```  
+```cpp  
 // generic_classes_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -104,11 +104,11 @@ int main() {
 }  
 ```  
   
- Obou typů hodnot (buď předdefinované typy, jako `int` nebo `double`, nebo hodnotu definovanou uživatelem typy) a odkazové typy může být použita jako argument obecného typu. Syntaxe v rámci obecné definice je stejný bez ohledu na to. Neznámý typ syntakticky, považuje, jako by šlo odkazového typu. Modul runtime je však možné, určit, zda typu použitého ve skutečnosti je typu hodnoty a nahraďte příslušné generovaný kód pro přímý přístup k členy. Typy hodnot, které jsou použity jako argumenty obecného typu nejsou do pole a proto se nebude vyskytovat snížení výkonu, které jsou přidružené k zabalení. By měl být použit v textu Obecná syntaxe **T ^** a '**->**, místo provedení'**.**'. Jakékoli použití [nové, gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pro typ parametru se správně interpretovat modulem runtime jako vytvoření jednoduchého typu hodnoty Pokud argument typ je typ hodnoty.  
+ Oba typy hodnot (buď předdefinované typy, jako **int** nebo **double**, nebo hodnotu definovanou uživatelem typy) a typy odkazů může sloužit jako argument obecného typu. Syntaxe v definici obecného je stejný bez ohledu na to. Neznámý typ je zpracováván syntakticky, jako by šlo typ odkazu. Modul runtime je však možné, která určí, zda skutečně používá typ je typ hodnoty a nahraďte příslušné generovaný kód pro přímý přístup ke členům. Hodnota typy použité jako argumenty obecného typu nejsou v poli a proto není trpí snížení výkonu, které jsou přidružené k zabalení. By měl být použit v těle obecné syntaxe `T^` a `->` místo `.`. Jakékoli použití [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) pro typ parametru se správně interpretovat modulem runtime jako jednoduchým vytvořením hodnotového typu Pokud typ argumentu je typ hodnoty.  
   
- Můžete také deklarovat obecné třídy s [omezení obecných parametrů typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) na typy, které lze použít pro parametr typu. V následujícím příkladu použít kterýkoli typ pro `ItemType` musí implementovat `IItem` rozhraní. Pokus o použití `int`, například které neimplementuje `IItem`, by vytvořit k chybě kompilace, protože argument typu nesplňuje omezení.  
+ Můžete také deklarovat obecná třída s atributem [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) na typy, které lze použít pro parametr typu. V následujícím příkladu používá libovolný typ pro `ItemType` musí implementovat `IItem` rozhraní. Pokus o použití **int**, například která neimplementuje `IItem`, byste mohli vytvořit chybu v době kompilace, protože argumentů typu nevyhovuje omezením.  
   
-```  
+```cpp  
 // generic_classes_2.cpp  
 // compile with: /clr /c  
 interface class IItem {};  
@@ -117,9 +117,9 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- Obecné třídy v oboru názvů stejné nemohou být přetíženy pouze změnou počet nebo různé typy parametrů typu. Ale pokud každá třída žije v jiný obor názvů, se může být přetížený. Zvažte například následující dvě třídy `MyClass` a `MyClass<ItemType>`, v oborech názvů `A` a `B`. Dvě třídy mohou být přetíženy pak v třetí oboru názvů C:  
+ Obecné třídy v oboru názvů stejný nemohou být přetíženy pouze změnou číslo nebo typy parametrů typu. Ale pokud každá třída nachází jiný obor názvů, mohou být přetíženy. Představte si třeba následující dvě třídy `MyClass` a `MyClass<ItemType>`, v oborech názvů `A` a `B`. Dvě třídy mohou být přetíženy pak v oboru názvů třetí C:  
   
-```  
+```cpp  
 // generic_classes_3.cpp  
 // compile with: /clr /c  
 namespace A {  
@@ -144,9 +144,9 @@ namespace C {
 }  
 ```  
   
- Základní třída a základní rozhraní nemohou mít parametry typu. Základní třída však může zahrnovat parametr typu jako argument, jako v následujícím případě:  
+ Základní třídu a základní rozhraní nemůže být parametry typu. Základní třídy však může zahrnovat parametr typu jako argument, jako v následujících případech:  
   
-```  
+```cpp  
 // generic_classes_4.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -156,18 +156,18 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- Konstruktory a destruktory jsou spustit jednou pro každou instanci objektu (obvyklým); statické konstruktory jsou spustit jednou pro každý typ vytvořený.  
+ Konstruktory a destruktory jsou spouštěny jednou pro každou instanci objektu (obvyklým); statické konstruktory jsou spouštěny jednou pro každý konstruovaný typ.  
   
 ## <a name="fields-in-generic-classes"></a>Pole v obecné třídy  
- Tato část ukazuje použití instance a statických polí v obecné třídy.  
+ Tato část ukazuje použití statických polí v obecné třídy a instance.  
   
-### <a name="instance-variables"></a>Instance proměnné  
- Instance proměnné obecná třída může mít typy a proměnné inicializátory, které zahrnují všechny parametry typu z nadřazených tříd.  
+### <a name="instance-variables"></a>Proměnné instance  
+ Proměnné instance obecné třídy můžete mít typy a proměnné inicializátory, které zahrnují všechny parametry typu z nadřazené třídy.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu, tři různé instance obecná třída MyClass\<ItemType >, se vytváří pomocí příslušného typu argumentů (`int`, **dvojité**, a **řetězec**).  
+ V následujícím příkladu tři různé instance obecné třídy MyClass\<ItemType >, jsou vytvořeny pomocí příslušného typu argumentů (**int**, **double**a **řetězec**).  
   
-```  
+```cpp  
 // generics_instance_fields1.cpp  
 // compile with: /clr  
 // Instance fields on generic classes  
@@ -206,14 +206,14 @@ String field = ABC
 ```  
   
 ## <a name="static-variables"></a>Statické proměnné  
- Při vytváření nové obecného typu jsou vytvořeny nové instance všechny statické proměnné a všechny statického konstruktoru pro tento typ je provedena.  
+ Vytvoření nové obecného typu se nové instance všechny statické proměnné se vytvářejí a jakékoli statického konstruktoru pro daný typ je.  
   
- Statické proměnné můžete použít všechny parametry typu z nadřazených tříd.  
+ Statické proměnné můžete použít všechny parametry typu z nadřazené třídy.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje použití statická pole a statického konstruktoru v rámci obecné třídy.  
+ Následující příklad ukazuje použití statické položky a statický konstruktor v rámci obecné třídy.  
   
-```  
+```cpp  
 // generics_static2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -267,27 +267,27 @@ Test1
 ```  
   
 ## <a name="methods-in-generic-classes"></a>Metody v obecné třídy  
- Metody v obecné třídy mohou být obecný sami; metody neobecnou budou implicitně parametry podle parametr typu třídy.  
+ Metody v obecné třídy mohou být obecný. Obecné metody se implicitně parametrizovány parametrem typu třídy.  
   
- Následující zvláštní pravidla platí při metod v rámci obecné třídy:  
+ Následující zvláštní pravidla platí pro metody v rámci obecných tříd:  
   
--   Jako parametry, návratové typy nebo lokální proměnné, můžete použít metody v obecné třídy parametry typu.  
+-   Metody v obecné třídy můžete použít parametry typu jako parametry, návratových typů nebo lokální proměnné.  
   
--   Metody v obecné třídy můžete použít otevřené nebo zavřené sestavené typy jako parametry, návratové typy nebo lokální proměnné.  
+-   Metody v obecné třídy můžete použít otevřeno nebo zavřeno sestavené typy jako parametry, návratových typů nebo lokální proměnné.  
   
-### <a name="non-generic-methods-in-generic-classes"></a>Metody neobecnou v obecné třídy  
- Metody v obecné třídy, které mají žádné další typ parametry se obvykle označují jako neobecnou i když jsou implicitně parametry podle nadřazených obecná třída.  
+### <a name="non-generic-methods-in-generic-classes"></a>Neobecné metody v obecné třídy  
+ Metody v obecných tříd, které mají parametry žádné další typ se obvykle označují jako neobecnou i když jsou implicitně parametrizován nadřazené obecné třídy.  
   
- Podpis neobecnou metodu může obsahovat jeden nebo více parametrů typu nadřazených třídy, buď přímo, nebo v otevřeném typu vytvořený. Příklad:  
+ Podpis neobecnou metodu může obsahovat minimálně jeden parametr typu nadřazené třídy, buď přímo, nebo v otevřeném typu vytvořený. Příklad:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
- Text těchto metod můžete také použít tyto parametry typu.  
+ Text z těchto metod můžete také použít tyto parametry typu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad deklaruje neobecnou metodu `ProtectData`, uvnitř obecná třída `MyClass<ItemType>`. Metoda používá parametr typu třídy `ItemType` v jeho podpisu v otevřeném typu vytvořený.  
+ Následující příklad deklaruje neobecnou metodu `ProtectData`, uvnitř obecných tříd `MyClass<ItemType>`. Metoda používá parametr typu třídy `ItemType` v podpisu v otevřeném typu vytvořený.  
   
-```  
+```cpp  
 // generics_non_generic_methods1.cpp  
 // compile with: /clr  
 // Non-generic methods within a generic class.  
@@ -341,11 +341,11 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>Obecné metody v obecné třídy  
- Obecné metody v obecné a neobecné třídy můžou deklarovat. Příklad:  
+ Je možné deklarovat obecných metod v obecných a neobecných třídách. Příklad:  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // generics_method2.cpp  
 // compile with: /clr /c  
 generic <typename Type1>  
@@ -365,14 +365,14 @@ public:
 };  
 ```  
   
- Neobecnou metodu je stále Obecné v tom smyslu, že je parametry podle parametr typu třída, ale nemá žádné další typ parametry.  
+ Neobecnou metodu je stále generická v tom smyslu, že je parametrizovány parametrem typu třídy, ale nemá žádné parametry další typu.  
   
- Všechny typy metod v obecných tříd může být statické Obecné, včetně, instanci a virtuální metody.  
+ Všechny typy metod v obecné třídy může být obecné, včetně statické, instance a virtuální metody.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje deklarování a použití obecné metody v rámci obecné třídy:  
+ Následující příklad ukazuje deklaraci a použití obecných metod v rámci obecných tříd:  
   
-```  
+```cpp  
 // generics_generic_method2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -417,10 +417,10 @@ MyMethod returned: Hello #1
 MyMethod returned: Hello World!  
 ```  
   
-## <a name="using-nested-types-in-generic-classes"></a>Použití vnořené typy v obecné třídy  
- Stejně jako s běžné třídy, můžou deklarovat jiné typy uvnitř obecné třídy. Vnořené třídy deklaraci je implicitně parametry podle parametry typu deklarace vnější třídy. Proto je pro každý vytvořený vnější typ definované odlišné vnořené třídy. Například v deklaraci,  
+## <a name="using-nested-types-in-generic-classes"></a>Použití vnořených typů v obecné třídy  
+ Stejně jako běžné třídy lze deklarovat jiné typy uvnitř obecné třídy. Deklarace vnořených tříd je implicitně parametrizován parametry typu deklarace vnější třídy. Proto odlišné vnořené třídy je definována pro každý vytvořený vnějšího typu. Například v deklaraci  
   
-```  
+```cpp  
 // generic_classes_5.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -429,11 +429,11 @@ ref struct Outer {
 };  
 ```  
   
- Typ vnější\<int >:: vnitřní není stejný jako typ vnější\<dvojité >:: vnitřní.  
+ Typ vnější\<int >:: vnitřní není stejný jako typ vnější\<double >:: vnitřní.  
   
- Stejně jako u obecné metody v obecné třídy lze definovat další typ parametry pro vnořené typy. Pokud použijete stejné názvy parametrů typu ve třídě vnitřní a vnější, parametr typu vnitřní skryje parametr vnější typu.  
+ Stejně jako u obecných metod v obecné třídy lze definovat další typy parametrů pro vnořeného typu. Pokud používáte stejné názvy parametrů typů ve třídě vnitřní a vnější, vnitřní typ parametru skryje parametr vnějšího typu.  
   
-```  
+```cpp  
 // generic_classes_6.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -447,15 +447,15 @@ ref class Outer {
 };  
 ```  
   
- Vzhledem k tomu, že neexistuje žádný způsob, jak odkazovat na parametr vnější typu, kompilátor vygeneruje upozornění v této situaci.  
+ Protože neexistuje žádný způsob, jak odkazovat na parametr typu vnějšího, kompilátor vytvoří upozornění v této situaci.  
   
- Když jsou pojmenované sestavené vnořené obecné typy, parametr typu pro typ vnějšího není zahrnutý v seznamu Typ parametru pro vnitřní typ Přestože vnitřní typ je implicitně parametry podle parametr typu vnější typu. V případě výše uvedený název typu sestavené bude vnější\<int >:: vnitřní\<řetězec >.  
+ Když jsou pojmenovány konstruovaný vnořených obecných typech, parametr typu vnějšího typu není součástí seznam parametrů typu pro typ vnitřní i v případě, že vnitřní typ implicitně parametrizován parametr typu vnějšího typu. Ve výše uvedeném případě bude název konstruovaný typ vnější\<int >:: vnitřní\<řetězec >.  
   
- Následující příklad ukazuje, vytváření a čtení odkazovaného seznamu pomocí vnořené typy v obecné třídy.  
+ Následující příklad ukazuje vytváření a čtení odkazovaného seznamu pomocí vnořené typy obecných tříd.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // generics_linked_list.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -546,18 +546,18 @@ Reading nodes:
   
 ## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Vlastnosti, události, indexery a operátory v obecné třídy  
   
--   Vlastnosti, události, indexery a operátory můžete použít jako návratové hodnoty, parametrů nebo místní proměnné, jako např. kdy parametry typu nadřazených obecné třídy `ItemType` je parametr typu třídy:  
+-   Vlastnosti, události, indexery a operátoři mohou použít parametry typu Obecné ohraničující třídy jako návratové hodnoty, parametry nebo lokální proměnné, třeba při `ItemType` je parametr typu třídy:  
   
     ```  
     public ItemType MyProperty {}  
     ```  
   
--   Vlastnosti, události, indexery a operátory nelze sami nastavit parametry.  
+-   Vlastnosti, události, indexery a operátory nelze sami parametrizovat.  
   
 ## <a name="example"></a>Příklad  
  Tento příklad ukazuje deklarace vlastnost instance v rámci obecné třídy.  
   
-```  
+```cpp  
 // generics_generic_properties1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -594,9 +594,9 @@ John, 234
 ```  
   
 ## <a name="example"></a>Příklad  
- Další příklad ukazuje obecné třídy s událostí.  
+ Další příklad ukazuje obecnou třídu s událostí.  
   
-```  
+```cpp  
 // generics_generic_with_event.cpp  
 // compile with: /clr  
 // Declare a generic class with an event and  
@@ -656,12 +656,12 @@ int main() {
 ```  
   
 ## <a name="generic-structs"></a>Obecné struktury  
- Pravidla pro deklarování a použití obecné struktur jsou stejné jako v případě obecné třídy, s výjimkou rozdíly v uvedených v referenční příručka jazyka Visual C++.  
+ Pravidla pro deklarování a použití obecných struktur jsou stejné jako u obecných tříd, s výjimkou rozdílů, které jste si poznamenali v v referenční dokumentace jazyka Visual C++.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad deklaruje obecná struktura, `MyGenStruct`, s jedním polem `myField`a přiřadí hodnoty různých typů (`int`, **dvojité**, **řetězec ^**) do tohoto pole.  
+ Následující příklad deklaruje o obecnou strukturu `MyGenStruct`, s jedním polem `myField`a přiřadí hodnoty různých typů (**int**, **double**, `String^`) do tohoto pole.  
   
-```  
+```cpp  
 // generics_generic_struct1.cpp  
 // compile with: /clr  
 using namespace System;  

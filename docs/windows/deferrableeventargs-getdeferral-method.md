@@ -1,5 +1,5 @@
 ---
-title: Deferrableeventargs::getdeferral – metoda | Microsoft Docs
+title: Deferrableeventargs::getdeferral – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883538"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571201"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral – metoda
-Získá odkaz na [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objekt, který reprezentuje odložené události.  
+Získá odkaz na [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objekt, který představuje odložené událost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,14 +30,14 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `result`  
- Ukazatele, který bude odkazovat [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objektu po dokončení volání.  
+ *výsledek*  
+ Ukazatel, který bude odkazovat [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objektu po dokončení volání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Příklad kódu, najdete v části [DeferrableEventArgs – třída](../windows/deferrableeventargs-class.md).  
+ Příklad kódu naleznete v tématu [deferrableeventargs – třída](../windows/deferrableeventargs-class.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

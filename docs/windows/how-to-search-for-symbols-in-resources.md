@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vyhledávání symbolů v prostředcích | Microsoft Docs'
+title: 'Postupy: vyhledávání symbolů v prostředcích | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b45780223191c8dacec12d5312f4d2ac724b4d4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3040e89ee4c729953c1a56f0c8728ba4d5b9d7b6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880215"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570518"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Postupy: Vyhledávání symbolů v prostředcích
-### <a name="to-find-symbols-in-resources"></a>Najít symboly v prostředky  
+### <a name="to-find-symbols-in-resources"></a>Chcete-li najít symboly v prostředcích  
   
 1.  Z **upravit** nabídce zvolte **najít Symbol**.  
   
-2.  V [najít Symbol – dialogové](http://msdn.microsoft.com/en-us/63e93d9c-784f-418d-a76a-723da5ff5d96)v **najít** pole, v rozevíracím seznamu vyberte předchozí hledaný řetězec nebo zadejte klávesa akcelerátoru, kterou chcete najít (například ID_ACCEL1).  
+2.  V [dialogového okna Najít Symbol](http://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)v **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít (například ID_ACCEL1).  
   
     > [!TIP]
-    >  Použít [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) pro hledání, je nutné použít [najít v souborech – příkaz](/visualstudio/ide/reference/find-command) z **upravit** nabídky místo **najít Symbol**příkaz. Chcete-li regulární výrazy, musíte mít **použití: regulární výrazy** v zaškrtnuto políčko [dialogové okno Hledat](http://msdn.microsoft.com/en-us/dad03582-4931-4893-83ba-84b37f5b1600). Pak kliknete tlačítko se šipkou vpravo napravo **najít** pole zobrazíte seznam vyhledávání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazena jako hledaný text v **najít** pole.  
+    >  Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) pro hledání, je nutné použít [najít v souborech – příkaz](/visualstudio/ide/reference/find-command) z **upravit** nabídky místo **najít Symbol**příkazu. Chcete-li regulární výrazy, musíte mít **použití: regulární výrazy** zaškrtnuto políčko v [dialogové okno hledání](http://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600). Pak kliknete tlačítko se šipkou vpravo na pravé straně **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.  
   
-3.  Vyberte některé z **najít** možnosti.  
+3.  Vyberte některou z **najít** možnosti.  
   
 4.  Klikněte na tlačítko **najít další**.  
   
     > [!NOTE]
-    >  Nelze vyhledat symboly v řetězci, akcelerátoru nebo binární prostředky.  
+    >  Nelze hledat symboly v řetězci, akcelerátoru nebo binární prostředky.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti a [návod: použití prostředků pro lokalizaci pomocí technologie ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

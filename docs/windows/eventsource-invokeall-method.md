@@ -1,5 +1,5 @@
 ---
-title: EventSource::invokeall – metoda | Microsoft Docs
+title: EventSource::invokeall – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882612"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570647"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll – metoda
-Volá každý obslužná rutina události související s aktuálním [EventSource](../windows/eventsource-class.md) pomocí zadané typy argumentů a argumenty.  
+Volá Každá obslužná rutina události spojené s aktuálním [EventSource](../windows/eventsource-class.md) pomocí zadanými typy argumentu a argumenty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -183,66 +183,66 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T0`  
- Typ argumentu zeroth obslužná rutina události.  
+### <a name="parameters"></a>Parametry  
+ *T0*  
+ Typ argumentu ID nultého obslužné rutiny události.  
   
- `T1`  
- Typ prvního argumentu obslužná rutina události.  
+ *T1*  
+ Typ prvního argumentu obslužné rutiny události.  
   
- `T2`  
- Typ druhý argument obslužná rutina události.  
+ *T2*  
+ Typ druhého argumentu obslužné rutiny události.  
   
- `T3`  
- Typ třetí argument obslužná rutina události.  
+ *T3*  
+ Typ třetí argument obslužné rutiny události.  
   
- `T4`  
- Typ čtvrtého argumentu obslužná rutina události.  
+ *T4*  
+ Typ čtvrtého argumentu obslužné rutiny události.  
   
- `T5`  
- Typ argumentu páté obslužná rutina události.  
+ *T5*  
+ Typ pátého argumentu obslužné rutiny události.  
   
- `T6`  
- Typ šestého argumentu obslužná rutina události.  
+ *T6*  
+ Typ šestého argumentu obslužné rutiny události.  
   
- `T7`  
- Typ sedmého argumentu obslužná rutina události.  
+ *T7*  
+ Typ sedmého argumentu obslužné rutiny události.  
   
- `T8`  
- Typ argumentu nakrmeni obslužná rutina události.  
+ *T8*  
+ Typ osmého argumentu obslužné rutiny události.  
   
- `T9`  
- Typ argumentu deváté obslužná rutina události.  
+ *T9*  
+ Typ devátého argumentu obslužné rutiny události.  
   
- `arg0`  
- Argument zeroth obslužná rutina události.  
+ *arg0*  
+ Argument obslužné rutiny události ID nultého.  
   
- `arg1`  
- První argument obslužná rutina události.  
+ *arg1*  
+ První argument obslužné rutiny události.  
   
- `arg2`  
- Druhý argument obslužná rutina události.  
+ *arg2*  
+ Druhý argument obslužné rutiny události.  
   
- `arg3`  
- Třetí argument obslužná rutina události.  
+ *arg3*  
+ Třetí argument obslužné rutiny události.  
   
- `arg4`  
- Čtvrtý argument obslužná rutina události.  
+ *arg4*  
+ Čtvrtý argument obslužné rutiny události.  
   
- `arg5`  
- Páté argumentu obslužná rutina události.  
+ *arg5*  
+ Pátý argument obslužné rutiny události.  
   
- `arg6`  
- Šesté argumentu obslužná rutina události.  
+ *arg6*  
+ Šestý argument obslužné rutiny události.  
   
- `arg7`  
- Sedmého argumentu obslužná rutina události.  
+ *arg7*  
+ Sedmého argumentu obslužné rutiny události.  
   
- `arg8`  
- Argument nakrmeni obslužná rutina události.  
+ *arg8*  
+ Argument obslužné rutiny události osmého.  
   
- `arg9`  
- Deváté argumentu obslužná rutina události.  
+ *arg9*  
+ Devátého argumentu obslužné rutiny události.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

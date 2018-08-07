@@ -1,5 +1,5 @@
 ---
-title: Explicitní přepsání (C++ Component Extensions) | Microsoft Docs
+title: Explicitní přepsání (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,64 +15,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879500"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570321"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explicitní přepsání (rozšíření komponent C++)
-Toto téma popisuje postup explicitní přepsání člena rozhraní nebo základní třída. S názvem (explicitní) přepsání lze používat pouze přepsat metodu s odvozené metodu, která má jiný název.  
+Toto téma popisuje postup explicitní přepsání člena základní třídy nebo rozhraní. Pojmenované přepsání (explicitně) by měla sloužit pouze k přepsání metody s Odvozená metoda, která má jiný název.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
  **Syntaxe**  
   
 ```  
-  
-      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **Parametry**  
   
- *přepsání deklarátor – funkce*  
- Návratový typ, název a argument seznam přepsání funkce.  Všimněte si, že není nutné mít stejný název jako funkce přepsání přepsání funkce.  
+ *přepsání deklarátorem funkce*  
+ Návratový typ, název a argumentu seznamu přepisující funkce.  Všimněte si, že není nutné mít stejný název jako funkce přepsání přepisující funkce.  
   
  *Typ*  
- Základní typ, který obsahuje funkce, která se přepsat.  
+ Základní typ, který obsahuje funkci, kterou chcete přepsat.  
   
- *Funkce*  
- Čárkami oddělený seznam jedné nebo více názvy funkcí pro přepsání.  
+ *– funkce*  
+ Čárkami oddělený seznam jednoho nebo více názvy funkcí, které chcete přepsat.  
   
  *přepsání definice funkce*  
- Funkce text příkazů, které definují přepsání funkce.  
+ Příkazy tělo funkce, které definují přepisující funkce.  
   
  **Poznámky**  
   
- Použijte explicitní přepsání, chcete-li vytvořit alias pro podpis metody nebo poskytovat různé implementace pro metody pole stejným podpisem.  
+ Použijte explicitní přepsání k vytvoření zástupce pro podpis metody a poskytují tak různé implementace pro pole stejnou signaturu metody.  
   
- Informace o změně chování zděděné typy a členy zděděné typu najdete v tématu [přepsat specifikátory](../windows/override-specifiers-cpp-component-extensions.md).  
+ Informace o úpravách chování se děděné typy a členy zděděných typů najdete v tématu [specifikátory přepisu](../windows/override-specifiers-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  **Poznámky**  
   
- Pro informace o explicitní přepsání v nativním kódu nebo kód kompilovat s **/clr:oldSyntax**, najdete v části [explicitní přepsání](../cpp/explicit-overrides-cpp.md).  
+ Informace o explicitních přepsáních ve nativní kód nebo kód zkompilovaný s `/clr:oldSyntax`, naleznete v tématu [explicitní přepsání](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- Následující příklad kódu ukazuje jednoduchý, implicitní override a implementace člena v základní rozhraní není pomocí explicitní přepsání.  
+ Následující příklad kódu ukazuje, jednoduché a implicitní přepsání a implementace členu základní rozhraní bez použití explicitní přepsání.  
   
-```  
+```cpp  
 // explicit_override_1.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -100,10 +99,9 @@ X::f override of I1::f
   
  **Příklad**  
   
- Následující příklad kódu ukazuje, jak implementovat všechny členy rozhraní běžné podpisem pomocí syntaxe explicitní přepsání.  
+ Následující příklad kódu ukazuje, jak implementovat všechny členy rozhraní s podpisem běžné pomocí syntaxe explicitního přepsání.  
   
-```  
-  
+```cpp  
 // explicit_override_2.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -137,7 +135,7 @@ X::f override of I1::f and I2::f
   
  **Příklad**  
   
- Následující příklad kódu ukazuje, jak funkce přepsání, může mít jiný název z funkce, které implementuje.  
+ Následující příklad kódu ukazuje, jak přepsat funkce může mít jiný název funkce, které implementuje.  
   
 ```  
 // explicit_override_3.cpp  
@@ -167,9 +165,9 @@ X::g
   
  **Příklad**  
   
- Následující příklad kódu ukazuje implementace explicitního rozhraní, která implementuje kolekce bezpečného typu.  
+ Následující příklad kódu ukazuje explicitní implementací rozhraní, která implementuje kolekce bezpečného typu.  
   
-```  
+```cpp  
 // explicit_override_4.cpp  
 // compile with: /clr /LD  
 using namespace System;  

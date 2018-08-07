@@ -1,5 +1,5 @@
 ---
-title: Obecné typy a šablony (Visual C++) | Microsoft Docs
+title: Obecné typy a šablony (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878902"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570763"
 ---
 # <a name="generics-and-templates-visual-c"></a>Obecné typy a šablony (Visual C++)
-Obecné typy a šablony jsou obě jazykové funkce, které poskytují podporu pro parametrizované typy. Však se liší a mít jiný používá. Toto téma obsahuje přehled mnoho rozdíly.  
+Obecné typy a šablony jsou obě vlastnosti jazyka, které poskytují podporu pro parametrizované typy. Nicméně se liší a mít různá použití. Toto téma obsahuje přehled o spoustu rozdílů.  
   
- Další informace najdete v tématu [prostředí Windows Runtime a spravované šablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ Další informace najdete v tématu [Windows Runtime a spravované šablony](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ## <a name="comparing-templates-and-generics"></a>Porovnání šablony a obecné typy  
- Hlavní rozdíly mezi obecné typy a šablonami C++:  
+ Hlavní rozdíly mezi obecnými typy a šablony C++:  
   
--   Obecné typy jsou obecné, dokud typy jsou nahrazena pro ně za běhu. Šablony se specializují v době kompilace, takže nejsou stále parametrizované typy za běhu  
+-   Obecné typy jsou obecné, dokud typy jsou nahrazeny pro ně za běhu. Šablony jsou specializované v době kompilace, takže už nejsou stále parametrizované typy za běhu  
   
--   Modul common language runtime konkrétně podporuje obecné typy v MSIL. Vzhledem k tomu, že modul runtime ví o obecných typech, můžete konkrétní typy nahrazena pro obecné typy při odkazování na sestavení obsahující obecného typu. Šablony, na rozdíl od vyřešte na běžné typy v době kompilace a výsledný typy nemusí specializuje v ostatních sestavení.  
+-   Modul common language runtime konkrétně podporuje obecné typy v jazyce MSIL. Vzhledem k tomu, že modul runtime ví o obecných typů, můžete určité typy nahrazena pro obecné typy při odkazování na sestavení obsahující obecného typu. Šablony, naproti tomu přeložit do běžných typů v době kompilace a výsledné typy nemusí být specializovaná v jiných sestaveních.  
   
--   Obecné typy specializuje ve dvou různých sestavení se stejným typem argumenty jsou stejného typu. Šablony specializované ve dvou různých sestavení stejného typu, který argumenty jsou považovány za modulem runtime různých typů.  
+-   Obecné typy se specializuje na dvě různá sestavení se stejným typem argumenty jsou stejného typu. Šablony se specializuje na dvě různá sestavení se stejným typem, který argumenty jsou považovány za tímto modulem různých typů.  
   
--   Obecné typy jsou generovány jako jediný spustitelný kód, který se používá pro všechny argumenty typu odkazu (to neplatí pro typy hodnot, které mají jedinečné implementace na typ hodnoty). Kompilátor JIT zná obecné typy a bude schopen optimalizovat kód pro hodnotou nebo odkazem typy, které se používají jako argumenty typu. Šablony generování kódu samostatný modul runtime pro každý specializace.  
+-   Obecné typy jsou generovány jako jediný spustitelný kód, který se používá pro všechny referenční argumenty typu (to neplatí pro typy hodnot, které mají jedinečné implementace na typ hodnoty). Kompilátor JIT ví o obecných typů a je možné optimalizovat kód pro typy odkazu nebo hodnoty, které se používají jako argumenty typu. Šablony generování kódu samostatný modul runtime pro každou specializaci.  
   
--   Obecné typy neumožňují parametry šablon bez typu, například `template <int i> C {}`. Šablony umožňují je.  
+-   Obecné typy nejsou povoleny parametry šablony bez typu, jako například `template <int i> C {}`. Šablony umožňují je.  
   
--   Obecné typy neumožňují explicitní specializace (to znamená, vlastní implementaci šablony pro konkrétní typ). Šablony udělat.  
+-   Obecné typy neumožňují explicitní specializace (to znamená, vlastní implementaci šablony pro konkrétní typ). Šablony se provést.  
   
--   Obecné typy neumožňují částečná specializace (na vlastní implementace pro podmnožinu argumenty typu). Šablony udělat.  
+-   Obecné typy neumožňují částečná specializace (vlastní implementaci pro podmnožinu argumentů typu). Šablony se provést.  
   
--   Obecné typy neumožňují parametr typu, který se má použít jako základní třída pro obecný typ. Šablony udělat.  
+-   Obecné typy neumožňují parametr typu má být použit jako základní třída pro obecného typu. Šablony se provést.  
   
--   Šablony podporují šablona šablony parametry (například `template<template<class T> class X> class MyClass`), ale nechcete obecné typy.  
+-   Šablony podporují parametrů šablony – šablonu (například `template<template<class T> class X> class MyClass`), ale nejsou obecné typy.  
   
 ## <a name="combining-templates-and-generics"></a>Kombinování šablony a obecné typy  
   
--   Základní rozdíl v obecných typech má důsledky pro vytváření aplikací, které spojují šablony a obecné typy. Předpokládejme například, že máte třídu šablony, kterou chcete vytvořit obecné obálku pro dané šablony pro jiné jazyky jako obecný vystavit. Nemůže mít proveďte obecný parametr typu, který potom předává když do šablony, protože šabloně musí mít tento parametr typu v době kompilace, ale obecná nevyřeší parametr typu dokud modulu runtime. Vnoření šablonu uvnitř obecný nebude fungovat, buď protože neexistuje žádný způsob, jak rozšířit šablony v době kompilace pro libovolný obecné typy, které může být vytvořena instance za běhu.  
+-   Základní rozdíl v obecných typech má vliv na pro vytváření aplikací, které kombinují šablony a obecné typy. Předpokládejme například, že máte třídu šablony, kterou chcete vytvořit obecné obálku pro vystavit Tato šablona do jiných jazyků jako obecný. Obecný zkuste nemůže mít parametr typu, který potom předává na šablonu, protože šablony musí mít tento parametr typu v době kompilace, ale nevyřeší obecného parametru typu do modulu runtime. Vnoření šablony uvnitř obecného nebude fungovat, buď protože neexistuje žádný způsob, jak rozšířit šablony v době kompilace pro libovolného obecné typy, které může být vytvořena v době běhu.  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Následující příklad ukazuje jednoduchý příklad pomocí šablony a obecné typy společně. V tomto příkladu šablony třídy předá její parametr prostřednictvím obecného typu. Naopak není možné.  
+ Následující příklad ukazuje jednoduchý příklad dohromady pomocí šablon a obecné typy. V tomto příkladu třída šablony předá svůj parametr prostřednictvím obecného typu. Opak není možné.  
   
- Tato stylu může použít, když budete chtít vytvořit na existující obecné rozhraní API pomocí šablony kód, který je místní pro sestavení Visual C++, nebo když budete muset přidat další vrstvu Parametrizace typu Obecné využívat výhod určité funkce šablony není supporte d podle obecných typů.  
+ Tohoto idiomu může použít, když budete chtít vytvořit na existující obecného rozhraní API pomocí šablony kód, který je místní pro sestavení Visual C++, nebo když budete muset přidat další úroveň Parametrizace obecného typu, abyste mohli využívat některé funkce šablony není supporte d podle obecných typů.  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // templates_and_generics.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -97,7 +97,7 @@ int main() {
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 F  
 ```  
   

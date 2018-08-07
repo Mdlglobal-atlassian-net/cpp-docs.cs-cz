@@ -1,5 +1,5 @@
 ---
-title: Event::Event konstruktor (knihovna šablon C++ prostředí Windows Runtime) | Microsoft Docs
+title: Event::Event konstruktor (knihovna šablon C++ prostředí Windows Runtime) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882625"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571409"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event Konstruktor (Knihovna šablon C++ prostředí Windows Runtime)
-Inicializuje novou instanci třídy událostí.  
+Inicializuje novou instanci třídy Event.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,8 +37,8 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `h`  
- Popisovač události. Ve výchozím nastavení `h` je inicializováno `nullptr`.  
+ *h*  
+ Zpracování události. Ve výchozím nastavení *h* je inicializován na **nullptr**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

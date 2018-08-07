@@ -1,5 +1,5 @@
 ---
-title: Hstring::Attach – metoda | Microsoft Docs
+title: Hstring::Attach – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876063"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570986"
 ---
 # <a name="hstringattach-method"></a>HString::Attach – metoda
-Zadaný objekt HString přidruží aktuální objekt HString.  
+Přidruží zadaný **HString** objektu s aktuálním **HString** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hstr`  
- Existující objekt HString.  
+ *HSTR*  
+ Existující **HString** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

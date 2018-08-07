@@ -1,5 +1,5 @@
 ---
-title: EventSource – třída | Microsoft Docs
+title: EventSource – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876511"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570532"
 ---
 # <a name="eventsource-class"></a>EventSource – třída
-Představuje-agilní událost. Členské funkce EventSource přidejte, odeberte a vyvolání obslužné rutiny událostí. Agilní události, použijte [AgileEventSource](agileeventsource-class.md). 
+Představuje událost agile. **EventSource** členské funkce přidání, odebrání a vyvolání obslužných rutin událostí. Agilní události, použijte [agileeventsource –](agileeventsource-class.md). 
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,8 +34,8 @@ template<typename TDelegateInterface>
 class EventSource;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `TDelegateInterface`  
+### <a name="parameters"></a>Parametry  
+ *TDelegateInterface*  
  Rozhraní pro delegáta, který představuje obslužnou rutinu události.  
   
 ## <a name="members"></a>Členové  
@@ -44,24 +44,24 @@ class EventSource;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[EventSource::EventSource – konstruktor](../windows/eventsource-eventsource-constructor.md)|Inicializuje novou instanci třídy EventSource.|  
+|[EventSource::EventSource – konstruktor](../windows/eventsource-eventsource-constructor.md)|Inicializuje novou instanci třídy **EventSource** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[EventSource::Add – metoda](../windows/eventsource-add-method.md)|Připojí reprezentována rozhraní zadaného delegáta sadu obslužných rutin událostí pro aktuální objekt EventSource obslužné rutiny události.|  
-|[EventSource::GetSize – metoda](../windows/eventsource-getsize-method.md)|Načte číslo přidružené k aktuálnímu objektu EventSource obslužné rutiny událostí|  
-|[EventSource::InvokeAll – metoda](../windows/eventsource-invokeall-method.md)|Volá každý obslužná rutina události související s aktuálním objektem EventSource pomocí zadané typy argumentů a argumenty.|  
-|[EventSource::Remove – metoda](../windows/eventsource-remove-method.md)|Odstraní reprezentována registrační token zadané události ze sady obslužné rutiny událostí, které jsou přidružené k aktuálnímu objektu EventSource obslužné rutiny události.|  
+|[EventSource::Add – metoda](../windows/eventsource-add-method.md)|Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **EventSource** objektu.|  
+|[EventSource::GetSize – metoda](../windows/eventsource-getsize-method.md)|Získá počet obslužných rutin událostí, které jsou přidružené k aktuální **EventSource** objektu|  
+|[EventSource::InvokeAll – metoda](../windows/eventsource-invokeall-method.md)|Volá Každá obslužná rutina události spojené s aktuálním **EventSource** pomocí zadanými typy argumentu a argumenty.|  
+|[EventSource::Remove – metoda](../windows/eventsource-remove-method.md)|Odstraní obslužná rutina události reprezentována zadanou událost registračního tokenu ze sady obslužné rutiny událostí, které jsou přidružené k aktuální **EventSource** objektu.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock_ – datový člen](../windows/eventsource-addremovelock-data-member.md)|Přístup k synchronizaci [targets_ –](../windows/eventsource-targets-data-member.md) pole při přidání, odebrání nebo volání obslužné rutiny událostí.|  
-|[EventSource::targets_ – datový člen](../windows/eventsource-targets-data-member.md)|Pole jeden nebo více obslužných rutin událostí.|  
-|[EventSource::targetsPointerLock_ – datový člen](../windows/eventsource-targetspointerlock-data-member.md)|Synchronizuje přístupu ke členům interních datových i obslužné rutiny události pro tento EventSource se přidávají, odebrat nebo vyvolána.|  
+|[EventSource::addRemoveLock_ – datový člen](../windows/eventsource-addremovelock-data-member.md)|Synchronizuje přístup k [targets_ –](../windows/eventsource-targets-data-member.md) pole při přidání, odebrání nebo volání obslužné rutiny událostí.|  
+|[EventSource::targets_ – datový člen](../windows/eventsource-targets-data-member.md)|Pole jednoho nebo více obslužných rutin událostí.|  
+|[EventSource::targetsPointerLock_ – datový člen](../windows/eventsource-targetspointerlock-data-member.md)|Synchronizuje přístup k interní datových členů, dokonce i za běhu obslužné rutiny událostí pro EventSource se neustále přidávají, odebrat nebo vyvolána.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `EventSource`  
@@ -72,5 +72,5 @@ class EventSource;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)
-[AgileEventSource – třída](agileeventsource-class.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)  
+ [AgileEventSource – třída](agileeventsource-class.md)

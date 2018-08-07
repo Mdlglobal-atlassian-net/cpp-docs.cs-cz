@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::getunmarshalclass – metoda | Microsoft Docs
+title: Ftmbase::getunmarshalclass – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873300"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571149"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass – metoda
-Získá CLSID, který COM používá k nalezení DLL obsahující kód pro odpovídající proxy server. COM načte tuto knihovnu DLL k vytvoření instance Neinicializovaný proxy serveru.  
+Získá identifikátor CLSID, který COM používá k nalezení knihovny DLL obsahující kód pro odpovídající server proxy. COM načte tuto knihovnu DLL vytvořit neinicializované instance serveru proxy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,30 +40,30 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Odkaz na identifikátor rozhraní být zařazena.  
+### <a name="parameters"></a>Parametry  
+ *riid*  
+ Odkaz na identifikátor rozhraní zařadit.  
   
- `pv`  
- Ukazatel rozhraní zařazována; může mít hodnotu NULL, pokud má volající nemá požadované rozhraní ukazatel.  
+ *PV*  
+ Ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.  
   
- `dwDestContext`  
- Cílový kontext, kde má být zařazeny specifikované rozhraní.  
+ *dwDestContext*  
+ Cílový kontext, kde má být sdružení daného rozhraní.  
   
- Zadejte jeden nebo více hodnot výčtu MSHCTX.  
+ Zadejte jednu nebo více hodnot výčtu MSHCTX.  
   
- Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu na stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
+ Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.  
   
- `mshlflags`  
- Když tato operace dokončí, ukazatel na CLSID, který se má použít k vytvoření proxy serveru v procesu klienta.  
+ *mshlflags*  
+ Pokud tato operace dokončena, ukazatel na identifikátor CLSID se použije k vytvoření proxy serveru v procesu klienta.  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném S_FALSE.  
+ S_OK v případě úspěchu; v opačném případě S_FALSE.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ftm.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: kopírování prostředků | Microsoft Docs'
+title: 'Postupy: kopírování prostředků | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,55 +23,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b173be24e9f177a3156f740fcb07240c30fec75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879845"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570682"
 ---
 # <a name="how-to-copy-resources"></a>Postupy: Kopírování prostředků
-Prostředky můžete zkopírovat z jednoho souboru do druhého, aniž byste museli měnit je nebo můžete [Změna jazyka nebo podmínky prostředku během kopírování](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
+Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo se dají [Změna jazyka nebo podmínky prostředku během kopírování jeho](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
   
- Prostředky můžete snadno zkopírovat z existující prostředek nebo spustitelný soubor do aktuální soubor prostředků. K tomuto účelu můžete otevřít oba soubory obsahující prostředky ve stejnou dobu a přetáhněte položky z jednoho souboru do jiného nebo zkopírujte a vložte mezi těmito dvěma soubory. Tato metoda se dá použít pro soubory skriptu (.rc) prostředků a soubory prostředků šablony (.rct) i spustitelné soubory (.exe).  
+ Prostředky můžete snadno zkopírovat z existující prostředek nebo spustitelného souboru k aktuálnímu souboru prostředků. K tomuto účelu můžete otevřete oba soubory, které obsahují prostředky ve stejnou dobu a přetáhněte položky z jednoho souboru nebo kopírování a vkládání mezi dva soubory. Tato metoda se dá použít pro soubory skriptů (.rc) prostředků a soubory prostředků šablon (.rct), jakož i spustitelné soubory (.exe).  
   
 > [!NOTE]
->  Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [CLIPART: společných prostředků](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0).  
+>  Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [Klipart: běžným prostředkům](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).  
   
- Můžete použít metodu přetažení myší mezi .rc soubory, které jsou otevřené [mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+ Můžete použít metodu a přetažení mezi soubory .rc, které jsou otevřené [mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>Kopírování prostředků mezi soubory pomocí metody přetažení myší  
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>Kopírování prostředků mezi soubory pomocí přetahování myší – metoda  
   
-1.  Otevřete i samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků v .rc of mimo soubor projektu](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například otevřete Source1.rc a Source2.rc.  
+1.  Otevřete oba samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků, ve který #zahrnuje konce souboru mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například otevřete Source1.rc a Source2.rc.  
   
-2.  Uvnitř první soubor .rc klikněte na prostředek, který chcete kopírovat. Například v Source1.rc, klikněte na možnost IDD_DIALOG1.  
+2.  V prvním .rc souboru klikněte na prostředek, který chcete kopírovat. Například v Source1.rc, klikněte na možnost **IDD_DIALOG1**.  
   
-3.  Podržte stisknutou klávesu CTRL a tažením druhý soubor .rc prostředku. Například přetáhněte IDD_DIALOG1 z Source1.rc Source2.rc.  
+3.  Podržte stisknutou klávesu CTRL a přetáhněte prostředek do druhého souboru .rc. Například, přetáhněte **IDD_DIALOG1** z Source1.rc k Source2.rc.  
   
     > [!NOTE]
-    >  Přetahování prostředku bez podržíte stisknutou klávesu CTRL Přesune prostředek místo kopírování.  
+    >  Přetažení prostředku bez podržení klávesy CTRL Přesune prostředek místo jeho kopírování.  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>Kopírování prostředků pomocí kopírování a vložení  
   
-1.  Otevřete i samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků v .rc of mimo soubor projektu](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například Source1.rc a Source2.rc.  
+1.  Otevřete oba samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků, ve který #zahrnuje konce souboru mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například Source1.rc a Source2.rc.  
   
-2.  Ve zdrojovém souboru, ze kterého chcete kopírovat prostředek (například Source1.rc), klikněte pravým tlačítkem na prostředek a zvolte **kopie** z místní nabídky.  
+2.  Ve zdrojovém souboru, ze kterého chcete kopírovat prostředek (například Source1.rc), klikněte pravým tlačítkem na prostředek a zvolte **kopírování** z místní nabídky.  
   
-3.  Klikněte pravým tlačítkem na soubor prostředků, do kterého chcete vložit prostředků (například Source2.rc). Zvolte **vložení** z místní nabídky.  
-  
-    > [!NOTE]
-    >  Nelze přetáhněte a vyřadit, kopírovat, Vyjmout nebo vložte mezi zdrojových souborů v projektu (zobrazení prostředků) a soubory samostatné .rc, (ty otevřít v dokumentu windows). Můžete to udělat v předchozích verzích produktu.  
+3.  Klikněte pravým tlačítkem na soubor prostředků, do které chcete vložit prostředků (například Source2.rc). Zvolte **vložit** z místní nabídky.  
   
     > [!NOTE]
-    >  Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty ve existující soubor, Visual C++ změnit hodnotu symbol přenášená prostředků nebo názvu symbolu a hodnota při kopírování na nový soubor.  
+    >  Nelze přetáhnout a vyřadit, kopírovat, Vyjmout nebo vkládání mezi soubory prostředků v projektu (zobrazení prostředků) a samostatné .rc soubory (ty otevřít v systému windows dokumentu). Můžete to udělat v předchozích verzích produktu.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+    > [!NOTE]
+    >  Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor, Visual C++ změnit hodnotu symbolu přenesené prostředků nebo název symbolu a hodnota při kopírování do nového souboru.  
   
- Požadavky  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Editory prostředků](../windows/resource-editors.md)

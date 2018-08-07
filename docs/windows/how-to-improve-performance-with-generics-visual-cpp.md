@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zlepšení výkonu pomocí obecných typů (Visual C++) | Microsoft Docs'
+title: 'Postupy: zlepšení výkonu pomocí obecných typů (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877563"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571513"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Postupy: Zlepšení výkonu pomocí obecných typů (Visual C++)
-S obecnými typy můžete vytvořit opakovaně použitelný kód na základě typu parametru. Skutečný typ parametr typu je odložení, dokud není zavolána kódem na straně klienta. Další informace o obecných typů najdete v tématu [obecné typy](../windows/generics-cpp-component-extensions.md).  
+Pomocí obecných typů můžete vytvořit opakovaně použitelný kód založený na parametr typu. Skutečný typ parametru typu je odloženo, dokud není volán kód klienta. Další informace o obecných typů viz [obecných typů](../windows/generics-cpp-component-extensions.md).  
   
- Tento článek popisuje jak obecné vám mohou pomoci zvýšit výkon aplikace, která používá kolekce.  
+ Tento článek popisuje, jak obecných typů vám může pomoct zvýšit výkon aplikace, která používá kolekce.  
   
 ## <a name="example"></a>Příklad  
- Rozhraní .NET Framework se dodává s mnoha třídy kolekce v <xref:System.Collections?displayProperty=fullName> oboru názvů. Většina těchto kolekcí, fungovat u objektů typu <xref:System.Object?displayProperty=fullName>. To umožňuje kolekce pro ukládání libovolného typu, protože všechny typy v rozhraní .NET Framework, i typy hodnot, jsou odvozeny od <xref:System.Object?displayProperty=fullName>. Existují však dvě nevýhody tohoto přístupu.  
+ Rozhraní .NET Framework je součástí mnoha kolekcí tříd v <xref:System.Collections?displayProperty=fullName> oboru názvů. Většina těchto kolekcí pracovat s objekty typu <xref:System.Object?displayProperty=fullName>. Díky tomu kolekce pro ukládání libovolného typu, protože všechny typy v rozhraní .NET Framework, dokonce i typy hodnot jsou odvozeny z <xref:System.Object?displayProperty=fullName>. Existují však dva nevýhod tohoto přístupu.  
   
- První Pokud kolekce je ukládání typy hodnot jako celá čísla, hodnota musí být před přidávají do kolekce do pole a nezabalený, pokud je hodnota načteny z kolekce. Toto jsou náročná operace.  
+ Nejprve Pokud kolekce je uložení typů hodnot, jako jsou celá čísla, hodnota musí být přidán do kolekce v poli a rozbalit, pokud je hodnota načteny z kolekce. Jedná se o nákladné operace.  
   
- Druhý neexistuje žádný způsob, jak řídit typy, které lze přidat do kolekce. Perfektně právní přidat celé číslo a řetězec ke stejné kolekci, je i v případě, že toto je pravděpodobně není co byla určena. Proto aby váš kód jako typově bezpečný, budete muset zkontrolujte, jestli typ načíst z kolekce skutečně co byl očekáván.  
+ Za druhé neexistuje žádný způsob, jak řídit typy, které lze přidat do kolekce. Je naprosto právní přidat celé číslo a řetězec do stejné kolekce, i když to je pravděpodobně není co byl určen. Proto aby váš kód je typově bezpečný, budete muset zkontrolujte, že typ načten z kolekce ve skutečnosti je, co byl očekáván.  
   
- Následující příklad kódu ukazuje dva hlavní nevýhody před obecné typy kolekcí rozhraní .NET Framework.  
+ Následující příklad kódu ukazuje dvě podstatné nevýhody kolekcemi rozhraní .NET Framework před obecných typů.  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -87,11 +87,11 @@ Popped an int: 7
 ```  
   
 ## <a name="example"></a>Příklad  
- Nové <xref:System.Collections.Generic?displayProperty=fullName> obor názvů obsahuje řadu stejné kolekce v nalezen <xref:System.Collections?displayProperty=fullName> obor názvů, ale bylo upraveno tak, aby přijímal parametry obecného typu. Tím se eliminuje dvě nevýhody neobecnou kolekcí: zabalení a rozbalení typy hodnot a že není možné určit typy k uložení do kolekce. Operace na dvě kolekce jsou identické; liší se pouze v tom, jak jsou vytvořeny instance.  
+ Nové <xref:System.Collections.Generic?displayProperty=fullName> obor názvů obsahuje mnoho nenašly ve stejné kolekce <xref:System.Collections?displayProperty=fullName> obor názvů, ale byly upraveny tak, aby přijímal parametry obecného typu. Tím se eliminují dvě nevýhody obecné kolekce: zabalení a rozbalení typů hodnot a neschopnost určit typy ukládaly do kolekce. Operace na dvě kolekce jsou identické; se liší pouze v tom, jak jsou vytvořena instance.  
   
- Porovnání příklad uvedeno výše v tomto příkladu, který používá obecný <xref:System.Collections.Generic.Stack%601> kolekce. V rozsáhlých kolekcí, které se často přistupuje bude výrazně větší než v předchozím příkladu výkon tohoto příkladu.  
+ V příkladu uvedená výše v tomto příkladu, který používá obecného porovnání <xref:System.Collections.Generic.Stack%601> kolekce. V rozsáhlých kolekcí, které jsou často bude výkon v tomto příkladu výrazně větší než v předchozím příkladu.  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

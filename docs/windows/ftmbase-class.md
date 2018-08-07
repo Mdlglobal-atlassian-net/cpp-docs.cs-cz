@@ -1,5 +1,5 @@
 ---
-title: FtmBase – třída | Microsoft Docs
+title: Ftmbase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814349"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570558"
 ---
 # <a name="ftmbase-class"></a>FtmBase – třída
-Představuje objekt volné zařazování vláken.  
+Představuje objekt s volným zařazováním vláken.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [RuntimeClass – třída](runtimeclass-class.md).  
+ Další informace najdete v tématu [runtimeclass – třída](runtimeclass-class.md).  
   
 ## <a name="members"></a>Členové  
   
@@ -45,19 +44,19 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Název|Popis|  
 |----------|-----------------|  
-|[FtmBase::FtmBase – konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicializuje novou instanci třídy FtmBase.|  
+|[FtmBase::FtmBase – konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicializuje novou instanci třídy **ftmbase –** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[FtmBase::CreateGlobalInterfaceTable – metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Vytvoří tabulku globální rozhraní (GIT).|  
-|[FtmBase::DisconnectObject – metoda](../windows/ftmbase-disconnectobject-method.md)|Vynuceně uvolní všechny externí připojení k objektu. Server objektu volání objektu implementace této metody před vypíná.|  
-|[FtmBase::GetMarshalSizeMax – metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Získáte horní mez počtu bajtů, které jsou potřebné pro zařazování specifikované rozhraní ukazatele na zadaný objekt.|  
-|[FtmBase::GetUnmarshalClass – metoda](../windows/ftmbase-getunmarshalclass-method.md)|Získá CLSID, který COM používá k nalezení DLL obsahující kód pro odpovídající proxy server. COM načte tuto knihovnu DLL k vytvoření instance Neinicializovaný proxy serveru.|  
-|[FtmBase::MarshalInterface – metoda](../windows/ftmbase-marshalinterface-method.md)|Zapíše do datového proudu data potřebná pro inicializaci objektu proxy v některé procesu klienta.|  
+|[FtmBase::CreateGlobalInterfaceTable – metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Vytvoří globální tabulku rozhraní (GIT).|  
+|[FtmBase::DisconnectObject – metoda](../windows/ftmbase-disconnectobject-method.md)|Nuceně uvolní všechny externí připojení k objektu. Server objektu zavolá objektu implementace této metody před vypíná.|  
+|[FtmBase::GetMarshalSizeMax – metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Získejte horní mez počtu bajtů potřebných k zařazování zadaný ukazatel rozhraní na zadaný objekt.|  
+|[FtmBase::GetUnmarshalClass – metoda](../windows/ftmbase-getunmarshalclass-method.md)|Získá identifikátor CLSID, který COM používá k nalezení knihovny DLL obsahující kód pro odpovídající server proxy. COM načte tuto knihovnu DLL vytvořit neinicializované instance serveru proxy.|  
+|[FtmBase::MarshalInterface – metoda](../windows/ftmbase-marshalinterface-method.md)|Zapíše do datového proudu data potřebná k inicializaci objektu proxy v nějaký proces klienta.|  
 |[FtmBase::ReleaseMarshalData – metoda](../windows/ftmbase-releasemarshaldata-method.md)|Zničí zařazené datový paket.|  
-|[FtmBase::UnmarshalInterface – metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicializuje nově vytvořený proxy a vrátí ukazatele rozhraní zda proxy serveru.|  
+|[FtmBase::UnmarshalInterface – metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   

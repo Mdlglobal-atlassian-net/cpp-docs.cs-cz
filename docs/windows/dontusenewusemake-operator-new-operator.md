@@ -1,5 +1,5 @@
 ---
-title: DontUseNewUseMake::operator new – operátor | Microsoft Docs
+title: DontUseNewUseMake::operator new – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873677"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571422"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new – operátor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `__unnamed0`  
+ *__unnamed0*  
  Nepojmenovaný parametr, který určuje počet bajtů paměti k přidělení.  
   
- `placement`  
- Typ, který má být přidělen.  
+ *umístění*  
+ Typ, který má být přiděleny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Poskytuje způsob, jak předat další argumenty, pokud přetížení operátoru `new`.  
+ Poskytuje způsob, jak předat další argumenty, pokud přetížíte operátor **nové**.  
   
 ## <a name="remarks"></a>Poznámky  
- Přetížení operátoru `new` a brání použití v RuntimeClass.  
+ Přetížení operátoru **nové** a brání použití v `RuntimeClass`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -55,5 +55,5 @@ void* operator new(
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [DontUseNewUseMake – třída](../windows/dontusenewusemake-class.md)   
+ [Dontusenewusemake – třída](../windows/dontusenewusemake-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

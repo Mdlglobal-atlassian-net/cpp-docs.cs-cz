@@ -1,5 +1,5 @@
 ---
-title: Derefhelper – struktura | Microsoft Docs
+title: Derefhelper – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871364"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571337"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +42,21 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Parametr šablony.  
   
 ## <a name="remarks"></a>Poznámky  
- Představují dereferenced ukazatel `T*` parametr šablony.  
+ Představuje ukazatel přes ukazatel `T*` parametr šablony.  
   
- Derefhelper – například použít ve výrazu: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ Derefhelper – je třeba použít ve výrazu: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`DerefType`|Identifikátor pro parametr šablony přímo odkázat `T*`.|  
+|`DerefType`|Identifikátor pro parametr šablony přes ukazatel `T*`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `DerefHelper`  

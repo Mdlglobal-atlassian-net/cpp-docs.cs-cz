@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zahrnutí prostředků v době kompilace | Microsoft Docs'
+title: 'Postupy: zahrnutí prostředků v době kompilace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,43 +23,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880147"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571333"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Postupy: Zahrnutí prostředků v čase kompilace
-Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všechny prostředky v souboru skriptu (.rc) jeden prostředek. Však přidáním prostředků v dalších souborů do aktuálního projektu v době kompilace tak, že je v uvedete **kompilaci direktivy** pole [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md).  
+Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všech prostředků v jednom souboru prostředku skriptů (.rc). Ale můžete přidat prostředky v jiných souborech do aktuálního projektu v době kompilace v jejich uvedení v seznamu **směrnice času kompilace** pole [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md).  
   
- Tady je několik důvodů umístit prostředky v souboru než hlavní soubor:  
+ Tady je několik důvodů umístit prostředky do souboru než hlavní .rc souborů:  
   
--   K přidání komentářů se příkazy prostředků, které nebudou získat odstraněny při uložení souboru .rc.  
+-   Chcete-li přidat komentáře pro příkazy prostředků, které nebudou se odstraní při ukládání souboru .rc.  
   
-     Editory prostředků nečtou soubory .rc nebo resource.h přímo. Kompilátor prostředků je zkompiluje do .aps soubory, které se spotřebovávají editory prostředků. Tento soubor je krok kompilace a ukládá jenom symbolický data. Jako normální kompilaci proces, informace, které není symbolický (například komentáře) se zahodí během kompilace. Vždy, když soubor .aps získá synchronizována se soubor, znovu vygeneruje soubor (například když uložíte, editor prostředků přepíše .rc soubor a soubor resource.h). Všechny změny prostředků sami zůstanou zahrnuté v souboru .rc, ale komentáře vždy budou ztraceny po .rc soubor se přepíše.  
+     Editory prostředků přímo číst soubory .rc nebo souboru resource.h. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a soubor resource.h). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc.  
   
--   Zahrnout prostředky, které již byla vyvinuta a testována a nepotřebujete další úpravy. (Všechny soubory, které jsou zahrnuty, ale nemáte rozšíření .rc nebudou upravovat editory prostředků.)  
+-   Chcete zahrnout prostředky, které již byly vývoji a testování a není nutné další změny. (Všechny soubory, které jsou zahrnuty, ale nemají příponou .rc nebude možné upravovat podle editory prostředků.)  
   
--   Chcete-li zahrnout zdroje, které jsou používány několik různých projektů nebo které jsou součástí zdrojového kódu Správa verzí a proto musí existovat v centrálním umístění, kde změny bude mít vliv na všechny projekty.  
+-   Chcete zahrnout prostředky, které se používají v několika různých projektech, nebo jsou součástí systému správy verzí zdrojového kódu a tedy musí existovat v centrálním umístění, kde změny bude mít vliv na všechny projekty.  
   
--   Zahrnout prostředky (například RCDATA prostředky), které jsou ve vlastním formátu. Prostředky RCDATA může mít zvláštní požadavky. Výraz nelze použít například jako hodnota pro pole nameID. Najdete v článku [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] Další informace naleznete v dokumentaci.  
+-   Chcete zahrnout prostředky (jako jsou například prostředky RCDATA), které jsou ve vlastním formátu. RCDATA prostředky mohou mít zvláštní požadavky. Například nelze použít výraz jako hodnotu pro pole nameID. Zobrazit [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] Další informace naleznete v dokumentaci.  
   
- Pokud máte ve existující soubory .rc, které splnit některý z těchto podmínek části, byste měli umístit v oddílech v jednom nebo více oddělené soubory .rc a zahrnout je do vašeho projektu pomocí [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md). *Projectname*.rc2 soubor vytvořený v podadresáři \res nový projekt se používá pro tento účel.  
+ Pokud máte oddíly v existujících souborech .rc, které splňují kterákoli z těchto podmínek, měli byste umístit v oddílech v jednom nebo více samostatných souborů .rc a zahrnout je do projektu pomocí [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md). *Projectname*.rc2 soubor vytvořený v podadresáři \res nový projekt se používá pro tento účel.  
   
-### <a name="to-include-resources-in-your-project-at-compile-time"></a>Zahrnout prostředky ve vašem projektu v době kompilace  
+### <a name="to-include-resources-in-your-project-at-compile-time"></a>Chcete zahrnout prostředky ve vašem projektu v době kompilace  
   
-1.  Umístíte prostředky v souboru skriptu prostředků s jedinečný název souboru. Nepoužívejte *projectname*.rc, protože to je název souboru pro soubor skriptu hlavní prostředků.  
+1.  Umístíte prostředky v souboru skriptu prostředků s jedinečným názvem souboru. Nepoužívejte *projectname*.rc, protože to je název souboru pro soubor skriptu prostředku hlavní.  
   
-2.  Klikněte pravým tlačítkem na soubor (v [zobrazení prostředků](../windows/resource-view-window.md)) a zvolte **prostředek zahrnuje** z místní nabídky.  
+2.  Klikněte pravým tlačítkem na soubor .rc (v [zobrazení prostředků](../windows/resource-view-window.md)) a zvolte **prostředek zahrnuje** z místní nabídky.  
   
-3.  V **kompilaci direktivy** pole, přidejte [#include](../preprocessor/hash-include-directive-c-cpp.md) kompilátoru směrnice na nový soubor prostředků v souboru hlavní prostředků ve vývojovém prostředí.  
+3.  V **směrnice času kompilace** přidejte [#include](../preprocessor/hash-include-directive-c-cpp.md) direktivy kompilátoru zahrnout nový soubor prostředků hlavního souboru prostředku ve vývojovém prostředí.  
   
-     Prostředky v souborů zahrnutých tímto způsobem jsou vytvářeny součástí spustitelný soubor v době kompilace. Nejsou přímo k dispozici pro úpravy nebo změna, když pracujete na vaší hlavní projektového souboru. Budete muset otevřít soubory zahrnuté .rc samostatně. Všechny soubory, které jsou zahrnuty, ale nemáte rozšíření .rc nebude možné upravovat pomocí editory prostředků.  
+     Prostředky v souborech tímto způsobem jsou součástí vašeho spustitelného souboru k v době kompilace. Nejsou přímo k dispozici pro úpravy nebo změny při práci na souboru .rc hlavního projektu. Budete muset otevřít soubory zahrnuté .rc odděleně. Všechny soubory, které jsou zahrnuty, ale nemají příponou .rc nebude možné upravovat podle editory prostředků.  
   
-
-  
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

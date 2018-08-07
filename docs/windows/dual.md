@@ -1,5 +1,5 @@
 ---
-title: duální | Microsoft Docs
+title: duální | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872377"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571015"
 ---
 # <a name="dual"></a>dual
 Umístí rozhraní v souboru IDL jako duální rozhraní.  
@@ -30,18 +30,16 @@ Umístí rozhraní v souboru IDL jako duální rozhraní.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Když **duální** C++ atribut předchází rozhraní, způsobí, že rozhraní, které má být umístěn uvnitř bloku knihovny v souboru generovaného .idl.  
+ Když **duální** C++ atribut předchází rozhraní, způsobí, že rozhraní být umístěny uvnitř bloku knihovny v souboru generovaného IDL.  
   
 ## <a name="example"></a>Příklad  
  Následující kód je blok atribut, který používá **duální** před definice rozhraní:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,9 +77,9 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|**dispinterface**|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -91,5 +89,5 @@ __interface IStatic : IDispatch
  [Atributy podle použití](../windows/attributes-by-usage.md)   
  [Vlastní](../windows/custom-cpp.md)   
  [Dispinterface](../windows/dispinterface.md)   
- [Objekt](../windows/object-cpp.md)   
+ [objekt](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

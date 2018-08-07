@@ -1,5 +1,5 @@
 ---
-title: db_source | Microsoft Docs
+title: db_source | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b826e5d630b52062892001c26efda01b5c7293f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873716"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570607"
 ---
 # <a name="dbsource"></a>db_source
 Vytvoří připojení ke zdroji dat.  
@@ -30,41 +30,40 @@ Vytvoří připojení ke zdroji dat.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ db_source(   
+[ db_source(   
    db_source,   
    name,   
    hresult   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *db_source*  
- Připojovací řetězec používaný pro připojení ke zdroji dat. Formát řetězce připojení, najdete v části [připojovací řetězce a Data odkazy](https://msdn.microsoft.com/en-us/library/ms718376.aspx) v Microsoft Data Access Components (MDAC) sady SDK.  
+ Připojovací řetězec použitý pro připojení ke zdroji dat. Formát připojovacího řetězce, naleznete v tématu [připojovací řetězce a propojení dat](https://msdn.microsoft.com/library/ms718376.aspx) v Microsoft Data Access Components (MDAC) SDK.  
   
- *název* (volitelné)  
- Při použití `db_source` na třídu, *název* je instance objektu zdroje dat, který má `db_source` byt aplikovaný atribut (viz Příklad 1). Při použití `db_source` vložené v implementaci metoda *název* je proměnná (místní počítač do metody), která slouží k přístupu k datům zdroje (viz příklad 2). To předáte *název* k `source_name` parametr **db_command** přidružit zdroji dat pomocí příkazu.  
+ *Název* (volitelné)  
+ Při použití **db_source** na třídu, *název* je instance objektu zdroje dat, který má **db_source** byt aplikovaný atribut (viz Příklad 1). Při použití **db_source** vložené v implementaci metody, *název* je proměnná (místní počítač do metody), který slouží pro přístup k datům zdroje (viz příklad 2). To předat *název* k *source_name* parametr `db_command` ke zdroji dat pomocí příkazu.  
   
- `hresult` (volitelné)  
- Určuje proměnné, která se zobrazí `HRESULT` tohoto příkazu databáze. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
+ *HRESULT* (volitelné)  
+ Určuje proměnné, která se zobrazí `HRESULT` tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
   
 ## <a name="remarks"></a>Poznámky  
- `db_source` vytvoří [CDataSource](../data/oledb/cdatasource-class.md) a [CSession](../data/oledb/csession-class.md) objekt, který společně představují připojení ke zdroji dat příjemce technologie OLE DB.  
+ **db_source** vytvoří [CDataSource](../data/oledb/cdatasource-class.md) a [CSession](../data/oledb/csession-class.md) objekt, což dohromady představují připojení ke zdroji dat příjemce technologie OLE DB.  
   
- Při použití `db_source` na třídu, `CSession` objekt stane se členem třídy.  
+ Při použití **db_source** na třídu, `CSession` objekt se stane členem třídy.  
   
- Při použití `db_source` metoda, bude proveden vloženého kódu v rámci oboru metody a `CSession` objekt se vytvoří jako místní proměnné.  
+ Při použití **db_source** v metodě, se spustí vloženého kódu v rámci oboru metody a `CSession` jako místní proměnná je vytvořen objekt.  
   
- `db_source` Přidá vlastnosti zdroje dat na třídu nebo v rámci metody. Se používá ve spojení s **db_command** (které trvá `db_source` *název* parametr jako jeho `source_name` parametr).  
+ **db_source** přidá vlastnosti zdroje dat pro třídu nebo v rámci metody. Používá se ve spojení s `db_command` (které trvá *db_source* *název* parametr jako jeho *source_name* parametr).  
   
- Pokud příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor přejmenuje třídy pro \_ *YourClassName*přistupujícího objektu, kde *YourClassName* je název, který jste zadali Třída a kompilátor také vytvoří třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd se zobrazí oba třídy.  
+ Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.  
   
- Příklad tohoto atributu se použijí v aplikaci, naleznete v části Ukázky [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) a [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Příklad tohoto atributu použijí v aplikaci, najdete v ukázkách [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) a [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Příklad  
- Tato ukázka volá `db_source` na třídu vytvořte připojení ke zdroji dat `ds` používá databázi Northwind. `ds` je popisovač pro zdroj dat, který může být použit interně k `CMyCommand` třídy.  
+ Tato ukázka volá **db_source** třídy pro vytvoření připojení ke zdroji dat `ds` pomocí databáze Northwind. `ds` je obslužnou rutinu pro zdroj dat, který je možné interně na `CMyCommand` třídy.  
   
-```  
+```cpp  
 // db_source_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -84,9 +83,9 @@ class CMyCommand {};
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`, člen, metoda, místní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

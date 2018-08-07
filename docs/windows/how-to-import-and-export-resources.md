@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Import a Export prostředků | Microsoft Docs'
+title: 'Postupy: Import a Export prostředků | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,45 +27,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879175"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570477"
 ---
 # <a name="how-to-import-and-export-resources"></a>Postupy: Import a export prostředků
-Můžete importovat grafických prostředků (rastrové obrázky, ikonami, kurzory a panely nástrojů), soubory HTML a vlastní prostředky pro použití v jazyce Visual C++. Stejné typy souborů, můžete exportovat z projektu Visual C++ do samostatných souborů, které lze použít mimo vývojového prostředí.  
+Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory a panely nástrojů), soubory HTML a vlastní prostředky pro použití v jazyce Visual C++. Stejné typy souborů, můžete exportovat z projektu Visual C++ do samostatných souborů, které lze použít mimo vývojové prostředí.  
   
 > [!NOTE]
->  Typy prostředků, jako je například řetězec tabulek akcelerátorů, dialogová okna a nelze importovat nebo exportovat, protože nejsou typy samostatné souborů.  
+>  Typy prostředků jako akcelerátory, dialogová okna a tabulky řetězců nelze importovaná nebo exportovaná, protože nejsou typy samostatný soubor.  
   
-### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>K importu jednotlivých prostředků do aktuální soubor prostředků  
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Importovat jednotlivé prostředky do aktuálního souboru prostředků  
   
-1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na uzel pro skript prostředků (* .rc) souboru, do které chcete přidat prostředek.  
+1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na uzel pro skript prostředků (* .rc) soubor, ke kterému chcete přidat prostředek.  
   
 2.  Klikněte na tlačítko **Import** v místní nabídce.  
   
 3.  Vyhledejte a vyberte název souboru rastrový obrázek (BMP), ikona (), kurzor (), soubor Html (.htm) nebo jiný soubor, který chcete importovat.  
   
-4.  Klikněte na tlačítko **OK** pro daný prostředek přidejte do vybraného souboru v **prostředků** zobrazení.  
+4.  Klikněte na tlačítko **OK** bude příslušný materiál přidán na vybraný soubor v **prostředků** zobrazení.  
   
     > [!NOTE]
-    >  Proces importu funguje stejným způsobem, bez ohledu na to, který prostředek se konkrétní typ vybrali. Importovaných zdrojů je automaticky přidán do správný uzel pro tento typ prostředku.  
+    >  Proces importu funguje stejným způsobem bez ohledu na to, který prostředek se konkrétní typ jste vybrali. Importovaných zdrojů je automaticky přidán do správný uzel pro příslušný typ prostředku.  
   
-### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Chcete-li exportovat rastrového obrázku, ikony nebo kurzoru jako samostatný soubor (za účelem použití mimo Visual C++)  
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Chcete-li exportovat bitmapy, ikony nebo kurzoru jako samostatný soubor (pro použití mimo aplikaci Visual C++)  
   
-1.  V **prostředků** zobrazit, klikněte pravým tlačítkem na prostředek, který chcete exportovat.  
+1.  V **prostředků** zobrazení, klikněte pravým tlačítkem na prostředku, kterou chcete exportovat.  
   
 2.  Klikněte na tlačítko **exportovat** v místní nabídce.  
   
-3.  V **Export prostředků** dialogové okno pole, přijměte aktuální název nebo zadejte nový.  
+3.  V **exportovat prostředky** dialogové okno pole názvu aktuálního souboru přijměte nebo zadejte nový.  
   
 4.  Přejděte do složky, kam chcete uložit soubor a klikněte na tlačítko **exportovat**.  
   
-
-  
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

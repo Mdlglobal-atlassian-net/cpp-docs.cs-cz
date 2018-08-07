@@ -1,5 +1,5 @@
 ---
-title: helpstring | Microsoft Docs
+title: helpstring | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879003"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570928"
 ---
 # <a name="helpstring"></a>helpstring
-Určuje řetězec znaků, který se používá k popisu elementu, na který se vztahuje.  
+Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `string`  
+### <a name="parameters"></a>Parametry  
+ *string*  
  Textový řetězec nápovědy.  
   
 ## <a name="remarks"></a>Poznámky  
- **Helpstring** atribut C++ má stejné funkce jako [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL atribut.  
+ **Helpstring** C++ atribut má stejné funkce jako [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) příklad použití **helpstring**.  
+ Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) příklad, jak používat **helpstring**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -52,9 +51,9 @@ Určuje řetězec znaků, který se používá k popisu elementu, na který se v
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`, `typedef`, **třída**, metoda, vlastnost|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**rozhraní**, **typedef**, **třída**, metoda, vlastnost|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -62,8 +61,8 @@ Určuje řetězec znaků, který se používá k popisu elementu, na který se v
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Soubor nápovědy](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

@@ -1,5 +1,5 @@
 ---
-title: Hstring::CopyTo – metoda | Microsoft Docs
+title: Hstring::CopyTo – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44974faf5fc1f068d28d7febe3ed2a266f4869e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65d8e259b74bcdffbf11c6c96172d918f9db1b50
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874769"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570870"
 ---
 # <a name="hstringcopyto-method"></a>HString::CopyTo – metoda
-Kopie aktuální HString objektu na objekt HSTRING.  
+Zkopíruje aktuální **HString** objektu na objekt HSTRING.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `str`  
- HSTRING, která obdrží kopii.  
+ *str*  
+ HSTRING, který přijímá kopii.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda volá [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) funkce.  

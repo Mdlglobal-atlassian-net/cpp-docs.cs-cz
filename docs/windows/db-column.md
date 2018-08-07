@@ -1,5 +1,5 @@
 ---
-title: db_column | Microsoft Docs
+title: db_column | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879630"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570698"
 ---
 # <a name="dbcolumn"></a>db_column
-Zadaný sloupec se váže k proměnné v dané sadě řádků.  
+Připojí zadaný sloupec proměnné v dané sadě řádků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ db_column(   
+[ db_column(   
    ordinal,   
    dbtype,   
    precision,   
@@ -42,8 +41,8 @@ Zadaný sloupec se váže k proměnné v dané sadě řádků.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ordinal`  
- Počet pořadí sloupců (**DBCOLUMNINFO** pořadí) nebo název sloupce (ANSI nebo Unicode string) odpovídající pole v sadě řádků, do kterého se mají vázat data. Pokud používáte čísla, můžete přeskočit po sobě jdoucích řadové číslovky (například: 1, 2, 3, 5). Název může obsahovat mezery, pokud ji podporuje zprostředkovatele OLE DB, které používáte. Například můžete použít některý z následujících formátů:  
+ *Pořadí*  
+ Číslo pořadí sloupce (`DBCOLUMNINFO` pořadovém místě) nebo názvem sloupce (řetězec ANSI nebo Unicode) odpovídající pole v dané sadě řádků, ke kterému chcete svázat data. Pokud používáte čísla, můžete přeskočit po sobě jdoucích řadové číslovky (například: 1, 2, 3, 5). Název může obsahovat mezery, pokud podporuje zprostředkovatel OLE DB, který používáte. Například můžete použít některou z následujících formátů:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
@@ -51,33 +50,33 @@ Zadaný sloupec se váže k proměnné v dané sadě řádků.
 ```  
   
  *Hodnota DbType* (volitelné)  
- OLE DB [typ ukazatele](https://msdn.microsoft.com/en-us/library/ms711251.aspx) položku sloupce.  
+ OLE DB [indikátor typu](https://msdn.microsoft.com/library/ms711251.aspx) pro vstupní sloupec.  
   
  *přesnost* (volitelné)  
- Přesnost má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` element [DBBINDING struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *škálování* (volitelné)  
- Škálování, který se má použít pro sloupec položku. Podrobnosti najdete v tématu Popis `bScale` element [DBBINDING struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Stav* (volitelné)  
- Členské proměnné používané pro udržení stav daného sloupce. Stav označuje, zda hodnota sloupce je hodnota dat nebo s jinou hodnotou, například **NULL**. Možné hodnoty, najdete v části [stav](https://msdn.microsoft.com/en-us/library/ms722617.aspx) v *referenční příručka programátora technologie OLE DB*.  
+ Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*.  
   
  *Délka* (volitelné)  
  Členské proměnné používané pro udržení velikost sloupce v bajtech.  
   
 ## <a name="remarks"></a>Poznámky  
- **db_column** váže zadaného sloupce tabulky k proměnné v dané sadě řádků. Ji vymezuje data členů, které mohou být zahrnuty v OLE DB `IAccessor`– na základě vazby. Tento atribut Nastaví mapu sloupce, které jsou obvykle definovány pomocí makra příjemce technologie OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), a [COLUMN_ENTRY](../data/oledb/column-entry.md). Tyto manipulaci s OLE DB [struktura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) pro vazbu zadaný sloupec. Každý člen označit s **db_column** atribut bude zabírat jedna položka v mapě sloupce ve formě položku sloupce. Proto volat tento atribut kde vložíte mapy sloupce, který je ve třídě příkazu nebo tabulky.  
+ **db_column** váže sloupec tabulky zadané proměnné v dané sadě řádků. Vymezuje členská data, která se může účastnit OLE DB `IAccessor`– na základě vazby. Tento atribut nastaví mapy sloupce obvykle definovány pomocí makra příjemce technologie OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), a [COLUMN_ENTRY](../data/oledb/column-entry.md). Tyto manipulovat s OLE DB [struktura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) svázat zadaný sloupec. Každý člen můžete označit **db_column** atribut budou zaměstnávat jedna položka v mapě sloupců ve formuláři položky sloupce. Proto volání tento atribut kde vložíte mapy sloupce, tedy ve třídě příkazu nebo tabulky.  
   
  Použití **db_column** ve spojení s buď [db_table](../windows/db-table.md) nebo [db_command](../windows/db-command.md) atributy.  
   
- Pokud příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor přejmenuje třídy pro \_ *YourClassName*přistupujícího objektu, kde *YourClassName* je název, který jste zadali Třída a kompilátor také vytvoří třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd se zobrazí oba třídy.  
+ Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.  
   
- Příklady tento atribut použít v aplikaci, najdete v tématu ukázky [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), a [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Pro příklady tohoto atributu použijí v aplikaci, najdete v ukázkách [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409), a [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Příklad  
- Tato ukázka tabulka, která se vytvoří vazbu mezi sloupci **dlouho** – datový člen a určuje stav a délka pole.  
+ Tato ukázka vytvoří vazbu sloupec v tabulce **dlouhé** datový člen a určuje pole Stav a délka.  
   
-```  
+```cpp  
 // db_column_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -94,9 +93,9 @@ class CProducts {
 ```  
   
 ## <a name="example"></a>Příklad  
- Tato ukázka váže čtyři sloupce, abyste **dlouho**, řetězec znaků, časovým razítkem a **DB_NUMERIC** celé číslo, v tomto pořadí.  
+ Tato ukázka vytvoří vazbu čtyři sloupce **dlouhé**, řetězec znaků, časové razítko a `DB_NUMERIC` celé číslo, v uvedeném pořadí.  
   
-```  
+```cpp  
 // db_column_2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -118,9 +117,9 @@ class CProducts {
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`, člen, – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **struktura**, člen, – metoda|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Obecní delegáti (Visual C++) | Microsoft Docs
+title: Obecní delegáti (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875595"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571308"
 ---
 # <a name="generic-delegates-visual-c"></a>Obecní delegáti (Visual C++)
-Parametry obecného typu můžete použít s delegáti. Další informace o delegáti najdete v tématu [delegáta (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  
+Můžete použít parametry obecného typu pomocí delegátů. Další informace o delegátech naleznete v tématu [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,31 +37,31 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `attributes` (Volitelné)  
- Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
+ *atributy* (volitelné)  
+ Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
   
- *Typ-parametr-identifikátory*  
- Čárkami oddělený seznam identifikátory pro parametry typu.  
+ *Typ – parametr-identifikátory*  
+ Čárkou oddělený seznam identifikátorů pro parametry typu.  
   
- `type-parameter-constraints-clauses`  
- Má podobu uvedený v [omezení obecných parametrů typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *Typ parametru omezení klauzule*  
+ Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *Modifikátory dostupnosti* (volitelné)  
- Modifikátory dostupnosti (například **veřejné**, `private`).  
+ Modifikátory (třeba **veřejné**, **privátní**).  
   
  *Typ výsledku*  
  Návratový typ delegáta.  
   
- *Identifikátor*  
- Název delegát.  
+ *identifikátor*  
+ Název delegáta.  
   
- *Parametry formal* (volitelné)  
+ *formální parametry* (volitelné)  
  Seznam parametrů delegáta.  
   
 ## <a name="example"></a>Příklad  
- V okamžiku, kdy je vytvořen objekt delegáta jsou zadány parametry typu delegáta. Delegát i přidružená metoda musí mít stejným podpisem. Následuje příklad obecný delegát deklarace.  
+ V okamžiku, kdy je vytvořen objekt delegáta jsou zadány parametry typu delegát. Delegáta a přidružená metoda musí mít stejný podpis. Následuje příklad deklarace obecného delegáta.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -71,13 +71,13 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, že  
   
--   Nelze použít stejný objekt delegáta s jinou sestavené typy. Vytvořte různé delegáta pro různé typy objektů.  
+-   Stejný objekt delegáta nelze použít s různými typy vytvořený. Vytvořte různé delegáta pro různé typy objektů.  
   
--   – Obecný delegát může být přidružen obecná metoda.  
+-   Obecný delegát může být spojeny s obecnou metodou.  
   
--   Když obecná metoda je volána bez zadání argumenty typu, pokusí se kompilátor odvození typu argumenty pro volání.  
+-   Při volání obecné metody bez zadání argumentů, kompilátor se pokusí odvodit argumenty typu pro volání.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -112,9 +112,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad uvádí obecný delegát `GenDelegate<ItemType>`a potom vytvoří instanci tím, že přidružíte metodě `MyMethod` používající parametr typu `ItemType`. Dvě instance delegáta (celé číslo a dvojitou) jsou vytvořeny a volání.  
+ Následující příklad deklaruje obecného delegátu `GenDelegate<ItemType>`a poté vytvoří instanci tím, že přidružíte k metodě `MyMethod` , která používá parametr typu `ItemType`. Dvě instance delegáta (celé číslo a typ double) jsou vytvořena a vyvolána.  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

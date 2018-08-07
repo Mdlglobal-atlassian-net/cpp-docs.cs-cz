@@ -1,5 +1,5 @@
 ---
-title: db_table | Microsoft Docs
+title: db_table | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f482e93f124d73d48d1de66f3feb1779146025d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91eea8bd751e4e8e843fb2d052f2b4a71f9bdc38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874340"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570334"
 ---
 # <a name="dbtable"></a>db_table
-Otevře se tabulce OLE DB.  
+Otevře se tabulku OLE DB.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ db_table(   
+[ db_table(   
    db_table,   
    name,   
    source_name,   
@@ -41,26 +40,26 @@ Otevře se tabulce OLE DB.
   
 #### <a name="parameters"></a>Parametry  
  *db_table*  
- Řetězec určující název tabulky databáze (například "produkty").  
+ Řetězec určující název databázové tabulky (například "produktů").  
   
- *název* (volitelné)  
- Název popisovače, který používáte při práci s tabulkou. Pokud chcete vrátit více než jeden řádek výsledků, zadejte tento parametr. **db_table** generuje proměnné se zadaným *název* která lze procházet sadu řádků nebo spustit více dotazů akce.  
+ *Název* (volitelné)  
+ Název popisovače, který slouží pro práci s tabulkou. Tento parametr musíte zadat, pokud se chcete vrátit více než jeden řádek výsledků. **db_table** generuje proměnné se zadaným *název* , který slouží k procházení řádků nebo spustit více dotazů akce.  
   
  *source_name* (volitelné)  
- `CSession` Proměnnou nebo instanci třídy, která má `db_source` atribut použitý k němu na kterém se příkaz provede. V tématu [db_source](../windows/db-source.md).  
+ `CSession` Proměnnou nebo instance třídy, která má `db_source` atribut WebMethod na kterém příkaz spustí. Zobrazit [db_source](../windows/db-source.md).  
   
- `hresult` (volitelné)  
- Určuje proměnné, která se zobrazí `HRESULT` tohoto příkazu databáze. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
+ *HRESULT* (volitelné)  
+ Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
   
 ## <a name="remarks"></a>Poznámky  
- **db_table** vytvoří [CTable](../data/oledb/ctable-class.md) objekt, který je používán příjemce technologie OLE DB se otevřít tabulku. Tento atribut lze použít pouze na úrovni třídy; nemůžete ji použít vložené. Použít **db_column** k vytvoření vazby sloupců tabulky. proměnné; použít **db_param –** pro vymezení (nastavte typ parametru a to na) parametrů.  
+ **db_table** vytvoří [CTable](../data/oledb/ctable-class.md) objekt, který používá příjemce technologie OLE DB otevřít tabulku. Tento atribut lze použít pouze na úrovni třídy; nelze ji použít vložený. Použít `db_column` proměnných, vytvořit vazbu sloupců tabulky použijte `db_param` pro vymezení (nastavený typ parametru a to v) parametrů.  
   
- Pokud příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor přejmenuje třídy pro \_ *YourClassName*přistupujícího objektu, kde *YourClassName* je název, který jste zadali Třída a kompilátor také vytvoří třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd se zobrazí oba třídy.  
+ Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad otevře tabulky produktů pro použití `CProducts`.  
+ Následující příklad otevře tabulky produktů pro použití u `CProducts`.  
   
-```  
+```cpp  
 // db_table.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -73,7 +72,7 @@ class CProducts {
 };  
 ```  
   
- Příklad tohoto atributu se použijí v aplikaci, naleznete v části Ukázky [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) a [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Příklad tohoto atributu použijí v aplikaci, najdete v ukázkách [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) a [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -81,9 +80,9 @@ class CProducts {
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
