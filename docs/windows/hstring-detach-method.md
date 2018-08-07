@@ -1,5 +1,5 @@
 ---
-title: Hstring::detach – metoda | Microsoft Docs
+title: Hstring::detach – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621476f092b3dbaad994e63a329f1a8c567f55b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bfd4390cdc786836b08e77b4ee699e44cc42618
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885451"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569723"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach – metoda
-Zadaný objekt HString od základní hodnoty zrušíte.  
+Zruší přidružení zadaného **HString** objekt ze základní hodnoty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,7 +32,7 @@ HSTRING Detach() throw()
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Základní hodnota HString před byla zahájena operace odpojení.  
+ Základní **HString** hodnotu před byla zahájena operace odpojení.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

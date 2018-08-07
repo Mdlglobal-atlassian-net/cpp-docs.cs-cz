@@ -1,5 +1,5 @@
 ---
-title: Handlet::detach – metoda | Microsoft Docs
+title: Handlet::detach – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878460"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569476"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach – metoda
-Aktuální objekt HandleT z jeho základní popisovač zrušíte.  
+Zruší přidružení aktuální **HandleT** objekt z jeho základní popisovač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ typename HandleTraits::Type Detach();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Základní obslužná rutina.  
+ Základní popisovač.  
   
 ## <a name="remarks"></a>Poznámky  
- Po dokončení této operace aktuální HandleT nastavena na neplatný stav.  
+ Když tato operace dokončí, aktuální **HandleT** je nastavena na neplatný stav.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

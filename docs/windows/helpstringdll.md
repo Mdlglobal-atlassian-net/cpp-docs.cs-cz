@@ -1,5 +1,5 @@
 ---
-title: helpstringdll – | Microsoft Docs
+title: helpstringdll – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877342"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570077"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Určuje název knihovny DLL používat k provádění vyhledávací řetězec dokumentu (lokalizace).  
+Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `string`  
- Knihovny DLL používat k provádění dokumentu vyhledávací řetězec.  
+### <a name="parameters"></a>Parametry  
+ *string*  
+ Knihovny DLL použít k provádění vyhledání řetězce dokumentu.  
   
 ## <a name="remarks"></a>Poznámky  
- **Helpstringdll –** atribut C++ má stejné funkce jako [helpstringdll –](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL atribut.  
+ **Helpstringdll –** C++ atribut má stejné funkce jako [helpstringdll –](http://msdn.microsoft.com/library/windows/desktop/aa366860) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,9 +63,9 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `interface`, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **rozhraní**, rozhraní – metoda|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -74,5 +73,5 @@ __interface IMyI
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   

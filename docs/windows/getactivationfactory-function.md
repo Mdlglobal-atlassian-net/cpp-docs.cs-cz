@@ -1,5 +1,5 @@
 ---
-title: Getactivationfactory – funkce | Microsoft Docs
+title: Getactivationfactory – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881335"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570308"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory – funkce
-Načte objekt pro vytváření aktivace pro typ zadaný v parametru šablony.  
+Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Parametr šablony, který určuje typ objektu pro vytváření aktivace.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Parametr šablony určující typ objektu factory pro aktivaci.  
   
- `activatableClassId`  
- Název třídy, která aktivace vytváření může vytvořit.  
+ *activatableClassId*  
+ Název třídy, která může vytvářet objektu factory pro aktivaci.  
   
- `factory`  
- Když tato operace dokončí, odkaz na aktivační objekt factory pro typ `T`.  
+ *objekt pro vytváření*  
+ Když tato operace dokončí, odkaz na objekt pro vytváření aktivace pro typ *T*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném chybu HRESULT, která označuje, proč jsou tato operace se nezdařila.  
+ S_OK v případě úspěchu; v opačném případě chybu HRESULT, která označuje, proč tato operace se nezdařila.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

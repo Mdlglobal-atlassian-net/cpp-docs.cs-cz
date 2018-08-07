@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Nastavení Průvodce | Microsoft Docs
+title: Příručka pro dialogové okno nastavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,41 +23,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875874"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568888"
 ---
 # <a name="guide-settings-dialog-box"></a>Dialogové okno Nastavení vodítek
 ## <a name="layout-guides"></a>Vodítka rozložení  
- Zobrazuje nastavení pro tato vodítka.  
+ Zobrazuje nastavení vodítek rozložení.  
   
  **None**  
   
  Skryje nástroje rozložení.  
   
- **Pravítek a vodítek**  
+ **Pravítka a vodítka**  
   
- Když je povolené, přidá pravítek do nástroje rozložení; Průvodce můžete umístit do pravítek. Výchozí příručky jsou okrajů, které lze přesunout přetažením. Klikněte v pravítek umístit průvodce. Ovládací prvky "snap" k vodítkům při ovládací prvky se přesouvají přes nebo u nich. Ovládací prvky se také přesunout pomocí průvodce, jakmile jsou připojené k němu. Pokud ovládací prvek je připojen k příručce na každé straně a Průvodce se přesune, změně velikosti ovládacího prvku.  
+ Pokud povolená, přidá do nástroje rozložení; pravítka příručky je možné použít v pravítka. Výchozí příručky jsou okraje, které je možné přesunout přetažením. Klikněte na tlačítko v pravítka umístit průvodce. Ovládací prvky "přichytávat" k Průvodci při přesunutí ovládacích prvků nad nebo vedle sebe. Ovládací prvky také přesunout pomocí průvodce, jakmile jsou k němu připojená. Když ovládací prvek je připojen k vodítko na každé straně a přesunout vodítko, změně velikosti ovládacího prvku.  
   
  **Mřížka**  
   
- Vytvoří rozložení mřížky. Nové ovládací prvky se automaticky zarovná k mřížce.  
+ Vytvoří rozložení mřížky. Nové ovládací prvky budou automaticky zarovnat k mřížce.  
   
 ## <a name="grid-spacing"></a>Rozteč mřížky  
- Zobrazuje nastavení pro rozteč mřížky v poli jednotky dialogu (dlu).  
+ Nastavení pro rozteč mřížky se zobrazí v poli jednotky dialogu (dlu).  
   
- **Šířka: dlu**  
+ **Width: dlu**  
   
- Nastaví šířku mřížky rozložení v dlu. Vodorovné DLU je průměrná velikost písma dialogové okno pole dělený čtyři.  
+ Nastavuje šířku mřížky rozložení v dlu. Vodorovné DLU je průměrná délka pole písmo dialogového okna dělený čtyři.  
   
- **Výška: dlu**  
+ **Height: dlu**  
   
- Nastaví výšku mřížky rozložení v dlu. Svislé DLU je průměrná výška dialogové okno Písmo pole dělený 8.  
+ Nastaví výšku mřížky rozložení v dlu. Svislé DLU je průměrná výška pole písmo dialogového okna dělený osmidílné série.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -65,4 +65,3 @@ ms.locfileid: "33875874"
 ## <a name="see-also"></a>Viz také  
  [Změna mřížky rozložení](../windows/modifying-the-layout-grid.md)   
  [Stavy editoru dialogových oken (vodítka a mřížky)](../windows/dialog-editor-states-guides-and-grids.md)
-

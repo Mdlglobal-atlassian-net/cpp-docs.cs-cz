@@ -1,5 +1,5 @@
 ---
-title: Enableif – struktura | Microsoft Docs
+title: Enableif – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873375"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569027"
 ---
 # <a name="enableif-structure"></a>EnableIf – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,22 +43,22 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Typ.  
   
- `b`  
+ *b*  
  Logický výraz.  
   
 ## <a name="remarks"></a>Poznámky  
- Definuje členem data v typu zadaném pomocí druhý parametr šablony, pokud je první parametr šablony výsledkem `true`.  
+ Datový člen typu určené druhý parametr šablony, pokud je vyhodnocen jako první parametr šablony definuje **true**.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`type`|Pokud parametr šablony `b` vyhodnotí jako `true`, částečná specializace definuje – datový člen `type` být typu `T`.|  
+|`type`|Pokud parametr šablony *b* vyhodnotí jako **true**, částečná specializace definuje datový člen `type` typu `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `EnableIf`  

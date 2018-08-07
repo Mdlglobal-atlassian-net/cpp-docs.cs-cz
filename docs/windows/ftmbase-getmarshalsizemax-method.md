@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::getmarshalsizemax – metoda | Microsoft Docs
+title: Ftmbase::getmarshalsizemax – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873791"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570211"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax – metoda
-Získáte horní mez počtu bajtů, které jsou potřebné pro zařazování specifikované rozhraní ukazatele na zadaný objekt.  
+Získejte horní mez počtu bajtů potřebných k zařazování zadaný ukazatel rozhraní na zadaný objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,31 +40,31 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Odkaz na identifikátor rozhraní být zařazena.  
+### <a name="parameters"></a>Parametry  
+ *riid*  
+ Odkaz na identifikátor rozhraní zařadit.  
   
- `pv`  
- Ukazatel rozhraní zařazována; může mít hodnotu NULL.  
+ *PV*  
+ Ukazatel rozhraní na zařadit; může mít hodnotu NULL.  
   
- `dwDestContext`  
- Cílový kontext, kde má být zařazeny specifikované rozhraní.  
+ *dwDestContext*  
+ Cílový kontext, kde má být sdružení daného rozhraní.  
   
- Zadejte jeden nebo více hodnot výčtu MSHCTX.  
+ Zadejte jednu nebo více hodnot výčtu MSHCTX.  
   
- V současné době unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu na stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
+ V současné době unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.  
   
- `mshlflags`  
- Příznak, který udává, zda data, která mají být zařazené se předává zpátky do procesu klientů – obvyklý případ – nebo zapisovat do globální tabulky, kde se dá načíst více klientů. Zadejte jeden nebo více hodnot výčtu MSHLFLAGS.  
+ *mshlflags*  
+ Příznak označující, zda je data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů. Zadejte jednu nebo více hodnot výčtu MSHLFLAGS.  
   
- `pSize`  
- Když tato operace dokončí, ukazatel na horní mez na množství dat, která má být zapsán do zařazování datového proudu.  
+ *pSize*  
+ Když tato operace dokončena, ukazatel na horní mez na množství dat k zápisu do streamu zařazování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota E_FAIL nebo E_NOINTERFACE.  
+ S_OK v případě úspěchu; nebo jinak E_NOINTERFACE E_FAIL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ftm.h  

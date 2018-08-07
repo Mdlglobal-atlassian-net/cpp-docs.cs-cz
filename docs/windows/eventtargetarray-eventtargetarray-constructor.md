@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::eventtargetarray – konstruktor | Microsoft Docs
+title: Eventtargetarray::eventtargetarray – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872712"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569785"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `hr`  
- Po operacích tento konstruktor parametr `hr` označuje, zda přidělení pole byla úspěšná nebo neúspěšná. Následující tabulka uvádí možné hodnoty pro `hr`.  
+### <a name="parameters"></a>Parametry  
+ *hr*  
+ Po operacích tento konstruktor parametr *hr* označuje, zda přidělení pole bylo úspěšné nebo neúspěšné. V následující tabulce jsou uvedeny možné hodnoty pro *hr*.  
   
  S_OK  
  Operace byla úspěšná.  
@@ -47,15 +47,15 @@ EventTargetArray(
  Nepodařilo se přidělit paměť pro pole.  
   
  S_FALSE  
- Parametr `items` je menší než nebo rovna nule.  
+ Parametr *položky* je menší než nebo rovna nule.  
   
- `items`  
- Počet elementů pole přidělit.  
+ *Položky*  
+ Počet prvků pole pro přidělení.  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy EventTargetArray.  
+ Inicializuje novou instanci třídy **EventTargetArray** třídy.  
   
- EventTargetArray slouží k udržování pole obslužné rutiny událostí v objektu EventSource.  
+ **Eventtargetarray –** umožňuje zachovat pole obslužné rutiny událostí v `EventSource` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  
@@ -63,5 +63,5 @@ EventTargetArray(
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [EventTargetArray – třída](../windows/eventtargetarray-class.md)   
+ [Eventtargetarray – třída](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

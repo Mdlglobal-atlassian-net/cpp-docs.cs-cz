@@ -1,5 +1,5 @@
 ---
-title: HandleT::operator = – operátor | Microsoft Docs
+title: HandleT::operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873924"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570038"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= – operátor
-Hodnota zadaného objektu HandleT přesune na aktuální objekt HandleT.  
+Přesune hodnotu zadaného **handlet –** objektů na aktuální **HandleT** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Rvalue – odkaz na popisovač.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Odkaz rvalue na popisovač.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Odkaz na aktuální objekt HandleT.  
+ Odkaz na aktuální **HandleT** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato operace by způsobila neplatnost zadaného parametrem objektu HandleT `h`.  
+ Tato operace zruší platnost **handlet –** objekt zadaný parametrem *h*.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Připnutí ukazatelů a polí | Microsoft Docs'
+title: 'Postupy: Připnutí ukazatelů a polí | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873586"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569372"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Postupy: Připnutí ukazatelů a polí
-Připnutí dílčí objekt definovaný v spravovaného objektu má za následek Připnutí celý objekt.  Například pokud je připnutý libovolný element pole, pak celé pole je také připojena. Neexistují žádné rozšíření pro jazyk pro deklarování definovaného pole. Chcete-li připnout pole, deklarujte Připnutí ukazatel na jeho typ elementu a kód pin, jeden z jejích elementů.  
+Připnutí dílčí objekt definovaný v spravovaný objekt má za následek Připnutí celý objekt.  Například pokud je připnutý libovolný prvek pole, pak celé pole je také připnout. Nejsou žádná rozšíření jazyka pro deklarování připnuté pole. Chcete-li připnout pole, deklarujte ukazatel Připnutí a jeho typ elementu, Připne jeden z jeho prvků.  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 ++  
 ```  
   

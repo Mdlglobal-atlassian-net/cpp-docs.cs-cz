@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI) | Microsoft Docs'
+title: 'Postupy: deklarování a použití vnitřních ukazatelů a spravovaných polí (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875302"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569840"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)
-Následující C + +/ CLI příklad ukazuje, jak můžete deklarování a použití vnitřního ukazatele na pole.  
+Následující C + +/ CLI příklad ukazuje, jak deklarovat a použít vnitřní ukazatel na pole.  
   
 > [!IMPORTANT]
->  Tato funkce jazyk podporuje **/CLR** – možnost kompilátoru, ale nejsou nástrojem **/ZW** – možnost kompilátoru.  
+>  Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

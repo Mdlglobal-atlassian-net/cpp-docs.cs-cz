@@ -1,5 +1,5 @@
 ---
-title: DefaultValue | Microsoft Docs
+title: Výchozí hodnota | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873414"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569983"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Umožňuje specifikaci výchozí hodnota pro typové volitelný parametr.  
+Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -39,12 +38,12 @@ Umožňuje specifikaci výchozí hodnota pro typové volitelný parametr.
  Výchozí hodnota pro parametr.  
   
 ## <a name="remarks"></a>Poznámky  
- **Defaultvalue** atribut C++ má stejné funkce jako [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL atribut.  
+ **Defaultvalue** C++ atribut má stejné funkce jako [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje metoda rozhraní pomocí **defaultvalue** atribut:  
+ Následující kód ukazuje metodu rozhraní pomocí **defaultvalue** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -73,8 +72,8 @@ __interface IFireTabCtrl : IDispatch {
 |||  
 |-|-|  
 |**Platí pro**|Parametr rozhraní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -82,8 +81,8 @@ __interface IFireTabCtrl : IDispatch {
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy parametru](../windows/parameter-attributes.md)   
- [na více systémů](../windows/out-cpp.md)   
- [retval –](../windows/retval.md)   
+ [navýšení kapacity](../windows/out-cpp.md)   
+ [retval](../windows/retval.md)   
  [V](../windows/in-cpp.md)   
  [pointer_default –](../windows/pointer-default.md)   
- [Jedinečné](../windows/unique-cpp.md)   
+ [Jedinečný](../windows/unique-cpp.md)   

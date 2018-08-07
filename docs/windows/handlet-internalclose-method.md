@@ -1,5 +1,5 @@
 ---
-title: Handlet::internalclose – metoda | Microsoft Docs
+title: Handlet::internalclose – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874142"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568638"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose – metoda
-Zavře aktuální objekt HandleT.  
+Zavře aktuální **HandleT** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ virtual bool InternalClose();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud aktuální HandleT uzavřený úspěšně; v opačném `false`.  
+ **Hodnota TRUE** Pokud aktuální **handlet –** zavření úspěšně; v opačném případě **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- InternalClose() je chráněný.  
+ **InternalClose()** je **chráněné**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

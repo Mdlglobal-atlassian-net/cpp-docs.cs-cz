@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: deklarace přídavných ukazatelů a typů hodnot | Microsoft Docs'
+title: 'Postupy: deklarace přídavných ukazatelů a typů hodnot | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569752"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Postupy: Deklarace přídavných ukazatelů a typů hodnot
-Typ hodnoty mohou být implicitně do pole. Potom můžete deklarovat Připnutí ukazatel na objekt typu hodnota samostatně a použití **pin_ptr** zabalené hodnoty typu.  
+Hodnotový typ jde použít boxing implicitně. Pak může deklarovat ukazatel Připnutí na objekt typu hodnoty samostatně a použití **pin_ptr** na hodnotový typu.  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Výstup  
   
-```  
+```Output  
 8  
 7  
 7  

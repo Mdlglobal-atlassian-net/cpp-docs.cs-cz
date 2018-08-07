@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: deklarace vnitřních ukazatelů s použitím klíčového slova const (C + +/ CLI) | Microsoft Docs'
+title: 'Postupy: deklarace vnitřních ukazatelů s použitím klíčového slova const (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a71de1ab8d0ae081274616d4c22a4d7f39c0bbbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fdab21e0e8b9ad0b6fb1d58ba7d1bcd7020ffd10
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875042"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568612"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C++/CLI)
-Následující příklad ukazuje způsob použití `const` v deklaraci vnitřní ukazatel.  
+Následující příklad ukazuje, jak používat **const** v deklaraci vnitřní ukazatel.  
   
 > [!IMPORTANT]
->  Tato funkce jazyk podporuje **/CLR** – možnost kompilátoru, ale nejsou nástrojem **/ZW** – možnost kompilátoru.  
+>  Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // interior_ptr_const.cpp  
 // compile with: /clr  
 using namespace System;  

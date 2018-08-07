@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::unmarshalinterface – metoda | Microsoft Docs
+title: Ftmbase::unmarshalinterface – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877716"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570025"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface – metoda
-Inicializuje nově vytvořený proxy a vrátí ukazatele rozhraní zda proxy serveru.  
+Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pStm`  
- Ukazatel na datový proud, ze kterého má být zařazeny ukazatel rozhraní.  
+ *pStm*  
+ Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.  
   
- `riid`  
- Odkaz na identifikátor rozhraní být zařazeny.  
+ *riid*  
+ Odkaz na identifikátor rozhraní bude zrušeno.  
   
- `ppv`  
- Po této operaci dokončení adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadované v `riid`. Pokud tato operace úspěšná, *`ppv` obsahuje požadované rozhraní ukazatele rozhraní být zařazeny.  
+ *ppv*  
+ Když tato operace dokončí, adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadovaný v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadované rozhraní ukazatel rozhraní, bude zrušeno.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota E_NOINTERFACE nebo E_FAIL.  
+ S_OK v případě úspěchu; jinak E_NOINTERFACE nebo E_FAIL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ftm.h  

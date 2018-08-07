@@ -1,5 +1,5 @@
 ---
-title: Položka | Microsoft Docs
+title: Položka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872312"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569635"
 ---
 # <a name="entry"></a>entry
-V modulu určením vstupní bod v knihovně DLL Určuje exportované funkce nebo konstanta.  
+Určuje exportované funkce nebo konstanta v modulu určením vstupní bod v knihovně DLL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `id`  
- ID vstupního bodu.  
+ *id*  
+ ID vstupní bod.  
   
 ## <a name="remarks"></a>Poznámky  
- **Položka** atribut C++ má stejné funkce jako [položka](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL atribut.  
+ **Položka** C++ atribut má stejné funkce jako [položka](http://msdn.microsoft.com/library/windows/desktop/aa366815) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [idl_module –](../windows/idl-module.md) pro příklad použití **položka**.  
+ Podívejte se na příklad pro [možnost idl_module](../windows/idl-module.md) pro příklad použití **položka**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -53,8 +52,8 @@ V modulu určením vstupní bod v knihovně DLL Určuje exportované funkce nebo
 |||  
 |-|-|  
 |**Platí pro**|`idl_module` Atribut|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

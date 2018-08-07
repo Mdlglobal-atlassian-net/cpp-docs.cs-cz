@@ -1,5 +1,5 @@
 ---
-title: Handletraits::Close – metoda | Microsoft Docs
+title: Handletraits::Close – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f45f95fb1b060f3892def6dc2962bfffef70c77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875611"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569827"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close – metoda
-Zavře Zadaný popisovač.  
+Zavře určený.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Popisovač zavřete.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Obslužná rutina zavřete.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** pokud zpracování `h` uzavřený úspěšně; v opačném **false**.  
+ **Hodnota TRUE** pokud zpracování *h* zavření úspěšně; v opačném případě **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

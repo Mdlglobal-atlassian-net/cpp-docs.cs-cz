@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení adresáře souborů k zahrnutí pro prostředky | Microsoft Docs'
+title: 'Postupy: určení adresáře souborů k zahrnutí pro prostředky | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875276"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569537"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Postupy: Určení adresářů souborů k zahrnutí pro prostředky
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Určení adresářů include pro konkrétní soubor .rc  
   
-1.  Soubor v Průzkumníku řešení klikněte pravým tlačítkem a vyberte **vlastnosti** z místní nabídky.  
+1.  Klikněte pravým tlačítkem na soubor .rc v Průzkumníku řešení a vyberte **vlastnosti** z místní nabídky.  
   
-2.  V **stránky vlastností** dialogové okno, klikněte **prostředky** uzlu v levém podokně, pak zadejte další zahrnuté adresáře v **další adresáře souborů k zahrnutí** Vlastnost.  
+2.  V **stránky vlastností** dialogové okno, klikněte na tlačítko **prostředky** uzlu v levém podokně, pak zadejte další adresáře include **další adresáře souborů k zahrnutí** Vlastnost.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide. Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti, najdete v části [návod: použití prostředků pro lokalizaci pomocí technologie ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md)   
- [TN035: Použití více zdrojových souborů a hlavičkových souborů pomocí aplikace Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
+ [Prostředek zahrnuje dialogové okno](../windows/resource-includes-dialog-box.md)   
+ [TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
  [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Editory prostředků](../windows/resource-editors.md)

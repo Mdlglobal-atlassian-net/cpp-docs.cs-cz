@@ -1,5 +1,5 @@
 ---
-title: Skrytá | Microsoft Docs
+title: skryté | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e813ce223bad48aab3807bb01e042190d28aef74
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879682"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568667"
 ---
 # <a name="hidden"></a>hidden
-Určuje, že položka existuje, ale by se neměly zobrazovat v prohlížeči uživatele.  
+Označuje, že položka existuje, ale nebude se zobrazovat v prohlížeči uživatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [hidden]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Skrytá** atribut C++ má stejné funkce jako [Skrytá](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL atribut.  
+ **Skryté** C++ atribut má stejné funkce jako [skryté](http://msdn.microsoft.com/library/windows/desktop/aa366861) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) příklad použití **Skrytá**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **skryté**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Určuje, že položka existuje, ale by se neměly zobrazovat v prohlížeči už
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`, **třída**, `struct`, metoda, vlastnost|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**Třída typu coclass** (při použití **třída** nebo `struct`)|  
+|**Platí pro**|**rozhraní**, **třídy**, **struktura**, metoda, vlastnost|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**coclass** (při použití u **třídy** nebo **struktura**)|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -57,5 +55,5 @@ Určuje, že položka existuje, ale by se neměly zobrazovat v prohlížeči už
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy rozhraní](../windows/interface-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   

@@ -1,5 +1,5 @@
 ---
-title: first_is – | Microsoft Docs
+title: first_is – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875003"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569260"
 ---
 # <a name="firstis"></a>first_is
-Určuje index první prvek pole má být přenesen.  
+Určuje index první prvek pole předávají.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *výraz*  
+### <a name="parameters"></a>Parametry  
+ *Výraz*  
  Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.  
   
 ## <a name="remarks"></a>Poznámky  
- **First_is –** atribut C++ má stejné funkce jako [first_is –](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL atribut.  
+ **First_is –** C++ atribut má stejné funkce jako [first_is –](http://msdn.microsoft.com/library/windows/desktop/aa366831) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje různé způsoby, kterými chcete zadat část do pole:  
+ Následující kód ukazuje různé způsoby, jak zadat oddíl v poli:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,16 +71,16 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**Platí pro**|Pole v `struct` nebo **– typ union**, rozhraní parametr, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atributy parametru](../windows/parameter-attributes.md)   
  [last_is –](../windows/last-is.md)   
  [max_is –](../windows/max-is.md)   

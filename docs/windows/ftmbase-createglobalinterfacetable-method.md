@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::createglobalinterfacetable – metoda | Microsoft Docs
+title: Ftmbase::createglobalinterfacetable – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872390"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569001"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable – metoda
-Vytvoří tabulku globální rozhraní (GIT).  
+Vytvoří globální tabulku rozhraní (GIT).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `git`  
- Když tato operace dokončí, ukazatel na tabulku globální rozhraní.  
+### <a name="parameters"></a>Parametry  
+ *Git*  
+ Když tato operace dokončí, ukazatel na globální tabulku rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu "IGlobalInterfaceTable" v "COM – rozhraní" dílčí téma tématu "COM odkaz" v knihovně MSDN.  
+ Další informace najdete v tématu "IGlobalInterfaceTable" v "Rozhraní modelu COM" Tematická "Odkaz modelu COM" tématu v knihovně MSDN.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** ftm.h  

@@ -1,5 +1,5 @@
 ---
-title: db_param – | Microsoft Docs
+title: db_param – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880688"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569440"
 ---
 # <a name="dbparam"></a>db_param
-Přidruží zadané členské proměnné vstupní nebo výstupní parametr a vymezuje proměnnou.  
+Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ Přidruží zadané členské proměnné vstupní nebo výstupní parametr a vym
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `ordinal`  
- Číslo sloupce (**DBCOLUMNINFO** pořadí) odpovídající pole v sadě řádků, do kterého se mají vázat data.  
+ *Pořadí*  
+ Číslo sloupce (DBCOLUMNINFO pořadí), který je odpovídající pole v dané sadě řádků, ke kterému chcete svázat data.  
   
  *paramtype* (volitelné)  
- Typ nastavení parametru. Zprostředkovatelé podporují pouze typy vstupně-výstupní parametr, které podporují základní zdroj dat. Typ je kombinací jednoho nebo více **DBPARAMIOENUM** hodnoty:  
+ Typ, který má nastavit pro parametr. Podporují pouze vstupně-výstupní typy parametrů, které podporují podkladovému zdroji dat. Typ je kombinace jedné nebo více hodnot DBPARAMIOENUM:  
   
--   **DBPARAMIO_INPUT** vstupní parametr.  
+-   DBPARAMIO_INPUT vstupního parametru.  
   
--   **DBPARAMIO_OUTPUT** výstupní parametr.  
+-   DBPARAMIO_OUTPUT výstupní parametr.  
   
--   **DBPARAMIO_NOTPARAM** přistupující objekt nemá žádné parametry. Nastavení **eParamIO** na tuto hodnotu v řádku přístupové objekty upozorní uživatele, že parametry jsou ignorovány.  
+-   DBPARAMIO_NOTPARAM přistupující objekt nemá žádné parametry. Nastavení `eParamIO` na tuto hodnotu v řádku přistupující objekty upozorňuje uživatele, že parametry budou ignorovány.  
   
  *Hodnota DbType* (volitelné)  
- OLE DB [typ ukazatele](https://msdn.microsoft.com/en-us/library/ms711251.aspx) položku sloupce.  
+ OLE DB [indikátor typu](https://msdn.microsoft.com/library/ms711251.aspx) pro vstupní sloupec.  
   
  *přesnost* (volitelné)  
- Přesnost má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis **bPrecision** element [DBBINDING struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *škálování* (volitelné)  
- Škálování, který se má použít pro sloupec položku. Podrobnosti najdete v tématu Popis **bScale** element [DBBINDING struktura](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Stav* (volitelné)  
- Členské proměnné používané pro udržení stav daného sloupce. Stav označuje, zda hodnota sloupce je hodnota dat nebo s jinou hodnotou, například **NULL**. Možné hodnoty, najdete v části [stav](https://msdn.microsoft.com/en-us/library/ms722617.aspx) v *referenční příručka programátora technologie OLE DB*.  
+ Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*.  
   
  *Délka* (volitelné)  
  Členské proměnné používané pro udržení velikost sloupce v bajtech.  
   
 ## <a name="remarks"></a>Poznámky  
- **db_param –** definuje parametry, můžete použít v příkazech; proto ji používáte s **db_command**. Například můžete použít **db_param –** pro svázání parametrů v dotazu SQL nebo uložené procedury. Parametry v uložené proceduře jsou rozlišeny pomocí otazník (?) a byste měli vytvořit vazbu datových členů v pořadí, ve kterém se zobrazí parametry.  
+ **db_param –** definuje parametry, můžete použít v příkazech; proto použít je s `db_command`. Například můžete použít **db_param –** pro svázání parametrů v dotazů SQL nebo úložné procedury. Parametry v uložené proceduře jsou rozlišeny pomocí otazník (?). proto byste měli vytvořit vazbu datové členy v pořadí parametrů.  
   
- **db_param –** vymezuje data členů, které mohou být zahrnuty v OLE DB `ICommandWithParameters`– na základě vazby. Nastaví typ parametru (vstup nebo výstup), typ OLE DB, přesnost, měřítko, stav a délka zadaného parametru. Tento atribut vloží makra příjemce technologie OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Každý člen označit s **db_param –** atribut bude zabírat jedna položka v mapě ve formě COLUMN_ENTRY.  
+ **db_param –** vymezuje členská data, která se může účastnit OLE DB `ICommandWithParameters`– na základě vazby. Nastaví typ parametru (vstupní nebo výstupní), typ OLE DB, přesnost, měřítko, stav a délka zadaného parametru. Tento atribut vloží makra příjemce technologie OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Každý člen můžete označit **db_param –** atribut budou zaměstnávat jednu položku na mapě ve formě COLUMN_ENTRY.  
   
- **db_param –** se používá ve spojení s buď [db_table](../windows/db-table.md) nebo [db_command](../windows/db-command.md) atributy.  
+ **db_param –** se používá ve spojení s oběma [db_table](../windows/db-table.md) nebo [db_command](../windows/db-command.md) atributy.  
   
- Pokud příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor přejmenuje třídy pro \_ *YourClassName*přistupujícího objektu, kde *YourClassName* je název, který jste zadali Třída a kompilátor také vytvoří třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd se zobrazí oba třídy.  
+ Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad vytvoří třídu příkazu podle postupu SalesbyYear uložené v databázi Northwind. Ho přiřadí první parametr v uložené proceduře pomocí `m_RETURN_VALUE` proměnnou a definuje jako výstupní parametr. Se přidružuje poslední dva parametry (vstupu) s `m_Beginning_Date` a `m_Ending_Date`.  
+ Následující příklad vytvoří třídu příkazu na základě SalesbyYear uložené procedury v databázi Northwind. Přidruží první parametr v uložené proceduře se `m_RETURN_VALUE` proměnnou a definuje jako výstupní parametr. Přidruží poslední dva parametry (vstupu) s `m_Beginning_Date` a `m_Ending_Date`.  
   
  V následujícím příkladu `nOutput` proměnné s výstupní parametr.  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -124,9 +123,9 @@ struct CSalesbyYear {
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`, člen, metoda, místní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **struktura**, člen, metoda, místní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

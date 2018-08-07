@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem | Microsoft Docs
+title: defaultcollelem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870907"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569882"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
-Používá pro optimalizaci kód jazyka Visual Basic.  
+Používá pro optimalizaci kódu jazyka Visual Basic.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Defaultcollelem** atribut C++ má stejné funkce jako [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL atribut.  
+ **Defaultcollelem** C++ atribut má stejné funkce jako [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje metoda rozhraní pomocí **defaultcollelem** atribut:  
+ Následující kód ukazuje metodu rozhraní pomocí **defaultcollelem** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -62,9 +60,9 @@ __interface IMyForm
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

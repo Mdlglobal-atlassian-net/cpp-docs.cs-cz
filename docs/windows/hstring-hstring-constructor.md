@@ -1,5 +1,5 @@
 ---
-title: Hstring::hstring – konstruktor | Microsoft Docs
+title: Hstring::hstring – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876875"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568768"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString – konstruktor
-Inicializuje novou instanci třídy HString.  
+Inicializuje novou instanci třídy **HString** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,16 +33,16 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hstr`  
+ *HSTR*  
  Popisovač HSTRING.  
   
- `other`  
- Existující objekt HString.  
+ *Ostatní*  
+ Existující **HString** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- První konstruktor inicializuje nový objekt HString, který je prázdný.  
+ První konstruktor inicializuje novou **HString** objekt, který je prázdný.  
   
- Druhý konstruktor inicializuje nový objekt HString na hodnotu existující `other` parametr a pak zničí `other` parametr.  
+ Druhý konstruktor inicializuje novou **HString** objektu na hodnotu stávající *jiných* parametr a potom zničí *jiných* parametru.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: Vyplnění ohraničené oblasti obrázku barvou (Editor obrázků pro ikony) | Microsoft Docs
+title: Vyplnění ohraničené oblasti obrázku barvou (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880566"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569869"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Vyplnění ohraničené oblasti obrázku barvou (editor obrázků pro ikony)
-Editor obrázků poskytuje **vyplnění** nástroj pro naplnění všechny uzavřené oblast bitové kopie s aktuální kreslení barvu nebo aktuální barvu pozadí.  
+Editor obrázků poskytuje **vyplnit** nástroj pro naplnění všechny uzavřené oblast obrázku s aktuální vykreslení barvy nebo aktuální barvu pozadí.  
   
 > [!TIP]
->  Popisy tlačítek Zobrazit při přesunutí ukazatele nad tlačítka panelu nástrojů. Tyto tipy můžete identifikovat funkce každé tlačítko.  
+>  Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.  
   
 ### <a name="to-use-the-fill-tool"></a>Použití nástroje výplně  
   
-1.  Na **Editor obrázků** panelu nástrojů (nebo **Image** nabídce **nástroje** příkaz), klikněte na tlačítko **vyplnění** nástroj.  
+1.  Na **Editor obrázků** nástrojů (nebo **Image** nabídce **nástroje** příkaz), klikněte na tlačítko **vyplnit** nástroj.  
   
-2.  V případě potřeby vyberte Kreslení barev: V [barevná paleta](../windows/colors-window-image-editor-for-icons.md), klikněte na levé tlačítko myši pro výběr barev popředí nebo pravým tlačítkem myši a vyberte barvu pozadí.  
+2.  V případě potřeby vyberte vykreslení barvy: V [barvy palety](../windows/colors-window-image-editor-for-icons.md), klikněte na tlačítko levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.  
   
-3.  Přesunout **výplně** nástroj do oblasti, kterou chcete vyplnit.  
+3.  Přesunout **výplně** nástroj k oblasti, které chcete vyplnit.  
   
-4.  Kliknutím na tlačítko myši doleva nebo doprava vyplnit barvu popředí nebo barvu pozadí.  
+4.  Kliknutím na tlačítko myši doleva nebo doprava vyplnit barvu popředí nebo pozadí.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   

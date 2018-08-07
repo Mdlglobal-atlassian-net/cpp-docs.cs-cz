@@ -1,5 +1,5 @@
 ---
-title: Překlopení obrázku (Editor obrázků pro ikony) | Microsoft Docs
+title: Překlopení obrázku (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4332e1de44682dbd37b67c71bdcc4c107c98a3da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0cb6c655bdc8da5341a28449a25796ad59e453b4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873898"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569427"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Překlopení obrázku (editor obrázků pro ikony)
-Můžete překlopit nebo otočit obrázek:  
+Můžete překlopit nebo otočení obrázku na:  
   
--   Vytvořte zrcadlený obraz původního.  
+-   Vytvoření zrcadlový obraz původní.  
   
--   Zapněte opačně bitovou kopii.  
+-   Vzhůru nohama zapněte na obrázku.  
   
--   Otočí obrázek vpravo 90 stupňů najednou.  
+-   Otočit o 90 stupňů obrázek vpravo.  
   
-### <a name="to-flip-the-image-horizontally-mirror-image"></a>K převrácení bitovou kopii vodorovně (zrcadlený obraz)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Chcete-li Převrátit obrázek vodorovně (zrcadlový obraz)  
   
-1.  Z **Image** nabídce zvolte **Překlopit vodorovně**.  
+1.  Z **Image** nabídce zvolte **Převrátit vodorovně**.  
   
-### <a name="to-flip-the-image-vertically-turn-upside-down"></a>K převrácení bitovou kopii svisle (zapnout obráceně)  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Chcete-li Převrátit obrázek svisle (zapnout vzhůru nohama)  
   
-1.  Z **Image** nabídce zvolte **Překlopit svisle**.  
+1.  Z **Image** nabídce zvolte **Převrátit svisle**.  
   
-### <a name="to-rotate-the-image-90-degrees"></a>Chcete-li otočit bitovou kopii 90 stupňů  
+### <a name="to-rotate-the-image-90-degrees"></a>Otočí obrázek 90 stupňů  
   
-1.  Z **Image** nabídce zvolte **otočit 90 stupňů**.  
+1.  Z **Image** nabídce zvolte **otočit o 90 stupňů**.  
   
     > [!NOTE]
-    >  Můžete také [klávesy akcelerátoru (místní)](../windows/accelerator-keys-image-editor-for-icons.md) pro tyto příkazy nebo přístup příkazy z místní nabídky (kliknutím mimo bitovou kopii v editoru obrázků).  
+    >  Můžete také použít [klávesy akcelerátoru (místní)](../windows/accelerator-keys-image-editor-for-icons.md) pro tyto příkazy nebo přístupu k příkazům v místní nabídce (kliknutím mimo bitové kopie v editoru obrázků).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

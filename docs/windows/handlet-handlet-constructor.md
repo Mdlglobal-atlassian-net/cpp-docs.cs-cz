@@ -1,5 +1,5 @@
 ---
-title: Handlet::handlet – konstruktor | Microsoft Docs
+title: Handlet::handlet – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881894"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569508"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT – konstruktor
-Inicializuje novou instanci třídy HandleT.  
+Inicializuje novou instanci třídy **HandleT** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
+### <a name="parameters"></a>Parametry  
+ *h*  
  Popisovač.  
   
 ## <a name="remarks"></a>Poznámky  
- První konstruktor inicializuje objekt HandleT, který není platný popisovač pro objekt. Druhý konstruktor vytvoří nový objekt HandleT z parametru `h`.  
+ První konstruktor inicializuje **HandleT** objekt, který není platný popisovač pro objekt. Druhý konstruktor vytvoří novou **handlet –** objekt z parametru *h*.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

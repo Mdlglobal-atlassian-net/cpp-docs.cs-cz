@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání podpory MFC do souborů skriptu prostředků | Microsoft Docs'
+title: 'Postupy: Přidání podpory MFC do souborů skriptu prostředků | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,43 +20,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879793"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569739"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Postupy: Přidání podpory MFC do souborů skriptu prostředků
-Za normálních okolností při vytváření aplikace knihovny MFC pro Windows pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), Průvodce generuje základní sadu soubory (včetně souboru skriptu (.rc) prostředků), který obsahuje hlavní funkce Microsoft Foundation třídy (MFC). Ale pokud upravujete soubor .rc pro aplikace Windows, která není založena na MFC, následující funkce, které jsou specifické pro rozhraní MFC framework nejsou k dispozici:  
+Za normálních okolností při sestavení aplikace knihovny MFC pro používání Windows [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), průvodce vygeneruje základní sadu souborů (včetně souboru prostředků skriptů (.rc)), který obsahuje základní funkce Microsoft Foundation třídy (MFC). Nicméně pokud upravujete soubor .rc pro aplikaci Windows, která není založena na knihovně MFC, následující funkce specifické pro rozhraní knihovny MFC nejsou k dispozici:  
   
--   Průvodci kódem MFC (označovaly jako "[MFC ClassWizard](http://msdn.microsoft.com/en-us/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
+-   Průvodci kódem knihovny MFC (dříve označované jako "[MFC ClassWizard](http://msdn.microsoft.com/98dc2434-ba93-4e0b-b084-1a4bc26cdf1e)")  
   
--   Výzva řetězce nabídky  
+-   Řetězce výzev nabídky  
   
--   Zobrazovat obsah pro ovládací prvky pole se seznamem  
+-   Obsah seznamu pro pole se seznamem  
   
 -   Hostování ovládacího prvku ActiveX  
   
- Podpora MFC ale můžete přidat existující soubory .rc, které nemají ho.  
+ Můžete však přidat podporu knihovny MFC do existujících .rc souborů, které ji nemají.  
   
-### <a name="to-add-mfc-support-to-rc-files"></a>Přidání podpory MFC do soubory .rc  
+### <a name="to-add-mfc-support-to-rc-files"></a>Přidání podpory MFC do souborů .rc  
   
 1.  Otevření souboru skriptu prostředků.  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V [zobrazení prostředků](../windows/resource-view-window.md), zvýrazněte složce prostředky (například MFC.rc).  
+2.  V [zobrazení prostředků](../windows/resource-view-window.md), zvýrazněte složku prostředků (například MFC.rc).  
   
-3.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), nastavte **MFC režimu** vlastnost **True**.  
+3.  V [okno vlastností](/visualstudio/ide/reference/properties-window), nastavte **MFC režimu** vlastnost **True**.  
   
     > [!NOTE]
-    >  Kromě nastavení tento příznak, musí být soubor .rc součástí projektu knihovny MFC. Například pouze nastavení **MFC režimu** k **True** na soubor .rc ve Win32 projektu nebude získáte žádnou z funkcí MFC.  
+    >  Kromě nastavení tohoto příznaku soubor .rc musí být součástí projektu knihovny MFC. Například pouhé nastavení **MFC režimu** k **True** na souboru .rc v Win32 projektu vám neposkytne žádné funkce knihovny MFC.  
   
-
-  
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  MFC  
   

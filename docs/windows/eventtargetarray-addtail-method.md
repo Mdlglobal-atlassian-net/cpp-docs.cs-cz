@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::addtail – metoda | Microsoft Docs
+title: Eventtargetarray::addtail – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872280"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570171"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `element`  
- Ukazatel na obslužné rutiny události pro připojení.  
+### <a name="parameters"></a>Parametry  
+ *– Element*  
+ Ukazatel na obslužnou rutinu události pro připojení.  
   
 ## <a name="remarks"></a>Poznámky  
- Přidá zadanou událost obslužné rutiny na konec interní pole obslužné rutiny událostí.  
+ Obslužné rutiny zadané události připojí na konec vnitřní pole obslužných rutin událostí.  
   
- AddTail() se má používat pouze EventSource – třída interně.  
+ **AddTail()** je určena pro použití interně pomocí pouze `EventSource` třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  
@@ -50,5 +50,5 @@ void AddTail(
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [EventTargetArray – třída](../windows/eventtargetarray-class.md)   
+ [Eventtargetarray – třída](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

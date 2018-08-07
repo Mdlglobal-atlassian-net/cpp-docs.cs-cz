@@ -1,5 +1,5 @@
 ---
-title: EventSource::targets_ – datový člen | Microsoft Docs
+title: EventSource::targets_ – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871741"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568846"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ – datový člen
-Pole jeden nebo více obslužných rutin událostí.  
+Pole jednoho nebo více obslužných rutin událostí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud dojde k události, která je reprezentována aktuální objekt EventSource, jsou volány obslužné rutiny událostí.  
+ Pokud událost, která je reprezentována aktuální **EventSource** dochází k objektu, jsou volány obslužné rutiny události.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

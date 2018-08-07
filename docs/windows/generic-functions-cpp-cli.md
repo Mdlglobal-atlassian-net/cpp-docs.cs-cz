@@ -1,5 +1,5 @@
 ---
-title: Obecné funkce (C + +/ CLI) | Microsoft Docs
+title: Obecné funkce (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,33 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878831"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568875"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
-Obecné funkce je funkce, která je deklarovaný s parametry typu. Při volání, skutečné typy se používají místo parametrů typu.  
+Obecné funkce je funkce, která je deklarována s parametry typu. Při volání skutečné typy používané místo parametry typu.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
  **Poznámky**  
   
- Tato funkce se nevztahuje na všech platformách.  
+ Tato funkce se nevztahují na všechny platformy.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  **Poznámky**  
   
- Tato funkce není podporována v prostředí Windows Runtime.  
+ Tato funkce není podporována v modulu Windows Runtime.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- Obecné funkce je funkce, která je deklarovaný s parametry typu. Při volání, skutečné typy se používají místo parametrů typu.  
+ Obecné funkce je funkce, která je deklarována s parametry typu. Při volání skutečné typy používané místo parametry typu.  
   
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 [attributes] [modifiers]  
@@ -56,49 +56,49 @@ return-type identifier<type-parameter identifier(s)>
 {function-body}  
 ```  
   
- **Parametry**  
+### <a name="parameters"></a>Parametry 
   
  *atributy* (volitelné)  
- Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
+ Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
   
  *Modifikátory* (volitelné)  
- Modifikátor pro funkce, například statický.  `virtual` není povolená, protože virtuální metody nesmí být obecný.  
+ Modifikátor pro funkce, jako je statická.  **virtuální** není povolená, protože virtuální metody nemusí být obecný.  
   
  *Návratový typ*  
- Typ vrácený metodou Pokud je návratový typ void, není potřeba žádnou návratovou hodnotu.  
+ Typ vrácený metodou Pokud je návratový typ void, vyžádáním žádnou návratovou hodnotu.  
   
- *Identifikátor*  
+ *identifikátor*  
  Název funkce.  
   
  *parametr typu identifikátory*  
- Seznam identifikátorů oddělených čárkami.  
+ Seznam identifikátorů oddělených čárkou.  
   
- *Parametry formal* (volitelné)  
+ *formální parametry* (volitelné)  
  Seznam parametrů.  
   
  *Typ parametru omezení klauzule*  
- To určuje omezení na typy, které mohou být použity jako argumenty typu a má podobu uvedený v [omezení obecných parametrů typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Toto určuje omezení na typy, které mohou používat jako argumenty typu a má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
  *tělo funkce*  
- Text metodu, která mohou odkazovat na identifikátory parametr typu.  
+ Tělo metody, která mohou odkazovat na identifikátory parametr typu.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
- Obecné funkce jsou funkce deklarovat s parametr obecného typu. Mohou být metody třídy nebo struktura nebo samostatnou funkcí. Jeden obecný deklarace implicitně deklaruje řadu funkcí, které se liší pouze v rámci nahrazování jiný skutečný typ pro parametr obecného typu.  
+ Obecné funkce jsou funkce deklarované s parametr obecného typu. Mohou být metody do třídy nebo struktury nebo samostatné funkce. Jeden obecný deklarace implicitně deklaruje název řady funkcí, které se liší pouze v rámci nahrazování jiný typ skutečného parametru obecného typu.  
   
- V jazyce Visual C++ nemusí být konstruktory třídě nebo struktuře deklarovat s parametry obecného typu.  
+ V jazyce Visual C++ nemůže být deklarovaný třídy nebo struktury konstruktory s parametry obecného typu.  
   
- Při volání, skutečný typ nahrazuje parametr obecného typu. Skutečný typ je možné explicitně zadat lomené závorky pomocí syntaxe podobné volání funkce šablony. Pokud volána bez parametrů typu, pokusí se kompilátor odvodit skutečný typ z parametry zadané ve volání funkce. Pokud argument určený typu nelze odvodit z použité parametry, kompilátor ohlásí chybu.  
+ Při volání, parametr obecného typu je nahrazen skutečným typem. Skutečný typ může být explicitně zadán v ostrými závorkami pomocí syntaxe podobné volání šablony funkce. Pokud je volána bez parametrů typu, kompilátor se pokusí odvodit skutečný typ z parametry zadané ve volání funkce. Pokud argumentu zamýšlený typ nelze odvodit z parametrů použitých, kompilátor oznámí chybu.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- Následující příklad kódu ukazuje obecné funkce.  
+ Následující vzorový kód ukazuje obecnou funkci.  
   
-```  
+```cpp  
 // generics_generic_function_1.cpp  
 // compile with: /clr  
 generic <typename ItemType>  
@@ -131,9 +131,9 @@ int main() {
   
  **Příklad**  
   
- Obecné funkce mohou být přetíženy na základě podpis nebo Arita, počet parametry typu na funkci. Obecné funkce také mohou být přetíženy s funkcemi neobecnou se stejným názvem, tak dlouho, dokud se liší v některé parametry typu funkce. Například mohou být přetíženy následující funkce:  
+ Obecné funkce mohou být přetíženy podle podpis nebo Arita, počet parametrů typu na funkci. Obecné funkce také mohou být přetíženy s neobecné funkce se stejným názvem, tak dlouho, dokud funkce se liší v některé parametry typu. Například mohou být přetíženy následující funkce:  
   
-```  
+```cpp  
 // generics_generic_function_2.cpp  
 // compile with: /clr /c  
 ref struct MyClass {  
@@ -149,9 +149,9 @@ ref struct MyClass {
   
  **Příklad**  
   
- Následující příklad používá obecné funkce Najít první prvek v poli. Deklaruje `MyClass`, který dědí ze základní třídy `MyBaseClass`. `MyClass` obsahuje obecné funkci `MyFunction`, která volá jinou funkci Obecné, `MyBaseClassFunction`, v rámci základní třídy. V **hlavní**, obecné funkce `MyFunction`, se nazývá pomocí jiného typu argumentů.  
+ V následujícím příkladu používá obecná funkce k vyhledání prvního prvku v poli. Deklaruje `MyClass`, který dědí ze základní třídy `MyBaseClass`. `MyClass` obsahuje obecná funkce `MyFunction`, která volá jinou funkci Obecné, `MyBaseClassFunction`, v rámci základní třídy. V `main`, obecná funkce `MyFunction`, je volána pomocí jiného typu argumentů.  
   
-```  
+```cpp  
 // generics_generic_function_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
  [Obecné typy](../windows/generics-cpp-component-extensions.md)

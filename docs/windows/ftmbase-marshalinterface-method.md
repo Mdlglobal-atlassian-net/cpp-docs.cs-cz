@@ -1,5 +1,5 @@
 ---
-title: Ftmbase::marshalinterface – metoda | Microsoft Docs
+title: Ftmbase::marshalinterface – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874613"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570054"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface – metoda
-Zapíše do datového proudu data potřebná pro inicializaci objektu proxy v některé procesu klienta.  
+Zapíše do datového proudu data potřebná k inicializaci objektu proxy v nějaký proces klienta.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,32 +40,32 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `pStm`  
- Ukazatel do datového proudu má být použit při zařazování.  
+### <a name="parameters"></a>Parametry  
+ *pStm*  
+ Ukazatel na datový proud, které se použijí při zařazování.  
   
- `riid`  
- Odkaz na identifikátor rozhraní být zařazena. Toto rozhraní musí být odvozen z rozhraní IUnknown.  
+ *riid*  
+ Odkaz na identifikátor rozhraní zařadit. Toto rozhraní musí být odvozen od `IUnknown` rozhraní.  
   
- `pv`  
- Ukazatel na ukazatel rozhraní zařazována; může mít hodnotu NULL, pokud má volající nemá požadované rozhraní ukazatel.  
+ *PV*  
+ Ukazatel na ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.  
   
- `dwDestContext`  
- Cílový kontext, kde má být zařazeny specifikované rozhraní.  
+ *dwDestContext*  
+ Cílový kontext, kde má být sdružení daného rozhraní.  
   
- Zadejte jeden nebo více hodnot výčtu MSHCTX.  
+ Zadejte jednu nebo více hodnot výčtu MSHCTX.  
   
- Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu na stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
+ Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Vyhrazeno pro budoucí použití; musí být nula.  
   
- `mshlflags`  
- Určuje, jestli má být přenesen zpět do procesu klienta je data, která mají být zařazené – obvyklý případ – nebo zapisovat do globální tabulky, kde se dá načíst více klientů.  
+ *mshlflags*  
+ Určuje, zda data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  S_OK  
- Ukazatel rozhraní byl úspěšně zařazené.  
+ Úspěšně byl zařazen ukazatel rozhraní.  
   
  E_NOINTERFACE  
  Zadané rozhraní není podporováno.  

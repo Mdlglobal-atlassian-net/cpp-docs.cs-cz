@@ -1,5 +1,5 @@
 ---
-title: Výjimka zpracování (rozšíření komponent C++) | Microsoft Docs
+title: Zpracování výjimek (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877732"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568651"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Zpracování výjimek (rozšíření komponent C++)
-Aplikace, kompilovat s **/ZW** – možnost kompilátoru nebo **/CLR** – možnost kompilátoru používejte *výjimky* ke zpracování neočekávaným chybám při spuštění programu. Následující témata popisují zpracování výjimek v buď C + +/ CX nebo C + +/ CLI aplikace.  
+Zkompilovaná aplikace `/ZW` – možnost kompilátoru nebo `/clr` – možnost kompilátoru používají *výjimky* zpracování neočekávaných chyb během provádění programu. Následující témata popisují zpracování výjimek v obou C + +/ CX nebo C + +/ CLI aplikací.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Základní koncepty při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Popisuje vyvolání výjimky a pomocí `try` / `catch` bloky.  
+ Popisuje generování výjimek a pomocí **zkuste**/**catch** bloky.  
   
- [Rozdíly v chování zpracování výjimek v režimu kompilace/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- Popisuje rozdíly od standardní chování zpracování výjimek jazyka C++.  
+ [Rozdíly v chování zpracování výjimek v/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ Tento článek popisuje rozdíly oproti standardní chování zpracování výjimek jazyka C++.  
   
  [finally](../dotnet/finally.md)  
- Popisuje postup použití finally – klíčové slovo.  
+ Tento článek popisuje způsob použití finally – klíčové slovo.  
   
  [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Ukazuje, jak neošetřených výjimek, se dají zachytit.  
+ Ukazuje, jak neošetřené výjimky mohou být zachyceny.  
   
  [Postupy: Zachycení výjimek v nativním kódu z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- Popisuje, jak zachytit výjimky CLR a C++ v nativním kódu.  
+ Popisuje, jak zachytávat výjimky CLR a C++ v nativním kódu.  
   
  [Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
  Ukazuje, jak zachytit všechny neošetřené výjimky.  

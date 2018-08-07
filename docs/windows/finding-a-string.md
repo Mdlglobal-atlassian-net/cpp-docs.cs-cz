@@ -1,5 +1,5 @@
 ---
-title: Hledání řetězce | Microsoft Docs
+title: Hledání řetězce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,40 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3763baf0f085dc72040ab22c9efd38e8aa8068f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c91e9523b063e9decbcb97ce9f5d8229a9c670b2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875731"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568933"
 ---
 # <a name="finding-a-string"></a>Hledání řetězce
-Můžete vyhledat jednoho nebo více řetězců v tabulce řetězců a použít [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) s **hledání v souborech** příkazu (**upravit** nabídky) najít všechny instance řetězce odpovídající vzor.  
+Můžete vyhledat jeden nebo více řetězců v tabulce řetězců a použít [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) s **najít v souborech** příkazu (**upravit** nabídky) najít všechny instance řetězce které odpovídají vzoru.  
   
-### <a name="to-find-a-string-in-the-string-table"></a>Najít řetězec do tabulky řetězců  
+### <a name="to-find-a-string-in-the-string-table"></a>K vyhledání řetězce v tabulce řetězců  
   
-1.  Otevřít tabulku řetězec poklepáním na ikonu v [zobrazení prostředků](../windows/resource-view-window.md).  
+1.  Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Na **upravit** nabídky, klikněte na **najít a nahradit**, zvolte **najít**.  
+2.  Na **upravit** nabídky, klikněte na tlačítko **najít a nahradit**, klikněte na tlačítko **najít**.  
   
-3.  V **najít** pole, v rozevíracím seznamu vyberte předchozí hledaný řetězec nebo zadejte titulek textu nebo prostředku identifikátor řetězce, který chcete najít.  
+3.  V **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte titulek identifikátor textu nebo prostředku řetězce, které chcete najít.  
   
-4.  Vyberte některé z **najít** možnosti.  
+4.  Vyberte některou z **najít** možnosti.  
   
 5.  Klikněte na tlačítko **najít další**.  
   
     > [!TIP]
-    >  Chcete-li používat regulární výrazy při vyhledávání souborů, použijte **hledání v souborech** příkaz. Zadejte regulární výraz k odpovídá vzorku nebo klikněte na tlačítko napravo **najít** pole zobrazíte seznam vyhledávání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazena jako hledaný text v **najít** pole. Pokud používáte regulární výrazy, nezapomeňte **použít: regulární výrazy** je zaškrtnuté políčko.  
+    >  Chcete-li použít regulární výrazy při vyhledávání souborů, použijte **najít v souborech** příkazu. Zadejte regulární výraz k porovnání vzoru, nebo klikněte na tlačítko napravo **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole. Pokud používáte regulární výrazy, je nutné **použití: regulární výrazy** je zaškrtnuto políčko.  
   
- Informace o přidávání zdrojů do spravovaných projekty (ty, které cílí modul common language runtime), najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti, najdete v části [návod: lokalizace Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití zdrojů pro lokalizaci s technologií ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Editor řetězce](../windows/string-editor.md)   
-
