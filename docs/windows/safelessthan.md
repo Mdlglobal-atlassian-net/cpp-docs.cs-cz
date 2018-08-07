@@ -1,5 +1,5 @@
 ---
-title: SafeLessThan | Microsoft Docs
+title: SafeLessThan | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0188d3f08f0d4a06fb174163dc0a837e3dc9c041
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888396"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605776"
 ---
 # <a name="safelessthan"></a>SafeLessThan
-Určuje, zda je jedno číslo menší než jiné.  
+Určuje, zda je jedno číslo menší než jiný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,25 +37,25 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [v] `t`  
- První číslo. Toto musí být typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ První číslo. Musí se jednat o typ `T`.  
   
- [v] `u`  
- Druhé číslo. Musí se jednat o typ U.  
+ [in] *u*  
+ Druhé číslo. Musí se jednat o typ `U`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud `t` je menší než `u`jinak `false`.  
+ **Hodnota TRUE** Pokud *t* je menší než *u*; jinak vrátí hodnotu **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje standardní relační operátor, protože `SafeLessThan` umožňuje porovnat dva různé typy číslo.  
+ Tato metoda rozšiřuje standardní relační operátor protože **SafeLessThan** umožňuje porovnat dva různé typy číslo.  
   
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci jedno porovnání bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tato metoda by měl použít, pouze když jedné matematické operace musí být chráněny. Pokud existují více operací, měli byste použít `SafeInt` třída místo jednotlivých funkcí samostatné volání.  
+>  Tato metoda by měla sloužit pouze při jedné matematické operace musí být chráněné. Pokud je více operací, měli byste použít `SafeInt` třídy spíše než jednotlivé samostatné funkce volání.  
   
- Další informace o typech šablon T a U najdete v tématu [funkce jazyka SafeInt](../windows/safeint-functions.md).  
+ Další informace o typech šablon `T` a `U`, naleznete v tématu [SafeInt – funkce](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** safeint.h  

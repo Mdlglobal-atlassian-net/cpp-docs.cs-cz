@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset::getimplementediids – metoda | Microsoft Docs
+title: Runtimeclassbaset::getimplementediids – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892231"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603248"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru `implements`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ *implementuje* parametru.  
   
- `implements`  
- Ukazatel na typ určený parametrem `T`.  
+ *Implementuje*  
+ Ukazatel na typ určený parametrem *T*.  
   
- `iidCount`  
- Maximální počet ID rozhraní pro načtení.  
+ *iidCount*  
+ Maximální počet rozhraní ID pro načtení.  
   
- `iids`  
- Pokud tato operace dokončí úspěšně, pole ID implementována podle typu rozhraní `T`.  
+ *IID*  
+ Pokud se tato operace dokončí úspěšně, pole rozhraní implementovaný tímto typem ID *T*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující chybu.  
+ S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.  
   
 ## <a name="remarks"></a>Poznámky  
- Načte pole rozhraní ID, které jsou implementovány pomocí zadaného typu.  
+ Načte pole ID, které jsou implementovány pomocí zadaného typu rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

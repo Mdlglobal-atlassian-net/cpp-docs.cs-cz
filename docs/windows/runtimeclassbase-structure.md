@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbase – struktura | Microsoft Docs
+title: Runtimeclassbase – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888386"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602676"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Slouží k detekci RuntimeClass v [zkontrolujte](../windows/make-function.md) funkce.  
+ Slouží ke zjištění `RuntimeClass` v [zkontrolujte](../windows/make-function.md) funkce.  
   
- Runtimeclassbase – je prázdnou strukturou.  
+ **Runtimeclassbase –** je prázdná struktura.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `RuntimeClassBase`  

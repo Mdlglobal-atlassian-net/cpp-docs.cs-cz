@@ -1,5 +1,5 @@
 ---
-title: LCID | Microsoft Docs
+title: LCID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c36c4a53dc627af10b6c768cdc9bc9353cbd4877
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919bf90fad228a3d7b4f574072e5f315da6427d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877251"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602695"
 ---
 # <a name="lcid"></a>lcid
 Umožňuje předat funkci identifikátor národního prostředí.  
@@ -30,17 +30,15 @@ Umožňuje předat funkci identifikátor národního prostředí.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [lcid]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Lcid** C++ atribut implementuje funkce [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL atribut. Pokud chcete implementovat národní prostředí pro blok knihovny, použijte **lcid =** `lcid` parametru [modulu](../windows/module-cpp.md) atribut.  
+ **Lcid** C++ atribut implementuje funkce [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) atribut MIDL. Pokud chcete implementovat národní prostředí pro bloku knihovny, použijte **lcid =** `lcid` parametr [modulu](../windows/module-cpp.md) atribut.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_lcid.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -60,8 +58,8 @@ __interface IStatic {
 |||  
 |-|-|  
 |**Platí pro**|Parametr rozhraní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

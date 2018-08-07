@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::Release – metoda | Microsoft Docs
+title: Runtimeclass::Release – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888793"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607521"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release – metoda
-Provede operaci vydání COM v aktuálním objektu RuntimeClass.  
+Provádí operaci vydání COM v aktuálním **RuntimeClass** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud počet odkazů klesne na nulu, je odstraněn objekt RuntimeClass.  
+ Pokud klesne na nulu, počet odkazů **RuntimeClass** objekt odstranit.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

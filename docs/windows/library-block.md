@@ -1,5 +1,5 @@
 ---
-title: library_block – | Microsoft Docs
+title: library_block – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877888"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605068"
 ---
 # <a name="libraryblock"></a>library_block
-Umístí konstrukce uvnitř bloku IDL knihovny.  
+Umístí konstrukci uvnitř bloku knihovny IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Při umístění konstrukce uvnitř bloku knihovny, je zajistit, že bude předána do knihovny typů, bez ohledu na to, jestli se odkazuje. Ve výchozím nastavení, upraveném pouze konstrukce [třída typu coclass](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), a [idl_module –](../windows/idl-module.md) atributy jsou umístěny v bloku knihovny.  
+ Umístíte-li použít konstrukce uvnitř bloku knihovny, zajistíte tím, že budou předány do knihovny typů, bez ohledu na to, zda se na ni odkazuje. Ve výchozím nastavení, pouze vytvoří změnil [coclass](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), a [možnost idl_module](../windows/idl-module.md) atributy jsou umístěny v bloku knihovny.  
   
 ## <a name="example"></a>Příklad  
- V následujícím kódu vlastní rozhraní je umístěn uvnitř bloku knihovny.  
+ V následujícím kódu, vlastní rozhraní nachází uvnitř bloku knihovny.  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -58,9 +56,9 @@ __interface IMyInterface {
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

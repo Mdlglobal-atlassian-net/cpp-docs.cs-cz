@@ -1,5 +1,5 @@
 ---
-title: Makeandinitialize – funkce | Microsoft Docs
+title: Makeandinitialize – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bebe74ae855cf303f09dd8798fcceec0df455b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbdb6a312d6658fc880aa43ffc1205378d3935e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877589"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607647"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize – funkce
-Inicializuje pro zadanou třídu prostředí Windows Runtime. Tato funkce slouží k vytváření instancí komponenty, která je definována ve stejném modulu.  
+Inicializuje zadanou třídu Windows Runtime. Tato funkce slouží k vytvoření instance komponenty, který je definován ve stejném modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,69 +40,69 @@ typename TArg8,
 typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Třídy definované uživatelem, která dědí z `WRL::RuntimeClass`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Uživatel zadal třídu, která dědí z `WRL::RuntimeClass`.  
   
- `TArg1`  
- Typ argumentu 1, který je předán do zadaného modulu runtime – třída  
+ *TArg1*  
+ Typ argumentu 1, který je předán do třídy zadaného modulu runtime.  
   
- `TArg2`  
- Typ argumentu 2, který je předán do zadaného modulu runtime – třída  
+ *TArg2*  
+ Typ argumentu 2, který je předán do třídy zadaného modulu runtime.  
   
- `TArg3`  
- Typ argumentu 3, který je předán do zadaného modulu runtime – třída  
+ *TArg3*  
+ Typ argumentu 3, který je předán do třídy zadaného modulu runtime.  
   
- `TArg4`  
- Typ argumentu 4, který je předán do zadaného modulu runtime – třída  
+ *TArg4*  
+ Typ argumentu 4, který je předán do třídy zadaného modulu runtime.  
   
- `TArg5`  
- Typ argumentu 5, který je předán do zadaného modulu runtime – třída  
+ *TArg5*  
+ Typ argumentu 5, který je předán do třídy zadaného modulu runtime.  
   
- `TArg6`  
- Typ argumentu 6, který je předán do zadaného modulu runtime – třída  
+ *TArg6*  
+ Typ argumentu 6, který je předán do třídy zadaného modulu runtime.  
   
- `TArg7`  
- Typ argumentu 7, který je předán do zadaného modulu runtime – třída  
+ *TArg7*  
+ Typ argumentu 7, který je předán do třídy zadaného modulu runtime.  
   
- `TArg8`  
- Typ argumentu 8, který je předán do zadaného modulu runtime – třída  
+ *TArg8*  
+ Typ argumentu 8, který je předán do třídy zadaného modulu runtime.  
   
- `TArg9`  
- Typ argumentu 9, který je předán do zadaného modulu runtime – třída  
+ *TArg9*  
+ Typ argumentu 9, který je předán do třídy zadaného modulu runtime.  
   
- `arg1`  
- Argument 1, který je předán do zadaného runtime třídy.  
+ *arg1*  
+ Argument 1, který je předán do třídy zadaného modulu runtime.  
   
- `arg2`  
- Argument 2, který je předán do zadaného runtime třídy.  
+ *arg2*  
+ Argument 2, který je předán do třídy zadaného modulu runtime.  
   
- `arg3`  
- Argument 3, který je předán do zadaného runtime třídy.  
+ *arg3*  
+ Argument 3, který je předán do třídy zadaného modulu runtime.  
   
- `arg4`  
- Argument 4, který je předán do zadaného runtime třídy.  
+ *arg4*  
+ Argument 4, který je předán do třídy zadaného modulu runtime.  
   
- `arg5`  
- Argument 5, který je předán do zadaného runtime třídy.  
+ *arg5*  
+ Argument 5, který je předán do třídy zadaného modulu runtime.  
   
- `arg6`  
- Argument 6, který je předán do zadaného runtime třídy.  
+ *arg6*  
+ Argument 6, který je předán do třídy zadaného modulu runtime.  
   
- `arg7`  
- Argument 7, který je předán do zadaného runtime třídy.  
+ *arg7*  
+ Argument 7, který je předán do třídy zadaného modulu runtime.  
   
- `arg8`  
- Argument 8, který je předán do zadaného runtime třídy.  
+ *arg8*  
+ Argument 8, který je předán do třídy zadaného modulu runtime.  
   
- `arg9`  
- Argument 9, který je předán do zadaného runtime třídy.  
+ *arg9*  
+ Argument 9, který je předán do třídy zadaného modulu runtime.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `HRESULT` Hodnotu.  
+ Hodnotu HRESULT.  
   
 ## <a name="remarks"></a>Poznámky  
- V tématu [postupy: vytváření instancí komponent knihovny WRL přímo](../windows/how-to-instantiate-wrl-components-directly.md) další rozdíly mezi tato funkce a [Microsoft::WRL::Make](../windows/make-function.md)a příklad.  
+ Naleznete v tématu [postupy: vytvoření instance komponenty knihovny WRL přímo](../windows/how-to-instantiate-wrl-components-directly.md) další rozdíly mezi touto funkcí a [Microsoft::WRL:: Make](../windows/make-function.md)a příklad.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

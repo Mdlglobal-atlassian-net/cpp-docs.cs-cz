@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator – třída | Microsoft Docs
+title: Makeallocator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878057"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605916"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator – třída
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Název typu.  
   
- `hasWeakReferenceSupport`  
- `true` přidělení paměti pro objekt, který podporuje slabé odkazy; `false` přidělení paměti pro objekt, který nepodporuje slabé odkazy.  
+ *hasWeakReferenceSupport*  
+ **Hodnota TRUE** přidělení paměti pro objekt, který podporuje slabé odkazy; **false** přidělení paměti pro objekt, který nepodporuje slabé odkazy.  
   
 ## <a name="remarks"></a>Poznámky  
- Pro třídu activatable s nebo bez podpory slabé odkaz přidělí paměť.  
+ Přiděluje paměť pro aktivovatelné třídy s nebo bez něj slabou podporu odkazu.  
   
- Přepsání MakeAllocator – třída implementovat model přidělení uživatelské paměti.  
+ Přepsat **MakeAllocator** třídu pro implementaci modelu přidělování paměti definované uživatelem.  
   
- MakeAllocator se obvykle používá, aby se zabránilo nevracení paměti, pokud objekt vyvolá během vytváření.  
+ **Makeallocator –** se obvykle používá pro zabránění nevracení paměti, pokud objekt vyvolá během konstrukce.  
   
 ## <a name="members"></a>Členové  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator – konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicializuje novou instanci třídy MakeAllocator.|  
-|[MakeAllocator::~MakeAllocator – destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Deinitializes aktuální instance třídy MakeAllocator.|  
+|[MakeAllocator::MakeAllocator – konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Inicializuje novou instanci třídy **MakeAllocator** třídy.|  
+|[MakeAllocator::~MakeAllocator – destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Zruší inicializaci aktuální instance **MakeAllocator** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate – metoda](../windows/makeallocator-allocate-method.md)|Přidělí paměť a přidruží ji s aktuálním objektem MakeAllocator.|  
-|[MakeAllocator::Detach – metoda](../windows/makeallocator-detach-method.md)|Zrušíte paměti přidělené [přidělte](../windows/makeallocator-allocate-method.md) z aktuálního objektu MakeAllocator metodu.|  
+|[MakeAllocator::Allocate – metoda](../windows/makeallocator-allocate-method.md)|Přidělí paměť a přidruží ji k aktuální **MakeAllocator** objektu.|  
+|[MakeAllocator::Detach – metoda](../windows/makeallocator-detach-method.md)|Zruší přidružení paměť přidělenou [přidělení](../windows/makeallocator-allocate-method.md) metodu z aktuální **MakeAllocator** objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `MakeAllocator`  

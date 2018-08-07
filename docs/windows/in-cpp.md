@@ -1,5 +1,5 @@
 ---
-title: v (C++) | Microsoft Docs
+title: v aplikaci (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874015"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606433"
 ---
 # <a name="in-c"></a>in (C++)
-Označuje, že parametr je mají být předány z volání procedury volané procedury.  
+Označuje, že je parametr předat z volající procedury do volané procedury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **v** atribut C++ má stejné funkce jako [v](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL atribut.  
+ **v** C++ atribut má stejné funkce jako [v](http://msdn.microsoft.com/library/windows/desktop/aa367051) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- V tématu [vazbu](../windows/bindable.md) příklad použití **v**.  
+ Zobrazit [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **v**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Označuje, že parametr je mají být předány z volání procedury volané pro
   
 |||  
 |-|-|  
-|**Platí pro**|Parametr rozhraní, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Rozhraní parametrů, metody rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|**retval**|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

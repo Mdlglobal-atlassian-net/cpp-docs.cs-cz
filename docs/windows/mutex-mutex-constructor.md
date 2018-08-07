@@ -1,5 +1,5 @@
 ---
-title: Mutex::mutex – konstruktor | Microsoft Docs
+title: Mutex::mutex – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876453"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605191"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex – konstruktor
-Inicializuje novou instanci třídy Mutex.  
+Inicializuje novou instanci třídy **Mutex** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Popisovač, nebo odkaz rvalue do popisovače na objekt Mutex.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Popisovač nebo odkaz rvalue na popisovač, na **Mutex** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- První konstruktor inicializuje objekt Mutex od Zadaný popisovač. Druhý konstruktor inicializuje objekt Mutex od Zadaný popisovač a pak se posouvá vlastnictví mutex jako aktuální objekt Mutex.  
+ První konstruktor inicializuje **Mutex** objekt ze zadaného popisovače. Druhý konstruktor inicializuje **Mutex** objekt Zadaný popisovač a pak přesune vlastnictví mutex do aktuální **Mutex** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

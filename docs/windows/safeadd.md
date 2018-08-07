@@ -1,5 +1,5 @@
 ---
-title: SafeAdd | Microsoft Docs
+title: SafeAdd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892713"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607401"
 ---
 # <a name="safeadd"></a>SafeAdd
-Sečte dvě čísla způsobem, který chrání před přetečení.  
+Sečte dvě čísla způsobem, který chrání proti přetečení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,26 +38,26 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [v] `t`  
- První číslo, které chcete přidat. Toto musí být typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ Chcete-li přidat o první číslo. Toto musí být typu T.  
   
- [v] `u`  
+ [in] *u*  
  Druhé číslo, které chcete přidat. Musí se jednat o typ U.  
   
- [out] `result`  
- Parametr kde `SafeAdd` ukládá výsledek.  
+ [out] *výsledek*  
+ Parametr kde **SafeAdd** výsledek je uložen.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ **Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci jeden přidání bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
+ Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci sčítání jeden bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tato metoda by měl použít, pouze když jedné matematické operace musí být chráněny. Pokud existují více operací, měli byste použít `SafeInt` třída namísto volání jednotlivých samostatnou funkcí.  
+>  Tato metoda by měla sloužit pouze při jedné matematické operace musí být chráněné. Pokud je více operací, měli byste použít `SafeInt` třídy místo volání jednotlivých samostatné funkce.  
   
- Další informace o typech šablon T a U najdete v tématu [funkce jazyka SafeInt](../windows/safeint-functions.md).  
+ Další informace o typech šablony T a U najdete v tématu [SafeInt – funkce](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** safeint.h  

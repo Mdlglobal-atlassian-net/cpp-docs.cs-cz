@@ -1,5 +1,5 @@
 ---
-title: RemoveIUnknown – třída | Microsoft Docs
+title: Removeiunknown – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879539"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606166"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown – třída
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,22 +39,22 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Třída.  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoří typ, který je ekvivalentní `IUnknown`-založené na typ, ale má nevirtuální `QueryInterface`, `AddRef`, a `Release` členské funkce.  
+ Vytvoří typ, který je ekvivalentní `IUnknown`– podle typu, ale má nevirtuální `QueryInterface`, `AddRef`, a `Release` členské funkce.  
   
- Ve výchozím nastavení, poskytují virtuální metody modelu COM `QueryInterface`, `AddRef`a verzí metody. Ale `ComPtr` nevyžaduje režii virtuální metody. `RemoveIUnknown` Eliminuje režijní náklady na tento tím, že poskytuje privátní, nevirtuální `QueryInterface`, `AddRef`, a `Release` metody.  
+ Ve výchozím nastavení, poskytují virtuální metody modelu COM `QueryInterface`, `AddRef`, a `Release` metody. Ale `ComPtr` nevyžaduje režijní náklady na virtuální metody. `RemoveIUnknown` Eliminuje režijní náklady na tento tím, že poskytuje privátní, nevirtuální `QueryInterface`, `AddRef`, a `Release` metody.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`ReturnType`|Synonymum pro typ, který je ekvivalentní pro parametr šablony `T` , ale má nevirtuální IUnknown členy.|  
+|`ReturnType`|Synonymum pro typ, který se rovná parametru šablony *T* , ale má nevirtuální `IUnknown` členy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `T`  

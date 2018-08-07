@@ -1,5 +1,5 @@
 ---
-title: includelib – (C++) | Microsoft Docs
+title: includelib – (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878889"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603378"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-Způsobí, že mají být zahrnuty v souboru generovaného .idl .idl nebo .h soubor.  
+Způsobí, že soubor IDL nebo .h mají být zahrnuty v souboru generovaného IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *name.IDL*  
- Název souboru .idl, který chcete součástí generovaného .idl souboru.  
+ Název souboru, který chcete zahrnout jako součást souboru generovaného IDL.  
   
 ## <a name="remarks"></a>Poznámky  
- `includelib` C++ atributu způsobí, že soubor .idl nebo .h mají být zahrnuty v souboru generovaného .idl po `importlib` příkaz.  
+ **Includelib** C++ atribut vygeneruje soubor IDL nebo .h mají být zahrnuty v souboru IDL vygenerované po `importlib` příkazu.  
   
 ## <a name="example"></a>Příklad  
- Následující kód je zobrazena v souboru sada:  
+ Následující kód můžete vidět v souboru s příponou .cpp:  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -59,9 +58,9 @@ Způsobí, že mají být zahrnuty v souboru generovaného .idl .idl nebo .h sou
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ano|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ano|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

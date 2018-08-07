@@ -1,5 +1,5 @@
 ---
-title: nonextensible – | Microsoft Docs
+title: nonextensible – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881598"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608492"
 ---
 # <a name="nonextensible"></a>nonextensible
-Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nelze ji rozšířit s další členy v době běhu.  
+Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Nonextensible –** atribut C++ má stejné funkce jako [nonextensible –](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL atribut.  
+ **Nerozšiřitelnou kategorii** C++ atribut má stejné funkce jako [nerozšiřitelnou kategorii](http://msdn.microsoft.com/library/windows/desktop/aa367120) atribut MIDL.  
   
- Použití **nonextensible –** taky vyžaduje [oleautomation](../windows/oleautomation.md) atribut.  
+ Použití **nerozšiřitelnou kategorii** také vyžaduje [oleautomation](../windows/oleautomation.md) atribut.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje jedno použití **nonextensible –** atribut:  
+ Následující kód ukazuje jedno použití **nerozšiřitelnou kategorii** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**duální** a **oleautomation**, nebo **dispinterface**|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|`dual` a `oleautomation`, nebo `dispinterface`|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

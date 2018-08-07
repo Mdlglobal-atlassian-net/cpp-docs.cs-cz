@@ -1,5 +1,5 @@
 ---
-title: objekt (C++) | Microsoft Docs
+title: objekt (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879705"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607907"
 ---
 # <a name="object-c"></a>object (C++)
 Určuje vlastní rozhraní.  
@@ -30,18 +30,16 @@ Určuje vlastní rozhraní.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Při předchozím definici rozhraní **objekt** C++ atribut způsobuje rozhraní umístit do souboru IDL jako vlastní rozhraní.  
+ Pokud předchozí definice rozhraní, **objekt** C++ atribut způsobí, že rozhraní budou umístěny v souboru IDL jako vlastní rozhraní.  
   
- Každé rozhraní označené jako objekt musí dědit z **IUnknown**. Toto je podmínka Pokud některá z základní rozhraní dědí od **IUnknown**. Pokud žádná základní rozhraní dědí od **IUnknown**, kompilátor způsobí, že rozhraní označené jako **objekt** k odvozování z **IUnknown**.  
+ Libovolné rozhraní označené objektu musí dědit z `IUnknown`. Tato podmínka splněna Pokud některý z základních rozhraní dědí od `IUnknown`. Pokud žádná základní rozhraní dědí od `IUnknown`, kompilátor způsobí, že rozhraní označené **objekt** odvodit z `IUnknown`.  
   
 ## <a name="example"></a>Příklad  
- V tématu [nonbrowsable](../windows/nonbrowsable.md) příklad použití **objekt**.  
+ Zobrazit [nonbrowsable](../windows/nonbrowsable.md) příklad, jak používat **objekt**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -49,9 +47,9 @@ Určuje vlastní rozhraní.
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

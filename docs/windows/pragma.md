@@ -1,5 +1,5 @@
 ---
-title: Direktiva pragma | Microsoft Docs
+title: direktivy pragma | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878145"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602614"
 ---
 # <a name="pragma"></a>pragma
-Zadaný řetězec vysílá do souboru generovaného .idl bez použití uvozovek. .  
+Zadaný řetězec vysílá do generovaného souboru bez použití uvozovek. 
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *pragma_statement*  
- Direktiva pragma, kterou chcete přejít do generovaného .idl souboru.  
+ Direktivy pragma, který chcete vrátit do generovaného souboru.  
   
 ## <a name="remarks"></a>Poznámky  
- **– Direktiva pragma** atribut C++ má stejné funkce jako [– Direktiva pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL atribut.  
+ **– Direktiva pragma** C++ atribut má stejné funkce jako [– Direktiva pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +64,9 @@ __interface A
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

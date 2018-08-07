@@ -1,5 +1,5 @@
 ---
-title: Module::incrementobjectcount – metoda | Microsoft Docs
+title: Module::incrementobjectcount – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c662d4f8752014ca785b63020fc0ef7c97b5306f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f52e81a57909cfb9fa0c52b8e376d33f63fded0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878239"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605003"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount – metoda
-Zvýší počet objektů, které sledují modulem.  
+Zvýší počet objektů, které jsou sledovány v rámci modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,12 +34,12 @@ virtual long IncrementObjectCount();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Počet před provedením operace přírůstku.  
+ Počet před provedením operace Inkrementace.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  
   
  **Namespace:** Microsoft::WRL
  
- ## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také
  [Module – třída](../windows/module-class.md)

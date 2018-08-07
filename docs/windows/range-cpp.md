@@ -1,5 +1,5 @@
 ---
-title: rozsah (C++) | Microsoft Docs
+title: rozsah (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877927"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603439"
 ---
 # <a name="range-c"></a>range (C++)
-Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastaveny v době běhu.  
+Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastavené v době běhu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -39,17 +38,17 @@ Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou
   
 #### <a name="parameters"></a>Parametry  
  *Nízká*  
- Hodnota nízkou rozsahu.  
+ Hodnota nízkého rozsahu.  
   
  *Vysoká*  
- Hodnota vysoká rozsahu.  
+ Hodnota vysokého rozsahu.  
   
 ## <a name="remarks"></a>Poznámky  
- **Rozsah** atribut C++ má stejné funkce jako [rozsah](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL atribut.  
+ **Rozsah** C++ atribut má stejné funkce jako [rozsah](http://msdn.microsoft.com/library/windows/desktop/aa367151) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -69,9 +68,9 @@ __interface ICustom {
   
 |||  
 |-|-|  
-|**Platí pro**|Metody rozhraní, parametr rozhraní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní parametr rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Issame – struktura | Microsoft Docs
+title: Issame – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877667"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603582"
 ---
 # <a name="issame-structure"></a>IsSame – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +41,15 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T1`  
+### <a name="parameters"></a>Parametry  
+ *T1*  
  Typ.  
   
- `T2`  
- Jiný typ.  
+ *T2*  
+ Jiného typu.  
   
 ## <a name="remarks"></a>Poznámky  
- Testy, zda jeden zadaný typ je stejná jako jiné zadaný typ.  
+ Testy, zda jeden zadaný typ je stejný jako jiný určený typ.  
   
 ## <a name="members"></a>Členové  
   
@@ -57,7 +57,7 @@ struct IsSame<T1, T1>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IsSame::value – konstanta](../windows/issame-value-constant.md)|Určuje, zda jeden typ je stejná jako jiné.|  
+|[IsSame::value – konstanta](../windows/issame-value-constant.md)|Označuje, zda jeden typ. je stejný jako jiný.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IsSame`  

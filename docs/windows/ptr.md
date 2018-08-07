@@ -1,5 +1,5 @@
 ---
-title: PTR | Microsoft Docs
+title: PTR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875991"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604327"
 ---
 # <a name="ptr"></a>ptr
 Ukazatel se označí jako úplné ukazatel.  
@@ -30,16 +30,14 @@ Ukazatel se označí jako úplné ukazatel.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Ptr** atribut C++ má stejné funkce jako [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) MIDL atribut.  
+ **Ptr** C++ atribut má stejné funkce jako [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) pro ukázkové použití **ptr**.  
+ Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) ukázkový používání **ptr**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Ukazatel se označí jako úplné ukazatel.
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní parametrů, metody rozhraní `typedef`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Rozhraní parametrů, metody rozhraní **– typedef**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: implementuje (C++) | Microsoft Docs
+title: implementuje (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880686"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606459"
 ---
 # <a name="implements-c"></a>implements (C++)
-Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.  
+Určuje odesílajících rozhraních, které se musí být členy třídy typu IDL coclass.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- **Rozhraní**  
- Čárkami oddělený seznam rozhraní, které budou členem třída typu coclass IDL. Je metoda sdružená vlastnost pro zadání jednoho rozhraní **implementuje (***Název_rozhraní***)**.  
+### <a name="parameters"></a>Parametry  
+ *Rozhraní*  
+ Čárkami oddělený seznam rozhraní, které budou členem třídy typu IDL coclass. Metoda Zkrácený tvar vlastností pro zadání jednoho rozhraní je **implementuje (***interface_name***)**.  
   
- **odesílající rozhraní**  
- Čárkami oddělený seznam dispinterface, který bude členem třída typu coclass IDL. Je metoda sdružená vlastnost pro zadání jednoho dispinterface **implementuje (odesílající rozhraní** * = dispinterface_name ***)**.  
+ *odesílacích rozhraních*  
+ Čárkami oddělený seznam dispinterface, která bude členem třídy typu IDL coclass. Je metoda Zkrácený tvar vlastností pro zadání jedné dispinterface **implementuje (odesílající rozhraní** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení se přidají jenom COM – rozhraní, která se základní třídy třída typu coclass v třída typu coclass IDL. **implementuje** umožňuje vynutit dalších rozhraní mají být členy třída typu coclass IDL.  
+ Ve výchozím nastavení se přidají jenom-rozhraní COM, které jsou základní třídy typu coclass v konstruktoru coclass IDL. **implementuje** umožňuje vynutit jiná rozhraní mají stát členy coclass IDL.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -53,17 +52,17 @@ Určuje odesílání rozhraní, které mají být členy třída typu coclass ID
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ano|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ano|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad je v tří částí: souboru IDL a jeho přidružené .h soubor a soubor C++.  
+ V následujícím příkladu je v tří částí: souboru IDL a jeho přidružené. h: soubor a soubor jazyka C++.  
   
- Předpokládejme následující .idl soubor, který bude k dispozici pro kompilátor.  
+ Předpokládejme následující soubor .idl, který bude k dispozici pro kompilátor.  
   
 ```  
 // attr_implements.idl  
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>Příklad  
- A následující soubor hlaviček, který se taky musí být k dispozici pro kompilátor.  
+ A následujícího souboru .h, který také musí být k dispozici pro kompilátor.  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>Příklad  
- V následující program bez implementuje IBar1, IBar2 a je. nebudou v třída typu coclass v generované IDL.  
+ V následující program bez implementuje `IBar1`, `IBar2`, a `ISna` nebudou existovat v rámci `coclass` v generované IDL.  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

@@ -1,5 +1,5 @@
 ---
-title: propget – | Microsoft Docs
+title: propget | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881855"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607544"
 ---
 # <a name="propget"></a>propget
-Určuje funkci přistupujícího objektu vlastnosti.  
+Určuje funkci, která přistupujícího objektu vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [propget]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Propget –** atribut C++ má stejné funkce jako [propget –](http://msdn.microsoft.com/library/windows/desktop/aa367145) MIDL atribut.  
+ **Propget** C++ atribut má stejné funkce jako [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) pro ukázkové použití **propget –**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) ukázkový používání **propget**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -48,14 +46,14 @@ Určuje funkci přistupujícího objektu vlastnosti.
 |||  
 |-|-|  
 |**Platí pro**|Metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
-|**Neplatné atributy**|**propput –**, **propputref**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
+|**Neplatné atributy**|`propput`, `propputref`|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [propput –](../windows/propput.md)   
+ [propput](../windows/propput.md)   
  [propputref](../windows/propputref.md)   

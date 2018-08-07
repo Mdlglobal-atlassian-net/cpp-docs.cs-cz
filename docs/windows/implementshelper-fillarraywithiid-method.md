@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::fillarraywithiid – metoda | Microsoft Docs
+title: Implementshelper::fillarraywithiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879920"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608319"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `index`  
- Index počítaný od nuly určující počáteční elementu pole pro tuto operaci. Po dokončení této operace `index` se zvýší o 1.  
+ *index*  
+ Z nuly vycházející index určující počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* zvyšuje o 1.  
   
- `iids`  
- Pole typu identifikátory IID.  
+ *IID*  
+ Pole typu IID.  
   
 ## <a name="remarks"></a>Poznámky  
- Vloží zadané parametrem aktuální šablony zeroth do elementu zadané pole ID rozhraní.  
+ Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

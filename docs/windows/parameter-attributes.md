@@ -1,5 +1,5 @@
 ---
-title: Atributy parametru | Microsoft Docs
+title: Atributy parametru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f96c5e3bcdd48f4fe3144b0e8885e82c2093a1d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879393"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608842"
 ---
 # <a name="parameter-attributes"></a>Atributy parametru
-Následující atributy se používají k parametrům metody ve třídě nebo rozhraní.  
+Následující atributy se vztahují na parametry metody ve třídě nebo rozhraní.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
 |[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atribut.|  
-|[defaultvalue](../windows/defaultvalue.md)|Umožňuje specifikaci výchozí hodnota pro typové volitelný parametr.|  
-|[first_is](../windows/first-is.md)|Určuje index první prvek pole má být přenesen.|  
-|[iid_is](../windows/iid-is.md)|Určuje index první prvek pole má být přenesen.|  
-|[immediatebind](../windows/immediatebind.md)|Označuje, že databáze bude okamžitě informováni o všechny změny vlastností objektu vázané na data.|  
-|[in](../windows/in-cpp.md)|Označuje, že parametr je mají být předány z volání procedury volané procedury.|  
-|[last_is](../windows/last-is.md)|Určuje index posledním elementem pole přenášet.|  
+|[defaultvalue](../windows/defaultvalue.md)|Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.|  
+|[first_is](../windows/first-is.md)|Určuje index první prvek pole předávají.|  
+|[iid_is](../windows/iid-is.md)|Určuje index první prvek pole předávají.|  
+|[immediatebind](../windows/immediatebind.md)|Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.|  
+|[in](../windows/in-cpp.md)|Označuje, že je parametr předat z volající procedury do volané procedury.|  
+|[last_is](../windows/last-is.md)|Určuje index posledního prvku pole předávají.|  
 |[lcid](../windows/lcid.md)|Umožňuje předat funkci identifikátor národního prostředí.|  
-|[length_is](../windows/length-is.md)|Určuje počet elementů pole přenášet.|  
-|[max_is](../windows/max-is.md)|Určuje maximální hodnotu platné pole indexu.|  
-|[Volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr členské funkce.|  
-|[out](../windows/out-cpp.md)|Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volání procedury (ze serveru do klienta).|  
-|[rozsah](../windows/range-cpp.md)|Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastaveny v době běhu.|  
-|[ref](../windows/ref-cpp.md)|Identifikuje ukazatel odkaz.|  
-|[retval](../windows/retval.md)|Označí parametr, který obdrží hodnotu vrácenou člena.|  
-|[satype](../windows/satype.md)|Určuje datový typ **SAFEARRAY** struktura.|  
-|[size_is](../windows/size-is.md)|Určuje velikost paměti přidělené velikostí ukazatele, velikost ukazatele na velikosti ukazatele a jedním - nebo vícerozměrná pole.|  
-|[Jedinečné](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
+|[length_is](../windows/length-is.md)|Určuje počet elementů pole předávají.|  
+|[max_is](../windows/max-is.md)|Určuje maximální hodnotu pro pole platný index.|  
+|[Volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr pro členské funkce.|  
+|[out](../windows/out-cpp.md)|Identifikuje parametry ukazatele, které se vracejí z volané procedury do volající procedury (ze serveru do klienta).|  
+|[rozsah](../windows/range-cpp.md)|Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastavené v době běhu.|  
+|[ref](../windows/ref-cpp.md)|Určuje referenční ukazatel.|  
+|[retval](../windows/retval.md)|Označí parametr, který přijímá návratovou hodnotu člena.|  
+|[satype](../windows/satype.md)|Určuje datový typ `SAFEARRAY` struktury.|  
+|[size_is](../windows/size-is.md)|Určuje velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.|  
+|[Jedinečný](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
   
 ## <a name="see-also"></a>Viz také  
  [Atributy podle použití](../windows/attributes-by-usage.md)

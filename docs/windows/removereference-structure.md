@@ -1,5 +1,5 @@
 ---
-title: Removereference – struktura | Microsoft Docs
+title: Removereference – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881260"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602708"
 ---
 # <a name="removereference-structure"></a>RemoveReference – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +38,16 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Třída.  
   
 ## <a name="remarks"></a>Poznámky  
- Odstraní odkaz nebo deklarátor odkazu znak z parametru šablony zadanou třídu.  
+ Odebere odkaz nebo odkaz na r-hodnoty vlastností z dané třídy parametru šablony.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  

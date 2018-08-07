@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper – třída | Microsoft Docs
+title: Roinitializewrapper – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705589"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606719"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper – třída
-Inicializuje prostředí Windows Runtime.  
+Inicializuje modul Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- RoInitializeWrapper je pro vaše pohodlí, která inicializuje prostředí Windows Runtime a vrátí HRESULT určující, zda operace byla úspěšná. Protože volání destruktoru třídy `::Windows::Foundation::Uninitialize`, instancí `RoInitializeWrapper` musí být deklarován v oboru globální nebo nejvyšší úrovně.  
+ **RoInitializeWrapper** je usnadnění práce, která inicializuje modul Windows Runtime a vrátí HRESULT, která určuje, zda operace byla úspěšná. Vzhledem k tomu volá destruktor třídy `::Windows::Foundation::Uninitialize`, výskyty **RoInitializeWrapper** musí být deklarovány v oboru globálním správcem nebo nejvyšší úrovně.  
   
 ## <a name="members"></a>Členové  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |Název|Popis|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper – konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicializuje novou instanci třídy RoInitializeWrapper.|  
-|[RoInitializeWrapper::~RoInitializeWrapper – destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Zničí aktuální instance třídy RoInitializeWrapper.|  
+|[RoInitializeWrapper::RoInitializeWrapper – konstruktor](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicializuje novou instanci třídy **RoInitializeWrapper** třídy.|  
+|[RoInitializeWrapper::~RoInitializeWrapper – destruktor](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Odstraní aktuální instanci aplikace **RoInitializeWrapper** třídy.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() – operátor](../windows/roinitializewrapper-hresult-parens-operator.md)|Načte HRESULT vyprodukované RoInitializeWrapper konstruktor.|  
+|[RoInitializeWrapper::HRESULT() – operátor](../windows/roinitializewrapper-hresult-parens-operator.md)|Načte hodnotu HRESULT vytvořené metodou **RoInitializeWrapper** konstruktoru.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `RoInitializeWrapper`  

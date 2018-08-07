@@ -1,5 +1,5 @@
 ---
-title: s omezeným přístupem | Microsoft Docs
+title: s omezeným přístupem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602769"
 ---
 # <a name="restricted"></a>restricted
-Určuje, že členem modulu, rozhraní nebo dispinterface nelze volat libovolně.  
+Určuje, že modul, rozhraní nebo dispinterface nejde volat libovolně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `interfaces`  
- Jedno nebo více rozhraní, které nemusí být volat libovolně u objektu COM. Tento parametr je pouze platný při použití na třídu.  
+### <a name="parameters"></a>Parametry  
+ *Rozhraní*  
+ Jedno nebo více rozhraní, které nelze volat libovolně pro objekt modelu COM. Tento parametr platí pouze při použití na třídu.  
   
 ## <a name="remarks"></a>Poznámky  
- **s omezeným přístupem** atribut C++ má stejné funkce jako [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL atribut.  
+ **s omezeným přístupem** C++ atribut má stejné funkce jako [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
  Následující kód ukazuje způsob použití **s omezeným přístupem** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní metody `interface`, **třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**Třída typu coclass** (při použití **třída** nebo `struct`)|  
+|**Platí pro**|Metody rozhraní **rozhraní**, **třídy**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**coclass** (při použití u **třídy** nebo **struktura**)|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Editory prostředků | Microsoft Docs
+title: Editory prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,32 +22,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91151b215a180fd926acf1205d810fc8eb6fd6f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879591"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604457"
 ---
 # <a name="resource-editors"></a>Editory prostředků
-Editor prostředků je specializovaná prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků sady Visual Studio technik a rozhraní, které se vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazení a úprava prostředků v editoru odpovídající](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [náhled prostředků](../windows/previewing-resources.md).  
+Editor prostředků je specializované prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků Visual Studio techniky a rozhraní vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazit a upravit prostředky ve vhodném editoru](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [ve verzi preview prostředky](../windows/previewing-resources.md).  
   
  Otevře se editor odpovídající automaticky při vytvoření nebo otevření prostředku.  
   
- **Poznámka:** protože spravované projekty nepoužívají soubory skriptu prostředků, musíte otevřít vaše prostředky z **Průzkumníku řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pracovat se soubory prostředků v spravované projekty. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
+ **Poznámka:** protože spravované projekty nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 |Použití...|Chcete-li upravit...|  
 |----------------|----------------|  
-|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulky akcelerátoru v projektech Visual C++.|  
-|[Binární editor](binary-editor.md)|Binární data informace a vlastní prostředky v projektech Visual C++, Visual Basic a Visual C#.|  
+|[Editor akcelerátorů](../windows/accelerator-editor.md)|Tabulek akcelerátorů v projektech Visual C++.|  
+|[Binární editor](binary-editor.md)|Informace o binárních dat a vlastních prostředků v projektech Visual C++, Visual Basic nebo Visual C#.|  
 |[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v projektech Visual C++.|  
-|[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech Visual C++, Visual Basic a Visual C#.|  
-|[Editor nabídek](../windows/menu-editor.md)|Nabídky prostředky v projektech Visual C++.|  
-|[Editor pásu karet](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech knihovny MFC.|  
+|[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech Visual C++, Visual Basic nebo Visual C#.|  
+|[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v projektech Visual C++.|  
+|[Editor pásu karet](../mfc/ribbon-designer-mfc.md)|Prostředky z pásu karet v projektech knihovny MFC.|  
 |[Editor řetězce](../windows/string-editor.md)|Řetězec tabulek v projektech Visual C++.|  
-|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Panel nástrojů prostředky v projektech Visual C++. Editor panelu nástrojů je součástí editor obrázků.|  
+|[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech Visual C++. Editor panelu nástrojů je součástí editoru obrázků.|  
 |[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech Visual C++.|  
   
 ## <a name="requirements"></a>Požadavky  
@@ -57,5 +57,4 @@ Editor prostředků je specializovaná prostředí pro vytváření nebo úprav 
  [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)   
- [Nabídky a další prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

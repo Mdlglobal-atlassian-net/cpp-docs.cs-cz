@@ -1,5 +1,5 @@
 ---
-title: Funkce jazyka SafeInt | Microsoft Docs
+title: SafeInt – Functions | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,35 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b8a0475b5d3ba9053cd5d2df5ffd99ce9292ba8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889303"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603452"
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
-Knihovna SafeInt nabízí několik funkcí, které můžete použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete chránit jedné matematické operace z přetečení celé číslo, můžete tyto funkce. Pokud chcete chránit více matematické operace, měli byste vytvořit `SafeInt` objekty. Chcete-li vytvořit je efektivnější `SafeInt` objekty než pomocí těchto funkcí vícekrát.  
+SafeInt – knihovna poskytuje několik funkcí, které lze použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete zabránit přetečení celého čísla jedné matematické operace, můžete tyto funkce. Pokud chcete chránit několik matematických operací, měli byste vytvořit **SafeInt** objekty. Je mnohem efektivnější, chcete-li vytvořit **SafeInt** objektů, než se tyto funkce používat více než jednou.  
   
- Tyto funkce umožňují porovnat nebo provádět matematické operace dva různé typy parametrů bez nutnosti nejprve převést do stejného typu.  
+ Tyto funkce umožňují snadno porovnat nebo provádění matematických operací na dva různé typy parametrů, aniž by bylo nutné je nejprve převést na stejný typ.  
   
- Každá z těchto funkcí má dva typy šablony: `T` a `U`. Každý z těchto typů může být logická hodnota, znak nebo integrální typu. Celočíselné typy můžete podepsané nebo nepodepsané a jakékoli velikosti z 8 bitů na 64 bitů.  
+ Každá z těchto funkcí má dva typy šablon: `T` a `U`. Každý z těchto typů může být logická hodnota, znak nebo celočíselného typu. Integrální typy mohou být podepsaný nebo nepodepsaný řetězec a libovolné velikosti z 8 bitů na 64 bitů.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
-|[SafeAdd](../windows/safeadd.md)|Sečte dvě čísla a chrání před přetečení.|  
-|[SafeCast](../windows/safecast.md)|Vrhá jeden typ parametru k jinému typu.|  
-|[SafeDivide](../windows/safedivide.md)|Provede podíl dvou čísel a chrání před dělení nulou.|  
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Porovná dvě čísla. Tyto funkce umožňují porovnat dva různé typy čísel, aniž by měnili jejich typy.|  
-|[SafeModulus](../windows/safemodulus.md)|Provede operaci numerického zbytku na dvou čísel.|  
-|[SafeMultiply](../windows/safemultiply.md)|Vynásobí dvě čísla společně a chrání před přetečení.|  
-|[SafeSubtract](../windows/safesubtract.md)|Odečte dvou čísel a chrání před přetečení.|  
+|[SafeAdd](../windows/safeadd.md)|Sečte dvě čísla a chrání proti přetečení.|  
+|[SafeCast](../windows/safecast.md)|Přetypování jednoho typu na jiný typ parametru.|  
+|[SafeDivide](../windows/safedivide.md)|Provede podíl dvou čísel a chrání proti dělení nulou.|  
+|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Porovná dvě čísla. Tyto funkce umožňují snadno porovnat dva různé typy čísel beze změny jejich typy.|  
+|[SafeModulus](../windows/safemodulus.md)|Provádí operace numerického zbytku dvou čísel.|  
+|[SafeMultiply](../windows/safemultiply.md)|Vynásobí dvě čísla společně a chrání proti přetečení.|  
+|[SafeSubtract](../windows/safesubtract.md)|Odečte dvou čísel a chrání proti přetečení.|  
   
 ## <a name="related-sections"></a>Související oddíly  
   
-|Část|Popis|  
+|Oddíl|Popis|  
 |-------------|-----------------|  
-|[SafeInt – třída](../windows/safeint-class.md)|`SafeInt` Třídy.|  
-|[SafeIntException – třída](../windows/safeintexception-class.md)|Specifické pro knihovnu SafeInt třídou výjimky.|
+|[SafeInt – třída](../windows/safeint-class.md)|**SafeInt** třídy.|  
+|[SafeIntException – třída](../windows/safeintexception-class.md)|Třídy výjimek specifické pro SafeInt – knihovna.|

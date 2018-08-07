@@ -1,5 +1,5 @@
 ---
-title: importidl – | Microsoft Docs
+title: importidl – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877472"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607180"
 ---
 # <a name="importidl"></a>importidl
-Vloží zadaný .idl soubor do souboru generovaného IDL.  
+Vloží zadaný souboru do generovaného souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `idl_file`  
- Určuje název souboru .idl, který chcete sloučit s .idl soubor, který se budou generovat pro vaši aplikaci.  
+### <a name="parameters"></a>Parametry  
+ *idl_file*  
+ Určuje název souboru, který chcete sloučit s souboru IDL se vygeneruje pro vaši aplikaci.  
   
 ## <a name="remarks"></a>Poznámky  
- **Importidl –** C++ atribut umístí části mimo knihovnu bloku (v `idl_file`) do vašeho programu generovaného .idl souboru a v části library (v `idl_file`) do části knihovny vašeho programu soubor generovaný .idl.  
+ **Importidl –** C++ atribut umístí části mimo blok knihovny (v *idl_file*) do generovaného souboru váš program a v části library (v *idl_file*) do knihovny část váš program vygeneruje soubor IDL.  
   
- Můžete chtít použít **importidl –**, například, pokud chcete použít soubor programového ruční .idl s generovaného .idl souboru.  
+ Můžete chtít použít **importidl –**, například, pokud chcete použít soubor .idl. ruční pevně zakódované souborem generované IDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -60,9 +59,9 @@ Vloží zadaný .idl soubor do souboru generovaného IDL.
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -71,6 +70,6 @@ Vloží zadaný .idl soubor do souboru generovaného IDL.
  [Atributy kompilátoru](../windows/compiler-attributes.md)   
  [Samostatné atributy](../windows/stand-alone-attributes.md)   
  [Import](../windows/import.md)   
- [importlib –](../windows/importlib.md)   
+ [importlib](../windows/importlib.md)   
  [Zahrnout](../windows/include-cpp.md)   
  [includelib –](../windows/includelib-cpp.md)   

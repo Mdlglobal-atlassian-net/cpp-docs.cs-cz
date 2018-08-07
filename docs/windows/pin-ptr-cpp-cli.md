@@ -1,5 +1,5 @@
 ---
-title: pin_ptr (C + +/ CLI) | Microsoft Docs
+title: pin_ptr (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc99a352e0bde7918cab460293ff23061377551
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a87dadfd4787e4bd0100efb8fe7ffe2b1e7a8899
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880163"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607849"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
-Deklaruje *Připnutí ukazatelů*, který se používá jenom s modul common language runtime.  
+Deklaruje *ukazatel Připnutí*, který se používá jenom s common language runtime.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Používají se žádné poznámky pro tuto funkci jazyka, které platí pro všechny moduly runtime.)  
+ (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- (Tento jazyk funkce není podporována v prostředí Windows Runtime).  
+ (Tato funkce jazyka není podporována v modulu Windows Runtime).  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- A *Připnutí ukazatelů* vnitřní ukazatel, která zabraňuje objekt ukazuje z přesunutí v haldě uvolňování paměti. To znamená není změnit hodnotu Připnutí ukazatel modul common language runtime. To je potřeba, při předání adresu spravované třídy nespravované funkce tak, aby adresu nezmění neočekávaně během řešení volání nespravovaných funkcí.  
+ A *ukazatel Připnutí* vnitřní ukazatel, který brání objekt ukazuje získat přechodem na haldě uvolňování paměti. To znamená se nezmění hodnotu ukazatel Připnutí modulem common language runtime. To je potřeba při předání adresy spravovanou třídu nespravované funkci tak, aby během rozlišení nespravovanou funkci volání nezmění neočekávaně adresu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -47,37 +47,37 @@ Deklaruje *Připnutí ukazatelů*, který se používá jenom s modul common lan
   
 ### <a name="parameters"></a>Parametry  
  *cv_qualifier*  
- `const` nebo `volatile` kvalifikátory. Ve výchozím nastavení, je připnutý ukazatel `volatile`. Je ale nejde o chybu deklarovat Připnutí ukazatel redundantní `volatile`.  
+ **Const** nebo **volatile** kvalifikátory. Ve výchozím nastavení, je ukazatel Připnutí **volatile**. Je redundantní, ale ne o chybu deklarovat ukazatel Připnutí **volatile**.  
   
  *Typ*  
- Typ `initializer`.  
+ Typ *inicializátor*.  
   
  *var*  
- Název `pin_ptr` proměnné.  
+ Název **pin_ptr** proměnné.  
   
  *Inicializátor*  
- Člen odkaz, element spravovaného pole nebo jakýkoliv jiný objekt, který lze přiřadit nativní ukazatel.  
+ Člen typu odkazu, element spravovaného pole nebo jakýkoli jiný objekt, který můžete přiřadit na nativní ukazatel.  
   
 ### <a name="remarks"></a>Poznámky  
- A `pin_ptr` představuje nadmnožinou funkce nativní ukazatel. Proto všechny položky, které lze přiřadit k nativní ukazatel můžete taky přiřadit ke `pin_ptr`. Vnitřní ukazatel oprávněn provádět stejnou sadu operací, jako nativními ukazateli, včetně porovnání a aritmetika ukazatele.  
+ A **pin_ptr** představuje nadmnožinu funkcí nativní ukazatel. Proto cokoli, co je možné přiřadit na nativní ukazatel lze také přiřadit **pin_ptr**. Vnitřní ukazatel se nepovoluje provádět stejnou sadu operací, jako nativní ukazatele, včetně porovnání a aritmetiku ukazatele.  
   
- Na objekt nebo dílčí objekt spravované třídy, můžete připnuli, v takovém případě modul CLR nebude ho přesunout během uvolňování paměti. Hlavní použití tohoto objektu je předat ukazatel spravovaných dat jako skutečný parametr volání nespravovaných funkcí. Během cyklu kolekce modul runtime bude kontrolovat metadata vytvořené pro Připnutí ukazatelů a nepřesune položku, kterou se odkazuje.  
+ Objekt nebo podobjektu spravované třídy je možné připnout, v takovém případě common language runtime nepřesune během uvolňování paměti. Instančního objektu pomocí tohoto objektu je předat ukazatel spravovaných dat jako skutečný parametr nespravované funkci volání. Během cyklu shromažďování modul runtime bude kontrolovat metadat pro ukazatel Připnutí vytvořit a nepřesune, na který odkazuje na položku.  
   
- Připnutí objekt také PIN kódy jeho hodnota pole; To znamená pole primitivních nebo hodnota typu. Ale deklarovaná sledovací popisovač pole (`%`) nejsou připnutý.  
+ Připnutí objekt také vážou jeho hodnoty polí. To znamená, že pole primitivních nebo hodnota typu. Pole však deklaroval sledovací popisovač (`%`) nejsou připnuté.  
   
- Připnutí dílčí objekt definovaný v spravovaného objektu má za následek Připnutí celý objekt.  
+ Připnutí dílčí objekt definovaný v spravovaný objekt má za následek Připnutí celý objekt.  
   
- Pokud tak, aby odkazoval na novou hodnotu opětovně přiřazován Připnutí ukazatelů, předchozí instanci ukazuje je nelze nadále považovat za připnutý.  
+ Pokud ukazatel Připnutí je přiřazena tak, aby odkazoval na novou hodnotu, předchozí instanci, na které je nelze nadále považovat za připnout.  
   
- Objekt je připnutá pouze při `pin_ptr` body k němu. Objekt je již připojena při jeho Připnutí ukazatelů ocitne mimo rozsah, nebo je nastaven na [nullptr](../windows/nullptr-cpp-component-extensions.md). Po `pin_ptr` přejde mimo obor, objekt, který byl připnutý lze přesunout v haldě modulem garbage collector. Všechny nativní ukazatele, které stále odkazovat objekt se nebude aktualizovat a zrušte odkazující na jeden z nich by mohly znamenat vyšší neopravitelné výjimky.  
+ Objekt je připnutá pouze při **pin_ptr** na ně odkazuje. Objekt je již ukotvena při jeho Připnutí ukazatel dostane mimo rozsah, nebo je nastaven na [nullptr](../windows/nullptr-cpp-component-extensions.md). Po **pin_ptr** překročí obor, objekt, který byla připnuta může přesunou v haldě systému uvolňování paměti. Všechny nativní ukazatele, které stále odkazují na objekt nebude aktualizován a zrušením odkazu jeden z nich může vyvolat výjimku neobnovitelná.  
   
- Pokud žádné přídavných ukazatelů bodu k objektu (všechny přídavných ukazatelů byla mimo rozsah, přejděte na další objekty byly přiřazeny nebo byly přiřazené [nullptr](../windows/nullptr-cpp-component-extensions.md)), objekt záruku, že se tak, aby byla připojená.  
+ Pokud žádné přídavných ukazatelů ukazuje na objekt (všechny přídavných ukazatelů přestala být obor, byl znovu přiřazen tak, aby odkazoval na jiné objekty nebo byly přiřazeny [nullptr](../windows/nullptr-cpp-component-extensions.md)), je zaručeno, že objekt není možné připnout.  
   
- Připnutí ukazatel může ukazovat na popisovač odkaz na typ hodnoty nebo zabalený typ popisovače, členem spravovaný typ, nebo element spravovaného pole. Nemůže odkazovat na odkazového typu.  
+ Odkaz na popisovač, typ hodnoty nebo popisovač zabalený typ, člen spravovaného typu nebo jeho element spravovaného pole může odkazovat ukazatel Připnutí. Nemůže odkazovat na typ odkazu.  
   
- S ohledem na adresu `pin_ptr` , odkazuje na objekt nativní způsobí, že nedefinované chování.  
+ Přebírání adresy **pin_ptr** , odkazuje na nativní objekt způsobí nedefinované chování.  
   
- Přídavných ukazatelů lze deklarovat pouze jako místní proměnné nestatické v zásobníku.  
+ Přídavných ukazatelů může deklarovat jenom jako nestatická místní proměnné v zásobníku.  
   
  Přídavných ukazatelů nelze použít jako:  
   
@@ -89,21 +89,20 @@ Deklaruje *Připnutí ukazatelů*, který se používá jenom s modul common lan
   
 -   cílový typ přetypování.  
   
- `pin_ptr` Probíhá `cli` oboru názvů. Další informace najdete v tématu [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ **pin_ptr** probíhá `cli` oboru názvů. Další informace najdete v tématu [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Další informace o vnitřních ukazatelů najdete v tématu [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md).  
+ Další informace o vnitřních ukazatelů naleznete v tématu [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Další informace o přídavné ukazatele najdete v tématu [postup: Pin ukazatelů a polí](../windows/how-to-pin-pointers-and-arrays.md) a [postupy: deklarace Připnutí ukazatelů a typů hodnot](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Další informace o přídavné ukazatele, naleznete v tématu [jak: Pin ukazatelů a polí](../windows/how-to-pin-pointers-and-arrays.md) a [postupy: deklarování Připnutí ukazatelů a typů hodnot](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad používá `pin_ptr` omezit pozice první prvek pole.  
+ Následující příklad používá **pin_ptr** omezit pozice prvního prvku pole.  
   
-```  
+```cpp  
 // pin_ptr_1.cpp  
 // compile with: /clr   
 using namespace System;  
@@ -153,11 +152,9 @@ int main() {
 45  
 ```  
   
- **Příklad**  
+ Následující příklad ukazuje, že vnitřní ukazatel lze převést na ukazatel Připnutí a návratový typ operátoru address-of (`&`) je vnitřní ukazatel operand je na spravované haldě.  
   
- Následující příklad ukazuje, že vnitřní ukazatel můžete převést na Připnutí ukazatelů a že návratový typ address-of – operátor (`&`) je vnitřní ukazatel operand je na spravované haldě.  
-  
-```  
+```cpp  
 // pin_ptr_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -191,11 +188,9 @@ int main() {
 1  
 ```  
   
- **Příklad**  
+ Následující příklad ukazuje, že ukazatel Připnutí lze převést na jiného typu.  
   
- Následující příklad ukazuje, že Připnutí ukazatel lze převést na jiný typ.  
-  
-```  
+```cpp  
 // pin_ptr_3.cpp  
 // compile with: /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: Module::unregisterobjects – metoda | Microsoft Docs
+title: Module::unregisterobjects – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874116"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607437"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects – metoda
-Zruší registraci objekty v zadaný modul tak, aby ostatní aplikace se nemůže připojit k nim.  
+Zruší registraci objekty v zadaném modulu tak, aby k nim nelze připojit další aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `module`  
+### <a name="parameters"></a>Parametry  
+ *Modul*  
  Ukazatel na modul.  
   
- `serverName`  
- Opravňující název, který určuje podmnožinu objektů vliv na tuto operaci.  
+ *název_serveru*  
+ Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud je tato operace úspěšná. v opačném chybu HRESULT, která určuje, z důvodu této operace se nezdařila.  
+ Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod tato operace se nezdařila.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

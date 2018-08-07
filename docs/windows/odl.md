@@ -1,5 +1,5 @@
 ---
-title: ODL | Microsoft Docs
+title: ODL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877693"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608183"
 ---
 # <a name="odl"></a>odl
-Identifikuje rozhraní jako objekt popis jazyk (ODL) rozhraní. MIDL kompilátoru nevyžaduje, aby **odl** atribut; je rozpoznán pouze pro kompatibilitu s starší soubory .odl.  
+Označí rozhraní jako objekt popis jazyka (ODL) rozhraní. V kompilátoru MIDL nevyžaduje, aby **odl** atribut; je rozpoznáno pouze pro kompatibilitu s starší soubory .odl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Odl** atribut C++ má stejné funkce jako [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL atribut.  
+ **Odl** C++ atribut má stejné funkce jako [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,9 +64,9 @@ public:
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

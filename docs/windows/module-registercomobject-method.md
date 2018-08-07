@@ -1,5 +1,5 @@
 ---
-title: Module::registercomobject – metoda | Microsoft Docs
+title: Module::registercomobject – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873976"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606537"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject – metoda
-Zaregistruje jeden nebo více objektů COM, můžete k nim připojit jiné aplikace.  
+Zaregistruje jeden nebo více objektů modelu COM, takže k nim mohli připojit další aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,29 +39,29 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `serverName`  
+### <a name="parameters"></a>Parametry  
+ *název_serveru*  
  Plně kvalifikovaný název serveru.  
   
- `clsids`  
+ *CLSID*  
  Pole CLSID k registraci.  
   
- `factories`  
- Pole rozhraní IUnknown objektů tříd, jejichž dostupnosti je publikován.  
+ *objekty pro vytváření*  
+ Pole rozhraní IUnknown objektů tříd, jejichž dostupnost je publikován.  
   
- `cookies`  
- Po dokončení operace pole ukazatelé na hodnoty, které identifikují třída objekty, které byly zaregistrovány. Později se používají tyto hodnoty odvolat registrace.  
+ *Soubory cookie*  
+ Po dokončení operace, pole ukazatelů na hodnoty, které identifikují třídu objektů, které jste zaregistrovali. Tyto hodnoty se později použijí zrušit registraci.  
   
- `count`  
+ *Počet*  
  Počet CLSID k registraci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK Pokud successfu; jinak hodnota HRESULT například CO_E_OBJISREG, která určuje, z důvodu operace se nezdařila.  
+ S_OK Pokud úspěšné; v opačném případě HRESULT jako je například CO_E_OBJISREG, který označuje důvod operace se nezdařila.  
   
 ## <a name="remarks"></a>Poznámky  
- Objekty COM jsou registrovány CLSCTX_LOCAL_SERVER enumerátor CLSCTX výčtu.  
+ Objekty modelu COM jsou registrovány CLSCTX_LOCAL_SERVER enumerátor výčtu CLSCTX.  
   
- Typ připojení k registrované objekty je zadána kombinaci aktuální `comflag` parametr šablony a REGCLS_SUSPENDED enumerátor REGCLS výčtu.  
+ Typ připojení k registrované objekty je určená kombinací aktuální *comflag* parametr šablony a REGCLS_SUSPENDED enumerátor výčtu REGCLS.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

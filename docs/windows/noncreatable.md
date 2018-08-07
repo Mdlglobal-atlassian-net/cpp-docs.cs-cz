@@ -1,5 +1,5 @@
 ---
-title: noncreatable – | Microsoft Docs
+title: noncreatable | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4881d0e2bc1379f5c4cafa17f485707bca315783
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877820"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607940"
 ---
 # <a name="noncreatable"></a>noncreatable
-Definuje objekt, který nelze vytvořit instanci samostatně.  
+Definuje objekt, který se nedá vytvořit instance samostatně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [noncreatable]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Noncreatable –** atribut C++ má stejné funkce jako [noncreatable –](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL atribut a je automaticky předána do vygenerovaného. IDL soubor kompilátorem.  
+ **Noncreatable** C++ atribut má stejné funkce jako [noncreatable –](http://msdn.microsoft.com/library/windows/desktop/aa367118) atribut MIDL a automaticky předána do vytvořeného. Soubor IDL kompilátorem.  
   
- Pokud tento atribut se používá v rámci projekt, který používá ATL, změní chování atribut. Kromě výše uvedených chování atribut také vloží [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro. Toto makro označuje ATL objekt nelze vytvořit externě.  
+ Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, se změní chování atributu. Kromě výše uvedených chování atribut také vloží [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) – makro. Toto makro označuje s knihovnou ATL objekt nelze vytvořit externě.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,9 +64,9 @@ class CMyClass : public A
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**coclass**|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

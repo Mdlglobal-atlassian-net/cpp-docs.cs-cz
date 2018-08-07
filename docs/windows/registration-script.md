@@ -1,5 +1,5 @@
 ---
-title: registration_script – | Microsoft Docs
+title: registration_script – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878720"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607670"
 ---
 # <a name="registrationscript"></a>registration_script
-Spustí skript zadanou vlastní registraci.  
+Provede zadanou registraci vlastní skript.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Skript*  
- Úplná cesta k souboru vlastní registrace skript (.). Hodnota **žádné**, jako například `script = "none"`, označuje, že coclass nemá žádné požadavky na registraci.  
+ *skript*  
+ Úplná cesta k souboru registrace vlastní skript (.rgs). Hodnota **žádný**, jako například `script = "none"`, označuje, že coclass nemá žádné požadavky na registraci.  
   
 ## <a name="remarks"></a>Poznámky  
- **Registration_script –** C++ atribut provede vlastní registrace skript určeného **skriptu**. Pokud tento atribut nezadá, použije se soubor standardní .rgs (obsahující informace o registraci komponenty). Další informace o .rgs souborů najdete v tématu [ATL komponenta registru (Registrar)](../atl/atl-registry-component-registrar.md).  
+ **Registration_script –** C++ atribut spustí skript vlastní registrace určené *skript*. Pokud tento atribut není zadán, je použít standardní .rgs soubor (obsahující informace o registraci komponenty). Další informace o .rgs soubory, naleznete v tématu [The komponenta knihovny ATL registru (Registrar)](../atl/atl-registry-component-registrar.md).  
   
- Tento atribut vyžaduje, aby [třída typu coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít stejného elementu.  
+ Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu.  
   
 ## <a name="example"></a>Příklad  
- Následující kód určuje, že součást má skript registru s názvem cpp_attr_ref_registration_script.rgs.  
+ Následující kód určuje, že součást má volat cpp_attr_ref_registration_script.rgs skript registru.  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -73,14 +72,14 @@ class CMyClass:public IFace {};
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Jeden nebo více z následujících: **třída typu coclass**, **progid**, nebo **vi_progid –**.|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
- [COM – atributy](../windows/com-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [Com – atributy](../windows/com-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [rdx](../windows/rdx.md)   

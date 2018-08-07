@@ -1,5 +1,5 @@
 ---
-title: Přesunutí tlačítka panelu nástrojů | Microsoft Docs
+title: Přesunutí tlačítka panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffb82def1626541929b6132b7d733df484b40ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90cdd21d77901f10b92ec73084806e8523924724
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876901"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607450"
 ---
 # <a name="moving-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů
 ### <a name="to-move-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů  
   
-1.  V **nástrojů zobrazení** podokně, přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.  
+1.  V **panel nástrojů zobrazení** podokně přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
- Knihovny MFC nebo knihovny ATL  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

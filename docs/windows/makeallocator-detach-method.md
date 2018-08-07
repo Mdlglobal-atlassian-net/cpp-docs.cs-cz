@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::detach – metoda | Microsoft Docs
+title: Makeallocator::detach – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876966"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603365"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Zrušíte paměti přidělené [přidělte](../windows/makeallocator-allocate-method.md) z aktuálního objektu MakeAllocator metodu.  
+ Zruší přidružení paměť přidělenou [přidělení](../windows/makeallocator-allocate-method.md) metodu z aktuální **MakeAllocator** objektu.  
   
- Když zavoláte Detach(), jste zodpovědní za odstraňování poskytované metodu přidělte paměť.  
+ Při volání **Detach()**, zodpovídáte za odstranění paměti poskytované `Allocate` metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -44,5 +44,5 @@ __forceinline void Detach();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [MakeAllocator – třída](../windows/makeallocator-class.md)   
+ [Makeallocator – třída](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: ProgID | Microsoft Docs
+title: ProgID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2b2d2168b568c74c5404cc83bab1e5f77570773
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98057773d6cbb51fe5aacc3ac814af89532bd887
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880430"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607982"
 ---
 # <a name="progid"></a>progid
-Určuje identifikátor ProgID pro objekt COM.  
+Určuje identifikátor pro objekt modelu COM ProgID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ progid(  
+[ progid(  
    name  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *Jméno*  
- ProgID reprezentující objekt.  
+ Identifikátor ProgID reprezentující objekt.  
   
- ProgID prezentovat čitelná pro člověka verzi identifikátor třídy (CLSID) použije k identifikaci objektů COM/ActiveX.  
+ ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.  
   
 ## <a name="remarks"></a>Poznámky  
- **Progid** C++ atribut umožňuje určit ProgID pro objekt COM. ProgID má tvar *name1.name2.version*. Pokud nezadáte *verze* pro ProgID, je výchozí verze 1. Pokud nezadáte *name1.name2*, výchozí název je *classname.classname*. Pokud nezadáte **progid** a zadáte **vi_progid –**, *name1.name2* jsou převzaty z **vi_progid –** a (Další sekvenčních verze Number) je připojen.  
+ **Progid** atribut C++ umožňuje zadat klíč pro objekt modelu COM ProgID. Identifikátor ProgID má tvar *name1.name2.version*. Pokud nezadáte *verze* pro ProgID, je výchozí verze 1. Pokud nezadáte *name1.name2*, výchozí název je *classname.classname*. Pokud nezadáte **progid** a zadáte `vi_progid`, *name1.name2* pocházejí ze `vi_progid` (Další pořadové číslo) a verze se připojí.  
   
- Pokud bloku atribut, který používá **progid** také nepoužívá `uuid`, kompilátor zkontroluje registru a zjistěte, zda `uuid` existuje pro zadaný **progid**. Pokud **progid** není zadán, verzi (a třída typu coclass název, pokud se vytváří třída typu coclass) se použije k vygenerování **progid**.  
+ Pokud blok atribut, který používá **progid** také nepoužívá **uuid**, kompilátor zkontroluje registru a zjistěte, jestli **uuid** existuje pro zadaný rozbočovač **progid** . Pokud **progid** není zadán, verze (a název coclass, pokud vytváříte coclass) se použije k vygenerování **progid**.  
   
- **ProgID** znamená **třída typu coclass** atribut, který je zadáte-li **progid**, je totéž jako zadání **třída typu coclass** a  **ProgID** atributy.  
+ **ProgID** znamená `coclass` atribut, to znamená, pokud zadáte **progid**, je totéž jako zadání `coclass` a **progid** atributy.  
   
- **Progid** atribut způsobuje třídu automaticky zaregistrovat se zadaným názvem. Soubor generovaný .idl nezobrazí **progid** hodnotu.  
+ **Progid** atribut způsobí, že třída má být automaticky zaregistrován se zadaným názvem. Nebudou se zobrazovat generovaného souboru **progid** hodnotu.  
   
- Pokud tento atribut se používá v rámci projekt, který používá ATL, změní chování atribut. Kromě výše uvedených chování informace zadaným tento atribut se používá v **GetProgID** funkce, vloženy **třída typu coclass** atribut. Další informace najdete v tématu [třída typu coclass](../windows/coclass.md) atribut.  
+ Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, se změní chování atributu. Kromě výše uvedené chování je používán informace zadané pomocí tohoto atributu `GetProgID` funkce vloženy `coclass` atribut. Další informace najdete v tématu [coclass](../windows/coclass.md) atribut.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [třída typu coclass](../windows/coclass.md) pro ukázkové použití **progid**.  
+ Podívejte se na příklad pro [coclass](../windows/coclass.md) ukázkový používání **progid**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -62,15 +61,15 @@ Určuje identifikátor ProgID pro objekt COM.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Klíč progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

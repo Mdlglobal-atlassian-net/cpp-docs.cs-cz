@@ -1,5 +1,5 @@
 ---
-title: 'Module::methodreleasenotifier:: method_ – datový člen | Microsoft Docs'
+title: 'Module::methodreleasenotifier:: method_ – datový člen | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce9ad8ba8659fb26c7303ff5efe236535e14d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0929ac466a5f09a0ee2401111b40a969aaf7193d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877186"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606810"
 ---
 # <a name="modulemethodreleasenotifiermethod-data-member"></a>Module::MethodReleaseNotifier::method_ – datový člen
-Obslužné rutiny události pro aktuální objekt Module::MethodReleaseNotifier obsahuje ukazatel.  
+Uchovává ukazatel na obslužnou rutinu události pro aktuální **Module::MethodReleaseNotifier** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   

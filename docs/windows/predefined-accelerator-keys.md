@@ -1,5 +1,5 @@
 ---
-title: Předdefinované klávesy akcelerátoru | Microsoft Docs
+title: Předdefinované klávesy akcelerátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,71 +19,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880792"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608414"
 ---
 # <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
-Existuje několik předdefinovaných přístupové klávesy, které může být součástí projekt aplikace Windows. Některé z těchto virtuálních klíčů jsou pro prostředí Windows. Další podpora prohlížeče nebo aplikace kódování Unicode. Můžete používat kterýkoli z těchto klíčů v jakékoli akcelerátoru.  
+Existuje mnoho z předdefinované klávesy akcelerátoru, které mohou být součástí projektu aplikace Windows. Některé z těchto virtuální klíče jsou pro prostředí Windows. Další podpora prohlížeče nebo aplikace kódování Unicode. Můžete použít některý z těchto klíčů v jakékoli akcelerátoru.  
   
 |Key|Popis|  
 |---------|-----------------|  
 |VK_ACCEPT|Přijměte editoru IME|  
-|VK_BROWSER_BACK|Windows: Klíč zpět v prohlížeči|  
-|VK_BROWSER_FAVORITES|Windows: Oblíbené položky prohlížeče klíč|  
-|VK_BROWSER_FORWARD|Windows: Předat dál klíč prohlížeče|  
-|VK_BROWSER_HOME|Windows: Spuštění prohlížeče a z domova klíč|  
-|VK_BROWSER_REFRESH|Windows: Klíč obnovit v prohlížeči|  
+|VK_BROWSER_BACK|Windows: Zpět v prohlížeči klávesu|  
+|VK_BROWSER_FAVORITES|Windows: Klíč Oblíbené položky prohlížeče|  
+|VK_BROWSER_FORWARD|Windows: Forward klíč prohlížeče|  
+|VK_BROWSER_HOME|Windows: Klíč spuštění prohlížeče a domovské|  
+|VK_BROWSER_REFRESH|Windows: Prohlížeč-obnovit klíč|  
 |VK_BROWSER_SEARCH|Windows: Klíč hledání prohlížeče|  
-|VK_BROWSER_STOP|Windows: Klíč ukončit v prohlížeči|  
-|VK_CONVERT|Převést editoru IME|  
-|VK_FINAL|IME – režim konečné|  
-|VK_HANGUEL|Režim editoru IME Hanguel (udržovat kompatibilitu; použít VK_HANGUL)|  
-|VK_HANGUL|Korejská IME režimu|  
-|VK_HANJA|Režim Hanja editoru IME|  
-|VK_JUNJA|Režim Junja editoru IME|  
-|VK_KANA|Režim Kana editoru IME|  
-|VK_KANJI|Režim Kanji editoru IME|  
+|VK_BROWSER_STOP|Windows: Klíč prohlížeč-zastavit|  
+|VK_CONVERT|Převést as|  
+|VK_FINAL|Poslední režim editoru IME|  
+|VK_HANGUEL|Režim editoru IME Hanguel (zachován z důvodu kompatibility; použijte VK_HANGUL)|  
+|VK_HANGUL|Režim editoru IME Korejská|  
+|VK_HANJA|Režim editoru IME Hanja|  
+|VK_JUNJA|Režim editoru IME Junja|  
+|VK_KANA|Režim editoru IME Kana|  
+|VK_KANJI|Režim editoru IME Kanji|  
 |VK_LAUNCH_APP1|Windows: Klíč spuštění aplikace 1|  
 |VK_LAUNCH_APP2|Windows: Klíč spuštění aplikace 2|  
-|VK_LAUNCH_MAIL|Windows: Klíč e-mailu spuštění|  
-|VK_LAUNCH_MEDIA_SELECT|Systému Windows: Vyberte klíč média|  
-|VK_LCONTROL|Klíč řízení vlevo|  
-|VK_LMENU|Klíč nabídce vlevo|  
+|VK_LAUNCH_MAIL|Windows: E-mailu počáteční klíč|  
+|VK_LAUNCH_MEDIA_SELECT|Windows: Výběr klíč média|  
+|VK_LCONTROL|Klávesy vlevo|  
+|VK_LMENU|Klíč nabídku vlevo|  
 |VK_LSHIFT|Klíč POSUNUTÍ doleva|  
-|VK_MEDIA_NEXT_TRACK|Windows: Další klíč sledovat|  
-|VK_MEDIA_PLAY_PAUSE|Systému Windows: Klíč přehrát či pozastavit média|  
-|VK_MEDIA_PREV_TRACK|Windows: Předchozí klíč sledovat|  
-|VK_MEDIA_STOP|Systému Windows: Klíč zastavení média|  
+|VK_MEDIA_NEXT_TRACK|Windows: Další sledování klávesu|  
+|VK_MEDIA_PLAY_PAUSE|Windows: Klíč pauzy a přehrávání média|  
+|VK_MEDIA_PREV_TRACK|Windows: Předchozí stopa klíč|  
+|VK_MEDIA_STOP|Windows: Klíč média Stop|  
 |VK_MODECHANGE|Žádost o změnu režimu editoru IME|  
-|VK_NONCONVERT|Nonconvert editoru IME|  
-|VK_OEM_1|Windows: pro standardní klávesnice USA ";:' klíč|  
-|VK_OEM_102|Windows: Buď lomená závorka nebo zpětné lomítko klíče na klávesnici RT 102 kláves|  
-|VK_OEM_2|Windows: pro standardní klávesnice USA "/?" klíč|  
-|VK_OEM_3|Windows: pro standardní klávesnice USA % ~' klíč|  
-|VK_OEM_4|Windows: pro standardní klávesnice USA. [{"klíč|  
-|VK_OEM_5|Windows: pro standardní klávesnice USA "\\&#124;' klíč|  
-|VK_OEM_6|Windows: pro standardní klávesnice USA, "]}" klíč|  
-|VK_OEM_7|Windows: pro standardní klávesnice USA, klíč 'single uvozovky nebo dvojitou quote'|  
-|VK_OEM_COMMA|Windows: pro jakékoli zemi či oblasti, klíč ''|  
-|VK_OEM_MINUS|Windows: pro jakékoli zemi či oblasti '-' klíč|  
-|VK_OEM_PERIOD|Windows: pro jakékoli zemi či oblasti '.' klíč|  
-|VK_OEM_PLUS|Windows: pro jakékoli zemi či oblasti, klíč '+'|  
-|VK_PACKET|Windows: Sloužící k předávání znaky znakové sady Unicode, jako kdyby byly stisknutí kláves.|  
-|VK_RCONTROL|Klíč právo řízení|  
-|VK_RMENU|Pravé nabídce klíč|  
-|VK_RSHIFT|POSUNUTÍ doprava klíč|  
-|VK_SLEEP|Klíč režimu spánku počítače|  
-|VK_VOLUME_DOWN|Windows: Svazek stisknutou klávesu|  
-|VK_VOLUME_MUTE|Systému Windows: Klíč ztlumení svazku|  
+|VK_NONCONVERT|Editor IME nonconvert|  
+|VK_OEM_1|Windows: pro standardní uživatelské USA ";:' klíč|  
+|VK_OEM_102|Windows: Buď lomená závorka klíč nebo zpětné lomítko klávesu na klávesnici 102 klávesami RT|  
+|VK_OEM_2|Windows: pro standardní uživatelské USA "/?" klíč|  
+|VK_OEM_3|Windows: pro standardní uživatelské USA "~" klíč|  
+|VK_OEM_4|Windows: pro standardní uživatelské USA "[{" klíč|  
+|VK_OEM_5|Windows: pro standardní uživatelské USA "\\&#124;" klíč|  
+|VK_OEM_6|Windows: pro standardní uživatelské USA "]}" klíče|  
+|VK_OEM_7|Windows: pro standardní uživatelské USA, klíč "single nabídky/dvojité uvozovky"|  
+|VK_OEM_COMMA|Windows: pro žádné země ani oblasti, klíč ""|  
+|VK_OEM_MINUS|Windows: pro žádné země ani oblasti "-" klíč|  
+|VK_OEM_PERIOD|Windows: pro žádné země ani oblasti "." klíč|  
+|VK_OEM_PLUS|Windows: pro žádné země ani oblasti, klíč '+'|  
+|VK_PACKET|Windows: Sloužící k předávání znaky znakové sady Unicode, jako by byly úhozy na klávesnici.|  
+|VK_RCONTROL|Ovládací PRVEK vpravo klíč|  
+|VK_RMENU|Vpravo nabídka key|  
+|VK_RSHIFT|Klávesa SHIFT doprava|  
+|VK_SLEEP|Klíč v režimu spánku počítače|  
+|VK_VOLUME_DOWN|Windows: Svazek klávesy|  
+|VK_VOLUME_MUTE|Windows: Ztlumit klíč svazku|  
 |VK_VOLUME_UP|Windows: Svazek klíč|  
 |VK_XBUTTON1|Windows: X1 tlačítko myši|  
 |VK_XBUTTON2|Windows: X2 tlačítko myši|  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

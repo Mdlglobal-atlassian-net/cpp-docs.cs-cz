@@ -1,5 +1,5 @@
 ---
-title: Operator == – operátor (Microsoft::WRL) | Microsoft Docs
+title: Operator == – operátor (Microsoft::WRL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 719522a37c989b388a811348759d1fff34c373a9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882586"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605356"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== – operátor (Microsoft::WRL)
-Operátor rovnosti pro [ComPtr](../windows/comptr-class.md) a [ComPtrRef](../windows/comptrref-class.md) objekty.  
+Operátor rovnosti pro [ComPtr](../windows/comptr-class.md) a [comptrref –](../windows/comptrref-class.md) objekty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `a`  
+### <a name="parameters"></a>Parametry  
+ *a*  
  Levý objekt.  
   
- `b`  
- Objekt pravý.  
+ *b*  
+ Pravý objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud jsou objekty stejné; v opačném `false`.  
+ **Hodnota TRUE** Pokud jsou objekty stejné; jinak **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: Raiseexception – funkce | Microsoft Docs
+title: RaiseException – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882180"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602663"
 ---
 # <a name="raiseexception-function"></a>RaiseException – funkce
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `hr`  
- Kód výjimky výjimky vyvolaných; To znamená, HRESULT operace se nezdařila.  
+### <a name="parameters"></a>Parametry  
+ *hr*  
+ Kód výjimky výjimek vyvolaných; To znamená, HRESULT neúspěšnou operaci.  
   
- `dwExceptionFlags`  
- Příznak, který indikuje výjimce (hodnota příznaku je nulová), nebo noncontinuable výjimky (hodnota příznaku je nenulové hodnoty). Ve výchozím nastavení je výjimka noncontinuable.  
+ *dwExceptionFlags*  
+ Příznak, který označuje výjimce (hodnota příznaku je nula), nebo noncontinuable výjimky (hodnota příznaku je nenulová). Výjimkou je ve výchozím nastavení, co vznikla nevykonatelná.  
   
 ## <a name="remarks"></a>Poznámky  
- Vyvolá výjimku v volající vlákno.  
+ Vyvolá výjimku v volajícího vlákna.  
   
- Další informace najdete v tématu Windows **raiseexception –** funkce.  
+ Další informace najdete v článku Windows `RaiseException` funkce.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** internal.h  

@@ -1,5 +1,5 @@
 ---
-title: oleautomation | Microsoft Docs
+title: oleautomation | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882287"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608004"
 ---
 # <a name="oleautomation"></a>oleautomation
-Označuje, že rozhraní je kompatibilní s automatizace.  
+Označuje, že je kompatibilní s automatizací rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Oleautomation** atribut C++ má stejné funkce jako [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) MIDL atribut.  
+ **Oleautomation** C++ atribut má stejné funkce jako [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklady pro [defaultvalue](../windows/defaultvalue.md) a [nonextensible –](../windows/nonextensible.md) pro ukázkové použití **oleautomation**.  
+ Podívejte se na příklady pro [defaultvalue](../windows/defaultvalue.md) a [nerozšiřitelnou kategorii](../windows/nonextensible.md) ukázkový používání **oleautomation**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Označuje, že rozhraní je kompatibilní s automatizace.
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|**dispinterface**|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Vožení nové nabídky mezi stávající nabídky | Microsoft Docs
+title: Vožení nové nabídky mezi stávající nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876329"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607105"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Vožení nové nabídky mezi stávající nabídky
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>Chcete-li vložit nové nabídky mezi stávající nabídky  
   
-1.  Vyberte existující název nabídky a stiskněte klávesu **vložit** klíč. **Nová položka** pole je vložen před vybranou položku.  
+1.  Vyberte existující název nabídky a stiskněte klávesu **vložit** klíč. **Nová položka** pole se vloží před vybranou položku.  
   
      \- nebo –  
   
-2.  Klikněte pravým tlačítkem na panelu nabídek a zvolte **vložit nový** z místní nabídky.  
+2.  Klikněte pravým tlačítkem na řádku nabídek a vyberte **vložit nový** z místní nabídky.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

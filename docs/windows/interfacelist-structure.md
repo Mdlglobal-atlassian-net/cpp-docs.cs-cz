@@ -1,5 +1,5 @@
 ---
-title: Interfacelist – struktura | Microsoft Docs
+title: Interfacelist – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876732"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604837"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,11 +37,11 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Název rozhraní; První rozhraní v seznamu rekurzivní.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Název rozhraní; první mapované rozhraní seznamu rekurzivní.  
   
- `U`  
+ *U*  
  Název rozhraní; Zbývající rozhraní v seznamu rekurzivní.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -49,12 +49,12 @@ struct InterfaceList;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|`FirstT`|Synonymum pro parametr šablony `T`.|  
-|`RestT`|Synonymum pro parametr šablony `U`.|  
+|`FirstT`|Synonymum pro parametr šablony *T*.|  
+|`RestT`|Synonymum pro parametr šablony *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `InterfaceList`  

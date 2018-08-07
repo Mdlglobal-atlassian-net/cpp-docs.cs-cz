@@ -1,5 +1,5 @@
 ---
-title: Module::GenericReleaseNotifier – třída | Microsoft Docs
+title: Module::genericreleasenotifier – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3ba58e08bac36d905fbf874546d7791f2aa3fcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882005"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606420"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier – třída
-Po vydání poslední objekt v aktuální modul, vyvolá obslužnou rutinu události. Obslužné rutiny události je určena na lambda, functor nebo ukazatel funkce.  
+Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ template<typename T>
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ člena data, která obsahuje umístění obslužné rutiny události.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ datového člena, který obsahuje umístění obslužné rutiny události.  
   
 ## <a name="members"></a>Členové  
   
@@ -44,19 +44,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializuje novou instanci třídy Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::GenericReleaseNotifier** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke – metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události související s aktuálním objektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::Invoke – metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události spojené s aktuálním **Module::GenericReleaseNotifier** objektu.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_ – datový člen](../windows/module-genericreleasenotifier-callback-data-member.md)|Obsahuje lambda, functor nebo obslužná rutina události – ukazatel funkce související s aktuálním objektem Module::GenericReleaseNotifier.|  
+|[Module::GenericReleaseNotifier::callback_ – datový člen](../windows/module-genericreleasenotifier-callback-data-member.md)|Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální **Module::GenericReleaseNotifier** objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ReleaseNotifier`  

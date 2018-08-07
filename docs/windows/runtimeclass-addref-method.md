@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::addref – metoda | Microsoft Docs
+title: Runtimeclass::addref – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892257"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608479"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef – metoda
-Zvýší počet odkazů pro aktuální objekt RuntimeClass.  
+Zvýší počet odkazů pro aktuální **RuntimeClass** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ STDMETHOD_(
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

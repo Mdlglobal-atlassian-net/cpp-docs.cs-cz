@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::casttobase – metoda | Microsoft Docs
+title: Interfacetraits::casttobase – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878522"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606446"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +36,20 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru `ptr`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ parametru *ptr*.  
   
- `ptr`  
- Ukazatel na typ `T`.  
+ *ptr*  
+ Ukazatel na typ *T*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Ukazatel na `Base`.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrhá zadaný ukazatel na ukazatel na `Base`.  
+ Přetypování zadaný ukazatel na ukazatel na `Base`.  
   
- Další informace o `Base`, najdete v části veřejné – definice TypeDef v [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
+ Další informace o `Base`, naleznete v části veřejné definice TypeDef [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

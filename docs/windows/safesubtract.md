@@ -1,5 +1,5 @@
 ---
-title: SafeSubtract | Microsoft Docs
+title: SafeSubtract | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 190b93fc9b3cfb299784d0c352c2f7e5bff25db4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889218"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606140"
 ---
 # <a name="safesubtract"></a>SafeSubtract
-Odečítá od dvou čísel způsobem, který chrání před přetečení.  
+Odečte dvě čísla způsobem, který chrání proti přetečení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,26 +38,26 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [v] `t`  
- První číslo v odčítání. Toto musí být typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *t*  
+ První číslo v odčítání. Musí se jednat o typ `T`.  
   
- [v] `u`  
- Číslo, které má odečíst od `t`. Musí se jednat o typ U.  
+ [in] *u*  
+ Číslo, které se má odečíst od *t*. Musí se jednat o typ `U`.  
   
- [out] `result`  
- Parametr kde `SafeSubtract` ukládá výsledek.  
+ [out] *výsledek*  
+ Parametr kde **SafeSubtract** výsledek je uložen.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ **Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a slouží k odečtení jedné operace bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tato metoda by měl použít, pouze když jedné matematické operace musí být chráněny. Pokud existují více operací, měli byste použít `SafeInt` třída namísto volání jednotlivých samostatnou funkcí.  
+>  Tato metoda by měla sloužit pouze při jedné matematické operace musí být chráněné. Pokud je více operací, měli byste použít `SafeInt` třídy místo volání jednotlivých samostatné funkce.  
   
- Další informace o typech šablon T a U najdete v tématu [funkce jazyka SafeInt](../windows/safeint-functions.md).  
+ Další informace o typech šablon `T` a `U`, naleznete v tématu [SafeInt – funkce](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** safeint.h  

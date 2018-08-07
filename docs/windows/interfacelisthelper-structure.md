@@ -1,5 +1,5 @@
 ---
-title: Interfacelisthelper – struktura | Microsoft Docs
+title: Interfacelisthelper – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878044"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608128"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,45 +50,45 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T0`  
- Parametr šablony 0, který je vyžadován.  
+### <a name="parameters"></a>Parametry  
+ *T0*  
+ Parametr šablony 0, což je povinné.  
   
- `T1`  
- Parametr šablony 1, který ve výchozím nastavení neurčená.  
+ *T1*  
+ Parametr šablony 1, která ve výchozím nastavení není zadán.  
   
- `T2`  
- Parametr šablony 2, který ve výchozím nastavení neurčená. Třetí parametr šablony.  
+ *T2*  
+ Parametr šablony 2, která ve výchozím nastavení není zadán. Třetí parametr šablony.  
   
- `T3`  
- Parametr šablony 3, který ve výchozím nastavení neurčená.  
+ *T3*  
+ Parametr šablony 3, která ve výchozím nastavení není zadán.  
   
- `T4`  
- Parametr šablony 4, který ve výchozím nastavení neurčená.  
+ *T4*  
+ Parametr šablony 4, která ve výchozím nastavení není zadán.  
   
- `T5`  
- Parametr šablony 5, který ve výchozím nastavení neurčená.  
+ *T5*  
+ Parametr šablony 5, která ve výchozím nastavení není zadán.  
   
- `T6`  
- Parametr šablony 6, který ve výchozím nastavení neurčená.  
+ *T6*  
+ Parametr šablony 6, která ve výchozím nastavení není zadán.  
   
- `T7`  
- Parametr šablony 7, který ve výchozím nastavení neurčená.  
+ *T7*  
+ Parametr šablony 7, která ve výchozím nastavení není zadán.  
   
- `T8`  
- Parametr šablony 8, který ve výchozím nastavení neurčená.  
+ *T8*  
+ Parametr šablony 8, která ve výchozím nastavení není zadán.  
   
- `T9`  
- Parametr šablony 9, který ve výchozím nastavení neurčená.  
+ *T9*  
+ Parametr šablony 9, která ve výchozím nastavení není zadán.  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoří typ interfacelist – rekurzivně použití argumenty parametrů určené šablony.  
+ Sestavení `InterfaceList` typ podle rekurzivně použití určené šablony parametr argumentů.  
   
- Interfacelisthelper – šablona používá parametr šablony `T0` definovat první data člena do interfacelist – struktura a pak rekurzivně platí šabloně interfacelisthelper – pro všechny ostatní parametry šablony. Interfacelisthelper – zastaví, pokud nejsou žádné zbývající parametry šablony.  
+ **Interfacelisthelper –** šablona používá parametr šablony *T0* k definování první datový člen v `InterfaceList` strukturu a rekurzivně se vztahuje  **Interfacelisthelper –** šablonu pro všechny zbývající parametry šablony. **Interfacelisthelper –** zastaví, když neexistují žádné zbývající parametry šablony.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  

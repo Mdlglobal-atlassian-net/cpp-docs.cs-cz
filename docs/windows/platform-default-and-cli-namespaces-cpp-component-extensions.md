@@ -1,5 +1,5 @@
 ---
-title: Platform, default a rozhraní příkazového řádku obory názvů (C++ Component Extensions) | Microsoft Docs
+title: Platform, default a cli obory názvů (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880737"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603547"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Obory názvů Platform, default a cli (rozšíření komponent C++)
-Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.  
+Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- Při vytváření projektu poskytuje jazyk Visual C++ výchozí obor názvů pro váš projekt. Můžete ručně přejmenujte obor názvů, i když v prostředí Windows Runtime musí odpovídat názvu souboru .winmd název kořenového oboru názvů.  
+ Při vytváření projektu poskytuje jazyk Visual C++ výchozí obor názvů pro váš projekt. Obor názvů, můžete ručně přejmenovat, i když v modulu Windows Runtime musí název souboru .winmd odpovídat názvu kořenového oboru názvů.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Další informace najdete v tématu [obory názvů a Typ viditelnosti (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+ Další informace najdete v tématu [viditelnost typů a oborů názvů (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 using namespace cli;  
 ```  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
- C + +/ CLI podporuje `cli` oboru názvů. Při kompilaci s **/CLR**, `using` je implicitní příkazu v části syntaxe.  
+ C + +/ CLI podporuje **rozhraní příkazového řádku** oboru názvů. Při kompilaci s `/clr`, **pomocí** implikován příkaz v oddílu syntaxe.  
   
- V jsou následující funkce jazyka `cli` obor názvů:  
+ Spadají následující funkce jazyka **rozhraní příkazového řádku** obor názvů:  
   
 -   [Pole](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad kódu ukazuje, že je možné použít symbol v `cli` oboru názvů jako uživatelem definované symbol v kódu.  Nicméně Jakmile provedete, budete muset explicitně nebo implicitně kvalifikaci vaše odkazy na `cli` jazyk element se stejným názvem.  
+ Následující příklad kódu ukazuje, že je možné použít symbol v **rozhraní příkazového řádku** oboru názvů jako uživatelsky definovaný symbol v kódu.  Nicméně, jakmile to uděláte, budete muset explicitně nebo implicitně kvalifikovat odkazy na **rozhraní příkazového řádku** prvek jazyka se stejným názvem.  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

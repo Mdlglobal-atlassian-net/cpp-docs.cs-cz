@@ -1,5 +1,5 @@
 ---
-title: REF nové, gcnew (rozšíření komponent C++) | Microsoft Docs
+title: REF new, gcnew (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879058"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606182"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (rozšíření komponent C++)
-`ref new` Agregační – klíčové slovo přiděluje instance typu, který je uvolnění z paměti při objektu se změní na nedostupné a která vrací popisovač ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) k objektu přidělená.  
+**Ref nové** agregační – klíčové slovo přiděluje instance typu, který je uvolněna při objekt přestane být přístupný a, která vrací popisovač ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) na přiřazený objekt.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- Paměť pro instanci typu, která je přidělena `ref new` je automaticky navrácena.  
+ Paměť pro instanci typu, která je přidělena **ref nové** automaticky uvolní.  
   
- A `ref new` operaci vyvolává `OutOfMemoryException` Pokud nelze přidělit paměť.  
+ A **ref nové** vyvolá operaci `OutOfMemoryException` Pokud nelze přidělit paměť.  
   
- Další informace o tom, jak je paměť pro nativní typy C++ přidělené a navrácena najdete v tématu [nové a odstraňte operátory](../cpp/new-and-delete-operators.md).  
+ Další informace o fungování přidělené a přidělení paměti pro nativní typy jazyka C++, naleznete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Použití `ref new` přidělit paměť pro prostředí Windows Runtime objekty, jejichž doba platnosti, které chcete spravovat automaticky. Objekt je automaticky navrácena, kdy přestane jeho počet odkazů na nulu, které dojde po poslední kopii odkaz byla mimo rozsah. Další informace najdete v tématu [Ref třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Použití **ref nové** přidělení paměti pro objekty modulu Windows Runtime, jehož doba života, které chcete spravovat automaticky. Objekt je automaticky uvolní při jeho počet odkazů dosáhne nuly, které dojde po poslední Kopírovat odkaz má nepřejdou mimo rozsah. Další informace najdete v tématu [referenční třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- Tím se přidělí paměť pro spravovaný typ (referenční dokumentace nebo hodnota typu) `gcnew`a navrácena pomocí uvolňování paměti.  
+ Je přidělena paměť pro spravovaného typu (typ hodnotou nebo odkazem) **gcnew**a navrácena pomocí uvolňování paměti.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad používá `gcnew` přidělit objekt zprávy.  
+ Následující příklad používá **gcnew** přidělit objekt zprávy.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **Příklad**  
+ Následující příklad používá **gcnew** vytvořit zabalený typ hodnoty pro použití jako typ odkazu.  
   
- Následující příklad používá `gcnew` vytvoření typu zabalené hodnoty pro použití jako odkazového typu.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

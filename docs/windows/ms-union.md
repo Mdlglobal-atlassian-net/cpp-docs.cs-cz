@@ -1,5 +1,5 @@
 ---
-title: ms_union – | Microsoft Docs
+title: ms_union – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882034"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606696"
 ---
 # <a name="msunion"></a>ms_union
 Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.  
@@ -30,18 +30,16 @@ Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Ms_union –** atribut C++ má stejné funkce jako [ms_union –](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL atribut.  
+ **Ms_union –** C++ atribut má stejné funkce jako [ms_union –](http://msdn.microsoft.com/library/windows/desktop/aa367100) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
  Následující kód ukazuje umístění **ms_union –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -71,9 +69,9 @@ __interface IFireTabCtrl {
 |||  
 |-|-|  
 |**Platí pro**|Nonencapsulated sjednocení|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
-|**Neplatné atributy**|**dispinterface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
+|**Neplatné atributy**|`dispinterface`|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Okno zobrazení zdrojů | Microsoft Docs
+title: Zobrazení prostředků – okno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877381"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608306"
 ---
 # <a name="resource-view-window"></a>Okno Zobrazení zdrojů
 > [!NOTE]
@@ -32,10 +32,10 @@ ms.locfileid: "33877381"
  Zobrazení prostředků zobrazuje soubory prostředků zahrnuté v projektech. Typy prostředků pro daný soubor .rc lze zobrazit rozbalením složky nejvyšší úrovně (například Project1.rc). Rozbalením libovolného typu prostředku lze zobrazit jednotlivé prostředky daného typu.  
   
 > [!NOTE]
->  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+>  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Chcete-li zobrazit místní nabídku příkazů, klikněte v okně Zobrazení prostředků pravým tlačítkem. Dvojitým kliknutím na záhlaví lze okno také ukotvit nebo uvolnit. Kliknutím na záhlaví pravým tlačítkem zobrazíte dodatečné příkazy, kterými lze ovládat chování okna. Další informace najdete v tématu [Správa systému Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Chcete-li zobrazit místní nabídku příkazů, klikněte v okně Zobrazení prostředků pravým tlačítkem. Dvojitým kliknutím na záhlaví lze okno také ukotvit nebo uvolnit. Kliknutím na záhlaví pravým tlačítkem zobrazíte dodatečné příkazy, kterými lze ovládat chování okna. Další informace najdete v tématu [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
 #### <a name="to-open-the-resource-view-window"></a>Otevření okna Zobrazení prostředků  
   
@@ -43,11 +43,9 @@ ms.locfileid: "33877381"
   
      \- nebo –  
   
-2.  Stiskněte klávesu **CTRL + SHIFT + E**.  
+2.  Stisknutím klávesy **Ctrl**+**Shift**+**E**.  
   
-
-  
-### <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

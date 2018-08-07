@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::makeallocator – konstruktor | Microsoft Docs
+title: Makeallocator::makeallocator – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874938"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608206"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ MakeAllocator();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy MakeAllocator.  
+ Inicializuje novou instanci třídy **MakeAllocator** třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -42,5 +42,5 @@ MakeAllocator();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [MakeAllocator – třída](../windows/makeallocator-class.md)   
+ [Makeallocator – třída](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

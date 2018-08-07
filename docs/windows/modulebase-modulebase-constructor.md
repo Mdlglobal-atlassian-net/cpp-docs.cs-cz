@@ -1,5 +1,5 @@
 ---
-title: Modulebase::modulebase – konstruktor | Microsoft Docs
+title: Modulebase::modulebase – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875887"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608927"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ ModuleBase();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy modulu.  
+ Inicializuje novou instanci `Module` třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -42,5 +42,5 @@ ModuleBase();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [ModuleBase – třída](../windows/modulebase-class.md)   
+ [Modulebase – třída](../windows/modulebase-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Editor nabídek | Microsoft Docs
+title: Editor nabídek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879435"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606247"
 ---
 # <a name="menu-editor"></a>Editor nabídek
-Nabídky umožňují uspořádat příkazy způsobem logické a snadno najít. Pomocí editoru nabídky můžete vytvořit a upravit nabídky tak, že práce řádku nabídek, úzce podobná v aplikaci bylo dokončeno.  
+Nabídky umožňuje uspořádat příkazy v podobě logické a snadno najít. V nabídce editoru můžete vytvořit a upravit nabídky při práci přímo s nabídek, který se velmi podobá v dokončenou aplikaci.  
   
- Pro projekty Visual C++ můžete použít editor nabídek na:  
+Pro projekty Visual C++ můžete použít editor nabídky:  
   
 -   [Vytvoření nabídky](../windows/creating-a-menu.md)  
   
@@ -42,29 +42,29 @@ Nabídky umožňují uspořádat příkazy způsobem logické a snadno najít. P
   
 -   [Vyberte nabídek a příkazů nabídky](../windows/selecting-multiple-menus-or-menu-commands.md)  
   
--   [Přesunutí a kopírování nabídek a příkazů nabídky](../windows/moving-and-copying-menus-and-menu-commands.md)  
+-   [Přesun a kopírování nabídek a příkazů nabídky](../windows/moving-and-copying-menus-and-menu-commands.md)  
   
 -   [Vytvořit místní nabídky](../windows/creating-pop-up-menus.md)  
   
--   [Připojení místní nabídky do vaší aplikace](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+-   [Připojení místní nabídky k aplikaci](../windows/connecting-a-pop-up-menu-to-your-application.md)  
   
--   [Zobrazení prostředků nabídky jako místní nabídky](../windows/viewing-a-menu-as-a-pop-up-menu.md)  
+-   [Zobrazení prostředku nabídky jako místní nabídky](../windows/viewing-a-menu-as-a-pop-up-menu.md)  
   
--   [Přidružení příkazu nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md)  
+-   [Přiřazení příkazu nabídky klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md)  
   
--   [Přidružit příkazu nabídky k textu stavového řádku](../windows/associating-menu-commands-with-status-bar-text-in-mfc-applications.md)  
+-   [Přidružení příkazu nabídky k textu stavového řádku](../windows/associating-menu-commands-with-status-bar-text-in-mfc-applications.md)  
   
 -   [Přiřazení přístupových kláves k příkazům nabídky](../windows/assigning-access-keys-to-menu-commands.md)  
   
 -   [Změnit vlastnosti příkazu nabídky](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Při použití editoru nabídky v velký počet instancí, kliknutím pravým tlačítkem myši zobrazíte místní nabídky často používané příkazy. Příkazy, které jsou k dispozici závisí na ukazatele odkazující na.  
+    >  Když se editor nabídky v mnoha případech, můžete kliknout na pravé tlačítko myši zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.  
   
     > [!NOTE]
-    >  ATL programů a programy Microsoft Foundation Class Library (MFC) můžete použitím průvodců kódem napojit příkazů nabídky ke kódu. Další informace najdete v tématu [přidání události](../ide/adding-an-event-visual-cpp.md).  
+    >  Pro programy třídy knihovny MFC (Microsoft Foundation) a knihovny ATL můžete použít Průvodce kód k připojení příkazů nabídky ke kódu. Další informace najdete v tématu [přidání události](../ide/adding-an-event-visual-cpp.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -75,4 +75,3 @@ Nabídky umožňují uspořádat příkazy způsobem logické a snadno najít. P
  [Identifikátory objektů uživatelského rozhraní a příkazů](../mfc/user-interface-objects-and-command-ids.md)   
  [Nabídky](../mfc/menus-mfc.md)   
  [Nabídky](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

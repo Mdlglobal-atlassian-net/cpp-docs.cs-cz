@@ -1,5 +1,5 @@
 ---
-title: MixIn – struktura | Microsoft Docs
+title: Mixin – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876160"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605721"
 ---
 # <a name="mixin-structure"></a>MixIn – struktura
-Zajišťuje třídu runtime, pochází z prostředí Windows Runtime rozhraní, pokud existuje a pak classic COM – rozhraní.  
+Zajišťuje, že runtime třídy je odvozen z rozhraní Windows Runtime, pokud existuje a potom klasické rozhraní COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Derived`  
- Typ odvozený od [implementuje](../windows/implements-structure.md) struktura.  
+### <a name="parameters"></a>Parametry  
+ *Odvozené*  
+ Typ odvozený od [implementuje](../windows/implements-structure.md) struktury.  
   
- `MixInType`  
+ *MixInType*  
  Základní typ.  
   
- `hasImplements`  
- `true` Pokud `MixInType` je odvozen od aktuální implementace základní typ; `false` jinak.  
+ *hasImplements*  
+ **Hodnota TRUE** Pokud *MixInType* je odvozen od implementace rozhraní aktuální základní typ; **false** jinak.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je třída odvozená z prostředí Windows Runtime a rozhraní třídy COM, seznamu deklarace tříd musí nejprve seznam všech rozhraní prostředí Windows Runtime a pak všechny classic COM rozhraní. MixIn zajistí, že rozhraní jsou zadané ve správném pořadí.  
+ Pokud je třída odvozená z modulu Windows Runtime a rozhraní třídy modelu COM, seznam deklarací třídy musí nejdříve zobrazit seznam všech rozhraní Windows Runtime a potom všechny klasické rozhraní COM rozhraní. **MixIn** zajistí, že rozhraní jsou zadány ve správném pořadí.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `MixIn`  

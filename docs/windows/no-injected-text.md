@@ -1,5 +1,5 @@
 ---
-title: no_injected_text – | Microsoft Docs
+title: no_injected_text – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880345"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603417"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Kompilátor brání vložení kódu v důsledku použití atributu.  
+Zabrání kompilátoru vkládání kódu v důsledku použití atributu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `boolean`(volitelné)  
- **Hodnota TRUE,** žádný kód vložili, chcete-li **false** umožňující kód vložit. **Hodnota TRUE,** je výchozí.  
+ *Logická* (volitelné)  
+ **Hodnota TRUE** žádný kód vložený, chcete-li **false** umožňující kódu vložit. **Hodnota TRUE** je výchozí nastavení.  
   
 ## <a name="remarks"></a>Poznámky  
- Nejběžnější použití **no_injected_text –** C++ atribut je [/Fx](../build/reference/fx-merge-injected-code.md) – možnost kompilátoru, která vloží **no_injected_text –** atribut do souboru .mrg.  
+ Nejběžnější použití nástroje **no_injected_text –** atributů C++, je [/Fx](../build/reference/fx-merge-injected-code.md) – možnost kompilátoru, která vloží **no_injected_text –** atributu do souboru .mrg.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -49,9 +48,9 @@ Kompilátor brání vložení kódu v důsledku použití atributu.
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: ModuleBase – třída | Microsoft Docs
+title: Modulebase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878733"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605055"
 ---
 # <a name="modulebase-class"></a>ModuleBase – třída
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ class ModuleBase;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase – konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicializuje novou instanci třídy modulu.|  
-|[ModuleBase::~ModuleBase – destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Deinitializes aktuální instance třídy modulu.|  
+|[ModuleBase::ModuleBase – konstruktor](../windows/modulebase-modulebase-constructor.md)|Inicializuje novou instanci `Module` třídy.|  
+|[ModuleBase::~ModuleBase – destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Zruší inicializaci aktuální instance `Module` třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ModuleBase::DecrementObjectCount – metoda](../windows/modulebase-decrementobjectcount-method.md)|Pokud je implementována, snižuje počet objektů, které sledují modulem.|  
-|[ModuleBase::IncrementObjectCount – metoda](../windows/modulebase-incrementobjectcount-method.md)|Pokud je implementována, zvýší počet objektů, které sledují modulem.|  
+|[ModuleBase::DecrementObjectCount – metoda](../windows/modulebase-decrementobjectcount-method.md)|Při implementaci, sníží počet objektů sledování modulu.|  
+|[ModuleBase::IncrementObjectCount – metoda](../windows/modulebase-incrementobjectcount-method.md)|Při implementaci, zvýší počet objektů, které jsou sledovány v rámci modulu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ModuleBase`  

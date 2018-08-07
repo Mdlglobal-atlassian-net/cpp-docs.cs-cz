@@ -1,5 +1,5 @@
 ---
-title: Implementsbase – struktura | Microsoft Docs
+title: Implementsbase – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875770"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603961"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Slouží k ověření typy parametrů šablony v [implementuje strukturu](../windows/implements-structure.md).  
+ Používá se k ověření typy parametrů šablony v [Implements – struktura](../windows/implements-structure.md).  
   
- Implementsbase – struktura je prázdný záměrné.  
+ **Implementsbase –** struktura je prázdná záměrně.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ImplementsBase`  

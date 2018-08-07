@@ -1,5 +1,5 @@
 ---
-title: Invokehelper::Invoke – metoda | Microsoft Docs
+title: Invokehelper::Invoke – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8db9d9b44a2646d69dfbbd423d712f0d1c92d6cd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882300"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607969"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,39 +62,39 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `arg1`  
+### <a name="parameters"></a>Parametry  
+ *arg1*  
  Argument 1.  
   
- `arg2`  
+ *arg2*  
  Argument 2.  
   
- `arg3`  
+ *arg3*  
  Argument 3.  
   
- `arg4`  
+ *arg4*  
  Argument 4.  
   
- `arg5`  
+ *arg5*  
  Argument 5.  
   
- `arg6`  
+ *arg6*  
  Argument 6.  
   
- `arg7`  
+ *arg7*  
  Argument 7.  
   
- `arg8`  
+ *arg8*  
  Argument 8.  
   
- `arg9`  
+ *arg9*  
  Argument 9.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující chybu.  
+ S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.  
   
 ## <a name="remarks"></a>Poznámky  
- Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.  
+ Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

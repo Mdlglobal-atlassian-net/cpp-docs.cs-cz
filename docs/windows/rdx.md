@@ -1,5 +1,5 @@
 ---
-title: RDX | Microsoft Docs
+title: RDX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878954"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603113"
 ---
 # <a name="rdx"></a>rdx
-Klíč registru vytvoří nebo upraví existující klíč registru.  
+Vytvoří klíč registru nebo upraví stávající klíč registru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `key`  
- Název klíče, který se vytvořit nebo otevřít.  
+### <a name="parameters"></a>Parametry  
+ *Klíč*  
+ Název klíče, který má být vytvořen nebo otevřen.  
   
- `valuename`(volitelné)  
- Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, se přidá.  
+ *VALUENAME* (volitelné)  
+ Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.  
   
  *regtype*  
- Typ klíče registru, který chcete přidat. Může být jedna z následujících: **text**, **dword**, **binární**, nebo `CString`.  
+ Typ přidávaný klíč registru. Může být jedna z následujících akcí: `text`, `dword`, `binary`, nebo `CString`.  
   
 ## <a name="remarks"></a>Poznámky  
- **Rdx** C++ atribut vytvoří nebo upraví existující klíč registru pro komponenty modelu COM. Atribut přidá BEGIN_RDX_MAP makro do objektu, který implementuje cílového člena. `RegistryDataExchange`, funkce Vložit v důsledku makro BEGIN_RDX_MAP lze použít k přenosu dat mezi registru a datové členy  
+ **Rdx** C++ atribut vytvoří nebo upraví stávající klíč registru pro komponenty modelu COM. Atribut přidá makro BEGIN_RDX_MAP na objekt, který implementuje cílový člen. `RegistryDataExchange`, funkce vloženy jako výsledek BEGIN_RDX_MAP makra lze použít k přenosu dat mezi registru a datové členy  
   
- Tento atribut lze použít ve spojení s [třída typu coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atributy nebo další atributy, které znamená jednu z těchto.  
+ Tento atribut lze použít ve spojení s [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atributy nebo jiné atributy, které zahrnuje jeden z nich.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -59,17 +58,17 @@ Klíč registru vytvoří nebo upraví existující klíč registru.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída** nebo `struct` člena|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída** nebo **struktura** člena|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Příklad  
- Následující kód přidá klíč registru s názvem MyValue systému popisující součást CMyClass COM.  
+ Následující kód přidá klíč registru s názvem MyValue popisující komponenty modelu COM CMyClass systému.  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  
@@ -89,5 +88,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [COM – atributy](../windows/com-attributes.md)   
+ [Com – atributy](../windows/com-attributes.md)   
  [registration_script](../windows/registration-script.md)   

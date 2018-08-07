@@ -1,5 +1,5 @@
 ---
-title: New (nový slot v tabulce vtable) (C++ Component Extensions) | Microsoft Docs
+title: New (nový slot v tabulce vtable) (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879780"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607008"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nový slot v tabulce vtable) (rozšíření komponent C++)
-`new` – Klíčové slovo znamená, že se členem virtuální získat nový slot v tabulce vtable.  
+**Nové** – klíčové slovo určuje, že virtuální člen získá novou patici ve vtable.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Používají se žádné poznámky pro tuto funkci jazyka, které platí pro všechny moduly runtime.)  
+ (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Není podporována v prostředí Windows Runtime.  
+ V modulu Windows Runtime není podporován.  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
- V **/CLR** kompilace, `new` označuje, že bude člena virtuální získat nový slot v tabulce vtable; že funkce nemůže přepsat metodu základní třídy.  
+ V `/clr` kompilace, **nové** označuje, že virtuální člen získá novou patici ve vtable; že funkci nepřepisuje metodu základní třídy.  
   
- `new` způsobí, že modifikátor newslot mají být přidány do IL pro funkci.  Další informace o newslot najdete v tématu:  
+ **nové** způsobí, že modifikátor newslot být přidán do IL pro funkci.  Další informace o newslot naleznete v tématu:  
   
--   [MethodInfo.GetBaseDefinition – metoda](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Metoda MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [MethodAttributes – výčet](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Výčet MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad ukazuje účinek `new`.  
+ Následující příklad ukazuje účinek **nové**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  
@@ -112,5 +111,5 @@ E::f() called
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
  [Override – specifikátory](../windows/override-specifiers-cpp-component-extensions.md)

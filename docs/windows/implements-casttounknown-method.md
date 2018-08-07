@@ -1,5 +1,5 @@
 ---
-title: Implements::casttounknown – metoda | Microsoft Docs
+title: Implements::casttounknown – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874483"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607245"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown – metoda
-Získá ukazatel na základní rozhraní IUnknown.  
+Získá ukazatel na základní `IUnknown` rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Tato operace vždy úspěšný a vrátí ukazatel IUnknown.  
+ Tato operace je vždy úspěšné a vrátí `IUnknown` ukazatele.  
   
 ## <a name="remarks"></a>Poznámky  
  Interní pomocné funkce.  

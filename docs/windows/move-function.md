@@ -1,5 +1,5 @@
 ---
-title: Move – funkce | Microsoft Docs
+title: Move – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876768"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607300"
 ---
 # <a name="move-function"></a>Přesunout – funkce
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +36,20 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
+### <a name="parameters"></a>Parametry  
+ *T*  
  Typ argumentu.  
   
- `arg`  
- Argument přesunout.  
+ *arg*  
+ Argument pro přesunutí.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Parametr `arg` po odkaz nebo deklarátor odkazu vlastnosti, pokud existuje, se odebraly.  
+ Parametr *arg* po vlastností nebo odkaz rvalue, pokud existuje, se odebraly.  
   
 ## <a name="remarks"></a>Poznámky  
- Přesune zadaného argumentu z jednoho umístění do druhého.  
+ Zadaný argument přesune z jednoho umístění do druhého.  
   
- Další informace najdete v tématu **přesunout sémantiku** části [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** internal.h  

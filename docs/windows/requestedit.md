@@ -1,5 +1,5 @@
 ---
-title: requestedit – | Microsoft Docs
+title: requestedit – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878252"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606472"
 ---
 # <a name="requestedit"></a>requestedit
-Označuje, že vlastnost podporuje **OnRequestEdit, viz** oznámení.  
+Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Requestedit –** atribut C++ má stejné funkce jako [requestedit –](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL atribut.  
+ **Requestedit –** C++ atribut má stejné funkce jako [requestedit –](http://msdn.microsoft.com/library/windows/desktop/aa367155) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) pro ukázkové použití **requestedit –**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) ukázkový používání **requestedit –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Označuje, že vlastnost podporuje **OnRequestEdit, viz** oznámení.
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -59,5 +57,5 @@ Označuje, že vlastnost podporuje **OnRequestEdit, viz** oznámení.
  [Atributy metody](../windows/method-attributes.md)   
  [Atributy datového členu](../windows/data-member-attributes.md)   
  [defaultbind –](../windows/defaultbind.md)   
- [displaybind –](../windows/displaybind.md)   
+ [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   

@@ -1,5 +1,5 @@
 ---
-title: Zahrnout (C++) | Microsoft Docs
+title: Zahrnout (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878421"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603485"
 ---
 # <a name="include-c"></a>include (C++)
-Určuje jeden nebo více soubory hlaviček, které mají být zahrnuty v souboru generovaného .idl.  
+Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru generovaného IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ include(  
+[ include(  
    header_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *HEADER_FILE*  
- Název souboru, který chcete součástí generovaného .idl souboru.  
+ Název souboru, který chcete, aby zahrnuté v souboru generovaného IDL.  
   
 ## <a name="remarks"></a>Poznámky  
- **Zahrnují** C++ atributu způsobí, že `#include` příkaz, který má být umístěny pod `import "docobj.idl"` příkaz v souboru generovaného IDL.  
+ **Zahrnují** C++ atribut způsobí, že `#include` příkaz umístit pod `import "docobj.idl"` příkaz v souboru generovaného IDL.  
   
- **Zahrnují** atribut C++ má stejné funkce jako [zahrnují](http://msdn.microsoft.com/library/windows/desktop/aa367052) MIDL atribut.  
+ **Zahrnují** C++ atribut má stejné funkce jako [zahrnují](http://msdn.microsoft.com/library/windows/desktop/aa367052) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje příklad použití **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze #include příkaz.  
+ Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze #include příkazu.  
   
-```  
+```cpp  
 // cpp_attr_ref_include.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -61,9 +60,9 @@ Určuje jeden nebo více soubory hlaviček, které mají být zahrnuty v souboru
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

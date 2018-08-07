@@ -1,5 +1,5 @@
 ---
-title: out (C++) | Microsoft Docs
+title: out (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876810"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606121"
 ---
 # <a name="out-c"></a>out (C++)
-Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volání procedury (ze serveru do klienta).  
+Identifikuje parametry ukazatele, které se vracejí z volané procedury do volající procedury (ze serveru do klienta).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Out** atribut C++ má stejné funkce jako [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) MIDL atribut.  
+ **Si** C++ atribut má stejné funkce jako [si](http://msdn.microsoft.com/library/windows/desktop/aa367136) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) pro ukázkové použití **out**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) ukázkový používání **si**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -48,8 +46,8 @@ Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volán
 |||  
 |-|-|  
 |**Platí pro**|Parametr rozhraní|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

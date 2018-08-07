@@ -1,5 +1,5 @@
 ---
-title: Runtimeclass::gettrustlevel – metoda | Microsoft Docs
+title: Runtimeclass::gettrustlevel – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc588950cc8752a7c2b8e1ddf00b2193aaf0f395
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892628"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606621"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel – metoda
 
-Získá aktuální objekt RuntimeClass úroveň důvěryhodnosti.
+Získá aktuální úroveň důvěryhodnosti **RuntimeClass** objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ STDMETHOD(GetTrustLevel)(
 ### <a name="parameters"></a>Parametry
 
 *trustLvl*  
-Když tato operace dokončí, úroveň důvěryhodnosti aktuálního objektu RuntimeClass.
+Když tato operace dokončí, aktuální úroveň důvěryhodnosti **RuntimeClass** objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -47,7 +47,7 @@ Vždy S_OK.
 
 ## <a name="remarks"></a>Poznámky
 
-Chybu assert je vygenerované Pokud &#95; &#95;WRL_STRICT&#95; &#95; nebo &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; není definován.
+Chyba vyhodnocení je vygenerován, pokud &#95; &#95;WRL_STRICT&#95; &#95; nebo &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; není definován.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -56,5 +56,4 @@ Chybu assert je vygenerované Pokud &#95; &#95;WRL_STRICT&#95; &#95; nebo &#95; 
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
-
-[RuntimeClass – třída](../windows/runtimeclass-class.md)
+ [RuntimeClass – třída](../windows/runtimeclass-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Mutex::Operator = – operátor | Microsoft Docs
+title: Mutex::Operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875484"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602743"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= – operátor
-Přiřadí (přesune) zadaný objekt Mutex do aktuální objekt Mutex objektu.  
+Přiřadí (přesun) zadaný **Mutex** objektů na aktuální **Mutex** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Rvalue – odkaz na objekt Mutex.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Odkaz rvalue na **Mutex** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Odkaz na aktuální objekt Mutex.  
+ Odkaz na aktuální **Mutex** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu **přesunout sémantiku** části [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

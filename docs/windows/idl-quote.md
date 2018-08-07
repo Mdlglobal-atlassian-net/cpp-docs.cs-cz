@@ -1,5 +1,5 @@
 ---
-title: idl_quote – | Microsoft Docs
+title: idl_quote – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878509"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606511"
 ---
 # <a name="idlquote"></a>idl_quote
-Umožňuje používat IDL konstrukce, které nejsou podporované v aktuální verzi Visual C++ a jejich předání do souboru generovaného IDL.  
+Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verzi jazyka Visual C++ a jejich předávání do souboru generovaného IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *Text*  
- Název atributu, který hodláte – kompilátor Visual C++ na předání do souboru generovaného IDL bez vrácení chybě kompilátoru.  
+ Název atributu, který máte v úmyslu kompilátor Visual C++ pro převedení na generovaného souboru bez vrácení chybu kompilátoru.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud **idl_quote –** C++ atribut slouží jako samostatné atribut (středníkem po pravá závorka), pak *text* je umístěn v souboru sloučené .idl, jako je. Pokud **idl_quote –** se používá na symbol, *text* se umístí do atribut blok pro tento symbol.  
+ Pokud **idl_quote –** C++ atribut se používá jako samostatný atribut (oddělte středníkem. za uzavírací závorku), pak *text* je umístěn v souboru sloučeného IDL je. Pokud **idl_quote –** se používá na symbol, *text* je umístěn v rámci bloku atributu pro tento symbol.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje, jak můžete zadat nepodporovaného atributu (pomocí **v**, který je podporován) a postup definice a používání nedefinované .idl konstrukce:  
+ Následující kód ukazuje, jak můžete zadat nepodporovaný atribut (pomocí **v**, které jsou podporovány) a jak definovat a používat nedefinované .idl konstrukce:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Tento kód způsobí, že MYFLOT a MYDUB a *text* položka umístit do generovaného .idl souboru. *Název* parametr vynutí *text* umístit před všechno, co odkazuje *název* v souboru generovaného .idl. *Závislosti* parametr vynutí definice seznamu závislostí umístit před *text* v souboru generovaného .idl.  
+ Tento kód způsobí, že MYFLOT a MYDUB a *text* položky budou umístěny v souboru generovaného IDL. *Název* vynutí parametr *text* umístit před cokoli, co odkazuje *název* v souboru generovaného IDL. *Závislosti* vynutí parametr definice seznamu závislostí umístit před *text* v souboru generovaného IDL.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -87,9 +86,9 @@ __interface IStatic{
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: SafeInt – knihovna | Microsoft Docs
+title: SafeInt – knihovna | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892049"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604184"
 ---
 # <a name="safeint-library"></a>SafeInt – knihovna
-Knihovna SafeInt pomáhá zabránit některé celé číslo, které mohou nastat při aplikaci matematické operace.  
+**SafeInt** knihovny pomáhá zabránit přetečení celého čísla, které může dojít při použití matematických operací.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
-|Část|Popis|  
+|Oddíl|Popis|  
 |-------------|-----------------|  
-|[SafeInt – třída](../windows/safeint-class.md)|Tato třída chrání před některé celé číslo.|  
-|[SafeInt – funkce](../windows/safeint-functions.md)|Funkce, které lze použít bez vytváření `SafeInt` objektu.|  
-|[SafeIntException – třída](../windows/safeintexception-class.md)|Třídy výjimek související s `SafeInt` třídy.|  
+|[SafeInt – třída](../windows/safeint-class.md)|Tato třída chrání proti přetečení celého čísla.|  
+|[SafeInt – funkce](../windows/safeint-functions.md)|Funkce, které lze použít bez vytvoření **SafeInt** objektu.|  
+|[SafeIntException – třída](../windows/safeintexception-class.md)|Třídy výjimek, které souvisí **SafeInt** třídy.|  
   
 ## <a name="related-sections"></a>Související oddíly  
   
-|Část|Popis|  
+|Oddíl|Popis|  
 |-------------|-----------------|  
 |[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)|Referenční dokumentace a koncepční obsah pro jazyk C++.|

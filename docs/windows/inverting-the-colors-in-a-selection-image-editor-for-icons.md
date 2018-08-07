@@ -1,5 +1,5 @@
 ---
-title: Převrácení barev ve výběru (Editor obrázků pro ikony) | Microsoft Docs
+title: Převrácení barev ve výběru (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874077"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608914"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Převrácení barev ve výběru (editor obrázků pro ikony)
-Editor obrázků poskytuje vhodný způsob k invertování barev vybraných součástí bitové kopie, takže lze určit vzhled obrázku s obráceným barvy.  
+Editor obrázků poskytuje pohodlný způsob, jak Invertovat barvy ve vybrané části obrázku tak poznáte podle zobrazení obrázku s obráceným barvami.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>K invertování barev v aktuálním výběru  
   
-1.  Na **bitové kopie** nabídky, klikněte na tlačítko **Invertovat barvy**.  
+1.  Na **Image** nabídky, klikněte na tlačítko **Invertovat barvy**.  
   
-
-  
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   

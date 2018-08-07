@@ -1,5 +1,5 @@
 ---
-title: Iid_ppv_args_helper – funkce | Microsoft Docs
+title: Iid_ppv_args_helper – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882339"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608375"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper – funkce
-Ověřuje, zda typ zadaného argumentu odvozuje od `IUnknown` rozhraní.  
+Ověřuje, že typ zadaného argumentu je odvozen od `IUnknown` rozhraní.  
   
 > [!IMPORTANT]
->  Tato šablona specializace podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu. Použití [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) místo.  
+>  Tato specializace šablony podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo v kódu. Použití [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) místo.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ argumentu `pp`.  
+ *T*  
+ Typ argumentu *pp*.  
   
- `pp`  
- Dvakrát nepřímý ukazatel.  
+ *str*  
+ Dvakrát nepřímé ukazatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Argument `pp` přetypovat na ukazatel na ukazatel na `void`.  
+ Argument *pp* přetypovat na ukazatel na ukazatel na **void**.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je vygenerována chyba kompilace parametr šablony `T` není odvozena od `IUnknown`.  
+ Pokud je vygenerována chyba kompilace parametr šablony *T* není odvozen od `IUnknown`.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace (knihovna prostředí Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Referenční dokumentace (knihovna Windows Runtime)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

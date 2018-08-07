@@ -1,5 +1,5 @@
 ---
-title: Module::unregistercomobject – metoda | Microsoft Docs
+title: Module::unregistercomobject – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881933"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602627"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject – metoda
-Odregistruje jeden nebo více objektů COM, což zabraňuje dalších aplikací v připojení k nim.  
+Zruší jeden nebo více objektů modelu COM, registraci což zabrání aplikacím bránily v připojení k nim.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `serverName`  
+### <a name="parameters"></a>Parametry  
+ *název_serveru*  
  (Nepoužívané)  
   
- `cookies`  
- Pole ukazatelé na hodnoty, které identifikují objekty tříd být neregistrované. Pole byl vytvořen [registercomobject –](../windows/module-registercomobject-method.md) metoda.  
+ *Soubory cookie*  
+ Pole ukazatelů na hodnoty, které identifikují objekty třídy pro odstranění registrace. Pole byl vytvořen [registercomobject –](../windows/module-registercomobject-method.md) metody.  
   
- `count`  
+ *Počet*  
  Počet tříd se zrušit registraci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud je tato operace úspěšná. v opačném chybu HRESULT, která určuje, z důvodu operace se nezdařila.  
+ Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod operace se nezdařila.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + +/ CLI) | Microsoft Docs
+title: __identifier (c + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877680"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603342"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Umožňuje použití klíčová slova jazyka Visual C++ jako identifikátory.  
+Umožňuje použít klíčová slova jazyka Visual C++ jako identifikátory.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
-**Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
-Použití `__identifier` – klíčové slovo pro identifikátory, které nejsou klíčová slova je povolené, ale důrazně nedoporučuje jako řádu stylu.  
+Použití **__identifier** – klíčové slovo pro identifikátory, které nejsou klíčových slov je povolené, ale důrazně nedoporučuje jak stylu.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- V následujícím příkladu třída s názvem `template` je vytvořené v C# a distribuovaných jako knihovny DLL. V aplikaci Visual C++, která používá `template` třídy, `__identifier` – klíčové slovo ukrývá fakt, na který `template` je standardní C++ – klíčové slovo.  
+ V následujícím příkladu třída s názvem `template` se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá `template` třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
- `__identifier` – Klíčové slovo je platný s **/CLR** – možnost kompilátoru.  
+ **__Identifier** – klíčové slovo je platná `/clr` – možnost kompilátoru.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- V následujícím příkladu třída s názvem `template` je vytvořené v C# a distribuovaných jako knihovny DLL. V aplikaci Visual C++, která používá `template` třídy, `__identifier` – klíčové slovo ukrývá fakt, na který `template` je standardní C++ – klíčové slovo.  
+ V následujícím příkladu třída s názvem `template` se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá `template` třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  
@@ -103,5 +101,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
  [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

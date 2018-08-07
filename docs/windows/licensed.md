@@ -1,5 +1,5 @@
 ---
-title: licenci | Microsoft Docs
+title: licenci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875744"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603799"
 ---
 # <a name="licensed"></a>licensed
-Označuje, že objekt COM, které se má licenci a musí být vytvořena pomocí **IClassFactory2**.  
+Označuje, že je licencován objektu COM, ke kterému se vztahuje a musí být vytvořena pomocí `IClassFactory2`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Licenci** atribut C++ má stejné funkce jako [licenci](http://msdn.microsoft.com/library/windows/desktop/aa367070) MIDL atribut.  
+ **Licenci** C++ atribut má stejné funkce jako [licenci](http://msdn.microsoft.com/library/windows/desktop/aa367070) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**coclass**|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|`coclass`|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

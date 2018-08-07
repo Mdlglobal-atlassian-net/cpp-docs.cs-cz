@@ -1,5 +1,5 @@
 ---
-title: Mutex::Lock – metoda | Microsoft Docs
+title: Mutex::Lock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880869"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603521"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock – metoda
-Počká, dokud nebude aktuální objekt nebo objekt Mutex přidružené k zadanému popisovači, uvolní mutex nebo zadaný časový limit uplynul.  
+Počká, až do aktuálního objektu nebo **Mutex** objekt přidružený k Zadaný popisovač mutex nebo zadaný časový limit uplynul vydané verze.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `milliseconds`  
- Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čeká neomezenou dobu zaseknout.  
+### <a name="parameters"></a>Parametry  
+ *Milisekundy*  
+ Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čekat po neomezenou dobu.  
   
- `h`  
- Popisovač objekt Mutex.  
+ *h*  
+ Popisovač **Mutex** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   

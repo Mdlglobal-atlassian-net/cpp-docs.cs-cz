@@ -1,5 +1,5 @@
 ---
-title: propputref | Microsoft Docs
+title: propputref | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878187"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606797"
 ---
 # <a name="propputref"></a>propputref
-Určuje nastavení funkce vlastnost, která používá odkaz místo hodnotu.  
+Určuje vlastnost nastavení funkci, která používá odkaz namísto hodnotu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Propputref** atribut C++ má stejné funkce jako [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL atribut.  
+ **Propputref** C++ atribut má stejné funkce jako [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) pro ukázkové použití **propputref**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) ukázkový používání **propputref**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -48,14 +46,14 @@ Určuje nastavení funkce vlastnost, která používá odkaz místo hodnotu.
 |||  
 |-|-|  
 |**Platí pro**|Metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
-|**Neplatné atributy**|**propget –**, **propput –**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
+|**Neplatné atributy**|`propget`, `propput`|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
- [propget –](../windows/propget.md)   
+ [propget](../windows/propget.md)   
  [propput](../windows/propput.md)   

@@ -1,5 +1,5 @@
 ---
-title: HStringReference – třída | Microsoft Docs
+title: Hstringreference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879552"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605097"
 ---
 # <a name="hstringreference-class"></a>HStringReference – třída
 Představuje HSTRING, který je vytvořený z existujícího řetězce.  
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Doba platnosti zálohování vyrovnávací paměti v nové HSTRING není spravován pomocí prostředí Windows Runtime. Volající přiděluje zdrojový řetězec na rámec zásobníku, aby se zabránilo přidělení haldy a omezit riziko nevrácenou pamětí. Volající musí také zajistit, že zdrojový řetězec zůstává beze změny po dobu životnosti připojené HSTRING. Další informace najdete v tématu [WindowsCreateStringReference funkce](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+ Doba života běhu záložní vyrovnávací paměti v novém HSTRING není spravována modulu Windows Runtime. Volající alokuje zdrojový řetězec v zásobníku přidělení haldy a odstranilo nebezpečí nevracení paměti. Volající také musí zajistit, že zdrojový řetězec se nezmění po celou dobu životnosti připojených HSTRING. Další informace najdete v tématu [WindowsCreateStringReference funkce](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
 ## <a name="members"></a>Členové  
   
@@ -40,22 +40,22 @@ class HStringReference;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[HStringReference::HStringReference – konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicializuje novou instanci třídy HStringReference.|  
+|[HStringReference::HStringReference – konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Inicializuje novou instanci třídy **HStringReference** třídy.|  
   
 ### <a name="members"></a>Členové  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[HStringReference::CopyTo – metoda](../windows/hstringreference-copyto-method.md)|Kopie aktuální HStringReference objektu na objekt HSTRING.|  
-|[HStringReference::Get – metoda](../windows/hstringreference-get-method.md)|Načte hodnotu základní HSTRING popisovač.|  
+|[HStringReference::CopyTo – metoda](../windows/hstringreference-copyto-method.md)|Zkopíruje aktuální **HStringReference** objektu na objekt HSTRING.|  
+|[HStringReference::Get – metoda](../windows/hstringreference-get-method.md)|Načte hodnotu podkladového popisovače HSTRING.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[HStringReference::Operator= – operátor](../windows/hstringreference-operator-assign-operator.md)|Hodnota jiného objektu HStringReference přesune na aktuální objekt HStringReference.|  
-|[HStringReference::Operator== – operátor](../windows/hstringreference-operator-equality-operator.md)|Určuje, zda dva parametry jsou stejné.|  
-|[HStringReference::Operator!= – operátor](../windows/hstringreference-operator-inequality-operator.md)|Určuje, zda dva parametry nejsou stejné.|  
+|[HStringReference::Operator= – operátor](../windows/hstringreference-operator-assign-operator.md)|Přesune hodnotu jiného **HStringReference** objektů na aktuální **HStringReference** objektu.|  
+|[HStringReference::Operator== – operátor](../windows/hstringreference-operator-equality-operator.md)|Určuje, zda se tyto dva parametry rovnají.|  
+|[HStringReference::Operator!= – operátor](../windows/hstringreference-operator-inequality-operator.md)|Určuje, zda dva parametry nerovnají.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HStringReference`  

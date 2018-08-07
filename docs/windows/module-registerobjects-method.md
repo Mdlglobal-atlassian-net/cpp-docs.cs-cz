@@ -1,5 +1,5 @@
 ---
-title: Module::registerobjects – metoda | Microsoft Docs
+title: Module::registerobjects – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875341"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605263"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects – metoda
-Zaregistruje objekty modelu COM nebo prostředí Windows Runtime, můžete k nim připojit jiné aplikace.  
+Zaregistruje objekty COM nebo prostředí Windows Runtime, takže k nim mohli připojit další aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +35,15 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `module`  
+### <a name="parameters"></a>Parametry  
+ *Modul*  
  Pole objektů COM nebo prostředí Windows Runtime.  
   
- `serverName`  
+ *název_serveru*  
  Název serveru, který vytvořil objekty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující z důvodu operace se nezdařila.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, který označuje důvod operace se nezdařila.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

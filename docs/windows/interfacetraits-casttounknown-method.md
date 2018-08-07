@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::casttounknown – metoda | Microsoft Docs
+title: Interfacetraits::casttounknown – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878122"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608648"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +36,20 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru `ptr`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ parametru *ptr*.  
   
- `ptr`  
- Ukazatel na typ `T`.  
+ *ptr*  
+ Ukazatel na typ *T*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na IUnknown, ze kterého `Base` je odvozený.  
+ Ukazatel rozhraní IUnknown odkud `Base` pochází.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrhá zadaný ukazatel na ukazatel IUnknown.  
+ Přetypování zadaný ukazatel na ukazatel na `IUnknown`.  
   
- Další informace o `Base`, najdete v části veřejné – definice TypeDef v [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
+ Další informace o `Base`, naleznete v části veřejné definice TypeDef [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

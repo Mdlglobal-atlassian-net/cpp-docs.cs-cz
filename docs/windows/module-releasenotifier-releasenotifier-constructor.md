@@ -1,5 +1,5 @@
 ---
-title: 'Module::releasenotifier:: releasenotifier – konstruktor | Microsoft Docs'
+title: 'Module::releasenotifier:: releasenotifier – konstruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882466"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608466"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier – konstruktor
-Inicializuje novou instanci třídy Module::ReleaseNotifier.  
+Inicializuje novou instanci třídy **Module::ReleaseNotifier** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +33,9 @@ Inicializuje novou instanci třídy Module::ReleaseNotifier.
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `release`  
- `true` Chcete-li odstranit tuto instanci při volání metody verze; `false` není odstranit tuto instanci.  
+### <a name="parameters"></a>Parametry  
+ *Vydání verze*  
+ **true** odstranit to instance, kdy `Release` metoda je volána; **false** k odstranění této instance.  
   
 ## <a name="exceptions"></a>Výjimky  
   

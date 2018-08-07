@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator&lt; operátor | Microsoft Docs
+title: HStringReference::Operator&lt; operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b486157fb42883af724f2356e7f85701e405035
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 489d97252dcb4d20b7ef2f8557991a4e6016743d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877290"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605529"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>HStringReference::Operator&lt; – operátor
-Určuje, zda je první parametr menší než druhý parametr.  
+Označuje, zda je první parametr je menší než druhý parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,15 +33,15 @@ inline bool operator<(
     const HStringReference& rhs) throw()  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lhs`  
- První parametr k porovnání. `lhs` může být odkaz na HStringReference.  
+### <a name="parameters"></a>Parametry  
+ *lhs*  
+ První parametr k porovnání. *LHS* může být odkazem na **HStringReference**.  
   
- `rhs`  
- Druhý parametr k porovnání.  `rhs` může být odkaz na HStringReference.  
+ *Zarovnání indirekce RHS*  
+ Druhý parametr k porovnání.  *Zarovnání indirekce RHS* může být odkazem na **HStringReference**.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud `lhs` parametr je menší než `rhs` parametr, jinak hodnota `false`.  
+ **Hodnota TRUE** Pokud *lhs* parametr je menší než *zarovnání indirekce rhs* parametr; v opačném případě **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

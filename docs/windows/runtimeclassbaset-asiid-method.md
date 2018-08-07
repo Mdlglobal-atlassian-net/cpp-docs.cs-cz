@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset::asiid – metoda | Microsoft Docs
+title: Runtimeclassbaset::asiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892127"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607424"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ, který implementuje rozhraní ID určený parametrem `riid`.  
+### <a name="parameters"></a>Parametry  
+ *T*  
+ Typ, který implementuje rozhraní ID určené parametrem *riid*.  
   
- `implements`  
- Proměnné v typu zadaném pomocí parametru šablony `T`.  
+ *Implementuje*  
+ Proměnné určené parametrem šablony typu *T*.  
   
- `riid`  
- ID rozhraní pro načtení.  
+ *riid*  
+ ID rozhraní, který se má načíst.  
   
- `ppvObject`  
- Pokud je tato operace úspěšná, ukazatel na ukazatel na rozhraní určený parametrem `riid`.  
+ *ppvObject*  
+ Pokud je tato operace úspěšná, ukazatel na ukazatel na rozhraní určené parametrem *riid*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT popisující chybu.  
+ S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.  
   
 ## <a name="remarks"></a>Poznámky  
- Načte ukazatel ID specifikované rozhraní.  
+ Načte ukazatel na ID zadané rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

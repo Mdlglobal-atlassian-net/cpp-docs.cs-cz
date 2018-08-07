@@ -1,5 +1,5 @@
 ---
-title: Výběr oblasti obrázku (Editor obrázků pro ikony) | Microsoft Docs
+title: Výběr oblasti obrázku (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cb7528e25604e873f6da92193a97cf79700799
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890102"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606784"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Výběr oblasti obrázku (editor obrázků pro ikony)
-Nástroje pro výběr můžete definovat oblast bitovou kopii, kterou chcete vyjmout, kopírovat, vymazat, změnit velikost, Invertovat nebo přesunout. Pomocí **obdélníku výběru** nástroj můžete definovat a vyberte obdélníkovou oblast bitové kopie. S **nestandardní výběr** nástroj může kreslení od ruky outline oblasti, kterou chcete vybrat pro vyjmutí, kopírování, nebo jiné operace.  
+Nástroje pro výběr můžete použít k definování oblast bitovou kopii, kterou chcete vyjmout, kopírovat, zrušte, změna velikosti, Invertovat nebo přesunout. S **obdélníku výběru** nástroje můžete definovat a vyberte obdélníkovou oblast obrázku. S **Volný výběr** nástroj od ruky obrys oblasti, kterou chcete vybrat pro vyjmutí, kopírování nebo jiné operace můžete nakreslit.  
   
 > [!NOTE]
->  Najdete v článku **obdélníku výběru** a **nestandardní výběr** nástroje na obrázku [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) nebo zobrazit popisy přidružené každé tlačítko na **Editor obrázků** panelu nástrojů.  
+>  Najdete v článku **obdélníku výběru** a **Volný výběr** nástroje na obrázku [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) nebo zobrazení popisů tlačítek spojených s každé tlačítko na **Editor obrázků** nástrojů.  
   
- Můžete také vytvořit vlastního štětce z výběru. Další informace najdete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
+ Můžete také vytvořit vlastní štětec z výběru. Další informace najdete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
 ### <a name="to-select-an-area-of-an-image"></a>Vyberte oblast obrázku  
   
-1.  Na **Editor obrázků** panelu nástrojů (nebo z **bitové kopie** nabídce **nástroje** příkaz), klikněte na tlačítko chcete nástroj pro výběr.  
+1.  Na **Editor obrázků** nástrojů (nebo z **Image** nabídce **nástroje** příkaz), klikněte na nástroj pro výběr chcete.  
   
-2.  Přesuňte kurzor na roh oblast, která chcete vybrat. Když je kurzor přes bitovou kopii, zobrazí se zaměřovacím.  
+2.  Přesuňte bod vložen do jednoho rohu oblast obrázku, který chcete vybrat. Mezi vlasy se zobrazí po kurzoru nad bitovou kopii.  
   
-3.  Přetáhněte kurzor na opačné rohu oblasti, kterou chcete vybrat. Obdélníku ukazuje, jaké pixelů bude vybrána. Všechny pixelů v obdélníku, včetně těch, které v obdélníku, jsou zahrnuty ve výběru.  
+3.  Přetáhněte kurzor protilehlého rohu oblasti, kterou chcete vybrat. Obdélník ukazuje, jaké pixelů bude vybrána. Všechny obrazové body v obdélníku, včetně těch v obdélníku, jsou zahrnuté ve výběru.  
   
-4.  Uvolnění tlačítka myši. Hranice výběru uzavře vybrané oblasti.  
+4.  Uvolněte tlačítko myši. Ohraničení výběru obklopuje vybrané oblasti.  
   
-### <a name="to-select-an-entire-image"></a>Chcete-li vybrat celého obrázku  
+### <a name="to-select-an-entire-image"></a>K výběru celého obrázku  
   
-1.  Kliknutím na obrázek mimo aktuální výběr. Hranice výběru změní fokus a zahrnuje celou bitovou kopii znovu.  
+1.  Kliknutím na obrázek mimo aktuální výběr. Ohraničení výběru změní fokus a zahrnuje celou image ještě jednou.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   
@@ -59,4 +59,3 @@ Nástroje pro výběr můžete definovat oblast bitovou kopii, kterou chcete vyj
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

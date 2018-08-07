@@ -1,5 +1,5 @@
 ---
-title: SafeCast | Microsoft Docs
+title: SafeCast | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892449"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608544"
 ---
 # <a name="safecast"></a>SafeCast
-Vrhá jeden typ čísla k jinému typu.  
+Přetypování jednom typu čísla do jiného typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,23 +37,23 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [v] `From`  
- Číslo zdroj, který se má převést. Toto musí být typu T.  
+### <a name="parameters"></a>Parametry  
+ [in] *z*  
+ Zdroj číslo k převedení. Musí se jednat o typ `T`.  
   
- [out] `To`  
- Odkaz na nový typ number. Musí se jednat o typ U.  
+ [out] *Do*  
+ Odkaz na nový typ number. Musí se jednat o typ `U`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ **Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci přetypování jedné bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
+ Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro přetypování jedné operace bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Tato metoda by měl použít, pouze když jedné operace musí být chráněny. Pokud existují více operací, měli byste použít `SafeInt` třída namísto volání jednotlivých samostatnou funkcí.  
+>  Tato metoda by měla sloužit pouze pokud jedné operace musí být chráněné. Pokud je více operací, měli byste použít `SafeInt` třídy místo volání jednotlivých samostatné funkce.  
   
- Další informace o typech šablon T a U najdete v tématu [funkce jazyka SafeInt](../windows/safeint-functions.md).  
+ Další informace o typech šablony T a U najdete v tématu [SafeInt – funkce](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** safeint.h  

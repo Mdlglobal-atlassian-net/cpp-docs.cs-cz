@@ -1,5 +1,5 @@
 ---
-title: interior_ptr (C + +/ CLI) | Microsoft Docs
+title: interior_ptr (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879104"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605120"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
-*Vnitřní ukazatel* deklaruje ukazatel na uvnitř odkazového typu, ale ne samotný objekt. Vnitřní ukazatel můžete bodu odkaz popisovač, typ hodnoty, zabalený typ popisovače, členem spravovaný typ, nebo element spravované pole.  
+*Vnitřní ukazatel* deklaruje ukazatel na uvnitř odkazu typu, ale nikoli samotného objektu. Vnitřní ukazatel může odkazovat odkaz na popisovač, typ hodnoty, popisovač zabalený typ, členství spravovaného typu, nebo element spravovaného pole.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Používají se žádné poznámky pro tuto funkci jazyka, které platí pro všechny moduly runtime.)  
+ (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom prostředí Windows Runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
  Následující příklad syntaxe ukazuje vnitřní ukazatel.  
@@ -49,33 +49,33 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
 ### <a name="parameters"></a>Parametry  
  *cv_qualifier*  
- **Const** nebo `volatile` kvalifikátory.  
+ **Const** nebo **volatile** kvalifikátory.  
   
  *Typ*  
- Typ *inicializátoru*.  
+ Typ *inicializátor*.  
   
  *var*  
- Název `interior_ptr` proměnné.  
+ Název **interior_ptr** proměnné.  
   
  *Inicializátor*  
- Člen odkaz, element spravovaného pole nebo jakýkoliv jiný objekt, který lze přiřadit nativní ukazatel.  
+ Člen typu odkazu, element spravovaného pole nebo jakýkoli jiný objekt, který můžete přiřadit na nativní ukazatel.  
   
 ### <a name="remarks"></a>Poznámky  
- Nativní ukazatel není schopný sledovat položku jako změny jeho umístění na spravovaná halda, který je výsledkem bude systém uvolňování přesunutí instance objektu. Aby ukazatel správně odkazovat na instanci je potřeba aktualizovat ukazatele na objekt nově umístěného modulu runtime.  
+ Nativní ukazatel není schopen sledovat položku na spravované haldě, který je výsledkem systému uvolňování paměti přesun instancí objektu při změně jeho umístění. Ukazatele na správně odkazování na instanci, modul runtime musí aktualizovat ukazatel na nově umístěné objektu.  
   
- `interior_ptr` Představuje nadmnožinou funkce nativní ukazatel.  Proto všechny položky, které lze přiřadit k nativní ukazatel lze také přiřadit `interior_ptr`.  Vnitřní ukazatel oprávněn provádět stejnou sadu operací, jako nativními ukazateli, včetně porovnání a aritmetika ukazatele.  
+ **Interior_ptr** představuje nadmnožinu funkcí nativní ukazatel.  Proto cokoli, co je možné přiřadit na nativní ukazatel lze také přiřadit **interior_ptr**.  Vnitřní ukazatel se nepovoluje provádět stejnou sadu operací, jako nativní ukazatele, včetně porovnání a aritmetiku ukazatele.  
   
- Vnitřní ukazatel lze deklarovat pouze v zásobníku.  Vnitřní ukazatel nelze deklarovat jako člena třídy.  
+ Vnitřní ukazatel lze deklarovat pouze v zásobníku.  Vnitřní ukazatel nelze deklarovat jako člen třídy.  
   
- Vzhledem k tomu, že vnitřních ukazatelů existují pouze v zásobníku, s ohledem na adresu vnitřního ukazatele poskytuje nespravovaný ukazatel.  
+ Protože vnitřních ukazatelů existují pouze v zásobníku, provede převzetí adresy vnitřní ukazatel nespravovaný ukazatel.  
   
- `interior_ptr` má implicitní převod na `bool`, což umožňuje pro jeho použití v podmíněné příkazy.  
+ **interior_ptr** má implicitní převod na **bool**, což umožňuje pro jeho použití podmíněné příkazy.  
   
- Informace o tom, jak deklarace vnitřních ukazatelů, která odkazuje na objekt, který nelze přesunout na haldě uvolňování paměti najdete v tématu [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
+ Informace o tom, jak deklarovat vnitřní ukazatel, který odkazuje na objekt, který nelze přesunout na haldě uvolňování paměti naleznete v tématu [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` je v oboru názvů rozhraní příkazového řádku.  V tématu [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
+ **interior_ptr** je v oboru názvů rozhraní příkazového řádku.  Zobrazit [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
   
- Další informace o vnitřních ukazatelů najdete v tématu  
+ Další informace o vnitřních ukazatelů naleznete v tématu  
   
 -   [Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
@@ -86,12 +86,11 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 -   [Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad ukazuje, jak deklarování a použití vnitřních ukazatelů do odkazového typu.  
+ Následující příklad ukazuje, jak deklarovat a použít vnitřní ukazatel na typ odkazu.  
   
 ```cpp  
 // interior_ptr.cpp  

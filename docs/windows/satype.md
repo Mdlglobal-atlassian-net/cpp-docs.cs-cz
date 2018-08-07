@@ -1,5 +1,5 @@
 ---
-title: satype – | Microsoft Docs
+title: satype – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888679"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603391"
 ---
 # <a name="satype"></a>satype
-Určuje datový typ **SAFEARRAY** struktura.  
+Určuje datový typ `SAFEARRAY` struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *data_type*  
- Datový typ pro **SAFEARRAY** datová struktura, která je předáván jako parametr pro metodu rozhraní.  
+ Datový typ `SAFEARRAY` datová struktura, která je předána jako parametr metody rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -46,20 +45,20 @@ Určuje datový typ **SAFEARRAY** struktura.
   
 |||  
 |-|-|  
-|**Platí pro**|Parametr rozhraní, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Rozhraní parametrů, metody rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
 ## <a name="remarks"></a>Poznámky  
- **Satype –** C++ atribut určuje datový typ **SAFEARRAY**.  
+ **Satype –** C++ atribut určuje datový typ `SAFEARRAY`.  
   
 > [!NOTE]
->  Úroveň dereference je vyřazeno z **SAFEARRAY** ukazatel v souboru generovaného .idl jak je deklarován v souboru.  
+>  Z je vyřadit určitou úroveň dereference `SAFEARRAY` ukazatel v souboru IDL vygenerovaný v tom, jak je deklarován v souboru .cpp.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

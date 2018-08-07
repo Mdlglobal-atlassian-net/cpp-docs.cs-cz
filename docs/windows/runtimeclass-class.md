@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass – třída | Microsoft Docs
+title: Runtimeclass – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889004"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606329"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
-Představuje třídu WinRT nebo COM, která dědí zadaný rozhraní a poskytuje zadané prostředí Windows Runtime, classic COM a slabé odkaz na podporu.  
+Představuje třídu WinRT nebo COM, která dědí zadaných rozhraní a poskytuje zadaného modulu Windows Runtime, klasické rozhraní COM a slabou podporu odkazu.  
   
-Tato třída poskytuje standardní implementace třídy WinRT a modelu COM, poskytuje implementace `QueryInterface`, `AddRef`, `Release` atd., spravuje počet odkazů modulu a podporu pro zajištění objekt factory třídy pro activatable objekty.
+Tato třída poskytuje standardní implementace WinRT a com. tříd, poskytuje implementaci `QueryInterface`, `AddRef`, `Release` atd., spravuje referenčního počtu modulu a obsahuje podporu pro poskytuje objekt pro vytváření tříd pro aktivovatelné objekty.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,25 +36,25 @@ template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```
   
-#### <a name="parameters"></a>Parametry  
- `classFlags`  
-Volitelný parametr. Kombinace jednoho nebo více [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) hodnot výčtu. `__WRL_CONFIGURATION_LEGACY__` Makro lze definovat za účelem změnit výchozí hodnotu classFlags pro všechny třídy za běhu v projektu. Pokud definované, RuntimeClass instance jsou jiný agilní ve výchozím nastavení. Pokud není definované, RuntimeClass instance jsou agilní ve výchozím nastavení. Aby se zabránilo nejednoznačnosti vždycky zadat Microsoft::WRL::FtmBase v `TInterfaces` nebo RuntimeClassType::InhibitFtmBase. Poznámka: Pokud jsou obě používá objekt InhibitFtmBase a FtmBase bude agile.
+### <a name="parameters"></a>Parametry  
+ *classFlags*  
+Volitelný parametr. Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu. `__WRL_CONFIGURATION_LEGACY__` Makra lze definovat za účelem změnit výchozí hodnotu classFlags pro všechny třídy modulu runtime v projektu. Pokud definována, RuntimeClass instance jsou mimo agilní ve výchozím nastavení. Pokud není definován, RuntimeClass instance jsou agilní ve výchozím nastavení. Aby se zabránilo nejednoznačnosti vždy zadávat `Microsoft::WRL::FtmBase` v `TInterfaces` nebo `RuntimeClassType::InhibitFtmBase`. Poznámka: Pokud jsou obě používají objekt InhibitFtmBase a ftmbase – bude agile.
  
- `TInterfaces`  
-Seznam rozhraní objekt implementuje nad rámec IUnknown, IInspectable nebo dalších rozhraní řízené [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Je taky mohou ostatní třídy pocházet ze, zejména Microsoft::WRL::FtmBase byl objekt agilní a způsobit, že ho implementovat imarshal – seznam.
+ *TInterfaces*  
+Seznam rozhraní objekt implementuje nad rámec `IUnknown`, `IInspectable` nebo jiných rozhraní řídí [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md). Je také může seznam jiných tříd nelze odvodit z, zejména `Microsoft::WRL::FtmBase` vytvořit objekt agilní a způsobit, že k implementaci `IMarshal`.
   
 ## <a name="members"></a>Členové  
-`RuntimeClassInitialize` Funkci, která inicializuje objekt, pokud funkce šablony makeandinitialize – slouží k vytvoření objektu. Pokud se inicializace vrátí S_OK, pokud daný objekt byl úspěšně inicializován nebo COM kód chyby. Kód chyby COM jako návratová hodnota makeandinitialize – rozšířena. Všimněte si, že RuntimeClassInitialize metoda není volána, pokud funkce šablony zkontrolujte slouží k vytvoření objektu.
+`RuntimeClassInitialize` Funkce, která inicializuje objekt, pokud `MakeAndInitialize` šablony funkce se používá ke konstrukci objektu. Vrátí hodnotu S_OK, pokud objekt byl úspěšně inicializován nebo kód chyby modelu COM. Pokud inicializace se nezdařila. Kód chyby modelu COM je postoupena jako návratovou hodnotu `MakeAndInitialize`. Všimněte si, že `RuntimeClassInitialize` metoda není volána, pokud `Make` šablony funkce se používá ke konstrukci objektu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[RuntimeClass::RuntimeClass – konstruktor](../windows/runtimeclass-runtimeclass-constructor.md)|Inicializuje aktuální instanci RuntimeClass – třída.|  
-|[RuntimeClass::~RuntimeClass – destruktor](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinitializes aktuální instance třídy RuntimeClass.|  
+|[RuntimeClass::RuntimeClass – konstruktor](../windows/runtimeclass-runtimeclass-constructor.md)|Inicializuje aktuální instance třídy RuntimeClass.|  
+|[RuntimeClass::~RuntimeClass – destruktor](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Zruší inicializaci aktuální instance třídy RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
-Toto je podrobností implementace.
+Toto je podrobnost implementace.
   
 ## <a name="requirements"></a>Požadavky  
 **Záhlaví:** implements.h  
@@ -62,4 +62,4 @@ Toto je podrobností implementace.
 **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

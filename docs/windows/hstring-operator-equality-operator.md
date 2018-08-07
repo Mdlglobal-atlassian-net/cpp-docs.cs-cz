@@ -1,5 +1,5 @@
 ---
-title: HString::Operator == – operátor | Microsoft Docs
+title: HString::Operator == – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c21e9f79673cc888f8661803a8cc4bb9053870c4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876537"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604561"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator== – operátor
-Určuje, zda dva parametry jsou stejné.  
+Určuje, zda se tyto dva parametry rovnají.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,18 +47,17 @@ inline bool operator==(
 inline bool operator==(  
                  const HString& lhs,   
                  const HSTRING& rhs) throw()  
-  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lhs`  
- První parametr k porovnání. `lhs` může být objekt HString nebo HStringReference nebo popisovač HSTRING.  
+### <a name="parameters"></a>Parametry  
+ *lhs*  
+ První parametr k porovnání. *LHS* může být **HString** nebo `HStringReference` objektu nebo popisovače HSTRING.  
   
- `rhs`  
- Druhý parametr k porovnání.`rhs` může být objekt HString nebo HStringReference nebo popisovač HSTRING.  
+ *Zarovnání indirekce RHS*  
+ Druhý parametr k porovnání. *zarovnání indirekce rhs* může být **HString** nebo `HStringReference` objektu nebo popisovače HSTRING.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud `lhs` a `rhs` parametry jsou stejné, jinak hodnota `false`.  
+ **Hodnota TRUE** Pokud *lhs* a *zarovnání indirekce rhs* parametry jsou stejné, jinak **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

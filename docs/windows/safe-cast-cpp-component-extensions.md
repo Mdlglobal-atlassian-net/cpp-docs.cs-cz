@@ -1,5 +1,5 @@
 ---
-title: safe_cast (rozšíření komponent C++) | Microsoft Docs
+title: safe_cast (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f59aa201a60fb2cf118b31eb4be377cd246ece
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891513"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606381"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (rozšíření komponent C++)
-`safe_cast` Operace v případě úspěchu vrátí zadaný výraz jako zadaný typ; jinak vyvolá `InvalidCastException`.  
+**Safe_cast** časový limit operace vrátí zadaný výraz jako zadaný typ, v případě úspěchu; jinak vyvolá výjimku `InvalidCastException`.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Používají se žádné poznámky pro tuto funkci jazyka, které platí pro všechny moduly runtime.)  
+ (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,10 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
-### <a name="parameters"></a>Parametry  
-  
-### <a name="remarks"></a>Poznámky  
-  
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- `safe_cast` Umožňuje změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnné nebo parametru být převoditelná na určitý typ můžete použít safe_cast bez bloku try-catch – ke zjištění programovací chyby během vývoje. Další informace najdete v tématu [přetypování (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+ **safe_cast** vám umožní změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnná nebo parametr být převoditelná na určitý typ, můžete použít **safe_cast** bez **bloku try-catch** bloku k detekci programové chyby během vývoje. Další informace najdete v tématu [přetypování (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -58,28 +53,26 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Parametry  
  *id typu*  
- Typ převést *výraz* k. Obslužná rutina se odkaz na typ hodnoty, typ hodnoty nebo sledovací odkaz na typ hodnotou nebo odkazem.  
+ Typ, který chcete převést *výraz* k. Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.  
   
- *výraz*  
- Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo sledovací odkaz na typ hodnotou nebo odkazem.  
+ *Výraz*  
+ Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
- `safe_cast` Vyvolá `InvalidCastException` Pokud nemůže převést *výraz* na typ určený *id typu*. K zachycení `InvalidCastException`, zadejte [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru a použijte příkaz try/catch.  
+ **safe_cast** vyvolá `InvalidCastException` Pokud nelze převést *výraz* na typ určený *id typu*. K zachycení `InvalidCastException`, zadejte [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru a použití **bloku try/catch** příkazu.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad kódu ukazuje, jak používat `safe_cast` pomocí prostředí Windows Runtime.  
+ Následující příklad kódu ukazuje, jak používat **safe_cast** s modulem Windows Runtime.  
   
-```cpp#  
+```cpp  
 // safe_cast_ZW.cpp  
 // compile with: /ZW /EHsc  
   
@@ -112,7 +105,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- `safe_cast` Umožňuje změnit typ výrazu a generovat ověřitelný kód MSIL.  
+ **safe_cast** umožňuje změnit typ výrazu a generovat ověřitelného kódu MSIL.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -122,42 +115,40 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Parametry  
  *id typu*  
- Obslužná rutina se odkaz na typ hodnoty, typ hodnoty nebo sledovací odkaz na typ hodnotou nebo odkazem.  
+ Popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.  
   
- *výraz*  
- Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo sledovací odkaz na typ hodnotou nebo odkazem.  
+ *Výraz*  
+ Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo odkaz sledování na typ odkazu nebo hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
- Výraz `safe_cast<` *id typu*`>(`*výraz* `)` převede operand výrazu na objekt typu id typu.  
+ Výraz `safe_cast<` *id typu*`>(`*výraz* `)` operand výrazu převede na objekt typu id typu.  
   
- Kompilátor bude přijímat [static_cast](../cpp/static-cast-operator.md) ve většině míst, na které bude přijímat `safe_cast`.  Ale `safe_cast` záruku, že se k vytvoření ověřitelných MSIL, přičemž `static_cast` by mohla vést k neověřitelný MSIL.  V tématu [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) a [Peverify.exe (Nástroj PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Další informace o ověřitelný kód.  
+ Kompilátor přijme [static_cast](../cpp/static-cast-operator.md) ve většině případů, které bude přijímat **safe_cast**.  Ale **safe_cast** je zaručeno, že k tvorbě ověřitelného kódu MSIL, přičemž **static_cast** by mohla vést neověřitelný MSIL.  Zobrazit [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) a [Peverify.exe (Nástroj PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Další informace o kódu s možností ověření.  
   
- Jako `static_cast`, `safe_cast` vyvolá uživatelem definované převody.  
+ Stejně jako **static_cast**, **safe_cast** vyvolá uživatelem definovaných převodů.  
   
- Další informace o přetypování najdete v tématu [operátory přetypování](../cpp/casting-operators.md).  
+ Další informace o přetypování, naleznete v tématu [operátory přetypování](../cpp/casting-operators.md).  
   
- `safe_cast` se nevztahuje **const_cast –** (přetypovat rychle **const**).  
+ **safe_cast** se nevztahuje **const_cast** (přetypovat pryč **const**).  
   
- `safe_cast` je v oboru názvů rozhraní příkazového řádku.  V tématu [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
+ **safe_cast** je v oboru názvů rozhraní příkazového řádku.  Zobrazit [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
   
- Další informace o **safe_cas**t, najdete v části:  
+ Další informace o **safe_cast**, naleznete v tématu:  
   
--   [Přetypování ve stylu jazyka pomocí možnosti/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [Přetypování C-Style s parametrem/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
 -   [Postupy: Používání operátoru safe_cast v jazyce C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Jeden příklad kde nebude přijímat kompilátor `static_cast` , ale bude přijímat `safe_cast` je pro přetypování mezi typy nesouvisejícími rozhraní.  S `safe_cast`, kompilátor nevydá Chyba převodu a provede kontrolu za běhu, zda je možné přetypování  
+ Jeden příklad, ve kterém kompilátor nepřijímá **static_cast** přijme, ale **safe_cast** je pro přetypování mezi typy nesouvisejících rozhraní.  S **safe_cast**, kompilátor nevydá Chyba převodu a provede kontrolu za běhu, jestli je možné přetypování  
   
 ```cpp  
 // safe_cast.cpp  

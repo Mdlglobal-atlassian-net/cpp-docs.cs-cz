@@ -1,5 +1,5 @@
 ---
-title: Ovládací prvek ActiveX dialogové okno Vložit | Microsoft Docs
+title: Vložit ovládací prvek ActiveX – dialogové okno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,31 +18,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2e0b25b7457ed11e297c3a4793bee4c93fc481d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bbf381170da99a17ee8c701d8d3f3251c88729d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877148"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607121"
 ---
 # <a name="insert-activex-control-dialog-box"></a>Dialogové okno Vložit ovládací prvek ActiveX
 Toto dialogové okno umožňuje [vložení ovládacích prvků ActiveX do vašem dialogovém okně](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) při použití [editoru dialogového okna](../windows/dialog-editor.md).  
   
  **Ovládací prvek ActiveX**  
- Zobrazí seznam ovládací prvky ActiveX. Vložení ovládacího prvku z tohoto dialogového okna negeneruje obálkovou třídu. Pokud potřebujete obálkovou třídu, použijte [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) ji vytvořit (Další informace najdete v tématu [přidání třídy](../ide/adding-a-class-visual-cpp.md)). Pokud ovládací prvek ActiveX v tomto seznamu nezobrazí, pokuste se nainstalovat ovládací prvek podle pokynů dodavatele.  
+ Zobrazí seznam ovládacích prvků ActiveX. Vložení ovládacího prvku z tohoto dialogového okna negeneruje obálkovou třídu. Pokud potřebujete obálkovou třídu, použijte [zobrazení tříd](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) si ji vytvořit (Další informace najdete v tématu [přidání třídy](../ide/adding-a-class-visual-cpp.md)). Ovládací prvek ActiveX v tomto seznamu nezobrazí, zkuste nainstalovat ovládací prvek podle pokynů jeho dodavatele.  
   
  **Cesta**  
- Zobrazí soubor, ve kterém je nalezen ovládací prvek ActiveX.  
+ Zobrazí soubor, ve kterém se nachází v ovládacím prvku ActiveX.  
   
- Ovládací prvky můžete umístit v okně sady nástrojů pro snadný přístup. Další informace najdete v tématu [přizpůsobení sady nástrojů – dialogové okno](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  
+ Ovládací prvky můžete umístit v okně nástrojů pro snadný přístup. Další informace najdete v tématu [dialogové okno Přizpůsobit panel nástrojů](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Karta Editor dialogového okna, panel nástrojů](../windows/dialog-editor-tab-toolbox.md)   
+ [Karta editoru dialogového okna, panel nástrojů](../windows/dialog-editor-tab-toolbox.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)
-

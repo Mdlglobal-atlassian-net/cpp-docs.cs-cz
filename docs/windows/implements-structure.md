@@ -1,5 +1,5 @@
 ---
-title: Implementuje strukturu | Microsoft Docs
+title: Implementuje strukturu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880913"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607803"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
-Implementuje QueryInterface a GetIid pro zadaná rozhraní.  
+Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,48 +58,48 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `I0`  
- ID zeroth rozhraní. (Povinné)  
+### <a name="parameters"></a>Parametry  
+ *I0*  
+ ID nultého rozhraní. (Povinné)  
   
- `I1`  
- První rozhraní ID. (Volitelné)  
+ *I1*  
+ ID prvního rozhraní. (Volitelné)  
   
- `I2`  
- Druhý ID rozhraní. (Volitelné)  
+ *I2*  
+ Druhé ID rozhraní. (Volitelné)  
   
- `I3`  
- Třetí ID rozhraní. (Volitelné)  
+ *I3*  
+ ID třetího rozhraní. (Volitelné)  
   
- `I4`  
- Čtvrtý ID rozhraní. (Volitelné)  
+ *TYP I4*  
+ ID čtvrtého rozhraní. (Volitelné)  
   
- `I5`  
- Páté ID rozhraní. (Volitelné)  
+ *I5*  
+ ID pátého rozhraní. (Volitelné)  
   
- `I6`  
- Šesté ID rozhraní. (Volitelné)  
+ *I6*  
+ ID šestého rozhraní. (Volitelné)  
   
- `I7`  
- Sedmého ID rozhraní. (Volitelné)  
+ *I7*  
+ ID sedmého rozhraní. (Volitelné)  
   
- `I8`  
- ID nakrmeni rozhraní. (Volitelné)  
+ *I8*  
+ ID osmého rozhraní. (Volitelné)  
   
- `I9`  
- Deváté ID rozhraní. (Volitelné)  
+ *I9*  
+ ID devátého rozhraní. (Volitelné)  
   
- `flags`  
- Konfigurace příznaky pro třídu. Jeden nebo více [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) výčty, které jsou určené v [runtimeclassflags –](../windows/runtimeclassflags-structure.md) struktura.  
+ *příznaky*  
+ Konfigurace příznaky pro třídu. Jeden nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) výčty, které jsou určené v [runtimeclassflags –](../windows/runtimeclassflags-structure.md) struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Je odvozena ze seznamu zadaný rozhraní a implementuje šablony pomocné rutiny pro QueryInterface a GetIid.  
+ Je odvozen ze seznamu zadaných rozhraní a implementuje šablony pomocné rutiny pro `QueryInterface` a `GetIid`.  
   
- Každý `I0` prostřednictvím `I9` rozhraní parametr musí být odvozeny od buď IUnknown IInspectable, nebo [chaininterfaces –](../windows/chaininterfaces-structure.md) šablony. `flags` Parametr určuje, zda je podpora vygenerované IUnknown nebo IInspectable.  
+ Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozhraní `IUnknown`, `IInspectable`, nebo [chaininterfaces –](../windows/chaininterfaces-structure.md) šablony. *Příznaky* parametr určuje, zda podpory je vygenerován pro `IUnknown` nebo `IInspectable`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -109,9 +109,9 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Implements::CanCastTo – metoda](../windows/implements-cancastto-method.md)|Získá ukazatele k zadanému rozhraní.|  
-|[Implements::CastToUnknown – metoda](../windows/implements-casttounknown-method.md)|Získá ukazatel na základní rozhraní IUnknown.|  
-|[Implements::FillArrayWithIid – metoda](../windows/implements-fillarraywithiid-method.md)|Vloží zadané parametrem aktuální šablony zeroth do elementu zadané pole ID rozhraní.|  
+|[Implements::CanCastTo – metoda](../windows/implements-cancastto-method.md)|Získá ukazatel na rozhraní zadané.|  
+|[Implements::CastToUnknown – metoda](../windows/implements-casttounknown-method.md)|Získá ukazatel na základní `IUnknown` rozhraní.|  
+|[Implements::FillArrayWithIid – metoda](../windows/implements-fillarraywithiid-method.md)|Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.|  
   
 ### <a name="protected-constants"></a>Chráněné konstanty  
   

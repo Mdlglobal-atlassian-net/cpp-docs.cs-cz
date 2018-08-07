@@ -1,5 +1,5 @@
 ---
-title: importlib – | Microsoft Docs
+title: importlib | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876755"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603065"
 ---
 # <a name="importlib"></a>importlib
-Díky typy, které již byly kompilovány do jiného typu knihovny k dispozici pro knihovny typů vytváří.  
+Díky typy, které již byly zkompilovány do jiné knihovny typů k dispozici pro vytváření knihovny typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *tlb_file*  
- Název souboru .tlb, v uvozovkách, které chcete importované do knihovny typů aktuálního projektu.  
+ Název souboru .tlb v uvozovkách, které chcete importovat do knihovny typů aktuálního projektu.  
   
 ## <a name="remarks"></a>Poznámky  
- **Importlib –** C++ atributu způsobí, že `importlib` příkaz, který má být umístěn v bloku knihovny generovaného .idl souboru. **Importlib –** atribut má stejné funkce jako [importlib –](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL atribut.  
+ **Importlib** C++ atribut způsobí, že `importlib` příkaz umístit do bloku knihovny ze souboru generovaného IDL. **Importlib** atribut má stejné funkce jako [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje příklad použití **importlib –**:  
+ Následující kód ukazuje příklad, jak používat **importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -59,9 +58,9 @@ Díky typy, které již byly kompilovány do jiného typu knihovny k dispozici p
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

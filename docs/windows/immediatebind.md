@@ -1,5 +1,5 @@
 ---
-title: immediatebind | Microsoft Docs
+title: immediatebind | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876261"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603045"
 ---
 # <a name="immediatebind"></a>immediatebind
-Označuje, že databáze bude okamžitě informováni o všechny změny vlastností objektu vázané na data.  
+Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Immediatebind** atribut C++ má stejné funkce jako [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL atribut.  
+ **Immediatebind** C++ atribut má stejné funkce jako [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- V tématu [vazbu](../windows/bindable.md) příklad použití **immediatebind**.  
+ Zobrazit [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **immediatebind**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Označuje, že databáze bude okamžitě informováni o všechny změny vlastnos
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -58,5 +56,5 @@ Označuje, že databáze bude okamžitě informováni o všechny změny vlastnos
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
  [defaultbind –](../windows/defaultbind.md)   
- [displaybind –](../windows/displaybind.md)   
+ [displaybind](../windows/displaybind.md)   
  [requestedit](../windows/requestedit.md)   

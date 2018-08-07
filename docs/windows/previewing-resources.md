@@ -1,5 +1,5 @@
 ---
-title: Náhled prostředků | Microsoft Docs
+title: Náhled prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878668"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605016"
 ---
 # <a name="previewing-resources"></a>Náhled prostředků
-Zobrazení náhledu vaše prostředky můžete zobrazit grafické prostředků bez jejich otevření. Zobrazení náhledu je také užitečné pro spustitelné soubory, poté, co jste je kompilovat, protože identifikátory prostředků změnit na čísla. Vzhledem k tomu, že tyto číselné identifikátory často neposkytují dostatek informací, zobrazení náhledu prostředky vám pomůže rychle identifikovat.  
+Náhled prostředků vám umožní zobrazit grafických prostředků bez jejich otevírání. V předběžné verzi je také užitečné pro spustitelné soubory, poté, co jste je zkompilovat, protože identifikátory prostředků změnit na čísla. Protože tyto identifikátory číselné často neposkytuje dostatek informací, zobrazení náhledu prostředky vám pomůže rychle identifikovat.  
   
- Zobrazit náhled visual rozložení následující typy prostředků:  
+ Rozložení vizuálu z těchto typů prostředků můžete zobrazit náhled:  
   
 -   Rastrový obrázek  
   
@@ -44,29 +44,28 @@ Zobrazení náhledu vaše prostředky můžete zobrazit grafické prostředků b
   
 -   Panel nástrojů  
   
- Funkce visual preview se nevztahuje na prostředky akcelerátoru, Manifest, řetězec tabulky a informace o verzi.  
+ Funkce visual ve verzi preview se nevztahuje na akcelerátoru, Manifest, tabulka řetězců a informace o verzi zdroje.  
   
 ### <a name="to-preview-resources"></a>Náhled prostředků  
   
-1.  V [zobrazení prostředků](../windows/resource-view-window.md) nebo okna dokumentu, vyberte prostředek, například IDD_ABOUTBOX.  
+1.  V [zobrazení prostředků](../windows/resource-view-window.md) nebo okno dokumentu, vyberte prostředek, třeba IDD_ABOUTBOX.  
   
-     **Poznámka:** Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+     **Poznámka:** Pokud projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), klikněte **stránky vlastností** tlačítko.  
+2.  V [okno vlastností](/visualstudio/ide/reference/properties-window), klikněte na tlačítko **stránky vlastností** tlačítko.  
   
      \- nebo –  
   
 3.  Na **zobrazení** nabídky, klikněte na tlačítko **stránky vlastností**.  
   
-     Stránka vlastností pro prostředek otevře zobrazení Náhled prostředku. Potom můžete pomocí nahoru a dolů klávesy se šipkami přejděte ovládacího prvku strom zobrazení prostředků nebo okna dokumentu. Stránka vlastností zůstane otevřít a zobrazit jakémukoli prostředku, který má právě fokus a bude schopen zobrazit jejich náhled.  
+     Stránka vlastností pro prostředek se otevře zobrazení ve verzi preview tohoto prostředku. Pak můžete použít nahoru a dolů šipkami, přejděte na ovládací prvek stromu v zobrazení zdrojů nebo okno dokumentu. Na stránce vlastností bude zůstanou otevřené a zobrazit jakémukoli prostředku, který má právě fokus a může být zobrazen.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky 
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
  [Editory prostředků](../windows/resource-editors.md)
-

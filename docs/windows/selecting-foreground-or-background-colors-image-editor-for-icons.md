@@ -1,5 +1,5 @@
 ---
-title: Výběr barev popředí nebo pozadí (Editor obrázků pro ikony) | Microsoft Docs
+title: Výběr barev popředí nebo pozadí (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888643"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605545"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Výběr barev popředí nebo pozadí (editor obrázků pro ikony)
-S výjimkou **mazání**, nástroje na **Editor obrázků** nástrojů kreslení s aktuální barvu popředí nebo pozadí po stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.  
+S výjimkou **gumy**, nástroje na **Editor obrázků** draw nástrojů s aktuální barvu popředí nebo pozadí při stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.  
   
 ### <a name="to-select-a-foreground-color"></a>Vyberte barvu popředí  
   
-1.  S levým tlačítkem myši, klikněte na požadovanou barvu na [barevná paleta](../windows/colors-window-image-editor-for-icons.md).  
+1.  Levé tlačítko myši, klikněte na požadovanou barvu [barvy palety](../windows/colors-window-image-editor-for-icons.md).  
   
-### <a name="to-select-a-background-color"></a>Chcete-li vybrat barvu pozadí  
+### <a name="to-select-a-background-color"></a>Výběr barvy pozadí  
   
-1.  Pravým tlačítkem myši, klikněte na požadovanou barvu na **barvy** palety.  
+1.  Pravé tlačítko myši, klikněte na požadovanou barvu **barvy** palety.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   

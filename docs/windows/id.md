@@ -1,5 +1,5 @@
 ---
-title: ID | Microsoft Docs
+title: ID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882444"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605705"
 ---
 # <a name="id"></a>id
-Určuje `dispid` parametr pro členské funkce (vlastnost nebo metodu, v rozhraní nebo dispinterface).  
+Určuje *dispid* parametr pro členské funkce (vlastnost nebo metoda v rozhraní nebo dispinterface).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `dispid`  
- Odesílání ID pro metodu rozhraní.  
+### <a name="parameters"></a>Parametry  
+ *identifikátor DISPID*  
+ Identifikátor odeslání pro metody rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- **Id** atribut C++ má stejné funkce jako [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL atribut.  
+ **Id** C++ atribut má stejné funkce jako [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) příklad použití **id**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **id**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -52,9 +51,9 @@ Určuje `dispid` parametr pro členské funkce (vlastnost nebo metodu, v rozhran
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

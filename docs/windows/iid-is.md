@@ -1,5 +1,5 @@
 ---
-title: iid_is – | Microsoft Docs
+title: iid_is – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877999"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603287"
 ---
 # <a name="iidis"></a>iid_is
-Určuje identifikátory IID rozhraní modelu COM, na kterou ukazatele rozhraní odkazuje.  
+Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *výraz*  
- Výraz jazyka C, který určuje identifikátory IID rozhraní modelu COM ukazuje ukazatele rozhraní.  
+ *Výraz*  
+ Výraz jazyka C, který určuje IID rozhraní modelu COM na které odkazuje ukazatel rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
- **Iid_is –** atribut C++ má stejné funkce jako [iid_is –](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL atribut.  
+ **Iid_is –** C++ atribut má stejné funkce jako [iid_is –](http://msdn.microsoft.com/library/windows/desktop/aa367044) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
  Následující kód ukazuje použití **iid_is –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  
@@ -67,9 +66,9 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**Platí pro**|Parametr rozhraní, – datový člen|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Rozhraní parametr, datový člen|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

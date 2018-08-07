@@ -1,5 +1,5 @@
 ---
-title: Import | Microsoft Docs
+title: Importovat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877264"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604704"
 ---
 # <a name="import"></a>import
-Určuje jiný .idl, .odl nebo hlavičce soubor obsahující definice, které chcete odkazovat z vaší hlavní IDL.  
+Určuje jiný soubor .idl, .odl nebo záhlaví obsahující definice, kterou chcete odkazovat z hlavní IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `idl_file`  
- Název souboru IDL, které chcete importované do knihovny typů aktuálního projektu.  
+### <a name="parameters"></a>Parametry  
+ *idl_file*  
+ Název souboru IDL, který chcete importovat do knihovny typů aktuálního projektu.  
   
 ## <a name="remarks"></a>Poznámky  
- **Importovat** C++ atributu způsobí, že `#import` příkaz, který má být umístěny pod `import "docobj.idl"` příkaz v souboru generovaného IDL. **Importovat** atribut má stejné funkce jako [importovat](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL atribut.  
+ **Importovat** C++ atribut způsobí, že `#import` příkaz umístit pod `import "docobj.idl"` příkaz v souboru generovaného IDL. **Importovat** atribut má stejné funkce jako [importovat](http://msdn.microsoft.com/library/windows/desktop/aa367047) atribut MIDL.  
   
- **Importovat** atribut pouze umístí zadaný soubor do souboru .idl generovaný projektu; **importovat** atribut neumožňuje volání konstrukce v zadaném souboru ze zdrojového kódu ve vašem projektu.  Chcete-li zavolat konstrukce v zadaném souboru zdrojového kódu v projektu, buď použijte [#import](../preprocessor/hash-import-directive-cpp.md) a `embedded_idl` atribut nebo je můžete zahrnout soubor .h pro `idl_file`, pokud existuje soubor h.  
+ **Importovat** atribut pouze umístí do souboru IDL, který se vygeneruje vaším projektem; zadaný soubor **importovat** atribut neumožňuje volání konstruktorů v zadaném souboru ze zdrojového kódu ve vašem projektu.  Pokud chcete volat konstrukce v zadaném souboru ze zdrojového kódu ve vašem projektu, buď použijte [#import](../preprocessor/hash-import-directive-cpp.md) a `embedded_idl` atribut nebo je můžete zahrnout soubor hlaviček pro *idl_file*, pokud existuje soubor hlaviček.  
   
 ## <a name="example"></a>Příklad  
  Následující kód:  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- vytváří následující kód v souboru generovaného .idl:  
+ vytvoří následující kód v souboru generovaného IDL:  
   
 ```  
 import "docobj.idl";  
@@ -74,9 +73,9 @@ library MyLib {
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -85,6 +84,6 @@ library MyLib {
  [IDL – atributy](../windows/idl-attributes.md)   
  [Samostatné atributy](../windows/stand-alone-attributes.md)   
  [importidl –](../windows/importidl.md)   
- [importlib –](../windows/importlib.md)   
+ [importlib](../windows/importlib.md)   
  [Zahrnout](../windows/include-cpp.md)   
  [includelib –](../windows/includelib-cpp.md)   

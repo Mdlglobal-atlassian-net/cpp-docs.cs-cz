@@ -1,5 +1,5 @@
 ---
-title: 'Ikony a kurzory: prostředky obrázků pro zařízení s displejem (Editor obrázků pro ikony) | Microsoft Docs'
+title: 'Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení (Editor obrázků pro ikony) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,30 +26,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881907"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604613"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony a kurzory: prostředky obrázků pro zařízení s displejem (editor obrázků pro ikony)
-Ikony a kurzory jsou grafických prostředků, které mohou obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zobrazení zařízení. Kromě toho má kurzoru "aktivního bodu," umístění, které Windows používá ke sledování jeho umístění. Ikony a kurzory vytvářejí a upravit pomocí editoru bitové kopie, jako jsou rastrové obrázky a další bitové kopie.  
+Ikony a kurzory jsou grafických prostředků, které může obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zařízení s displejem. Kromě toho kurzor má "aktivního bodu," požadované místo Windows používá ke sledování jeho pozice. Ikony a kurzory jsou vytvořeny a upravovat pomocí editoru obrázků, jako jsou rastrové obrázky a další Image.  
   
- Když vytvoříte nové ikony nebo kurzoru, editor obrázků nejprve vytvoří bitovou kopii standardní typu. Obrázek je původně vyplněn (transparentní) barvy obrazovky. Pokud je bitová kopie kurzoru, aktivní bod je původně levého horního rohu (souřadnice 0,0).  
+ Při vytváření nové ikony nebo kurzoru s editoru obrázků nejprve vytvoří bitovou kopii standardních typů. Na obrázku je zpočátku vyplněn barvou obrazovky (transparentní). Pokud se image nachází kurzor, aktivního bodu je zpočátku levý horní roh (souřadnice 0; 0).  
   
- Editor obrázků ve výchozím nastavení podporuje vytváření další bitových kopií pro zařízení uvedené v následující tabulce. Bitové kopie pro jiná zařízení můžete vytvořit tak, že zadáte parametry šířky, výšky a počet barev do [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md).  
+ Ve výchozím nastavení editoru obrázků podporuje vytváření dalších obrázků pro zařízení uvedené v následující tabulce. Můžete vytvářet Image pro jiná zařízení tak, že zadáte parametry šířku, výšku a počet barev do [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
 >  Pomocí editoru obrázků můžete prohlížet 32bitové obrázky, ale nemůžete je upravovat.  
   
 |Barva|Šířka (v pixelech)|Výška (v pixelech)|  
 |-----------|----------------------|-----------------------|  
-|Černobílý tisk|16|16|  
-|Černobílý tisk|32|32|  
-|Černobílý tisk|48|48|  
-|Černobílý tisk|64|64|  
-|Černobílý tisk|96|96|  
+|Monochromatický|16|16|  
+|Monochromatický|32|32|  
+|Monochromatický|48|48|  
+|Monochromatický|64|64|  
+|Monochromatický|96|96|  
 |16|16|16|  
 |16|32|32|  
 |16|64|64|  
@@ -61,7 +61,7 @@ Ikony a kurzory jsou grafických prostředků, které mohou obsahovat více bito
 |256|64|64|  
 |256|96|96|  
   
--   [Vytvoření nové obrázku zařízení (ikony nebo kurzoru)](../windows/creating-a-device-image-image-editor-for-icons.md)  
+-   [Vytvoření nového obrázku zařízení (ikony nebo kurzoru)](../windows/creating-a-device-image-image-editor-for-icons.md)  
   
 -   [Přidání obrázku pro zařízení s jiným zobrazením](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
   
@@ -71,11 +71,11 @@ Ikony a kurzory jsou grafických prostředků, které mohou obsahovat více bito
   
 -   [Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
   
--   [Vytvoření 256 barvami ikony nebo kurzoru](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
+-   [Vytvoření 256barevných ikony nebo kurzoru](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
   
 -   [Nastavení aktivního bodu kurzoru](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -84,4 +84,3 @@ Ikony a kurzory jsou grafických prostředků, které mohou obsahovat více bito
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)   
  [Ikony](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Kurzory](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

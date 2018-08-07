@@ -1,5 +1,5 @@
 ---
-title: Tvorba ovládacích prvků stejné šířky, výšky nebo velikosti | Microsoft Docs
+title: Nastavení ovládacích prvků stejnou šířku, výšku ani velikost | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8c475e42a490b68f6a50e071f2479748039186
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874795"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607316"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Nastavení stejné šířky, výšky nebo velikosti ovládacích prvků
-Můžete změnit velikost skupinu ovládací prvky založené na velikost dominantního ovládacího prvku. Můžete také [Změna velikosti ovládacího prvku podle dimenze jeho text titulku](../windows/sizing-individual-controls.md).  
+Změnit velikost skupiny ovládacích prvků na základě velikosti dominantního ovládacího prvku. Můžete také [Změna velikosti ovládacího prvku v závislosti na velikosti jeho text titulku](../windows/sizing-individual-controls.md).  
   
-### <a name="to-make-controls-the-same-width-height-or-size"></a>Chcete-li ovládací prvky stejné šířky, výšky nebo velikosti  
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Aby se řídí stejnou šířku, výšku ani velikost  
   
-1.  [Vyberte ovládací prvky](../windows/selecting-multiple-controls.md) chcete změnit.  
+1.  [Vyberte ovládací prvky](../windows/selecting-multiple-controls.md) chcete změnit velikost.  
   
-     Řízení nejprve vybrán v řadě je dominantního ovládacího prvku. Konečné velikosti ovládacích prvků ve skupině závisí na velikosti dominantního ovládacího prvku. Další informace o výběru dominantního ovládacího prvku najdete v tématu [určení dominantního ovládacího prvku](../windows/specifying-the-dominant-control.md).  
+     Ovládací prvek nejprve v řadě je dominantního ovládacího prvku. Konečné velikosti ovládacích prvků ve skupině závisí na velikosti dominantního ovládacího prvku. Další informace o výběru dominantního ovládacího prvku, naleznete v tématu [určení dominantního ovládacího prvku](../windows/specifying-the-dominant-control.md).  
   
 2.  Z **formátu** nabídce zvolte **nastavit stejnou velikost**, pak vyberte jednu z následujících příkazů:  
   
-    -   **Obě**  
+    -   **Obojí**  
   
     -   **Výška**  
   
     -   **Šířka**  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky](../mfc/controls-mfc.md)
-

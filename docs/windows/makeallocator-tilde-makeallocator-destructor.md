@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ makeallocator – destruktor | Microsoft Docs'
+title: 'MakeAllocator:: ~ MakeAllocator – destruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877096"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606306"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator – destruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití p�
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Deinitializes aktuální instance třídy MakeAllocator.  
+ Zruší inicializaci aktuální instance **MakeAllocator** třídy.  
   
- Tento destruktor také odstraní základní přidělenou paměť, v případě potřeby.  
+ V případě potřeby se tento destruktor odstraní také základní přidělené paměti.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -44,5 +44,5 @@ Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití p�
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [MakeAllocator – třída](../windows/makeallocator-class.md)   
+ [Makeallocator – třída](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Module::registerwinrtobject – metoda | Microsoft Docs
+title: Module::registerwinrtobject – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874951"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603754"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject – metoda
-Jeden nebo více objektů prostředí Windows Runtime zaregistruje, takže k nim můžou připojit jiné aplikace.  
+Zaregistruje jeden nebo více objektů prostředí Windows Runtime, takže k nim mohli připojit další aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,21 +36,21 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `serverName`  
- Název, který určuje podmnožinu objektů vliv na tuto operaci.  
+### <a name="parameters"></a>Parametry  
+ *název_serveru*  
+ Název, který určuje podmnožinu objekty ovlivněné touto operací.  
   
- `activatableClassIds`  
- Pole activatable CLSID k registraci.  
+ *activatableClassIds*  
+ Pole aktivovatelné CLSID k registraci.  
   
- `cookie`  
- Hodnota, která identifikuje objekty tříd, které byly zaregistrovány. Tato hodnota se používá novější zrušení registrace.  
+ *Soubor cookie*  
+ Hodnota, která označuje, které jste zaregistrovali objekty třídy. Tato hodnota se používá později zrušení registrace.  
   
- `count`  
+ *Počet*  
  Počet objektů, které chcete zaregistrovat.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; v opačném chybu HRESULT například CO_E_OBJISREG, která určuje, z důvodu operace se nezdařila.  
+ S_OK v případě úspěchu; v opačném případě chybu HRESULT jako je například CO_E_OBJISREG, který označuje důvod operace se nezdařila.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

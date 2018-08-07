@@ -1,5 +1,5 @@
 ---
-title: Makeallocator::allocate – metoda | Microsoft Docs
+title: Makeallocator::allocate – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876212"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606260"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného ukazatel na přidělenou paměť; v opačném `nullptr`.  
+ Pokud je úspěšná, ukazatel do přidělené paměti. v opačném případě **nullptr**.  
   
 ## <a name="remarks"></a>Poznámky  
- Přidělí paměť a přidruží ji s aktuálním objektem MakeAllocator.  
+ Přidělí paměť a přidruží ji k aktuální **MakeAllocator** objektu.  
   
- Velikost přidělenou paměť je velikost v typu zadaném pomocí aktuální MakeAllocator parametr šablony.  
+ Velikost přidělené paměti je velikost typu určeného aktuálním **MakeAllocator** parametr šablony.  
   
- Vývojář musí potlačení pouze Allocate() metody k implementaci model přidělení různých paměti.  
+ Vývojář potřebuje pouze přepsat **Allocate()** metody k implementaci modelu přidělování různých paměti.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -49,5 +49,5 @@ __forceinline void* Allocate();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [MakeAllocator – třída](../windows/makeallocator-class.md)   
+ [Makeallocator – třída](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::Verify – metoda | Microsoft Docs
+title: Interfacetraits::Verify – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875497"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603040"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ověřuje, že je správně odvozený Base.  
+ Ověřuje, že `Base` správně pochází.  
   
- Další informace o `Base`, najdete v části veřejné – definice TypeDef v [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
+ Další informace o `Base`, naleznete v části veřejné definice TypeDef [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

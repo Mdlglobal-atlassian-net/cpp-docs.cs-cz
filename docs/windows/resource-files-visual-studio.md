@@ -1,5 +1,5 @@
 ---
-title: Soubory prostředků (Visual Studio) | Microsoft Docs
+title: Zdrojové soubory (Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,56 +27,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b56d1f329aee29c37b15590729074d305f04d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879871"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605279"
 ---
 # <a name="resource-files-visual-studio"></a>Zdrojové soubory (Visual Studio)
 > [!NOTE]
->  Tomto materiálu se vztahuje na aplikací klasické pracovní plochy Windows. Informace o prostředcích v aplikacích pro univerzální platformu Windows najdete v tématu [definování prostředky aplikace](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Tento materiál se vztahuje na aplikace klasické pracovní plochy Windows. Informace o prostředcích v aplikacích pro univerzální platformu Windows, naleznete v tématu [definování prostředků aplikace](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
-> Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+> Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
 >  
-> Vzhledem k tomu, že projekty v rozhraní .NET programovací jazyky nepoužívají soubory skriptu prostředků, musíte otevřít vaše prostředky z **Průzkumníku řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pracovat se soubory prostředků v spravované projekty. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
+> Protože projekty v programovacích jazycích rozhraní .NET nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
   
- Termín "soubor prostředků" mohou odkazovat na určité typy souborů, včetně:  
+ Termín "soubor prostředků" mohou odkazovat na několik typů souborů, včetně:  
   
--   Soubor skriptu (.rc) prostředku programu.  
+-   Soubor skriptu prostředků (.rc) programu.  
   
--   Soubor šablony (.rct) prostředku.  
+-   Soubor prostředků šablony (.rct).  
   
--   Jednotlivé zdroje existující jako samostatný soubor, jako je soubor rastrového obrázku, ikony nebo kurzoru, se označuje ze souboru .rc.  
+-   Samostatný prostředek existující jako samostatný soubor, například soubor bitmapy, ikony nebo kurzoru to je odkazováno ze souboru .rc.  
   
--   Soubor hlavičky generované vývojového prostředí, například Resource.h, který je označován ze souboru .rc.  
+-   Soubor hlaviček generovaných vývojové prostředí, například Resource.h, které je uvedené v souboru .rc.  
   
- Prostředky je možné také najít v [typy souborů jiných](../windows/editable-file-types-for-resources.md) třeba soubory .exe, .dll a .res. Můžete pracovat s prostředky, soubory prostředků z projektu a ty, které nejsou součástí aktuálního projektu. Můžete také pracovat se soubory prostředků, které nebyly vytvořeny ve vývojovém prostředí sady Visual Studio. Například můžete:  
+ Prostředky můžete najít také v [jiné typy souborů](../windows/editable-file-types-for-resources.md) například soubory .exe, .dll a Res. Můžete pracovat s prostředky a soubory prostředků z v rámci vašeho projektu a s těmi, které nejsou součástí aktuálního projektu. Můžete také pracovat se soubory prostředků, které nebyly vytvořeny ve vývojovém prostředí sady Visual Studio. Například můžete:  
   
--   Práce se vnořené a podmíněně zahrnuté soubory prostředků.  
+-   Práce se soubory prostředků vnořené a podmíněně zahrnuté.  
   
--   Aktualizace existujících prostředků nebo je převést na formát Visual C++.  
+-   Aktualizovat stávající prostředky nebo je převést na formát Visual C++.  
   
--   Importovat nebo exportovat grafických prostředků do nebo z aktuální soubor prostředků.  
+-   Import a export grafických prostředků do nebo z aktuálního zdrojového souboru.  
   
--   Zahrnout sdílených nebo jen pro čtení identifikátorů (symboly), které nelze změnit pomocí vývojového prostředí.  
+-   Zahrnutí sdílených nebo jen pro čtení identifikátorů (symbolů), které nelze upravit ve vývojovém prostředí.  
   
--   Během aktuálního projektu, například prostředky, které jsou sdíleny mezi několik projektů zahrnují prostředky v souboru spustitelný soubor (.exe), nevyžadují úpravy (nebo které nechcete, aby k provádění úprav).  
+-   Zahrnout zdroje v souboru spustitelný soubor (.exe), které nevyžadují úpravy (nebo které nechcete upravovat) během vašeho aktuálního projektu, jako jsou například prostředky, které se sdílejí mezi několika projekty.  
   
--   Zahrnete typy prostředků není podporován ve vývojovém prostředí.  
+-   Zahrnují typy prostředků nejsou podporovány ve vývojovém prostředí.  
   
  Tato část zahrnuje:  
   
 -   [Vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md)  
   
--   [Vytvoření nového prostředku](../windows/how-to-create-a-resource.md)  
+-   [Vytváří se nový prostředek](../windows/how-to-create-a-resource.md)  
   
--   [Zobrazení prostředků v souboru skriptu prostředků](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
+-   [Zobrazování prostředků v souboru skriptu prostředků](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
   
--   [Otevírání v textovém formátu souboru skriptu prostředků](../windows/how-to-open-a-resource-script-file-in-text-format.md)  
+-   [Otevření souboru skriptu prostředků v textovém formátu](../windows/how-to-open-a-resource-script-file-in-text-format.md)  
   
--   [Doba kompilace zdrojů, včetně](../windows/how-to-include-resources-at-compile-time.md)  
+-   [Včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md)  
   
 -   [Kopírování prostředků](../windows/how-to-copy-resources.md)  
   
@@ -94,5 +94,4 @@ ms.locfileid: "33879871"
 ## <a name="see-also"></a>Viz také  
  [Editory prostředků](../windows/resource-editors.md)   
  [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)   
- [Nabídky a další prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Nabídky a ostatní prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

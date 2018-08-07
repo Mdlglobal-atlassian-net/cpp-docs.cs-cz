@@ -1,5 +1,5 @@
 ---
-title: Výběr barvy z obrázku, která se použije jinde (Editor obrázků pro ikony) | Microsoft Docs
+title: Výběr barvy z obrázku, která se použije jinde (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877407"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608810"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Výběr barvy z obrázku, která se použije jinde (editor obrázků pro ikony)
-**Vybrat barvu**, nebo barva vyzvednutí, nástroj umožňuje libovolnou barvu na bitovou kopii aktuální barvu popředí nebo pozadí barvy, v závislosti na tom, jestli stiskněte levé nebo pravé tlačítko myši. Chcete-li zrušit **vybrat barvu** nástroj, vyberte jiný nástroj.  
+**Vyberte barvu**, nebo barva vyzvednutí, nástroj vytvoří libovolnou barvu na obrázku aktuální barvu popředí nebo pozadí, v závislosti na tom, zda stisknutím levé nebo pravé tlačítko myši. Chcete-li zrušit **vyberte barvu** nástroj, zvolte jiný nástroj.  
   
 > [!TIP]
->  Popisy tlačítek Zobrazit při přesunutí ukazatele nad tlačítka panelu nástrojů. Tyto tipy můžete identifikovat funkce každé tlačítko.  
+>  Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.  
   
-### <a name="to-pick-up-a-color"></a>Vybrat barvy  
+### <a name="to-pick-up-a-color"></a>Aby se získaly barvy  
   
-1.  Na **Editor obrázků** panelu nástrojů (nebo z **Image** nabídce **nástroje** příkaz), klikněte na tlačítko **vybrat barvu** nástroj.  
+1.  Na **Editor obrázků** nástrojů (nebo z **Image** nabídce **nástroje** příkaz), klikněte na tlačítko **vyberte barvu** nástroj.  
   
-2.  Vyberte barvu, kterou chcete vybrat z bitové kopie.  
+2.  Vyberte barvu, kterou chcete vybrat z této image.  
   
     > [!NOTE]
-    >  Jakmile vyberete barvy, editor obrázků znovu aktivuje nástroj naposledy použité.  
+    >  Jakmile vyberete barvy, editoru obrázků znovu aktivuje nástroj naposledy použitých.  
   
-3.  Kreslení pomocí něj pro barvu popředí nebo na pravé tlačítko pro barvu pozadí.  
+3.  Kreslení pomocí levé tlačítko myši pro barvu popředí nebo pravé tlačítko myši pro barvu pozadí.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
+## <a name="requirements"></a>Požadavky  
   
  Žádné  
   

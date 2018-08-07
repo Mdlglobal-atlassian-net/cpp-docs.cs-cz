@@ -1,5 +1,5 @@
 ---
-title: Implements::fillarraywithiid – metoda | Microsoft Docs
+title: Implements::fillarraywithiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e020bd725d0c0f5c65ab1cfb38b45e2b8fbca62e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875718"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608855"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid – metoda
-Vloží zadané parametrem aktuální šablony zeroth do elementu zadané pole ID rozhraní.  
+Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,11 +36,11 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `index`  
- Index počítaný od nuly určující počáteční elementu pole pro tuto operaci. Po dokončení této operace `index` se zvýší o 1.  
+### <a name="parameters"></a>Parametry  
+ *index*  
+ Z nuly vycházející index určující počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* zvyšuje o 1.  
   
- `iids`  
+ *IID*  
  Pole typu IID.  
   
 ## <a name="remarks"></a>Poznámky  

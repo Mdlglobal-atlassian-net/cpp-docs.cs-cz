@@ -1,5 +1,5 @@
 ---
-title: jen pro čtení (C++) | Microsoft Docs
+title: jen pro čtení (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876563"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604421"
 ---
 # <a name="readonly-c"></a>readonly (C++)
-Zakáže přiřazení na člena.  
+Zakáže přiřazení na datový člen.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Jen pro čtení** atribut C++ má stejné funkce jako [jen pro čtení](http://msdn.microsoft.com/library/windows/desktop/aa367152) MIDL atribut.  
+ **Jen pro čtení** C++ atribut má stejné funkce jako [jen pro čtení](http://msdn.microsoft.com/library/windows/desktop/aa367152) atribut MIDL.  
   
- Pokud chcete zakázat úpravu parametru metody, použijte [v](../windows/in-cpp.md) atribut.  
+ Pokud chcete zakázat úpravy parametru metody, použijte [v](../windows/in-cpp.md) atribut.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje k využívání **jen pro čtení** atribut:  
+ Následující kód ukazuje použití **jen pro čtení** atribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  
@@ -63,9 +61,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

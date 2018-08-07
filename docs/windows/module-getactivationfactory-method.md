@@ -1,5 +1,5 @@
 ---
-title: Module::getactivationfactory – metoda | Microsoft Docs
+title: Module::getactivationfactory – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887010"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608102"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory – metoda
-Získá objekt pro vytváření aktivace pro modul.  
+Získá objekt factory pro aktivaci pro modul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `pActivatibleClassId`  
- Identifikátory IID třídu modulu runtime.  
+### <a name="parameters"></a>Parametry  
+ *pActivatibleClassId*  
+ Identifikátor IID třídy modulu runtime.  
   
- `ppIFactory`  
+ *ppIFactory*  
  IActivationFactory pro třídu zadaného modulu runtime.  
   
- `serverName`  
- Název podmnožinu objekty pro vytváření tříd v aktuální modulu. Zadejte název serveru, který je používán [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makro, nebo zadejte `nullptr` získat výchozí název serveru.  
+ *název_serveru*  
+ Název dílčí sady objekty pro vytváření tříd v aktuálním modulu. Zadejte název serveru používané [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) – makro, nebo zadejte **nullptr** získat výchozí název serveru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT vrácený getactivationfactory –.  
+ S_OK v případě úspěchu; v opačném případě hodnota HRESULT vrácený getactivationfactory –.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  
@@ -56,4 +56,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
-[Module – třídy](../windows/module-class.md) [activatableclass – makra](../windows/activatableclass-macros.md)
+ [Module – třída](../windows/module-class.md)  
+ [ActivatableClass – makra](../windows/activatableclass-macros.md)

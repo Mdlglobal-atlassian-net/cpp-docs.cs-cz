@@ -1,5 +1,5 @@
 ---
-title: Přesunutí nebo kopírování záznamu tabulky akcelerátorů do jiného souboru skriptu prostředků | Microsoft Docs
+title: Přesunutí nebo kopírování záznamu tabulky akcelerátorů do jiného souboru skriptu prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877901"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608049"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Přesunutí nebo kopírování záznamu tabulky akcelerátorů do jiného souboru skriptu prostředků
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Přesunutí nebo kopírování záznamu tabulky akcelerátorů do jiného souboru skriptu prostředků  
   
-1.  Tabulky akcelerátoru otevřete v obou soubory skriptu prostředků.  
+1.  Otevřete v tabulkách akcelerátoru v obou souborů skriptu prostředků.  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Vyberte položku, kterou chcete přesunout.  
   
-3.  Z **upravit** nabídce zvolte **kopie** nebo **Vyjmout**.  
+3.  Z **upravit** nabídce zvolte **kopírování** nebo **Vyjmout**.  
   
-4.  Vyberte položku v souboru skriptu prostředků cíl.  
+4.  Vyberte položku v cílovém souboru skriptu prostředků.  
   
-5.  Z **upravit** nabídce zvolte **vložení**.  
+5.  Z **upravit** nabídce zvolte **vložit**.  
   
     > [!NOTE]
-    >  Můžete taky klávesové zkratky pro kopírování a vložení.  
+    >  Můžete také použít klávesové zkratky pro kopírování a vkládání.  
   
-
-  
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

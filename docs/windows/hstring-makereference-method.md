@@ -1,5 +1,5 @@
 ---
-title: Hstring::makereference – metoda | Microsoft Docs
+title: Hstring::makereference – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882638"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608332"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference – metoda
-Vytvoří objekt HStringReference z parametr zadaný řetězec.  
+Vytvoří `HStringReference` objekt ze zadaného parametru řetězce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `sizeDest`  
- Parametr šablony, který určuje velikost HStringReference cílové vyrovnávací paměti.  
+### <a name="parameters"></a>Parametry  
+ *sizeDest*  
+ Parametr šablony, které určuje velikost cílové `HStringReference` vyrovnávací paměti.  
   
- `str`  
- Odkaz na řetězec znaků celou.  
+ *str*  
+ Odkaz na řetězec širokých znaků.  
   
- `len`  
- Maximální délka `str` parametr vyrovnávací paměti pro použití v této operaci. Pokud `len` není zadán parametr, celý `str` parametr se používá.  
+ *Délka*  
+ Maximální délka *str* parametr vyrovnávací paměti pro použití v této operaci. Pokud *len* parametr není zadán, celý *str* parametr se používá.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Objekt HStringReference, jehož hodnota je stejná jako zadaný `str` parametr.  
+ `HStringReference` Objekt, jehož hodnota je stejný jako zadaný *str* parametru.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

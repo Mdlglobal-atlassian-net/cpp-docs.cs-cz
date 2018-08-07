@@ -1,5 +1,5 @@
 ---
-title: rozhraní – třída (C++ Component Extensions) | Microsoft Docs
+title: interface class (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,49 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880856"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604483"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (rozšíření komponent C++)
-Deklaruje rozhraní.  Informace o nativní rozhraní najdete v tématu [__interface](../cpp/interface.md).  
+Deklaruje rozhraní.  Informace o nativní rozhraní, naleznete v tématu [__interface](../cpp/interface.md).  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- **Syntaxe**  
+
+### <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **Parametry**  
+### <a name="parameters"></a>Parametry  
   
  *interface_access*  
- Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a `private`.  `private` je výchozí.  Nemůže obsahovat vnořené rozhraní *interface_access* specifikátor.  
+ Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a **privátní**.  **privátní** je výchozí nastavení. Vnořené rozhraní nemůže mít *interface_access* specifikátor.  
   
  *Jméno*  
  Název rozhraní.  
   
  *inherit_access*  
- Usnadnění přístupu *base_interface*.  Jediným povolené usnadnění pro základní rozhraní je `public` (výchozí).  
+ Přístupnost *base_interface*.  Pouze povoleno usnadnění pro základní rozhraní není **veřejné** (výchozí).  
   
  *base_interface* (volitelné)  
  Základní rozhraní pro rozhraní *název*.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  **Struktura rozhraní** je ekvivalentní **třída rozhraní**.  
   
- Rozhraní může obsahovat deklarace pro funkce, události a vlastnosti.  Všichni členové rozhraní mít veřejnou dostupnost. Rozhraní může také obsahovat členy statických dat, funkce, události a vlastnosti, a tyto statické členy musí být definován v rozhraní.  
+ Rozhraní může obsahovat deklarace pro funkce, události a vlastnosti.  Všechny členy rozhraní mít veřejnou přístupnost. Rozhraní může také obsahovat statických datových členů, funkcí, události a vlastnosti, a tyto statické členy musí být definován v rozhraní.  
   
- Rozhraní definuje, jak může implementovat třídu. Rozhraní není třídy a třídy mohou pouze implementovat rozhraní. Pokud třída definuje funkce deklarované v rozhraní, se implementuje funkce, není přepsán. Vyhledávání názvu proto nezahrnuje členové rozhraní.  
+ Rozhraní definuje, jak se může implementovat třídu. Rozhraní není třídy a třídy lze implementovat pouze rozhraní. Pokud třída definuje funkce deklarovaná v rozhraní, že funkce je implementovaná, nebyly přepsány. Vyhledávání názvu proto nezahrnuje členy rozhraní.  
   
- Třídě nebo struktuře, která je odvozena z rozhraní musí implementovat rozhraní všechny členy. Při implementaci rozhraní *název* také musí implementovat rozhraní v `base_interface` seznamu.  
+ Třída nebo struktura, která je odvozena z rozhraní musí implementovat všechny členy rozhraní. Při implementaci rozhraní *název* musí také implementovat rozhraní v `base_interface` seznamu.  
   
  Další informace naleznete v tématu:  
   
@@ -68,34 +68,33 @@ interface class
   
 -   [Obecná rozhraní (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- Informace o jiných typech CLR najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Informace o dalších typech CLR naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Pokud je rozhraní s typem, můžete zjistit v době kompilace `__is_interface_class(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Pokud je typ rozhraní, můžete zjistit v době kompilace `__is_interface_class(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Ve vývojovém prostředí, můžete získat F1 – Nápověda na tato klíčová slova ve zvýraznění – klíčové slovo, (`interface class`, například) a stisknutím klávesy F1.  
+ Ve vývojovém prostředí, můžete získat nápovědy klávesy F1 v těchto klíčových slov zvýrazněním klíčového slova (`interface class`, třeba) a stisknutím klávesy F1.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  **Poznámky**  
   
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom prostředí Windows Runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  **Poznámky**  
   
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom modul common language runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují pouze modul common language runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad kódu ukazuje, jak rozhraní můžete definovat chování funkce hodin.  
+ Následující příklad kódu ukazuje, jak definovat chování clock – funkce rozhraní.  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **Příklad**  
+ Následující příklad kódu ukazuje dva způsoby, jak implementovat funkce se stejnou signaturou, které jsou deklarovány ve více rozhraní a použití těchto rozhraní pomocí třídy.  
   
- Následující příklad kódu ukazuje dva způsoby, jak implementovat funkce se stejným podpisem deklarován více rozhraní a použití těchto rozhraní třídou.  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

@@ -1,5 +1,5 @@
 ---
-title: HStringReference::Operator = – operátor | Microsoft Docs
+title: HStringReference::Operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73ec71526d340aafb16ddf2af274dce7ad0e9cbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875536"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608518"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= – operátor
-Hodnota jiného objektu HStringReference přesune na aktuální objekt HStringReference.  
+Přesune hodnotu jiného **HStringReference** objektů na aktuální **HStringReference** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,12 +31,12 @@ Hodnota jiného objektu HStringReference přesune na aktuální objekt HStringRe
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- Existující objekt HStringReference.  
+### <a name="parameters"></a>Parametry  
+ *Ostatní*  
+ Existující **HStringReference** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota existující `other` objektu se zkopíruje do aktuální objekt HStringReference a potom `other` zničena objektu.  
+ Hodnota existující *Další* objekt zkopírován do aktuální **HStringReference** objektu a pak *Další* objekt zničen.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

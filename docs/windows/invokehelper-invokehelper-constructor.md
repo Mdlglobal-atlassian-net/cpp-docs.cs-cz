@@ -1,5 +1,5 @@
 ---
-title: Invokehelper::invokehelper – konstruktor | Microsoft Docs
+title: Invokehelper::invokehelper – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874847"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602546"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `callback`  
+### <a name="parameters"></a>Parametry  
+ *zpětné volání*  
  Obslužné rutiny události.  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy invokehelper –.  
+ Inicializuje novou instanci třídy **InvokeHelper** třídy.  
   
  `TCallback` Parametr šablony určuje typ obslužné rutiny události.  
   

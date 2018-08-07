@@ -1,5 +1,5 @@
 ---
-title: retval – | Microsoft Docs
+title: retval | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888718"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606348"
 ---
 # <a name="retval"></a>retval
-Označí parametr, který obdrží hodnotu vrácenou člena.  
+Označí parametr, který přijímá návratovou hodnotu člena.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Retval** atribut C++ má stejné funkce jako [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL atribut.  
+ **Retval** C++ atribut má stejné funkce jako [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atribut MIDL.  
   
- **retval –** musí být uvedena na poslední argument v deklaraci funkce.  
+ **retval** musí být uvedena v posledním argumentu v deklaraci funkce.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) pro ukázkové použití **retval**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) ukázkový používání **retval**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -49,9 +47,9 @@ Označí parametr, který obdrží hodnotu vrácenou člena.
   
 |||  
 |-|-|  
-|**Platí pro**|Parametr rozhraní, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**out**|  
+|**Platí pro**|Rozhraní parametrů, metody rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**out**|  
 |**Neplatné atributy**|**in**|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits::iidcount – konstanta | Microsoft Docs
+title: InterfaceTraits::IidCount – konstanta | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874064"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602724"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount – konstanta
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obsahuje počet rozhraní, které ID přidružené k aktuálnímu objektu interfacetraits –.  
+ Obsahuje počet rozhraní přidružené k aktuální ID **interfacetraits –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

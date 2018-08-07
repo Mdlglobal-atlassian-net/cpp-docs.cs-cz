@@ -1,5 +1,5 @@
 ---
-title: 'Module::genericreleasenotifier:: callback_ – datový člen | Microsoft Docs'
+title: 'Module::genericreleasenotifier:: callback_ – datový člen | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6f7c430fcd75033e10e0a23d9d0ab78675653bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ad301ba081ad063ff58ebf7a749b0d32371d05b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880681"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605029"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ – datový člen
-Obsahuje lambda, functor nebo obslužná rutina události – ukazatel funkce související s aktuálním objektem Module::GenericReleaseNotifier.  
+Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   

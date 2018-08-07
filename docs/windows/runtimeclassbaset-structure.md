@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassbaset – struktura | Microsoft Docs
+title: Runtimeclassbaset – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888984"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604990"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `RuntimeClassTypeT`  
- Pole příznaky, které určuje jeden nebo více [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) výčty.  
+### <a name="parameters"></a>Parametry  
+ *RuntimeClassTypeT*  
+ Pole, která určuje jeden nebo více příznaků [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) enumerátory.  
   
 ## <a name="remarks"></a>Poznámky  
- Poskytuje pomocné metody pro `QueryInterface` operace a získávání ID rozhraní.  
+ Poskytuje pomocné metody pro `QueryInterface` operace a získat ID rozhraní.  
   
 ## <a name="members"></a>Členové  
   
@@ -52,5 +52,5 @@ friend struct Details::RuntimeClassBaseT;
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace (knihovna prostředí Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Referenční dokumentace (knihovna Windows Runtime)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

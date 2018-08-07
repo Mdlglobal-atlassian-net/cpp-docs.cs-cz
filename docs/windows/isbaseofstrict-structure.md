@@ -1,5 +1,5 @@
 ---
-title: Isbaseofstrict – struktura | Microsoft Docs
+title: Isbaseofstrict – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876888"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604500"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict – struktura
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Base`  
+### <a name="parameters"></a>Parametry  
+ *základ*  
  Základní typ.  
   
- `Derived`  
- Odvozený typ.  
+ *Odvozené*  
+ Odvozeného typu.  
   
 ## <a name="remarks"></a>Poznámky  
- Ověřuje, zda je jeden typ základní jiného.  
+ Ověřuje, zda je jeden typ základ jiného.  
   
- První šablona testuje, jestli je typ odvozený od základní typ, který může poskytne **true** nebo **false**. Druhá šablona testuje, jestli je typ odvozený od sebe, která vždy dává **false**.  
+ První šablona testuje, jestli typ je odvozen od základního typu, který může přinést **true** nebo **false**. Druhá šablona testuje, jestli je typ odvozený od sebe sama, který vždy dává **false**.  
   
 ## <a name="members"></a>Členové  
   
@@ -60,7 +60,7 @@ struct IsBaseOfStrict<Base, Base>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IsBaseOfStrict::value – konstanta](../windows/isbaseofstrict-value-constant.md)|Určuje, zda jeden typ základní jiného.|  
+|[IsBaseOfStrict::value – konstanta](../windows/isbaseofstrict-value-constant.md)|Označuje, zda je jeden typ základ jiného.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `IsBaseOfStrict`  

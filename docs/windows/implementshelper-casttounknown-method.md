@@ -1,5 +1,5 @@
 ---
-title: Implementshelper::casttounknown – metoda | Microsoft Docs
+title: Implementshelper::casttounknown – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874496"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604236"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ IUnknown* CastToUnknown();
  Ukazatel na základní rozhraní IUnknown.  
   
 ## <a name="remarks"></a>Poznámky  
- Získá ukazatel na základní rozhraní IUnknown pro aktuální implementuje strukturu.  
+ Získá ukazatel na základní `IUnknown` rozhraní pro aktuální `Implements` struktury.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

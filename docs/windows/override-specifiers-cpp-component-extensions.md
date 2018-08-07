@@ -1,5 +1,5 @@
 ---
-title: Override – specifikátory (C++ Component Extensions) | Microsoft Docs
+title: Override – specifikátory (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882759"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603911"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Override – specifikátory (rozšíření komponent C++)
-*Override – specifikátory* upravit jak zděděné typy a členy zděděné typů chovat v odvozených typů.  
+*Override – specifikátory* upravit jak se děděné typy a členy děděných typů chovají v odvozených typech.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
- Další informace o specifikátorů override najdete v tématu:  
+ Další informace o specifikátorech přepisu naleznete v tématu:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
@@ -39,23 +39,23 @@ ms.locfileid: "33882759"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   [Specifikátory override a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
+-   [Specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` a `sealed` je taky platná na typ deklarace, kde budou není sloužit jako specifikátory override.  
+ **abstraktní** a **zapečetěné** platí také u deklarací typů, kde nefungují jako specifikátory přepisu.  
   
- Informace o explicitně přepsání funkce základní třídy najdete v tématu [explicitní přepsání](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Informace o explicitním přepsání funkcí základní třídy naleznete v tématu [explicitní přepsání](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom prostředí Windows Runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom modul common language runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují pouze modul common language runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ## <a name="see-also"></a>Viz také  
  [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

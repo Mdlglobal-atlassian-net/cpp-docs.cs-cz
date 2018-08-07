@@ -1,5 +1,5 @@
 ---
-title: Runtimeclassflags – struktura | Microsoft Docs
+title: Runtimeclassflags – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892023"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604931"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags – struktura
-Obsahuje typu pro instanci [RuntimeClass](../windows/runtimeclass-class.md).  
+Obsahuje typ pro instanci [RuntimeClass](../windows/runtimeclass-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +36,9 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `flags`  
- A [RuntimeClassType – výčet](../windows/runtimeclasstype-enumeration.md) hodnotu.  
+### <a name="parameters"></a>Parametry  
+ *příznaky*  
+ A [runtimeclasstype – výčet](../windows/runtimeclasstype-enumeration.md) hodnotu.  
   
 ## <a name="members"></a>Členové  
   
@@ -46,7 +46,7 @@ struct RuntimeClassFlags;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[RuntimeClassFlags::value – konstanta](../windows/runtimeclassflags-value-constant.md)|Obsahuje [RuntimeClassType – výčet](../windows/runtimeclasstype-enumeration.md) hodnotu.|  
+|[RuntimeClassFlags::value – konstanta](../windows/runtimeclassflags-value-constant.md)|Obsahuje [runtimeclasstype – výčet](../windows/runtimeclasstype-enumeration.md) hodnotu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `RuntimeClassFlags`  

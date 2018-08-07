@@ -1,5 +1,5 @@
 ---
-title: pointer_default – | Microsoft Docs
+title: pointer_default – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877459"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604383"
 ---
 # <a name="pointerdefault"></a>pointer_default
-Určuje výchozí atribut ukazatele pro všechny ukazatele, s výjimkou ukazatele nejvyšší úrovně, které se zobrazují v seznamy parametrů.  
+Určuje výchozí atribut ukazatele pro všechny odkazy, s výjimkou ukazatelů nejvyšší úrovně, které se zobrazí v seznamech parametrů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ pointer_default(  
+[ pointer_default(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *value*  
- Hodnota, která popisuje je ukazatel typu: **ptr**, `ref`, nebo **jedinečný**.  
+ Hodnota, která popisuje typ ukazatele: **ptr**, **ref**, nebo **jedinečný**.  
   
 ## <a name="remarks"></a>Poznámky  
- **Pointer_default –** atribut C++ má stejné funkce jako [pointer_default –](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL atribut.  
+ **Pointer_default –** C++ atribut má stejné funkce jako [pointer_default –](http://msdn.microsoft.com/library/windows/desktop/aa367141) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) pro ukázkové použití **pointer_default –**.  
+ Podívejte se na příklad pro [defaultvalue](../windows/defaultvalue.md) ukázkový používání **pointer_default –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -52,9 +51,9 @@ Určuje výchozí atribut ukazatele pro všechny ukazatele, s výjimkou ukazatel
   
 |||  
 |-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**interface**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

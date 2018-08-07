@@ -1,5 +1,5 @@
 ---
-title: Implements::cancastto – metoda | Microsoft Docs
+title: Implements::cancastto – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877070"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608940"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo – metoda
-Získá ukazatele k zadanému rozhraní.  
+Získá ukazatel na rozhraní zadané.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,18 +36,18 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
- Odkaz na rozhraní ID.  
+### <a name="parameters"></a>Parametry  
+ *riid*  
+ Odkaz na identifikátor rozhraní.  
   
- `ppv`  
- Pokud úspěšné, ukazatel na rozhraní zadán `riid`.  
+ *ppv*  
+ Pokud úspěšná, ukazatel na rozhraní určené *riid*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak, který značí chybu, jako je například E_NOINTERFACE HRESULT.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu, například E_NOINTERFACE.  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je k interní pomocné funkce, který provede operaci QueryInterface.  
+ Toto je interní pomocné funkce, který provádí operace QueryInterface.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

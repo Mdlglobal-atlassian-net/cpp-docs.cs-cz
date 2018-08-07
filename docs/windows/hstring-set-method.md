@@ -1,5 +1,5 @@
 ---
-title: Hstring::set – metoda | Microsoft Docs
+title: Hstring::set – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882414"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606394"
 ---
 # <a name="hstringset-method"></a>HString::Set – metoda
-Nastaví hodnotu aktuální objekt HString zadaný řetězec široká charakterová nebo HString parametr.  
+Nastaví hodnotu aktuální **HString** objektu zadaného řetězce širokého znaku nebo **HString** parametru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,15 +39,15 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `str`  
- Široká charakterová řetězec.  
+### <a name="parameters"></a>Parametry  
+ *str*  
+ Širokoznaký řetězec.  
   
- `len`  
- Maximální délka `str` parametr, který je přiřazen jako aktuální objekt HString.  
+ *Délka*  
+ Maximální délka *str* parametr, který je přiřazen k aktuální **HString** objektu.  
   
- `hstr`  
- Existující objekt HString.  
+ *HSTR*  
+ Existující **HString** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

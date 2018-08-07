@@ -1,5 +1,5 @@
 ---
-title: Ukládání bitmap ve formátu GIF nebo JPEG (Editor obrázků pro ikony) | Microsoft Docs
+title: Ukládání bitmap ve formátu GIF nebo JPEG (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,40 +26,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890180"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608154"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Ukládání bitmap ve formátu GIF nebo JPEG (editor obrázků pro ikony)
-Když vytvoříte rastrový obrázek, vytvoří se ve formátu rastrový obrázek (BMP) bitovou kopii. Můžete však uložit obrázek jako GIF nebo JPEG nebo v jiné grafické formáty.  
+Když vytvoříte rastrový obrázek, vytvoření image ve formátu rastrový obrázek (BMP). Image můžete, ale uložit jako ve formátu GIF nebo JPEG nebo v jiné formáty.  
   
 > [!NOTE]
->  Tento proces se nevztahuje na ikony a kurzory.  
+>  Tento proces se nevztahují na ikony a kurzory.  
   
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Vytvoření a uložení rastrový obrázek jako GIF nebo JPEG  
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Vytvoříte a uložíte rastrový obrázek GIF nebo JPEG  
   
-1.  Z **soubor** nabídce zvolte **otevřete**, pak klikněte na tlačítko **soubor**.  
+1.  Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.  
   
-2.  V **dialogové okno Nový soubor**, klikněte na tlačítko **Visual C++** složku, pak vyberte **souboru rastrový obrázek (BMP)** v **šablony** pole a klikněte na tlačítko  **Otevřete**.  
+2.  V **dialogové okno Nový soubor**, klikněte na tlačítko **Visual C++** složku, pak vyberte **rastrového obrázku (BMP)** v **šablony** pole a klikněte na tlačítko  **Otevřít**.  
   
-     Bitmapy se otevře v **Image** editor.  
+     Rastrový obrázek se otevře v **Image** editoru.  
   
-3.  Podle potřeby proveďte změny nové bitmapy.  
+3.  Podle potřeby proveďte změny na nový rastrový obrázek.  
   
-4.  Se stále otevřen v rastrového obrázku **bitové kopie** editoru klikněte na **Uložit *filename*.bmp jako** na **souboru** nabídky.  
+4.  Se stále otevřen v rastrového obrázku **Image** editoru klikněte na **Uložit *filename*.bmp jako** na **souboru** nabídky.  
   
-5.  V **uložit soubor jako** dialogovém okně zadejte název, který chcete poskytnout soubor a rozšíření, která označuje formát souboru, které mají být v **název souboru** pole. Například myfile.gif.  
+5.  V **uložit soubor jako** dialogového okna zadejte název, kterému chcete udělit soubor a rozšíření, která označuje formát souboru, které chcete v **název_souboru** pole. Například myfile.gif.  
   
-     **Poznámka:** musíte vytvořit nebo otevřít rastrového obrázku mimo projekt a uložte ho jako jiný formát souboru. Pokud vytvoříte nebo ho otevřete v projektu, **uložit jako** příkaz nebude k dispozici. Další informace najdete v tématu [zobrazení prostředků v prostředků skriptu souboru mimo of projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     **Poznámka:** musíte vytvořit nebo otevřít rastrového obrázku mimo projekt Pokud chcete uložit v jiném formátu. Pokud vytvoříte nebo jej otevřete v projektu **uložit jako** příkaz nebude k dispozici. Další informace najdete v tématu [zobrazování prostředků v prostředků skriptu souboru mimo of projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Klikněte na tlačítko **Uložit**.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="see-also"></a>Viz také  
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-
