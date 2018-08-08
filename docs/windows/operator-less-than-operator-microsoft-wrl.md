@@ -1,5 +1,5 @@
 ---
-title: operátor&lt; – operátor (Microsoft::WRL) | Microsoft Docs
+title: operátor&lt; – operátor (Microsoft::WRL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881826"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604210"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>operátor&lt; – operátor (Microsoft::WRL)
-Určuje, zda adresu jeden objekt menší než jiné.  
+Určuje, zda je adresa jeden objekt menší než jiný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `a`  
+### <a name="parameters"></a>Parametry  
+ *a*  
  Levý objekt.  
   
- `b`  
- Objekt pravý.  
+ *b*  
+ Pravý objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud adresu `a` je menší než adresu `b`, jinak hodnota `false`.  
+ **true** Pokud adresa *a* je menší než adresu *b*; v opačném případě **false**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
