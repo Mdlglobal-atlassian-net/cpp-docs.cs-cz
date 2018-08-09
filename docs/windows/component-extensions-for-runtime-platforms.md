@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652682"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Přípony komponent pro platformy běhového prostředí
 Visual C++ poskytuje rozšíření jazyka pomoci programovat proti platformy běhového prostředí. S použitím C + +/ CX, při programování aplikací pro univerzální platformu Windows a komponenty, které se kompilují do nativního kódu. I když můžete vytvořit aplikace pro univerzální platformu Windows pomocí programování přímo proti rozhraní Windows Runtime COM s použitím C + +/ CX, můžete pracovat s konstruktory, výjimek a jiné moderní programovací idiomy C++. Pokud chcete povolit programování C++ ve spravovaném spouštěcím prostředí na platformě .NET, můžete použít C + +/ CLI.  
   
- **Dva moduly runtime, jednu sadu rozšíření**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Dva moduly runtime, jednu sadu rozšíření  
   
- C + +/ CX je podmnožinou jazyka C + +/ CLI. Pro rozšíření, které jsou společné pro C + +/ CX a C + +/ CLI, sémantika závisí na tom, zda cílíte na modul CLR (CLR) nebo prostředí Windows Runtime. Chcete-li zkompilovat aplikaci pro spuštění v modulu Windows Runtime, zadejte **/ZW** – možnost kompilátoru. Chcete-li zkompilovat jeho spuštění na modulu CLR, zadejte **/CLR** – možnost kompilátoru. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.  
+ C + +/ CX je podmnožinou jazyka C + +/ CLI. Pro rozšíření, které jsou společné pro C + +/ CX a C + +/ CLI, sémantika závisí na tom, zda cílíte na modul CLR (CLR) nebo prostředí Windows Runtime. Chcete-li zkompilovat aplikaci pro spuštění v modulu Windows Runtime, zadejte `/ZW` – možnost kompilátoru. Chcete-li zkompilovat jeho spuštění na modulu CLR, zadejte `/clr` – možnost kompilátoru. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.  
   
  Další informace o vytváření aplikací pro univerzální platformu Windows v jazyce C++ naleznete v tématu [plán pro prostředí Windows Runtime aplikací pomocí C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ poskytuje rozšíření jazyka pomoci programovat proti platformy bě
 |**nullptr**|Ne|Označuje, že popisovač nebo ukazatel neukazuje na objekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Šablona konstrukce  
- Tyto jazykové konstrukce jsou implementovány jako šablony, nikoli jako klíčová slova. Pokud zadáte **/ZW** – možnost kompilátoru, jsou definovány v `lang` oboru názvů. Pokud zadáte **/CLR** – možnost kompilátoru, jsou definovány v `cli` oboru názvů.  
+ Tyto jazykové konstrukce jsou implementovány jako šablony, nikoli jako klíčová slova. Pokud zadáte `/ZW` – možnost kompilátoru, jsou definovány v `lang` oboru názvů. Pokud zadáte `/clr` – možnost kompilátoru, jsou definovány v `cli` oboru názvů.  
   
 |Klíčové slovo|Účel|Odkaz|  
 |-------------|-------------|---------------|  

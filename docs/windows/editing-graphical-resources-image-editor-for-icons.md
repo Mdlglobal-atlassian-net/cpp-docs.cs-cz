@@ -1,5 +1,5 @@
 ---
-title: Úprava grafických prostředků (Editor obrázků pro ikony) | Microsoft Docs
+title: Úprava grafických prostředků (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882495"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642383"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Úprava grafických prostředků (editor obrázků pro ikony)
-Grafické prostředky jsou bitové kopie, které definujete pro vaši aplikaci. Můžete kreslení od ruky nebo kreslení pomocí tvarů. Můžete vybrat částí obrázku pro úpravy, překlopení nebo změna velikosti, nebo můžete vytvořit vlastního štětce z vybraných součástí bitové kopie a kreslení pomocí tento stopy. Můžete definovat vlastnosti bitové kopie, uložení bitové kopie v různých formátech a převést bitové kopie z jednoho formátu do druhého.  
+Grafické prostředky jsou obrázky, které definujete pro vaši aplikaci. Můžete nakreslit OdRuky nebo kreslení tvarů pomocí. Můžete vybrat částí obrázku pro úpravy, převrácení nebo změnou velikosti, nebo můžete vytvořit vlastního štětce z vybrané části obrázku a kreslit štětcem této. Můžete definovat vlastnosti bitové kopie, uložit obrázky v různých formátech a převést imagí z jednoho formátu do druhého.  
   
- Kromě vytvoření nové grafických prostředků, můžete [import existujících bitových kopií](../windows/how-to-import-and-export-resources.md) pro úpravy a pak je přidejte do projektu. Můžete taky otevírat a upravovat bitové kopie, které nejsou součástí projektu pro [úpravy samostatné image](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
+ Kromě vytvoření nové grafické prostředky, můžete [import existujících imagí](../windows/how-to-import-and-export-resources.md) pro úpravy a poté je přidejte do projektu. Můžete také otevřít a upravit bitové kopie, které nejsou součástí projektu pro [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
   
--   [Vytvoření nové bitové mapy nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
+-   [Vytváří se nový rastrový obrázek nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
   
 -   [Výběr a používání nástroje kreslení](using-a-drawing-tool-image-editor-for-icons.md)  
   
@@ -62,12 +62,12 @@ Grafické prostředky jsou bitové kopie, které definujete pro vaši aplikaci. 
   
 -   [Panel nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md)  
   
--   [Editor obrázků podokna](../windows/window-panes-image-editor-for-icons.md)  
+-   [Podokna editoru obrázků](../windows/window-panes-image-editor-for-icons.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 > [!NOTE]
->  Pomocí editoru obrázků můžete prohlížet 32bitové obrázky, ale nemůžete je upravovat.  
+>  Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -75,4 +75,3 @@ Grafické prostředky jsou bitové kopie, které definujete pro vaši aplikaci. 
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)   
-

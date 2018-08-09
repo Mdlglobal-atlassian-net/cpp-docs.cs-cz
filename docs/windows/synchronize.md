@@ -1,5 +1,5 @@
 ---
-title: Synchronizovat | Microsoft Docs
+title: Synchronizovat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 304ceece506465df0a51c56b247407d351fd23b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889794"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643495"
 ---
 # <a name="synchronize"></a>synchronize
 Synchronizuje přístup k cílové metody.  
@@ -30,22 +30,20 @@ Synchronizuje přístup k cílové metody.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [synchronize]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Synchronizovat** C++ atribut implementuje podporu pro synchronizaci metodu cílového objektu. Synchronizace umožňuje více objektů na používání běžné prostředků (například metoda třídy) řízením přístupu cílové metody.  
+ **Synchronizovat** C++ atribut implementuje podporu pro synchronizaci cílové metody objektu. Synchronizace umožňuje řízení přístupu na cílovou metodu více objektů určených k použití běžných prostředků (například pro metodu třídy).  
   
- Kód vkládat tento atribut volá správné `Lock` – metoda (určené model podprocesů) na začátku cílové metody. Když metoda je byl ukončen, `Unlock` je automaticky volána. Další informace o těchto funkcích najdete v tématu [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
+ Vložit tímto atributem nevolá správné `Lock` – metoda (určené model vláken) na začátku cílové metody. Pokud metoda skončí, `Unlock` je automaticky volána. Další informace o těchto funkcích najdete v tématu [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Tento atribut vyžaduje, aby [třída typu coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít stejného elementu. Pokud se používá jakékoli jeden atribut, budou automaticky použita další dvě. Například pokud **progid** se použije, **vi_progid –** a **třída typu coclass** jsou také použít.  
+ Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
 ## <a name="example"></a>Příklad  
- Následující kód poskytuje synchronizace `UpdateBalance` metodu `CMyClass` objektu.  
+ Následující kód obsahuje synchronizaci pro `UpdateBalance` metodu `CMyClass` objektu.  
   
-```  
+```cpp  
 // cpp_attr_ref_synchronize.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -76,9 +74,9 @@ class CMyClass {
   
 |||  
 |-|-|  
-|**Platí pro**|Metody třídy, – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Jeden nebo více z následujících: **třída typu coclass**, **progid**, nebo **vi_progid –**.|  
+|**Platí pro**|Metoda třídy, – metoda|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

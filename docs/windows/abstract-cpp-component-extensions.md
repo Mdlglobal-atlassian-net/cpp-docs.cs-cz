@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463239"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641805"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (rozšíření komponent C++)
 **Abstraktní** deklaruje klíčové slovo:  
@@ -33,16 +33,16 @@ ms.locfileid: "39463239"
 -   Členské funkce typu lze definovat pouze v odvozeném typu.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  První příklad syntaxe deklaruje třídu jako abstraktní. *Deklarace třídy* komponenta může být buď nativní deklarace C++ (**třídy** nebo **struktura**), nebo deklaraci rozšíření jazyka C++ (**třídy ref class** nebo **ref struct**) Pokud `/ZW` nebo `/clr` je zadána možnost kompilátoru.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Další informace najdete v tématu [referenční třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad vygeneruje chybu, protože třída `X` je označen `abstract`.  
+ Následující příklad vygeneruje chybu, protože třída `X` je označen **abstraktní**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Příklad**  
-  
- Následující příklad kódu dojde k chybě, protože ho vytvoří instanci nativních tříd, který je označen `abstract`. K této chybě dojde, s nebo bez něj `/clr` – možnost kompilátoru.  
+ Následující příklad kódu dojde k chybě, protože ho vytvoří instanci nativních tříd, který je označen **abstraktní**. K této chybě dojde, s nebo bez něj `/clr` – možnost kompilátoru.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Příklad**  
-  
- Následující příklad vygeneruje chybu, protože funkce `f` obsahuje definice, ale je označen `abstract`. Poslední příkaz v příkladu ukazuje, že deklarace abstraktní virtuální funkce je ekvivalentní k deklarování čistě virtuální funkce.  
+ Následující příklad vygeneruje chybu, protože funkce `f` obsahuje definice, ale je označen **abstraktní**. Poslední příkaz v příkladu ukazuje, že deklarace abstraktní virtuální funkce je ekvivalentní k deklarování čistě virtuální funkce.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

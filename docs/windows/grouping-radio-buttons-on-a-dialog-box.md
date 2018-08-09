@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641415"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Seskupení přepínačů v dialogovém okně
-Při přidání přepínacích tlačítek do dialogového okna s nimi zacházet jako se skupinou tak, že nastavíte vlastnost skupiny v okně Vlastnosti prvního tlačítka ve skupině. ID ovládacího prvku pro tento přepínač se pak objeví v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md), abyste mohli přidat členskou proměnnou pro skupinu přepínačů.  
+Při přidání přepínacích tlačítek do dialogového okna s nimi zacházet jako se skupinou tak, že nastavíte **skupiny** vlastnost **vlastnosti** okno pro první tlačítka ve skupině. ID ovládacího prvku pro tento přepínač se pak objeví v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md), abyste mohli přidat členskou proměnnou pro skupinu přepínačů.  
   
  Můžete mít více než jedné skupině přepínačů v dialogovém okně a každá skupina by se měl přidat pomocí následujícího postupu.  
   
@@ -44,7 +44,7 @@ Při přidání přepínacích tlačítek do dialogového okna s nimi zacházet 
      Změna **skupiny** vlastnost **True** přidá WS_GROUP styl tlačítka položky v objektu dialogového okna skriptu, prostředků a zajistí, že uživatel zvolit pouze jeden přepínací tlačítko současně na tlačítku skupiny (když uživatel klikne jeden přepínací tlačítko, ostatní ve skupině jsou vymazány).  
   
     > [!NOTE]
-    >  Pouze první přepínací tlačítko ve skupině by měly mít **skupiny** vlastnost nastavena na hodnotu **True**. Pokud máte další ovládací prvky, které nejsou součástí skupiny tlačítko, nastavte **skupiny** vlastnost první ovládací prvek *, která je mimo skupinu* k **True** také. Stisknutím kombinace kláves CTRL + D, chcete-li zobrazit pořadí ovládacích prvků můžete rychle identifikovat první ovládací prvek mimo skupinu.  
+    >  Pouze první přepínací tlačítko ve skupině by měly mít **skupiny** vlastnost nastavena na hodnotu **True**. Pokud máte další ovládací prvky, které nejsou součástí skupiny tlačítko, nastavte **skupiny** vlastnost první ovládací prvek *, která je mimo skupinu* k **True** také. Můžete rychle identifikovat první ovládací prvek mimo skupinu stisknutím kombinace kláves **Ctrl**+**D** Chcete-li zobrazit pořadí ovládacích prvků.  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Přidání členské proměnné pro skupina přepínacích tlačítek  
   
@@ -56,14 +56,13 @@ Při přidání přepínacích tlačítek do dialogového okna s nimi zacházet 
   
 4.  V **název proměnné** zadejte název pro novou proměnnou člena.  
   
-5.  V **typ proměnné** pole se seznamem, vyberte **int** nebo typ **int**.  
+5.  V **typ proměnné** pole se seznamem, vyberte **int** nebo typ `int`.  
   
-6.  Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například m_radioBox1 = 0; Vybere první přepínací tlačítko ve skupině.  
+6.  Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například `m_radioBox1 = 0;` vybere první přepínací tlačítko ve skupině.  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

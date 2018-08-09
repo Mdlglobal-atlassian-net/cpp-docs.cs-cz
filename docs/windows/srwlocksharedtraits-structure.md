@@ -1,5 +1,5 @@
 ---
-title: Srwlocksharedtraits – struktura | Microsoft Docs
+title: Srwlocksharedtraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889629"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652471"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits – struktura
-Popisuje běžné vlastnosti třída SRWLock ve sdíleném režimu zámku.  
+Popisuje běžné vlastnosti `SRWLock` třídy ve sdíleném režimu zámku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,7 @@ struct SRWLockSharedTraits;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -45,8 +45,8 @@ struct SRWLockSharedTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SRWLockSharedTraits::GetInvalidValue – metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Načte srwlocksharedtraits – objekt, který je vždy neplatný.|  
-|[SRWLockSharedTraits::Unlock – metoda](../windows/srwlocksharedtraits-unlock-method.md)|Uvolní výhradní kontrolu nad zadaný objekt SRWLock.|  
+|[SRWLockSharedTraits::GetInvalidValue – metoda](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Načte **srwlocksharedtraits –** objekt, který je pořád platný.|  
+|[SRWLockSharedTraits::Unlock – metoda](../windows/srwlocksharedtraits-unlock-method.md)|Uvolní výhradní kontrolu zadaného `SRWLock` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SRWLockSharedTraits`  

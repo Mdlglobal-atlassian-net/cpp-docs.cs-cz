@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: df5f341382b7f9594d740b7e47fbb53b53188d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462040"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643118"
 ---
 # <a name="argtraits-structure"></a>ArgTraits – struktura
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename TMemberFunction>  
 struct ArgTraits;  
 template<typename TDelegateInterface>  
@@ -117,7 +117,7 @@ template<
 struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TMemberFunction*  
  {{Parametr TypeName pro argtraits – struktura, která se nesmí odpovídat čemukoli `Invoke` podpis metody.  
   
@@ -152,7 +152,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
  Typ devátého argumentu `Invoke` metody.  
   
 ## <a name="remarks"></a>Poznámky  
- `ArgTraits` Struktura deklaruje delegáta zadané rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.  
+ **Argtraits –** struktura deklaruje delegáta zadané rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.  
   
 ## <a name="members"></a>Členové  
   

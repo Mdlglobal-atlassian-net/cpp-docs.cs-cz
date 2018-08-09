@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462781"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646186"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Přidá položku do rozhraní do mapy modelu COM cílové třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *COM_INTERFACE_ENTRY*  
  Řetězec obsahující vlastní text položky. Seznam možných hodnot najdete v tématu [makra COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Přidá položku do rozhraní do mapy modelu COM cílové třídy.
   
  Toto omezení je nezbytné, protože ATL použije první položku v mapě rozhraní jako identita `IUnknown`; proto položka musí být platné rozhraní. Například následující ukázka kódu je neplatný, protože první položka v mapě rozhraní neurčuje skutečné rozhraní modelu COM.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  Výsledný objekt mapy modelu COM pro `CMyBaseClass` vypadá takto:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Platí pro**|**Třída**, **– struktura**|  
 |**Opakovatelné**|Ano|  
-|**Vyžadované atributy**|Jeden nebo více z následujících akcí: **coclass**, **progid**, nebo **vi_progid –**.|  
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

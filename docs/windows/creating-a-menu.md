@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nabídky | Microsoft Docs
+title: Vytvoření nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,42 +19,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d9051e44216de9a64b68fc112fe8f17de112e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b220f51b0c5bf8bc139b3c7ccdb1953de310ec4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882073"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644054"
 ---
 # <a name="creating-a-menu"></a>Vytvoření nabídky
 > [!NOTE]
->  Okno prostředek není k dispozici v edicích Express.  
+>  **Okno zdrojů** není k dispozici ve verzích Express.  
   
 ### <a name="to-create-a-standard-menu"></a>Chcete-li vytvořit standardní nabídky  
   
 1.  Z **zobrazení** nabídky, klikněte na **zobrazení prostředků** a potom klikněte pravým tlačítkem na **nabídky** záhlaví a zvolte **přidat prostředek**. Zvolte **nabídky**.  
   
-2.  Vyberte **nová položka** pole (obdélníku, která obsahuje "Zde typu") na panelu nabídek.  
+2.  Vyberte **nová položka** pole (obdélník, který obsahuje "Zde typu") na panelu nabídek.  
   
-     ![Pole nové položky v nabídce editoru](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Pole nové položky  
+     ![Nové pole položky v nabídce editoru](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
+Nová položka – pole  
   
-3.  Zadejte název vaší nové nabídky, například "Soubor".  
+3.  Zadejte název pro vaši novou nabídku, například "File".  
   
-     Text, který zadáte, se zobrazí v **nabídky** editoru a v **popisek** pole [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Můžete upravit vlastnosti pro vaše nové nabídky v některém umístění.  
+     Text, který zadáte, se zobrazí v **nabídky** editoru a **titulek** pole [okno vlastností](/visualstudio/ide/reference/properties-window). Upravit vlastnosti pro vaše nové nabídce v některém umístění.  
   
-     Jakmile jste udělili nové nabídky název v řádku nabídek, pole Nová položka posune vpravo (abyste mohli přidat jiné nabídky) a jiného pole nové položky otevře pod první nabídky proto do něj může přidat příkazy nabídky.  
+     Po názvu jste udělili novou nabídku v panelu nabídek, nová položka pole posune doprava (umožňují přidat jiné nabídky) a jiného pole novou položku se otevře pod první nabídky, příkazy nabídky můžete přidat k němu.  
   
-     ![Rozšířená pole nové položky](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Nové pole položky s fokusem Zapuštěno po zadejte název nabídky  
+     ![Rozbalené pole novou položku](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
+Nové položky pole se zaměřením posune po zadejte název nabídky  
   
     > [!NOTE]
-    >  K vytvoření jedné položky nabídky v řádku nabídek, nastavte vlastnost automaticky otevřeném okně na hodnotu False.  
+    >  Chcete-li vytvořit jedné položky nabídky na řádku nabídek, nastavte **automaticky otevírané okno** vlastnost **False**.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Výběr vlastních barev (Editor obrázků pro ikony) | Microsoft Docs
+title: Dialogové okno Výběr vlastních barev (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880254"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642809"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Dialogové okno Výběr vlastních barev (editor obrázků pro ikony)
-Toto dialogové okno umožňuje přizpůsobit barvy, který použijete pro bitové kopie. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+Toto dialogové okno umožňuje přizpůsobit barvy, které používáte pro vaši image. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Barva barevného přechodu zobrazení**  
- Změní hodnoty vybrané barvy. Pozice křížku na barvu, kterou chcete změnit. Přesuňte jezdec nahoru nebo dolů změníte světelnost nebo hodnoty RGB barvy.  
+ **Barevný přechod zobrazení**  
+ Změní hodnoty vybraná barva. Umístěte na křížek na barvu, kterou chcete změnit. Potom přesuňte posuvník nahoru nebo dolů změnu světelnost nebo hodnoty RGB barvy.  
   
- **Světlost panelu**  
- Nastaví světelnost barvy, kterou vyberete v rozevíracím seznamu zobrazit přechodu barev. Klikněte a přetáhněte šipku bílé až panelu pro větší také průraznost nebo down pro menší. Všimněte si, že pole barev zobrazí barvu, kterou jste vybrali a vlivu světelnost, které nastavíte.  
+ **Panel světelnost**  
+ Nastaví světelnost pro barvu vyberte v **přechodu barevné zobrazení** pole. Klikněte a přetáhněte bílé šipka nahoru na panelu pro větší jas nebo méně. Všimněte si, že **barva** zobrazí vámi zvolená barva a ovlivnit světelnost nastavíte.  
   
  **Barva**  
- Uvádí hue (hodnota wheel barvu) barvy, kterou definujete. Hodnoty rozsahu od 0 do 240, kde 0 je red, je 60 žlutý, 120 je zobrazen zeleně, je 180 azurová, 200 je purpurová a 240 je modrá.  
+ Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.  
   
  **HUE**  
- Uvádí hue (hodnota wheel barvu) barvy, kterou definujete. Hodnoty rozsahu od 0 do 240, kde 0 je red, je 60 žlutý, 120 je zobrazen zeleně, je 180 azurová, 200 je purpurová a 240 je modrá.  
+ Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.  
   
- **Ne**  
- Určuje hodnotu sytost barvy, kterou definujete. Sytost je množství v zadané odstín barvy. Hodnoty rozsahu od 0 do 240.  
+ **Po Ne**  
+ Určuje hodnotu sytost barev, které definujete. Sytost je množství barvy v zadané odstín. Hodnoty v rozmezí 0 až 240.  
   
- **LUM**  
- Uvádí světelnost (také průraznost) barvu, kterou definujete. Hodnoty rozsahu od 0 do 240.  
+ **Světelnost**  
+ Zobrazí seznam světelnost (jas) na barvu, kterou definujete. Hodnoty v rozmezí 0 až 240.  
   
- **červená**  
- Určuje hodnotu červenou barvu, kterou definujete. Hodnoty rozsahu od 0 do 255.  
+ **Červená**  
+ Určuje hodnotu červenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.  
   
- **zelená**  
- Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty rozsahu od 0 do 255.  
+ **Zelená**  
+ Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.  
   
- **modrá**  
- Určuje hodnotu modrou barvu, kterou definujete. Hodnoty rozsahu od 0 do 255.  
+ **Modrá**  
+ Určuje hodnotu modrou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -61,4 +61,4 @@ Toto dialogové okno umožňuje přizpůsobit barvy, který použijete pro bitov
 ## <a name="see-also"></a>Viz také  
  [Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)   
  [Přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Barvy – okno](../windows/colors-window-image-editor-for-icons.md)
+ [Okno barvy](../windows/colors-window-image-editor-for-icons.md)

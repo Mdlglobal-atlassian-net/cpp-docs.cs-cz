@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463753"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642848"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna
 
 Pro projekt dialogová okna, které už jsou spojeny s třídou můžete využít výhod některé klávesové zkratky, při vytváření obslužných rutin událostí. Můžete rychle vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek nebo pro všechny příslušné zprávy Windows.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Chcete-li vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Chcete-li vytvořit obslužnou rutinu pro událost oznámení výchozí ovládací prvek
 
-1. Poklepejte na ovládací prvek. Do textového editoru otevře.
+1. Poklepejte na ovládací prvek. **Text** se otevře editor.
 
-2. Přidejte ovládací prvek kód obslužné rutiny oznámení v textovém editoru.
+2. Přidat kód obslužné rutiny pro ovládací prvek oznámení **Text** editoru.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Chcete-li vytvořit obslužnou rutinu pro všechny příslušné zprávy Windows
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Chcete-li vytvořit obslužnou rutinu pro všechny příslušné zprávy Windows
 
 1. Klepněte na ovládací prvek, pro kterou chcete zpracovat událost oznámení.
 
@@ -52,12 +52,12 @@ Pro projekt dialogová okna, které už jsou spojeny s třídou můžete využí
     > [!NOTE]
     > Můžete také vybrat dialogových oken a klikněte na tlačítko **ControlEvents** tlačítko a zobrazte seznam obvyklých událostí Windows pro všechny ovládací prvky v dialogovém okně.
 
-3. V **vlastnosti** okna, klikněte na tlačítko v pravém sloupci vedle událostí ke zpracování a pak vyberte název události navrhované oznámení (například **OnBnClickedOK** popisovače **BN_CLICKED** ).
+3. V **vlastnosti** okna, klikněte na tlačítko v pravém sloupci vedle událostí ke zpracování a pak vyberte název události navrhované oznámení (například `OnBnClickedOK` zpracovává BN_CLICKED).
 
     > [!NOTE]
     > Alternativně můžete zadat název obslužné rutiny události podle vašeho výběru, namísto výběru výchozí název obslužné rutiny události.
 
-   Jakmile vyberete událost Visual Studio textového editoru otevře a zobrazí kód obslužné rutiny události. Například následující kód se přidá výchozí **OnBnClickedOK**:
+   Po výběru události Visual Studio otevře **textový Editor** a zobrazí kód obslužné rutiny události. Například následující kód se přidá výchozí `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -68,19 +68,17 @@ Pro projekt dialogová okna, které už jsou spojeny s třídou můžete využí
 
 Pokud chcete přidat obslužnou rutinu události pro třídu jiné než jedna implementace dialogových oken, použijte [Průvodce obslužnou rutinou události](../ide/event-handler-wizard.md). Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).
 
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Požadavky
-
-Win32
+## <a name="requirements"></a>Požadavky
+ Win32
 
 ## <a name="see-also"></a>Viz také
-
-[Výchozí události ovládacích prvků](../windows/default-control-events.md)  
-[Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)  
-[Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)  
-[Přidání třídy](../ide/adding-a-class-visual-cpp.md)  
-[Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)  
-[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)  
-[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+ [Výchozí události ovládacích prvků](../windows/default-control-events.md)  
+ [Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)  
+ [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)  
+ [Přidání třídy](../ide/adding-a-class-visual-cpp.md)  
+ [Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)  
+ [Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)  
+ [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)  
+ [Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

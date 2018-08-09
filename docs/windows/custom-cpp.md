@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460929"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651892"
 ---
 # <a name="custom-c"></a>custom (C++)
 Definuje metadata pro objekt v knihovně typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ custom(  
    uuid,   
    value  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *uuid*  
  Jedinečný identifikátor.  
   

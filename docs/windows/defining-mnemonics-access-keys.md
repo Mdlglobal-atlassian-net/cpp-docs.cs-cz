@@ -1,5 +1,5 @@
 ---
-title: Definice klávesových zkratek (přístupové klávesy) | Microsoft Docs
+title: Definice klávesových zkratek (přístupové klávesy) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,46 +25,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a60cf597a88fcf7038848be6c9e2d31269f6a906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 960dcd17a1ff581db540aecfd536e9d2f2e98539
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873690"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645094"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definice klávesových zkratek (přístupové klávesy)
-Za normálních okolností klávesnice uživatelé Přesun zaměření pro vstup z jednoho ovládacího prvku do druhého v dialogovém okně s klíči KARTĚ a šipku. Však můžete definovat přístupový klíč (název klávesovými nebo snadno zapamatovat), který umožňuje uživatelům zvolit ovládacího prvku stisknutím jeden klíč.  
+Za normálních okolností uživatelé klávesnice Přesun zaměření pro vstup z jednoho ovládacího prvku do druhého v dialogovém okně s **kartu** a **šipku** klíče. Ale můžete definovat přístupovou klávesu (název mnemonická nebo snadno zapamatovat), který umožňuje uživatelům vybrat ovládací prvek stisknutím klávesy jeden klíč.  
   
-### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Chcete-li definovat přístupový klíč pro ovládací prvek s popiskem viditelné (tlačítek, zaškrtněte políčka a přepínače)  
+### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Chcete-li definovat přístupovou klávesu pro ovládací prvek titulkem viditelné (tlačítka, zaškrtávací políčka a přepínačů)  
   
 1.  Vyberte ovládací prvek v dialogovém okně.  
   
-2.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window)v **popisek** vlastnost, zadejte nový název pro ovládací prvek, zadáním ampersand (**&**) před písmenem, který chcete používat jako přístupový klíč pro ovládací prvek. Například `&Radio1`.  
+2.  V [okno vlastností](/visualstudio/ide/reference/properties-window)v **titulek** vlastnost, zadejte nový název pro ovládací prvek psaní znak ampersand (`&`) před písmeno jako přístupový klíč pro tento ovládací prvek. Například `&Radio1`.  
   
-3.  Stiskněte klávesu **zadejte**.  
+3.  Stisknutím klávesy **zadejte**.  
   
-     Podtržení, které se zobrazí v zobrazení titulku udávajících přístupový klíč, například **R**adio1.  
+     Podtržení se zobrazí v zobrazení titulku udávajících přístupový klíč, například **R**adio1.  
   
-### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Chcete-li definovat přístupový klíč pro ovládací prvek bez viditelné popisek  
+### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Chcete-li definovat přístupovou klávesu pro ovládací prvek bez zobrazen titulek  
   
-1.  Proveďte popisek ovládacího prvku pomocí **statický Text** řídit ve [sada nástrojů](/visualstudio/ide/reference/toolbox).  
+1.  Provádění dotazů pomocí popisek pro ovládací prvek **statický Text** v ovládacím prvku [nástrojů](/visualstudio/ide/reference/toolbox).  
   
-2.  Statický text titulku, zadejte znak ampersand (**&**) před písmenem, který chcete používat jako přístupový klíč.  
+2.  Statický text titulku, zadejte znak ampersand (`&`) před písmeno jako přístupový klíč.  
   
-3.  Ujistěte se, že ovládacího prvku statický text okamžitě předchází řízení, které jsou označeny v pořadí.  
+3.  Ujistěte se, že ovládací prvek statického textu bezprostředně předchází ovládací prvek, který ho popisky v pořadí.  
   
- Všechny klíče přístup v rámci dialogového okna musí být jedinečné.  
+ Přístupové klíče v rámci dialogového okna musí být jedinečné.  
   
-#### <a name="to-check-for-duplicate-access-keys"></a>Zkontrolujte duplicitní přístupové klávesy  
+### <a name="to-check-for-duplicate-access-keys"></a>Hledat duplicitní přístupové klávesy  
   
-1.  Na **formátu** nabídky, klikněte na tlačítko **zkontrolovat klávesové zkratky**.  
+1.  Na **formátu** nabídky, klikněte na tlačítko **zkontrolujte klávesových zkratek**.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky](../mfc/controls-mfc.md)
-

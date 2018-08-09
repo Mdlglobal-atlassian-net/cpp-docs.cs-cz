@@ -1,5 +1,5 @@
 ---
-title: defaultbind – | Microsoft Docs
+title: defaultbind | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871458"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644083"
 ---
 # <a name="defaultbind"></a>defaultbind
-Určuje jeden, vazbu vlastnosti, která nejlépe představuje objekt.  
+Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Defaultbind –** atribut C++ má stejné funkce jako [defaultbind –](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL atribut.  
+ **Defaultbind** C++ atribut má stejné funkce jako [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) příklad použití **defaultbind –**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **defaultbind**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Určuje jeden, vazbu vlastnosti, která nejlépe představuje objekt.
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -58,6 +56,6 @@ Určuje jeden, vazbu vlastnosti, která nejlépe představuje objekt.
  [IDL – atributy](../windows/idl-attributes.md)   
  [Atributy metody](../windows/method-attributes.md)   
  [Atributy datového členu](../windows/data-member-attributes.md)   
- [displaybind –](../windows/displaybind.md)   
- [immediatebind –](../windows/immediatebind.md)   
+ [displaybind](../windows/displaybind.md)   
+ [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   

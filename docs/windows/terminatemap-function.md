@@ -1,5 +1,5 @@
 ---
-title: Terminatemap – funkce | Microsoft Docs
+title: Terminatemap – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890346"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645935"
 ---
 # <a name="terminatemap-function"></a>TerminateMap – funkce
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,21 +36,21 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parametry  
- `module`  
+### <a name="parameters"></a>Parametry  
+ *Modul*  
  A [modulu](../windows/module-class.md).  
   
- `serverName`  
- Název podmnožinu objekty pro vytváření tříd v modulu určený parametrem `module`.  
+ *název_serveru*  
+ Název dílčí sady objekty pro vytváření tříd v modulu určené parametrem *modulu*.  
   
- `forceTerminate`  
- `true` Ukončit třídu objektů Factory bez ohledu na to, že jsou aktivní; `false` není ukončen objekty pro vytváření tříd, pokud je aktivní žádné objekt pro vytváření.  
+ *forceTerminate*  
+ **Hodnota TRUE** ukončení třídy jsou aktivní, bez ohledu na to, že objekty pro vytváření **false** není ukončit objekty pro vytváření tříd, pokud je aktivní libovolný objekt pro vytváření.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud byla ukončena všechny objekty pro vytváření tříd; v opačném `false`.  
+ **Hodnota TRUE** všechny objekty pro vytváření tříd byl ukončen; v opačném případě **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- Vypne tříd v zadaný modul.  
+ Třída továrny v zadaném modulu vypne.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

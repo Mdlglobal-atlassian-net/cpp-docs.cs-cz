@@ -1,5 +1,5 @@
 ---
-title: Weakreference::setunknown – metoda | Microsoft Docs
+title: Weakreference::setunknown – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891012"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647677"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ void SetUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `unk`  
+### <a name="parameters"></a>Parametry  
+ *UNK*  
  Ukazatel `IUnknown` rozhraní objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Nastaví odkaz na silné aktuálního `WeakReference` objekt, který má ukazatel zadaný rozhraní.  
+ Nastaví silný odkaz aktuální **WeakReference** objektu na zadané rozhraní ukazatel.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -48,5 +48,5 @@ void SetUnknown(
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také
-[WeakReference – třída](../windows/weakreference-class1.md)  
+ [Weakreference – třída](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

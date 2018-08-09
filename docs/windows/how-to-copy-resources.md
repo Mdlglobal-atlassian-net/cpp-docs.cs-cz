@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f29a115d20eca90b66a876bf1b5070052d90008d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eb93f90b6d96d679b055893dc13adaa0d3c2e780
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570682"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642978"
 ---
 # <a name="how-to-copy-resources"></a>Postupy: Kopírování prostředků
 Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo se dají [Změna jazyka nebo podmínky prostředku během kopírování jeho](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
@@ -44,23 +44,23 @@ Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo s
   
 1.  Otevřete oba samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků, ve který #zahrnuje konce souboru mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například otevřete Source1.rc a Source2.rc.  
   
-2.  V prvním .rc souboru klikněte na prostředek, který chcete kopírovat. Například v Source1.rc, klikněte na možnost **IDD_DIALOG1**.  
+2.  V prvním .rc souboru klikněte na prostředek, který chcete kopírovat. Například v `Source1.rc`, klikněte na tlačítko **IDD_DIALOG1**.  
   
-3.  Podržte stisknutou klávesu CTRL a přetáhněte prostředek do druhého souboru .rc. Například, přetáhněte **IDD_DIALOG1** z Source1.rc k Source2.rc.  
+3.  Podržte stisknutou klávesu CTRL a přetáhněte prostředek do druhého souboru .rc. Například, přetáhněte **IDD_DIALOG1** z `Source1.rc` k `Source2.rc`.  
   
     > [!NOTE]
-    >  Přetažení prostředku bez podržení klávesy CTRL Přesune prostředek místo jeho kopírování.  
+    >  Přetažení prostředku bez podržení **Ctrl** klíč přesunu prostředku místo jeho kopírování.  
   
 ### <a name="to-copy-resources-using-copy-and-paste"></a>Kopírování prostředků pomocí kopírování a vložení  
   
 1.  Otevřete oba samostatné soubory prostředků (Další informace najdete v tématu [zobrazení prostředků, ve který #zahrnuje konce souboru mimo projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Například Source1.rc a Source2.rc.  
   
-2.  Ve zdrojovém souboru, ze kterého chcete kopírovat prostředek (například Source1.rc), klikněte pravým tlačítkem na prostředek a zvolte **kopírování** z místní nabídky.  
+2.  Ve zdrojovém souboru, ze kterého chcete kopírovat prostředek (například `Source1.rc`), klikněte pravým tlačítkem na prostředek a zvolte **kopírování** z místní nabídky.  
   
-3.  Klikněte pravým tlačítkem na soubor prostředků, do které chcete vložit prostředků (například Source2.rc). Zvolte **vložit** z místní nabídky.  
+3.  Klikněte pravým tlačítkem na soubor prostředků, do které chcete vložit prostředku (například `Source2.rc`). Zvolte **vložit** z místní nabídky.  
   
     > [!NOTE]
-    >  Nelze přetáhnout a vyřadit, kopírovat, Vyjmout nebo vkládání mezi soubory prostředků v projektu (zobrazení prostředků) a samostatné .rc soubory (ty otevřít v systému windows dokumentu). Můžete to udělat v předchozích verzích produktu.  
+    >  Nelze přetáhnout a vyřadit, kopírování, vyjmutí nebo vložte mezi soubory prostředků v projektu (**zobrazení prostředků**) a samostatné .rc soubory (ty otevřít v systému windows dokumentu). Můžete to udělat v předchozích verzích produktu.  
   
     > [!NOTE]
     >  Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor, Visual C++ změnit hodnotu symbolu přenesené prostředků nebo název symbolu a hodnota při kopírování do nového souboru.  
@@ -68,7 +68,6 @@ Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo s
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

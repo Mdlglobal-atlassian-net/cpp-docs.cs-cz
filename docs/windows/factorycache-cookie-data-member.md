@@ -1,5 +1,5 @@
 ---
-title: Factorycache::cookie – datový člen | Microsoft Docs
+title: Factorycache::cookie – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874444"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652378"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie – datový člen
-Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -37,7 +37,7 @@ union {
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obsahuje hodnotu, která identifikuje registrované objektu třídy prostředí Windows Runtime nebo COM a je později použít ke zrušení registrace objektu.  
+ Obsahuje hodnotu, která identifikuje registrovaného objektu třídy Windows Runtime nebo modelu COM a je později použít ke zrušení registrace objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

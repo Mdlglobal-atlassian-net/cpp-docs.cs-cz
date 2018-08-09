@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464886"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648175"
 ---
 # <a name="attributes-alphabetical-reference"></a>Abecedně řazená referenční dokumentace k atributům
 Následující atributy jsou k dispozici v jazyce Visual C++.  
@@ -118,7 +118,7 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[satype](../windows/satype.md)|Určuje datový typ `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Určuje velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.|  
 |[Zdroj](../windows/source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí.|  
-|[string](../windows/string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, **bajtů**, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|  
+|[string](../windows/string-cpp.md)|Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte`, nebo ekvivalentní pole nebo ukazatel na takové pole musí být považované za řetězec.|  
 |[support_error_info](../windows/support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|  
 |[switch_is](../windows/switch-is.md)|Určuje výraz nebo identifikátor, který funguje jako sjednocení discriminant, který vybere člen sjednocení.|  
 |[switch_type](../windows/switch-type.md)|Určuje typ proměnné použité jako sjednocení discriminant.|  

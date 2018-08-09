@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Aktivace a používání komponent prostředí Windows Runtime použitím knihovny WRL | Microsoft Docs'
+title: 'Postupy: Aktivace a používání komponent Windows Runtime s použitím knihovny WRL | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,77 +13,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50c37438bf3a840f57119245b845d0b94f1873db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1931b81a187065d4c4f04ea6f9fe91f7df0ca9b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880767"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646150"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Postupy: Aktivace a používání komponent prostředí Windows Runtime s použitím knihovny WRL
-Tento dokument ukazuje, jak používat Windows Runtime C++ šablony knihovny (WRL) k inicializaci prostředí Windows Runtime a jak aktivace a používání komponent prostředí Windows Runtime.  
+Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) se inicializovat modul Windows Runtime a aktivaci a používání komponent prostředí Windows Runtime.  
   
- Pokud chcete používat komponenty, musíte získat ukazatele rozhraní pro typ, který je implementováno modulem komponentu. A protože základní technologii prostředí Windows Runtime modelu COM (Component Object), je třeba postupovat podle pravidla COM Udržovat instance typu. Například musíte udržovat *odkazovat počet* který určuje, když je typ odstraněn z paměti.  
+ Chcete-li použít komponentu, musíte získat ukazatele rozhraní na typ, který je implementováno komponentou. A protože základní technologie Windows Runtime je modelu COM (Component Object), je třeba dodržovat pravidla COM Udržovat instance typu. Například musíte mít *referenční počet* , který určuje, kdy je typ odstraněn z paměti.  
   
- Pro zjednodušení použití prostředí Windows Runtime, poskytuje knihovna šablon C++ prostředí Windows Runtime šabloně chytré ukazatele [ComPtr\<T >](../windows/comptr-class.md), který automaticky provede počítání odkazů. Když je deklarovat proměnnou, zadejte `ComPtr<` *název rozhraní* `>` *identifikátor*. Pro přístup rozhraní členovi, použít operátor přístup ke členu šipku (`->`) na identifikátor.  
-  
-> [!IMPORTANT]
->  Při volání funkce rozhraní vždy otestovat `HRESULT` vrátit hodnotu.  
-  
-## <a name="activating-and-using-a-windows-runtime-component"></a>Aktivace a používání komponent prostředí Windows Runtime  
- Následující postup použijte `Windows::Foundation::IUriRuntimeClass` rozhraní ukazují, jak vytvořit objekt pro vytváření aktivace pro prostředí Windows Runtime součást, vytvořit instanci této součásti a získání hodnoty vlastnosti. Také se ukazují, jak k chybě při inicializaci prostředí Windows Runtime. Úplný příklad následuje.  
+ Pro zjednodušení použití prostředí Windows Runtime, knihovny šablon jazyka C++ Windows Runtime poskytuje šablony inteligentního ukazatele [ComPtr\<T >](../windows/comptr-class.md), která automaticky provádí počítání odkazů. Pokud deklarujete proměnnou, zadejte `ComPtr<` *název rozhraní* `>` *identifikátor*. Chcete-li získat přístup k člen rozhraní, použijte šipku operátora přístupu členů (`->`) k identifikátoru.  
   
 > [!IMPORTANT]
->  I když používáte obvykle Windows knihovna šablon C++ Runtime v aplikaci pro univerzální platformu Windows (UWP), tento příklad používá konzolovou aplikaci pro obrázek. Funkce, jako `wprintf_s` nejsou k dispozici z aplikace UWP. Další informace o typy a funkce, které můžete použít v aplikaci UWP najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) a [Win32 a COM pro aplikace UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
+>  Při volání funkce protokolem rozhraní vždy testujte návratovou hodnotu HRESULT.  
   
-#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Pro aktivaci a používání komponent prostředí Windows Runtime  
+## <a name="activating-and-using-a-windows-runtime-component"></a>Aktivace a pomocí komponenty Windows Runtime  
+ Následující kroky použijte `Windows::Foundation::IUriRuntimeClass` rozhraní ukazují, jak vytvořit objekt factory pro aktivaci pro součást prostředí Windows Runtime, vytvořit instanci této součásti a hodnot vlastností. Jsou také ukazují, jak inicializovat Windows Runtime. Následuje Úplný příklad.  
   
-1.  Zahrnout (`#include`) potřebné prostředí Windows Runtime, knihovna šablon C++ prostředí Windows Runtime nebo standardní knihovna C++ hlavičky.  
+> [!IMPORTANT]
+>  I když používáte obvykle knihovna šablon C++ Windows Runtime v aplikaci pro univerzální platformu Windows (UPW), v tomto příkladu používá konzolovou aplikaci pro ilustraci. Funkce, jako například `wprintf_s` nejsou k dispozici prostřednictvím aplikace pro UPW. Další informace o typech a funkce, které můžete použít v aplikaci UWP, naleznete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) a [Win32 a COM pro aplikace pro UPW](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
+  
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>K aktivaci a používání komponent prostředí Windows Runtime  
+  
+1.  Zahrnout (`#include`) veškeré požadované prostředí Windows Runtime, knihovny šablon jazyka C++ Windows Runtime nebo hlavičky standardní knihovny C++.  
   
      [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]  
   
-     Doporučujeme vám, že využíváte `using namespace` v soubor tak čitelnost kód direktivy.  
+     Doporučujeme využívat `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.  
   
-2.  Inicializujte vláken, ve kterém se aplikace spouští. Všechny aplikace musí inicializovat jeho přístup z více vláken a model vláken. Tento příklad používá [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) k chybě při inicializaci prostředí Windows Runtime a určuje [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) jako model vláken. `RoInitializeWrapper` Třídy volání `Windows::Foundation::Initialize` při vytváření, a `Windows::Foundation::Uninitialize` kdy byla.  
+2.  Inicializujte vláken, ve kterém se spustí aplikace. Každá aplikace musí inicializovat jeho vlákna a dělení na vlákna modelu. V tomto příkladu [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) třídy se inicializovat modul Windows Runtime a určuje [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) jako model vláken. `RoInitializeWrapper` Třídy volání `Windows::Foundation::Initialize` při konstrukci, a `Windows::Foundation::Uninitialize` při jeho zničení.  
   
      [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]  
   
-     V druhém příkazu [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) vrátí operátor `HRESULT` z volání `Windows::Foundation::Initialize`.  
+     V druhém příkazu [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) operátor vrátí `HRESULT` z volání `Windows::Foundation::Initialize`.  
   
-3.  Vytvoření *aktivační objekt pro vytváření* pro `ABI::Windows::Foundation::IUriRuntimeClassFactory` rozhraní.  
+3.  Vytvoření *objektu factory pro aktivaci* pro `ABI::Windows::Foundation::IUriRuntimeClassFactory` rozhraní.  
   
      [!code-cpp[wrl-consume-component#4](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]  
   
-     Prostředí Windows Runtime používá k identifikaci typy plně kvalifikované názvy. `RuntimeClass_Windows_Foundation_Uri` Parametr je řetězec, který poskytuje prostředí Windows Runtime a obsahuje název modulu runtime požadované třídy.  
+     Modul Windows Runtime používá k identifikaci typy plně kvalifikovaných názvů. `RuntimeClass_Windows_Foundation_Uri` Parametr je řetězec, který je poskytován modulu Windows Runtime a obsahuje název třídy runtime vyžaduje.  
   
 4.  Inicializace [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) proměnné, která představuje identifikátor URI `"http://www.microsoft.com"`.  
   
      [!code-cpp[wrl-consume-component#6](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]  
   
-     V prostředí Windows Runtime není přidělit paměť pro řetězec, který bude používat prostředí Windows Runtime. Místo toho prostředí Windows Runtime vytvoří kopii vašeho řetězec do vyrovnávací paměti, že udržuje a používá pro operace a vrátí popisovač do vyrovnávací paměti vytvořený.  
+     V modulu Windows Runtime není přidělit paměť pro řetězec, který bude používat modul Windows Runtime. Místo toho modul Windows Runtime vytvoří kopii vašeho řetězce do vyrovnávací paměti, že udržuje a používá pro operace a potom vrátí popisovač do vyrovnávací paměti, které vytvořili.  
   
-5.  Použití `IUriRuntimeClassFactory::CreateUri` metoda factory pro vytvoření `ABI::Windows::Foundation::IUriRuntimeClass` objektu.  
+5.  Použití `IUriRuntimeClassFactory::CreateUri` metoda factory `ABI::Windows::Foundation::IUriRuntimeClass` objektu.  
   
      [!code-cpp[wrl-consume-component#7](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]  
   
-6.  Volání `IUriRuntimeClass::get_Domain` metoda pro načtení hodnotu `Domain` vlastnost.  
+6.  Volání `IUriRuntimeClass::get_Domain` metodu pro načtení hodnoty `Domain` vlastnost.  
   
      [!code-cpp[wrl-consume-component#8](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]  
   
-7.  Tisk – název domény pro konzolu a vrátit. Všechny `ComPtr` a RAII objekty nechte oboru a vydávají automaticky.  
+7.  Vypsat názvy domény do konzoly a vrátit. Všechny `ComPtr` a objekty RAII ponechte oboru a automaticky se vydávají.  
   
      [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]  
   
-     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) funkce načte základní Unicode formu řetězce identifikátoru URI.  
+     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) funkce načte základní Unicode formu řetězec identifikátoru URI.  
   
- Tady je kompletní příklad:  
+ Tady je úplný příklad:  
   
  [!code-cpp[wrl-consume-component#1](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_8.cpp)]  
   
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Kompilace kódu, zkopírujte jej a vložte ji do projektu sady Visual Studio nebo ho vložte do souboru, který je pojmenován `wrl-consume-component.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
+ Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-component.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
   
- **cl.exe knihovny wrl využívat component.cpp runtimeobject.lib**  
+ `cl.exe wrl-consume-component.cpp runtimeobject.lib`  
   
 ## <a name="see-also"></a>Viz také  
  [Knihovna šablon C++ prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

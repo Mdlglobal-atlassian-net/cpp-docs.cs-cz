@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 03db2fd8853321e4a9320f2c17b05800b87e466c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466553"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652959"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args – konstanta
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 static const int args = -1; ;  
 ```  
   
@@ -37,7 +37,7 @@ static const int args = -1; ;
  Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.  
   
 ## <a name="remarks"></a>Poznámky  
- Když `args` rovná -1 znamená, může být nalezena žádná shoda pro `Invoke` podpis metody.  
+ Když **args** rovná -1 znamená, může být nalezena žádná shoda pro `Invoke` podpis metody.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

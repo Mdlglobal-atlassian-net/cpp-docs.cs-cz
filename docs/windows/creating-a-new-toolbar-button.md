@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nového tlačítka panelu nástrojů | Microsoft Docs
+title: Vytvoření nového tlačítka panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f174bb24ef7782424b07ac681aed601a719cd6d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873024"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650979"
 ---
 # <a name="creating-a-new-toolbar-button"></a>Vytvoření nového tlačítka panelu nástrojů
 ### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů  
@@ -33,42 +33,41 @@ ms.locfileid: "33873024"
 1.  V [zobrazení prostředků](../windows/resource-view-window.md) rozbalte složku prostředků (například Project1.rc).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Rozbalte **nástrojů** složky a vyberte panelu nástrojů upravit.  
+2.  Rozbalte **nástrojů** a pak zvolte položku panelu nástrojů pro úpravy.  
   
-3.  ID přiřadíte prázdné tlačítko na pravém konci panelu nástrojů. Můžete to provést úpravou **ID** vlastnost [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Chcete třeba udělit stejné ID jako z nabídky tlačítka panelu nástrojů. V takovém případě použijte pole rozevíracího seznamu vyberte **ID** položky nabídky.  
+3.  Přiřaďte ID prázdné tlačítko na pravém konci panelu nástrojů. Můžete tak učinit pomocí úpravy **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window). Můžete například poskytnout stejný Identifikátor jako možnost nabídky tlačítka panelu nástrojů. V takovém případě použijte pole rozevíracího seznamu vyberte **ID** položky nabídky.  
   
      -nebo-  
   
-     Vyberte tlačítko prázdné na pravém konci panelu nástrojů (v podokně zobrazení panelu nástrojů) a začít kreslení. Výchozí tlačítko ID příkazu, který je přiřazen (ID_BUTTON\<n >).  
+     Vyberte tlačítko prázdné na pravém konci panelu nástrojů (v **panel nástrojů zobrazení** podokno) a začněte kreslení. Je přiřazen výchozí Identifikátor příkazu tlačítka (ID_BUTTON\<n >).  
   
- Můžete také zkopírujte a vložte bitovou kopii na panelu nástrojů jako tlačítko Nový.  
+ Můžete také zkopírovat a vložit obrázek do nového tlačítka panelu nástrojů.  
   
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítka  
+### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko  
   
 1.  V [zobrazení prostředků](../windows/resource-view-window.md), otevřete poklepáním panelu nástrojů.  
   
-2.  Dále otevřete bitovou kopii, kterou chcete přidat na panel nástrojů.  
+2.  Dále otevřete image, kterou chcete přidat na panel nástrojů.  
   
     > [!NOTE]
-    >  Pokud v sadě Visual Studio otevřete bitovou kopii, otevře se v editoru obrázků. V ostatních aplikacích grafiky můžete také otevřít bitovou kopii.  
+    >  Pokud obrázek otevřít v sadě Visual Studio, se otevře v **Image** editoru. Image můžete otevřít také v jiných aplikacích grafiky.  
   
-3.  Z **upravit** nabídce zvolte **kopie**.  
+3.  Z **upravit** nabídce zvolte **kopírování**.  
   
-4.  Přepněte na panelu nástrojů kliknutím jeho karty v horní části okna zdroje.  
+4.  Přepnout na panelu nástrojů kliknutím na jeho karty v horní části okna zdroje.  
   
-5.  Z **upravit** nabídce zvolte **vložení**.  
+5.  Z **upravit** nabídce zvolte **vložit**.  
   
-     Image se zobrazí na panelu nástrojů jako tlačítko Nový.  
+     Obrázek se zobrazí na panelu nástrojů jako nového tlačítka.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Požadavky  
- Knihovny MFC nebo knihovny ATL  
+## <a name="requirements"></a>Požadavky  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)   
  [Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

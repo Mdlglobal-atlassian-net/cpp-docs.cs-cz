@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror – | Microsoft Docs
+title: usesgetlasterror – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890272"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647057"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
-Informuje volající, že pokud dojde k chybě při volání této funkce, volající může potom zavolejte `GetLastError` načíst kód chyby.  
+Říká volajícímu, že pokud dojde k chybě při volání této funkce, potom volající provést zavoláním `GetLastError` načíst kód chyby.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Usesgetlasterror –** atribut C++ má stejné funkce jako [usesgetlasterror –](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL atribut.  
+ **Usesgetlasterror –** C++ atribut má stejné funkce jako [usesgetlasterror –](http://msdn.microsoft.com/library/windows/desktop/aa367297) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [idl_module –](../windows/idl-module.md) příklad ukázka, jak pomocí **usesgetlasterror –**.  
+ Zobrazit [možnost idl_module](../windows/idl-module.md) příklad ukázku toho, jak používat **usesgetlasterror –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -48,8 +46,8 @@ Informuje volající, že pokud dojde k chybě při volání této funkce, volaj
 |||  
 |-|-|  
 |**Platí pro**|**modul** atribut|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

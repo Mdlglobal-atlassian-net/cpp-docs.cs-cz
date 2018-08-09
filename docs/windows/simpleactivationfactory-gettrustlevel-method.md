@@ -1,5 +1,5 @@
 ---
-title: Simpleactivationfactory::gettrustlevel – metoda | Microsoft Docs
+title: Simpleactivationfactory::gettrustlevel – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892615"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645185"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel – metoda
-Získá úroveň důvěryhodnosti instance třídy určeného `Base` – třída parametru šablony.  
+Získá instanci třídy určené úroveň důvěryhodnosti `Base` parametr šablony třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +33,9 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `trustLvl`  
- Po této operaci dokončení úroveň důvěryhodnosti aktuální třídy objektu.  
+### <a name="parameters"></a>Parametry  
+ *trustLvl*  
+ Když tato operace dokončí, úroveň důvěryhodnosti objektu aktuální třídy.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vždy S_OK.  

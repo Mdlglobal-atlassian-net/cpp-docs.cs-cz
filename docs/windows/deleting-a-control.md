@@ -1,5 +1,5 @@
 ---
-title: Odstranění ovládacího prvku | Microsoft Docs
+title: Odstranění ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f779ec16e9ecb47b5958737bc1ca6fe3075cec33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 231e9cd3e49b7e22dfd2a0daa4f7bbc83cc967f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871419"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644915"
 ---
 # <a name="deleting-a-control"></a>Odstranění ovládacího prvku
-### <a name="to-delete-a-control"></a>Odstranění ovládacího prvku  
+### <a name="to-delete-a-control"></a>Chcete-li odstranit ovládací prvek  
   
 1.  V dialogovém okně vyberte ovládací prvek a stiskněte klávesu **odstranit** klíč.  
   
@@ -33,14 +33,12 @@ ms.locfileid: "33871419"
 2.  Na **upravit** nabídky, klikněte na tlačítko **odstranit**.  
   
     > [!TIP]
-    >  Při použití editoru dialogového okna lze v mnoha případech po kliknutí pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy.  
+    >  Při použití **dialogové okno** editoru v mnoha případech můžete kliknutím na tlačítko pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)
-

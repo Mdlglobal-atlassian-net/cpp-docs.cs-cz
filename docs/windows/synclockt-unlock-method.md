@@ -1,5 +1,5 @@
 ---
-title: Synclockt::Unlock – metoda | Microsoft Docs
+title: Synclockt::Unlock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892303"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642120"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ void Unlock();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Uvolní ovládacího prvku prostředku uchovávat aktuální objekt SyncLockT, pokud existuje.  
+ Verze ovládacího prvku prostředku držené aktuální **SyncLockT** objektu, pokud existuje.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

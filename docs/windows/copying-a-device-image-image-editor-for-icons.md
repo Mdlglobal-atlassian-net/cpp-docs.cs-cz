@@ -1,5 +1,5 @@
 ---
-title: Kopírování obrázku zařízení (Editor obrázků pro ikony) | Microsoft Docs
+title: Kopírování obrázku zařízení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b48691dde50c1f0829d5393c9023509c863ed39c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e842dcb70e6f4a4ec4751ed7f4f231b41af2d288
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883978"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645656"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Kopírování obrázku zařízení (editor obrázků pro ikony)
 ### <a name="to-copy-a-device-image"></a>Kopírování obrázku zařízení  
   
-1.  Na **Image** nabídky, klikněte na tlačítko **otevřete obrázku zařízení** a vyberte bitovou kopii z aktuálního seznamu obrázků. Vyberte například 32 × 32, 16 barev verzi ikony.  
+1.  Na **Image** nabídky, klikněte na tlačítko **otevřít obraz zařízení** a vybrala image v seznamu aktuálních imagí. Například zvolte 32 × 32, 16 barev verzi ikonu.  
   
-2.  Kopírování obrázku aktuálně zobrazený ikony (**CTRL + C**).  
+2.  Zkopírujte aktuálně zobrazené obraz bitové kopie (**Ctrl**+**C**).  
   
-3.  Otevřete jinou bitovou kopii ikony v jiném **Editor obrázků** okno. Například otevřete 16 x 16, 16 barev verzi ikony.  
+3.  Otevřete jiný obrázek ikony v jiném **Editor obrázků** okna. Například otevřete 16 × 16, ikona verzi 16 barev.  
   
-4.  Vložit obrázek ikony (**CTRL + V**) z jednoho **Editor obrázků** okno na druhý. Větší velikost při vkládání do menší velikost, můžete popisovače ikona změní velikost obrázku.  
+4.  Vložit obrázek ikony (**Ctrl**+**V**) z jednoho **Editor obrázků** okně do jiné. Větší velikost při vkládání do menší velikost, můžete změnit velikost obrázku obslužné rutiny ikonu.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
- [Ikony a kurzory: prostředky obrázků pro zařízení s displejem](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)
-

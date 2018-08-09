@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 65e8576f069cce7d7aec2eae18ad577820ca93a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570379"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644739"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add – metoda
 Připojí obslužnou rutinu události reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **EventSource** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HRESULT Add(  
    _In_ TDelegateInterface* delegateInterface,  
    _Out_ EventRegistrationToken* token  

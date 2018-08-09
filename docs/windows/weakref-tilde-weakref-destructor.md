@@ -1,5 +1,5 @@
 ---
-title: 'WeakRef:: ~ weakref – destruktor | Microsoft Docs'
+title: 'WeakRef:: ~ WeakRef – destruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47752b861ab5974b60f62cdfaba620e60288d09a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2acc2e24b1030dc09529fdcad444e29f83ae11e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651662"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef – destruktor
-Deinitializes aktuální instance třídy WeakRef.  
+Zruší inicializaci aktuální instance **WeakRef** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   

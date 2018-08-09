@@ -1,5 +1,5 @@
 ---
-title: Prostředí Windows Runtime a spravované šablony (rozšíření komponent C++) | Microsoft Docs
+title: Windows Runtime a spravované šablony (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891360"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641457"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime a spravované šablony (rozšíření komponent C++)
-Šablony umožňují definovat prototyp prostředí Windows Runtime nebo běžné typ modulu runtime jazyka a potom vytvořte instanci daného typu variant pomocí parametrů typu jinou šablonu.  
+Šablony vám umožní definovat prototyp modulu Windows Runtime nebo společný typ modulu runtime jazyka a potom vytvořte instanci variace tohoto typu pomocí parametrů typu jinou šablonu.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- Můžete vytvořit šablony z typů hodnotu nebo odkaz.  Další informace o vytváření hodnotu nebo odkaz typy najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Vytvoření šablon z typů hodnoty nebo odkazu.  Další informace o vytváření typů hodnoty nebo odkazu naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Další informace o standardní šablony třídy C++ najdete v tématu [šablony třídy](../cpp/class-templates.md).  
+ Další informace o standardní šablony tříd C++, naleznete v tématu [šablony třídy](../cpp/class-templates.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- (Existují žádné poznámky pro tuto funkci jazyka, která se týkají jenom prostředí Windows Runtime).  
+ (Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- K vytvoření šablony třídy ze spravovaných typů, které je ukázán v následujících příkladech kódu existují určitá omezení.  
+ Existují některá omezení k vytvoření šablony třídy ze spravovaných typů, které je ukázán v následujícím příkladu kódu.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Je možné vytvořit instanci obecného typu pomocí parametru šablony spravovaného typu, ale nelze vytvořit instanci spravovaného šablonu s parametru šablony obecného typu.  Toto je, protože obecné typy jsou vyřešeny za běhu.  Další informace najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony.  Je to proto obecné typy jsou vyřešeny za běhu.  Další informace najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,9 +66,7 @@ ref class R {
 };  
 ```  
   
- **Příklad**  
-  
- Obecného typu nebo funkce nemůže být vnořena ve spravované šablony.  
+ Obecný typ nebo funkce nemůže být vnořená v spravované šablony.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -80,9 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- **Příklad**  
-  
- Nelze získat přístup šablony definovaných v odkazované sestavení s C + +/ CLI syntaxe jazyka, ale můžete použít reflexe.  Pokud není vytvořit instanci šablony, není vygenerované v metadatech.  Šablonu je vytvořena, zobrazí se pouze odkazované členské funkce v metadatech.  
+ Nejde získat přístup šablony definovaný v odkazovaném sestavení s C + +/ syntaxi jazyka rozhraní příkazového řádku, ale můžete použít reflexe.  Pokud šablona není vytvořena instance, není aktivováno v metadatech.  Pokud dojde k vytvoření šablony, zobrazí se pouze odkazované členské funkce v metadatech.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -112,9 +107,7 @@ int main() {
 }  
 ```  
   
- **Příklad**  
-  
- Spravované Modifikátor třídy v částečná specializace nebo explicitní specializace šablon třídy, můžete změnit.  
+ Můžete změnit spravované Modifikátor třídy v částečné specializace nebo explicitní specializace šablony třídy.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  

@@ -1,5 +1,5 @@
 ---
-title: 'Symboly: Identifikátory prostředků | Microsoft Docs'
+title: 'Symboly: Identifikátory prostředků | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,32 +21,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891841"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650882"
 ---
 # <a name="symbols-resource-identifiers"></a>Symboly: identifikátory prostředků
-Symbol je resource identifier (ID), která se skládá ze dvou částí: textový řetězec (názvu symbolu) namapované na celočíselnou hodnotu (symbol hodnota). Příklad:  
+Symbol je identifikátor prostředku (ID), který se skládá ze dvou částí: textový řetězec (název symbolu) mapovat na celočíselnou hodnotu (hodnoty symbolů). Příklad:  
   
 ```  
 IDC_EDITNAME = 5100  
 ```  
   
- Názvy symbolů jsou nejčastěji označovány jako identifikátory.  
+ Názvy symbolů se často označují jako identifikátory.  
   
- Symboly zadejte popisný způsob odkazující na prostředky a objekty uživatelského rozhraní, ve zdrojovém kódu a při práci s nimi v editory prostředků. Můžete zobrazit a upravit symboly v jedné pomocí vhodné místo [symboly prostředků – dialogové okno](../windows/viewing-resource-symbols.md).  
+ Symboly zadejte popisný způsob, jak odkazující na prostředky a objekty uživatelského rozhraní, ve zdrojovém kódu a při práci s nimi v editory prostředků. Můžete zobrazit a pracovat s symboly pomocí jednoho vhodným místem [symboly prostředků – dialogové okno](../windows/viewing-resource-symbols.md).  
   
- Když vytvoříte nový prostředek nebo objektu prostředků [editory prostředků](../windows/resource-editors.md) zadejte výchozí název prostředku, například `IDC_RADIO1`a přiřadit hodnotu. Definice name plus hodnota je uložena v souboru Resource.h.  
+ Když vytvoříte nový prostředek nebo prostředek objektu [editory prostředků](../windows/resource-editors.md) zadejte výchozí název prostředku, například `IDC_RADIO1`a přiřadit hodnotu. Definice name plus hodnota je uložena v souboru Resource.h.  
   
 > [!NOTE]
->  Když kopírujete prostředky nebo objektů prostředků z jednoho .rc souboru do druhého, Visual C++ změnit přenášená prostředků symbol hodnotu, nebo názvu symbolu a hodnotu, aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty ve stávající soubor.  
+>  Při do jiné kopírování prostředků nebo objektů prostředků z jednoho souboru .rc, Visual C++ může změnit přenesené prostředek hodnota symbolu, nebo názvu symbolu a hodnotu, aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor.  
   
- S růstem vaší aplikace v velikosti a vyspělosti proto nemá počet prostředků a symboly. Sledování velkého počtu symboly na různých místech několik souborů může být obtížné. [Symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) zjednodušuje správu symbol tím, že nabízí centrální nástroj, pomocí kterého můžete:  
+ S růstem vaší aplikace v velikost i sofistikovanější postupy zločinců se počet zdrojů a symbolů. Sledování velký počet symbolů, které jsou rozmístěny v několika souborů. může být obtížné. [Symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) zjednodušuje správu symbol tím, že nabízí centrální nástroj, pomocí kterého můžete:  
   
-- [Symboly prostředků zobrazení](../windows/viewing-resource-symbols.md)  
+- [Zobrazení symbolů prostředků](../windows/viewing-resource-symbols.md)  
   
 - [Vytváření nových symbolů](../windows/creating-new-symbols.md)  
   
@@ -66,7 +66,7 @@ IDC_EDITNAME = 5100
   
 - [Zobrazit ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -75,4 +75,3 @@ IDC_EDITNAME = 5100
  [Postupy: vyhledávání symbolů v prostředcích](../windows/how-to-search-for-symbols-in-resources.md)   
  [Editory prostředků](../windows/resource-editors.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)
-

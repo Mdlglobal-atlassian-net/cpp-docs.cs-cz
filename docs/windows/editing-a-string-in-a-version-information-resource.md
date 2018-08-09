@@ -1,5 +1,5 @@
 ---
-title: Úprava řetězce v prostředku informací o verzi | Microsoft Docs
+title: Úprava řetězce v prostředku informací o verzi | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80795f912ab41809b19e77bd33f56243541d4de1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 306359c1479c8c67d6edc08414f601a4b560496e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882881"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648100"
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>Úprava řetězce v prostředku informací o verzi
-### <a name="to-edit-a-string-in-a-version-information-resource"></a>Chcete-li upravit řetězec v prostředku informací o verzi  
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Úprava řetězce v prostředku informací o verzi  
   
-1.  Klikněte na položku jednou, potom znovu vyberte můžete začít s jeho úpravami. Provést změny přímo v tabulce informace o verzi nebo v [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Provedené změny se projeví na obou místech.  
+1.  Vyberte, pak znovu zahajte úprav klikněte na položku jednou. Provést změny přímo ve **informace o verzi** tabulky nebo [okno vlastností](/visualstudio/ide/reference/properties-window). Provedené změny se projeví na obou místech.  
   
-     **Poznámka:** při úpravě **FILEFLAGS** klíče v editoru informací o verzi, můžete si všimnout nelze nastavit **ladění**, **privátní sestavení**, nebo **Speciální sestavení** vlastnosti (v okně vlastností) pro soubory .rc:  
+     > [!NOTE] 
+     > Při úpravě `FILEFLAGS` klíče v **informace o verzi** editoru, můžete si všimnout nelze nastavit **ladění**, **soukromého sestavení**, nebo **speciální Sestavení** vlastnosti (v **vlastnosti** okno) pro soubory .rc:  
   
-    -   Nastaví editor informací o verzi **ladění** vlastnost s #ifdef ve skriptu prostředků na základě **_DEBUG –** sestavení příznak.  
+    -   **Informace o verzi** editor sad **ladění** vlastnost s `#ifdef` ve skriptu prostředků na základě `_DEBUG` sestavení příznak.  
   
-    -   Pokud **privátní sestavení** klíč má **hodnotu** nastavit v tabulce informace o verzi, odpovídající **privátní sestavení** vlastnost (v okně vlastností) **FILEFLAGS** klíč bude **True**. Pokud **hodnotu** je prázdné, bude vlastnost **False**. Podobně **speciální sestavení** klíč (v tabulce informace o verzi) je vázaný na **speciální sestavení** vlastnost **FILEFLAGS** klíč.  
+    -   Pokud `Private Build` klíč má **hodnotu** nastavit **informace o verzi** tabulce, odpovídající **soukromého sestavení** vlastnost (v **vlastnosti**  okno) pro `FILEFLAGS` klíč bude **True**. Pokud **hodnotu** je prázdné, bude vlastnost **False**. Podobně **speciální sestavení** klíč (v **informace o verzi** tabulky) se váže na **speciální sestavení** vlastnost `FILEFLAGS` klíč.  
   
- Informace o pořadí řetězce bloku můžete seřadit kliknutím na klíč nebo hodnota záhlaví sloupců. Tyto položky automaticky Změna uspořádání informace do vybrané pořadí.  
+ Informace o pořadí bloku řetězec lze seřadit klepnutím na klíč, nebo hodnota záhlaví sloupců. Tyto položky automaticky uspořádat informace do zvolené sekvenci.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Editor informací o verzi](../windows/version-information-editor.md)   
  [Informace o verzi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

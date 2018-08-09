@@ -1,5 +1,5 @@
 ---
-title: Creatormap::servername – datový člen | Microsoft Docs
+title: Creatormap::servername – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870933"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642173"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName – datový člen
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ukládá název serveru pro creatormap –.  
+ Ukládá creatormap – název serveru.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

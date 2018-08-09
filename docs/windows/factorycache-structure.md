@@ -1,5 +1,5 @@
 ---
-title: Factorycache – struktura | Microsoft Docs
+title: Factorycache – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874028"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647544"
 ---
 # <a name="factorycache-structure"></a>FactoryCache – struktura
-Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obsahuje umístění objekt pro vytváření tříd a hodnotu, která identifikuje registrovaný wrt nebo objektu COM třídy.  
+ Obsahuje umístění objektu pro vytváření tříd a hodnotu, která identifikuje registrovaný wrt nebo objektu třídy modelu COM.  
   
 ## <a name="members"></a>Členové  
   
@@ -42,8 +42,8 @@ struct FactoryCache;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[FactoryCache::cookie – datový člen](../windows/factorycache-cookie-data-member.md)|Obsahuje hodnotu, která identifikuje registrované objektu třídy prostředí Windows Runtime nebo COM a je později použít ke zrušení registrace objektu.|  
-|[FactoryCache::factory – datový člen](../windows/factorycache-factory-data-member.md)|Odkazuje na objekt třídy prostředí Windows Runtime nebo COM.|  
+|[FactoryCache::cookie – datový člen](../windows/factorycache-cookie-data-member.md)|Obsahuje hodnotu, která identifikuje registrovaného objektu třídy Windows Runtime nebo modelu COM a je později použít ke zrušení registrace objektu.|  
+|[FactoryCache::factory – datový člen](../windows/factorycache-factory-data-member.md)|Odkazuje na objekt třídy Windows Runtime nebo modelu COM.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `FactoryCache`  

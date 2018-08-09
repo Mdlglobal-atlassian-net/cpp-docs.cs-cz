@@ -1,5 +1,5 @@
 ---
-title: Odstranění bloku informací o verzi | Microsoft Docs
+title: Odstranění bloku informací o verzi | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a374382e47e9623e041dd500730244b7fe205aa7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649956"
 ---
 # <a name="deleting-a-version-information-block"></a>Odstranění bloku informací o verzi
 ### <a name="to-delete-a-version-information-block"></a>Odstranění bloku informací o verzi  
@@ -32,19 +32,17 @@ ms.locfileid: "33871855"
 1.  Otevřete poklepáním na ikonu v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Klikněte pravým tlačítkem na záhlaví bloku, které chcete odstranit a potom vyberte **odstranit blok informací o verzi** z místní nabídky.  
+2.  Klikněte pravým tlačítkem na záhlaví bloku, kterou chcete odstranit a pak zvolte **odstranit blok informací o verzi** z místní nabídky.  
   
-     Tento příkaz odstraní vybranou hlavičku a neporušené zbývající informace o verzi. Upozorňujeme, že tuto akci nelze vrátit zpět.  
+     Tento příkaz odstraní vybranou hlavičku a ponechá beze změny zbývající informace o verzi. Upozorňujeme, že tato akce nejde vrátit zpět.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Editor informací o verzi](../windows/version-information-editor.md)   
  [Informace o verzi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

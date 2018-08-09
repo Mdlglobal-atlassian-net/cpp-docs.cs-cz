@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c8ebecf984254175a15075e8d8a4125f9fc5ec17
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8ec3a5775baf04d6e0583734b2e833950bc2fdec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462531"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643560"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (editor obrázků pro ikony)
 V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony nebo kurzoru bitová kopie má atribut transparentní. I když jsou obdélníkové obrázky ikon a kurzorů, mnoho se nezobrazí, protože části obrázku jsou transparentní; základní image na obrazovce zobrazí prostřednictvím ikony nebo kurzoru. Při přetažení ikonu, části obrázku se může vyskytovat obrácenou barvu. Vytvoření tohoto efektu tak, že nastavíte barvu obrazovky a inverzní barvy v [okno barvy](../windows/colors-window-image-editor-for-icons.md).  
@@ -43,7 +43,7 @@ V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony 
  Obrazovky a inverzní barvy použijete s ikonami a kurzory tvar a barva odvozené image nebo určují inverzní oblasti. Barvy označující části obrázku má tyto atributy. Můžete změnit barvy, které představují vlastnosti obrazovky a inverzní barev v úpravách. Tyto změny nemají vliv na vzhled ikony nebo kurzoru v aplikaci.  
   
 > [!NOTE]
->  Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Dialogová okna a příkazy nabídek, zobrazí se mohou lišit od těch popsaných v **pomáhají** v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení nastavení pro vývoj v sadě Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-transparent-or-inverse-regions"></a>Vytvoření průhledných nebo obrácených oblastí  
   
@@ -60,12 +60,11 @@ V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony 
      Doplňkovou barvu je automaticky určeno pro ostatní selektor.  
   
     > [!TIP]
-    >  Pokud dvakrát kliknete na volič barvy obrazovky nebo inverzní barvy [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) se zobrazí.  
+    >  Pokud dvakrát kliknete **barvy obrazovky** nebo **inverzní barvy** pro výběr [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) se zobrazí.  
   
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

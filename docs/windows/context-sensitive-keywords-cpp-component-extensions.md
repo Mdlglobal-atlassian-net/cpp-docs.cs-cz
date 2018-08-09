@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466121"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644226"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextově závislá klíčová slova (rozšíření komponent C++)
 *Kontextově závislá klíčová slova* jsou prvky jazyka, které jsou rozpoznány pouze v určitém kontextu. Mimo určitý kontext může být kontextové klíčové slovo symbolem definovaným uživatelem.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  Následuje seznam kontextových klíčových slov:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466121"
  Pro účely čitelnosti můžete omezit použití kontextových klíčových slov jako uživatelem definované symboly.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  (Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  (Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Následující příklad kódu ukazuje, že ve vhodném kontextu **vlastnost** kontextové klíčové slovo je možné definovat vlastnost a proměnnou.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 100  

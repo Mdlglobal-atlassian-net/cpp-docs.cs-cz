@@ -1,5 +1,5 @@
 ---
-title: switch_is – | Microsoft Docs
+title: switch_is – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892788"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651363"
 ---
 # <a name="switchis"></a>switch_is
-Určuje výraz nebo identifikátor, který funguje jako union discriminant, která vybere položku členů sjednocení.  
+Určuje výraz nebo identifikátor, který funguje jako sjednocení discriminant, který vybere člen sjednocení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [switch_is]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Switch_is –** atribut C++ má stejné funkce jako [switch_is –](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL atribut.  
+ **Switch_is –** C++ atribut má stejné funkce jako [switch_is –](http://msdn.microsoft.com/library/windows/desktop/aa367275) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [případ](../windows/case-cpp.md) příklad pro ukázkové použití **switch_is –**.  
+ Najdete v článku [případ](../windows/case-cpp.md) příklad ukázkový používání **switch_is –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,14 +45,14 @@ Určuje výraz nebo identifikátor, který funguje jako union discriminant, kter
   
 |||  
 |-|-|  
-|**Platí pro**|`typedef`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Definice TypeDef**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [switch_type](../windows/switch-type.md)   

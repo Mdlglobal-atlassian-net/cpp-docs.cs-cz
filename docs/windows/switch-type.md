@@ -1,5 +1,5 @@
 ---
-title: switch_type – | Microsoft Docs
+title: switch_type – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890176"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650593"
 ---
 # <a name="switchtype"></a>switch_type
-Určuje typ proměnnou použít jako union discriminant.  
+Určuje typ proměnné použité jako sjednocení discriminant.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `type`  
- Typ přepínač může být typ integer, znak, logická hodnota nebo – výčet.  
+### <a name="parameters"></a>Parametry  
+ *Typ*  
+ Typ přepínače může být typ integer, znak, logická hodnota nebo výčet.  
   
 ## <a name="remarks"></a>Poznámky  
- **Switch_type –** atribut C++ má stejné funkce jako [switch_type –](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL atribut.  
+ **Switch_type –** C++ atribut má stejné funkce jako [switch_type –](http://msdn.microsoft.com/library/windows/desktop/aa367276) atribut MIDL.  
   
- Atributy C++ nepodporují [zapouzdřené sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa367119) jsou podporovány pouze v následující podobě:  
+ Atributy C++ nepodporuje [zapouzdřené sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated sjednocení](http://msdn.microsoft.com/library/windows/desktop/aa367119) jsou podporovány pouze v následujícím tvaru:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,7 +62,7 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [případ](../windows/case-cpp.md) příklad pro ukázkové použití **switch_type –**.  
+ Najdete v článku [případ](../windows/case-cpp.md) příklad ukázkový používání **switch_type –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -72,14 +70,14 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Platí pro**|`typedef`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Definice TypeDef**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   

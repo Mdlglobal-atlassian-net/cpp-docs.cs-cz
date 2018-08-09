@@ -1,5 +1,5 @@
 ---
-title: size_is – | Microsoft Docs
+title: size_is | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889670"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645448"
 ---
 # <a name="sizeis"></a>size_is
-Zadejte velikost paměti přidělené velikostí ukazatele, velikost ukazatele na velikosti ukazatele a jedním - nebo vícerozměrná pole.  
+Zadejte velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *výraz*  
- Velikost paměti přidělené velikostí ukazatele.  
+### <a name="parameters"></a>Parametry  
+ *Výraz*  
+ Velikost paměti přidělené pro velikosti ukazatele.  
   
 ## <a name="remarks"></a>Poznámky  
- **Size_is –** atribut C++ má stejné funkce jako [size_is –](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL atribut.  
+ **Size_is** C++ atribut má stejné funkce jako [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [first_is –](../windows/first-is.md) pro ukázku určení oddíl pole.  
+ Podívejte se na příklad pro [first_is –](../windows/first-is.md) ukázku toho, jak zadat část pole.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -52,16 +51,16 @@ Zadejte velikost paměti přidělené velikostí ukazatele, velikost ukazatele n
   
 |||  
 |-|-|  
-|**Platí pro**|Pole v `struct` nebo **– typ union**, rozhraní parametr, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
-|**Neplatné atributy**|**max_is**|  
+|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
+|**Neplatné atributy**|`max_is`|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atributy parametru](../windows/parameter-attributes.md)   
  [first_is –](../windows/first-is.md)   
  [last_is –](../windows/last-is.md)   

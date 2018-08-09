@@ -1,5 +1,5 @@
 ---
-title: WeakReference Class1 | Microsoft Docs
+title: WeakReference – Třída1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891643"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645539"
 ---
-# <a name="weakreference-class1"></a>WeakReference Class1
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+# <a name="weakreference-class1"></a>WeakReference – Třída1
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +34,13 @@ class WeakReference;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Představuje *slabé odkaz* , lze pomocí prostředí Windows Runtime nebo klasického modelu COM. Slabé odkazy představuje objekt, který může nebo nemusí být dostupné.  
+ Představuje *nestálý odkaz* , který je možné pomocí prostředí Windows Runtime nebo klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.  
   
- A `WeakReference` objekt udržuje *silné odkaz*, který je zde ukazatel na objekt a *počet silné odkazů*, což je počet kopií silné odkaz, který byl distribuován podle Metoda Resolve(). Sice nenulový počet silné odkaz, odkaz na silné je platný a je přístupný objekt. Pokud počet silné odkazů klesne na nulu, silné odkaz je neplatný a objekt je nedostupný.  
+ A **WeakReference** udržuje objekt *silného odkazu*, což je ukazatel na objekt a *silného odkazu počet*, což je počet kopií silného odkaz, který byl distribuován podle `Resolve()` metody. Počet silného odkazu je nenulová, silný odkaz je platný a je přístupný objekt. Když počet odkazů silné klesne na nulu, silný odkaz je neplatný a objekt je nedostupný.  
   
- WeakReference objekt se obvykle používá k reprezentování objekt, jehož existence řídí na externí vlákna nebo aplikaci. Můžete například vytvořte objekt WeakReference z odkaz na objekt souboru. Je-li otevřít soubor, je silné odkaz platný. Ale pokud soubor se zavřel, silné odkaz bude neplatná.  
+ A **WeakReference** objekt se obvykle používá k reprezentaci objektu, jehož existence je řízena vnějším vláknem nebo aplikací. Například sestavit **WeakReference** objekt z odkazu na objekt souboru. Když je soubor otevřen, silný odkaz je platný. Ale pokud se soubor zavře, silný odkaz níže uvedených situací.  
   
- WeakReference metody jsou bezpečné pro přístup z více vláken.  
+ **WeakReference** metody jsou bezpečné pro vlákna.  
   
 ## <a name="members"></a>Členové  
   
@@ -48,17 +48,17 @@ class WeakReference;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakReference::WeakReference – konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicializuje novou instanci třídy WeakReference.|  
-|[WeakReference::~WeakReference – destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Deinitializes (zničí) aktuální instance třídy WeakReference.|  
+|[WeakReference::WeakReference – konstruktor](../windows/weakreference-weakreference-constructor.md)|Inicializuje novou instanci třídy **WeakReference** třídy.|  
+|[WeakReference::~WeakReference – destruktor](../windows/weakreference-tilde-weakreference-destructor.md)|Zruší inicializaci (odstraní) aktuální instancí třídy **WeakReference** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakReference::DecrementStrongReference – metoda](../windows/weakreference-decrementstrongreference-method.md)|Snižuje počet silné odkaz na aktuální objekt WeakReference.|  
-|[WeakReference::IncrementStrongReference – metoda](../windows/weakreference-incrementstrongreference-method.md)|Zvětší počet silné odkaz na aktuální WeakReference objektu.|  
-|[WeakReference::Resolve – metoda](../windows/weakreference-resolve-method.md)|Nastaví zadaný ukazatele na aktuální hodnotu silné odkaz, pokud počet silné odkazů nenulové hodnoty.|  
-|[WeakReference::SetUnknown – metoda](../windows/weakreference-setunknown-method.md)|Nastaví odkaz na silné aktuálního objektu WeakReference ukazatel zadaný rozhraní.|  
+|[WeakReference::DecrementStrongReference – metoda](../windows/weakreference-decrementstrongreference-method.md)|Sníží počet silné referenční aktuálního **WeakReference** objektu.|  
+|[WeakReference::IncrementStrongReference – metoda](../windows/weakreference-incrementstrongreference-method.md)|Zvýší počet odkazů silné aktuálního **WeakReference** objektu.|  
+|[WeakReference::Resolve – metoda](../windows/weakreference-resolve-method.md)|Nastaví zadaný ukazatel na aktuální hodnotu silného odkazu, pokud je počet odkazů silné nenulové.|  
+|[WeakReference::SetUnknown – metoda](../windows/weakreference-setunknown-method.md)|Nastaví silný odkaz aktuální **WeakReference** objektu na zadané rozhraní ukazatel.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `WeakReference`  

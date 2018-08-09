@@ -1,5 +1,5 @@
 ---
-title: uidefault – | Microsoft Docs
+title: uidefault – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890148"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651610"
 ---
 # <a name="uidefault"></a>uidefault
-Označuje, že je člen informace typu výchozího člena pro zobrazení v uživatelském rozhraní.  
+Označuje, že informace o člen typu je výchozí člen pro zobrazení v uživatelském rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Uidefault –** atribut C++ má stejné funkce jako [uidefault –](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL atribut.  
+ **Uidefault –** C++ atribut má stejné funkce jako [uidefault –](http://msdn.microsoft.com/library/windows/desktop/aa367292) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje vzorek **uidefault –**:  
+ Následující kód ukazuje příklad **uidefault –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface ICustom{
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

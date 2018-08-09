@@ -1,5 +1,5 @@
 ---
-title: Vytvoření 256 barvami ikony nebo kurzoru (Editor obrázků pro ikony) | Microsoft Docs
+title: Vytvoření 256barevných ikony nebo kurzoru (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52c9aed6e55a11eea8eeb9b4979cbe43b016c26f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92f5a427399009baf1b157480f0e486e9c4ec538
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872358"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645220"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Vytvoření ikony nebo kurzoru s 256 barvami (editor obrázků pro ikony)
-Editor obrázků, ikony a kurzory může být použití velikostí velké (64 x 64) s 256 barvami palety lze vybírat. Po vytvoření prostředku, je vybrán zařízení styl bitové kopie.  
+Použití **Image** editoru, ikony a kurzory může být velikosti velké (64 × 64) s 256 barev palety lze vybírat. Po vytvoření prostředku, je vybrat styl obrázku zařízení.  
   
-### <a name="to-create-a-256-color-icon-or-cursor"></a>Chcete-li vytvořit 256 barvami ikony nebo kurzoru s  
+### <a name="to-create-a-256-color-icon-or-cursor"></a>Chcete-li vytvořit 256barevných ikony nebo kurzoru  
   
-1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na váš soubor .rc, a potom vyberte **vložit prostředků** z místní nabídky. (Pokud již máte existující zdroj bitové kopie v souboru .rc, jako je například kurzoru, můžete můžete jednoduše klikněte pravým tlačítkem myši **kurzor** složky a vyberte **vložení kurzoru** z místní nabídky.)  
+1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc a pak zvolte **vložit prostředků** z místní nabídky. (Pokud už máte existující prostředek obrázku v souboru .rc, jako je například kurzor, můžete můžete jednoduše kliknout pravým tlačítkem **kurzor** a pak zvolte položku **vložení kurzoru** z místní nabídky.)  
   
-     **Poznámka:** Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    > [!NOTE] 
+    > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V [dialogové okno Vložit prostředek](../windows/add-resource-dialog-box.md), vyberte **ikonu** nebo **kurzor** a klikněte na tlačítko **nový**.  
+2.  V [vložit prostředek – dialogové okno](../windows/add-resource-dialog-box.md)vyberte **ikonu** nebo **kurzor** a klikněte na tlačítko **nový**.  
   
-3.  Na **Image** nabídky, klikněte na tlačítko **novou bitovou kopii zařízení**.  
+3.  Na **Image** nabídky, klikněte na tlačítko **nový obrázek zařízení**.  
   
-4.  Vyberte požadovaný styl 256 barvami image.  
+4.  Vyberte požadovaný styl 256 barev obrázku.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
- [Používání palety 256 barvami](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
+ [Používání palety s 256 barvami](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ikony a kurzory: prostředky obrázků pro zařízení s displejem](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-
+ [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

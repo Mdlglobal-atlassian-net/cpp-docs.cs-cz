@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571526"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643842"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopové aplikace (Visual C++)
 A *aplikace klasické pracovní plochy* v jazyce C++ je nativní aplikace s přístupem k kompletní sadu rozhraní API pro Windows a buď spuštěn v okně nebo systémové konzoly. Desktopové aplikace v jazyce C++ může běžet na Windows XP do systému Windows 10 (i když je již nejsou oficiálně podporované Windows XP a existuje mnoho rozhraní API Windows, které byly zavedeny od té doby).
@@ -26,11 +26,12 @@ A *aplikace klasické pracovní plochy* v jazyce C++ je nativní aplikace s př�
 Desktopová aplikace, která se liší od aplikace univerzální platformy Windows (UPW), které můžou spouštět na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hubech a dalších zařízení. Další informace o klasické pracovní plochy vs. Aplikace UWP, naleznete v tématu [výběr technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
 
 
-**Přemostění na Desktop** nastavit ve Windows 10 můžete zabalit existující aplikace klasické pracovní plochy nebo objekt modelu COM jako aplikace pro UPW a přidat UPW funkce, jako je pracovat s uživateli nebo volání rozhraní API z moderního rozhraní Windows API. Můžete také přidat aplikace pro UPW pro desktop řešení v sadě Visual Studio a balíček je společně v jednom balíčku a používat rozhraní Windows API pro komunikaci mezi nimi.  
+### <a name="desktop-bridge"></a>Přemostění na Desktop
+Ve Windows 10 můžete zabalit existující aplikace klasické pracovní plochy nebo objekt modelu COM jako aplikace pro UPW a přidat UPW funkce, jako je touch nebo volání rozhraní API ze sady moderní rozhraní Windows API. Můžete také přidat aplikace pro UPW pro desktop řešení v sadě Visual Studio a balíček je společně v jednom balíčku a používat rozhraní Windows API pro komunikaci mezi nimi.  
    
 V sadě Visual Studio 2017 verze 15.4 nebo novější můžete vytvořit projekt Windows Application balíček výrazně zjednodušit práci při balení aplikace klasické pracovní plochy. S ohledem na jaké registru volá platí několik omezení nebo používá rozhraní API pro aplikace klasické pracovní plochy, ale v mnoha případech můžete vytvořit kód alternativní cesty dosáhnout podobné funkce jako při spuštění v balíčku aplikace. Další informace najdete v tématu [přemostění na Desktop](/windows-uwp/porting/desktop-to-uwp-root).  
   
- **Terminologie**  
+### <a name="terminology"></a>Terminologie  
   
 -   A *Win32* aplikace je Windows aplikace klasické pracovní plochy v jazyce C++, který může používat nativní [rozhraní API Windows C a/nebo rozhraní API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT a standardní knihovny rozhraní API a 3. knihovnách třetích stran. Aplikace Win32, na kterém běží v okně vyžaduje pro vývojáře pro práci s zpráv Windows uvnitř procedury funkce Windows explicitně. Bez ohledu na název můžete jako (x86) 32bitové nebo 64bitové (x64) binární zkompilovat aplikaci Win32. V sadě Visual Studio IDE je shodný podmínky x86 a Win32.  
   

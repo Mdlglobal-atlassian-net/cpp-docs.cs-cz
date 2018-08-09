@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 229a5a61bfe28280f7bffcd92f9d9cebffa2415b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461449"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647157"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator* Operátor
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 InterfaceType* operator *();  
 ```  
   

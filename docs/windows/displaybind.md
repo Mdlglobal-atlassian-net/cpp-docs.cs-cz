@@ -1,5 +1,5 @@
 ---
-title: displaybind | Microsoft Docs
+title: displaybind | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879884"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641737"
 ---
 # <a name="displaybind"></a>displaybind
-Určuje vlastnosti, která má být zobrazena uživateli jako vazbu.  
+Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Displaybind** atribut C++ má stejné funkce jako [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL atribut.  
+ **Displaybind** C++ atribut má stejné funkce jako [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Podívejte se na příklad pro [vazbu](../windows/bindable.md) příklad použití **displaybind**.  
+ Podívejte se na příklad pro [umožňujících vazbu](../windows/bindable.md) příklad, jak používat **displaybind**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -47,9 +45,9 @@ Určuje vlastnosti, která má být zobrazena uživateli jako vazbu.
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
@@ -59,5 +57,5 @@ Určuje vlastnosti, která má být zobrazena uživateli jako vazbu.
  [Atributy metody](../windows/method-attributes.md)   
  [Atributy datového členu](../windows/data-member-attributes.md)   
  [defaultbind –](../windows/defaultbind.md)   
- [immediatebind –](../windows/immediatebind.md)   
+ [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   

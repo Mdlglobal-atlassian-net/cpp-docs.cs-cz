@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465867"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644944"
 ---
 # <a name="callas"></a>call_as
 Umožňuje [místní](../windows/local-cpp.md) funkce mají být namapovány na vzdálenou funkci tak, aby při vzdálené funkce je volána, je vyvolána lokální funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *– funkce*  
  Lokální funkce, kterou chcete volat při vyvolání vzdálenou funkci.  
   
@@ -43,7 +43,7 @@ Umožňuje [místní](../windows/local-cpp.md) funkce mají být namapovány na 
  **Call_as** C++ atribut má stejné funkce jako [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje, jak můžete **call_as** mapovat funkci nonremotable (**f1**) na funkci lze používat vzdáleně (**Remf1**):  
+ Následující kód ukazuje, jak můžete **call_as** mapovat funkci nonremotable (`f1`) na funkci lze používat vzdáleně (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

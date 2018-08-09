@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a470aa5bb1b24ab2fe549f098a83c29e5d0828
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464146"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650280"
 ---
 # <a name="adding-or-deleting-a-string"></a>Přidání nebo odstranění řetězce
-Můžete rychle vložit nové položky do tabulky řetězců pomocí editoru řetězců. Nové řetězce jsou umístěny na konci v tabulce a jsou uvedeny další k dispozici identifikátor. Potom můžete upravit vlastnosti ID, hodnotu a popisek v [okno vlastností](/visualstudio/ide/reference/properties-window) podle potřeby.  
+Můžete rychle vkládat nové položky do řetězce pomocí tabulky **řetězec** editoru. Nové řetězce jsou umístěny na konci v tabulce a jsou uvedeny další k dispozici identifikátor. Potom můžete upravit **ID**, **hodnotu**, nebo **titulek** vlastnosti v [okno vlastností](/visualstudio/ide/reference/properties-window) podle potřeby.  
   
- Editor řetězců je zajištěno, že je velmi riskantní používat ID, které se už používá. Pokud vyberete ID už používá, editor řetězců oznámíme vám to a pak přiřaďte obecný jedinečné ID, například IDS_STRING58113.  
+ **Řetězec** editor zajišťuje, je velmi riskantní používat ID, které se už používá. Pokud vyberete ID už používá, **řetězec** oznámíme vám to a zařaďte obecné jedinečné ID, například editor `IDS_STRING58113`.  
   
 ### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců  
   
@@ -64,10 +64,9 @@ Můžete rychle vložit nové položky do tabulky řetězců pomocí editoru ře
   
 -   Stisknutím klávesy **odstranit** klíč.  
   
- Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

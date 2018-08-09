@@ -1,5 +1,5 @@
 ---
-title: Připojení místní nabídky do vaší aplikace | Microsoft Docs
+title: Připojení místní nabídky do vaší aplikace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879526"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641259"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Připojení místní nabídky k aplikaci
-### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pro připojení místní nabídky do vaší aplikace  
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pro připojení místní nabídky k aplikaci  
   
-1.  Přidání obslužné rutiny zpráv pro WM_CONTEXTMENU (například). Další informace najdete v tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md).  
+1.  Přidání obslužné rutiny zpráv pro WM_CONTEXTMENU (například). Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).  
   
 2.  Přidejte následující kód do obslužné rutiny zpráv:  
   
-    ```  
+    ```cpp  
     CMenu menu;  
     VERIFY(menu.LoadMenu(IDR_MENU1));  
     CMenu* pPopup = menu.GetSubMenu(0);  
@@ -41,12 +41,9 @@ ms.locfileid: "33879526"
     ```  
   
     > [!NOTE]
-    >  [CPoint](../atl-mfc-shared/reference/cpoint-class.md) **předán zprávy obslužná rutina je v souřadnice obrazovky.**  
+    >  [CPoint](../atl-mfc-shared/reference/cpoint-class.md) předané ve zprávě je obslužná rutina v souřadnicovém systému obrazovky.  
   
-
-  
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  MFC  
   
 ## <a name="see-also"></a>Viz také  

@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e9f044a7aebdb96162edc0dcd4c33ed3c89e3b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461020"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644879"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Třídy a struktury (rozšíření komponent C++)
 Deklaruje třídu nebo strukturu jehož *doba života objektu* je spravována automaticky. Když objekt již není dostupný nebo dostane mimo rozsah, Visual C++ automaticky zahodí paměti, který je přidělen k objektu.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
       class_access  
       ref class  
       name  
@@ -42,7 +42,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 ```  
   
- **Parametry**  
+### <a name="parameters"></a>Parametry  
   
  *class_access* (volitelné)  
  Usnadnění přístupu z dané třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (**privátní** je výchozí nastavení). Nemůže obsahovat vnořené třídy nebo struktury *class_access* specifikátor.  
@@ -54,14 +54,14 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [abstraktní](../windows/abstract-cpp-component-extensions.md) a [zapečetěné](../windows/sealed-cpp-component-extensions.md) jsou platné modifikátory.  
   
  *inherit_access* (volitelné)  
- Přístupnost `base_type`. Pouze povolené přístupnost **veřejné** (**veřejné** je výchozí nastavení).  
+ Přístupnost *base_type*. Pouze povolené přístupnost **veřejné** (**veřejné** je výchozí nastavení).  
   
  *base_type* (volitelné)  
  Základní typ. Hodnotový typ však nemůže fungovat jako základního typu.  
   
  Další informace najdete v popisech specifické pro jazyk tohoto parametru v prostředí Windows Runtime a běžné Runtimesections jazyka.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  Deklarovaná přístupnost člena výchozí objekt pomocí **třídy ref class** nebo **hodnotu třídy** je **privátní**. A je deklarovaná přístupnost člena výchozí objekt pomocí **ref struct** nebo **hodnotu struktury** je **veřejné**.  
   
@@ -88,29 +88,27 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 -   [Obecné třídy (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  Zobrazit [referenční třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) a [hodnotové třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry  
  *base_type* (volitelné)  
- Základní typ. A **třídy ref class** nebo **ref struct** může dědit z nuly nebo více rozhraní a nula nebo jedna `ref` typy. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více rozhraní.  
+ Základní typ. A **třídy ref class** nebo **ref struct** může dědit z nuly nebo více rozhraní a nula nebo jedna **ref** typy. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více rozhraní.  
   
  Pokud deklarujete objekt s použitím **třídy ref class** nebo **ref struct** klíčových slov, objekt přistupuje popisovač pro objekt, což znamená, čítač odkaz na ukazatel na objekt. Pokud proměnnou deklarovanou dostane mimo rozsah, kompilátor automaticky odstraní základní objekt. Když objekt se používá jako parametr ve volání nebo je uložen v proměnné, popisovač pro objekt skutečně předány nebo uložené.  
   
  Pokud deklarujete objekt s použitím **hodnotu třídy** nebo **hodnotu struktury** klíčová slova, dobu života objektu deklarovanému objektu není pod dohledem. Objekt je stejně jako všechny ostatní standardní C++ třídy nebo struktury.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny moduly runtime** části, která jsou specifická pro C + +/ CLI.  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry  
  *base_type* (volitelné)  
  Základní typ. A **třídy ref class** nebo **ref struct** může dědit od nuly nebo více spravovaných rozhraní a nula nebo jedna typech. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více spravovaných rozhraních.  
   
@@ -119,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  **Hodnotu třídy** a **hodnotu struktury** klíčová slova sděluje kompilátoru, že hodnota přidělené třídy nebo struktury je předán funkcím nebo uložené ve členech.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ## <a name="see-also"></a>Viz také  
  [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

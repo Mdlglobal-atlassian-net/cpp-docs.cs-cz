@@ -1,5 +1,5 @@
 ---
-title: Podokna (Editor obrázků pro ikony) | Microsoft Docs
+title: Podokna (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a38341f6c6bcbcdec6bb4e6f5e5820fa759e6dab
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892836"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652021"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Podokna (editor obrázků pro ikony)
-Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě podokna. Zobrazení je skutečná velikost a dalších se zvětší (výchozí zvětšení faktor je 6). Tyto dvě podokna zobrazení se automaticky aktualizují: změny v jednom podokně jsou okamžitě uvedené v dalších. Dvě podokna usnadnit práci zvětšeným zobrazením bitové kopie, ve kterém můžete rozlišení jednotlivých pixelů a, ve stejnou dobu, můžete sledovat účinek práce na zobrazení skutečná velikost bitové kopie.  
+**Editor obrázků** okno obvykle zobrazí obrázek do dvou podoken oddělené rozdělovač. Jedno zobrazení je skutečná velikost a druhý se zvětší (výchozí rozšíření faktor je 6). Zobrazení v těchto dvou podoken se automaticky aktualizují: změny, které provedete v jedno podokno se okamžitě zobrazí v jiném. Velikost podoken usnadňují práci na zvětšeným zobrazením bitové kopie, ve kterém můžete rozlišení jednotlivých pixelech a, ve stejnou dobu, můžete sledovat účinek práce na zobrazení skutečné velikosti obrázku.  
   
- V levém podokně používá podle potřeby (až polovinu okna obrázek), kolik místa, jako je zobrazit zvětšení 1:1 (výchozí) vaší bitové kopie. V pravém podokně zobrazí bitovou kopii přiblížení či oddálení (ve výchozím nastavení zvětšení 6:1). Můžete [změna měřítka zobrazení](../windows/changing-the-magnification-factor-image-editor-for-icons.md) v každé pomocí podokna **Magnify** ve [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) nebo pomocí klávesy akcelerátoru.  
+ V levém podokně používá tolik místa je potřeba (až polovinu **Image** okno) Chcete-li zobrazit zobrazení zvětšením 1:1 (výchozí) z image. Pravý panel zobrazuje přiblíženou bitové kopie (6:1 zvětšení ve výchozím nastavení). Můžete [změna měřítka zobrazení](../windows/changing-the-magnification-factor-image-editor-for-icons.md) v každé pomocí podokna **Magnify** nástroj [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) nebo pomocí klávesové zkratky.  
   
- Můžete zvětšit menší podokně okna editoru obrázků a použít dvě podokna zobrazíte různých oblastech velký obrázek. Klikněte v podokně, vyberte ho.  
+ Můžete zvětšit menší podokně **Editor obrázků** okno a použijte dvě podokna pro zobrazení různých oblastech velký obrázek. Klikněte v podokně, vyberte ji.  
   
- Relativní velikosti podoken můžete změnit umístění ukazatele na panelu rozdělení a přesunutí příčku doleva či doprava. Příčku můžete přesunout zcela na obou stranách, pokud chcete pracovat v podokně jenom jeden.  
+ Můžete změnit tak relativní velikosti podoken umístěním ukazatele na panelu rozdělení a přesunutí příčku směrem doprava nebo doleva. Pokud budete chtít pracovat na pouze jedno podokno, můžete příčku přesunout až po obou stranách.  
   
- Pokud v podokně editor bitové kopie je rozšířeno o faktor 4 nebo vyšší, můžete [zobrazit mřížky pixelů](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) který vymezuje jednotlivých pixelů v bitové kopii.  
+ Pokud **Editor obrázků** podokno se zvětšeným faktorem 4 nebo vyšší, můžete [zobrazit mřížku obrazových bodů](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md) , který odděluje citaci jednotlivých pixelech na obrázku.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -45,4 +45,3 @@ Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

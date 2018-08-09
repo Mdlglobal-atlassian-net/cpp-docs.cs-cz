@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569931"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646783"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Vytvoří přijímače událostí (jímky).  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Typ*  
  Výčet jedné z následujících hodnot:  
   
@@ -50,13 +50,13 @@ Vytvoří přijímače událostí (jímky).
   
 -   `com` pro kód v modelu COM. Tato hodnota vyžaduje, aby následující soubory hlaviček:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **má**  
+ *má*  
  Zadejte *layout_dependent* pouze tehdy, pokud `type` = **com**. *layout_dependent* je logická hodnota:  
   
 -   **Hodnota TRUE** znamená, že podpis delegáty, v případě, že příjemce musí přesně odpovídat těch, ke kterým jsou připojeny události zdroje. Názvy obslužných rutin událostí příjemce musí shodovat s názvy zadané v zdrojové rozhraní relevantní události. Je nutné použít `coclass` při *layout_dependent* je **true**. Je efektivnější zadejte **true**.  
@@ -81,7 +81,7 @@ Vytvoří přijímače událostí (jímky).
 |-|-|  
 |**Platí pro**|**Třída**, **– struktura**|  
 |**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|**coclass** při *layout_dependent*=**true**|  
+|**Vyžadované atributy**|`coclass` Když *layout_dependent*=**true**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

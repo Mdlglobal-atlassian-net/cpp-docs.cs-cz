@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c795a3a80c48e7fa976807ab3e261fc927d7e104
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461033"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644268"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid – metoda
 Ukládá ID rozhraní určené *I0* parametr šablony v zadaném umístění v zadaném poli ID rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *index*  
  Ukazatel na hodnotu indexu do *IID* pole.  
   

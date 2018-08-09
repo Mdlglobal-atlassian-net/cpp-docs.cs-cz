@@ -1,5 +1,5 @@
 ---
-title: Odstranění záznamu z tabulky akcelerátorů | Microsoft Docs
+title: Odstranění záznamu z tabulky akcelerátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880495"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648318"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>Odstranění záznamu z tabulky akcelerátorů
-### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Chcete-li odstranit položku z tabulky akcelerátorů  
+### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Chcete-li odstranit záznam z tabulky akcelerátorů  
   
 1.  Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Vyberte položku, kterou chcete odstranit. (Podržte stisknutou **CTRL** nebo **SHIFT** klíče při kliknutí na vyberte více položek.)  
+2.  Vyberte položku, kterou chcete odstranit. (Podržte stisknutou klávesu **Ctrl** nebo **Shift** klíče při kliknutí na vybrat více položek.)  
   
-3.  Klikněte pravým tlačítkem a zvolte **odstranit** z místní nabídky (nebo vyberte **odstranit** z **upravit** nabídky).  
+3.  Klikněte pravým tlačítkem a zvolte **odstranit** v místní nabídce (nebo vyberte **odstranit** z **upravit** nabídky).  
   
  \- nebo –  
   
--   Stiskněte klávesu Delete.  
+-   Stisknutím klávesy **odstranit** klíč.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

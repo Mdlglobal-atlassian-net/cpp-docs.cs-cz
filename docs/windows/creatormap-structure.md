@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 173b41c6d36d36b7d8a0f4e7b024e845eec6ae4a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464253"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650502"
 ---
 # <a name="creatormap-structure"></a>CreatorMap – struktura
 Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct CreatorMap;  
 ```  
   

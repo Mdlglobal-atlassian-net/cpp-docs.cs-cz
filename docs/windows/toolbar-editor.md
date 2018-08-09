@@ -1,5 +1,5 @@
 ---
-title: Editor panelu nástrojů | Microsoft Docs
+title: Editor panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,39 +20,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891308"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641644"
 ---
 # <a name="toolbar-editor"></a>Editor panelu nástrojů
-Editor panelu nástrojů umožňuje vytvářet prostředky panelu nástrojů a převést bitmap na panelu nástrojů prostředky. Editor panelu nástrojů používá grafické zobrazení na panelu nástrojů a tlačítka, která velmi podobat, jak bude vypadat v dokončení aplikaci.  
+Editor panelu nástrojů umožňuje vytvářet prostředky panelu nástrojů a rastrové obrázky převést prostředky panelu nástrojů. Editor panelu nástrojů používá grafické zobrazení zobrazíte panel nástrojů a tlačítka, která se velmi podobají, jak bude vypadat dokončené aplikace.  
   
- Editor panelu nástrojů můžete:  
+ Editor panelu nástrojů vám umožní:  
   
 -   [Vytváření nových panelů nástrojů a tlačítka](../windows/creating-new-toolbars.md)  
   
--   [Převádění bitmap na panelu nástrojů prostředků](../windows/converting-bitmaps-to-toolbars.md)  
+-   [Převádění bitmap na prostředky panelu nástrojů](../windows/converting-bitmaps-to-toolbars.md)  
   
--   [Vytváření, přesunutí a upravit tlačítka panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+-   [Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)  
   
 -   [Vytváření popisů tlačítek](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- Editor panelu nástrojů zobrazí dvě zobrazení obrázku tlačítka, stejná jako okno editoru bitové kopie. Rozdělení panelu dělí dvě podokna. Můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru. Výše dvě zobrazení bitové kopie je panel nástrojů subjektu.  
+ V okně editoru panelu nástrojů naleznete dvě zobrazení obrázku tlačítka, stejně jako okno editoru obrázků. Rozdělit pruh odděluje. Můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru. Nad dvě zobrazení obrázku je panel nástrojů předmět.  
   
  ![Editor panelu nástrojů](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Editor panelu nástrojů  
   
- Editor panelu nástrojů je podobná editor obrázků ve funkcích. Položky nabídky, grafické nástroje a mřížky rastrového obrázku jsou stejné jako v editoru obrázků. V nabídce bitové kopie a umožní vám přepínat mezi editor panelu nástrojů a editor obrázků není příkaz nabídky. Další informace o použití panel nástrojů grafiky, barevná paleta nebo nabídka obrázku, najdete v části [Editor obrázků](../windows/image-editor-for-icons.md).  
+ Editor panelu nástrojů je podobný editor obrázků ve funkcích. Položky nabídky, grafické nástroje a rastrový obrázek mřížky jsou stejná jako v editoru obrázků. V nabídce Image můžete přepínat mezi editoru panelu nástrojů a editoru obrázků je příkaz nabídky. Další informace o používání nástrojů grafiky, palety barev nebo nabídky Image, najdete v části [Editor obrázků](../windows/image-editor-for-icons.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
- Knihovny MFC nebo knihovny ATL  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Editory prostředků](../windows/resource-editors.md)   
- [Nabídky a další prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Nabídky a ostatní prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

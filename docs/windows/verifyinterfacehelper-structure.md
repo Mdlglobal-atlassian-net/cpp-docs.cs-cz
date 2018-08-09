@@ -1,5 +1,5 @@
 ---
-title: Verifyinterfacehelper – struktura | Microsoft Docs
+title: Verifyinterfacehelper – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890249"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641246"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper – struktura
-Podporuje infrastrukturu knihovna šablon C++ prostředí Windows Runtime a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +42,14 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `I`  
- Rozhraní k ověření.  
+### <a name="parameters"></a>Parametry  
+ *I*  
+ Rozhraní pro ověření.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>Poznámky  
- Ověří, že rozhraní zadané parametr šablony splňuje určité požadavky.  
+ Ověřuje, že rozhraní určené parametrem šablony splňuje určité požadavky.  
   
 ## <a name="members"></a>Členové  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 09b336a62b49633cd770f11799b236a80b35e46a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466774"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650099"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache – datový člen
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 FactoryCache* factoryCache;  
 ```  
   

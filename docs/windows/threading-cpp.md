@@ -1,5 +1,5 @@
 ---
-title: dělení na vlákna (C++) | Microsoft Docs
+title: Práce s vlákny (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,50 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f21ea8c16b4e09a5ad1845a10797be00f91b0d8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e0e8b13a74c5b232e2662f80fc1cc8f80a1ffc9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891321"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652998"
 ---
 # <a name="threading-c"></a>threading (C++)
-Určuje model vláken pro objekt COM.  
+Určuje model vláken pro objekt modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ threading(  
+[ threading(  
    model=enumeration  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- ***model*** (volitelné)  
- Jedna z následujících modely vláken:  
+### <a name="parameters"></a>Parametry  
+ *model* (volitelné)  
+ Jeden z následujících modely dělení na vlákna:  
   
--   **Apartment** (dělení objektu apartment)  
+-   `apartment` (podprocesový model apartment)  
   
--   **neutrální** (součásti rozhraní .NET Framework bez uživatelského rozhraní)  
+-   `neutral` (Součásti rozhraní .NET framework bez uživatelského rozhraní)  
   
--   **jeden** (jednoduché vlákna)  
+-   `single` (jednoduché dělení na vlákna)  
   
--   **volné** (bez dělení na vlákna)  
+-   `free` (bez vláken)  
   
--   **obě** (apartment a volných vláken)  
+-   `both` (objektu apartment a volných vláken)  
   
- Výchozí hodnota je **apartment**.  
+ Výchozí hodnota je `apartment`.  
   
 ## <a name="remarks"></a>Poznámky  
- **Dělení na vlákna** atribut C++ v souboru generovaného IDL nezobrazí, ale se použije k implementaci objektu COM.  
+ **Dělení na vlákna** C++ atribut se nezobrazují v souboru IDL vygenerovaný, ale budou použity v implementaci váš objekt modelu COM.  
   
- V projekty knihovny ATL Pokud [třída typu coclass](../windows/coclass.md) atribut je přítomen, model vláken určeného *modelu* se předá jako parametr šablony k [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) – třída , vložená **třída typu coclass** atribut.  
+ V projektech ATL Pokud [coclass](../windows/coclass.md) atribut je také k dispozici, model vláken určené *modelu* je předán jako parametr šablony [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) třídy , Vložit `coclass` atribut.  
   
- **Dělení na vlákna** atribut také chrání přístup k [event_source –](../windows/event-source.md).  
+ **Dělení na vlákna** atribut také chrání přístup k [event_source](../windows/event-source.md).  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [licenci](../windows/licensed.md) příklad pro ukázkové použití **dělení na vlákna**.  
+ Najdete v článku [licenci](../windows/licensed.md) příklad ukázkový používání **dělení na vlákna**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -68,16 +67,16 @@ Určuje model vláken pro objekt COM.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**coclass**|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
- [COM – atributy](../windows/com-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
- [Podpora více vláken ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutrální Apartment](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
+ [Com – atributy](../windows/com-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
+ [Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Neutrální bytů](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

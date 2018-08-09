@@ -1,5 +1,5 @@
 ---
-title: Zobrazení nabídky jako místní nabídky | Microsoft Docs
+title: Zobrazení nabídky jako místní nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891016"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652198"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Zobrazení nabídky jako místní nabídky
-Za normálních okolností při práci v editoru nabídky prostředků nabídky se zobrazí jako řádku nabídek. Můžete však mít prostředků nabídky, které jsou přidány do řádku nabídek aplikace při spuštění programu.  
+Za normálních okolností při práci v editoru nabídky, prostředku nabídky se zobrazí jako panel nabídek. Může však mít prostředky nabídky, které jsou přidány do řádku nabídek aplikace, zatímco program běží.  
   
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Chcete-li zobrazit prostředků nabídky jako místní nabídky  
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Chcete-li zobrazit prostředku nabídky jako místní nabídky  
   
-1.  V nabídce klikněte pravým tlačítkem a zvolte **zobrazení jako místní** z místní nabídky.  
+1.  Klikněte pravým tlačítkem na nabídku a zvolte **zobrazit jako místní nabídku** z místní nabídky.  
   
-     Toto je pouze předvolbu zobrazení a nezmění vaši nabídku.  
+     Toto je pouze zobrazení prioritní a nezmění vaši nabídku.  
   
     > [!NOTE]
-    >  Chcete-li změnit zpátky na řádku nabídek zobrazení, klikněte na tlačítko **zobrazení jako místní** znovu (který zruší zaškrtnutí políčka barvy a vrátí zobrazení řádku nabídek).  
+    >  Chcete-li změnit zpět na zobrazení řádku nabídek klikněte na tlačítko **zobrazit jako místní nabídku** znovu (který odstraněn znak zaškrtnutí barvy a vrátí zobrazení řádku nabídek).  
   
-
-  
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

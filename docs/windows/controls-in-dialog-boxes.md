@@ -1,5 +1,5 @@
 ---
-title: Ovládací prvky v dialogových oknech | Microsoft Docs
+title: Ovládací prvky v dialogových oknech | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873118"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646940"
 ---
 # <a name="controls-in-dialog-boxes"></a>Ovládací prvky v dialogových oknech
-Ovládací prvky můžete přidat pomocí dialogu pole [Karta Editor dialogového okna](../windows/dialog-editor-tab-toolbox.md) v [okno sady nástrojů](/visualstudio/ide/reference/toolbox), který umožňuje volbu ovládacího prvku chcete a přetáhněte ji na dialogové okno. Ve výchozím okno sady nástrojů nastavena na automatické skrýt. Při otevření editoru dialogových oken, zobrazí se jako karty na levém okraji řešení. Však můžete Připnout okno sady nástrojů do pozice kliknutím **automaticky skrýt** tlačítko v pravém horním rohu okna. Další informace o tom, jak řídit chování tohoto okna najdete v tématu [Správa oken](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+Do pole pomocí dialogového okna můžete přidat ovládací prvky [karta editoru dialogového okna](../windows/dialog-editor-tab-toolbox.md) v [okno nástrojů](/visualstudio/ide/reference/toolbox), což vám umožní vybrat ovládací prvek a přetáhněte ji do dialogových oken. Ve výchozím nastavení okno panelu nástrojů je nastavena na automatické skrývání. Se zobrazí jako karty na levý okraj vašeho řešení při otevření editoru dialogového okna. Ale můžete připnout **nástrojů** okno do pozice po kliknutí **automaticky skrýt** tlačítko v pravém horním rohu okna. Další informace o tom, jak řídit chování tohoto okna najdete v tématu [okno Správa](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Nejrychlejší způsob, jak přidání ovládacích prvků do dialogového okna, přemístit stávající ovládací prvky nebo přesunutí ovládacích prvků z jednoho dialogové okno na jiný, je použít metodu přetažení myší. Umístění ovládacího prvku v tečkovaná čára jsou uvedeny, dokud je vyřazeno do dialogových oken. Po přidání ovládacího prvku do dialogového okna s metodou přetažení myší řízení přidělena standardní výšce pro daný typ ovládacího prvku.  
+ Nejrychlejší způsob, jak přidat ovládací prvky do dialogového okna, umístění existujících ovládacích prvků nebo přesunutí ovládacích prvků z jednoho dialogového okna do jiného, je použít metodu přetahování myší. Umístění ovládacího prvku je popsaný v tečkovaná čára, dokud je přetáhnout do dialogových oken. Při přidání ovládacího prvku do dialogového okna s metodou přetažení myší, ovládací prvek dostane standardní výšku vhodné pro tento typ ovládacího prvku.  
   
- Při přidání ovládacího prvku do dialogového okna nebo jiného umístění, jeho posledním umístění může určit příruček nebo okraje, nebo jestli máte mřížky rozložení zapnutý.  
+ Při přidání ovládacího prvku do dialogového okna nebo jiného umístění, jeho konečné umístění může být stanoveno pomocí vodítek a okrajů, nebo zda je třeba rozložení mřížky zapnuté.  
   
- Po přidání ovládacího prvku do dialogového okna, můžete změnit vlastnosti, například jeho popisek v [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Můžete vybrat více ovládacích prvků a změnit jejich vlastnosti najednou.  
+ Po přidání ovládacího prvku do dialogového okna, můžete změnit vlastnosti, jako je titulek v [okno vlastností](/visualstudio/ide/reference/properties-window). Můžete vybrat více ovládacích prvků a změňte jejich vlastnosti všechny najednou.  
   
 -   [Přidání, úprava nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)  
   
@@ -55,13 +55,12 @@ Ovládací prvky můžete přidat pomocí dialogu pole [Karta Editor dialogovéh
   
 -   [Určení umístění a velikosti dialogového okna](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Přidání obslužných rutin událostí pro ovládací prvky dialogové okno](../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [Ovládací prvky dialogové okno a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)   
+ [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Ovládací prvky dialogového okna a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)   
  [Editor dialogových oken](../windows/dialog-editor.md)
-

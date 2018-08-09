@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b64f44e2188848a25e607c53171e25aa721e9bc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466007"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641363"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock – metoda
-Specializuje criticalsection – šablony tak, aby podporoval uvolňující vlastnictví objektu zadaného kritický oddíl.  
+Se specializuje `CriticalSection` šablony tak, že podporuje uvolňující vlastnictví objektu zadaného kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type cs  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *cs*  
  Ukazatel na objekt kritický oddíl.  
   
 ## <a name="remarks"></a>Poznámky  
- *Typ* Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.  
+ `Type` Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.  
   
- Další informace najdete v tématu "LeaveCriticalSection funkce" v části "Synchronizace funkce" dokumentaci k rozhraní Windows API.  
+ Další informace najdete v tématu **LeaveCriticalSection funkce** v **funkce synchronizace** část dokumentace k rozhraní API Windows.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

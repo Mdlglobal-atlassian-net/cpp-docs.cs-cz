@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::checkvalidstateforresultscall – metoda | Microsoft Docs
+title: Asyncbase::checkvalidstateforresultscall – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859898"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651905"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall – metoda
-Ověřuje, zda je možné v aktuálním stavu asynchronní shromažďovat výsledky asynchronní operace.  
+Testuje, jestli výsledky asynchronní operace se můžou shromažďovat v aktuálním asynchronní stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForResultsCall();  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK Pokud výsledky můžete shromažďovat; v opačném E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
+ Pokud výsledky se můžou shromažďovat; S_OK v opačném případě E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

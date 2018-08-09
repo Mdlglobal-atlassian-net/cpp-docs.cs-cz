@@ -1,5 +1,5 @@
 ---
-title: Vytvoření popisku tlačítka pro tlačítko Toolbar | Microsoft Docs
+title: Vytvoření popisku tlačítka pro tlačítko Toolbar | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c2fa538a7888a2f14ae34fde9133b2872d13ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871764"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647775"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Vytvoření popisku tlačítka pro tlačítko panelu nástrojů
 ### <a name="to-create-a-tool-tip"></a>Vytvoření popisku tlačítka  
   
-1.  Kliknutím na tlačítko panelu nástrojů.  
+1.  Vyberte tlačítko panelu nástrojů.  
   
-2.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window)v **výzva** pole vlastnosti, přidejte popis tlačítka pro stavový řádek; po zprávy, přidejte \n a název tip nástroje.  
+2.  V [okno vlastností](/visualstudio/ide/reference/properties-window)v **výzvy** vlastnost pole, přidejte popis tlačítka pro stavový řádek; po něm, přidejte `\n` a název nástroje tip.  
   
- Běžným příkladem popisku tlačítka je tlačítko Tisk na WordPad:  
+ Je běžným příkladem popisku tlačítka **tisk** tlačítko **WordPad**:  
   
- 1. Spustit program WordPad.  
+ 1. Otevřít **WordPad**.  
   
- 2. Podržte ukazatel myši nad **tiskových** tlačítka panelu nástrojů.  
+ 2. Najeďte myší **tisk** tlačítka panelu nástrojů.  
   
- 3. Všimněte si, že slovo "Tisk" teď se plovoucí pod ukazatele myši.  
+ 3. Všimněte si, že slovo `Print` je nyní plovoucí pod ukazatele myši.  
   
- 4. Podívejte se na stavovém řádku (na velmi dolní části okna WordPad) – Všimněte si, že se nyní zobrazí text "Vytiskne aktivní dokument".  
+ 4. Podívejte se na stavovém řádku (dole velmi **WordPad** okno) – Všimněte si, že nyní zobrazuje text `Prints the active document`.  
   
- "Print" v kroku 3 je "tip název nástroj" a 'Vytiskne aktivní dokument' z kroku 4 je "Popis tlačítka pro stavový řádek."  
+ `Print` v **kroku 3** je "nástroj tip name," a `Prints the active document` z **kroku 4** je "Popis tlačítka na stavový řádek."  
   
- Pokud chcete tento účinek použití **nástrojů** editor, můžete nastavit **výzva** vlastnost **vytiskne active document\nPrint**.  
+ Pokud chcete tento efekt použití **nástrojů** editor, můžete nastavit **výzvy** vlastnost `Prints the active document\nPrint`.  
   
 > [!NOTE]
->  Můžete upravit pomocí text výzvy [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+>  Můžete upravit pomocí text výzvy [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
- Knihovny MFC nebo knihovny ATL  
+## <a name="requirements"></a>Požadavky  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

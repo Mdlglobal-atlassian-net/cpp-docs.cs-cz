@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nového vlastního prostředku nebo prostředku dat | Microsoft Docs
+title: Vytvoření nového vlastního prostředku nebo prostředku dat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,42 +19,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82d68ec7c9580cf1b95d4c678c491c4e33d12e10
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871829"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650843"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Vytvoření nového vlastního prostředku nebo prostředku dat
-Můžete vytvořit nový prostředek vlastní nebo dat tím, že prostředek v samostatném souboru pomocí syntaxe souboru skriptu (.rc) normální prostředků a včetně tento soubor pravým tlačítkem myši na projekt v Průzkumníku řešení a kliknutím na **prostředek zahrnuje**  v místní nabídce.  
+Můžete vytvořit nový vlastní nebo datový prostředek tak, že prostředek v samostatném souboru pomocí syntaxe souboru normální prostředku skriptů (.rc) a včetně souboru kliknutím pravým tlačítkem myši na projekt v **Průzkumníka řešení** a kliknete na  **Prostředek zahrnuje** v místní nabídce.  
   
-### <a name="to-create-a-new-custom-or-data-resource"></a>Chcete-li vytvořit nový prostředek vlastní nebo data  
+### <a name="to-create-a-new-custom-or-data-resource"></a>Chcete-li vytvořit nový vlastní nebo datový prostředek  
   
-1. [Vytvořte soubor .rc](../windows/how-to-create-a-resource-script-file.md) obsahující vlastní nebo data prostředků.  
+1. [Vytvořte soubor .rc](../windows/how-to-create-a-resource-script-file.md) , který obsahuje vlastní nebo datový prostředek.  
   
-     Můžete zadat vlastní data v souboru .rc jako uvozovkách řetězce ukončené hodnotou null, nebo jako celá čísla ve formátu decimal, šestnáctkové nebo osmičková.  
+     Můžete zadat vlastní data v souboru .rc, jako v uvozovkách řetězec zakončený hodnotou null, nebo jako celá čísla ve formátu desítkové, hexadecimální nebo osmičkové soustavě.  
   
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na vaše projektového souboru a pak klikněte na tlačítko **prostředek zahrnuje** v místní nabídce.  
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na souboru .rc v projektu a pak klikněte na tlačítko **prostředek zahrnuje** v místní nabídce.  
   
-3.  V **kompilaci direktivy** zadejte **#include** příkaz, který poskytuje název souboru, který obsahuje vaše vlastní prostředek. Příklad:  
+3.  V **směrnice času kompilace** zadejte `#include` příkaz, který poskytuje název souboru, který obsahuje vaše vlastní prostředek. Příklad:  
   
- ```  
+ ```cpp  
     #include mydata.rc  
  ```  
   
-     Zajistěte, aby se syntaxe a zda je typ jsou správné. Obsah **kompilaci direktivy** pole jsou vloženy do souboru skriptu prostředků přesně tak, jak byla zadána.  
+     Ujistěte se, že syntaxe a pravopisu, co zadáte jsou správné. Obsah **směrnice času kompilace** pole jsou vloženy do souboru skriptu prostředků přesně tak, jak jste je zadali.  
   
-4.  Klikněte na tlačítko **OK** k zaznamenání změny.  
+4.  Klikněte na tlačítko **OK** zaznamenat vaše změny.  
   
- Jiný způsob, jak vytvořit vlastní prostředek se má importovat externí soubor jako vlastní prostředek. Další informace najdete v tématu [import a export prostředků](../windows/how-to-import-and-export-resources.md).  
+ Dalším způsobem, jak vytvořit vlastní prostředek se má importovat jako vlastní prostředek externího souboru. Další informace najdete v tématu [import a export prostředků](../windows/how-to-import-and-export-resources.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Binární editor](binary-editor.md)
-

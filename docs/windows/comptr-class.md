@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7e4866df2d948d02a53b2532b0832f161d07ff8c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465334"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647557"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
 Vytvoří *inteligentního ukazatele* typ, který představuje rozhraní určené typem parametru šablony. **ComPtr** automaticky udržuje počet odkazů pro základního ukazatele rozhraní a uvolní rozhraní, když počet odkazů dosáhne nuly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <typename T>  
 class ComPtr;  
   
@@ -37,7 +37,7 @@ template<class T>
 friend class ComPtr;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *T*  
  Rozhraní, která **ComPtr** představuje.  
   

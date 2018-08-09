@@ -1,5 +1,5 @@
 ---
-title: emitidl – | Microsoft Docs
+title: emitidl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4c66ba8c49a405f9fdd93b1652626ab47488a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876589"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643040"
 ---
 # <a name="emitidl"></a>emitidl
-Určuje, zda jsou všechny následné IDL – atributy zpracovat a uložena v souboru generovaného IDL.  
+Určuje, zda jsou všechny následné IDL – atributy zpracovat a umístí do generovaného souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```
+```cpp
 [ emitidl(state, defaultimports=boolean) ];
 ```  
   
 ### <a name="parameters"></a>Parametry  
 *Stav*  
-Jednu z těchto hodnot: **true**, **false**, **vynutit**, **s omezeným přístupem**, **nabízené**, nebo **pop**.  
+Jednu z těchto hodnot: `true`, `false`, `forced`, `restricted`, `push`, nebo `pop`.  
   
--   Pokud **true**, všechny kategorie IDL – atributy v souboru zdrojového kódu jsou umístěny v souboru generovaného IDL. Toto je výchozí nastavení pro **emitidl –**.  
+-   Pokud `true`, atributy IDL kategorie v souboru zdrojového kódu jsou umístěny v souboru generovaného IDL. Toto je výchozí nastavení pro **emitidl**.  
   
--   Pokud **false**, všechny kategorie IDL – atributy v souboru zdrojového kódu nejsou uloženy do souboru generovaného IDL.  
+-   Pokud `false`, atributy IDL kategorie v souboru zdrojového kódu nejsou umístěny v souboru generovaného IDL.  
   
--   Pokud **s omezeným přístupem**, umožňuje IDL – atributy v souboru bez [modulu](../windows/module-cpp.md) atribut. Kompilátor negeneruje souboru IDL.  
+-   Pokud `restricted`, umožňuje IDL – atributy, které se v souboru bez [modulu](../windows/module-cpp.md) atribut. Kompilátor negeneruje souboru IDL.  
   
--   Pokud **vynutit**, přepsání následné **s omezeným přístupem** atribut, který vyžaduje soubor, který chcete mít **modulu** atribut v případě, že existují IDL atributy v souboru.  
+-   Pokud `forced`, přepíše následné `restricted` atribut, který vyžaduje soubor mít `module` atribut, pokud existují IDL – atributy v souboru.  
   
--   **nabízená** umožňuje uložit aktuální **emitidl –** nastavení interní **emitidl –** zásobník a **pop** umožňuje nastavíte **emitidl –** na jakémkoli hodnota je v horní části interní **emitidl –** zásobníku.  
+-   `push` Umožňuje uložit aktuální **emitidl** nastavení na interní **emitidl** zásobníku, a `pop` umožňuje nastavit **emitidl** na libovolné hodnoty je v horní části vnitřní **emitidl** zásobníku.  
   
-`defaultimports=`*Logická hodnota* \(volitelné)  
--   Pokud *boolean* je **true**, docobj.idl je importovat do generovaného .idl souboru. Navíc pokud souboru IDL se stejným názvem jako .h soubor, který `#include` do zdrojových kód najít ve stejném adresáři jako soubor h a potom soubor generovaný .idl obsahuje příkaz import pro tento soubor .idl.  
+`defaultimports=`*Logická* \(volitelné)  
+-   Pokud *logická* je **true**, docobj.idl se importují do generovaného souboru. Navíc pokud souboru IDL se stejným názvem jako. h: soubor, který jste `#include` do zdrojových kód nachází ve stejném adresáři jako soubor hlaviček, pak generovaného souboru obsahuje příkaz import pro tento soubor .idl.  
   
--   Pokud *boolean* je **false**, docobj.idl není importován do generovaného .idl souboru. Je nutné explicitně naimportovat soubory .idl s [importovat](../windows/import.md).  
+-   Pokud *logická* je **false**, docobj.idl není importován do generovaného souboru. Musíte explicitně importujete soubory .idl s [importovat](../windows/import.md).  
   
 ## <a name="remarks"></a>Poznámky  
-Po **emitidl –** C++ atribut se vyskytuje v souboru se zdrojovým kódem, kategorie IDL – atributy, které jsou umístěny v souboru generovaného IDL. Pokud je žádné **emitidl –** výstup do souboru generovaného IDL jsou atribut IDL – atributy v souboru se zdrojovým kódem.  
+Po **emitidl** C++ atribut dochází v souboru zdrojového kódu, atributy IDL kategorií jsou umístěny v souboru generovaného IDL. Pokud není žádný **emitidl** atribut IDL – atributy v souboru zdrojového kódu se zobrazují v souboru generovaného IDL.  
   
-Je možné, že více **emitidl –** atributů v souboru zdrojového kódu. Pokud `[emitidl(false)];` se vyskytuje v souboru bez následné `[emitidl(true)];`, pak se do souboru generovaného .idl zpracovávají žádné atributy.  
+Je možné mít více **emitidl** atributy v souboru zdrojového kódu. Pokud `[emitidl(false)];` dochází v souboru bez následné `[emitidl(true)];`, pak žádné atributy jsou zpracovány do souboru generovaného IDL.  
   
-Pokaždé, když kompilátor narazí do nového souboru **emitidl –** implicitně nastavena na **true**.  
+Pokaždé, když kompilátor narazí nový soubor **emitidl** implicitně nastavena na **true**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -65,9 +65,9 @@ Pokaždé, když kompilátor narazí do nového souboru **emitidl –** implicit
   
 |||  
 |-|-|  
-|**Platí pro**|Odkudkoli|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Kdekoli|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
 Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

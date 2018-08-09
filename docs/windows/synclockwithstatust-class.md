@@ -1,5 +1,5 @@
 ---
-title: SyncLockWithStatusT – třída | Microsoft Docs
+title: Synclockwithstatust – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51e5a66358890fc20731fb5cb657616484e19db4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66fd02ff9af4f7a5c1cb85b58e966622bed0060a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890977"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648688"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT – třída
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ template <
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `SyncTraits`  
+### <a name="parameters"></a>Parametry  
+ *SyncTraits*  
  Typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.  
   
 ## <a name="remarks"></a>Poznámky  
  Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.  
   
- SyncLockWithStatusT – třída se používá k implementaci [Mutex](../windows/mutex-class1.md) a [Semaphore](../windows/semaphore-class.md) třídy.  
+ **Synclockwithstatust –** třída se používá k implementaci [Mutex](../windows/mutex-class1.md) a [semafor](../windows/semaphore-class.md) třídy.  
   
 ## <a name="members"></a>Členové  
   
@@ -51,26 +51,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT – konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicializuje novou instanci třídy SyncLockWithStatusT.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT – konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicializuje novou instanci třídy **synclockwithstatust –** třídy.|  
   
 ### <a name="protected-constructors"></a>Chráněné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT – konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicializuje novou instanci třídy SyncLockWithStatusT.|  
+|[SyncLockWithStatusT::SyncLockWithStatusT – konstruktor](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inicializuje novou instanci třídy **synclockwithstatust –** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus – metoda](../windows/synclockwithstatust-getstatus-method.md)|Načte stav Čekání aktuálního objektu SyncLockWithStatusT.|  
-|[SyncLockWithStatusT::IsLocked – metoda](../windows/synclockwithstatust-islocked-method.md)|Určuje, zda je aktuální objekt SyncLockWithStatusT vlastní prostředek; To znamená, je objekt SyncLockWithStatusT *uzamčení*.|  
+|[SyncLockWithStatusT::GetStatus – metoda](../windows/synclockwithstatust-getstatus-method.md)|Načte aktuální stav Čekání **synclockwithstatust –** objektu.|  
+|[SyncLockWithStatusT::IsLocked – metoda](../windows/synclockwithstatust-islocked-method.md)|Označuje, zda aktuální **synclockwithstatust –** vlastní prostředek objektu; to znamená, **synclockwithstatust –** objekt je *uzamčen*.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::status_ – datový člen](../windows/synclockwithstatust-status-data-member.md)|Blokování výsledek základní čekat po operace uzamčení operaci na objektu založeného na aktuální objekt SyncLockWithStatusT.|  
+|[SyncLockWithStatusT::status_ – datový člen](../windows/synclockwithstatust-status-data-member.md)|Obsahuje výsledek základní operace čekání po operaci zámku na objektu na základě aktuálního **synclockwithstatust –** objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SyncLockT`  

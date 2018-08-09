@@ -1,5 +1,5 @@
 ---
-title: Struktura HANDLETraits | Microsoft Docs
+title: Handletraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876645"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649910"
 ---
 # <a name="handletraits-structure"></a>Struktura HANDLETraits
 Definuje běžné vlastnosti popisovač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -45,8 +45,8 @@ struct HANDLETraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[HANDLETraits::Close – metoda](../windows/handletraits-close-method.md)|Zavře Zadaný popisovač.|  
-|[HANDLETraits::GetInvalidValue – metoda](../windows/handletraits-getinvalidvalue-method.md)|Představuje popisovač za neplatný.|  
+|[HANDLETraits::Close – metoda](../windows/handletraits-close-method.md)|Zavře určený.|  
+|[HANDLETraits::GetInvalidValue – metoda](../windows/handletraits-getinvalidvalue-method.md)|Představuje neplatný popisovač.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HANDLETraits`  

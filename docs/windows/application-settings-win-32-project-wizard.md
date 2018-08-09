@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464681"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652985"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Nastavení aplikace, Průvodce projektem Win 32
 Tuto stránku průvodce použijte k nastavení voleb pro projekt Win32.  
   
- **Typ aplikace**  
+## <a name="application-type"></a>Typ aplikace  
  Vytvoří určený typ aplikace.  
   
 |Možnost|Popis|  
@@ -38,7 +38,7 @@ Tuto stránku průvodce použijte k nastavení voleb pro projekt Win32.
 |**KNIHOVNY DLL**|Vytvoří dynamickou knihovnu (DLL) systému Win32. Knihovna DLL systému Win32 je binární soubor napsaný v C nebo C++, který používá volání rozhraní API systému Win32, nikoli tříd knihovny MFC, a funguje jako sdílená knihovna funkcí, které lze použít více aplikacemi současně.<br /><br /> Do DLL aplikace nelze přidat podporu knihovny MFC nebo knihovny ATL. Je možné určit, že knihovna DLL exportuje symboly.|  
 |**Statická knihovna**|Vytvoří statickou knihovnu. Statická knihovna je soubor obsahující objekty a jejich funkce a data, které jsou propojeny do programu při vytvoření spustitelného souboru. Toto téma vysvětluje, jak vytvořit počáteční soubory a [vlastnosti projektu](../ide/property-pages-visual-cpp.md) pro statické knihovny. Soubor statické knihovny poskytuje následující výhody:<br /><br /> -Statická knihovna systému Win32 je užitečná, pokud aplikace, kterou právě pracujete provede volání rozhraní API systému Win32, nikoli tříd knihovny MFC.<br />-Proces propojení je stejný, ať zbytek aplikace Windows napsán v jazyce C nebo C++.<br />-Můžete propojit statickou knihovnu pro aplikace založené na knihovně MFC nebo do programu bez knihovny MFC.|  
   
- **Další možnosti**  
+## <a name="additional-options"></a>Další možnosti  
  Definuje podporu a možnosti pro aplikaci v závislosti na jejím typu.  
   
 |Možnost|Popis|  
@@ -48,7 +48,7 @@ Tuto stránku průvodce použijte k nastavení voleb pro projekt Win32.
 |**Předkompilované hlavičky**|Určuje, že projekt statické knihovny používá předkompilovanou hlavičku.|  
 |Kontroly životního cyklu bezpečnostního vývoje (SDL)|Další informace o SDL najdete v tématu [pokyny k procesu Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Přidání podpory pro**  
+## <a name="add-support-for"></a>Přidat podporu pro  
  Přidání podpory pro jednu z knihoven v aplikaci Visual C++.  
   
 |Možnost|Popis|  

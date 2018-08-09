@@ -1,5 +1,5 @@
 ---
-title: Úprava vlastností pro ovládací prvek ActiveX | Microsoft Docs
+title: Úprava vlastností pro ovládací prvek ActiveX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f99caed2b0ce78635f89d884599ee6d40fc86f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f64fd94eca03b132d0448147085b04e3ff6c1097
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885149"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648058"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Úprava vlastností pro ovládací prvek ActiveX
-Ovládací prvky ActiveX, které poskytl nezávislí výrobci může jsou vybavené vlastní vlastnosti a vlastnosti. V okně Vlastnosti se zobrazí vlastnosti pro ovládací prvky ActiveX. Kromě toho se zobrazují všechny stránky vlastností vytvořené zapisovače ovládacího prvku ActiveX v **vlastnosti stránky** dialogové okno (Pokud chcete zobrazit na stránce vlastností pro určitý ovládací prvek ActiveX, klikněte na tlačítko Stránka vlastností v [Vlastnosti – okno](/visualstudio/ide/reference/properties-window)).  
+Poskytuje nezávislým výrobcům – ovládací prvky ActiveX mohou jsou vybavené své vlastní vlastnosti a vlastnosti. Vlastnosti pro ovládací prvky ActiveX jsou zobrazeny v **vlastnosti** okna. Kromě toho se zobrazují všechny stránky vlastností vytvořený autorům ovládací prvek ActiveX v **stránky vlastností** dialogové okno (Chcete-li zobrazit **stránku vlastností** pro konkrétní ovládací prvek ActiveX, klikněte na tlačítko  **Stránka vlastností** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window)).  
   
- Různé karty se zobrazí na stránce vlastností pro ovládací prvek ActiveX, v závislosti na vlastností, které jsou v rámci ovládacího prvku ActiveX.  
+ Různé karty se zobrazí na stránce vlastností pro ovládací prvek ActiveX, v závislosti na seznamy vlastností, které jsou součástí ovládacího prvku ActiveX.  
   
 > [!NOTE]
->  Následující postup platí pro pomocí stránky vlastností pro úpravu ovládacích prvků ActiveX. Také můžete procházet a upravit vlastnosti ActiveX v novém okně Vlastnosti.  
+>  Následující postup platí pro použitím stránky vlastnosti můžete upravit ovládací prvky ActiveX. Můžete také procházet a upravovat vlastnosti ActiveX na novém **vlastnosti** okna.  
   
-### <a name="to-edit-properties-for-an-activex-control"></a>Chcete-li upravit vlastnosti pro ovládací prvek ActiveX  
+### <a name="to-edit-properties-for-an-activex-control"></a>Postup úpravy vlastností pro ovládací prvek ActiveX  
   
 1.  Vyberte **ActiveX** ovládacího prvku.  
   
-2.  Na **zobrazení** nabídky, klikněte na tlačítko **stránka vlastností** a zobrazit vlastnosti.  
+2.  Na **zobrazení** nabídky, klikněte na tlačítko **stránku vlastností** a zobrazte vlastnosti.  
   
 3.  Proveďte změny podle potřeby na stránce vlastností.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
+ [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)   
  [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
-

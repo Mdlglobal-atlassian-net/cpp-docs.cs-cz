@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569996"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642331"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Určuje ID tématu nápovědy HLP nebo CHM souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ Určuje ID tématu nápovědy HLP nebo CHM souboru.
   
 ### <a name="parameters"></a>Parametry  
  *contextID*  
- 32-bit identifikátor kontextové nápovědy v souboru nápovědy.  
+ Identifikátor kontextu 32-bit nápovědy v **pomáhají** souboru.  
   
 ## <a name="remarks"></a>Poznámky  
  **Helpstringcontext –** C++ atribut má stejné funkce jako [helpstringcontext –](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL – atribut.  

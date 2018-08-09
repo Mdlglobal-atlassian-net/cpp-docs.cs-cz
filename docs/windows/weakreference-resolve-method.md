@@ -1,5 +1,5 @@
 ---
-title: Weakreference::Resolve – metoda | Microsoft Docs
+title: Weakreference::Resolve – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe78f8644768563507f98157ac859993776d7fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890470"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646199"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 STDMETHOD(Resolve)  
    (REFIID riid,   
    _Deref_out_opt_ IInspectable **ppvObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
+### <a name="parameters"></a>Parametry  
+ *riid*  
  Identifikátor rozhraní.  
   
- `ppvObject`  
- Po této operaci dokončení vytvoří kopii aktuální silné odkaz, pokud je tento počet silné odkaz nenulové hodnoty.  
+ *ppvObject*  
+ Když tato operace dokončí, kopii aktuální silného odkazu, pokud je počet odkazů silné nenulové.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
--   S_OK, pokud tato operace úspěšná a počet silné odkaz je nulová. `ppvObject` Parametr je nastaven na `nullptr`.  
+-   S_OK, pokud je tato operace úspěšná, a počet silného odkazu je nula. *PpvObject* parametr je nastaven na **nullptr**.  
   
--   S_OK, pokud tato operace je úspěšné a počet silné odkaz je nenulové hodnoty. `ppvObject` Parametr je nastaven na silné odkaz.  
+-   S_OK, pokud je tato operace úspěšná a počet silného odkazu není nenulová. *PpvObject* parametr je nastaven na silný odkaz.  
   
--   Jinak hodnota HRESULT určující z důvodu této operace se nezdařila.  
+-   V opačném případě HRESULT, který označuje důvod tato operace se nezdařila.  
   
 ## <a name="remarks"></a>Poznámky  
- Nastaví zadaný ukazatele na aktuální hodnotu silné odkaz, pokud počet silné odkazů nenulové hodnoty.  
+ Nastaví zadaný ukazatel na aktuální hodnotu silného odkazu, pokud je počet odkazů silné nenulové.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -61,5 +60,5 @@ STDMETHOD(Resolve)
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [WeakReference Class1](../windows/weakreference-class1.md)   
+ [WeakReference – Třída1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

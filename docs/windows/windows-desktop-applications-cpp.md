@@ -1,5 +1,5 @@
 ---
-title: Aplikace na ploše systému Windows (C++) | Microsoft Docs
+title: Desktopové aplikace Windows (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890697"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647954"
 ---
-# <a name="windows-desktop-applications-c"></a>Aplikace na ploše systému Windows (C++)
-Tato část popisuje postup vytvoření C++ aplikací klasické pracovní plochy, které spusťte v okně prostředí.  
+# <a name="windows-desktop-applications-c"></a>Desktopové aplikace Windows (C++)
+Tato část popisuje, jak vytvářet aplikace klasické pracovní plochy jazyka C++, na kterých běží v okně.  
+
 > [!TIP]  
-> Pro Windows 10 můžete aplikaci převaděč plochy do balíčku plochy aplikace pro nasazení prostřednictvím Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Pro Windows 10 můžete použít Desktop App Converter Pokud chcete zabalit desktopové aplikace pro nasazení přes Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přeneste svoje aplikace klasické pracovní plochy pro Universal Windows platformy (UPW) s přemostění na Desktop](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
   
 ## <a name="prerequisites"></a>Požadavky  
- V těchto tématech předpokládají, že rozumíte základy jazyka C++.  
+ Tato témata se předpokládá, že chápete základy jazyka C++.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
@@ -47,4 +48,3 @@ Tato část popisuje postup vytvoření C++ aplikací klasické pracovní plochy
   
 ## <a name="see-also"></a>Viz také  
  [Visual C++ v sadě Visual Studio](../visual-cpp-in-visual-studio.md)
-

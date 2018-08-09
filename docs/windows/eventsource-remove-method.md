@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 36a057bbad39e61576828c5a02f6863248b235cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641402"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove – metoda
 Odstraní obslužná rutina události reprezentována zadanou událost registračního tokenu ze sady obslužné rutiny událostí, které jsou přidružené k aktuální **EventSource** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HRESULT Remove(  
    EventRegistrationToken token  
 );  
@@ -43,7 +43,7 @@ HRESULT Remove(
  S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace o struktuře EventRegistrationToken, najdete v článku `Windows::Foundation::EventRegistrationToken` struktura tématu v referenční dokumentaci modulu Windows Runtime.  
+ Další informace o `EventRegistrationToken` struktury, přečtěte si téma **Windows::Foundation:: struktura** téma v **modulu Windows Runtime** referenční dokumentaci.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: Seznam argumentů s proměnnou délkou (...) (C + +/ CLI) | Microsoft Docs
+title: Seznamy argumentů s proměnnou délkou (...) (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889820"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642939"
 ---
 # <a name="variable-argument-lists--ccli"></a>Seznamy argumentů s proměnnou délkou (...) (C++/CLI)
-Tento příklad ukazuje, jak můžete použít `...` syntaxe v jazyce Visual C++ implementovat funkce, které mají proměnný počet argumentů.  
+Tento příklad ukazuje, jak můžete použít `...` syntaxe v jazyce Visual C++ k implementaci funkcí, které mají variabilní počet argumentů.  
   
 > [!NOTE]
->  Toto téma se věnuje pro C + +/ CLI. Informace o používání `...` v ISO Standard C++, najdete v části [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md) a výpustky a výchozí argumenty v [výrazy přípony](../cpp/postfix-expressions.md).  
+>  Toto téma se vztahuje k C + +/ CLI. Informace o používání `...` ve standardu ISO C++ naleznete v tématu [tři tečky a Variadické šablony](../cpp/ellipses-and-variadic-templates.md) a symbol tří teček a výchozí argumenty v [výrazy přípony](../cpp/postfix-expressions.md).  
   
- Parametr, který používá `...` musí být poslední parametr v seznamu parametrů.  
+ Parametr, který používá `...` musí být posledním parametrem v seznamu parametrů.  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="code"></a>Kód  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -61,9 +61,9 @@ int main() {
 ```  
   
 ## <a name="code-example"></a>Příklad kódu  
- Následující příklad ukazuje, jak volat z jazyka C# Visual C++ funkce, která přebírá proměnný počet argumentů.  
+ Následující příklad ukazuje, jak volat z jazyka C# funkci Visual C++, která přijímá proměnný počet argumentů.  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -74,11 +74,11 @@ public:
 };  
 ```  
   
- Funkce `f` lze volat z jazyka C# nebo Visual Basic, například jako by šlo funkci, která může trvat proměnný počet argumentů.  
+ Funkce `f` lze volat z C# nebo Visual Basic, například jako by šlo funkce, která může mít proměnný počet argumentů.  
   
- V jazyce C#, argument, který je předán `ParamArray` parametr může být volána proměnný počet argumentů. Následující ukázka kódu je v jazyce C#.  
+ V jazyce C#, argument, který je předán `ParamArray` parametr může být volán proměnným počtem argumentů. Následující ukázka kódu je v jazyce C#.  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -93,9 +93,9 @@ public class X {
 }  
 ```  
   
- Volání `f` v jazyce Visual C++ můžete předat inicializovaného pole nebo pole proměnlivou délkou.  
+ Volání `f` v jazyce Visual C++ může předat inicializované pole nebo pole s proměnnou délkou.  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

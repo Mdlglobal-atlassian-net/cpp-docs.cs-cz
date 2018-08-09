@@ -1,5 +1,5 @@
 ---
-title: Operátor sledovacího odkazu (rozšíření komponent C++) | Microsoft Docs
+title: Operátor sledovacího odkazu (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890856"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651828"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operátor sledovacího odkazu (rozšíření komponent C++)
-A *sledovací odkaz* (`%`) se chová stejně jako obyčejnou referenční příručka C++ (`&`) s tím rozdílem, že když je objekt přiřazení sledovací odkaz, se zvýší počet odkazů objektu.  
+A *sledovací odkaz* (`%`) se chová jako běžná reference C++ (`&`) s tím rozdílem, že když objekt přiřazen sledovacímu odkazu, je zvýšen počet odkazů na objekt.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
  Sledovací odkaz má následující vlastnosti.  
   
--   Přiřazení objektu sledovací odkaz způsobí, že se zvýší počet odkaz objektu.  
+-   Přiřazení objektu do sledovacího odkazu způsobí, že počet odkazů na objekt k navýšení.  
   
--   Nativní referenční dokumentace (&) je výsledek, když jste dereference *. Sledovací odkaz (%) je výsledek, když jste dereference ^. Tak dlouho, dokud máte % k objektu, objekt zůstanou aktivní v paměti.  
+-   Nativní odkaz (`&`) je výsledkem v případě, že přestoupíte `*`. Sledovací odkaz (`%`) je výsledkem v případě, že přestoupíte `^`. Za předpokladu, že máte `%` na objekt, objekt zůstane zachován v paměti.  
   
--   Tečky (`.`) operátor přístup ke členu se používá pro přístup ke členu objektu.  
+-   Tečka (`.`) – operátor přístupu členů slouží k přístupu k člena objektu.  
   
--   Sledovací odkazy jsou platné pro typy hodnot a obslužné rutiny (například `String^`).  
+-   Sledovací odkazy jsou platné pro typy hodnot a popisovače (například `String^`).  
   
--   Sledovací odkaz nelze přiřadit hodnotu null nebo `nullptr` hodnotu. Sledovací odkaz může přeřazena na jiný platný objekt tolikrát, kolikrát podle potřeby.  
+-   Sledovací odkaz nelze přiřadit hodnotu null nebo **nullptr** hodnotu. Sledovací odkaz může být přeřazen jinému platnému objektu tolikrát, kolikrát podle potřeby.  
   
--   Sledovací odkaz nelze použít jako adresu proveďte unární operátor.  
+-   Sledovací odkaz nelze použít jako unární operátor převzetí adresy.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Sledovací odkaz se chová jako odkaz na standardní C++, s tím rozdílem, že % je počítáno odkaz. Následující fragment kódu ukazuje, jak pro převod mezi % a ^ typy:  
+ Sledovací odkaz se chová jako referenční standard C++, s tím rozdílem, že je % počítáním referencí. Následující fragment kódu ukazuje, jak převod mezi % a ^ typy:  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -52,10 +52,9 @@ Foo% srFoo = *spFoo;
 Foo^ spFoo2 = %srFoo;  
 ```  
   
- Následující příklad ukazuje, jak předat ^ funkce, která přebírá %.  
+ Následující příklad ukazuje, jak předat ^ funkci, která přebírá %.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -72,24 +71,23 @@ ref class Foo sealed {};
 ```  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- V jazyce C + +/ CLI, můžete použít sledování odkaz na popisovač při vytvoření vazby na objekt typu CLR v haldě uvolňování paměti.  
+ V jazyce C + +/ CLI, můžete použít sledovací odkaz na popisovač Pokud svážete objekt typu CLR na haldě uvolňování paměti.  
   
- V modulu CLR, hodnota odkazu sledování proměnné se aktualizuje automaticky vždy, když má systém uvolňování přesune odkazovaného objektu.  
+ V modulu CLR, hodnota sady sledovacího odkazu proměnná se automaticky aktualizuje pokaždé, když uvolňování paměti přesune odkazovaný objekt.  
   
  Sledovací odkaz lze deklarovat pouze v zásobníku. Sledovací odkaz nemůže být členem třídy.  
   
- Není možné, že nativní C++ odkaz na objekt v haldě uvolňování paměti.  
+ Není možné mít nativní odkaz C++ na objekt na haldě uvolňování paměti.  
   
- Další informace o sledování odkazů v jazyce C + +/ CLI, najdete v části:  
+ Další informace o sledování odkazů v jazyce C + +/ CLI, najdete v článku:  
   
 -   [Postupy: Používání sledovacích odkazů v jazyce C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující ukázka pro C + +/ CLI ukazuje způsob použití sledovací odkaz s typy nativní a spravovaná.  
+ Následující ukázka pro C + +/ CLI ukazuje, jak použít sledovací odkaz s nativními a spravovanými typy.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **Příklad**  
   
  Následující ukázka pro C + +/ CLI ukazuje, jak vytvořit vazbu sledovací odkaz na pole.  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

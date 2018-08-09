@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ weakreference – destruktor | Microsoft Docs'
+title: 'WeakReference:: ~ WeakReference – destruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890730"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648604"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference – destruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>Návratová hodnota  
   
 ## <a name="remarks"></a>Poznámky  
- Deinitializes aktuální instance třídy WeakReference.  
+ Zruší inicializaci aktuální instance **WeakReference** třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -44,4 +44,4 @@ virtual ~WeakReference();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md) [WeakReference – třída](../windows/weakreference-class1.md)
+ [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md) [weakreference – třída](../windows/weakreference-class1.md)

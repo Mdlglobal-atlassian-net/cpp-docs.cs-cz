@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571172"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650050"
 ---
 # <a name="generic-interfaces-visual-c"></a>Obecná rozhraní (Visual C++)
 Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty,
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
  *atributy* (volitelné)  
- Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
+ Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.  
   
  *klíč třídy*  
  **Třída** nebo **typename**  

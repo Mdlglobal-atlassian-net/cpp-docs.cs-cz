@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645123"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
 Obecné funkce je funkce, která je deklarována s parametry typu. Při volání skutečné typy používané místo parametry typu.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  Tato funkce se nevztahují na všechny platformy.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  Tato funkce není podporována v modulu Windows Runtime.  
   
@@ -47,7 +47,7 @@ Obecné funkce je funkce, která je deklarována s parametry typu. Při volání
   
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Následující vzorový kód ukazuje obecnou funkci.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Příklad**  
-  
  Obecné funkce mohou být přetíženy podle podpis nebo Arita, počet parametrů typu na funkci. Obecné funkce také mohou být přetíženy s neobecné funkce se stejným názvem, tak dlouho, dokud funkce se liší v některé parametry typu. Například mohou být přetíženy následující funkce:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Příklad**  
   
  V následujícím příkladu používá obecná funkce k vyhledání prvního prvku v poli. Deklaruje `MyClass`, který dědí ze základní třídy `MyBaseClass`. `MyClass` obsahuje obecná funkce `MyFunction`, která volá jinou funkci Obecné, `MyBaseClassFunction`, v rámci základní třídy. V `main`, obecná funkce `MyFunction`, je volána pomocí jiného typu argumentů.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 My function returned an int: 2003  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16d01d634b44b4e6da425c40e011106021638305
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461735"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642991"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Změna písma textu obrázku (editor obrázků pro ikony)
 Následující postup je příklad toho, jak:  
@@ -31,13 +31,13 @@ Následující postup je příklad toho, jak:
   
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Změna písma textu obrázku  
   
-1.  Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [vytvoření projektu aplikace Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). [Šablony aplikace Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) přidá soubor s názvem app.ico do svého projektu ve výchozím nastavení.  
+1.  Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [vytvoření projektu aplikace Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). [Šablony aplikace Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) přidá soubor s názvem `app.ico` do svého projektu ve výchozím nastavení.  
   
-2.  V Průzkumníku řešení poklikejte na soubor app.ico. [Editor obrázků](../windows/image-editor-for-icons.md) se otevře.  
+2.  V **Průzkumníka řešení**, poklikejte na soubor app.ico. [Editor obrázků](../windows/image-editor-for-icons.md) se otevře.  
   
 3.  Z **Image** nabídce vyberte možnost **nástroje** a pak vyberte **textový nástroj**. [Dialogové okno textový nástroj](../windows/text-tool-dialog-box-image-editor-for-icons.md) se zobrazí.  
   
-4.  V **textový nástroj** dialogovém okně `C++` v oblasti prázdný text. Tento text se zobrazí v okně možností změny velikosti se nachází v levém horním rohu app.ico, v **Editor obrázků**.  
+4.  V **textový nástroj** dialogovém okně `C++` v oblasti prázdný text. Tento text se zobrazí v okně možností změny velikosti se nachází v levém horním rohu `app.ico`v **Editor obrázků**.  
   
 5.  V **Editor obrázků**, přetáhněte pole umožňující změnu velikosti na střed app.ico, aby se zlepšila čitelnost textu.  
   
@@ -51,7 +51,7 @@ Následující postup je příklad toho, jak:
   
 10. Klikněte na tlačítko **OK** tlačítko. **Písmo nástroje Text** dialogové okno se zavře a použije se nové nastavení písma v textu.  
   
-11. Klikněte na tlačítko **Zavřít** tlačítko **textový nástroj** dialogové okno. Pole umožňující změnu velikosti celého textu zmizí z editoru obrázků.  
+11. Klikněte na tlačítko **Zavřít** tlačítko **textový nástroj** dialogové okno. Pole umožňující změnu velikosti celého textu zmizí z **Editor obrázků**.  
   
 ## <a name="see-also"></a>Viz také  
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   

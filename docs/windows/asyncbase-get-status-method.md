@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460955"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652250"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status – metoda
 Načte hodnotu označující stav asynchronní operace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Status  
 )(AsyncStatus *status) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Stav*  
- Umístění, kde má být uložen stav. Další informace najdete v tématu Windows::Foundation::AsyncStatus výčtu.  
+ Umístění, kde má být uložen stav. Další informace najdete v tématu `Windows::Foundation::AsyncStatus` výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  S_OK v případě úspěchu; v opačném případě E_ILLEGAL_METHOD_CALL.  

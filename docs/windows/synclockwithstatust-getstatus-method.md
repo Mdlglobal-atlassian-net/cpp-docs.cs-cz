@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::getStatus – metoda | Microsoft Docs
+title: Synclockwithstatust::getStatus – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03addd8d89c54eddb5deb721ab47d46e8b945edd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4677239bbcaff0c72eb11ade259f47531a616f19
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889759"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649633"
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,12 +34,12 @@ DWORD GetStatus() const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Výsledek operace čekání na objekt, který je založen na třídě SyncLockWithStatusT například [Mutex](../windows/mutex-class1.md) nebo [Semaphore](../windows/semaphore-class.md). Nula (0) označuje, že operace čekání vrátil stav signalizovaného; jinak jiný stav došlo k chybě, například uplynulý čas vypršení platnosti.  
+ Výsledek operace čekání na objekt, který je založen na **synclockwithstatust –** třídy, jako například [Mutex](../windows/mutex-class1.md) nebo [semafor](../windows/semaphore-class.md). Nula (0) označuje, že operace čekání vrátí signalizovaného stavu; v opačném případě jiný stav došlo k chybě, jako hodnotu časového limitu vypršel.  
   
 ## <a name="remarks"></a>Poznámky  
- Načte stav Čekání aktuálního objektu SyncLockWithStatusT.  
+ Načte aktuální stav Čekání **synclockwithstatust –** objektu.  
   
- Načte hodnotu základní funkce GetStatus() [status_ –](../windows/synclockwithstatust-status-data-member.md) – datový člen. Pokud objekt podle SyncLockWithStatusT – třída provádí operace uzamčení, objekt nejprve čeká objekt k dispozici. Výsledek této operace čekání je uložený v `status_` – datový člen. Možné hodnoty `status_` – datový člen jsou vrácené hodnoty operace čekání. Další informace najdete v tématu vrácené hodnoty **WaitForSingleObjectEx()** funkce v knihovně MSDN.  
+ Načte hodnotu základní funkce GetStatus() [status_ –](../windows/synclockwithstatust-status-data-member.md) datový člen. Když se objekt na platformě **synclockwithstatust –** třída provádí operace uzamčení, objekt nejprve počká na objekt k dispozici. Výsledek této operace čekání je uložen v `status_` datový člen. Možné hodnoty `status_` datový člen jsou vrácené hodnoty operace čekání. Další informace najdete v tématu vrácené hodnoty `WaitForSingleObjectEx()` funkce v knihovně MSDN.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

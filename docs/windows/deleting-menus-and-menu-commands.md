@@ -1,5 +1,5 @@
 ---
-title: Odstranění nabídek a příkazů nabídky | Microsoft Docs
+title: Odstranění nabídek a příkazů nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62074a586c336bf78280548eb12699b06abdd6f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ae62b4c16c30be5384b94053ea66aa127974a81
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871377"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642344"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>Odstranění nabídek a příkazů nabídky
-### <a name="to-delete-a-menu-or-menu-command"></a>Chcete odstranit nabídky nebo příkazu nabídky  
+### <a name="to-delete-a-menu-or-menu-command"></a>Odstranění nabídky nebo příkazu nabídky  
   
 1.  Klikněte pravým tlačítkem na název nabídky nebo příkaz.  
   
 2.  Zvolte **odstranit** z místní nabídky.  
   
     > [!NOTE]
-    >  Podobně můžete použít místní nabídky k provedení dalších akcí, jako je kopírování, vyjmutí, vložení, vložte nový, vložte oddělovače upravit ID zobrazení jako automaticky otevírané okno, zkontrolujte klávesové zkratky, atd.  
+    >  Podobně můžete použít nabídku provádět další akce, jako je kopírování, vyjmutí, vložení, vložit nový, vložit oddělovač úprav ID zobrazení jako automaticky otevírané okno, zkontrolujte klávesových zkratek apod.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

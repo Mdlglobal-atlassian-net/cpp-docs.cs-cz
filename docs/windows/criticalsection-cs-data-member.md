@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::cs_ – datový člen | Microsoft Docs
+title: Criticalsection::cs_ – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da07f5328f6ff75f778e44ffafd3722e0cdfca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882560"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641389"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ – datový člen
-Deklaruje člena kritická sekce.  
+Deklaruje datový člen kritický oddíl.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 CRITICAL_SECTION cs_;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tento člen dat je chráněný.  
+ Tento datový člen je chráněný.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

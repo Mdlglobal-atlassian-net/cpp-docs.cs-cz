@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8c2683d2e1875e7d68d27f7bde515b7a4ca70da0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571409"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649725"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event Konstruktor (Knihovna šablon C++ prostředí Windows Runtime)
-Inicializuje novou instanci třídy Event.  
+Inicializuje novou instanci třídy **události** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 explicit Event(  
    HANDLE h = HandleT::Traits::GetInvalidValue()  
 );  
@@ -36,7 +36,7 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *h*  
  Zpracování události. Ve výchozím nastavení *h* je inicializován na **nullptr**.  
   

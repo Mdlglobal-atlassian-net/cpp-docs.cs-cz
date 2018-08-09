@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cf1c7c0894eacc828a011c8c5f9fef8c2d78fba8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460488"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652510"
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
 Obecné typy vytvořené v jednom jazyce .NET může použít v jiných jazycích rozhraní .NET. Na rozdíl od šablon obecný ve zkompilovaném sestavení stále zůstává obecný. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce než sestavení, ve kterém byl definován obecného typu.  
@@ -114,9 +114,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Výstup  
-  
-```  
+```Output  
 90  
 80  
 70  

@@ -1,5 +1,5 @@
 ---
-title: Přiřazení příkazu nabídky ke klávese akcelerátoru | Microsoft Docs
+title: Přiřazení příkazu nabídky ke klávese akcelerátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4f1aa4b80aec2e7c16485c08d2505695b21f4d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e4b1665e54a03bf7d5f4705aaa3d76962ed16a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858078"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649969"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Přiřazení příkazu nabídky ke klávese akcelerátoru
-Jsou často časy, kdy má příkaz nabídky a kombinace kláves vydejte stejný příkaz programu. Můžete to provést pomocí editoru nabídky přiřadit stejný identifikátor prostředku, na příkaz nabídky a položce v tabulce akcelerátorů vaší aplikace. Potom upravte [popisek](../windows/menu-command-properties.md) příkazu v nabídce Zobrazit název klíče akcelerátoru.  
+Jsou často časy, kdy má příkaz nabídky a kombinace kláves stejný příkaz programu. Můžete to provést pomocí **nabídky** editor přiřadit stejný identifikátor prostředku pro příkaz nabídky a záznam v tabulce akcelerátorů vaší aplikace. Pak upravíte [titulek](../windows/menu-command-properties.md) příkazu nabídky, aby se zobrazil název klíče akcelerátoru.  
   
-### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Chcete-li přidružit příkazu nabídky ke klávese akcelerátoru  
+### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Pro přiřazení příkazu nabídky klávese akcelerátoru  
   
-1.  V **nabídky** editor, vyberte požadovaný příkaz nabídky.  
+1.  V **nabídky** editoru vyberte požadovaný příkaz nabídky.  
   
-2.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), přidejte název klíče akcelerátoru k **popisek** vlastnost:  
+2.  V [okno vlastností](/visualstudio/ide/reference/properties-window), přidejte název klíče akcelerátoru k **titulek** vlastnost:  
   
-    -   Následující titulek nabídky zadejte řídicí sekvence karta (\t), tak, aby všechny, které jsou ponechána v nabídce klávesy akcelerátoru zarovnána.  
+    -   Po popisek nabídky zadejte řídicí sekvence pro kartu (\t), takže všechno, co jsou klávesové zkratky v nabídce vlevo.  
   
-    -   Zadejte název klíče – modifikátor (**CTRL**, **ALT**, nebo **SHIFT**) následovat znak plus (**+**) a název, písmeno, nebo symbol další klíče.  
+    -   Zadejte název modifikační klávesa (**Ctrl**, **Alt**, nebo **Shift**) následované znakem plus (**+**) a název, písmeno, nebo symbol Další klíč.  
   
-         Například přiřadit **CTRL + O** k **otevřete** příkaz na **soubor** nabídce Upravit příkaz nabídky **popisek** tak, aby vypadal jako Toto:  
+         Například chcete přiřadit **Ctrl**+**O** k **otevřít** příkaz **souboru** nabídky, změnit příkazu nabídky  **Titulek** tak, aby vypadal takto:  
   
         ```  
         &Open...\tCtrl+O   
         ```  
   
-         Příkaz nabídky v editoru nabídky je aktualizována tak, aby odrážely novou titulek při psaní ho.  
+         Příkaz nabídky v **nabídky** editoru se aktualizuje tak, aby odrážely nový popisek během psaní.  
   
-3.  [Vytvoření položky tabulky akcelerátorů](../windows/adding-an-entry-to-an-accelerator-table.md) v **akcelerátoru** editoru a přiřaďte ho stejný identifikátor jako příkaz nabídky. Pomocí kombinace kláves, který si myslíte, že se bude snadno pamatovat.  
+3.  [Vytvoření položky tabulky akcelerátorů](../windows/adding-an-entry-to-an-accelerator-table.md) v **akcelerátoru** editoru a přiřaďte ho stejný identifikátor jako příkaz nabídky. Pomocí kombinace kláves, která si myslíte, že bude snadno pamatovat.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Přidání příkazů na nabídky](../windows/adding-commands-to-a-menu.md)   
+ [Přidání příkazů do nabídky](../windows/adding-commands-to-a-menu.md)   
  [Editor nabídek](../windows/menu-editor.md)

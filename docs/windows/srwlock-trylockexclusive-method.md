@@ -1,5 +1,5 @@
 ---
-title: Srwlock::trylockexclusive – metoda | Microsoft Docs
+title: Srwlock::trylockexclusive – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892654"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652767"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive – metoda
-Pokusí se získat objekt SRWLock ve výhradním režimu pro objekt SRWLock zadané nebo aktuální. Pokud je volání úspěšné, volající vlákno trvá vlastnictví zámku.  
+Pokusí se získat **srwlock –** objektu ve výhradním režimu pro aktuální nebo zadané **SRWLock** objektu. Pokud je volání úspěšné, volající vlákno převezme vlastnictví zámku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Ukazatel na objekt SRWLock.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Ukazatel **SRWLock** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného objekt SRWLock ve výhradním režimu a volající vlákno trvá vlastnictví zámku. SRWLock, jinak hodnota objektu, jejichž stav je neplatný.  
+ V případě úspěchu, **SRWLock** objektu ve výhradním režimu a volající vlákno převezme vlastnictví zámku. V opačném případě **SRWLock** objekt, jehož stav je neplatný.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

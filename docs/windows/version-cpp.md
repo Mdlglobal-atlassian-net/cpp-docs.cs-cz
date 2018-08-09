@@ -1,5 +1,5 @@
 ---
-title: verze (C++) | Microsoft Docs
+title: verze (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890606"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642276"
 ---
 # <a name="version-c"></a>version (C++)
-Identifikuje na konkrétní verzi mezi více verzí třídy.  
+Určuje konkrétní verzi napříč několika verzemi třídu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Verze*  
- Číslo verze coclass. Pokud není zadaný, 1.0 bude uložena v souboru IDL.  
+ Číslo verze `coclass`. Pokud není zadán, umístí 1.0 v souboru IDL.  
   
 ## <a name="remarks"></a>Poznámky  
- **Verze** atribut C++ má stejné funkce jako [verze](http://msdn.microsoft.com/library/windows/desktop/aa367306) MIDL atribut a je předána do souboru generovaného IDL.  
+ **Verze** C++ atribut má stejné funkce jako [verze](http://msdn.microsoft.com/library/windows/desktop/aa367306) atribut MIDL a předána do generovaného souboru.  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [vazbu](../windows/bindable.md) příklad pro ukázkové použití **verze**.  
+ Najdete v článku [umožňujících vazbu](../windows/bindable.md) příklad ukázkový používání **verze**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -53,9 +52,9 @@ Identifikuje na konkrétní verzi mezi více verzí třídy.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|**coclass**|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

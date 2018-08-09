@@ -1,5 +1,5 @@
 ---
-title: Vytváření dialogu, který uživatelé nemohou zavřít. | Microsoft Docs
+title: Vytvoření dialogového okna, které uživatelé nemohou zavřít. | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b176fbc4e420c08a2262b532cf1310ada56c978a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884460"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644177"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Vytvoření dialogového okna, které uživatelé nemohou zavřít.
-Můžete vytvořit runtime dialogové okno s uživatele nelze ukončit. Tento druh dialogové okno je užitečný pro přihlášení a pro aplikace nebo dokumentu zámky.  
+Můžete vytvořit modul runtime dialogové okno, které uživatel nemůže ukončeno. Tento druh dialogové okno je užitečný pro přihlášení a pro aplikace nebo dokumentu zámky.  
   
-### <a name="to-create-a-dialog-box-that-a-user-cannot-exit"></a>Chcete-li vytvořit dialogové okno, které uživatel nemůže ukončit.  
+### <a name="to-create-a-dialog-box-that-a-user-cannot-exit"></a>Chcete-li vytvořit dialogové okno, které uživatel nemohou zavřít.  
   
-1.  V **vlastnosti** nastavte dialogové okno, v podokně **nabídky systému** vlastnost **false**.  
+1.  V **vlastnosti** podokno pro dialogové okno, nastavte **systémové nabídky** vlastnost **false**.  
   
-     To zakáže nabídky systému dialogového a **Zavřít** tlačítko.  
+     Zakáže nabídky systému dialogového a **Zavřít** tlačítko.  
   
 2.  V dialogovém okně pole formuláře, odstraňte **zrušit** a **OK** tlačítka.  
   
-     Za běhu uživatel nemůže ukončit modální dialogové okno, které má tyto vlastnosti.  
+     V době běhu nemůže uživatel ukončit modální dialogové okno, které má tyto vlastnosti.  
   
- Pro umožnění testování druhu dialogového okna, při stisknutí klávesy ESC vyhledá funkci test dialogové okno pole. (ESC se také označuje jako vk_escape – klíč virtuální.) Bez ohledu na to, jak je navržený dialogové okno se bude chovat v době běhu můžete ukončit jej v testovacím režimu stisknutím klávesy ESC.  
+ Pokud chcete povolit testování tohoto druhu dialogového okna, test dialog box – funkce zjistí při **Esc** stisknutí. (**Esc** se také označuje jako virtuální vk_escape – klíč.) Bez ohledu na to, jak je určen dialogovém okně chování za běhu, můžete ukončit ji v režimu testu stisknutím kombinace kláves **Esc**.  
   
 > [!NOTE]
->  Pro aplikace MFC, chcete-li vytvořit dialogové okno, které uživatelé nemohou zavřít, je nutné přepsat výchozí chování `OnOK` a `OnCancel` vzhledem k tomu, že i v případě, že odstraníte přidružené tlačítek, dialogové okno můžete stále zrušit stisknutím klávesy ENTER nebo ESC.  
+>  Pro aplikace knihovny MFC, chcete-li vytvořit dialogové okno, které uživatelé nebudou moct zavřít, je nutné přepsat výchozí chování `OnOK` a `OnCancel` vzhledem k tomu, že i v případě, že odstraníte přidružené tlačítka, dialogové okno může stále vynechat stisknutím klávesy  **Zadejte** nebo **Esc**.  
   
- Informace o tom, jak přidat prostředky do spravovaných projekty najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index).  
+ Informace o tom, jak přidat prostředky do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -51,4 +51,3 @@ Můžete vytvořit runtime dialogové okno s uživatele nelze ukončit. Tento dr
  [Postupy: vytvoření prostředku](../windows/how-to-create-a-resource.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Editor dialogových oken](../windows/dialog-editor.md)
-

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568683"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652279"
 ---
 # <a name="finding-binary-data"></a>Hledání binárních dat
 Můžete vyhledat řetězce ASCII nebo šestnáctkové bajty. Například pokud chcete vyhledat "Hello", můžete vyhledat buď řetězec "Hello", nebo pro "48 65 6C 6 6 C f" (v šestnáctkové soustavě ekvivalent).  
@@ -44,7 +44,6 @@ Můžete vyhledat řetězce ASCII nebo šestnáctkové bajty. Například pokud 
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

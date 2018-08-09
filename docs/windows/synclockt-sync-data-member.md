@@ -1,5 +1,5 @@
 ---
-title: Synclockt::sync_ – datový člen | Microsoft Docs
+title: Synclockt::sync_ – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af046bdeaab5efbe4bb305e71391879105f4073
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f274f01661927772a1a3a6551dcb5efa59ac40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889063"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641857"
 ---
 # <a name="synclocktsync-data-member"></a>SyncLockT::sync_ – datový člen
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ typename SyncTraits::Type sync_;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obsahuje základní prostředku reprezentovaného parametrem SyncLockT – třída.  
+ Obsahuje základní prostředku reprezentovaného **SyncLockT** třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

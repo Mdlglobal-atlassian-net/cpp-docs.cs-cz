@@ -1,5 +1,5 @@
 ---
-title: Synclockt::synclockt – konstruktor | Microsoft Docs
+title: Synclockt::synclockt – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889835"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648162"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- Rvalue – odkaz na jiný objekt SyncLockT.  
+### <a name="parameters"></a>Parametry  
+ *Ostatní*  
+ Odkaz rvalue na jiný **SyncLockT** objektu.  
   
- `sync`  
- Odkaz na jiný objekt SyncLockWithStatusT.  
+ *sync*  
+ Odkaz na jiný `SyncLockWithStatusT` objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy SyncLockT – třída.  
+ Inicializuje novou instanci třídy **SyncLockT** třídy.  
   
- První konstruktor inicializuje aktuální objekt SyncLockT z jiného objektu SyncLockT určený parametrem `other`a pak zruší platnost druhý SyncLockT objekt. Druhý konstruktor je `protected`a inicializuje aktuální SyncLockT objekt, který má neplatný stav.  
+ První konstruktor inicializuje aktuální **synclockt –** objektu z jiného **synclockt –** objekt zadaný parametrem *jiných*a pak zruší platnost Další  **Synclockt –** objektu. Druhý konstruktor není **chráněné**a inicializuje aktuální **SyncLockT** objekt má neplatný stav.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

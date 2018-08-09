@@ -1,5 +1,5 @@
 ---
-title: Přidání záznamu do tabulky akcelerátorů | Microsoft Docs
+title: Přidání záznamu do tabulky akcelerátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f3e00c8ba6523f6cc615e4a766ad9206560b5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0c5e94913a705ac97407f82075ff9c83a12dd6b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855367"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642786"
 ---
 # <a name="adding-an-entry-to-an-accelerator-table"></a>Přidání záznamu do tabulky akcelerátorů
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Přidání záznamu do tabulky akcelerátorů  
@@ -29,25 +29,22 @@ ms.locfileid: "33855367"
 1.  Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Klikněte pravým tlačítkem do tabulky akcelerátorů a zvolte **nový akcelerátor** z místní nabídky, nebo klikněte na položku prázdný řádek v dolní části tabulky.  
+2.  Klikněte pravým tlačítkem v tabulce akcelerátorů a zvolte **nový akcelerátor** z místní nabídky nebo klikněte na položku prázdný řádek v tabulce dole.  
   
 3.  Vyberte [ID](id-property.md) z rozevíracího seznamu v ID pole nebo zadejte nové ID v **ID** pole.  
   
-4.  Typ [klíč](../windows/accelerator-key-property.md) chcete použít jako akcelerátoru nebo klikněte pravým tlačítkem a zvolte **další zadali klíč** z místní nabídky k nastavení kombinace kláves ( **další zadali klíč** příkaz je je dostupný také z **upravit** nabídky).  
+4.  Typ [klíč](../windows/accelerator-key-property.md) chcete použít jako akcelerátor nebo klikněte pravým tlačítkem a zvolte **další stisknutá klávesa** z místní nabídky k nastavení kombinace kláves ( **další stisknutá klávesa** je příkaz k dispozici prostřednictvím **upravit** nabídky).  
   
-5.  Změna [modifikátor](../windows/accelerator-modifier-property.md) a [typu](../windows/accelerator-type-property.md), v případě potřeby.  
+5.  Změnit [modifikátor](../windows/accelerator-modifier-property.md) a [typ](../windows/accelerator-type-property.md), v případě potřeby.  
   
-6.  Stiskněte klávesu **ENTER**.  
+6.  Stisknutím klávesy **ENTER**.  
   
     > [!NOTE]
-    >  Ujistěte se, že všechny akcelerátorů, které definujete jsou jedinečné. Může mít několik kombinace kláves přiřazené stejné ID s neplatí chybný, například CTRL + P a F8 můžete obě přiřadit ke ID_PRINT. Však s kombinaci kláves přiřadit více než jeden, který ID nebude fungovat správně, například CTRL + Z přiřazeného k ID_SPELL_CHECK a ID_THESAURUS.  
+    >  Ujistěte se, že se všechny akcelerátory, které definujete. Může mít několik kombinace kláves, které jsou přiřazeny stejnému identifikátoru s neplatí výplně, například **Ctrl** + **P** a **F8** lze obě přiřadit ID_PRINT. Však mít přiřazeno více než jeden ID nebude fungovat dobře, například kombinaci kláves **Ctrl** + **Z** přiřazená ID_SPELL_CHECK a ID_THESAURUS.  
   
-
-  
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

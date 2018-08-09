@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::oncancel – metoda | Microsoft Docs
+title: Asyncbase::oncancel – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7c5fabc84d6abb44a904c951c39eaf54a5c16b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865820"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646871"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel – metoda
 Při přepisu v odvozené třídě, zruší asynchronní operace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 virtual void OnCancel(  
    void  
 ) = 0;  
@@ -41,5 +41,5 @@ virtual void OnCancel(
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Viz také  
- [AsyncBase – třída](../windows/asyncbase-class.md)   
+ [Asyncbase – třída](../windows/asyncbase-class.md)   
  [AsyncBase::Cancel – metoda](../windows/asyncbase-cancel-method.md)

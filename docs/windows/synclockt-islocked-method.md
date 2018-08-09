@@ -1,5 +1,5 @@
 ---
-title: Synclockt::islocked – metoda | Microsoft Docs
+title: Synclockt::islocked – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 067b3763e10b2bbb310b213f7d748e953ba2a902
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfbd3418af731edf826debd9d6663095be706b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888472"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641516"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud objekt SyncLockT je uzamčení, jinak hodnota **false**.  
+ **Hodnota TRUE** Pokud **synclockt –** objekt je uzamčena, jinak **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- Určuje, zda je aktuální objekt SyncLockT vlastní prostředek; To znamená, je objekt SyncLockT *uzamčení*.  
+ Označuje, zda aktuální **synclockt –** vlastní prostředek objektu; to znamená, **synclockt –** objekt je *uzamčen*.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

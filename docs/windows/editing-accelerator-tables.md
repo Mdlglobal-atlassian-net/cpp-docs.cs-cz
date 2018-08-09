@@ -1,5 +1,5 @@
 ---
-title: Úprava tabulek akcelerátorů | Microsoft Docs
+title: Úprava tabulek akcelerátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1f20e6e50fad1f77e495fb47c62b162524cc72
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 761a5eefb80d47da0194e9c718f67bfe2d7b69de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641531"
 ---
 # <a name="editing-accelerator-tables"></a>Úprava tabulek akcelerátorů
-V jazyce Visual C++ můžete upravit tabulky akcelerátorů přímo s místní úpravy v editoru klávesových zkratek.  
+V jazyce Visual C++, můžete upravit přímo s místní úpravy. v tabulky akcelerátorů **akcelerátoru** editoru.  
   
- Níže uvedených postupech najdete použití standardních stránkách vlastností, ale úpravy na místě a metodu stránky vlastnost mít stejný výsledek. V tabulce akcelerátorů se okamžitě projeví změny provedené pomocí stránek vlastností nebo pomocí úpravy na místě.  
+ Použití standardních stránkách vlastností najdete v níže uvedených postupech, ale úpravy na místě a metoda stránka Vlastnosti mít stejný výsledek. Změny provedené pomocí stránky vlastností nebo pomocí úpravy na místě se okamžitě projeví v tabulce akcelerátorů.  
   
 -   [Úpravy tabulky akcelerátorů](../windows/editing-in-an-accelerator-table.md)  
   
@@ -42,7 +42,7 @@ V jazyce Visual C++ můžete upravit tabulky akcelerátorů přímo s místní �
   
 -   [Změna vlastností vícenásobných kláves akcelerátoru](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

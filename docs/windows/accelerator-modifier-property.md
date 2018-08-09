@@ -1,5 +1,5 @@
 ---
-title: Vlastnost modifikátoru akcelerátoru | Microsoft Docs
+title: Vlastnost modifikátoru akcelerátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0788536e776661b9a84a6cccc648a7db68389ae5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854051"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644252"
 ---
 # <a name="accelerator-modifier-property"></a>Vlastnost modifikátoru akcelerátoru
-Dále jsou právní položky pro vlastnost modifikátor v tabulce akcelerátorů.  
+Následují platné položky pro vlastnost modifikátor v tabulce akcelerátorů.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|**None**|Uživatel stiskne pouze hodnotu klíče. Efektivní používá se s hodnoty ASCII nebo ANSI 001 až 026, který je interpretován jako ^ A prostřednictvím ^ Z (CTRL + A pomocí kombinace kláves CTRL-Z).|  
-|**ALT**|Uživatel musí stisknutím klávesy ALT před hodnotu klíče.|  
-|**CTRL**|Uživatel musí stisknutím klávesy CTRL před hodnotu klíče. Není platný typ ASCII.|  
-|**Posunutí**|Uživatel musí stisknutím klávesy SHIFT před hodnotu klíče.|  
-|**Ctrl + Alt**|Uživatel musí stiskněte klávesu CTRL a klávesu ALT před hodnotu klíče. Není platný typ ASCII.|  
-|**Ctrl + Shift**|Uživatel musí stiskněte klávesu CTRL a SHIFT klíč před hodnotu klíče. Není platný typ ASCII.|  
-|**Alt + Shift**|Uživatel musí stisknutím klávesy ALT a klávesu SHIFT před hodnotu klíče. Není platný typ ASCII.|  
-|**Ctrl + Alt + Shift**|Uživatel musí stisknout klávesu CTRL, ALT a SHIFT před hodnotu klíče. Není platný typ ASCII.|  
+|**None**|Jakmile uživatel stiskne pouze **klíč** hodnotu. Co nejefektivnějšímu používá se s hodnotami standardu ASCII a ANSI 001 prostřednictvím 026, což je interpretován jako ^ A až ^ Z (CTRL-A pomocí CTRL-Z).|  
+|**ALT**|Uživatel musí stisknout klávesu **Alt** klíče před **klíč** hodnotu.|  
+|**CTRL**|Uživatel musí stisknout klávesu **Ctrl** klíče před **klíč** hodnotu. Není platná s typem ASCII.|  
+|**SHIFT**|Uživatel musí stisknout klávesu **Shift** klíče před **klíč** hodnotu.|  
+|**Ctrl + Alt**|Uživatel musí stisknout klávesu **Ctrl** klíč a **Alt** klíče před **klíč** hodnotu. Není platná s typem ASCII.|  
+|**Ctrl + Shift**|Uživatel musí stisknout klávesu **Ctrl** klíč a **Shift** klíče před **klíč** hodnotu. Není platná s typem ASCII.|  
+|**Alt + Shift**|Uživatel musí stisknout klávesu **Alt** klíč a **Shift** klíče před **klíč** hodnotu. Není platná s typem ASCII.|  
+|**Ctrl + Alt + Shift**|Uživatel musí stisknout klávesu **Ctrl**, **Alt**, a **Shift** před **klíč** hodnotu. Není platná s typem ASCII.|  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

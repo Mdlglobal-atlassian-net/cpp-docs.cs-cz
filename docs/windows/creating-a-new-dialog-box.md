@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nového dialogového okna | Microsoft Docs
+title: Vytvoření nového dialogového okna | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872141"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653024"
 ---
 # <a name="creating-a-new-dialog-box"></a>Vytvoření nového dialogového okna
 ### <a name="to-create-a-new-dialog-box"></a>K vytvoření nového dialogového okna  
   
-1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na váš soubor .rc, a potom vyberte **přidat prostředek** z místní nabídky.  
+1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc a pak zvolte **přidat prostředek** z místní nabídky.  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V **přidat prostředek** dialogové okno, vyberte **dialogové okno** v **typ prostředku** seznamu a pak klikněte na **nový**.  
+2.  V **přidat prostředek** dialogu **dialogové okno** v **typ prostředku** seznamu a potom klikněte na **nový**.  
   
-     Pokud se vedle typ prostředku dialogu zobrazuje znaménko plus (+), znamená to, že šablony dialogu pole jsou k dispozici. Klikněte na symbol plus rozbalte seznam šablon, vyberte šablonu a klikněte na tlačítko Nový.  
+     Pokud symbol plus (**+**) se zobrazí vedle **dialogové okno** typ prostředku, znamená to, že pole šablon dialogového okna jsou k dispozici. Klikněte na znaménko plus rozbalit seznam šablon, vyberte šablonu a klikněte na **nový**.  
   
-     Otevře se dialogové okno Nový v editoru dialogového okna.  
+     Otevře se dialogové okno Nový v **dialogové okno** editoru.  
   
-     Můžete také [otevře existující dialogová okna v editoru dialogové okno pro úpravy](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
+     Můžete také [otevřete existující dialogových oknech v editoru dialogové okno pro úpravy](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: vytvoření prostředku](../windows/how-to-create-a-resource.md)   
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   
  [Editor dialogových oken](../windows/dialog-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Předávání typů (C + +/ CLI) | Microsoft Docs
+title: Předávání typů (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9caa2e18a1ec851967857eb068797e092835f587
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 627b0a881795a963e3739accc351ee684b7b8232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891091"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644931"
 ---
 # <a name="type-forwarding-ccli"></a>Předávání typů (C++/CLI)
-*Předávání typů* umožňuje přesunout typu z jednoho sestavení (sestavení A) do jiné sestavení (sestavení B), tak, aby ji není nutné znovu zkompiluje klienty, kteří sestavení A.  
+*Předávání typů* vám umožní přesunout typ z jednoho sestavení (assembly A) do jiné sestavení (assembly B), takže není nutné znovu zkompilovat klienty, kteří využívají sestavení A.  
   
 ## <a name="all-platforms"></a>Všechny platformy  
  Tato funkce není podporována v všechny moduly runtime.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Tato funkce není podporována v prostředí Windows Runtime.  
+ Tato funkce není podporována v modulu Windows Runtime.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
  Následující příklad kódu ukazuje, jak používat předávání typů.  
@@ -45,26 +45,26 @@ ms.locfileid: "33891091"
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `new`  
- Sestavení, do které přesouváte definici typu.  
+ *new*  
+ Sestavení, do kterého se přesunutí definice typu.  
   
- `type`  
- Typ, jejichž definice přesouváte do jiné sestavení.  
+ *Typ*  
+ Typ, jejichž definice jsou přesunu do jiného sestavení.  
   
 ### <a name="remarks"></a>Poznámky  
- Když se dodává součást (sestavení) a je používán klientské aplikace, můžete použít typ předávání přesunout typem z komponenty (sestavení) do jiné sestavení, dodávat aktualizované součásti (a všechny další sestavení požadovaná) a klientem aplikace budou i nadále fungovat bez probíhá zopakovat.  
+ Poté, co se dodává komponentu (sestavení) a je používán klientskými aplikacemi, můžete použít typ předávání k přesunutí typu do jiného sestavení z komponenty (sestavení), dodejte aktualizované součásti (a jakékoli další požadovaná sestavení) a klient aplikace budou i nadále fungovat bez se znovu zkompilovat.  
   
- Předávání typů funguje výhradně u součástí odkazuje stávající aplikace. Když znovu vytvoříte aplikaci, musí být odkazy na příslušné sestavení pro všechny typy používané v aplikaci.  
+ Předávání typů funguje jenom pro součásti odkazují stávající aplikace. Při opětovném sestavování aplikace, musí být odkazy na odpovídající sestavení pro všechny typy použité v aplikaci.  
   
- Při předávání typu (typu A) ze sestavení, je nutné přidat `TypeForwardedTo` atribut pro tento typ, stejně jako odkaz na sestavení. Sestavení, na kterou odkazujete musí obsahovat jeden z následujících akcí:  
+ Při předávání typu (typ A) ze sestavení, je nutné přidat `TypeForwardedTo` atributů pro daný typ, stejně jako odkaz na sestavení. Sestavení, na které odkazujete musí obsahovat jeden z následujících akcí:  
   
 -   Definice pro typ A.  
   
--   A `TypeForwardedTo` atribut typu A, stejně jako odkaz na sestavení.  
+-   A `TypeForwardedTo` atributu pro typ A také odkaz na sestavení.  
   
  Mezi příklady typů, které může být přeposílán patří:  
   
--   REF – třídy  
+-   referenční třídy  
   
 -   Hodnota třídy  
   
@@ -78,26 +78,26 @@ ms.locfileid: "33891091"
   
 -   Nativní typy  
   
--   Vnořené typy (Pokud chcete předat dál vnořené typy, by měla předávat nadřazených typů)  
+-   Vnořené typy (Pokud chcete dál vnořený typ, by měl dál nadřazeného typu.)  
   
- Typ může předávat na sestavení vytvořené v libovolném jazyce cílení na modul common language runtime.  
+ Typ lze předat sestavení vytvořené v libovolném jazyce cílení na modul common language runtime.  
   
- Takže pokud se soubor zdrojového kódu, který je použit k vytvoření sestavení A.dll obsahuje definici typu (`ref class MyClass`), a chcete přesunout typu definice sestavení B.dll byste:  
+ Pokud soubor zdrojového kódu, který se používá k vytvoření sestavení A.dll obsahuje definici typu tedy (`ref class MyClass`), a chtěli jste typu přesuňte definice sestavení B.dll byste:  
   
-1.  Přesunout `MyClass` definic k souboru zdrojového kódu, sloužící k vytvoření B.dll typu.  
+1.  Přesunout `MyClass` definice do souboru zdrojového kódu slouží k sestavení B.dll typu.  
   
-2.  Sestavení sestavení B.dll  
+2.  Sestavení B.dll  
   
-3.  Odstranit `MyClass` zadejte definici z zdrojový kód používá k vytvoření A.dll a nahraďte ji následujícím kódem:  
+3.  Odstranit `MyClass` zadejte definici ze zdrojového kódu, používá k vytvoření A.dll a nahraďte následujícím kódem:  
   
     ```  
     #using "B.dll"  
     [assembly:TypeForwardedTo(MyClass::typeid)];  
     ```  
   
-4.  Vytvořte sestavení A.dll.  
+4.  Sestavení A.dll.  
   
-5.  Použijte A.dll bez nutnosti rekompilace klientské aplikace.  
+5.  Použití A.dll bez opětovné kompilace klientských aplikací.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**
+ – Možnost kompilátoru: `/clr`

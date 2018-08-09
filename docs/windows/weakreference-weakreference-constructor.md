@@ -1,5 +1,5 @@
 ---
-title: Weakreference::weakreference – konstruktor | Microsoft Docs
+title: Weakreference::weakreference – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e60b23a0c63ce1415765dd1f94863540849f975
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c872b311e6fa7aa16d7118a13bc69ef2c7ef9cc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891058"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652646"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ WeakReference();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy [WeakReference – třída](../windows/weakreference-class1.md).  
+ Inicializuje novou instanci třídy [weakreference – třída](../windows/weakreference-class1.md).  
   
- Je inicializováno ukazatele silné odkaz pro objekt WeakReference `nullptr`, a počet silné odkaz je inicializováno 1.  
+ Silný odkaz ukazatel pro **WeakReference** objekt je inicializován na **nullptr**, a počet silného odkazu je inicializován na hodnotu 1.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  
@@ -44,5 +44,4 @@ WeakReference();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
-    
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

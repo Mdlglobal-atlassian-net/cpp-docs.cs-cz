@@ -1,5 +1,5 @@
 ---
-title: Zobrazení nebo skrytí okna barvy (Editor obrázků pro ikony) | Microsoft Docs
+title: Zobrazení nebo skrytí okna barvy (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872039"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645107"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Zobrazení nebo skrytí okna Barvy (editor obrázků pro ikony)
-### <a name="to-display-colors-window"></a>Chcete-li zobrazit barvy – okno  
+### <a name="to-display-colors-window"></a>Chcete-li zobrazit okno barvy  
   
-1.  Klikněte pravým tlačítkem myši **Editor obrázků** podokně a zvolte **zobrazit okno barev** z místní nabídky.  
+1.  Klikněte pravým tlačítkem **Editor obrázků** podokně a zvolte **zobrazit okno barev** z místní nabídky.  
   
      \- nebo –  
   
@@ -36,16 +36,15 @@ ms.locfileid: "33872039"
   
 ### <a name="to-hide-the-colors-window"></a>Skrytí okna barvy  
   
-1.  Odepnout okna. To vám umožní okno na skrýt automaticky, když není používán.  
+1.  Odepnete okna. To vám umožní automaticky skrýt okno při není používán.  
   
  \- nebo –  
   
--   Klikněte **Zavřít** tlačítko.  
+-   Klikněte na tlačítko **Zavřít** tlačítko.  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
- [Barvy – okno](../windows/colors-window-image-editor-for-icons.md)   
+ [Okno barvy](../windows/colors-window-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

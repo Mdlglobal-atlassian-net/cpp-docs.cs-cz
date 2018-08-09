@@ -1,5 +1,5 @@
 ---
-title: Vytvoření vlastního štětce (Editor obrázků pro ikony) | Microsoft Docs
+title: Vytvoření vlastního štětce (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,59 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa6b10f1d263db95bf6eb901e65a3111721d6226
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873144"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647970"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Vytvoření vlastního štětce (editor obrázků pro ikony)
-Vlastní štětce je obdélníková část imagí, která se vyzvedávat a použít jako jeden z předdefinovaných štětce editor obrázků. Všechny operace, které můžete provádět na výběr, můžete u vlastního štětce.  
+Vlastní štětce je obdélníkovou část bitovou kopii, která sbírání a používat jako jeden z **Image** předem připravená štětce editoru. Všechny operace, které můžete provádět na výběr, můžete provádět na vlastní štětce.  
   
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Vytvoření vlastního štětce z část obrázku  
   
 1.  [Vyberte část obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , kterou chcete použít pro štětce.  
   
-2.  Podržíte **SHIFT** klíče dolů, klikněte na tlačítko ve výběru a přetáhněte ji napříč bitovou kopii.  
+2.  Podržení **Shift** klíče dolů, klikněte na tlačítko ve výběru a proveďte operaci přetažení přes obrázek.  
   
      \- nebo –  
   
 3.  Z **Image** nabídce zvolte **použít výběr jako štětce**.  
   
-     Výběr stane vlastního štětce, která distribuuje barev ve výběru v bitovou kopii. Zkopíruje výběr jsou ponechána v přetahování cestě. Tím pomaleji přetažení, jsou provedeny další kopie.  
+     Váš výběr se změní vlastní štětec, který distribuuje barev ve výběru mezi bitovou kopii. Zkopíruje výběr jsou ponechána na cestě přetahování. Tím pomaleji se při přetahování, jsou provedeny další kopie.  
   
-     **Poznámka:** kliknutím **použít výběr jako štětce** bez výběrem položky část obrázku použije bitovou kopii celou jako štětce. Výsledek pomocí vlastního štětce bude také záviset na tom, zda jste vybrali [neprůhledné nebo průhledná pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+     > [!NOTE]
+     > Kliknutím **použít výběr jako štětce** bez nejprve vyberete část obrázku použije celého obrázku jako štětce. Výsledek použití vlastního štětce také závisí na tom, zda jste vybrali [neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- Pixelů vlastního štětce, které odpovídají aktuálním barvu pozadí jsou obvykle transparentní: není malovat přes existující bitová kopie. Toto chování můžete změnit tak, aby barva pozadí pixelů malovat přes existující bitová kopie.  
+ Pixelů vlastního štětce, které odpovídají barvě pozadí jsou obvykle transparentní: není vykreslení přes stávající bitovou kopii. Toto chování můžete změnit tak, aby barvu pozadí pixelů vykreslení přes stávající bitovou kopii.  
   
- Vlastní štětce jako razítko nebo vzorníku můžete vytvořit různé speciální efekty.  
+ Vlastní štětce jako razítko nebo vzorníku slouží k vytvoření širokou škálu speciální efekty.  
   
-#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Kreslení tvarů vlastního štětce v barvu pozadí  
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Pro kreslení tvarů vlastní štětec pozadí barvou  
   
 1.  [Vyberte neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
-2.  [Nastavení barvy pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) na barvu, ve kterém chcete kreslení.  
+2.  [Nastavit barvu pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) barvu, ve kterém chcete kreslit.  
   
-3.  Nastavte vlastního štětce, kam chcete k vykreslení.  
+3.  Pozice vlastního štětce, ve které chcete kreslit.  
   
-4.  Klikněte pravým tlačítkem myši. Všechny neprůhledné oblasti vlastního štětce jsou vykreslovány v barvu pozadí.  
+4.  Klikněte pravým tlačítkem myši. Jakékoli neprůhledné oblastech vlastního štětce vykresleny barvou pozadí.  
   
-#### <a name="to-double-or-halve-the-custom-brush-size"></a>Dvakrát nebo polovinu velikost vlastního štětce  
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Dvakrát nebo polovinu velikost vlastního štětce  
   
-1.  Stiskněte **znaménko PLUS** (**+**) klíč dvojnásobku velikosti štětce nebo **ZNAMÉNKA MINUS** (**-**) klíče na polovinu ho .  
+1.  Stisknutím klávesy **znaménko Plus** (**+**) klíč na dvojnásobek velikosti štětce nebo **znaménko Minus** (**-**) klíč na polovinu ho .  
   
-#### <a name="to-cancel-the-custom-brush"></a>Chcete-li zrušit vlastního štětce  
+### <a name="to-cancel-the-custom-brush"></a>Chcete-li zrušit vlastního štětce  
   
-1.  Stiskněte klávesu **ESC** nebo zvolte jiný nástroj pro vykreslování.  
+1.  Stisknutím klávesy **Esc** nebo zvolte jiný nástroj pro vykreslování.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

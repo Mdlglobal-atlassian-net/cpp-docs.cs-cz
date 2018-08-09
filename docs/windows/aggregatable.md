@@ -17,48 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467193"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643004"
 ---
 # <a name="aggregatable"></a>aggregatable
 Označuje, že třída podporuje agregaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ aggregatable(   
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Hodnota* (volitelné)  
  Parametr označuje, kdy se dají agregovat objektu COM:  
   
--   **Nikdy** objekt COM nemůže být agregován.  
+-   `never` Objekt COM nemůže být agregován.  
   
--   **povolené** objekt COM lze vytvořit přímo, nebo se dají agregovat. Toto nastavení je výchozí.  
+-   `allowed` Objekt modelu COM lze vytvořit přímo, nebo se dají agregovat. Toto nastavení je výchozí.  
   
--   **vždy** objekt COM nelze vytvořit přímo a pouze se dají agregovat. Při volání `CoCreateInstance` pro tento objekt, je nutné zadat objekt agregovat `IUnknown` rozhraní (řízení `IUnknown`).  
+-   `always` Objekt modelu COM nelze vytvořit přímo a pouze se dají agregovat. Při volání `CoCreateInstance` pro tento objekt, je nutné zadat objekt agregovat `IUnknown` rozhraní (řízení `IUnknown`).  
   
 ## <a name="remarks"></a>Poznámky  
  **Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.  
   
  Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
- **Projekty knihovny ATL**  
+### <a name="atl-projects"></a>Projekty knihovny ATL  
   
  Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Kromě výše popsaným chování atribut přidá také jednu z následujících makra do cílové třídy:  
   
 |Hodnota parametru|Vložené: – makro|  
 |---------------------|--------------------|  
-|*Nikdy*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|*Povoleno*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|*Vždy*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>Příklad  
   

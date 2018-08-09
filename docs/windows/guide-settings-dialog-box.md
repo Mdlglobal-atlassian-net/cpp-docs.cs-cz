@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568888"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647993"
 ---
 # <a name="guide-settings-dialog-box"></a>Dialogové okno Nastavení vodítek
 ## <a name="layout-guides"></a>Vodítka rozložení  
  Zobrazuje nastavení vodítek rozložení.  
   
- **None**  
+### <a name="none"></a>Žádné  
   
  Skryje nástroje rozložení.  
   
- **Pravítka a vodítka**  
+### <a name="rulers-and-guides"></a>Pravítka a vodítka  
   
  Pokud povolená, přidá do nástroje rozložení; pravítka příručky je možné použít v pravítka. Výchozí příručky jsou okraje, které je možné přesunout přetažením. Klikněte na tlačítko v pravítka umístit průvodce. Ovládací prvky "přichytávat" k Průvodci při přesunutí ovládacích prvků nad nebo vedle sebe. Ovládací prvky také přesunout pomocí průvodce, jakmile jsou k němu připojená. Když ovládací prvek je připojen k vodítko na každé straně a přesunout vodítko, změně velikosti ovládacího prvku.  
   
- **Mřížka**  
+### <a name="grid"></a>Mřížka  
   
  Vytvoří rozložení mřížky. Nové ovládací prvky budou automaticky zarovnat k mřížce.  
   
 ## <a name="grid-spacing"></a>Rozteč mřížky  
  Nastavení pro rozteč mřížky se zobrazí v poli jednotky dialogu (dlu).  
   
- **Width: dlu**  
+### <a name="width-dlus"></a>Width: dlu  
   
  Nastavuje šířku mřížky rozložení v dlu. Vodorovné DLU je průměrná délka pole písmo dialogového okna dělený čtyři.  
   
- **Height: dlu**  
+### <a name="height-dlus"></a>Height: dlu 
   
  Nastaví výšku mřížky rozložení v dlu. Svislé DLU je průměrná výška pole písmo dialogového okna dělený osmidílné série.  
   

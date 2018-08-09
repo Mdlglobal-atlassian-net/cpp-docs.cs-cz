@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno Přidání ovládacích prvků do dialogového okna způsobí nefunkčnost | Microsoft Docs
+title: Přidání ovládacích prvků do dialogového okna způsobí, že dialogové okno přestane fungovat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,54 +20,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b10c24955e74d08ab570b5b694628f42bb394268
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b2ecb47c17aeeda1cfd54c19cb72d0d1808a836
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858991"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647115"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Přidání ovládacích prvků do dialogového okna způsobí nefunkčnost okna.
-Po přidání do běžného ovládacího prvku nebo ovládacího prvku RichEdit do dialogového okna, nebude se zobrazovat při testování dialogové okno nebo dialogové okno samotné se nezobrazí.  
+Po přidání běžného ovládacího prvku nebo ovládací prvek RTF do dialogového okna, nebude se zobrazovat při testování dialogových oken nebo dialogového okna, samotné se nezobrazí.  
   
- **Příklad problému**  
+### <a name="example-of-the-problem"></a>Příklad problému  
   
-1.  Vytvoření projektu Win32, úprava nastavení aplikace, takže vytvořit aplikaci pro Windows (ne konzolovou aplikaci).  
+1.  Vytvořte projekt Win32, změna nastavení aplikace, proto vytvořit aplikace Windows (ne konzolovou aplikaci).  
   
-2.  V [zobrazení prostředků](../windows/resource-view-window.md), dvakrát klikněte na soubor.  
+2.  V [zobrazení prostředků](../windows/resource-view-window.md), dvakrát klikněte na soubor .rc.  
   
-3.  V dialogovém okně Možnosti, dvakrát klikněte **o** pole.  
+3.  V části Možnosti dialogového okna, dvakrát klikněte **o** pole.  
   
 4.  Přidat **ovládací prvek adresy IP** do dialogového okna.  
   
-5.  Uložte a **znovu vytvořit všechny**.  
+5.  Uložit a **sestavit vše znovu**.  
   
 6.  Spuštění programu.  
   
-7.  Na dialogových oken **pomoci** nabídky, klikněte na tlačítko **o** příkaz; žádné dialogové okno bude zobrazeno.  
+7.  V dialogových oken **pomáhají** nabídky, klikněte na tlačítko **o** příkaz; žádné dialogové okno zobrazí okno.  
   
- **Příčinu**  
+### <a name="the-cause"></a>Příčinu  
   
- V současné době editoru dialogových oken nepřidá automaticky kódu do projektu při můžete přetáhnout následující běžné ovládací prvky nebo ovládacích prvků do dialogového okna pro úpravy s formátováním. Ani v sadě Visual Studio poskytuje chybě nebo upozornění při výskytu tohoto problému. Kód pro ovládací prvek je musí přidat ručně.  
+ V současné době editor dialogového okna automaticky nedojde k přidání kódu do projektu při přetažení následující běžné ovládací prvky nebo ovládací prvky na dialogové okno pro úpravy s formátováním. Ani sada Visual Studio poskytuje chybu nebo upozornění při výskytu tohoto problému. Kód pro ovládací prvek musí přidat ručně.  
   
 ||||  
 |-|-|-|  
-|Posuvník|Ovládací prvek stromu|Výběr data a času|  
+|Ovládací prvek posuvníku|Ovládací prvek stromu|Výběr data a času|  
 |Ovládací prvek typu číselník|Ovládací prvek karty|Měsíční kalendář|  
-|Ovládací prvek průběh|Ovládacího prvku animace|Ovládací prvek adresy IP|  
-|Klávesové zkratky|Ovládací prvek pro úpravy s formátováním|Rozšířená pole se seznamem|  
+|Ovládací prvek průběh|Animace ovládacího prvku|Ovládací prvek adresy IP|  
+|Klávesová zkratka|Ovládací prvek pro úpravy s formátováním|Rozšířené pole se seznamem|  
 |Ovládací prvek seznamu|Ovládací prvek pro úpravy s formátováním 2.0|Vlastní ovládací prvek|  
   
-## <a name="the-fix-for-common-controls"></a>Opravu pro běžné ovládací prvky  
- Abyste mohli používat běžné ovládací prvky v dialogovém okně, je třeba volat [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) nebo **AFXInitCommonControls** předtím, než vytvoříte dialogové okno.  
+## <a name="the-fix-for-common-controls"></a>Oprava pro běžné ovládací prvky  
+ Chcete-li použít běžné ovládací prvky v dialogovém okně, je třeba volat [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) nebo `AFXInitCommonControls` předtím, než vytvoříte dialogové okno.  
   
-## <a name="the-fix-for-richedit-controls"></a>Opravu pro RichEdit ovládací prvky  
- Je třeba volat **LoadLibrary** pro ovládací prvky rich edit. Další informace najdete v tématu [pomocí ovládacího prvku RichEdit 1.0 s MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [o bohaté upravit ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb787873) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], a [– Přehled ovládacího prvku upravit bohaté](../mfc/overview-of-the-rich-edit-control.md).  
+## <a name="the-fix-for-richedit-controls"></a>Oprava pro ovládací prvky RichEdit  
+ Je nutné volat `LoadLibrary` pro ovládací prvky pro úpravy s formátováním. Další informace najdete v tématu [pomocí ovládacího prvku RichEdit 1.0 s MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [o bohaté upravit ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb787873) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], a [– Přehled ovládacího prvku Rich upravit](../mfc/overview-of-the-rich-edit-control.md).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Řešení potíží s editoru dialogových oken](../windows/troubleshooting-the-dialog-editor.md)   
+ [Řešení potíží s editorem dialogového okna](../windows/troubleshooting-the-dialog-editor.md)   
  [Editor dialogových oken](../windows/dialog-editor.md)
-

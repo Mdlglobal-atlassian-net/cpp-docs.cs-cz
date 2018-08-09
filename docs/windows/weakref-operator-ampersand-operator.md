@@ -1,5 +1,5 @@
 ---
-title: WeakRef::operator&amp; operátor | Microsoft Docs
+title: WeakRef::operator&amp; operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890103"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649045"
 ---
 # <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp; – operátor
-Vrátí objekt ComPtrRef, který představuje aktuální objekt WeakRef.  
+Vrátí `ComPtrRef` objekt, který představuje aktuální **WeakRef** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- ComPtrRef objekt, který představuje aktuální objekt WeakRef.  
+ A `ComPtrRef` objekt, který představuje aktuální **WeakRef** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je interní pomocná operátor, který není určen pro použití v kódu.  
+ Toto je interní pomocné operátor, který není určena k použití ve vašem kódu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: Weakref::weakref – konstruktor | Microsoft Docs
+title: Weakref::weakref – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891045"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641470"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef – konstruktor
-Inicializuje novou instanci třídy WeakRef.  
+Inicializuje novou instanci třídy **WeakRef** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `ptr`  
- Ukazatelů, reference nebo deklarátor odkazu na existující objekt, který inicializuje objekt aktuální WeakRef.  
+### <a name="parameters"></a>Parametry  
+ *ptr*  
+ Ukazatel, odkaz nebo odkaz rvalue na existující objekt, který inicializuje aktuální **WeakRef** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- První konstruktor inicializuje objekt WeakRef prázdný. Druhý konstruktor inicializuje objekt WeakRef od ukazatele rozhraní IWeakReference. Třetí konstruktor inicializuje objekt WeakRef z odkazů na ComPtr\<IWeakReference > objektu. Konstruktory čtvrté a páté inicializuje objekt WeakRef z jiného objektu WeakRef.  
+ První konstruktor inicializuje prázdnou **WeakRef** objektu. Druhý konstruktor inicializuje **WeakRef** z ukazatele na objekt `IWeakReference` rozhraní. Třetí konstruktor inicializuje **WeakRef** z odkazu na objekt `ComPtr<IWeakReference>` objektu. Čtvrtý a pátý konstruktor inicializuje **WeakRef** objektu z jiného **WeakRef** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

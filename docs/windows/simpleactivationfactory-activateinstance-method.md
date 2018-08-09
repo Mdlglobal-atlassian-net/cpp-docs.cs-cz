@@ -1,5 +1,5 @@
 ---
-title: Simpleactivationfactory::activateinstance – metoda | Microsoft Docs
+title: Simpleactivationfactory::activateinstance – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889418"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646559"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance – metoda
 
@@ -39,15 +39,15 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>Parametry
 
 *ppvObject*  
-Když tato operace dokončí, ukazatel na instanci objektu určeného `Base` – třída parametru šablony.
+Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem `Base` parametr šablony třídy.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud &#95; &#95;WRL_STRICT&#95; &#95; je definován, chybu assert je vygenerované, pokud základní třída zadaná v parametru šablony třída není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo není nakonfigurovaný WinRt nebo WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
+Pokud &#95; &#95;WRL_STRICT&#95; &#95; je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo nemá nakonfigurovanou WinRt nebo WinRtClassicComMix [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -56,5 +56,4 @@ Pokud &#95; &#95;WRL_STRICT&#95; &#95; je definován, chybu assert je vygenerova
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
-
-[SimpleActivationFactory – třída](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory – třída](../windows/simpleactivationfactory-class.md)

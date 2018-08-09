@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 60a4326975f60455e6d2ef90575f5c940287042a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571015"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644109"
 ---
 # <a name="dual"></a>dual
 Umístí rozhraní v souboru IDL jako duální rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [dual]  
 ```  
   
@@ -80,7 +80,7 @@ __interface IStatic : IDispatch
 |**Platí pro**|**interface**|  
 |**Opakovatelné**|Ne|  
 |**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|**dispinterface**|  
+|**Neplatné atributy**|`dispinterface`|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   

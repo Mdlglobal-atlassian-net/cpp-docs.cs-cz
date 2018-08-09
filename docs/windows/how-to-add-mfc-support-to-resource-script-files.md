@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569739"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647021"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Postupy: Přidání podpory MFC do souborů skriptu prostředků
 Za normálních okolností při sestavení aplikace knihovny MFC pro používání Windows [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), průvodce vygeneruje základní sadu souborů (včetně souboru prostředků skriptů (.rc)), který obsahuje základní funkce Microsoft Foundation třídy (MFC). Nicméně pokud upravujete soubor .rc pro aplikaci Windows, která není založena na knihovně MFC, následující funkce specifické pro rozhraní knihovny MFC nejsou k dispozici:  
@@ -55,7 +55,6 @@ Za normálních okolností při sestavení aplikace knihovny MFC pro používán
     >  Kromě nastavení tohoto příznaku soubor .rc musí být součástí projektu knihovny MFC. Například pouhé nastavení **MFC režimu** k **True** na souboru .rc v Win32 projektu vám neposkytne žádné funkce knihovny MFC.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  MFC  
   
 ## <a name="see-also"></a>Viz také  

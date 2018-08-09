@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570607"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646108"
 ---
 # <a name="dbsource"></a>db_source
 Vytvoří připojení ke zdroji dat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ Vytvoří připojení ke zdroji dat.
  Při použití **db_source** na třídu, *název* je instance objektu zdroje dat, který má **db_source** byt aplikovaný atribut (viz Příklad 1). Při použití **db_source** vložené v implementaci metody, *název* je proměnná (místní počítač do metody), který slouží pro přístup k datům zdroje (viz příklad 2). To předat *název* k *source_name* parametr `db_command` ke zdroji dat pomocí příkazu.  
   
  *HRESULT* (volitelné)  
- Určuje proměnné, která se zobrazí `HRESULT` tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
+ Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
   
 ## <a name="remarks"></a>Poznámky  
  **db_source** vytvoří [CDataSource](../data/oledb/cdatasource-class.md) a [CSession](../data/oledb/csession-class.md) objekt, což dohromady představují připojení ke zdroji dat příjemce technologie OLE DB.  

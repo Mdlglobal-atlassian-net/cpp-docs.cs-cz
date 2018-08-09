@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461530"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646702"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *I0*  
  (Povinné) ID rozhraní: 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo – metoda](../windows/chaininterfaces-cancastto-method.md)|Určuje, zda ID zadané rozhraní může být převeden na jednotlivé specializace určené parametry šablony ChainInterface.|  
-|[ChainInterfaces::CastToUnknown – metoda](../windows/chaininterfaces-casttounknown-method.md)|Přetypování ukazatele rozhraní typu definované *I0* parametr šablony na ukazatel na rozhraní IUnknown.|  
+|[ChainInterfaces::CanCastTo – metoda](../windows/chaininterfaces-cancastto-method.md)|Určuje, jestli ID zadané rozhraní může být převeden na jednotlivé specializace určené **ChainInterface** parametry šablony.|  
+|[ChainInterfaces::CastToUnknown – metoda](../windows/chaininterfaces-casttounknown-method.md)|Přetypování ukazatele rozhraní typu definované *I0* parametr šablony na ukazatel na `IUnknown`.|  
 |[ChainInterfaces::FillArrayWithIid – metoda](../windows/chaininterfaces-fillarraywithiid-method.md)|Ukládá ID rozhraní určené *I0* parametr šablony v zadaném umístění v zadaném poli ID rozhraní.|  
 |[ChainInterfaces::Verify – metoda](../windows/chaininterfaces-verify-method.md)|Ověřuje, že každé rozhraní určené parametry šablony *I0* prostřednictvím *I9* dědí z `IUnknown` a/nebo `IInspectable`a že *I0* dědí z *I1* prostřednictvím *I9*.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Atribut cíle (rozšíření komponent C++) | Microsoft Docs
+title: Atribut cíle (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,99 +15,86 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f89eb3fcc48d8341190ceb5fe74a25570543e0cd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862020"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645588"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Cíle atributů (rozšíření komponent C++)
-Specifikátory využití atributů umožňují určit cíle atributů.  Každý atribut je definována pro použití určitých jazykové elementy. Atribut například mohou být definovány pouze pro třídy a struktury.  Následující seznam uvádí možné syntaktické elementy, na které můžete použít vlastní atribut. Kombinace tyto hodnoty (pomocí logických nebo) mohou být použity.  
+Specifikátory použití atributů umožňují zadat atribut cíle.  Každý atribut je definován použít některé prvky jazyka. Atribut může například definovat pouze pro třídy a struktury.  Následující seznam uvádí možné syntaktické prvky, na kterých je možné vlastní atribut. Kombinace těchto hodnot (pomocí logické nebo) může být použit.  
   
- K určení cílového atribut předat jeden nebo více <xref:System.AttributeTargets> výčty k <xref:System.AttributeUsageAttribute> při definování atributu.  
+ Chcete-li určit atribut target, předat jeden nebo více <xref:System.AttributeTargets> enumerátory k <xref:System.AttributeUsageAttribute> při definování atributu.  
   
- Následuje seznam platný atribut cíle:  
+ Následuje seznam platné cíle atributu:  
   
--   `All` (platí pro všechny konstrukce)  
+-   `All` (platí pro všechny konstruktory)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::All)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
 -   `Assembly` (platí pro sestavení jako celek)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Assembly)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
 -   `Module` (platí pro modul jako celek)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Module)]  
     ref class Attr : public Attribute {};  
   
     [module:Attr];  
-  
     ```  
   
 -   `Class`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Class)]  
     ref class Attr : public System::Attribute {};  
   
     [Attr]   // same as [class:Attr]  
     ref class MyClass {};  
-  
     ```  
   
 -   `Struct`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Struct)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [struct:Attr]  
     value struct MyStruct{};  
-  
     ```  
   
 -   `enum`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Enum)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [enum:Attr]  
     enum struct MyEnum{e, d};  
-  
     ```  
   
 -   `Constructor`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Constructor)]  
     ref class Attr : public Attribute {};  
@@ -115,13 +102,11 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     ref struct MyStruct{  
     [Attr] MyStruct(){}   // same as [constructor:Attr]  
     };  
-  
     ```  
   
 -   `Method`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Method)]  
     ref class Attr : public Attribute {};  
@@ -129,13 +114,11 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     ref struct MyStruct{  
     [Attr] void Test(){}   // same as [method:Attr]  
     };  
-  
     ```  
   
 -   `Property`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Property)]  
     ref class Attr : public Attribute {};  
@@ -143,13 +126,11 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     ref struct MyStruct{  
     [Attr] property int Test;   // same as [property:Attr]  
     };  
-  
     ```  
   
 -   `Field`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Field)]  
     ref class Attr : public Attribute {};  
@@ -157,13 +138,11 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     ref struct MyStruct{  
     [Attr] int Test;   // same as [field:Attr]  
     };  
-  
     ```  
   
 -   `Event`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Event)]  
     ref class Attr : public Attribute {};  
@@ -173,26 +152,22 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     ref struct MyStruct{  
     [Attr] event ClickEventHandler^ OnClick;   // same as [event:Attr]  
     };  
-  
     ```  
   
 -   `Interface`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Interface)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [event:Attr]  
     interface struct MyStruct{};  
-  
     ```  
   
 -   `Parameter`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Parameter)]  
     ref class Attr : public Attribute {};  
@@ -201,26 +176,22 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     void Test([Attr] int i);  
     void Test2([parameter:Attr] int i);  
     };  
-  
     ```  
   
 -   `Delegate`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Delegate)]  
     ref class Attr : public Attribute {};  
   
     [Attr] delegate void Test();  
     [delegate:Attr] delegate void Test2();  
-  
     ```  
   
 -   `ReturnValue`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::ReturnValue)]  
     ref class Attr : public Attribute {};  
@@ -229,44 +200,43 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     // Note required specifier  
     [returnvalue:Attr] int Test() { return 0; }  
     };  
-  
     ```  
   
- Atribut obvykle předchází přímo element jazyk, na který se vztahuje. V některých případech ale pozici atribut nestačí k určení zamýšleného cílového atributu. Vezměte v úvahu v tomto příkladu:  
+ Obvykle atribut přímo předchází prvek jazyka, ke kterému se vztahuje. V některých případech však polohu atribut nestačí k určení zamýšleného cílového atributu. Podívejte se například:  
   
-```  
+```cpp  
 [Attr] int MyFn(double x)...  
 ```  
   
- Syntakticky, neexistuje žádný způsob, jak zjistit, pokud je atribut určený použít metodu nebo metody vrátit hodnotu (v takovém případě je standardně metodu). V takových případech lze specifikátor použití atributu. Chcete-li použít návratovou hodnotu atributu, použít například `returnvalue` specifikátor následujícím způsobem:  
+ Syntakticky, neexistuje žádný způsob, jak zjistit, pokud atribut má použít pro metodu nebo návratovou hodnotu metody (v takovém případě bude výchozí metodu). V takových případech lze specifikátor atributu využití. Například chcete-li atribut platí pro návratovou hodnotu, použijte `returnvalue` specifikátor následujícím způsobem:  
   
-```  
+```cpp  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
- Specifikátory využití atribut jsou potřeba v těchto situacích:  
+ Použití specifikátoru atributu jsou nutné v následujících situacích:  
   
--   Chcete-li určit úroveň sestavení nebo modulu atribut.  
+-   Chcete-li určit atribut úrovně sestavení nebo modulu.  
   
--   Chcete-li určit, že atribut aplikuje na návratovou hodnotu metody, není metodu:  
+-   Můžete zadat, že atribut platí pro návratovou hodnotu metody, nikoli metodu:  
   
-    ```  
+    ```cpp  
     [method:Attr] int MyFn(double x)...     // Attr applies to method  
     [returnvalue:Attr] int MyFn(double x)...// Attr applies to return value  
     [Attr] int MyFn(double x)...            // default: method  
     ```  
   
--   Chcete-li určit, že atribut platí pro přistupující objekt vlastnosti, není vlastnost:  
+-   Můžete zadat, že atribut platí pro přistupující objekt vlastnosti, nikoli vlastnost:  
   
-    ```  
+    ```cpp  
     [method:MyAttr(123)] property int Property()    
     [property:MyAttr(123)] property int Property()  
     [MyAttr(123)] property int get_MyPropy() // default: property  
     ```  
   
--   Chcete-li určit, že atribut aplikuje na přístupového objektu události, není události:  
+-   Můžete zadat, že atribut platí pro přístupový objekt události, nikoli události:  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     ref struct X {  
        [field:MyAttr(123)] event MyDel* MyEvent;   //field  
@@ -275,27 +245,26 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
     }  
     ```  
   
- Specifikátor použití atributu platí pouze pro atribut, který následuje. To je  
+ Specifikátor atributu využití platí pouze pro atribut, který následuje. To je  
   
-```  
+```cpp  
 [returnvalue:Attr1, Attr2]  
 ```  
   
  se liší od  
   
-```  
+```cpp  
 [returnvalue:Attr1, returnvalue:Attr2]  
 ```  
   
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak určit více cílů.  
+ Tato ukázka předvádí, jak určit více cílů.  
   
 ### <a name="code"></a>Kód  
   
-```  
-  
+```cpp  
 using namespace System;  
 [AttributeUsage(AttributeTargets::Class | AttributeTargets::Struct, AllowMultiple = true )]  
 ref struct Attr : public Attribute {  

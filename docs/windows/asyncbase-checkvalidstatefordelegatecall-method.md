@@ -1,5 +1,5 @@
 ---
-title: Asyncbase::checkvalidstatefordelegatecall – metoda | Microsoft Docs
+title: Asyncbase::checkvalidstatefordelegatecall – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e3420304b0432f635d04a4892e7984dd38f144
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859872"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653069"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall – metoda
-Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním stavu asynchronní.  
+Ověřuje, zda vlastnosti delegáta lze upravit v aktuálním asynchronní stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForDelegateCall();  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud lze upravovat vlastnosti delegáta. v opačném E_ILLEGAL_METHOD_CALL.  
+ S_OK, pokud lze upravovat vlastnosti delegáta. v opačném případě E_ILLEGAL_METHOD_CALL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

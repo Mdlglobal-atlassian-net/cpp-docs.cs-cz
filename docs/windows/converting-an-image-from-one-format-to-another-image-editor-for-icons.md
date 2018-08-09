@@ -1,5 +1,5 @@
 ---
-title: Převod obrázku z jednoho formátu do druhého (Editor obrázků pro ikony) | Microsoft Docs
+title: Převod obrázku z jednoho formátu do jiného (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f415b0b2b6efca6eda9ecd131cc047b8c5cec83e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3f16f09a42961a2bfd6093f6f2dd72b0fdcc382
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871037"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645617"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Převod obrázku z jednoho formátu do druhého (editor obrázků pro ikony)
-Můžete otevřít obrázky GIF nebo JPEG v editoru obrázků a uložit je jako rastrové obrázky. Můžete také otevřít soubor rastrového obrázku a uložte ho jako GIF nebo JPEG. Práce s obrázky nemusí být součástí projekt, ve vývojovém prostředí (v tématu [úpravy samostatné image](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
+Můžete otevřít ve formátu GIF nebo JPEG imagí v **Image** editoru a uložte je jako rastrové obrázky. Můžete také otevřít soubor rastrového obrázku a uložit jako ve formátu GIF nebo JPEG. Při práci s obrázky nemusí být součástí projektu pro úpravy ve vývojovém prostředí (naleznete v tématu [samostatný obrázek úpravy](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
   
-### <a name="to-convert-an-image-from-one-format-to-another"></a>Převod obrázku z jednoho formátu do jiného  
+### <a name="to-convert-an-image-from-one-format-to-another"></a>K převedení obrázku z jednoho formátu do druhého  
   
-1.  Otevřete obrázek **Image** editor.  
+1.  Otevřít obrázek v **Image** editoru.  
   
-2.  Z **soubor** nabídce zvolte **Uložit *filename* jako**.  
+2.  Z **souboru** nabídce zvolte **Uložit *filename* jako**.  
   
-3.  V **uložit soubor jako** dialogovém **název souboru** zadejte název souboru a linku, která označuje požadovaný formát.  
+3.  V **uložit soubor jako** v dialogu **název_souboru** zadejte název souboru a rozšíření, která označuje požadovaný formát.  
   
 4.  Klikněte na tlačítko **Uložit**.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

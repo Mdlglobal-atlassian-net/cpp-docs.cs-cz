@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory – třída | Microsoft Docs
+title: Simpleclassfactory – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892758"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641820"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory – třída
 Poskytuje základní mechanismus pro vytvoření základní třídy.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Base`  
+### <a name="parameters"></a>Parametry  
+ *základ*  
  Základní třída.  
   
 ## <a name="remarks"></a>Poznámky  
- Základní třída musí obsahovat výchozí konstruktor.  
+ Základní třída musí poskytovat konstruktor default.  
   
- Následující příklad kódu ukazuje, jak používat SimpleClassFactory s [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makro.  
+ Následující příklad kódu ukazuje, jak používat **simpleclassfactory –** s [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) – makro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   

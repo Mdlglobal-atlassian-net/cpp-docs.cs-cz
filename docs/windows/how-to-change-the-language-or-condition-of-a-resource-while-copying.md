@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570493"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650212"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Postupy: Změna jazyka nebo podmínky prostředku během kopírování
 Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.  
@@ -34,7 +34,7 @@ Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastno
   
  Jazyk a podmínky prostředku jsou uvedeny v závorkách za názvem prostředku v okně pracovního prostoru. V tomto příkladu používá prostředek s názvem IDD_AboutBox finština jako svůj jazyk a jeho stav je XX33.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   V **podmínku** zadejte podmínku.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

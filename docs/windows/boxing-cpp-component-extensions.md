@@ -1,5 +1,5 @@
 ---
-title: Zabalení (rozšíření komponent C++) | Microsoft Docs
+title: Zabalení (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861354"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650619"
 ---
 # <a name="boxing--c-component-extensions"></a>Zabalení (rozšíření komponent C++)
-Visual C++ compiler můžete převést typy hodnot k objektům v procesu označovaného jako *zabalení*a převést objekty do typy hodnot v procesu označovaného jako *rozbalení*.  
+Kompilátor Visual C++ můžete převést typy hodnot k objektům v procesu nazývaného *zabalení*a převedení objektů na typy hodnot v procesu nazývaného *rozbalení*.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Používají se žádné poznámky pro tuto funkci jazyka, které platí pro všechny moduly runtime.)  
+ (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- C + +/ CX podporuje syntaxi ve zkráceném tvaru pro typy hodnot zabalení a rozbalení odkazové typy. Typ hodnoty je zabalená, když je přiřazený k proměnné typu `Object`. `Object` Proměnná nezabalený, když je přiřazen k proměnné typu hodnota a nezabalený typ určený v závorkách; to znamená, když je proměnná objektu přetypovat na typ hodnoty.  
+ C + +/ CX podporuje syntaxi ve zkráceném tvaru pro typy hodnot zabalení a rozbalení typy odkazů. Typ hodnoty je zabalená, když je přiřazen k proměnné typu `Object`. `Object` Proměnná je instance nezabalená, když je přiřazen do proměnné typu hodnoty a nezabalený typ. je uveden v závorkách, což znamená, když je objektová proměnná přetypována na typ hodnoty.  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ### <a name="examples"></a>Příklady  
- Následující kód například polí a unboxes `DateTime` hodnotu. V příkladu nejdřív získá hodnotu data a času, který představuje aktuální datum a čas a přiřadí ji k proměnné data a času. Pak je podle jeho přiřazení proměnné objektu zabalená, datum a čas. Nakonec zabalené hodnoty je nezabalený přiřazením jiné proměnné, data a času.  
+ Následující kód například polí a unboxes `DateTime` hodnotu. Nejprve příklad získá `DateTime` hodnotu, která představuje aktuální datum a čas a přiřadí ji k `DateTime` proměnné. Pak bude `DateTime` je zabalená, tak, že ji přiřadíte `Object` proměnné. Nakonec je nejprve vybalen zabalené hodnoty tak, že ji přiřadíte do jiného `DateTime` proměnné.  
   
- Chcete-li otestovat v příkladu, vytvoření projektu BlankApplication, nahraďte metodu BlankPage::OnNavigatedTo() a pak zadat zarážky na pravou hranatou závorku a přiřazení proměnné str1. Pokud v příkladu dosáhne pravá závorka, podívejte se na str1.  
+ Příklad testování, vytvořit `BlankApplication` projektu, nahraďte `BlankPage::OnNavigatedTo()` metoda a pak zadejte zarážky za uzavírací závorku a přiřazení k proměnné `str1`. Pokud v příkladu dosáhne uzavírací závorku, podívejte se `str1`.  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,15 +75,14 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
  Další informace najdete v tématu [zabalení (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- Kompilátor Visual C++ teď typů k hodnot polí <xref:System.Object>.  To je možné z důvodu převodu z kompilátoru definované pro převod typů hodnot do <xref:System.Object>.  
+ Kompilátor Visual C++ teď typů do hodnot polí <xref:System.Object>. To je možné z důvodu převodu definované kompilátorem převést hodnotu typů do <xref:System.Object>.  
   
- Zabalení a rozbalení povolit hodnotu typy jsou považovány za objekty. Typy hodnot, včetně struktura typů a vestavěné typy, jako je například int, mohou být převedeny do a z typu <xref:System.Object>.  
+ Zabalení a rozbalení povolit typy hodnot jsou považovány za objekty. Typy hodnot včetně struktury typů a vestavěné typy, například int, může být převeden do a z typu <xref:System.Object>.  
   
  Další informace naleznete v tématu:  
   
@@ -99,10 +95,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Následující ukázka ukazuje, jak implicitní zabalení funguje.  
   
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 1  

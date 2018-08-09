@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570025"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644031"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface – metoda
 Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHODIMP UnmarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  
@@ -37,7 +37,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *pStm*  
  Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.  
   

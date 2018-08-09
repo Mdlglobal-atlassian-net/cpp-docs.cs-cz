@@ -20,26 +20,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb77d43dabe223308ae3eb0c34ec22d0c1624e2e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466927"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646663"
 ---
 # <a name="aggregates"></a>aggregates
 Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *identifikátor CLSID*  
  Určuje identifikátor CLSID agregovatelné objektu.  
   
@@ -51,7 +51,7 @@ Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSI
   
  Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
- **Projekty knihovny ATL**  
+### <a name="atl-projects"></a>Projekty knihovny ATL  
   
  Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Nejprve se přidá následující položku do mapy modelu COM cílového objektu:  
   

@@ -1,5 +1,5 @@
 ---
-title: Přidávání souborů do prázdných aplikací Win32 | Microsoft Docs
+title: Přidávání souborů do prázdných aplikací Win32 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856889"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646839"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Přidávání souborů do prázdných aplikací Win32
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Přidat soubory do prázdné aplikace Windows desktop  
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Chcete-li přidat soubory do prázdné aplikace klasické pracovní plochy Windows  
   
-1.  Vyberte adresář, v **Průzkumníku řešení**.  
+1.  Vyberte adresář, do **Průzkumníka řešení**.  
   
-2.  Klikněte pravým tlačítkem na název adresáře, klikněte na tlačítko **přidat** z místní nabídky a pak klikněte na tlačítko **existující položka**.  
+2.  Klikněte pravým tlačítkem na název adresáře, klikněte na tlačítko **přidat** z místní nabídky a pak klikněte na tlačítko **existující položku**.  
   
-3.  V **dialogové okno Přidat existující položku**, přejděte na soubory, které chcete přidat do projektu.  
+3.  V **dialogové okno Přidat existující položku**, přejděte k souborům, které chcete přidat do projektu.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
- Pokud chcete přidat soubory, které jsou ani zdroj, Hlavička nebo soubory prostředků do projektu, klikněte pravým tlačítkem na uzel řešení v Průzkumníku řešení a přidejte soubory do projektu stejným způsobem. Složka ostatních vytvoří se pro další soubory v projektu.  
+ Přidat soubory, které jsou ani zdroje, Hlavička nebo souborů prostředků do vašeho projektu, klikněte pravým tlačítkem myši **řešení** uzel v **Průzkumníka řešení** a přidejte soubory do projektu stejným způsobem. A **různé** vytvoří složku pro uložení další soubory v projektu.  
   
 > [!NOTE]
->  Před vytvořením projektu, musíte zadat sestavení možnosti pro tyto soubory tak, aby byly správně zahrnuty v aplikaci dokončení. Další informace najdete v tématu [určení nastavení projektu s použitím stránek vlastností](../ide/property-pages-visual-cpp.md) a [sestavení programu C/C++](../build/building-c-cpp-programs.md).  
+>  Před vytvořením projektu, je potřeba určit možnosti sestavení pro tyto soubory tak, že jsou správně součástí dokončenou aplikaci. Další informace najdete v tématu [určení nastavení projektu pomocí stránky vlastností](../ide/property-pages-visual-cpp.md) a [vytváření programu v jazyce C/C++](../build/building-c-cpp-programs.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření aplikací prázdný Windows Desktop](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Vytváření aplikací klasické pracovní plochy Windows prázdný](../windows/creating-an-empty-windows-desktop-application.md)   
  [Nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

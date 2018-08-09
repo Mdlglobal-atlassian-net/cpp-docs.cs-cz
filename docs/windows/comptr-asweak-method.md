@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78f6eb9f3d0acf6a28479593d64616fa6881be76
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465219"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648087"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak – metoda
 Získá nestálý odkaz na aktuální objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HRESULT AsWeak(  
    _Out_ WeakRef* pWeakRef  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *pWeakRef*  
  Když tato operace dokončí, ukazatel na objekt nestálý odkaz.  
   

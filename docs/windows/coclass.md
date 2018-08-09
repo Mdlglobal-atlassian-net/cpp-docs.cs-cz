@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463113"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647837"
 ---
 # <a name="coclass"></a>coclass
 Vytvoří objekt modelu COM, které můžete implementovat rozhraní modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Vytvoří objekt modelu COM, které můžete implementovat rozhraní modelu COM.
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) – makro je vložen do objektu map COM.
   
- Název třídy typu coclass v souboru IDL pro třídu vygenerované bude mít stejný název jako třída.  Například a odkazuje na následující příklad a použijte pro přístup k ID třídy pro konstruktor coclass CMyClass, v klientovi v souboru hlavičky generované MIDL CLSID_CMyClass.  
+ Název třídy typu coclass v souboru IDL pro třídu vygenerované bude mít stejný název jako třída.  Například a odkazuje na následující příklad a pro přístup k ID třídy pro konstruktor coclass `CMyClass`, použijte v klientovi v souboru hlavičky generované MIDL `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Příklad  
  Následující kód ukazuje způsob použití **coclass** atribut:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Následující příklad ukazuje, jak lze přepsat výchozí implementace funkce, která se zobrazí v kódu vloženy **coclass** atribut. Zobrazit [/Fx](../build/reference/fx-merge-injected-code.md) Další informace o zobrazení vloženého kódu. Všechny základní třídy nebo rozhraní, které můžete použít pro třídu se zobrazí ve vloženém kódu.   Dále pokud explicitně neurčíte tuto třídu jako základ pro váš coclass, třída je zahrnuta ve výchozím nastavení ve vloženém kódu atribut poskytovatel použije formulář určili ve svém kódu.  
+ Následující příklad ukazuje, jak lze přepsat výchozí implementace funkce, která se zobrazí v kódu vloženy **coclass** atribut. Zobrazit [/Fx](../build/reference/fx-merge-injected-code.md) Další informace o zobrazení vloženého kódu. Všechny základní třídy nebo rozhraní, které můžete použít pro třídu se zobrazí ve vloženém kódu. Dále pokud explicitně neurčíte tuto třídu jako základ pro váš coclass, třída je zahrnuta ve výchozím nastavení ve vloženém kódu atribut poskytovatel použije formulář určili ve svém kódu.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

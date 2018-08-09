@@ -1,5 +1,5 @@
 ---
-title: Semaphore::Lock – metoda | Microsoft Docs
+title: Semaphore::Lock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892472"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642143"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock – metoda
-Počká, dokud nebude aktuální objekt nebo objekt semafor přidružené k zadanému popisovači, je ve stavu signalizovaného nebo zadaný časový limit uplynul.  
+Počká, až do aktuálního objektu nebo **semafor** objekt přidružený k je zadaný popisovač do signalizovaného stavu nebo zadaný časový limit uplynul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +40,15 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `milliseconds`  
- Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čeká neomezenou dobu zaseknout.  
+### <a name="parameters"></a>Parametry  
+ *Milisekundy*  
+ Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čekat po neomezenou dobu.  
   
- `h`  
- Popisovač pro objekt semafor.  
+ *h*  
+ Popisovač **semafor** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ A `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  
@@ -56,5 +56,4 @@ static SyncLock Lock(
  **Namespace:** Microsoft::WRL:: wrappers –  
   
 ## <a name="see-also"></a>Viz také  
-[Semaphore – třída](../windows/semaphore-class.md)
- 
+ [Semaphore – třída](../windows/semaphore-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Vytváření nových panelů nástrojů | Microsoft Docs
+title: Vytváření nových panelů nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b61d1c530272ecaba2cbeb36c21e158bd5a6b401
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c805fa46b47db5600dad153ffa51ba4f0b25442b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888077"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652292"
 ---
 # <a name="creating-new-toolbars"></a>Vytváření nových panelů nástrojů
 ### <a name="to-create-a-new-toolbar"></a>Chcete-li vytvořit nový panel nástrojů  
   
-1.  V **prostředků** zobrazení, klikněte pravým tlačítkem na váš soubor .rc, a potom vyberte **přidat prostředek** z místní nabídky. (Pokud máte existující panelu nástrojů v souboru .rc, které můžete jednoduše kliknout pravým tlačítkem **nástrojů** složky a vyberte **vložit nástrojů** z místní nabídky.)  
+1.  V **prostředků** zobrazení, klikněte pravým tlačítkem na soubor .rc a pak zvolte **přidat prostředek** z místní nabídky. (Pokud máte existující nástrojů v souboru .rc, je můžete jednoduše kliknout pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů** z místní nabídky.)  
   
-     **Poznámka:** Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE]
+     > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V **přidat prostředek** dialogové okno, vyberte **nástrojů** v **typ prostředku** seznamu a pak klikněte na **nový**.  
+2.  V **přidat prostředek** dialogu **nástrojů** v **typ prostředku** seznamu a potom klikněte na **nový**.  
   
-     Pokud se znaménkem plus (+) zobrazí vedle **nástrojů** typ prostředku, znamená to, že nástrojů šablony jsou k dispozici. Kliknutím na znaménko plus rozbalte seznam šablon, vyberte šablonu a klikněte na tlačítko **nový**.  
+     Pokud symbol plus (**+**) se zobrazí vedle **nástrojů** typ prostředku, znamená to, že šablony nástrojů jsou k dispozici. Klikněte na znaménko plus rozbalit seznam šablon, vyberte šablonu a klikněte na **nový**.  
   
      \- nebo –  
   
-3.  [Převést existujícího rastrového obrázku na panelu nástrojů](../windows/converting-bitmaps-to-toolbars.md).  
+3.  [Převod existujícího rastrového obrázku panelu nástrojů](../windows/converting-bitmaps-to-toolbars.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
- Knihovny MFC nebo knihovny ATL  
+## <a name="requirements"></a>Požadavky  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

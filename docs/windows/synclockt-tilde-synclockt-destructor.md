@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ synclockt – destruktor | Microsoft Docs'
+title: 'SyncLockT:: ~ SyncLockT – destruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892732"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646715"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT – destruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,9 +34,9 @@ Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití p�
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Instance třídy SyncLockT deinitializes.  
+ Uvolní instanci **SyncLockT** třídy.  
   
- Tento destruktor také odemkne aktuální instance SyncLockT.  
+ Tento destruktor také odemkne aktuální **SyncLockT** instance.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

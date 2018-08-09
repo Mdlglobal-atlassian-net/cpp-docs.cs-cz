@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 34850646e40ffa9cbd3185b13fdaa93d7c873787
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569663"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651437"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 Definuje rozhraní jako výchozího rozhraní vtable pro objekt modelu COM.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ defaultvtable(  
    interface  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *interface*  
  Určené rozhraní, které mají mít výchozí vtable pro objekt modelu COM.  
   

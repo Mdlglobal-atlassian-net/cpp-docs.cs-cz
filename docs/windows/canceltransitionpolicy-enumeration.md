@@ -1,5 +1,5 @@
 ---
-title: CancelTransitionPolicy – výčet | Microsoft Docs
+title: Canceltransitionpolicy – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860343"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642955"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy – výčet
-Určuje, jak je asynchronní operace pokus o přechod do stavu terminálu z byla dokončena nebo chyba by měl chovat s ohledem na klient požádal zrušené stavu.  
+Určuje, jak asynchronní operace je pokus o přechod do konečný stav Dokončeno nebo chyba by se měly chovat s ohledem na klient vyžádal zrušeném stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |Název|Popis|  
 |----------|-----------------|  
-|`RemainCanceled`|Pokud asynchronní operace aktuálně zrušené stavu klient požádal, znamená to, že zůstane ve stavu zrušené oproti přechodu do Terminálové dokončit nebo chybový stav.|  
-|`TransitionFromCanceled`|Pokud asynchronní operaci je momentálně ve stavu zrušené klient požádal, označuje stav měli přechod od zrušené stavu terminálu stavu dokončení nebo Chyba určeného hovoru, který využívá tento příznak.|  
+|`RemainCanceled`|Pokud asynchronní operace je aktuálně ve zrušeném stavu klient vyžádal, to znamená, že zůstanou ve zrušeném stavu na rozdíl od přechod k dokončení terminálu nebo v chybovém stavu.|  
+|`TransitionFromCanceled`|Pokud asynchronní operace je aktuálně ve zrušeném stavu klient vyžádal, to znamená, že stav by měl přejít od zrušeném stavu na konečný stav Dokončeno nebo chyba, počítáno od volání, které používá tento příznak.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570669"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643186"
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
 Obecná třída je deklarována pomocí následující tvar:  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Poznámky  
  Ve výše uvedené syntaxe se používají následující termíny:  
   
- `attributes` (volitelné)  
+ *atributy* (volitelné)  
  Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.  
   
  *klíč třídy*  
@@ -57,7 +57,7 @@ class-body
  *klauzule omezení*  
  Seznam (nikoli oddělený čárkami) **kde** klauzule určující omezení pro parametry typu. Má podobu:  
   
- `where`  *identifikátor typu parametru*`:`*seznam omezení*   `...`  
+ `where`  *identifikátor typu parametru*`:`*seznam omezení*  `...`  
   
  *seznam omezení*  
  *Třída nebo rozhraní*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- Typ vnější\<int >:: vnitřní není stejný jako typ vnější\<double >:: vnitřní.  
+ Typ `Outer<int>::Inner` není stejný jako typ `Outer<double>::Inner`.  
   
  Stejně jako u obecných metod v obecné třídy lze definovat další typy parametrů pro vnořeného typu. Pokud používáte stejné názvy parametrů typů ve třídě vnitřní a vnější, vnitřní typ parametru skryje parametr vnějšího typu.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Protože neexistuje žádný způsob, jak odkazovat na parametr typu vnějšího, kompilátor vytvoří upozornění v této situaci.  
   
- Když jsou pojmenovány konstruovaný vnořených obecných typech, parametr typu vnějšího typu není součástí seznam parametrů typu pro typ vnitřní i v případě, že vnitřní typ implicitně parametrizován parametr typu vnějšího typu. Ve výše uvedeném případě bude název konstruovaný typ vnější\<int >:: vnitřní\<řetězec >.  
+ Když jsou pojmenovány konstruovaný vnořených obecných typech, parametr typu vnějšího typu není součástí seznam parametrů typu pro typ vnitřní i v případě, že vnitřní typ implicitně parametrizován parametr typu vnějšího typu. Ve výše uvedeném případě by se název konstruovaný typ `Outer<int>::Inner<string>`.  
   
  Následující příklad ukazuje vytváření a čtení odkazovaného seznamu pomocí vnořené typy obecných tříd.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Vlastnosti, události, indexery a operátoři mohou použít parametry typu Obecné ohraničující třídy jako návratové hodnoty, parametry nebo lokální proměnné, třeba při `ItemType` je parametr typu třídy:  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

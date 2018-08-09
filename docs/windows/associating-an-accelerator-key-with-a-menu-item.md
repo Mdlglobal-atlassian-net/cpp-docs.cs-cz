@@ -1,5 +1,5 @@
 ---
-title: Přiřazení klíče akcelerátoru k položce nabídky | Microsoft Docs
+title: Přiřazení klíče akcelerátoru k položce nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d55fc13cb8fd989188c5796709c952903ce83d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854808"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651148"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Přiřazení klíče akcelerátoru k položce nabídky
-Tolikrát, kolikrát chcete položku nabídky a kombinace kláves pro vydejte stejný příkaz programu. Můžete provést přiřazením stejný identifikátor prostředku (ID) pro položku nabídky a položku v tabulce akcelerátorů vaší aplikace. Popisek položky nabídky Zobrazit název akcelerátor upravte. Další informace o položek nabídky a klávesy akcelerátoru najdete v tématu [přidružení položku nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
-  
-
+V mnoha případech má položku nabídky a kombinace kláves pro stejný příkaz programu. To provedete tak, že stejný identifikátor prostředku (ID) přiřadíte k položce nabídky a záznam v tabulce akcelerátorů vaší aplikace. Potom upravte položku nabídky titulek, aby se zobrazil název akcelerátoru. Další informace o položky nabídky a přístupové klávesy, naleznete v tématu [přiřazení položky nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

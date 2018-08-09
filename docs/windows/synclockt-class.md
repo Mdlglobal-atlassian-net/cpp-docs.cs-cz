@@ -1,5 +1,5 @@
 ---
-title: SyncLockT – třída | Microsoft Docs
+title: Synclockt – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892849"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643423"
 ---
 # <a name="synclockt-class"></a>SyncLockT – třída
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ template <
 class SyncLockT;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `SyncTraits`  
+### <a name="parameters"></a>Parametry  
+ *SyncTraits*  
  Typ, který může převzít vlastnictví prostředku.  
   
 ## <a name="remarks"></a>Poznámky  
  Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.  
   
- SyncLockT – třída slouží, například při provádění [SRWLock](../windows/srwlock-class.md) třídy.  
+ **Synclockt –** třída se používá, třeba k implementaci [SRWLock](../windows/srwlock-class.md) třídy.  
   
 ## <a name="members"></a>Členové  
   
@@ -51,27 +51,27 @@ class SyncLockT;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT – konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicializuje novou instanci třídy SyncLockT – třída.|  
-|[SyncLockT::~SyncLockT – destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Instance třídy SyncLockT deinitializes.|  
+|[SyncLockT::SyncLockT – konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicializuje novou instanci třídy **SyncLockT** třídy.|  
+|[SyncLockT::~SyncLockT – destruktor](../windows/synclockt-tilde-synclockt-destructor.md)|Uvolní instanci **SyncLockT** třídy.|  
   
 ### <a name="protected-constructors"></a>Chráněné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockT::SyncLockT – konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicializuje novou instanci třídy SyncLockT – třída.|  
+|[SyncLockT::SyncLockT – konstruktor](../windows/synclockt-synclockt-constructor.md)|Inicializuje novou instanci třídy **SyncLockT** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockT::IsLocked – metoda](../windows/synclockt-islocked-method.md)|Určuje, zda je aktuální objekt SyncLockT vlastní prostředek; To znamená, je objekt SyncLockT *uzamčení*.|  
-|[SyncLockT::Unlock – metoda](../windows/synclockt-unlock-method.md)|Uvolní ovládacího prvku prostředku uchovávat aktuální objekt SyncLockT, pokud existuje.|  
+|[SyncLockT::IsLocked – metoda](../windows/synclockt-islocked-method.md)|Označuje, zda aktuální **synclockt –** vlastní prostředek objektu; to znamená, **synclockt –** objekt je *uzamčen*.|  
+|[SyncLockT::Unlock – metoda](../windows/synclockt-unlock-method.md)|Verze ovládacího prvku prostředku držené aktuální **SyncLockT** objektu, pokud existuje.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[SyncLockT::sync_ – datový člen](../windows/synclockt-sync-data-member.md)|Obsahuje základní prostředku reprezentovaného parametrem SyncLockT – třída.|  
+|[SyncLockT::sync_ – datový člen](../windows/synclockt-sync-data-member.md)|Obsahuje základní prostředku reprezentovaného **SyncLockT** třídy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `SyncLockT`  
@@ -82,5 +82,5 @@ class SyncLockT;
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Microsoft::WRL::Wrappers::details](../windows/microsoft-wrl-wrappers-details-namespace.md)   
+ [Microsoft::WRL::Wrappers::details Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)   
  [SRWLock – třída](../windows/srwlock-class.md)

@@ -1,5 +1,5 @@
 ---
-title: typeid (rozšíření komponent C++) | Microsoft Docs
+title: typeid (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888364"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644070"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (rozšíření komponent C++)
 Získá hodnotu, která určuje typ objektu.  
   
 > [!WARNING]
->  Toto téma označuje verzi rozšíření komponent C++ typeid. ISO C++ verzi toto klíčové slovo, naleznete v části [typeid – operátor](../cpp/typeid-operator.md).  
+>  Toto téma odkazuje na verzi rozšíření komponent C++ typeid. Verzi tohoto klíčového slova ISO C++ naleznete v části [typeid – operátor](../cpp/typeid-operator.md).  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
   
@@ -49,49 +49,46 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Název typu.  
   
 ### <a name="remarks"></a>Poznámky  
- V jazyce C + +/ CX, vrátí typeid [Platform::Type](../cppcx/platform-type-class.md) , se vytvářejí na základě informací o typu modulu runtime.  
+ V jazyce C + +/ CX, vrátí typeid [Platform::type –](../cppcx/platform-type-class.md) , který je vytvořen z informací o typu modulu runtime.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 type::typeid  
 ```  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry   
  *Typ*  
- Název tohoto typu (abstraktní deklarátor), pro které chcete objekt System::Type.  
+ Název typu (abstraktní deklarátor), pro které chcete `System::Type` objektu.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky  
   
  `typeid` slouží k získání <xref:System.Type> pro typ v době kompilace.  
   
- `typeid` je podobná získávání System::Type pro typ za běhu pomocí <xref:System.Type.GetType%2A> nebo <xref:System.Object.GetType%2A>. Typeid však přijímá jenom název typu jako parametr.  Pokud chcete pomocí instance typu můžete zobrazit jeho System::Type název, použijte GetType.  
+ `typeid` je podobný System::Type typu za běhu pomocí <xref:System.Type.GetType%2A> nebo <xref:System.Object.GetType%2A>. Typeid však přijímá pouze název typu jako parametr.  Pokud chcete získat jeho název System::Type pomocí instance typu, použijte GetType.  
   
- `typeid` musí být schopen vyhodnotit název typu (typů) při kompilaci, zatímco GetType vyhodnotí typ určený k vrácení za běhu.  
+ `typeid` musí mít k vyhodnocení názvu typu (typ) v době kompilace, zatímco GetType vyhodnocen jako typ určený k vrácení v době běhu.  
   
- `typeid` může trvat název nativního typu nebo běžné alias runtime jazyka pro název nativního typu; v tématu [rozhraní .NET Framework – ekvivalenty k nativním typy C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Další informace.  
+ `typeid` může trvat nativní typ název nebo common language runtime alias pro nativní typ name; Zobrazit [rozhraní .NET Framework – ekvivalenty nativních typů C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Další informace.  
   
- `typeid` taky spolupracuje se službou nativní typy, i když stále vrátí System::Type.  Struktura type_info získáte pomocí [typeid – operátor](../cpp/typeid-operator.md).  
+ `typeid` taky spolupracuje s nativní typy, i když stále vrátí System::Type.  Type_info – struktura, použijte [typeid – operátor](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad porovnává typeid – klíčové slovo GetType() členu.  
+ Následující příklad porovnává typeid – klíčové slovo chcete `GetType()` člena.  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
   
- **Příklad**  
+ Následující příklad ukazuje, že proměnné typu System::Type je možné získat atributy typu.  Profil také ukazuje, že u některých typů, budete muset vytvořit definice typu použití `typeid`.  
   
- Následující příklad ukazuje, že proměnná typu System::Type lze získat atributy pro typ.  Také ukazuje, že pro některé typy, budete muset vytvořit typedef používat `typeid`.  
-  
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  

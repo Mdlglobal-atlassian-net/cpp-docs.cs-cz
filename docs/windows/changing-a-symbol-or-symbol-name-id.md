@@ -1,5 +1,5 @@
 ---
-title: Změna symbolu nebo názvu symbolu (ID) | Microsoft Docs
+title: Změna symbolu nebo názvu symbolu (ID) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9d2429f1257711d766d8e51b890e2e8a59b8d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857711"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642253"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Změna symbolu nebo názvu symbolu (ID)
-Když vytvoříte nový prostředek nebo objektu prostředků, přiřadí ji vývojového prostředí symbol výchozí název, například IDD_DIALOG1. Můžete použít [vlastnosti – okno](/visualstudio/ide/reference/properties-window) Chcete-li změnit výchozí název symbolu nebo chcete změnit název žádné symbolu již přidružených k prostředku.  
+Při vytváření nového prostředku nebo prostředku objektu vývojové prostředí jí přiřadí výchozí název symbolu, například IDD_DIALOG1. Můžete použít [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li změnit výchozí název symbolu nebo chcete změnit název žádný symbol už přidružené k prostředku.  
   
-### <a name="to-change-a-resources-symbol-name"></a>Chcete-li změnit název prostředku symbolu  
+### <a name="to-change-a-resources-symbol-name"></a>Chcete-li změnit název symbolu prostředku  
   
 1.  V [zobrazení prostředků](../windows/resource-view-window.md), vyberte prostředek.  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  V **vlastnosti** okno, zadejte nový název symbolu nebo vyberte ze seznamu existující symboly v **ID** pole.  
   
-     Pokud zadáte nový název symbolu, je automaticky přiřazovat hodnota.  
+     Pokud zadáte nový název symbolu, je automaticky přiřazena hodnota.  
   
- Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) změnit názvy symbolů prostředek není aktuálně přiřazen. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).  
+ Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) změnit názvy symbolů není aktuálně přiřazená k prostředku. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).  
   
-
-  
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

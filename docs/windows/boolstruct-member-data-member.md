@@ -1,5 +1,5 @@
 ---
-title: Boolstruct::Member – datový člen | Microsoft Docs
+title: Boolstruct::Member – datový člen | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859810"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641112"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member – datový člen
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Určuje, že [ComPtr](../windows/comptr-class.md) , nebo není, Správa doba života objektu rozhraní.  
+ Určuje, že [ComPtr](../windows/comptr-class.md) je nebo není, Správa doba života objektu rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** internal.h  

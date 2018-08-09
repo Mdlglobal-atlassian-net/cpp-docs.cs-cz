@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465295"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649780"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Omezení obecných parametrů typů (C++/CLI)
 V obecném typu nebo deklarace metody se můžete kvalifikovat parametr typu s omezeními. Omezení je požadavek, který musí splňovat typy použité jako argumenty typu. Omezení může být například, že argument typu musí implementovat určité rozhraní nebo dědí určité třídy.  
@@ -32,11 +32,11 @@ V obecném typu nebo deklarace metody se můžete kvalifikovat parametr typu s o
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *parametr typu*  
  Jeden z parametrů typu, chcete-li být omezený.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  Tento seznam může také obsahovat třídu. Pro argument typu pro omezení základní třídy se musí být stejné třídy jako omezení nebo jsou odvozeny z omezení.  
   
- Můžete také určit `gcnew()` k označení, že argument typu musí mít veřejný konstruktor bez parametrů; nebo **třídy ref class** uvést typ argumentu musí být typ odkazu, včetně tříd, rozhraní, delegáta nebo pole Typ; nebo **hodnotu třídy** uvést typ argumentu musí být typem hodnoty. Některá hodnota typu s výjimkou Nullable\<T > je možné zadat.  
+ Můžete také určit **gcnew()** k označení, že argument typu musí mít veřejný konstruktor bez parametrů; nebo **třídy ref class** k označení, že argument typu musí být typ odkazu, včetně všechny třídy, rozhraní, delegáta nebo typ pole; nebo **hodnotu třídy** uvést typ argumentu musí být typem hodnoty. Některá hodnota typu s výjimkou Nullable\<T > je možné zadat.  
   
  Můžete také zadat obecný parametr jako omezení. Argument typu zadaný pro typ, že jsou omezení musí být nebo odvozen od typu omezení. Tomu se říká omezení holého typu.  
   

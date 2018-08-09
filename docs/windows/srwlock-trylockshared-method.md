@@ -1,5 +1,5 @@
 ---
-title: Srwlock::trylockshared – metoda | Microsoft Docs
+title: Srwlock::trylockshared – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645809"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared – metoda
-Pokusí se získat objekt SRWLock ve sdíleném režimu pro objekt SRWLock zadané nebo aktuální.  
+Pokusí se získat **srwlock –** objektu ve sdíleném režimu pro aktuální nebo zadané **SRWLock** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `lock`  
- Ukazatel na objekt SRWLock.  
+### <a name="parameters"></a>Parametry  
+ *lock*  
+ Ukazatel **SRWLock** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného objekt SRWLock v režimu sdílení a volající vlákno trvá vlastnictví zámku. SRWLock, jinak hodnota objektu, jejichž stav je neplatný.  
+ V případě úspěchu, **SRWLock** objektu ve sdíleném režimu a volající vlákno převezme vlastnictví zámku. V opačném případě **SRWLock** objekt, jehož stav je neplatný.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

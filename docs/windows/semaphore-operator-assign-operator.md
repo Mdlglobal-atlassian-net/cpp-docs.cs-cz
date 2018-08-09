@@ -1,5 +1,5 @@
 ---
-title: Semaphore::Operator = – operátor | Microsoft Docs
+title: Semaphore::Operator = – operátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892524"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651275"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= – operátor
-Přesune zadaný popisovač z objektu semaforu pro aktuální objekt semafor.  
+Posune Zadaný popisovač z **semafor** objektů na aktuální **semafor** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Deklarátor odkazu na objekt semafor.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Odkaz rvalue na **semafor** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Odkaz na aktuální objekt semafor.  
+ Odkaz na aktuální **semafor** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

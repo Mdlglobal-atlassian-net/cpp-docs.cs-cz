@@ -1,5 +1,5 @@
 ---
-title: Zarovnání ovládacích prvků v dialogovém okně | Microsoft Docs
+title: Zarovnání ovládacích prvků v dialogovém okně | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 562beb956b7d968d8886dd810c27de5a249f944b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0aaf7ce6e94a8c7816a1fc5da6ad6ce6cf09c077
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856681"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652305"
 ---
 # <a name="centering-controls-in-a-dialog-box"></a>Zarovnání ovládacích prvků v dialogovém okně
-### <a name="to-center-controls-in-a-dialog-box"></a>Na střed ovládacích prvků v dialogovém okně  
+### <a name="to-center-controls-in-a-dialog-box"></a>Zarovnat na střed ovládacích prvků v dialogovém okně  
   
-1.  Vyberte ovládací prvek nebo ovládací prvky, které chcete ke změně uspořádání.  
+1.  Vyberte ovládací prvek nebo prvky, které chcete změnit uspořádání.  
   
 2.  Z **formátu** nabídce zvolte **Center v dialogovém okně**a pak vyberte jednu z následujících opatření:  
   
-    -   **Svislé**: centra pro ovládací prvky svisle v dialogovém okně.  
+    -   `Vertical`: centra ovládacích prvků v dialogovém okně svisle.  
   
-    -   **Vodorovné**: centra pro ovládací prvky vodorovně v dialogovém okně.  
+    -   `Horizontal`: centra ovládacích prvků v dialogovém okně vodorovně.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky](../mfc/controls-mfc.md)
-

@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644096"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake – třída
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 class DontUseNewUseMake;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Brání použití operátoru **nové** v RuntimeClass. V důsledku toho je nutné použít [Make – funkce](../windows/make-function.md) místo.  
+ Brání použití operátoru **nové** v `RuntimeClass`. V důsledku toho je nutné použít [Make – funkce](../windows/make-function.md) místo.  
   
 ## <a name="members"></a>Členové  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new – operátor](../windows/dontusenewusemake-operator-new-operator.md)|Přetížení operátoru **nové** a brání použití v RuntimeClass.|  
+|[DontUseNewUseMake::operator new – operátor](../windows/dontusenewusemake-operator-new-operator.md)|Přetížení operátoru **nové** a brání použití v `RuntimeClass`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `DontUseNewUseMake`  

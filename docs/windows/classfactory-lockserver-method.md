@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462703"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652368"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer – metoda
 Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální **ClassFactory –** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *hejna*  
  **Hodnota TRUE** se zvýší počet sledovaných objektů. **false** se sníží počet sledovaných objektů.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  S_OK v případě úspěchu; v opačném případě E_FAIL.  
   
 ## <a name="remarks"></a>Poznámky  
- ClassFactory – uchovává informace o objekty v základní instance [modulu](../windows/module-class.md) třídy.  
+ **ClassFactory –** uchovává informace o objekty v základní instance [modulu](../windows/module-class.md) třídy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: Změna velikosti ovládacího prvku během jeho přidávání | Microsoft Docs
+title: Změna velikosti ovládacího prvku během jeho přidávání | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 736a8cf1efacdbabcb4b5d54d965812f0322af36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e66424814d3793cc57ae92959a8f5c03f9299ed2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889684"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648711"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>Změna velikosti ovládacího prvku během jeho přidávání
-### <a name="to-size-a-control-while-you-add-it"></a>Chcete-li velikost ovládacího prvku během jeho přidávání  
+### <a name="to-size-a-control-while-you-add-it"></a>Pro nastavení velikosti ovládacího prvku během jeho přidávání  
   
-1.  Vyberte ovládací prvek v [okno sady nástrojů](/visualstudio/ide/reference/toolbox).  
+1.  Vyberte ovládací prvek v [okno nástrojů](/visualstudio/ide/reference/toolbox).  
   
-2.  Umístěte kurzor (který se zobrazí jako křížové zaměřovací), kam chcete nového ovládacího prvku na vašem dialogovém okně levém horním rohu.  
+2.  Umístěte ukazatel myši (který se zobrazí jako různé vlasy), kde chcete levého horního rohu nový ovládací prvek bude ve vašem dialogovém okně.  
   
-3.  Klikněte na tlačítko a podržte tlačítko myši k ukotvení levém horním rohu ovládacího prvku v dialogovém okně pak přetáhněte kurzor napravo a dolů, až do ovládacího prvku požadovanou velikost.  
+3.  Klepněte a podržte tlačítko myši pro ukotvení levého horního rohu ovládacího prvku v dialogovém okně pak přesuňte kurzor doprava a dolů, dokud je ovládací prvek požadovanou velikost.  
   
     > [!NOTE]
-    >  Ve skutečnosti můžete ukotvení všechny čtyři rohy, které jste vykreslování ovládacího prvku. Tento postup použít jako příklad levého horního rohu.  
+    >  Ve skutečnosti se dá ukotvit, všechny čtyři rohy požadovaný kresbě ovládací prvek. Tento postup použít jako příklad levém horním rohu.  
   
-4.  Uvolnění tlačítka myši. Vyrovná ovládacího prvku do dialogového okna v zadanou velikost.  
+4.  Uvolněte tlačítko myši. Vyrovná ovládacího prvku do dialogového okna v zadanou velikost.  
   
     > [!TIP]
-    >  Velikost ovládacího prvku můžete změnit po vyřazení do dialogových oken přesunutím úchyty na ohraničení ovládacího prvku. Další informace najdete v tématu [nastavení velikosti jednotlivých ovládacích prvků](../windows/sizing-individual-controls.md).  
+    >  Můžete změnit velikost ovládacího prvku po přetažení do dialogových oken přesunutím úchyty pro změnu velikosti ohraničení ovládacího prvku. Další informace najdete v tématu [velikosti jednotlivých ovládacích prvků](../windows/sizing-individual-controls.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
- [Přidání obslužných rutin událostí pro ovládací prvky dialogové okno](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)
-

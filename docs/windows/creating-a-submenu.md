@@ -1,5 +1,5 @@
 ---
-title: Vytvoření podnabídky | Microsoft Docs
+title: Vytvoření podnabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1383e12761bc9d5cb0558072061bddac4da42d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883378"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647472"
 ---
 # <a name="creating-a-submenu"></a>Vytvoření podnabídky
 ### <a name="to-create-a-submenu"></a>Vytvoření podnabídky  
   
-1.  Klikněte na příkaz nabídky, pro který chcete vytvořit podnabídky.  
+1.  Klikněte na příkaz nabídky, u kterého chcete vytvořit podnabídky.  
   
-2.  V **nová položka** pole, které se zobrazí vpravo, zadejte název nového příkazu nabídky. Tento nový příkaz zobrazí první v nabídce podnabídky.  
+2.  V **nová položka** pole, které se zobrazí napravo, zadejte název nového příkazu nabídky. Tento nový příkaz zobrazí první v nabídce podnabídka.  
   
-3.  Dílčí nabídky přidáte další příkazy.  
+3.  Přidejte další příkazy nabídky podnabídka.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

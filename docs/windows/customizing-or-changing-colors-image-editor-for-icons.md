@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571282"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645393"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Přizpůsobení nebo změna barev (editor obrázků pro ikony)
-Editor obrázků [barvy palety](../windows/colors-window-image-editor-for-icons.md) otevření zobrazí 16 standardní barvy. Kromě zobrazených barvy můžete vytvořit své vlastní barvy. Pak můžete [uložit a načíst vlastní paletu barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+**Image** editoru [barvy palety](../windows/colors-window-image-editor-for-icons.md) otevření zobrazí 16 standardní barvy. Kromě zobrazených barvy můžete vytvořit své vlastní barvy. Pak můžete [uložit a načíst vlastní paletu barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Chcete-li změnit barvy palety barev  
   
@@ -51,7 +51,6 @@ Editor obrázků [barvy palety](../windows/colors-window-image-editor-for-icons.
 5.  Klikněte na tlačítko **OK** přidáte novou barvu.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

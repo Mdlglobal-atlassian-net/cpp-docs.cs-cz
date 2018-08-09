@@ -1,5 +1,5 @@
 ---
-title: Práce se zdrojovými soubory | Microsoft Docs
+title: Práce se zdrojovými soubory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc416561b36566235ed422cd8989b4218f34da81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a009c8e1d9a3db682a81e1f054ef999cffaf266d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891607"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641441"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 > [!WARNING]
->  Tato část se týká Windows desktop aplikace napsané v jazyce C++. Informace o prostředcích v univerzální platformu Windows aplikace napsané v jazyce C++ najdete v tématu [definování prostředky aplikace](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Tato část se týká aplikací klasické pracovní plochy Windows napsaný v jazyce C++. Informace o prostředcích v aplikacích pro univerzální platformu Windows napsaný v jazyce C++, naleznete v tématu [definování prostředků aplikace](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
->  Informace o přidávání zdrojů do C + +/ CLI projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+>  Informace o přidávání prostředků do C + +/ CLI projekty, najdete v [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- Prostředky se může skládat ze široké škály elementy, včetně elementů rozhraní, které obsahují informace pro uživatele (například rastrový obrázek, ikony nebo kurzoru); vlastní prostředky, které obsahují data, které aplikace potřebuje; verze prostředky, které se používají při instalaci rozhraní API; a nabídky a dialogové okno pole prostředků.  
+ Prostředky se může skládat z širokou řadu prvků, včetně prvky rozhraní, které poskytují informace o uživateli (třeba bitmapy, ikony nebo kurzoru s); vlastní prostředky, které obsahují data, která aplikace potřebuje; verze zdroje, které jsou používány instalační program rozhraní API; a integrované prostředky nabídky a dialogové okno.  
   
- Můžete přidat nové prostředky do projektu a upravit tyto prostředky pomocí editoru příslušný prostředek. Většina Visual C++ automaticky generovat soubor .rc pro váš projekt.  
+ Můžete přidat nové prostředky do projektu a upravit tyto prostředky pomocí editoru odpovídající prostředek. Většina průvodců aplikace Visual C++ bude automaticky generovat soubor .rc pro váš projekt.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Soubory prostředků](../windows/resource-files-visual-studio.md)  
- Popisuje soubory prostředků a jak se používají v aplikací klasické pracovní plochy Windows. Obsahuje také odkazy na témata, které popisují, jak používat soubory prostředků.  
+ Popisuje soubory prostředků a jejich použití v aplikacích klasické pracovní plochy Windows. Obsahuje také odkazy na témata, která popisují způsob použití souborů prostředků.  
   
  [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)  
- Popisuje symboly a poskytuje informace o používání **symboly prostředků** dialogové okno Spravovat symboly v projektech.  
+ Popisuje symboly a poskytuje informace o používání **symbolů prostředků** dialogové okno ke správě symbolů ve vašich projektech.  
   
  [Editory prostředků](../windows/resource-editors.md)  
- Popisuje editory prostředků uvedené v sadě Visual Studio, typů prostředků můžete můžete upravit pomocí každý editoru a obsahuje odkazy na podrobnější informace o jednotlivých editoru.  
+ Popisuje editory prostředků k dispozici v sadě Visual Studio, typy prostředků je můžete upravit každé editoru a obsahuje odkazy na podrobné informace o používání každý editor.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Visual C++](../visual-cpp-in-visual-studio.md)  
  Obsahuje odkazy na dokumentaci jazyka Visual C++.  
   
- [Představení Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
- Popisuje úplnou sadu nástrojů pro vývoj, které všechny používají stejný integrované vývojové prostředí (IDE), což jim umožní sdílet nástroje a usnadňuje vytváření řešení smíšený jazyk.  
+ [Představení sady Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+ Popisuje úplnou sadu nástrojů pro vývoj, které všechny používat stejné integrované vývojové prostředí (IDE), což jim umožní sdílení nástrojů a usnadňuje vytváření řešení jazyků.  
   
  [Kontaktujte nás](/visualstudio/ide/talk-to-us)  
- Obsahuje odkazy na informace o používání sady dokumentace, obrátíte na podporu produktu a využívání funkce pro usnadnění přístupu.  
+ Obsahuje odkazy na informace o používání sady dokumentace, kontaktovat podporu produktů a použití funkce pro usnadnění přístupu.  
   
 ## <a name="see-also"></a>Viz také  
- [Aplikace pracovní plochy Windows](../windows/windows-desktop-applications-cpp.md)   
- [Nabídky a další prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)   
+ [Nabídky a ostatní prostředky](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

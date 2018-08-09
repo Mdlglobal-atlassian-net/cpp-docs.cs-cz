@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 29a88c34502404de13bd3b93d13c60470e2882ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465380"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650713"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator – datový člen
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HRESULT (*factoryCreator)(  
    unsigned int* currentflags,  
    const CreatorMap* entry,  
@@ -37,7 +37,7 @@ HRESULT (*factoryCreator)(
  IUnknown** factory);  
 ```  
   
-## <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *currentflags*  
  Jeden z [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) enumerátory.  
   

@@ -1,5 +1,5 @@
 ---
-title: vi_progid – | Microsoft Docs
+title: vi_progid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891282"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642045"
 ---
 # <a name="viprogid"></a>vi_progid
-Určuje nezávislé na verzi forma identifikátor ProgID.  
+Určuje verzi nezávislé formu ProgID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      [ vi_progid(  
+[ vi_progid(  
    name  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *Jméno*  
- ProgID nezávislé na verzi, reprezentující objekt.  
+ Nezávislé na verze ProgID reprezentující objekt.  
   
- ProgID prezentovat čitelná pro člověka verzi identifikátor třídy (CLSID) použije k identifikaci objektů COM/ActiveX.  
+ ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.  
   
 ## <a name="remarks"></a>Poznámky  
- **Vi_progid –** C++ atribut umožňuje určit ProgID nezávislé na verzi pro objekt COM. ProgID má tvar *name1.name2.version*. Nezávislé na verzi ProgID nemá *verze*. Je možné zadat oba seznamy **progid** a **vi_progid –** atributů na coclass. Pokud nezadáte **vi_progid –**, je nezávislý na verzi ProgID hodnotu zadanou pomocí [progid](../windows/progid.md) atribut.  
+ **Vi_progid –** atribut C++ umožňuje zadat pro objekt modelu COM ProgID nezávislé na verzi. Identifikátor ProgID má tvar *name1.name2.version*. Nezávislé na verze ProgID nemá *verze*. Je možné zadat současně `progid` a **vi_progid –** atributy na `coclass`. Pokud nezadáte **vi_progid –**, nezávislé na verze ProgID se hodnoty určené [progid](../windows/progid.md) atribut.  
   
- **vi_progid –** znamená **třída typu coclass** atribut, který je zadáte-li **vi_progid –**, je totéž jako zadání **třída typu coclass** a **vi_progid –** atributy.  
+ **vi_progid –** znamená `coclass` atribut, to znamená, pokud zadáte **vi_progid –**, je totéž jako zadání `coclass` a **vi_progid –** atributy.  
   
- **Vi_progid –** atribut způsobuje třídu automaticky zaregistrovat se zadaným názvem. Soubor generovaný .idl nezobrazí ProgID hodnotu.  
+ **Vi_progid –** atribut způsobí, že třída má být automaticky zaregistrován se zadaným názvem. Generovaného souboru nezobrazí hodnotu ProgID.  
   
- V projekty knihovny ATL Pokud [třída typu coclass](../windows/coclass.md) atribut také přítomen, zadaný ProgID používá **GetVersionIndependentProgID** funkce (vložená **třída typu coclass** atribut).  
+ V projektech ATL Pokud [coclass](../windows/coclass.md) atribut je také k dispozici, používá zadaný identifikátor ProgID `GetVersionIndependentProgID` – funkce (vkládat stisknutím `coclass` atribut).  
   
 ## <a name="example"></a>Příklad  
- Najdete v článku [třída typu coclass](../windows/coclass.md) příklad pro ukázkové použití **vi_progid –**.  
+ Zobrazit [coclass](../windows/coclass.md) příklad ukázkový používání **vi_progid –**.  
   
 ## <a name="requirements"></a>Požadavky  
   
@@ -60,15 +59,15 @@ Určuje nezávislé na verzi forma identifikátor ProgID.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Třída**, **– struktura**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDL – atributy](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class – atributy](../windows/class-attributes.md)   
+ [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributy třídy](../windows/class-attributes.md)   
  [Klíč progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

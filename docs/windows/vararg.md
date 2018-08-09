@@ -1,5 +1,5 @@
 ---
-title: vararg | Microsoft Docs
+title: vararg | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f842d27f6b0dfc72a48f1bc7fbcb8fcccb0c26e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890964"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650401"
 ---
 # <a name="vararg"></a>vararg
-Určuje, že funkce přijímá proměnný počet argumentů.  
+Určuje, že funkce má proměnný počet argumentů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Vararg** atribut C++ má stejné funkce jako [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL atribut.  
+ **Vararg** C++ atribut má stejné funkce jako [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje k využívání **vararg**:  
+ Následující kód ukazuje použití **vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,9 +59,9 @@ __interface X : public IUnknown
   
 |||  
 |-|-|  
-|**Platí pro**|Rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Metoda rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

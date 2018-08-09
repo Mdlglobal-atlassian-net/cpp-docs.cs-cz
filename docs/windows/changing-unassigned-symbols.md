@@ -1,5 +1,5 @@
 ---
-title: Změna nepřiřazených symbolů | Microsoft Docs
+title: Změna nepřiřazených symbolů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855380"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644983"
 ---
 # <a name="changing-unassigned-symbols"></a>Změna nepřiřazených symbolů
-V [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které dosud nebyly přiřazeny do prostředku nebo objekt.  
+Během činnosti v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které nejsou přiřazeny k prostředku nebo objekt.  
   
-### <a name="to-change-an-unassigned-symbol"></a>Chcete-li změnit nepřiřazených symbolů  
+### <a name="to-change-an-unassigned-symbol"></a>Změna nepřiřazených symbolů  
   
-1.  V **název** vyberte nepřiřazených symbolů a klikněte na tlačítko **změnu**.  
+1.  V **název** pole, vyberte nepřiřazených symbolů a klikněte na tlačítko **změnu**.  
   
-2.  Upravit název nebo hodnota ve políček v symbolu **změnu Symbol** dialogové okno.  
+2.  Upravit vlastnosti name nebo value v polí zobrazených v symbolu **změnit Symbol** dialogové okno.  
   
     > [!NOTE]
-    >  Chcete-li změnit symbol, *je* přiřazen k prostředku nebo objekt, je nutné použít editor prostředků nebo vlastnosti – okno. Další informace najdete v tématu [změna symbolu nebo názvu symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).  
+    >  Chcete-li změnit symbol, který *je* přiřazené k prostředku nebo k objektu, je nutné použít editor prostředků nebo **vlastnosti** okna. Další informace najdete v tématu [změna symbolu nebo názvu symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

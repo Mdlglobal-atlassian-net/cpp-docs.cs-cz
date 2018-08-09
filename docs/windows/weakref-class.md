@@ -1,5 +1,5 @@
 ---
-title: WeakRef – třída | Microsoft Docs
+title: Weakref – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba7efc595be55b807cd3f044269db0debcb72407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88252e6bf4a5b7cad1ee6fcd0580d29f1bf5981a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891695"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641823"
 ---
 # <a name="weakref-class"></a>WeakRef – třída
-Představuje *slabé odkaz* které lze použít pouze prostředí Windows Runtime, není klasického modelu COM. Slabé odkazy představuje objekt, který může nebo nemusí být dostupné.  
+Představuje *nestálý odkaz* , který lze používat pouze modulu Windows Runtime, ne klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,11 +34,11 @@ class WeakRef : public ComPtr<IWeakReference>
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Objekt WeakRef udržuje *silné odkaz*, která je přidružená objektu a může být platný nebo neplatný. Volejte metodu As() nebo AsIID() k získání silné odkazu. Když je silné odkaz platný, má přístup přidruženého objektu. Když je neplatný odkaz na silné (`nullptr`), přidruženého objektu je nedostupná.  
+ A **WeakRef** udržuje objekt *silného odkazu*, který je přidružený k objektu a může být platný nebo neplatný. Volání `As()` nebo `AsIID()` metodu k získání silného odkazu. Silný odkaz je platný, má přístup k přidruženého objektu. Když je neplatný silný odkaz (**nullptr**), přidruženého objektu není dostupný.  
   
- WeakRef objekt se obvykle používá k reprezentování objekt, jehož existence řídí na externí vlákna nebo aplikaci. Můžete například vytvořte objekt WeakRef z odkaz na objekt souboru. Je-li otevřít soubor, je silné odkaz platný. Ale pokud soubor se zavřel, silné odkaz bude neplatná.  
+ A **WeakRef** objekt se obvykle používá k reprezentaci objektu, jehož existence je řízena vnějším vláknem nebo aplikací. Například sestavit **WeakRef** objekt z odkazu na objekt souboru. Když je soubor otevřen, silný odkaz je platný. Ale pokud se soubor zavře, silný odkaz níže uvedených situací.  
   
- Všimněte si, že dojde ke změně chování v [jako](../windows/weakref-as-method.md), [asiid –](../windows/weakref-asiid-method.md) a [CopyTo](../windows/weakref-copyto-method.md) metody v sadě Windows 10 SDK. Dříve, po volání metody některé z těchto metod, můžete zkontrolovat WeakRef pro `nullptr` k určení, pokud silné odkaz byl úspěšně získanou, jako v následujícím kódu:  
+ Všimněte si, že dojde ke změně chování v [jako](../windows/weakref-as-method.md), [asiid –](../windows/weakref-asiid-method.md) a [CopyTo](../windows/weakref-copyto-method.md) metody ve Windows 10 SDK. Dříve, po volání některé z těchto metod, můžete zkontrolovat WeakRef pro **nullptr** k určení, pokud silného odkazu byl úspěšně získán, stejně jako v následujícím kódu:  
   
 ```cpp  
 WeakRef wr;  
@@ -55,17 +55,15 @@ if(wr == nullptr)
 {  
     wprintf(L"Couldn’t get strong ref!");  
 }  
-  
 ```  
   
- Výše uvedený kód nefunguje, pokud používáte Windows 10 SDK (nebo novější). Místo toho zkontrolujte ukazatele, který byl předán pro `nullptr`.  
+ Ve výše uvedeném kódu nefunguje při použití Windows 10 SDK (nebo novější). Místo toho zkontrolujte ukazatel, který byl předán pro **nullptr**.  
   
 ```cpp  
 if (strongRef == nullptr)  
 {  
     wprintf(L"Couldn't get strong ref!");  
- }  
-  
+}  
 ```  
   
 ## <a name="members"></a>Členové  
@@ -74,22 +72,22 @@ if (strongRef == nullptr)
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakRef::WeakRef – konstruktor](../windows/weakref-weakref-constructor.md)|Inicializuje novou instanci třídy WeakRef.|  
-|[WeakRef::~WeakRef – destruktor](../windows/weakref-tilde-weakref-destructor.md)|Deinitializes aktuální instance třídy WeakRef.|  
+|[WeakRef::WeakRef – konstruktor](../windows/weakref-weakref-constructor.md)|Inicializuje novou instanci třídy **WeakRef** třídy.|  
+|[WeakRef::~WeakRef – destruktor](../windows/weakref-tilde-weakref-destructor.md)|Zruší inicializaci aktuální instance **WeakRef** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakRef::As – metoda](../windows/weakref-as-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují specifikované rozhraní.|  
-|[WeakRef::AsIID – metoda](../windows/weakref-asiid-method.md)|Nastaví zadaný parametr ukazatel ComPtr představují ID specifikované rozhraní.|  
-|[WeakRef::CopyTo – metoda](../windows/weakref-copyto-method.md)|Přiřadí ukazatele rozhraní, pokud je k dispozici, proměnnou zadaný ukazatele.|  
+|[WeakRef::As – metoda](../windows/weakref-as-method.md)|Nastaví zadaný `ComPtr` parametr ukazatele k reprezentaci zadané rozhraní.|  
+|[WeakRef::AsIID – metoda](../windows/weakref-asiid-method.md)|Nastaví zadaný `ComPtr` parametr ukazatele představující ID zadané rozhraní.|  
+|[WeakRef::CopyTo – metoda](../windows/weakref-copyto-method.md)|Přiřadí ukazatel rozhraní, pokud je k dispozici k proměnné zadané ukazatele.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[WeakRef::operator& – operátor](../windows/weakref-operator-ampersand-operator.md)|Vrátí objekt ComPtrRef, který představuje aktuální objekt WeakRef.|  
+|[WeakRef::operator& – operátor](../windows/weakref-operator-ampersand-operator.md)|Vrátí `ComPtrRef` objekt, který představuje aktuální **WeakRef** objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ComPtr`  

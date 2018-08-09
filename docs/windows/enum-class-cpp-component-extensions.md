@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570545"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647310"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (rozšíření komponent C++)
 Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořený sadou pojmenovaných konstant nazývaných enumerátory.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  C + +/ CX a C + +/ podpora rozhraní příkazového řádku **veřejný výčet tříd** a **soukromý výčet tříd** které jsou podobně jako standardní C++ **výčet tříd** , ale s přidáním usnadnění přístupu specifikátor. V části **/CLR**, C ++ 11 **výčet tříd** typ je povolené, ale bude generovat upozornění C4472, která je určena k zajištění, že Opravdu chcete typ výčtu ISO a není jazyce C + +/ CX a C + +/ CLI typu. Další informace o standardu ISO C++ **výčtu** – klíčové slovo, naleznete v tématu [výčty](../cpp/enumerations-cpp.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořen
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **Parametry**  
-  
+### <a name="parameters"></a>Parametry  
  *Přístup*  
  Usnadnění výčet, který může být **veřejné** nebo **privátní**.  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (Volitelné) Název proměnné typu výčtu.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky 
   
  Další informace a příklady najdete v tématu [výčty](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   Pokud *základní typ* je `char16`a hodnota výčtu rozsahu 0xD800 až 0xDFFF, může být reprezentována hodnotu. Však hodnotu logicky nesprávná, protože představuje poloviční Unicode náhradní pár a neměla by se zobrazit v izolaci.  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Syntaxe**  
+### <a name="syntax"></a>Syntaxe
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **Parametry**  
+ ### <a name="parameters"></a>Parametry  
   
  *Přístup*  
  Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (volitelné)  
  Název proměnné typu výčtu.  
   
- **Poznámky**  
+### <a name="remarks"></a>Poznámky 
   
  **Třída výčtu** a **enum struct** jsou ekvivalentní deklarace.  
   
@@ -163,13 +162,13 @@ int main() {
   
  bude generovat následující do jazyka MSIL pro podpis funkce:  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  V aktuální verze kompilátoru, ale je standardní výčtu generované jako spravovaného výčtu s [NativeEnumAttribute] a následující podpis funkce v jazyce MSIL:  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [Nadřízený typ výčtu](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
-  
- desc  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **Output**  
   
 ```Output  
 no automatic conversion to int: b  

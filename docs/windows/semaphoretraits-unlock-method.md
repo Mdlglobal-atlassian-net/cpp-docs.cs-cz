@@ -1,5 +1,5 @@
 ---
-title: Semaphoretraits::Unlock – metoda | Microsoft Docs
+title: Semaphoretraits::Unlock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892244"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650424"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock – metoda
-Kontrola verze sdíleného prostředku.  
+Ovládací prvek verze sdíleného prostředku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `h`  
- Popisovač semafor objektu.  
+### <a name="parameters"></a>Parametry  
+ *h*  
+ Popisovač **semafor** objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud neúspěšná operace odemčení, Unlock() vysílá chybu, která určuje příčinu selhání.  
+ Pokud neúspěšná, operace odemknutí **Unlock()** generuje chybu, která určuje příčinu selhání.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

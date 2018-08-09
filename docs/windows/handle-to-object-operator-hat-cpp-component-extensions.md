@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569801"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642767"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operátor popisovače objektu (^) (rozšíření komponent C++)
 *Deklarátor popisovače* (`^`, výslovnost "stříška"), změní typ [specifikátor](../cpp/overview-of-declarators.md) znamenat, že deklarovaný objekt má být automaticky odstraněn, když systém zjistí, že objekt je už nebude přístupný.  
@@ -36,7 +36,7 @@ ms.locfileid: "39569801"
  Informace o tom, jak vytvořit instanci objektu naleznete v tématu [ref nové](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
  Systém používá modul CLR *systému uvolňování paměti* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. Modul common language runtime udržuje haldu, na které se přidělují objekty a používá spravované odkazy (proměnné) ve svém programu označení umístění objektů na haldě. Pokud objekt už nebude používat, je uvolněna paměť, která je obsazena na haldě. Pravidelně systému uvolňování paměti zkomprimuje hladu k lepšímu využití uvolněné paměti. Komprimací haldy můžete přesunout objekty do haldy, což způsobí neplatnost uvedená umístění uváděná spravovanými odkazy. Ale systému uvolňování paměti zná umístění všech spravovaných odkazů a automaticky je aktualizuje pro označení aktuálního umístění objektů na haldě.  
@@ -48,7 +48,6 @@ ms.locfileid: "39569801"
  Další informace najdete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Tento příklad ukazuje, jak vytvořit instanci typu odkazu na spravované haldě.  Tento příklad také ukazuje, že inicializace jednoho popisovače jiným vytvoří dva odkazy na stejný objekt na spravované, uvolnění paměti haldy. Všimněte si, že přiřazení [nullptr](../windows/nullptr-cpp-component-extensions.md) k popisovači neoznačí objekt pro uvolňování paměti.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Příklad**  
   
  Následující příklad ukazuje, jak deklarovat popisovač pro objekt na spravované haldě, kde typ objektu je zabalený typ hodnoty. Ukázka také ukazuje, jak získat typ hodnoty ze zabaleného objektu.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Output**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Příklad**  
-  
- Tento příklad ukazuje, že běžný idiom C++ používání ukazatele void * tak, aby odkazoval na libovolný objekt je nahrazen pomocí Object ^, který může obsahovat popisovač na referenční třídu. Profil také ukazuje, že všechny typy, jako jsou pole a delegáty, mohou být převedeny na popisovač objektu.  
+ Tento příklad ukazuje, že běžný idiom C++ používání `void*` ukazatel na libovolný objekt je nahrazen `Object^`, který může obsahovat popisovač na referenční třídu. Profil také ukazuje, že všechny typy, jako jsou pole a delegáty, mohou být převedeny na popisovač objektu.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Příklad**  
   
  Tento příklad ukazuje, že popisovač může být dereferencován a že člen je přístupný pomocí dereferencovaného popisovače.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Příklad**  
-  
- Tento příklad ukazuje, že nativní odkaz (`&`) nelze vytvořit vazbu `int` člen spravovaného typu, jako `int` můžou být uložená v haldě uvolňování paměti a nativní odkazy nesledují pohyb objektu ve spravované haldě. Opravou je použití místní proměnné nebo změna `&` k `%`, takže odkazem sledování.  
+ Tento příklad ukazuje, že nativní odkaz (`&`) nelze vytvořit vazbu **int** člen spravovaného typu, jako **int** můžou být uložená v haldě uvolňování paměti a nativní odkazy nesledují pohyb objektu ve spravované haldě. Opravou je použití místní proměnné nebo změna `&` k `%`, takže odkazem sledování.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

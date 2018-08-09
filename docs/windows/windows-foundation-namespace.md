@@ -1,5 +1,5 @@
 ---
-title: Windows::Foundation – Namespace | Microsoft Docs
+title: Windows::Foundation – Namespace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 439746381b0b5d4932edd5c8717b2d3555005416
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891221"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646728"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation – obor názvů
-Umožňuje základní funkce prostředí Windows Runtime, například vytváření objektu a objektu pro vytváření.  
+Umožňuje základní funkce Windows Runtime, jako je vytvoření objektu a objektu pro vytváření.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ namespace Windows::Foundation;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v zadané třídy ID.|  
-|[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt pro vytváření aktivace pro typ zadaný v parametru šablony.|  
+|[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|  
+|[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  
@@ -49,4 +49,4 @@ namespace Windows::Foundation;
  **Namespace:** Windows  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)
+ [Namespace Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

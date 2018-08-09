@@ -1,5 +1,5 @@
 ---
-title: Změna faktoru zvětšení (Editor obrázků pro ikony) | Microsoft Docs
+title: Změna faktoru zvětšení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 310e26d4814b621cf9c3338857dfc9f97cd42b96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856996"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650160"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Změna faktoru zvětšení (editor obrázků pro ikony)
-Editor obrázků ve výchozím nastavení, zobrazí zobrazení v levém podokně na skutečná velikost a v pravém podokně v 6krát skutečná velikost zobrazení. Faktoru zvětšení (vidět ve stavovém řádku v dolní části pracovního prostoru) je poměr mezi skutečná velikost bitové kopie a velikost. Výchozí faktor je 6 a rozsah je od 1 do 10.  
+Ve výchozím nastavení zobrazí editoru obrázků v levém podokně na skutečné velikosti a zobrazení v pravém podokně ve skutečné velikosti 6krát zobrazení. Faktoru zvětšení (prohlédnout ve stavovém řádku v dolní části pracovní prostor) je poměr mezi skutečná velikost bitové kopie a velikost. Výchozí faktor je 6 a rozsah je od 1 do 10.  
   
-### <a name="to-change-the-magnification-factor"></a>Změna faktoru zvětšení  
+### <a name="to-change-the-magnification-factor"></a>Chcete-li změnit faktor zvětšení  
   
-1.  Vyberte **Editor obrázků** podokně jejichž faktoru zvětšení, kterou chcete změnit.  
+1.  Vyberte **Editor obrázků** podokně jehož faktor zvětšení, které chcete změnit.  
   
-2.  Na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), klikněte na šipku napravo [Magnify nástroj](../windows/toolbar-image-editor-for-icons.md) a vyberte faktoru zvětšení v podnabídce: **1 X**, **2 X**, **6 X**, nebo **8 X**.  
+2.  Na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), klikněte na šipku vpravo od [nebo vypne nástroj zvětšení](../windows/toolbar-image-editor-for-icons.md) a vyberte faktor zvětšení z podnabídky: **1 X**, **2 X**, **6 X**, nebo **8 X**.  
   
     > [!NOTE]
-    >  Chcete-li vybrat faktoru zvětšení, které nejsou uvedeny v **Magnify** nástroj, použijte klávesy akcelerátoru.  
+    >  Vybrat faktor zvětšení kromě oprávnění uvedených v seznamu **Magnify** nástroj, použijte klávesy akcelerátoru.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Podokna](../windows/window-panes-image-editor-for-icons.md)
-
+ [Okno podokna](../windows/window-panes-image-editor-for-icons.md)

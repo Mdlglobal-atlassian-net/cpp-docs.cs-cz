@@ -1,5 +1,5 @@
 ---
-title: Synclockwithstatust::synclockwithstatust – konstruktor | Microsoft Docs
+title: Synclockwithstatust::synclockwithstatust – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891347"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647752"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT – konstruktor
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `other`  
- Rvalue – odkaz na jiný objekt SyncLockWithStatusT.  
+### <a name="parameters"></a>Parametry  
+ *Ostatní*  
+ Odkaz rvalue na jiný **synclockwithstatust –** objektu.  
   
- `sync`  
- Odkaz na jiný objekt SyncLockWithStatusT.  
+ *sync*  
+ Odkaz na jiný **synclockwithstatust –** objektu.  
   
- `status`  
- Hodnota [status_ –](../windows/synclockwithstatust-status-data-member.md) členem data `other` parametr nebo `sync` parametr.  
+ *Stav*  
+ Hodnota [status_ –](../windows/synclockwithstatust-status-data-member.md) datový člen třídy *jiných* parametr nebo *synchronizace* parametr.  
   
 ## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy SyncLockWithStatusT.  
+ Inicializuje novou instanci třídy **synclockwithstatust –** třídy.  
   
- První konstruktor inicializuje aktuální objekt SyncLockWithStatusT z jiné SyncLockWithStatusT určený parametrem `other`a pak zruší platnost druhý SyncLockWithStatusT objekt. Druhý konstruktor je `protected`a inicializuje aktuální SyncLockWithStatusT objekt, který má neplatný stav.  
+ První konstruktor inicializuje aktuální **synclockwithstatust –** objektu z jiného **synclockwithstatust –** určené parametrem *jiných*a pak zruší platnost druhé **synclockwithstatust –** objektu. Druhý konstruktor není **chráněné**a inicializuje aktuální **synclockwithstatust –** objekt má neplatný stav.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  
@@ -61,5 +61,5 @@ explicit SyncLockWithStatusT(
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Viz také  
- [SyncLockWithStatusT – třída](../windows/synclockwithstatust-class.md)   
+ [Synclockwithstatust – třída](../windows/synclockwithstatust-class.md)   
  [SyncLockWithStatusT::GetStatus – metoda](../windows/synclockwithstatust-getstatus-method.md)

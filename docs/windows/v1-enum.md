@@ -1,5 +1,5 @@
 ---
-title: v1_enum – | Microsoft Docs
+title: v1_enum – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890658"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644362"
 ---
 # <a name="v1enum"></a>v1_enum
-Přesměruje, že zadaného výčtového typu předávají jako 32bitová verze entity místo výchozího 16 bitů.  
+Určí, že zadaný výčtového typu předávají jako 32-bit entity spíše než výchozí 16 bitů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [v1_enum]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **V1_enum –** atribut C++ má stejné funkce jako [v1_enum –](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL atribut.  
+ **V1_enum –** C++ atribut má stejné funkce jako [v1_enum –](http://msdn.microsoft.com/library/windows/desktop/aa367303) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje k využívání **v1_enum –**:  
+ Následující kód ukazuje použití **v1_enum –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_v1_enum.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  
@@ -60,8 +58,8 @@ enum eList {
 |||  
 |-|-|  
 |**Platí pro**|Výčtový typ|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

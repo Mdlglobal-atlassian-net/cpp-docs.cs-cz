@@ -1,5 +1,5 @@
 ---
-title: Používání nástroje kreslení (Editor obrázků pro ikony) | Microsoft Docs
+title: Používání nástroje kreslení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891669"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646121"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Používání nástroje kreslení (editor obrázků pro ikony)
-Editor obrázků je od ruky kreslení a mazání nástroje všechny fungovat stejným způsobem: Vyberte nástroj a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikost a tvar. Můžete pak přesuňte ukazatel na bitovou kopii a klikněte na tlačítko nebo přetáhněte kreslení a vymazat.  
+Od ruky, vykreslování a mazání nástroje všechny fungují stejně jako v editoru obrázků: Vyberte nástroje a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikosti a tvaru. Přesuňte ukazatel myši na obrázku a kliknutí nebo tažením nakreslete a vymazat.  
   
- Když vyberete **mazání** nástroj **štětce** nástroj, nebo **rozprašovač** nástroj, výběr možnosti zobrazí možnosti tohoto nástroje.  
+ Když vyberete **gumy** nástroj, **štětce** nástroje, nebo **rozprašovač** nástroji pro výběr možnosti zobrazí možnosti tohoto nástroje.  
   
 > [!TIP]
->  Místo použití **mazání** nástroj, možná bude pohodlnější k vykreslení v barvu pozadí s jedním z nástrojů pro kreslení.  
+>  Namísto použití **gumy** tool, pravděpodobně pro vás bude pohodlnější kreslete barvu pozadí s jedním z nástrojů pro kreslení.  
   
- Můžete vybrat buď z nástrojů pro kreslení **Editor obrázků** panelu nástrojů nebo **Image** nabídky.  
+ Můžete zvolit buď z nástrojů pro kreslení **Editor obrázků** nástrojů nebo **Image** nabídky.  
   
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Vyberte a použijte nástroj kreslení na panelu nástrojů editoru obrázků  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Vyberte a použijte nástroj pro vykreslování na panelu nástrojů editoru obrázků  
   
-1.  Klikněte na tlačítko **Editor obrázků** panelu nástrojů.  
+1.  Klikněte na tlačítko **Editor obrázků** nástrojů.  
   
-    -   **Mazání** nástroj barvy přes bitové kopie s aktuální barvu pozadí při stisknutí volby levé tlačítko.  
+    -   **Gumy** nástroj barvy bitová kopie se aktuální barvu pozadí při stisknutí levého tlačítka myši.  
   
-    -   **Tužky** nástroj nevykresluje od ruky v konstantní šířku jeden pixel.  
+    -   **Tužky** nástroj od ruky nakreslí konstantní šířku jeden pixel.  
   
     -   **Výběr možnosti určuje velikost a tvar nástroj štětec**.  
   
-    -   **Rozprašovač** nástroj náhodně distribuuje barev pixelů kolem center štětce.  
+    -   **Rozprašovač** nástroj náhodně distribuuje barev pixelů kolem středu štětce.  
   
         > [!TIP]
-        >  Když je ukazatelem tlačítka na, zobrazí se popisy tlačítek [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md). Tyto tipy vám pomůže identifikovat konkrétní tlačítka zde uvedeným.  
+        >  Popisy tlačítek se zobrazí, když ukazatel myši najedete myší na tlačítka na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md). Následující tipy vám umožní identifikovat konkrétní tlačítka uvedeným.  
   
 2.  V případě potřeby vyberte barvy a štětce:  
   
-    -   V [barevná paleta](../windows/colors-window-image-editor-for-icons.md), klikněte na levé tlačítko myši pro výběr barev popředí nebo pravým tlačítkem myši a vyberte barvu pozadí.  
+    -   V [barvy palety](../windows/colors-window-image-editor-for-icons.md), klikněte na tlačítko levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.  
   
-    -   V [možnosti selektor](../windows/toolbar-image-editor-for-icons.md), klikněte na tlačítko obrazce představující štětce, kterou chcete použít.  
+    -   V [výběr možnosti](../windows/toolbar-image-editor-for-icons.md), klikněte na obrazec představující štětec, který chcete použít.  
   
-3.  Přejděte na místo, na bitovou kopii, kde chcete spustit kreslení nebo Malování. Tvar ukazatele změny podle na nástroj, který jste vybrali.  
+3.  Přejděte na místo na obrázku, kde chcete spustit, kreslení nebo vykreslování. Tvar ukazatele změny podle nástroj, který jste vybrali.  
   
-4.  Stiskněte levé tlačítko (pro barvu popředí) nebo pravým tlačítkem myši (pro barvu pozadí) a podržením, jako je kreslení.  
+4.  Stiskněte klávesu levé tlačítko myši (Barva popředí) nebo pravým tlačítkem myši (pro barvu pozadí) a podržte ho při vykreslení.  
   
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Vyberte a použijte nástroj kreslení v nabídce bitové kopie  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Vyberte a používání nástroje kreslení z nabídky Image  
   
-1.  Klikněte na tlačítko **Image** nabídku a vyberte **nástroje** příkaz.  
+1.  Klikněte na tlačítko **Image** nabídky a vybereme **nástroje** příkazu.  
   
-2.  V podnabídce kaskádových vyberte na nástroj, který chcete použít.  
+2.  Kaskádové podnabídce zvolte nástroj, který chcete použít.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
@@ -78,4 +77,3 @@ Editor obrázků je od ruky kreslení a mazání nástroje všechny fungovat ste
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)   
  [Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)
-

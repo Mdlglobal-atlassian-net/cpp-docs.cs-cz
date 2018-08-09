@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465600"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646969"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete – metoda
 Nastaví adresu obslužné rutiny události dokončení se zadanou hodnotou.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnComplete  
 )(TComplete* completeHandler);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *completeHandler*  
  Adresy, ke kterému je nastavena obslužná rutina události dokončení.  
   

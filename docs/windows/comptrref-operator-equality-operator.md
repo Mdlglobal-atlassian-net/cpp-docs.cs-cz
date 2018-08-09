@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463951"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650700"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== – operátor
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *a*  
- Odkaz na objekt comptrref –.  
+ Odkaz na **comptrref –** objektu.  
   
  *b*  
- Odkaz na jiný objekt comptrref – nebo ukazatel na anonymního typu (`void*`).  
+ Odkaz na jiný **comptrref –** objekt nebo ukazatel na anonymního typu (`void*`).  
   
 ## <a name="return-value"></a>Návratová hodnota  
  První operátor výnosy **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.  
@@ -69,7 +69,7 @@ bool operator==(
  Čtvrtý a pátý operátory yield **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.  
   
 ## <a name="remarks"></a>Poznámky  
- Určuje, zda dva objekty comptrref – jsou stejné.  
+ Určuje, zda dva **comptrref –** objekty rovnají.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

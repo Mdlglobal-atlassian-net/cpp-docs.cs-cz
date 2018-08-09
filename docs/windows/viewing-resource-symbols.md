@@ -1,5 +1,5 @@
 ---
-title: Zobrazení symbolů prostředků | Microsoft Docs
+title: Zobrazení symbolů prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891104"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649351"
 ---
 # <a name="viewing-resource-symbols"></a>Zobrazení symbolů prostředků
-### <a name="to-view-resource-symbols"></a>Chcete-li zobrazit symboly prostředků  
+### <a name="to-view-resource-symbols"></a>K zobrazení symbolů prostředků  
   
-1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na váš soubor .rc.  
-  
-    > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Vyberte **symboly prostředků** z místní nabídky k zobrazení tabulky symbolů prostředků v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md).  
+1.  V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc.  
   
     > [!NOTE]
-    >  Chcete-li zobrazit předdefinované symboly, zkontrolujte **Zobrazit symboly jen pro čtení** zaškrtávací políčko.  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-
+2.  Vyberte **symbolů prostředků** z místní nabídky do zobrazení tabulky symbolů prostředků v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md).  
   
- **Požadavky**  
+    > [!NOTE]
+    >  Předdefinované symboly najdete **zobrazit jen pro čtení symbolů** zaškrtávací políčko.  
   
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

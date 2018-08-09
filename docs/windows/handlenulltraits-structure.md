@@ -1,5 +1,5 @@
 ---
-title: Handlenulltraits – struktura | Microsoft Docs
+title: Handlenulltraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645435"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits – struktura
 Definuje běžné vlastnosti neinicializovaný popisovač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -45,8 +45,8 @@ struct HANDLENullTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[HANDLENullTraits::Close – metoda](../windows/handlenulltraits-close-method.md)|Zavře Zadaný popisovač.|  
-|[HANDLENullTraits::GetInvalidValue – metoda](../windows/handlenulltraits-getinvalidvalue-method.md)|Představuje popisovač za neplatný.|  
+|[HANDLENullTraits::Close – metoda](../windows/handlenulltraits-close-method.md)|Zavře určený.|  
+|[HANDLENullTraits::GetInvalidValue – metoda](../windows/handlenulltraits-getinvalidvalue-method.md)|Představuje neplatný popisovač.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `HANDLENullTraits`  

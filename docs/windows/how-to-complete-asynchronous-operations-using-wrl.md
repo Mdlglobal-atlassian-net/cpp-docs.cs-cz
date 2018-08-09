@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570740"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643053"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Postupy: Dokončení asynchronních operací s použitím knihovny WRL
 Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) ke spuštění asynchronních operací a provedení práce po dokončení operací.  
@@ -40,7 +40,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h deklaruje typy, které jsou nutné k použití asynchronní časovače.  
+     `Windows.System.Threading.h` deklaruje typy, které jsou nutné k použití asynchronní časovače.  
   
      Doporučujeme využívat `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.  
   
@@ -122,7 +122,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-asyncOp.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
+ Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-asyncOp.cpp` a pak spusťte následující příkaz **příkazový řádek sady Visual Studio** okna.  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463740"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645198"
 ---
 # <a name="attribute-programming-faq"></a>Nejčastější dotazy k programování s atributy
 Toto téma poskytuje odpovědi na následující nejčastější dotazy:  
@@ -46,7 +46,7 @@ Toto téma poskytuje odpovědi na následující nejčastější dotazy:
 -   [Můžete použít atributy na třídu odvozenou z třídy, která rovněž používá atributy?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co je HRESULT?  
- `HRESULT` Je jednoduchý datový typ, který se často používá jako návratovou hodnotu tak, že atributy a knihovny ATL obecně. Následující tabulka popisuje různé hodnoty. Další hodnoty jsou obsaženy v souboru winerror.h záhlaví.  
+ HRESULT je jednoduchý datový typ, který se často používá jako návratovou hodnotu tak, že atributy a knihovny ATL obecně. Následující tabulka popisuje různé hodnoty. Další hodnoty jsou obsaženy v souboru winerror.h záhlaví.  
   
 |Název|Popis|Hodnota|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ Toto téma poskytuje odpovědi na následující nejčastější dotazy:
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Když je nutné zadat název parametru atributu  
  Ve většině případů, pokud atribut má jeden parametr, tento parametr je pojmenován. Tento název se nevyžaduje při vkládání atribut ve vašem kódu. Například následující použití příkazu [agregovatelné](../windows/aggregatable.md) atribut:  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  je přesně stejný jako:  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  Je povoleno následující:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  Je zakázáno následující:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  S atributy a zjednodušeně třídy můžete dědit z jiné třídy, které pravděpodobně samy přiřadit nebo ne. Odvozování z třídy s atributy výsledek je stejný jako odvození z této třídy po zprostředkovatele atribut má transformaci jeho kód. Atributy nejsou přenášeny do odvozené třídy prostřednictvím dědičnosti jazyka C++. Poskytovatele atributu transformuje pouze kód pixelům jeho atributy.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak můžete použít atributy v bez atributové projekt knihovny ATL?  
- Možná bude bez atributové projekt knihovny ATL, který má soubor .idl, a můžete začít přidávat s atributy objektů. V takovém případě použijte Průvodce přidáním třídy poskytnout kód.  
+ Možná bude bez atributové projekt knihovny ATL, který má soubor .idl, a můžete začít přidávat s atributy objektů. V takovém případě použijte **Průvodce přidáním třídy** poskytnout kód.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Použití souboru v projektu s atributy IDL  
- Může mít soubor .idl, který chcete použít v projektu ATL s atributy. V takovém případě byste použili [importidl –](../windows/importidl.md) atribut, zkompilujte soubor .idl do souboru .h (najdete v článku [MIDL – stránky vlastností](../ide/midl-property-pages.md) v dialogové okno stránky vlastností projektu) a poté zahrnout soubor hlaviček v projektu .  
+ Může mít soubor .idl, který chcete použít v projektu ATL s atributy. V takovém případě byste použili [importidl –](../windows/importidl.md) atribut, zkompilujte soubor .idl do souboru .h (najdete v článku [MIDL – stránky vlastností](../ide/midl-property-pages.md) v projektu **stránky vlastností** dialogové okno), a soubor .h pak zahrňte do projektu.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Můžete upravit kód, který se vloží atributem?  
  Některé atributy vloží kód do vašeho projektu. Vložený kód můžete zobrazit pomocí [/Fx](../build/reference/fx-merge-injected-code.md) – možnost kompilátoru. Je také možné zkopírovat kód z vloženého souboru a vložit do zdrojového kódu. To umožňuje upravovat chování atribut. Ale budete muset upravit jiných částí kódu také.  

@@ -1,5 +1,5 @@
 ---
-title: wire_marshal – | Microsoft Docs
+title: wire_marshal – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890210"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646680"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-Určuje datový typ, který se použije pro přenos místo specifické pro aplikaci datového typu.  
+Určuje datový typ, který se použije pro přenos místo typu dat pro konkrétní aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Wire_marshal –** atribut C++ má stejné funkce jako [wire_marshal –](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL atribut.  
+ **Wire_marshal –** C++ atribut má stejné funkce jako [wire_marshal –](http://msdn.microsoft.com/library/windows/desktop/aa367309) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje k využívání **wire_marshal –**:  
+ Následující kód ukazuje použití **wire_marshal –**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -63,9 +61,9 @@ Určuje datový typ, který se použije pro přenos místo specifické pro aplik
   
 |||  
 |-|-|  
-|**Platí pro**|`typedef`|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|**Definice TypeDef**|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

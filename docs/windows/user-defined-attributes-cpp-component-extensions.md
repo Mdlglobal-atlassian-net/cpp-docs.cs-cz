@@ -1,5 +1,5 @@
 ---
-title: Uživatelem definované atributy (C++ Component Extensions) | Microsoft Docs
+title: Uživatelsky definované atributy (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891763"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644125"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Uživatelsky definované atributy (rozšíření komponent C++)
-Vlastní atributy umožňují rozšířit metadata rozhraní, třídu nebo strukturu, metoda, parametr nebo – výčet.  
+Uživatelských atributů, které umožňují rozšířit metadat rozhraní, třídy nebo struktury, metody, parametr nebo výčet.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
  Všechny moduly runtime podporovat vlastní atributy.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- C + +/ CX atributy podporují pouze vlastnosti, ale není atribut konstruktory nebo metody.  
+ C + +/ CX atributy podporují pouze vlastnosti, ale není atribut konstruktory a metody.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- Vlastní atributy umožňují rozšířit metadata spravované elementu. Další informace najdete v tématu [atributy](/dotnet/standard/attributes/index).  
+ Uživatelských atributů, které umožňují rozšířit metadat spravovaného prvku. Další informace najdete v tématu [atributy](/dotnet/standard/attributes/index).  
   
 ### <a name="remarks"></a>Poznámky  
- Informace a syntaxe uvedené v tomto tématu slouží k nahrazení informace uvedené v [atribut](../windows/attribute.md).  
+ Informace a syntaxi popsanou v tomto tématu slouží k nahrazení informace uváděné v [atribut](../windows/attribute.md).  
   
  Můžete definovat vlastní atribut definování typu a provedením <xref:System.Attribute> základní třídu pro typ a volitelně použití <xref:System.AttributeUsageAttribute> atribut.  
   
- Například Vyrovnávání zatížení v Microsoft Server (MTS Transaction) 1.0, chování s ohledem na transakce, synchronizace, a tak dále byla zadaná pomocí vlastní identifikátory GUID vloženy do knihovny typů pomocí vlastních atributů ODL. Proto klienta serveru MTS by mohla určit jeho vlastnosti načtením knihovny typů. V rozhraní .NET Framework analogovým knihovny typů se metadata a analogovým vlastního atributu ODL je vlastní atributy. Navíc čtení knihovny typů se podobá je u typů pomocí reflexe.  
+ Například Vyrovnávání zatížení v Microsoft serveru (MTS Transaction) 1.0, chování s ohledem na transakce, synchronizace, a tak dále byla zadána prostřednictvím vlastní GUID vložen do knihovny typů s použitím vlastního atributu ODL. Proto může klient serveru MTS určit jeho vlastnosti načtením knihovny typů. V rozhraní .NET Framework analogové knihovny typů jsou metadata a obdobu jmenovek ODL vlastního atributu je vlastní atributy. Knihovny typů pro čtení je navíc obdobná u typů pomocí reflexe.  
   
  Další informace najdete v tématu,  
   
@@ -53,13 +53,12 @@ Vlastní atributy umožňují rozšířit metadata rozhraní, třídu nebo struk
   
 -   [Typy parametrů atributů](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Informace o podepisování sestavení v jazyce Visual C++, najdete v části [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Informace o podepisování sestavení v jazyce Visual C++, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Následující příklad ukazuje, jak definovat vlastní atribut.  
   
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **Příklad**  
-  
- Následující příklad ilustruje některé důležité funkce vlastních atributů. Například Tento příklad ukazuje použití běžné vlastních atributů: vytváření instancí serveru, který může plně popisují samotné klientům.  
+ Následující příklad ukazuje některé důležité funkce vlastních atributů. Tento příklad příkladu je běžné použití vlastních atributů: vytvoření instance serveru, který může plně sama sebe popsala klientům.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,13 +168,11 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **Příklad**  
+ `Object^` Typ nahrazuje neurčeného datového typu. Následující příklad definuje vlastní atribut, který přijímá pole `Object^` jako parametry.  
   
- Objekt ^ typ nahrazuje odlišný datový typ. V následujícím příkladu definuje vlastní atribut, který přijímá pole objektu ^ jako parametry.  
+ Argumenty atributu musí být konstanty z doby kompilace; ve většině případů měly by být konstantní literály.  
   
- Argumenty atributu musí být konstanty kompilace; ve většině případů měly by být konstantní literály.  
-  
- V tématu [typeid](../windows/typeid-cpp-component-extensions.md) informace o tom, jak vrátit hodnotu System::Type z bloku vlastních atributů.  
+ Zobrazit [typeid](../windows/typeid-cpp-component-extensions.md) informace o tom, jak vrátit hodnotu System::Type z bloku vlastního atributu.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **Příklad**  
-  
- Modul runtime vyžaduje, aby veřejné součástí třídy vlastního atributu musí být serializovatelný.  Při vytváření vlastních atributů, je omezen na kompilaci konstanty pojmenované argumenty vlastního atributu.  (Si ho představit jako posloupnost bits připojí k vaší třídy rozložení v metadatech.)  
+ Modul runtime vyžaduje, aby veřejnou část třídu vlastního atributu musí být serializovatelný.  Při vytváření vlastních atributů, jsou omezeny na konstanty z doby kompilace pojmenované argumenty vlastního atributu.  (Si ho představit jako posloupnost bits připojenou k rozložení třídy v metadatech.)  
   
 ```cpp  
 // extending_metadata_f.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Přepínání mezi ovládacími prvky dialogové okno a kódu | Microsoft Docs
+title: Přepínání mezi ovládacími prvky dialogového okna a kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,41 +21,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ffcb4621bf0005e6b22991da7a2dde9372afa6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b288e97030cad7e38caf19fb47f7a058c3ead61d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891919"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643105"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Přepínání mezi ovládacími prvky a kódem dialogového okna
-V aplikacích MFC dvojitým kliknutím na dialogové okno Ovládací prvky na jejich kód obslužné rutiny nebo rychle vytvořit se zakázaným inzerováním funkce obslužných rutin.  
+V aplikacích MFC můžete dvakrát kliknout na dialogové okno Ovládací prvky pro přechod na svůj kód obslužné rutiny nebo k rychlému vytvoření zástupné procedury funkcí obslužných rutin.  
   
- Ovládací prvek, klikněte na tlačítko **ControlEvents** tlačítko nebo **zprávy** v tlačítko [vlastnosti – okno](/visualstudio/ide/reference/properties-window) Chcete-li zobrazit úplný seznam zpráv systému Windows a události k dispozici pro vybranou položku. Zvolte ze seznamu k vytvoření nebo úpravě funkce obslužných rutin.  
+ Ovládací prvek vybraný, klikněte **ControlEvents** tlačítko nebo **zprávy** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li zobrazit úplný seznam událostí a zpráv Windows k dispozici pro vybranou položku. Zvolte ze seznamu a vytvořit nebo upravit funkce obslužné rutiny.  
   
-### <a name="to-jump-to-code-from-the-dialog-editor"></a>Přejít ke kódu z editoru dialogových oken  
+### <a name="to-jump-to-code-from-the-dialog-editor"></a>Můžete přejít ke kódu z editoru dialogových oken  
   
-1.  Dvakrát klikněte na ovládací prvek v dialogovém okně Přejít na deklaraci pro její zpracování funkce naposledy implementovaná zpráv. (Pro třídy na základě ATL dialogových oken, můžete vždy přejít k definici konstruktor.)  
+1.  Dvakrát klikněte na ovládací prvek v dialogovém okně můžete přejít k deklaraci jeho naposledy implementované zprávy funkci pro zpracování. (Pro třídy založený na knihovně ATL dialogových oken, můžete vždy přejít na definici konstruktoru.)  
   
 ### <a name="to-view-events-for-a-control"></a>Chcete-li zobrazit události pro ovládací prvek  
   
-1.  Ovládací prvek, klikněte **ControlEvents** tlačítka na [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+1.  Ovládací prvek vybraný, klikněte **ControlEvents** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
     > [!NOTE]
-    >  Kliknutím **ControlEvents** tlačítko při *dialogové okno* má fokus zpřístupňuje seznam všech ovládacích prvků v dialogových oken, které můžete rozbalit upravit události pro jednotlivé ovládací prvky.  
+    >  Kliknutím **ControlEvents** tlačítko, kdy *dialogové okno* má fokus zpřístupňuje seznam všech ovládacích prvků v poli dialogové okno, které můžete rozbalit Úprava události pro jednotlivé ovládací prvky.  
   
-     Když jeden ovládací prvek má právě fokus, v dialogovém okně, můžete ho klikněte pravým tlačítkem a vyberte **přidejte obslužné rutiny události** z místní nabídky. Umožňuje zadat třídu, ke kterému se přidá obslužná rutina. Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).  
+     Pokud jeden ovládací prvek má fokus v dialogovém okně, pravým tlačítkem myši a vybrat můžete **přidat obslužnou rutinu události** z místní nabídky. To umožňuje zadat třídu, ke kterému je přidání obslužné rutiny. Další informace najdete v tématu [přidání obslužné rutiny události](../ide/adding-an-event-handler-visual-cpp.md).  
   
-### <a name="to-view-messages-for-a-dialog-box"></a>Zobrazení zpráv pro dialogové okno  
+### <a name="to-view-messages-for-a-dialog-box"></a>Chcete-li zobrazit zprávy pro dialogové okno  
   
-1.  Dialogové okno vybraný, klikněte na **zprávy** v tlačítko [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+1.  Vybrané dialogovém okně klikněte **zprávy** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Editor dialogových oken](../windows/dialog-editor.md)
-

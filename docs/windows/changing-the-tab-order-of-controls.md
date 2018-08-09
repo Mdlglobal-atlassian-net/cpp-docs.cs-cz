@@ -1,5 +1,5 @@
 ---
-title: Změna pořadí karet ovládacích prvků | Microsoft Docs
+title: Změna pořadí karet ovládacích prvků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,68 +20,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32368ca6731c53255587a2083c9fe685eb8fefd0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861542"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641844"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Změna pořadí karet ovládacích prvků
-Pořadí je pořadí, ve kterém klávesy TAB přesune zaměření pro vstup z jeden ovládací prvek v rámci dialogového okna. Pořadí karet obvykle pokračuje zleva doprava a shora dolů v dialogovém okně. Má každý ovládací prvek **zarážek tabulátorů** vlastnost, která určuje, zda ovládacího prvku obdrží zaměření pro vstup.  
+Pořadí, ve kterém je pořadí **kartu** klíč přesune zaměření pro vstup z jednoho ovládacího prvku v rámci dialogového okna. Obvykle pokračuje pořadí zleva doprava a shora dolů v dialogovém okně. Každý ovládací prvek má **Tabstop** vlastnost, která určuje, zda ovládací prvek nastaven vstupní fokus.  
   
-### <a name="to-set-input-focus-for-a-control"></a>Chcete-li nastavit zaměření pro vstup pro ovládací prvek  
+### <a name="to-set-input-focus-for-a-control"></a>Chcete-li nastavit fokus vstupu pro ovládací prvek  
   
-1.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), vyberte **True** nebo **False** v **zarážek tabulátorů** vlastnost.  
+1.  V [okno vlastností](/visualstudio/ide/reference/properties-window)vyberte **True** nebo **False** v **Tabstop** vlastnost.  
   
- I ovládací prvky, které nemají vlastnost zarážek tabulátorů nastavená na hodnotu True musí být součástí pořadí. To může být důležité, například, když jste [přístupové klávesy (klávesové zkratky) definovat](../windows/defining-mnemonics-access-keys.md) pro ovládací prvky, které nemají titulky. Statický text, který obsahuje přístupový klíč pro související ovládací prvek okamžitě musí předcházet související ovládací prvek v pořadí.  
+ Dokonce i ovládací prvky, které nemají **Tabstop** vlastnost nastavena na hodnotu **True** musí být součástí pořadí. To může být důležité, například, když jste [definujte přístupové klíče (klávesových zkratek)](../windows/defining-mnemonics-access-keys.md) pro ovládací prvky, které nemají titulky. Statický text, který obsahuje přístupový klíč pro související ovládací prvek musí bezprostředně předcházet související ovládací prvek v pořadí.  
   
 > [!NOTE]
->  Pokud vaše dialogové okno obsahuje překrývající se ovládací prvky, změna pořadí karet může změnit způsob, jakým se zobrazí ovládací prvky. Ovládací prvky, které jsou dále v pořadí karet se zobrazují vždy nad překrývající se ovládací prvky, které je předcházet v pořadí.  
+>  Pokud vaše dialogové okno obsahuje překrývající se ovládací prvky, změna pořadí karet může změnit způsob, jakým se zobrazí ovládací prvky. Ovládací prvky, které jsou dále v pořadí karet se vždy zobrazují nad překrývající se ovládací prvky, které předcházet v pořadí.  
   
-#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li zobrazit aktuální pořadí pro všechny ovládací prvky v dialogovém okně  
+### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li zobrazit aktuální pořadí pro všechny ovládací prvky v dialogovém okně  
   
-1.  Na **formátu** nabídky, klikněte na tlačítko **pořadí karet**.  
+1.  Na **formátu** nabídky, klikněte na tlačítko **pořadí**.  
   
  \- nebo –  
   
--   Stiskněte kombinaci kláves CTRL + D.  
+-   Stisknutím klávesy **Ctrl**+**D**.  
   
-#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li změnit pořadí pro všechny ovládací prvky v dialogovém okně  
+### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li změnit pořadí ovládacích prvků pro všechny ovládací prvky v dialogovém okně  
   
-1.  Na **formátu** nabídky, klikněte na tlačítko **pořadí karet**.  
+1.  Na **formátu** nabídky, klikněte na tlačítko **pořadí**.  
   
-     Číslo v levém horním rohu každé řízení zobrazí jeho místo v aktuální pořadí.  
+     Řadu každý ovládací prvek v levém horním rohu se zobrazí místo něj v aktuální pořadí.  
   
-2.  Kliknutím na každý ovládací prvek v pořadí, ve které klávesy TAB můžete postupovat podle nastavení pořadí karet.  
+2.  Nastavení pořadí karet klikněte na každý prvek v pořadí, které chcete **kartu** klíč použít.  
   
-3.  Stiskněte klávesu **ENTER** ukončíte **pořadí karet** režimu.  
+3.  Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.  
   
     > [!TIP]
-    >  Jakmile zadáte režim pořadí karet, stisknutím klávesy ESC nebo zadejte možnost, chcete-li změnit pořadí zakázat.  
+    >  Jakmile zadáte **pořadí** režimu, můžete stisknout **Esc** nebo **Enter** zakázat možnost změnit pořadí ovládacích prvků.  
   
-#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Chcete-li změnit pořadí pro dva nebo více ovládacích prvků  
+### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Chcete-li změnit pořadí pro dva nebo více ovládacích prvků  
   
-1.  Z **formátu** nabídce zvolte **pořadí karet**.  
+1.  Z **formátu** nabídce zvolte **pořadí**.  
   
-2.  Zadejte, kde bude zahájena změna v pořadí. Chcete-li to provést, podržte klávesu **CTRL** klíče a klikněte na ovládací prvek před ten, kde chcete změněné pořadí zahájíte.  
+2.  Zadejte, kde se začne změna v pořadí. Chcete-li to provést, podržte **Ctrl** key a klikněte na ovládací prvek před ten, kde chcete začít změněné směr.  
   
-     Například pokud chcete změnit pořadí prvků 7 až 9, podržte klávesu CTRL a potom vyberte první prvek 6.  
+     Například, pokud chcete změnit pořadí ovládacích prvků `7` prostřednictvím `9`, podržte stisknutou klávesu **Ctrl**, vyberte ovládací prvek `6` první.  
   
     > [!NOTE]
-    >  Nastavit určitý ovládací prvek na číslo 1 (první v pořadí), dvakrát klikněte na ovládací prvek.  
+    >  Chcete-li nastavit konkrétní ovládací prvek na číslo `1` (první v pořadí), poklepejte na ovládací prvek.  
   
-3.  Uvolněte klávesu CTRL a potom klikněte na ovládací prvky v pořadí, ve které klávesy TAB můžete postupovat podle od tohoto okamžiku.  
+3.  Verze **Ctrl** klíče a pak klikněte na ovládací prvky v pořadí, které chcete **kartu** klíč dodržovat od tohoto okamžiku.  
   
-4.  Stiskněte klávesu **ENTER** ukončíte **pořadí karet** režimu.  
+4.  Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky](../mfc/controls-mfc.md)
-

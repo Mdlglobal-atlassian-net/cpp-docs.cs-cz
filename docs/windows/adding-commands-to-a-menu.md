@@ -1,5 +1,5 @@
 ---
-title: Přidání příkazů na nabídky | Microsoft Docs
+title: Přidání příkazů do nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,47 +21,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3564a808d39aa81ed3b45a1bc5812b285199e04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0c744e920c71b74d9296e6961add704435658fe
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856316"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644726"
 ---
 # <a name="adding-commands-to-a-menu"></a>Přidání komentářů k nabídce
-### <a name="to-add-commands-to-a-menu"></a>Chcete-li přidat příkazy k nabídce  
+### <a name="to-add-commands-to-a-menu"></a>Chcete-li přidat do nabídky příkazů  
   
 1.  [Vytvořit nabídku](../windows/creating-a-menu.md).  
   
-2.  Klikněte na název nabídky, například souboru.  
+2.  Klikněte na název nabídky, například **souboru**.  
   
-     Jednotlivé nabídky bude rozbalte a vystavit nové pole položky pro příkazy. Například můžete přidat nové příkazy, otevřete a zavřete soubor nabídky.  
+     Každá nabídka bude rozbalte a vystavovat nové položky pole pro příkazy. Například můžete přidat příkazy **nový**, **otevřít**, a **Zavřít** k **souboru** nabídky.  
   
 3.  Do pole nové položky zadejte název pro nový příkaz nabídky.  
   
     > [!NOTE]
-    >  Zadáte text se zobrazí v editoru nabídky a v **popisek** pole [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Můžete upravit vlastnosti pro vaše nové nabídky v některém umístění.  
+    >  Text, který zadáte, se zobrazí v **nabídky** editoru a **titulek** pole [okno vlastností](/visualstudio/ide/reference/properties-window). Upravit vlastnosti pro vaše nové nabídce v některém umístění.  
   
     > [!TIP]
-    >  Můžete definovat klávesovými klíč (přístupové klávesy), který umožňuje uživateli vybrat příkaz nabídky. Zadejte znak ampersand (&) před písmenem, zadejte je jako symbol. Uživatele můžete vybrat příkaz nabídky zadáním jím písmeno.  
+    >  Můžete definovat přístupové klávesy (Klávesová zkratka), který umožňuje uživateli vybrat příkaz nabídky. Zadejte znak ampersand (`&`) před písmenem určit jako symbol. Uživatel může vybrat příkaz nabídky tak, že zadáte písmeno.  
   
-4.  V okně Vlastnosti vyberte vlastnosti příkazu nabídky, které se vztahují. Podrobnosti najdete v tématu [vlastnosti příkazu nabídky](../windows/menu-command-properties.md).  
+4.  V **vlastnosti** okna, vyberte příkaz Vlastnosti, které se vztahují na nabídku. Podrobnosti najdete v tématu [vlastnosti příkazu nabídky](../windows/menu-command-properties.md).  
   
-5.  V **řádku** pole v okně vlastností, zadejte výzvy řetězec, který se má zobrazit ve stavovém vaší aplikace.  
+5.  V **řádku** pole **vlastnosti** okno, zadejte řetězec výzvy, které se mají zobrazit ve stavovém řádku vaší aplikace.  
   
-     Tím se vytvoří záznam v tabulce řetězců se stejným identifikátorem prostředků jako příkaz, který jste vytvořili.  
+     Tím se vytvoří záznam v tabulce řetězců se stejným identifikátorem prostředku jako příkaz, který jste vytvořili.  
   
     > [!NOTE]
-    >  Výzvy lze použít pouze pro položky, které nabídky **místní** vlastnost **True**. Například položek nabídek nejvyšší úrovně může mít výzvy, pokud mají položky dílčí nabídky. Účelem výzva je označuje, co se stane Pokud uživatel klikne na položku nabídky.  
+    >  Výzvy lze použít pouze pro položky nabídky **automaticky otevírané okno** vlastnost **True**. Například položky nabídek nejvyšší úrovně může mít výzvy, pokud mají položky dílčí nabídky. Účel **výzvy** je určit, co se stane, pokud uživatel klikne na položku nabídky.  
   
-6.  Stiskněte klávesu **ENTER** na dokončení příkazu nabídky.  
+6.  Stisknutím klávesy **Enter** na dokončení příkazu nabídky.  
   
-     Pole nové položky je vybrána, takže si můžete vytvořit další příkazy.  
+     Nové položky políčko je zaškrtnuto, takže si můžete vytvořit další příkazy.  
   
-
-  
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

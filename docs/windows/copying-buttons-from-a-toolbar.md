@@ -1,5 +1,5 @@
 ---
-title: Kopírování tlačítek z panelu nástrojů | Microsoft Docs
+title: Kopírování tlačítek z panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c006d243af78ea7f642ec36f49ce46fcfc732c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc7ea145b76f17ccd8b29b287faa3ef921e7dc73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880228"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646277"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Kopírování tlačítek z panelu nástrojů
 ### <a name="to-copy-buttons-from-a-toolbar"></a>Kopírování tlačítek z panelu nástrojů  
   
-1.  Podržte stisknutou **CTRL** klíč.  
+1.  Podržte stisknutou klávesu **Ctrl** klíč.  
   
-2.  V **nástrojů zobrazení** podokně, přetáhněte tlačítko buď jeho novém umístění na panelu nástrojů nebo do umístění na jiném panelu nástrojů.  
+2.  V **panel nástrojů zobrazení** podokně přetáhněte tlačítko buď nové místo na panelu nástrojů nebo do umístění na jiný panel nástrojů.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
- Knihovny MFC nebo knihovny ATL  
+## <a name="requirements"></a>Požadavky  
+ Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

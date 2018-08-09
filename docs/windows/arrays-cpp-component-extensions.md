@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461686"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645565"
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
 `Platform::Array<T>` Typu v jazyce C + +/ CX nebo **pole** – klíčové slovo v jazyce C + +/ CLI, deklaruje pole určeného typu a počáteční hodnota.  
@@ -52,7 +52,7 @@ ms.locfileid: "39461686"
   
  První příklad syntaxe používá **ref nové** agregační – klíčové slovo pro přidělení matici. Druhý příklad deklaruje místního pole.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461686"
  V době kompilace může zjistit, zda je typ pole s počítáním referencí s `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ### <a name="examples"></a>Příklady  
  Následující příklad vytvoří jednorozměrné pole, která má 100 elementů.  
@@ -106,7 +106,7 @@ int main() {
   
  První příklad syntaxe používá **gcnew** – klíčové slovo pro přidělení matici. Druhý příklad deklaruje místního pole.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Poznámky  
   
- `array` Probíhá [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
+ **pole** probíhá [Platform, default a cli obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
   
  Podobně jako standardní C++ indexy pole jsou počítány od nuly a pole je indexované pomocí hranatých závorek ([]). Na rozdíl od standardní C++ jsou uvedeny indexy vícerozměrné pole v seznamu indexů pro jednotlivé rozměry namísto sadu operátorů hranatých závorek ([]) pro jednotlivé rozměry. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  V době kompilace, můžete zjistit, zda je typ common language runtime (CLR) pole `__is_ref_array(type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
  Následující příklad vytvoří jednorozměrné pole, která má 100 elementů a trojrozměrného pole, která má 3 elementů v prvním rozměru, 5 elementů do druhého a 6 prvků v třetí.  

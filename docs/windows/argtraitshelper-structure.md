@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: fe97cc63de1f83d110e37451c1ceb91c7ad59f49
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466634"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652458"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper – struktura
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename TDelegateInterface>  
 struct ArgTraitsHelper;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TDelegateInterface*  
  Rozhraní delegáta.  
   

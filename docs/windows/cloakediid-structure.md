@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461220"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641917"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid – struktura
 Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<typename T>  
 struct CloakedIid : T;  
 ```  
@@ -39,7 +39,7 @@ struct CloakedIid : T;
  Rozhraní, který je skrytý (skryté).  
   
 ## <a name="remarks"></a>Poznámky  
- Následuje příklad `CloakedIid` se používá: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
+ Následuje příklad **cloakediid –** se používá: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `T`  

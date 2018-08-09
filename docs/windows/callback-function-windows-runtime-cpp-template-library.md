@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 799d0631ce29fcebd739f29232236e7cf87b74ac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461489"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652572"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Zpětné volání – funkce (knihovna šablon C++ prostředí Windows Runtime)
 Vytvoří objekt, jehož členská funkce je metoda zpětného volání.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template<  
    typename TDelegateInterface,  
    typename TCallback  
@@ -198,7 +198,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TDelegateInterface*  
  Parametr šablony určuje rozhraní delegáta pro volání při výskytu události.  
   

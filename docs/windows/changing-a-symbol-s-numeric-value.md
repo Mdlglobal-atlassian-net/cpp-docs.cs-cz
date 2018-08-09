@@ -1,5 +1,5 @@
 ---
-title: Změna symbolu&#39;číselnou hodnotu s | Microsoft Docs
+title: Změna symbolu&#39;s číselnou hodnotu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ada5ed80a1077dc2fc50494dcf6fcae609b0b0c9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860382"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652429"
 ---
-# <a name="changing-a-symbol39s-numeric-value"></a>Změna symbolu&#39;s číselná hodnota
-Pro symboly přidružené jediný zdroj, můžete použít [vlastnosti – okno](/visualstudio/ide/reference/properties-window) ke změně hodnoty symbolu. Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) ke změně hodnoty symbolů prostředek není aktuálně přiřazen. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).  
+# <a name="changing-a-symbol39s-numeric-value"></a>Změna symbolu&#39;s číselnou hodnotu
+Pro symboly přidružený jeden prostředek, můžete použít [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li změnit hodnotu symbolu. Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) ke změně hodnoty symbolů není aktuálně přiřazená k prostředku. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).  
   
-### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>Chcete-li změnit hodnotu symbol přiřazené k jedinému prostředku nebo k objektu  
+### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>Chcete-li změnit hodnotu symbolu, která je přiřazena k jednomu prostředku nebo k objektu  
   
 1.  V [zobrazení prostředků](../windows/resource-view-window.md), vyberte prostředek.  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V **vlastnosti** zadejte názvu symbolu následuje znak rovná a celé číslo **ID** pole, například:  
+2.  V **vlastnosti** okno, zadejte název symbolu následovaný symbolem rovná a typ integer v **ID** pole, například:  
   
     ```  
     IDC_EDITNAME=5100  
     ```  
   
- Nová hodnota je uložen v záhlaví souboru symbol při příštím uložení projektu. V poli ID; zůstává viditelná jenom názvu symbolu rovná se a hodnota se nezobrazují po jejich ověření.  
+ Nová hodnota je uložena v hlavičkový soubor symbolů při příštím uložte projekt. Pouze název symbolu zůstává viditelná pole ID. rovnítko a hodnota se nezobrazují, až se ověří.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti a [návod: použití prostředků pro lokalizaci pomocí technologie ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

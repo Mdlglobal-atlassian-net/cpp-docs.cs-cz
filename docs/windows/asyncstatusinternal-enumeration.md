@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464873"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652796"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal – výčet
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.  
   
 ## <a name="members"></a>Členové  
- *_Created*  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: vytvořili  
+ `_Created`  
+ Ekvivalent `::Windows::Foundation::AsyncStatus::Created`  
   
- *_Started*  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: spuštění  
+ `_Started`  
+ Ekvivalent `::Windows::Foundation::AsyncStatus::Started`  
   
- *_Completed*  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: dokončeno  
+ `_Completed`  
+ Ekvivalent `::Windows::Foundation::AsyncStatus::Completed`  
   
- *_Cancelled*  
- Ekvivalentní:: Windows::Foundation::AsyncStatus:: zrušeno  
+ `_Cancelled`  
+ Ekvivalent `::Windows::Foundation::AsyncStatus::Cancelled`  
   
- *_Podrobnosti*  
- Ekvivalentní:: Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ Ekvivalent `::Windows::Foundation::AsyncStatus::Error`  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** async.h  

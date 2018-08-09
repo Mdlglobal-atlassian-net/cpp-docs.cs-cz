@@ -1,5 +1,5 @@
 ---
-title: Přidání informací o verzi pro jiný jazyk | Microsoft Docs
+title: Přidání informací o verzi pro jiný jazyk | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 897dc9291c17e916be824915a467ec85a7770548
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93682f1a12e2fe2d5dfaf715a718563c35ecddde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857568"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650453"
 ---
 # <a name="adding-version-information-for-another-language"></a>Přidání informací o verzi pro jiný jazyk
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Chcete-li přidat informace o verzi pro jiný jazyk (nový blok informací o)  
@@ -34,21 +34,19 @@ ms.locfileid: "33857568"
 1.  Otevřete poklepáním v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete v tématu [vytvoření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Klikněte pravým tlačítkem myši v tabulce informace o verzi a zvolte **nový blok informací o verzi** z místní nabídky.  
+2.  Klikněte pravým tlačítkem v tabulce informace o verzi a zvolte **novou verzi informačního bloku** z místní nabídky.  
   
-     Tento příkaz přidá bloku Další informace do aktuální prostředku informací o verzi a otevře v jeho odpovídající vlastnosti [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+     Tento příkaz přidá do aktuálního prostředku informací o verzi z bloku Další informace a otevře se jeho odpovídající vlastnosti v [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
-3.  V **vlastnosti** okně vyberte odpovídající jazyk a znaková sada pro nového bloku.  
+3.  V **vlastnosti** okno, vyberte příslušný jazyk a znakové sady pro nový blok.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky 
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Editor informací o verzi](../windows/version-information-editor.md)   
  [Informace o verzi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

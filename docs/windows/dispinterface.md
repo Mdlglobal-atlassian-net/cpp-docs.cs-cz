@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569211"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644327"
 ---
 # <a name="dispinterface"></a>dispinterface
 Umístí rozhraní v souboru IDL jako rozhraní odbavení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Umístí rozhraní v souboru IDL jako rozhraní odbavení.
   
  Příklad použití pro [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) v dokumentaci k MIDL:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**Platí pro**|**interface**|  
 |**Opakovatelné**|Ne|  
 |**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|**duální**, **objekt**, **oleautomation**, `local`, **ms_union –**|  
+|**Neplatné atributy**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
   

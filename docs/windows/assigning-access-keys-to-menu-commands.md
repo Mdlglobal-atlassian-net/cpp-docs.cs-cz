@@ -1,5 +1,5 @@
 ---
-title: Přiřazení přístupových kláves příkazům nabídky | Microsoft Docs
+title: Přiřazení přístupových kláves k příkazům nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44a21e5930d0d8f2fcaad79cc5cef5bc984ad8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4745bd188f42b5df976750f952a91ce0e30a9cd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857896"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645796"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Přiřazení přístupových kláves příkazům nabídky
-Přístupový klíč (symbol, který umožňuje uživateli vybrat v nabídce pomocí klávesnice) můžete přiřadit nabídek a příkazů nabídky.  
+Přístupový klíč (symbol, který umožňuje uživateli vybrat nabídku pomocí klávesnice) můžete přiřadit nabídek a příkazů nabídky.  
   
 ### <a name="to-assign-an-access-shortcut-key-to-a-menu-command"></a>Přiřazení (místní) přístupový klíč k příkazu nabídky  
   
-1.  Zadejte znak ampersand (**&**) před písmenem v nabídce název nebo název příkazu k určení jím písmeno jako odpovídající přístupový klíč. Například "& souboru" sady ALT + F jako klávesovou zkratku v aplikace napsané pro Microsoft Windows v nabídce Soubor.  
+1.  Zadejte znak ampersand (`&`) před písmena v názvu nabídky nebo název příkazu zadat písmeno jako odpovídající přístupový klíč. Například "& soubor" sady **Alt**+**F** jako klávesovou zkratku **souboru** nabídky aplikace napsané pro Microsoft Windows.  
   
-     Položky nabídky poskytne viditelné signálem, že jedno z písmen obsahuje klávesovou zkratku přiřazen. Následující písmeno, které se zobrazí ampersand podtrhnou (contingent na operačním systému).  
+     Položka nabídky bude informovat viditelné s jedním z písmen klávesová zkratka přiřazena. Následující písmeno, znak ampersand se zobrazí podtržený (závislý na operační systém).  
   
     > [!NOTE]
-    >  Zkontrolujte, zda všechny přístupové klíče v nabídce jsou jedinečné pravým tlačítkem myši na vaší nabídky a zvolením **zkontrolovat klávesové zkratky** z místní nabídky.  
+    >  Ujistěte se, že přístupové klíče v nabídce jsou jedinečné pravým tlačítkem myši na vaše nabídky a zvolením **zkontrolujte klávesových zkratek** z místní nabídky.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461806"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646316"
 ---
 # <a name="attribute"></a>– atribut
 Umožňuje vytvořit vlastní atribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ Umožňuje vytvořit vlastní atribut.
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *AllowOn*  
  Určuje prvky jazyka, na které můžete použít vlastní atribut. Výchozí hodnota je `System::AttributeTargets::All` (viz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ Umožňuje vytvořit vlastní atribut.
  Určuje, zda vlastní atribut můžete opakovaně použít pro konstrukci. Výchozí hodnota je FALSE.  
   
  *Zděděné*  
- Určuje, zda je atribut má být zděděna podtřídy. Kompilátor neposkytuje žádnou zvláštní podporu pro tuto funkci; dodržovat tyto informace je práce pro atribut uživatele (například reflexe). Pokud *zděděné* má hodnotu TRUE, dědí atribut. Pokud *AllowMultiple* má hodnotu TRUE, atribut budou se hromadit na člena odvozené; Pokud *AllowMultiple* má hodnotu FALSE, atribut se přepsat (nebo nahradit) v dědičnosti. Pokud *zděděné* má hodnotu FALSE, nebude možné zdědit atribut. Výchozí hodnota je TRUE.  
+ Určuje, zda je atribut má být zděděna podtřídy. Kompilátor neposkytuje žádnou zvláštní podporu pro tuto funkci; úkolem atribut příjemců (`Reflection`, například) dodržovat tyto informace. Pokud *zděděné* má hodnotu TRUE, dědí atribut. Pokud *AllowMultiple* má hodnotu TRUE, atribut budou se hromadit na člena odvozené; Pokud *AllowMultiple* má hodnotu FALSE, atribut se přepsat (nebo nahradit) v dědičnosti. Pokud *zděděné* má hodnotu FALSE, nebude možné zdědit atribut. Výchozí hodnota je TRUE.  
   
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  `attribute` Atribut je nyní zastaralý.  Můžete vytvořit uživatelem definované attirbutes common language runtime atributu System.Attribute přímo.  Další informace najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  **Atribut** atribut je nyní zastaralý.  Použít atribut common language runtime `System.Attribute` na přímo k vytvoření attirbutes definovaný uživatelem. Další informace najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Můžete definovat [vlastního atributu](../windows/custom-attributes-cpp.md) tak, že `attribute` atributu na definici spravované třídy nebo struktury. Název třídy je vlastní atribut. Příklad:  
+ Můžete definovat [vlastního atributu](../windows/custom-attributes-cpp.md) tak, že **atribut** atributu na definici spravované třídy nebo struktury. Název třídy je vlastní atribut. Příklad:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  Zobrazit [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md) diskuse o atribut cíle.  
   
- `attribute` Atribut má *AllowMultiple* parametr, který určuje, zda je vlastní atribut je jedno použití nebo multiuse (může objevit více než jednou ve stejné entity).  
+ **Atribut** atribut má *AllowMultiple* parametr, který určuje, zda je vlastní atribut je jedno použití nebo multiuse (může objevit více než jednou ve stejné entity).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Vlastní atribut třídy jsou odvozené přímo nebo nepřímo z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, díky kterému budou Identifikace definice atributu v metadatech rychlé a snadné. `attribute` Atribut znamená dědičnosti z System::Attribute, takže není nutné explicitní odvození:  
+ Vlastní atribut třídy jsou odvozené přímo nebo nepřímo z <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, díky kterému budou Identifikace definice atributu v metadatech rychlé a snadné. **Atribut** atribut znamená dědičnosti z `System::Attribute`, takže není nutné explicitní odvození:  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  je ekvivalentem  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` je alias pro <xref:System.AttributeUsageAttribute?displayProperty=fullName> (ne atributAtribut; to je výjimka pravidlo pro pojmenování atributů).  
+ **atribut** je alias pro <xref:System.AttributeUsageAttribute?displayProperty=fullName> (ne atributAtribut; to je výjimka pravidlo pro pojmenování atributů).  
   
 ## <a name="requirements"></a>Požadavky  
   

@@ -1,5 +1,5 @@
 ---
-title: Upravitelné typy souboru pro prostředky | Microsoft Docs
+title: Upravitelné typy souborů prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870247"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648428"
 ---
 # <a name="editable-file-types-for-resources"></a>Upravitelné typy souboru pro prostředky
 Můžete otevřít následující typy souborů a upravit prostředky, které obsahují.  
@@ -32,14 +32,12 @@ Můžete otevřít následující typy souborů a upravit prostředky, které ob
 |Název souboru|Popis|  
 |---------------|-----------------|  
 |.rc|Soubory skriptu prostředků.|  
-|.RCT|Soubory prostředků šablony.|  
+|.RCT|Soubory prostředků šablon.|  
 |.res|Soubory prostředků.|  
 |.resx|Spravovaných zdrojových souborů.|  
 |.exe|Spustitelné soubory.|  
-|.dll|Soubory knihovny DLL.|  
-|.bmp, .ico, který, DIB a .cur|Soubory bitové mapy, ikona, nástrojů a kurzoru.|  
-  
-
+|DLL|Soubory knihoven DLL.|  
+|.bmp, ICO, DIB a .cur|Rastrový obrázek, ikona, nástrojů a kurzoru soubory.|  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

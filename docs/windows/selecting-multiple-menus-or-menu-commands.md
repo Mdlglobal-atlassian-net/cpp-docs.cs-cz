@@ -1,5 +1,5 @@
 ---
-title: Výběr více nabídek nebo příkazů nabídky | Microsoft Docs
+title: Výběr více nabídek nebo příkazů nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891906"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644853"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Výběr více nabídek nebo příkazů nabídky
-Můžete vybrat více názvy nabídek nebo příkazů nabídky k provádění operací hromadné například odstranění nebo změna vlastností.  
+Můžete vybrat více názvy nabídek nebo příkazů nabídky k provedení operace hromadného například odstranění nebo změna vlastností.  
   
 ### <a name="to-select-multiple-menu-commands"></a>Chcete-li vybrat více příkazů nabídky  
   
-1.  Podržte stisknutou klávesu CTRL a klikněte na tlačítko nabídky nebo dílčí příkazy, které chcete.  
+1.  Když podržíte **Ctrl** klíče, klikněte na tlačítko nabídky a podnabídky příkazy, které chcete.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.*  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
- **Požadavky**  
+## <a name="requirements"></a>Požadavky  
   
  Win32  
   

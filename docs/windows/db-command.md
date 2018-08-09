@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571435"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650086"
 ---
 # <a name="dbcommand"></a>db_command
 Vytvoří příkaz OLE DB.  
@@ -41,7 +41,6 @@ Vytvoří příkaz OLE DB.
 ```  
   
 ### <a name="parameters"></a>Parametry  
-
 *Příkaz*  
 Příkaz řetězec obsahující text příkazu technologie OLE DB. Je jednoduchý příklad:  
   
@@ -112,12 +111,12 @@ Název popisovače, který můžete použít pro práci se v sadě řádků. Pok
 **db_command** kontroluje, ujistěte se, že proměnné použité pro *source_name* je platný, funkce nebo globální rozsah by tak měly být zadané proměnné.  
   
 *HRESULT* (volitelné)  
-Určuje proměnné, která se zobrazí `HRESULT` tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
+Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
   
 *vazby* (volitelné)  
 Umožňuje oddělit vazby parametrů příkazu technologie OLE DB.  
   
-Pokud zadáte hodnotu pro *vazby*, **db_command** provede analýzu přidruženou hodnotu a nebude analyzovat \[ *bindtype*] parametru. Toto použití můžete použít syntaxi zprostředkovatele OLE DB. Chcete-li zakázat analýzy bez vazby parametrů, zadejte **vazby = ""**.  
+Pokud zadáte hodnotu pro *vazby*, **db_command** provede analýzu přidruženou hodnotu a nebude analyzovat \[ *bindtype*] parametru. Toto použití můžete použít syntaxi zprostředkovatele OLE DB. Chcete-li zakázat analýzy bez vazby parametrů, zadejte `Bindings=""`.  
   
 Pokud nezadáte hodnotu *vazby*, **db_command** provede analýzu bloku parametrů vazby, hledá "**(**" následovaný **\[** _bindtype_**]** v závorkách, za nímž následuje jedna nebo více dříve deklarovaný člen proměnné C++, za nímž následuje "**)**". Veškerý text v závorkách se odstraní z výsledné příkazu a tyto parametry se použije k vytvoření sloupce a parametr vazby tohoto příkazu.  
   
@@ -133,7 +132,7 @@ Pokud *bulk_fetch* je menší než 1, `SetRows` vrátí nulu.
 ## <a name="remarks"></a>Poznámky  
 **db_command** vytvoří [CCommand](../data/oledb/ccommand-class.md) objekt, který používá příjemce technologie OLE DB ke spuštění příkazu.  
   
-Můžete použít **db_command** s rozsahem třídy nebo funkce; Hlavní rozdíl je v oboru `CCommand` objektu. V oboru funkce data, jako jsou třeba vazby ukončit na konci funkce. Použití oboru třídy a funkce zahrnují třídy šablona příjemce technologie OLE DB `CCommand<>`, ale liší se argumenty šablony pro případy funkce a třídy. V případě funkce bude proveden vazby **přistupující objekt** , která zahrnuje místní proměnné při použití třídy odvodí `CAccessor`-odvozené třídy jako argument. Když se použije jako atribut třídy **db_command** funguje ve spojení s **db_column**.  
+Můžete použít **db_command** s rozsahem třídy nebo funkce; Hlavní rozdíl je v oboru `CCommand` objektu. V oboru funkce data, jako jsou třeba vazby ukončit na konci funkce. Použití oboru třídy a funkce zahrnují třídy šablona příjemce technologie OLE DB `CCommand<>`, ale liší se argumenty šablony pro případy funkce a třídy. V případě funkce bude proveden vazby `Accessor` , která zahrnuje místní proměnné při použití třídy odvodí `CAccessor`-odvozené třídy jako argument. Když se použije jako atribut třídy **db_command** funguje ve spojení s **db_column**.  
   
 **db_command** lze použít ke spuštění příkazů, které nevrací sadu výsledků dotazu.  
   

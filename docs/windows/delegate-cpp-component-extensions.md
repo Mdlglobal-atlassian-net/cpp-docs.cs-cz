@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570360"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649504"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (rozšíření komponent C++)
 Deklaruje typ, který představuje ukazatel na funkci.  
@@ -68,7 +68,7 @@ delegate-type-identifier
  Použití *identifikátor typu delegáta* deklarovat událost s stejný prototyp jako delegát. Další informace najdete v tématu [delegátů (C + +/ CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
  Modul common language runtime podporuje delegáty s následující syntaxí.  
@@ -124,10 +124,9 @@ function_declaration
 -   [Obecní delegáti (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru:   **/CLR**  
+ – Možnost kompilátoru: `/clr`  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
  Následující příklad ukazuje, jak deklarovat a inicializovat, vyvoláte.  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in func1 8  

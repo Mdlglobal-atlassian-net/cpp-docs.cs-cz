@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466199"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647811"
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 Implementuje asynchronní stav počítače Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *TComplete*  
  Obslužná rutina události, která je volána po dokončení asynchronní operace.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  Obslužná rutina události, která je volána při spuštěné asynchronní operace nahlásí aktuální průběh operace.  
   
  *Hodnota resultType*  
- Jeden z [asyncresulttype –](../windows/asyncresulttype-enumeration.md) hodnot výčtu. Ve výchozím nastavení SingleResult.  
+ Jeden z [asyncresulttype –](../windows/asyncresulttype-enumeration.md) hodnot výčtu. Ve výchozím nastavení `SingleResult`.  
   
 ## <a name="members"></a>Členové  
   

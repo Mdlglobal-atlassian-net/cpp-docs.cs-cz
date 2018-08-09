@@ -1,5 +1,5 @@
 ---
-title: Srwlockexclusivetraits::Unlock – metoda | Microsoft Docs
+title: Srwlockexclusivetraits::Unlock – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892587"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648019"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock – metoda
-Uvolní výhradní kontrolu nad zadaný objekt SRWLock.  
+Uvolní výhradní kontrolu zadaného `SRWLock` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `srwlock`  
- Popisovač objektu SRWLock.  
+### <a name="parameters"></a>Parametry  
+ *srwlock*  
+ Popisovač `SRWLock` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: řetězec (C++) | Microsoft Docs
+title: řetězec (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889017"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645406"
 ---
 # <a name="string-c"></a>string (C++)
-Určuje, že jednorozměrná `char`, `wchar_t`, **bajtů** (nebo ekvivalentního) má ukazatel na takové pole nebo pole musí být považované za řetězec.  
+Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte` (nebo obdobných) pole nebo ukazatel na takové pole musí být považované za řetězec.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Řetězec** atribut C++ má stejné funkce jako [řetězec](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL atribut.  
+ **Řetězec** C++ atribut má stejné funkce jako [řetězec](http://msdn.microsoft.com/library/windows/desktop/aa367270) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
  Následující kód ukazuje, jak používat **řetězec** na rozhraní a definice typu:  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,9 +58,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Platí pro**|Pole nebo odkazy pole, parametr rozhraní, rozhraní – metoda|  
-|**Opakovatelných**|Ne|  
-|**Povinné atributy**|Žádné|  
+|**Platí pro**|Pole nebo ukazatel pole, rozhraní parametrů, metody rozhraní|  
+|**Opakovatelné**|Ne|  
+|**Vyžadované atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
   
  Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  

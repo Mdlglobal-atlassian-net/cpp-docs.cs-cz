@@ -1,5 +1,5 @@
 ---
-title: Zmenšení nebo roztažení části obrázku (Editor obrázků pro ikony) | Microsoft Docs
+title: Zmenšení nebo roztažení části obrázku (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e931ff9d47c1e114fec60d26300cabe281db5816
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c32da2b56e3a19bda02f226645b98d746a39c7d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888731"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650313"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>Zmenšení nebo roztažení části obrázku (editor obrázků pro ikony)
 ### <a name="to-shrink-or-stretch-part-of-an-image"></a>Zmenšení nebo roztažení části obrázku  
   
-1.  Vyberte část bitovou kopii, kterou chcete změnit. Další informace najdete v tématu [výběr oblasti obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md).  
+1.  Vyberte část image, kterou chcete změnit velikost. Další informace najdete v tématu [výběr oblasti obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md).  
   
-2.  Přetáhněte jeden úchyt, dokud nebude výběru požadované velikosti.  
+2.  Přetáhněte jednu z úchyty pro změnu velikosti, dokud nebude výběru požadované velikosti.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Změna velikosti obrázku](../windows/resizing-an-image-image-editor-for-icons.md)
-

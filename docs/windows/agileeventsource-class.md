@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462066"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642835"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource – třída
 
@@ -30,7 +30,7 @@ Představuje událost, která je vyvolána agilní komponentu, která je kompone
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Parametry  
  *TDelegateInterface*  
-
  Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Dalš
 
 |Název|Popis|
 |----------|-----------------|
-|[AgileEventSource::Add – metoda](#add)|Připojí obslužnou rutinu události agilní reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální objekt agileeventsource –.|
+|[AgileEventSource::Add – metoda](#add)|Připojí obslužnou rutinu události agilní reprezentována rozhraní zadaného delegáta k sadě obslužné rutiny událostí pro aktuální **agileeventsource –** objektu.|
 
 ## <a name="add"></a> AgileEventSource::Add – metoda
 
@@ -85,7 +84,7 @@ HRESULT Add(
 Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
 
 *Token*  
-Po dokončení této operace, popisovač, který představuje událost. Použijte tento token jako parametr do metody Remove() zahodíte obslužné rutiny události.
+Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru `Remove()` metoda zahodíte obslužné rutiny události.
 
 ### <a name="return-value"></a>Návratová hodnota
 

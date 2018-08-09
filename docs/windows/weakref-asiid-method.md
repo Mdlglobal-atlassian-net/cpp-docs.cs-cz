@@ -1,5 +1,5 @@
 ---
-title: Weakref::asiid – metoda | Microsoft Docs
+title: Weakref::asiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69108681b181d0b2fce20f9e30a009b6b93c2180
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891295"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643482"
 ---
 # <a name="weakrefasiid-method"></a>WeakRef::AsIID – metoda
-Nastaví zadaný parametr ukazatel ComPtr představují ID specifikované rozhraní.  
+Nastaví zadaný `ComPtr` parametr ukazatele představující ID zadané rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,27 +36,27 @@ HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `riid`  
+### <a name="parameters"></a>Parametry  
+ *riid*  
  Identifikátor rozhraní.  
   
- `ptr`  
- Když tato operace dokončí, objekt, který představuje parametr `riid`.  
+ *ptr*  
+ Když tato operace dokončí, objekt, který představuje parametr *riid*.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
--   S_OK, pokud je tato operace úspěšná; jinak hodnota HRESULT určující z důvodu operace se nezdařila, a `ptr` je nastaven na `nullptr`.  
+-   Pokud je tato operace úspěšná; S_OK v opačném případě HRESULT, který označuje důvod operace nebyla úspěšná, a *ptr* je nastavena na **nullptr**.  
   
--   S_OK, pokud se tato operace úspěšná, ale aktuální objekt WeakRef už byla uvolněna. Parametr `ptr` je nastaven na `nullptr`.  
+-   Pokud tato operace úspěšná, ale aktuální S_OK **WeakRef** objekt již byl uvolněn. Parametr *ptr* je nastavena na **nullptr**.  
   
--   Pokud se tato operace úspěšná, ale aktuální objekt WeakRef není odvozen z parametru S_OK `riid`. Parametr `ptr` je nastaven na `nullptr`. (Další informace najdete v části poznámky.)  
+-   Pokud tato operace úspěšná, ale aktuální S_OK **weakref –** objekt není odvozen z parametru *riid*. Parametr *ptr* je nastavena na **nullptr**. (Další informace najdete v části poznámky.)  
   
 ## <a name="remarks"></a>Poznámky  
- Je vygenerované chybu, pokud parametr `riid` není odvozen od IInspectable. Tato chyba nahrazuje návratovou hodnotu.  
+ Je vygenerován chybu, pokud parametr *riid* není odvozen od `IInspectable`. Tato chyba nahrazuje návratovou hodnotu.  
   
- První šablona je formulář, který by měli používat v kódu. Druhá šablona (není vidět tady, ale v záhlaví souboru deklarována) je interní, specializace pomocné rutiny, která podporuje funkcí jazyka C++, jako [automaticky](../cpp/auto-cpp.md) zadejte odvození – klíčové slovo.  
+ První šablona je formulář, který by měl používat ve vašem kódu. Druhá šablona (není vidět, ale deklarované v souboru hlaviček) je interní, specializace pomocné rutiny, podporující funkcí jazyka C++, jako [automaticky](../cpp/auto-cpp.md) klíčovým slovem odvození typu.  
   
- Od verze Windows 10 SDK, tato metoda nenastaví WeakRef instance `nullptr` Pokud nebylo možné získat odkaz na slabé, proto byste neměli kontrolní součet, která kontroluje WeakRef pro `nullptr`. Místo toho zkontrolujte `ptr` pro `nullptr`.  
+ Od verze Windows 10 SDK, tato metoda nenastaví **WeakRef** instance na **nullptr** Pokud nebylo možné získat nestálý odkaz, takže byste se měli vyhnout kontroly chyb kódu, který kontroluje, **WeakRef** pro **nullptr**. Místo toho zkontrolujte *ptr* pro **nullptr**.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

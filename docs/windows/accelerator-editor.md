@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466069"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648282"
 ---
 # <a name="accelerator-editor"></a>Editor akcelerátorů
 Tabulky akcelerátorů je prostředek Windows, který obsahuje seznam klávesy akcelerátoru (označované také jako klávesové zkratky) a identifikátory příkazů, které jsou s nimi spojeny. Program může mít více než jedné tabulky akcelerátoru.  
@@ -36,7 +36,7 @@ Tabulky akcelerátorů je prostředek Windows, který obsahuje seznam klávesy a
   
  Můžete použít [zobrazení tříd](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) připojit klíče příkazy akcelerátoru ke kódu.  
   
- Editor akcelerátorů vám umožní:  
+ S **akcelerátoru** editoru, můžete:  
   
 -   [Nastavení vlastností akcelerátoru](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ Tabulky akcelerátorů je prostředek Windows, který obsahuje seznam klávesy a
 -   [Pomocí předdefinované klávesy akcelerátoru](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Při použití editoru akcelerátoru, kliknete pravým tlačítkem na Zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.  
+    >  Při použití **akcelerátoru** editoru, kliknete pravým tlačítkem na Zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.  
   
     > [!NOTE]
     >  Windows neumožňuje vytvářet tabulky prázdný akcelerátoru. Pokud jste se žádné položky tabulky akcelerátorů, je odstraněn automaticky při ukládání tabulky.  
   
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

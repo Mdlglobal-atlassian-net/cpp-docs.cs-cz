@@ -1,5 +1,5 @@
 ---
-title: Řetězec (rozšíření komponent C++) | Microsoft Docs
+title: String (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889237"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645990"
 ---
 # <a name="string--c-component-extensions"></a>String (rozšíření komponent C++)
-Podporuje kompilátoru Visual C++ *řetězce*, které jsou objekty, které představují text jako posloupnost znaků. Visual C++ podporuje proměnné řetězec, jehož hodnota je implicitní, a literály, jehož hodnota je řetězec v uvozovkách explicitní.  
+Visual C++ podporuje kompilátoru *řetězce*, které jsou objekty, které představují text jako posloupnost znaků. Jazyk Visual C++ podporuje proměnné řetězec, jehož hodnota je implicitní, a literály typu, jehož hodnota je explicitní řetězec v uvozovkách.  
   
 ## <a name="all-runtimes"></a>Všechny moduly runtime  
- Prostředí Windows Runtime a modul common language runtime představují řetězce jako objekty, jejichž přidělené paměti je spravováno automaticky. To znamená není nutné explicitně zahodit paměť pro řetězec při ukončení proměnné vloží řetězec mimo obor nebo aplikace. Pokud chcete označit, že životnosti objektu řetězec spravováno automaticky, deklarovat na řetězcový typ. s [popisovač objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modifikátor.  
+ Modul Windows Runtime a modul common language runtime představují řetězce jako objekty, jejichž přidělenou paměť je spravována automaticky. To znamená není nutné explicitně zahodit paměti pro řetězec při ukončení řetězce proměnné překročí obor nebo aplikace. K označení, že se automaticky spravovat dobu života objektu string, deklarujte typ řetězce s [popisovač objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modifikátor.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- Architektura prostředí Windows Runtime vyžaduje Visual C++ pro implementaci `String` datový typ v `Platform` oboru názvů. Pro usnadnění vaší práce, Visual C++ také poskytuje `string` datový typ, který se jedná o synonymum `Platform::String`v `default` oboru názvů.  
+ Architektura modulu Windows Runtime vyžaduje Visual C++ k implementaci `String` datového typu ve `Platform` oboru názvů. Pro usnadnění práce, budou také poskytuje jazyk Visual C++ `string` datový typ, který je synonymum pro `Platform::String`v `default` oboru názvů.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -41,36 +41,35 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další příklady a další informace o řetězcích, najdete v části [Platform::String, std::wstring a literály (platforma)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ Další informace a příklady o řetězcích naleznete v tématu [Platform::String std::wstring a literály (Platform)](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: **/ZW**  
+ – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)  
- Toto téma popisuje, jak Visual C++ compiler zpracovává textové literály při spuštění pomocí **/CLR** – možnost kompilátoru. Použít **/CLR**, musíte taky použít modul CLR (CLR), C + +/ CLI syntaxe a spravovaných objektech. Další informace o **/CLR**, najdete v části [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Toto téma popisuje, jak kompilátor Visual C++ zpracovává řetězcové literály, při spuštění pomocí `/clr` – možnost kompilátoru. Chcete-li použít `/clr`, musíte taky použít common language runtime (CLR), C + +/ syntaxe rozhraní příkazového řádku a spravované objekty. Další informace o `/clr`, naleznete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Při kompilaci s **/CLR**, kompilátor převede textové literály řetězce typu <xref:System.String>. Chcete-li zachovat zpětnou kompatibilitu s existující kód existuje jsou dvě výjimky:  
+ Při kompilaci s `/clr`, kompilátor převede řetězcové literály řetězce typu <xref:System.String>. Pro zachování zpětné kompatibility s existujícím kódem existuje jsou dvě výjimky:  
   
--   Zpracovávání výjimek v jazyce. Pokud je vyvolána řetězcový literál, kompilátor bude catch jako řetězcový literál.  
+-   Zpracování výjimek. Při vyvolání řetězcového literálu kompilátor zachytí ho jako řetězcový literál.  
   
--   Odvození šablony. Když jako šablonu argumentu předána řetězcový literál, kompilátor nebude převeďte ho na <xref:System.String>. Všimněte si, bude textové literály jako obecný argument předaná povýšen <xref:System.String>.  
+-   Odvození šablony. Řetězcový literál je předána jako argument šablony, kompilátor neprovede konverzi na <xref:System.String>. Mějte na paměti, bude řetězcové literály, které jsou předány jako obecný argument povýšen <xref:System.String>.  
   
- Kompilátor také obsahuje integrovanou podporu pro tři operátory, které můžete přepsat k přizpůsobení jejich chování:  
+ Kompilátor také obsahuje integrovanou podporu pro tři operátory, které můžete přizpůsobit jejich chování můžete přepsat:  
   
 -   System::String ^ – operátor + (System::String, System::String);  
   
--   System::String ^ + – operátor (System::Object, System::String);  
+-   System::String ^ (System::Object, System::String); + – operátor  
   
--   System::String ^ + – operátor (System::String, System::Object);  
+-   System::String ^ (System::String, System::Object); + – operátor  
   
- Když uplyne <xref:System.String>, kompilátor pole, v případě potřeby a pak řetězení objekt (s ToString) s řetězcem.  
+ Při předání <xref:System.String>, kompilátor pole, v případě potřeby a pak je zřetězí objekt (s ToString) s řetězcem.  
   
 > [!NOTE]
->  Pomocí kurzoru ("^") označuje, že je deklarovaný proměnná popisovač pro C + +/ CLI spravovaných objektů.  
+>  Znak stříšky ("^") označuje, že deklarovaná proměnná je popisovač pro C + +/ CLI spravovaných objektů.  
   
  Další informace najdete v části [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md).  
   
@@ -78,9 +77,8 @@ using namespace default;
  – Možnost kompilátoru:   **/CLR**  
   
 ### <a name="examples"></a>Příklady  
- **Příklad**  
   
- Následující příklad kódu ukazuje, zřetězení a porovnávání řetězců.  
+ Následující příklad kódu ukazuje zřetězení a porovnávání řetězců.  
   
 ```cpp  
 // string_operators.cpp  
@@ -169,9 +167,7 @@ abc
 n is empty  
 ```  
   
- **Příklad**  
-  
- Následující příklad ukazuje, že můžete použít přetížení operátory zadaný kompilátoru a zjistí, že kompilátor přetížení funkce, na základě <xref:System.String> typu.  
+ Následující příklad ukazuje, že lze provést přetížení operátorů poskytované kompilátoru a, že kompilátor bude najít přetížení funkce na základě <xref:System.String> typu.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -231,9 +227,7 @@ String ^ a
 const char * a  
 ```  
   
- **Příklad**  
-  
- Následující příklad ukazuje, že kompilátor rozlišuje nativní řetězce a <xref:System.String> řetězce.  
+ Následující příklad ukazuje, že kompilátor rozlišuje mezi nativní řetězce a <xref:System.String> řetězce.  
   
 ```cpp  
 // string_operators_3.cpp  
@@ -285,6 +279,6 @@ System.String
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
+ [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
  [Řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md)   
  [/clr (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

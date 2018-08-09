@@ -1,5 +1,5 @@
 ---
-title: Editor řetězce | Microsoft Docs
+title: Editor řetězců | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,38 +23,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23211293313135cb0341ac234014ae3c144b7fec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e8e7bcfef2b8ea9b908c949c9def24ebe0eba31
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891373"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641428"
 ---
 # <a name="string-editor"></a>Editor řetězce
-Tabulky řetězců je prostředek systému Windows, který obsahuje seznam ID, hodnoty a titulky pro všechny řetězce vaší aplikace. Například výzvy stavového řádku jsou umístěny v tabulce řetězců.  
+Tabulka řetězců je prostředek Windows, který obsahuje seznam ID, hodnoty a popisky pro všechny řetězce vaší aplikace. Například výzvy stavový řádek jsou umístěny v tabulce řetězců.  
   
- Při vývoji aplikace, může mít několik tabulek řetězců – jeden pro každou jazyka nebo podmínky. Spustitelný soubor modulu má však pouze jednu tabulku řetězec. Spuštěné aplikace můžete odkazovat několik tabulek řetězců, když vložíte do různých knihoven DLL tabulky.  
+ Při vývoji aplikace, máte několik tabulek řetězců, jeden pro každý jazyk nebo podmínku. Spustitelný soubor modulu má však pouze jedna tabulka řetězců. Běžící aplikaci může odkazovat několik tabulek řetězců, pokud vložené tabulky do jiné knihovny DLL.  
   
- Tabulky řetězců usnadní lokalizaci vaší aplikace do různých jazyků. Pokud všechny řetězce jsou v tabulce řetězce, je možné lokalizovat aplikace beze změny zdrojového kódu při převodu řetězce (a další prostředky). Toto je obvykle žádoucí více než ručně hledání a nahrazování řetězců různé ve zdrojových souborech.  
+ Tabulky řetězců umožňují snadno lokalizovat vaši aplikaci do různých jazyků. Pokud jsou všechny řetězce v tabulce řetězců, je možné lokalizovat aplikaci při převodu řetězce (a další prostředky) bez změny zdrojového kódu. Toto je obvykle žádoucí více než ručně vyhledávání a nahrazování různých řetězců ve zdrojových souborech.  
   
- Pomocí editoru řetězec, můžete:  
+ Pomocí editoru řetězce, můžete:  
   
--   [Vyhledávání pro jeden nebo více řetězců](../windows/finding-a-string.md).  
+-   [Hledání řetězců jeden nebo více](../windows/finding-a-string.md).  
   
--   Rychle [vložit nové položky](../windows/adding-or-deleting-a-string.md) do tabulky řetězec.  
+-   Rychle [vložit nové položky](../windows/adding-or-deleting-a-string.md) do tabulky řetězců.  
   
--   [Přesunutí řetězce z jednoho zdrojového souboru do jiného](../windows/moving-a-string-from-one-resource-file-to-another.md)  
+-   [Přesunutí řetězce z jednoho zdrojového souboru do druhého](../windows/moving-a-string-from-one-resource-file-to-another.md)  
   
--   [Použít místní úpravy vlastností ID, hodnotu a titulek](../windows/changing-the-properties-of-a-string.md) a zobrazit změny okamžitě.  
+-   [Použít místní úpravy. pro vlastnosti ID, hodnotu a popisek](../windows/changing-the-properties-of-a-string.md) a podívejte se na změny okamžitě.  
   
 -   [Změna vlastnosti titulku vícenásobných řetězců](../windows/changing-the-caption-property-of-multiple-strings.md)  
   
 -   [Přidání formátovacích nebo speciálních znaků do řetězce](../windows/adding-formatting-or-special-characters-to-a-string.md)  
   
     > [!NOTE]
-    >  Nepovoluje Windows vytváření tabulek prázdný řetězec. Pokud vytvoříte tabulku řetězec s žádné položky, odstraní se automaticky při ukládání souboru prostředků.  
+    >  Windows neumožňuje vytvoření tabulky prázdný řetězec. Pokud vytvoříte tabulku řetězců s žádné položky, odstraní se automaticky při ukládání souboru prostředků.  
   
- Informace o přidávání zdrojů do spravovaných projekty (ty, které cílí modul common language runtime), najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace o ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a prostředky řetězce přiřazení k vlastnosti, najdete v části [návod: lokalizace Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití zdrojů pro lokalizaci s technologií ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  
@@ -63,4 +63,3 @@ Tabulky řetězců je prostředek systému Windows, který obsahuje seznam ID, h
  [Editory prostředků](../windows/resource-editors.md)   
  [Řetězce](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)   
  [O řetězcích](http://msdn.microsoft.com/library/windows/desktop/ms647465.aspx)
-

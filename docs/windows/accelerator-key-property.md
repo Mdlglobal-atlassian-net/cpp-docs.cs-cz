@@ -1,5 +1,5 @@
 ---
-title: Vlastnost klávesy akcelerátoru | Microsoft Docs
+title: Vlastnost klávesy akcelerátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4fc56384d666026f4cc7e21f9d8af9347046fd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 36884376e5ff31754e4c53ef6602f6bfd129f4a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857204"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650440"
 ---
 # <a name="accelerator-key-property"></a>Vlastnost klávesy akcelerátoru
-Dále jsou právní položky pro vlastnost klíč v tabulce akcelerátorů:  
+Následují platné položky pro vlastnost klíče v tabulce akcelerátorů:  
   
--   Celé číslo mezi 0 a 255 ve formátu desetinného čísla. Hodnota určuje, zda je hodnota považovány za ASCII nebo ANSI následujícím způsobem:  
+-   Celé číslo mezi 0 a 255 ve formátu desetinného čísla. Hodnota určuje, zda hodnota je považován za ASCII a ANSI následujícím způsobem:  
   
-    -   Jednociferné čísla jsou vždy vyhodnocena jako odpovídající klíč, nikoli jako hodnoty ASCII nebo ANSI.  
+    -   Jednociferné čísla jsou vždy interpretováno jako odpovídajícího klíče, nikoli jako hodnot ASCII a ANSI.  
   
-    -   Hodnoty od 1 do 26, je-li před nul, se interpretují jako ^ A prostřednictvím ^ Z, která představuje hodnotu ASCII písmena abecedy při stisknutí se stisknutou klávesou CTRL.  
+    -   Hodnoty 1 až 26, když párový příkaz nulami, jsou interpretovány jako ^ A až ^ Z, která představuje hodnotu ASCII písmena abecedy při stisknutí klávesy **Ctrl** klávesa stisknuta.  
   
-    -   Hodnoty z 27-32 jsou vždy interpretovat jako desetinných míst třímístné 027 prostřednictvím 032.  
+    -   Hodnoty z 27. až 32 jsou vždy interpretovány jako trojmístný desetinné hodnoty 027 prostřednictvím 032.  
   
-    -   Hodnoty z 033 do 255, ať už před sebou na 0 nebo nejsou vyhodnocena jako hodnoty ANSI.  
+    -   Hodnoty z 033 až 255, zda předchází uživatele 0 nebo nejsou vyhodnocena jako hodnoty ANSI.  
   
--   Klávesnice jeden znak. Velká písmena A - Z nebo číslice 0 – 9 může být ASCII nebo virtuální hodnoty klíče; Další znak je pouze v ASCII.  
+-   Klávesnice jeden znak. Velká písmena A – Z nebo čísla 0 – 9 může být ASCII nebo virtuální klíčových hodnot. jakýkoli jiný znak ASCII je pouze.  
   
--   Klávesnice jeden znak v rozsahu A – Z (velká písmena pouze), před sebou šipka nahoru (^) (například ^ C). To zadá hodnotu ASCII klíče při stisknutí se stisknutou klávesou CTRL.  
+-   Klávesnice jeden znak v rozsahu A – Z (velká písmena pouze) předchází znak stříšky (^) (například ^ C). To vstupuje do ASCII hodnotu klíče, pokud se stiskne s **Ctrl** klávesa stisknuta.  
   
     > [!NOTE]
-    >  Pokud zadáte hodnotu ASCII, možnosti vlastnost modifikátor budou omezeny. Jenom řízení klíč k dispozici pro použití je klávesu ALT.  
+    >  Při zadávání hodnotu ASCII, jsou omezené možnosti modifikátor vlastností. Je pouze klávesu CTRL k dispozici pro použití **Alt** klíč.  
   
--   Všechny platné virtuální identifikátor klíče. Rozevírací seznam klíč v tabulce akcelerátorů obsahuje seznam identifikátorů standardní virtuální klíče.  
+-   Libovolný platný identifikátor virtuální klávesy. Pole rozevíracího seznamu klíče v tabulce akcelerátorů obsahuje seznam identifikátorů standardní virtuální klíče.  
   
     > [!TIP]
-    >  Jiný způsob, jak definovat klávese akcelerátoru je klikněte pravým tlačítkem na položku nebo více položek v tabulce akcelerátorů, zvolte **další zadali klíč** z místní nabídky a potom stiskněte klávesu klíče nebo kombinace kláves na klávesnici. **Další zadali klíč** je k dispozici z také **upravit** nabídky.  
+    >  Klikněte pravým tlačítkem na položku nebo více položek v tabulce akcelerátorů, zvolte je další způsob, jak definovat klíče akcelerátoru k **další stisknutá klávesa** z místní nabídky a stiskněte klávesy nebo kombinace kláves na klávesnici. **Další stisknutá klávesa** příkazu je také k dispozici **upravit** nabídky.  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

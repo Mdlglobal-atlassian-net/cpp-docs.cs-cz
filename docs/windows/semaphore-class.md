@@ -1,5 +1,5 @@
 ---
-title: Semafor třída | Microsoft Docs
+title: Semafor třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889466"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652633"
 ---
 # <a name="semaphore-class"></a>Semaphore – třída
-Představuje objekt synchronizace, který řídí sdílený prostředek, který podporuje omezený počet uživatelů.  
+Představuje objekt synchronizace, který řídí sdíleného prostředku, který podporuje omezený počet uživatelů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -46,25 +45,25 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Semaphore::Semaphore – konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicializuje novou instanci třídy semafor.|  
+|[Semaphore::Semaphore – konstruktor](../windows/semaphore-semaphore-constructor.md)|Inicializuje novou instanci třídy **semafor** třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jejichž podpis obsahuje zadaný počet argumentů.|  
+|[InvokeHelper::Invoke – metoda](../windows/invokehelper-invoke-method.md)|Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Semaphore::Lock – metoda](../windows/semaphore-lock-method.md)|Počká, dokud nebude aktuální objekt nebo objekt přidružený k zadanému popisovači, je ve stavu signalizovaného nebo zadaný časový limit uplynul.|  
+|[Semaphore::Lock – metoda](../windows/semaphore-lock-method.md)|Počká, dokud aktuální objekt nebo objekt přidružený k zadanému popisovači, je do signalizovaného stavu nebo zadaný časový limit uplynul.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Semaphore::operator= – operátor](../windows/semaphore-operator-assign-operator.md)|Přesune zadaný popisovač z objektu semaforu pro aktuální objekt semafor.|  
+|[Semaphore::operator= – operátor](../windows/semaphore-operator-assign-operator.md)|Posune Zadaný popisovač z **semafor** objektů na aktuální **semafor** objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Semaphore`  

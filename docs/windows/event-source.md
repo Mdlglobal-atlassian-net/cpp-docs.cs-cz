@@ -22,19 +22,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571386"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652403"
 ---
 # <a name="eventsource"></a>event_source
 Vytvoří zdroj událostí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ event_source(  
    type,  
    optimize=[speed | size],  
@@ -50,7 +50,7 @@ Vytvoří zdroj událostí.
   
 -   `com` pro kód v modelu COM. Je nutné použít `coclass` při `type` = `com`. Tato hodnota vyžaduje, aby následující soubory hlaviček:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  

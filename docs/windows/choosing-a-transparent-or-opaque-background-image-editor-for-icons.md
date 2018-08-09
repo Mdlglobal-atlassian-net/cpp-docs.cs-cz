@@ -1,5 +1,5 @@
 ---
-title: Výběr průhledného nebo neprůhledného pozadí (Editor obrázků pro ikony) | Microsoft Docs
+title: Výběr průhledného nebo neprůhledného pozadí (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c8a809e7cd7ed7a461149707cc9e0b2a4a62158
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857909"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649517"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Výběr průhledného nebo neprůhledného pozadí (editor obrázků pro ikony)
-Při přesunutí nebo kopírování výběru z bitové kopie, pixelů ve výběru, které odpovídají aktuálním barvu pozadí jsou ve výchozím nastavení transparentní; není jejich skrývat pixelů v cílovém umístění.  
+Když přesouváte nebo kopírujete z bitové kopie s výběrem, žádné pixelech ve výběru, které odpovídají barvě pozadí jsou ve výchozím nastavení transparentní; Ne, zakrýt pixelů v cílovém umístění.  
   
- Můžete přejít z průhledné pozadí (výchozí) na neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** zobrazí možnosti v modulu pro výběr možnost **Editor obrázků** panelu nástrojů (jak je vidět níže).  
+ Můžete přepnout z průhledné pozadí (výchozí) do neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** možnosti se zobrazí **možnost** selektor na **Editor obrázků** nástrojů (jak je vidět níže).  
   
- ![Možnosti na pozadí &#45; průhledná nebo neprůhledná](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-Možnosti transparentní a neprůhledného na panelu nástrojů editoru obrázků  
+ ![Možnosti pozadí &#45; neprůhledné nebo průhledné](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+**Možnosti transparentní a neprůhledné** na **panelu nástrojů editoru obrázků**  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Chcete-li přepnout mezi transparentní a neprůhledné pozadí  
   
-1.  V **Editor obrázků** nástrojů, klikněte na tlačítko **možnost** selektor a potom klikněte na příslušnou pozadí:  
+1.  V **Editor obrázků** nástrojů, klikněte na tlačítko **možnost** selektor a potom klikněte na tlačítko na pozadí odpovídající:  
   
-    -   **Neprůhledné pozadí (E)**: existující bitová kopie je po všech součástí výběr skryt.  
+    -   `Opaque Background (O)`: Existující image je po všech součástí výběr skryt.  
   
-    -   **Průhledná pozadí (T)**: existující obrázek ukazuje prostřednictvím částí výběru, které odpovídají aktuálním barvu pozadí.  
+    -   `Transparent Background (T)`: Existujícího obrázku prostřednictvím částí výběru, které odpovídají barvě pozadí.  
   
  \- nebo –  
   
 -   Na **Image** nabídky, zaškrtněte nebo zrušte **kreslení neprůhledných**.  
   
- Při výběru již je v platnosti změnit, jaké části obrázku jsou transparentní, můžete změnit barvu pozadí.  
+ Při výběru je již platná, chcete-li změnit, které části obrázku je transparentní, můžete změnit barvu pozadí.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

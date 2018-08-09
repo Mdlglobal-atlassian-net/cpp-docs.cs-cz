@@ -1,5 +1,5 @@
 ---
-title: Nastavení vlastností akcelerátoru | Microsoft Docs
+title: Nastavení vlastností akcelerátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5337378b54c2109d05e28cb9d1bfed82f81913f3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888842"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652695"
 ---
 # <a name="setting-accelerator-properties"></a>Nastavení vlastností akcelerátoru
-Vlastnosti akcelerátoru můžete nastavit v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) kdykoli. Editor akcelerátorů můžete také použít k úpravě vlastností akcelerátoru v tabulce akcelerátorů. Změny provedené pomocí okna vlastnosti nebo editor akcelerátorů mít stejný výsledek: úpravy se okamžitě projeví v tabulce akcelerátorů.  
+Můžete nastavit vlastnosti akcelerátoru [okno vlastností](/visualstudio/ide/reference/properties-window) kdykoli. Editor akcelerátorů můžete také použít k úpravě vlastností akcelerátoru v tabulce akcelerátorů. Změny provedené pomocí okna vlastnosti nebo editor akcelerátorů mít stejný výsledek: úpravy se okamžitě projeví v tabulce akcelerátorů.  
   
- Nejsou k dispozici tři vlastnosti pro každý akcelerátoru [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
+ Existují tři vlastnosti pro každý akcelerátor [ID](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
   
--   [Modifikátor – vlastnost](../windows/accelerator-modifier-property.md) nastaví kombinace kláves pro akcelerátor ovládacího prvku.  
+-   [Vlastnost modifikátoru](../windows/accelerator-modifier-property.md) nastaví prvek kombinace kláves pro akcelerátor.  
   
     > [!NOTE]
-    >  V okně vlastností tato vlastnost se zobrazí jako tři samostatné logická hodnota vlastnosti, které lze kontrolovat nezávisle: Alt, Ctrl a Shift.  
+    >  V okně Vlastnosti, tato vlastnost se zobrazí jako tři samostatné logické vlastnosti, které je možné řídit nezávisle na sobě: **Alt**, **Ctrl**, a **Shift**.  
   
--   [Klíče vlastnost](../windows/accelerator-key-property.md) nastaví skutečný klíč pro použití jako zkratku.  
+-   [Klíčové vlastnosti](../windows/accelerator-key-property.md) nastaví skutečné klíč pro použití jako akcelerátor.  
   
--   [Zadejte vlastnost](../windows/accelerator-type-property.md) Určuje, zda je klíč interpretována jako virtuální (VIRTKEY) nebo ASCII nebo ANSI.  
-  
-
+-   [Zadejte vlastnost](../windows/accelerator-type-property.md) Určuje, zda klíč je interpretován jako virtuální (VIRTKEY) nebo ASCII a ANSI.  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

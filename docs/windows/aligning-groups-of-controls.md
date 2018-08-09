@@ -1,5 +1,5 @@
 ---
-title: Zarovnání skupin ovládacích prvků | Microsoft Docs
+title: Zarovnání skupin ovládacích prvků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 743176ed52004a37718ae69db3693dde07ca7391
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac1c04f51b2e05213223ca3e20e4a4fcc3e54e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858338"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651805"
 ---
 # <a name="aligning-groups-of-controls"></a>Zarovnání skupin ovládacích prvků
-Následující postup ukazuje, jak k zarovnání skupin ovládacích prvků.  
+Následující postup ukazuje, jak zarovnání skupin ovládacích prvků.  
   
 ### <a name="to-align-groups-of-controls"></a>Zarovnání skupin ovládacích prvků  
   
-1.  [Vyberte ovládací prvky](../windows/selecting-multiple-controls.md) chcete zarovnat. Vyberte ovládací prvek, který se má provádět dominantního ovládacího prvku nebo nastavit tak, aby se před provedením zarovnání nebo změna velikosti příkaz dominantního ovládacího prvku.  
+1.  [Vyberte ovládací prvky](../windows/selecting-multiple-controls.md) chcete zarovnat. Vyberte ovládací prvek, který se má provádět dominantního ovládacího prvku nebo nastavit tak, aby se dominantního ovládacího prvku před provádění zarovnání nebo změny velikosti příkazu.  
   
-     Poslední pozice skupiny ovládacích prvků závisí na pozici dominantního ovládacího prvku. Další informace o výběru dominantního ovládacího prvku najdete v tématu [určení dominantního ovládacího prvku](../windows/specifying-the-dominant-control.md).  
+     Konečná pozice skupiny ovládacích prvků, závisí na pozici dominantního ovládacího prvku. Další informace o výběru dominantního ovládacího prvku, naleznete v tématu [určení dominantního ovládacího prvku](../windows/specifying-the-dominant-control.md).  
   
-2.  Z **formátu** nabídce zvolte **Align**a pak vyberte jednu z následujících zarovnání:  
+2.  Z **formátu** nabídce zvolte **zarovnat**a pak vyberte jednu z následujících zarovnání:  
   
-    -   **Doleva**: Zarovná vybrané ovládací prvky k jejich levé strany.  
+    -   `Lefts`: Zarovná vybrané ovládací prvky jejich levé strany.  
   
-    -   **Centrech**: Zarovná vybrané ovládací prvky vodorovně jejich středových bodů.  
+    -   `Centers`: Zarovná vybrané ovládací prvky vodorovně jejich bodů System center.  
   
-    -   **Práva**: Zarovná vybrané ovládací prvky k jejich pravé straně.  
+    -   `Rights`: Zarovná vybrané ovládací prvky jejich pravé straně.  
   
-    -   **Tolní počítače**: Zarovná vybrané ovládací prvky horní okraje.  
+    -   `Tops`: Zarovná vybrané ovládací prvky jeho horní hrany.  
   
-    -   **Středy**: Zarovná vybrané ovládací prvky svisle podél jejich střední body.  
+    -   `Middles`: Zarovná vybrané ovládací prvky svisle podél jejich střední body.  
   
-    -   **DNA**: Zarovná vybrané ovládací prvky dolní okraje.  
+    -   `Bottoms`: Zarovná vybrané ovládací prvky dolního okraje.  
   
- Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Požadavky  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
  [Ovládací prvky](../mfc/controls-mfc.md)
-

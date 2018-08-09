@@ -1,5 +1,5 @@
 ---
-title: Vytváření místních nabídek | Microsoft Docs
+title: Vytváření místních nabídek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648071"
 ---
 # <a name="creating-pop-up-menus"></a>Vytváření místních nabídek
-[Místní nabídky](../mfc/menus-mfc.md) zobrazení často používané příkazy. Může se jednat kontextově závislá na umístění ukazatele. Pomocí místní nabídky v aplikaci vyžaduje vytváření nabídky sám a následným připojením ke kódu aplikace.  
+[Místní nabídky](../mfc/menus-mfc.md) zobrazení často používané příkazy. Můžou být závislá na kontextu do umístění ukazatele. Pomocí místní nabídky v aplikaci vyžaduje vytváření samotné nabídky a následným připojením ke kódu aplikace.  
   
- Po vytvoření prostředků nabídky kódu aplikace musí načíst zdroj nabídky a použít [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) způsobí v nabídce Zobrazit. Jakmile uživatel má vynechat v místní nabídce kliknete na mimo něj, nebo klepnutí na příkaz, že funkce vrátí. Pokud uživatel vybere příkaz, odešle příkaz zprávy do okna byl předán jejichž popisovač.  
+ Po vytvoření prostředku nabídky kódu aplikace potřebuje k načtení prostředku nabídky a použít [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) způsobit v nabídce Zobrazit. Jakmile uživatel má Zavře rozbalovací nabídky po kliknutí mimo něj nebo klikl na příkaz, že funkce vrátí. Pokud uživatel vybere příkaz, tento příkaz se pošle zpráva v okně, jehož popisovač byl předán.  
   
 ### <a name="to-create-a-pop-up-menu"></a>Chcete-li vytvořit místní nabídky  
   
-1.  [Vytvořit nabídku](../windows/creating-a-menu.md) s prázdný název (neposkytují **popisek**).  
+1.  [Vytvořit nabídku](../windows/creating-a-menu.md) s prázdný název (neposkytují **titulek**).  
   
-2.  [Příkaz nabídky přidat do nové nabídky](../windows/adding-commands-to-a-menu.md). Přesuňte do první příkaz nabídky pod ním prázdné nabídky (titulek dočasné textem sem typ). Zadejte **popisek** a všechny ostatní informace.  
+2.  [Přidání příkazu nabídky do nové nabídky](../windows/adding-commands-to-a-menu.md). Přesunout na první příkaz nabídky pod názvem prázdné nabídky (říká dočasné titulek `Type Here`). Zadejte **titulek** a další informace.  
   
-     Tento postup opakujte pro všechny ostatní příkazy nabídky v místní nabídce.  
+     Tento postup opakujte pro další příkazy nabídky v místní nabídce.  
   
-3.  Uložte prostředků nabídky.  
+3.  Uložte prostředek nabídky.  
   
     > [!TIP]
-    >  Další informace o zobrazení v místní nabídce najdete v tématu [zobrazení nabídky jako místní nabídky](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
+    >  Další informace o zobrazení místní nabídky, naleznete v tématu [zobrazení nabídky jako místní nabídky](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Požadavky**  
-  
+## <a name="requirements"></a>Požadavky  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

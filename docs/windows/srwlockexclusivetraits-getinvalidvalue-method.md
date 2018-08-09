@@ -1,5 +1,5 @@
 ---
-title: Srwlockexclusivetraits::getinvalidvalue – metoda | Microsoft Docs
+title: Srwlockexclusivetraits::getinvalidvalue – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888952"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649231"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue – metoda
-Načte srwlockexclusivetraits – objekt, který je vždy neplatný.  
+Načte **srwlockexclusivetraits –** objekt, který je pořád platný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Srwlockexclusivetraits – objektu.  
+ Prázdná **srwlockexclusivetraits –** objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

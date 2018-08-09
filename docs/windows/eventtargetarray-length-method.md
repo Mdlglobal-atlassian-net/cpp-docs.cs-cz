@@ -1,5 +1,5 @@
 ---
-title: Eventtargetarray::length – metoda | Microsoft Docs
+title: Eventtargetarray::length – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab14d842935e99f8e5f8a96b24b5675d61e418d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886087"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653102"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 size_t Length();  
 ```  
   
@@ -45,5 +45,5 @@ size_t Length();
  **Namespace:** Microsoft::WRL:: details –  
   
 ## <a name="see-also"></a>Viz také  
- [EventTargetArray – třída](../windows/eventtargetarray-class.md)   
+ [Eventtargetarray – třída](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

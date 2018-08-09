@@ -1,5 +1,5 @@
 ---
-title: Koncepty programování s atributy | Microsoft Docs
+title: Koncepty programování s přidělenými atributy | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d04c877fb018d1ee16a3c4643c634d2fd3961b7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860187"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651243"
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
-Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití atributů v programy můžou. Atributy, nová funkce v jazyce Visual C++, jsou navrženy pro zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele dynamické knihovny (DLL) k vložení kódu nebo úpravě kódu v souborech generovaný objekt. Existují atributy, které pomáhají při vytváření soubory .idl, rozhraní, knihovny typů a další elementy COM. Atributy v integrované vývojové prostředí (IDE), jsou podporovány prostřednictvím průvodců a okno vlastností.  
+Visual C++ obsahuje širokou škálu materiál, který můžete použít atributy ve svých programech. Atributy, novou funkci v jazyce Visual C++ jsou navržené pro zjednodušení programování v modelu COM a rozhraní .NET Framework common language runtime vývoje. Pokud zahrnete atributy ve zdrojových souborech, kompilátor spolupracuje s poskytovatele dynamické knihovny (DLL), vložte kód nebo upravit kód v souborech generované objektů. Existují atributy, které pomáhají při vytváření souborů .idl, rozhraní, knihovny typů a dalších prvků modelu COM. Atributy jsou podporovány v integrovaném vývojovém prostředí (IDE) podle průvodce a v okně Vlastnosti.  
   
- Při atributy vyloučit některé podrobné kódování potřebná k zápisu objektů COM, musíte na pozadí v [COM Základy](http://msdn.microsoft.com/library/windows/desktop/ms694363) nejlépe jejich použití.  
+ Zatímco atributy eliminují některý podrobné psaní kódu, které jsou potřebné pro zápis objektů modelu COM, je nutné na pozadí v [COM Základy](http://msdn.microsoft.com/library/windows/desktop/ms694363) nejlépe jejich použití.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Účel atributů](../windows/purpose-of-attributes.md)  
@@ -37,10 +37,10 @@ Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití a
  Popisuje, jak fungují atributy ve vašem projektu.  
   
  [Sestavení programu s atributy](../windows/building-an-attributed-program.md)  
- Poskytuje informace o používání C++ – možnosti kompilátoru ve vašem projektu.  
+ Obsahuje informace o použití možnosti kompilátoru jazyka C++ ve vašem projektu.  
   
  [Kategorie atributů](../windows/attribute-categories.md)  
- Obsahuje odkazy na kategorie atributy používané v jazyce Visual C++.  
+ Obsahuje odkazy na kategorie Atributy použité v jazyce Visual C++.  
   
  [Atribut Programmming – nejčastější dotazy](../windows/attribute-programming-faq.md)  
  Odpovědi na časté otázky k programování s atributy.  
@@ -53,5 +53,4 @@ Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití a
  Popisuje ladění programů s atributy.  
   
  [__super](../cpp/super.md)a [__interface](../cpp/interface.md)  
- Odkazy na nové klíčová slova jazyka C++ související s programování s atributy.  
-  
+ Obsahuje odkazy na související s programování s atributy nová klíčová slova jazyka C++.  
