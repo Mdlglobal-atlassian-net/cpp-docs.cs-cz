@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d648577d03507154c8e3b226fa00e3f03dc25abc
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 223358d33fb7eab0663237e8eb8deb487b84109a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608505"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010435"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase – destruktor
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 virtual ~ModuleBase();  
 ```  
   

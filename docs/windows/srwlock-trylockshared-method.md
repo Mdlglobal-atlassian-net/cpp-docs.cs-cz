@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e67ecd6d5b4968af94ff1a82ad8be24e5b816298
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645809"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014244"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared – metoda
 Pokusí se získat **srwlock –** objektu ve sdíleném režimu pro aktuální nebo zadané **SRWLock** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 WRL_NOTHROW SyncLockShared TryLockShared();  
 WRL_NOTHROW static SyncLockShared TryLockShared(  
    _In_ SRWLOCK* lock  

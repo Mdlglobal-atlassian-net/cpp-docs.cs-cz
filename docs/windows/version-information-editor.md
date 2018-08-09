@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8ea040d5a549c61ba17f059260cb399d82bc430
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647378"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013964"
 ---
 # <a name="version-information-editor"></a>Editor informací o verzi
-Informace o verzi se skládá z společnosti a číslo product ID produktu, číslo verze produktu a oznámení o autorských právech a ochranná známka. Editor informací o verzi můžete vytvořit a udržovat tato data, která je uložena v prostředku informací o verzi. Prostředku informací o verzi není vyžadována danou aplikací, ale je vhodné místo pro shromažďovat informace, které identifikují aplikaci. Instalační program rozhraní API se také používá informace o verzi.  
+Informace o verzi se skládá z společnosti a číslo product ID produktu, číslo verze produktu a oznámení o autorských právech a ochranná známka. S **informace o verzi** editoru lze vytvářet a spravovat tato data, která je uložena v prostředku informací o verzi. Prostředku informací o verzi není vyžadována danou aplikací, ale je vhodné místo pro shromažďovat informace, které identifikují aplikaci. Instalační program rozhraní API se také používá informace o verzi.  
   
  Prostředku informací o verzi má horní bloku a nejméně jeden menší bloky: jeden blok informací v horní části a jeden nebo více informační bloky verze v dolní části (pro ostatní jazyky a/nebo znakové sady). Začátek bloku má upravitelné číselného pole a vybrat rozevírací seznamy. Menší bloky obsahují pouze upravitelná textová pole.  
   
 > [!NOTE]
 >  Windows standard je jenom jedna verze prostředku s názvem VS_VERSION_INFO.  
   
- Editor informací o verzi umožňuje:  
+ **Informace o verzi** editor umožňuje:  
   
 -   [Úprava řetězce v prostředku informací o verzi](../windows/editing-a-string-in-a-version-information-resource.md)  
   
@@ -45,7 +45,7 @@ Informace o verzi se skládá z společnosti a číslo product ID produktu, čí
 -   [O přístup k verzi z programu](../windows/accessing-version-information-from-within-your-program.md)  
   
     > [!NOTE]
-    >  Při používání editoru informací o verzi v mnoha případech je můžete kliknout pravým tlačítkem na Zobrazit místní nabídku příkazů specifických pro prostředky. Například pokud klepnete na tlačítko při odkazující na položky záhlaví bloku, v místní nabídce ukazuje příkazy nový blok informací o verzi a informace o bloku odstranit verzi.  
+    >  Při použití **informace o verzi** editoru v mnoha případech můžete kliknout pravým tlačítkem na Zobrazit místní nabídku příkazů specifických pro prostředky. Například vyberete-li při odkazující na položky záhlaví bloku, v místní nabídce se zobrazuje **nové informace o verzi bloku** a **odstranit blok informací verze** příkazy.  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606511"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011575"
 ---
 # <a name="idlquote"></a>idl_quote
 Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verzi jazyka Visual C++ a jejich předávání do souboru generovaného IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Text*  
  Název atributu, který máte v úmyslu kompilátor Visual C++ pro převedení na generovaného souboru bez vrácení chybu kompilátoru.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Tento kód způsobí, že MYFLOT a MYDUB a *text* položky budou umístěny v souboru generovaného IDL. *Název* vynutí parametr *text* umístit před cokoli, co odkazuje *název* v souboru generovaného IDL. *Závislosti* vynutí parametr definice seznamu závislostí umístit před *text* v souboru generovaného IDL.  
+ Tento kód způsobí, že `MYFLOT` a `MYDUB` a *text* položky budou umístěny v souboru generovaného IDL. *Název* vynutí parametr *text* umístit před cokoli, co odkazuje *název* v souboru generovaného IDL. *Závislosti* vynutí parametr definice seznamu závislostí umístit před *text* v souboru generovaného IDL.  
   
 ## <a name="requirements"></a>Požadavky  
   

@@ -1,5 +1,5 @@
 ---
-title: Otevřete &lt;zařízení&gt; dialogové okno (Editor obrázků pro ikony) obrázku | Microsoft Docs
+title: Otevřít &lt;zařízení&gt; dialogového okna obrázku zařízení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881702"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013324"
 ---
-# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Otevřete &lt;zařízení&gt; bitové kopie dialogové okno (Editor obrázků pro ikony)
-Tento dialog otevřete obrázky zařízení. Zobrazí se seznam existujících bitových kopií zařízení v rámci aktuální prostředku (bitové kopie, které jsou součástí aktuální prostředků).  
+# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Otevřít &lt;zařízení&gt; dialogového okna obrázku zařízení (Editor obrázků pro ikony)
+Použijte toto dialogové okno otevřete obrázcích zařízení. Zobrazí seznam stávajících zařízení imagí v aktuální prostředek (bitové kopie, které jsou součástí aktuální prostředek).  
   
- **Aktuální Image**  
- Uvádí Image obsažený v prostředku. Vyberte typ obrázku, který chcete otevřít.  
+### <a name="current-images"></a>Aktuálních Imagí  
+ Obsahuje seznam imagí, které jsou zahrnuté v prostředku. Výběr typu image, kterou chcete otevřít.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -36,4 +36,3 @@ Tento dialog otevřete obrázky zařízení. Zobrazí se seznam existujících b
 ## <a name="see-also"></a>Viz také  
  [Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

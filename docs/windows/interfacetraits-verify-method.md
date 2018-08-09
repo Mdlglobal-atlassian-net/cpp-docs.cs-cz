@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603040"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017945"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify – metoda
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __forceinline static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
  Ověřuje, že `Base` správně pochází.  
   
- Další informace o `Base`, naleznete v části veřejné definice TypeDef [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
+ Další informace o `Base`, najdete v článku **veřejné definice TypeDef** tématu [interfacetraits – struktura](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

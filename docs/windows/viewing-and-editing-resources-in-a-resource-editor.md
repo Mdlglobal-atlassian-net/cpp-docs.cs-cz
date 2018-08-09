@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646927"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014000"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Zobrazení a úprava prostředků v editoru prostředků
-Každý typ prostředku má editoru prostředků specifických pro příslušný typ prostředku. Můžete změnit uspořádání, změňte velikost, přidat ovládací prvky a funkce nebo jinak upravit aspektů prostředku pomocí editoru přidružené. Můžete také upravit prostředek v [textový formát](../windows/how-to-open-a-resource-script-file-in-text-format.md) a [binární formát](../windows/opening-a-resource-for-binary-editing.md).  
+Každý typ prostředku má **prostředků** editor specifické pro příslušný typ prostředku. Můžete změnit uspořádání, změňte velikost, přidat ovládací prvky a funkce nebo jinak upravit aspektů prostředku pomocí editoru přidružené. Můžete také upravit prostředek v [textový formát](../windows/how-to-open-a-resource-script-file-in-text-format.md) a [binární formát](../windows/opening-a-resource-for-binary-editing.md).  
   
  Některé typy prostředků jsou jednotlivé soubory, které můžete importovat a používat různými způsoby; patří mezi ně rastrové obrázky, ikony, kurzory, panely nástrojů a soubory html. Tyto zdroje mají názvy souborů a jednak [identifikátory prostředků](../windows/symbols-resource-identifiers.md). Jiné, jako je například dialogová okna, nabídek a tabulky řetězců v projekty Win32, existují pouze v rámci prostředku skriptů (.rc) souboru nebo souboru prostředků (.rct) šablony.  
   
@@ -46,16 +46,16 @@ Každý typ prostředku má editoru prostředků specifických pro příslušný
   
 1.  Vyberte **zobrazení prostředků** z **zobrazení** nabídky.  
   
-2.  Pokud v okně zobrazení prostředků není nejvrchnější okna, klikněte na tlačítko **zobrazení prostředků** kartu a přenést ho do horní části.  
+2.  Pokud **zobrazení prostředků** není úplně nahoře okno, klikněte na tlačítko **zobrazení prostředků** kartu a přenést ho do horní části.  
   
-3.  Ze zobrazení zdrojů rozbalte složku pro projekt, který obsahuje prostředky, které chcete zobrazit. Pokud chcete zobrazit dialogové okno prostředek, rozbalte složku dialogu.  
+3.  Z **zobrazení prostředků**, rozbalte složku pro projekt, který obsahuje prostředky, které chcete zobrazit. Například pokud chcete zobrazit prostředku dialogového okna, rozbalte **dialogové okno** složky.  
   
     > [!NOTE]
     >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Dvakrát klikněte na prostředek, třeba IDD_ABOUTBOX.  
+4.  Dvakrát klikněte na prostředek, třeba **IDD_ABOUTBOX**.  
   
-     Prostředek se otevře ve vhodném editoru. Například pro prostředky dialogového okna, prostředek se otevře v editoru dialogového okna.  
+     Prostředek se otevře ve vhodném editoru. Například pro prostředky dialogového okna, prostředek se otevře uvnitř **dialogové okno** editoru.  
   
      Můžete také [zobrazit prostředky v souboru .rc (skript prostředků) bez nutnosti otevřít projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Každý typ prostředku má editoru prostředků specifických pro příslušný
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Chcete-li zobrazit spravovaných prostředků v editoru prostředků  
   
-1.  V **Průzkumníka řešení**, dvakrát klikněte na prostředek, třeba Bitmap1.bmp.  
+1.  V **Průzkumníka řešení**, dvakrát klikněte na prostředek, třeba **Bitmap1.bmp**.  
   
      Prostředek se otevře ve vhodném editoru.  
   
@@ -83,7 +83,7 @@ Každý typ prostředku má editoru prostředků specifických pro příslušný
   
 1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit** z místní nabídky.  
   
-### <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

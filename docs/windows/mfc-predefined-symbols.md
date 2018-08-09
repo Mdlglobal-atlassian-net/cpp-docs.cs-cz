@@ -1,5 +1,5 @@
 ---
-title: Předdefinované symboly MFC | Microsoft Docs
+title: Předdefinované symboly MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882057"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018491"
 ---
 # <a name="mfc-predefined-symbols"></a>Předdefinované symboly MFC
-Projekty knihovny MFC, vždy zahrňte několik soubory hlaviček, které podporují windows. Tyto jsou přidané pomocí #include příkazy v souboru StdAfx.h:  
+Projekty MFC vždy zahrnovat několik hlavičkové soubory, které podporují windows. Tyto budou přidány prostřednictvím `#include` příkazů v `StdAfx.h` souboru:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ Projekty knihovny MFC, vždy zahrňte několik soubory hlaviček, které podporu
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- Soubory hlaviček obsahovat symbol hodnoty ID pro MFC běžných hodnot. Tyto symboly jsou k dispozici, pouze když pracujete v projektu knihovny MFC. Všimněte si, že předpona AFX_ následuje název předpony standardní symbol.  
+ Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnoty. Tyto symboly jsou k dispozici pouze při práci v projektu knihovny MFC. Všimněte si, že předpona AFX_ následuje název předpony standardní symbol.  
   
 |||  
 |-|-|  
@@ -187,7 +187,7 @@ Projekty knihovny MFC, vždy zahrňte několik soubory hlaviček, které podporu
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
 |AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI PÍSMA|  
-|AFX_IDS_NOT_DOCOBJECT|VÝJIMKA AFX_IDS_NOT_SUPPORTED_|  
+|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ VÝJIMKY|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|  

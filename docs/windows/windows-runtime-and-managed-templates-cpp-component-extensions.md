@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641457"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011559"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime a spravované šablony (rozšíření komponent C++)
 Šablony vám umožní definovat prototyp modulu Windows Runtime nebo společný typ modulu runtime jazyka a potom vytvořte instanci variace tohoto typu pomocí parametrů typu jinou šablonu.  
@@ -44,7 +44,7 @@ ms.locfileid: "39641457"
   
 ### <a name="examples"></a>Příklady  
   
- Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony.  Je to proto obecné typy jsou vyřešeny za běhu.  Další informace najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony. Je to proto obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Nejde získat přístup šablony definovaný v odkazovaném sestavení s C + +/ syntaxi jazyka rozhraní příkazového řádku, ale můžete použít reflexe.  Pokud šablona není vytvořena instance, není aktivováno v metadatech.  Pokud dojde k vytvoření šablony, zobrazí se pouze odkazované členské funkce v metadatech.  
+ Nejde získat přístup šablony definovaný v odkazovaném sestavení s C + +/ syntaxi jazyka rozhraní příkazového řádku, ale můžete použít reflexe. Pokud šablona není vytvořena instance, není aktivováno v metadatech. Pokud dojde k vytvoření šablony, zobrazí se pouze odkazované členské funkce v metadatech.  
   
 ```cpp  
 // managed_templates_3.cpp  

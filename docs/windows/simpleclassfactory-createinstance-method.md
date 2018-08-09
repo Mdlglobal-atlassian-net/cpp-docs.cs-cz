@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aa0d48ba96c550ff6ee1248dccd0b4c8e3021212
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651077"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020301"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance – metoda
 
@@ -39,7 +39,6 @@ STDMETHOD( CreateInstance )(
 ```
 
 ### <a name="parameters"></a>Parametry
-
 *pUnkOuter*  
 Musí být **nullptr**; v opačném případě je vrácená hodnota CLASS_E_NOAGGREGATION.
 
@@ -57,7 +56,7 @@ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje ch
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud &#95; &#95;WRL_STRICT&#95; &#95; je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo nemá nakonfigurovanou ClassicCom nebo WinRtClassicComMix [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
+Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](../windows/runtimeclass-class.md), nebo nemá nakonfigurovanou ClassicCom nebo WinRtClassicComMix [ Runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnota výčtu.
 
 ## <a name="requirements"></a>Požadavky
 

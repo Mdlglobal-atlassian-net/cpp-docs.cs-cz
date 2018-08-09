@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti příkazu nabídky | Microsoft Docs
+title: Vlastnosti příkazu nabídky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 665bc76998750f32e7de03e2fdd75fcec835774c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878860"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014523"
 ---
 # <a name="menu-command-properties"></a>Vlastnosti příkazu nabídky
-Níže uvedené informace jsou uspořádána podle vlastnosti nabídky, které se zobrazují v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) když vyberete příkaz nabídky. Tyto podmínky jsou uvedeny abecedně Přestože okno vlastností můžete také zobrazit tyto vlastnosti podle kategorie.  
+Níže uvedené informace jsou uspořádané podle **nabídky** vlastnosti, které se zobrazují v [okno vlastností](/visualstudio/ide/reference/properties-window) když vyberete příkaz nabídky. Ty jsou uvedeny v abecedním pořadí i když **vlastnosti** okna také umožňuje zobrazit tyto vlastnosti podle kategorie.  
   
 |Vlastnost|Popis|  
 |--------------|-----------------|  
-|**Rozdělit**|Může být jedna z těchto hodnot:<br /><br /> -   **Žádný** (výchozí): žádná zalomení.<br />-   **Sloupec**: pro statické nabídky, tato hodnota umístí příkaz nabídky na nový řádek. Tato hodnota pro místní nabídky, umístí příkaz nabídky nový sloupec s žádné hranici mezi sloupce. Nastavení této vlastnosti ovlivní vzhled nabídky pouze za běhu, není v editoru nabídky.<br />-   **Panel**: je stejné jako sloupec, pouze pro místní nabídky, nový sloupec tuto hodnotu odděluje od původního sloupec s svislá čára. Nastavení této vlastnosti ovlivní vzhled nabídky pouze za běhu, není v editoru nabídky.|  
-|**Popisek**|Text, který označuje příkaz nabídky (název nabídky). Chcete-li jedno z písmen v záhlaví nabídky příkaz klávesovými klíč, předcházet ampersand (&).|  
-|**Zaškrtnutí**|V případě hodnoty True je původně zaškrtnutí příkazu nabídky. Typ: Bool. Výchozí: False.|  
-|**povoleno**|Pokud **False**, položky nabídky je zakázána.|  
-|**Šedý**|V případě hodnoty True je příkaz nabídky původně šedým a neaktivní. Typ: Bool. Výchozí: False.|  
-|**Pomoc**|Zarovnává položku nabídky vpravo. Například **pomoci** příkazu nabídky je vždy na pravé straně v všechny aplikace systému Windows. Pokud tuto vlastnost nastavte u položky nabídky, že položka se zobrazí na velmi pravém a na konci velmi v nabídce. Platí pro položky nejvyšší úrovně. Výchozí hodnota: **False**.|  
-|**ID**|Symbol definované v záhlaví souboru. Typ: Symbol, celé číslo nebo řetězec v uvozovkách. Můžete použít všechny symbol, který je běžně k dispozici v žádném z editory, i když [vlastnosti – okno](/visualstudio/ide/reference/properties-window) neposkytuje rozevíracího seznamu můžete vybrat z.|  
-|**Popup**|V případě hodnoty True je příkaz nabídky místní nabídky. Typ: Bool. Výchozí hodnota: True nabídek nejvyšší úrovně v řádku nabídek; jinak hodnota False.|  
-|**řádku**|Obsahuje text, který se zobrazí ve stavovém řádku, když je označený tento příkaz nabídky. Text je umístěn v tabulce řetězců se stejným identifikátorem jako příkaz nabídky. Tato vlastnost je k dispozici pro jakýkoli typ projektu, ale je běhové funkce MFC konkrétní.|  
-|**Justify zprava doleva**|Zarovná příkaz nabídky v řádku nabídek v době běhu vpravo. Typ: Bool. Výchozí: False.|  
-|**Právo na levém pořadí**|Umožňuje zobrazit zprava doleva při rozhraní je lokalizace do jakýkoli jazyk, který čte doleva, jako je například hebrejština nebo arabské příkazů nabídky.|  
-|**Oddělovač**|V případě hodnoty True je příkaz nabídky oddělovač. Typ: Bool. Výchozí: False.|  
-  
-
+|**Konec**|Může být jedna z těchto hodnot:<br /><br /> -   **Žádný** (výchozí): žádné přerušení.<br />-   **Sloupec**: pro statické nabídky, tato hodnota umístí příkaz nabídky na nový řádek. Pro místní nabídky umístí tato hodnota příkazu nabídky nový sloupec s žádný zřejmý mezi sloupci. Nastavení této vlastnosti má vliv na vzhled nabídky pouze v době běhu, není v nabídce editoru.<br />-   **Panel**: totéž jako **sloupec** s výjimkou, pro místní nabídky, tato hodnota odděluje nového sloupce ze staré sloupci se zobrazuje svislá čára. Nastavení této vlastnosti není v ovlivňuje vzhled nabídky pouze v době běhu **nabídky** editoru.|  
+|**Titulek**|Text, který označuje příkaz nabídky (název nabídky). K výběru jedné ze písmena v popiscích nabídky příkazu mnemonická klávesa, předchází znak ampersand (&).|  
+|**Zaškrtnuto**|Pokud **True**, je příkaz nabídky hesla implicitně zaškrtnuto. Typ: **Bool**. Výchozí hodnota: **False**.|  
+|**Povoleno**|Pokud **False**, položka nabídky je zakázána.|  
+|**Šedý**|Pokud **True**, příkaz nabídky je zpočátku šedě a neaktivní. Typ: **Bool**. Výchozí hodnota: **False**.|  
+|**Pomoc**|Zarovná položky nabídky na pravé straně. Například **pomáhají** příkazu nabídky je vždy na pravé straně ve všech aplikacích pro Windows. Pokud tuto vlastnost nastavíte na položku nabídky, této položky se zobrazí velmi úplně vpravo a na konci velmi nabídky. Platí pro položky nejvyšší úrovně. Výchozí hodnota: **False**.|  
+|**ID**|Symbol definovaný v souboru hlaviček. Typ: **Symbol**, **celé číslo**, nebo **řetězec v uvozovkách**. Můžete použít libovolný symbol, který je běžně k dispozici v editorech, i když [okno vlastností](/visualstudio/ide/reference/properties-window) neposkytuje rozevíracího seznamu pro výběr z.|  
+|**Popup**|Pokud **True**, příkaz nabídky je rozbalovací nabídky. Typ: **Bool**. Výchozí hodnota: **True** pro nejvyšší úrovně nabídky na řádku; jinak nabídek **False**.|  
+|**řádek**|Obsahuje text, který se zobrazí ve stavovém řádku, když je zvýrazněn tento příkaz. Text je umístěn v tabulce řetězců se stejným identifikátorem příkazu nabídky. Tato vlastnost je k dispozici pro každý typ projektu, ale funkce za běhu je konkrétní knihovny MFC.|  
+|**Zarovnat zprava doleva.**|Zarovnává doprava příkaz nabídky na řádku nabídek v době běhu. Typ: **Bool**. Výchozí hodnota: **False**.|  
+|**Right to Left Order**|Umožňuje zobrazovat zprava doleva, pokud rozhraní je lokalizován pro libovolný jazyk, který čte doleva, jako je například hebrejština nebo arabštině příkazů místní nabídky.|  
+|**Oddělovač**|Pokud **True**, příkaz nabídky je oddělovač. Typ: **Bool**. Výchozí hodnota: **False**.|  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

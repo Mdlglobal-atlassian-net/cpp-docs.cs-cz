@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb5da618ce94711ce41e305c234ef5a5087c5f38
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a4a80faf8718b1db103e15cba6ee97a73553490d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603569"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017741"
 ---
 # <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
 Editor obrázků má rozsáhlou sadu nástrojů pro vytváření a úpravu obrázků a také funkce, které vám pomohou vytvořit rastry pro panel nástrojů. Kromě rastrových obrázků, ikon a kurzorů, můžete upravit obrázky ve formátu GIF nebo JPEG pomocí příkazů v **Image** nabídky a nástroje na **Editor obrázků** nástrojů.  
@@ -43,18 +43,18 @@ Editor obrázků má rozsáhlou sadu nástrojů pro vytváření a úpravu obrá
   
 -   [Používat klíče akcelerátoru pro příkazy v editoru obrázků](../windows/accelerator-keys-image-editor-for-icons.md)  
   
- V okně Editor obrázků naleznete dvě zobrazení obrázku s rozdělovačem pro rozdělení dvou podoken. Můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru.  
+ **Editor obrázků** okno naleznete dvě zobrazení obrázku s rozdělovačem dvě podokna pro rozdělení. Můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru.  
   
- Okno Editor obrázků lze upravit podle vašich potřeb a preferencí. Je možné [změnit faktor zvětšení](../windows/changing-the-magnification-factor-image-editor-for-icons.md) a [zobrazit nebo skrýt mřížku obrazových bodů](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).  
+ **Editor obrázků** okna můžete upravit podle vašich potřeb a preferencí. Je možné [změnit faktor zvětšení](../windows/changing-the-magnification-factor-image-editor-for-icons.md) a [zobrazit nebo skrýt mřížku obrazových bodů](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Pomocí editoru obrázků můžete prohlížet 32bitové obrázky, ale nemůžete je upravovat.  
+>  Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.  
   
 ## <a name="visual-studio-image-library"></a>Knihovna obrázků Visual Studio  
- Stáhněte si zdarma Knihovnu obrázků Visual Studio, která obsahuje mnoho animací, rastrových obrázků a ikon, které lze použít v aplikacích. Další informace o stažení knihovny naleznete v tématu [The knihovna obrázků Visual Studio](/visualstudio/designers/the-visual-studio-image-library).  
+ Zdarma si můžete stáhnout **knihovna obrázků Visual Studio** obsahující mnoho animací, bitmap a ikon, které můžete použít ve svých aplikacích. Další informace o stažení knihovny naleznete v tématu [The knihovna obrázků Visual Studio](/visualstudio/designers/the-visual-studio-image-library).  
   
 ## <a name="managed-resources"></a>Spravované prostředky  
- Můžete použít editor obrázků a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
+ Můžete použít **Image** editoru a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   

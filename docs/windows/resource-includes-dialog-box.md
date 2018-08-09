@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno prostředek zahrnuje | Microsoft Docs
+title: Prostředek zahrnuje – dialogové | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,33 +23,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d11f3abdaa4f804f9916e7313d1a4338c29a7369
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879669"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015076"
 ---
 # <a name="resource-includes-dialog-box"></a>Dialogové okno Prostředek zahrnuje
-Můžete použít **prostředek zahrnuje** dialogové okno Upravit v prostředí normální funkční uspořádání ukládání všechny prostředky v souboru projektu .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v Resource.h.  
+Můžete použít **prostředek zahrnuje** dialogové okno Upravit prostředí normální funkční uspořádání ukládání všech prostředků v projektu soubor .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v souboru Resource.h.  
   
- Chcete-li otevřít **prostředek zahrnuje** dialogové okno, klikněte pravým tlačítkem na .rc souboru v [zobrazení prostředků](../windows/resource-view-window.md), zvolte **prostředek zahrnuje** z místní nabídky.  
+ Chcete-li otevřít **prostředek zahrnuje** dialogové okno, klikněte pravým tlačítkem na příslušný .rc souborů v [zobrazení prostředků](../windows/resource-view-window.md), klikněte na tlačítko **prostředek zahrnuje** z místní nabídky.  
   
- **Soubor hlaviček symbolů**  
- Umožňuje změnit název souboru záhlaví, kde jsou uloženy definice symbolů pro váš soubor prostředků. Další informace najdete v tématu [změna názvy z soubory hlaviček symbolů](../windows/changing-the-names-of-symbol-header-files.md).  
+ **Hlavičkový soubor symbolů**  
+ Umožňuje změnit název hlavičkového souboru, kde jsou uloženy definice symbolů pro váš soubor prostředků. Další informace najdete v tématu [mění se názvy z hlavičkových souborů symbolu](../windows/changing-the-names-of-symbol-header-files.md).  
   
- **Směrnice pro symboly jen pro čtení**  
- Umožňuje zahrnout soubory hlaviček, které obsahují znaky, které nesmí být měněny během relace úprav. Například můžete zahrnout soubor symbol, který sdílí několik projektů. Můžete použít také souborů .h MFC. Další informace najdete v tématu [zahrnutí sdílených (jen pro čtení) nebo vypočítat symboly](../windows/including-shared-read-only-or-calculated-symbols.md).  
+ **Směrnice souborů jen pro čtení**  
+ Umožňuje zahrnout soubory hlaviček, které obsahují symboly, které by se nemělo upravovat během úprav relace. Například můžete zahrnout soubor se symboly, jež jsou sdílena mezi několika projekty. Můžete také zahrnout soubory hlaviček knihovny MFC. Další informace najdete v tématu [zahrnutí sdílených (jen pro čtení) nebo počítané symboly](../windows/including-shared-read-only-or-calculated-symbols.md).  
   
- **Direktivy kompilace**  
- Umožňuje zahrnout soubory prostředků, které jsou vytvořené a upravit samostatně z prostředků v souboru hlavní prostředku, obsahují direktivy kompilaci (jako jsou ty, které podmíněně zahrnují prostředky), nebo obsahují prostředky ve vlastním formátu. Můžete taky pole direktivy kompilace pro zahrnutí standardní zdrojových souborů MFC. Další informace najdete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).  
+ **Směrnice času kompilace**  
+ Umožňuje zahrnout soubory prostředků, které vytvářejí se a upravují samostatně z prostředků v hlavní soubor prostředků, obsahovat směrnice času kompilace (například ty, které podmíněně zahrnout prostředky), nebo obsahují prostředky ve vlastním formátu. Můžete také použít **pole direktivy kompilace** mají zahrnout soubory prostředků standardní knihovny MFC. Další informace najdete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).  
   
 > [!NOTE]
->  Položky do těchto polí se zobrazují v souboru .rc označeny `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, a `TEXTINCLUDE 3` v uvedeném pořadí. Další informace najdete v tématu [TN035: použití více zdrojových souborů a hlavičkových souborů pomocí aplikace Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
+>  Zobrazí položky v těchto textových polí v souboru .rc, které jsou označené nástrojem `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, a `TEXTINCLUDE 3` v uvedeném pořadí. Další informace najdete v tématu [TN035: použití více zdrojových souborů a soubory hlaviček s jazykem Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
   
- Po provedení změn pomocí souborů prostředků **prostředek zahrnuje** dialogové okno, je potřeba soubor .rc zavřete a znovu ji změny se projeví. Další informace najdete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).  
-  
-
+ Jakmile se změny provedené pomocí souboru prostředků **prostředek zahrnuje** dialogové okno, budete muset zavřít soubor .rc a znovu ho, aby se změny projevily. Další informace najdete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).  
   
 ## <a name="requirements"></a>Požadavky  
  Win32  

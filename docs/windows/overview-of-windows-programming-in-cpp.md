@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604515"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012190"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -39,7 +39,7 @@ Aplikace UWP můžete psát v jazyce C + +/ CX, dialekt jazyka C++, můžete pou
 
    Tato kategorie zahrnuje také pomocí jazyka C++ pro součásti jádra a výpočetní kód v rámci serveru a programování v cloudu. Někdy náročné na výkon kódu v jádru serveru nebo cloudové aplikace je napsaný v jazyce C++ se pro zajištění maximálního výkonu. Můžete kompilovat takového kódu do knihovny DLL a použití z jazyka C# nebo Visual Basic.
 
-- **Aplikace rozhraní .NET framework**. Většina aplikací rozhraní .NET Framework jsou napsané v C# nebo Visual Basic, ale můžete také C + +/ CLI (/ CLR – možnost kompilátoru v jazyce Visual C++). Doporučujeme použít C + +/ CLI pro vrstvu minimální spolupráce v větší aplikace, která zahrnuje spravovaného a nativního kódu.
+- **Aplikace rozhraní .NET framework**. Většina aplikací rozhraní .NET Framework jsou napsané v C# nebo Visual Basic, ale můžete také C + +/ CLI ( `/clr` – možnost kompilátoru v jazyce Visual C++). Doporučujeme použít C + +/ CLI pro vrstvu minimální spolupráce v větší aplikace, která zahrnuje spravovaného a nativního kódu.
 
 ##  <a name="BK_WindowsUniversal"></a> Univerzální aplikace pro Windows
 

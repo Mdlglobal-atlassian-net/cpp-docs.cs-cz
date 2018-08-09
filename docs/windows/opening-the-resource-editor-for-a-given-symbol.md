@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca604ac88e4e8c0ecbb45c764f7d22836d367b2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5911d7125b6a5cdf1e6afd8502c5891ddf680a30
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602756"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011085"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Otevření editoru prostředků pro daný symbol
 Při prohlížení symbolů v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete další informace o způsobu použití určitého symbolu. **Zobrazit použití** tlačítko poskytuje rychlý způsob, jak získat tyto informace.  
@@ -42,7 +42,6 @@ Při prohlížení symbolů v [symboly prostředků – dialogové okno](../wind
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

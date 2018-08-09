@@ -1,5 +1,5 @@
 ---
-title: Strategie internacionalizace | Microsoft Docs
+title: Strategie internacionalizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,29 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e4d7b067daedcbc5ce065c096e561dbf932ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a3b8a47e70efa3268ae9b36eda311d267be2ded
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856593"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018926"
 ---
 # <a name="internationalization-strategies"></a>Strategie internacionalizace
-V závislosti na cílový operační systémy a trhy máte několik Strategie internacionalizace:  
+V závislosti na cílové operačních systémů a trhy máte několik Strategie internacionalizace:  
   
 -   Vaše aplikace používá kódování Unicode.  
   
-     Použijte Unicode specifické funkce a všechny znaky jsou široké 16 bitů (i když můžete použít znaky ANSI v některých částech vašeho programu pro zvláštní účely). Běhové knihovny jazyka C poskytuje funkce, makra a datové typy pro programování výhradně kódování Unicode. MFC je plně kódování Unicode.  
+     Používat funkce specifické pro kódování Unicode a všechny znaky jsou široké 16 bitů (i když používáte znaků ANSI v některé části programu pro zvláštní účely). Knihovny run-time jazyka C poskytuje funkce, makra a datové typy pro programování výhradně kódování Unicode. Knihovna MFC je plně podporující kódování Unicode.  
   
--   Vaše aplikace používá rozhraní MBCS a může být spouštěn na libovolné platformě Win32.  
+-   Vaše aplikace používá znakovou sadu MBCS a může být spouštěn na libovolné platformě Win32.  
   
-     Používáte funkce specifické pro MBCS. Řetězce mohou obsahovat jednobajtové znaky, dvoubajtové znaky nebo obojí. Běhové knihovny jazyka C poskytuje funkce, makra a datové typy znakové sady MBCS – pouze pro programování. MFC je plně MBCS povolen.  
+     Můžete používat funkce specifické znakové sady MBCS. Řetězce mohou obsahovat jednobajtové znaky, dvoubajtové znaky nebo obojí. Knihovny run-time jazyka C poskytuje funkce, makra a datové typy znakové sady MBCS – pouze pro programování. Knihovna MFC je plně podporují znakové sady MBCS.  
   
--   Zdrojový kód pro vaši aplikaci je napsán pro dokončení přenositelnost – opětovnou kompilací symbolem **_UNICODE** nebo symbol **_MBCS** definovat, můžete vytvořit verze, využívající buď. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Zdrojový kód pro vaše aplikace je určené pro dokončení přenositelnost – opětovnou kompilací symbol `_UNICODE` nebo symbol `_MBCS` definována, můžete vytvářet verze, které buď použít. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Můžete používat plně přenositelné C Runtime funkcí, makra a datové typy. Flexibilita knihovny MFC podporuje některé z těchto strategií.  
+     Můžete použít plně přenositelné C Runtime functions, makra a datové typy. Flexibilita knihovny MFC podporuje některý z těchto strategií.  
   
- Zbývající část těchto témat se zaměřuje na psaní úplně přenosné kód, který můžete vytvořit ve formátu Unicode nebo jako MBCS.  
+ Zbývající část těchto témat soustředit na psaní zcela přenositelný kód, který může vytvořit jako Unicode nebo znakové sady MBCS.  
   
 ## <a name="see-also"></a>Viz také  
  [Kódování Unicode a MBCS](../text/unicode-and-mbcs.md)   

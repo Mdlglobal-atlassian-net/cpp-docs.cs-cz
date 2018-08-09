@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571467"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016925"
 ---
 # <a name="how-to-create-a-resource"></a>Postupy: Vytvoření prostředku
 > [!NOTE]
->  Zobrazení prostředků není podporováno ve verzích Express.  
+>  **Zobrazení prostředků** není podporováno ve verzích Express.  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>Chcete-li vytvořit nový prostředek v okně zobrazení prostředků  
   
-1.  S důrazem na souboru .rc v [zobrazení prostředků](../windows/resource-view-window.md), klikněte na tlačítko **upravit** nabídku a zvolte **přidat prostředek** (nebo klikněte pravým tlačítkem na soubor .rc v okně zobrazení prostředků a zvolte  **Přidat prostředek** z místní nabídky).  
+1.  Se zaměřením na souboru .rc v [zobrazení prostředků](../windows/resource-view-window.md), klikněte na tlačítko **upravit** nabídku a zvolte **přidat prostředek** (nebo klikněte pravým tlačítkem na soubor .rc v **zobrazení prostředků** a zvolte **přidat prostředek** z místní nabídky).  
   
-     **Poznámka:** Pokud projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  V [přidat prostředek – dialogové okno](../windows/add-resource-dialog-box.md), vyberte typ prostředku, které chcete přidat do projektu.  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571467"
   
 1.  Z **projektu** nabídce zvolte **přidat prostředek**.  
   
- Při vytváření nového prostředku jazyka Visual C++ přiřadí jedinečný název, například IDD_Dialog1. Toto ID prostředku lze přizpůsobit úpravou vlastností pro prostředek v editoru přidružený prostředek nebo v [okno vlastností](/visualstudio/ide/reference/properties-window).  
+ Při vytváření nového prostředku jazyka Visual C++ přiřadí jedinečný název, například `IDD_Dialog1`. Toto ID prostředku lze přizpůsobit úpravou vlastností pro prostředek v editoru přidružený prostředek nebo v [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
  Prostředek můžete vytvořit jako nové výchozí prostředek (prostředek, který není založen na šabloně) nebo jako prostředek vzorované po [šablony](../windows/how-to-use-resource-templates.md).  
   
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.*
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
-
-## <a name="requirements"></a>Požadavky  
-  
-Win32  
+## <a name="requirements"></a>Požadavky    
+ Win32  
   
 ## <a name="see-also"></a>Viz také  
  [Soubory prostředků](../windows/resource-files-visual-studio.md)   

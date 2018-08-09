@@ -1,5 +1,5 @@
 ---
-title: Dialogové okno textový nástroj písma (Editor obrázků pro ikony) | Microsoft Docs
+title: Dialogové okno textový nástroj písma (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890426"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015908"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Dialogové okno Písmo textového nástroje (editor obrázků pro ikony)
-Určuje nastavení písma, pokud použijete [dialogové okno textový nástroj](../windows/text-tool-dialog-box-image-editor-for-icons.md) z [Editor obrázků](../windows/image-editor-for-icons.md).  
+Určuje nastavení písma, když použijete [dialogové okno textový nástroj](../windows/text-tool-dialog-box-image-editor-for-icons.md) z [Editor obrázků](../windows/image-editor-for-icons.md).  
   
- Použijte toto dialogové okno pro:  
+ Pomocí tohoto dialogového okna pro:  
   
 -   [Změna písma textu obrázku](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Chcete-li získat přístup k tohoto dialogového okna, klikněte na tlačítko **písma** tlačítka v dialogovém okně nástroje Text.  
+ Toto dialogové okno, klikněte na tlačítko **písmo** tlačítko **textový nástroj** dialogové okno.  
   
  **Písma**  
  Zobrazí seznam dostupných písem.  
   
  **Styl písma**  
- Zobrazí seznam dostupných styly určeného písma.  
+ Zobrazí seznam dostupných stylů pro zadaný font.  
   
  **Velikost**  
- Uvádí velikosti dostupný bod určeného písma.  
+ Umožňuje zobrazit seznam velikostí bod k dispozici pro zadaný font.  
   
  **Ukázka**  
- Zobrazuje ukázku jak text se zadaným nastavením písma.  
+ Zobrazuje ukázku toho, jak se text zobrazí s nastavením zadaný font.  
   
- **Skript**  
- Zobrazí seznam dostupných jazykových skriptů určeného písma. Když vyberete skript jiný jazyk, znaková sada tohoto jazyka k dispozici pro vytvoření vícejazyčné dokumenty.  
+ **skript**  
+ Zobrazí seznam dostupný jazyk skriptů pro zadaný font. Když vyberete jiný jazyk skriptu, znaková sada, bude k dispozici pro vytvoření vícejazyčné dokumenty jazyka.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
  [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

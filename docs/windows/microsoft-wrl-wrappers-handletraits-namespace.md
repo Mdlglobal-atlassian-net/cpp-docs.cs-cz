@@ -1,5 +1,5 @@
 ---
-title: Namespace Microsoft::WRL::Wrappers::HandleTraits | Microsoft Docs
+title: Namespace Microsoft::WRL::Wrappers::HandleTraits | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b114d067249e78d7fb935e473cc3cc952c76fe02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c83b921aabeee34b583c8f771190ecf60edccb59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878031"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015808"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits – obor názvů
-Popisuje vlastnosti běžné typy prostředků na základě popisovač.  
+Popisuje charakteristiky běžné typy prostředků pro popisovač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::HandleTraits;  
 ```  
   
@@ -39,13 +39,13 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CriticalSectionTraits – struktura](../windows/criticalsectiontraits-structure.md)|Se specializuje `CriticalSection` objekt pro podporu neplatný kritická sekce nebo funkce, která se verze kritická sekce.|  
-|[EventTraits – struktura](../windows/eventtraits-structure.md)|Definuje vlastnosti `Event` třída popisovač.|  
-|[FileHandleTraits – struktura](../windows/filehandletraits-structure.md)|Definuje vlastnosti popisovač souboru.|  
+|[CriticalSectionTraits – struktura](../windows/criticalsectiontraits-structure.md)|Se specializuje `CriticalSection` objektu pro podporu neplatný kritický oddíl nebo funkci uvolnění kritický oddíl.|  
+|[EventTraits – struktura](../windows/eventtraits-structure.md)|Definuje vlastnosti `Event` popisovač třídy.|  
+|[FileHandleTraits – struktura](../windows/filehandletraits-structure.md)|Definuje vlastnosti popisovače souboru.|  
 |[HANDLENullTraits – struktura](../windows/handlenulltraits-structure.md)|Definuje běžné vlastnosti neinicializovaný popisovač.|  
 |[HANDLETraits – struktura](../windows/handletraits-structure.md)|Definuje běžné vlastnosti popisovač.|  
 |[MutexTraits – struktura](../windows/mutextraits-structure.md)|Definuje běžné vlastnosti [Mutex](../windows/mutex-class1.md) třídy.|  
-|[SemaphoreTraits – struktura](../windows/semaphoretraits-structure.md)|Definuje běžné vlastnosti semaforu pro objekt.|  
+|[SemaphoreTraits – struktura](../windows/semaphoretraits-structure.md)|Definuje běžné vlastnosti objektu pro spolupráci.|  
 |[SRWLockExclusiveTraits – struktura](../windows/srwlockexclusivetraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve výhradním režimu zámku.|  
 |[SRWLockSharedTraits – struktura](../windows/srwlocksharedtraits-structure.md)|Popisuje běžné vlastnosti `SRWLock` třídy ve sdíleném režimu zámku.|  
   

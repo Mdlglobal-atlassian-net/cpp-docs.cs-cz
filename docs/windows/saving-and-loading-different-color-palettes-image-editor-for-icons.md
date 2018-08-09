@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606969"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015940"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Ukládání a načítání různých barevných palet (editor obrázků pro ikony)
-Můžete uložit a načíst paletu barev, která obsahuje [přizpůsobit barvy](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Ve výchozím nastavení, barevná paleta naposledy použité se vyplní automaticky, když spustíte Visual Studio.)  
+Můžete uložit a načíst **barvy** paletu, která obsahuje [přizpůsobit barvy](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Ve výchozím nastavení, **barvy** palety naposledy použité se vyplní automaticky, když spustíte Visual Studio.)  
   
 > [!TIP]
->  Protože editoru obrázků nemá žádný způsob, jak obnovit výchozí barvy palety, měli byste uložit výchozí palety barev pod názvem, jako je například standard.pal nebo default.pal tak, aby je snadno obnovit výchozí nastavení.  
+>  Protože **Image** editor neobsahuje žádný způsob, jak obnovit výchozí **barvy** palety, měli byste uložit výchozí **barvy** palety pod názvem, jako  *Standard.PAL* nebo *default.pal* tak, aby je snadno obnovit výchozí nastavení.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>Chcete-li uložit vlastní barvy palety  
   
@@ -46,10 +46,9 @@ Můžete uložit a načíst paletu barev, která obsahuje [přizpůsobit barvy](
   
 1.  Z **Image** nabídce zvolte **načíst paletu**.  
   
-2.  V [dialogové okno Načíst barvy palety](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), přejděte do správného adresáře a vybrat paletu, který chcete načíst. Palety barev, které se uloží s příponou souboru .pal.  
+2.  V [dialogové okno Načíst barvy palety](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), přejděte do správného adresáře a vybrat paletu, který chcete načíst. **Barva** palety se uloží s příponou souboru .pal.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

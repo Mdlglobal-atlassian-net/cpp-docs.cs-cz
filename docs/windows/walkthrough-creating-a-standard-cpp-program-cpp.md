@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643280"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017325"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
 Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slouží k vytvoření standardního programu C++. Podle kroků v tomto podrobném návodu, můžete vytvořit projekt, přidejte do projektu nový soubor, upravte soubor tak přidáním kódu jazyka C++ a potom zkompilujete a spustíte program pomocí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -59,7 +59,7 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
   
     2.  V **kód** uzel, klikněte na tlačítko **soubor C++ (.cpp)**, zadejte název souboru a pak klikněte na tlačítko **přidat**.  
   
-     Soubor .cpp se zobrazí ve složce zdrojové soubory v **Průzkumníka řešení**, a soubor je otevřen v editoru sady Visual Studio.  
+     Soubor .cpp se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení**, a soubor je otevřen v editoru sady Visual Studio.  
   
 6.  V souboru v editoru zadejte platný program C++ používající standardní knihovny C++, nebo zkopírujte jeden z ukázkových programů a vložte ho do souboru.  
   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604483"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012830"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (rozšíření komponent C++)
 Deklaruje rozhraní.  Informace o nativní rozhraní, naleznete v tématu [__interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ Deklaruje rozhraní.  Informace o nativní rozhraní, naleznete v tématu [__int
 
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Parametry  
-  
  *interface_access*  
  Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a **privátní**.  **privátní** je výchozí nastavení. Vnořené rozhraní nemůže mít *interface_access* specifikátor.  
   
@@ -75,7 +74,7 @@ interface class
  Ve vývojovém prostředí, můžete získat nápovědy klávesy F1 v těchto klíčových slov zvýrazněním klíčového slova (`interface class`, třeba) a stisknutím klávesy F1.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- **Poznámky**  
+### <a name="remarks"></a>Poznámky 
   
  (Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)  
   
@@ -83,7 +82,7 @@ interface class
  – Možnost kompilátoru: `/ZW`  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- **Poznámky**  
+### <a name="remarks"></a>Poznámky
   
  (Neexistují žádné poznámky o této funkci jazyka, které se vztahují pouze modul common language runtime.)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 in Function_3  

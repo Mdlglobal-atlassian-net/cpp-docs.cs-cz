@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604236"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016233"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown – metoda
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na základní rozhraní IUnknown.  
+ Ukazatel na základní `IUnknown` rozhraní.  
   
 ## <a name="remarks"></a>Poznámky  
  Získá ukazatel na základní `IUnknown` rozhraní pro aktuální `Implements` struktury.  

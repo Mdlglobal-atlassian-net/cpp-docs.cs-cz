@@ -1,5 +1,5 @@
 ---
-title: Namespace Microsoft::WRL::Wrappers::details | Microsoft Docs
+title: Namespace Microsoft::WRL::Wrappers::details | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875549"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020159"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details – obor názvů
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -52,7 +52,7 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CompareStringOrdinal – metoda](../windows/comparestringordinal-method.md)|Porovná dvě zadané `HSTRING` objekty a vrátí celé číslo, které označuje jejich relativní pozici v pořadí řazení.|  
+|[CompareStringOrdinal – metoda](../windows/comparestringordinal-method.md)|Porovná dva zadané `HSTRING` objekty a vrátí celé číslo určující jejich relativní umístění v pořadí řazení.|  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

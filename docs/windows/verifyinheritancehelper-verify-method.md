@@ -1,5 +1,5 @@
 ---
-title: Verifyinheritancehelper::Verify – metoda | Microsoft Docs
+title: Verifyinheritancehelper::Verify – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 879f5fa117f0f2bc444243f540925d64a2b824b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889872"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018813"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Testuje dvě rozhraní zadanou aktuální parametry šablony a určuje, zda jedno rozhraní je odvozena z jiných.  
+ Testuje dvě rozhraní určeném aktuálním parametry šablony a určuje, zda jedno rozhraní je odvozena od druhé.  
   
- Pokud jedno rozhraní není odvozen z jiných, jsou vydávány k chybě.  
+ Chyba je vygenerován, pokud jedno rozhraní není odvozena od druhé.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

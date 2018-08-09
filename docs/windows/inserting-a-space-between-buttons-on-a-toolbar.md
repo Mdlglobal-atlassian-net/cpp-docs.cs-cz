@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 056d20420484b29bd66827607432ebe2d6543c52
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 985dbf5ca03af3edae0ecf25796690059868ffc1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607355"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019533"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Vložení mezery mezi tlačítka na panelu nástrojů
 Obecně platí k vložení mezer mezi tlačítky, jednoduše přetáhněte je od sebe na panelu nástrojů. Chcete-li odebrat místa, přetáhněte je směrem k sobě navzájem.  
@@ -41,7 +41,6 @@ Obecně platí k vložení mezer mezi tlačítky, jednoduše přetáhněte je od
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  

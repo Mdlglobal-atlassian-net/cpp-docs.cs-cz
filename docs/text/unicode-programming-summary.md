@@ -1,5 +1,5 @@
 ---
-title: Souhrn programování Unicode | Microsoft Docs
+title: Souhrn programování s kódem Unicode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,39 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65db0889b36cafa4b3942b7834229d1a7d9f5783
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859674"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010357"
 ---
 # <a name="unicode-programming-summary"></a>Souhrn programování s kódem Unicode
-Abyste mohli využívat MFC a C Runtime podpora pro Unicode, budete muset:  
+Abyste mohli využívat výhody podpory knihovny MFC a C za běhu Unicode, budete muset:  
   
--   Definování **_UNICODE**.  
+-   Definování `_UNICODE`.  
   
-     Definujte symbol **_UNICODE** před sestavením programu.  
+     Definujte symbol `_UNICODE` před sestavením aplikace.  
   
--   Zadejte vstupní bod.  
+-   Určení vstupního bodu.  
   
-     Na **výstup** stránka složky Linkeru do projektu [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogové okno pole, nastavte symbol vstupního bodu na **wWinMainCRTStartup**.  
+     Na **výstup** stránku **Linkeru** složky v projektu [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogové okno, nastavte **vstupní bod** symbol, který má `wWinMainCRTStartup`.  
   
--   Pomocí přenosného běhové funkce a typy.  
+-   Použijte přenosné za běhu funkcí a typů.  
   
-     Použijte správnou běhové funkce jazyka C pro zpracování řetězce Unicode. Můžete použít **serveru webového obsahu** řadu funkcí, ale preferovat (mezinárodní úrovni povoleno) přenositelností plně **_TCHAR** makra. Tyto makra jsou všechny s předponou **_tcs**; se nahrazují pro jednu, pro **str** řadu funkcí. Tyto funkce jsou podrobně popsány v [internacionalizace](../c-runtime-library/internationalization.md) části *referenční dokumentace běhové knihovny*. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+     Použití správné funkce jazyka C za běhu pro zpracování řetězce Unicode. Můžete použít `wcs` řadu funkcí, ale můžete dát přednost (mezinárodně povoleno) přenosná plně `_TCHAR` makra. Tato makra jsou předponu `_tcs`; jejich nahrazení, jeden pro jednu, pro `str` řady funkcí. Tyto funkce jsou popsány podrobně [internacionalizace](../c-runtime-library/internationalization.md) část *Run-Time Library Reference*. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Použití **_TCHAR** a související přenosné datové typy popsané v [podpora pro Unicode](../text/support-for-unicode.md).  
+     Použití `_TCHAR` a související přenosné datové typy, které je popsáno v [podpora pro Unicode](../text/support-for-unicode.md).  
   
 -   Zpracování řetězců literálu.  
   
-     Kompilátor Visual C++ interpretuje řetězcový literál programového jako:  
+     Kompilátor Visual C++ interpretuje zakódovaný jako řetězec literálů:  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     rozumí řetězec znaků Unicode. Literálové znaky můžete používat stejnou předponu. Použití **_T** makro do kódu obecných řetězců obecně, takže jsou kompilovány jako řetězce Unicode v kódu Unicode nebo řetězce ANSI (včetně MBCS) bez kódování Unicode. Například místo provedení:  
+     k označení řetězec znaků Unicode. Můžete použít stejnou předponu pro literály. Použití `_T` – makro do kódu literálu řetězců obecně, takže jsou kompilovány jako řetězce Unicode v kódování Unicode nebo řetězce ANSI (včetně znakové sady MBCS) bez kódování Unicode. Například namísto sady:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
@@ -59,46 +59,46 @@ Abyste mohli využívat MFC a C Runtime podpora pro Unicode, budete muset:
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     S **_UNICODE** definované, **_T –** překládá řetězcového literálu do formuláře předpony L; jinak hodnota **_T** převede řetězec bez předpony l.  
+     S `_UNICODE` definované, `_T` přeloží řetězcového literálu na formuláři předponu L; v opačném případě `_T` převede řetězec bez předponu L.  
   
     > [!TIP]
-    >  **_T** makro je stejný jako `_TEXT` makro.  
+    >  `_T` – Makro je stejné jako `_TEXT` – makro.  
   
--   Buďte opatrní délky řetězců funkce.  
+-   Buďte opatrní délky řetězců na funkce.  
   
-     Některé funkce mají počet znaků v řetězci; ostatní chtějí počet bajtů. Například pokud **_UNICODE** je definován následující volání do `CArchive` objekt nebude fungovat (`str` je `CString`):  
+     Některé funkce mají počet znaků v řetězci; ostatní má počet bajtů. Například pokud `_UNICODE` je definován, následující volání `CArchive` objekt nebude fungovat (`str` je `CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     V aplikaci Unicode délka umožňuje počet znaků, ale není správný počet bajtů, protože každý znak je 2 bajtů široké. Místo toho je nutné použít:  
+     V aplikaci ve formátu Unicode délka poskytuje počet znaků, ale není správný počet bajtů, protože každý znak je 2 bajty široké. Místo toho musíte použít:  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
     ```  
   
-     Určuje, které správný počet bajtů k zápisu.  
+     Určuje, který správný počet bajtů k zápisu.  
   
-     Ale MFC členské funkce, které jsou zaměřené na znak, nikoli orientované na bajtů fungovat bez další kódování:  
+     Ale MFC členské funkce, které jsou zaměřené na znak, spíše než bajtů založenému na záznamech, fungovat bez to velmi kódování:  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` přijímá a počet znaků, ne počet bajtů.  
+     `CDC::TextOut` přijímá počet znaků, nikoli počet bajtů.  
   
--   Použití [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) otevírat soubory Unicode.  
+-   Použití [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) otevřete soubory Unicode.  
   
- To Shrneme, MFC a knihovna RTL – poskytuje následující podporu pro programování Unicode:  
+ Souhrnně řečeno, MFC a knihovny run-time poskytují následující podporu pro programování v kódování Unicode:  
   
--   S výjimkou funkce člena třídy databáze, jsou všechny funkce MFC kódování Unicode, včetně `CString`. `CString` také poskytuje funkce převodu znakové sady Unicode nebo ANSI.  
+-   S výjimkou členských funkcí třídy databáze, jsou všechny funkce knihovny MFC kódování Unicode, včetně `CString`. `CString` také poskytuje funkce pro převod kódování Unicode/ANSI.  
   
--   Knihovna RTL – poskytuje Unicode verze všechny funkce zpracování řetězců. (Běhové knihovny také poskytuje přenositelné verze vhodné pro kódování Unicode nebo MBCS. Jedná se o **_tcs** makra.)  
+-   Knihovny run-time poskytuje všechny funkce zpracování řetězce Unicode verze. (Knihovny run-time také poskytuje přenosná verze vhodný pro kódování Unicode nebo znakové sady MBCS. Jedná se o `_tcs` makra.)  
   
--   Tchar.h poskytuje přenosné datové typy a **_T** makro pro převod řetězců literálu a znaků. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Tchar.h poskytuje přenosné datové typy a `_T` – makro pro převod řetězcových literálů a znaků. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   Knihovna RTL – poskytuje široká charakterová verzi **hlavní**. Použití **wmain** aby vaše aplikace kódování Unicode.  
+-   Poskytuje širokoznaké verze knihovny run-time `main`. Použití `wmain` aplikace s ohledem na kódování Unicode.  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora pro Unicode](../text/support-for-unicode.md)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034777"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017994"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v desktopové aplikaci Windows
 Při vytváření klasický desktopový projekt Windows v sadě Visual Studio 2017 je nastaven ve výchozím nastavení k sestavení s verzí Windows 10 SDK, která byla nainstalována při C++ Desktop workload byla nainstalována nebo naposledy aktualizována. Tato verze sady Windows SDK je kompatibilní s Windows 7 a novější. Zobrazit [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers) Další informace o cílení na konkrétní verze Windows.
@@ -31,7 +31,6 @@ Pokud chcete cílit na starší verzi sady SDK, můžete otevřít **projektu | 
   
 1.  Ujistěte se, že je nainstalovaná sada Windows 10 SDK. Windows 10 SDK je nainstalována jako součást **vývoj desktopových aplikací pomocí C++** pracovního vytížení. Je k dispozici na samostatnou verzi [soubory ke stažení a nástroje pro Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílení verze sady SDK**.  
   
      ![Výsledkem změny cílení verze SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Pokud chcete cílit na starší verzi sady SDK, můžete otevřít **projektu | 
   
      ![Cílit na verzi platformy](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Tato akce změní hodnoty projektová makra, které zahrnují cesty k souborů hlaviček a soubory knihovny. Chcete-li zjistit, co změnil v sekci adresáře Visual C++ v dialogovém okně vlastností projektu zvolte jednu z vlastností, jako je například adresáře Include, zvolte otevřete rozevírací seznam a zvolte \<Upravit >. **Adresáře souborů k zahrnutí** se zobrazí dialogové okno.  
+     Tato akce změní hodnoty projektová makra, které zahrnují cesty k souborů hlaviček a soubory knihovny. Chcete-li zjistit, co změnil v **adresáře Visual C++** část **vlastnosti projektu** dialogového okna, zvolte jednu z vlastností, jako **adresáře souborů k zahrnutí**, zvolit otevřete rozevírací seznam a zvolte \<Upravit >. **Adresáře souborů k zahrnutí** se zobrazí dialogové okno.  
   
      ![Zahrnout adresáře dialogovému oknu](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Pokud chcete cílit na starší verzi sady SDK, můžete otevřít **projektu | 
   
 1.  Otevřete místní nabídku pro uzel projektu a zvolte **změnit cílení verze sady SDK**.  
   
-2.  V rozevíracím seznamu verzi cílové platformy zvolte 8.1.  
+2.  V **verze cílové platformy** rozevírací seznam, zvolte **8.1**.  
   
 ## <a name="see-also"></a>Viz také  
  [Desktopové aplikace Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

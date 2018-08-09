@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652067"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019675"
 ---
 # <a name="testing-a-dialog-box"></a>Testování dialogového okna
 Při návrhu dialogového okna můžete simulovat a testovat jeho chování za běhu bez kompilace programu. V tomto režimu můžete:  
@@ -42,7 +42,7 @@ Při návrhu dialogového okna můžete simulovat a testovat jeho chování za b
   
 ### <a name="to-test-a-dialog-box"></a>Testování dialogového okna  
   
-1.  Když je editor dialogového okna aktivní okno na řádku nabídek zvolte **formátu**, **testovací dialogové okno**.  
+1.  Když **dialogové okno** editor není aktivní okno na řádku nabídek, zvolte **formátu** > **testovací dialogové okno**.  
   
 2.  Chcete-li simulaci ukončit, stiskněte **Esc**, nebo prostě vybrat **Zavřít** tlačítka v dialogových oken, které testujete.  
   

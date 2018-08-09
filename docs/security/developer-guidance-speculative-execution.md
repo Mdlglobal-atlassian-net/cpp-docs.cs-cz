@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102462"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018842"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
-Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifikaci a omezení spekulativního spouštění na straně kanálu hardwaru chyby v softwaru C++. Tyto chyby zabezpečení může odhalit citlivé informace napříč hranicemi vztahů důvěryhodnosti a může mít vliv na software, který běží na procesorech podporujících spekulativního, mimo pořadí provádění instrukcí. Tato třída ohrožení zabezpečení byl první je popsáno v lednu 2018 a další informace a pokyny najdete v [informační zpravodaj zabezpečení společnosti Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifikaci a omezení spekulativního spouštění na straně kanálu hardwaru chyby v softwaru C++. Tyto chyby zabezpečení může odhalit citlivé informace napříč hranicemi vztahů důvěryhodnosti a může mít vliv na software, který běží na procesorech podporujících spekulativního, mimo pořadí provádění instrukcí. Tato třída ohrožení zabezpečení byl první je popsáno v lednu 2018 a další informace a pokyny najdete v [informační zpravodaj zabezpečení společnosti Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Pokynů, které jste v tomto článku se vztahuje na třídy reprezentována ohrožení zabezpečení:
 
-1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
+1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
 
 2. CVE-2018-3639, označované také jako [spekulativního jednorázové přihlášení pro Store (SSB)](https://aka.ms/sescsrdssb). Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění zatížení náskok před závislé úložiště jako výsledek misprediction přístupu k paměti.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy přidělený na zásobník nepřímé větev ukazatelů. Je možné, že spekulativního úpravy by se mohl vyskytnout pro globální proměnné, paměť přidělenou haldě a dokonce i paměti jen pro čtení na některých procesorech. Přidělený na zásobník paměti kompilátor Visual C++ již trvá v zájmu postup znesnadňují speculatively upravit přidělený na zásobník nepřímé větvi cíle, například opětovným uspořádáním lokální proměnné tak, že soubor cookie zabezpečení jako jsou umístěna vyrovnávací paměti součástí [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) kompilátoru bezpečnostní funkce.
+Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy přidělený na zásobník nepřímé větev ukazatelů. Je možné, že spekulativního úpravy by se mohl vyskytnout pro globální proměnné, paměť přidělenou haldě a dokonce i paměti jen pro čtení na některých procesorech. Přidělený na zásobník paměti kompilátor Visual C++ již trvá v zájmu postup znesnadňují speculatively upravit přidělený na zásobník nepřímé větvi cíle, například opětovným uspořádáním lokální proměnné tak, že soubor cookie zabezpečení jako jsou umístěna vyrovnávací paměti součástí [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) kompilátoru bezpečnostní funkce.
 
 ## <a name="speculative-type-confusion"></a>Typu spekulativním záměny
 
@@ -368,6 +368,6 @@ Další technikou, který slouží k omezení spekulativního spouštění na st
 
 ## <a name="see-also"></a>Viz také
 
-[Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Omezení spekulativního spouštění na straně kanálu hardwarové ohrožení zabezpečení](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

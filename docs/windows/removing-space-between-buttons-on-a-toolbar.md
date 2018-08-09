@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5734874fb77907d021a360d84c17d054b223741c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0404c11def5ac70c9020adc28309b7c12aa1cf67
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605493"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017470"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Odebrání mezer mezi tlačítky na panelu nástrojů
 Následující postup ukazuje, jak odebrat mezery mezi tlačítka na panelu nástrojů.  
@@ -30,12 +30,11 @@ Následující postup ukazuje, jak odebrat mezery mezi tlačítka na panelu nás
   
 1.  Přetáhněte tlačítko na jedné straně místa směrem k tlačítku na druhé straně prostor se překrývá na tlačítko Další informace o urazili polovinu cesty.  
   
-     Pokud není místa vedle tlačítka, které přetahujete klávesou a přetáhněte více než polovinu životnosti poslední tlačítko vedle tlačítka, editoru panelu nástrojů také vloží mezeru na opačnou stranu tlačítka, které přetahujete.  
+     Pokud není žádný prostor vedle tlačítka, které přetahujete klávesou a více než polovinu životnosti minulé vedle tlačítka, přetáhněte tlačítko **nástrojů** editor také vloží mezeru na opačnou stranu tlačítka, které jste přetažení.  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Knihovny MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  

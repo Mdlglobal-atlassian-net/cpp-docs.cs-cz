@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570375"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013411"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)
 Prostředky můžete zobrazit v souboru .rc bez nutnosti otevřít projekt. Otevře se v okně dokumentu na rozdíl od otevřít v souboru .rc [zobrazení prostředků](../windows/resource-view-window.md) okno (stejně jako když je soubor otevřen, uvnitř projektu).  
@@ -46,13 +46,13 @@ Prostředky můžete zobrazit v souboru .rc bez nutnosti otevřít projekt. Otev
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>K otevření více souborů .rc mimo projekt  
   
-1.  Otevřete oba samostatné soubory prostředků. Například otevřete Source1.rc a Source2.rc.  
+1.  Otevřete oba samostatné soubory prostředků. Například otevřete `Source1.rc` a `Source2.rc`.  
   
     1.  Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.  
   
-    2.  V **otevřít soubor** dialogové okno, přejděte do první souboru skriptu prostředků, kterou chcete otevřít (Source1.rc), zvýrazněte soubor a klikněte na tlačítko **otevřete**.  
+    2.  V **otevřít soubor** dialogové okno, přejděte do první souboru skriptu prostředků, kterou chcete otevřít (`Source1.rc`), zvýrazněte ho a klikněte na tlačítko **otevřete**.  
   
-    3.  Opakujte předchozí krok Otevřete druhý soubor .rc (Source2.rc).  
+    3.  Opakujte předchozí krok pro druhý .rc soubor otevřít (`Source2.rc`).  
   
          Soubory .rc jsou teď otevřít v systému windows v samostatných dokumentech.  
   

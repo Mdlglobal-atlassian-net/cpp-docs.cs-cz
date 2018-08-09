@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603485"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013558"
 ---
 # <a name="include-c"></a>include (C++)
 Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru generovaného IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru genero
  **Zahrnují** C++ atribut má stejné funkce jako [zahrnují](http://msdn.microsoft.com/library/windows/desktop/aa367052) atribut MIDL.  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze #include příkazu.  
+ Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze `#include` příkazu.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

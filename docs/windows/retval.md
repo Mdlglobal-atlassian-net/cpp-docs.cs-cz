@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e4364f60012cb4571edbf195a02b77f500a2dc86
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606348"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010328"
 ---
 # <a name="retval"></a>retval
 Označí parametr, který přijímá návratovou hodnotu člena.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [retval]  
 ```  
   

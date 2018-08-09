@@ -1,5 +1,5 @@
 ---
-title: Předdefinované symboly systému Win32 | Microsoft Docs
+title: Předdefinované symboly systému Win32 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d399f8985e61067b86fc6c4a1066462309212c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891734"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012879"
 ---
 # <a name="win32-predefined-symbols"></a>Předdefinované symboly systému Win32
-Tyto symboly jsou definovány v záhlaví souborů Win32 a podporují standardní funkce aplikací systému Windows a akce. Tyto symboly jsou používány především s společné prvky uživatelského rozhraní. Při práci s ovládacími prvky v editory prostředků, zobrazí se tyto symboly v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) přidružené běžné ovládací prvky. Například pokud vaše panelu nástrojů by měla zobrazovat ikona aplikace, na ikonu bude spojený s symbol IDI_SMALL v okně Vlastnosti.  
+Tyto symboly jsou definovány v souborech hlaviček Win32 a podporují standardní funkce aplikace Windows a akce. Tyto symboly se používá hlavně s společné prvky uživatelského rozhraní. Při práci s ovládacími prvky v editoru prostředků, zobrazí se tyto symboly v [okno vlastností](/visualstudio/ide/reference/properties-window) přidružené k běžné ovládací prvky. Například pokud vaše nástrojů by měl zobrazit ikonu aplikace, na ikonu se přidruží symbol IDI_SMALL v **okně s vlastnostmi**.  
   
 |||  
 |-|-|  
-|IDABORT|Řízení: Tlačítko dialogovém přerušení|  
+|IDABORT|Ovládacího prvku: Tlačítko Přerušit pole dialogového okna|  
 |IDC_STATIC|Ovládací prvek: Statický text v dialogovém okně|  
-|IDCANCEL|Ovládacího prvku: Tlačítko Zrušit pole dialogové okno|  
-|IDD_ABOUTBOX|Dialogové okno: Produktu o dialogové okno|  
-|IDI_PROJECTNAME|Ikona: Aktuální projekt – ikona|  
+|IDCANCEL|Ovládacího prvku: Tlačítko Storno pole dialogového okna|  
+|IDD_ABOUTBOX|Dialogové okno: Produktu dialogové okno|  
+|IDI_PROJECTNAME|Ikona: Aktuální ikony projektu|  
 |IDI_SMALL|Ikona: Aktuální projekt malé ikony|  
-|IDIGNORE|Ovládací prvek: Použít klepnutím na tlačítko Ignorovat v dialogová okna|  
-|IDM_ABOUT|Položka nabídky: Používá pomoci... O...|  
-|IDM_EXIT|Položka nabídky: Používá se souborem... Ukončení...|  
-|IDNO|Ovládací prvek: Žádné tlačítko dialogu|  
-|IDOK|Ovládacího prvku: Tlačítko pole OK dialogové okno|  
-|IDRETRY|Řízení: Tlačítko dialogovém opakování|  
+|IDIGNORE|Ovládací prvek: Používá se ignorovat tlačítka v dialogových oknech|  
+|IDM_ABOUT|Položka nabídky: Používá s nápovědou... O...|  
+|IDM_EXIT|Položka nabídky: Používá se soubor... Ukončení...|  
+|IDNO|Ovládací prvek: Dialogové okno se neobjeví tlačítko|  
+|IDOK|Ovládacího prvku: Tlačítko pole OK dialogového okna|  
+|IDRETRY|Ovládacího prvku: Tlačítko Opakovat pole dialogového okna|  
 |IDS_APP_TITLE|Řetězec: Název aktuální aplikace|  
 |IDYES|Ovládací prvek: Dialogové okno Ano tlačítko.|  
   

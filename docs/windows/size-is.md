@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645448"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011852"
 ---
 # <a name="sizeis"></a>size_is
 Zadejte velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ size_is(  
    "expression"  
 ) ]  

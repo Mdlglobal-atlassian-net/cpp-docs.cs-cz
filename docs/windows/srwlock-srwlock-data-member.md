@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cffbcde4196f37bd97dac0f67ecefa6615d6b2ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647489"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014923"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ – datový člen
 Obsahuje základní proměnnou zámek pro aktuální **SRWLock** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 SRWLOCK SRWLock_;  
 ```  
   

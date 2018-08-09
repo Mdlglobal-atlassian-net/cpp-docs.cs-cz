@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604278"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016853"
 ---
 # <a name="method-attributes"></a>Atributy metody
 Následující atributy se vztahují na metody ve třídě, coclass nebo rozhraní.  
@@ -39,8 +39,8 @@ Následující atributy se vztahují na metody ve třídě, coclass nebo rozhran
 |[defaultbind](../windows/defaultbind.md)|Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Používá pro optimalizaci kódu jazyka Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.|  
-|[helpcontext](../windows/helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto prvku v souboru nápovědy.|  
-|[helpfile](../windows/helpfile.md)|Nastaví název souboru nápovědy pro knihovnu typů.|  
+|[helpcontext](../windows/helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto elementu v **pomáhají** souboru.|  
+|[helpfile](../windows/helpfile.md)|Nastaví název **pomáhají** soubor pro knihovnu typů.|  
 |[helpstring](../windows/helpstring.md)|Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Určuje ID tématu nápovědy HLP nebo CHM souboru.|  
 |[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|  

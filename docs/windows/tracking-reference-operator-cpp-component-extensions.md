@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651828"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011839"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operátor sledovacího odkazu (rozšíření komponent C++)
 A *sledovací odkaz* (`%`) se chová jako běžná reference C++ (`&`) s tím rozdílem, že když objekt přiřazen sledovacímu odkazu, je zvýšen počet odkazů na objekt.  
@@ -46,7 +46,7 @@ A *sledovací odkaz* (`%`) se chová jako běžná reference C++ (`&`) s tím ro
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  Sledovací odkaz se chová jako referenční standard C++, s tím rozdílem, že je % počítáním referencí. Následující fragment kódu ukazuje, jak převod mezi % a ^ typy:  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  Následující příklad ukazuje, jak předat ^ funkci, která přebírá %.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **Output**  
   
 ```Output  
 21  

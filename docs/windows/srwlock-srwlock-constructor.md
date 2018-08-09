@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 941a0b31224b67c9305c41e036d93744b98b915e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f4bdbf1b2615a87b39797f2ff4e6e188c338dd5e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642608"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015856"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock – konstruktor
 Inicializuje novou instanci třídy **SRWLock** třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 SRWLock();  
 ```  
   

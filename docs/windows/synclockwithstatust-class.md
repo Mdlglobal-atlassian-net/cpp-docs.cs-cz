@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66fd02ff9af4f7a5c1cb85b58e966622bed0060a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bd514b1684571fb12a19265b57e6d5b92b8c7edd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648688"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011546"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT – třída
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename SyncTraits  
 >  

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608810"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015115"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Výběr barvy z obrázku, která se použije jinde (editor obrázků pro ikony)
 **Vyberte barvu**, nebo barva vyzvednutí, nástroj vytvoří libovolnou barvu na obrázku aktuální barvu popředí nebo pozadí, v závislosti na tom, zda stisknutím levé nebo pravé tlačítko myši. Chcete-li zrušit **vyberte barvu** nástroj, zvolte jiný nástroj.  
@@ -41,14 +41,13 @@ ms.locfileid: "39608810"
 2.  Vyberte barvu, kterou chcete vybrat z této image.  
   
     > [!NOTE]
-    >  Jakmile vyberete barvy, editoru obrázků znovu aktivuje nástroj naposledy použitých.  
+    >  Po výběru barvy, **Image** nástroj znovu aktivuje naposledy použité editoru.  
   
 3.  Kreslení pomocí levé tlačítko myši pro barvu popředí nebo pravé tlačítko myši pro barvu pozadí.  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

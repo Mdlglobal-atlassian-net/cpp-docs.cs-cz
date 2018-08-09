@@ -1,5 +1,5 @@
 ---
-title: Pomocí Tchar –. Datové typy H s kódováním _MBCS | Microsoft Docs
+title: Pomocí TCHAR. H datové typy s kódováním _MBCS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,58 +22,58 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3aa2f0dffd33f0ac885753e4c7fb7f413d755149
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858351"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020319"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Použití datových typů TCHAR.H s kódováním _MBCS
-Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu se mapuje na jednu z následujících druhů rutin:  
+Když konstanta manifestu `_MBCS` je definován, dané rutiny obecného textu mapuje na jednu z následujících druhů rutin:  
   
--   Rutina SBCS, která zpracovává vícebajtové bajtů, znaky a řetězce správně. V takovém případě jsou očekávány řetězcové argumenty být typu **char\***. Například `_tprintf` mapuje `printf`; argumenty řetězce, které mají `printf` typu **char\***. Pokud používáte **_TCHAR** obecného textu datový typ řetězec vašeho typy, typy formální a aktuální parametrů pro `printf` souhlasit, protože **_TCHAR** \* mapuje **char \***.  
+-   Rutina SBCS, která zpracovává řetězce vícebajtové bajtů, znaky a odpovídajícím způsobem. V takovém případě se řetězcové argumenty očekává se typ `char*`. Například `_tprintf` mapuje `printf`; řetězcové argumenty `printf` jsou typu `char*`. Pokud používáte `_TCHAR` obecného textu datový typ pro váš řetězec typy, typy formální a skutečný parametr pro `printf` porovnat, protože `_TCHAR*` mapuje `char*`.  
   
--   Rutiny specifické pro MBCS. V takovém případě jsou očekávány řetězcové argumenty být typu `unsigned` **char\***. Například `_tcsrev` mapuje `_mbsrev`, která očekává a vrátí řetězec typu `unsigned` **char\***. Pokud použijete **_TCHAR** obecného textu datový typ pro vaše typy řetězců nastal konflikt typu potenciální protože **_TCHAR** mapuje na typ `char`.  
+-   Rutiny specifické znakové sady MBCS. V takovém případě se řetězcové argumenty očekává se typ `unsigned char*`. Například `_tcsrev` mapuje `_mbsrev`, který očekává, že a vrátí řetězec typu `unsigned char*`. Pokud používáte `_TCHAR` obecného textu datový typ pro vaše typy řetězců je potenciální konflikt typu protože `_TCHAR` mapuje na typ `char`.  
   
- Toto jsou tři řešení pro prevenci tento konflikt typu (a upozornění kompilátoru jazyka C nebo C++ chyby kompilátoru, které by):  
+ Toto jsou tři řešení jak zabránit tomuto typu konfliktu (a upozornění kompilátoru jazyka C nebo chyby kompilátoru jazyka C++, které by vedla k):  
   
--   Použije výchozí chování. Tchar.h poskytuje prototypy obecného textu pro rutiny v běhové knihovny, jako v následujícím příkladu.  
+-   Použije výchozí chování. Tchar.h zajišťující prototypy obecné textové rutiny knihoven runtime, jako v následujícím příkladu.  
   
     ```  
     char * _tcsrev(char *);  
     ```  
   
-     V případě výchozí prototypu pro `_tcsrev` mapuje `_mbsrev` prostřednictvím převodu v Libc.lib. Tato operace změní typy `_mbsrev` příchozí parametry a odchozí návratová hodnota z **_TCHAR \***  (to znamená, `char` **\***) k `unsigned` `char` **\***. Tato metoda zajišťuje typ odpovídající při použití **_TCHAR**, ale je relativně pomalá kvůli režii volání funkce.  
+     Ve výchozím nastavení, prototyp `_tcsrev` mapuje `_mbsrev` prostřednictvím převodní rutina v Libc.lib. Typy se tím změní `_mbsrev` příchozí parametry a odchozí vrátit hodnotu z `_TCHAR*` (to znamená `char *`) k `unsigned char *`. Tato metoda zajišťuje shodu při použití typů `_TCHAR`, ale je poměrně pomalý kvůli režii volání funkce.  
   
--   Pomocí funkce vložené začleněním následující preprocesoru ve vašem kódu.  
+-   Pomocí funkce vkládání začleňte následující příkaz preprocesoru ve vašem kódu.  
   
     ```  
     #define _USE_INLINING  
     ```  
   
-     Tato metoda způsobí, že převodu vložené funkce, zadaný v souboru Tchar.h k mapování obecného textu rutiny přímo do příslušné rutiny MBCS. Následující výpis kódu z Tchar.h poskytuje příklad, jak to provést.  
+     Tato metoda způsobí, že vložené funkce převodní rutinou, uvedené v souboru Tchar.h se k mapování obecného textu rutina přímo do příslušné rutiny znakové sady MBCS. Následující úryvek kódu ze souboru Tchar.h znázorňuje, jak to lze provést.  
   
     ```  
     __inline char *_tcsrev(char *_s1)  
     {return (char *)_mbsrev((unsigned char *)_s1);}  
     ```  
   
-     Pokud můžete použít vložené, toto je nejlepší řešení, protože zaručuje, zadejte odpovídající a obsahuje náklady. žádné další čas.  
+     Pokud vám vkládání, toto je doporučené řešení, zaručuje zadejte odpovídající a obsahuje náklady. žádné další čas.  
   
--   Použijte přímé mapování začleněním následující preprocesoru ve vašem kódu.  
+-   Použijte přímé mapování začleňte následující příkaz preprocesoru ve vašem kódu.  
   
     ```  
     #define _MB_MAP_DIRECT  
     ```  
   
-     Tento přístup poskytuje rychlou alternativu, pokud nechcete použít výchozí chování nebo nemůže používat vložené. Způsobí, že rutina obecného textu nejde mapovat pomocí makra přímo na verzi MBCS rutiny, jako v následujícím příkladu z Tchar.h.  
+     Tento přístup poskytuje rychlou alternativou, pokud nechcete použít výchozí chování nebo nemůže používat vložené. Způsobí, že obecné textové rutiny namapovat tak makro přímo na verzi znakové sady MBCS rutiny, jako v následujícím příkladu v souboru Tchar.h.  
   
     ```  
     #define _tcschr _mbschr  
     ```  
   
-     Pokud tuto metodu, musí být opatrní, abyste zajistili použití příslušné datové typy pro argumenty řetězce a návratové hodnoty řetězce. Přetypování typu můžete použít k zajištění správné shody typů nebo můžete použít **_TXCHAR** datový typ obecného textu. **_TXCHAR –** mapuje na typ `char` v kódu SBCS ale mapuje na typ `unsigned` `char` v MBCS kódu. Další informace o obecného textu makra najdete v tématu [mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v *referenční dokumentace běhové knihovny*.  
+     Při volbě této možnosti musí být opatrní a zajistit používání odpovídající datových typů pro argumenty řetězce a vrácené hodnoty řetězce. Přetypování typu můžete použít k zajištění shody správný typ, nebo můžete použít `_TXCHAR` datový typ obecného textu. `_TXCHAR` mapování na typ **char** v kódu SBCS ale mapování na typ **unsigned char** v kódu znakové sady MBCS. Další informace o makra obecného textu, naleznete v tématu [mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Viz také  
  [Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

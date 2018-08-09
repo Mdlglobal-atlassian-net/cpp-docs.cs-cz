@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605545"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018826"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Výběr barev popředí nebo pozadí (editor obrázků pro ikony)
 S výjimkou **gumy**, nástroje na **Editor obrázků** draw nástrojů s aktuální barvu popředí nebo pozadí při stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.  
@@ -39,7 +39,6 @@ S výjimkou **gumy**, nástroje na **Editor obrázků** draw nástrojů s aktuá
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608154"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010688"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Ukládání bitmap ve formátu GIF nebo JPEG (editor obrázků pro ikony)
 Když vytvoříte rastrový obrázek, vytvoření image ve formátu rastrový obrázek (BMP). Image můžete, ale uložit jako ve formátu GIF nebo JPEG nebo v jiné formáty.  
@@ -51,9 +51,10 @@ Když vytvoříte rastrový obrázek, vytvoření image ve formátu rastrový ob
   
 4.  Se stále otevřen v rastrového obrázku **Image** editoru klikněte na **Uložit *filename*.bmp jako** na **souboru** nabídky.  
   
-5.  V **uložit soubor jako** dialogového okna zadejte název, kterému chcete udělit soubor a rozšíření, která označuje formát souboru, které chcete v **název_souboru** pole. Například myfile.gif.  
+5.  V **uložit soubor jako** dialogového okna zadejte název, kterému chcete udělit soubor a rozšíření, která označuje formát souboru, které chcete v **název_souboru** pole. Například *myfile.gif*.  
   
-     **Poznámka:** musíte vytvořit nebo otevřít rastrového obrázku mimo projekt Pokud chcete uložit v jiném formátu. Pokud vytvoříte nebo jej otevřete v projektu **uložit jako** příkaz nebude k dispozici. Další informace najdete v tématu [zobrazování prostředků v prostředků skriptu souboru mimo of projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+     > [!NOTE]
+     > Musíte vytvořit nebo otevřít rastrového obrázku mimo projekt Pokud chcete uložit v jiném formátu. Pokud vytvoříte nebo jej otevřete v projektu **uložit jako** příkaz nebude k dispozici. Další informace najdete v tématu [zobrazování prostředků v prostředků skriptu souboru mimo of projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
 6.  Klikněte na tlačítko **Uložit**.  
   

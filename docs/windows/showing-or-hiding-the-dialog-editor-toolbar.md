@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651402"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019170"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Zobrazení nebo skrytí panelu nástrojů editoru dialogového okna
-Otevřete editor dialogového okna, panelu nástrojů editoru dialogového okna se automaticky zobrazí v horní části vašeho řešení.  
+Když otevřete **dialogové okno** editoru **editoru dialogového okna** nástrojů se automaticky zobrazí v horní části vašeho řešení.  
   
 ### <a name="dialog-editor-toolbar"></a>Panel nástrojů editoru dialogového okna  
   
@@ -40,9 +40,9 @@ Otevřete editor dialogového okna, panelu nástrojů editoru dialogového okna 
 |![Tlačítko svisle Center](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Svisle|![Přepínací tlačítko mřížky](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Přepnout mřížku|  
 |![Vodorovná tlačítka Center](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Vodorovná|![Tlačítko průvodce přepínací tlačítko](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Průvodce přepínací tlačítko|  
   
- Panel nástrojů editoru dialogového okna obsahuje tlačítka pro uspořádání rozložení ovládacích prvků v dialogovém okně, třeba velikost a zarovnání. Tlačítka panelu nástrojů editoru dialogového okna odpovídají příkazů v nabídce Formát. Podrobnosti najdete v tématu [klávesy akcelerátoru pro Editor dialogového okna](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ **Editoru dialogového okna** nástrojů obsahuje tlačítka pro uspořádání rozložení ovládacích prvků v dialogovém okně třeba velikost a zarovnání. **Editor dialogových oken** tlačítka na panelu nástrojů odpovídají příkazy na **formátu** nabídky. Podrobnosti najdete v tématu [klávesy akcelerátoru pro Editor dialogového okna](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Když se v editoru dialogového okna můžete přepínat zobrazení panelu nástrojů editoru dialogového okna tak, že ho vyberete ze seznamu dostupných panelů nástrojů a oken.  
+ Pokud pracujete s **dialogové okno** editoru můžete přepínat zobrazení **editoru dialogového okna** nástrojů tak, že ho vyberete ze seznamu dostupných panelů nástrojů a oken.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Zobrazení nebo skrytí panelu nástrojů editoru dialogového okna  
   

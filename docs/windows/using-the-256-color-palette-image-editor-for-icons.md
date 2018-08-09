@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645149"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011813"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Používání palety s 256 barvami (editor obrázků pro ikony)
-Chcete-li nakreslit s výběrem z palety barev 256, je potřeba vyberte barvu z palety barev v [okno barvy](../windows/colors-window-image-editor-for-icons.md).  
+Pro kreslení pomocí výběru z palety barev 256, je nutné vybrat barvy z **barvy** paletu [okno barvy](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Vybrat barvu z palety barev 256 pro velké ikony  
   
@@ -36,7 +36,7 @@ Chcete-li nakreslit s výběrem z palety barev 256, je potřeba vyberte barvu z 
   
 2.  Výběr barvy z 256 barev zobrazených v **barvy** paletu **barvy** okna.  
   
-     Barva vybraná se stane aktuální barvu na paletě barvy v **barvy** okna.  
+     Barva vybraná se stane aktuální barvu v **barvy** paletu **barvy** okna.  
   
     > [!NOTE]
     >  Počáteční paletu 256barevných imagí odpovídá na paletě vrácené `CreateHalftonePalette` rozhraní Windows API. Všechny ikony určený pro prostředí Windows by měl palety můžete zabránit blikání během palety realizace.  

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569453"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015544"
 ---
 # <a name="how-to-use-resource-templates"></a>Postupy: Použití šablon prostředků
 Prostředek šablony je vlastní prostředek, který jste uložili jako soubor s příponou .rct. Šablony prostředků pak může sloužit jako výchozí bod pro vytvoření dalších prostředků. Šablony prostředků ušetřit čas při vývoji další prostředky nebo skupiny prostředků, které sdílejí funkce, jako je standardní ovládací prvky a další opakované prvků. Například můžete chtít zahrnout tlačítko Nápověda a ikona logo společnosti v několika dialogových oknech. Provedete to tak rychle, vytvořte novou šablonu pole dialogové okno a přizpůsobit pomocí loga a na tlačítko Nápověda.  
@@ -46,7 +46,7 @@ Prostředek šablony je vlastní prostředek, který jste uložili jako soubor s
   
 4.  Zadejte název a umístění souboru nového .rct a klikněte na tlačítko **otevřít**.  
   
-5.  Nový soubor .rct se přidá do vašeho projektu a zobrazí se v Průzkumníkovi řešení pod **prostředky** složky.  
+5.  Nový soubor .rct se přidá do vašeho projektu a zobrazí se v **Průzkumníka řešení** pod **prostředky** složky.  
   
      Můžete teď poklikejte na soubor .rct a otevřete ho v okně dokumentu a pak přidat prostředky do ní (klikněte pravým tlačítkem na soubor v okně dokumentu a zvolte **přidat prostředek** z místní nabídky). Můžete poté přizpůsobit tyto prostředky a uložte soubor .rct.  
   
@@ -76,7 +76,6 @@ Prostředek šablony je vlastní prostředek, který jste uložili jako soubor s
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

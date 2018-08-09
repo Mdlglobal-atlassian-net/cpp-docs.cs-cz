@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648981"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015040"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
 Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace pro univerzální platformu Windows (UPW), který používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -59,17 +59,17 @@ Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytv
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Použití knihovny WRL vytvoření Media Foundation ve stupních šedi transformace komponenty  
   
-1.  V sadě Visual Studio, vytvořit **prázdné řešení** projektu. Název projektu, například `MediaCapture`.  
+1.  V sadě Visual Studio, vytvořit **prázdné řešení** projektu. Název projektu, například *MediaCapture*.  
   
-2.  Přidat **knihovny DLL (Universal Windows)** projektu do řešení. Název projektu, například `GrayscaleTransform`.  
+2.  Přidat **knihovny DLL (Universal Windows)** projektu do řešení. Název projektu, například *GrayscaleTransform*.  
   
-3.  Přidat **soubor Midl (.idl)** soubor do projektu. Název souboru, například `GrayscaleTransform.idl`.  
+3.  Přidat **soubor Midl (.idl)** soubor do projektu. Název souboru, například *GrayscaleTransform.idl*.  
   
 4.  Tento kód vložte do GrayscaleTransform.idl.  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  Pro nahrazení obsahu soubor pch.h, použijte následující kód.  
+5.  Pomocí následujícího kódu nahraďte obsah `pch.h`.  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytv
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  V tomto příkladu nepoužívá GrayscaleTransform.h. Můžete ho odebrat z projektu Pokud budete chtít.  
+7.  `GrayscaleTransform.h` v tomto příkladu nepoužívá. Můžete ho odebrat z projektu Pokud budete chtít.  
   
-8.  Použijte následující kód pro nahrazení obsahu GrayscaleTransform.cpp.  
+8.  Pomocí následujícího kódu nahraďte obsah `GrayscaleTransform.cpp`.  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytv
        DllGetClassObject                   PRIVATE
    ```   
   
-10. Použijte následující kód pro nahrazení obsahu dllmain.cpp.  
+10. Pomocí následujícího kódu nahraďte obsah `dllmain.cpp`.  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytv
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Použití knihovny WRL vlastní součást Media Foundation z aplikace C#  
   
-1.  Přidat nový **jazyka C# prázdná aplikace (XAML)** projektu `MediaCapture` řešení. Název projektu, například `MediaCapture`.  
+1.  Přidat nový **jazyka C# prázdná aplikace (XAML)** projektu `MediaCapture` řešení. Název projektu, například *MediaCapture*.  
   
 2.  V **MediaCapture** projektu, přidejte odkaz na `GrayscaleTransform` projektu. Další informace o postupu [postupy: Přidání nebo odebrání odkazů pomocí Správce odkazů](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).  
   
-3.  V Package.appxmanifest na **možnosti** kartu, vyberte možnost **mikrofon** a **webovou kameru**. Obě možnosti jsou nutné k zachycení fotky z webové kamery.  
+3.  V `Package.appxmanifest`na **možnosti** kartu, vyberte možnost **mikrofon** a **webovou kameru**. Obě možnosti jsou nutné k zachycení fotky z webové kamery.  
   
-4.  Do MainPage.xaml přidejte tento kód do kořenového adresáře [mřížky](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) element:  
+4.  V `MainPage.xaml`, přidejte tento kód do kořenového adresáře [mřížky](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) element:  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  Použijte následující kód pro nahrazení obsahu MainPage.xaml.cs.  
+5.  Pomocí následujícího kódu nahraďte obsah `MainPage.xaml.cs`.  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- Následující obrázek znázorňuje MediaCapture aplikace.  
+ Je vidět na následujícím obrázku `MediaCapture app`.  
   
  ![Aplikace MediaCapture zachytávání fotografii](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

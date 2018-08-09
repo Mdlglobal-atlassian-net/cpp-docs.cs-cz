@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 50503f06c3617d046c86db7fdcfd56555c1b4b8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606587"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011800"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Přesouvání a kopírování nabídek a příkazů nabídky
 Mohou přesunout nebo kopírovat nabídek a příkazů nabídky pomocí přetahování myší metody nebo pomocí příkazů v místní nabídce (klikněte pravým tlačítkem na nabídky).  
@@ -53,10 +53,9 @@ Mohou přesunout nebo kopírovat nabídek a příkazů nabídky pomocí přetaho
     > [!NOTE]
     >  Můžete také přetáhnout, zkopírujte a vložte jiným nabídkám v jiných oknech nabídky.  
   
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *příručce vývojáře v rozhraní .NET Framework.* Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem a [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

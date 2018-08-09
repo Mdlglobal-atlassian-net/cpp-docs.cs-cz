@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603547"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015530"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Obory názvů Platform, default a cli (rozšíření komponent C++)
 Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.  
@@ -41,7 +41,7 @@ Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s j
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 using namespace cli;  
 ```  
   

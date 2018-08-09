@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608609"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014910"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Zahrnutí sdílených (jen pro čtení) nebo vypočtených symbolů
 Při prvním vývojové prostředí přečte soubor prostředků vytvořený v jiné aplikaci, označí všechny soubory zahrnuté záhlaví jen pro čtení. Následně můžete použít [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md) přidat soubory hlaviček další symbolů jen pro čtení.  
@@ -37,7 +37,7 @@ Při prvním vývojové prostředí přečte soubor prostředků vytvořený v j
   
  Soubory zahrnuté symbolů můžete použít také v případě, že máte existující prostředky s definice symbolů, které definovat hodnotu symbolu pomocí výrazů spíše než jednoduché celých čísel. Příklad:  
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ Při prvním vývojové prostředí přečte soubor prostředků vytvořený v j
     > [!NOTE]
     >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  V **měrnice souborů jen pro čtení** pole, použijte **#include** direktivy kompilátoru k určení souboru, kam chcete uchovávat symbolů jen pro čtení.  
+2.  V **měrnice souborů jen pro čtení** pole, použijte `#include` direktivy kompilátoru k určení souboru, kam chcete uchovávat symbolů jen pro čtení.  
   
-     Nevolejte souboru Resource.h, protože se běžně používá hlavičkový soubor symbolů hlavní název souboru.  
+     Nevolejte soubor `Resource.h`, protože se běžně používá hlavičkový soubor symbolů hlavní název souboru.  
   
     > [!NOTE]
     >  **Důležité** zadejte v poli direktivy symbolů jen pro čtení je součástí souboru prostředků přesně během psaní. Ujistěte se, jaký typ neobsahuje chyby syntaxe nebo kontrolu pravopisu.  
@@ -76,7 +76,6 @@ Při prvním vývojové prostředí přečte soubor prostředků vytvořený v j
 4.  Klikněte na tlačítko **OK**.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

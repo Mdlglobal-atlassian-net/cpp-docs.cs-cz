@@ -1,5 +1,5 @@
 ---
-title: Hstring::Get – metoda | Microsoft Docs
+title: Hstring::Get – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2b36c6fd5ccfd8fa0429448fb3b7045762a461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 67a8bf626d2e3f26a2f182f2e1f099f14d29b779
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881234"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013337"
 ---
 # <a name="hstringget-method"></a>HString::Get – metoda
-Načte hodnotu základní HSTRING popisovač.  
+Načte hodnotu podkladového popisovače HSTRING.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HSTRING Get() const throw()  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Hodnota základní popisovač HSTRING  
+ Hodnotu podkladového popisovače HSTRING  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** corewrappers.h  

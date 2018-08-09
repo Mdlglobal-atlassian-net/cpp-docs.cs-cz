@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5517695da652dfd1eaa34b6ffd68fa90eac1a397
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605666"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012866"
 ---
 # <a name="selecting-controls"></a>Výběr ovládacích prvků
 Vyberte ovládací prvky na velikost, zarovnání, přesunutí, kopírovat, nebo je odstranit a pak provést operaci, kterou chcete. Ve většině případů je třeba vybrat více než jeden ovládací prvek při použití nástroje pro velikost a zarovnání na [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
  Při výběru ovládacího prvku, má šedé ohraničení kolem něj plný (aktivní) nebo prázdný (neaktivní) "úchyty," squares malý, který se zobrazí v ohraničení výběru. Když vyberete více ovládacích prvků, dominantního ovládacího prvku má plnou úchyty; všechny ostatní vybrané ovládací prvky mají prázdný úchyty.  
   
- Když jsou změny velikosti nebo zarovnání více ovládacích prvků, editor dialogového okna používá "dominantního ovládacího prvku" zjistit, jak se ostatní ovládací prvky velikosti nebo zarovnána. Ve výchozím nastavení dominantní ovládací prvek je první ovládací prvek.  
+ Při nastavování velikosti nebo zarovnání více ovládacích prvků **dialogové okno** editor používá "dominantního ovládacího prvku" zjistit, jak se ostatní ovládací prvky velikosti nebo zarovnána. Ve výchozím nastavení dominantní ovládací prvek je první ovládací prvek.  
   
 -   [Výběr více ovládacích prvků](../windows/selecting-multiple-controls.md)  
   

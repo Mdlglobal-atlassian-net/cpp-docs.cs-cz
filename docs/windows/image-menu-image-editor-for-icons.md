@@ -1,5 +1,5 @@
 ---
-title: Obrázek nabídky (Editor obrázků pro ikony) | Microsoft Docs
+title: Obrázek nabídky (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,66 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f8a1e5acdd2f17101f61866e050e7a28f80ea837
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880527"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019783"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Nabídka obrázku (editor obrázků pro ikony)
-Nabídka obrázku, která se zobrazí jenom v případě, že je aktivní editor obrázků, obsahuje příkazy pro úpravy bitové kopie, Správa palety barev a nastavení možností okno Editor obrázků. Příkazy pro použití obrázky zařízení kromě toho jsou k dispozici při práci s ikony a kurzory.  
+**Image** nabídky, která se zobrazí pouze tehdy, když **Image** editor není aktivní, obsahuje příkazy pro úpravy obrázků, Správa palet barev a nastavení **Editor obrázků** okna Možnosti. Kromě toho příkazy pro použití imagí zařízení jsou k dispozici při práci s ikonami a kurzory.  
   
- **Invertování barev**  
- Invertuje výběr barev. Další informace najdete v tématu [převrácení barev ve výběru](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
+ **Invertovat barvy**  
+ Invertuje barev. Další informace najdete v tématu [převrácení barev ve výběru](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).  
   
- **Překlopit vodorovných**  
- Převrátí bitovou kopii nebo výběr vodorovně. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
+ **Převrátit vodorovně**  
+ Převrátí obrázek nebo výběr vodorovně. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Překlopit Vertical**  
- Převrátí bitovou kopii nebo výběr svisle. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
+ **Převrátit svisle**  
+ Převrátí obrázek nebo výběr svisle. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Otočit 90 stupňů.**  
- Otočí obrázek nebo výběr 90 stupňů. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
+ **Otočit o 90 stupňů**  
+ Otočí obrázek nebo výběr o 90 stupňů. Další informace najdete v tématu [překlopení obrázku](../windows/flipping-an-image-image-editor-for-icons.md).  
   
- **Zobrazit barvy – okno**  
- Otevře se [barvy – okno](../windows/colors-window-image-editor-for-icons.md), v němž můžete vybrat barvy použité pro bitové kopie. Další informace najdete v tématu [práce s barvou](../windows/working-with-color-image-editor-for-icons.md).  
+ **Zobrazit okno barev**  
+ Otevře [okno barvy](../windows/colors-window-image-editor-for-icons.md), ve kterém můžete zvolit barev použitých pro vaši image. Další informace najdete v tématu [práce s barvou](../windows/working-with-color-image-editor-for-icons.md).  
   
- **Použijte výběr jako štětce**  
- Umožňuje vytvoření vlastního štětce z část obrázku. Výběr stane vlastního štětce, která distribuuje barev ve výběru v bitovou kopii. Zkopíruje výběr jsou ponechána v přetahování cestě. Tím pomaleji přetažení, jsou provedeny další kopie. Další informace najdete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
+ **Použít výběr jako štětce**  
+ Umožňuje vytvořit vlastní štětec z část obrázku. Váš výběr se změní vlastní štětec, který distribuuje barev ve výběru mezi bitovou kopii. Zkopíruje výběr jsou ponechána na cestě přetahování. Tím pomaleji se při přetahování, jsou provedeny další kopie. Další informace najdete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- **Kopírování a výběr obrysu**  
- Vytvoří kopii aktuální výběr a popisuje ho. Pokud barvu pozadí je obsažena v aktuálním výběru, bude vyloučena Pokud máte [transparentní](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) vybrané.  
+ **Kopírování a výběr osnovy**  
+ Vytvoří kopii aktuálního výběru a zvýrazní ji. Je-li barvu pozadí je obsažen v aktuálním výběru, bude vyloučena v případě, že máte [transparentní](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) vybrané.  
   
  **Upravit barvy**  
- Otevře se [výběr barvy vlastní](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), která umožňuje přizpůsobit barvy, můžete použít pro bitové kopie. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ Otevře [výběr vlastní barvy](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), které umožňuje přizpůsobit barvy, můžete použít pro vaši image. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Zatížení palety**  
- Otevře se [dialogové okno Načíst barvy palety](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), což umožňuje načíst barvy palety dříve uloží do souboru PAL.  
+ **Načíst paletu**  
+ Otevře [dialogové okno Načíst barvy palety](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), což vám umožní načíst barvy palety dříve uložený soubor .pal.  
   
- **Uložit palety**  
- Barvy palety uloží do souboru PAL.  
+ **Uložit paletu**  
+ Uloží do souboru .pal barvy palety.  
   
- **Kreslení neprůhledné**  
- Když vyberete, bude aktuální výběr neprůhledná. Pokud zaškrtnutí políčka zrušeno, díky aktuální výběr transparentní. Další informace najdete v tématu [výběr neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+ **Nakreslit neprůhledné**  
+ Pokud je vybráno, změní aktuální výběr neprůhledné. Není-li zaškrtnuto, změní aktuální výběr na průhledný. Další informace najdete v tématu [výběr neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
  **Editor panelu nástrojů**  
- Otevře se [dialogové okno Nový prostředek panelu nástrojů](../windows/new-toolbar-resource-dialog-box.md).  
+ Otevře [nový prostředek panelu nástrojů – dialogové okno](../windows/new-toolbar-resource-dialog-box.md).  
   
  **Nastavení mřížky**  
- Otevře se [dialogové okno Nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md) ve kterém můžete zadat mřížky pro bitové kopie.  
+ Otevře [dialogové okno Nastavení mřížky](../windows/grid-settings-dialog-box-image-editor-for-icons.md) ve kterém můžete zadat mřížky pro vaši image.  
   
- **Nový obrázek – typ**  
- Otevře se [nový \<zařízení > dialogové okno typ obrázku](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Jeden ikonu prostředků může obsahovat několik imagí různě; Windows můžete použít velikost příslušnou položku v závislosti na tom, jak se bude, který se má zobrazit. Nedojde ke změně velikosti na ikonu nový typ zařízení, ale spíš vytvoří novou bitovou kopii v rámci ikonu. Pouze u ikony a kurzory.  
+ **Nový typ obrázku**  
+ Otevře [nový \<zařízení > obrázku dialogové okno](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Jedna ikona prostředků může obsahovat několik imagí různé velikosti; Windows budou moct použít velikost příslušnou položku v závislosti na tom, jak se bude zobrazený. Nový typ zařízení nemohou měnit velikost ikony, ale místo toho vytvoří novou image v rámci ikonu. Platí jenom pro ikony a kurzory.  
   
  **Aktuální typ obrázku ikony nebo kurzoru**  
- Otevře podnabídky, které uvádí první dostupné kurzoru nebo ikonu Image (první devět). Poslední příkaz v podnabídce **více...** , otevře se [otevřete \<zařízení > dialogové okno Obrázek](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
+ Otevře se podnabídka, který obsahuje seznam prvních dostupné kurzoru nebo ikonu imagí (prvních devět). Poslední příkaz v podnabídce **více...** , otevře [otevřít \<zařízení > obrázku dialogové](../windows/open-device-image-dialog-box-image-editor-for-icons.md).  
   
- **Odstranit typ obrázku**  
- Odstraní vybrané zařízení image.  
+ **Smazat bitovou kopii**  
+ Odstraní image vybrané zařízení.  
   
  **Nástroje**  
- Spustí dílčí, který obsahuje všechny nástroje, které jsou k dispozici prostřednictvím [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md).  
+ Spustí podnabídku obsahující všechny nástroje, které jsou k dispozici [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
@@ -84,4 +84,3 @@ Nabídka obrázku, která se zobrazí jenom v případě, že je aktivní editor
 ## <a name="see-also"></a>Viz také  
  [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)
-

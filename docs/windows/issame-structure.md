@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b63e3784529edf8957654511af53373fd80799ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603582"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014257"
 ---
 # <a name="issame-structure"></a>IsSame – struktura
 Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 template <  
    typename T1,  
    typename T2  

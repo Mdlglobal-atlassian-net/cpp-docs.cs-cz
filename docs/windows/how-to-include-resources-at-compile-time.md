@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571333"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018913"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Postupy: Zahrnutí prostředků v čase kompilace
 Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všech prostředků v jednom souboru prostředku skriptů (.rc). Ale můžete přidat prostředky v jiných souborech do aktuálního projektu v době kompilace v jejich uvedení v seznamu **směrnice času kompilace** pole [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md).  
@@ -37,7 +37,7 @@ Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všech pros
   
 -   Chcete-li přidat komentáře pro příkazy prostředků, které nebudou se odstraní při ukládání souboru .rc.  
   
-     Editory prostředků přímo číst soubory .rc nebo souboru resource.h. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a soubor resource.h). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc.  
+     Editory prostředků nečtou přímo .rc nebo `resource.h` soubory. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a `resource.h` souboru). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc.  
   
 -   Chcete zahrnout prostředky, které již byly vývoji a testování a není nutné další změny. (Všechny soubory, které jsou zahrnuty, ale nemají příponou .rc nebude možné upravovat podle editory prostředků.)  
   
@@ -58,7 +58,6 @@ Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všech pros
      Prostředky v souborech tímto způsobem jsou součástí vašeho spustitelného souboru k v době kompilace. Nejsou přímo k dispozici pro úpravy nebo změny při práci na souboru .rc hlavního projektu. Budete muset otevřít soubory zahrnuté .rc odděleně. Všechny soubory, které jsou zahrnuty, ale nemají příponou .rc nebude možné upravovat podle editory prostředků.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

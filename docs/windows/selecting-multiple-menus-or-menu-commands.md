@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644853"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020210"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Výběr více nabídek nebo příkazů nabídky
 Můžete vybrat více názvy nabídek nebo příkazů nabídky k provedení operace hromadného například odstranění nebo změna vlastností.  
@@ -34,7 +34,6 @@ Můžete vybrat více názvy nabídek nebo příkazů nabídky k provedení oper
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

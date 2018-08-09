@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603342"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018358"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Umožňuje použít klíčová slova jazyka Visual C++ jako identifikátory.  
@@ -31,7 +31,7 @@ Umožňuje použít klíčová slova jazyka Visual C++ jako identifikátory.
 ## <a name="all-platforms"></a>Všechny platformy  
 ### <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Použití **__identifier** – klíčové slovo pro identifikátory, které nejs
 ### <a name="examples"></a>Příklady  
  **Příklad**  
   
- V následujícím příkladu třída s názvem `template` se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá `template` třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
+ V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Příklady  
   
- V následujícím příkladu třída s názvem `template` se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá `template` třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
+ V následujícím příkladu třída s názvem **šablony** se vytvoří v jazyce C# a distribuuje jako knihovnu DLL. V aplikaci Visual C++, která používá **šablony** třídy, **__identifier** – klíčové slovo ukrývá fakt, který **šablony** je standardní – klíčové slovo C++.  
   
 ```cs  
 // identifier_template.cs  

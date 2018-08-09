@@ -1,5 +1,5 @@
 ---
-title: Symboly pro programování oken MFC | Microsoft Docs
+title: Symboly pro programování MFC Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882690"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012778"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symboly pro programování oken MFC
-Tyto symboly jsou taky součástí MFC podpůrné soubory, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly se používá hlavně s nabídkami. Při práci s nabídkami v editoru nabídky, tyto symboly se zobrazí v okně vlastnosti přidružené k běžné příkazy nabídky. Například pokud aplikace obsahuje nabídku souborů pomocí příkazu pro ukončení, tento příkaz bude spojený s symbol id_app_exit – v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  
+Tyto symboly jsou taky součástí soubory podpory knihovny MFC, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používá hlavně s nabídkami. Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **okně s vlastnostmi** přidružené k běžné příkazy nabídky. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -62,7 +62,7 @@ Tyto symboly jsou taky součástí MFC podpůrné soubory, ale podporují standa
 |ID_WINDOW_TILE_VERT –|ID_WIZBACK|ID_WIZFINISH|  
 |ID_WIZNEXT|IDABORT|IDC_STATIC|  
 |IDCANCEL|IDD_ABOUTBOX|IDIGNORE|  
-|IDNO|IDOK|IDP_OLE_INIT_FAILED –|  
+|IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   
 ## <a name="requirements"></a>Požadavky  

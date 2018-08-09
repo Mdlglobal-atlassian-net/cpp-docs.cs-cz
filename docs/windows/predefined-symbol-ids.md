@@ -1,5 +1,5 @@
 ---
-title: Předdefinovaná identifikátory Symbol | Microsoft Docs
+title: Předdefinované symboly ID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876420"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017237"
 ---
 # <a name="predefined-symbol-ids"></a>ID předdefinovaných symbolů
-Abyste před zahájením nového projektu, v závislosti na typu projektu některé symbol ID předdefinovaných pro vaše použití. Tyto identifikátory symbol podporují různé typy projektů, jako je například MFC a knihovny. Představují běžné úkoly, které jsou obvykle součástí jakékoli aplikace, nebo akce hardwaru položek, jako jsou myši nebo tiskárny.  
+Když začnete nový projekt, v závislosti na typu projektu pro použití předdefinovaných některé ID symbolů. Tyto identifikátory symbol podporují různé typy projektů, jako je například knihovny MFC a knihovny. Představují běžné úkoly, které jsou obvykle zahrnuta v jakékoli aplikaci nebo akce položek hardwaru, jako jsou tiskárny a myši.  
   
- Tyto identifikátory symbol stane důležité při práci s prostředky. Jsou k dispozici, když upravujete tabulky akcelerátoru; Některé z nich jsou už přidružené virtuální klíče. Jsou k dispozici pro vás [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Některé z ID předdefinovaných symbolů můžete přiřadit nové prostředky, nebo můžete přiřadit klávesy akcelerátoru k nim a funkcí spojených s symbol, který se automaticky přidruží ID kombinaci kláves.  
+ Tyto identifikátory symbol významu nabývají při práci s prostředky. Jsou k dispozici při úpravách tabulkách akcelerátoru. Některé z nich jsou už přidružené virtuální klávesy. Jsou také k dispozici, až [okno vlastností](/visualstudio/ide/reference/properties-window). Některé z ID předdefinovaných symbolů můžete přiřadit nové prostředky, nebo můžete přiřadit klávesové zkratky pro jejich a funkce přidružené k symbolu, který automaticky přiřadí ID klíče kombinaci.  
   
- Tyto knihovny mají předdefinované symboly, které se zobrazí jako součást projektu:  
+ Tyto knihovny obsahuje předdefinované symboly, které se zobrazí jako součást projektu:  
   
 -   [Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)  
   
@@ -39,10 +39,8 @@ Abyste před zahájením nového projektu, v závislosti na typu projektu někte
     > [!NOTE]
     >  Předdefinované symboly jsou vždy jen pro čtení.  
   
-
-  
 ## <a name="requirements"></a>Požadavky  
- Win32, MFC a knihovny ATL  
+ Win32, MFC nebo ATL  
   
 ## <a name="see-also"></a>Viz také  
  [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)

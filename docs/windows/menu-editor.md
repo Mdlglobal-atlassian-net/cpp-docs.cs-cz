@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606247"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018332"
 ---
 # <a name="menu-editor"></a>Editor nabídek
-Nabídky umožňuje uspořádat příkazy v podobě logické a snadno najít. V nabídce editoru můžete vytvořit a upravit nabídky při práci přímo s nabídek, který se velmi podobá v dokončenou aplikaci.  
+Nabídky umožňuje uspořádat příkazy v podobě logické a snadno najít. S **nabídky** editoru můžete vytvářet a upravovat nabídky při práci přímo s nabídek, který se velmi podobá v dokončenou aplikaci.  
   
-Pro projekty Visual C++ můžete použít editor nabídky:  
+Pro projekty Visual C++, můžete použít **nabídky** editoru:  
   
 -   [Vytvoření nabídky](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ Pro projekty Visual C++ můžete použít editor nabídky:
 -   [Změnit vlastnosti příkazu nabídky](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Když se editor nabídky v mnoha případech, můžete kliknout na pravé tlačítko myši zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.  
+    >  Při použití **nabídky** editoru v mnoha případech můžete kliknutím na tlačítko pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.  
   
     > [!NOTE]
-    >  Pro programy třídy knihovny MFC (Microsoft Foundation) a knihovny ATL můžete použít Průvodce kód k připojení příkazů nabídky ke kódu. Další informace najdete v tématu [přidání události](../ide/adding-an-event-visual-cpp.md).  
+    >  Pro programy třídy knihovny MFC (Microsoft Foundation) a knihovny ATL, můžete použít **průvodců kódem** připojit příkazů nabídky ke kódu. Další informace najdete v tématu [přidání události](../ide/adding-an-event-visual-cpp.md).  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   

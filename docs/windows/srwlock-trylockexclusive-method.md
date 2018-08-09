@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652767"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013477"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive – metoda
 Pokusí se získat **srwlock –** objektu ve výhradním režimu pro aktuální nebo zadané **SRWLock** objektu. Pokud je volání úspěšné, volající vlákno převezme vlastnictví zámku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 SyncLockExclusive TryLockExclusive();  
   
 static SyncLockExclusive TryLockExclusive(  

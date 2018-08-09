@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98057773d6cbb51fe5aacc3ac814af89532bd887
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: efbf2910fb025370e3373b91b418a4e2a2df5bc5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607982"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015778"
 ---
 # <a name="progid"></a>progid
 Určuje identifikátor pro objekt modelu COM ProgID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ progid(  
    name  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  *Jméno*  
  Identifikátor ProgID reprezentující objekt.  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570630"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012531"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Postupy: Zpracování událostí s použitím knihovny WRL
 Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) přihlásit k odběru a zpracování událostí objekt prostředí Windows Runtime.  
@@ -35,7 +35,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h deklaruje typy, které jsou nutné k vytvoření výčtu zařízení.  
+     `Windows.Devices.Enumeration.h` deklaruje typy, které jsou nutné k vytvoření výčtu zařízení.  
   
      Doporučujeme využívat `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.  
   
@@ -90,7 +90,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-events.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
+ Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-events.cpp` a pak spusťte následující příkaz **příkazový řádek sady Visual Studio** okna.  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

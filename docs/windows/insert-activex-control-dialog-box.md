@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bbf381170da99a17ee8c701d8d3f3251c88729d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0201619d463d677eae312d70a543a19887dbdb40
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607121"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011787"
 ---
 # <a name="insert-activex-control-dialog-box"></a>Dialogové okno Vložit ovládací prvek ActiveX
 Toto dialogové okno umožňuje [vložení ovládacích prvků ActiveX do vašem dialogovém okně](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) při použití [editoru dialogového okna](../windows/dialog-editor.md).  
   
- **Ovládací prvek ActiveX**  
+### <a name="activex-control"></a>Ovládací prvek ActiveX 
  Zobrazí seznam ovládacích prvků ActiveX. Vložení ovládacího prvku z tohoto dialogového okna negeneruje obálkovou třídu. Pokud potřebujete obálkovou třídu, použijte [zobrazení tříd](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) si ji vytvořit (Další informace najdete v tématu [přidání třídy](../ide/adding-a-class-visual-cpp.md)). Ovládací prvek ActiveX v tomto seznamu nezobrazí, zkuste nainstalovat ovládací prvek podle pokynů jeho dodavatele.  
   
- **Cesta**  
+### <a name="path"></a>Cesta  
  Zobrazí soubor, ve kterém se nachází v ovládacím prvku ActiveX.  
   
- Ovládací prvky můžete umístit v okně nástrojů pro snadný přístup. Další informace najdete v tématu [dialogové okno Přizpůsobit panel nástrojů](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
+ Můžete umístit ovládací prvky **nástrojů** okno pro snadný přístup. Další informace najdete v tématu [dialogové okno Přizpůsobit panel nástrojů](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   

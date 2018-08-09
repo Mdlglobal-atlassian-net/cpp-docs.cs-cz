@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603715"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013711"
 ---
 # <a name="implementscategory"></a>implements_category
 Určuje součást kategorie implementované cílové třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ Určuje součást kategorie implementované cílové třídy.
  Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
   
 ## <a name="example"></a>Příklad  
- Následující kód určuje, že následující objekt implementuje kategorie ovládacího prvku.  
+ Následující kód určuje, že následující objekt implementuje `Control` kategorie.  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  

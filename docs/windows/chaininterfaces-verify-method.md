@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b71581687ec69a4aff85f649e85ebfe10c0a844f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81b3a166215f7731a43333e230621072d760260c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650466"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013529"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify – metoda
 Ověřuje, že každé rozhraní určené parametry šablony *I0* prostřednictvím *I9* dědí z `IUnknown` a/nebo `IInspectable`a že *I0* dědí z *I1* prostřednictvím *I9*.  
@@ -35,8 +35,7 @@ WRL_NOTHROW __forceinline static void Verify();
   
 ## <a name="remarks"></a>Poznámky  
  Pokud se ověření nezdaří, **static_assert** vydá chybovou zprávu s popisem chyby.  
-  
-## <a name="remarks"></a>Poznámky  
+
  Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* prostřednictvím *I9* jsou volitelné.  
   
 ## <a name="requirements"></a>Požadavky  

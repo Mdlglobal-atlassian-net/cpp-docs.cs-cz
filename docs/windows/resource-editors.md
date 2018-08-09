@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604457"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016993"
 ---
 # <a name="resource-editors"></a>Editory prostředků
-Editor prostředků je specializované prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků Visual Studio techniky a rozhraní vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazit a upravit prostředky ve vhodném editoru](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [ve verzi preview prostředky](../windows/previewing-resources.md).  
+A **prostředků** editoru je specializované prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků Visual Studio techniky a rozhraní vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazit a upravit prostředky ve vhodném editoru](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [ve verzi preview prostředky](../windows/previewing-resources.md).  
   
  Otevře se editor odpovídající automaticky při vytvoření nebo otevření prostředku.  
   

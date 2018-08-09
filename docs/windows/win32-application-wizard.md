@@ -1,5 +1,5 @@
 ---
-title: Win32 – Průvodce aplikací | Microsoft Docs
+title: Průvodce aplikací Win32 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891422"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014218"
 ---
 # <a name="win32-application-wizard"></a>Win32 – průvodce aplikací
-Průvodce aplikace Win32 Visual C++ umožňuje vytvořit čtyři typy projektů (uvedené v záhlaví v následující tabulce). V každém případě můžete zadat další možnosti, které jsou vhodné pro typ projektu, který můžete otevřít. Následující tabulka uvádí, které možnosti jsou dostupné pro jednotlivé typy aplikací.  
+Průvodce aplikace Win32 Visual C++ umožňuje vytvořit čtyři typy projektů (uvedeny v záhlaví v následující tabulce). V každém případě můžete zadat další možnosti, které jsou vhodné pro typ projektu, které můžete otevřít. Následující tabulka uvádí, jaké možnosti jsou k dispozici pro všechny typy aplikací.  
   
-|Typ podpory|Konzolová aplikace|Aplikace spustitelný soubor (Windows)|Knihovna DLL|Statická knihovna|  
+|Typ podpory|Konzolová aplikace|Aplikace spustitelný soubor (Windows)|Dynamická knihovna|Statická knihovna|  
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
 |**Prázdný projekt**|Ano|Ano|Ano|Ne|  
-|**Export symbolů**|Ne|Ne|Ano|Ne|  
-|**Předkompilovaných hlaviček**|Ne|Ne|Ne|Ano|  
-|**Podpora ATL**|Ano|Ne|Ne|Ne|  
-|**Podpora MFC**|Ano|Ne|Ne|Ano|  
+|**Symboly exportu**|Ne|Ne|Ano|Ne|  
+|**Předkompilované hlavičky**|Ne|Ne|Ne|Ano|  
+|**ATL – podpora**|Ano|Ne|Ne|Ne|  
+|**Podpora knihovny MFC**|Ano|Ne|Ne|Ano|  
   
 ## <a name="overview"></a>Přehled  
- Tato stránka průvodce popisuje aktuální nastavení projektu pro aplikace Win32, kterou vytváříte. Ve výchozím nastavení jsou nastavené následující možnosti:  
+ Tato stránka průvodce popisuje aktuální nastavení projektu pro vytvářenou aplikaci Win32. Ve výchozím nastavení jsou nastavené následující možnosti:  
   
--   Projekt je aplikace systému Windows.  
+-   Projekt je aplikace Windows.  
   
 -   Projekt není prázdný.  
   
--   Projekt obsahuje žádné symboly export.  
+-   Projekt neobsahuje žádné symboly pro export.  
   
--   Projekt nepoužívá předkompilovaný hlavičkový soubor (Tato možnost je dostupná pro projekty statických knihoven pouze).  
+-   Projekt nepoužívá soubor předkompilované hlavičky (Tato možnost je k dispozici pro projekty statických knihoven pouze).  
   
--   Tento projekt zahrnuje podporu pro knihovny MFC ani ATL.  
+-   Projekt nezahrnuje podporu pro knihovny MFC ani ATL.  
   
- Chcete-li změnit toto výchozí nastavení, klikněte na tlačítko [nastavení aplikace](../windows/application-settings-win-32-project-wizard.md) v levém sloupci průvodce a proveďte požadované změny.  
+ Chcete-li změnit výchozí nastavení, klikněte na tlačítko [nastavení aplikace](../windows/application-settings-win-32-project-wizard.md) kartu v levém sloupci průvodce a proveďte požadované změny.  
   
- Po vytvoření aplikace systému Windows, můžete přidat obecné třídy C++ pomocí [Obecné](../ide/generic-cpp-class-wizard.md) kód průvodce. Můžete přidat další položky, jako jsou soubory, soubory hlaviček, zdroje nebo textové soubory HTML.  
+ Po vytvoření aplikace klasické pracovní plochy Windows, můžete přidat obecnou C++ třídu pomocí [obecný](../ide/generic-cpp-class-wizard.md) Průvodce kódem. Lze přidat další položky, jako jsou soubory HTML, soubory hlaviček, prostředky nebo textové soubory.  
   
 > [!NOTE]
->  Nelze přidat třídy ATL a MFC – třídy můžete přidat pouze ty typy aplikace pracovní plochy Windows, které podporují MFC (viz předchozí tabulka).  
+>  Nelze přidat třídy ATL a MFC – třídy můžete přidat pouze tyto typy aplikace klasické pracovní plochy Windows, které podporují knihovny MFC (viz předchozí tabulka).  
   
- Průvodce vytvoří soubory můžete zobrazit pro svůj projekt v **Průzkumníku řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v souboru projektu vygenerované souboru ReadMe.txt. Další informace o typech souborů [typy souborů vytvořené pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ Můžete zobrazit soubory Průvodce vytvoří pro váš projekt v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru `ReadMe.txt`. Další informace o typech souborů [typy souborů vytvořené pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření aplikací prázdný Windows Desktop](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Vytváření aplikací klasické pracovní plochy Windows prázdný](../windows/creating-an-empty-windows-desktop-application.md)   
  [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)

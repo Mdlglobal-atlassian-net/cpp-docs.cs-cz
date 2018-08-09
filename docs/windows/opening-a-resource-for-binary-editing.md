@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605952"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014504"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Otevření prostředku pro binární úpravy
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Chcete-li otevřít prostředek klasické pracovní plochy Windows pro binární úpravy  
@@ -36,7 +36,7 @@ ms.locfileid: "39605952"
 2.  Klikněte pravým tlačítkem na zdroj a klikněte na tlačítko **Open binární Data** z místní nabídky.  
   
     > [!NOTE]
-    >  Pokud používáte [zobrazení prostředků](../windows/resource-view-window.md) okno otevřít prostředek ve formátu, že Visual Studio nedokáže rozpoznat (například RCDATA nebo vlastní prostředek), prostředek se automaticky otevře v binárním editoru.  
+    >  Pokud používáte [zobrazení prostředků](../windows/resource-view-window.md) okno otevřít prostředek ve formátu, že Visual Studio nedokáže rozpoznat (například RCDATA nebo vlastní prostředek), prostředek se automaticky otevře v **binární** editoru.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Otevřete spravovaný prostředek pro binární úpravy  
   
@@ -58,10 +58,9 @@ Binární Data pro dialogové okno se zobrazí v binárním editoru
  Jenom konkrétní hodnoty ASCII jsou reprezentovány v binárním editoru (0x20 prostřednictvím 0x7E). Rozšířené znaky zobrazují jako tečky v části hodnotu ASCII binární editor (pravý panel). "Tisknutelné" znaky jsou hodnoty ASCII 32 prostřednictvím 126.  
   
 > [!NOTE]
->  Pokud chcete použít binární editor prostředku už upravována v jiném okně editoru, nejprve zavřete ostatní okna editoru.  
+>  Pokud chcete použít **binární** editor prostředku už upravována v jiném okně editoru nejprve zavřít ostatní okna editoru.  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  

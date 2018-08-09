@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607021"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018279"
 ---
 # <a name="purpose-of-attributes"></a>Účel atributů
 Atributy rozšíření bez narušení classic struktura jazyka C++ v aktuálně možné směry. Atributy umožňují poskytovatelů (samostatné knihovny DLL) rozšíření funkcí jazyka dynamicky. Hlavním cílem atributy je pro zjednodušení vytváření komponent modelu COM, kromě zvýšit úroveň produktivity pro vývojáře komponenty. Atributy lze použít na téměř jakémkoli C++ konstrukce, jako jsou třídy, datové členy nebo členské funkce. Zvýraznění výhody této nové technologie je následující:  
@@ -35,7 +35,7 @@ Atributy rozšíření bez narušení classic struktura jazyka C++ v aktuálně 
   
  Například implementovat jednoduché událostní jímka pro obecné třídy ATL, můžete použít [event_receiver](../windows/event-receiver.md) atribut pro konkrétní třídu jako `CMyReceiver`. `event_receiver` Atribut je potom kompilovány pomocí kompilátoru jazyka Visual C++, který vloží správný kód do souboru objektu.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d508c6196ad9b9f32b4bcb0704272a500d0e952
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4c52b905420dcb576705d63be7d7bdce27c5eea6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643040"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015240"
 ---
 # <a name="emitidl"></a>emitidl
 Určuje, zda jsou všechny následné IDL – atributy zpracovat a umístí do generovaného souboru.  
@@ -75,4 +75,4 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 ## <a name="see-also"></a>Viz také  
 [Atributy kompilátoru](../windows/compiler-attributes.md)   
 [Samostatné atributy](../windows/stand-alone-attributes.md)   
-[Ukázky atributů](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+[Ukázky atributů](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -1,5 +1,5 @@
 ---
-title: Podpora vícebajtových znakových sad (MBCS) | Microsoft Docs
+title: Podpora vícebajtových znakových sad (MBCS) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,57 +19,57 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46eb8a3db986c1709aa23da9b96b03867837066a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863631"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012817"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Podpora vícebajtových znakových sad (MBCS)
 Vícebajtové znakové sady (MBCS) jsou starším přístupem k potřebě podporovat znakové sady, které nelze reprezentovat jediným bajtem, jako například japonštinu a čínštinu. Při novém vývoji by měla být pro všechny textové řetězce použita sada Unicode, snad kromě systémových řetězců, které koncový uživatel neuvidí. Sada MBCS je starou technologií a pro nový vývoj se nedoporučuje.  
   
- Nejběžnější MBCS implementace je dvoubajtové znakové sady (DBCS). Visual C++ v obecné a rozhraní MFC zejména je plně podporují pro znaky DBCS.  
+ Většina běžných implementací znakové sady MBCS je dvoubajtové znakové sady (DBCS). Obecný Visual C++ a knihovnou MFC zejména se plně podporují pro znaky DBCS.  
   
- Ukázky naleznete v části soubory MFC zdrojového kódu.  
+ Ukázky najdete v souborech zdrojového kódu knihovny MFC.  
   
- Pro platformy použité na trzích, jejichž jazyky použít velké znakových sad je nejlepší alternativou k Unicode MBCS. MFC MBCS podporuje pomocí internationalizace datové typy a C běhové funkce. Stejné byste měli provést v kódu.  
+ Pro platformy použité na trzích, jehož jazyky použít velkých znakových sad nejlepší alternativou do kódování Unicode je znakové sady MBCS. MFC podporuje znakové sady MBCS pomocí internationalizace datové typy a funkce jazyka C za běhu. Stejné byste měli dělat ve vašem kódu.  
   
- V části MBCS kódování znaků v bajtech 1 nebo 2. V 2bajtová znaků, první nebo úvodní bajt signalizuje, že ji a následující bajtů se interpretovat jako jeden znak. Prvním bajtem pochází z rozsahu kódů, které jsou vyhrazené pro použití jako úvodní bajty. Který rozsah bajtů může být úvodní bajty závisí na znaková stránka používá. Například japonské znaková stránka 932 používá rozsah 0x81 až 0x9F jako úvodní bajty, ale korejské znakové stránky 949 používá jiný rozsah.  
+ V rámci znakové sady MBCS kódování znaků v 1 nebo 2 bajty. 2bajtové znaky, první nebo vedoucí bajt signalizuje, že ho a následující bajt jsou interpretovány jako jeden znak. První bajt pochází z rozsahu vyhrazené pro použití jako úvodní bajty kódů. Které rozsahy bajtů, může být vedoucí bajt závisí na znakové stránce. Například japonské znakovou stránku 932 používá jako vedoucí bajt rozsahu 0x81 prostřednictvím 0x9F, ale korejské znaková stránka 949 používá jiný rozsah.  
   
- Vezměte v úvahu všechny následující ve vašem MBCS programování.  
+ Vezměte v úvahu všechny následující programování vaše znakové sady MBCS.  
   
  Znaky znakové sady MBCS v prostředí  
- Znaky znakové sady MBCS se mohou objevit v řetězcích, jako jsou názvy souborů a adresářů.  
+ Znaky znakové sady MBCS se mohou objevit v řetězce, jako jsou názvy souborů a adresářů.  
   
- Operace úprav  
- Operace v aplikacích MBCS úprav pracovat na znaků, ne v bajtech. Vsuvka by neměl rozdělit znak, šipka vpravo přesuňte jeden znak doprava a tak dále. **Odstranit** , měli byste odstranit znak; **Vrátit zpět** by znovu vložit.  
+### <a name="editing-operations"></a>Operace úprav  
+ Operace v aplikacích znakové sady MBCS úprav pracovat na znaky, ne v bajtech. Blikající kurzor by neměl rozdělit znaku, **šipka vpravo** klíč by měl přesunout jeden znak doprava a tak dále. **Odstranit** měli odstranit znak; **Zpět** by měl znovu.  
   
- Zpracování řetězce  
- V aplikaci, která používá MBCS představuje zpracování řetězce speciální problémy. Znaky obou šířek jsou kombinované ve jeden řetězec; proto musí nezapomeňte zkontrolovat úvodní bajty.  
+### <a name="string-handling"></a>Zpracování řetězců  
+ V aplikaci, která používá znakovou sadu MBCS zpracování řetězce představuje zvláštní problémy. Znaky obou šířek směšování jeden řetězec; Proto nezapomeňte zkontrolovat úvodní bajty.  
   
- Podpora běhové knihovny  
- Běhové knihovny jazyka C a rozhraní MFC podporují jednobajtové, MBCS a Unicode programování. Jednobajtové řetězce jsou zpracovávány pomocí `str` řadu běhové funkce MBCS řetězce jsou zpracovávány pomocí odpovídajících `_mbs` funkce a řetězců v kódu Unicode jsou zpracovávány pomocí odpovídajících *serveru webového obsahu* funkce. Implementace funkce člena třídy knihovny MFC pomocí přenosné běhové funkce, které mapují správné okolností na normální `str` rodiny funkce, funkce znakové sady MBCS nebo funkce Unicode, jak je popsáno v "Přenositelnost MBCS/Unicode."  
+### <a name="run-time-library-support"></a>Podpora knihovny run-time  
+ Podpora knihovny run-time jazyka C a MFC jednobajtové znakové sady MBCS a Unicode programování. Jednobajtové řetězce se zpracovávají `str` řadu funkcí modulu runtime, znakové sady MBCS řetězce se zpracovávají odpovídající `_mbs` funkce a řetězců v kódu Unicode se zpracovávají odpovídající `wcs` funkce. Implementace funkce člena třídy knihovny MFC pomocí přenosné běhové funkce, které se mapují správné okolností na normální `str` produktovou řadu funkcí, znakové sady MBCS funkce nebo funkce Unicode, jak je popsáno v "Přenositelnosti znakové sady MBCS/Unicode."  
   
- Přenositelnost MBCS/Unicode  
- Pomocí souboru Tchar.h záhlaví, můžete vytvořit jednobajtové, MBCS a Unicode aplikací ze stejného zdroje. Tchar.h definuje makra s *_tcs* , který mapování na `str`, `_mbs`, nebo *wcs* podle potřeby. Pokud chcete vytvořit MBCS, definujte symbol **_MBCS**. Chcete-li sestavit Unicode, definujte symbol **_UNICODE**. Ve výchozím nastavení **_MBCS** je definována pro aplikace MFC. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+### <a name="mbcsunicode-portability"></a>Přenositelnosti znakové sady MBCS/Unicode  
+ Pomocí souboru Tchar.h záhlaví, můžete vytvořit jednobajtové znakové sady MBCS a Unicode aplikace ze stejného zdroje. Tchar.h definuje předponu makra *_tcs* , které mapují na `str`, `_mbs`, nebo `wcs` funkcí, podle potřeby. Pokud chcete vytvořit znakové sady MBCS, definujte symbol `_MBCS`. Chcete-li sestavit Unicode, definujte symbol `_UNICODE`. Ve výchozím nastavení `_MBCS` je definováno pro aplikace knihovny MFC. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
 > [!NOTE]
->  Není definován chování, pokud obě definujete **_UNICODE** a **_MBCS**.  
+>  Chování není definováno, pokud definujete obě `_UNICODE` a `_MBCS`.  
   
- Soubory hlaviček Mbctype.h a Mbstring.h definovat MBCS specifické funkce a makra, které může být nutné v některých případech. Například `_ismbblead` zjistíte, jestli konkrétní bajtů v řetězci je úvodní bajt.  
+ Soubory hlaviček Mbctype.h a Mbstring.h definovat specifické znakové sady MBCS funkcemi a makry, která může být nutné v některých případech. Například `_ismbblead` zjistíte, zda konkrétní bajtů v řetězci je vedoucí bajt.  
   
- Pro mezinárodní přenositelnost kódu s vaším programem [Unicode](../text/support-for-unicode.md) nebo vícebajtových znakových sad (MBCS).  
+ Mezinárodní přenositelnost kódu vašeho programu pomocí [Unicode](../text/support-for-unicode.md) nebo vícebajtové znakové sady (MBCS).  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?  
   
--   [Povolit MBCS v mém programu](../text/international-enabling.md)  
+-   [Povolit znakovou sadu MBCS v mé aplikaci](../text/international-enabling.md)  
   
--   [Povolit kódování Unicode a MBCS v mém programu](../text/internationalization-strategies.md)  
+-   [Povolit kódování Unicode a MBCS v mé aplikaci](../text/internationalization-strategies.md)  
   
--   [Použít k vytvoření mezinárodního programu MBCS](../text/mbcs-programming-tips.md)  
+-   [Vytvoření mezinárodní programu pomocí znakové sady MBCS](../text/mbcs-programming-tips.md)  
   
--   [Zobrazit souhrn programování znakové sady MBCS](../text/mbcs-programming-tips.md)  
+-   [Prohlédnout souhrnné informace o programování znakové sady MBCS](../text/mbcs-programming-tips.md)  
   
 -   [Další informace o mapování obecného textu pro přenositelnost šířky bajtu](../text/generic-text-mappings-in-tchar-h.md)  
   

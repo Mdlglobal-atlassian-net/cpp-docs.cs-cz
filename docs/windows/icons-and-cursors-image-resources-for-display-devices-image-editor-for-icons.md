@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604613"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017831"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony a kurzory: prostředky obrázků pro zařízení s displejem (editor obrázků pro ikony)
-Ikony a kurzory jsou grafických prostředků, které může obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zařízení s displejem. Kromě toho kurzor má "aktivního bodu," požadované místo Windows používá ke sledování jeho pozice. Ikony a kurzory jsou vytvořeny a upravovat pomocí editoru obrázků, jako jsou rastrové obrázky a další Image.  
+Ikony a kurzory jsou grafických prostředků, které může obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zařízení s displejem. Kromě toho kurzor má "aktivního bodu," požadované místo Windows používá ke sledování jeho pozice. Ikony a kurzory jsou vytvořeny a upravovat pomocí **Image** editoru, jako jsou rastrové obrázky a další Image.  
   
- Při vytváření nové ikony nebo kurzoru s editoru obrázků nejprve vytvoří bitovou kopii standardních typů. Na obrázku je zpočátku vyplněn barvou obrazovky (transparentní). Pokud se image nachází kurzor, aktivního bodu je zpočátku levý horní roh (souřadnice 0; 0).  
+ Při vytváření nové ikony nebo kurzoru, **Image** editoru nejprve vytvoří bitovou kopii standardních typů. Na obrázku je zpočátku vyplněn barvou obrazovky (transparentní). Pokud se image nachází kurzor, aktivního bodu je zpočátku levý horní roh (souřadnice 0; 0).  
   
- Ve výchozím nastavení editoru obrázků podporuje vytváření dalších obrázků pro zařízení uvedené v následující tabulce. Můžete vytvářet Image pro jiná zařízení tak, že zadáte parametry šířku, výšku a počet barev do [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md).  
+ Ve výchozím nastavení **Image** editor podporuje vytváření dalších bitových kopií pro zařízení uvedené v následující tabulce. Můžete vytvářet Image pro jiná zařízení tak, že zadáte parametry šířku, výšku a počet barev do [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Pomocí editoru obrázků můžete prohlížet 32bitové obrázky, ale nemůžete je upravovat.  
+>  Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.  
   
 |Barva|Šířka (v pixelech)|Výška (v pixelech)|  
 |-----------|----------------------|-----------------------|  

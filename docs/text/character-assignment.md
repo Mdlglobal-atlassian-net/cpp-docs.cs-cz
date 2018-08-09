@@ -1,5 +1,5 @@
 ---
-title: Znak přiřazení | Microsoft Docs
+title: Přiřazení znaků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856694"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010409"
 ---
 # <a name="character-assignment"></a>Přiřazení znaků
-Podívejte se na následující příklad, ve kterém `while` smyčky prohledá řetězec, zkopíruje všechny znaky s výjimkou 'X' do jiného řetězce:  
+Zvažte následující příklad, ve kterém **při** smyčky vyhledá v řetězci, zkopíruje všechny znaky s výjimkou "X" do jiného řetězce:  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- Kód zkopíruje bajt `sz2` do umístění, na kterou odkazuje `sz1`, pak zvýší `sz1` přijímat další bajtů. Ale pokud další znak v `sz2` je dvoubajtové znakové přiřazení `sz1` zkopíruje jenom prvním bajtem. Následující kód používá přenosné funkce kopíruje znak bezpečně a se zvýší `sz1` a `sz2` správně:  
+ Kód zkopíruje bajt `sz2` do umístění, na které odkazuje `sz1`, pak inkrementuje `sz1` přijímat další bajt. Avšak v tom případě další znak v `sz2` je dvoubajtové znakové přiřazení `sz1` zkopíruje pouze první bajt. Následující kód používá přenosné funkce znak bezpečně zkopírovat a druhý se zvýší `sz1` a `sz2` správně:  
   
 ```  
 while( *sz2 )  

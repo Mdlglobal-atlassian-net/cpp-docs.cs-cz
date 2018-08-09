@@ -1,5 +1,5 @@
 ---
-title: Nové &lt;zařízení&gt; typ dialogové okno (Editor obrázků pro ikony) obrázku | Microsoft Docs
+title: Nové &lt;zařízení&gt; typ dialogového okna obrázku zařízení (Editor obrázků pro ikony) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879617"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019283"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nové &lt;zařízení&gt; bitové kopie dialogové okno typů (Editor obrázků pro ikony)
-Umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > Image** dialogové okno, klikněte na tlačítko **typ obrázku** na **Image** nabídky.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nové &lt;zařízení&gt; typ dialogového okna obrázku zařízení (Editor obrázků pro ikony)
+Umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > obrázku** dialogové okno, klikněte na tlačítko **nový typ obrázku** na **Image** nabídky.  
   
- **Cílový typ obrázku**  
- Seznam typů bitové kopie k dispozici. Vyberte typ obrázku, který chcete otevřít:  
+### <a name="target-image-type"></a>Cílový typ obrázku  
+ Seznam typů dostupné image. Vyberte typ obrázku, který chcete otevřít:  
   
 ||||  
 |-|-|-|  
 |-16 x 16, 16 barev|-48 x 48, 16 barev|-96 x 96, 16 barev|  
-|-16 x 16, 256 barvami|-48 x 48, 256 barvami|-96 x 96, 256 barvami|  
-|-16 x 16, černobílý tisk|-48 x 48, černobílý tisk|-96 x 96 černobílý tisk|  
+|-16 x 16, 256 barev|-48 x 48, 256 barev|-96 x 96, 256 barev|  
+|-16 x 16, monochromatický|-48 x 48, monochromatický|-96 x 96, monochromatický|  
 |-32 x 32, 16 barev|-64 x 64, 16 barev||  
-|-32 x 32, 256 barvami|-64 x 64, 256 barvami||  
-|-32 x 32, černobílý tisk|-64 x 64, černobílý tisk||  
+|-32 x 32, 256 barev|-64 x 64, 256 barev||  
+|-32 x 32, monochromatický|-64 x 64, monochromatický||  
   
 > [!NOTE]
->  Všechny existující Image se nezobrazí v tomto seznamu.  
+>  V tomto seznamu se nezobrazí žádné existující Image.  
   
- **Vlastní**  
- Otevře se [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md) ve kterém můžete vytvořit novou bitovou kopii pomocí vlastní velikost a počet barev.  
+### <a name="custom"></a>Vlastní  
+ Otevře [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor-for-icons.md) ve kterém můžete vytvořit novou bitovou kopii s vlastní velikost a počet barev.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
   
 ## <a name="see-also"></a>Viz také  
- [Ikony a kurzory: prostředky obrázků pro zařízení s displejem](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)   
  [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606621"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015128"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel – metoda
 
@@ -37,7 +37,6 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>Parametry
-
 *trustLvl*  
 Když tato operace dokončí, aktuální úroveň důvěryhodnosti **RuntimeClass** objektu.
 
@@ -47,7 +46,7 @@ Vždy S_OK.
 
 ## <a name="remarks"></a>Poznámky
 
-Chyba vyhodnocení je vygenerován, pokud &#95; &#95;WRL_STRICT&#95; &#95; nebo &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; není definován.
+Chyba vyhodnocení je vygenerován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INSPECTABLE_CLASS_MACRO__` není definován.
 
 ## <a name="requirements"></a>Požadavky
 

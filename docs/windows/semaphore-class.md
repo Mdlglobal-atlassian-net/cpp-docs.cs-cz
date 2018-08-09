@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5feb954a5bba1bfc7c3a98b1324e75bd2aa058f1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652633"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015700"
 ---
 # <a name="semaphore-class"></a>Semaphore – třída
 Představuje objekt synchronizace, který řídí sdíleného prostředku, který podporuje omezený počet uživatelů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   

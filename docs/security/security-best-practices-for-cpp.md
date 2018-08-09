@@ -1,5 +1,5 @@
 ---
-title: Osvědčené postupy zabezpečení pro jazyk C++ | Microsoft Docs
+title: Osvědčené postupy zabezpečení pro jazyk C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,53 +18,54 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015621"
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 
-Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich používání není zpřístupnit aplikace útokům imunní, ale umožňuje méně pravděpodobné, že úspěšné útoky.  
+Tento článek obsahuje informace o zabezpečení nástroje a postupy. Jejich používání Nedovolte, aby byly aplikace útokům imunní, ale je méně pravděpodobné, že úspěšných útoků.  
   
-## <a name="visual-c-security-features"></a>Funkce zabezpečení Visual C++
+## <a name="visual-c-security-features"></a>Zabezpečení funkce Visual C++
 
- Tyto funkce zabezpečení jsou součástí Visual C++ kompilátoru a linkeru:  
+ Tyto funkce zabezpečení jsou integrované do kompilátoru Visual C++ a propojovací program:  
   
  [/guard (povolení ochrany toku řízení)](../build/reference/guard-enable-control-flow-guard.md)  
- Způsobí, že kompilátor k analýze tok řízení pro cíle nepřímé volání při kompilaci a potom pro vložení kódu k ověření cílů v době běhu.  
+ Způsobí, že kompilátor pro analýzu toku řízení pro cíle nepřímé volání v době kompilace a pak se vložit kód pro ověření cíle za běhu.  
   
  [/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)  
- Dá pokyn kompilátoru vložení zjištění přetečení kódu do funkce, které jsou na riziko zneužití. Když se detekuje překročení, provádění je zastavena. Ve výchozím nastavení je tato možnost je na.  
+ Dává pokyn kompilátoru k vložení do funkce, které mají být zneužity kód pro detekci přetečení. Při zjištění překročení zastavením spuštění. Ve výchozím nastavení tato možnost zapnutá.  
   
  [/SAFESEH (image má bezpečné obslužné rutiny výjimek)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
- Dá pokyn linkeru pro zahrnutí do bitové kopie výstupní tabulku, která obsahuje adresu každé obslužné rutiny výjimky. V době běhu operačního systému používá tuto tabulku a ujistěte se, že jsou spuštěny pouze potřebné výjimky obslužné rutiny. To pomáhá zabránit spuštění obslužné rutiny výjimek, které jsou zavedené službou napadením se zlými úmysly za běhu. Tento parametr je standardně vypnutý.  
+ Přikáže linkeru, aby do výstupní image zahrnout tabulku, která obsahuje adresu každé obslužné rutiny výjimky. V době běhu operační systém používá tuto tabulku abyste měli jistotu, že jsou provedeny obslužné rutiny výjimek pouze legitimní. To pomáhá zabránit spuštění obslužné rutiny výjimek, které vznikají zavlečením napadením se zlými úmysly v době běhu. Tento parametr je standardně vypnutý.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (kompatibilní s předcházením spuštění dat)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
- Tyto kompilátoru a linkeru možnosti umožňují kompatibility Zabránění spuštění dat (DEP). Zabránění spuštění dat chrání procesor před provádění jiných znakové stránky.  
+ Tyto kompilátoru a možnosti linkeru zajištění kompatibility Zabránění spuštění dat (DEP). Zabránění spuštění dat chrání procesoru pro provádění bez znakové stránky.  
   
  [/analyze (analýza kódu)](../build/reference/analyze-code-analysis.md)  
- Tato možnost kompilátoru aktivuje analýza kódu, která generuje sestavy možné problémy zabezpečení, jako je přetečení vyrovnávací paměti, zrušení inicializovaného paměť, vyhodnocení ukazatele null a nevracení paměti. Tento parametr je standardně vypnutý. Další informace najdete v tématu [analýzy kódu pro C/C++ – přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
+ Tato možnost kompilátoru aktivuje analýzy kódu, který bude hlásit potenciální problémy se zabezpečením, jako je například přetečení vyrovnávací paměti, neinicializovaná paměť, přístup přes ukazatel s hodnotou null a nevracení paměti. Tento parametr je standardně vypnutý. Další informace najdete v tématu [analýzy kódu pro C/C++ přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
  [/DYNAMICBASE (použití modulu pro náhodné rozložení adresního prostoru)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
- Tato možnost linkeru umožňuje vytvářet spustitelné bitové kopie, který lze načíst v různých umístěních v paměti na začátku spuštění. Tato možnost také vytváří zásobníku umístění v paměti mnohem méně předvídatelný.  
+ Tohoto parametru linkeru umožňuje vytváření spustitelnou bitovou kopii, která je možné načíst na různých místech v paměti na začátku spuštění. Tato možnost také umožňuje umístění zásobníku v paměti méně předvídatelné.  
   
 ## <a name="security-enhanced-crt"></a>Rozšířené zabezpečení CRT  
- Knihovny za běhu C (CRT) má rozšíření, zahrnující bezpečné verze funkcí, které představují bezpečnostní rizika – například nezaškrtnuté `strcpy` řetězec kopírování. Protože starší, nebezpečné verze tyto funkce jsou zastaralé, způsobí kompilaci upozornění. Doporučujeme vám používat zabezpečený verze těchto funkcí CRT místo potlačení upozornění kompilace. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).  
+ Knihovna Runtime jazyka C (CRT) má rozšířený zahrnout bezpečné verze funkcí, které představují riziko zabezpečení – třeba Nekontrolovaná `strcpy` řetězec funkce kopírování. Protože starší, nezabezpečené verze těchto funkcí jsou zastaralé, způsobují upozornění kompilace. Doporučujeme vám použít bezpečné verze těchto funkcí CRT místo potlačení upozornění kompilace. Další informace najdete v tématu [funkce zabezpečení v CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
 ## <a name="safeint-library"></a>SafeInt – knihovna  
- [SafeInt – knihovna](../windows/safeint-library.md) pomáhá zabránit přetečení celé číslo a dalších zneužití chyb, které můžou nastat, když aplikace provede matematické operace. `SafeInt` Knihovna obsahuje [SafeInt – třída](../windows/safeint-class.md), [SafeIntException – třída](../windows/safeintexception-class.md)a několik [funkce jazyka SafeInt](../windows/safeint-functions.md).  
+ [SafeInt – knihovna](../windows/safeint-library.md) pomáhá zabránit přetečení celého čísla a jiné zneužitelné chyby, které mohou nastat při používání matematických operací. `SafeInt` Knihovna obsahuje [SafeInt – třída](../windows/safeint-class.md), [SafeIntException – třída](../windows/safeintexception-class.md)a několik [SafeInt – funkce](../windows/safeint-functions.md).  
   
- `SafeInt` Třída chrání před přetečení celé číslo a zneužití dělení nulou. Můžete ji zpracovat porovnání mezi hodnoty různých typů. I poskytuje dvě zásady pro zpracování chyby. Výchozí zásada je určená pro `SafeInt` třídy throw `SafeIntException` třídy výjimky do sestavy, proč matematickém operaci nelze dokončit. Druhá zásada je určená pro `SafeInt` třída zastavit spuštění programu. Můžete také definovat vlastní zásadu.  
+ `SafeInt` Třídy chrání proti přetečení celého čísla a zneužije dělení nulou. Slouží ke zpracování porovnání hodnoty různých typů. Poskytuje dvě zásady zpracování chyb. Výchozí zásada je určená pro `SafeInt` třídy na výjimku `SafeIntException` třídy výjimky do sestavy, proč matematické operaci nejde dokončit. Druhá zásada je určená pro `SafeInt` třídy k zastavení vykonávání programu. Můžete také definovat vlastní zásady.  
   
- Každý `SafeInt` funkce chrání jeden matematické operace z využitelných chyby. Můžete vytvořit dva různé druhy parametry bez převádění do stejného typu. Chcete-li chránit více matematické operace, použijte `SafeInt` třídy.  
+ Každý `SafeInt` funkce chrání jeden matematické operace z zneužitelné chyby. Bez převodu na stejný typ, můžete použít dva různé typy parametrů. Chcete-li chránit více matematické operace, použijte `SafeInt` třídy.  
   
 ## <a name="checked-iterators"></a>Checked – iterátory  
- Zaškrtnutý iterátor vynucuje hranice kontejneru. Ve výchozím nastavení když zaškrtnutý iterátor je mimo rozsah, generuje výjimku a končí spuštění programu. Zaškrtnutý iterátor poskytuje další úrovně odpovědi, které závisí na hodnotách, které jsou přiřazeny k preprocesor definuje jako  **\_zabezpečeného\_SCL\_VYVOLÁ** a  **\_ITERATOR\_ladění\_úroveň**. Například na  **\_ITERATOR\_ladění\_úroveň = 2**, zaškrtnutý iterátor poskytuje komplexní kontroly správnosti v režimu ladění, které jsou k dispozici pomocí nepodmíněných výrazů. Další informace najdete v tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md) a [ \_ITERATOR\_ladění\_úroveň](../standard-library/iterator-debug-level.md).  
+ Kontrolovaný iterátor vynucuje hranice kontejneru. Ve výchozím nastavení když kontrolovaného iterátoru je mimo rozsah, generuje výjimku a ukončí provádění programu. Kontrolovaný iterátor poskytuje další úrovně odpovědi, které závisí na hodnotách, které jsou přiřazeny k preprocesoru, jako  **\_SECURE\_SCL\_VYVOLÁ** a  **\_ITERÁTORU\_ladění\_úroveň**. Například na  **\_ITERÁTORU\_ladění\_LEVEL = 2**, kontrolovaného iterátoru poskytuje komplexní kontroly správnosti v režimu ladění, které jsou k dispozici pomocí kontrolních příkazů. Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md) a [ \_ITERÁTORU\_ladění\_úroveň](../standard-library/iterator-debug-level.md).  
   
 ## <a name="code-analysis-for-managed-code"></a>Analýza kódu pro spravovaný kód  
- Analýza kódu pro spravovaný kód, také známé jako FxCop kontroluje sestavení pro shodu pokynů pro návrh rozhraní.NET Framework. FxCop analyzuje kód a metadata v každé sestavení zkontrolujte výskyt závad v těchto oblastech:  
+ Analýza kódu pro spravovaný kód, označované také jako FxCop, zkontroluje sestavení pro soulad s pokyny k návrhu rozhraní.NET Framework. FxCop analyzuje kódu a metadata v každé sestavení ke kontrole chyb v těchto oblastech:  
   
 -   Knihovna návrhu  
   
@@ -76,30 +77,30 @@ Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich
   
 -   Zabezpečení  
   
-## <a name="windows-application-verifier"></a>Ověřovatel aplikací systému Windows  
- Ověřovač aplikace (nástroj Ověřovatel aplikací) můžete identifikovat potenciální problémy kompatibility, stability a zabezpečení aplikací.  
+## <a name="windows-application-verifier"></a>Ověřovatel aplikací Windows  
+ Ověřovatel aplikací (nástroj AppVerifier) pomáhá identifikovat možné problémy kompatibility, stabilitu a zabezpečení aplikace.  
   
- Nástroj Ověřovatel aplikací sleduje, jak aplikace používá operační systém. Sleduje systém souborů, registr, paměti a rozhraní API aplikace běží, a doporučuje zdrojového kódu opravy pro problémy, které nalezl.  
+ Nástroj AppVerifier sleduje, jak aplikace používá operační systém. Sleduje systém souborů, registry, paměť a rozhraní API, zatímco aplikace běží a doporučuje zdrojový kód opravy problémů, které nalezl.  
   
- Můžete použít nástroj Ověřovatel aplikací na:  
+ Můžete použít nástroj AppVerifier na:  
   
--   Test potenciální chyby kompatibility aplikací, které jsou způsobeny obvyklé programovací chyby.  
+-   Test pro potenciální chyby kompatibility aplikace, které jsou způsobeny běžné programovací chyby.  
   
--   Zkontrolujte aplikaci pro problémy související s pamětí.  
+-   Prozkoumejte aplikace pro problémy související s pamětí.  
 
--   Identifikujte potenciální potíže se zabezpečením v aplikaci.  
+-   Identifikujte potenciální problémy se zabezpečením v aplikaci.  
   
- Nástroj Ověřovatel aplikací je součástí sady Application Compatibility Toolkit, která je k dispozici z [kompatibilita aplikací](http://go.microsoft.com/fwlink/p/?linkid=91277) na webu TechNet.  
+ Nástroj AppVerifier je součástí sady Application Compatibility Toolkit, který je k dispozici [kompatibilita aplikací](http://go.microsoft.com/fwlink/p/?linkid=91277) na webu TechNet.  
   
 
-## <a name="windows-user-accounts"></a>Uživatelské účty systému Windows  
- Pomocí Windows uživatelské účty, které patří k vývojářům zpřístupňuje skupiny Administrators a--rozšíření – zákazníkům na bezpečnostní rizika. Další informace najdete v tématu [spuštění jako člen skupiny Users](running-as-a-member-of-the-users-group.md) a [jak řízení uživatelských účtů (UAC) má vliv na vaše aplikace](how-user-account-control-uac-affects-your-application.md).
+## <a name="windows-user-accounts"></a>Uživatelské účty Windows  
+ Pomocí Windows uživatelské účty, které patří zpřístupňuje vývojářům skupiny Administrators a--rozšířením – zákazníkům bezpečnostní rizika. Další informace najdete v tématu [spuštění jako člen skupiny Users](running-as-a-member-of-the-users-group.md) a [jak řízení uživatelských účtů (UAC) ovlivňuje vaše aplikace](how-user-account-control-uac-affects-your-application.md).
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>Pokyny pro kanály straně spekulativní provádění
+## <a name="guidance-for-speculative-execution-side-channels"></a>Pokyny pro kanály na straně spekulativního spouštění
 
-Informace o tom, jak usnadní identifikaci a zmírnit zranitelná spekulativní provádění straně kanál hardwaru v C++ softwaru najdete v tématu [Průvodce pro vývojáře C++ pro kanály straně provádění Speculative](developer-guidance-speculative-execution.md).
+Informace o tom, k identifikaci a zmírnění zranitelná spekulativního spouštění na straně kanálu hardware v C++ softwaru najdete v tématu [C++ informace pro vývojáře pro kanály na straně provádění spekulativní](developer-guidance-speculative-execution.md).
 
 ## <a name="see-also"></a>Viz také  
-- <xref:System.Security>   
-- [Zabezpečení](/dotnet/standard/security/index)   
-- [Jak nástroj Řízení uživatelských účtů (UAC) ovlivňuje vaši aplikaci](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[Zabezpečení](/dotnet/standard/security/index)   
+[Jak nástroj Řízení uživatelských účtů (UAC) ovlivňuje vaši aplikaci](how-user-account-control-uac-affects-your-application.md)

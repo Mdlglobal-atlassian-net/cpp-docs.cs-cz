@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604353"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018591"
 ---
 # <a name="module-c"></a>module (C++)
 Bloku knihovny definuje v souboru IDL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Bloku knihovny definuje v souboru IDL.
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *typ* (volitelné)  
- Může být jedna z následujících akcí:  
+*typ* (volitelné)  
+Může být jedna z následujících akcí:  
   
 -   `dll` Přidá se funkcí a tříd, které umožňují výslednou knihovnu DLL, aby fungoval jako server COM v procesu. Jedná se o výchozí hodnotu.  
   
@@ -61,51 +61,51 @@ Bloku knihovny definuje v souboru IDL.
   
 -   `unspecified` Zakáže injektáž kódu ATL související s atributem module: injektáž modulu ATL – třídy, globální instanci _AtlModule a vstupní bod funkce. Injektáž kódu ATL kvůli dalším atributům v projektu není zakázána.  
   
- *Název* (volitelné)  
- Název bloku knihovny.  
+*Název* (volitelné)  
+Název bloku knihovny.  
   
- *verze* (volitelné)  
- Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.  
+*verze* (volitelné)  
+Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.  
   
- *uuid*  
- Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Je nutné načíst *uuid* bloku knihovny, které vám pomůžou s použitím identifikátoru **__uuidof (***NázevKnihovny***)**.  
+*uuid*  
+Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Je nutné načíst *uuid* bloku knihovny, které vám pomůžou s použitím identifikátoru **__uuidof (***NázevKnihovny***)**.  
   
- *lcid*  
- Parametr lokalizace. Zobrazit [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Další informace.  
+*lcid*  
+Parametr lokalizace. Zobrazit [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) Další informace.  
   
- *ovládací prvek* (volitelné)  
- Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.  
+*ovládací prvek* (volitelné)  
+Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.  
   
- *helpstring*  
- Určuje knihovnu typů.  
+*helpstring*  
+Určuje knihovnu typů.  
   
- *helpstringdll –* (volitelné)  
- Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](http://msdn.microsoft.com/library/windows/desktop/aa366860) pro další informace.  
+*helpstringdll –* (volitelné)  
+Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](http://msdn.microsoft.com/library/windows/desktop/aa366860) pro další informace.  
   
- *HelpFile –* (volitelné)  
- Název souboru nápovědy pro knihovnu typů.  
+*HelpFile –* (volitelné)  
+Název **pomáhají** soubor pro knihovnu typů.  
   
- *HelpContext* (volitelné)  
- ID nápovědy pro tuto knihovnu typů.  
+*HelpContext* (volitelné)  
+**Pomáhají ID** pro tuto knihovnu typů.  
   
- *helpstringcontext –* (volitelné)  
- Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.  
+*helpstringcontext –* (volitelné)  
+Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.  
   
- *skryté* (volitelné)  
- Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](http://msdn.microsoft.com/library/windows/desktop/aa366861) atribut MIDL pro další informace.  
+*skryté* (volitelné)  
+Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](http://msdn.microsoft.com/library/windows/desktop/aa366861) atribut MIDL pro další informace.  
   
- *s omezeným přístupem* (volitelné)  
- Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) atribut MIDL pro další informace.  
+*s omezeným přístupem* (volitelné)  
+Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](http://msdn.microsoft.com/library/windows/desktop/aa367157) atribut MIDL pro další informace.  
   
- *vlastní* (volitelné)  
- Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:  
+*vlastní* (volitelné)  
+Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- ID zdroje řetězce souboru .rgs použije k registraci knihovny DLL, spustitelný soubor, nebo že služba ID aplikace. Když v modulu je typ služby, tento argument se používá také k získání ID řetězec obsahující název služby.  
+*resource_name*  
+ID zdroje řetězce souboru .rgs použije k registraci knihovny DLL, spustitelný soubor, nebo že služba ID aplikace. Když v modulu je typ služby, tento argument se používá také k získání ID řetězec obsahující název služby.  
   
 > [!NOTE]
 >  Souboru .rgs a řetězec obsahující název služby by měl obsahovat stejnou číselnou hodnotu.  

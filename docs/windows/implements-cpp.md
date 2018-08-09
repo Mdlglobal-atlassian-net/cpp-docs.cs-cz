@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606459"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010370"
 ---
 # <a name="implements-c"></a>implements (C++)
 Určuje odesílajících rozhraních, které se musí být členy třídy typu IDL coclass.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ Určuje odesílajících rozhraních, které se musí být členy třídy typu I
  Čárkami oddělený seznam dispinterface, která bude členem třídy typu IDL coclass. Je metoda Zkrácený tvar vlastností pro zadání jedné dispinterface **implementuje (odesílající rozhraní** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení se přidají jenom-rozhraní COM, které jsou základní třídy typu coclass v konstruktoru coclass IDL. **implementuje** umožňuje vynutit jiná rozhraní mají stát členy coclass IDL.  
+ Ve výchozím nastavení, pouze rozhraní modelu COM, které jsou základní třídy `coclass` přidají v konstruktoru coclass IDL. **implementuje** umožňuje vynutit jiná rozhraní být IDL `coclass` členy.  
   
 ## <a name="requirements"></a>Požadavky  
   

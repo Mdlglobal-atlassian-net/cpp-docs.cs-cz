@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606933"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010286"
 ---
 # <a name="modifying-the-layout-grid"></a>Změna mřížky rozložení
 Pokud jsou uvedení nebo uspořádání ovládacích prvků v dialogovém okně, můžete pro přesnější umístění mřížky rozložení. Po zapnutí mřížky "se přichytil k" tečkované čáry mřížky jakoby zmagnetizovat zobrazí ovládací prvky. Můžete zapnout a vypnout tuto funkci "přichycení k mřížce" a změnit velikost buňky mřížky rozložení.  
@@ -35,7 +35,7 @@ Pokud jsou uvedení nebo uspořádání ovládacích prvků v dialogovém okně,
   
 2.  V [dialogové okno nastavení průvodce](../windows/guide-settings-dialog-box.md)zaškrtněte nebo zrušte **mřížky** tlačítko.  
   
-     Můžete řídit mřížky v jednotlivých oknech editoru dialogového okna pomocí **Přepnout mřížku** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     Můžete řídit mřížky v jednotlivých **dialogové okno** oken editoru pomocí **Přepnout mřížku** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Chcete-li změnit velikost rozložení mřížky  
   
@@ -46,7 +46,6 @@ Pokud jsou uvedení nebo uspořádání ovládacích prvků v dialogovém okně,
  Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Požadavky  
-  
  Win32  
   
 ## <a name="see-also"></a>Viz také  

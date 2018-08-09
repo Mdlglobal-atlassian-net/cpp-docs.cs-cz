@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fe50fed4fd701ba171620d2c0cd0cde6e8da2bbc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604548"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020223"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (rozšíření komponent C++)
 **zapečetěné** jako kontextové klíčové slovo pro referenční třídy, která označuje, že virtuální člen nelze přepsat, nebo typ nelze použít jako základní typ.  
@@ -35,13 +35,12 @@ ms.locfileid: "39604548"
   
 ## <a name="syntax"></a>Syntaxe
   
-```  
+```cpp  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
 ```  
   
 ### <a name="parameters"></a>Parametry  
-  
  *identifikátor*  
  Název třídy nebo funkce.  
   

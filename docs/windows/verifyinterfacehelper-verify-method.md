@@ -1,5 +1,5 @@
 ---
-title: Verifyinterfacehelper::Verify – metoda | Microsoft Docs
+title: Verifyinterfacehelper::Verify – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f33935bcb042a961494f7da6d34a07b0aeda9af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4626e6cfa17b4cc050d10bb74fad0d791a8ceef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888980"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013649"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify – metoda
-Podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo z vašeho kódu.  
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ověří, že rozhraní zadané aktuální parametr šablony splňuje určité požadavky.  
+ Ověřuje, že rozhraní určené typem parametru aktuální šablony splňuje určité požadavky.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** implements.h  

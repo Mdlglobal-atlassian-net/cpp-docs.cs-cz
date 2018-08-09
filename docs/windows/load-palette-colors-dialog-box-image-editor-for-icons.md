@@ -1,5 +1,5 @@
 ---
-title: Načíst paletu barev dialogové okno (Editor obrázků pro ikony) | Microsoft Docs
+title: Načíst paletu barev (Editor obrázků pro ikony) dialogové okno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95e5235a792301f3742bc576da607d7433f2e4b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b88f13d0073c47d5c43908d4fea38c4337a5e1a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878171"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011403"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Dialogové okno Načíst barvy palety (editor obrázků pro ikony)
-Tento dialog načíst palety barev speciální pro použití v projektu. Další informace najdete v tématu [ukládání a načítání různých palety barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Použijte toto dialogové okno Načíst palet barev speciální používat ve vašem projektu. Další informace najdete v tématu [ukládání a načítání různých palet barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
- **Oblast hledání**  
- Určuje umístění, ve které chcete najít soubor nebo složku. Klikněte na šipku a vyberte jiné umístění nebo klikněte na ikonu složky na panelu nástrojů přesunout nahoru úrovně.  
+### <a name="look-in"></a>Oblast hledání  
+ Určuje umístění, ve které chcete najít soubor nebo složku. Klikněte na šipku a vyberte jiné umístění nebo klikněte na ikonu složky na panelu nástrojů pro posun úrovně výš.  
   
- **Název souboru**  
- Místo pro zadání názvu souboru, který chcete otevřít. Rychle najít soubor, který jste dříve otevřen, klikněte na název souboru v rozevíracím seznamu, pokud je k dispozici.  
+### <a name="file-name"></a>Název souboru  
+ Poskytuje prostor pro zadání názvu souboru, který chcete otevřít. Pokud chcete rychle vyhledat soubor, který jste dříve otevřeli, klikněte na název souboru v rozevíracím seznamu, pokud je k dispozici.  
   
- Pokud chcete vyhledat soubor, můžete použít hvězdičky (*) jako zástupné znaky. Například můžete zadat \*.\* zobrazte seznam všech souborů. Můžete také zadat úplnou cestu k souboru, například C:\My Documents\MyColorPalette.pal nebo \\\NetworkServer\MyFolder\MyColorPalette.pal.  
+ Pokud chcete vyhledat soubor, můžete použít hvězdičky (*) jako zástupné znaky. Například můžete zadat \*.\* zobrazíte seznam všech souborů. Můžete také zadat úplnou cestu k souboru, například C:\My Documents\MyColorPalette.pal nebo \\\NetworkServer\MyFolder\MyColorPalette.pal.  
   
- **Soubory typu**  
- Uvádí typy souborů, které se zobrazí. Palety (* PAL) je výchozí typ souboru pro palety barev.  
+### <a name="files-of-type"></a>Soubory typu  
+ Seznam typů souborů, které se zobrazí. Paleta (* .pal) je výchozí typ souboru pro palet barev.  
   
 ## <a name="requirements"></a>Požadavky  
  Žádné  
