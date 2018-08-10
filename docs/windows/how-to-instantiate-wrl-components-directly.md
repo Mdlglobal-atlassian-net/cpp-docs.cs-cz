@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568813"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013272"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Postupy: Přímé vytváření instancí komponent knihovny WRL
 Další informace o použití Windows Runtime C++ šablony knihovny (WRL)[Microsoft::WRL:: Make](../windows/make-function.md) a [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pro vytvoření instance komponenty z modulu, který ji definuje.  
@@ -34,13 +34,13 @@ Další informace o použití knihovny šablon jazyka C++ Windows Runtime k vytv
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Vytvoření instance komponenty pro základní nástroj pro protokolování  
   
-1.  V sadě Visual Studio, vytvořit **Konzolová aplikace Win32** projektu. Název projektu, například `WRLLogger`.  
+1.  V sadě Visual Studio, vytvořit **Konzolová aplikace Win32** projektu. Název projektu, například *WRLLogger*.  
   
 2.  Přidat **soubor Midl (.idl)** do projektu, zadejte název souboru `ILogger.idl`a následně přidejte následující kód:  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  Pro nahrazení obsahu souboru WRLLogger.cpp použijte následující kód.  
+3.  Pomocí následujícího kódu nahraďte obsah `WRLLogger.cpp`.  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ Další informace o použití knihovny šablon jazyka C++ Windows Runtime k vytv
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  Pro nahrazení definice `wmain` použijte následující kód. Tato verze pro vytvoření instance objektu `MakeAndInitialize` používá `CConsoleWriter` a provádí kontrolu výsledku `HRESULT`.  
+2.  Pro nahrazení definice `wmain` použijte následující kód. Tato verze používá `MakeAndInitialize` pro vytvoření instance `CConsoleWriter` objektu a ověří výsledek HRESULT.  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   
