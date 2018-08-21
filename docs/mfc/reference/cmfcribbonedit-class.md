@@ -482,7 +482,7 @@ virtual void OnDrawOnList(
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.  
   
  [in] *strText*  
- Zobrazovaný text [(../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit třída]").  
+ Zobrazovaný text [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit třída").  
   
  [in] *nTextOffset*  
  Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.  
