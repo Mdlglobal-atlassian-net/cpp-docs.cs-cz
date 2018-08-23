@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4c43e02b5d847a908910ec0df4bfc56c5464fd66
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338386"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466108"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl – třída
-Implementuje rozhraní OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) rozhraní, která načte libovolné řádky ze sady řádků.  
+Implementuje rozhraní OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) rozhraní, která načte libovolné řádky ze sady řádků.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
  Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.  
   
  *BookmarkKeyType*  
- Typ záložky, jako je například DLOUHO nebo řetězec. Běžné záložky musí mít délku minimálně o dva bajty. (Single bajty délka je vyhrazený pro OLE DB [standardní záložky](https://msdn.microsoft.com/library/ms712954.aspx)`DBBMK_FIRST`, `DBBMK_LAST`, a `DBBMK_INVALID`.)  
+ Typ záložky, jako je například DLOUHO nebo řetězec. Běžné záložky musí mít délku minimálně o dva bajty. (Single bajty délka je vyhrazený pro OLE DB [standardní záložky](/previous-versions/windows/desktop/ms712954\(v=vs.85\))`DBBMK_FIRST`, `DBBMK_LAST`, a `DBBMK_INVALID`.)  
   
  *BookmarkType*  
  Mechanismu mapování za údržbu relací mezi záložku daty.  
@@ -114,13 +114,13 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](#rgbookmarks)|Pole záložky.|  
   
 ## <a name="remarks"></a>Poznámky  
- `IRowsetLocateImpl` představuje implementaci šablony technologie OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) rozhraní. `IRowsetLocate` slouží k načtení libovolného řádků ze sady řádků. Sada řádků, který neimplementuje toto rozhraní je `sequential` sady řádků. Když `IRowsetLocate` je k dispozici pro sadu řádků sloupců 0 je záložka pro řádky; čtení v tomto sloupci se získat hodnotu záložku, která je možné změnit umístění na stejný řádek.  
+ `IRowsetLocateImpl` představuje implementaci šablony technologie OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) rozhraní. `IRowsetLocate` slouží k načtení libovolného řádků ze sady řádků. Sada řádků, který neimplementuje toto rozhraní je `sequential` sady řádků. Když `IRowsetLocate` je k dispozici pro sadu řádků sloupců 0 je záložka pro řádky; čtení v tomto sloupci se získat hodnotu záložku, která je možné změnit umístění na stejný řádek.  
   
  `IRowsetLocateImpl` slouží k implementaci podpory záložky u zprostředkovatelů. Záložky jsou zástupné symboly (indexy pro sadu řádků), které umožňují příjemce na řádek, rychle vrátit umožňuje vysokorychlostní přístup k datům. Zprostředkovatel určí, co záložky lze jedinečně identifikovat řádek. Pomocí `IRowsetLocateImpl` metody, můžete porovnat záložky, načítání řádků tím, že odsazení, načítání řádků záložkou a návratové hodnoty hash pro záložky.  
   
  Pro podporu technologie OLE DB záložky v sadě řádků, ujistěte se, v sadě řádků z této třídy dědit.  
   
- Informace o implementaci podpora záložek, naleznete v tématu [podporu zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md) v *průvodce Visual C++ programátor* a [záložky](https://msdn.microsoft.com/library/ms709728.aspx) v *Referenční informace pro OLE DB programátory* v sadu SDK platformy.  
+ Informace o implementaci podpora záložek, naleznete v tématu [podporu zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md) v *průvodce Visual C++ programátor* a [záložky](/previous-versions/windows/desktop/ms709728\(v=vs.85\)) v *Referenční informace pro OLE DB programátory* v sadu SDK platformy.  
 
 ## <a name="compare"></a> IRowsetLocateImpl::Compare
 Porovná dva záložky.  
@@ -137,10 +137,10 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Některé z záložky může být standardní definované technologie OLE DB [standardní záložku](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST`, `DBBMK_LAST`, nebo `DBBMK_INVALID`). Hodnota vrácená v `pComparison` označuje vztah mezi dvěma záložek:  
+ Některé z záložky může být standardní definované technologie OLE DB [standardní záložku](/previous-versions/windows/desktop/ms712954\(v=vs.85\)) (`DBBMK_FIRST`, `DBBMK_LAST`, nebo `DBBMK_INVALID`). Hodnota vrácená v `pComparison` označuje vztah mezi dvěma záložek:  
   
 -   DBCOMPARE_LT (`cbBookmark1` před `cbBookmark2`.)  
   
@@ -169,10 +169,10 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/library/ms723031.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IRowsetLocate::GetRowsAt](/previous-versions/windows/desktop/ms723031\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li místo toho načtěte z pozice kurzoru, použijte [IRowset::GetRowsAt](https://msdn.microsoft.com/library/ms723031.aspx).  
+ Chcete-li místo toho načtěte z pozice kurzoru, použijte [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031\(v=vs.85\)).  
   
  `IRowsetLocateImpl::GetRowsAt` nedojde ke změně pozice kurzoru. 
 
@@ -192,12 +192,12 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>Parametry  
  *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/library/ms725420.aspx).  
+ [in] Odpovídá *hChapter* parametr [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/library/ms725420.aspx) v *OLE DB referenční informace pro programátory*.  
+ Další parametry, naleznete v tématu [IRowsetLocate::GetRowsByBookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Záložky lze hodnotu definujete nebo OLE DB [standardní záložky](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST` nebo `DBBMK_LAST`). Nedojde ke změně pozice kurzoru.  
+ Záložky lze hodnotu definujete nebo OLE DB [standardní záložky](/previous-versions/windows/desktop/ms712954\(v=vs.85\)) (`DBBMK_FIRST` nebo `DBBMK_LAST`). nedojde ke změně pozice kurzoru.  
 
 ## <a name="hash"></a> IRowsetLocateImpl::Hash
 Vrátí hodnotu hash hodnoty pro zadaný záložky.  
@@ -215,9 +215,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>Parametry  
  *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx).  
+ [in] Odpovídá *hChapter* parametr [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx) v *OLE DB referenční informace pro programátory*.  
+ Další parametry, naleznete v tématu [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
 
 ## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
 Pole záložky.  
@@ -231,6 +231,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ## <a name="see-also"></a>Viz také  
  [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/ms721190.aspx)   
+ [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190\(v=vs.85\))   
  [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md)   
- [Záložky](https://msdn.microsoft.com/library/ms709728.aspx)
+ [Záložky](/previous-versions/windows/desktop/ms709728\(v=vs.85\))

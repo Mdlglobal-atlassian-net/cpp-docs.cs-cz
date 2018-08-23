@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339595"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466317"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
-Šablony technologie OLE DB provádění [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) rozhraní ve specifikaci OLE DB.  
+Šablony technologie OLE DB provádění [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) rozhraní ve specifikaci OLE DB.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   Kapitola 6 *odkaz programátora technologie OLE DB*  
   
--   Také naleznete v tématu Jak `RUpdateRowset` třída se používá v ukázce UpdatePV  
+-   Také naleznete v tématu Jak `RUpdateRowset` třída se používá [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 Odstraní řádky ze sady řádků.  
@@ -129,7 +129,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 Vytvoří a inicializuje nový řádek v dané sadě řádků.  
@@ -144,7 +144,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::InsertRow](https://msdn.microsoft.com/library/ms716921.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
 Nastaví hodnoty dat v jedné nebo více sloupců.  
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::SetData](https://msdn.microsoft.com/library/ms721232.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 Overidden poskytovatelem se zapsat data do svého úložiště.  

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: fdce28feddfca0789306a16f8dc6d047dc375120
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852572"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466307"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Cmfcfilterchunkvalueimpl – třída
 Toto je třída, která zjednodušuje logiku párování hodnot bloku dat a vlastnosti.  
@@ -91,7 +91,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Načte bloků dat identifikátoru GUID.|  
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Načte bloků PID (ID vlastnosti).|  
 |[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Získá bloku dat typu.|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|Načte hodnota řetězce.|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Načte hodnotu řetězce.|  
 |[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Načte hodnotu jako přidělené sestavování propvariant.|  
 |[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Hodnota vrátí nepřidělený (vnitřní hodnotu).|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Kontroluje, zda hodnota této vlastnosti je platný, nebo ne.|  

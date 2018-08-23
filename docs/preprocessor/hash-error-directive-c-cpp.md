@@ -1,5 +1,5 @@
 ---
-title: '#Chyba – direktiva (C/C++) | Microsoft Docs'
+title: '#Chyba – direktiva (C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905569"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465091"
 ---
 # <a name="error-directive-cc"></a>#error – direktiva (C++)
-`#error` – Direktiva vysílá uživatelem zadanou chybovou zprávu v době kompilace a ukončí kompilace.  
+**#Error** – direktiva generuje zadané uživatelem chybovou zprávu v době kompilace a ukončí kompilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,8 @@ ms.locfileid: "33905569"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Chybová zpráva, která tato direktiva vysílá zahrnují *token řetězec* parametr. `token-string` Parametr není předmětem makro rozšíření. Tato direktiva je velmi užitečné při předběžném zpracování pro upozornění na vývojáře nekonzistence program nebo porušení omezení. Následující příklad ukazuje Chyba při zpracování při předběžném zpracování:  
+ 
+Obsahuje chybovou zprávu, která tato direktiva generuje *řetězci tokenu* parametru. *Řetězci tokenu* parametr není řídí podle rozšíření makra. Tato direktiva je nejužitečnější při předběžném zpracování oznamujících developer program nekonzistence nebo porušení omezení. Následující příklad ukazuje Chyba při zpracování během předběžného zpracování:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ ms.locfileid: "33905569"
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+ 
+[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

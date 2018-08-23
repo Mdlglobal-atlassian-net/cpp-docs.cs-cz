@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0508f0042f63441b3a9bdf66cd29ca0a9a73e6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465947"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl – třída
 `CMFCShellTreeCtrl` Třída rozšiřuje [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.    
 ## <a name="syntax"></a>Syntaxe  
   
 ```  

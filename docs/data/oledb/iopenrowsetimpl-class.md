@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e2212a10269b852d0df6f10a87e08370c1d27cf8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4de30a1abdf111f171ad49a028a25cc2683cbef4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340622"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465220"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl – třída
 Poskytuje implementaci pro `IOpenRowset` rozhraní.  
@@ -59,10 +59,10 @@ class IOpenRowsetImpl : public IOpenRowset
 |[OpenRowset](#openrowset)|Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu. (Není v ATLDB. H)|  
   
 ## <a name="remarks"></a>Poznámky  
- [IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
+ [IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
-Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) v *referenční informace pro OLE DB programátory.*  
+Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory.*  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -85,7 +85,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
  *pRowsetObj*  
  [out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.  
   
- Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) v *OLE DB referenční informace pro programátory.*  
+ Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
@@ -103,7 +103,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nebyla nalezena v ATLDB. H. Je vytvořen objekt Průvodcem knihovnou ATL při vytváření zprostředkovatele.  

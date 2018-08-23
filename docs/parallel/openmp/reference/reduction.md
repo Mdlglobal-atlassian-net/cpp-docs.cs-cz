@@ -1,5 +1,5 @@
 ---
-title: snížení | Microsoft Docs
+title: snížení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692532"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465473"
 ---
 # <a name="reduction"></a>reduction
-Určuje, že jeden nebo více proměnných, které jsou soukromé pro každé vlákno jsou předmětem snížení operaci na konci paralelní oblast.  
+Určuje, že jeden nebo více proměnných, které jsou privátní pro každé vlákno je předmětem operaci snížení na konci paralelní oblasti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +33,13 @@ reduction(operation:var)
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- kde  
+ Pokud  
   
  `operation`  
- Operátor pro operaci provést na proměnné (`var`) na konci paralelní oblast.  
+ Operátor pro tuto operaci provést na proměnných (`var`) na konci paralelní oblasti.  
   
  `var`  
- Jeden další proměnné, na které se má provést skalární snížení. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
+ Jednu nebo více proměnných, na kterém chcete provést snížení skaláru. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
   
 ## <a name="remarks"></a>Poznámky  
  `reduction` platí pro následující direktivy:  
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>Viz také  

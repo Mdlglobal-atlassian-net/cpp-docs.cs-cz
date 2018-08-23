@@ -1,5 +1,5 @@
 ---
-title: __readcr0 | Microsoft Docs
+title: __readcr0 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb1abfadbe793f49eae53e2ee35f820c947685c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334649"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465101"
 ---
 # <a name="readcr0"></a>__readcr0
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Přečte CR0 registrace a vrátí jeho hodnotu.  
+ Přečte CR0 registr a vrátí jeho hodnotu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,20 +37,20 @@ unsigned __int64 __readcr0(void);  /* X64 */
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Hodnota v CR0 registrace.  
+ Hodnota registru CR0.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__readcr0`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr0`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní je k dispozici pouze v režimu jádra a rutiny je k dispozici jako vnitřní pouze.  
+ Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

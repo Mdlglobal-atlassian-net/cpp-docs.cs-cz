@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332101"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465018"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozšířenou verzi převést skalární hodnota jednoho přesnost číslo s plovoucí desetinnou na 64bitové celé číslo (`cvtss2si`) instrukcí.  
+ Generuje x64 rozšířenou verzi převést skalární jedné přesnosti s plovoucí desetinnou čárkou bodu čísla na 64bitové celé číslo (`cvtss2si`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,22 +38,22 @@ __int64 _mm_cvtss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `value`  
- `__m128` Struktura obsahující hodnot s plovoucí čárkou.  
+ [in] `value`  
+ `__m128` Struktury obsahující hodnot s plovoucí čárkou.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- 64bitové celočíselné výsledek převodu první hodnota s plovoucí desetinnou čárkou na celé číslo.  
+ 64bitové celé číslo, výsledek převodu první hodnota s plovoucí desetinnou čárkou na celé číslo.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- První prvek hodnoty strukturu je převést na celé číslo a vrácena. Zaokrouhlení ovládací bity v MXCSR slouží k určení chování zaokrouhlení. Výchozí režim zaokrouhlení se zaokrouhlí na nejbližší zaokrouhlení na sudé číslo. Pokud je 0,5 v části decimal. Protože `__m128` struktura reprezentuje XMM registrace, trvá Tento vnitřní hodnotu z registru XMM a zapíše ho do systémové paměti.  
+ První prvek hodnotu struktury je převést na celé číslo a vrátil. Zaokrouhlení řídicí bity v registru MXCSR slouží k určení chování se zaokrouhlováním. Výchozí režim zaokrouhlování je zaokrouhlí na nejbližší zaokrouhlení na číslo sudé, pokud je 0,5 v desetinnou část. Vzhledem k tomu, `__m128` struktura reprezentuje XMM registru, to zabere vnitřní hodnotu z registru XMM a zapisuje je do systémové paměti.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__m128d](../cpp/m128d.md)   

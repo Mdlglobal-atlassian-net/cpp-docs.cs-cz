@@ -1,5 +1,5 @@
 ---
-title: TLBID | Microsoft Docs
+title: TLBID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d651546733f42b1a714ac7a39992fa2d392c8fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839865"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466096"
 ---
 # <a name="tlbid"></a>tlbid
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Umožňuje načítání knihoven než knihovny primární typů.  
+Umožňuje načítání knihoven jiné než primární typ knihovny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,27 +34,29 @@ ms.locfileid: "33839865"
 tlbid(number)  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `number`  
- Počet knihovny typů v `filename`.  
+### <a name="parameters"></a>Parametry  
+*Číslo*  
+Počet knihovnu typů v `filename`.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud více knihovny typů jsou součástí jednoho knihovny DLL, možné načítat knihovny než knihovny primární typů pomocí `tlbid`.  
+ 
+Pokud více knihoven typů jsou součástí jedné knihovny DLL, je možné načítat knihovny jiné než primární typ knihovny pomocí **tlbid**.  
   
- Příklad:  
+Příklad:  
   
 ```  
 #import <MyResource.dll> tlbid(2)  
 ```  
   
- je ekvivalentní:  
+je ekvivalentní:  
   
 ```  
 LoadTypeLib("MyResource.dll\\2");  
 ```  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

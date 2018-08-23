@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5248d7c692e3443ea0e0798cf723f38099c3f863
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408629"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465004"
 ---
 # <a name="alignment-c-declarations"></a>Zarovnání (deklarace C++)
-Jednou z nízké úrovně funkcí jazyka C++ je schopnost určit přesné zarovnání objektů v paměti maximálně využijí architektury konkrétní hardware. Ve výchozím nastavení, kompilátor zarovná členy třídy a struktury na jejich velikost: bool a char jsou zarovnány jeden hranice jeden bajt, short na dva bajty, int na čtyři bajty, long long double a long double na osm bajtů. Ve většině případů budete muset nikdy být obeznámeni s zarovnání, protože je již optimální výchozí zarovnání. V některých případech však můžete dosáhnout výrazné zlepšení výkonu, nebo úspory paměti tak, že zadáte vlastní zarovnání datových struktur. Visual Studio 2015 můžete použít klíčová slova __alignof specifických pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spuštění v sadě Visual Studio 2015 používejte C ++ 11 standard klíčových slov [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nová klíčová slova se chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci pro tato rozšíření platí také pro nová klíčová slova. Zobrazit [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standard jazyka C++ neurčuje balení chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže budete stále muset použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.  
+Jednou z nízké úrovně funkcí jazyka C++ je schopnost určit přesné zarovnání objektů v paměti maximálně využijí architektury konkrétní hardware. Ve výchozím nastavení, kompilátor zarovná členy třídy a struktury na jejich velikost: bool a char jsou zarovnány na hranice jeden bajt, na dva bajty, krátký int na čtyři bajty, long long, double a long double na osm bajtů. Ve většině případů budete muset nikdy být obeznámeni s zarovnání, protože je již optimální výchozí zarovnání. V některých případech však můžete dosáhnout výrazné zlepšení výkonu, nebo úspory paměti tak, že zadáte vlastní zarovnání datových struktur. Visual Studio 2015 můžete použít klíčová slova __alignof specifických pro společnost Microsoft a declspec(alignas) k určení zarovnání větší než výchozí. Spuštění v sadě Visual Studio 2015 používejte C ++ 11 standard klíčových slov [alignof a alignas](../cpp/alignof-and-alignas-cpp.md) pro přenositelnost maximální kódu. Nová klíčová slova se chovají stejným způsobem pod pokličkou jako rozšíření specifické pro společnost Microsoft a v dokumentaci pro tato rozšíření platí také pro nová klíčová slova. Zobrazit [__alignof – operátor](../cpp/alignof-operator.md) a [zarovnat](../cpp/align-cpp.md) Další informace. Standard jazyka C++ neurčuje balení chování pro zarovnání na hranicích menší než výchozí nastavení kompilátoru pro cílovou platformu, takže budete stále muset použít Microsoft #pragma [pack](../preprocessor/pack.md) v takovém případě.  
   
  Poskytuje standardní knihovny C++ [aligned_storage – třída](../standard-library/aligned-storage-class.md) pro přidělení paměti pro datové struktury s vlastní zarovnání a [aligned_union – třída](../standard-library/aligned-union-class.md) pro určení zarovnání pro sjednocení s netriviálními konstruktory a destruktory.  
   

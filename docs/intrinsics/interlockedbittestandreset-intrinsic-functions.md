@@ -1,5 +1,5 @@
 ---
-title: vnitřní funkce _interlockedbittestandreset | Microsoft Docs
+title: vnitřní funkce _interlockedbittestandreset | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,17 +28,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340447"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464621"
 ---
-# <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedbittestandreset-intrinsic-functions"></a>vnitřní funkce _interlockedbittestandreset
+**Specifické pro Microsoft**  
   
- Generuje instrukci, která nastaví chvíli `b` adresy `a` na hodnotu nula a vrátí původní hodnotu.  
+ Generuje instrukce, která nastaví bit `b` adresy `a` na nulu a vrátí původní hodnotu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,35 +82,35 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `a`  
- Ukazatel na paměť pro zjištění.  
+ [in] `a`  
+ Ukazatel paměti prozkoumat.  
   
- [v] `b`  
- Bit pozice pro testování.  
+ [in] `b`  
+ Bitová pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Původní hodnotu verze na pozici určeného `b`.  
+ Původní hodnota bit na určené pozici `b`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h >|  
 |`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h >|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h >|  
+|`_interlockedbittestandreset64`|x64|\<intrin.h >|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- Na x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] procesory, tyto vnitřní funkce používají `lock btr` instrukce, který čte a nastaví zadaný bit nule v atomické operace.  
+ Na x86 a x64 procesory, použijte tyto vnitřní objekty `lock btr` instrukce, která čte a nastaví zadané bit na hodnotu nula atomické operace.  
   
- Použijte na procesory ARM – vnitřní prvky s `_acq` a `_rel` přípony pro získání a verze sémantikou, například na začátku a konci kritické části. ARM – vnitřní prvky s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na procesorech ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Na procesory Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako u procesorů, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na procesorech Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány u procesorů, které nepodporují HLE, doporučení se ignoruje.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

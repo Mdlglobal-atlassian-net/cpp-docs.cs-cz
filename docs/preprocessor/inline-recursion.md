@@ -1,5 +1,5 @@
 ---
-title: inline_recursion – | Microsoft Docs
+title: inline_recursion | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849493"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466094"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Řídí vložené rozšíření přímých nebo vzájemně rekurzivních volání funkce.  
@@ -31,16 +31,17 @@ ms.locfileid: "33849493"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použití této – Direktiva pragma pro funkce řízení označen jako [vložené](../cpp/inline-functions-cpp.md) a [__inline](../cpp/inline-functions-cpp.md) nebo funkce, které kompilátor automaticky rozšíří v rámci /Ob2 možnost. Vyžaduje tato direktiva pragma [/Ob](../build/reference/ob-inline-function-expansion.md) nastavení – možnost kompilátoru 1 nebo 2. Výchozí stav pro direktivu pragma `inline_recursion` je vypnuto. Direktiva pragma se projeví při prvním volání funkce poté, co je zobrazena, a neovlivňuje definici funkce.  
+ 
+Použití této direktivy pragma ovládacího prvku funkce označené jako [vložené](../cpp/inline-functions-cpp.md) a [__inline](../cpp/inline-functions-cpp.md) nebo funkce, které kompilátor automaticky rozbalí v `/Ob2` možnost. Použití této direktivy pragma vyžaduje [/Ob](../build/reference/ob-inline-function-expansion.md) nastavení parametru kompilátoru 1 nebo 2. Výchozí stav pro **inline_recursion** je vypnuté. Direktiva pragma se projeví při prvním volání funkce poté, co je zobrazena, a neovlivňuje definici funkce.  
   
- Direktiva pragma `inline_recursion` určuje, jak jsou rozbaleny rekurzivní funkce. Pokud je direktiva pragma `inline_recursion` vypnutá a vložená funkce zavolá sama sebe (buď přímo, nebo nepřímo), je funkce rozbalena pouze jednou. Pokud `inline_recursion` je, funkce je rozšířena několikrát, dokud nebude dosaženo hodnoty nastavené s [inline_depth –](../preprocessor/inline-depth.md) – Direktiva pragma, výchozí hodnota pro rekurzivní funkce, které je definované `inline_depth` omezený – Direktiva pragma nebo kapacitou .  
+**Inline_recursion** – Direktiva pragma řídí, jak jsou rozbaleny rekurzivní funkce. Pokud **inline_recursion** je vypnuté, a Pokud vložená funkce zavolá sama sebe (buď přímo nebo nepřímo), funkce rozbalena pouze jednou. Pokud **inline_recursion** zapnutý, je funkce rozbalena vícekrát, dokud nedosáhne hodnoty nastavené direktivou [inline_depth](../preprocessor/inline-depth.md) – Direktiva pragma, výchozí hodnota pro rekurzivní funkce, který je definován `inline_depth` – Direktiva pragma, nebo omezením kapacity.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_depth](../preprocessor/inline-depth.md)   
- [/Ob (rozbalení vložené funkce)](../build/reference/ob-inline-function-expansion.md)
+ 
+[Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_depth](../preprocessor/inline-depth.md)   
+[/Ob (rozbalení vložené funkce)](../build/reference/ob-inline-function-expansion.md)

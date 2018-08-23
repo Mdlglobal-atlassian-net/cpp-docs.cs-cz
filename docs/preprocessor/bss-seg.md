@@ -1,5 +1,5 @@
 ---
-title: bss_seg – | Microsoft Docs
+title: bss_seg | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849805"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464797"
 ---
 # <a name="bssseg"></a>bss_seg
-Určuje, kde, neinicializovaného proměnné jsou uloženy v souboru .obj segmentu.  
+Určuje segment neinicializované proměnné, kde jsou uloženy v souboru .obj.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Soubory obj lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Segment výchozí v souboru .obj Neinicializovaný dat je .bss. V některých případech použití **bss_seg –** může urychlit načíst časy seskupením Neinicializovaný data do oddílů.  
+ 
+Soubory obj lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Výchozí segment v souboru obj neinicializovaná data je .bss. V některých případech použití **bss_seg** můžete urychlit načítání časy seskupením neinicializovaná data do jednoho oddílu.  
   
- **bss_seg –** bez parametrů obnoví na .bss segmentu.  
+**bss_seg** bez parametrů obnoví nastavení segmentu na .bss.  
   
- **nabízená**(volitelné)  
- Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízené** může mít *identifikátor* a *název segmentu*.  
+*push* (volitelné)  
+Vloží záznam do zásobníku vnitřního kompilátoru. A *nabízených* může mít *identifikátor* a *segment-name*.  
   
- **POP** (volitelné)  
- Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
+*POP* (volitelné)  
+Odstraní nejvyšší záznam z vnitřního zásobníku kompilátoru.  
   
- *identifikátor* (volitelné)  
- Při použití s **nabízené**, přiřadí název záznamu v zásobníku vnitřní kompilátoru. Při použití s **pop**, POP záznamy ze zásobníku vnitřní, dokud *identifikátor* odebrána; Pokud *identifikátor* nebyl nalezen v interní zásobníku, nic se odebrány.  
+*identifikátor* (volitelné)  
+Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s *pop*, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
   
- *identifikátor* umožňuje více záznamů, chcete-li být odebrány s jedním **pop** příkaz.  
+*identifikátor* vyjmout několik záznamů lze jedním z jedné *pop* příkazu.  
   
- *"název segmentu"*(volitelné)  
- Název segmentu Při použití s **pop**, je odebrány zásobníku a *název segmentu* stane názvem active segmentu.  
+*"segment-name"*(volitelné)  
+Název segmentu Při použití s *pop*, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.  
   
- *"segment třídy"* (volitelné)  
- Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
+*"segmentu třídy"* (volitelné)  
+Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directive_bss_seg.cpp  
 int i;                     // stored in .bss  
 #pragma bss_seg(".my_data1")  
@@ -75,11 +75,12 @@ int main() {
 }  
 ```  
   
- Můžete také určit oddíly pro inicializovaného dat ([data_seg](../preprocessor/data-seg.md)), funkce ([code_seg](../preprocessor/code-seg.md)) a const proměnné ([const_seg –](../preprocessor/const-seg.md)).  
+Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), funkce ([code_seg](../preprocessor/code-seg.md)) a proměnné const ([const_seg](../preprocessor/const-seg.md)).  
   
- Data přidělen s použitím **bss_seg –** – Direktiva pragma nezachovává žádné informace o jeho umístění.  
+Data Alokovaná pomocí **bss_seg** – Direktiva pragma nezachovává žádné informace o jeho umístění.  
   
- V tématu [/SECTION](../build/reference/section-specify-section-attributes.md) pro seznam názvů byste neměli používat při vytváření oddílu.  
+Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) seznam názvů byste neměli používat při tvorbě oddílu.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

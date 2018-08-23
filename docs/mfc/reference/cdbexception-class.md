@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e45a5c97f0f25ed0bcb704b584de645bce18cb9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e67dec2474d89e3daccf0bc0e59332c79080cc99
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338597"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465014"
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 Představuje podmínku výjimky vyplývající z databázových tříd.  
@@ -132,7 +132,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>Poznámky  
  Řetězec je formuláře "stav: % s, nativní: % ld původu: % s", kde jsou kódy v pořadí, nahrazena hodnot, které popisují:  
   
--   SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](https://msdn.microsoft.com/library/ms714687.aspx)v *ODBC programátora*. Příklad: "S0022".  
+-   SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\))v *ODBC programátora*. Příklad: "S0022".  
   
 -   Kód nativní chyby specifické pro zdroj dat se vrátil v *pfNativeError* parametr `SQLError` funkce. Příklad: 207.  
   
@@ -140,7 +140,7 @@ class CDBException : public CException
   
  Rozhraní framework interpretuje řetězec chyby a vloží do jeho komponenty `m_strStateNativeOrigin`; Pokud `m_strStateNativeOrigin` obsahuje informace o více než jednu chybu, chyby jsou odděleny tabulátorů. Vloží text alfanumerické chyby do rozhraní framework `m_strError`.  
   
- Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) fungovat v *ODBC programátora*.  
+ Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) fungovat v *ODBC programátora*.  
   
 ### <a name="example"></a>Příklad  
   Z rozhraní ODBC: "Stav: S0022, nativní: 207, původu: [Microsoft] [ovladač ODBC SQL Server] [SQL Server] neplatný název sloupce '%{colname/."  

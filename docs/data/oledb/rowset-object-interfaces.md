@@ -19,42 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8a1a5f5256087a8869426489fe01250b16fc598
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340508"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464713"
 ---
 # <a name="rowset-object-interfaces"></a>Rozhraní objektu sady řádků
 V následující tabulce jsou uvedeny povinných a volitelných rozhraní určené v objektu sady řádků OLE DB.  
   
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)|Povinné|Ano|  
-|[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Povinné|Ano|  
-|[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)|Povinné|Ano|  
-|[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)|Povinné|Ano|  
-|[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Povinné|Ano|  
-|[IChapteredRowset](https://msdn.microsoft.com/library/ms718180.aspx)|Nepovinné|Ne|  
-|[IColumnsInfo2](https://msdn.microsoft.com/library/ms712953.aspx)|Nepovinné|Ne|  
-|[IColumnsRowset](https://msdn.microsoft.com/library/ms722657.aspx)|Nepovinné|Ne|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|Povinné|Ano|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Povinné|Ano|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|Povinné|Ano|  
+|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|Povinné|Ano|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Povinné|Ano|  
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Nepovinné|Ne|  
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Nepovinné|Ne|  
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Nepovinné|Ne|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Nepovinné|Ano (pomocí knihovny ATL)|  
-|[IDBAsynchStatus](https://msdn.microsoft.com/library/ms709832.aspx)|Nepovinné|Ne|  
-|[IGetRow](https://msdn.microsoft.com/library/ms718047.aspx)|Nepovinné|Ne|  
-|[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)|Nepovinné|Ano|  
-|[IRowsetChapterMember](https://msdn.microsoft.com/library/ms725430.aspx)|Nepovinné|Ne|  
-|[IRowsetCurrentIndex](https://msdn.microsoft.com/library/ms709700.aspx)|Nepovinné|Ne|  
-|[IRowsetFind](https://msdn.microsoft.com/library/ms724221.aspx)|Nepovinné|Ne|  
-|[IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)|Nepovinné (ale vyžaduje pro poskytovatele úroveň 0)|Ano|  
-|[IRowsetIndex](https://msdn.microsoft.com/library/ms719604.aspx)|Nepovinné|Ne|  
-|[IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)|Nepovinné|Ano|  
-|[IRowsetRefresh](https://msdn.microsoft.com/library/ms714892.aspx)|Nepovinné|Ne|  
-|[IRowsetScroll](https://msdn.microsoft.com/library/ms712984.aspx)|Nepovinné|Ne|  
-|[IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)|Nepovinné|Ano|  
-|[IRowsetView](https://msdn.microsoft.com/library/ms709755.aspx)|Nepovinné|Ne|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Nepovinné|Ano|  
-|[IRowsetBookmark](https://msdn.microsoft.com/library/ms714246.aspx)|Nepovinné|Ne|  
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Nepovinné|Ne|  
+|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Nepovinné|Ano|  
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|Nepovinné (ale vyžaduje pro poskytovatele úroveň 0)|Ano|  
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Nepovinné|Ano|  
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Nepovinné|Ne|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Nepovinné|Ano|  
+|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Nepovinné|Ne|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Nepovinné|Ano|  
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Nepovinné|Ne|  
   
  Implementuje objekt generované v Průvodci řádků `IAccessor`, `IRowset`, a `IRowsetInfo` prostřednictvím dědičnosti. `IAccessorImpl` Váže oba výstupní sloupce. `IRowset` Rozhraní zpracovává načtené řádky a data. `IRowsetInfo` Rozhraní zpracovává vlastnosti sady řádků.  
   

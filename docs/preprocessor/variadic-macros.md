@@ -1,5 +1,5 @@
 ---
-title: Variadická makra | Microsoft Docs
+title: Variadická makra | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5918c7d91a3568799f361fcb42edb2e9c7b1445e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16549d6b7a80a8aa0f3f98cf9c7cd89c74058959
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850532"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464698"
 ---
 # <a name="variadic-macros"></a>Variadická makra
 Makra variadic jsou makra podobná funkcím, které obsahují proměnný počet argumentů.  
   
 ## <a name="remarks"></a>Poznámky  
- Variadická makra použít, je možné zadat se třemi tečkami jako konečný argument formální v definici makra a identifikátor nahrazení `__VA_ARGS__` lze v definici vložit další argumenty.  `__VA_ARGS__` je nahrazena všechny argumenty, které odpovídají se třemi tečkami, včetně čárkami mezi nimi.  
+ 
+Chcete-li použít makra variadic, lze zadat tři tečky jako poslední formální argument v definici makra a identifikátor nahrazení `__VA_ARGS__` může použít v definici pro vložení dalších argumentů.  `__VA_ARGS__` je nahrazen všemi argumenty, které odpovídají třem tečkám, včetně čárek mezi nimi.  
   
- Standard C určuje, že třem tečkám musí být předán alespoň jeden argument, aby se makro nepřekládalo na výraz s koncovou čárkou.  Implementace jazyka Visual C++ potlačí koncovou čárku, pokud nejsou třem tečkám předány žádné argumenty.  
+Standard C určuje, že třem tečkám musí být předán alespoň jeden argument, aby se makro nepřekládalo na výraz s koncovou čárkou.  Implementace jazyka Visual C++ potlačí koncovou čárku, pokud nejsou třem tečkám předány žádné argumenty.  
   
 ## <a name="example"></a>Příklad  
   
@@ -58,10 +59,8 @@ int main() {
                              // suppresses the trailing comma  
 }  
 ```  
-  
-## <a name="output"></a>Výstup  
-  
-```  
+    
+```Output  
 here are some varargs1(1)  
 here are some varargs2(4)  
 here are some varargs3(5)  
@@ -70,4 +69,5 @@ error
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Makra (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Makra (C/C++)](../preprocessor/macros-c-cpp.md)

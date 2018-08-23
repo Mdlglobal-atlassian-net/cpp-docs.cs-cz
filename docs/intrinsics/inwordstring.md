@@ -1,5 +1,5 @@
 ---
-title: __inwordstring | Microsoft Docs
+title: __inwordstring | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073c1303661aece3340f9ac84d37ccf23e29d556
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb3f563d94d2e7685c1a83e497b1db082f131842
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333359"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466320"
 ---
 # <a name="inwordstring"></a>__inwordstring
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Čte data pomocí zadaný port `rep insw` instrukcí.  
+ Čte data z pomocí zadaný port `rep insw` instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,27 +41,27 @@ void __inwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
- Port pro čtení z.  
+ [in] `Port`  
+ Port, který se má číst z.  
   
  [out] `Buffer`  
- Zde se zapíše data načtená z portu.  
+ Tady je zapsána data načtená z portu.  
   
- [v] `Count`  
- Počet slov dat ke čtení.  
+ [in] `Count`  
+ Počet slov data ke čtení.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inwordstring`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

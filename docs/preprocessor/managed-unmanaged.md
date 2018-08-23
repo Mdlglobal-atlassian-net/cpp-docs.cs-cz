@@ -1,5 +1,5 @@
 ---
-title: spravované, nespravované | Microsoft Docs
+title: spravované, nespravované | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846373"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465383"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
 Povolení řízení na úrovni funkce pro kompilování funkcí jako spravovaných nebo nespravovaných.  
@@ -35,31 +35,31 @@ Povolení řízení na úrovni funkce pro kompilování funkcí jako spravovaný
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru poskytuje úroveň modulu řízení kompilaci funkce buď jako spravované nebo nespravované.  
+
+[/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru poskytuje řízení na úrovni modulu pro kompilování funkcí jako spravovaných nebo nespravovaných.  
   
- Nespravovaná funkce bude zkompilována pro nativní platformu a provádění části programu bude modulem CLR (Common Language Runtime) předáno nativní platformě.  
+Nespravovaná funkce bude zkompilována pro nativní platformu a provádění části programu bude modulem CLR (Common Language Runtime) předáno nativní platformě.  
   
- Kompilované funkce jako spravovaný ve výchozím nastavení při **/CLR** se používá.  
+Funkce jsou ve výchozím nastavení při použití `/clr` kompilovány jako spravované.  
   
- Při použití těchto direktivy:  
+Při použití direktivy pragma:  
   
--   Přidání direktivy pragma před funkci, ale nikoliv do těla funkce.  
+- Přidání direktivy pragma před funkci, ale nikoliv do těla funkce.  
   
--   Přidat – Direktiva pragma po `#include` příkazy. Nepoužívejte tyto direktivy před `#include` příkazy.  
+- Přidání direktivy pragma po `#include` příkazy. Nepoužívejte direktivy pragma před `#include` příkazy.  
   
- Kompilátor ignoruje `managed` a `unmanaged` direktivy Pokud **/CLR** není použita při kompilaci.  
+Kompilátor ignoruje **spravované** a **nespravované** direktivy pragma Pokud `/clr` se nepoužívá při kompilaci.  
   
- Když je vytvořena instance funkce šablony, stav direktivy pragma v době definice šablony určuje, zda je spravovaná nebo nespravovaná.  
+Když je vytvořena instance funkce šablony, stav direktivy pragma v době definice šablony určuje, zda je spravovaná nebo nespravovaná.  
   
- Další informace najdete v tématu [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md).  
+Další informace najdete v tématu [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

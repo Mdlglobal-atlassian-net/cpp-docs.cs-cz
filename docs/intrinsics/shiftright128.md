@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 | Microsoft Docs
+title: __shiftright128 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339719"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464914"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Posune množství 128-bit, vyjádřené dvě počty 64-bit `LowPart` a `HighPart`, vpravo podle počtu bitů určeného `Shift` a vrátí nízkou 64bitová verze výsledku.  
+ Množství 128-bit, vyjádřené dvě veličiny 64-bit posune `LowPart` a `HighPart`, vpravo o počet bitů určený `Shift` a vrátí nízké 64 bitů výsledku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,33 +39,33 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `LowPart`  
- Nízkou 64bitová verze množství 128-bit se posunou.  
+ [in] `LowPart`  
+ Nízká 64 bitů množství 128 bitů a posunutí.  
   
- [v] `HighPart`  
- Vysoká 64bitová verze množství 128-bit se posunou.  
+ [in] `HighPart`  
+ Vysoká 64 bitů množství 128 bitů a posunutí.  
   
- [v] `Shift`  
- Počet bitů se posunou.  
+ [in] `Shift`  
+ Počet bitů na posunu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Nízkou 64bitová verze výsledku.  
+ Nízká 64 bitů výsledku.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `Shift` Hodnota je vždycky modulo 64, která, například při volání `__shiftright128(0, 1, 64)`, funkce se posunutí horní část `0` bitů doprava a vrátit nízkou součástí `0` a není `1` jinak může být správně.  
+ `Shift` Hodnota je vždy modulo 64 tak, že, například při volání `__shiftright128(0, 1, 64)`, funkce změní horní část `0` bits klikněte pravým tlačítkem myši a vrátí dolní část z `0` a ne `1` jako jinak lze očekávat.  
   
 ## <a name="example"></a>Příklad  
- Příklad, naleznete v části [__shiftleft128](../intrinsics/shiftleft128.md).  
+ Příklad najdete v tématu [__shiftleft128](../intrinsics/shiftleft128.md).  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__shiftleft128](../intrinsics/shiftleft128.md)   

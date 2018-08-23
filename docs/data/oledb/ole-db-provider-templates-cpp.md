@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339572"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465949"
 ---
 # <a name="ole-db-provider-templates-c"></a>Šablony zprostředkovatele OLE DB (C++)
 OLE DB je důležitou součástí strategie Microsoft univerzální přístup k datům. OLE DB návrh umožňuje přístup k vysoce výkonné datům z libovolného zdroje dat. Žádná tabulková data lze zobrazit pomocí technologie OLE DB bez ohledu na to, zda pochází z databáze. Flexibilita vám obrovské množství výkonu.  
@@ -63,7 +63,7 @@ OLE DB je důležitou součástí strategie Microsoft univerzální přístup k 
  Poskytovatelé může značně lišit složitost a funkce. Je užitečné kategorizovat zprostředkovatele na zprostředkovatele jen pro čtení a aktualizovatelní zprostředkovatelé:  
   
 -   Visual C++ 6.0 podporuje pouze zprostředkovatelé jen pro čtení. [Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md) popisuje, jak vytvořit zprostředkovatele pouze pro čtení.  
--   Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele, které můžete aktualizovat (zápis do) úložiště. Informace o aktualizovatelní zprostředkovatelé najdete v tématu [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) ukázka je příkladem aktualizovatelného zprostředkovatele.  
+-   Jazyk Visual C++ podporuje aktualizovatelné zprostředkovatele, které můžete aktualizovat (zápis do) úložiště. Informace o aktualizovatelní zprostředkovatelé najdete v tématu [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ukázka je příkladem aktualizovatelného zprostředkovatele.  
   
  Další informace naleznete v tématu:  
   
@@ -75,5 +75,5 @@ OLE DB je důležitou součástí strategie Microsoft univerzální přístup k 
   
 ## <a name="see-also"></a>Viz také  
  [Přístup k datům](../data-access-in-cpp.md)   
- [Dokumentace k sadě SDK technologie OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Referenční informace pro OLE DB programátory](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

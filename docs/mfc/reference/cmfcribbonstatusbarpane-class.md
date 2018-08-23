@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853846"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464918"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Cmfcribbonstatusbarpane – třída
 `CMFCRibbonStatusBarPane` Třída implementuje prvek pásu karet, který lze přidat na stavový panel pásu karet.  
@@ -210,7 +210,7 @@ BOOL IsExtended() const;
  TRUE, pokud je podokno na stavovém řádku rozšířené oblasti. FALSE v opačném případě.  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void OnDrawBorder(CDC*);
@@ -222,7 +222,7 @@ virtual void OnDrawBorder(CDC*);
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);

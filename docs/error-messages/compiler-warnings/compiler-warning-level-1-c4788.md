@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4788 | Microsoft Docs
+title: Upozornění (úroveň 1) C4788 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a43fb9d79c63637b2bff9a27661a9f848ef6dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23e86de5ebab3f99c7d98e502e280b5defb51e10
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284196"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465108"
 ---
-# <a name="compiler-warning-level-1-c4788"></a>C4788 kompilátoru upozornění (úroveň 1)
-"identifikátor": identifikátor byl zkrácen na "číslo" znaků  
+# <a name="compiler-warning-level-1-c4788"></a>Kompilátor upozornění (úroveň 1) C4788
+'identifier': identifikátor se zkrátil na znaků 'number'  
   
- Kompilátor omezuje maximální délku povolenou pro název funkce. Pokud kompilátor vygeneruje funclets pro EH/SEH kód, tvoří název funclet předponou názvu funkce s nějaký text, například "__catch", "\__unwind", nebo jiný řetězec.  
+ Kompilátor omezuje maximální délku povolenou pro název funkce. Když kompilátor generuje funclets pro kód EH/SEH, tvoří název funkce předponou v podobě název funkce nějaký text, například "__catch", "\__unwind", nebo jiného řetězce.  
   
- Výsledný název funclet může být příliš dlouho a bude zkrácení a generovat C4788 kompilátoru.  
+ Výsledný název funkce může být příliš dlouhý a bude ji zkrátit a generovat C4788 kompilátor.  
   
- Chcete-li vyřešit toto upozornění, zmenšit na původní název funkce. Pokud funkci C++ šablony funkce nebo metoda, použijte pro část názvu definice typu. Příklad:  
+ Pokud chcete vyřešit toto upozornění, zkraťte název původní funkce. Pokud je funkce C++ šablony funkce nebo metoda, pomocí definice typu pro část názvu. Příklad:  
   
 ```  
 C1<x, y, z<T>>::C2<a,b,c>::f  
@@ -43,4 +43,4 @@ typedef C1<x, y, z<T>>::C2<a,b,c> new_class ;
 new_class::f  
 ```  
   
- Toto upozornění se zobrazí jenom v [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] kompilátoru.
+ Toto upozornění se zobrazí pouze v x64 kompilátoru.

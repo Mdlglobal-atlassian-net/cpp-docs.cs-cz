@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_si64x | Microsoft Docs
+title: _mm_stream_si64x | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328786"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464711"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje MOVNTI instrukcí. Zapisuje data `Source` do určeného umístění paměti `Dest`, bez zahlcení mezipaměti.  
+ Generuje instrukce MOVNTI. Zapisuje data `Source` určeného umístění paměti `Dest`, bez zahlcení mezipamětí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ void _mm_stream_si64x(
 #### <a name="parameters"></a>Parametry  
   
  [out] `Dest`  
- Ukazatel na umístění pro zdroj dat pro zápis.  
+ Ukazatel na umístění pro zápis zdrojová data.  
   
- [v] `Source`  
+ [in] `Source`  
  Data k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
@@ -85,7 +85,7 @@ int main()
 0 ffffffffffff 0 0  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

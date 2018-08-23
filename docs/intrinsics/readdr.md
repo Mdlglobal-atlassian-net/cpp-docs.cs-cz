@@ -1,5 +1,5 @@
 ---
-title: __readdr | Microsoft Docs
+title: __readdr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332972"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465114"
 ---
 # <a name="readdr"></a>__readdr
-Načte hodnotu zadaného ladění registrace.  
+Přečte hodnotu do registru zadaného ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,24 +34,24 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `DebugRegister`  
- Konstanta od 0 do 7, který identifikuje ladění zaregistrovat.  
+ [in] `DebugRegister`  
+ Registrace – konstanta od 0 do 7, který identifikuje ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Hodnota zadaná ladění registrace.  
+ Hodnota registru zadané ladění.  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní tyto funkce jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní funkce.  
+ Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

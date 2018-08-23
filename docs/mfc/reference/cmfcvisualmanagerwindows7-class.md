@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465011"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Cmfcvisualmanagerwindows7 – třída
-`CMFCVisualManagerWindows7` Poskytuje vzhled aplikace [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace.  
+`CMFCVisualManagerWindows7` Poskytuje vzhled aplikace Windows 7 aplikace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Nastaví barevné schéma `CMFCVisualManagerWindows7` grafického uživatelského rozhraní.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `CMFCVisualManagerWindows7` třídy změnit vzhled vaší aplikace tak, aby napodoboval výchozí [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace. Tato třída nemusí být platný, pokud vaše aplikace běží na verzi Windows starší než [!INCLUDE[win7](../../build/includes/win7_md.md)]. V tomto scénáři aplikace používá výchozí správce vzhledu definované v [cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Použití `CMFCVisualManagerWindows7` třídy změnit vzhled vaší aplikace tak, aby napodoboval výchozí aplikace pro Windows 7. Tato třída nemusí být platný, pokud vaše aplikace běží na verzi systému Windows starší než Windows 7. V tomto scénáři aplikace používá výchozí správce vzhledu definované v [cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  Cmfcvisualmanagerwindows7 – dědí z obou více metod [CMFCVisualManagerWindows – třída](../../mfc/reference/cmfcvisualmanagerwindows-class.md) a `CMFCVisualManager` třídy. Metody uvedené v předchozí části jsou metody ještě `CMFCVisualManagerWindows7` třídy.  
   

@@ -1,5 +1,5 @@
 ---
-title: high_method_prefix – | Microsoft Docs
+title: high_method_prefix – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f8e085f414134a11572063e5bd27ed830e1d95
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd645adc3ab37c2838a9abeadf4ee6eb62cc96dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913002"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465941"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje předpony v názvu základní vlastnosti a metody.  
+Určuje předponu pro pojmenování základní vlastnosti a metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,15 +34,17 @@ ms.locfileid: "33913002"
 high_method_prefix("Prefix")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Prefix`  
- Předpona, která má být použit.  
+### <a name="parameters"></a>Parametry  
+*Předpona*  
+Předpona se použije.  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení souhrnné zpracování chyb vlastnosti a metody jsou vystaveny členské funkce s názvem bez předpony. Názvy jsou z knihovny typů.  
+ 
+Ve výchozím nastavení základní vlastnosti zpracování chyb a metody vystaveny členským funkcím pojmenovaným bez předpony. Názvy se z knihovny typů.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

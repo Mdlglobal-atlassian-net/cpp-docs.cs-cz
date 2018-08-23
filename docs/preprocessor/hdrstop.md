@@ -1,5 +1,5 @@
 ---
-title: hdrstop – | Microsoft Docs
+title: hdrstop | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1c628efaf45be87dcfc046cf1774c762c157f4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10365b4cbe43863f72b721665ae8ea518e3fdc5f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847023"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465094"
 ---
 # <a name="hdrstop"></a>hdrstop
 Poskytuje větší kontrolu nad názvy souborů předkompilace a nad umístěním, ve kterém je uložen stav kompilace.  
@@ -31,32 +31,32 @@ Poskytuje větší kontrolu nad názvy souborů předkompilace a nad umístění
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma hdrstop [( "filename" )]    
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- *Filename* je název předkompilovaný hlavičkový soubor použít nebo vytvořit (v závislosti na tom, jestli se [/Yu](../build/reference/yu-use-precompiled-header-file.md) nebo [/Yc](../build/reference/yc-create-precompiled-header-file.md) je zadána). Pokud *filename* neobsahuje specifikaci cesta předkompilovaný hlavičkový soubor předpokládá se, že ve stejném adresáři jako zdrojový soubor.  
+ 
+*Filename* je název předkompilovaného souboru hlaviček použít nebo vytvořit (podle toho, jestli [/Yu](../build/reference/yu-use-precompiled-header-file.md) nebo [/Yc](../build/reference/yc-create-precompiled-header-file.md) je zadána). Pokud *filename* neobsahuje specifikaci cesty, předpokládá se soubor předkompilované hlavičky ve stejném adresáři jako zdrojový soubor.  
   
- Pokud obsahuje soubor jazyka C nebo C++ **hdrstop –** – Direktiva pragma, když kompilujete s /Yc, kompilátor uloží stav kompilace až umístění – Direktiva pragma. Zkompilovaný stav jakéhokoli kódu, který následuje direktivu pragma, není uložen.  
+Obsahuje-li soubor jazyka C nebo C++ **hdrstop** – Direktiva pragma při kompilaci s `/Yc`, kompilátor uloží stav kompilace do umístění direktivy pragma. Zkompilovaný stav jakéhokoli kódu, který následuje direktivu pragma, není uložen.  
   
- Použití *filename* pro pojmenování předkompilovaný hlavičkový soubor, ve kterém je uložen kompilované stav. Mezery mezi **hdrstop –** a *filename* je volitelný. Název souboru zadaný v **hdrstop –** – Direktiva pragma je řetězec a proto podléhá omezení libovolný řetězec jazyka C nebo C++. Zejména je nutné jej uzavřít do uvozovek a použít řídicí znak (zpětné lomítko) pro zadání názvů adresářů. Příklad:  
+Použití *filename* pojmenovat soubor předkompilované hlavičky, ve kterém je uložen zkompilovaný stav. Mezera mezi **hdrstop** a *filename* je volitelný. Název souboru zadaný v **hdrstop** – Direktiva pragma je řetězec a proto je v souladu s omezeními libovolný řetězec jazyka C nebo C++. Zejména je nutné jej uzavřít do uvozovek a použít řídicí znak (zpětné lomítko) pro zadání názvů adresářů. Příklad:  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
 ```  
   
- Název předkompilovaného souboru hlaviček se určuje podle následujících pravidel, v pořadí podle priority:  
+Název předkompilovaného souboru hlaviček se určuje podle následujících pravidel, v pořadí podle priority:  
   
-1.  Argument možnosti kompilátoru /Fp  
+1. Argument `/Fp` – možnost kompilátoru  
   
-2.  *Filename* argument #**hdrstop – Direktiva pragma**  
+2. *Filename* argument `#pragma hdrstop`  
   
-3.  Základní název zdrojového souboru s příponou .PCH  
+3. Základní název zdrojového souboru s příponou .PCH  
   
- Pro /Yc a /Yu možnosti, pokud žádná z možností dvě kompilace ani **hdrstop –** – Direktiva pragma Určuje název souboru, základní název zdrojového souboru se používá jako základní název předkompilovaný hlavičkový soubor.  
+Pro `/Yc` a `/Yu` možnosti, pokud ani jeden ze dvou možností kompilace ani **hdrstop** – Direktiva pragma Určuje název souboru, základní název zdrojového souboru se používá jako základní název předkompilovaného souboru hlaviček.  
   
- Lze také použít příkazy předzpracování pro provedení nahrazení makra následovně:  
+Lze také použít příkazy předzpracování pro provedení nahrazení makra následovně:  
   
 ```  
 #define INCLUDE_PATH "c:\\progra~`1\\devstsu~1\\vc\\include\\"  
@@ -67,11 +67,11 @@ Poskytuje větší kontrolu nad názvy souborů předkompilace a nad umístění
 #pragma hdrstop( INCLUDE_PATH PCH_FNAME )  
 ```  
   
- Kde platí následující pravidla **hdrstop –** – Direktiva pragma se může:  
+Následující pravidla určují, kde **hdrstop** – Direktiva pragma je možné použít:  
   
--   Musí být uvedena mimo jakékoliv deklarace dat, funkce nebo definice.  
+- Musí být uvedena mimo jakékoliv deklarace dat, funkce nebo definice.  
   
--   Musí být zadána ve zdrojovém souboru, nikoli v souboru hlaviček.  
+- Musí být zadána ve zdrojovém souboru, nikoli v souboru hlaviček.  
   
 ## <a name="example"></a>Příklad  
   
@@ -86,7 +86,8 @@ __inline Disp( char *szToDisplay )   // Define an inline function
 #pragma hdrstop  
 ```  
   
- V tomto příkladu **hdrstop –** – Direktiva pragma se zobrazí po dva soubory byly zahrnuty a byla definována vložené funkce. To se může zpočátku zdát, jako neobvyklé umístění direktivy pragma. Zvažte ale, že pomocí ruční možnosti předkompilace, /Yc a /Yu, **hdrstop –** – Direktiva pragma umožňuje předkompilovat celý zdrojové soubory – dokonce i vloženého kódu. Kompilátor společnosti Microsoft předkompilaci neomezuje pouze na deklarace dat.  
+V tomto příkladu **hdrstop** – Direktiva pragma se zobrazí po dvou souborů a vložená funkce definována. To se může zpočátku zdát, jako neobvyklé umístění direktivy pragma. Zvažte však, který používá ruční předkompilace, `/Yc` a `/Yu`, se **hdrstop** – Direktiva pragma umožňuje předkompilovat celé zdrojové soubory, dokonce i vložený kód. Kompilátor společnosti Microsoft předkompilaci neomezuje pouze na deklarace dat.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

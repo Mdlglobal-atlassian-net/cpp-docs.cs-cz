@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496555"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465392"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
@@ -61,7 +61,7 @@ Podrobnosti o místo na disku a požadavky na operační systém, najdete v čá
 
    Při prvním spuštění aplikace Visual Studio, budete vyzváni k přihlášení pomocí pověření Account Microsoft. Pokud ho nemáte, můžete jeden vytvořit zdarma. Musíte také zvolit jen motiv. Nedělejte si starosti, pokud chcete ji můžete změnit později. 
 
-   Visual Studio to trvat několik minut, než na se připravit k použití při prvním spuštění. Zde je, jak to vypadá v rychlého časové závislosti:
+   Visual Studio to trvat několik minut, než se připravit k použití při prvním spuštění. Zde je, jak to vypadá v rychlého časové závislosti:
 
    ![Přihlaste se Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "přihlášení Visual Studio 2017")
 

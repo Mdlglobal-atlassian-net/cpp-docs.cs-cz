@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs
+title: __readgsbyte __readgsdword, __readgsqword __readgsword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325276"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464919"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Čtení paměti z umístění určeného posun vzhledem k začátku GS segmentu.  
+ Čtení paměti z umístění, které určuje posun vzhledem k začátku segmentu GS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,27 +52,27 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
- Posun od začátku `GS` číst z.  
+ [in] `Offset`  
+ Posun od začátku `GS` ke čtení z.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Obsah paměti bajtů, word, double aplikace word nebo quadword (označeno název volaná funkce) v umístění `GS:[Offset]`.  
+ Obsah paměti byte, word, slovo double nebo quadword (jak je uvedeno podle názvu funkce volaná) v umístění `GS:[Offset]`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|x64|  
+|`__readgsdword`|x64|  
+|`__readgsqword`|x64|  
+|`__readgsword`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní tyto funkce jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto vnitřní objekty jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   

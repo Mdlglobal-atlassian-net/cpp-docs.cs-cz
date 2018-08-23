@@ -38,15 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337239"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464912"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl – třída
-Poskytuje implementaci [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) rozhraní.  
+Poskytuje implementaci [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,7 +88,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 Vrátí pole řadové číslovky sloupců v sadě řádků, které se identifikují pomocí ID zadaného sloupce.  
@@ -102,7 +102,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
  [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

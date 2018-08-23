@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852265"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466105"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 `CNetAddressCtrl` Třída reprezentuje ovládacího prvku síťové adresy, které můžete použít k zadání a ověření formátu protokolu IPv4, IPv6 a pojmenovaných adres DNS.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  Následující obrázek znázorňuje dialogového okna, která obsahuje ovládací prvek sítě. Textového pole (1) pro ovládacího prvku síťové adresy obsahuje neplatný síťovou adresu. Pokud síťová adresa není platná, zobrazí se zpráva informační Tip (2).  
   
- ![Dialogové okno s ovládacím prvkem síťové adresy a informační tip. ] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Dialogové okno s ovládacím prvkem síťové adresy a informační tip. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>Příklad  
  Následující příklad kódu je část dialogového okna, která ověřuje síťovou adresu. Obslužné rutiny událostí pro tři přepínačů určete síťová adresa může být jeden ze tří typů adresu. Uživatel zadá do textového pole ovládacího prvku síťové adresy a stiskne tlačítko Ověřit adresu. Pokud se jedná o platnou adresu, zobrazí se zpráva o úspěchu; v opačném případě se zobrazí chybová zpráva předdefinované informační tip.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
- Tato třída je podporována v [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] a novější.  
+ Tato třída je podporován v systému Windows Vista nebo novější.  
   
  Další požadavky pro tuto třídu jsou popsány v [vytvářet požadavky pro Windows Vista běžné ovládací prvky](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

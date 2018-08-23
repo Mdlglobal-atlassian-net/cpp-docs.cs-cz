@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854132"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465107"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Cmfcvisualmanageroffice2003 – třída
 `CMFCVisualManagerOffice2003` Poskytuje vzhled aplikace Microsoft Office 2003 aplikace.  
@@ -720,7 +720,7 @@ virtual void OnDrawBarGripper(
  Výchozí implementace této metody se zobrazí standardní úchytu. Chcete-li přizpůsobit vzhled úchytu přepsáním této metody v vlastní třídy odvozené od [cmfcvisualmanageroffice2003 –](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) třídy.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual BOOL OnDrawBrowseButton(

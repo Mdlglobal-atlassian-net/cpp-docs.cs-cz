@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336723"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465953"
 ---
 # <a name="ctable-class"></a>CTable – třída
 Poskytuje prostředky pro přímý přístup k jednoduché sady řádků (jeden bez parametrů).  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in] `DBID` Tabulky otevřete.  
   
  *pPropSet*  
- [in] Ukazatel na pole [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://msdn.microsoft.com/library/ms713696.aspx) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
+ [in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
   
  *ulPropSets*  
- [in] Počet [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury předané *pPropSet* argument.  
+ [in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](https://msdn.microsoft.com/library/ms716724.aspx) v *OLE DB referenční informace pro programátory*.  
+ Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: Multithreading a národní prostředí | Microsoft Docs
+title: Multithreading a národní prostředí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692851"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465006"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading a národní prostředí
-Běhové knihovny jazyka C a standardní knihovny C++ poskytují podporu pro změnu národního prostředí vašeho programu. Toto téma popisuje problémy, které nastat při použití funkce národního prostředí obou knihoven v aplikaci s více vlákny.  
+Běhové knihovny jazyka C a standardní knihovny C++ poskytují podporu pro změnu národního prostředí programu. Toto téma popisuje problémy, které vznikají při použití funkce národního prostředí obě knihovny ve vícevláknových aplikacích.  
   
 ## <a name="remarks"></a>Poznámky  
- S běhové knihovny, můžete vytvořit vícevláknové aplikace pomocí `_beginthread` a `_beginthreadex` funkce. Toto téma popisuje pouze vícevláknové aplikace vytvořené pomocí těchto funkcí. Další informace najdete v tématu [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+
+S běhové knihovny jazyka C, můžete vytvořit vícevláknové aplikace pomocí `_beginthread` a `_beginthreadex` funkce. Toto téma popisuje pouze vícevláknové aplikace vytvořené pomocí těchto funkcí. Další informace najdete v tématu [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Můžete změnit národní prostředí pomocí běhové knihovny jazyka C [setlocale](../preprocessor/setlocale.md) funkce. V předchozích verzích Visual C++ tato funkce by měla vždy změnit národního prostředí v celé aplikaci. Nyní je zde podpora pro nastavení národního prostředí na základě vlákna. To se provádí pomocí [_configthreadlocale –](../c-runtime-library/reference/configthreadlocale.md) funkce. Chcete-li určit, že [setlocale](../preprocessor/setlocale.md) by se měl změnit pouze národního prostředí v aktuální vlákno volání `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` v daném vláknu. Naopak volání `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` způsobí, že vlákno pro použití jako globální národní prostředí a všechny volání [setlocale](../preprocessor/setlocale.md) v tom, že vlákno změní národní prostředí v všechna vlákna, které explicitně nepovolili národní prostředí podle vláken.  
+Chcete-li změnit národní prostředí pomocí běhové knihovny jazyka C, použijte [setlocale](../preprocessor/setlocale.md) funkce. V předchozích verzích aplikace Visual C++ tato funkce by měla vždy změnit národní prostředí v celé aplikaci. Je teď podporují pro nastavení národního prostředí na základě vlákno. To se provádí pomocí [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) funkce. Chcete-li určit, že [setlocale](../preprocessor/setlocale.md) by měl změnit pouze národní prostředí v aktuálním vlákně, volání `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` v tomto vlákně. Naopak volání `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` způsobí, že toto vlákno pro použití globální národní prostředí a voláním [setlocale](../preprocessor/setlocale.md) v tom, že vlákno se změní národní prostředí ve všech vláknech, které nejsou explicitně povolená národní prostředí pro vlákno.  
   
- Můžete změnit národní prostředí pomocí běhové knihovny jazyka C++ [locale – třída](../standard-library/locale-class.md). Při volání [locale::global](../standard-library/locale-class.md#global) metoda, změníte národní prostředí v každé vlákno, které explicitně nepovolil národní prostředí podle vláken. Chcete-li změnit národního prostředí v jedno vlákno nebo část aplikace, stačí vytvořit instanci `locale` objekt v daném vlákně nebo části kódu.  
+Chcete-li změnit národní prostředí pomocí knihovny Runtime jazyka C++, použijte [locale – třída](../standard-library/locale-class.md). Při volání [locale::global](../standard-library/locale-class.md#global) metodu, můžete změnit národní prostředí v každém vlákně, které explicitně nepovolil národní prostředí pro vlákno. Chcete-li změnit národní prostředí v jednom vlákně nebo část aplikace, jednoduše vytvořit instanci `locale` objekt vlákna nebo části kódu.  
   
 > [!NOTE]
->  Volání metody [locale::global](../standard-library/locale-class.md#global) změní národní prostředí pro standardní knihovna C++ a běhové knihovny jazyka C. Avšak volání [setlocale](../preprocessor/setlocale.md) pouze změny národní prostředí běhové knihovny jazyka C; standardní knihovna C++ nemá vliv.  
+> Volání [locale::global](../standard-library/locale-class.md#global) změní národní prostředí pro standardní knihovny C++ a C Runtime Library. Však voláním [setlocale](../preprocessor/setlocale.md) pouze změny národního prostředí běhové knihovny jazyka C; standardní knihovny C++ není ovlivněno.  
   
- Následující příklady ukazují, jak používat [setlocale](../preprocessor/setlocale.md) funkce, [locale – třída](../standard-library/locale-class.md)a [_configthreadlocale –](../c-runtime-library/reference/configthreadlocale.md) funkce změnit národní prostředí aplikace několika různých scénářů.  
+Následující příklady ukazují, jak používat [setlocale](../preprocessor/setlocale.md) funkce, [locale – třída](../standard-library/locale-class.md)a [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) funkce Změna národního prostředí aplikace několik různých scénářů.  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu hlavní vlákno dva potomky. První vlákno, vlákna A, povoluje národní prostředí podle vláken voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhý vlákno, vlákno B, jakož i hlavní vlákno, nepovolujte národní prostředí podle vláken. Přístup z více vláken poté provede změny národního prostředí pomocí [setlocale](../preprocessor/setlocale.md) funkce běhové knihovny jazyka C.  
+ 
+V tomto příkladu hlavního vlákna dva potomky. První vlákno, vlákno A povoluje národní prostředí pro vlákno voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhé vlákno, vlákno B, jakož i hlavním vlákně, nepovolujte národní prostředí pro vlákno. Vlákna A poté pokračuje změnit pomocí národního prostředí [setlocale](../preprocessor/setlocale.md) funkce běhové knihovny jazyka C.  
   
- Má povoleno, národní prostředí podle vláken pouze tyto funkce běhové knihovny jazyka C v přístup z více vláken A začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v vlákno B a hlavního vlákna nadále používat národního prostředí "C". Navíc od [setlocale](../preprocessor/setlocale.md) nemá vliv na národním prostředí standardní knihovna C++, všechny standardní knihovna C++ objekty nadále používat národního prostředí "C".  
+Protože má povoleno, národní prostředí vlákna pouze na funkce běhové knihovny jazyka C ve vlákně A začněte používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C ve vlákně B a v hlavním vlákně dál používají národní prostředí "C". Navíc protože [setlocale](../preprocessor/setlocale.md) nemá vliv na národní prostředí standardní knihovny C++, všechny standardní knihovny C++ objekty i nadále používat národní prostředí "C".  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -138,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu hlavní vlákno dva potomky. První vlákno, vlákna A, povoluje národní prostředí podle vláken voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhý vlákno, vlákno B, jakož i hlavní vlákno, nepovolujte národní prostředí podle vláken. Přístup z více vláken A poté provede změny použitím národního prostředí [locale::global](../standard-library/locale-class.md#global) metoda standardní knihovny jazyka C++.  
+ 
+V tomto příkladu hlavního vlákna dva potomky. První vlákno, vlákno A povoluje národní prostředí pro vlákno voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhé vlákno, vlákno B, jakož i hlavním vlákně, nepovolujte národní prostředí pro vlákno. Vlákna A poté pokračuje změnit pomocí národního prostředí [locale::global](../standard-library/locale-class.md#global) metoda standardní knihovny C++.  
   
- Má povoleno, národní prostředí podle vláken pouze tyto funkce běhové knihovny jazyka C v přístup z více vláken A začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v vlákno B a hlavního vlákna nadále používat národního prostředí "C". Ale protože [locale::global](../standard-library/locale-class.md#global) metoda změní národního prostředí "globální", všechny objekty standardní knihovna C++ v všechna vlákna začít používat "Francouzské" národní prostředí.  
+Protože má povoleno, národní prostředí vlákna pouze na funkce běhové knihovny jazyka C ve vlákně A začněte používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C ve vlákně B a v hlavním vlákně dál používají národní prostředí "C". Ale protože [locale::global](../standard-library/locale-class.md#global) metoda změní národní prostředí "globální", všechny objekty standardní knihovny jazyka C++ ve všech vláknech začít používat "Francouzské" národní prostředí.  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -236,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu hlavní vlákno dva potomky. První vlákno, vlákna A, povoluje národní prostředí podle vláken voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhý vlákno, vlákno B, jakož i hlavní vlákno, nepovolujte národní prostředí podle vláken. Přístup z více vláken B poté provede změny národního prostředí pomocí [setlocale](../preprocessor/setlocale.md) funkce běhové knihovny jazyka C.  
+ 
+V tomto příkladu hlavního vlákna dva potomky. První vlákno, vlákno A povoluje národní prostředí pro vlákno voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhé vlákno, vlákno B, jakož i hlavním vlákně, nepovolujte národní prostředí pro vlákno. Vlákno B poté provede změny pomocí národního prostředí [setlocale](../preprocessor/setlocale.md) funkce běhové knihovny jazyka C.  
   
- Vzhledem k tomu, že vlákno B nemá povoleno národní prostředí podle vláken, funkce běhové knihovny jazyka C v vlákno B a hlavního vlákna začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v pokračovat přístup z více vláken A použít národního prostředí "C", protože přístup z více vláken A má povoleno národní prostředí podle vláken. Navíc od [setlocale](../preprocessor/setlocale.md) nemá vliv na národním prostředí standardní knihovna C++, všechny standardní knihovna C++ objekty nadále používat národního prostředí "C".  
+Protože B vlákna nemá povoleno národní prostředí pro vlákno, funkce běhové knihovny jazyka C ve vlákně B a v hlavním vlákně začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v vlákna A nadále používat národní prostředí "C", protože má povoleno národní prostředí pro vlákno. Navíc protože [setlocale](../preprocessor/setlocale.md) nemá vliv na národní prostředí standardní knihovny C++, všechny standardní knihovny C++ objekty i nadále používat národní prostředí "C".  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -338,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu hlavní vlákno dva potomky. První vlákno, vlákna A, povoluje národní prostředí podle vláken voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhý vlákno, vlákno B, jakož i hlavní vlákno, nepovolujte národní prostředí podle vláken. Přístup z více vláken B pak provede změny použitím národního prostředí [locale::global](../standard-library/locale-class.md#global) metoda standardní knihovny jazyka C++.  
+ 
+V tomto příkladu hlavního vlákna dva potomky. První vlákno, vlákno A povoluje národní prostředí pro vlákno voláním `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Druhé vlákno, vlákno B, jakož i hlavním vlákně, nepovolujte národní prostředí pro vlákno. Vlákno B poté provede změny pomocí národního prostředí [locale::global](../standard-library/locale-class.md#global) metoda standardní knihovny C++.  
   
- Vzhledem k tomu, že vlákno B nemá povoleno národní prostředí podle vláken, funkce běhové knihovny jazyka C v vlákno B a hlavního vlákna začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v pokračovat přístup z více vláken A použít národního prostředí "C", protože přístup z více vláken A má povoleno národní prostředí podle vláken. Ale protože [locale::global](../standard-library/locale-class.md#global) metoda změní národního prostředí "globální", všechny objekty standardní knihovna C++ v všechna vlákna začít používat "Francouzské" národní prostředí.  
+Protože B vlákna nemá povoleno národní prostředí pro vlákno, funkce běhové knihovny jazyka C ve vlákně B a v hlavním vlákně začít používat "Francouzské" národní prostředí. Funkce běhové knihovny jazyka C v vlákna A nadále používat národní prostředí "C", protože má povoleno národní prostředí pro vlákno. Ale protože [locale::global](../standard-library/locale-class.md#global) metoda změní národní prostředí "globální", všechny objekty standardní knihovny jazyka C++ ve všech vláknech začít používat "Francouzské" národní prostředí.  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -440,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora více vláken ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread –, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale –](../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale –](../preprocessor/setlocale.md)   
- [Internacionalizace](../c-runtime-library/internationalization.md)   
- [Národní prostředí](../c-runtime-library/locale.md)   
- [\<clocale – >](../standard-library/clocale.md)   
- [\<národní prostředí >](../standard-library/locale.md)   
- [locale – třída](../standard-library/locale-class.md)
+
+[Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setlocale](../preprocessor/setlocale.md)   
+[Internacionalizace](../c-runtime-library/internationalization.md)   
+[Národní prostředí](../c-runtime-library/locale.md)   
+[\<clocale – >](../standard-library/clocale.md)   
+[\<národní prostředí >](../standard-library/locale.md)   
+[locale – třída](../standard-library/locale-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Zpracování (x64) výjimek | Microsoft Docs
+title: Zpracování (x64) výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367183"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464709"
 ---
 # <a name="exception-handling-x64"></a>Zpracování výjimek (x64)
-Tato část popisuje strukturované zpracování výjimek a v chování zpracování výjimek v C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+Tato část popisuje strukturované zpracování výjimek a chování x64 zpracování výjimek jazyka C++.  
   
 -   [Unwind data pro zpracování výjimek, podpora ladění](../build/unwind-data-for-exception-handling-debugger-support.md)  
   

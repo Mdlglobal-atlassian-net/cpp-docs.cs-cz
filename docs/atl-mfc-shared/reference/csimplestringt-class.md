@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883629"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464442"
 ---
 # <a name="csimplestringt-class"></a>Csimplestringt – třída
 Tato třída reprezentuje `CSimpleStringT` objektu.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  Vyrovnávací paměti je automaticky uvolněn, kdy `CSimpleStringT` objekt zničen.  
   
- Pokud budete udržovat přehled o délce řetězce sami, ne nepřipojujte ukončujícího znaku null. Po uvolnění vyrovnávací paměti s použitím je nutné zadat délku řetězce konečné `ReleaseBuffer`. Pokud připojíte ukončujícího znaku null při volání `ReleaseBuffer`, předejte hodnotu -1 (výchozí) pro délku `ReleaseBuffer`, a `ReleaseBuffer` provede `strlen` pro vyrovnávací paměť k určení jeho délka.  
+ Pokud budete udržovat přehled o délce řetězce sami, nepřipojujte ukončujícího znaku null. Po uvolnění vyrovnávací paměti s použitím je nutné zadat délku řetězce konečné `ReleaseBuffer`. Pokud připojíte ukončujícího znaku null při volání `ReleaseBuffer`, předejte hodnotu -1 (výchozí) pro délku `ReleaseBuffer`, a `ReleaseBuffer` provede `strlen` pro vyrovnávací paměť k určení jeho délka.  
   
  Další informace o počítání odkazů najdete v následujících článcích:  
   

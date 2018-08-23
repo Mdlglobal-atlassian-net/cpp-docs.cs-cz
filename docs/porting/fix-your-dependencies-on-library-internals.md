@@ -1,5 +1,5 @@
 ---
-title: Opravte svoje závislosti na knihovně internals | Microsoft Docs
+title: Oprava závislostí u interních informací o knihovně | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/24/2017
 ms.technology:
@@ -15,28 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839057"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466384"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>Opravte svoje závislosti na interní informace o knihovny
+# <a name="fix-your-dependencies-on-library-internals"></a>Oprava závislostí u interních informací o knihovně
 
-Microsoft publikuje zdrojový kód pro standardní knihovnu většinu běhové knihovny jazyka C a další knihovny Microsoft v mnoha verzí sady Visual Studio. Účelem je, které vám pomohou pochopit chování knihovny a ladění kódu. Jeden vedlejším účinkem publikování knihovny zdrojový kód je, že některé interní hodnoty, datové struktury a funkce jsou zveřejněné, i když nejsou součástí knihovny rozhraní. Obvykle mají názvy, které začínají dvě podtržítka nebo podtržítkem následuje velké písmeno, názvy, které si vyhrazuje C++ Standard do implementace. Tyto hodnoty, struktur a funkce jsou podrobnosti implementace, které mohou změnit knihovny v průběhu času vyvíjejí, a proto důrazně doporučujeme před přepnutím všechny závislosti na nich. Pokud tak učiníte, riskujete, že kód není přenositelností a problémy při pokusu o migraci kódu do nové verze knihoven.  
+Společnost Microsoft publikovala zdrojový kód pro standardní knihovnu, většina běhové knihovny jazyka C a další knihovny Microsoft v mnoha verzí sady Visual Studio. Naším záměrem je vám pomůžou pochopit chování knihovny a na ladění vašeho kódu. Jeden vedlejší efekt publikování zdrojový kód knihovny je, že některé interními hodnotami, datové struktury a funkcí jsou přístupné, i když nejsou součástí rozhraní knihovny. Mají obvykle názvy začínající dvěma podtržítky nebo podtržítkem, za nímž následuje velké písmeno, názvy, které standardu jazyka C++ vyhrazuje do implementace. Tyto hodnoty, struktury a funkce jsou podrobnosti implementace, které mohou změnit knihoven v průběhu času vyvíjejí, a proto důrazně nedoporučujeme na nich s ohledem všechny závislosti. Pokud tak učiníte, riskujete, že kód nepřenosné a problémů při pokusu o migrovat kód do nové verze knihoven.  
 
-Ve většině případů co je nového nebo nejnovější změny dokumentu pro jednotlivé verze sady Visual Studio nepodporuje zmínili změny internals knihovny. Můžete se neměl mít vliv tyto podrobnosti implementace. Ale někdy riziko použít nějaký kód, který se zobrazí v knihovně je příliš velký. Toto téma popisuje závislosti na internals CRT nebo standardní knihovny, které jste se může mít spoléhali na a jak se bude aktualizovat váš kód k odebrání těchto závislostí, můžete provést víc přenosného nebo migrovat na nové verze knihovny.
+Ve většině případů co je nového nebo Breaking Changes dokument pro každou verzi sady Visual Studio nebude zmiňovat změny s interními funkcemi knihovny. Koneckonců můžete už by nemělo být ovlivněny tyto podrobnosti implementace. Ale někdy pokušení používat nějaký kód, který se zobrazí v knihovně je příliš velké. Toto téma popisuje závislosti na CRT nebo standardní knihovna interní informace, které můžete mít spoléhal na a tom, jak aktualizovat váš kód k odebrání těchto závislostí, můžete provést větší přenositelnost nebo migrovat na nové verze knihovny.
 
 ## <a name="hashseq"></a>_Hash_seq  
 
-Interní hodnota hash funkce `std::_Hash_seq(const unsigned char *, size_t)`používané k implementaci `std::hash` na některé typy řetězce byla viditelná v posledních verzích standardní knihovny. Tuto funkci implementovat [FNV 1a hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na posloupnost znaků.  
+Interní hodnota hash funkce `std::_Hash_seq(const unsigned char *, size_t)`, která slouží k implementaci `std::hash` u některých typů řetězce byla zobrazená v nejnovějších verzích standardní knihovny. Tuto funkci implementovat [FNV 1a hash]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) na sekvenci znaků.  
   
-Chcete-li odebrat tuto závislost, máte několik možností.  
+Pokud chcete odebrat tuto závislost, máte několik možností.  
 
--   Pokud vaše záměr je uvést `const char *` pořadí do kontejner neuspořádaný pomocí stejné stroje kód hash jako `basic_string`, můžete to udělat pomocí `std::hash` šabloně přetížení, které přijímá `std::string_view`, která vrací tento kód hash v přenosný způsob. Kód knihovny řetězec může nebo nemusí spoléhají na použití algoritmus hash FNV 1a v budoucnu, tak toto je nejlepší způsob, jak se vyhnout závislost na konkrétní šifrovací algoritmus, který. 
+- Pokud máte v úmyslu, je vložit `const char *` pořadí do Neseřazený kontejneru pomocí stejné strojů kód hash jako `basic_string`, můžete to udělat pomocí `std::hash` šablony přetížení, která přebírá `std::string_view`, vracející tento kód hash v přenosný způsob. Kód knihovny řetězec může nebo nemusí spoléhat na použití algoritmus hash FNV 1a v budoucnu, tohle je nejlepší způsob, jak se vyhnout se závislostí na konkrétním hashovací algoritmus. 
   
--   Pokud vaše záměrem generovat algoritmus hash FNV 1a přes libovolný paměti, jsme provedli tento kód k dispozici na Githubu v [VCSamples]( https://github.com/Microsoft/vcsamples) úložiště v samostatné záhlaví souboru, [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), v části [Licencí MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Také jsme zahrnuli kopie sem pro usnadnění vaší práce. Tento kód můžete zkopírovat do souboru záhlaví, přidat hlavičku do ovlivněného kódu, najít a nahradit `_Hash_seq` podle `fnv1a_hash_bytes`. Získáte stejné chování interní implementaci v `_Hash_seq`. 
+- Pokud máte v úmyslu generovat algoritmus hash FNV 1a prostřednictvím libovolného paměti, zpřístupnili jsme, že kód na Githubu v [VCSamples]( https://github.com/Microsoft/vcsamples) úložiště v souboru hlaviček samostatné [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq), v části [Licencí MIT](https://github.com/Microsoft/VCSamples/blob/master/license.txt). Přidali jsme také zkopírovat sem pro vaše pohodlí. Tento kód můžete zkopírovat do souboru hlaviček, přidat hlavičku do žádné ovlivněné kód a najít a nahradit `_Hash_seq` podle `fnv1a_hash_bytes`. Zobrazí se stejné chování pro vnitřní implementaci v `_Hash_seq`. 
 
 ```cpp  
 /*
@@ -84,7 +84,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
   
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025815"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465950"
 ---
 # <a name="atl-project-wizard"></a>Průvodce projektem ATL
 Aktivní šablony knihovny (ATL) je sada šablonových tříd jazyka C++ a, které zjednodušují psaní malé a rychlé objekty modelu COM. Průvodce projektem ATL vytvoří projekt s struktury obsahující objekty modelu COM.  
@@ -52,7 +52,7 @@ Aktivní šablony knihovny (ATL) je sada šablonových tříd jazyka C++ a, kter
   
 -   [Optimalizace kompilátoru pro projekt knihovny ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Můžete určit vlastnosti projektu (například [, jestli se má propojit staticky CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../ide/general-property-page-project.md) stránku kde můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro Projekt knihovny ATL. Zobrazit [pomocí projektů k sestavení aplikace](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) Další informace.  
+ Můžete určit vlastnosti projektu (například [, jestli se má propojit staticky CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../ide/general-property-page-project.md) stránku kde můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro Projekt knihovny ATL.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

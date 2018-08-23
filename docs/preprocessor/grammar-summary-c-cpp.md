@@ -1,5 +1,5 @@
 ---
-title: Gramatický souhrn (C/C++) | Microsoft Docs
+title: Gramatický souhrn (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a742b882f0195d82b0cbbfea2ab6210342449a40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a1f5cb9e23d5b818779062a5039a2d16c04aefe
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849142"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464801"
 ---
 # <a name="grammar-summary-cc"></a>Gramatický souhrn (C/C++)
-Tento oddíl popisuje formální gramatiku preprocesoru. Pokrývá syntaxe direktivy předběžného zpracování a operátory popsané v [The preprocesor](../preprocessor/preprocessor.md) a v [direktivy Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+Tento oddíl popisuje formální gramatiku preprocesoru. Popisuje syntaxi direktiv a operací popsaných v tématech [preprocesor](../preprocessor/preprocessor.md) a [direktivy Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
- V následujících tématech jsou zahrnuty:  
+Jsou zahrnuty v následujících tématech:  
   
--   [Definice](../preprocessor/definitions-for-the-grammar-summary.md)  
+- [Definice](../preprocessor/definitions-for-the-grammar-summary.md)  
   
--   [Konvence](../preprocessor/conventions.md)  
+- [Konvence](../preprocessor/conventions.md)  
   
--   [Gramatika preprocesoru](../preprocessor/preprocessor-grammar.md)  
+- [Gramatika preprocesoru](../preprocessor/preprocessor-grammar.md)  
   
 ## <a name="see-also"></a>Viz také  
- [C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)
+ 
+[C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)

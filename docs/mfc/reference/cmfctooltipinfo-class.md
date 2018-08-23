@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0a8ec3a7898f846af85614dec75c10c5a0393e24
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850888"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466212"
 ---
 # <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo – třída
 Ukládá informace o vzhled popisů tlačítek.  
@@ -222,7 +222,7 @@ BOOL m_bVislManagerTheme;
  Pokud `m_bVislManagerTheme` má hodnotu TRUE, každý popis požaduje novou [cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md) ze Správce vzhledu aplikace předtím, než se zobrazí na obrazovce a používá hodnoty v tomto objektu určit jejich výskytu. Ostatní členové vaší [cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md) jsou ignorovány.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209219"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464925"
 ---
 # <a name="ccomptrbase-class"></a>Ccomptrbase – třída
 Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny založené na modelu COM. paměti.  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  CLSID asociované s daty a kód, který se použije k vytvoření objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu S_OK při úspěchu, nebo REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING nebo E_NOINTERFACE při selhání. Zobrazit [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) a [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) popis těchto chyb.  
+ Vrátí hodnotu S_OK při úspěchu, nebo REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING nebo E_NOINTERFACE při selhání. Zobrazit [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) a [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) popis těchto chyb.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud první forma metoda je volána, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) slouží k obnovení identifikátor CLSID. Obě formy poté zavolejte [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Pokud první forma metoda je volána, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) slouží k obnovení identifikátor CLSID. Obě formy poté zavolejte [CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
  V sestavení ladění, dojde k chybě kontrolního výrazu Pokud [CComPtrBase::p](#p) není shodný s hodnotou NULL.  
   

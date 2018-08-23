@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026955"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465104"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass – třída
 Tato třída poskytuje metody pro vytvoření instance třídy a získání jeho vlastnosti.  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] Adresa proměnné ukazatele, která přijímá ukazatel požadovaná rozhraní, pokud bude úspěšné vytvoření.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnoty HRESULT. Zobrazit [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) v sadě Windows SDK pro popis možných vrácených hodnot.  
+ Standardní hodnoty HRESULT. Zobrazit [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) v sadě Windows SDK pro popis možných vrácených hodnot.  
   
 ### <a name="remarks"></a>Poznámky  
  První přetížení této funkce použít pro vytvoření objektu typické; druhé přetížení použijte, pokud je potřeba započítat vytvářený objekt.  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Všimněte si, že rozhraní *Q* musí mít IID s ním spojená, který se dá načíst pomocí [__uuidof](../../cpp/uuidof-operator.md) operátor.  
   
 ### <a name="example"></a>Příklad  
- V následujícím příkladu `CDocument` ATL – třídy generované v Průvodci pochází z `CComCoClass` , který implementuje `IDocument` rozhraní. Třída je registrována v mapě objektů s OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO – makro, aby klienti nelze vytvořit instance dokumentu pomocí [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` je CoClass, která poskytuje metodu na jednom vlastním rozhraní modelu COM pro vytvoření instancí třídy dokumentu. Kód uvedený níže ukazuje, jak snadné ji k vytvoření instance třídy dokumentu pomocí `CreateInstance` člen zděděno z `CComCoClass` základní třídy.  
+ V následujícím příkladu `CDocument` ATL – třídy generované v Průvodci pochází z `CComCoClass` , který implementuje `IDocument` rozhraní. Třída je registrována v mapě objektů s OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO – makro, aby klienti nelze vytvořit instance dokumentu pomocí [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` je CoClass, která poskytuje metodu na jednom vlastním rozhraní modelu COM pro vytvoření instancí třídy dokumentu. Kód uvedený níže ukazuje, jak snadné ji k vytvoření instance třídy dokumentu pomocí `CreateInstance` člen zděděno z `CComCoClass` základní třídy.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

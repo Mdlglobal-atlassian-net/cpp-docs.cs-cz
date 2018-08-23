@@ -1,5 +1,5 @@
 ---
-title: Třída CSplitButton | Microsoft Docs
+title: Csplitbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbced65aa76206d040ff1c13267fe9b7d3c69eca
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122784"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465112"
 ---
-# <a name="csplitbutton-class"></a>CSplitButton – třída
-`CSplitButton` Třída reprezentuje ovládací prvek tlačítko rozdělení. Ovládací prvek tlačítko rozdělení provede výchozí chování, když uživatel klikne na hlavní část tlačítko a zobrazí rozevírací nabídky, když uživatel klikne na šipku rozevíracího seznamu tlačítka.  
+# <a name="csplitbutton-class"></a>Csplitbutton – třída
+`CSplitButton` Třída představuje ovládací tlačítko rozdělení. Tlačítko rozdělení ovládání provede výchozí chování, když uživatel klikne na hlavní část tlačítka a zobrazí rozevírací nabídky po kliknutí tlačítko šipky rozevíracího seznamu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,24 +52,24 @@ class CSplitButton : public CButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSplitButton::Create](#create)|Vytvoří ovládací prvek tlačítko rozdělení se zadanou styly a připojí k aktuální `CSplitButton` objektu.|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Nastaví rozevírací nabídce, která se zobrazí, když uživatel klikne na šipku rozevíracího seznamu aktuální ovládacího prvku tlačítko rozdělení.|  
+|[CSplitButton::Create](#create)|Vytvoří ovládací tlačítko rozdělení se zadaným styly a připojí ho k aktuální `CSplitButton` objektu.|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Nastaví rozevírací nabídky, který se zobrazí, když uživatel klepne na šipku rozevíracího seznamu aktuálního ovládacího prvku tlačítko rozdělení.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|Zpracovává BCN_DROPDOWN oznámení, že systém pošle, když uživatel klikne na šipku rozevíracího seznamu aktuální ovládacího prvku tlačítko rozdělení.|  
+|[CSplitButton::OnDropDown](#ondropdown)|Zpracovává BCN_DROPDOWN oznámení, že systém odešle, když uživatel klepne na šipku rozevíracího seznamu aktuálního ovládacího prvku tlačítko rozdělení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSplitButton` Je třída odvozená z [CButton](../../mfc/reference/cbutton-class.md) třídy. Ovládací prvek tlačítko rozdělení je tlačítko, jehož styl je BS_SPLITBUTTON. Když uživatel klikne na šipku rozevíracího seznamu zobrazuje vlastní nabídku. Další informace najdete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON v [styly tlačítek](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ `CSplitButton` Je třída odvozena z [CButton](../../mfc/reference/cbutton-class.md) třídy. Tlačítko rozdělení ovládání je ovládací prvek tlačítko, jehož styl je BS_SPLITBUTTON. Vlastní nabídky se zobrazí po kliknutí na šipku rozevíracího seznamu. Další informace najdete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON [styly](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
- Následující obrázek znázorňuje dialogu, který obsahuje ovládacího prvku pager a ovládací prvek tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a (3) podnabídky se zobrazí.  
+ Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a zobrazí se podnabídky (3).  
   
- ![Dialogové okno s ovládacím prvkem a stránkovacím. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -82,12 +82,12 @@ class CSplitButton : public CButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
- Tato třída je podporována v [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] a novější.  
+ Tato třída je podporován v systému Windows Vista nebo novější.  
   
- Další požadavky pro tuto třídu, jsou popsané v [sestavení požadavky pro Windows Vista běžné ovládací prvky](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Další požadavky pro tuto třídu jsou popsány v [vytvářet požadavky pro Windows Vista běžné ovládací prvky](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
 ##  <a name="create"></a>  CSplitButton::Create  
- Vytvoří ovládací prvek tlačítko rozdělení se zadanou styly a připojí k aktuální `CSplitButton` objektu.  
+ Vytvoří ovládací tlačítko rozdělení se zadaným styly a připojí ho k aktuální `CSplitButton` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -101,16 +101,16 @@ virtual BOOL Create(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *dwStyle*|Bitová kombinace (nebo) stylů má být použita pro ovládací prvek. Další informace najdete v tématu [styly tlačítek](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[v] *Rect –*|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku.|  
-|[v] *pParentWnd*|Ukazatel na jinou hodnotu než null [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  
-|[v] *nID*|ID ovládacího prvku.|  
+|[in] *dwStyle*|Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [styly](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|[in] *rect*|Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která obsahuje umístění a velikost ovládacího prvku.|  
+|[in] *pParentWnd*|Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|  
+|[in] *nID*|ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
- Vytvoří `CSplitButton` objektu. V konstruktoru parametry zadejte podnabídky, které se zobrazí, když uživatel klikne na šipku rozevíracího seznamu ovládacího prvku tlačítko rozdělení.  
+ Vytvoří `CSplitButton` objektu. Zadejte parametry konstruktoru podnabídky, který se zobrazí, když uživatel klepne na šipku rozevíracího seznamu ovládacího prvku tlačítko rozdělení.  
   
 ```  
 CSplitButton();
@@ -126,15 +126,15 @@ CSplitButton(CMenu* pMenu)
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *nMenuId*|ID prostředku řádku nabídek.|  
-|[v] *nSubMenuId*|ID prostředku podnabídky.|  
-|[v] *pMenu*|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který určuje podnabídky. `CSplitButton` Objektu odstranění `CMenu` objekt a jeho přidružené HMENU při `CSplitButton` opuštění rozsahu.|  
+|[in] *nMenuId*|ID prostředku z řádku nabídek.|  
+|[in] *nSubMenuId*|ID prostředku podnabídky.|  
+|[in] *pMenu*|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který určuje podnabídky. `CSplitButton` Objekt odstraní `CMenu` objektu a jeho přidružené HMENU při `CSplitButton` objekt dostane mimo rozsah.|  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CSplitButton::Create](#create) metodu pro vytvoření ovládacího prvku tlačítko rozdělení a připojte ji k `CSplitButton` objektu.  
   
 ##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
- Zpracovává BCN_DROPDOWN oznámení, že systém pošle, když uživatel klikne na šipku rozevíracího seznamu aktuální ovládacího prvku tlačítko rozdělení.  
+ Zpracovává BCN_DROPDOWN oznámení, že systém odešle, když uživatel klepne na šipku rozevíracího seznamu aktuálního ovládacího prvku tlačítko rozdělení.  
   
 ```  
 afx_msg void OnDropDown(
@@ -146,15 +146,15 @@ afx_msg void OnDropDown(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *pNMHDR*|Ukazatel na [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struktura, která obsahuje informace o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
-|[out] *pResult*|(Nepoužívá, je vrácena žádná hodnota.) Návratová hodnota [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
+|[in] *pNMHDR*|Ukazatel [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) strukturu, která obsahuje informace o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
+|[out] *pResult*|(Není používána a není vrácena žádná hodnota.) Návratová hodnota [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) oznámení.|  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel klikne na šipku rozevíracího seznamu v ovládacím prvku tlačítko rozdělení, systém odešle oznámení BCN_DROPDOWN zprávy, které `OnDropDown` metoda zpracovává. Ale `CSplitButton` objekt nepředává BCN_DROPDOWN oznámení pro ovládací prvek, který obsahuje ovládací prvek tlačítko rozdělení. Nadřazeného ovládacího prvku v důsledku toho nemůže podporovat vlastní akce v reakci na oznámení.  
+ Když uživatel klikne na rozevírací šipku na ovládací tlačítko rozdělení, systém odešle oznámení BCN_DROPDOWN zpráva, která `OnDropDown` metoda obslužné rutiny. Ale `CSplitButton` objekt nepředává BCN_DROPDOWN oznámení do ovládacího prvku, který obsahuje tlačítko rozdělení ovládání. V důsledku toho nemůže podporovat nadřazeného ovládacího prvku vlastní akce v reakci na oznámení.  
   
- Chcete-li implementovat vlastní akci, která podporuje nadřazeného ovládacího prvku, použijte [CButton](../../mfc/reference/cbutton-class.md) objekt s styl BS_SPLITBUTTON místo `CSplitButton` objektu. Potom implementovat obslužnou rutinu pro oznámení BCN_DROPDOWN v `CButton` objektu. Další informace najdete v tématu [styly tlačítek](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
+ Implementovat vlastní akci, která obsahuje ovládací prvek podporuje, používat [CButton](../../mfc/reference/cbutton-class.md) objektu stylu BS_SPLITBUTTON místo `CSplitButton` objektu. Potom implementujte obslužnou rutinu pro BCN_DROPDOWN oznámení v `CButton` objektu. Další informace najdete v tématu [styly](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- Chcete-li implementovat vlastní akce, aby tlačítko rozdělení podporuje ovládací prvek sám sebe, použijte [zprávy reflexe](../../mfc/tn062-message-reflection-for-windows-controls.md). Odvodit vlastní třídu z `CSplitButton` třídy a pojmenujte ji třeba CMySplitButton. Pak přidejte následující mapa zpráv do vaší aplikace pro zpracování BCN_DROPDOWN oznámení:  
+ Chcete-li implementovat vlastní akci, že tlačítko rozdělení podporuje ovládací prvek vlastní, použijte [zprávy reflexe](../../mfc/tn062-message-reflection-for-windows-controls.md). Odvodit vlastní třídu z `CSplitButton` třídy a pojmenujte ji třeba CMySplitButton. Pak přidejte následující mapování zpráv pro vaši aplikaci obsluhování BCN_DROPDOWN oznámení:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -164,7 +164,7 @@ END_MESSAGE_MAP()
 ```  
   
 ##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
- Nastaví rozevírací nabídce, která se zobrazí, když uživatel klikne na šipku rozevíracího seznamu aktuální ovládacího prvku tlačítko rozdělení.  
+ Nastaví rozevírací nabídky, který se zobrazí, když uživatel klepne na šipku rozevíracího seznamu aktuálního ovládacího prvku tlačítko rozdělení.  
   
 ```  
 void SetDropDownMenu(
@@ -178,23 +178,23 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] *nMenuId*|ID prostředku řádku nabídek.|  
-|[v] *nSubMenuId*|ID prostředku podnabídky.|  
-|[v] *pMenu*|Ukazatel na [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který určuje podnabídky. `CSplitButton` Objektu odstranění `CMenu` objekt a jeho přidružené HMENU při `CSplitButton` opuštění rozsahu.|  
+|[in] *nMenuId*|ID prostředku z řádku nabídek.|  
+|[in] *nSubMenuId*|ID prostředku podnabídky.|  
+|[in] *pMenu*|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který určuje podnabídky. `CSplitButton` Objekt odstraní `CMenu` objektu a jeho přidružené HMENU při `CSplitButton` objekt dostane mimo rozsah.|  
   
 ### <a name="remarks"></a>Poznámky  
- *NMenuId* parametr identifikuje řádku nabídek, což je vodorovné seznam položek nabídky panelu. *NSubMenuId* parametr je počítaný od nuly číslo indexu, který identifikuje podnabídky, což je rozevírací seznam položky nabídky, které jsou spojené s každou položku nabídky panelu. Typická aplikace má například nabídky, která obsahuje položky nabídky panelu, "Soubor" "Upravit" a "Nápověda". Položka nabídky panelu "Soubor" má dílčí, který obsahuje položky nabídky "Otevřít," "Zavřete" a "Ukončit." Při kliknutí na šipku rozevíracího seznamu ovládacího prvku tlačítko rozdělení ovládací prvek zobrazí zadané dílčí není panelu nabídek.  
+ *NMenuId* parametr identifikuje panel nabídek, což je vodorovné seznam položky panelu nabídek. *NSubMenuId* parametr je založený na nule, který identifikuje podnabídky, což je rozevírací seznam položek nabídky, které jsou spojené s každou položku nabídky panelu číslo indexu. Například Typická aplikace má nabídku, která obsahuje položky panelu nabídek "File", "Edit" a "Nápověda". Položka nabídky panelu "File" obsahuje podnabídku obsahující položky nabídky "Otevřít," "Zavřít" a "Ukončit." Po kliknutí na šipku rozevíracího seznamu ovládacího prvku tlačítko rozdělení ovládací prvek zobrazuje podnabídky zadaného řádku nabídek.  
   
- Následující obrázek znázorňuje dialogu, který obsahuje ovládacího prvku pager a ovládací prvek tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a (3) podnabídky se zobrazí.  
+ Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a zobrazí se podnabídky (3).  
   
- ![Dialogové okno s ovládacím prvkem a stránkovacím. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
 ### <a name="example"></a>Příklad  
- První příkaz v následujícím příkladu kódu ukazuje [CSplitButton::SetDropDownMenu](#setdropdownmenu) metoda. Jsme vytvořili v nabídce sady Visual Studio prostředek editor, který automaticky s názvem IDR_MENU1 Identifikátor řádku nabídky. *NSubMenuId* parametr, který je nulová, odkazuje na podnabídky pouze v řádku nabídek.  
+ První příkaz v následujícím příkladu kódu ukazuje, [CSplitButton::SetDropDownMenu](#setdropdownmenu) metody. Jsme vytvořili v nabídce sady Visual Studio prostředku editor, který automaticky pojmenuje Identifikátor řádku nabídky IDR_MENU1. *NSubMenuId* parametr, který je nula, odkazuje na pouze podnabídky panelu nabídek.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [CSplitButton – třída](../../mfc/reference/csplitbutton-class.md)   
+ [Csplitbutton – třída](../../mfc/reference/csplitbutton-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CButton – třída](../../mfc/reference/cbutton-class.md)

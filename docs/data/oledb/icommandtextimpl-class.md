@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340290"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465957"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl – třída
-Poskytuje implementaci pro [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx) rozhraní.  
+Poskytuje implementaci pro [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,7 +87,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.  
+ Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 Nastaví text příkazu, nahraďte existující text příkazu.  
@@ -100,7 +100,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 Ukládá příkaz textový řetězec.  

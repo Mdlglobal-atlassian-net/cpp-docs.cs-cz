@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852585"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464917"
 ---
 # <a name="cmfctabctrl-class"></a>Cmfctabctrl – třída
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládací prvek karty. Ovládací prvek karty zobrazí okno ukotvitelné s plochými nebo trojrozměrnými kartami v jeho horní nebo dolní. Karty mohou zobrazit text a obrázek a mohou změnit barvu, pokud je aktivní.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Odnímatelnými kartami systému windows.  
   
- `CMFCTabCtrl` Třídu lze použít s dialogovým oknem, ale je určená pro řízení aplikací, které používají ukotvení pruhy jako [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] a [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Další informace najdete v tématu [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md).  
+ `CMFCTabCtrl` Třídu lze použít s dialogovým oknem, ale je určená pro řízení aplikací, které používají ukotvení pruhy, jako je Microsoft Excel a sady Visual Studio. Další informace najdete v tématu [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md).  
   
  Použijte následující postup přidání možností změny velikosti dokovací ovládací prvek karty ve vaší aplikaci:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Index založený na nule kartu k zobrazení nebo -1, k určení aktuálně aktivní karta.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

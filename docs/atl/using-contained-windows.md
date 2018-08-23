@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850797"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465008"
 ---
 # <a name="using-contained-windows"></a>Pomocí obsaženého Windows
 ATL – implementuje omezením windows s [ccontainedwindowt –](../atl/reference/ccontainedwindowt-class.md). Obsaženého okna představuje okno, které deleguje své zprávy na kontejnerovém objektu namísto jeho vlastní třídy.  
@@ -40,7 +40,7 @@ ATL – implementuje omezením windows s [ccontainedwindowt –](../atl/referenc
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- Další informace o časových obdobích omezením, najdete v článku [SUBEDIT](../visual-cpp-samples.md) vzorku.  
+ Další informace o časových obdobích omezením, najdete v článku [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) vzorku.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy oken](../atl/atl-window-classes.md)

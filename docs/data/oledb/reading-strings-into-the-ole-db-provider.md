@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465213"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
-`RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](https://msdn.microsoft.com/library/ms709757.aspx). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
+`RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
   
  Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
   

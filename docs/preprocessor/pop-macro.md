@@ -1,5 +1,5 @@
 ---
-title: pop_macro – | Microsoft Docs
+title: pop_macro | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7790cadf9b5bc0b9a1fa37b5131f4fb704142ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3106bc3c74be0f6d5a9a386b0f4c8c9c64bdfedf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849636"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465207"
 ---
 # <a name="popmacro"></a>pop_macro
-Nastaví hodnotu *macro_name* makro na hodnotu v horní části zásobníku pro tento makro.  
+Nastaví hodnotu vlastnosti *macro_name* makra na hodnotu na vrcholu zásobníku tohoto makra.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma pop_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Nejdřív musíte vydat [push_macro –](../preprocessor/push-macro.md) pro *macro_name* předtím, než můžete provést **pop_macro –**.  
+ 
+Nejprve musíte vydat [push_macro](../preprocessor/push-macro.md) pro *macro_name* předtím, než vám pomůžou **pop_macro**.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directives_pop_macro.cpp  
 // compile with: /W1  
 #include <stdio.h>  
@@ -76,4 +75,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

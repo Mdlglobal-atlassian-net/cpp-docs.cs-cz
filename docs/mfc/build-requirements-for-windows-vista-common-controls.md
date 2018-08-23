@@ -1,5 +1,5 @@
 ---
-title: Požadavky na sestavení pro běžné ovládací prvky Windows Vista | Microsoft Docs
+title: Požadavky na sestavení pro běžné ovládací prvky Windows Vista | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d8d3e5c8cd6b4a0876d0cac8e1fb3c7e87eed9cc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930973"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465113"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
-Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Windows verze 6.1. Běžné ovládací prvky jsou součástí [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a je součástí knihovny [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Knihovna poskytuje nové metody, které zlepšují existující třídy a nové třídy a metody, které podporují [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] běžné ovládací prvky. Když vytvoříte aplikaci, postupujte podle požadavků na kompilace a migrace, které jsou popsány v následujících částech.  
+Knihovny Microsoft Foundation Class (MFC) podporuje běžných ovládacích prvků Windows verze 6.1. Běžné ovládací prvky jsou zahrnuty v systému Windows Vista a knihovny je součástí sady Visual Studio SDK. Knihovna poskytuje nové metody, které rozšiřují existující třídy a nové třídy a metody, které podporují běžné ovládací prvky Windows Vista. Když vytváříte aplikaci, postupujte podle kompilace a migrace požadavky, které jsou popsány v následujících částech.  
   
-## <a name="compilation-requirements"></a>Požadavky na kompilace  
+## <a name="compilation-requirements"></a>Kompilace požadavky  
   
 ### <a name="supported-versions"></a>Podporované verze  
- Některé nové třídy a metody podporují pouze [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a novějším, zatímco jiné metody také podporují starší operační systémy. Poznámka: v `Requirements` část každého tématu metoda určuje, kdy minimální požadovaný operační systém je [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
+ Některé nové třídy a metody podporují pouze Windows Vista a novější, zatímco jiné metody také podporují starší operační systémy. Poznámka: v `Requirements` každého tématu metoda určuje, kdy minimální požadovaný operační systém je Windows Vista.  
   
- I když se počítač nespustí [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], můžete vytvořit aplikace knihovny MFC, který se spustí na [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] Pokud máte soubory hlaviček MFC verze 6.1 ve vašem počítači. Ale běžné ovládací prvky, které byly navrženy speciálně pro [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] fungovat pouze v daném systému a jsou ignorovány ve starších operačních systémech.  
+ I v případě, že počítač není spuštěn Windows Vista, můžete vytvářet aplikace knihovny MFC, který se spustí v systému Windows Vista, pokud máte souborech hlaviček knihovny MFC verze 6.1 ve vašem počítači. Běžné ovládací prvky, které jsou určené konkrétně pro Windows Vista však pracovat pouze v daném systému a jsou ignorovány ve starších operačních systémech.  
   
 ### <a name="supported-character-sets"></a>Podporované znakové sady  
- Nové běžné ovládací prvky Windows podporují pouze ve znakové sadě Unicode a ne znakovou sadu ANSI. Pokud vytvoříte aplikaci na příkazovém řádku, použijte obě následující definovat (/ D) jako základní zadat Unicode – možnosti kompilátoru znaková sada:  
+ Nové běžné ovládací prvky Windows podporují pouze znakové sady Unicode a ne znakovou sadu ANSI. Pokud vytváříte aplikaci na příkazovém řádku, použijte obě následující definovat (/ D) – možnosti kompilátoru k určení kódování Unicode jako základní znakové sady:  
   
 ```  
 /D_UNICODE /DUNICODE  
 ```  
   
- Pokud vytvoříte aplikaci v sadě Visual Studio integrované vývojové prostředí (IDE), zadejte **znakové sady Unicode** možnost **znaková sada** vlastnost **obecné**  uzel vlastností projektu.  
+ Pokud vytváříte aplikaci v sadě Visual Studio integrované vývojové prostředí (IDE), zadejte **znakové sady Unicode** možnost **znaková sada** vlastnost **obecné**  uzel vlastností projektu.  
   
- ANSI verzi několik metod MFC jsou zastaralé od verze běžné ovládací prvky Windows verze 6.1. Další informace najdete v tématu [zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md).  
+ ANSI verze z několika metod MFC jsou zastaralé od verze 6.1 běžných ovládacích prvků Windows. Další informace najdete v tématu [zastaralé rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Požadavky na migraci  
- Pokud používáte Visual Studio IDE k vytvoření nové aplikace MFC, která používá běžné ovládací prvky Windows verze 6.1, rozhraní IDE automaticky deklaruje odpovídající manifestu. Ale pokud migrujete existující aplikaci MFC ze starší verze sady Visual Studio a chcete používat nové běžné ovládací prvky, rozhraní IDE neposkytuje automaticky manifestu informace k upgradu vaší aplikace. Místo toho je nutné ručně vložit následující zdrojový kód ve vaší **stdafx.h** souboru:  
+ Pokud používáte rozhraní IDE sady Visual Studio k vytvoření nové aplikace knihovny MFC, která používá běžné ovládací prvky Windows verze 6.1, rozhraní IDE automaticky deklaruje odpovídající manifestu. Nicméně pokud migrujete existující aplikaci MFC ze starší verze sady Visual Studio a chcete použít nové běžné ovládací prvky, rozhraní IDE neposkytuje automaticky informace o manifestu k upgradu vaší aplikace. Místo toho je nutné ručně vložit následující zdrojový kód v vaše **stdafx.h** souboru:  
   
 ```  
 #ifdef UNICODE  

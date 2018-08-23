@@ -1,5 +1,5 @@
 ---
-title: Zastaralé (C/C++) | Microsoft Docs
+title: Zastaralé (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d51ee23ab4e4be9cf24b913cb0c4ffa325a9bbf5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839816"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466380"
 ---
 # <a name="deprecated-cc"></a>zastaralé (C/C++)
-**Zastaralé** – Direktiva pragma umožňuje znamenat, že funkce, typ nebo jakýkoli jiný identifikátor může být podporován budoucí verze nebo by měla být dále používán.  
+**Zastaralé** – Direktiva pragma umožňuje určit, že funkce, typ nebo jakýkoli jiný identifikátor pravděpodobně nebude podporovat v budoucí verzi nebo by již nelze použít.  
 > [!NOTE]
-> Informace o C ++ 14 `[[deprecated]]` atribut a pokyny k použití, která atribut vs Microsoft declspec nebo – Direktiva pragma najdete v tématu [standardní atributy C++](../cpp/attributes.md) atribut.
+> Informace o C ++ 14 `[[deprecated]]` atribut a pokyny, kdy se má použít atribut vs Microsoft declspec nebo direktivy pragma naleznete v tématu [C++ standardní atributy](../cpp/attributes.md) atribut.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ ms.locfileid: "33839816"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Když kompilátor zaznamená identifikátor určeného **zastaralé** – Direktiva pragma, vydá upozornění kompilátoru [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
+Když kompilátor narazí určený identifikátor **zastaralé** – Direktiva pragma, vydá upozornění kompilátoru [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).   
   
- Názvy maker lze označit jako zastaralé. Umístěte název makra do uvozovek, jinak dojde k rozšíření makra.  
+Názvy maker lze označit jako zastaralé. Umístěte název makra do uvozovek, jinak dojde k rozšíření makra.  
   
- Protože **zastaralé** – Direktiva pragma funguje na všechny odpovídající identifikátory a nevyžaduje podpisy v úvahu, není nejlepší možnost pro místo začne konkrétních verzí přetížených funkcí. Všechny odpovídající název funkce, která je uvedena do oboru aktivuje upozornění.
+Vzhledem k tomu, **zastaralé** – Direktiva pragma lze použít na všechny odpovídající identifikátory a podpisů nebere účtu, není nejlepší možnosti pro ukončení podpory pro konkrétní verze přetížených funkcí. Žádné odpovídající název funkce, která je přeneseny do rozsahu se aktivuje upozornění.
 
-  Doporučujeme použít C ++ 14 `[[deprecated]]` atribut, pokud je to možné, místo **zastaralé** – Direktiva pragma. Microsoft specifické [__declspec(deprecated)](../cpp/deprecated-cpp.md) modifikátor deklarace je také vhodnější volbou v mnoha případech než **zastaralé** – Direktiva pragma. `[[deprecated]]` Atribut a `__declspec(deprecated)` modifikátor umožňují určit nepoužívané stavu pro určité formy přetížených funkcí. Diagnostické upozornění se zobrazí pouze na odkazy na konkrétní přetížené funkce atribut nebo modifikátor platí pro.  
+Doporučujeme použít C ++ 14 `[[deprecated]]` atribut, pokud je to možné, namísto **zastaralé** direktivy pragma. Specifické pro Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modifikátoru deklarace je také vhodnější použít v mnoha případech než **zastaralé** direktivy pragma. `[[deprecated]]` Atribut a `__declspec(deprecated)` modifikátor vám umožňují určit stav již nepoužívaných konkrétních podob přetížených funkcí. Diagnostické upozornění se zobrazí pouze na odkazy na konkrétní přetížení funkce atribut nebo modifikátor se vztahuje na.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directive_deprecated.cpp  
 // compile with: /W3  
 #include <stdio.h>  
@@ -66,9 +66,9 @@ int main() {
 }  
 ```  
   
- Následující příklad ukazuje, jakým způsobem označit třídu jako zastaralou:  
+Následující příklad ukazuje, jakým způsobem označit třídu jako zastaralou:  
   
-```  
+```cpp  
 // pragma_directive_deprecated2.cpp  
 // compile with: /W3  
 #pragma deprecated(X)  
@@ -83,4 +83,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

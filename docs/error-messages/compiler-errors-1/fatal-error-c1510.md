@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1510 | Microsoft Docs
+title: Závažná chyba C1510 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/11/2017
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f39a609e1621dab404ff79e49ade56a88277aa80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25b1c3f83b770dc7b346e83e9675afe423af2516
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199350"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464926"
 ---
 # <a name="fatal-error-c1510"></a>Závažná chyba C1510
-Nelze otevřít clui.dll prostředků jazyk  
+Nejde otevřít jazykový prostředek clui.dll.  
   
- Kompilátor nelze načíst knihovnu DLL prostředku jazyk.  
+ Kompilátor nemůže načíst knihovna DLL prostředků jazyka.  
   
-Existují dvě běžné příčiny tohoto problému. Pokud používáte 32bitový kompilátor a nástroje, zobrazí se tato chyba pro rozsáhlých projektů, které používají více než 2GB paměti během odkaz. Možná řešení v systémech Windows 64-bit je nativní 64bitová verze nebo křížové kompilátoru a nástroje pro generování kódu. Toto využívá větší místo paměti, která je k dispozici pro 64bitové aplikace. Pokud kompilátoru 32-bit musíte použít, protože běží na 32bitové verzi systému, v některých případech můžete zvýšit množství paměti k dispozici linkeru 3 GB. Další informace najdete v tématu [4 GB optimalizace: nástroje BCDEdit a Boot.ini](https://msdn.microsoft.com/library/vs/alm/bb613473(v=vs.85).aspx) a [nástroje BCDEdit/set increaseuserva](https://msdn.microsoft.com/library/ff542202.aspx) příkaz.  
+Existují dvě běžné příčiny tohoto problému. Při použití 32bitové verze kompilátoru a nástrojů, může se zobrazit tato chyba pro velké projekty, které používají více než 2GB paměti během odkaz. Možné řešení v 64bitových systémech Windows, je použít 64bitové nativní a křížový kompilátor a nástroje pro generování kódu. Toto využívá větší paměť k dispozici pro 64bitové aplikace. Pokud je nutné použít 32bitový kompilátor, protože běží v 32bitové verzi systému, v některých případech můžete zvýšit množství paměti k dispozici v linkeru na 3GB. Další informace najdete v tématu [4 GB optimalizace: nástroje BCDEdit a Boot.ini](https://msdn.microsoft.com/library/vs/alm/bb613473\(v=vs.85\).aspx) a [nástroje BCDEdit/sadě increaseuserva](https://msdn.microsoft.com/library/ff542202.aspx) příkazu.  
 
-Obvyklou příčinou je poškozený nebo neúplná instalace sady Visual Studio. V takovém případě spusťte instalační program znovu k opravě nebo znovu nainstalujte Visual Studio.  
+Obvyklou příčinou je poškozený nebo neúplná instalace sady Visual Studio. V takovém případě opětovným spuštěním instalačního programu opravte nebo přeinstalujte Visual Studio.  
   

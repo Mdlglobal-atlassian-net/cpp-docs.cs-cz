@@ -1,5 +1,5 @@
 ---
-title: no_implementation – | Microsoft Docs
+title: no_implementation – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf756a411404d2ebb821d5b226818844acfca75b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbf715e2cbd19d139904438e722e4d0b72e29f29
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849545"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465940"
 ---
 # <a name="noimplementation"></a>no_implementation
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Potlačí generování .tli hlavičky, která obsahuje implementace členských funkcí obálku.  
+Potlačí generování tli hlavičky, která obsahuje implementace členské funkce obálky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,14 @@ no_implementation
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud tento atribut je zadán, hlavičku .tlh s deklaracemi vystavit knihovny typů položek, vygeneruje se bez `#include` příkaz, který má zahrnout soubor hlaviček, .tli.  
+ 
+Pokud tento atribut je zadán, hlavičku .tlh s deklaracemi vystavit knihovny typů položek, vygeneruje se bez `#include` příkazu zahrnout hlavičku souboru tli.  
   
- Tento atribut se používá ve spojení s [implementation_only –](../preprocessor/implementation-only.md).  
+Tento atribut se používá ve spojení s [implementation_only –](../preprocessor/implementation-only.md).  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Jakmile | Microsoft Docs
+title: Jakmile | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912924"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465938"
 ---
 # <a name="once"></a>once
 Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového kódu obsažen (otevřen) pouze jednou.  
@@ -31,26 +31,24 @@ Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma once  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použití `#pragma once` může snížit dobu sestavení jako kompilátor nebude otevřít a přečíst soubor po první #include souboru v jednotce překlad. Tento proces se označuje jako *více zahrnují optimalizace*. Má podobný vliv *#include ochrana* stylu, které používá makro preprocesoru definice, aby více zahrnutí obsah souboru. To také pomáhá zabránit porušení *jednu definici pravidla*– požadavek na všechny šablony, typy, funkce a objekty mají více než jednu definici v kódu.  
+ 
+Použití `#pragma once` lze snížit dobu sestavení, protože kompilátor nesmí otevřít a číst soubor po první `#include` souboru v jednotce překladu. To se označuje jako *více obsahoval optimalizace, které*. Je podobný vliv `#include guard` idiom, který využívá Definice preprocesoru maker, která brání více zahrnutí obsah souboru. To také pomáhá zabránit porušení *jednu definici pravidla*– tento požadavek, že všechny šablony, typy, funkce a objekty mají více než jednu definici ve vašem kódu.  
   
- Příklad:  
+Příklad:  
   
 ```  
 // header.h  
 #pragma once  
-// Code placed here is included only once per translation unit  
-  
+// Code placed here is included only once per translation unit    
 ```  
   
- Doporučujeme, abyste `#pragma once` direktivy pro nový kód, protože není znečištění směrovány správu globálního oboru názvů s symbol preprocesoru. Vyžaduje méně zadáte, je méně rušivě a nemohou způsobit kolizí symbol – chyb vzniklých při různých hlavičkových souborů pomocí stejné symbol preprocesoru jako hodnota ochrana. Není součástí standardní C++, ale jeho přenositelnosti implementované několik běžných kompilátory.  
+Doporučujeme, abyste `#pragma once` směrnice pro nový kód, protože není znečištění směrovány správu globální obor názvů s symbol preprocesoru. Vyžaduje méně psát, je méně rušivé a nemůže způsobit symbol kolizí – chyb vzniklých při různých hlavičkové soubory jako hodnotu guard používat stejné symbol preprocesoru. Není součástí standardu C++, ale je implementována přenositelnosti několik běžných kompilátory.  
   
- Neexistuje žádné výhody použít i #include ochrana stylu a `#pragma once` ve stejném souboru. Kompilátor rozpozná #include ochrana stylu a implementuje násobek zahrnují optimalizace, stejně jako `#pragma once` – direktiva, pokud žádný jiný komentář kódu nebo direktivy preprocesoru pochází před nebo po standardní formu stylu:  
+Neexistuje žádná výhoda použít i #include guard idiom a `#pragma once` ve stejném souboru. Kompilátor rozpozná #include guard idiom a implementuje násobek obsahoval optimalizace, stejně jako `#pragma once` směrnice, pokud žádný kód mimo komentář nebo direktivy preprocesoru pochází před nebo po standardní formuláře idiom:  
   
 ```  
 // header.h  
@@ -59,13 +57,13 @@ Určuje, že soubor bude pomocí kompilátoru při kompilaci souboru zdrojového
 #ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
 #define HEADER_H_  
 // Code placed here is included only once per translation unit  
-#endif // HEADER_H_  
-  
+#endif // HEADER_H_    
 ```  
   
- Doporučujeme #include ochrana stylu při kód musí být přenosný na kompilátory, které neimplementují `#pragma once` – direktiva, můžete zachovat konzistenci stávající kód, nebo když zahrnují více optimalizace není možné. Tato situace může nastat v projektech komplexní při vytváření aliasů systému souborů nebo alias patří cesty zabránit kompilátoru z identifikace identické vložené soubory kanonický cestou.  
+Doporučujeme, abyste `#include guard` idiom, když kód musí být nepřenositelné na kompilátory, které neimplementují `#pragma once` směrnice, můžete zachovat konzistenci s existujícím kódem, nebo když zahrnují více optimalizace není možné. Tato situace může nastat ve složitých projektů při vytváření aliasů systému souborů nebo alias k zahrnutí cesty k zabránění kompilátoru v identifikaci identické soubory k zahrnutí canonical cestou.  
   
- Dejte pozor, abyste používat `#pragma once` nebo #include ochrana stylu hlavičky souborů, které jsou navržené jako zahrnuta vícekrát, používání preprocesoru symboly k řízení jejich důsledky. Příklad tohoto návrhu v tématu \<assert.h > soubor hlaviček. Také je potřeba spravovat zahrnout cesty, kde se vyhněte se vytváření více cest k zahrnuté soubory, které můžete vůbec nemělo více zahrnují optimalizace pro obě #include chrání a `#pragma once`.  
+Dejte pozor, abyste pomocí `#pragma once` nebo `#include guard` idiom v souborech hlaviček, které jsou určeny mají být zahrnuty více než jednou, pomocí symboly preprocesoru řídit jejich důsledky. Příklad tohoto návrhu, najdete v článku \<assert.h > soubor hlaviček. Také být opatrní při správě zahrnout cesty do Vyhněte se vytváření více cest k zahrnuté soubory, které, aby zhatila více obsahoval optimalizace, které pro obě `#include guard`s a `#pragma once`.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

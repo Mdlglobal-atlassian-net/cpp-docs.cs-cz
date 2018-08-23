@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336937"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466403"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 Dědí z `DBPROPIDSET` struktury a přidá konstruktor, který inicializuje pole klíče i na [addpropertyid –](../../data/oledb/cdbpropidset-addpropertyid.md) přístup k metodě.  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operátor =](#op_equal)|Přiřadí obsah jedno ID vlastnosti nastavit na jiný.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktura patří do sady jednu vlastnost.  
+ Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktura patří do sady jednu vlastnost.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 Přidá ID vlastnosti ID sady vlastností.  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] Nastavte vlastnost ID se má přidat do ID vlastnosti.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
-Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktury.  
+Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parametry  
  *identifikátor GUID*  
- [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) struktury.  
+ [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) také. Voláním této funkce, pokud použijete výchozí konstruktor pro tuto třídu.  

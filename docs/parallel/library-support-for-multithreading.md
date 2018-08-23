@@ -1,5 +1,5 @@
 ---
-title: Podpora knihovny pro Multithreading | Microsoft Docs
+title: Podpora knihovny pro Multithreading | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b25d506b5364dcbc26d3e32f5b0eb34188b30bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685669"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465304"
 ---
 # <a name="library-support-for-multithreading"></a>Podpora knihovny pro multithreading
-Všechny verze CRT nyní podporují, Multithreading s výjimkou verzí bez uzamčení některých funkcí. V tématu [vícevláknové knihovny výkonu](../c-runtime-library/multithreaded-libraries-performance.md) Další informace.  
+Všechny verze CRT teď podporují více vláken s výjimkou nezamykací verze některých funkcí. Zobrazit [výkon vícevláknových knihoven](../c-runtime-library/multithreaded-libraries-performance.md) Další informace.  
   
- V tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md) Další informace o verzích CRT.  
+Zobrazit [funkce knihovny CRT](../c-runtime-library/crt-library-features.md) pro další informace o verzích CRT.  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

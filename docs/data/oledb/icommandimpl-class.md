@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466112"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
-Poskytuje implementaci pro [rozhraní ICommand](https://msdn.microsoft.com/library/ms709737.aspx) rozhraní.  
+Poskytuje implementaci pro [rozhraní ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 Zruší aktuální provedení příkazu.  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Poznámky  
  Chcete-li vytvořit více než jedné sady řádků nebo poskytnout vlastní podmínky pro vytváření různých sad řádků, umístěte volání různých `CreateRowset` zevnitř `Execute`.  
   
- Zobrazit [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) v *referenční informace pro OLE DB programátory.*  
+ Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) v *referenční informace pro OLE DB programátory.*  
 
 ## <a name="execute"></a> ICommandImpl::Execute
 Vykoná příkaz.  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommand::Execute](https://msdn.microsoft.com/library/ms718095.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
  Odchozí požadované rozhraní bude rozhraní získaných z objektu sady řádků, které tato funkce vytvoří.  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
  Užitečné při načítání vlastností z relace.  

@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336977"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466399"
 ---
 # <a name="cutlprops-class"></a>CUtlProps – třída
 Implementuje vlastnosti pro celou řadu vlastností rozhraní technologie OLE DB (například `IDBProperties`, `IDBProperties`, a `IRowsetInfo`).  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.  
   
  *pDBProp*  
- ID vlastnosti a nová hodnota v [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) struktury.  
+ ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní HRESULT. Výchozí návratová hodnota je S_OK.  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  Index pole vlastností nastavenou; nula, pokud existuje pouze jedna vlastnost sady.  
   
  *pDBProp*  
- ID vlastnosti a nová hodnota v [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) struktury.  
+ ID vlastnosti a nová hodnota v [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní HRESULT. Výchozí návratová hodnota je S_OK.  

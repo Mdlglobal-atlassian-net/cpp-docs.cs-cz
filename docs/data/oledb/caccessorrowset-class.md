@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340726"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464617"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset – třída
 Zapouzdřuje sadu řádků a jejich přidružené přístupových objektů v jedné třídě.  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Konstruktor|  
 |[Zavřít](#close)|Zavře sadu řádků a všechny přistupující objekty.|  
 |[Freerecordmemory –](#freerecordmemory)|Uvolní všechny sloupce v aktuální záznam, který musí být uvolněna.|  
-|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
+|[GetColumnInfo –](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Poznámky  
  Třída `TAccessor` spravuje přistupujícího objektu. Třída *TRowset* spravuje v sadě řádků.  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní HRESULT.  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Poznámky  
  Uživatel musí uvolnit informace vrácené sloupce a vyrovnávací paměti pro řetězec. Druhá verze tuto metodu použijte, když používáte [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) a je nutné přepsat vazbách.  
   
- Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) v *OLE DB referenční informace pro programátory*.  
+ Další informace najdete v tématu [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   

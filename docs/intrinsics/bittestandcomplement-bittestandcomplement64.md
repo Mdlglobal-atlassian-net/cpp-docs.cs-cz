@@ -1,5 +1,5 @@
 ---
-title: _bittestandcomplement _bittestandcomplement64 | Microsoft Docs
+title: _bittestandcomplement _bittestandcomplement64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1c3eb6f6447363fee7bafca33b8ea59c1c7e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74040260149b6a22dcb673eb26f4561c4f324e61
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328822"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465221"
 ---
 # <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement _bittestandcomplement64
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generovat instrukci, který zkoumá bit `b` adresy `a`, vrátí jeho aktuální hodnotu a nastaví bit k svému doplňku.  
+ Generovat instrukce, který zkoumá vlastnost bit `b` adresy `a`, vrátí aktuální hodnotu a nastaví bit svému doplňku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,21 +47,21 @@ unsigned char _bittestandcomplement64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `a`  
- Ukazatel na paměť pro zjištění.  
+ [out v] `a`  
+ Ukazatel paměti prozkoumat.  
   
- [v] `b`  
- Bit pozice pro testování.  
+ [in] `b`  
+ Bitová pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Bit na zadané pozici.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_bittestandcomplement`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandcomplement`|x86, ARM, x64|  
+|`_bittestandcomplement64`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
@@ -108,7 +108,7 @@ Testing bit 0
 Value changed to 0, Result: 1  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

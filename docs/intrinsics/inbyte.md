@@ -1,5 +1,5 @@
 ---
-title: __inbyte | Microsoft Docs
+title: __inbyte | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465859"
 ---
 # <a name="inbyte"></a>__inbyte
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `in` instrukce, vrací jeden bajt číst z portu určeného `Port`.  
+ Generuje `in` instrukce, vrací jeden bajt čtení z portu určené `Port`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ unsigned char __inbyte(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
- Port pro čtení z.  
+ [in] `Port`  
+ Port, který se má číst z.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Čtení bajtů z zadaný port.  
+ Číst bajt z zadaný port.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  

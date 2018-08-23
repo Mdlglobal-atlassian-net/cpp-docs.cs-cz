@@ -1,5 +1,5 @@
 ---
-title: '#include – direktiva (C/C++) | Microsoft Docs'
+title: '##include – direktiva (C/C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,90 +18,91 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cd6098f7a539fd883a9c8e0e0c116590a2f38f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b2ab8696adf30363d63321200fa87f31d18be369
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843545"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466382"
 ---
 # <a name="include-directive-cc"></a>#include – direktiva (C++)
-Informuje preprocesor zacházet s obsah zadaného souboru, jako kdyby se objeví v zdrojový program v místě, kde se zobrazí direktivu.  
+Určuje preprocesoru, aby s obsahem zadaného souboru, jak by se měl nacházet ve zdrojové aplikaci v místě, kde se objeví direktiva.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      #include  "path-spec"  
+#include  "path-spec"  
 #include  <path-spec>  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- Můžete uspořádat definice konstanta a makro do zahrnout soubory a pak použít `#include` direktivy je přidáte do jakékoli zdrojový soubor. Zahrnout soubory jsou užitečné pro zahrnutí deklarace externích proměnných a komplexními datovými typy. Typy může být definovaný a s názvem pouze jednou v souboru začlenění pro tento účel vytvořit.  
+## <a name="remarks"></a>Poznámky 
+
+Můžete uspořádat definice konstanty a makra v zahrnutých souborech a potom pomocí **#include** direktivy je přidejte do libovolného zdrojového souboru. Zahrnout soubory jsou také užitečná pro zahrnutí deklarace externích proměnných a komplexních datových typů. Typy může být definované a pojmenovat pouze jednou v zahrnutém souboru vytvořeném pro tento účel.  
   
- `path-spec` Je název souboru, který může volitelně předcházet specifikaci adresáře. Název existující soubor musí být název souboru. Syntaxe `path-spec` závisí na operačním systému, na kterém je program zkompilovat.  
+`path-spec` Je název souboru, který může být volitelně předcházen specifikací adresáře. Název souboru musí být název existujícího souboru. Syntaxe `path-spec` závisí na operačním systému, ve kterém je program zkompilován.  
   
- Informace o tom, jak odkazovat na sestavení v aplikaci C++, který se zkompiluje pomocí [/CLR](../build/reference/clr-common-language-runtime-compilation.md), najdete v části [#using](../preprocessor/hash-using-directive-cpp.md).  
+Informace o tom, jak odkazovat na sestavení v C++ aplikaci zkompilované s použitím [/CLR](../build/reference/clr-common-language-runtime-compilation.md), naleznete v tématu [#using](../preprocessor/hash-using-directive-cpp.md).  
   
- Obě různé formy způsobit směrnice nahradit za celý obsah zadaný soubor. Rozdíl mezi dvěma formuláře je v pořadí, ve kterém preprocesor vyhledá soubory hlaviček-li úplně zadána cesta. Následující tabulka ukazuje rozdíl mezi dvě různé formy.  
+Obě formy syntaxe způsobí náhradu této direktivy celým obsahem určeného zahrnutého souboru se nahradí. Rozdíl mezi dvěma formuláři je v tom pořadí, ve kterém preprocesor hledá soubory hlaviček případě je cesta zadána neúplně. Následující tabulka ukazuje rozdíl mezi dvě různými formami syntaxe.  
   
-|Syntaxe formuláře|Akce|  
+|Forma syntaxe|Akce|  
 |-----------------|------------|  
-|Uvozovkách formuláře|Preprocesor hledá zahrnout soubory v tomto pořadí:<br /><br /> 1) ve stejném adresáři jako soubor, který obsahuje `#include` příkaz.<br /><br /> 2) v adresáře aktuálně otevřenou obsahovat soubory, v opačném pořadí, ve kterém byly otevřen. Hledání začíná v adresáři nadřazené zahrnout soubor a pokračuje směrem nahoru adresáře žádné nadřazený zahrnout soubory.<br /><br /> 3) v cestě, který je určen podle jednotlivých /I – možnost kompilátoru.<br /><br /> 4)<br /><br /> Podél cesty, které jsou určené proměnnou prostředí zahrnout.|  
-|Formulář ostré závorky|Preprocesor hledá zahrnout soubory v tomto pořadí:<br /><br /> 1) v cestě, který je určen podle jednotlivých /I – možnost kompilátoru.<br /><br /> 2) kompilování Pokud probíhá na příkazový řádek podél cesty, které jsou určené proměnnou prostředí zahrnout.|  
+|Citovaný formulář|Preprocesor vyhledává zahrnuté soubory v tomto pořadí:<br /><br /> (1) ve stejném adresáři jako soubor, který obsahuje **#include** příkazu.<br /><br /> (2) v adresářích aktuálně otevřeném zahrňte soubory v obráceném pořadí, v jakém byly otevřeny. Hledání začne v adresáři nadřazeného souboru zahrnutí a pokračuje směrem nahoru přes adresáře všech nadřazených soubory k zahrnutí.<br /><br /> (3) v cestě, která je zadána každý `/I` – možnost kompilátoru.<br /><br /> 4)<br /><br /> Podél cest, které jsou určeny proměnnou prostředí INCLUDE.|  
+|Forma lomené závorky|Preprocesor vyhledává zahrnuté soubory v tomto pořadí:<br /><br /> (1) v cestě, která je zadána každý `/I` – možnost kompilátoru.<br /><br /> (2) při kompilaci na příkazovém řádku, podél cest, které jsou určeny proměnnou prostředí INCLUDE.|  
   
- Preprocesor – zastaví hledání také soubor s daným názvem najde. Pokud uzavřete specifikaci dokončení, jednoznačným cestu pro soubor zahrnutí mezi dvojitých uvozovek nahoře (""), preprocesor vyhledá pouze specifikace této cesty a ignoruje standardní adresáře.  
+Preprocesor zastaví hledání, jakmile nalezne soubor s daným názvem. Pokud zadáte jednoznačnou, kompletní cesta specifikace k souboru include mezi dvojité uvozovky (""), preprocesor prohledá pouze specifikaci cesty a ignoruje standardní adresáře.  
   
- Pokud název souboru, který má uzavřena v uvozovkách představuje specifikaci neúplné cesta, vyhledá preprocesoru první k adresáři se souborem "nadřazená". Nadřazený soubor je soubor, který obsahuje `#include` – direktiva. Například pokud obsahovat soubor s názvem `file2` do souboru s názvem `file1`, `file1` je nadřazeném souboru.  
+Pokud je název souboru uzavřený do dvojitých uvozovek specifikace neúplné cesty, preprocesor nejprve prohledá "rodičovský" adresář. Nadřazený soubor je soubor, který obsahuje **#include** směrnice. Například pokud zahrnete soubor s názvem `file2` do souboru s názvem `file1`, `file1` je nadřazený soubor.  
   
- Vložené soubory mohou být "vnořené"; To znamená `#include` – direktiva se mohou objevit v souboru, který je pojmenován jiným `#include` – direktiva. Například `file2` můžou zahrnovat `file3`. V takovém případě `file1` bude stále nadřazeného `file2`, ale bylo by "nadřazený" z `file3`.  
+Zahrnuté soubory mohou být "vnořené"; To znamená **#include** – direktiva se mohou objevit v souboru pojmenovaným jiným **#include** směrnice. Například `file2` může zahrnovat `file3`. V takovém případě `file1` stále by šlo nadřazený `file2`, ale bylo by "nadřazený" z `file3`.  
   
- Když zahrnout soubory jsou vnořené a při kompilování dojde na příkazovém řádku, vyhledávání directory začíná adresáře nadřazeném souboru a poté pokračuje prostřednictvím adresáře všechny soubory nadřazený. To znamená hledání začne vůči adresáři, která obsahuje daný zdroj, který se právě zpracovává. Pokud soubor nebyl nalezen, hledání se přesune do adresáře, které jsou určené /I – možnost kompilátoru. Prohledají se nakonec adresáře, které jsou určené proměnnou prostředí zahrnout.  
+Při vnoření souborů a jsou při kompilaci na příkazovém řádku, hledání začne s adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdroj, který se právě zpracovává. Pokud soubor není nalezen, hledání se přesune do adresáře, které jsou určeny `/I` – možnost kompilátoru. Nakonec jsou prohledány adresáře určené proměnnou prostředí INCLUDE.  
   
- Z vývojového prostředí je ignorován proměnné prostředí zahrnout. Informace o tom, jak nastavit adresáře, které se vyhledávají zahrnout soubory – to platí také pro proměnná prostředí LIB – viz [stránka vlastností adresářů VC ++](../ide/vcpp-directories-property-page.md).  
+Z vývojového prostředí je proměnná prostředí INCLUDE ignorována. Informace o tom, jak nastavit adresáře, které se budou hledat vkládané soubory – to platí také pro proměnné prostředí LIB – viz [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).  
   
- Tento příklad ukazuje zahrnutí souborů pomocí ostrých závorek:  
+Tento příklad ukazuje začlenění souboru pomocí ostrých závorek:  
   
 ```  
 #include <stdio.h>  
 ```  
   
- Tento příklad přidá obsah souboru s názvem STDIO. H na zdrojový program. Lomené závorky způsobit preprocesor k vyhledání adresáře, které jsou určené proměnnou prostředí zahrnout pro STDIO. H, po prohledává adresáře, které jsou určené /I – možnost kompilátoru.  
+V tomto příkladu přidá obsah souboru s názvem STDIO. H do zdrojového programu. Lomené závorky způsobí, že preprocesor hledat adresáře určené proměnnou prostředí INCLUDE pro STDIO. H po prohledání adresářů uvedených `/I` – možnost kompilátoru.  
   
- Další příklad ukazuje zahrnutí souborů pomocí uvozovkách formuláře:  
+Následující příklad ukazuje začlenění souboru pomocí citovaného formuláře:  
   
 ```  
 #include "defs.h"  
 ```  
   
- Tento příklad přidá obsah souboru, která je zadána DEFS. H na zdrojový program. Uvozovky znamená, že preprocesor nejprve hledat adresář, který obsahuje zdrojový soubor nadřazené.  
+V tomto příkladu přidá obsah souboru určeného DEFS. H do zdrojového programu. Uvozovky znamenají, že preprocesor nejprve prohledá adresář obsahující nadřazený zdrojový soubor.  
   
- Vnoření zahrnout soubory můžete pokračovat až 10 úrovně. Když vnořeného `#include` je zpracování preprocesor pokračuje vložení nadřazených soubor do původní zdrojový soubor.  
+Vnoření vložených souborů může pokračovat až do 10 úrovně. Když ve vnořeném **#include** je zpracována, bude preprocesor nadále vkládat vnořené soubory do původního zdrojového souboru.  
   
- **Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Najít includable zdrojové soubory, preprocesoru první hledání adresáře, které jsou určené /I – možnost kompilátoru. Pokud není k dispozici možnost /I nebo selže, preprocesor používá proměnnou prostředí pro zahrnutí nalézt žádné soubory zahrnout v rámci lomené závorky. Zahrnout prostředí proměnnou a /I – možnost kompilátoru může obsahovat více cest, oddělených středníkem (;). Pokud se více než jeden adresář se zobrazí jako součást možnost /I nebo v rámci proměnné prostředí zahrnout, preprocesor je prohledává v pořadí, ve kterém jsou zobrazeny.  
+Pro nalezení zahrnutelných zdrojových souborů, že preprocesor nejprve prohledá adresáře, které jsou určeny `/I` – možnost kompilátoru. Pokud `/I` možnost není k dispozici nebo se nezdaří, preprocesor použije proměnnou prostředí INCLUDE k nalezení všech souborů include v lomených závorkách. Proměnná prostředí INCLUDE a `/I` – možnost kompilátoru může obsahovat několik cest oddělených středníky (;). Pokud více než jeden adresář zobrazí jako součást `/I` možnost nebo v rámci proměnná prostředí INCLUDE, preprocesor je hledá v pořadí, v jakém jsou uvedeny.  
   
- Například příkaz  
+Například příkaz  
   
 ```  
 CL /ID:\MSVC\INCLUDE MYPROG.C  
 ```  
   
- způsobí, že preprocesor pro vyhledávání v adresáři D:\MSVC\INCLUDE\ pro zahrnout soubory, jako je například STDIO. H. Příkazy  
+způsobí, že bude preprocesor hledat zahrnuté soubory, jako je například STDIO adresáři D:\MSVC\INCLUDE\. H. Příkazy  
   
 ```  
 SET INCLUDE=D:\MSVC\INCLUDE  
 CL MYPROG.C  
 ```  
   
- mají stejný účinek. Pokud selžou obě sady hledání, vygeneruje se kompilátoru závažné chybě.  
+mají stejný účinek. Pokud se obě sady vyhledávání nezdaří, je generována závažná chyba kompilátoru.  
   
- Pokud název souboru je plně zadaná pro vloženého souboru, který má cestu, který obsahuje dvojtečku (například F:\MSVC\SPECIAL\INCL\TEST. H), preprocesor sleduje cestu.  
+Pokud název souboru je plně zadaný pro soubor include, který má cestu, která obsahuje dvojtečkou (například F:\MSVC\SPECIAL\INCL\TEST. H), preprocesor sleduje cestu.  
   
- Pro zahrnout soubory, které jsou určeny jako `#include` "`path-spec`", vyhledávání directory začíná adresáři nadřazeném souboru a poté pokračuje prostřednictvím adresáře všechny soubory nadřazený. To znamená, hledání začne vůči adresáři, který obsahuje zdrojový soubor, který obsahuje `#include` direktiva, která je zpracovávána. Pokud není dostupný žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání bude pokračovat, jako kdyby měla název souboru uzavřené v lomených závorkách.  
+Při zahrnutí souborů, které jsou určeny jako `#include` "`path-spec`", hledání začne adresářem nadřazeného souboru a pak pokračuje přes adresáře všech souborů výše nadřazených. Hledání tedy začíná relativně vzhledem k adresáři obsahujícímu zdroj souboru, který obsahuje **#include** směrnice, které jsou zpracovávány. Pokud není žádný nadřazený soubor a soubor nebyl nalezen, vyhledávání pokračuje, jako by název souboru byl uzavřen do lomených závorek.  
   
- **Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+ 
+[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

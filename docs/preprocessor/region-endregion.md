@@ -1,5 +1,5 @@
 ---
-title: oblast, endregion – | Microsoft Docs
+title: oblast, endregion | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839444"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465384"
 ---
 # <a name="region-endregion"></a>region, endregion
-**#pragma oblast** umožňují určit blok kódu, který můžete rozbalit nebo sbalit při použití [osnovy funkce](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.  
+`#pragma region` Umožňuje určit blok kódu, které můžete rozbalit nebo sbalit při použití [funkce osnovy](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,22 @@ ms.locfileid: "33839444"
 #pragma endregion comment  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `comment`(volitelné)  
- Komentář, který se zobrazí v editoru kódu.  
+### <a name="parameters"></a>Parametry  
+*Komentář* (volitelné)  
+Komentář, který se zobrazí v editoru kódu.  
   
- *název*(volitelné)  
- Název oblasti.  Tento název se zobrazí v editoru kódu.  
+*Název* (volitelné)  
+Název oblasti.  Tento název se zobrazí v editoru kódu.  
   
 ## <a name="remarks"></a>Poznámky  
- **endregion – #pragma** označuje konec **oblast #pragma** bloku.  
+ 
+`#pragma endregion` označuje konec `#pragma region` bloku.  
   
- A `#region` bloku musí být ukončena s **endregion – #pragma**.  
+A `#region` bloku musí být ukončen direktivou `#pragma endregion`.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directives_region.cpp  
 #pragma region Region_1  
 void Test() {}  
@@ -65,4 +66,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

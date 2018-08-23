@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336963"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466401"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
-Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
+Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **Hodnota TRUE** Pokud název nebyl nalezen. V opačném případě **false**.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) rozhraní.  
+ Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 Analyzuje zobrazovaný název na extrahuje komponentu řetězec, který lze převést na moniker.  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  Standardní HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
-Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx).  
+Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Syntaxe  
   

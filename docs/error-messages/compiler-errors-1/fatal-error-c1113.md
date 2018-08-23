@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1113 | Microsoft Docs
+title: Závažná chyba C1113 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343dbc41743c825b7fb3624019817ec7c5f163fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199051"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464813"
 ---
 # <a name="fatal-error-c1113"></a>Závažná chyba C1113
-\#použití ve 'file' se nezdařilo.  
+\#selhalo na 'file'  
   
- Jenom soubor ve formátu Microsoft Intermediate Language (MSIL) se dá předat do [#using](../../preprocessor/hash-using-directive-cpp.md) – direktiva. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru umožňuje vytvářet MSIL výstupního souboru. Další [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] jazyky také vytvořit několik MSIL soubory.
+ Pouze soubor ve formátu Microsoft Intermediate Language (MSIL) mohou být předány [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru umožňuje vytvořit výstupní soubor jazyka MSIL. Další jazyky sady Visual Studio také vytvářejí soubory MSIL.

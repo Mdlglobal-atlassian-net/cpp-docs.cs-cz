@@ -1,5 +1,5 @@
 ---
-title: 'Portování a upgrade: Příklady a případové studie | Microsoft Docs'
+title: 'Přenos a upgrade: Příklady a případové studie | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1b05c96e4db1af204937068f019222d3c53684
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d264c77668e0220c4198657b8133f0ebea34e6cb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850141"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464615"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Přenos a upgrade: Příklady a případové studie
-Můžete získat představu o druhy problémů, které můžete narazit trvání migrace z předchozí verze aplikace Visual C++ do stávající kontrolou scénářů migrace úspěšná.  
+Můžete získat představu o druhy problémů můžete setkat, doba trvání migrace z předchozí verze aplikace Visual C++ do aktuálního kontrolou scénářů migrace úspěšná.  
   
-## <a name="examples-of-successful-migrations"></a>Příklady úspěšné migrace  
- Zde si můžete přečíst o trvalo migrovat na nejnovější verzi aplikace Visual C++ některé mírné ukázky a nástroje. Problémy v těchto migrace jsou typické pro typy problémů, může dojít v žádné migrace, ale s jednou výjimkou důležité a velikost kód, který je. Ukázky jsou samozřejmě velmi malé a krátký ve srovnání s reálné aplikaci kódu.  
+## <a name="examples-of-successful-migrations"></a>Příklady úspěšné migrace 
+
+Tady si přečíst o trvalo pro migraci některých mírné ukázek a nástrojů na nejnovější verzi aplikace Visual C++. Problémy v těchto migrace jsou typické pro typy problémů můžete narazit v každé migrace, ale jedna důležitá výjimka, a to je velikost kódu. Ukázky jsou samozřejmě velmi malé a krátké ve srovnání s kód aplikací v reálném světě.  
   
--   [MFC Klikyháky](../porting/porting-guide-mfc-scribble.md) je ukázka, která používá základní informace o MFC.  
+- [MFC Scribble](../porting/porting-guide-mfc-scribble.md) je ukázka, která používá základy knihovny MFC.  
   
--   [COM Spy](../porting/porting-guide-mfc-scribble.md) je aplikace, která se zobrazí informace o komponenty modelu COM + na počítači.  
+- [COM Spy](../porting/porting-guide-mfc-scribble.md) je aplikace, která zobrazí informace o komponenty modelu COM +. na počítači.  
   
--   [Nástroje Spy ++](../porting/porting-guide-spy-increment.md) je aplikace, která zkontroluje a poskytuje informace o prvky uživatelského rozhraní v spuštěných aplikací.  
+- [Spy ++](../porting/porting-guide-spy-increment.md) je aplikace, která zkontroluje a poskytne vám informace o prvcích uživatelského rozhraní v spuštěných aplikací.  
   
 ## <a name="see-also"></a>Viz také  
- [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
+ 
+[Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

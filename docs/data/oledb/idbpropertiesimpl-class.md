@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337112"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466313"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl – třída
 Poskytuje implementaci pro `IDBProperties` rozhraní.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties –](#setproperties)|Nastaví vlastnosti zdroje dat a inicializační vlastnosti skupiny, pro objekty zdroje dat, nebo skupině vlastností Initialization pro enumerátory.|  
   
 ## <a name="remarks"></a>Poznámky  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), musí vystavit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) je povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory. Nicméně pokud enumerátor zpřístupní [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), musí vystavit `IDBProperties`. `IDBPropertiesImpl` implementuje `IDBProperties` pomocí statické funkce definované [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 Vrátí hodnoty vlastností ve zdroji dat, informace o zdroji dat a inicializaci skupiny vlastností, které jsou aktuálně nastaveny na objekt zdroje dat nebo hodnoty vlastností ve skupině vlastností Initialization, které jsou aktuálně nastavená na Enumerátor.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBProperties::GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
  Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBProperties::GetPropertyInfo](https://msdn.microsoft.com/library/ms718175.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
  Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBProperties::SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud zprostředkovatele je inicializována, tato metoda nastaví hodnoty vlastností v DBPROPSET_DATASOURCE DBPROPSET_DATASOURCEINFO, DBPROPSET_DBINIT skupiny vlastností pro objekt zdroje dat. Pokud zprostředkovatele není inicializován, nastaví DBPROPSET_DBINIT skupiny pouze vlastnosti.  

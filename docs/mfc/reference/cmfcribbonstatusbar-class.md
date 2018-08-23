@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852449"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465105"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Cmfcribbonstatusbar – třída
 `CMFCRibbonStatusBar` Třída implementuje ovládací prvek panel stav, který dokáže zobrazit prvky pásu.  
@@ -259,7 +259,7 @@ BOOL CreateEx(
  TRUE, pokud stavový řádek je úspěšně vytvořen, FALSE v opačném případě.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -426,7 +426,7 @@ virtual void OnDrawInformation(
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled řetězec informací na stavovém řádku. Použití [CMFCRibbonStatusBar::SetInformation](#setinformation) metoda put stavového řádku v režimu informace. V tomto režimu se stavový řádek skryje všechny podokna a zobrazí informace o řetězec určený *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void RecalcLayout();

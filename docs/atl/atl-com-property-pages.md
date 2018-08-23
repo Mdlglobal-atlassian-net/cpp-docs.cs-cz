@@ -1,5 +1,5 @@
 ---
-title: ATL COM vlastnost stránky | Microsoft Docs
+title: Stránky vlastností knihovny ATL modelu COM projektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357529"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464916"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM – stránky vlastností
-COM – stránky vlastností nabízí uživatelské rozhraní pro nastavení vlastností (nebo volání metody) jeden nebo více objektů COM. Stránky vlastností jsou používány v ovládacích prvcích ActiveX pro zajištění bohaté uživatelské rozhraní, které umožňují vlastností ovládacího prvku na nastavit v době návrhu.  
+Com – stránky vlastností nabízí uživatelské rozhraní pro nastavení vlastností (nebo volání metody) z jednoho nebo více objektů COM. Stránky vlastností jsou používány v ovládacích prvcích ActiveX pro poskytování bohatá uživatelská rozhraní, které umožňují vlastností ovládacího prvku na nastavení v době návrhu.  
   
- Stránky vlastností jsou, které implementují objekty COM [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) nebo [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) rozhraní. Tato rozhraní poskytují metody, které umožňují stránky přidružen `site` (objekt COM představující kontejneru stránky) a počet *objekty* (COM – objekty jejichž metody bude volána v reakci na změny provedené uživatelem na stránku vlastností). Stránka kontejneru vlastnost je zodpovědná za volání metod v rozhraní vlastnost stránky říct stránky, pokud chcete zobrazit nebo skrýt jeho uživatelské rozhraní a kdy se mají použít změny provedené uživatelem na základní objekty.  
+ Stránky vlastností jsou objekty COM, které implementují [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) nebo [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) rozhraní. Tato rozhraní poskytuje metody, které umožňují stránce přidruženo `site` (objekt modelu COM představující kontejneru stránky) a počet *objekty* (objekty modelu COM zavolá se jejíž metody v reakci na změny provedené uživatelem na stránce vlastností). Kontejner vlastnosti stránky je zodpovědná za volání metod na rozhraní stránky vlastností předat stránce při zobrazení nebo skrytí uživatelského rozhraní a kdy se mají použít změny provedené uživatelem pro příslušné objekty.  
   
- Každý stránka vlastností se dají vytvářet zcela nezávisle na objekty, jejichž vlastnosti lze nastavit. Stránky vlastností všechno, co vyžaduje je pochopit konkrétní rozhraní (nebo sadu rozhraní) a nabízí uživatelské rozhraní pro volání metody tohoto rozhraní.  
+ Každou stránku vlastností se dají úplně nezávisle na objekty, jejichž vlastnosti můžete nastavit. Stránky vlastností všechno, musí je pochopení konkrétní rozhraní (nebo sadu rozhraní) a nabízí uživatelské rozhraní pro volání metody tohoto rozhraní.  
   
- Další informace najdete v tématu [vlastností a stránky vlastností](http://msdn.microsoft.com/library/windows/desktop/ms686577) v [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Další informace najdete v tématu [seznamy vlastností a stránky vlastností](http://msdn.microsoft.com/library/windows/desktop/ms686577) v sadě Windows SDK.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Zadání stránek vlastností](../atl/specifying-property-pages.md)  
- Jsou uvedené kroky pro zadání stránky vlastností pro ovládací prvek je a zobrazí ukázka třídy.  
+ Jsou uvedené kroky pro zadání stránek vlastností pro ovládací prvek je a ukazuje příklad třídy.  
   
  [Implementace stránek vlastností](../atl/implementing-property-pages.md)  
- Jsou uvedené kroky pro implementaci stránky vlastností, včetně metody k přepsání. Vás provede kompletní příklad podle ATLPages ukázka programu.  
+ Jsou uvedené kroky pro implementaci stránky vlastností, včetně metod k přepsání. Vás provede kompletní příklad podle ATLPages ukázkový program.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Ukázka ATLPages](../visual-cpp-samples.md)  
- Ukázka abstraktní pro ATLPages ukázku, která implementuje pomocí stránky vlastností `IPropertyPageImpl`.  
+ Abstraktní ukázky pro ukázku ATLPages, který implementuje stránku vlastností pomocí `IPropertyPageImpl`.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
+ Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)

@@ -1,5 +1,5 @@
 ---
-title: auto_rename – | Microsoft Docs
+title: auto_rename – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7561e9d9b49f9af885299a6b94d3edbcf8f2a74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912807"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464609"
 ---
 # <a name="autorename"></a>auto_rename
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.  
+Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,11 +34,13 @@ ms.locfileid: "33912807"
 auto_rename  
 ```  
   
-## <a name="remarks"></a>Poznámky  
- Tento atribut se používá při importování knihovny typů používající jedno nebo více vyhrazených slov jazyka C++ (klíčových slov nebo maker) jako názvů proměnných.  
+## <a name="remarks"></a>Poznámky 
+
+Tento atribut se používá při importování knihovny typů používající jedno nebo více vyhrazených slov jazyka C++ (klíčových slov nebo maker) jako názvů proměnných.  
   
- **Konkrétní END C++**  
+ **Specifické pro END C++**  
   
-## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Viz také 
+
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

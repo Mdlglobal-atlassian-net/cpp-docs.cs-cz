@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853992"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464448"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – třída
 `CMFCShellListCtrl` Třída poskytuje funkce pro řízení seznamu Windows a umožňuje jeho rozšíření tím včetně možnost zobrazit seznam položek prostředí.  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  TRUE, pokud je zobrazené složky složce klasické pracovní plochy. FALSE v opačném případě.  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual int OnCompareItems(

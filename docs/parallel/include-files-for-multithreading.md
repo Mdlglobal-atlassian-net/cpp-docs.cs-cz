@@ -1,5 +1,5 @@
 ---
-title: Zahrnout soubory pro Multithreading | Microsoft Docs
+title: Zahrnuté soubory pro Multithreading | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b94f4a7a394b78cb7c6f23275709e4aeacc774
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73444c72878073d881abec08c474eb1f1ce64f02
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685798"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466385"
 ---
 # <a name="include-files-for-multithreading"></a>Zahrnuté soubory pro multithreading
-Standardní zahrnout soubory deklarovat funkce běhové knihovny jazyka C, jak jsou implementované v knihovnách. Pokud použijete [úplná optimalizace](../build/reference/ox-full-optimization.md) (/ Ox) nebo [fastcall zásady volání](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) možnost kompilátor předpokládá, že všechny funkce by měla být volána pomocí konvence volání registru. Funkce běhové knihovny byly zkompilovány pomocí konvence volání jazyka C a deklarace v standardní zahrnout soubory oznámení kompilátoru generovat správné externí odkazy na tyto funkce.  
+Standardní vložené soubory deklarujte funkce knihovny run-time jazyka C, jak jsou implementované v knihovnách. Pokud používáte [úplná optimalizace](../build/reference/ox-full-optimization.md) (/ Ox) nebo [fastcall konvence volání](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) možnost, kompilátor předpokládá, že všechny funkce lze volat pomocí registru konvence volání. Funkce knihovny run-time byly zkompilovány pomocí konvence volání jazyka C a že bude kompilátor generovat správný externí odkazy na tyto funkce se deklarace ve standardních vložených souborech.  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

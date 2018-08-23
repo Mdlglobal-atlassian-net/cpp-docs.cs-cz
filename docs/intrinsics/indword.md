@@ -1,5 +1,5 @@
 ---
-title: __indword | Microsoft Docs
+title: __indword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcfb321d526bb449335f87e7a83ba2a0aba7e60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325536"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465218"
 ---
 # <a name="indword"></a>__indword
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Přečte jeden double aplikace word dat pomocí zadaný port `in` instrukcí.  
+ Načte data o jedno slovo double pomocí zadaný port `in` instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +39,24 @@ unsigned long __indword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
- Port pro čtení z.  
+ [in] `Port`  
+ Port, který se má číst z.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Slovo přečíst z portu.  
+ Slovo čtení z portu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__indword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indword`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

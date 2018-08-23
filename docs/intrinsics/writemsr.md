@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Microsoft Docs
+title: __writemsr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323521"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464446"
 ---
 # <a name="writemsr"></a>__writemsr
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje zápis modelu konkrétní zaregistrovat (`wrmsr`) instrukcí.  
+ Generuje zápisu pro konkrétní registraci modelu (`wrmsr`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,24 +40,24 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Register`  
- Konkrétní registrace modelu.  
+ [in] `Register`  
+ Model konkrétním registru.  
   
- [v] `Value`  
+ [in] `Value`  
  Hodnota pro zápis  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto funkci lze použít pouze v režimu jádra a tato rutina je pouze k dispozici jako vnitřní.  
+ Tato funkce slouží pouze v režimu jádra a tato rutina je dostupný jenom jako vnitřní.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

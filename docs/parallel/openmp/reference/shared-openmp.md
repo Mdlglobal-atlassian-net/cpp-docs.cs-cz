@@ -1,5 +1,5 @@
 ---
-title: sdílené (OpenMP) | Microsoft Docs
+title: sdílené (OpenMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691674"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464803"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Určuje, že jeden nebo více proměnných by měl sdílen všechna vlákna.  
+Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +33,13 @@ shared(var)
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- kde  
+ Pokud  
   
  `var`  
- Jeden další proměnné, do sdílené složky. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
+ Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
   
 ## <a name="remarks"></a>Poznámky  
- Jiný způsob, jak sdílet proměnné mezi vláken je s [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzule.  
+ Dalším způsobem, jak sdílet proměnné mezi vlákny je [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.  
   
  `shared` platí pro následující direktivy:  
   
@@ -52,7 +52,7 @@ shared(var)
  Další informace najdete v tématu [2.7.2.4 sdílené](../../../parallel/openmp/2-7-2-4-shared.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [privátní](../../../parallel/openmp/reference/private-openmp.md) příklad použití `shared`.  
+ Zobrazit [privátní](../../../parallel/openmp/reference/private-openmp.md) pro příklad použití `shared`.  
   
 ## <a name="see-also"></a>Viz také  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,5 +1,5 @@
 ---
-title: __svm_vmload | Microsoft Docs
+title: __svm_vmload | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cd8164da7be750310f133bb25c17f8cdb21f38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335150"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465111"
 ---
 # <a name="svmvmload"></a>__svm_vmload
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Načte podmnožinu stav procesoru z řídicí blok zadaný virtuální počítač (VMCB).  
   
@@ -41,20 +41,20 @@ void __svm_vmload(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
+|[in] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
   
 ## <a name="remarks"></a>Poznámky  
- `__svm_vmload` Funkce je ekvivalentní volání `VMLOAD` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace naleznete v dokumentu "programátory architektura AMD64 ruční svazku 2: programování systému" číslo 24593, revize 3.11, dokumentu v [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
+ `__svm_vmload` Funkce je ekvivalentní volání `VMLOAD` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__svm_vmload`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmload`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

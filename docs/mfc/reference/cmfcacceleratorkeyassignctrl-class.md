@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCAcceleratorKeyAssignCtrl | Microsoft Docs
+title: Cmfcacceleratorkeyassignctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037243"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466397"
 ---
-# <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl – třída
-`CMFCAcceleratorKeyAssignCtrl` Třída rozšiřuje [CEdit třída](../../mfc/reference/cedit-class.md) pro podporu tlačítka další systémové například ALT, řízení a SHIFT.  
+# <a name="cmfcacceleratorkeyassignctrl-class"></a>Cmfcacceleratorkeyassignctrl – třída
+`CMFCAcceleratorKeyAssignCtrl` Třída rozšiřuje [cedit – třída](../../mfc/reference/cedit-class.md) k podpoře dalších systémových tlačítek, jako například ALT, SHIFT a CONTROL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,16 +56,16 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Načte `ACCEL` struktury pro stisknuto klávesovou zkratku `CMFCAcceleratorKeyAssignCtrl` objektu.|  
+|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Načte `ACCEL` strukturu pro stisknuto klávesovou zkratku `CMFCAcceleratorKeyAssignCtrl` objektu.|  
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Určuje, zda byla definována klávesovou zkratku.|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit zprávy oken, než jsou odeslány do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce systému Windows. (Přepisuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Obnoví klávesovou zkratku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída rozšiřuje funkce `CEdit` třída díky podpoře klávesové zkratky, také známé jako klávesy akcelerátoru. `CMFCAcceleratorKeyAssignCtrl` Třídy funkce jako [CEdit třída](../../mfc/reference/cedit-class.md) a taky poznáte tlačítka systému.  
+ Tato třída rozšiřuje funkce `CEdit` třídy díky podpoře klávesové zkratky, označované také jako přístupové klávesy. `CMFCAcceleratorKeyAssignCtrl` Funkcí jako třídy [cedit – třída](../../mfc/reference/cedit-class.md) a také poznáte systémových tlačítek.  
   
- Tato třída mapuje kombinace fyzické klávesových zkratek řetězcové hodnoty. Předpokládejme například, kombinace kláves ALT + B je namapována na řetězec "Alt + B". Když uživatel stiskne tuto kombinaci kláves v `CMFCAcceleratorKeyAssignCtrl` objektů, zobrazí se uživateli "Alt + B". Další informace o mapování mezi klávesové zkratky a formát řetězce najdete v tématu [CMFCAcceleratorKey třída](../../mfc/reference/cmfcacceleratorkey-class.md).  
+ Tato třída mapuje fyzické klávesových zkratek řetězcové hodnoty. Předpokládejme například, kombinace kláves ALT + B je namapován na řetězec "Alt + B". Když uživatel stiskne tuto kombinaci kláves v `CMFCAcceleratorKeyAssignCtrl` objektu, zobrazí se uživateli "Alt + B". Další informace o mapování klávesových zkratek a formát řetězce najdete v tématu [cmfcacceleratorkey – třída](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit `CMFCAcceleratorKeyAssignCtrl` objektu a použít jeho `ResetKey` metoda resetovat klávesovou zkratku.  
@@ -73,13 +73,13 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
  [!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CEdit](../../mfc/reference/cedit-class.md)  
+ [Cedit –](../../mfc/reference/cedit-class.md)  
   
  `CMFCAcceleratorKeyAssignCtrl`   
   
@@ -87,14 +87,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
  **Záhlaví:** afxacceleratorkeyassignctrl.h  
   
 ##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
- Vytvoří [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
+ Vytvoří [cmfcacceleratorkeyassignctrl –](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
   
 ```  
 CMFCAcceleratorKeyAssignCtrl();
 ```  
   
 ##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Načte `ACCEL` struktury pro stisknuto klávesovou zkratku [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
+ Načte `ACCEL` strukturu pro stisknuto klávesovou zkratku [cmfcacceleratorkeyassignctrl –](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
   
 ```  
 ACCEL const* GetAccel() const;  
@@ -104,10 +104,10 @@ ACCEL const* GetAccel() const;
  `ACCEL` Struktura, která popisuje klávesovou zkratku.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete získat `ACCEL` strukturu pro klávesovou zkratku, která uživatel zadal do vaší `CMFCAcceleratorKeyAssignCtrl` objektu.  
+ Pomocí této funkce můžete načíst `ACCEL` strukturu pro klávesovou zkratku, která uživatel zadal do vaší `CMFCAcceleratorKeyAssignCtrl` objektu.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 BOOL IsFocused() const;  
@@ -118,27 +118,27 @@ BOOL IsFocused() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
- Určuje, zda byla definována klávesovou zkratku v [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
+ Určuje, zda byla definována klávesovou zkratku v [cmfcacceleratorkeyassignctrl –](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objektu.  
   
 ```  
 BOOL IsKeyDefined() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud uživatel již má stisknutí platnou kombinaci klíče, které definují klávesovou zkratku; jinak 0.  
+ Nenulové, pokud uživatel stiskne již platnou kombinaci kláves, které definují klávesovou zkratku; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce slouží k určení, zda uživatel zadal platný klávesovou zkratku ve vaší `CMFCAcceleratorKeyAssignCtrl` objektu. Pokud existuje klávesovou zkratku, můžete použít [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metoda získat `ACCEL` struktura přidružené k této klávesové zkratky.  
+ Tato funkce slouží k určení, zda uživatel zadal platný klávesovou zkratku v vaše `CMFCAcceleratorKeyAssignCtrl` objektu. Pokud existuje klávesovou zkratku můžete použít [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodu k získání `ACCEL` struktura přidružené k této klávesovou zkratku.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pMsg*  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -152,7 +152,7 @@ void ResetKey();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce vymaže text ovládací prvek upravit. To zahrnuje všechny klávesové zkratky, které uživatel klepl na tlačítko.  
+ Funkce vymaže úpravy textu ovládacího prvku. To zahrnuje všechny klávesové zkratky, které uživatel stiskl.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

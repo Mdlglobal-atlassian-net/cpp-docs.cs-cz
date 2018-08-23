@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring | Microsoft Docs
+title: __outdwordstring | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331757"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465222"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `rep outsd` instrukce, který odesílá `Count` doublewords počínaje `Buffer` z portu vstupně-výstupních operací určeného `Port`.  
+ Generuje `rep outsd` instrukce, která odesílá `Count` začínající na x doubleword `Buffer` portu vstupně-výstupní operace určené `Port`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,27 +41,27 @@ void __outdwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
+ [in] `Port`  
  Port pro odesílání dat na.  
   
- [v] `Buffer`  
+ [in] `Buffer`  
  Ukazatel na data, která mají být odeslány zadaný port.  
   
- [v] `Count`  
- Počet doublewords k odeslání.  
+ [in] `Count`  
+ Počet x doubleword k odeslání.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

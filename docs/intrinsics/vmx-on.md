@@ -1,5 +1,5 @@
 ---
-title: __vmx_on | Microsoft Docs
+title: __vmx_on | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa4325dc55bee53f2a19b192bb0c699dd89eb0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333089"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466390"
 ---
 # <a name="vmxon"></a>__vmx_on
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Aktivuje operace rozšíření (VMX) virtuálního počítače v procesoru.  
   
@@ -38,29 +38,29 @@ unsigned char __vmx_on(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `VmsSupportPhysicalAddress`  
- Ukazatel na 64-bit fyzickou adresu, která odkazuje na virtuální počítač řídicí struktury (VMCS).  
+ [in] `VmsSupportPhysicalAddress`  
+ Ukazatel na fyzickou adresu 64-bit, který odkazuje na virtuální počítač řídicí struktury (VMCS).  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
 |0|Operace byla úspěšná.|  
-|1|Operace se nezdařila s rozšířené stavu k dispozici v `VM-instruction error field` z aktuální VMCS.|  
-|2|Operace se nezdařila bez stavu k dispozici.|  
+|1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|  
+|2|Operace selhala, aniž by k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- `__vmx_on` Funkce odpovídá `VMXON` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__vmx_on` Funkce odpovídá `VMXON` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_on`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339433"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466312"
 ---
 # <a name="ole-db-templates"></a>Šablony OLE DB
 Šablony technologie OLE DB usnadňují přístup k datům OLE DB. Visual C++ poskytuje šablony třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Můžete použít šablony příjemce Visual C++ pro zápis aplikace klienta (příjemce) technologie OLE DB a šablony zprostředkovatele pro zápis aplikace serveru (poskytovatel).  
@@ -38,7 +38,7 @@ ms.locfileid: "39339433"
  [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Popisuje, co je technologie OLE DB a univerzální přístup k datům v OLE DB.  
   
- [Referenční informace pro OLE DB programátory](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [Referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Obsahuje odkazy na dokumentaci k sadě Windows SDK na technologie OLE DB.  
   
  [OLE DB – Ukázky šablon](../../visual-cpp-samples.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání podpory správce restartování | Microsoft Docs'
+title: 'Postupy: Přidání podpory správce restartování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8b30491b2cb46ab0e8b25edc2d39e6616817c9b4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931270"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464812"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Postupy: Přidání podpory správce restartování
 
-Správce restartování je funkce přidána do Visual Studio pro systém Windows Vista nebo novější operační systémy. Správce restartování přidává podporu pro aplikace, pokud se neočekávaně ukončí nebo restartuje. Chování správce restartování závisí na typu aplikace. Pokud je aplikace editor dokumentů, správce restartování povolené automaticky uložit stav aplikace a obsah všechny otevřené dokumenty a restartuje po neočekávaném ukončení aplikace. Pokud vaše aplikace není editor dokumentů, správce restartování restartuje aplikace, ale je ve výchozím nastavení nelze uložit stav aplikace.  
+Správce restartování je funkce přidána do Visual Studio pro Windows Vista nebo novější operační systémy. Správce restartování přidává podporu pro vaši aplikaci, pokud se neočekávaně zavře nebo restartuje. Chování správce restartování závisí na typu aplikace. Pokud vaše aplikace je editoru dokumentů, správce restartování povolené automaticky uložit stav aplikace a obsah otevřených dokumentů a restartuje po neočekávaném ukončení aplikace. Pokud vaše aplikace není editoru dokumentů, restartuje správce restartování aplikace, ale ve výchozím nastavení ho Nejde uložit stav aplikace.  
   
- Po restartování aplikace zobrazí dialogové okno úloh, pokud je aplikace kódování Unicode. Pokud je aplikace ANSI, aplikace zobrazí okno se zprávou systému Windows. V tomto okamžiku uživatel rozhodne, zda se mají obnovit automaticky uložené dokumenty. Pokud uživatel není obnovit automaticky uložené dokumenty, správce restartování odstraní dočasné soubory.  
+ Po restartování aplikace zobrazí dialogové okno úloh, pokud je aplikace kódování Unicode. Pokud se jedná o aplikaci ANSI, aplikace se zobrazí okno se zprávou Windows. V tomto okamžiku uživatel rozhodne, zda se má obnovit automaticky uložené dokumenty. Pokud uživatel neobnovuje automaticky uložené dokumenty, správce restartování odstraní dočasné soubory.  
   
 > [!NOTE]
 >  Můžete přepsat výchozí chování správce restartování pro ukládání dat a restartování aplikace.  
   
- Ve výchozím nastavení, vytvořené pomocí Průvodce projektem v aplikacích MFC [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] podpory správce restartování při spuštění aplikace na počítači s Windows Vista nebo novějšího operačního systému. Pokud nechcete, aby vaše aplikace pro podporu správce restartování, můžete zakázat správce restartování v Průvodci vytvořením projektu.  
+ Ve výchozím nastavení MFC aplikace vytvořené pomocí Průvodce projektu v sadě Visual Studio podpory správce restartování při spuštění aplikace na počítači s Windows Vista nebo novějším operačním systémem. Pokud nechcete, aby aplikace pro potřeby podpory správce restartování, můžete zakázat správce restartování v Průvodci vytvořením projektu.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Přidání podpory správce restartování do existující aplikace  
   
-1.  Otevřete existující aplikaci MFC v [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+1.  V sadě Visual Studio otevřete existující aplikaci MFC.  
   
-2.  Otevření zdrojového souboru pro hlavní aplikace. Ve výchozím nastavení to je sada soubor, který má stejný název jako vaše aplikace. Zdrojový soubor hlavní aplikace pro MyProject je například MyProject.cpp.  
+2.  Otevřete zdrojový soubor pro hlavní aplikaci. Ve výchozím nastavení to je soubor .cpp, který má stejný název jako vaše aplikace. Například hlavní aplikace zdrojový soubor pro MyProject je MyProject.cpp.  
   
-3.  Najít v konstruktoru pro hlavní aplikace. Například pokud je název projektu MyProject, konstruktor je `CMyProjectApp::CMyProjectApp()`.  
+3.  Najdete konstruktoru pro hlavní aplikaci. Například pokud váš projekt je MyProject, konstruktor je `CMyProjectApp::CMyProjectApp()`.  
   
 4.  Přidejte následující řádek kódu do konstruktoru.  
   
@@ -47,12 +47,12 @@ Správce restartování je funkce přidána do Visual Studio pro systém Windows
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  Zajistěte, aby `InitInstance` metoda aplikace volá nadřazené `InitInstance` metoda: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) nebo `CWinAppEx::InitInstance`. `InitInstance` Metoda je odpovědná za kontrolu *m_dwRestartManagerSupportFlags* parametr.  
+5.  Ujistěte se, že `InitInstance` metoda aplikace volá svého nadřazeného objektu `InitInstance` metoda: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) nebo `CWinAppEx::InitInstance`. `InitInstance` Metoda je odpovědná za kontrolu *m_dwRestartManagerSupportFlags* parametru.  
   
-6.  Zkompilování a spuštění aplikace.  
+6.  Kompilace a spuštění aplikace.  
   
 ## <a name="see-also"></a>Viz také  
- [CDataRecoveryHandler – třída](../mfc/reference/cdatarecoveryhandler-class.md)   
+ [Cdatarecoveryhandler – třída](../mfc/reference/cdatarecoveryhandler-class.md)   
  [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp – třída](../mfc/reference/cwinapp-class.md)   
  [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   

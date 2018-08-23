@@ -1,5 +1,5 @@
 ---
-title: x64 softwarové konvence | Microsoft Docs
+title: x64 softwarové konvence | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380885"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464710"
 ---
 # <a name="x64-software-conventions"></a>x64 – softwarové konvence
-Tato část popisuje volání metody konvence pro Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64-bit rozšíření x86 architektura.  
+Tato část popisuje metodologii konvence volání pro x64, 64-bit rozšíření x86 Visual C++ architektury.  
   
 -   [Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ Tato část popisuje volání metody konvence pro Visual C++ [!INCLUDE[vcprx64](
   
 -   [Formát obrázku](../build/image-format.md)  
   
- Následující možnost kompilátoru pomůže vám při optimalizaci aplikace pro [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ Následující možnost kompilátoru umožňuje optimalizovat aplikaci pro x64:  
   
 -   [/favor (optimalizace pro konkrétní architekturu)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

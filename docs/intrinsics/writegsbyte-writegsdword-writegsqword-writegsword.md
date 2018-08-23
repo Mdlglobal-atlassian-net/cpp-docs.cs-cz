@@ -1,5 +1,5 @@
 ---
-title: __writegsbyte, __writegsdword, __writegsqword, __writegsword | Microsoft Docs
+title: __writegsbyte __writegsdword, __writegsqword __writegsword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5ae6f47009600c87cb260246fca474592a5e9c6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328273"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466400"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Paměť k zápisu do umístění určeného posun vzhledem k začátku GS segmentu.  
+ Zápis paměti do umístění určeného proměnnou posun vzhledem k začátku segmentu GS.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,27 +56,27 @@ void __writegsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
+ [in] `Offset`  
  Posun od začátku GS k zápisu.  
   
- [v] `Data`  
+ [in] `Data`  
  Hodnota pro zápis  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__writegsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__writegsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writegsbyte`|x64|  
+|`__writegsdword`|x64|  
+|`__writegsqword`|x64|  
+|`__writegsword`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní tyto funkce jsou dostupné v režimu jádra pouze a tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto vnitřní objekty jsou k dispozici v pouze v režimu jádra a tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   

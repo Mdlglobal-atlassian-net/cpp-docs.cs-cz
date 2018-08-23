@@ -48,15 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338776"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465960"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
-Poskytuje implementaci [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) rozhraní.  
+Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,7 +98,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[Releaseaccessor –](#releaseaccessor)|Uvolní přistupující objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.  
+ Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 Konstruktor  
@@ -120,7 +120,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx) v *referenční informace pro OLE DB programátory*.
+ Zobrazit [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 Vytvoří ze sady vazby přistupující objekt.  
@@ -137,7 +137,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IAccessor::CreateAccessor](https://msdn.microsoft.com/library/ms720969.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 Vrátí základní sloupce vazby od uživatele v přistupujícím objektu.  
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 Uvolní přistupující objekt.  
@@ -165,7 +165,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IAccessor::ReleaseAccessor](https://msdn.microsoft.com/library/ms719717.aspx) v *referenční informace pro OLE DB programátory*.
+ Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
   
 ## <a name="see-also"></a>Viz také  
  [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: __sidt | Microsoft Docs
+title: __sidt | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324509"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466104"
 ---
 # <a name="sidt"></a>__sidt
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Ukládá hodnotu registru tabulky popisovače přerušení (IDTR) v umístění zadané paměti.  
+ Uloží hodnotu registru tabulky popisovače přerušení (IDTR) v zadaném umístění v paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ void __sidt(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `Destination`|Ukazatel na paměť umístění, kde jsou uložené IDTR.|  
+|[in] `Destination`|Ukazatel na umístění v paměti, kde je uložen IDTR.|  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `__sidt` Funkce je ekvivalentní volání `SIDT` počítač instrukcí. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__sidt` Funkce je ekvivalentní volání `SIDT` strojové instrukce. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: odkaz na sadu instrukcí," na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

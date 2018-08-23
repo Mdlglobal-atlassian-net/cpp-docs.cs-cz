@@ -1,5 +1,5 @@
 ---
-title: upozornění | Microsoft Docs
+title: upozornění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842960"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465942"
 ---
 # <a name="warning-pragma"></a>– Direktiva Pragma upozornění
-Umožňuje selektivní změny chování zprávy upozornění kompilátoru.  
+Umožňuje selektivní úpravy chování zprávy upozornění kompilátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,24 +40,25 @@ Umožňuje selektivní změny chování zprávy upozornění kompilátoru.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
-Následující upozornění – specifikátor parametry jsou k dispozici.  
+
+K dispozici jsou následující parametry upozornění specifier.  
   
 |upozornění – specifikátor|Význam|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Použít danou úroveň u zadané upozorněními. To také zapne zadaný upozornění, které se ve výchozím nastavení.|  
-|`default`|Upozornění chování resetovat na výchozí hodnotu. To také zapne zadaný upozornění, které se ve výchozím nastavení. Upozornění budou generovány v jeho výchozí, zdokumentovat, úroveň.<br /><br /> Další informace najdete v tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|Příkaz zadaný zprávy upozornění.|  
-|`error`|Sestavy zadaný upozornění jako chyby.|  
-|`once`|Zobrazení zadané zprávy pouze jednou.|  
-|`suppress`|V zásobníku nabízených oznámení aktuální stav – Direktiva pragma, zakáže zadaný upozornění pro další řádek a pak otevře zásobník upozornění tak, aby se vynuluje stav – Direktiva pragma.|  
+|*1, 2, 3, 4*|Platí pro zadaný počet upozornění: na dané úrovni. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté.|  
+|*default*|Chování upozornění resetovat na výchozí hodnotu. To také zapne zadané upozornění, která je ve výchozím nastavení vypnuté. Upozornění se vygeneruje při jeho výchozí, zdokumentovat, úroveň.<br /><br /> Další informace najdete v tématu [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*Zakázat*|Zadaná zpráva nebo zprávy upozornění bez vyvolání.|  
+|*Chyba*|Sestavy určených upozornění jako chyby.|  
+|*once*|Zobrazení zadané zprávy pouze jednou.|  
+|*potlačení*|Posune aktuální stav direktivy pragma v zásobníku, zakáže zadané upozornění pro další řádek a potom zobrazí zásobník upozornění tak, aby se resetuje stav direktivy pragma.|  
   
- Příkaz následující kód ukazuje, že `warning-number-list` parametru může obsahovat více čísel upozornění a že více `warning-specifier` v stejné – Direktiva pragma lze zadat parametry.  
+Příkaz následující kód ukazuje, že `warning-number-list` parametr může obsahovat více čísel upozornění a že více `warning-specifier` v stejné – Direktiva pragma lze zadat parametry.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
 ```  
   
- Toto je funkčně srovnatelný následující kód.  
+ Toto je funkčně srovnatelný s následujícím kódem.  
   
 ```cpp  
 // Disable warning messages 4507 and 4034.  
@@ -70,9 +71,9 @@ Následující upozornění – specifikátor parametry jsou k dispozici.
 #pragma warning( error : 164 )  
 ```  
   
- Kompilátor přidá 4000 na libovolné číslo upozornění, která je od 0 do 999.  
+Kompilátor přidá 4000 do libovolného počtu upozornění, která je od 0 do 999.  
   
- Pro upozornění číslice v rozsahu 4700 4999, které jsou ty, které jsou přidružené k generování kódu, bude stav upozornění platit při kompilátor narazí otevřete složené závorky funkce platná pro zbytek funkce. Pomocí `warning` – Direktiva pragma ve funkci na změnu stavu upozornění, které se má číslo větší než 4699 se projeví až po skončení funkce. Následující příklad ukazuje správné umístění `warning` direktivy zakázat upozornění generování kódu a pak ho obnovit.  
+Pro upozornění čísla v rozsahu 4700 4999, které jsou ty, které jsou přidružené k generování kódu, stavu upozornění, výsledkem bude, když kompilátor narazí na otevřené složené závorky funkce, pro ostatní funkce nebudou platit. Použití **upozornění** – Direktiva pragma ve funkci změny stavu upozornění, že má číslo větší než 4699 se projeví až po konec funkce. Následující příklad ukazuje správné umístění **upozornění** direktivy pragma zakážete generování kódu upozornění a pak ho obnovit.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Všimněte si, že v rámci funkce textu, poslední nastavení jazyka `warning` – Direktiva pragma bude platit pro celou funkci.  
+Všimněte si, že v rámci funkce textu, poslední nastavení **upozornění** – Direktiva pragma, nebudou platit pro celou funkci.  
   
-## <a name="push-and-pop"></a>Nabízení a Pop  
- `warning` – Direktiva pragma také podporuje syntaxi, kde `n` představuje úroveň pro upozornění (1 až 4).  
+## <a name="push-and-pop"></a>Se službami push a vyvolat přes Pop  
+ 
+**Upozornění** – Direktiva pragma podporuje také následující syntaxi, kde *n* představuje úroveň pro upozornění (1 až 4).  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- – Direktiva pragma `warning( push )` uloží aktuální stav varování u každé upozornění. – Direktiva pragma `warning( push, n )` ukládá aktuální stav pro každý upozornění a nastaví globální úroveň pro upozornění na `n`.  
+Direktivy pragma `warning( push )` uloží aktuální stav varování u každé varování. Direktivy pragma `warning( push, n )` ukládá aktuální stav pro každé upozornění a nastaví globální úroveň pro upozornění na *n*.  
   
- – Direktiva pragma `warning( pop )` bodů POP poslední stav upozornění vloženy do zásobníku. Veškeré změny, které jste do stavu upozornění mezi `push` a `pop` se vrátit zpět. Vezměte v úvahu v tomto příkladu:  
+Direktivy pragma `warning( pop )` POP poslední stav upozornění vloženy do zásobníku. Všechny změny provedené do stavu varování mezi *nabízených* a *pop* se vrátit zpět. Podívejte se například:  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Na konci tohoto kódu `pop` obnoví stav každé varování (zahrnuje 4705, 4706 a 4707) které byly při spuštění kódu.  
+Na konci tohoto kódu *pop* obnoví stav každé varování (včetně 4705 4706 a 4707) který byl při spuštění kódu.  
   
- Když píšete soubory hlaviček, můžete použít `push` a `pop` zaručit, že stav varování změny provedené uživatelem nezabrání hlavičky kompilování správně. Použití `push` na začátku hlavičku a `pop` na konci. Například pokud máte hlavičku, která není řádně zkompilovat na úrovni upozornění 4, následující kód by změnit úroveň pro upozornění na 3 a obnovte původní úroveň pro upozornění na konci záhlaví.  
+Při zápisu hlavičkové soubory, můžete použít *nabízených* a *pop* zaručí, že stav varování změny provedené uživatelem nezabrání hlavičky kompilaci správně. Použití *nabízených* na začátku záhlaví a *pop* na konci. Například pokud máte hlavičku, která není čistě kompilace na úroveň upozornění 4, následující kód by změnit úroveň upozornění 3 a obnovte původní úroveň pro upozornění na konci záhlaví.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Další informace o kompilátoru možnosti, které vám pomůžou potlačení upozornění, naleznete v části [/FI](../build/reference/fi-name-forced-include-file.md) a [/w](../build/reference/compiler-option-warning-level.md).  
+Další informace o kompilátoru, možnosti, které vám pomůžou potlačit upozornění, najdete v části [/FI](../build/reference/fi-name-forced-include-file.md) a [/w](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

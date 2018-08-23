@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465955"
 ---
 # <a name="cmfcmenubar-class"></a>Cmfcmenubar – třída
 Panel nabídek, který implementuje dokování.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  Šířka tlačítka pro pole se seznamem v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- **Pomáhají** vypadá podobně jako pole se seznamem **pomáhají** – pole se seznamem na panelu nabídky [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ **Pomáhají** vypadá podobně jako pole se seznamem **pomáhají** – pole se seznamem v panelu nabídek aplikace Microsoft Word.  
   
  Při volání této metody *uiID* nastavena na hodnotu 0, tato metoda skrývá pole se seznamem. Jinak tato metoda zobrazí pole se seznamem automaticky na pravé straně vašich nabídek. Po volání této metody volejte [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) k získání ukazatele na vloženého [cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu.  
   

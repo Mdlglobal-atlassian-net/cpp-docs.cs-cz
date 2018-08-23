@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift | Microsoft Docs
+title: __ull_rshift | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333115"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465019"
 ---
 # <a name="ullrshift"></a>__ull_rshift
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- x64, se přesune na 64-bit hodnotu zadanou pomocí prvního parametru vpravo podle počtu bitů určeného druhý parametr.  
+ x64, se přesune na 64 bitů hodnotu zadanou pomocí prvního parametru vpravo o počet bitů určený druhý parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ unsigned __int64 __ull_rshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `mask`  
+ [in] `mask`  
  64bitové celočíselné hodnoty posunutí doprava.  
   
- [v] `nBit`  
- Počet bitů se posunou modulo 32 na x86 a modulo 64 na x64.  
+ [in] `nBit`  
+ Počet bitů, chcete-li posunout modulo 32 na x86 a modulo 64 na x64.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Maska posunuty o `nBit` bits.  
+ Maska o `nBit` bits.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Je-li druhý parametr je větší než 31 na x86 (63 na x64), který číslo je obsazené modulo 32 (64 na x64) k určení počtu bitů se posunou. `ull` v názvu označuje `unsigned long long (unsigned __int64)`.  
+ Není-li druhý parametr je větší než 31 na x86 (63 na x64), toto číslo provedena modulo 32 (64 na x64) k určení počtu bitů a posunutí. `ull` v názvu označuje `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Příklad  
   
@@ -86,7 +86,7 @@ int main()
 1  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__ll_lshift](../intrinsics/ll-lshift.md)   

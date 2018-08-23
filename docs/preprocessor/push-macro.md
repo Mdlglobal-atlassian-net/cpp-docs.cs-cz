@@ -1,5 +1,5 @@
 ---
-title: push_macro – | Microsoft Docs
+title: push_macro | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e41ef7bf7b93e4b2a533dddcb82fee904cb428
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912989"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465298"
 ---
 # <a name="pushmacro"></a>push_macro
-Uloží hodnotu *macro_name* makro v horní části zásobníku pro tento makro.  
+Uloží hodnotu *macro_name* – makro vrcholu zásobníku tohoto makra.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma push_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete načíst hodnotu *macro_name* s **pop_macro –**.  
+ 
+Můžete načíst hodnotu *macro_name* s `pop_macro`.  
   
- V tématu [pop_macro –](../preprocessor/pop-macro.md) pro ukázku.  
+Zobrazit [pop_macro](../preprocessor/pop-macro.md) ukázku.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

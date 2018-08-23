@@ -1,5 +1,5 @@
 ---
-title: raw_native_types – | Microsoft Docs
+title: raw_native_types – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5baa3204b14da53f6a6a3232874e0ac7de0fd91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b09e36e793608167a4ce64a9124d7dafbaf9ec62
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849792"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466301"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Zakáže použití třídy, které podporují COM v funkce vysoké úrovně obálku a místo toho vynutí používání nízké úrovně datových typů.  
+Zakáže použití tlačítek třídy pro podporu modelu COM v funkce obálky vysoké úrovně a místo toho vynutí použití nižší úrovně datových typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,12 @@ raw_native_types
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, vysoké úrovně metody zpracování chyb použití třídy COM podporu [_bstr_t](../cpp/bstr-t-class.md) a [_variant_t](../cpp/variant-t-class.md) místě `BSTR` a **VARIANT** datové typy a Nezpracovaná ukazatele rozhraní COM. Tyto třídy zapouzdření podrobnosti o přidělování a rušení přidělení paměti úložiště pro tyto datové typy a výrazně zjednodušit operace přetypování a převody typu.  
+ 
+Ve výchozím nastavení, použijte základní metody zpracování chyb třídy COM support [_bstr_t](../cpp/bstr-t-class.md) a [_variant_t](../cpp/variant-t-class.md) místo `BSTR` a `VARIANT` datových typů a raw COM rozhraní ukazatele. Tyto třídy zapouzdřit podrobnosti o přidělování a rušení přidělení paměti úložiště pro tyto typy dat a výrazně zjednodušit operace přetypování a převodu typu.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

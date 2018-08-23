@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 680588a4c045c20001b46b35c67d28e366afc52d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408463"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464805"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Specifické pro Microsoft**  
@@ -38,7 +38,7 @@ BSTR* GetAddress( );
  Ukazatel na objekt `BSTR` obalený objektem `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- **GetAddress** ovlivní všechny `_bstr_t` objekty tuto sdílenou složku `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a a **operátoru =**.  
+ **GetAddress** ovlivní všechny `_bstr_t` objekty tuto sdílenou složku `BSTR`. Více než jeden `_bstr_t` můžete sdílet `BSTR` prostřednictvím kopírovacího konstruktoru a **operátoru =**.  
   
 ## <a name="example"></a>Příklad  
  Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití **GetAddress**.  

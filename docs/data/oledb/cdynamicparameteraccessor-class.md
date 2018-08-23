@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338217"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466032"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor – třída
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
   
  *pStatus*  
- [out] Ukazatel na proměnnou obsahující stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
+ [out] Ukazatel na proměnnou obsahující stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
   
 ### <a name="remarks"></a>Poznámky  
  První přepsat vrátí **true** v případě úspěchu nebo **false** při selhání. Druhá přepsat odkazuje na paměti, který obsahuje stav zadaný parametr.
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in] Ukazatel na paměť obsahující data, která mají být zapsána do vyrovnávací paměti.  
   
  *Stav*  
- [in] Stav sloupce je DBSTATUS. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
+ [in] Stav sloupce je DBSTATUS. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí **true** v případě úspěchu nebo **false** při selhání.  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
   
  *Stav*  
- [in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
+ [in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí **true** v případě úspěchu nebo **false** při selhání. 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in] Ukazatel na ANSI (**CHAR**) nebo Unicode (**WCHAR**) data zadaný parametr řetězce. Zobrazit DBSTATUS v oledb.h.  
   
  *Stav*  
- [in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](https://msdn.microsoft.com/library/ms722617.aspx) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
+ [in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
   
 ### <a name="remarks"></a>Poznámky  
  Vrátí **true** v případě úspěchu nebo **false** při selhání.  

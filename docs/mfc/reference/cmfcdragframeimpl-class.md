@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDragFrameImpl | Microsoft Docs
+title: Cmfcdragframeimpl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040945"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466026"
 ---
-# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl – třída
-`CMFCDragFrameImpl` Třída nevykresluje přetáhněte obdélníku, která se zobrazí, když uživatel nastavuje tažením podokno v režimu standardní ukotvení.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl – třída
+`CMFCDragFrameImpl` Třídy vykresluje obdélník, který se zobrazí, když uživatel přetáhne podokno v režimu standardního ukotvení.  
+   Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
    
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,12 +34,12 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída objektu vložené v každé [CPane třída](../../mfc/reference/cpane-class.md) objektu. Proto jednotlivých panelech, který používá `CanFloat` metoda zobrazí obdélníku přetažení, když se uživatel nastavuje tažením ho.  
+ Objekt této třídy je vložený v každém [cpane – třída](../../mfc/reference/cpane-class.md) objektu. Díky tomu se každý podokno, které používá `CanFloat` metoda zobrazí obdélník přetažení, když ho uživatel přetáhne.  
   
- Tloušťka rámeček přetáhněte můžete řídit pomocí [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) a [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Tloušťka obdélník můžete řídit pomocí [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) a [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
+ [Cmfcdragframeimpl –](../../mfc/reference/cmfcdragframeimpl-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdragframeimpl.h  
@@ -52,7 +52,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bClearInternalRects*  
+ [in] *bClearInternalRects*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -64,7 +64,7 @@ void Init(CWnd* pDraggedWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDraggedWnd*  
+ [in] *pDraggedWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -76,7 +76,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bForceMove*  
+ [in] *bForceMove*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -92,9 +92,9 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pTabbedBar*  
- [v] *bFirstTime*  
- [v] *pCBarToPlaceOn*  
+ [in] *pTabbedBar*  
+ [in] *bFirstTime*  
+ [in] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -106,7 +106,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pOldTargetBar*  
+ [in] *pOldTargetBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

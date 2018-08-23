@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401479"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466396"
 ---
 # <a name="main-program-startup"></a>main: nastavení programu
-Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který dodržuje [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] programovacího modelu, můžete použít `wmain`, což je verze širokého znaku **hlavní**.  
+Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který splňuje programovací model Unicode, můžete použít `wmain`, což je verze širokého znaku **hlavní**.  
   
  **Hlavní** není kompilátorem předdefinované funkce. Musí být zadána textu programu.  
   

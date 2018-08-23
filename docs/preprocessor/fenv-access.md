@@ -1,5 +1,5 @@
 ---
-title: fenv_access – | Microsoft Docs
+title: fenv_access | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,30 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963320"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464438"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Zakáže (**na**) nebo umožňuje (**vypnout**) optimalizace, které by se mohly změnit s plovoucí desetinnou čárkou prostředí příznak testy a změny v režimu.
+Zakáže (**na**) nebo povolí (**vypnout**) příznak optimalizace, které by mohly změnit prostředí s plovoucí desetinnou čárkou, testy a změně režimu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **fenv_access – #pragma (** { **na** | **vypnout** } **)**  
+> **#pragma fenv_access (** { **na** | **vypnout** } **)**  
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení **fenv_access –** je **vypnout**. Pokud kompilátor můžete předpokládat, že váš kód přístup nebo manipulaci s plovoucí desetinnou čárkou prostředí a potom ji můžete provádět mnoho optimalizace kódu s plovoucí desetinnou čárkou. Nastavit **fenv_access –** k **na** k informování kompilátor váš kód přistupuje k s plovoucí desetinnou čárkou prostředí pro testování příznaky stavu, výjimky, nebo o nastavení ovládacího prvku příznaky režimu. Kompilátor zakáže tyto optimalizace, aby váš kód konzistentní přístup s plovoucí desetinnou čárkou prostředí. 
+Ve výchozím nastavení **fenv_access** je **vypnout**. Pokud kompilátor můžete předpokládat, že váš kód získat přístup nebo manipulaci s plovoucí desetinnou čárkou prostředí a potom ho můžete provádět mnoho optimalizace plovoucí desetinné čárky kód. Nastavte **fenv_access** k **na** k informuje kompilátor, že váš kód přistupuje k s plovoucí desetinnou čárkou prostředí pro testování stavu příznaky, výjimky, nebo nastavení příznaků režim ovládacího prvku. Kompilátor zakáže tyto optimalizace tak, aby váš kód může přistupovat k prostředí s plovoucí desetinnou čárkou konzistentně. 
 
-Další informace o s plovoucí desetinnou čárkou chování najdete v tématu [/fp (zadejte Floating-Point chování)](../build/reference/fp-specify-floating-point-behavior.md).
+Další informace o chování plovoucí desetinné čárky, naleznete v tématu [/fp (určení chování plovoucí desetinné čárky)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Druhy optimalizace, které podléhají **fenv_access –** jsou:
+Typy optimalizace, které platí pro ně **fenv_access** jsou:
 
-- Globální eliminace společných dílčích výrazů
+- Globální eliminace společných dílčích
 
 - Kód pohybu
 
@@ -55,7 +54,7 @@ Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patř�
 
 ## <a name="examples"></a>Příklady
 
-Tento příklad nastaví **fenv_access –** k **na** nastavit s plovoucí desetinnou čárkou řízení registrace pro 24bitový přesnost:
+Tento příklad nastaví **fenv_access** k **na** nastavení registru ovládacího prvku s plovoucí desetinnou čárkou 24 bitů přesnosti:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Pokud jste komentář `#pragma fenv_access (on)` od předchozího vzorku, Všimněte si, že výstup různých kvůli kompilátor vyhodnocení kompilaci, který nepoužívá režim ovládacího prvku.
+Pokud jste zakomentovali `#pragma fenv_access (on)` od předchozího vzorku, mějte na paměti, že výstup se liší, protože kompilátor provádí vyhodnocení za kompilace, která nevyužívá režim ovládacího prvku.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

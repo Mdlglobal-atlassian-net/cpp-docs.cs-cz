@@ -1,5 +1,5 @@
 ---
-title: v souladu s | Microsoft Docs
+title: v souladu s | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b145225cfed3131b406d15827b589aed718d16bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c6204349731222df99683ddb20b2b2d827b3fcd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843740"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466098"
 ---
 # <a name="conform"></a>conform
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje chování běhové [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru.  
+Určuje chování za běhu [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,28 +37,28 @@ ms.locfileid: "33843740"
 #pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *Jméno*  
- Určuje název možnosti kompilátoru má být změněn. Jediné platné *název* je `forScope`.  
+### <a name="parameters"></a>Parametry  
+*Jméno*  
+Určuje název možnosti kompilátoru, který má být upraven. Jediné platné *název* je `forScope`.  
   
- **Zobrazit** (volitelné)  
- Způsobí, že aktuální nastavení *název* (true nebo false), který se má zobrazit prostřednictvím upozornění během kompilace. Například `#pragma conform(forScope, show)`.  
+*Zobrazit* (volitelné)  
+Způsobí, že aktuální nastavení *název* (true nebo false), který se má zobrazit pomocí upozornění v průběhu kompilace. Například `#pragma conform(forScope, show)`.  
   
- **vypnutý**(volitelné)  
- Nastavení *název* k **na** umožňuje [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru. Výchozí hodnota je **vypnout**.  
+*vypnutý*(volitelné)  
+Nastavení *název* k *na* umožňuje [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru. Výchozí hodnota je *vypnout*.  
   
- **nabízená** (volitelné)  
- Aktuální hodnota nabízených oznámení *název* do zásobníku vnitřní kompilátoru. Pokud zadáte *identifikátor*, můžete zadat **na** nebo **vypnout** hodnota *název* vloženy do zásobníku. Například `#pragma conform(forScope, push, myname, on)`.  
+*push* (volitelné)  
+Posune aktuální hodnotu *název* do zásobníku vnitřního kompilátoru. Pokud zadáte *identifikátor*, můžete zadat *na* nebo *vypnout* hodnota *název* doručí do zásobníku. Například `#pragma conform(forScope, push, myname, on)`.  
   
- **POP** (volitelné)  
- Nastaví hodnotu *název* na hodnotu v horní části zásobníku vnitřní kompilátoru a bodů POP zásobníku. Pokud je zadán identifikátor s **pop**, zásobníku budou odebrány, zpět, dokud nenajde záznam s *identifikátor*, který bude také být odebrány; aktuální hodnota *název* v na další záznam v zásobníku se změní na novou hodnotu *název*. Pokud zadáte pop s *identifikátor* , není v záznamu v zásobníku, **pop** je ignorována.  
+*POP* (volitelné)  
+Nastaví hodnotu *název* hodnotu v horní části vnitřního zásobníku kompilátoru a potom vezme zásobníku. Pokud je zadaný identifikátor s *pop*, zásobníku bude odebrán, zpět, dokud najde záznam s *identifikátor*, které budou také být odebrány; aktuální hodnota pro *název* v Další záznam do zásobníku stane novou hodnotu *název*. Pokud zadáte pop s *identifikátor* , který není v záznamu v zásobníku, *pop* se ignoruje.  
   
- *identifikátor*(volitelné)  
- Může být součástí **nabízené** nebo **pop** příkaz. Pokud *identifikátor* se používá, pak **na** nebo **vypnout** specifikátor lze také použít.  
+*identifikátor*(volitelné)  
+Může být součástí *nabízených* nebo *pop* příkazu. Pokud *identifikátor* se používá, pak *na* nebo *vypnout* specifikátor je také možné.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directive_conform.cpp  
 // compile with: /W1  
 // C4811 expected  
@@ -75,4 +75,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

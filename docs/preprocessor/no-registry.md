@@ -1,5 +1,5 @@
 ---
-title: no_registry – | Microsoft Docs
+title: 'no_registry s: % | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849662"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464611"
 ---
 # <a name="noregistry"></a>no_registry
-Atribut `no_registry` říká kompilátoru, aby v registru nevyhledával knihovny typů importované pomocí direktivy `#import`.  
+**no_registry s: %** sděluje kompilátoru, aby v registru nevyhledával knihovny typů importované pomocí `#import`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #import filename no_registry  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *Název souboru*  
- Knihovna typů.  
+### <a name="parameters"></a>Parametry  
+*Název souboru*  
+Knihovna typů.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud knihovnu odkazovaného typu nebyl nalezen v adresáři zahrnout, kompilace se nezdaří, i když knihovny typů v registru.  `no_registry` šíří do dalších typ knihoven importovat implicitně s `auto_search`.  
+ 
+Pokud odkazovanou knihovnu typů nebyl nalezen v adresářích souborů k zahrnutí, kompilace se nezdaří, i v případě, že knihovna typů nachází v registru.  **no_registry s: %** rozšíří do ostatních knihoven typů importovaných implicitně pomocí `auto_search`.  
   
- Kompilátor nikdy nebude hledat v registru typy knihoven, které jsou určeny názvem souboru a které jsou předány přímo do direktivy `#import`.  
+Kompilátor nikdy nebude hledat v registru typy knihoven, které jsou určeny názvem souboru a které jsou předány přímo do direktivy `#import`.  
   
- Je-li zadán atribut `auto_search`, další direktivy `#import` budou generovány s nastavením atributu `no_registry` počáteční direktivy `#import` (byla-li počáteční direktiva `#import` vytvořena s atributem `no_registry`, bude direktiva `auto_search` generovaná pomocí atributu `#import` vytvořena také s atributem `no_registry`).  
+Když `auto_search` není zadána, další `#import`s se dá vygenerovat pomocí **no_registry s: %** nastavení počáteční `#import` (pokud počáteční `#import` byl – direktiva **no_registry s: %** , `auto_search`– vygeneruje `#import` je také **no_registry s: %**.)  
   
- `no_registry` je užitečné, pokud chcete importovat křížové odkazovaného typu knihovny bez riziko kompilátoru hledání starší verzi souboru v registru.  `no_registry` je také užitečné, pokud není zaregistrován knihovny typů.  
+**no_registry s: %** je užitečné, pokud chcete importovat křížově odkazované knihovny typů bez rizika, že kompilátor vyhledá starší verzi souboru v registru. **no_registry s: %** je také užitečné, pokud knihovna typů není registrována.  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Vložený Assembler | Microsoft Docs
+title: Vložený Assembler | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055037"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465009"
 ---
 # <a name="inline-assembler"></a>Vložený assembler
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Jazyk sestavení slouží různým účelům, například zvýšení rychlosti programu, snížení požadavků na paměť a ovládání hardwaru. Inline assembler můžete použít pro vložení instrukcí sestavení jazyka přímo do zdrojových programů v jazyce C a C++ bez nutnosti dodatečných kroků sestavení a propojení. Inline assembler je integrován v kompilátoru, takže nepotřebujete používat samostatný kompilátor, jako například Microsoft Macro Assembler (MASM).  
   
 > [!NOTE]
 >  Programy s kódem inline assembleru nejsou plně přenosné na jiné hardwarové platformy. Pokud navrhujete s ohledem na přenositelnost, vyhněte se použití inline assembleru.  
   
- Vnořené sestavení nepodporuje ARM a [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] procesory.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:  
+ Vložené sestavení není podporován ARM a x64 procesory.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:  
   
 -   [Přehled inline assembleru](../../assembler/inline/inline-assembler-overview.md)  
   
@@ -57,8 +57,8 @@ ms.locfileid: "32055037"
   
 -   [Optimalizace vloženého sestavení](../../assembler/inline/optimizing-inline-assembly.md)  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru a jazyk sestavení](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
+ [Vnitřní prvky kompilátoru a jazyk sestavení](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
  [Referenční dokumentace jazyka C++](../../cpp/cpp-language-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: __ud2 | Microsoft Docs
+title: __ud2 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326160"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466028"
 ---
 # <a name="ud2"></a>__ud2
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje nedefinované instrukce.  
+ Generuje instrukce nedefinovaný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,22 +36,22 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Procesor vyvolá výjimku neplatný kód operace, je-li provést nedefinované instrukci.  
+ Procesor vyvolá výjimku neplatný operační kód, pokud spustí nedefinované instrukce.  
   
- `__ud2` Funkce je ekvivalentní volání `UD2` počítač instrukce a je k dispozici pouze v režimu jádra. Další informace naleznete v dokumentu "vyvíjející Software Intel architektura ruční svazku 2: odkaz na sadu instrukce," v [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__ud2` Funkce je ekvivalentní volání `UD2` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: odkaz na sadu instrukcí," na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="example"></a>Příklad  
- Následující příklad spustí nedefinované instrukce, které vyvolá výjimku. Obslužná rutina výjimky poté změní návratový kód od nuly do jednoho.  
+ Následující příklad spustí nedefinované instrukce, která vyvolává výjimku. Obslužná rutina výjimky poté změní návratový kód od nuly do jednoho.  
   
 ```  
 // __ud2_intrinsic.cpp  

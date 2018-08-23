@@ -1,5 +1,5 @@
 ---
-title: embedded_idl – | Microsoft Docs
+title: embedded_idl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0b594952e8e5be0a9be9c843877c8c4bb95eca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842713"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465204"
 ---
 # <a name="embeddedidl"></a>embedded_idl
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje, že knihovny typů je zapsán do souboru .tlh kódem generované atribut zachovaná.  
+Určuje, že knihovna typů je zapsána do souboru .tlh se zachovaným kódem atributem generován.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ ms.locfileid: "33842713"
 embedded_idl[("param")]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `param`  
- Může být jedna ze dvou hodnot:  
+### <a name="parameters"></a>Parametry  
+*Param*  
+Může být jedna ze dvou hodnot:  
   
--   emitidl –: informace o typu naimportované z knihovny typelib bude k dispozici v IDL vygenerované s atributy projektu.  Toto je výchozí nastavení a bude platit, a pokud nezadáte parametr, který se `embedded_idl`.  
+- emitidl: informace o typu naimportované z knihovny typelib bude k dispozici v generované projektu s atributy IDL.  Toto je výchozí nastavení a bude platit, pokud nezadáte parametr `embedded_idl`.  
   
--   no_emitidl: informace o typu naimportované z knihovny typelib nebude přítomný v IDL vygenerované s atributy projektu.  
+- no_emitidl: informace o typu naimportované z knihovny typelib nemusí být v generované projektu s atributy IDL.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // import_embedded_idl.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -53,8 +53,10 @@ embedded_idl[("param")]
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Konkrétní END C++**  
+ 
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmlaunch | Microsoft Docs
+title: __vmx_vmlaunch | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926195aa8dc612d3972634f8140ce3fff753a48f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 463a0ef679250aec9489c539ef11a6e1288b3a6f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335020"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465020"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Umístí volající aplikace ve stavu operace nekořenovými VMX (zadejte virtuální počítač) s použitím aktuální virtuální počítač řízení struktury (VMCS).  
+ Umístí volající aplikace ve stavu operace nekořenovými VMX (zadejte virtuální počítač) pomocí aktuální struktury řízení virtuálních počítačů (VMCS).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,23 +41,23 @@ unsigned char __vmx_vmlaunch(
 |Hodnota|Význam|  
 |-----------|-------------|  
 |0|Operace byla úspěšná.|  
-|1|Operace se nezdařila s rozšířené stavu k dispozici v `VM-instruction error field` z aktuální VMCS.|  
-|2|Operace se nezdařila bez stavu k dispozici.|  
+|1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|  
+|2|Operace selhala, aniž by k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- Aplikace můžete provést operaci virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkci lze použít pouze s VMCS, jejichž stav spuštění je `Clear`a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkci lze použít pouze s VMCS, jejichž stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a potom pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkce pro první operaci zadejte virtuální počítač a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce pro následující operace zadejte virtuálních počítačů.  
+ Aplikace může provádět operace, která virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkci lze použít pouze s VMCS, jehož stav spuštění je `Clear`a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkci lze použít pouze s VMCS, jehož stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a pak použít [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funkce pro první virtuální počítač zadat operaci a [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funkce pro následné operace zadejte virtuální počítač.  
   
- `__vmx_vmlaunch` Funkce je ekvivalentní volání `VMLAUNCH` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__vmx_vmlaunch` Funkce je ekvivalentní volání `VMLAUNCH` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmlaunch`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmlaunch`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

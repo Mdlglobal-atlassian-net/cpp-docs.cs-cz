@@ -1,5 +1,5 @@
 ---
-title: no_auto_exclude – | Microsoft Docs
+title: no_auto_exclude – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0c8d28e1e9c7306c1a74db90177caf76ca95b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5cae3a52c3434317ee26292de13d3e0471d78998
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839519"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464896"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Zakáže automatické vyloučení.  
+Zakáže automatické vyloučení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,12 @@ no_auto_exclude
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. `#import` pokusí se vyhnout se tak, že tyto položky automaticky vyloučíte více chybám definice. Když to uděláte, [upozornění kompilátoru (úroveň 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) dojde u jednotlivých položek, které se mají vyloučit. Toto automatické vyloučení můžete zakázat pomocí tohoto atributu.  
+ 
+Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. `#import` se pokouší vyhnout několik chyb definice tak, že tyto položky automaticky vyloučí. Když to uděláte, [upozornění kompilátoru (úroveň 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) budou vydány pro každou položku mají být vyloučeny. Toto automatické vyloučení můžete zakázat pomocí tohoto atributu.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

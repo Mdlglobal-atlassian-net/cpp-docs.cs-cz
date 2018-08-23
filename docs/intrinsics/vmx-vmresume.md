@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmresume | Microsoft Docs
+title: __vmx_vmresume | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8809489a71410af21e47d8771ec208340fc893a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57bcd86606ef1d8e874abf2c7ad5f57ebf6deeed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330876"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466318"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Obnoví VMX nekořenovými operace s použitím aktuální struktury řízení virtuálního počítače (VMCS).  
+ Obnoví VMX nekořenovými operace pomocí aktuální řídicí struktura virtuálního počítače (VMCS).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,23 +41,23 @@ unsigned char __vmx_vmresume(
 |Hodnota|Význam|  
 |-----------|-------------|  
 |0|Operace byla úspěšná.|  
-|1|Operace se nezdařila s rozšířené stavu k dispozici v `VM-instruction error field` z aktuální VMCS.|  
-|2|Operace se nezdařila bez stavu k dispozici.|  
+|1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|  
+|2|Operace selhala, aniž by k dispozici.|  
   
 ## <a name="remarks"></a>Poznámky  
- Aplikace můžete provést operaci virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo `__vmx_vmresume` funkce. `__vmx_vmlaunch` Funkci lze použít pouze s VMCS, jejichž stav spuštění je `Clear`a `__vmx_vmresume` funkci lze použít pouze s VMCS, jejichž stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a potom `__vmx_vmlaunch` funkce pro první operaci zadejte virtuální počítač a `__vmx_vmresume` funkce pro následné zadejte virtuální počítač operace.  
+ Aplikace může provádět operace, která virtuálního počítače zadejte buď pomocí [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) nebo `__vmx_vmresume` funkce. `__vmx_vmlaunch` Funkci lze použít pouze s VMCS, jehož stav spuštění je `Clear`a `__vmx_vmresume` funkci lze použít pouze s VMCS, jehož stav spuštění je `Launched`. V důsledku toho použít [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funkce pro nastavení stavu spuštění VMCS k `Clear`a pak použít `__vmx_vmlaunch` funkce pro první operace virtuálního počítače zadejte a `__vmx_vmresume` funkce pro následné zadejte virtuální počítač operace.  
   
- `__vmx_vmresume` Funkce je ekvivalentní volání `VMRESUME` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace, vyhledejte dokument PDF, "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu C97063-002 číslo na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__vmx_vmresume` Funkce je ekvivalentní volání `VMRESUME` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, vyhledejte dokument PDF "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmresume`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmresume`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

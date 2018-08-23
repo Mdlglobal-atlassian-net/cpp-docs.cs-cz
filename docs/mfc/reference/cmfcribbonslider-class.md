@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850849"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465103"
 ---
 # <a name="cmfcribbonslider-class"></a>Cmfcribbonslider – třída
 `CMFCRibbonSlider` Třída implementuje posuvník, který můžete přidat na stavový panel pásu karet nebo panel pásu karet. V ovládacím prvku posuvník pásu karet se podobá posuvníkům pro zvětšení, které se zobrazují v aplikacích sady Office 2007.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  Minimální přírůstek, která jezdce můžete projít v ovládacím prvku posuvník.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  Hodnota TRUE, pokud má posuvník přiblížení tlačítka; FALSE v opačném případě.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

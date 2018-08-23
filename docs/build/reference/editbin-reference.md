@@ -1,5 +1,5 @@
 ---
-title: Editbin – odkaz | Microsoft Docs
+title: Editbin – referenční dokumentace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372305"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464625"
 ---
 # <a name="editbin-reference"></a>EDITBIN – odkaz
-Microsoft COFF binární soubor Editor (nástroje EDITBIN. Soubor EXE) upravuje binární soubory běžné objekt souboru formátu (COFF). Editbin – slouží k úpravě objektu soubory, spustitelné soubory a dynamické knihovny (DLL).  
+Microsoft COFF binární soubor Editor (EDITBIN. Soubor EXE) upraví binárních souborů Common Object File Format (COFF). Editbin – můžete použít k úpravě souborů objektů, spustitelných souborů a dynamické knihovny (DLL).  
   
 > [!NOTE]
->  Můžete spustit tento nástroj pouze z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] příkazového řádku. Nelze ji spustit z příkazového řádku systému nebo v Průzkumníku souborů.  
+>  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.  
   
- Editbin – není k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru. Veškeré úpravy binární soubory, které vytváří s /GL bude muset být dosaženo nutnosti rekompilace a propojením.  
+ Editbin – není k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru. Veškeré úpravy binární soubory, které jsou vytvořené pomocí/GL. muset dosáhnout při opětovné kompilaci a propojování.  
   
--   [Příkazový řádek EDITBIN](../../build/reference/editbin-command-line.md)  
+-   [Editbin – příkazový řádek](../../build/reference/editbin-command-line.md)  
   
 -   [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)  
   

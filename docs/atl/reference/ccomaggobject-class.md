@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
-ms.translationtype: HT
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884990"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466029"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject – třída
 Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní pro agregovaného objektu. Podle definice agregovaného objektu je součástí vnějšího objektu. `CComAggObject` Třída je podobně jako [CComObject – třída](../../atl/reference/ccomobject-class.md), s tím rozdílem, že poskytuje rozhraní, které jsou přímo přístupné specialistům do externích klientů.  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Název|Popis|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Zvýší počet odkazů na agregovaný objekt.|  
-|[CComAggObject::CreateInstance](#createinstance)|Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Provede konečnou inicializaci `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Provádí konečné zničení `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované rozhraní.|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  Uvolní všechny přidělené prostředky, volání [FinalRelease](#finalrelease), a sníží počet modul zámku.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Tato statická funkce vám umožní vytvořit nový **CComAggObject <** `contained` **>** objektu bez režie [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(

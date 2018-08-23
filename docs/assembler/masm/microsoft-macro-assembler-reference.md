@@ -1,5 +1,5 @@
 ---
-title: Microsoft Macro Assembler – referenční dokumentace | Microsoft Docs
+title: Microsoft Macro Assembler – referenční dokumentace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: edf1289b20d710ff6b579a56150d01568fb21fbd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052824"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466315"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
-Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého sestavení. MASM obsahuje makro jazyk, který obsahuje funkce, jako je zpracování řetězec opakování ve smyčce, aritmetické a text. MASM také vám dává větší kontrolu nad hardware, protože umožňuje sady instrukce 386, 486 a Pentium procesory. Pomocí MASM také můžete snížit režijní náklady na čas a paměti.  
+Microsoft Macro Assembler (MASM) poskytuje několik výhod oproti vloženým sestavením. MASM obsahuje makra jazyka, který obsahuje funkce, jako je zpracování smyček, aritmetické a textové řetězce. MASM nabízí také větší kontrolu nad hardwarem, protože umožňuje instrukční sadu 386, 486 a procesorech Pentium. Pomocí MASM také můžete snížit režijní náklady na čas a paměti.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Použití nástroje ML a ml64 v příkazovém možnost příkazového řádku](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
  Popisuje možnosti příkazového řádku ML.exe a ML64.exe.  
   
  [Chybové zprávy ML](../../assembler/masm/ml-error-messages.md)  
- Popisuje ML.exe závažné a méně závažné chybové zprávy a upozornění.  
+ Popisuje ML.exe závažná a méně chybové zprávy a upozornění.  
   
  [Referenční dokumentace k direktivám](../../assembler/masm/directives-reference.md)  
  Obsahuje odkazy na články, které popisují použití direktivy v MASM.  
   
  [Referenční dokumentace k symbolům](../../assembler/masm/symbols-reference.md)  
- Obsahuje odkazy na články, které popisují použití symboly v MASM.  
+ Obsahuje odkazy na články, které popisují použití symbolů v MASM.  
   
  [Referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md)  
  Obsahuje odkazy na články, které popisují použití operátorů v MASM.  
   
  [Příručky pro programování výrobce procesoru](../../assembler/masm/processor-manufacturer-programming-manuals.md)  
- Obsahuje odkazy na weby, které mohou obsahovat programovací informace o procesorů, které nejsou vyrobila, za účelem prodeje nebo podporovaný společností Microsoft.  
+ Obsahuje odkazy na weby, které může obsahovat informace o programování o procesorů, které nejsou vyrobené, prodává nebo podporovaný společností Microsoft.  
   
  [MASM pro x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
- Informace o tom, jak vytvořit výstupní soubory pro [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
+ Informace o tom, jak vytvoření výstupních souborů pro x64.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Visual C++](../../visual-cpp-in-visual-studio.md)  
@@ -56,4 +56,4 @@ Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého se
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../../intrinsics/compiler-intrinsics.md)   
  [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)   
- [x64 (amd64) – vnitřní prvky](../../intrinsics/x64-amd64-intrinsics-list.md)
+ [x64 (amd64) vnitřní objekty](../../intrinsics/x64-amd64-intrinsics-list.md)

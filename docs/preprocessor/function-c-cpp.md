@@ -1,5 +1,5 @@
 ---
-title: funkce (C/C++) | Microsoft Docs
+title: – funkce (C/C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76ab5b2911d349c62ff18967e7a660cdc3589ddd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849480"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464796"
 ---
 # <a name="function-cc"></a>funkce (C/C++)
 Určuje, že budou vytvořena volání funkcí zadaných v seznamu argumentů direktivy pragma.  
@@ -31,18 +31,18 @@ Určuje, že budou vytvořena volání funkcí zadaných v seznamu argumentů di
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma function( function1 [, function2, ...] )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud použijete **vnitřní** – Direktiva pragma (nebo /Oi) pro oznámení kompilátoru generovat vnitřní funkce (vnitřní funkce jsou generovány jako vloženého kódu, ne jako volání funkce), můžete použít **funkce** – Direktiva pragma Chcete-li explicitně vynutit volání funkce. Po nalezení direktivy pragma function se její účinek projeví v první definici funkce obsahující zadanou vnitřní funkci. Účinek pokračuje na konec zdrojový soubor a vzhled **vnitřní** – Direktiva pragma zadání stejné vnitřní funkce. **Funkce** – Direktiva pragma lze použít pouze mimo funkci – na globální úrovni.  
+
+Pokud používáte `intrinsic` – Direktiva pragma (nebo /Oi) Chcete-li sdělit kompilátoru, aby vytvářel vnitřní funkce (vnitřní funkce jsou vytvořeny jako vložený kód, nikoli jako volání funkce), můžete použít **funkce** – Direktiva pragma k vynucení explicitního volání funkce. Po nalezení direktivy pragma function se její účinek projeví v první definici funkce obsahující zadanou vnitřní funkci. Účinek trvá do konce zdrojového souboru nebo do výskytu `intrinsic` zadávající stejnou vnitřní funkci. **Funkce** – Direktiva pragma lze použít pouze vně funkce – na globální úrovni.  
   
- Seznam funkcí, které mají vnitřní formulářů, najdete v části [#pragma vnitřní](../preprocessor/intrinsic.md).  
+Seznam funkcí, které mají vlastní vnitřní podobu, naleznete v tématu [#pragma intrinsic](../preprocessor/intrinsic.md).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp  
 // pragma_directive_function.cpp  
 #include <ctype.h>  
 #include <stdio.h>  
@@ -92,5 +92,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Viz také
+
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

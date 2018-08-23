@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření agenta toku dat | Microsoft Docs'
+title: 'Návod: Vytvoření agenta toku dat | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f94692b6762e1dc24a7af910d2cfd52abc516598
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693091"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465307"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Postupy: Vytvoření agenta toku dat
-Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou založené na toku dat, místo tok řízení.  
+Tento dokument ukazuje, jak vytvářet aplikace pro systém agenta, které jsou založeny na toku dat, namísto tok řízení.  
   
- *Řízení toku* odkazuje pořadí provádění operací v programu. Tok řízení se řídí pomocí řídicí struktury například podmíněné příkazy, smyčky a tak dále. Alternativně *toku dat* odkazuje na programovací model, ve kterém jsou vytvářeny výpočty pouze v případě, všechna požadovaná data je k dispozici. Programovací model toku dat se týká konceptu usnadnění, ve kterém nezávislé komponenty programu vzájemnou komunikaci odesláním zprávy.  
+ *Řízení toku* odkazuje na pořadí provádění operací v programu. Tok řízení je upravena pomocí ovládacího prvku struktury, jako jsou podmíněné příkazy, smyčky a tak dále. Alternativně *toku dat* odkazuje na programovací model, ve kterém výpočty jsou provedeny pouze v případě, všechna požadovaná data je k dispozici. Programovací model toku dat se týká koncept předávání, zpráv, ve kterém nezávislé komponenty aplikace komunikovat mezi sebou odesíláním zpráv.  
   
- Asynchronní agenti podporovat tok řízení i toku dat programovací modely. I když modelu tok řízení je vhodné v mnoha případech, model toku dat je vhodné v jiné, například když agenta přijímá data a provede akci, která je založena na datovou část data.  
+ Asynchronní agenti podporu tok řízení a toku dat programovacích modelů. I když je vhodné v mnoha případech model tok řízení, model toku dat je vhodné pro ostatní, například, pokud agent přijímá data a provádějí akci, která je založena na datovou část data.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Přečtěte si následující dokumenty, než začnete Tento názorný postup:  
+ Před zahájením tohoto návodu, přečtěte si následující dokumenty:  
   
 - [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)  
   
@@ -39,76 +39,76 @@ Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou
 - [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
 ##  <a name="top"></a> Oddíly  
- Tento názorný postup obsahuje následující části:  
+ Tento návod obsahuje následující části:  
   
-- [Vytvoření agenta základní tok řízení](#control-flow)  
+- [Vytvoření agenta toku řízení základní](#control-flow)  
   
-- [Vytvoření základní agenta toku dat](#dataflow)  
+- [Vytvoření základního agenta toku dat](#dataflow)  
   
 - [Vytvoření agenta protokolování zpráv](#logging)  
   
-##  <a name="control-flow"></a> Vytvoření agenta základní tok řízení  
- Podívejte se na následující příklad, který definuje `control_flow_agent` třídy. `control_flow_agent` Třída slouží na tři vyrovnávacích pamětí zpráv: jeden vstupní vyrovnávací paměti a dva výstupní vyrovnávací paměti. `run` Metoda čte z zdrojová vyrovnávací paměť zprávy ve smyčce a používá podmíněného příkaz k přímé toku spuštění programu. Agent zvýší jeden čítač nulová, záporné hodnoty a zvýší jiný čítač nenulové, kladné hodnoty. Po agenta obdrží sentinel hodnota nula, odešle hodnoty čítačů výstupní vyrovnávací paměti zpráv. `negatives` a `positives` metody povolit aplikaci číst počty kladné i záporné hodnoty od agenta.  
+##  <a name="control-flow"></a> Vytvoření agenta toku řízení základní  
+ Podívejte se na následující příklad, který definuje `control_flow_agent` třídy. `control_flow_agent` Třídy funguje na tři vyrovnávací paměti zpráv: jeden vstupní vyrovnávací paměti a dvě výstupní vyrovnávací paměti. `run` Metoda načte ze zdrojové vyrovnávací paměti zpráv ve smyčce a podmíněný příkaz používá k řízení toku programu. Agent zvýší jeden čítač pro nenulové, záporné hodnoty a zvýší jiný čítač pro nenulové, kladné hodnoty. Po agent obdrží sentinel hodnota nula, odešle do výstupní vyrovnávací paměti zpráv hodnoty čítače. `negatives` a `positives` metody umožňují aplikaci číst počty kladné i záporné hodnoty od agenta.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
   
- I když tento příklad vytvoří základní použití tok řízení v agenta, ukazuje sériové povaha programování na základě řízení toku. Každá zpráva musí být zpracovány postupně, i když může být k dispozici ve vyrovnávací paměti vstupní zpráva více zpráv. Model toku dat umožňuje obě větve podmíněného příkaz vyhodnotit současně. Model toku dat můžete také vytvořit složitější zasílání zpráv sítě, které fungují na data, jakmile je k dispozici.  
+ Přestože tento příklad využívá základní tok řízení v agentovi, ukazuje sériového portu povaze programování na základě řízení toku. Každá zpráva musí být zpracovány postupně, i když může být k dispozici ve vyrovnávací paměti vstupní zprávy více zpráv. Model toku dat umožňuje obou větvích podmíněný příkaz pro vyhodnocení současně. Model toku dat také umožňuje vytvářet složitější sítě zasílání zpráv, které působí na data, jakmile je k dispozici.  
   
  [[Horní](#top)]  
   
-##  <a name="dataflow"></a> Vytvoření základní agenta toku dat  
- V této části ukazuje, jak převést `control_flow_agent` třídy pomocí modelu toku dat si provést stejný úkol.  
+##  <a name="dataflow"></a> Vytvoření základního agenta toku dat  
+ Tato část ukazuje, jak převést `control_flow_agent` třídy k použití modelu datového toku k provedení stejné úlohy.  
   
- Agenta toku dat funguje tak, že vytvoření sítě vyrovnávacích pamětí zpráv, z nichž každá má konkrétní účel. Určité bloky zpráv pomocí funkce filtru k přijetí nebo odmítnutí zprávu na základě jeho datové části. Funkce filtru zajistí, že blok zpráv přijímá jenom určité hodnoty.  
+ Agenta toku dat funguje tak, že vytvoříte síť vyrovnávacích pamětí zpráv, z nichž každý slouží pro konkrétní účel. Některé blokům zpráv pomocí funkce filtru přijmout nebo odmítnout zprávu na základě její datové části. Funkce filtru se zajistí, že blok zpráv přijme jenom konkrétní hodnoty.  
   
 #### <a name="to-convert-the-control-flow-agent-to-a-dataflow-agent"></a>Převedení agenta toku řízení na agenta toku dat  
   
-1.  Zkopírujte text `control_flow_agent` třída k jiné třídě, například `dataflow_agent`. Alternativně můžete přejmenovat `control_flow_agent` třídy.  
+1.  Zkopírujte text `control_flow_agent` třídu pro jiné třídy, například `dataflow_agent`. Alternativně můžete přejmenovat `control_flow_agent` třídy.  
   
-2.  Odebrat do těla smyčky, která volá `receive` z `run` metoda.  
+2.  Odeberte tělo smyčky, která volá `receive` z `run` metody.  
   
  [!code-cpp[concrt-dataflow-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_2.cpp)]  
   
-3.  V `run` metoda po inicializaci proměnné `negative_count` a `positive_count`, přidejte `countdown_event` objekt, který sleduje počet aktivní operace.  
+3.  V `run` metoda po inicializaci proměnné `negative_count` a `positive_count`, přidejte `countdown_event` objekt, který sleduje počet aktivními operacemi.  
   
  [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]  
   
-     `countdown_event` Třídy se zobrazí později v tomto tématu.  
+     `countdown_event` Třídy je uveden dále v tomto tématu.  
   
-4.  Vytvořte objekty vyrovnávací paměti, které se budou podílet zprávy v síti toku dat.  
+4.  Vytvořte zprávu vyrovnávací paměti objektů, které se budou podílet v síti datového toku.  
   
  [!code-cpp[concrt-dataflow-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_4.cpp)]  
   
-5.  Připojte vyrovnávacích pamětí zpráv k síti.  
+5.  Připojte vyrovnávací paměti zpráv a vytvoří síť.  
   
  [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]  
   
-6.  Počkejte `event` a `countdown event` objekty, které chcete nastavit. Tyto události signalizují, že agenta přijal sentinel hodnota a že nebudou dokončeny všechny operace.  
+6.  Počkejte `event` a `countdown event` objektů, která se má nastavit. Tyto události signalizují, že agent přijal hodnotu sentinel a že nebudou dokončeny všechny operace.  
   
  [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]  
   
  Následující diagram znázorňuje sítě dokončení toku dat pro `dataflow_agent` třídy:  
   
- ![Síť toku dat](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")  
+ ![Tok dat sítě](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")  
   
- Následující tabulka popisuje členy sítě.  
+ Následující tabulka popisuje členy v síti.  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|`increment_active`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) objekt, který zvýší čítač aktivní událostí a předá vstupní hodnoty do zbytku sítě.|  
-|`negatives`, `positives`|[Concurrency::Call](../../parallel/concrt/reference/call-class.md) objekty, které zvýší počet číslic a snižuje čítač aktivní událostí. Objekty každý pomocí filtru tak, aby přijímal záporná čísla nebo kladná čísla.|  
-|`sentinel`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který přijímá pouze sentinel hodnotu nula a snižuje čítač aktivní událostí.|  
-|`connector`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objekt, který se připojuje zdrojová vyrovnávací paměť zprávy k interní síti.|  
+|`increment_active`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) objekt, který zvýší Čítač Aktivní události a předává vstupní hodnoty do zbytku sítě.|  
+|`negatives`, `positives`|[Concurrency::Call](../../parallel/concrt/reference/call-class.md) objekty, které zvětšit jejich celkový počet čísel a dekrementuje čítače aktivní události. Všechny objekty pomocí filtru tak, aby přijímal záporná čísla nebo kladná čísla.|  
+|`sentinel`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který přijímá pouze hodnotu sentinel nula a sníží Čítač Aktivní události.|  
+|`connector`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objekt, který zdrojová vyrovnávací paměť zpráv se připojí k interní síti.|  
   
- Protože `run` metoda je volána v odděleném podprocesu, jiná vlákna mohou zasílat zprávy do sítě, než je plně připojená síť. `_source` – Datový člen je `unbounded_buffer` objekt, který ukládá do vyrovnávací paměti veškerý vstup, který se odesílá z aplikace pro agenta. Abyste měli jistotu sítě zpracuje všechny vstupní zprávy, agenta nejprve propojuje uzlu interní sítě a potom propojuje začátek síti, `connector`do `_source` – datový člen. To zaručuje, že zprávy není zpracovat jako síť je právě vytvořen.  
+ Vzhledem k tomu, `run` metoda je volána v samostatném vlákně, ostatní vlákna mohou odesílat zprávy k síti předtím, než je plně připojená síť. `_source` Datový člen je `unbounded_buffer` objekt, který ukládá do vyrovnávací paměti veškerý vstup, který se odesílá z aplikace do agenta. Abyste měli jistotu, že síť zpracovává všechny vstupní zprávy, agenta nejprve propojuje uzly interní sítě a pak propojí začátku této síti `connector`, možnosti `_source` datový člen. Zaručí se tak, že zprávy nezpracovávají jako síti je právě vytvořen.  
   
- Vzhledem k síti v tomto příkladu je založená na toku dat, místo na tok řízení sítě musí komunikovat s agenta, je dokončené zpracování jednotlivých vstupní hodnoty, a že uzlu sentinel přijal jeho hodnotu. Tento příklad používá `countdown_event` objekt signál, že všechny vstupní hodnoty byly zpracovány a [concurrency::event](../../parallel/concrt/reference/event-class.md) objektu k označení, že uzel sentinel přijal jeho hodnotu. `countdown_event` Třídy používá `event` objekt, který má být signalizován hodnota čítače hodnota nula. Head sítě toku dat zvýší čítače pokaždé, když to obdrží hodnotu. Každý terminálu uzel sítě snižuje čítač po zpracovává vstupní hodnoty. Po agenta forms toku dat sítě, čeká uzlu sentinel nastavit `event` objekt a `countdown_event` objekt signál, že jeho čítač dosáhl nula.  
+ Protože sítě v tomto příkladu je založená na toku dat, spíše než v toku řízení sítě musí komunikovat agentům, že bylo dokončeno zpracování každé vstupní hodnota a že ověřovací uzel byl přijat jeho hodnotu. Tento příklad používá `countdown_event` objekt, který signalizuje, že byly zpracovány všechny vstupní hodnoty a [concurrency::event](../../parallel/concrt/reference/event-class.md) objektu k označení, že ověřovací uzel byl přijat jeho hodnotu. `countdown_event` Třídy používá `event` objekt, který signalizuje, že když hodnota čítače dosáhne nuly. Vedoucí toku dat sítě zvýší čítač pokaždé, když se obdrží hodnotu. Každý terminálu uzel sítě dekrementuje čítače po zpracovává vstupní hodnota. Po forms agenta toku dat sítě, čeká ověřovací uzel pro nastavení `event` objekt a pro `countdown_event` objektu na signál, že jeho čítač bylo dosaženo nula.  
   
- Následující příklad ukazuje `control_flow_agent`, `dataflow_agent`, a `countdown_event` třídy. `wmain` Funkce vytvoří `control_flow_agent` a `dataflow_agent` objekt a používá `send_values` odesílat řadu náhodných hodnot do agentů.  
+ Následující příklad ukazuje `control_flow_agent`, `dataflow_agent`, a `countdown_event` třídy. `wmain` Vytvoří funkci `control_flow_agent` a `dataflow_agent` a použije `send_values` funkce Odeslat posloupnost náhodných hodnot do agentů.  
   
  [!code-cpp[concrt-dataflow-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_7.cpp)]  
   
- Tento příklad vytvoří následující výstup:  
+ Tento příklad vytvoří následující ukázkový výstup:  
   
 ```Output  
 Control-flow agent:  
@@ -120,14 +120,14 @@ There are 499477 positive numbers.
 ```  
   
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `dataflow-agent.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
+ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `dataflow-agent.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
   
- **cl.exe /EHsc toku dat – agent.cpp**  
+ **cl.exe/EHsc toku dat agent.cpp**  
   
  [[Horní](#top)]  
   
 ##  <a name="logging"></a> Vytvoření agenta protokolování zpráv  
- Následující příklad ukazuje `log_agent` třídy, která vypadá přibližně takto: `dataflow_agent` třídy. `log_agent` Třída implementuje asynchronní protokolování agenta, zápisy do souboru a ke konzole protokolu zpráv. `log_agent` Třída umožňuje aplikaci zařadit do kategorií jako informační zprávy, varování nebo chyba. Umožňuje také aplikace k určení, zda je každá kategorie protokolu zapisovány do souboru, konzole nebo obojí. Tento příklad zapíše všechny zprávy protokolu do souboru a pouze chybové zprávy do konzoly.  
+ Následující příklad ukazuje `log_agent` třídu, která vypadá podobně jako `dataflow_agent` třídy. `log_agent` Třída implementuje asynchronního protokolování agenta, zápisy do souboru a ke konzole protokolování zpráv. `log_agent` Třída umožňuje aplikaci ke kategorizaci jako informační zprávy, upozornění nebo chyby. Umožňuje také aplikace k určení, jestli je každé kategorie protokolu zapisovat do souboru nebo konzoly. Tento příklad zapíše všechny zprávy protokolu do souboru a pouze chybové zprávy do konzoly.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  
   
@@ -137,7 +137,7 @@ There are 499477 positive numbers.
 error: This is a sample error message.  
 ```  
   
- Tento příklad vytvoří také log.txt soubor, který obsahuje následující text.  
+ Tento příklad také vytvoří soubor log.txt, který obsahuje následující text.  
   
 ```Output  
 info: ===Logging started.=== 
@@ -147,9 +147,9 @@ info: ===Logging finished.===
 ```  
   
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `log-filter.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
+ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `log-filter.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
   
- **cl.exe /EHsc protokolu filter.cpp**  
+ **cl.exe/EHsc log-filter.cpp**  
   
  [[Horní](#top)]  
   

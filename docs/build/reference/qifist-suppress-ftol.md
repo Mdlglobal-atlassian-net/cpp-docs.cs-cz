@@ -1,5 +1,5 @@
 ---
-title: -QIfist (potlačit _ftol) | Microsoft Docs
+title: -QIfist (potlačit _ftol) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ec65e330cebb1de718330ba129e960383b31c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b693f78b6fbd9a11dbe98ec2eacc3d781ffd7ebf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378402"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465314"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Potlačit _ftol)
-Zastaralé Potlačí volání pomocné funkce `_ftol` po vyžaduje převod z typu s plovoucí desetinnou čárkou integrální typu.  
+Zastaralé Potlačí volání funkce nápovědy `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ vyžádáním.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,40 +37,40 @@ Zastaralé Potlačí volání pomocné funkce `_ftol` po vyžaduje převod z typ
 ## <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  **/ QIfist** je dostupný jenom v kompilátoru cílení x86; tato možnost kompilátoru není k dispozici v kompilátory cílení na [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] orARM.  
+>  **/ QIfist** je dostupná pouze v kompilátoru cílení x86; tato možnost kompilátoru není k dispozici v kompilátorech, které cílí na x64 orARM.  
   
- Kromě převod z typu s plovoucí desetinnou čárkou integrální typ `_ftol` funkce zajišťuje zaokrouhlení režim jednotky s plovoucí desetinnou čárkou (FPU) směrem k nule (truncate), nastavením bity 10 a 11 řídicího slova. To zaručuje, že převod z typu s plovoucí desetinnou čárkou integrální typ k podle standardu ANSI C (část čísla se zahodí). Při použití **/QIfist**, tato záruka už neplatí. Zaokrouhlení režimu bude mít jednu z čtyři, jak je uvedeno v Intel v příručkách:  
+ Kromě převod z typu s plovoucí desetinnou čárkou na celočíselný typ `_ftol` funkce zajišťuje režimu zaokrouhlování jednotku s plovoucí desetinnou čárkou (FPU) směrem k nule (zkrácení), nastavením bitů 10 a 11 řídicího slova. Zaručí se tak, že převod z typu s plovoucí desetinnou čárkou na celočíselný typ dochází podle popisu ve standardu ANSI jazyka C (desetinná část čísla se zahodí). Při použití **/QIfist**, tuto záruku už neplatí. Režim bude jednu ze čtyř, jak je uvedeno v Intel referenční příručky:  
   
--   Zaokrouhlí na nejbližší (sudé číslo. Pokud stejnou vzdálenost)  
+-   Zaokrouhlit na nejbližší (sudé číslo Pokud zařízením)  
   
--   Zaokrouhlí směrem k záporné nekonečno  
+-   Zaokrouhlí směrem k zápornému nekonečnu  
   
--   Zaokrouhlí směrem k kladné infinity  
+-   Zaokrouhlení směrem ke kladnému nekonečnu  
   
 -   Zaokrouhlí směrem k nule.  
   
- Můžete použít [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkce C Run-Time k úpravě zaokrouhlení chování FPU. Režim FPU zaokrouhlení výchozí hodnota je "Zaokrouhlit na nejbližší." Pomocí **/QIfist** může zvýšit výkon vaší aplikace, ale není bez rizika. Měli byste důkladně otestovat části kódu, které jsou citlivé na zaokrouhlení režimy před spoléhají na kód vytvořené s **/QIfist** v produkčním prostředí.  
+ Můžete použít [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funkce C Run-Time pro úpravu zaokrouhlení chování FPU. Režim FPU zaokrouhlení výchozí hodnota je "Zaokrouhlit na nejbližší." Pomocí **/QIfist** může zlepšit výkon vaší aplikace, ale ne bez rizika. Měli byste důkladně otestovat části kódu, které jsou citlivé na režimech zaokrouhlení předtím, než spoléhání se na kód sestaven s **/QIfist** v produkčním prostředí.  
   
- [/ arch (x86)](../../build/reference/arch-x86.md) a **/QIfist** nelze použít na stejné kompilace.  
+ [/ arch (x86)](../../build/reference/arch-x86.md) a **/QIfist** nelze použít na stejném kompilace.  
   
 > [!NOTE]
->  **/ QIfist** není v platnosti ve výchozím nastavení protože také zaokrouhlení ovlivňují plovoucí, přejděte na plovoucí bits bodu zaokrouhlení (které dojde po každé výpočtu), takže když nastavíte příznaky pro zaokrouhlení stylu jazyka C (směrem k nule), vaše plovoucí bod výpočty se mohou lišit. **/ QIfist** by se neměla používat, pokud kód závisí na očekávané chování zkracování zlomkové části číslo s plovoucí desetinnou čárkou. Pokud si nejste jistí, nepoužívejte **/QIfist**.  
+>  **/ QIfist** je výsledkem bude ve výchozím nastavení protože zaokrouhlování bity také vliv plovoucí desetinná čárka s plovoucí desetinnou čárkou neukazuje zaokrouhlení (které dojde po každé výpočtu), tak když nastavíte příznaky pro zaokrouhlení C-style (směrem k nule), vaše plovoucí desetinnou čárkou výpočty se může lišit. **/ QIfist** neměl by se používat, pokud váš kód závisí na očekávané chování zkracování necelá část hodnoty číslo s plovoucí desetinnou čárkou. Pokud si nejste jistí, nepoužívejte **/QIfist**.  
   
- **/QIfist** možnost je zastaralé od verze Visual Studio 2005. Kompilátor udělal významná vylepšení v float int převod urychlit. Seznam – možnosti kompilátoru zastaralé, najdete v části **zastaralé a odebrat – možnosti kompilátoru** v [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
+ **/QIfist** možnost je zastaralé od verze Visual Studio 2005. Kompilátor provedl významná vylepšení float k urychlení int převodu. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **C/C++** složky.  
+2.  Klikněte na tlačítko **C/C++** složky.  
   
-3.  Klikněte **příkazového řádku** stránku vlastností.  
+3.  Klikněte na tlačítko **příkazového řádku** stránku vlastností.  
   
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
+4.  Zadejte možnost do kompilátoru **další možnosti** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)   

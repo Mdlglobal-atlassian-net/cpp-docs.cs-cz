@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec2a52949754e6b19730d5ef025f958d517f6fd0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 467fa4812af6957bea249d6f55701e1474a9382d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341033"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466025"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odkazování na vlastnost ve zprostředkovateli
-Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](https://msdn.microsoft.com/library/ms722734.aspx) v *OLE DB referenční informace pro programátory*.  
+Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
  V následujícím příkladu se předpokládá, že se pokoušíte získat vlastnosti ze sady řádků. Kód pro použití relace nebo příkazu je podobné, ale používá jiné rozhraní.  
   

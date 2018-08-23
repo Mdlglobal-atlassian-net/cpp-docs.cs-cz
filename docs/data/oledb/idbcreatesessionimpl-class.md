@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756cc7ba203a1655bf5112d9c03e84707644f1e5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337567"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464714"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl – třída
-Poskytuje implementaci pro [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx) rozhraní.  
+Poskytuje implementaci pro [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IDBCreateSession::CreateSession](https://msdn.microsoft.com/library/ms714942.aspx) v *referenční informace pro OLE DB programátory*.   
+ Zobrazit [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
   
 ## <a name="see-also"></a>Viz také  
  [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

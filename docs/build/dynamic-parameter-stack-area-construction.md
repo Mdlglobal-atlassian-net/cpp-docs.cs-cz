@@ -1,5 +1,5 @@
 ---
-title: Zásobník konstrukce dynamické oblasti parametrů | Microsoft Docs
+title: Zásobník konstrukce dynamické oblasti parametrů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161c98ad3d47c6f988efb60ba2aae9f0e025967e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39c5aa2bd844a70848583ef8304cdb2fd57befc6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367469"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466395"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Konstrukce dynamické oblasti zásobníku parametrů
-Pokud se ukazatel na rámec používá, existuje možnost vytvořit dynamicky oblasti zásobníku parametrů. Není to aktuálně v [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilátoru.  
+Pokud se používá ukazatel na rámec, existuje možnost k vytvoření dynamické oblasti zásobníku parametrů. Není to aktuálně x64 kompilátoru.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití zásobníku](../build/stack-usage.md)

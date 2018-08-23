@@ -1,5 +1,5 @@
 ---
-title: float_control – | Microsoft Docs
+title: float_control | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840352"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465300"
 ---
 # <a name="floatcontrol"></a>float_control
-Určuje s plovoucí desetinnou čárkou chování pro funkci.  
+Určuje chování plovoucí desetinné čárky pro funkci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Příznaky  
- `value`, `setting` **[nabízené]**  
- Určuje chování s plovoucí desetinnou čárkou. `value` může být **přesné** nebo **s výjimkou**. Další informace najdete v tématu [/fp (zadejte Floating-Point chování)](../build/reference/fp-specify-floating-point-behavior.md). `setting` lze buď **na** nebo **vypnout**.  
+ 
+*Hodnota*, *nastavení* *[nabízených]*  
+Určuje chování plovoucí desetinné čárky. *Hodnota* může být `precise` nebo `except`. Další informace najdete v tématu [/fp (určení chování plovoucí desetinné čárky)](../build/reference/fp-specify-floating-point-behavior.md). *nastavení* může být buď `on` nebo `off`.  
   
- Pokud `value` je **přesné**, nastavení pro **přesné** a **s výjimkou** jsou specifikované. **s výjimkou** lze nastavit pouze **na** při **přesné** je také nastavena na **na**.  
+Pokud *hodnotu* je `precise`, nastavení `precise` a `except` jsou zadané. `except` lze nastavit pouze `on` při `precise` je také nastavena na `on`.  
   
- Pokud volitelné **nabízené** token se přidá, aktuální nastavení pro `value` vložena do zásobníku vnitřní kompilátoru.  
+Pokud volitelný *nabízených* token se přidá, aktuální nastavení pro *hodnotu* je vloženo do zásobníku vnitřního kompilátoru.  
   
- **push**  
- Nabízená aktuální `float_control` nastavení k zásobníku vnitřní kompilátoru  
+*push*  
+Nabízená aktuální **float_control** nastavení do vnitřního zásobníku kompilátoru  
   
- **POP**  
- Odebere `float_control` nastavení z horní části zásobníku vnitřní kompilátoru a který zpřístupňuje nové `float_control` nastavení.  
+*POP*  
+Odebere **float_control** nastavení z vrcholu vnitřního zásobníku kompilátoru a, která umožňuje novou **float_control** nastavení.  
   
 ## <a name="remarks"></a>Poznámky  
- Nelze zapnout `float_control precise` vypnout při **s výjimkou** zapnutý. Podobně **přesné** kdy nelze vypnout `fenv_access` zapnutý. Přechod od striktní modelu k rychlé model se `float_control` – Direktiva pragma, použijte následující kód:  
+ 
+Nedá se zase `float_control precise` vypnuté, kdy `except` zapnutý. Obdobně `precise` nelze vypnout, kdy `fenv_access` zapnutý. Přejít od modelu striktní rychlé modelu s **float_control** – Direktiva pragma, použijte následující kód:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Přechod od rychlé modelu striktní modelu s `float_control` – Direktiva pragma, použijte následující kód:  
+Přejít od modelu rychlé striktní modelu s **float_control** – Direktiva pragma, použijte následující kód:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patří:  
+Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patří:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak zachytit výjimku přetečení s plovoucí desetinnou čárkou s použitím – Direktiva pragma `float_control`.  
+ 
+Následující příklad ukazuje, jak zachytit výjimku přetečení s plovoucí desetinnou čárkou pomocí direktivy pragma **float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

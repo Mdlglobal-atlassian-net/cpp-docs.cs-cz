@@ -1,5 +1,5 @@
 ---
-title: hlavní funkce a spuštění programu | Microsoft Docs
+title: hlavní funkce a vykonávání programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd6dae49eb655856247ea70e61582e16228db454
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387496"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464706"
 ---
 # <a name="main-function-and-program-execution"></a>main – spuštění funkce a programu
-Každý program C má primární funkce (hlavní), který musí mít název **hlavní**. Pokud váš kód dodržuje programovací model znakové sady Unicode, můžete použít verzi široká charakterová **hlavní**, **wmain**. **Hlavní** funkce slouží jako výchozí bod pro spuštění programu. Obvykle řídí spuštění programu pomocí směrování volání dalších funkcí v programu. Program obvykle ukončí provádění na konci **hlavní**, i když můžete ukončovat platnost u jiných bodů programu pro celou řadu důvodů. V některých případech, například při zjištění určité chyby, lze vynutit ukončení programu. Chcete-li to provést, použijte **ukončete** funkce. Najdete v článku *referenční dokumentace běhové knihovny* informace o a příklad použití [ukončete](../c-runtime-library/reference/exit-exit-exit.md) funkce.  
+Každý program jazyka C má primární (hlavní) funkci, která musí mít název **hlavní**. Pokud váš kód používá programovací model Unicode, můžete použít verze širokého znaku **hlavní**, **wmain**. **Hlavní** funkci slouží jako výchozí bod pro spuštění programu. Obvykle řídí spuštění programu pomocí směrování volání dalších funkcí v programu. Program je obvykle ukončen na konci **hlavní**, i když můžete ukončit v jiných bodech programu z různých důvodů. V některých případech, například při zjištění určité chyby, lze vynutit ukončení programu. Chcete-li tak učinit, použijte **ukončit** funkce. Najdete v článku *Run-Time Library Reference* pro informace a příklad použití [ukončit](../c-runtime-library/reference/exit-exit-exit.md) funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +36,14 @@ main( int argc, char *argv[ ], char *envp[ ] )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Funkce v rámci zdrojového programu provádí jeden nebo více konkrétních úkolů. **Hlavní** tyto funkce umožňují vykonávat úkoly příslušných můžete volat funkce. Když **hlavní** volá jinou funkci, předá řízení provádění funkce, takže spuštění zahájí první příkaz ve funkci. Funkce vrátí prvek na **hlavní** při `return` spustit příkaz nebo když je dosaženo konce funkce.  
+ Funkce v rámci zdrojového programu provádí jeden nebo více konkrétních úkolů. **Hlavní** funkce může volat tyto funkce k provedení svých úkolů. Když **hlavní** volá jinou funkci, předá řízení provádění této funkci, takže provádění začne prvním příkazem této funkce. Vrátí ovládací prvek **hlavní** při `return` je proveden příkaz nebo když je dosaženo konce funkce.  
   
- Je možné deklarovat všechny funkce, včetně **hlavní**, chcete-li mít parametry. Pojem „parametr“ nebo „formální parametr“ odkazuje na identifikátor, který přijímá hodnotu předanou funkci. V tématu [parametry](../c-language/parameters.md) informace o předání argumentů parametry. Když jedna funkce volá jinou, volaná funkce přijme hodnoty svých parametrů z volající funkce. Tyto hodnoty jsou označovány jako „argumenty“. Je možné deklarovat formální parametry **hlavní** tak, aby mohl přijímat argumenty z příkazového řádku pomocí tento formát:  
+ Je možné deklarovat všechny funkce, včetně **hlavní**s parametry. Pojem „parametr“ nebo „formální parametr“ odkazuje na identifikátor, který přijímá hodnotu předanou funkci. Zobrazit [parametry](../c-language/parameters.md) informace o předávání argumentů do parametrů. Když jedna funkce volá jinou, volaná funkce přijme hodnoty svých parametrů z volající funkce. Tyto hodnoty jsou označovány jako „argumenty“. Lze deklarovat formální parametry **hlavní** tak, aby může přijímat argumenty z příkazového řádku pomocí tohoto formátu:  
   
- Pokud chcete předat informace, které **hlavní** funkce, parametry jsou tradičně pojmenované `argc` a `argv`, i když kompilátor jazyka C nevyžaduje, aby tyto názvy. Typy parametrů `argc` a `argv` jsou definovány v jazyce C. Tradičně, pokud třetí parametr předaný **hlavní**, tento parametr je pojmenován `envp`. Příklady dále v této části ukazují, jak používat tyto tři parametry pro přístup k argumentům příkazového řádku. Následující části popisují tyto parametry.  
+ Pokud chcete předat informace **hlavní** funkce, parametry jsou tradičně pojmenovány `argc` a `argv`, i když kompilátor jazyka C tyto názvy nevyžaduje. Typy parametrů `argc` a `argv` jsou definovány v jazyce C. Tradičně, pokud třetí parametr je předán do **hlavní**, tento parametr je pojmenován `envp`. Příklady dále v této části ukazují, jak používat tyto tři parametry pro přístup k argumentům příkazového řádku. Následující části popisují tyto parametry.  
   
- V tématu [použití funkce wmain](../c-language/using-wmain.md) popis verze široká charakterová **hlavní**.  
+ Zobrazit [použití funkce wmain](../c-language/using-wmain.md) popis širokoznaké verze **hlavní**.  
   
 ## <a name="see-also"></a>Viz také  
- [main: spuštění programu](../cpp/main-program-startup.md)
+ [Main: spuštění programu](../cpp/main-program-startup.md)   
+ [Analýza argumentů příkazového řádku jazyka C](../c-language/parsing-c-command-line-arguments.md)

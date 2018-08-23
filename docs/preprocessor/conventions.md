@@ -1,5 +1,5 @@
 ---
-title: Konvence | Microsoft Docs
+title: Konvence | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae91b383159a6de7e28507f9e272e5ea60093e0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912664"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465302"
 ---
 # <a name="conventions"></a>Konvence
 Úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|*nonterminal*|Kurzíva označuje neterminály.|  
+|*neterminálu*|Kurzíva označuje neterminály.|  
 |#include|Terminály tučného typu jsou slova a symboly vyhrazená literály, které je nutné zadat tak, jak je znázorněno. Znaky v tomto kontextu vždy rozlišují velká a malá písmena.|  
 |opt|Neterminály následované opt jsou vždy volitelné.|  
 |výchozí písmo|Znaky ze sady, které jsou popsány nebo uvedeny v tomto písmu, lze použít jako terminály v příkazech.|  
   
- Dvojtečka (:), která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích.  
+Dvojtečka (:), která následuje neterminál, zavádí jeho definici. Alternativní definice jsou uvedeny na samostatných řádcích.  
   
 ## <a name="see-also"></a>Viz také  
- [Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+
+[Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

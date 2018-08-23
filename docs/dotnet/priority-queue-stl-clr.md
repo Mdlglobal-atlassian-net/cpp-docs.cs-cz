@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376034"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42466199"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Třída šablony popisuje objekt, který řídí různé délky seřazené řadu prvků, která má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě základního kontejneru jako prioritní fronty.  
@@ -855,7 +855,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Členská funkce vloží prvek s hodnotou `val` do řízené sekvence a změní pořadí řízené sekvence udržovat disciplína haldy. Použijete ji Pokud chcete přidat jiný element do fronty.  
+ Členská funkce vloží prvek s hodnotou `val` v řízené sekvenci a změní pořadí řízené sekvence udržovat disciplína haldy. Použijete ji Pokud chcete přidat jiný element do fronty.  
   
 ### <a name="example"></a>Příklad  
   

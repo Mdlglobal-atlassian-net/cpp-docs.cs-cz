@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339589"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464814"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 Poskytuje funkce pro Windows textové pole.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Pro jednořádková ovládací prvky vrácená hodnota je v TCHARs, délka textu v textovém poli.  
   
- Pro víceřádková textová pole, je návratová hodnota délka řádku určené v TCHARs, *využívat* parametru. Pro [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] text, délka je počet bajtů v řádku; pro text v kódu Unicode, délka je počet znaků v řádku. Délka neobsahovalo znak návratu na konci řádku.  
+ Pro víceřádková textová pole, je návratová hodnota délka řádku určené v TCHARs, *využívat* parametru. Pro text v kódu ANSI délka je počet bajtů v řádku. pro text v kódu Unicode délka je počet znaků v řádku. Délka neobsahovalo znak návratu na konci řádku.  
   
  Pokud *využívat* parametr je větší než počet znaků v ovládacím prvku, vrácená hodnota je nula.  
   

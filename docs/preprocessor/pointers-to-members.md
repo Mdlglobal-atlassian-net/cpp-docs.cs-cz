@@ -1,5 +1,5 @@
 ---
-title: pointers_to_members – | Microsoft Docs
+title: pointers_to_members | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,45 +20,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 499649e94dbe549deb091291b197c80ff404bc33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09b0fcd2a00806d075e70d1469b57ba0a0dd5332
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841389"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465387"
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje, zda ukazatel na člen třídy lze deklarovat před definicí jeho přidružené třídy, a slouží k řízení velikosti ukazatele a kódu potřebného k interpretaci tohoto ukazatele.  
+Určuje, zda ukazatel na člen třídy lze deklarovat před definicí jeho přidružené třídy, a slouží k řízení velikosti ukazatele a kódu potřebného k interpretaci tohoto ukazatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```    
 #pragma pointers_to_members( pointer-declaration, [most-general-representation] )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete umístit **pointers_to_members –** – Direktiva pragma zdrojový soubor jako alternativu k použití [/vmx](../build/reference/vmb-vmg-representation-method.md) – možnosti kompilátoru nebo [klíčová slova dědičnosti](../cpp/inheritance-keywords.md).  
+ 
+Můžete umístit **pointers_to_members** – Direktiva pragma ve zdrojovém souboru jako alternativu k použití [/vmx](../build/reference/vmb-vmg-representation-method.md) – možnosti kompilátoru nebo [klíčová slova dědičnosti](../cpp/inheritance-keywords.md).  
   
- *Ukazatel deklarace* argument určuje, zda mají deklarovány ukazatele na člena, před nebo po definice přidružené funkce. *Ukazatel deklarace* argument je jedním z následujících dvou symboly:  
-  
-|Argument|Komentáře|  
-|--------------|--------------|  
-|**full_generality**|Generuje bezpečný, někdy neoptimální kód. Používáte **full_generality** Pokud žádné ukazatele na člena, je deklarovaný před definice přidružené třídy. Tento argument vždy používá reprezentace ukazatel určeného *většinu. Obecná reprezentace* argument. Ekvivalentní možnosti /vmg.|  
-|**best_case**|Generuje bezpečný, optimální kód, který používá nejlepší reprezentaci pro všechny odkazy na členy. Vyžaduje definování třídy před deklarací ukazatele na člena této třídy. Výchozí hodnota je **best_case**.|  
-  
- *Většinu. Obecná reprezentace* argument určuje nejmenší vyjádření ukazatele, kompilátor bezpečně můžete odkazovat všechny ukazatele na člena třídy v jednotce překlad. Tento argument může nabývat kterékoliv z těchto hodnot:  
+*Deklaraci ukazatele* argument určuje, zda je deklarován ukazatel na člen před nebo po definici související funkce. *Deklaraci ukazatele* argument je jedním z následujících dvou symbolů:  
   
 |Argument|Komentáře|  
 |--------------|--------------|  
-|**single_inheritance**|Nejobecnější reprezentace je jediná dědičnost, ukazatel na členskou funkci. Způsobí chybu, je-li model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako vícenásobný nebo virtuální.|  
-|**Vícenásobná dědičnost –**|Nejobecnější reprezentace je vícenásobná dědičnost, ukazatel na členskou funkci. Způsobí chybu, je-li model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako virtuální.|  
-|**virtual_inheritance**|Nejobecnější reprezentace je virtuální dědičnost, ukazatel na členskou funkci. Nikdy nezpůsobí chybu. Toto je výchozí argument při **#pragma pointers_to_members(full_generality)** se používá.|  
+|*full_generality*|Generuje bezpečný, někdy neoptimální kód. Použijete *full_generality* Pokud je jakýkoli ukazatel na člen deklarován před definicí přidružené třídy. Tento argument vždy používá reprezentaci ukazatele určenou argumentem *most-general-representation* argument. Ekvivalentní možnosti /vmg.|  
+|*best_case*|Generuje bezpečný, optimální kód, který používá nejlepší reprezentaci pro všechny odkazy na členy. Vyžaduje definování třídy před deklarací ukazatele na člena této třídy. Výchozí hodnota je *best_case*.|  
+  
+*Most-general-representation* argument určuje nejmenší reprezentaci ukazatele, který kompilátor může bezpečně použít k odkazování na jakýkoli ukazatel na člen třídy v jednotce překladu. Tento argument může nabývat kterékoliv z těchto hodnot:  
+  
+|Argument|Komentáře|  
+|--------------|--------------|  
+|*single_inheritance*|Nejobecnější reprezentace je jediná dědičnost, ukazatel na členskou funkci. Způsobí chybu, je-li model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako vícenásobný nebo virtuální.|  
+|*Vícenásobná dědičnost –*|Nejobecnější reprezentace je vícenásobná dědičnost, ukazatel na členskou funkci. Způsobí chybu, je-li model dědičnosti definice třídy, pro kterou je ukazatel na člen deklarován jako virtuální.|  
+|*virtual_inheritance*|Nejobecnější reprezentace je virtuální dědičnost, ukazatel na členskou funkci. Nikdy nezpůsobí chybu. Toto je výchozí argument při `#pragma pointers_to_members(full_generality)` se používá.|  
   
 > [!CAUTION]
->  Direktivu pragma `pointers_to_members` používejte pouze v souboru zdrojového kódu, který chcete ovlivnit, a až po všech direktivách `#include`. Tímto postupem snížíte riziko, že tato direktiva pragma ovlivní další soubory a že bude náhodně zadáno více definic pro stejnou proměnnou, funkci nebo název třídy.  
+> Doporučujeme umístit **pointers_to_members** – Direktiva pragma pouze v souboru se zdrojovým kódem, který chcete ovlivnit a až po všech `#include` direktivy. Tímto postupem snížíte riziko, že tato direktiva pragma ovlivní další soubory a že bude náhodně zadáno více definic pro stejnou proměnnou, funkci nebo název třídy.  
   
 ## <a name="example"></a>Příklad  
   
@@ -67,7 +67,8 @@ ms.locfileid: "33841389"
 #pragma pointers_to_members( full_generality, single_inheritance )  
 ```  
   
-## <a name="end-c-specific"></a>Konkrétní END C++  
+## <a name="end-c-specific"></a>Specifické pro END C++  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,5 +1,5 @@
 ---
-title: __stosd | Microsoft Docs
+title: __stosd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327129"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465956"
 ---
 # <a name="stosd"></a>__stosd
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje řetězcovou instrukci úložiště (`rep stosd`).  
+ Generuje instrukce řetězec úložiště (`rep stosd`).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ void __stosd(
  [out] `Dest`  
  Cíl operace.  
   
- [v] `Data`  
- Data, která k ukládání.  
+ [in] `Data`  
+ Data k uložení.  
   
- [v] `Count`  
- Délka bloku doublewords k zápisu.  
+ [in] `Count`  
+ Délka bloku x doubleword k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem je, že doubleword `Data` jsou zapsána do bloku `Count` doublewords v umístění v paměti na kterou odkazuje `Dest`.  
+ Výsledkem je, že doubleword `Data` je zapsán do bloku `Count` x doubleword v umístění v paměti na které odkazuje `Dest`.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -92,7 +92,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

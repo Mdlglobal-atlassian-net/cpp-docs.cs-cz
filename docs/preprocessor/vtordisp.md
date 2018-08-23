@@ -1,5 +1,5 @@
 ---
-title: vtordisp | Microsoft Docs
+title: vtordisp | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 502425728fcd97d2ae8d2efe406dc73370de1272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5d0b28c855ab8a6f6da814ee17521a5ad7799993
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841769"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464610"
 ---
 # <a name="vtordisp"></a>vtordisp
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Řídí přidání skrytého členu vtordisp pro přesunutí vytvoření nebo zničení.  
+Řídí přidání skrytého členu vtordisp pro přesunutí vytvoření nebo zničení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,32 +39,33 @@ ms.locfileid: "33841769"
 #pragma vtordisp([push,] {on | off})  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `push`  
- Uloží aktuální nastavení vtordisp do vnitřního zásobníku kompilátoru a nastaví nové nastavení vtordisp do parametru `n`.  Není-li parametr `n` zadán, aktuální nastavení vtordisp není změněno.  
+### <a name="parameters"></a>Parametry  
+*push*  
+Posune aktuální nastavení vtordisp na vnitřního zásobníku kompilátoru a nastaví nové nastavení vtordisp na *n*.  Pokud *n* není zadán, aktuální nastavení vtordisp není změněno.  
   
- `pop`  
- Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru a obnoví nastavení vtordisp na odstraněnou hodnotu.  
+*POP*  
+Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru a obnoví nastavení vtordisp na odstraněnou hodnotu.  
   
- `n`  
- Určuje novou hodnotu nastavení vtordisp. Možnými hodnotami jsou 0, 1 a 2, které odpovídají možnostem kompilátoru /vd0, /vd1 a /vd2. Další informace najdete v tématu [/vd (zakázat posunutí konstrukcí)](../build/reference/vd-disable-construction-displacements.md).  
+*n*  
+Určuje novou hodnotu nastavení vtordisp. Možné hodnoty jsou 0, 1 nebo 2, které `/vd0`, `/vd1`, a `/vd2` – možnosti kompilátoru. Další informace najdete v tématu [/vd (zakázat posunutí konstrukcí)](../build/reference/vd-disable-construction-displacements.md).  
   
- `on`  
- Ekvivalentní `#pragma vtordisp(1)`.  
+*on*  
+Ekvivalentní `#pragma vtordisp(1)`.  
   
- `off`  
- Ekvivalentní `#pragma vtordisp(0)`.  
+*Vypnout*  
+Ekvivalentní `#pragma vtordisp(0)`.  
   
 ## <a name="remarks"></a>Poznámky  
- Direktivu pragma `vtordisp` lze použít pouze v kódu, který používá virtuální základy. Přepisuje-li odvozená třída virtuální funkci, kterou třída dědí z virtuální základní třídy, a pokud konstruktor nebo destruktor odvozené základní třídy tuto funkci volá pomocí ukazatele na virtuální základní třídu, kompilátor může do tříd s virtuálními základy zavést dodatečná skrytá pole `vtordisp`.  
+ 
+**Vtordisp** – Direktiva pragma se vztahuje pouze na kód, který používá virtuální základy. Pokud přepíše odvozená třída virtuální funkci, která dědí z virtuální základní třídy, a pokud konstruktor nebo destruktor odvozené třídě volá tuto funkci pomocí ukazatele na virtuální základní třídu, kompilátor může způsobit další skryté **vtordisp** pole do tříd s virtuálními základy.  
   
- Direktiva pragma `vtordisp` ovlivňuje rozložení tříd uvedených za ní. Pro kompletní moduly určují možnosti /vd0, /vd1 a /vd2 stejné chování. Zadáním hodnoty `0` nebo `off` jsou skryté členy `vtordisp` potlačeny. Členy `vtordisp` vypněte pouze v případě, že neexistuje situace, kdy by konstruktory a destruktory třídy volaly virtuální funkce objektu, na který ukazuje ukazatel `this`.  
+**Vtordisp** – Direktiva pragma ovlivňuje rozložení tříd uvedených za ní. `/vd0`, `/vd1`, A `/vd2` možnosti zadat stejné chování pro kompletní moduly. Zadáním 0 nebo *vypnout* potlačí skrytého **vtordisp** členy. Vypnout **vtordisp** pouze pokud je nemohly žádným způsobem, který konstruktory a destruktory třídy volaly virtuální funkce objektu, na které odkazují **to** ukazatele.  
   
- Zadáním výchozí hodnoty `1` nebo `on` je povoleno použití skrytých členů `vtordisp` tam, kde jsou zapotřebí.  
+Určení 1 nebo *na*, standardně povoleno použití skrytých **vtordisp** členy, kde jsou zapotřebí.  
   
- Určení `2` umožňuje skrytého `vtordisp` členy pro všechny virtuální základů s virtuální funkce.  `vtordisp(2)` může být potřeba zajistit správné výkon `dynamic_cast` na objekt částečně zkonstruovat. Další informace najdete v tématu [upozornění kompilátoru (úroveň 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
+Určení 2 povoleno použití skrytých **vtordisp** členů pro všechny virtuální základy s virtuálními funkcemi.  `vtordisp(2)` může být nezbytné pro zajištění správné činnosti **dynamic_cast** na částečně vytvořeným objektem. Další informace najdete v tématu [upozornění kompilátoru (úroveň 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
   
- Direktiva `#pragma vtordisp()` bez argumentů obnoví nastavení vtordisp na počáteční nastavení.  
+Direktiva `#pragma vtordisp()` bez argumentů obnoví nastavení vtordisp na počáteční nastavení.  
   
 ```  
 #pragma vtordisp(push, 2)  
@@ -72,7 +73,8 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)  
 ```  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

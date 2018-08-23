@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 8e9f5527917dcab663670d59f7a4ce0f51948bfb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269537"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464616"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -30,7 +30,7 @@ Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně v
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Pokud váš správce balíčků poskytuje starší verzi CMake, můžete alternativně vyřešit ji [vytváření CMake ze zdroje](#build-a-supported-cmake release-from-source) nebo stahování z oficiální [stránku pro stažení CMake](https://cmake.org/download/). Pro hodnotu typu variant CMake poskytovaný společností Microsoft, který podporuje [zobrazení cílů CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) podokno v sadě Visual Studio, stáhněte si nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Pro hodnotu typu variant CMake poskytovaný společností Microsoft, který podporuje [zobrazení cílů CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) podokno v sadě Visual Studio, stáhněte si nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). Pokud váš správce balíčků poskytuje starší verze než CMake 3.8, můžete alternativně vyřešit ji [vytváření CMake ze zdroje](#build-a-supported-cmake-release-from-source), nebo byste radši chtěli použít standardní CMake, si můžete stáhnout z oficiální [stránku pro stažení CMake](https://cmake.org/download/). 
 
 ## <a name="open-a-folder"></a>Otevřít složku
 

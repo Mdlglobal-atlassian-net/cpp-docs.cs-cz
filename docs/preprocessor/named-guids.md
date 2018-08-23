@@ -1,5 +1,5 @@
 ---
-title: named_guids – | Microsoft Docs
+title: named_guids – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2022f979205fed461f02e5886698d9455021a855
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912846"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466095"
 ---
 # <a name="namedguids"></a>named_guids
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje, kompilátor definovat a inicializace proměnné identifikátor GUID v původní styl, formuláře **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, a **DIID _MyDispInterface**.  
+Instruuje kompilátor, aby definovat a inicializaci proměnných identifikátor GUID v původní stylu formuláře `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, a `DIID_MyDispInterface`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,10 @@ named_guids
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **Konkrétní END C++**  
+
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

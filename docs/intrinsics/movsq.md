@@ -1,5 +1,5 @@
 ---
-title: __movsq | Microsoft Docs
+title: __movsq | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466398"
 ---
 # <a name="movsq"></a>__movsq
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje řetězec opakovaných přesunout (`rep movsq`) instrukcí.  
+ Generuje řetězec opakovaný přesun (`rep movsq`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ void __movsq(
  [out] `Dest`  
  Cíl operace.  
   
- [v] `Source`  
+ [in] `Source`  
  Zdroj operaci.  
   
- [v] `Count`  
- Počet quadwords ke kopírování.  
+ [in] `Count`  
+ Počet x quadword ke kopírování.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem je, že první `Count` quadwords na kterou odkazuje `Source` se zkopírují do `Dest` řetězec.  
+ Výsledkem je, že první `Count` x quadword odkazované `Source` se zkopírují do `Dest` řetězec.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -90,7 +90,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50   
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

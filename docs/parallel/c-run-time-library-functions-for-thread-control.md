@@ -1,5 +1,5 @@
 ---
-title: Funkce běhové knihovny jazyka C pro řízení vláken | Microsoft Docs
+title: Funkce knihovny Run-Time jazyka C pro řízení vláken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a505bae156edba6798812b807d7ab5c6ea9e396
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685759"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464515"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkce běhové knihovny jazyka C pro řízení vláken
-Všechny programy Win32 mít alespoň jedno vlákno. Jakékoli vlákno můžete vytvořit další vlákna. Vlákno můžete rychle dokončit svou práci a pak ukončete, nebo může zůstat aktivní po dobu trvání programu.  
+Všechny programy Win32 mají alespoň jedno vlákno. Jakékoli vlákno můžete vytvořit další vlákna. Vlákno může rychle dokončí svou práci a pak ukončete, nebo může zůstat aktivní po dobu životnosti programu.  
   
- Běhové knihovny C LIBCMT a MSVCRT poskytují následující funkce pro vytváření a ukončení vlákna: [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_endthread _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md).  
+Knihovny runtime LIBCMT a MSVCRT jazyka C poskytují následující funkce pro vytváření a ukončení vlákna: [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_endthread _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md).  
   
- `_beginthread` a `_beginthreadex` funkce vytvořit nové vlákno a vrátí identifikátor vlákna, pokud byla operace úspěšná. Vlákno se automaticky ukončí pokud dokončí provádění nebo jej můžete ukončit pomocí volání `_endthread` nebo `_endthreadex`.  
+`_beginthread` a `_beginthreadex` funkce vytvořit nové vlákno a vrací identifikátor vlákna, pokud je operace úspěšná. Vlákno se automaticky ukončí dokončí provádění, nebo jej můžete ukončit volání `_endthread` nebo `_endthreadex`.  
   
 > [!NOTE]
->  Pokud chcete volat C běhové rutiny z programu vytvořené s Libcmt.lib, je nutné spustit vaší vláken s `_beginthread` nebo `_beginthreadex` funkce. Nepoužívají funkce Win32 `ExitThread` a `CreateThread`. Pomocí `SuspendThread` může vést k vzájemnému zablokování, když je více než jedno vlákno zablokuje čekáním na pozastavené vlákno dokončí přístup k C Runtime datová struktura.  
+> Pokud se chystáte volání rutiny C za běhu z aplikace vytvořené pomocí Libcmt.lib, je nutné spustit vlákna s `_beginthread` nebo `_beginthreadex` funkce. Nepoužívejte funkce Win32 `ExitThread` a `CreateThread`. Pomocí `SuspendThread` může vést k zablokování při více než jedno vlákno je zablokuje čekáním pozastaveného vlákna dokončí přístup do struktury dat za běhu C.  
   
-##  <a name="_core_the__beginthread_function"></a> _Beginthread – a _beginthreadex – funkce  
- `_beginthread` a `_beginthreadex` funkce vytvořit nové vlákno. Vlákno sdílí kód a data segmenty procesu s jiná vlákna v procesu, ale má svůj vlastní jedinečný registr hodnot, místa v zásobníku a aktuální adresa instrukce. Systém přiřadí času procesoru pro každé vlákno tak, aby všechny vláken v procesu můžete současně provést.  
+##  <a name="_core_the__beginthread_function"></a> _Beginthread a _beginthreadex funkce  
+ 
+`_beginthread` a `_beginthreadex` funkce vytvořit nové vlákno. Vlákno sdílí segmentů kódu a dat procesů pro ostatní vlákna v procesu, ale má svůj vlastní jedinečný registr hodnoty, místo v zásobníku a aktuální adresa instrukce. Systém přiděluje čas procesoru pro každé vlákno tak, aby všechna vlákna v procesu mohou být prováděna současně.  
   
- `_beginthread` a `_beginthreadex` jsou podobné [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce v rozhraní API Win32 má ale tyto rozdíly:  
+`_beginthread` a `_beginthreadex` je podobný jako [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) – funkce rozhraní Win32 API, ale nemá tyto rozdíly:  
   
--   Inicializují určité proměnné běhové knihovny jazyka C. To je důležité, pouze pokud používáte běhové knihovny jazyka C ve vašem vláken.  
+- Inicializují určité proměnné knihovny run-time C. To je důležité, pouze při použití knihovny run-time jazyka C v vlákna.  
   
--   `CreateThread` pomáhá poskytovat kontrolu nad atributů zabezpečení. Tato funkce vám pomůže spustit vlákno v pozastaveném stavu.  
+- `CreateThread` pomáhá zajistit kontrolu nad atributy zabezpečení. Tuto funkci můžete spustit vlákno v pozastaveném stavu.  
   
- `_beginthread` a `_beginthreadex` vrací popisovač nové vlákno v případě úspěchu nebo kód chyby, pokud došlo k chybě.  
+ `_beginthread` a `_beginthreadex` vrací popisovač do nové vlákno v případě úspěchu nebo kód chyby, pokud došlo k chybě.  
   
-##  <a name="_core_the__endthread_function"></a> _Endthread – a _endthreadex – funkce  
- [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md) funkce ukončí vlákno vytvořené `_beginthread` (a podobně `_endthreadex` ukončí vlákno vytvořené `_beginthreadex`). Vlákna ukončit automaticky při ukončení. `_endthread` a `_endthreadex` jsou užitečné pro podmíněné ukončení zevnitř vlákna. Vlákno vyhrazené ke zpracování komunikace může například skončit, pokud nelze získat kontrolu nad komunikační port.  
+##  <a name="_core_the__endthread_function"></a> _Endthread a _endthreadex funkce  
+ 
+[_Endthread](../c-runtime-library/reference/endthread-endthreadex.md) funkce ukončí vlákno vytvořil `_beginthread` (a naopak `_endthreadex` ukončí vlákno vytvořil `_beginthreadex`). Vlákna automaticky ukončit, když jsou dokončeny. `_endthread` a `_endthreadex` jsou užitečné pro podmíněné ukončení v rámci vlákno. Vlákno vyhrazený pro zpracování, komunikace například můžete skončit, pokud nelze získat kontrolu nad komunikační port.  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+ 
+[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

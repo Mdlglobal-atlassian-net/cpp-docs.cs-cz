@@ -1,5 +1,5 @@
 ---
-title: __emul __emulu | Microsoft Docs
+title: __emul __emulu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331032"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465403"
 ---
 # <a name="emul-emulu"></a>__emul __emulu
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Provede součinů, které přetečení, co mohou být uloženy 32bitové celé číslo.  
+ Provádí součinů, které přetečení, co může obsahovat 32bitové celé číslo.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,26 +46,26 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `a`  
- První operand celé číslo násobení.  
+ [in] `a`  
+ První celočíselný operand násobení.  
   
- [v] `b`  
+ [in] `b`  
  Druhý operand celé číslo násobení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Výsledkem násobení.  
+ Výsledek násobení.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `__emul` má dvě hodnoty podepsaný 32bitová verze a vrátí výsledek násobení jako hodnotu 64bitové celé číslo se znaménkem.  
+ `__emul` přebírá dva 32-bit hodnoty se znaménkem a vrátí výsledek násobení jako 64-bit celočíselnou hodnotu se znaménkem.  
   
  `__emulu` má dvě hodnoty 32bitové celé číslo bez znaménka a vrátí výsledek násobení jako hodnotu 64bitové celé číslo bez znaménka.  
   
@@ -108,7 +108,7 @@ int main()
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

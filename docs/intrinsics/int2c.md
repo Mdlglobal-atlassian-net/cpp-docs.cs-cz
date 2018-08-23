@@ -1,5 +1,5 @@
 ---
-title: __int2c | Microsoft Docs
+title: __int2c | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e163eabd802fdd33d9f90d3a3a111017188dd89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329404"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466031"
 ---
 # <a name="int2c"></a>__int2c
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `int 2c` instrukce, které se aktivuje `2c` přerušení.  
+ Generuje `int 2c` instrukce, která aktivuje `2c` přerušení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ void __int2c(void);
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__int2c`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__int2c`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

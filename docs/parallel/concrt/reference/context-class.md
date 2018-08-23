@@ -1,5 +1,5 @@
 ---
-title: Třída kontextu | Microsoft Docs
+title: Context – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bf574fc679b879e2fa9084ed6fbd4ed82e66f70
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694177"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465109"
 ---
 # <a name="context-class"></a>Context – třída
-Představuje abstrakci pro kontextu spuštění.  
+Představuje abstrakci pro kontext spuštění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,26 +58,26 @@ class Context;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Blok](#block)|Blokuje aktuálního kontextu.|  
-|[CurrentContext](#currentcontext)|Vrací ukazatel na aktuálním kontextu.|  
-|[Getid –](#getid)|Vrátí identifikátor pro kontext, který je jedinečná v rámci scheduler, do které patří kontextu.|  
-|[GetScheduleGroupId](#getschedulegroupid)|Vrátí identifikátor pro skupinu plán, kontext právě pracuje.|  
-|[GetVirtualProcessorId](#getvirtualprocessorid)|Vrátí identifikátor virtuální procesor, který kontextu je právě prováděných v.|  
-|[ID](#id)|Vrátí identifikátor pro aktuální kontext, který je jedinečné v rámci scheduler, do které patří aktuální kontext.|  
-|[Iscurrenttaskcollectioncanceling –](#iscurrenttaskcollectioncanceling)|Vrátí informace, zda kolekce úloh, které je právě prováděných vložené v aktuálním kontextu je in the midst of active zrušení (nebo bude zanedlouho).|  
-|[Issynchronouslyblocked –](#issynchronouslyblocked)|Určuje, zda kontext je blokovaný synchronně. Synchronně zablokuje, pokud explicitně provedli akci, která vedla k blokování považuje za kontextu.|  
-|[Přidělit nadměrnému počtu procesů](#oversubscribe)|Další virtuální procesor vloží do plánovače po dobu trvání blok kódu při vyvolání na kontext provádění na jednom z virtuálních procesorů v této plánovače.|  
-|[ScheduleGroupId](#schedulegroupid)|Vrátí identifikátor pro aktuální kontext pracuje na skupině plán.|  
-|[Odblokování](#unblock)|Odblokuje kontextu a způsobí, že aby se spustitelného.|  
-|[VirtualProcessorId](#virtualprocessorid)|Vrátí identifikátor pro virtuální procesor, který spouští v aktuálním kontextu.|  
-|[YIELD –](#yield)|Předá provádění, takže můžete provést další kontext. Pokud žádný další kontext je k dispozici yield k, Plánovač přispět k jiné vlákno operačního systému.|  
+|[Blok](#block)|Blokuje aktuální kontext.|  
+|[CurrentContext](#currentcontext)|Vrací ukazatel na aktuální kontext.|  
+|[Getid –](#getid)|Vrátí identifikátor kontextu, který je jedinečný v rámci plánovače, do kterého kontext patří.|  
+|[GetScheduleGroupId](#getschedulegroupid)|Vrátí identifikátor plánu skupiny, kontext aktuálně pracuje.|  
+|[GetVirtualProcessorId](#getvirtualprocessorid)|Vrátí identifikátor virtuálního procesoru, je kontext aktuálně spuštěn.|  
+|[ID](#id)|Vrátí identifikátor aktuálního kontextu, který je jedinečný v rámci plánovače, do kterého aktuální kontext patří.|  
+|[Iscurrenttaskcollectioncanceling –](#iscurrenttaskcollectioncanceling)|Vrátí informace o tom, zda kolekce úkolu, který je právě probíhá vloženě v aktuálním kontextu je uprostřed aktivního rušení (nebo bude za chvíli).|  
+|[Issynchronouslyblocked –](#issynchronouslyblocked)|Určuje, zda je kontext synchronně blokován. Kontext je považován za synchronně blokovaný, pokud výslovně provedl akci, která vedla k blokování.|  
+|[Přidělit nadměrnému počtu procesů](#oversubscribe)|Vloží další virtuální procesor do plánovače pro dobu trvání bloku kódu při vyvolání v kontextu spuštění v jednom z virtuálních procesorů v tomto plánovači.|  
+|[ScheduleGroupId](#schedulegroupid)|Vrátí identifikátor plánu skupiny, aktuální kontext pracuje.|  
+|[Odblokování](#unblock)|Odblokuje kontext a způsobí, že se stane spustitelným.|  
+|[VirtualProcessorId](#virtualprocessorid)|Vrátí identifikátor virtuálního procesoru, je aktuální kontext spuštěn.|  
+|[YIELD](#yield)|Předá vykonávání, takže může vykonávat jiný kontext. Pokud žádný jiný kontext není k dispozici, Plánovač může ustoupit jinému vláknu operačního systému.|  
   
 ## <a name="remarks"></a>Poznámky  
- Plánovač Concurrency Runtime (najdete v části [Plánovač](scheduler-class.md)) kontexty provádění používá k provedení práce ve frontě k němu vaše aplikace. Vlákno Win32 je příkladem kontextu spuštění operačního systému Windows.  
+ Plánovač Concurrency Runtime (viz [Plánovač](scheduler-class.md)) používá kontexty spuštění k provedení práce ve frontě v aplikaci. Vlákno Win32 je příkladem kontextu spuštění v operačním systému Windows.  
   
- Kdykoli se rovná počet virtuálních procesorů udělit pomocí Správce prostředků úroveň souběžnosti plánovače. Virtuálního procesoru je abstrakci pro zpracování prostředků a mapy na vlákno hardwaru v základním systému. Pouze kontextu jedné Plánovač můžete spustit na virtuálních procesorů v daném okamžiku.  
+ Kdykoli se úroveň souběžnosti plánovače rovná počtu virtuálních procesorů poskytnutých správcem prostředků. Virtuální procesor je abstrakcí pro zpracování zdrojů a map pro vlákno hardwaru v podkladovém systému. Pouze jeden kontext plánovače může provádět na virtuální procesor v daném okamžiku.  
   
- Je spolupráci ve své podstatě Plánovač a spouštění kontextu přispět jeho virtuálních procesorů na jiný kontext kdykoli Pokud si přeje přechod do stavu čekání. Při čekání ho ji nelze obnovit, dokud nebude k dispozici virtuální procesor od Plánovač začne její provedení.  
+ Plánovač má kooperativní charakter a vykonávající kontext může kdykoliv přinést svůj virtuální procesor do jiného kontextu, pokud přeje přejít do stavu čekání. Když je jeho čekání uspokojeno, nemůže pokračovat, dokud ho dostupný virtuální procesor z plánovače začne, ale jeho spuštění.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Context`  
@@ -89,20 +89,20 @@ class Context;
   
 ##  <a name="block"></a> Blok 
 
- Blokuje aktuálního kontextu.  
+ Blokuje aktuální kontext.  
   
 ```
 static void __cdecl Block();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda bude výsledkem proces výchozí plánovač jejich vytvoření a/nebo pokud neexistuje žádné scheduler aktuálně přidružen kontext volání připojené k volání kontextu.  
+ Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.  
   
- Zjistí, pokud kontext volání běží na virtuálních procesorů, virtuálních procesorů jiného spustitelného kontextu spouštět ani může potenciálně vytvořte novou.  
+ Pokud volání kontextu běží na virtuální procesor, virtuální procesor najdete jiný spustitelný kontextu spuštění nebo může potenciálně vytvořte novou.  
   
- Po `Block` byla volána metoda nebo bude volán, musí spárujte ho s volání [Odblokovat](#unblock) metoda z jiné kontext spuštění v pořadí pro něj spustit znovu. Uvědomte si, že je mezi bodem, kde kód publikuje jeho kontext pro jiné vlákno, abyste mohli volat kritické období `Unblock` metoda a bod, kde volat metodu skutečné na `Block` Přišla žádost. Během této doby nesmí volání libovolné metody, které můžete zase blokovat a odblokovat vlastní důvodů (například získání zámku). Volání `Block` a `Unblock` metoda nekontrolovat Důvod blokování a odblokování. Pouze jeden objekt by měl mít vlastnictví `Block` -  `Unblock` pár.  
+ Po `Block` byla volána metoda nebo bude volána, musíte ji spárovat volání [Odblokovat](#unblock) metodu z jiného kontextu spuštění, aby ji znovu spustit. Mějte na paměti, že je mezi bodem, kde váš kód publikuje jeho kontextu pro jiné vlákno, abyste mohli volat kritické době `Unblock` metoda a bodu, kdy Skutečná metoda volání `Block` tvoří. Během tohoto období se nesmějí volat žádné metody, která můžete zase blokovat nebo odblokovat vlastní důvodů (například získání zámku). Volání `Block` a `Unblock` metoda do not track Důvod blokování a odblokování. Vlastnictví by měl mít pouze jeden objekt `Block` -  `Unblock` pár.  
   
- Tuto metodu můžete vyvolat různé výjimky, včetně [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
+ Tato metoda může vyvolat výjimky, včetně různých [scheduler_resource_allocation_error –](scheduler-resource-allocation-error-class.md).  
   
 ##  <a name="dtor"></a> ~ Kontextu 
 
@@ -110,100 +110,100 @@ static void __cdecl Block();
 virtual ~Context();
 ```  
   
-##  <a name="currentcontext"></a> CurrentContext – 
+##  <a name="currentcontext"></a> CurrentContext 
 
- Vrací ukazatel na aktuálním kontextu.  
+ Vrací ukazatel na aktuální kontext.  
   
 ```
 static Context* __cdecl CurrentContext();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na aktuálním kontextu.  
+ Ukazatel na aktuální kontext.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda bude výsledkem proces výchozí plánovač jejich vytvoření a/nebo pokud neexistuje žádné scheduler aktuálně přidružen kontext volání připojené k volání kontextu.  
+ Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.  
   
 ##  <a name="getid"></a> Getid – 
 
- Vrátí identifikátor pro kontext, který je jedinečná v rámci scheduler, do které patří kontextu.  
+ Vrátí identifikátor kontextu, který je jedinečný v rámci plánovače, do kterého kontext patří.  
   
 ```
 virtual unsigned int GetId() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Identifikátor pro kontext, který je jedinečná v rámci scheduler, do které patří kontextu.  
+ Identifikátor kontextu, který je jedinečný v rámci plánovače, do kterého kontext patří.  
   
 ##  <a name="getschedulegroupid"></a> Getschedulegroupid – 
 
- Vrátí identifikátor pro skupinu plán, kontext právě pracuje.  
+ Vrátí identifikátor plánu skupiny, kontext aktuálně pracuje.  
   
 ```
 virtual unsigned int GetScheduleGroupId() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Identifikátor pro skupinu plánu kontextu je aktuálně pracujete.  
+ Identifikátor plánu skupiny kontext aktuálně pracuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácená hodnota z této metody je okamžitou vzorkování plán skupiny, která spouští v kontextu. Pokud tato metoda je volána v jiném kontextu než aktuální kontext, hodnota může být zastaralé okamžikem, je vrácena a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo trasování pouze pro účely.  
+ Vrácená hodnota z této metody je okamžité vzorkování plánu skupiny, který je spuštěn kontextu. Pokud tato metoda je volána v jiném kontextu než kontextu aktuální, hodnota může být zastaralá chvíli se vrátí a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo pouze pro účely sledování.  
   
 ##  <a name="getvirtualprocessorid"></a> Getvirtualprocessorid – 
 
- Vrátí identifikátor virtuální procesor, který kontextu je právě prováděných v.  
+ Vrátí identifikátor virtuálního procesoru, je kontext aktuálně spuštěn.  
   
 ```
 virtual unsigned int GetVirtualProcessorId() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud kontext je aktuálně spuštěných na virtuálních procesorů, identifikátor pro virtuální procesor, který kontextu je právě prováděných v; jinak hodnota `-1`.  
+ Pokud je kontext aktuálně spuštěn na virtuální procesor, identifikátor virtuálního procesoru, který je kontext aktuálně spuštěn. v opačném případě hodnota `-1`.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácená hodnota z této metody je okamžitou vzorkování virtuální procesor, který spouští v kontextu. Tato hodnota může být zastaralé okamžikem, je vrácena a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo trasování pouze pro účely.  
+ Vrácená hodnota z této metody je okamžité vzorkování virtuálního procesoru, který je spuštěn kontextu. Tato hodnota může být zastaralá chvíli se vrátí a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo pouze pro účely sledování.  
   
 ##  <a name="id"></a> ID 
 
- Vrátí identifikátor pro aktuální kontext, který je jedinečné v rámci scheduler, do které patří aktuální kontext.  
+ Vrátí identifikátor aktuálního kontextu, který je jedinečný v rámci plánovače, do kterého aktuální kontext patří.  
   
 ```
 static unsigned int __cdecl Id();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud aktuální kontext je připojen k plánovače, identifikátor pro aktuální kontext, který je jedinečná v rámci scheduler, do které patří aktuální kontext; jinak hodnota `-1`.  
+ Pokud aktuální kontext je připojena k plánovače, identifikátor pro aktuální kontext, který je jedinečný v rámci plánovače, do kterého patří aktuální kontext; v opačném případě hodnota `-1`.  
   
 ##  <a name="iscurrenttaskcollectioncanceling"></a> Iscurrenttaskcollectioncanceling – 
 
- Vrátí informace, zda kolekce úloh, které je právě prováděných vložené v aktuálním kontextu je in the midst of active zrušení (nebo bude zanedlouho).  
+ Vrátí informace o tom, zda kolekce úkolu, který je právě probíhá vloženě v aktuálním kontextu je uprostřed aktivního rušení (nebo bude za chvíli).  
   
 ```
 static bool __cdecl IsCurrentTaskCollectionCanceling();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud plánovače je připojen k volání kontextu a skupinu úloh je prováděna úloha vložené v tomto kontextu, sdělení, zda této skupiny úloh je in the midst of active zrušení (nebo bude zanedlouho); jinak hodnota `false`.  
+ Pokud plánovače je připojen k volání kontextu a skupiny úloh spouští úlohu jako vloženou v tomto kontextu, údaj o tom, zda úkol skupiny je uprostřed aktivního rušení (nebo bude zanedlouho); v opačném případě hodnota `false`.  
   
 ##  <a name="issynchronouslyblocked"></a> Issynchronouslyblocked – 
 
- Určuje, zda kontext je blokovaný synchronně. Synchronně zablokuje, pokud explicitně provedli akci, která vedla k blokování považuje za kontextu.  
+ Určuje, zda je kontext synchronně blokován. Kontext je považován za synchronně blokovaný, pokud výslovně provedl akci, která vedla k blokování.  
   
 ```
 virtual bool IsSynchronouslyBlocked() const = 0;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jestli je blokována synchronně kontextu.  
+ Určuje, zda je kontext synchronně blokován.  
   
 ### <a name="remarks"></a>Poznámky  
- Synchronně zablokuje, pokud explicitně provedli akci, která vedla k blokování považuje za kontextu. Pro přístup z více vláken Plánovač, to by znamenat přímého volání `Context::Block` metoda nebo na synchronizační objekt, který byl vytvořený pomocí `Context::Block` metoda.  
+ Kontext je považován za synchronně blokovaný, pokud výslovně provedl akci, která vedla k blokování. V Plánovači vlákno by jít přímého volání `Context::Block` metody nebo objekt synchronizace, které bylo vytvořeno prostřednictvím `Context::Block` metody.  
   
- Vrácená hodnota z tato metoda je okamžitou ukázka jestli kontextu synchronně blokováno. Tato hodnota může být zastaralé okamžikem, je vrácena a lze použít pouze velmi výjimečné situace.  
+ Vrácená hodnota z této metody je okamžité vzorku o tom, zda je kontext synchronně blokován. Tato hodnota může být zastaralá chvíli se vrátí a jde použít jenom za velmi specifických podmínek.  
   
 ##  <a name="operator_delete"></a> delete – operátor 
 
- A `Context` objekt zničen interně modulem runtime. Nelze explicitně odstranit.  
+ A `Context` objekt je zničen interně modulem runtime. Nelze odstranit explicitně.  
   
 ```
 void operator delete(void* _PObject);
@@ -215,7 +215,7 @@ void operator delete(void* _PObject);
   
 ##  <a name="oversubscribe"></a> Přidělit nadměrnému počtu procesů 
 
- Další virtuální procesor vloží do plánovače po dobu trvání blok kódu při vyvolání na kontext provádění na jednom z virtuálních procesorů v této plánovače.  
+ Vloží další virtuální procesor do plánovače pro dobu trvání bloku kódu při vyvolání v kontextu spuštění v jednom z virtuálních procesorů v tomto plánovači.  
   
 ```
 static void __cdecl Oversubscribe(bool _BeginOversubscription);
@@ -223,74 +223,74 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
   
 ### <a name="parameters"></a>Parametry  
  `_BeginOversubscription`  
- Pokud `true`, jako ukazatel toho, že má být přidána velmi virtuálního procesoru po dobu trvání Překryvný odběr. Pokud `false`, jako ukazatel toho, že Překryvný odběr, měli byste ukončit a měla by být odebrána dříve přidané virtuálních procesorů.  
+ Pokud `true`, jako ukazatel toho, že další virtuální procesor přidaly po dobu trvání překryvného odběru. Pokud `false`, jako ukazatel toho, že by měla končit překryvného odběru a by se měly odebrat dříve přidanými virtuálního procesoru.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 
- Vrátí identifikátor pro aktuální kontext pracuje na skupině plán.  
+ Vrátí identifikátor plánu skupiny, aktuální kontext pracuje.  
   
 ```
 static unsigned int __cdecl ScheduleGroupId();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud aktuální kontext je připojena k plánovače a funguje na skupinu plán, identifikátor pro Plánovač skupiny, kterou aktuální kontext pracuje na; jinak hodnota `-1`.  
+ Pokud aktuální kontext je připojena k plánovače a práci v plánu skupiny, identifikátor pro Plánovač skupině, která je aktuální kontext pracuje na; v opačném případě hodnota `-1`.  
   
 ##  <a name="unblock"></a> Odblokování 
 
- Odblokuje kontextu a způsobí, že aby se spustitelného.  
+ Odblokuje kontext a způsobí, že se stane spustitelným.  
   
 ```
 virtual void Unblock() = 0;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je perfektně právní pro volání `Unblock` metodu pro dřívější než odpovídající volání [bloku](#block) metoda. Stejně dlouho jako volání `Block` a `Unblock` metody jsou správně spárovat, modul runtime správně zpracovává přirozené soupeření buď řazení. `Unblock` Volání přicházející před `Block` volání jednoduše Neguje účinku `Block` volání.  
+ Je možné dokonale pro volání `Unblock` předcházet odpovídající volání metody [bloku](#block) metody. Tak dlouho, dokud volání `Block` a `Unblock` metody jsou správně spárované, modul runtime správně zpracovává přirozený závodu o buď řazení. `Unblock` Už před volání `Block` volání jednoduše Neguje působení `Block` volání.  
   
- Existuje několik výjimek, které může být vyvolána z této metody. Pokud se pokusí volání kontextu `Unblock` metoda sám na sobě, [context_self_unblock](context-self-unblock-class.md) dojde k výjimce. Pokud volání `Block` a `Unblock` nejsou správně spárované (například dvě volání `Unblock` jsou vytvářeny pro kontext, který běží v současné době), [context_unblock_unbalanced](context-unblock-unbalanced-class.md) dojde k výjimce.  
+ Existuje několik výjimek, které mohou být vyvolány z této metody. Pokud se pokusí kontext volání `Unblock` metoda sám na sobě, [context_self_unblock –](context-self-unblock-class.md) , bude vyvolána výjimka. Pokud volání `Block` a `Unblock` nejsou správně spárované (například dvě volání `Unblock` jsou vytvořené pro kontext, který aktuálně běží), [context_unblock_unbalanced –](context-unblock-unbalanced-class.md) , bude vyvolána výjimka.  
   
- Uvědomte si, že je mezi bodem, kde kód publikuje jeho kontext pro jiné vlákno, abyste mohli volat kritické období `Unblock` metoda a bod, kde volat metodu skutečné na `Block` Přišla žádost. Během této doby nesmí volání libovolné metody, které můžete zase blokovat a odblokovat vlastní důvodů (například získání zámku). Volání `Block` a `Unblock` metoda nekontrolovat Důvod blokování a odblokování. Pouze jeden objekt by měl mít vlastnictví `Block` a `Unblock` pár.  
+ Mějte na paměti, že je mezi bodem, kde váš kód publikuje jeho kontextu pro jiné vlákno, abyste mohli volat kritické době `Unblock` metoda a bodu, kdy Skutečná metoda volání `Block` tvoří. Během tohoto období se nesmějí volat žádné metody, která můžete zase blokovat nebo odblokovat vlastní důvodů (například získání zámku). Volání `Block` a `Unblock` metoda do not track Důvod blokování a odblokování. Vlastnictví by měl mít pouze jeden objekt `Block` a `Unblock` pár.  
   
 ##  <a name="virtualprocessorid"></a> Virtualprocessorid – 
 
- Vrátí identifikátor pro virtuální procesor, který spouští v aktuálním kontextu.  
+ Vrátí identifikátor virtuálního procesoru, je aktuální kontext spuštěn.  
   
 ```
 static unsigned int __cdecl VirtualProcessorId();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud aktuální kontext je připojen k plánovače, identifikátor pro virtuální procesor, který je aktuální kontext provádění na; jinak hodnota `-1`.  
+ Pokud do fronty plánovače, identifikátor virtuálního procesoru, je aktuální kontext spuštěn; je připojený aktuální kontext v opačném případě hodnota `-1`.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácená hodnota z této metody je okamžitou vzorkování virtuální procesor, který spouští v aktuálním kontextu. Tato hodnota může být zastaralé okamžikem, je vrácena a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo trasování pouze pro účely.  
+ Vrácená hodnota z této metody je okamžité vzorkování virtuálního procesoru, je aktuální kontext spuštěn. Tato hodnota může být zastaralá chvíli se vrátí a nelze spoléhat. Tato metoda se obvykle používá pro ladění nebo pouze pro účely sledování.  
   
-##  <a name="yield"></a> YIELD – 
+##  <a name="yield"></a> YIELD 
 
- Předá provádění, takže můžete provést další kontext. Pokud žádný další kontext je k dispozici yield k, Plánovač přispět k jiné vlákno operačního systému.  
+ Předá vykonávání, takže může vykonávat jiný kontext. Pokud žádný jiný kontext není k dispozici, Plánovač může ustoupit jinému vláknu operačního systému.  
   
 ```
 static void __cdecl Yield();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda bude výsledkem proces výchozí plánovač jejich vytvoření a/nebo pokud neexistuje žádné scheduler aktuálně přidružen kontext volání připojené k volání kontextu.  
+ Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.  
   
 ##  <a name="yieldexecution"></a> YieldExecution 
 
- Předá provádění, takže můžete provést další kontext. Pokud žádný další kontext je k dispozici yield k, Plánovač přispět k jiné vlákno operačního systému.  
+ Předá vykonávání, takže může vykonávat jiný kontext. Pokud žádný jiný kontext není k dispozici, Plánovač může ustoupit jinému vláknu operačního systému.  
   
 ```
 static void __cdecl YieldExecution();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda bude výsledkem proces výchozí plánovač jejich vytvoření a/nebo pokud neexistuje žádné scheduler aktuálně přidružen kontext volání připojené k volání kontextu.  
+ Tato metoda způsobí procesu výchozím plánovačem se vytvoří a/nebo připojené k volání kontextu, pokud neexistuje žádný Plánovač aktuálně přiřazen k volání kontextu.  
   
- Tato funkce je nového v [!INCLUDE[vs_dev14](../../../ide/includes/vs_dev14_md.md)] a je stejný jako [Yield](#yield) funkce ale není v konfliktu s makro Yield v odkazující na Windows.  
+ Tato funkce je nového v sadě Visual Studio 2015 a je stejný jako [Yield](#yield) fungovat, ale není v konfliktu s Yield – makro v Windows.h.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [Scheduler – třída](scheduler-class.md)   
  [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 

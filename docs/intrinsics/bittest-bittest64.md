@@ -1,5 +1,5 @@
 ---
-title: _bittest _bittest64 | Microsoft Docs
+title: _bittest _bittest64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b2259e7eecd820d35527a6ab8908f274e3e287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623077695731b88285769c5b887b1f64f5263855
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334250"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466034"
 ---
 # <a name="bittest-bittest64"></a>_bittest _bittest64
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
-Generuje `bt` instrukce, který zkoumá bit v pozici `b` adresy `a`a vrátí hodnotu této verze.  
+Generuje `bt` instrukce, který zkoumá vlastnost bitu v pozici `b` adresy `a`a vrátí hodnotu této verze.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,21 +47,21 @@ unsigned char _bittest64(
 ```  
   
 ### <a name="parameters"></a>Parametry  
-[v] `a`  
-Ukazatel na paměť pro zjištění.  
+[in] `a`  
+Ukazatel paměti prozkoumat.  
   
-[v] `b`  
-Bit pozice pro testování.  
+[in] `b`  
+Bitová pozice pro testování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 Bit na zadané pozici.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_bittest`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_bittest64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_bittest`|x86, ARM, x64|\<intrin.h >|  
+|`_bittest64`|ARM, x64|\<intrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
 Tato rutina je k dispozici pouze jako vnitřní objekt.  
@@ -106,7 +106,7 @@ Binary representation:
 0000000000000010011000010110010  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

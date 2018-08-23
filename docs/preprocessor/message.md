@@ -1,5 +1,5 @@
 ---
-title: zpráva | Microsoft Docs
+title: zpráva | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846360"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465386"
 ---
 # <a name="message"></a>– zpráva
 Odešle řetězcový literál na standardní výstup bez ukončení kompilace.  
@@ -31,20 +31,20 @@ Odešle řetězcový literál na standardní výstup bez ukončení kompilace.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Typické použití **zpráva** – Direktiva pragma je zobrazit informační zprávy v době kompilace.  
+
+Typické použití **zpráva** – Direktiva pragma je zobrazení informačních zpráv během kompilace.  
   
- *Messagestring* parametr může být makro, které zasahuje do řetězcový literál a můžete zřetězení těchto makra s textové literály v libovolné kombinace.  
+*Messagestring* parametr může být makro, které se rozbalí na řetězcový literál a lze zřetězit s řetězcovými literály v libovolné kombinaci těchto maker.  
   
- Pokud použijete předdefinovanou makro v **zpráva** – Direktiva pragma, makro by měla vrátit řetězec, jinak bude mít výstup makro převést na řetězec.  
+Pokud použijete předdefinované makro v **zpráva** – Direktiva pragma, makro by měla vrátit řetězec, jinak bude nutné výstup makra převést na řetězec.  
   
- Používá následující fragment kódu **zpráva** – Direktiva pragma pro zobrazení zpráv během kompilace:  
+Následující fragment kódu používá **zpráva** – Direktiva pragma pro zobrazení zpráv během kompilace:  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ Odešle řetězcový literál na standardní výstup bez ukončení kompilace.
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

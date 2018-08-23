@@ -1,5 +1,5 @@
 ---
-title: high_property_prefixes – | Microsoft Docs
+title: high_property_prefixes – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7269301fed3892fbf4b7cf6427bacb82d9712ef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ce21958dbb928a29debe21fb7cfaed4b9036141
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849386"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465095"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje alternativní předpony pro tři metody vlastností.  
+Určuje alternativní předpony pro tři metody vlastností.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +34,23 @@ ms.locfileid: "33849386"
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `GetPrefix`  
- Předpona, která má být použit pro **propget –** metody.  
+### <a name="parameters"></a>Parametry  
+*GetPrefix*  
+Předpona se použije pro `propget` metody.  
   
- `PutPrefix`  
- Předpona, která má být použit pro **propput –** metody.  
+*PutPrefix*  
+Předpona se použije pro `propput` metody.  
   
- `PutRefPrefix`  
- Předpona, která má být použit pro **propputref** metody.  
+*PutRefPrefix*  
+Předpona se použije pro `propputref` metody.  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení souhrnné zpracování chyb **propget –**, **propput –**, a **propputref** metody jsou vystaveny členské funkce předpony **získat** , `Put`, a **typu PutRef**, v uvedeném pořadí.  
+ 
+Ve výchozím nastavení základní zpracování chyb `propget`, `propput`, a `propputref` metody jsou vystaveny členským funkcím pojmenovaným s předponami `Get`, `Put`, a `PutRef`v uvedeném pořadí.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

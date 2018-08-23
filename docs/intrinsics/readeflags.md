@@ -1,5 +1,5 @@
 ---
-title: __readeflags | Microsoft Docs
+title: __readeflags | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8233b949fc0ab06663e9f20fad8f47f633fadf6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6488cc42519bbbee8c8fefb242996144f6bb8a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340096"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466114"
 ---
 # <a name="readeflags"></a>__readeflags
-Přečte že stav programu a řízení (EFLAGS) zaregistrovat.  
+Přečte že stav programu a ovládací prvek (EFLAGS) registrovat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,20 +34,20 @@ unsigned __int64 __readeflags(void);
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Hodnota EFLAGS registrace. Vrácená hodnota je 32 bity dlouho na platformě 32bitová a 64bitová verze dlouho na 64bitové platformě.  
+ Hodnota registru EFLAGS. Vrácená hodnota je 32 bitů dlouhý na 32bitové platformě a 64 bitů dlouhý na 64bitové platformě.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__readeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readeflags`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b2d84d9a072d3eeaa84246a6692487be5c71679c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339751"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465952"
 ---
 # <a name="transaction-object-interfaces"></a>Rozhraní objektu transakce
 Objekt transakce definuje atomickou jednotku práce na zdroji dat a určuje, jak tyto jednotky práce vzájemně souvisí. Tento objekt není přímo podporován šablonami zprostředkovatele OLE DB (to znamená, musíte vytvořit vlastní objekt).  
@@ -35,8 +35,8 @@ Objekt transakce definuje atomickou jednotku práce na zdroji dat a určuje, jak
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Povinné|Ne|  
-|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Povinné|Ne|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Nepovinné|Ne|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Povinné|Ne|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Nepovinné|Ne|  
   
 ## <a name="see-also"></a>Viz také  
  [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: __movsw | Microsoft Docs
+title: __movsw | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334438"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465857"
 ---
 # <a name="movsw"></a>__movsw
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vytvoří řetězec přesunout (`rep movsw`) instrukcí.  
+ Z nich generuje řetězec přesunout (`rep movsw`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ void __movsw(
  [out] `Dest`  
  Cíl operace.  
   
- [v] `Source`  
+ [in] `Source`  
  Zdroj operaci.  
   
- [v] `Count`  
- Počet slov pro kopírování.  
+ [in] `Count`  
+ Počet slova, která chcete kopírovat.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem je, že první `Count` slova na kterou odkazuje `Source` se zkopírují do `Dest` řetězec.  
+ Výsledkem je, že první `Count` slova odkazované `Source` se zkopírují do `Dest` řetězec.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -89,7 +89,7 @@ int main()
 0 1 2 3 4 5 6 7 8 9   
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

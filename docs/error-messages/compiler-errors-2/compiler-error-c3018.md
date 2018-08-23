@@ -1,5 +1,5 @@
 ---
-title: C3018 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3018 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71695816672fa0f806accc32ac4f5a373557bdd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54436aab9ebb7821e33037bc7ec14a43aa20dda8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254330"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465097"
 ---
-# <a name="compiler-error-c3018"></a>C3018 chyby kompilátoru
-'var1': OpenMP pro testovací nebo přírůstek musí používat index proměnné 'var2.  
+# <a name="compiler-error-c3018"></a>Chyba kompilátoru C3018
+'var1': OpenMP pro test nebo přírůstek musí používat indexu proměnné 'var2.  
   
- A `for` smyčky v příkazu OpenMP musí pro jeho test a přírůstek používaly stejnou proměnnou, protože využívá pro její index.  
+ A `for` smyčky v příkazu OpenMP musí používaly stejnou proměnnou pro zvýšení a testování, protože používá pro jeho index.  
   
  Následující ukázka generuje C3018:  
   
@@ -41,13 +41,13 @@ int main()
    {  
       #pragma omp for  
       for (i = 0; j < 10; ++i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; ++i)  
          j *= 2;  
   
       #pragma omp for  
       for (i = 0; i < 10; j = j + i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; i = j + i)  
          j *= 2;  
    }  

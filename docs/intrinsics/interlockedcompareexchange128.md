@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange128 | Microsoft Docs
+title: _InterlockedCompareExchange128 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337932"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464619"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Provede porovnání interlocked 128-bit a serveru exchange.  
+ Provádí 128-bit propojené porovnání a záměna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,45 +42,45 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Destination`  
- Ukazatel na cíl, který je pole dvě celá čísla 64-bit považuje za pole 128-bit. Cílový data musí být 16 bajtů v souladu předejdete obecnou chybu ochrany.  
+ [out v] `Destination`  
+ Ukazatel na cílový, což je pole dvou celých čísel 64-bit považují za 128bitového pole. Cíl dat musí být 16 bajtů v souladu, aby obecnou chybu ochrany.  
   
- [v] `ExchangeHigh`  
- 64bitové celé číslo, které je možné poskytovat s horní část cílové.  
+ [in] `ExchangeHigh`  
+ 64bitové celé číslo, který možná bude vyměněn za horní část cílové.  
   
- [v] `ExchangeLow`  
- 64bitové celé číslo, které je možné poskytovat s nízkou část cílového.  
+ [in] `ExchangeLow`  
+ 64bitové celé číslo, který možná bude vyměněn za dolní část cílové.  
   
- [ve out] `ComparandResult`  
- Ukazatele na pole dvě celá čísla 64-bit (považuje za pole 128-bit) k porovnání s cílovým.  Na výstupu se přepíšou s původní hodnotou k cílové složce.  
+ [out v] `ComparandResult`  
+ Ukazatel na pole dvou celých čísel 64-bit (považují za pole 128-bit) má být porovnán s cílem.  Na výstupu je přepsán s původní hodnotou cíl.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- 1, pokud operand porovnávání 128-bit rovná původní hodnotu k cílové složce. `ExchangeHigh` a `ExchangeLow` přepsat cílový 128-bit.  
+ 1, pokud operand porovnávání 128bitové shodná s původní hodnota cíle. `ExchangeHigh` a `ExchangeLow` přepsat cílový 128 bitů.  
   
- 0, pokud operand porovnávání se nerovná původní hodnotu k cílové složce. Hodnota cíl je beze změny a hodnota operand porovnávání se přepíše s hodnotou cílového.  
+ 0, pokud operand porovnávání se nerovná původní hodnota cíle. Hodnota cíle je beze změny a hodnota operand porovnávání je přepsán s hodnotou cílového.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedCompareExchange128`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní vygeneruje `cmpxchg16b` instrukce (s `lock` předponu) k provádění porovnání uzamčeném 128-bit a exchange. Dřívější verze AMD 64bitový hardware nepodporují tento pokyn. Chcete-li zkontrolovat pro podporu hardwaru pro `cmpxchg16b` instrukce, volání `__cpuid` vnitřní s `InfoType=0x00000001 (standard function 1)`. Bit 13 `CPUInfo[2]` (ECX) je 1, pokud je podporováno pokyn.  
+ Tomto vnitřní vygeneruje `cmpxchg16b` instrukcí (s `lock` předpony) provádět 128-bit uzamčené porovnání a záměna. Starší verze AMD 64bitový hardware nepodporuje tuto instrukci. Zkontrolujte hardwarovou podporu `cmpxchg16b` instrukce, volání `__cpuid` vnitřní s `InfoType=0x00000001 (standard function 1)`. Bit 13 `CPUInfo[2]` (ECX) je 1, pokud je podporován podle pokynů.  
   
 > [!NOTE]
->  Hodnota `ComparandResult` vždy přepsán. Po `lock` instrukce, Tento vnitřní okamžitě zkopíruje počáteční hodnota `Destination` k `ComparandResult`. Z tohoto důvodu `ComparandResult` a `Destination` by měla odkazovat na umístění samostatnou paměť pro vyhnout neočekávanému chování.  
+>  Hodnota `ComparandResult` vždy přepsán. Po `lock` instrukce, tomto vnitřní okamžitě zkopíruje počáteční hodnota `Destination` k `ComparandResult`. Z tohoto důvodu `ComparandResult` a `Destination` by měly odkazovat na samostatná paměťová místa, aby se zabránilo neočekávané chování.  
   
- Přestože je možné použít `_InterlockedCompareExchange128` pro synchronizaci nízké úrovně vlákno, není nutné k synchronizaci víc než 128 bitů, pokud používáte menší funkce synchronizace (například dalších `_InterlockedCompareExchange` vnitřní funkce) místo. Použití `_InterlockedCompareExchange128` atomic pro přístup na hodnotu 128-bit v paměti.  
+ I když používáte `_InterlockedCompareExchange128` pro synchronizaci vláken nízké úrovně, nepotřebujete k synchronizaci více než 128 bitů, pokud používáte menší funkce synchronizace (jako je například druhé `_InterlockedCompareExchange` vnitřní funkce) místo toho. Použití `_InterlockedCompareExchange128` atomic pro přístup na hodnotu 128 bitů v paměti.  
   
- Pokud jste spustili kód, který používá tento vnitřní hardware, který nepodporuje `cmpxchg16b` instrukce, nepředvídatelné výsledky.  
+ Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `cmpxchg16b` instrukce, výsledky nepředvídatelné.  
   
  Tato rutina je k dispozici pouze jako vnitřní.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad používá `_InterlockedCompareExchange128` nahradit vysoké slovo pole dvě celá čísla 64-bit součet jeho vysoké a nízké slova a se zvýší nízkou aplikace word. Přístup k poli BigInt.Int je atomic, ale tento příklad používá jedním vláknem a ignoruje uzamčení pro jednoduchost.  
+ Tento příklad používá `_InterlockedCompareExchange128` vysoký Wordu pole dvou celých čísel 64-bit nahraďte součet jeho vysoké a nízké slova a postupně dolní slovo. Přístup k poli BigInt.Int je atomické, ale tento příklad používá jedno vlákno a ignoruje uzamčení pro jednoduchost.  
   
 ```  
 // cmpxchg16b.c  
@@ -128,10 +128,10 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Konkrétní Microsoft END**  
- Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**  
+ Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [_InterlockedCompareExchange vnitřní funkce](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
+ [Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

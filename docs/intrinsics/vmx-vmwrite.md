@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmwrite | Microsoft Docs
+title: __vmx_vmwrite | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337714"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466316"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Zapíše zadaná hodnota v zadaném poli Aktuální struktura řízení virtuálního počítače (VMCS).  
+ Zapíše zadaná hodnota v zadaném poli aktuální řídicí struktura virtuálního počítače (VMCS).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,31 +42,31 @@ unsigned char __vmx_vmwrite(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `Field`|Pole VMCS k zápisu.|  
-|[v] `FieldValue`|Hodnota k zápisu do pole VMCS.|  
+|[in] `Field`|Pole VMCS k zápisu.|  
+|[in] `FieldValue`|Hodnota k zápisu do příslušného pole VMCS.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
  0  
  Operace byla úspěšná.  
   
  1  
- Operace se nezdařila s rozšířené stavu k dispozici v `VM-instruction error field` z aktuální VMCS.  
+ Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.  
   
  2  
- Operace se nezdařila bez stavu k dispozici.  
+ Operace selhala, aniž by k dispozici.  
   
 ## <a name="remarks"></a>Poznámky  
- `__vmx_vmwrite` Funkce je ekvivalentní volání `VMWRITE` počítač instrukcí. Hodnota `Field` parametr je indexu kódovaného pole, která je popsána v dokumentaci Intel. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality a pak zjistěte příloha C této dokument.  
+ `__vmx_vmwrite` Funkce je ekvivalentní volání `VMWRITE` strojové instrukce. Hodnota `Field` parametr je kódovaný pole index, který je popsán v dokumentaci k Intel. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality a pak naleznete v dodatku C, který dokument.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

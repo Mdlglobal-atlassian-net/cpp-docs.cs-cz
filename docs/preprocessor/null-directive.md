@@ -1,5 +1,5 @@
 ---
-title: Null – direktiva | Microsoft Docs
+title: Direktiva s hodnotou Null | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496f22bcdc87a6772d0e0d9fc76d26f25d47adb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd5b996f4a44ef0a310b2a8d76560f6123929472
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912976"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464898"
 ---
 # <a name="null-directive"></a>Direktiva s hodnotou Null
-Jednotné přihlašování číslo je null direktivy preprocesoru (**#**) samostatně na řádek. Nemá žádný vliv.  
+Direktiva preprocesoru null je jeden znak čísla (**#**) samostatně na řádek. Nemá žádný vliv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+ 
+[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)

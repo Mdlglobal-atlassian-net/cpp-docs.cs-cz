@@ -1,5 +1,5 @@
 ---
-title: Třída CPaneContainerManager | Microsoft Docs
+title: Cpanecontainermanager – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079374"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466111"
 ---
-# <a name="cpanecontainermanager-class"></a>CPaneContainerManager – třída
-`CPaneContainerManager` Třída spravuje úložiště a zobrazení aktuální ukotvení rozložení.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cpanecontainermanager-class"></a>Cpanecontainermanager – třída
+`CPaneContainerManager` Třída spravuje úložiště a zobrazení aktuálního dokovacího rozložení.  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -184,16 +184,16 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::RemovePaneFromPaneContainer](#removepanefrompanecontainer)||  
 |[CPaneContainerManager::ReplacePane](#replacepane)||  
 |[CPaneContainerManager::ResizePaneContainers](#resizepanecontainers)||  
-|[CPaneContainerManager::Serialize](#serialize)|Čtení nebo zápisu tento objekt z nebo do archivu. (Přepisuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CPaneContainerManager::Serialize](#serialize)|Čtení nebo zápis tento objekt z nebo do archivu. (Přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
 |[CPaneContainerManager::SetDefaultPaneDividerForPanes](#setdefaultpanedividerforpanes)||  
 |[CPaneContainerManager::SetPaneContainerRTC](#setpanecontainerrtc)||  
 |[CPaneContainerManager::SetResizeMode](#setresizemode)||  
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework automaticky vytváří instance `CPaneContainerManager` objekty a vloží je buď do [CPaneDivider třída](../../mfc/reference/cpanedivider-class.md) objekty nebo do [CMultiPaneFrameWnd třída](../../mfc/reference/cmultipaneframewnd-class.md) objekty.  
+ Rozhraní automaticky vytváří instance `CPaneContainerManager` objekty a vkládá je buď do [cpanedivider – třída](../../mfc/reference/cpanedivider-class.md) objekty nebo do [cmultipaneframewnd – třída](../../mfc/reference/cmultipaneframewnd-class.md) objekty.  
   
- `CPaneContainerManager` Třída ukládá ukazatel na kořenovém binárního stromu, která je vytvořena z [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) objekty.  
+ `CPaneContainerManager` Třídy ukládá ukazatele do kořenového adresáře binární strom, který je sestaven z [cpanecontainer –](../../mfc/reference/cpanecontainer-class.md) objekty.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak získat odkaz na `CPaneContainerManager` objektu. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
@@ -201,9 +201,9 @@ class CPaneContainerManager : public CObject
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)  
+ [Cpanecontainermanager –](../../mfc/reference/cpanecontainermanager-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpanecontainermanager.h  
@@ -216,7 +216,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBarToAdd*  
+ [in] *pControlBarToAdd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -237,11 +237,11 @@ virtual BOOL AddPaneContainerManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *srcManager*  
- [v] *bOuterEdge*  
- [v] *pTargetControlBar*  
- [v] *dwAlignment*  
- [v] *bCopy*  
+ [in] *srcManager*  
+ [in] *bOuterEdge*  
+ [in] *pTargetControlBar*  
+ [in] *dwAlignment*  
+ [in] *bCopy*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -257,8 +257,8 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pTargetControlBar*  
- [v] *srcManager*  
+ [in] *pTargetControlBar*  
+ [in] *srcManager*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -274,8 +274,8 @@ void AddPanesToList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *plstControlBars*  
- [v] *plstSliders*  
+ [in] *plstControlBars*  
+ [in] *plstSliders*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -287,7 +287,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBarToAdd*  
+ [in] *pControlBarToAdd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -301,8 +301,8 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBarToAdd*  
- [v] *pRecentContainer*  
+ [in] *pBarToAdd*  
+ [in] *pRecentContainer*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -323,13 +323,13 @@ void CalcRects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *rectOriginal*  
- [v] *rectInserted*  
- [v] *rectSlider*  
- [v] *dwSliderStyle*  
- [v] *dwAlignment*  
- [v] *sizeMinOriginal*  
- [v] *sizeMinInserted*  
+ [in] *rectOriginal*  
+ [in] *rectInserted*  
+ [in] *rectSlider*  
+ [in] *dwSliderStyle*  
+ [in] *dwAlignment*  
+ [in] *sizeMinOriginal*  
+ [in] *sizeMinInserted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -352,7 +352,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -368,8 +368,8 @@ virtual BOOL CheckForMiniFrameAndCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
- [v] *ppTargetControlBar*  
+ [in] *bodu*  
+ [in] *ppTargetControlBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -386,9 +386,9 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentWnd*  
- [v] *pDefaultSlider*  
- [v] *pContainerRTC*  
+ [in] *pParentWnd*  
+ [in] *pDefaultSlider*  
+ [in] *pContainerRTC*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -424,7 +424,7 @@ virtual void EnableGrippers(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -438,8 +438,8 @@ virtual CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bLeftBar*  
+ [in] *pBar*  
+ [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -453,7 +453,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nID*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -467,7 +467,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -527,10 +527,10 @@ virtual void GetMinMaxOffset(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pSlider*  
- [v] *nMinOffset*  
- [v] *nMaxOffset*  
- [v] *nStep*  
+ [in] *pSlider*  
+ [in] *nMinOffset*  
+ [in] *nMaxOffset*  
+ [in] *nStep*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -542,7 +542,7 @@ virtual void GetMinSize(CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *velikost*  
+ [in] *velikost*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -609,7 +609,7 @@ virtual void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -635,11 +635,11 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBarToInsert*  
- [v] *pTargetControlBar*  
- [v] *dwAlignment*  
- [v] *lprect –*  
- [v] *dockMethod*  
+ [in] *pControlBarToInsert*  
+ [in] *pTargetControlBar*  
+ [in] *dwAlignment*  
+ [in] *lprect –*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -699,10 +699,10 @@ virtual int OnPaneDividerMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pSlider*  
- [v] *uFlags*  
- [v] *nOffset*  
- [v] *hdwp*  
+ [in] *pSlider*  
+ [in] *uFlags*  
+ [in] *nOffset*  
+ [in] *hdwp*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -718,8 +718,8 @@ virtual BOOL OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bShow*  
+ [in] *pBar*  
+ [in] *bShow*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -738,11 +738,11 @@ virtual CDockablePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
- [v] *nSensitivity*  
- [v] *bExactBar*  
- [v] *bIsTabArea*  
- [v] *bCaption*  
+ [in] *bodu*  
+ [in] *nSensitivity*  
+ [in] *bExactBar*  
+ [in] *bIsTabArea*  
+ [in] *bCaption*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -783,7 +783,7 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pSlider*  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -795,7 +795,7 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -811,8 +811,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBarOld*  
- [v] *pBarNew*  
+ [in] *pBarOld*  
+ [in] *pBarNew*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -835,11 +835,11 @@ virtual void ResizePaneContainers(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nSide*  
- [v] *bExpand*  
- [v] *nOffset*  
- [v] *hdwp*  
- [v] *Rect –*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
+ [in] *hdwp*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -851,7 +851,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *ar*  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -863,7 +863,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pSlider*  
+ [in] *pSlider*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -875,7 +875,7 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pContainerRTC*  
+ [in] *pContainerRTC*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -887,7 +887,7 @@ virtual void SetResizeMode(BOOL bResize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bResize*  
+ [in] *bResize*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -899,7 +899,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -907,5 +907,5 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CObject – třída](../../mfc/reference/cobject-class.md)   
- [CPaneContainer – třída](../../mfc/reference/cpanecontainer-class.md)   
+ [Cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md)   
  [CPaneDivider – třída](../../mfc/reference/cpanedivider-class.md)

@@ -19,36 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 01d08fb35a1e954aad07153f63ad3ed34282570d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337843"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464521"
 ---
 # <a name="session-object-interfaces"></a>Rozhraní objektu relace
 V následující tabulce jsou uvedeny povinných a volitelných rozhraní definované technologie OLE DB pro objekt relace.  
   
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx)|Povinné|Ano|  
-|[IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx)|Povinné|Ano|  
-|[ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)|Povinné|Ano|  
-|[IAlterIndex](https://msdn.microsoft.com/library/ms714943.aspx)|Nepovinné|Ne|  
-|[IAlterTable](https://msdn.microsoft.com/library/ms719764.aspx)|Nepovinné|Ne|  
-|[IBindResource](https://msdn.microsoft.com/library/ms714936.aspx)|Nepovinné|Ne|  
-|[ICreateRow](https://msdn.microsoft.com/library/ms716832.aspx)|Nepovinné|Ne|  
-|[IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)|Nepovinné|Ano|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)|Nepovinné|Ano|  
-|[IIndexDefinition](https://msdn.microsoft.com/library/ms711593.aspx)|Nepovinné|Ne|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Nepovinné|Ano|  
-|[ITableCreation](https://msdn.microsoft.com/library/ms713639.aspx)|Nepovinné|Ne|  
-|[ITableDefinition](https://msdn.microsoft.com/library/ms714277.aspx)|Nepovinné|Ne|  
-|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/library/ms720947.aspx)|Nepovinné|Ne|  
-|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Nepovinné|Ne|  
-|[ITransactionJoin](https://msdn.microsoft.com/library/ms718071.aspx)|Nepovinné|Ne|  
-|[ITransactionLocal](https://msdn.microsoft.com/library/ms714893.aspx)|Nepovinné|Ne|  
-|[ITransactionObject](https://msdn.microsoft.com/library/ms713659.aspx)|Nepovinné|Ne|  
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))|Povinné|Ano|  
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))|Povinné|Ano|  
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))|Povinné|Ano|  
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943\(v=vs.85\))|Nepovinné|Ne|  
+|[IAlterTable](/previous-versions/windows/desktop/ms719764\(v=vs.85\))|Nepovinné|Ne|  
+|[IBindResource](/previous-versions/windows/desktop/ms714936\(v=vs.85\))|Nepovinné|Ne|  
+|[ICreateRow](/previous-versions/windows/desktop/ms716832\(v=vs.85\))|Nepovinné|Ne|  
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))|Nepovinné|Ano|  
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))|Nepovinné|Ano|  
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593\(v=vs.85\))|Nepovinné|Ne|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Nepovinné|Ano|  
+|[ITableCreation](/previous-versions/windows/desktop/ms713639\(v=vs.85\))|Nepovinné|Ne|  
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277\(v=vs.85\))|Nepovinné|Ne|  
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947\(v=vs.85\))|Nepovinné|Ne|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Nepovinné|Ne|  
+|[ITransactionJoin](/previous-versions/windows/desktop/ms718071\(v=vs.85\))|Nepovinné|Ne|  
+|[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Nepovinné|Ne|  
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Nepovinné|Ne|  
   
  Objekt relace vytváří objektu sady řádků. Pokud zprostředkovatel podporuje příkazy, relace také vytvoří příkazový objekt (`CCommand`, implementace rozhraní OLE DB `TCommand`). Implementuje objekt příkazu `ICommand` rozhraní a používá `ICommand::Execute` metodu provést příkazy pro řádků, jak je znázorněno na následujícím obrázku.  
   

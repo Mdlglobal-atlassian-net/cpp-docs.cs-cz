@@ -1,5 +1,5 @@
 ---
-title: omp – | Microsoft Docs
+title: omp | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849467"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42466020"
 ---
 # <a name="omp"></a>omp
 Přijímá jednu nebo více direktiv OpenMP spolu se všemi volitelnými klauzulemi direktivy.  
@@ -31,12 +31,13 @@ Přijímá jednu nebo více direktiv OpenMP spolu se všemi volitelnými klauzul
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- V tématu [direktivy OpenMP](../parallel/openmp/reference/openmp-directives.md) Další informace.  
+ 
+Zobrazit [direktivy OpenMP](../parallel/openmp/reference/openmp-directives.md) Další informace.  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

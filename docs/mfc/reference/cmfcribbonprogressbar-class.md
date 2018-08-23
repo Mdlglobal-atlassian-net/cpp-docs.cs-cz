@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850758"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466205"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
 Implementuje ovládací prvek, který vizuálně označuje průběh déletrvající operace.  
@@ -151,7 +151,7 @@ int GetRangeMin() const;
  Minimální hodnota v aktuálním rozsahu.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -178,7 +178,7 @@ BOOL IsInfiniteMode() const;
  V nekonečné režimu indikátor průběhu vyplní opakovaně od minimální hodnoty na maximální hodnotu. Nekonečné režimu můžete použít k označení, že probíhá operace, ale, že čas dokončení neznámý.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

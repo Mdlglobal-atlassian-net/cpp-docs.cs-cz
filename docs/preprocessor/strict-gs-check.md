@@ -1,5 +1,5 @@
 ---
-title: strict_gs_check – | Microsoft Docs
+title: strict_gs_check | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842973"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464697"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Tato direktiva pragma poskytuje rozšířenou kontrolu zabezpečení.  
@@ -36,16 +36,18 @@ Tato direktiva pragma poskytuje rozšířenou kontrolu zabezpečení.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Dává pokyn kompilátoru k vložení náhodných souborů cookie do zásobníku funkce pro zjištění některých kategorií přetečení vyrovnávací paměti založené na zásobníku. Ve výchozím nastavení nevkládá možnost kompilátoru /GS (kontrola zabezpečení vyrovnávací paměti) soubor cookie pro všechny funkce. Další informace najdete v tématu [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md).  
+ 
+Dává pokyn kompilátoru k vložení náhodných souborů cookie do zásobníku funkce pro zjištění některých kategorií přetečení vyrovnávací paměti založené na zásobníku. Ve výchozím nastavení `/GS` (Kontrola zabezpečení vyrovnávací paměti) – možnost kompilátoru k vložení do souboru cookie pro všechny funkce. Další informace najdete v tématu [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md).  
   
- Pro povolení strict_gs_check je nutné kompilovat s /GS (kontrola zabezpečení vyrovnávací paměti).  
+Je nutné kompilovat s `/GS` (Kontrola zabezpečení vyrovnávací paměti) umožňující **strict_gs_check**.  
   
- Tuto direktivu pragma je třeba použít u modulů kódu, které jsou vystaveny potenciálně škodlivým datům. Direktiva pragma je velmi agresivní a je použita na funkce, které tuto obranu pravděpodobně potřebovat nebudou, ale je optimalizována pro minimalizaci vlivu na výkon výsledné aplikace.  
+Tuto direktivu pragma je třeba použít u modulů kódu, které jsou vystaveny potenciálně škodlivým datům. Direktiva pragma je velmi agresivní a je použita na funkce, které tuto obranu pravděpodobně potřebovat nebudou, ale je optimalizována pro minimalizaci vlivu na výkon výsledné aplikace.  
   
- I když bude tato direktiva pragma použita, je nutné snažit se psát bezpečný kód. To znamená Ujistěte se, že má váš kód žádné přetečení vyrovnávací paměti. strict_gs_check – může chránit aplikace od přetečení vyrovnávací paměti, které zůstávají ve vašem kódu.  
+I když bude tato direktiva pragma použita, je nutné snažit se psát bezpečný kód. To znamená Ujistěte se, že váš kód nemá žádné přetečení vyrovnávací paměti. **strict_gs_check** může chránit aplikace od přetečení vyrovnávací paměti, které zůstávají ve vašem kódu.  
   
 ## <a name="example"></a>Příklad  
- V následujícím kódu dochází k přetečení vyrovnávací paměti při kopírování pole do místního pole. Při kompilaci tohoto kódu s /GS nebude do zásobníku vložen žádný soubor cookie, protože datový typ pole je ukazatel. Přidání direktivy pragma strict_gs_check vynutí soubor cookie zásobníku do zásobníku funkce.  
+ 
+V následujícím kódu dochází k přetečení vyrovnávací paměti při kopírování pole do místního pole. Při kompilaci tohoto kódu s `/GS`, žádný soubor cookie je vložen do zásobníku, protože datový typ pole je ukazatel. Přidávání **strict_gs_check** – Direktiva pragma vynutí soubor cookie zásobníku do zásobníku funkce.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)
+ 
+[Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)

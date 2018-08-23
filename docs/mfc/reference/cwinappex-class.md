@@ -1,5 +1,5 @@
 ---
-title: Třída CWinAppEx | Microsoft Docs
+title: CWinAppEx – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -128,17 +128,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf57093ff1feeccc0f805bee197959dd4fb453b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123061"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465320"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx – třída
-`CWinAppEx` zpracovává stavu aplikace, uloží stav do registru, načte stav z registru, inicializuje správci aplikace a poskytuje odkazy na tyto stejné správci aplikace.  
+`CWinAppEx` Zpracovává stav aplikace ukládá stav do registru, načítá stav z registru, inicializuje správce aplikace a poskytuje odkazy na ty stejné správce aplikace.  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -157,83 +157,83 @@ class CWinAppEx : public CWinApp
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinAppEx::CleanState](#cleanstate)|Informace o aplikaci se odebere z registru systému Windows.|  
-|[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Určuje, zda aplikace načte počáteční velikost a umístění hlavního okna rámce z registru.|  
-|[CWinAppEx::EnableTearOffMenus](#enabletearoffmenus)|Povoluje úplné vypnutí nabídky pro aplikaci.|  
-|[CWinAppEx::EnableUserTools](#enableusertools)|Umožňuje uživatelům vytvářet vlastní příkazy v aplikaci.|  
-|[CWinAppEx::ExitInstance](#exitinstance)|Voláno rámcem uvnitř `Run` – členská funkce ukončíte tuto instanci aplikace. (Přepisuje [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).)|  
-|[CWinAppEx::GetBinary](#getbinary)|Čte binární data, která souvisí s zadanou hodnotu registru.|  
-|[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)|Vrátí ukazatel na globální [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objektu.|  
+|[CWinAppEx::CleanState](#cleanstate)|Informace o aplikaci se odebere z registru Windows.|  
+|[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Určuje, zda aplikace načte počáteční velikost a umístění okna hlavního rámce z registru.|  
+|[CWinAppEx::EnableTearOffMenus](#enabletearoffmenus)|Umožňuje odnímatelné nabídky pro aplikaci.|  
+|[CWinAppEx::EnableUserTools](#enableusertools)|Umožňuje uživateli vytvořit vlastní příkazy v aplikaci.|  
+|[CWinAppEx::ExitInstance](#exitinstance)|Volá se rozhraním, v rámci `Run` členské funkce ukončila tato instance aplikace. (Přepíše [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).)|  
+|[CWinAppEx::GetBinary](#getbinary)|Čte binární data, která je přidružená hodnota registru.|  
+|[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)|Vrací ukazatel na globální [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) objektu.|  
 |[CWinAppEx::GetDataVersion](#getdataversion)||  
-|[CWinAppEx::GetDataVersionMajor](#getdataversionmajor)|Vrátí hlavní verzi aplikace, které jsou uloženy v registru systému Windows.|  
-|[CWinAppEx::GetDataVersionMinor](#getdataversionminor)|Vrátí dílčí verze aplikace, které jsou uloženy v registru systému Windows.|  
-|[CWinAppEx::GetInt](#getint)|Přečte číselná data, která souvisí s zadanou hodnotu z registru.|  
-|[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)|Vrátí ukazatel na globální [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) objektu.|  
-|[CWinAppEx::GetMouseManager](#getmousemanager)|Vrátí ukazatel na globální [CMouseManager](../../mfc/reference/cmousemanager-class.md) objektu.|  
-|[CWinAppEx::GetObject](#getobject)|Přečte `CObject`-odvozené data, která souvisí s zadanou hodnotu z registru.|  
-|[CWinAppEx::GetRegSectionPath](#getregsectionpath)|Vrátí řetězec, který představuje cestu klíče registru. Tato cesta zřetězí zadaná relativní cesta se cesta k aplikaci.|  
+|[CWinAppEx::GetDataVersionMajor](#getdataversionmajor)|Vrátí hlavní verzi aplikace uložena v registru Windows.|  
+|[CWinAppEx::GetDataVersionMinor](#getdataversionminor)|Vrátí dílčí verze aplikace uložena v registru Windows.|  
+|[CWinAppEx::GetInt](#getint)|Přečte číselná data, která souvisí se zadanou hodnotou z registru.|  
+|[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)|Vrací ukazatel na globální [ckeyboardmanager –](../../mfc/reference/ckeyboardmanager-class.md) objektu.|  
+|[CWinAppEx::GetMouseManager](#getmousemanager)|Vrací ukazatel na globální [cmousemanager –](../../mfc/reference/cmousemanager-class.md) objektu.|  
+|[CWinAppEx::GetObject](#getobject)|Přečte `CObject`-odvozené dat, který je spojen se zadanou hodnotou z registru.|  
+|[CWinAppEx::GetRegSectionPath](#getregsectionpath)|Vrátí řetězec, který je cesta klíče registru. Tato cesta zřetězí zadaná relativní cesta se cesta aplikace.|  
 |[CWinAppEx::GetRegistryBase](#getregistrybase)|Vrátí cestu registru pro aplikaci.|  
 |[CWinAppEx::GetSectionBinary](#getsectionbinary)|Čte binární data, která souvisí se zadaným klíčem a hodnotou z registru.|  
-|[CWinAppEx::GetSectionInt](#getsectionint)|Čte číselná data z registru, zadaný klíč a hodnotu.|  
+|[CWinAppEx::GetSectionInt](#getsectionint)|Číselná data načte z registru související se zadaným klíčem a hodnotou.|  
 |[CWinAppEx::GetSectionObject](#getsectionobject)|Přečte `CObject` data, která souvisí se zadaným klíčem a hodnotou z registru.|  
-|[CWinAppEx::GetSectionString](#getsectionstring)|Čte data řetězec, který je přidružen zadaný klíč a hodnotu z registru.|  
-|[CWinAppEx::GetShellManager](#getshellmanager)|Vrátí ukazatel na globální [CShellManager](../../mfc/reference/cshellmanager-class.md) objektu.|  
-|[CWinAppEx::GetString](#getstring)|Čte data řetězec, který je přidružen zadanou hodnotu z registru.|  
-|[CWinAppEx::GetTooltipManager](#gettooltipmanager)|Vrátí ukazatel na globální [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objektu.|  
-|[CWinAppEx::GetUserToolsManager](#getusertoolsmanager)|Vrátí ukazatel na globální [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) objektu.|  
+|[CWinAppEx::GetSectionString](#getsectionstring)|Přečte data řetězce, který je spojen se zadaným klíčem a hodnotou z registru.|  
+|[CWinAppEx::GetShellManager](#getshellmanager)|Vrací ukazatel na globální [cshellmanager –](../../mfc/reference/cshellmanager-class.md) objektu.|  
+|[CWinAppEx::GetString](#getstring)|Přečte data řetězce, který je spojen se zadanou hodnotou z registru.|  
+|[CWinAppEx::GetTooltipManager](#gettooltipmanager)|Vrací ukazatel na globální [ctooltipmanager –](../../mfc/reference/ctooltipmanager-class.md) objektu.|  
+|[CWinAppEx::GetUserToolsManager](#getusertoolsmanager)|Vrací ukazatel na globální [cusertoolsmanager –](../../mfc/reference/cusertoolsmanager-class.md) objektu.|  
 |[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)|Inicializuje `CContextMenuManager` objektu.|  
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Inicializuje `CKeyboardManager` objektu.|  
 |[CWinAppEx::InitMouseManager](#initmousemanager)|Inicializuje `CMouseManager` objektu.|  
-|[CWinAppEx::InitShellManager](#initshellmanager)|Inicializuje `CShellManager` – třída|  
+|[CWinAppEx::InitShellManager](#initshellmanager)|Inicializuje `CShellManager` třídy|  
 |[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Inicializuje `CTooltipManager` třídy.|  
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||  
-|[CWinAppEx::IsStateExists](#isstateexists)|Určuje, zda zadaný klíč v registru.|  
-|[CWinAppEx::LoadState](#loadstate)|Stav aplikace načte z registru.|  
-|[CWinAppEx::OnAppContextHelp](#onappcontexthelp)|Voláno rámcem, když uživatel požádá kontextovou nápovědu pro **přizpůsobení** dialogové okno.|  
-|[CWinAppEx::OnViewDoubleClick](#onviewdoubleclick)|Zavolá příkaz uživatelem definované při poklepání kdekoli v aplikaci.|  
+|[CWinAppEx::IsStateExists](#isstateexists)|Označuje, zda se zadaným klíčem v registru.|  
+|[CWinAppEx::LoadState](#loadstate)|Načte stav aplikace z registru.|  
+|[CWinAppEx::OnAppContextHelp](#onappcontexthelp)|Volá se rozhraním, když si uživatel vyžádá nápovědu kontext pro **přizpůsobení** dialogové okno.|  
+|[CWinAppEx::OnViewDoubleClick](#onviewdoubleclick)|Uživatelský příkaz volá, když uživatel poklepe kdekoli v aplikaci.|  
 |[CWinAppEx::OnWorkspaceIdle](#onworkspaceidle)||  
-|[CWinAppEx::SaveState](#savestate)|Stav rozhraní zapíše do registru systému Windows.|  
-|[CWinAppEx::SetRegistryBase](#setregistrybase)|Nastaví cestu výchozí klíč registru. Tento klíč bude sloužit jako kořenové pro všechny následné registru volání.|  
-|[CWinAppEx::ShowPopupMenu](#showpopupmenu)|Zobrazí místní nabídky.|  
-|[CWinAppEx::WriteBinary](#writebinary)|Binární data zapíše na zadanou hodnotu registru.|  
-|[CWinAppEx::WriteInt](#writeint)|Tato číselná data zapíše do zadanou hodnotu registru.|  
-|[CWinAppEx::WriteObject](#writeobject)|Zapisuje data, která je odvozena z [CObject – třída](../../mfc/reference/cobject-class.md) na zadanou hodnotu registru.|  
-|[CWinAppEx::WriteSectionBinary](#writesectionbinary)|Binární data zapíše na hodnotu určený klíč registrů.|  
-|[CWinAppEx::WriteSectionInt](#writesectionint)|Zapíše číselná data na hodnotu určený klíč registrů.|  
-|[CWinAppEx::WriteSectionObject](#writesectionobject)|Zapisuje data odvozené z `CObject` třídu na hodnotu určený klíč registrů.|  
-|[CWinAppEx::WriteSectionString](#writesectionstring)|Zapíše data řetězec na hodnotu určený klíč registrů.|  
-|[CWinAppEx::WriteString](#writestring)|Zapíše data řetězec na hodnotu registru.|  
+|[CWinAppEx::SaveState](#savestate)|Zapíše stav rozhraní do registru Windows.|  
+|[CWinAppEx::SetRegistryBase](#setregistrybase)|Nastaví cestu ke klíči registru výchozí. Tento klíč bude sloužit jako kořenový adresář pro všechny následné registru volání.|  
+|[CWinAppEx::ShowPopupMenu](#showpopupmenu)|Zobrazí místní nabídka.|  
+|[CWinAppEx::WriteBinary](#writebinary)|Zapíše binární data do hodnoty registru.|  
+|[CWinAppEx::WriteInt](#writeint)|Zapíše zadaná hodnota registru číselná data.|  
+|[CWinAppEx::WriteObject](#writeobject)|Zapíše data, která je odvozena z [CObject – třída](../../mfc/reference/cobject-class.md) hodnotě registru.|  
+|[CWinAppEx::WriteSectionBinary](#writesectionbinary)|Zapíše binárních dat na hodnotu zadaného klíče registru.|  
+|[CWinAppEx::WriteSectionInt](#writesectionint)|Zapíše číselná data na hodnotu zadaného klíče registru.|  
+|[CWinAppEx::WriteSectionObject](#writesectionobject)|Zapíše data odvozená z `CObject` třídy na hodnotu zadaného klíče registru.|  
+|[CWinAppEx::WriteSectionString](#writesectionstring)|Zapíše data řetězce na hodnotu zadaného klíče registru.|  
+|[CWinAppEx::WriteString](#writestring)|Zapíše data řetězce k hodnotě registru.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinAppEx::LoadCustomState](#loadcustomstate)|Voláno rámcem při načtení stavu aplikace.|  
-|[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Voláno rámcem při načtení velikost a umístění vaší aplikace z registru. Načíst data obsahují velikost a umístění hlavního rámce při posledním zavření aplikace.|  
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Voláno rámcem při okno rámce je zpracování funkce WM_CLOSE bude.|  
-|[CWinAppEx::PreLoadState](#preloadstate)|Voláno rámcem bezprostředně před načtení stavu aplikace.|  
-|[CWinAppEx::PreSaveState](#presavestate)|Voláno rámcem bezprostředně před uložení stavu aplikace.|  
-|[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Znovu načte velikost a umístění okna zadaný z registru|  
-|[CWinAppEx::SaveCustomState](#savecustomstate)|Voláno rámcem po zapíše stavu aplikace do registru.|  
-|[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|Voláno rámcem velikost a umístění hlavního rámce zapsat do registru.|  
+|[CWinAppEx::LoadCustomState](#loadcustomstate)|Volá se rozhraním, když byl načten stav aplikace.|  
+|[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Volá se rozhraním, když se načte velikost a umístění aplikace z registru. Načtená data zahrnuje velikost a umístění hlavního rámce v době poslední ukončením vaší aplikace.|  
+|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Volá se rozhraním, když hlavní okno rámce zpracovává WM_CLOSE.|  
+|[CWinAppEx::PreLoadState](#preloadstate)|Volá se rozhraním, bezprostředně před se načte stav aplikace.|  
+|[CWinAppEx::PreSaveState](#presavestate)|Volá se rozhraním, bezprostředně před se uloží stav aplikace.|  
+|[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Znovu načte velikost a umístění zadaného okna z registru|  
+|[CWinAppEx::SaveCustomState](#savecustomstate)|Volá se rozhraním po stavu aplikace zapíše do registru.|  
+|[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|Volá se rozhraním, aby zápis do registru na velikost a umístění hlavního rámce.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Určuje, zda rozhraní bude resetovat všechny bitové kopie nástrojů, když je načten rámec okna, který obsahuje panelu nástrojů.|  
+|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Určuje, zda rozhraní resetuje všechny obrázky panelu nástrojů při načtení okna rámce, který obsahuje panel nástrojů.|  
   
 ## <a name="remarks"></a>Poznámky  
- Velká část funkce poskytované službou rozhraní MFC framework závisí na `CWinAppEx` třídy. Můžete začlenit `CWinAppEx` třída do své aplikace v jednom ze dvou způsobů:  
+ Většina funkcí poskytovaných rozhraní MFC závisí `CWinAppEx` třídy. Můžete začlenit `CWinAppEx` třídy do vaší aplikace v jednom ze dvou způsobů:  
   
--   Vytvořit `CWinAppEx` třídy v hlavní vlákno.  
+-   Vytvoření `CWinAppEx` třídy v hlavním vlákně.  
   
--   Odvození třídy hlavní aplikace z `CWinAppEx`.  
+-   Odvodit třídu hlavní aplikaci z `CWinAppEx`.  
   
- Po začlenit `CWinAppEx` do vaší aplikace, bude možné inicializovat některého z vybraných manažerů aplikace. Než použijete Správce aplikací, je třeba inicializovat pomocí volání metody odpovídající inicializovat. K získání ukazatele na konkrétní správce, volejte metodu get přidružené. `CWinAppEx` Třída spravuje správce následující aplikace: [CMouseManager třída](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager třída](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager třída](../../mfc/reference/ckeyboardmanager-class.md), [ Třída CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), a [CMenuTearOffManager třída](../../mfc/reference/cmenutearoffmanager-class.md).  
+ Jakmile implementujete `CWinAppEx` do své aplikace můžete inicializovat některý správce aplikace. Před použitím správce aplikace musí inicializovat pomocí volání metody odpovídající inicializace. Získat ukazatel na konkrétní manažera, zavolejte metodu přidružené get. `CWinAppEx` Třída spravuje správce následující aplikace: [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md), [ Cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md), a [cmenutearoffmanager – třída](../../mfc/reference/cmenutearoffmanager-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -241,27 +241,27 @@ class CWinAppEx : public CWinApp
   
  [CWinApp](../../mfc/reference/cwinapp-class.md)  
   
- [CWinAppEx](../../mfc/reference/cwinappex-class.md)  
+ [CWinAppEx –](../../mfc/reference/cwinappex-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwinappex.h  
   
 ##  <a name="cleanstate"></a>  CWinAppEx::CleanState  
- Odebere všechny informace o aplikaci z registru systému Windows.  
+ Odebere všechny informace o aplikaci z registru Windows.  
   
 ```  
 virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSectionName*  
+ [in] *lpszSectionName*  
  Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda byla úspěšná. jinak 0.  
+ Nenulové, pokud metoda byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vymaže data aplikací z konkrétní části registru. Můžete zadat v části zrušte pomocí parametru *lpszSectionName*. Pokud *lpszSectionName* má hodnotu NULL, tato metoda použije výchozí cestu registru uložené v `CWinAppEx` objektu. Cesta v registru výchozí, použijte [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Tato metoda odstraní data aplikací v určitém oddíle registru. Můžete určit části zrušte pomocí parametru *lpszSectionName*. Pokud *lpszSectionName* má hodnotu NULL, tato metoda použije výchozí cestu registru uložené v `CWinAppEx` objektu. Chcete-li získat výchozí cestu k registru, použijte [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  Vytvoří `CWinAppEx` objektu.  
@@ -271,28 +271,28 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bResourceSmartUpdate*  
- Logický parametr, který určuje, zda objekt prostoru by měl zjistit a zpracování aktualizace prostředků.  
+ [in] *bResourceSmartUpdate*  
+ Parametr logické hodnoty, která určuje, zda by měl objekt workspace detekoval a řešil aktualizace prostředku.  
   
 ### <a name="remarks"></a>Poznámky  
- `CWinAppEx` Třída inicializace metody, poskytuje funkce pro ukládání a načítání informací o aplikaci do registru a řízení aplikace globální nastavení. Také umožňuje použít globální správce, jako [CKeyboardManager třída](../../mfc/reference/ckeyboardmanager-class.md) a [CUserToolsManager třída](../../mfc/reference/cusertoolsmanager-class.md). Každá aplikace může mít jenom jednu instanci `CWinAppEx` třídy.  
+ `CWinAppEx` Třída obsahuje metody inicializace, poskytuje funkce pro ukládání a načítání informací o aplikaci do registru a řídí nastavení globální aplikace. Taky umožňuje použít globální správci, jako [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md) a [cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md). Každá aplikace může obsahovat jenom jednu instanci `CWinAppEx` třídy.  
   
 ##  <a name="enableloadwindowplacement"></a>  CWinAppEx::EnableLoadWindowPlacement  
- Určuje, zda aplikace načte počáteční velikost a umístění hlavního okna rámce z registru.  
+ Určuje, zda aplikace načte počáteční velikost a umístění okna hlavního rámce z registru.  
   
 ```  
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- Určuje, zda aplikace načte z registru počáteční velikost a umístění hlavního rámce okna.  
+ [in] *bEnable*  
+ Určuje, zda aplikace načte z registru počáteční velikost a umístění okna hlavního rámce.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení je velikost a umístění hlavního rámce načten z registru společně s další nastavení aplikace. K tomu dojde během [CWinAppEx::LoadState](#loadstate). Pokud nechcete načíst umístění okno úvodní z registru, volejte tuto metodu s *bEnable* nastavena na hodnotu FALSE.  
+ Ve výchozím nastavení velikost a umístění hlavního rámce se načte z registru společně s další nastavení aplikace. K tomu dochází během [CWinAppEx::LoadState](#loadstate). Pokud nechcete načíst umístění počáteční okna z registru, volání této metody s *bEnable* nastavena na hodnotu FALSE.  
   
 ##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
- Vytvoří a inicializuje [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objektu.  
+ Vytvoří a inicializuje [cmenutearoffmanager –](../../mfc/reference/cmenutearoffmanager-class.md) objektu.  
   
 ```  
 BOOL EnableTearOffMenus(
@@ -302,23 +302,23 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszRegEntry*  
- Řetězec, který obsahuje cestu klíče registru. Aplikace používá k uložení informací pro nabídky úplné vypnutí tohoto klíče registru.  
+ [in] *lpszRegEntry*  
+ Řetězec, který obsahuje cestu klíče registru. Aplikace používá tohoto klíče registru k ukládání informací o odnímatelné nabídky.  
   
- [v] *uiCmdFirst*  
- ID první úplné vypnutí nabídky.  
+ [in] *uiCmdFirst*  
+ ID první odtrhnout nabídky.  
   
- [v] *uiCmdLast*  
- ID poslední úplné vypnutí nabídky.  
+ [in] *uiCmdLast*  
+ ID poslední odtrhnout nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud `CMenuTearOffManager` je vytvořen a inicializován úspěšně; FALSE Pokud dojde k chybě nebo pokud `CMenuTearOffManager` již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete povolit nabídky úplné vypnutí ve vaší aplikaci. By měly volat tuto funkci z `InitInstance`.  
+ Pomocí této funkce umožňující odnímatelné nabídky ve vaší aplikaci. Měli byste zavolat tuto funkci z `InitInstance`.  
   
 ##  <a name="enableusertools"></a>  CWinAppEx::EnableUserTools  
- Umožňuje uživateli vytvořit příkazy vlastní nabídky, která snižují stisknutí kláves ve vaší aplikaci. Tato metoda vytvoří [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) objektu.  
+ Umožňuje uživateli vytvořit vlastní příkazy, které snižují stisknutí kláves do aplikace. Tato metoda vytvoří [cusertoolsmanager –](../../mfc/reference/cusertoolsmanager-class.md) objektu.  
   
 ```  
 BOOL EnableUserTools(
@@ -331,33 +331,33 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmdToolsDummy*  
- Celé číslo bez znaménka, který rozhraní používá jako zástupný symbol pro ID příkazu v nabídce Nástroje pro uživatele.  
+ [in] *uiCmdToolsDummy*  
+ Celé číslo bez znaménka, která rozhraní používá jako zástupný symbol pro Identifikátor příkazu v nabídce Nástroje pro uživatele.  
   
- [v] *uiCmdFirst*  
+ [in] *uiCmdFirst*  
  ID příkazu pro příkaz první nástroj uživatele.  
   
- [v] *uiCmdLast*  
+ [in] *uiCmdLast*  
  ID příkazu pro příkaz poslední nástroj uživatele.  
   
- [v] *pToolRTC*  
- Třída, která `CUserToolsManager` objekt se používá k vytvoření nových nástrojů uživatele.  
+ [in] *pToolRTC*  
+ Třída, která `CUserToolsManager` objektu používá k vytvoření nové uživatelské nástroje.  
   
- [v] *uArgMenuID*  
+ [in] *uArgMenuID*  
  ID argument nabídky.  
   
- [v] *uInitDirMenuID*  
- ID nabídky pro počáteční nástroj adresář.  
+ [in] *uInitDirMenuID*  
+ ID nabídky pro adresář počáteční nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud metoda vytvoří a inicializuje `CUserToolsManager` objektu; FALSE Pokud metoda selže nebo pokud `CUserToolsManager` objekt již existuje.  
+ Hodnota TRUE, pokud metoda vytvoří a inicializuje `CUserToolsManager` objektu FALSE Jestliže metoda selže nebo pokud `CUserToolsManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když povolíte uživatelem definované nástroje, podporuje rozhraní automaticky dynamická nabídka, která může být rozšířena při přizpůsobení. Rozhraní framework přidruží každou novou položku externího příkazu. Rozhraní framework tyto příkazy vyvolá, když uživatel vybere odpovídající položku z **nástroje** nabídky.  
+ Když povolíte uživatelem definované nástroje, rozhraní automaticky podporuje dynamickou nabídku, která je možné rozšířit během přizpůsobení. Rozhraní přidruží externí příkaz každou novou položku. Rozhraní volá tyto příkazy, když uživatel vybere odpovídající položku z **nástroje** nabídky.  
   
- Pokaždé, když uživatel přidá novou položku, rozhraní framework vytvoří nový objekt. Typ třídy pro nový objekt je definován *pToolRTC*. *PToolRTC* typu třídy musí být odvozen od [CUserTool třída](../../mfc/reference/cusertool-class.md).  
+ Pokaždé, když uživatel přidá nová položka, rozhraní vytvoří nový objekt. Typ třídy pro nový objekt je definován *pToolRTC*. *PToolRTC* typu třídy musí být odvozen od [cusertool – třída](../../mfc/reference/cusertool-class.md).  
   
- Další informace o nástrojích uživatele a jak je zahrnout do své aplikace najdete v tématu [uživatelem definované nástroje](../../mfc/user-defined-tools.md).  
+ Další informace o uživatelské nástroje a o tom, jak začlenit do vaší aplikace najdete v tématu [uživatelem definované nástroje](../../mfc/user-defined-tools.md).  
   
 ##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance  
 
@@ -371,7 +371,7 @@ virtual int ExitInstance();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getbinary"></a>  CWinAppEx::GetBinary  
- Čte binární data z určený klíč registru.  
+ Čte binární data z klíče registru.  
   
 ```  
 BOOL GetBinary(
@@ -381,25 +381,25 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název klíče registru.  
   
  [out] *ppData*  
- Ukazatel na vyrovnávací paměti, kterou metodu vyplní binární data.  
+ Ukazatel do vyrovnávací paměti, který metoda vyplní binární data.  
   
  [out] *pBytes*  
- Ukazatel na celé číslo bez znaménka, která metoda se používá k zápisu počet bajtů přečtených.  
+ Ukazatel na celé číslo bez znaménka, která metoda se používá k zápisu počet přečtených bajtů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; FALSE jinak.  
+ Hodnota TRUE v případě úspěchu; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte binární data zapsat do registru. Zápis dat do registru, pomocí metod [CWinAppEx::WriteBinary](#writebinary) a [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
+ Tato metoda načte binární data zapsaná do registru. Chcete-li zapsat data do registru, použijte metody [CWinAppEx::WriteBinary](#writebinary) a [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
- Vrátí ukazatel na globální [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objektu.  
+ Vrací ukazatel na globální [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) objektu.  
   
 ```  
 CContextMenuManager* GetContextMenuManager();
@@ -409,7 +409,7 @@ CContextMenuManager* GetContextMenuManager();
  Ukazatel na globální `CContextMenuManager` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud objekt CContextMenuManager není inicializován, tato funkce volá [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) před vrátí ukazatel.  
+ Pokud ccontextmenumanager – objekt není inicializován, tato funkce volá [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) dříve, než vrátí ukazatel.  
   
 ##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion  
 
@@ -423,17 +423,17 @@ int GetDataVersion() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getdataversionmajor"></a>  CWinAppEx::GetDataVersionMajor  
- Vrátí hlavní verzi aplikace, která je uložen v registru systému Windows při volání [CWinAppEx::SaveState](#savestate).  
+ Vrátí hlavní verzi aplikace, který je uložen v registru Windows při volání [CWinAppEx::SaveState](#savestate).  
   
 ```  
 int GetDataVersionMajor() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celočíselná hodnota, která obsahuje hlavní číslo verze.  
+ Celočíselná hodnota, která obsahuje číslo hlavní verze.  
   
 ##  <a name="getdataversionminor"></a>  CWinAppEx::GetDataVersionMinor  
- Vrátí dílčí verze aplikace, která je uložen v registru systému Windows při volání [CWinAppEx::SaveState](#savestate).  
+ Vrátí dílčí verze aplikace, který je uložen v registru Windows při volání [CWinAppEx::SaveState](#savestate).  
   
 ```  
 int GetDataVersionMinor() const;  
@@ -443,7 +443,7 @@ int GetDataVersionMinor() const;
  Celočíselná hodnota, která obsahuje číslo podverze.  
   
 ##  <a name="getint"></a>  CWinAppEx::GetInt  
- Čte data celé číslo z určený klíč registru.  
+ Načte data o celé číslo z klíče registru.  
   
 ```  
 int GetInt(
@@ -452,22 +452,22 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název položky registru.  
   
- [v] *nDefault*  
- Výchozí hodnota, která vrátí tato metoda hodnotu, pokud zadaná položka registru neexistuje.  
+ [in] *Nvýchozí*  
+ Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Data registru, pokud metoda byla úspěšná. v opačném případě *nDefault*.  
+ Data registru, pokud metoda byla úspěšná. v opačném případě *Nvýchozí*.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte data celé číslo z registru. Pokud nejsou žádná data celé číslo přidruženou ke klíči registru indikován *lpszEntry*, vrátí tato metoda *nDefault*. Zápis dat do registru, pomocí metod [CWinAppEx::WriteSectionInt](#writesectionint) a [CWinAppEx::WriteInt](#writeint).  
+ Tato metoda načte data o celé číslo z registru. Pokud neexistuje žádná data o celé číslo přidružený ke klíči registru indikován *lpszEntry*, vrátí tato metoda *Nvýchozí*. Chcete-li zapsat data do registru, použijte metody [CWinAppEx::WriteSectionInt](#writesectionint) a [CWinAppEx::WriteInt](#writeint).  
   
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
- Vrátí ukazatel na globální [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) objektu.  
+ Vrací ukazatel na globální [ckeyboardmanager –](../../mfc/reference/ckeyboardmanager-class.md) objektu.  
   
 ```  
 CKeyboardManager* GetKeyboardManager();
@@ -477,10 +477,10 @@ CKeyboardManager* GetKeyboardManager();
  Ukazatel na globální `CKeyboardManager` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud správce klávesnice není inicializován, tato funkce volá [CWinAppEx::InitKeyboardManager](#initkeyboardmanager) před vrátí ukazatel.  
+ Pokud správce klávesnice není inicializován, tato funkce volá [CWinAppEx::InitKeyboardManager](#initkeyboardmanager) dříve, než vrátí ukazatel.  
   
 ##  <a name="getmousemanager"></a>  CWinAppEx::GetMouseManager  
- Vrátí ukazatel na globální [CMouseManager](../../mfc/reference/cmousemanager-class.md) objektu.  
+ Vrací ukazatel na globální [cmousemanager –](../../mfc/reference/cmousemanager-class.md) objektu.  
   
 ```  
 CMouseManager* GetMouseManager();
@@ -490,10 +490,10 @@ CMouseManager* GetMouseManager();
  Ukazatel na globální `CMouseManager` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud správce myši není inicializován.,, volání této funkce [CWinAppEx::InitMouseManager](#initmousemanager) před vrátí ukazatel.  
+ Pokud správce myši není inicializován, tato funkce volá [CWinAppEx::InitMouseManager](#initmousemanager) dříve, než vrátí ukazatel.  
   
 ##  <a name="getobject"></a>  CWinAppEx::GetObject  
- Přečte [CObject](../../mfc/reference/cobject-class.md)- dervied dat z registru.  
+ Přečte [CObject](../../mfc/reference/cobject-class.md)- vyvodila dat z registru.  
   
 ```  
 BOOL GetObject(
@@ -502,19 +502,19 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
- Řetězec, který obsahuje relativní cestu položky registru.  
+ [in] *lpszEntry*  
+ Řetězec, který obsahuje relativní cestu z položky registru.  
   
- [out] *obj.*  
- Odkaz na `CObject`. Metoda používá k ukládání dat registru tento odkaz.  
+ [out] *obj*  
+ Odkaz na `CObject`. Metoda používá tento odkaz k ukládání dat registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda byla úspěšná. jinak 0.  
+ Nenulové, pokud metoda byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte data z registru, který je odvozený od `CObject`. Zápis `CObject` dat do registru, použijte buď [CWinAppEx::WriteObject](#writeobject) nebo [CWinAppEx::WriteSectionObject](#writesectionobject).  
+ Tato metoda načítá data z registru, který je odvozen z `CObject`. Zapsat `CObject` dat do registru, použijte buď [CWinAppEx::WriteObject](#writeobject) nebo [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru, který se nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  Načte výchozí cestu registru pro aplikaci.  
@@ -524,27 +524,27 @@ LPCTSTR GetRegistryBase();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Řetězec, který obsahuje cestu registru výchozí umístění.  
+ Řetězec, který obsahuje cestu k umístění registru výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny metody [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) , přístup k registru spuštění ve výchozím umístění. Tuto metodu použijte, chcete-li načíst cestu k umístění registru výchozí. Použití [CWinAppEx::SetRegistryBase](#setregistrybase) Chcete-li změnit výchozí umístění v registru.  
+ Všechny metody [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md) , přístup k registru start ve výchozím umístění. Pomocí této metody můžete získat cestu k výchozí umístění registru. Použití [CWinAppEx::SetRegistryBase](#setregistrybase) Chcete-li změnit výchozí umístění registru.  
   
 ##  <a name="getregsectionpath"></a>  CWinAppEx::GetRegSectionPath  
- Vytvoří a vrátí absolutní cesta klíč registru.  
+ Vytvoří a vrátí absolutní cesta klíče registru.  
   
 ```  
 CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *szSectionAdd*  
+ [in] *szSectionAdd*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CString` , který obsahuje absolutní cesta klíč registru.  
+ A `CString` , který obsahuje absolutní cesta klíče registru.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda definuje klíč registru absolutní cesta připojením relativní cestu do *szSectionAdd* do výchozího umístění registru pro vaši aplikaci. Výchozí klíč registru, použijte metodu [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Tato metoda definuje absolutní cesta ke klíči registru přidáním relativní cestu v *szSectionAdd* do výchozího umístění registru pro vaši aplikaci. Chcete-li získat výchozí klíč registru, použijte metodu [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  Čte binární data z registru.  
@@ -558,28 +558,28 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnoty ke čtení.  
   
  [out] *ppData*  
  Ukazatel do vyrovnávací paměti, kde Metoda ukládá data.  
   
  [out] *pBytes*  
- Ukazatel na celé číslo bez znaménka. Metoda zapíše velikost *ppData* pro tento parametr.  
+ Ukazatel na celé číslo bez znaménka. Metoda zapíše velikost *ppData* tomuto parametru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
+ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte binární data, která je zapsán do registru pomocí metody [CWinAppEx::WriteBinary](#writebinary) a [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
+ Tato metoda načte binární data, která jsou zapsána do registru, pomocí metody [CWinAppEx::WriteBinary](#writebinary) a [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
- Čte data celé číslo z registru.  
+ Načte data o celé číslo z registru.  
   
 ```  
 int GetSectionInt(
@@ -589,25 +589,25 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnoty ke čtení.  
   
- [v] *nDefault*  
+ [in] *Nvýchozí*  
  Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celé číslo data, která je uložená v hodnotě registru; *nDefault* Pokud dat neexistuje.  
+ Celé číslo data, která je uložená v hodnotě registru; *Nvýchozí* Pokud dat neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Použít metody [CWinAppEx::WriteInt](#writeint) a [CWinAppEx::WriteSectionInt](#writesectionint) celočíselný datový zapsat do registru.  
+ Použijte metody [CWinAppEx::WriteInt](#writeint) a [CWinAppEx::WriteSectionInt](#writesectionint) celočíselná data zapsat do registru.  
   
  *LpszSubSection* parametr není absolutní cesta položky registru. Je relativní cestu, která se přidá na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
- Přečte [CObject](../../mfc/reference/cobject-class.md) dat registru z registru.  
+ Přečte [CObject](../../mfc/reference/cobject-class.md) data registru z registru.  
   
 ```  
 BOOL GetSectionObject(
@@ -617,25 +617,25 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnoty ke čtení.  
   
- [out] *obj.*  
+ [out] *obj*  
  Odkaz na `CObject`. Tato metoda používá `CObject` k ukládání dat registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte data z registru. Čtení dat je `CObject` data nebo data pro třídy odvozené od `CObject`. Zápis `CObject` dat do registru, použijte buď [CWinAppEx::WriteObject](#writeobject) nebo [CWinAppEx::WriteSectionObject](#writesectionobject).  
+ Tato metoda načítá data z registru. Čtení dat `CObject` data nebo data pro třídu odvozenou z `CObject`. Zapsat `CObject` dat do registru, použijte buď [CWinAppEx::WriteObject](#writeobject) nebo [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
- Řetězec čtení dat z registru.  
+ Čte data z registru řetězce.  
   
 ```  
 CString GetSectionString(
@@ -645,25 +645,25 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnoty ke čtení.  
   
- [v] *lpszDefault*  
+ [in] *lpszDefault*  
  Výchozí hodnota vrátit, pokud zadaná hodnota neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Řetězec data uložená v hodnotě registru, pokud existuje data v opačném případě *lpszDefault*.  
+ Řetězcová data uložená v hodnotě registru, pokud existuje data v opačném případě *lpszDefault*.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte data řetězec zapsat do registru. Použití [CWinAppEx::WriteString](#writestring) a [CWinAppEx::WriteSectionString](#writesectionstring) k zápisu dat řetězec do registru.  
+ Tato metoda načítá řetězec data zapsána do registru. Použití [CWinAppEx::WriteString](#writestring) a [CWinAppEx::WriteSectionString](#writesectionstring) zapsat data. řetězec do registru.  
   
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
- Vrátí ukazatel na globální [CShellManager](../../mfc/reference/cshellmanager-class.md) objektu.  
+ Vrací ukazatel na globální [cshellmanager –](../../mfc/reference/cshellmanager-class.md) objektu.  
   
 ```  
 CShellManager* GetShellManager();
@@ -673,10 +673,10 @@ CShellManager* GetShellManager();
  Ukazatel na globální `CShellManager` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CShellManager` objekt není inicializován, tato funkce volá [CWinAppEx::InitShellManager](#initshellmanager) před vrátí ukazatel.  
+ Pokud `CShellManager` objekt není inicializován, tato funkce volá [CWinAppEx::InitShellManager](#initshellmanager) dříve, než vrátí ukazatel.  
   
 ##  <a name="getstring"></a>  CWinAppEx::GetString  
- Řetězec čtení dat z klíče registru.  
+ Čte data z klíče registru řetězce.  
   
 ```  
 CString GetString(
@@ -685,22 +685,22 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název klíče registru  
   
- [v] *lpzDefault*  
- Výchozí hodnota, která vrátí tato metoda hodnotu, pokud zadaná položka registru neexistuje.  
+ [in] *lpzDefault*  
+ Výchozí hodnota, která metoda vrátí, pokud zadaná položka registru neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Řetězec dat uložených v registru v případě úspěšného; *lpszDefault* jinak.  
+ Data řetězce, který je uložen v registru v případě úspěchu; *lpszDefault* jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda čte data řetězec zapsat do registru. Zápis dat do registru, pomocí metod [CWinAppEx::WriteString](#writestring) nebo [CWinAppEx::WriteSectionString](#writesectionstring).  
+ Tato metoda načítá řetězec data zapsána do registru. Chcete-li zapsat data do registru, použijte metody [CWinAppEx::WriteString](#writestring) nebo [CWinAppEx::WriteSectionString](#writesectionstring).  
   
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
- Vrátí ukazatel na globální [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objektu.  
+ Vrací ukazatel na globální [ctooltipmanager –](../../mfc/reference/ctooltipmanager-class.md) objektu.  
   
 ```  
 CTooltipManager* GetTooltipManager();
@@ -710,95 +710,95 @@ CTooltipManager* GetTooltipManager();
  Ukazatel na globální `CTooltipManager` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CTooltipManager` objekt není inicializován, tato funkce volá [CWinAppEx::InitTooltipManager](#inittooltipmanager) před vrátí ukazatel.  
+ Pokud `CTooltipManager` objekt není inicializován, tato funkce volá [CWinAppEx::InitTooltipManager](#inittooltipmanager) dříve, než vrátí ukazatel.  
   
 ##  <a name="getusertoolsmanager"></a>  CWinAppEx::GetUserToolsManager  
- Vrátí ukazatel na globální [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) objektu.  
+ Vrací ukazatel na globální [cusertoolsmanager –](../../mfc/reference/cusertoolsmanager-class.md) objektu.  
   
 ```  
 CUserToolsManager* GetUserToolsManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na globální `CUserToolsManager` objektu; Pro tuto aplikaci není povolena hodnota NULL, pokud uživatel nástrojů pro správu.  
+ Ukazatel na globální `CUserToolsManager` objektu Pro aplikaci není povolena hodnota NULL, pokud uživatel nástroje pro správu.  
   
 ### <a name="remarks"></a>Poznámky  
- Ještě před obnovením ukazatel `CUserToolsManager` objektu, Správce musí inicializovat voláním [CWinAppEx::EnableUserTools](#enableusertools).  
+ Před načtením ukazatel `CUserToolsManager` objektu voláním musí inicializovat správce [CWinAppEx::EnableUserTools](#enableusertools).  
   
 ##  <a name="initcontextmenumanager"></a>  CWinAppEx::InitContextMenuManager  
- Inicializuje [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objektu.  
+ Inicializuje [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) objektu.  
   
 ```  
 BOOL InitContextMenuManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda vytvoří objekt CContextMenuManager; 0, pokud `CContextMenuManager` objekt již existuje.  
+ Nenulové, pokud metoda vytvoří objekt ccontextmenumanager –. 0, pokud `CContextMenuManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když zavoláte [CWinAppEx::GetContextMenuManager](#getcontextmenumanager), výchozí implementace této metody volá `InitContextMenuManager`.  
+ Při volání [CWinAppEx::GetContextMenuManager](#getcontextmenumanager), zavolá výchozí implementace této metody `InitContextMenuManager`.  
   
- Pokud je aplikace již manažera kontextové nabídky a volání `InitContextMenuManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto by neměl volat `InitContextMenuManager` Pokud vytvoříte `CContextMenuManager` objektu přímo. Pokud se nepoužívá vlastní `CContextMenuManager`, měli byste použít `GetContextMenuManager` k vytvoření `CContextMenuManager` objektu.  
+ Pokud už vaše aplikace má správce nabídek kontextu a zavoláte `InitContextMenuManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto byste neměli volat `InitContextMenuManager` Pokud vytvoříte `CContextMenuManager` objektu přímo. Pokud nepoužíváte vlastní `CContextMenuManager`, měli byste použít `GetContextMenuManager` k vytvoření `CContextMenuManager` objektu.  
   
 ##  <a name="initkeyboardmanager"></a>  CWinAppEx::InitKeyboardManager  
- Inicializuje [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) objektu.  
+ Inicializuje [ckeyboardmanager –](../../mfc/reference/ckeyboardmanager-class.md) objektu.  
   
 ```  
 BOOL InitKeyboardManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda vytvoří `CKeyboardManager` objekt; 0, pokud `CKeyboardManager` objekt již existuje.  
+ Nenulové, pokud metoda vytvoří `CKeyboardManager` objekt; 0, pokud `CKeyboardManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když zavoláte [CWinAppEx::GetKeyboardManager](#getkeyboardmanager), výchozí implementace této metody volá `InitKeyboardManager`.  
+ Při volání [CWinAppEx::GetKeyboardManager](#getkeyboardmanager), zavolá výchozí implementace této metody `InitKeyboardManager`.  
   
- Pokud je aplikace již manažera klávesnice a volání `InitKeyboardManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto by neměl volat `InitKeyboardManager` Pokud vytvoříte `CKeyboardManager` objektu přímo. Pokud se nepoužívá vlastní `CKeyboardManager`, měli byste použít `GetKeyboardManager` k vytvoření `CKeyboardManager` objektu.  
+ Pokud už vaše aplikace má správce klávesnice a zavoláte `InitKeyboardManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto byste neměli volat `InitKeyboardManager` Pokud vytvoříte `CKeyboardManager` objektu přímo. Pokud nepoužíváte vlastní `CKeyboardManager`, měli byste použít `GetKeyboardManager` k vytvoření `CKeyboardManager` objektu.  
   
 ##  <a name="initmousemanager"></a>  CWinAppEx::InitMouseManager  
- Inicializuje [CMouseManager](../../mfc/reference/cmousemanager-class.md) objektu.  
+ Inicializuje [cmousemanager –](../../mfc/reference/cmousemanager-class.md) objektu.  
   
 ```  
 BOOL InitMouseManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda vytvoří `CMouseManager` objekt; 0, pokud `CMouseManager` objekt již existuje.  
+ Nenulové, pokud metoda vytvoří `CMouseManager` objekt; 0, pokud `CMouseManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když zavoláte [CWinAppEx::GetMouseManager](#getmousemanager), výchozí implementace této metody volá `InitMouseManager`.  
+ Při volání [CWinAppEx::GetMouseManager](#getmousemanager), zavolá výchozí implementace této metody `InitMouseManager`.  
   
- Pokud je aplikace již manažera myši a volání `InitMouseManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto by nemělo volání `InitMouseManager` Pokud vytvoříte `CMouseManager` objektu přímo. Pokud se nepoužívá vlastní `CMouseManager`, měli byste použít `GetMouseManager` k vytvoření `CMouseManager` objektu.  
+ Pokud už vaše aplikace má správce myši a zavoláte `InitMouseManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto byste neměli volat `InitMouseManager` Pokud vytvoříte `CMouseManager` objektu přímo. Pokud nepoužíváte vlastní `CMouseManager`, měli byste použít `GetMouseManager` k vytvoření `CMouseManager` objektu.  
   
 ##  <a name="initshellmanager"></a>  CWinAppEx::InitShellManager  
- Inicializuje [CShellManager](../../mfc/reference/cshellmanager-class.md) objektu.  
+ Inicializuje [cshellmanager –](../../mfc/reference/cshellmanager-class.md) objektu.  
   
 ```  
 BOOL InitShellManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda vytvoří `CShellManager` objekt; 0, pokud `CShellManager` objekt již existuje.  
+ Nenulové, pokud metoda vytvoří `CShellManager` objekt; 0, pokud `CShellManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když zavoláte [CWinAppEx::GetShellManager](#getshellmanager), výchozí implementace této metody volá `InitShellManager`.  
+ Při volání [CWinAppEx::GetShellManager](#getshellmanager), zavolá výchozí implementace této metody `InitShellManager`.  
   
- Pokud je aplikace již shell manager a volání `InitShellManager`, aplikace vyvolá [ASSERT](diagnostic-services.md#assert) selhání. Proto Nevolejte `InitShellManager` Pokud vytvoříte `CShellManager` objektu přímo. Pokud se nepoužívá vlastní `CShellManager`, použijte `GetShellManager` k vytvoření `CShellManager` objektu.  
+ Pokud už vaše aplikace má správce prostředí a zavoláte `InitShellManager`, vaše aplikace vyvolá [ASSERT](diagnostic-services.md#assert) selhání. Proto Nevolejte `InitShellManager` Pokud vytvoříte `CShellManager` objektu přímo. Pokud nepoužíváte vlastní `CShellManager`, použijte `GetShellManager` k vytvoření `CShellManager` objektu.  
   
 ##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager  
- Inicializuje [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objektu.  
+ Inicializuje [ctooltipmanager –](../../mfc/reference/ctooltipmanager-class.md) objektu.  
   
 ```  
 BOOL InitTooltipManager();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda vytvoří `CTooltipManager` objekt; 0, pokud `CTooltipManager` objekt již existuje.  
+ Nenulové, pokud metoda vytvoří `CTooltipManager` objekt; 0, pokud `CTooltipManager` objekt již existuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Když zavoláte [CWinAppEx::GetTooltipManager](#gettooltipmanager), výchozí implementace této metody volá `InitTooltipManager`.  
+ Při volání [CWinAppEx::GetTooltipManager](#gettooltipmanager), zavolá výchozí implementace této metody `InitTooltipManager`.  
   
- Pokud je aplikace již manažera popisek a volání `InitTooltipManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto by neměl volat `InitTooltipManager` Pokud vytvoříte `CTooltipManager` objektu přímo. Pokud se nepoužívá vlastní `CTooltipManager`, měli byste použít `GetTooltipManager` k vytvoření `CTooltipManager` objektu.  
+ Pokud už vaše aplikace má popisek manažera a zavoláte `InitTooltipManager`, vaše aplikace bude mít [ASSERT](diagnostic-services.md#assert) selhání. Proto byste neměli volat `InitTooltipManager` Pokud vytvoříte `CTooltipManager` objektu přímo. Pokud nepoužíváte vlastní `CTooltipManager`, měli byste použít `GetTooltipManager` k vytvoření `CTooltipManager` objektu.  
   
 ##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate  
 
@@ -812,33 +812,33 @@ BOOL IsResourceSmartUpdate() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isstateexists"></a>  CWinAppEx::IsStateExists  
- Určuje, zda zadaný klíč v registru.  
+ Označuje, zda se zadaným klíčem v registru.  
   
 ```  
 BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSectionName*  
+ [in] *lpszSectionName*  
  Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je klíč v registru; jinak 0.  
+ Nenulové, pokud je klíč v registru. jinak 0.  
   
 ##  <a name="loadcustomstate"></a>  CWinAppEx::LoadCustomState  
- Tato metoda volá framework po načte stav aplikace z registru.  
+ Rozhraní volá tuto metodu po načte stav aplikace z registru.  
   
 ```  
 virtual void LoadCustomState();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete provést jakékoli zpracovávání po načtení stavu aplikace z registru. Ve výchozím nastavení tato metoda neprovede žádnou akci.  
+ Potlačí tuto metodu, pokud chcete provést zpracování po načtení stavu aplikace z registru. Ve výchozím nastavení tato metoda nemá žádný účinek.  
   
- Chcete-li načíst informace o vlastních stavu z registru, informace je třeba nejprve uložit pomocí [CWinAppEx::SaveCustomState](#savecustomstate).  
+ Aby bylo možné načíst informace o vlastní stav z registru, musíte jej nejprve uložit informace pomocí [CWinAppEx::SaveCustomState](#savecustomstate).  
   
 ##  <a name="loadstate"></a>  CWinAppEx::LoadState  
- Přečte stav aplikace z registru systému Windows.  
+ Načte stav aplikace z registru Windows.  
   
 ```  
 BOOL LoadState(
@@ -862,27 +862,27 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pFrame*  
- Ukazatel na rámec okna objekt. Metoda platí informace o stavu v registru do tohoto rámce okna.  
+ [in] *pFrame*  
+ Ukazatel na objekt okna rámce. Metoda použije informace o stavu v registru do tohoto okna rámce.  
   
- [v] *lpszSectionName*  
+ [in] *lpszSectionName*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *pFrameImpl*  
- Ukazatel na `CFrameImpl` objektu. Metoda platí informace o stavu v registru do tohoto rámce okna.  
+ [in] *pFrameImpl*  
+ Ukazatel `CFrameImpl` objektu. Metoda použije informace o stavu v registru do tohoto okna rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte stav aplikace a žádné informace o stavu pro okně s rámečkem. Načíst informace o okně s rámečkem se použije pro zadaný rámce okna. Pokud nezadáte okně s rámečkem, je načítán pouze informace o stavu aplikace. Informace o aplikaci zahrnuje stav [CMouseManager třída](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager třída](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager třída](../../mfc/reference/ckeyboardmanager-class.md)a [ Třída CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).  
+ Tato metoda načte stav aplikace a žádné informace o stavu pro okno rámce. Načíst informace pro okno rámce se použije u zadaného rámce okna. Pokud nezadáte okno rámce, je načíst pouze informace o stavu aplikace. Informace o aplikaci zahrnuje stav [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md)a [ Cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md).  
   
- Výchozí implementaci `CFrameImpl::OnLoadFrame` volání `LoadState`.  
+ Výchozí implementace `CFrameImpl::OnLoadFrame` volání `LoadState`.  
   
- *LpszSectionName* parametr není absolutní cesta pro položku registru. Je relativní cestu, která se přidá na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSectionName* parametr není absolutní cestu pro položky registru. Je relativní cestu, která se přidá na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
- Voláno rámcem při načtení velikost a umístění hlavního okna rámce z registru.  
+ Volá se rozhraním, když se načte velikost a umístění okna hlavního rámce z registru.  
   
 ```  
 virtual BOOL LoadWindowPlacement(
@@ -893,34 +893,34 @@ virtual BOOL LoadWindowPlacement(
   
 ### <a name="parameters"></a>Parametry  
  [out] *rectNormalPosition*  
- Obdélníku, která obsahuje souřadnice hlavního okna rámce, pokud je v obnovené pozici.  
+ Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je v obnovené pozici.  
   
  [out] *nFlags*  
- Příznaky, které řídí pozici minimalizované okno a jak operační systém přepíná mezi Obnovené okno a minimalizovaném okně.  
+ Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
   
  [out] *nShowCmd*  
- Celé číslo, které určuje zobrazení stavu okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+ Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení MFC automaticky načte předchozí pozici a stav hlavního okna rámce při spuštění aplikace. Další informace o tom, jak tyto informace jsou uloženy v registru najdete v tématu [CWinAppEx::StoreWindowPlacement](#storewindowplacement).  
+ Ve výchozím nastavení, knihovna MFC automaticky načte předchozí umístění a stav okna hlavního rámce při spuštění aplikace. Další informace o tom, jak tyto informace jsou uloženy v registru najdete v tématu [CWinAppEx::StoreWindowPlacement](#storewindowplacement).  
   
- Potlačí tuto metodu, pokud chcete načíst další informace týkající se hlavního rámce okna.  
+ Potlačí tuto metodu, pokud chcete načíst další informace o hlavní okno rámce.  
   
 ##  <a name="m_bforceimagereset"></a>  CWinAppEx::m_bForceImageReset  
- Určuje, zda rozhraní obnoví všechny bitové kopie nástrojů, když ho znovu načte rámec okna, který obsahuje panelu nástrojů.  
+ Určuje, zda rozhraní obnoví všechny obrázky panelu nástrojů, až se znovu načte rámec okna, který obsahuje panel nástrojů.  
   
 ```  
 BOOL m_bForceImageReset;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_bForceImageReset` – Datový člen je chráněný proměnné.  
+ `m_bForceImageReset` Datový člen je chráněná proměnná.  
   
 ##  <a name="onappcontexthelp"></a>  CWinAppEx::OnAppContextHelp  
- Rozhraní framework volá tuto metodu, když uživatel požádá kontextovou nápovědu pro **přizpůsobení** dialogové okno.  
+ Rozhraní volá tuto metodu, když si uživatel vyžádá nápovědu kontext pro **přizpůsobení** dialogové okno.  
   
 ```  
 virtual void OnAppContextHelp(
@@ -929,31 +929,31 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndControl*  
- Ukazatel na okno objekt, pro které uživatel vyvolat kontextovou nápovědu.  
+ [in] *pWndControl*  
+ Ukazatel na objekt window, pro kterou uživatel vyvolal kontextové nápovědy.  
   
- [v] *[dwHelpIDArray]*  
- Rezervovaná hodnota.  
+ [in] *dwHelpIDArray]*  
+ Rezervovanou hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je aktuálně vyhrazená pro budoucí použití. Výchozí implementace neprovede žádnou akci a není aktuálně voláno rámcem.  
+ Tato metoda je aktuálně vyhrazena pro budoucí použití. Výchozí implementace neprovede žádnou akci a není aktuálně volá se rozhraním.  
   
 ##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
- Tato metoda volá framework při okně s rámečkem je zpracování funkce WM_CLOSE bude.  
+ Rozhraní volá tuto metodu, když okno rámce zpracovává WM_CLOSE.  
   
 ```  
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pFrameImpl*  
- Ukazatel na `CFrameImpl` objektu.  
+ [in] *pFrameImpl*  
+ Ukazatel `CFrameImpl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této metody uloží stav *pFrameImpl*.  
   
 ##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
- Zavolá příkaz definovaný uživatelem, který je přidružený zobrazení při poklepání kdekoli v rámci tohoto zobrazení.  
+ Vyvolá příkaz definovaný uživatelem, který je přidružený k zobrazení, když uživatel poklepe kdekoli v rámci tohoto zobrazení.  
   
 ```  
 virtual BOOL OnViewDoubleClick(
@@ -962,17 +962,17 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- Ukazatel na objekt odvozené z [CView – třída](../../mfc/reference/cview-class.md).  
+ [in] *pWnd*  
+ Ukazatel na objekt odvozený od [CView Class](../../mfc/reference/cview-class.md).  
   
- [v] *iViewId*  
+ [in] *iViewId*  
  ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud rozhraní vyhledá příkaz; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud najde příkaz; rozhraní v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Aby bylo možné podporovat chování vlastní myši, musí volat tuto funkci při zpracování zprávy WM_LBUTTONDBLCLK. Tato metoda bude možné provést příkaz přidružené k ID zobrazení poskytl *iViewId*. Další informace o chování vlastní myši najdete v tématu [přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md).  
+ Za účelem podpory myši vlastní chování, je nutné volat tuto funkci při zpracování zprávy WM_LBUTTONDBLCLK. Tato metoda se spustí příkaz přidružený k zobrazení ID poskytnutá *iViewId*. Další informace týkající se myši vlastní chování najdete v tématu [přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
@@ -982,31 +982,31 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *CWnd&#38;*  
+ [in] *CWnd&#38;*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="preloadstate"></a>  CWinAppEx::PreLoadState  
- Tato metoda volá framework bezprostředně před načtením stavu aplikace z registru.  
+ Rozhraní volá tuto metodu, bezprostředně před načte stav aplikace z registru.  
   
 ```  
 virtual void PreLoadState();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete provést jakékoli zpracovávání bezprostředně před rozhraní načte stav aplikace.  
+ Potlačí tuto metodu, pokud ji chcete zpracování bezprostředně před rozhraní načte stav aplikace.  
   
 ##  <a name="presavestate"></a>  CWinAppEx::PreSaveState  
- Tato metoda volá framework bezprostředně před uložením stavu aplikace.  
+ Rozhraní volá tuto metodu, bezprostředně před uložením stavu aplikace.  
   
 ```  
 virtual void PreSaveState();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete provést jakékoli zpracovávání bezprostředně před rozhraní framework uloží stav aplikace.  
+ Potlačí tuto metodu, pokud ji chcete zpracování bezprostředně před rozhraní framework uloží stav aplikace.  
   
 ##  <a name="reloadwindowplacement"></a>  CWinAppEx::ReloadWindowPlacement  
  Znovu načte velikost a umístění okna z registru.  
@@ -1016,27 +1016,27 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pFrame*  
- Ukazatel na rámec okna.  
+ [in] *pFrame*  
+ Ukazatel na okno rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda byla úspěšná. 0, je-li zatížení selhání nebo že žádná data k načtení.  
+ Nenulové, pokud metoda byla úspěšná. 0, je-li zatížení selhalo nebo že žádná data pro načtení.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí funkce [CWinAppEx::StoreWindowPlacement](#storewindowplacement) velikost a umístění okna zapsat do registru.  
+ Použijte funkci [CWinAppEx::StoreWindowPlacement](#storewindowplacement) zapsat velikost a umístění okna do registru.  
   
 ##  <a name="savecustomstate"></a>  CWinAppEx::SaveCustomState  
- Tato metoda volá framework po ho uloží stav aplikace do registru.  
+ Rozhraní volá tuto metodu po uloží stav aplikace do registru.  
   
 ```  
 virtual void SaveCustomState();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete provést jakékoli zpracovávání po aplikace uloží stav do registru. Ve výchozím nastavení tato metoda neprovede žádnou akci.  
+ Potlačí tuto metodu, pokud chcete provést zpracování po aplikace ukládá stav do registru. Ve výchozím nastavení tato metoda nemá žádný účinek.  
   
 ##  <a name="savestate"></a>  CWinAppEx::SaveState  
- Stav aplikace zapíše do registru systému Windows.  
+ Stav aplikace zapíše do registru Windows.  
   
 ```  
 virtual BOOL SaveState(
@@ -1060,22 +1060,22 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSectionName*  
+ [in] *lpszSectionName*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *pFrameImpl*  
- Ukazatel na `CFrameImpl` objektu. Tento snímek se uloží do registru systému Windows.  
+ [in] *pFrameImpl*  
+ Ukazatel `CFrameImpl` objektu. Tento snímek je uložena do registru Windows.  
   
- [v] *pFrame*  
- Ukazatel na rámec okna objekt. Tento snímek se uloží do registru systému Windows.  
+ [in] *pFrame*  
+ Ukazatel na objekt okna rámce. Tento snímek je uložena do registru Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; FALSE jinak.  
+ Hodnota TRUE v případě úspěchu; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda šetří stav aplikace a žádné informace o stavu pro zadané rámce okna. Pokud nezadáte okně s rámečkem, metoda pouze uloží stav aplikace. Informace o aplikaci zahrnuje stav [CMouseManager třída](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager třída](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager třída](../../mfc/reference/ckeyboardmanager-class.md)a [ Třída CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).  
+ Tato metoda uloží stav aplikace a žádné informace o stavu pro zadané rámce okna. Pokud nezadáte okno rámce, metoda pouze uloží stav aplikace. Informace o aplikaci zahrnuje stav [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md), [ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md), [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md)a [ Cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md).  
   
- *LpszSectionName* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSectionName* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
 ##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  Nastaví výchozí cestu registru pro aplikaci.  
@@ -1085,17 +1085,17 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSectionName*  
+ [in] *lpszSectionName*  
  Řetězec, který obsahuje cestu klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Řetězec, který obsahuje cestu registru výchozí umístění.  
+ Řetězec, který obsahuje cestu k umístění registru výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny metody [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) , přístup k registru spuštění ve výchozím umístění. Tuto metodu použijte, chcete-li změnit umístění v registru této výchozí. Použití [CWinAppEx::GetRegistryBase](#getregistrybase) načíst výchozí umístění v registru.  
+ Všechny metody [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md) , přístup k registru start ve výchozím umístění. Tuto metodu použijte, chcete-li změnit tento výchozí umístění registru. Použití [CWinAppEx::GetRegistryBase](#getregistrybase) načíst výchozí umístění registru.  
   
 ##  <a name="showpopupmenu"></a>  CWinAppEx::ShowPopupMenu  
- Zobrazí místní nabídky.  
+ Zobrazí místní nabídka.  
   
 ```  
 virtual BOOL ShowPopupMenu(
@@ -1105,25 +1105,25 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiMenuResId*  
- Nabídky prostředku.  
+ [in] *uiMenuResId*  
+ ID prostředku nabídky  
   
- [v] *bodu*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) určující pozici v nabídce v souřadnice obrazovky.  
+ [in] *bodu*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , která určuje umístění v nabídce v souřadnicovém systému obrazovky.  
   
- [v] *pWnd*  
- Ukazatel na okně, které vlastní místní nabídky.  
+ [in] *pWnd*  
+ Ukazatel, který vlastní místní nabídka okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud v místní nabídce se zobrazí úspěšně; jinak 0.  
+ Nenulové, pokud se zobrazí místní nabídka se úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zobrazí v nabídce přidružené *uiMenuResId*.  
+ Tato metoda zobrazí nabídku přidružené *uiMenuResId*.  
   
- Chcete-li podporovat místní nabídky, musíte mít [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objektu. Pokud jste neinicializovali `CContextMenuManager` objektu `ShowPopupMenu` se nezdaří.  
+ Pro podporu kontextových nabídkách, musíte mít [ccontextmenumanager –](../../mfc/reference/ccontextmenumanager-class.md) objektu. Pokud nebyla inicializována `CContextMenuManager` objektu, `ShowPopupMenu` se nezdaří.  
   
 ##  <a name="storewindowplacement"></a>  CWinAppEx::StoreWindowPlacement  
- Voláno rámcem zapsat do registru na velikost a umístění hlavního rámce okna.  
+ Volá se rozhraním, zaznamená se do registru velikost a umístění okna hlavního rámce.  
   
 ```  
 virtual BOOL StoreWindowPlacement(
@@ -1133,25 +1133,25 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nFlags*  
- Příznaky, které řídí pozici minimalizované okno a jak operační systém přepíná mezi Obnovené okno a minimalizovaném okně.  
+ [in] *nFlags*  
+ Příznaky, které určují umístění minimalizované okno a jak operační systém Přepne mezi minimalizované okno a obnovený okna.  
   
- [v] *nShowCmd*  
- Celé číslo, které určuje zobrazení stavu okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+ [in] *nShowCmd*  
+ Celé číslo, které určuje zobrazit stav okna. Další informace o možných hodnot najdete v tématu [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [v] *rectNormalPosition*  
- Obdélníku, která obsahuje souřadnice hlavního okna rámce, pokud je v obnovené stavu.  
+ [in] *rectNormalPosition*  
+ Obdélník, který obsahuje souřadnice oknem hlavního rámce, když je ve stavu pro obnovený.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení MFC automaticky uloží stav hlavního rámce okna před ukončí aplikaci a pozice. Tyto informace jsou uloženy v registru pod klíčem windowplacement – ve výchozím umístění registru pro vaši aplikaci. Další informace o umístění registru výchozí aplikace najdete v tématu [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Ve výchozím nastavení automaticky ukládá MFC umístění a stav okna hlavního rámce před ukončí aplikaci. Tyto informace jsou uloženy v registru Windows v klíči windowplacement – ve výchozím umístění registru pro vaši aplikaci. Další informace o výchozí umístění registru v rámci vaší aplikace najdete v tématu [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
- Potlačí tuto metodu, pokud chcete uložit další informace týkající se hlavního rámce okna.  
+ Potlačí tuto metodu, pokud chcete k ukládání dalších informací o hlavní okno rámce.  
   
 ##  <a name="writebinary"></a>  CWinAppEx::WriteBinary  
- Binární data zapíše do registru.  
+ Zapíše binární data do registru.  
   
 ```  
 BOOL WriteBinary(
@@ -1161,22 +1161,22 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název klíče registru.  
   
- [v] *pData*  
- Data, která k ukládání.  
+ [in] *pData*  
+ Data k uložení.  
   
- [v] *nBytes*  
+ [in] *nBytes*  
  Velikost *pData* v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru, který se nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
- Pokud klíč zadaný pomocí *lpszEntry* neexistuje, tato metoda vytvoří.  
+ Pokud klíč určené *lpszEntry* buď neexistuje, tato metoda vytvoří.  
   
 ##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  Číselná data zapíše do registru.  
@@ -1188,22 +1188,22 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název klíče registru.  
   
- [v] *nHodnota*  
- Data, která k ukládání.  
+ [in] *nHodnota*  
+ Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
- Pokud klíč zadaný pomocí *lpszEntry* neexistuje, tato metoda vytvoří.  
+ Pokud klíč určené *lpszEntry* buď neexistuje, tato metoda vytvoří.  
   
 ##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
- Zapisuje data odvozené z [CObject – třída](../../mfc/reference/cobject-class.md) do registru.  
+ Zapíše data odvozená z [CObject – třída](../../mfc/reference/cobject-class.md) do registru.  
   
 ```  
 BOOL WriteObject(
@@ -1212,20 +1212,20 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [v] *obj.*  
- Odkaz na `CObject` dat, které se uloží metodu.  
+ [in] *obj*  
+ Odkaz na `CObject` data, která metoda se uloží.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zapíše *obj* data se zadanou hodnotou v klíči registru výchozí. Použití [CWinAppEx::GetRegistryBase](#getregistrybase) k určení aktuální klíč registru.  
+ Zapíše tato metoda *obj* dat se zadanou hodnotou, v klíči registru výchozí. Použití [CWinAppEx::GetRegistryBase](#getregistrybase) určit aktuální klíč registru.  
   
 ##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
- Binární data zapíše na hodnotu v registru.  
+ Zapíše binární data do hodnoty v registru.  
   
 ```  
 BOOL WriteSectionBinary(
@@ -1236,25 +1236,25 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje název klíče registru  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [v] *pData*  
+ [in] *pData*  
  Data k zápisu do registru.  
   
- [v] *nBytes*  
+ [in] *nBytes*  
  Velikost *pData* v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
- Pokud klíč zadaný pomocí *lpszEntry* neexistuje, tato metoda vytvoří.  
+ Pokud klíč určené *lpszEntry* buď neexistuje, tato metoda vytvoří.  
   
 ##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  Číselná data zapíše do registru.  
@@ -1267,25 +1267,25 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje relativní cestu klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [v] *nHodnota*  
+ [in] *nHodnota*  
  Data k zápisu do registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cesta, který se připojí k výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje ke klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
- Pokud klíč zadaný pomocí *lpszEntry* neexistuje, tato metoda vytvoří.  
+ Pokud klíč určené *lpszEntry* buď neexistuje, tato metoda vytvoří.  
   
 ##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
- Zapisuje data odvozené z [CObject – třída](../../mfc/reference/cobject-class.md) na konkrétní hodnotu.  
+ Zapíše data odvozená z [CObject – třída](../../mfc/reference/cobject-class.md) na hodnotu konkrétního registru.  
   
 ```  
 BOOL WriteSectionObject(
@@ -1295,25 +1295,25 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje název klíče registru.  
   
- [v] *lpszEntry*  
- Řetězec, který obsahuje název hodnota k nastavení.  
+ [in] *lpszEntry*  
+ Řetězec obsahující název hodnoty nastavení.  
   
- [v] *obj.*  
- Data, která k ukládání.  
+ [in] *obj*  
+ Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase), v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase)v uvedeném pořadí.  
   
- Pokud hodnota určuje *lpszEntry* neexistuje v klíči registru určeného *lpszSubSection*, tato metoda vytvoří tuto hodnotu.  
+ Pokud je hodnota zadaná pomocí *lpszEntry* neexistuje v klíči registru určené *lpszSubSection*, tato metoda vytvoří tuto hodnotu.  
   
 ##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
- Zápisy data řetězec na hodnotu v registru.  
+ Zapíše data řetězce na hodnotu v registru.  
   
 ```  
 BOOL WriteSectionString(
@@ -1323,25 +1323,25 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszSubSection*  
+ [in] *lpszSubSection*  
  Řetězec, který obsahuje název klíče registru.  
   
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje hodnotu pro nastavení.  
   
- [v] *lpszValue*  
- Řetězec data zapsat do registru.  
+ [in] *lpszValue*  
+ Řetězcová data k zápisu do registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszSubSection* parametr není absolutní cesta pro položku registru. Je relativní cestu, která je připojen na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase), v uvedeném pořadí.  
+ *LpszSubSection* parametr není absolutní cestu pro položky registru. To je relativní cesta, která se připojuje na konec výchozí klíč registru pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase)v uvedeném pořadí.  
   
- Pokud hodnota určuje *lpszEntry* neexistuje v části *lpszSubSection*, tato metoda vytvoří.  
+ Pokud je hodnota zadaná pomocí *lpszEntry* neexistuje v rámci *lpszSubSection*, tato metoda vytvoří.  
   
 ##  <a name="writestring"></a>  CWinAppEx::WriteString  
- Zápisy řetězec dat do registru.  
+ Zapíše data řetězce do registru.  
   
 ```  
 BOOL WriteString(
@@ -1350,25 +1350,25 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszEntry*  
+ [in] *lpszEntry*  
  Řetězec, který obsahuje název klíče registru.  
   
- [v] *lpszValue*  
- Data, která k ukládání.  
+ [in] *lpszValue*  
+ Data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- *LpszEntry* parametr je název položky registru, který je umístěný v klíči registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
+ *LpszEntry* parametr je název položky registru nachází pod klíčem registru výchozí pro vaši aplikaci. Chcete-li získat nebo nastavit klíč registru výchozí, použijte metody [CWinAppEx::GetRegistryBase](#getregistrybase) a [CWinAppEx::SetRegistryBase](#setregistrybase) v uvedeném pořadí.  
   
- Pokud klíč zadaný pomocí *lspzEntry* neexistuje, tato metoda vytvoří.  
+ Pokud klíč určené *lspzEntry* buď neexistuje, tato metoda vytvoří.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CWinApp – třída](../../mfc/reference/cwinapp-class.md)   
- [CMouseManager – třída](../../mfc/reference/cmousemanager-class.md)   
- [CContextMenuManager – třída](../../mfc/reference/ccontextmenumanager-class.md)   
- [CKeyboardManager – třída](../../mfc/reference/ckeyboardmanager-class.md)   
+ [Cmousemanager – třída](../../mfc/reference/cmousemanager-class.md)   
+ [Ccontextmenumanager – třída](../../mfc/reference/ccontextmenumanager-class.md)   
+ [Ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md)   
  [CUserToolsManager – třída](../../mfc/reference/cusertoolsmanager-class.md)

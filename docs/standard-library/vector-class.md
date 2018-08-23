@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8ef2a2044c55da258c4dbcde6690112d52f1a9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963599"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42464440"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -1187,7 +1187,7 @@ int main( )
    const int& ii = v1.front( );
 
    cout << "The first integer of v1 is "<< i << endl;
-   // by incrementing i, we move the the front reference to the second element
+   // by incrementing i, we move the front reference to the second element
    i++;
    cout << "Now, the first integer of v1 is "<< i << endl;
 }
@@ -2115,7 +2115,7 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Třída alokátoru, která se má použít s tímto objektem. [get_allocator](#get_allocator) vrátí třídu alokátoru pro objekt.|
 |*Počet*|Počet prvků ve vytvořeném vektoru.|
 |*Val*|Hodnota prvků v sestaveném vektoru.|
-|*Doprava*|Vektor, jehož bude vytvořený vektor kopií.|
+|*doprava*|Vektor, jehož bude vytvořený vektor kopií.|
 |*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
 |*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 |*IList*|Objekt initializer_list obsahující prvky ke zkopírování.|

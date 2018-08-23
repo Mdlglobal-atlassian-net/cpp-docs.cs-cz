@@ -1,5 +1,5 @@
 ---
-title: __writecr3 | Microsoft Docs
+title: __writecr3 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291cb73d3469264ad3b889cbd01c59622c4a370b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f2e88c7b4b19dd558a211327988dc68f81cc9d1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324701"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465022"
 ---
 # <a name="writecr3"></a>__writecr3
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Zapíše hodnota `Data` k CR3 registrace.  
+ Zapíše hodnotu `Data` CR3 registrace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,21 +37,21 @@ void writecr3(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Data`  
- Hodnota určená k zápisu do registru CR3.  
+ [in] `Data`  
+ Hodnota k zápisu do registru CR3.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__writecr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr3`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní je k dispozici pouze v režimu jádra a rutiny je k dispozici jako vnitřní pouze.  
+ Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

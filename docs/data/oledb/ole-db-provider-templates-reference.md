@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340414"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466207"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenční dokumentace k šablonám zprostředkovatelů OLE DB
 Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou být seskupeny do následujících kategorií. Referenční materiál obsahuje také informace o [makra pro šablony zprostředkovatele technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou bý
  Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu. Povinné rozhraní pro objekt relace.  
   
  [IRowsetChangeImpl –](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementuje rozhraní OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
+ Implementuje rozhraní OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) rozhraní, která umožňuje aktualizaci hodnot sloupce v existující řádky, odstranění řádků a vložením nových řádků.  
   
  [Irowsetcreatorimpl –](../../data/oledb/irowsetcreatorimpl-class.md)  
  Tato třída dědí z [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) a přepíše [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS` a `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou bý
  Implementuje vlastnosti sady řádků pomocí vlastnosti nastavit mapování definované ve třídě příkazu. Povinné rozhraní na sady řádků.  
   
  [IRowsetLocateImpl –](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementuje rozhraní OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) rozhraní, která načte libovolné řádky ze sady řádků. Pro podporu technologie OLE DB záložky v sadě řádků, ujistěte se, v sadě řádků z této třídy dědit.  
+ Implementuje rozhraní OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) rozhraní, která načte libovolné řádky ze sady řádků. Pro podporu technologie OLE DB záložky v sadě řádků, ujistěte se, v sadě řádků z této třídy dědit.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků. Implementovat příjemce, kteří zpracování oznámení [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) , zaregistrujte je v bodě připojení.  
+ Implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků. Implementovat příjemce, kteří zpracování oznámení [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) , zaregistrujte je v bodě připojení.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementuje rozhraní OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) do zdroje dat a vrátit zpět změny před samotným přenosem.  
+ Implementuje rozhraní OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) do zdroje dat a vrátit zpět změny před samotným přenosem.  
   
 ## <a name="command-classes"></a>Třídy příkazů  
  [Icommandimpl –](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ Třídy a rozhraní pro šablony zprostředkovatele technologie OLE DB mohou bý
   
  [Ierrorrecordsimpl –](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementuje rozhraní OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) rozhraní, přidání záznamů do a načtení záznamů z datového členu.  
+ Implementuje rozhraní OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) rozhraní, přidání záznamů do a načtení záznamů z datového členu.  
   
 ## <a name="see-also"></a>Viz také  
  [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   

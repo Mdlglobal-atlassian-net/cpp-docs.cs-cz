@@ -1,5 +1,5 @@
 ---
-title: Makra a jazyk C++ | Microsoft Docs
+title: Makra a jazyk C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746b04113e4cb49716e0c1fa6dee69a250bded42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849610"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42464899"
 ---
 # <a name="macros-and-c"></a>Makra a jazyk C++
 Jazyk C++ nabízí nové možnosti, z nichž některé nahrazují možnosti preprocesoru standardu ANSI C. Tyto nové možnosti zvyšují bezpečnost typů a předvídatelnost jazyka:  
   
--   V jazyce C++ objekty deklarován jako **const** mohou být používány konstantní výrazy. To programům umožňuje deklarovat konstanty, které mají informace o typu a hodnotě, a výčty, které lze symbolicky zobrazit ladicím programem. Použití direktivy `#define` preprocesoru pro definování konstant není tak přesné. Žádné úložiště přidělené **const** objektu, pokud výraz, který přebírá adresy se nachází v programu.  
+- V jazyce C++ lze objekty deklarované jako **const** lze použít v konstantních výrazech. To programům umožňuje deklarovat konstanty, které mají informace o typu a hodnotě, a výčty, které lze symbolicky zobrazit ladicím programem. Použití direktivy `#define` preprocesoru pro definování konstant není tak přesné. Pro není přiděleno žádné úložiště **const** objektu, pokud je výraz, který přijímá jeho adresu, nalezen v programu.  
   
--   Schopnost vložených funkcí jazyka C++ nahrazuje makra typů funkce. Výhody použití vložených funkcí oproti makrům jsou:  
+- Schopnost vložených funkcí jazyka C++ nahrazuje makra typů funkce. Výhody použití vložených funkcí oproti makrům jsou:  
   
-    -   Bezpečnost typů. Vložené funkce jsou kontrolovány stejně jako normální funkce. Makra nejsou typově bezpečná.  
+    - Bezpečnost typů. Vložené funkce jsou kontrolovány stejně jako normální funkce. Makra nejsou typově bezpečná.  
   
-    -   Správná manipulace s argumenty, které mají vedlejší účinky. Vložené funkce vyhodnotí výrazy, které jsou zadány jako argumenty, před vstupem do těla funkce. Proto neexistuje možnost, že by výrazy s vedlejšími účinky byly nebezpečné.  
+    - Správná manipulace s argumenty, které mají vedlejší účinky. Vložené funkce vyhodnotí výrazy, které jsou zadány jako argumenty, před vstupem do těla funkce. Proto neexistuje možnost, že by výrazy s vedlejšími účinky byly nebezpečné.  
   
- Další informace o vložených funkcí najdete v tématu [vložené, __inline, \__forceinline](../cpp/inline-functions-cpp.md).  
+Další informace o vložených funkcích naleznete v tématu [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md).  
   
- Z důvodu zpětné kompatibility jsou v jazyce C++ společnosti Microsoft zachovány všechny funkce preprocesoru, které existovaly ve standardu ANSI C a starších specifikacích jazyka C++.  
+Z důvodu zpětné kompatibility jsou v jazyce C++ společnosti Microsoft zachovány všechny funkce preprocesoru, které existovaly ve standardu ANSI C a starších specifikacích jazyka C++.  
   
 ## <a name="see-also"></a>Viz také  
- [Předdefinovaná makra](../preprocessor/predefined-macros.md)   
- [Makra (C/C++)](../preprocessor/macros-c-cpp.md)
+ 
+[Předdefinovaná makra](../preprocessor/predefined-macros.md)   
+[Makra (C/C++)](../preprocessor/macros-c-cpp.md)
