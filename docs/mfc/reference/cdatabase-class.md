@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337577"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465491"
 ---
 # <a name="cdatabase-class"></a>CDatabase – třída
 Reprezentuje připojení ke zdroji dat, pomocí kterého můžete pracovat ve zdroji dat.  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Mějte na paměti, že třídy knihovny MFC rozhraní ODBC již nebudete používat asynchronní zpracování. k provádění asynchronní operace, musíte přímo zavolat funkci rozhraní API ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Další informace najdete v tématu [asynchronní provádění](https://msdn.microsoft.com/library/ms713563.aspx) v sadě Windows SDK.  
+ Mějte na paměti, že třídy knihovny MFC rozhraní ODBC již nebudete používat asynchronní zpracování. k provádění asynchronní operace, musíte přímo zavolat funkci rozhraní API ODBC [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\)). Další informace najdete v tématu [asynchronní provádění](/previous-versions/windows/desktop/ms713563\(v=vs.85\)) v sadě Windows SDK.  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  Voláním této členské funkce k určení, zda databáze umožňuje transakce.  
