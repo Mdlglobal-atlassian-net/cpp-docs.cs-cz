@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d82e31e75cf0180670ebdbc875628fdefcef57bb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0ec2fea7b0aa320a40e70a56b9980d1993cee2fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014634"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610677"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation – obor názvů
-Umožňuje základní funkce Windows Runtime, jako je vytvoření objektu a objektu pro vytváření.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-namespace Windows::Foundation;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="functions"></a>Funkce  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|  
-|[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Windows  
-  
-## <a name="see-also"></a>Viz také  
- [Namespace Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)
+
+Umožňuje základní funkce Windows Runtime, jako je vytvoření objektu a objektu pro vytváření.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+namespace Windows::Foundation;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="functions"></a>Funkce
+
+|Název|Popis|
+|----------|-----------------|
+|[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|
+|[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Windows
+
+## <a name="see-also"></a>Viz také
+
+[Namespace Windows](http://msdn.microsoft.com/45b08650-69cd-4f7f-a959-b7361476865c)

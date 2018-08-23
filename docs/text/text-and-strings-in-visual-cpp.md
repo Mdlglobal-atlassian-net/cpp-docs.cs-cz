@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610711"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 Důležitou součástí vývoje aplikací pro mezinárodní trhy je odpovídající reprezentace místní znakové sady. Znaková sada ASCII definuje znaky v rozsahu 0x00 do 0x7F. Existují jiné znakové sady, především Evropské, které definují znaky v rozsahu 0x00 do 0x7F stejně jako znaková sada ASCII a také definovat rozšířené znakové od 0x80 do 0xFF. Proto 8 bitů, jedním jednobajtového znaku sady (SBCS) je dostačující k reprezentaci znakové sady ASCII, jakož i znakových sad mnoha evropských jazyků. Ale některé neevropské znakových sad, jako je například japonská Kanji obsahovat mnoho více znaků, než schéma kódování jednobajtové představují a proto vyžadují vícebajtové znakové sady (MBCS s) kódováním.  

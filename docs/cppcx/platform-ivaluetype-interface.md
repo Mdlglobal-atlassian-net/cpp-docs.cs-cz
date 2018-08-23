@@ -1,5 +1,5 @@
 ---
-title: Rozhraní Platform::IValueType | Microsoft Docs
+title: Platform::ivaluetype – rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,19 +9,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8b89b21e-0d7b-4cc2-baa3-93b17c82945c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d5a9df66678e7c5c40d1570fa6149ba3f28ff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089256"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613383"
 ---
-# <a name="platformivaluetype-interface"></a>Platform::IValueType rozhraní
-`Platform::IValueType` je rozhraní infrastruktury, které je implementované hodnota třídy a struktury hodnotu. Není určená pro explicitně do vašeho kódu.  
+# <a name="platformivaluetype-interface"></a>Platform::ivaluetype – rozhraní
+`Platform::IValueType` je rozhraní infrastruktury, které je implementované hodnota třídy a struktury hodnotu. Nesmí být použito explicitně v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,4 +30,4 @@ interface class IValueType
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

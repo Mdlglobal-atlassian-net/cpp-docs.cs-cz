@@ -1,30 +1,30 @@
 ---
-title: Získání ukazatele na datové vyrovnávací paměti (C + +/ CX) | Microsoft Docs
+title: Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090546"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613027"
 ---
-# <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatele na datové vyrovnávací paměti (C + +/ CX)
-V prostředí Windows Runtime [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní zajišťuje jazykově neutrální, na základě datového proudu pro přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaná ukazatel základního bajtového pole pomocí rozhraní Windows Runtime knihovny IBufferByteAccess, která je definována v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě bez provedení všechny nepotřebné kopie data.  
+# <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
+V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní poskytuje jazykově neutrální, základem je stream znamená, že přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaný ukazatel na podkladové pole bajtů s použitím rozhraní IBufferByteAccess knihovna Windows Runtime, který je definován v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě přitom všechny nepotřebné kopie data.  
   
- Následující diagram znázorňuje obrázek element XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` do C++ kód a potom C++ můžete použít odkaz na získat na základní vyrovnávací paměti. V aplikaci univerzální platformu Windows, který je napsán v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v prostředí Windows Runtime součásti.  
+ Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.  
   
- ![C&#43; &#43; kód přímo přístup k datům pixelů](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; kód přímo přístup k datům pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- Přijímá následující metodu [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí nezpracovaná ukazatel do základního bajtového pole. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.  
+ Následující metoda přijímá [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) a vrátí ukazatel raw k podkladové pole bajtů. Pro volání funkce, předejte [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) vlastnost.  
   
 ```  
   
@@ -56,13 +56,13 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>Kompletní příklad  
- Následující kroky ukazují, jak vytvořit aplikaci C# univerzální platformu Windows, která předá `WriteableBitmap` pro prostředí Windows Runtime C++ součásti knihovny DLL. Kód jazyka C++ získá ukazatel do vyrovnávací paměti pixelů a provádí jednoduchých úprav na místě na bitovou kopii. Alternativně můžete vytvořit klientskou aplikaci v jazyce Visual Basic, JavaScript nebo C++ místo C#. Pokud používáte C++, nepotřebujete komponentu knihovny DLL; Tyto metody můžete přidat pouze přímo na třídě MainPage nebo jiné třídy, které definujete.  
+ Následující kroky ukazují, jak vytvořit aplikace s C# Universal Windows Platform, který předá `WriteableBitmap` ke komponentě ve C++ Windows Runtime knihovny DLL. Kód jazyka C++ získá ukazatel do vyrovnávací paměti pixelů a provádí jednoduchých úprav na místě v imagi. Jako alternativu můžete vytvořit klientskou aplikaci v jazyce Visual Basic, JavaScriptu nebo C++ místo C#. Pokud používáte C++, není nutné komponentu knihovny DLL; Tyto metody můžete přidat jenom přímo do třídy MainPage nebo jiné třídy, které definujete.  
   
 #### <a name="create-the-client"></a>Vytvoření klienta  
   
-1.  Šablona projektu prázdnou aplikaci použijte k vytvoření aplikace C# univerzální platformu Windows.  
+1.  Použijte šablonu projektu prázdnou aplikaci pro vytvoření aplikace v jazyce C# Universal Windows Platform.  
   
-2.  V MainPage.xaml  
+2.  V souboru MainPage.xaml  
   
     -   Použít tento XAML k nahrazení `Grid` element:  
   
@@ -77,7 +77,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 3.  V MainPage.xaml.cs  
   
-    1.  Přidejte tyto deklarace oborů názvů:  
+    1.  Přidejte tyto deklarace oboru názvů:  
   
         ```  
         using Windows.Storage;  
@@ -87,13 +87,13 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
         using Windows.Storage.Pickers;  
         ```  
   
-    2.  Přidat `WriteableBitmap` členské proměnné na `MainPage` třídy a pojmenujte ji `m_bm`.  
+    2.  Přidat `WriteableBitmap` členské proměnné `MainPage` třídy a pojmenujte ho `m_bm`.  
   
         ```  
         private WriteableBitmap m_bm;  
         ```  
   
-    3.  Použít následující kód k nahrazení `OnNavigatedTo` se zakázaným inzerováním metoda. Nástroje pro výběr souborů otevře při spuštění aplikace. (Všimněte si, že `async` – klíčové slovo se přidá do signatury funkce).  
+    3.  Použijte následující kód k nahrazení `OnNavigatedTo` pahýl metody. Otevře se okno pro výběr souboru při spuštění aplikace. (Všimněte si, že `async` – klíčové slovo se přidá k signatuře funkce).  
   
         ```c#  
         async protected override void OnNavigatedTo(NavigationEventArgs e)  
@@ -121,7 +121,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
                 }  
         ```  
   
-    4.  Obslužné rutiny události pro klikněte na tlačítko přidáte. (Protože `ImageManipCPP` odkaz na obor názvů nebyl vytvořen, ale může mít vlnovkou v okně editoru.)  
+    4.  Přidáte obslužnou rutinu události pro kliknutí na tlačítko. (Protože `ImageManipCPP` nebyl vytvořen odkaz na obor názvů, ale může mít podtržení vlnovkou v okně editoru.)  
   
         ```  
         async private void Button_Click_1(object sender, RoutedEventArgs e)  
@@ -132,36 +132,36 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
                 }  
         ```  
   
-#### <a name="create-the-c-component"></a>Vytvoření komponentou C++  
+#### <a name="create-the-c-component"></a>Vytvořit komponentu C++  
   
-1.  Přidat novou součást C++ prostředí Windows Runtime do stávajícího řešení a pojmenujte ji `ImageManipCPP`. Přidat odkaz na jeho v projektu C# kliknutím pravým tlačítkem na takový projekt v **Průzkumníku řešení** a výběr **přidat**, **odkaz**.  
+1.  Přidat novou součást modulu Windows Runtime C++ do stávajícího řešení a pojmenujte ho `ImageManipCPP`. Přidejte na ni odkaz v projektu C# kliknutím pravým tlačítkem na tento projekt v **Průzkumníka řešení** a zvolíte **přidat**, **odkaz**.  
   
 2.  V Class1.h  
   
-    1.  Přidejte tuto `typedef` na druhém řádku právě po `#pragma once`:  
+    1.  Přidejte tuto `typedef` na druhý řádek jenom po `#pragma once`:  
   
         ```  
         typedef uint8 byte;  
   
         ```  
   
-    2.  Přidat `WebHostHidden` atribut nad začátku `Class1` deklarace.  
+    2.  Přidat `WebHostHidden` atribut přímo nad začátku `Class1` deklarace.  
   
         ```  
         [Windows::Foundation::Metadata::WebHostHidden]  
         ```  
   
-    3.  Přidejte tento podpis veřejná metoda k `Class1`:  
+    3.  Přidejte tento podpis veřejnou metodu `Class1`:  
   
         ```  
         Windows::Foundation::IAsyncAction^ Negativize(Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ bm);  
         ```  
   
-    4.  Přidat podpis z `GetPointerToPixelData` metoda, která se zobrazí ve starší fragmentu kódu. Ujistěte se, že tato metoda je soukromé.  
+    4.  Přidání podpisu z `GetPointerToPixelData` metodu, která se zobrazí ve starší fragmentu kódu. Ujistěte se, že tato metoda je privátní.  
   
 3.  V Class1.cpp  
   
-    1.  Přidat tyto `#include` direktivy a deklarace oborů názvů:  
+    1.  Přidejte tyto `#include` direktivy a deklarace oboru názvů:  
   
         ```  
   
@@ -176,9 +176,9 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
         ```  
   
-    2.  Přidání implementace `GetPointerToPixelData` z dřívějších fragmentu kódu.  
+    2.  Přidat implementaci `GetPointerToPixelData` z předchozích fragmentu kódu.  
   
-    3.  Přidání implementace `Negativize`. Tato metoda vytváří efekt podobná záporné filmu podle Prohodit hodnota každé hodnoty RGB v pixelech. Můžeme provádět metodu asynchronní protože větší Image může trvat znatelné množství času na dokončení.  
+    3.  Přidat implementaci `Negativize`. Tato metoda vytvoří efekt, který se podobá negativní filmu přehozením hodnotu každé hodnoty RGB v pixelech. Usnadňujeme metodu asynchronní vzhledem k tomu, že na větší Image může trvat postřehnutelné množství času na dokončení.  
   
         ```  
         IAsyncAction^ Class1::Negativize(WriteableBitmap^ bm)  
@@ -208,6 +208,6 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
         ```  
   
         > [!NOTE]
-        >  Tato metoda může pracovat rychleji, pokud používáte AMP nebo Parallel Library vzory učinit paralelní operaci.  
+        >  Tato metoda může pracovat rychleji, pokud použijete AMP nebo knihovny Ppl pro paralelní zpracování operace.  
   
-4.  Zajistěte, aby mít alespoň jeden obrázek do složky Obrázky a potom stiskněte klávesu F5, aby zkompilování a spuštění programu.
+4.  Zajistěte, aby mít alespoň jeden obrázek do složky Obrázky a stiskněte klávesu F5 ke kompilaci a spuštění programu.

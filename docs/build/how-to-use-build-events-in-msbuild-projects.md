@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití událostí sestavení v projektech MSBuild | Microsoft Docs'
+title: 'Postupy: použití událostí sestavení v projektech MSBuild | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369770"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613053"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
-Události sestavení je příkaz který [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] provádí v konkrétní fázi v procesu sestavení. *Před sestavením* události dojde před začátkem sestavování; *před propojením* před spuštěním kroku odkaz; dojde k události a *po sestavení* k události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že dojde k krok přidružené sestavení. Událost před propojením například nedochází, pokud nejde spustit krok propojení.  
+Události sestavení je příkaz, který provádí MSBuild v určité fázi v procesu sestavení. *Před sestavením* před začátkem sestavování dojde k události; *před propojením* před spuštěním kroku odkazu; dojde k události a *po sestavení* výskytu události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že nastane přidružené sestavení. Například událost před propojením nedojde, pokud krok propojení se nespustí.  
   
- Každá z událostí tři sestavení je reprezentována ve skupině Definice command element (`<Command>`), se spustí a elementu zprávy (`<Message>`) to znamená zobrazí, když **MSBuild** provede události sestavení. Každý prvek je volitelný a pokud zadáte stejného elementu vícekrát, poslední výskyt přednost.  
+ Všech událostí tři sestavení je reprezentován ve skupině definice příkazu elementu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který je zobrazí, když **MSBuild** provádí události sestavení. Každý element je volitelný a pokud chcete zadat více než jednou stejného elementu, posledního výskytu přednost.  
   
- Volitelný *použití v sestavení* – element (`<`* sestavení-událostí ***UseInBuild**`>`) lze zadat ve skupině vlastností indikující, zda je provádět události sestavení. Hodnota obsahu *použití v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je událost sestavení provést, dokud jeho odpovídající *použití v sestavení* element je nastaven na hodnotu `false`.  
+ Volitelně *použít v sestavení* – element (`<`* sestavení – událost ***UseInBuild**`>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.  
   
- Následující tabulka uvádí každý element XML událostí sestavení:  
+ V následující tabulce jsou uvedeny jednotlivých prvků XML události sestavení:  
   
-|XML Element|Popis|  
+|– Element XML|Popis|  
 |-----------------|-----------------|  
 |`PreBuildEvent`|Tato událost se spustí před začátkem sestavení.|  
-|`PreLinkEvent`|Tato událost se spustí před začátkem krok propojení.|  
+|`PreLinkEvent`|Tato událost se spustí před zahájením krok propojování.|  
 |`PostBuildEvent`|Tato událost se spustí po dokončení sestavení.|  
   
- Následující tabulka obsahuje seznam všech *použití v sestavení* element:  
+ V následující tabulce jsou uvedeny jednotlivé *použít v sestavení* element:  
   
-|XML Element|Popis|  
+|– Element XML|Popis|  
 |-----------------|-----------------|  
-|`PreBuildEventUseInBuild`|Určuje, zda chcete spustit *před sestavením* událostí.|  
-|`PreLinkEventUseInBuild`|Určuje, zda chcete spustit *před propojením* událostí.|  
-|`PostBuildEventUseInBuild`|Určuje, zda chcete spustit *po sestavení* událostí.|  
+|`PreBuildEventUseInBuild`|Určuje, jestli se má spustit *před sestavením* událostí.|  
+|`PreLinkEventUseInBuild`|Určuje, jestli se má spustit *před propojením* událostí.|  
+|`PostBuildEventUseInBuild`|Určuje, jestli se má spustit *po sestavení* událostí.|  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu lze přidat uvnitř elementu projektu vytvořené v souboru myproject.vcxproj [návod: použití nástroje MSBuild k vytvoření projektu Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* událostí díky kopii main.cpp; *před propojením* událostí díky kopii main.obj; a *po sestavení* událostí vytvoří kopii myproject.exe. Pokud projekt je sestaven pomocí konfigurace verze, události sestavení jsou spuštěny. Pokud projekt je sestaven pomocí konfiguraci ladění, nebudou provedeny událostí sestavení.  
+ Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [návod: použití nástroje MSBuild k vytvoření projektu jazyka Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.  
   
 ```  
 <ItemDefinitionGroup>  
@@ -79,5 +79,5 @@ Události sestavení je příkaz který [!INCLUDE[vstecmsbuild](../build/include
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
+ [Nástroj MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)   
  [Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7fa3193e505480a0acb8616510d8c2cdbc4f5d94
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d6f1c2f9aba65fd96603f966649d3ba62f25cde7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016350"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612295"
 ---
 # <a name="synclocktsync-data-member"></a>SyncLockT::sync_ – datový člen
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-typename SyncTraits::Type sync_;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Obsahuje základní prostředku reprezentovaného **SyncLockT** třídy.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Viz také  
- [SyncLockT – třída](../windows/synclockt-class.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+typename SyncTraits::Type sync_;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Obsahuje základní prostředku reprezentovaného **SyncLockT** třídy.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Viz také
+
+[SyncLockT – třída](../windows/synclockt-class.md)

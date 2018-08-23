@@ -17,56 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: da35e2c257fef72ea75e05768960098111727359
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013516"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611622"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier – třída
-Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename T>  
-class GenericReleaseNotifier : public ReleaseNotifier;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Typ datového člena, který obsahuje umístění obslužné rutiny události.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::GenericReleaseNotifier** třídy.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::Invoke – metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události spojené s aktuálním **Module::GenericReleaseNotifier** objektu.|  
-  
-### <a name="protected-data-members"></a>Chránění členové dat  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Module::GenericReleaseNotifier::callback_ – datový člen](../windows/module-genericreleasenotifier-callback-data-member.md)|Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální **Module::GenericReleaseNotifier** objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `ReleaseNotifier`  
-  
- `GenericReleaseNotifier`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [Module – třída](../windows/module-class.md)
+
+Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename T>
+class GenericReleaseNotifier : public ReleaseNotifier;
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Typ datového člena, který obsahuje umístění obslužné rutiny události.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::GenericReleaseNotifier** třídy.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::Invoke – metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události spojené s aktuálním **Module::GenericReleaseNotifier** objektu.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[Module::GenericReleaseNotifier::callback_ – datový člen](../windows/module-genericreleasenotifier-callback-data-member.md)|Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální **Module::GenericReleaseNotifier** objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`ReleaseNotifier`
+
+`GenericReleaseNotifier`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[Module – třída](../windows/module-class.md)

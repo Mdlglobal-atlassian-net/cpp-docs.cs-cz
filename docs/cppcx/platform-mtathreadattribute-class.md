@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::MTAThreadAttribute | Microsoft Docs
+title: Platform::MTAThreadAttribute – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,19 +13,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089162"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613456"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute – třída
-Označuje, že je modelu vláken pro aplikace Vícevláknová apartment (MTA).  
+Označuje, že model vláken pro aplikaci je vícevláknového objektu apartment (MTA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +39,10 @@ public ref class MTAThreadAttribute sealed : Attribute
   
 |Název|Popis|  
 |----------|-----------------|  
-|[1 konstruktor MTAThreadAttribute](#ctor) – konstruktor|Inicializuje novou instanci třídy.|  
+|[1 konstruktor MTAThreadAttribute](#ctor) konstruktor|Inicializuje novou instanci třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
- Atribut MTAThreadAttribute dědí z [Platform::Object třída](../cppcx/platform-object-class.md). MTAThreadAttribute také přetížení nebo má následující členy:  
+ Atribut MTAThreadAttribute dědí z [Platform::Object – třída](../cppcx/platform-object-class.md). MTAThreadAttribute také přetížení nebo má následující členy:  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -60,7 +60,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a> MTAThreadAttribute – konstruktor
+## <a name="ctor"></a> MTAThreadAttribute konstruktor
 Inicializuje novou instanci třídy MTAThreadAttribute.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -81,11 +81,11 @@ public:virtual override bool Equals(  Object^ obj)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- Obj  
+ obj  
  Objekt k porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud jsou objekty stejné; v opačném `false`.  
+ `true` Pokud jsou objekty shodné; v opačném případě `false`.  
   
 
 
@@ -116,4 +116,4 @@ public:String^ ToString()
  Řetězec, který představuje aktuální objekt.  
     
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642835"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611029"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource – třída
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parametry  
- *TDelegateInterface*  
- Rozhraní pro delegáta, který představuje obslužnou rutinu události.
+## <a name="parameters"></a>Parametry
 
- *TEventSourceOptions*  
- [Invokemodeoptions –](invokemodeoptions-structure.md) stucture jehož invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
+*TDelegateInterface*  
+Rozhraní pro delegáta, který představuje obslužnou rutinu události.
+
+*TEventSourceOptions*  
+[Invokemodeoptions –](invokemodeoptions-structure.md) stucture jehož invokeMode je nastaveno na `InvokeMode::StopOnFirstError` nebo `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -49,13 +50,14 @@ Většinu komponent v prostředí Windows Runtime jsou agilní komponenty. Dalš
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
- `EventSource``AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Požadavky
 
- **Záhlaví:** event.h
+**Záhlaví:** event.h
 
- **Namespace:** Microsoft::WRL
+**Namespace:** Microsoft::WRL
 
 ## <a name="members"></a>Členové
 
@@ -92,4 +94,5 @@ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje ch
 
 
 ## <a name="see-also"></a>Viz také
- [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

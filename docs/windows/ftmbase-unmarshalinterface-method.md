@@ -17,43 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef462ae884aad4160ffbae1883485ac7e06d3aa5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644031"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610698"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface – metoda
-Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHODIMP UnmarshalInterface(  
-   __in IStream *pStm,  
-   __in REFIID riid,  
-   __deref_out void **ppv  
-) override;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStm*  
- Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.  
-  
- *riid*  
- Odkaz na identifikátor rozhraní bude zrušeno.  
-  
- *ppv*  
- Když tato operace dokončí, adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadovaný v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadované rozhraní ukazatel rozhraní, bude zrušeno.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; jinak E_NOINTERFACE nebo E_FAIL.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** ftm.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [FtmBase – třída](../windows/ftmbase-class.md)
+
+Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStm*  
+Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.
+
+*riid*  
+Odkaz na identifikátor rozhraní bude zrušeno.
+
+*ppv*  
+Když tato operace dokončí, adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadovaný v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadované rozhraní ukazatel rozhraní, bude zrušeno.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; jinak E_NOINTERFACE nebo E_FAIL.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** ftm.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[FtmBase – třída](../windows/ftmbase-class.md)

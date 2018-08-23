@@ -1,5 +1,5 @@
 ---
-title: Změny systému sestavení | Microsoft Docs
+title: Změny systému sestavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,57 +22,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363318"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613198"
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
-MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a starších verzích, ale byl použit VCBuild systému. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou v aktuálním systému zobrazovat jinak. Tento dokument popisuje rozdíly v aktuální systém sestavení.  
+Systém MSBuild se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a dřívějších verzích, ale systém VCBuild se použil. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou reprezentovány odlišně v aktuálním systému. Tento dokument popisuje rozdíly v aktuálním systému sestavení.  
   
-## <a name="vcproj-is-now-vcxproj"></a>.vcproj je nyní VCXPROJ  
- Soubory projektu již používat příponu názvu souboru .vcproj. Visual Studio automaticky převádí soubory projektu, které byly vytvořené pomocí dřívější verze Visual C++ do formátu, který je používán v aktuálním systému. Další informace o tom, jak ručně aktualizovat projekt najdete v tématu [spínače/upgradu (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
+## <a name="vcproj-is-now-vcxproj"></a>.vcproj je nyní .vcxproj  
+ Soubory projektu již nebudete používat .vcproj příponu názvu souboru. Visual Studio automaticky převádí soubory projektu, které byly vytvořeny pomocí starší verze jazyka Visual C++ do formátu, který se používá v aktuálním systému. Další informace o tom, jak ručně upgradovat projekt, naleznete v tématu [/upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
   
- V aktuální verzi je přípona názvu souboru pro soubor projektu VCXPROJ.  
+ V aktuální verzi přípona názvu souboru pro soubor projektu je VCXPROJ.  
   
-## <a name="vsprops-is-now-props"></a>.vsprops je nyní props  
- V dřívějších verzích *seznam vlastností projektu* je soubor formátu XML, který má příponu názvu souboru .vsprops. Seznam vlastností projektu umožňuje zadat přepínačů pro sestavení nástroje, například kompilátoru nebo linkeru a vytvořit uživatelská makra.  
+## <a name="vsprops-is-now-props"></a>.vsprops je nyní .props  
+ V dřívějších verzích *seznam vlastností projektu* je soubor založený na formátu XML, který má příponu názvu souboru .vsprops. Seznam vlastností projektu umožňuje zadat parametry pro sestavení nástrojů, jako je kompilátoru nebo linkeru a vytvořit uživatelská makra.  
   
- V aktuální verzi je přípona názvu souboru pro seznam vlastností projektu props.  
+ Přípona názvu souboru pro seznam vlastností projektu v aktuální verzi je .props.  
   
-## <a name="custom-build-rules-and-rules-files"></a>Vytvořit vlastní pravidla a .rules soubory  
- V dřívějších verzích *v souboru pravidel* je soubor formátu XML, který má příponu názvu souboru .rules. Soubor pravidlo umožňuje definovat vlastní pravidla sestavení a zahrnout je do procesu sestavení projektu Visual C++. Vlastní sestavovací pravidlo, které může být přidružený jeden nebo více přípon souborů, umožňuje předat vstupní soubory nástroj, který vytvoří jednu nebo více výstupních souborů.  
+## <a name="custom-build-rules-and-rules-files"></a>Vlastní sestavení pravidel a .rules soubory  
+ V dřívějších verzích *soubor pravidel* je soubor založený na formátu XML, který má příponu názvu souboru .rules. Soubor pravidel umožňuje definovat vlastní pravidla sestavení a začlenit do procesu sestavení projektu ve Visual C++. Pravidlo vlastního sestavení, které může být přidružený jeden nebo více přípon souborů, umožňuje předání vstupních souborů do nástrojů, která obsahuje jeden nebo více výstupních souborů.  
   
- V této verzi jsou vlastní pravidla sestavení reprezentována tři typy souborů, XML, props a .targets místo .rules souboru. Při migraci .rules soubor, který byl vytvořen pomocí dřívější verze Visual C++ pro aktuální verzi ekvivalentní soubory .xml, props a .targets vytvářejí a ukládají ve vašem projektu společně s původní soubor .rules.  
+ V této verzi pravidla vlastního sestavení jsou reprezentovány tři typy souborů, XML, .props a .targets, nikoli soubor .rules. Při migraci .rules souboru, který byl vytvořen pomocí dřívější verze aplikace Visual C++ na aktuální verzi, ekvivalentní soubory .xml, .props a .targets jsou vytvořeny a uloženy ve vašem projektu společně s původní soubor .rules.  
   
 > [!IMPORTANT]
->  V aktuální verzi [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] nepodporuje vytváření nové pravidel. Z tohoto důvodu je nejjednodušší způsob, jak použít soubor pravidlo z projektu, který byl vytvořen pomocí dřívější verze Visual C++ migrace projektu na aktuální verzi.  
+>  V aktuální verzi rozhraní IDE nepodporuje vytváření nových pravidel. Z tohoto důvodu je nejjednodušší způsob, jak použít soubor pravidlo z projektu, který byl vytvořen pomocí dřívější verze aplikace Visual C++ chcete projekt migrovat, na aktuální verzi.  
   
 ## <a name="inheritance-macros"></a>Makra dědičnosti  
- V dřívějších verzích **$(Inherit)** makro určuje pořadí, ve kterém se zobrazují zděděné vlastnosti na příkazovém řádku, které tvoří systém sestavení projektu. **$(NoInherit)** makro způsobí, že všechny výskyty $(Inherit) ignorovat a způsobí, že všechny vlastnosti, které by jinak byly děděny, není byla zděděna. Například ve výchozím nastavení $(Inherit) – makro způsobí, že soubory zadané pomocí [/I (Další adresáře Include)](../build/reference/i-additional-include-directories.md) – možnost kompilátoru který bude přidán do příkazového řádku.  
+ V dřívějších verzích **$(Inherit)** – makro určuje pořadí zděděné vlastnosti na příkazovém řádku, který se skládá ze sestavení systém projektu. **$(NoInherit)** – makro způsobí, že všechny výskyty $(Inherit) ignorovat a způsobí, že všechny vlastnosti, které by jinak se dědí, není odvozeny. Například ve výchozím nastavení $(Inherit) – makro způsobí, že soubory určené vlastností [/I (další vložené adresáře)](../build/reference/i-additional-include-directories.md) – možnost kompilátoru připojit k příkazovému řádku.  
   
- V aktuální verzi je podporována dědičnost zadáním hodnoty vlastnosti jako zřetězení jednu nebo více literálových hodnot a makra vlastností. **$(Inherit)** a **$(NoInherit)** makra nejsou podporovány.  
+ V aktuální verzi je podporována dědičnost tak, že zadáte hodnotu vlastnosti jako zřetězení jeden nebo více literálních hodnot a makra vlastností. **$(Inherit)** a **$(NoInherit)** makra nejsou podporovány.  
   
- V následujícím příkladu je seznam oddělený středníkem přiřadit k vlastnosti na stránce vlastností. V seznamu se skládá z zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnosti, které je přístupné pomocí notace makro, **$(***MyProperty***)** .  
+ V následujícím příkladu je seznam oddělený středníkem přiřazená vlastnost na stránce vlastností. Seznam obsahuje zřetězení  *\<hodnota >* literál a hodnota `MyProperty` vlastnost, která je přístupné pomocí zápisu – makro, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
 ## <a name="vcxprojuser-files"></a>. vcxproj.user soubory  
- Soubor uživatele (. vcxproj.user) ukládá vlastnosti specifické pro uživatele, pro příklad, ladění a nasazení nastavení. Soubor vcxproj.user se vztahují na všechny projekty pro určitého uživatele.  
+ Uživatelský soubor (. vcxproj.user) ukládá vlastnosti specifické pro uživatele, pro příklad, ladění a nasazení nastavení. Soubor vcxproj.user platí pro všechny projekty pro určitého uživatele.  
   
 ## <a name="vcxprojfilters-file"></a>. vcxproj.filters souboru  
- Když **Průzkumníku řešení** se používá k přidání souboru do projektu, soubor filtry (. vcxproj.filters) definuje where v **Průzkumníku řešení** stromové zobrazení, se přidá soubor, na základě jeho přípony názvu souboru.  
+ Když **Průzkumníku řešení** se používá k přidání souboru do projektu soubor filtrů (. vcxproj.filters) definuje, v které **Průzkumníka řešení** stromovém zobrazení se přidá soubor, na základě jeho přípony názvu souboru.  
   
 ## <a name="vc-directories-settings"></a>Nastavení adresáře VC ++  
- Nastavení adresáře Visual C++ zadávají se na [stránka vlastností adresářů VC ++](../ide/vcpp-directories-property-page.md). V dřívějších verzích sady Visual Studio adresáře nastavení se vztahuje na uživatele a seznamu vyloučených adresářů je uveden v souboru sysincl.dat.  
+ Nastavení adresáře Visual C++ jsou určeny na [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md). V dřívějších verzích sady Visual Studio nastavení adresáře se vztahují na uživatele a seznam vyloučených adresářů je uveden v souboru sysincl.dat.  
   
- Nastavení adresáře VC ++ nelze změnit, pokud spustíte [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) na příkazovém řádku. Můžete také nelze změnit nastavení, pokud spustíte **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**a pak vyberte **obnovit nastavení** možnost.  
+ Nastavení adresáře VC ++ nejde změnit, pokud spustíte [devenv/resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) na příkazovém řádku. Můžete také nemůžete měnit nastavení, pokud otevřete **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**a pak vyberte **obnovit všechna nastavení** možnost.  
   
- Ze souboru .vssettings, který je vytvořen pomocí dřívější verze Visual C++ při migraci nastavení adresáře VC ++. Otevřete **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**, vyberte **importovat vybrané nastavení prostředí**a pak postupujte podle pokynů v průvodci. Nebo při spuštění sady Visual Studio poprvé, na **zvolte výchozí nastavení prostředí** dialogové okno, vyberte **migraci vhodné nastavení z předchozí verze a použít je kromě výchozí nastavení vybraný níže**.  
+ Migrace nastavení adresáře VC ++ ze souboru .vssettings, který je vytvořen pomocí dřívější verze aplikace Visual C++. Otevřít **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**vyberte **importovat vybrané nastavení prostředí**a pak postupujte podle pokynů v průvodci. Nebo když spustíte Visual Studio poprvé, na **zvolte výchozí nastavení prostředí** dialogu **migrovat nastavení oprávnění z předchozí verze a použít je kromě výchozího nastavení vybrané níže**.  
   
 ## <a name="see-also"></a>Viz také  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

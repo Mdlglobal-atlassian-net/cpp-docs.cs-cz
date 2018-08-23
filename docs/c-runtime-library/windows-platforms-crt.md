@@ -1,5 +1,5 @@
 ---
-title: Platformy systému Windows (CRT) | Microsoft Docs
+title: Platformy Windows (CRT) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/02/2018
 ms.technology:
@@ -21,20 +21,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e8020bbb7649d78232025ef9c63c1dc868fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613479"
 ---
 # <a name="windows-platforms-crt"></a>Platformy systému Windows (CRT)
 
-Běhové knihovny jazyka C pro Visual Studio podporují aktuální verze systému Windows a Windows Server, [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)]a Windows Vista a volitelně podporovat [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) pro x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Aktualizace Service Pack 2 (SP2) pro x64, a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] aktualizace Service Pack 2 (SP2) pro x86 a x64. Všechny tyto operační systémy podporují Windows desktop rozhraní API (Win32) a podporují kódování Unicode. Všechny aplikace Win32 kromě toho můžete použít vícebajtové znakové sady (MBCS).
+Běhové knihovny jazyka C pro sadu Visual Studio podporují aktuální verze Windows a Windows Server, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 a Windows Vista a volitelně x86, Windows XP Service podpora Windows XP Service Pack 3 (SP3) Pro x64 a Windows Server 2003 Service Pack 2 (SP2) pro x86 i x64 aktualizací Service Pack 2 (SP2). Všechny tyto operační systémy podporují Windows desktop rozhraní API (Win32) a poskytují podporu kódování Unicode. Kromě toho žádnou aplikaci Win32, můžete použít vícebajtovou znakovou sadu (MBCS).
 
 > [!NOTE]
-> Výchozí instalace **vývoj aplikací s jazykem C++** úloh ve Visual Studio 2017 nezahrnuje podporu pro [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] vývoj. Musíte nainstalovat volitelné součásti **Windows XP podporu pro jazyk C++** povolit sady nástrojů systému Windows XP.
+> Výchozí instalaci **vývoj desktopových aplikací pomocí C++** úlohy v sadě Visual Studio 2017 nezahrnuje podporu pro vývoj pro Windows XP a Windows Server 2003. Je nutné nainstalovat volitelnou součást **podpora Windows XP pro C++** povolit sadu nástrojů platformy Windows XP.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Kompatibilita](../c-runtime-library/compatibility.md)  

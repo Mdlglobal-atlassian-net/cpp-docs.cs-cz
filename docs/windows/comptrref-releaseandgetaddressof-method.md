@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 273c8aaded45e04f1564d434c1a4f4a6920c3883
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 03f709feddb1c0e9c82cf80a4bd5f24e531414d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611216"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-InterfaceType** ReleaseAndGetAddressOf();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní, která je reprezentována pomocí odstraněným **comptrref –** objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Comptrref – třída](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+InterfaceType** ReleaseAndGetAddressOf();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel rozhraní, která je reprezentována pomocí odstraněným **comptrref –** objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ComPtrRef – třída](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

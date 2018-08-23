@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6036db01ecdd66bcfe06405515c174628810a1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 801799c3472d156825149c83fb51ffe586de0997
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650147"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611015"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase – konstruktor
-Inicializuje novou instanci třídy **ftmbase –** třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-FtmBase();  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** ftm.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [FtmBase – třída](../windows/ftmbase-class.md)
+
+Inicializuje novou instanci třídy **ftmbase –** třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+FtmBase();
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** ftm.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[FtmBase – třída](../windows/ftmbase-class.md)

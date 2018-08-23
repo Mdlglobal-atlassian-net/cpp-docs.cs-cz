@@ -17,237 +17,240 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57450abdef0a6b25731405e092520ec5589972a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648630"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613732"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll – metoda
-Volá Každá obslužná rutina události spojené s aktuálním [EventSource](../windows/eventsource-class.md) pomocí zadanými typy argumentu a argumenty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void InvokeAll();  
-template <  
-   typename T0  
->  
-void InvokeAll(  
-   T0arg0  
-);  
-template <  
-   typename T0,  
-   typename T1  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8,  
-   typename T9  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8,  
-   T9arg9  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T0*  
- Typ argumentu ID nultého obslužné rutiny události.  
-  
- *T1*  
- Typ prvního argumentu obslužné rutiny události.  
-  
- *T2*  
- Typ druhého argumentu obslužné rutiny události.  
-  
- *T3*  
- Typ třetí argument obslužné rutiny události.  
-  
- *T4*  
- Typ čtvrtého argumentu obslužné rutiny události.  
-  
- *T5*  
- Typ pátého argumentu obslužné rutiny události.  
-  
- *T6*  
- Typ šestého argumentu obslužné rutiny události.  
-  
- *T7*  
- Typ sedmého argumentu obslužné rutiny události.  
-  
- *T8*  
- Typ osmého argumentu obslužné rutiny události.  
-  
- *T9*  
- Typ devátého argumentu obslužné rutiny události.  
-  
- *arg0*  
- Argument obslužné rutiny události ID nultého.  
-  
- *arg1*  
- První argument obslužné rutiny události.  
-  
- *arg2*  
- Druhý argument obslužné rutiny události.  
-  
- *arg3*  
- Třetí argument obslužné rutiny události.  
-  
- *arg4*  
- Čtvrtý argument obslužné rutiny události.  
-  
- *arg5*  
- Pátý argument obslužné rutiny události.  
-  
- *arg6*  
- Šestý argument obslužné rutiny události.  
-  
- *arg7*  
- Sedmého argumentu obslužné rutiny události.  
-  
- *arg8*  
- Argument obslužné rutiny události osmého.  
-  
- *arg9*  
- Devátého argumentu obslužné rutiny události.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [EventSource – třída](../windows/eventsource-class.md)
+
+Volá Každá obslužná rutina události spojené s aktuálním [EventSource](../windows/eventsource-class.md) pomocí zadanými typy argumentu a argumenty.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T0*  
+Typ argumentu ID nultého obslužné rutiny události.
+
+*T1*  
+Typ prvního argumentu obslužné rutiny události.
+
+*T2*  
+Typ druhého argumentu obslužné rutiny události.
+
+*T3*  
+Typ třetí argument obslužné rutiny události.
+
+*T4*  
+Typ čtvrtého argumentu obslužné rutiny události.
+
+*T5*  
+Typ pátého argumentu obslužné rutiny události.
+
+*T6*  
+Typ šestého argumentu obslužné rutiny události.
+
+*T7*  
+Typ sedmého argumentu obslužné rutiny události.
+
+*T8*  
+Typ osmého argumentu obslužné rutiny události.
+
+*T9*  
+Typ devátého argumentu obslužné rutiny události.
+
+*arg0*  
+Argument obslužné rutiny události ID nultého.
+
+*arg1*  
+První argument obslužné rutiny události.
+
+*arg2*  
+Druhý argument obslužné rutiny události.
+
+*arg3*  
+Třetí argument obslužné rutiny události.
+
+*arg4*  
+Čtvrtý argument obslužné rutiny události.
+
+*arg5*  
+Pátý argument obslužné rutiny události.
+
+*arg6*  
+Šestý argument obslužné rutiny události.
+
+*arg7*  
+Sedmého argumentu obslužné rutiny události.
+
+*arg8*  
+Argument obslužné rutiny události osmého.
+
+*arg9*  
+Devátého argumentu obslužné rutiny události.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** event.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[EventSource – třída](../windows/eventsource-class.md)

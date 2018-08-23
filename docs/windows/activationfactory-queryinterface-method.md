@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647099"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613229"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface – metoda
-Načte ukazatel na rozhraní zadané.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *riid*  
- Identifikátor rozhraní.  
-  
- *ppvObject*  
- Po dokončení této operace, ukazatel na rozhraní určené typem parametru *riid*.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ActivationFactory – třída](../windows/activationfactory-class.md)
+
+Načte ukazatel na rozhraní zadané.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parametry
+
+*riid*  
+Identifikátor rozhraní.
+
+*ppvObject*  
+Po dokončení této operace, ukazatel na rozhraní určené typem parametru *riid*.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ActivationFactory – třída](../windows/activationfactory-class.md)

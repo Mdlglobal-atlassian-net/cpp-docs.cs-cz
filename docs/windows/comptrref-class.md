@@ -17,67 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: aaeb641fc7b2276567edfb30fd36c46db6cfc5ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643547"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613686"
 ---
 # <a name="comptrref-class"></a>ComPtrRef – třída
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   typename T  
->  
-class ComPtrRef : public ComPtrRefBase<T>;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- A [ComPtr\<T >](../windows/comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována `ComPtr`.  
-  
-## <a name="remarks"></a>Poznámky  
- Představuje odkaz na objekt typu `ComPtr<T>`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[ComPtrRef::ComPtrRef – konstruktor](../windows/comptrref-comptrref-constructor.md)|Inicializuje novou instanci třídy **comptrref –** třídy z zadaný ukazatel na jiný **comptrref –** objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[ComPtrRef::GetAddressOf – metoda](../windows/comptrref-getaddressof-method.md)|Načte adresu ukazatel rozhraní reprezentované aktuální **comptrref –** objektu.|  
-|[ComPtrRef::ReleaseAndGetAddressOf – metoda](../windows/comptrref-releaseandgetaddressof-method.md)|Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[ComPtrRef::operator InterfaceType** – operátor](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.|  
-|[ComPtrRef::operator T* – operátor](../windows/comptrref-operator-t-star-operator.md)|Vrátí hodnotu [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) aktuálního objektu comptrref – datový člen.|  
-|[ComPtrRef::operator void** – operátor](../windows/comptrref-operator-void-star-star-operator.md)|Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhraní, která je reprezentována **comptrref –** objektu jako ukazatel na ukazatel- **void**a pak vrátí ukazatel přetypování.|  
-|[ComPtrRef::operator* – operátor](../windows/comptrref-operator-star-operator.md)|Načte ukazatel na rozhraní reprezentované aktuální **comptrref –** objektu.|  
-|[ComPtrRef::operator== – operátor](../windows/comptrref-operator-equality-operator.md)|Určuje, zda dva **comptrref –** objekty rovnají.|  
-|[ComPtrRef::operator!= – operátor](../windows/comptrref-operator-inequality-operator.md)|Určuje, zda dva **comptrref –** objekty nejsou stejné.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `ComPtrRefBase`  
-  
- `ComPtrRef`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRef : public ComPtrRefBase<T>;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+A [ComPtr\<T >](../windows/comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována `ComPtr`.
+
+## <a name="remarks"></a>Poznámky
+
+Představuje odkaz na objekt typu `ComPtr<T>`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[ComPtrRef::ComPtrRef – konstruktor](../windows/comptrref-comptrref-constructor.md)|Inicializuje novou instanci třídy **comptrref –** třídy z zadaný ukazatel na jiný **comptrref –** objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[ComPtrRef::GetAddressOf – metoda](../windows/comptrref-getaddressof-method.md)|Načte adresu ukazatel rozhraní reprezentované aktuální **comptrref –** objektu.|
+|[ComPtrRef::ReleaseAndGetAddressOf – metoda](../windows/comptrref-releaseandgetaddressof-method.md)|Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[ComPtrRef::operator InterfaceType** – operátor](../windows/comptrref-operator-interfacetype-star-star-operator.md)|Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována **comptrref –** objektu.|
+|[ComPtrRef::operator T* – operátor](../windows/comptrref-operator-t-star-operator.md)|Vrátí hodnotu [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) aktuálního objektu comptrref – datový člen.|
+|[ComPtrRef::operator void** – operátor](../windows/comptrref-operator-void-star-star-operator.md)|Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhraní, která je reprezentována **comptrref –** objektu jako ukazatel na ukazatel- **void**a pak vrátí ukazatel přetypování.|
+|[ComPtrRef::operator* – operátor](../windows/comptrref-operator-star-operator.md)|Načte ukazatel na rozhraní reprezentované aktuální **comptrref –** objektu.|
+|[ComPtrRef::operator== – operátor](../windows/comptrref-operator-equality-operator.md)|Určuje, zda dva **comptrref –** objekty rovnají.|
+|[ComPtrRef::operator!= – operátor](../windows/comptrref-operator-inequality-operator.md)|Určuje, zda dva **comptrref –** objekty nejsou stejné.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`ComPtrRefBase`
+
+`ComPtrRef`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,76 +1,76 @@
 ---
-title: Výjimky (C + +/ CX) | Microsoft Docs
+title: Výjimky (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82f54a365208c247e735e467157dfd29f9f271a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091625"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613406"
 ---
 # <a name="exceptions-ccx"></a>Výjimky (C + +/ CX)
 
-Zpracování chyb v jazyce C + +/ CX podle výjimky. Na nejzákladnější úrovni prostředí Windows Runtime součástí zprávy o chybách jako HRESULT hodnoty. V jazyce C + +/ CX, tyto hodnoty se převedou na silného typu výjimky, které obsahují hodnotu HRESULT a popis řetězec, který je k dispozici prostřednictvím kódu programu.  Výjimky jsou implementované jako `ref class` která je odvozena od `Platform::Exception`.  `Platform` Obor názvů definuje třídy odlišné výjimek pro nejběžnější hodnoty HRESULT; všechny ostatní hodnoty jsou nahlášené prostřednictvím programu `Platform::COMException` třídy. Všechny třídy výjimky mají [Exception::HResult](platform-exception-class.md#hresult) pole, které můžete použít k načtení původní HRESULT. Můžete také zkontrolovat informace o zásobník volání pro uživatelský kód v ladicím programu, které mohou pomoci přesně určit původního zdroje výjimky, i když je vytvořena v kódu, která byla zapsána v jiném jazyce než C++.
+Zpracování chyb v jazyce C + +/ CX založené na výjimkách. Na nejzákladnější úrovni součástí prostředí Windows Runtime umožňuje nahlásit chyby jako hodnoty HRESULT. V jazyce C + +/ CX, tyto hodnoty se převedou na silného typu výjimky, které obsahují hodnotu HRESULT a popis řetězec, který můžete přistupovat prostřednictvím kódu programu.  Výjimky jsou implementovány jako `ref class` , která je odvozena z `Platform::Exception`.  `Platform` Obor názvů definuje různé výjimky třídy pro nejběžnější hodnoty HRESULT; všechny ostatní hodnoty jsou hlášeny prostřednictvím `Platform::COMException` třídy. Všechny výjimky třídy mají [Exception::HResult](platform-exception-class.md#hresult) pole, které můžete použít k načtení původní hodnota HRESULT. Můžete také zkontrolovat informace o zásobníku volání pro uživatelský kód v ladicím programu, které mohou pomoci přesně určit původní příčiny výjimek, i v případě, vytvoří se v kódu napsaného v jiném jazyce než v C++.
 
 ## <a name="exceptions"></a>Výjimky
 
-V programu C++, throw a catch výjimka, která pochází z prostředí Windows Runtime operace, výjimku, která je odvozena z `std::exception`, nebo typ definovaný uživatelem. Budete muset výjimku prostředí Windows Runtime vyvolat jenom v případě, že se překročí aplikace binární rozhraní (ABI) hranici, například když dojde k zapsání kód, který zachytí vaší výjimek v jazyce JavaScript. Když Windows Runtime C++ výjimka dosáhne ABI hranice, výjimka je přeložit na `Platform::FailureException` výjimka, která představuje E_FAIL HRESULT. Další informace o ABI najdete v tématu [vytváření součásti systému Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Ve svém programu C++ lze vyvolat a zachytit výjimku, která pochází z operaci Windows Runtime, výjimka, která je odvozena od `std::exception`, nebo typ definovaný uživatelem. Je nutné vyvolat výjimku při běhu Windows pouze v případě, že ho překročí aplikace binární rozhraní (ABI) hranici, například když kód, který zachytává výjimky je napsaná v JavaScriptu. Hranice ABI dosáhne výjimky Windows Runtime C++ výjimka je přeložit na `Platform::FailureException` výjimku, která představuje E_FAIL HRESULT. Další informace o ABI, naleznete v tématu [vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Je možné deklarovat [Platform::Exception](platform-exception-class.md) pomocí jedné z dva konstruktory, které provést buď parametru HRESULT, nebo parametr HRESULT a [Platform::String](platform-string-class.md)^ parametr, který může být předán přes ABI do žádné aplikace Windows Runtime, která ji zpracovává. Nebo můžete pomocí jedné ze dvou deklarovat výjimku [Exception::CreateException metoda](platform-exception-class.md#createexception) přetížení, které provést buď parametru HRESULT, nebo parametr HRESULT a `Platform::String^` parametr.
+Je možné deklarovat [Platform::Exception](platform-exception-class.md) pomocí jedné z dva konstruktory, které přijímají parametr HRESULT nebo pomocí parametru HRESULT a [Platform::String](platform-string-class.md)^ parametr, který může být předán přes ABI do všech prostředí Windows Runtime aplikací, která ji zpracovává. Nebo výjimku lze deklarovat s použitím jednoho ze dvou [Exception::CreateException metoda](platform-exception-class.md#createexception) přetížení, která přijímají parametr HRESULT nebo pomocí parametru HRESULT a `Platform::String^` parametru.
 
-## <a name="standard-exceptions"></a>Standardní výjimky
+## <a name="standard-exceptions"></a>Standardních výjimek
 
-C + +/ CX podporuje sadu standardní výjimky, které představují typické HRESULT chyby. Každé standardní výjimka je odvozena z [Platform::COMException](platform-comexception-class.md), která je zase odvozena z `Platform::Exception`. Při vyvolat výjimku přes hranice ABI, musí se vyvolat jednu standardní výjimek.
+C + +/ CX podporuje sadu standardních výjimek, které představují typické chyby HRESULT. Každý standardní výjimka je odvozena z [Platform::COMException –](platform-comexception-class.md), která je dále odvozeno z `Platform::Exception`. Při vyvolání výjimky, hranice ABI, musíte vyvolat jednu ze standardních výjimek.
 
-Nelze odvodit typ vlastní výjimky z `Platform::Exception`. Vyvolá vlastní výjimky, použít k vytvoření uživatelem definované HRESULT `COMException` objektu.
+Nelze odvodit typ vlastní výjimky z `Platform::Exception`. Pokud chcete vyvolat vlastní výjimku, použijte hodnotu HRESULT uživatelem definované k vytvoření `COMException` objektu.
 
-Následující tabulka uvádí standardní výjimky.
+V následující tabulce jsou uvedeny standardních výjimek.
 
-|Název|Základní HRESULT|Popis|
+|Název|Základní hodnota HRESULT|Popis|
 |----------|------------------------|-----------------|
-|COMException|*uživatelem definované hresult*|Vyvolá, když je nerozpoznané HRESULT vrácená z volání metody COM.|
-|AccessDeniedException|E\_ACCESSDENIED|Vyvolá, když byl odepřen přístup k prostředku nebo funkce.|
-|ChangedStateException|E\_ZMĚNĚNO\_STAVU|Vyvolá, když jsou volány metody iterator kolekce nebo kolekce zobrazení po změně její nadřazená kolekce, a tím zneplatnění výsledky metody.|
-|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Vyvolá, když třídy COM není zaregistrován.|
-|DisconnectedException|RPC\_E\_ODPOJENO|Vyvolá, když je objekt odpojen od jeho klienty.|
-|FailureException|E\_NEZDAŘÍ|Vygeneruje se, když se operace nezdaří.|
-|InvalidArgumentException|E\_INVALIDARG|Vyvolá, když jeden z argumentů, které jsou k dispozici na metodu je neplatný.|
-|InvalidCastException|E\_NOINTERFACE|Vyvolá, když typ nelze převést na jiný typ.|
-|NotImplementedException –|E\_NOTIMPL|Vygeneruje se, pokud není implementovaný pro třídu metodu rozhraní.|
-|NullReferenceException|E\_UKAZATELE|Vygeneruje se při pokusu o zrušte referenční odkaz objektu null.|
-|ObjectDisposedException|RO\_E\_UZAVŘENO|Vygeneruje se při provádění operace v uvolněné objektu.|
-|OperationCanceledException|E\_ABORT|Vyvolá, když operace byla přerušena.|
-|OutOfBoundsException|E\_HRANICE|Vygeneruje se, když se operace pokusí o přístup k datům mimo platný rozsah.|
-|OutOfMemoryException|E\_OUTOFMEMORY|Vyvolá, když není dostatek paměti pro dokončení operace.|
-|WrongThreadException|RPC\_E\_NESPRÁVNÝ\_PŘÍSTUP Z VÍCE VLÁKEN|Vyvolá, když vlákno volá prostřednictvím ukazatele rozhraní, což je pro objekt proxy serveru, který nepatří do objektu apartment vlákna.|
+|COMException|*uživatelem definované hresult*|Vyvolána, když je nerozpoznaný HRESULT vrácená z volání metody COM.|
+|AccessDeniedException|ELEKTRONICKÉ\_ACCESSDENIED|Vyvolána, když byl odepřen přístup k prostředku nebo funkce.|
+|ChangedStateException|ELEKTRONICKÉ\_ZMĚNĚNÉ\_STAVU|Vyvolána výjimka při volání metody iterátoru shromažďování nebo zobrazení kolekce po změně nadřazené kolekce, a proto už není platná výsledky metody.|
+|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Vyvolána, když třída modelu COM není zaregistrovaný.|
+|DisconnectedException|RPC\_E\_ODPOJENO|Vyvolána, když je objekt odpojen od svých klientů.|
+|FailureException|ELEKTRONICKÉ\_SELHÁNÍ|Vyvolána, pokud se operace nezdaří.|
+|InvalidArgumentException|ELEKTRONICKÉ\_INVALIDARG|Vyvolána, když jeden z argumentů, které jsou k dispozici k metodě není platný.|
+|InvalidCastException|ELEKTRONICKÉ\_NOINTERFACE|Vyvolána, když typ nelze převést na jiného typu.|
+|NotImplementedException|ELEKTRONICKÉ\_NOTIMPL|Vyvolána, pokud se neimplementoval metodu rozhraní na třídě.|
+|NullReferenceException|ELEKTRONICKÉ\_UKAZATELE|Vyvolána výjimka při pokusu o zrušení odkazovat odkaz na objekt s hodnotou null.|
+|Objectdisposedexception –|RO\_E\_UZAVŘENO|Vyvolána výjimka při provádění operace na smazaném objektu.|
+|OperationCanceledException –|ELEKTRONICKÉ\_PŘERUŠENÍ|Vyvolána, pokud je operace přerušena.|
+|OutOfBoundsException|ELEKTRONICKÉ\_HRANICE|Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.|
+|OutOfMemoryException|ELEKTRONICKÉ\_OUTOFMEMORY|Vyvolána, když není dostatek paměti k dokončení operace.|
+|WrongThreadException|RPC\_E\_NESPRÁVNÉ\_VLÁKNA|Vyvolána, když vlákno volá prostřednictvím ukazatele rozhraní, které je objekt proxy serveru, který nepatří do objektu apartment vlákna.|
 
-## <a name="hresult-and-message-properties"></a>Vlastnosti HResult a zpráv
+## <a name="hresult-and-message-properties"></a>Vlastnosti HResult a zprávu
 
-Mají všechny výjimky [HResult](platform-comexception-class.md#hresult) vlastnost a [zpráva](platform-comexception-class.md#message) vlastnost. [Exception::HResult](platform-exception-class.md#hresult) vlastnost získá v výjimky základní číselná hodnota HRESULT. [Exception::Message](platform-exception-class.md#message) vlastnost získá řetězec poskytnuté systémem, která popisuje výjimku. V systému Windows 8 zpráva je k dispozici pouze v ladicím programu a je jen pro čtení. To znamená, že ho nelze změnit při opětovné výjimku. Ve Windows 8.1 můžete přístup řetězec zprávy prostřednictvím kódu programu a zadejte novou zprávu, pokud opětovné výjimku. Lepší zásobník volání informace jsou také k dispozici v ladicím programu, včetně callstacks pro volání asynchronních metod.
+Mají všechny výjimky [HResult](platform-comexception-class.md#hresult) vlastnost a [zpráva](platform-comexception-class.md#message) vlastnost. [Exception::HResult](platform-exception-class.md#hresult) vlastnost získá výjimky základní číselná hodnota HRESULT. [Exception::Message](platform-exception-class.md#message) vlastnost získá řetězec poskytnuté systémem, který popisuje výjimku. Zpráva v systému Windows 8, je k dispozici pouze v ladicím programu a je jen pro čtení. To znamená, že ho nelze změnit po znovu vyvolejte výjimku. Ve Windows 8.1 můžete používat řetězec zprávy prostřednictvím kódu programu a zadejte novou zprávu, pokud je výjimka znovu vyvolána. Lepší informace o zásobníku volání je také k dispozici v ladicím programu, včetně zásobníky volání pro volání asynchronní metody.
 
 ### <a name="examples"></a>Příklady
 
-Tento příklad ukazuje, jak má být vyvolána výjimka prostředí Windows Runtime pro synchronní operace:
+Tento příklad ukazuje, jak vyvolat výjimku modulu Windows Runtime pro synchronní operace:
 
 [!code-cpp[cx_exceptions#01](codesnippet/CPP/exceptiontest/class1.cpp#01)]
 
-Další příklad ukazuje, jak k zachycení výjimky.
+Následující příklad ukazuje, jak zachytit výjimku.
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-Zachytit výjimky, které jsou vyvolány během asynchronní operace, pomocí třídy úlohy a přidejte pokračování zpracování chyb. Zpracování chyb pokračování zařazuje výjimky, které jsou vyvolány na jiná vlákna zpět do volající vlákno tak, aby bylo možné zpracovat všechny potenciální výjimky v jednom místě v kódu. Další informace najdete v tématu [asynchronní programování v C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Zachytit výjimky, které jsou vyvolány během asynchronní operace, použijte třídu úloh a přidejte pokračování pro zpracování chyb. Zpracování chyb pokračování zařazuje výjimky, které jsou vyvolány v jiných vláknech zpět do volajícího vlákna tak, aby bylo možné zpracovat všechny potenciální výjimky v jednom místě v kódu. Další informace najdete v tématu [asynchronní programování v jazyce C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
-## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected událostí
+## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected události
 
-Ve Windows 8.1 můžete odebírat [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) statické událost, která poskytuje přístup k neošetřené chyby, které se chystáte přineste ukončení procesu. Bez ohledu na to, kde chyba vytvořena, se dosáhne této obslužné rutiny jako [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objekt, který je předán pomocí argumentů události. Při volání `Propagate` na objekt, vytvoří a vyvolá `Platform::*Exception` typu, který odpovídá kódu chyby. V bloků catch můžete uložit stav uživatele v případě potřeby a pak buď umožnit ukončení voláním procesu `throw`, nebo dělat něco program nelze vrátit zpět do známého stavu. Následující příklad ukazuje základní vzor:
+Ve Windows 8.1 můžete odebírat [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) statické událost, která poskytuje přístup k neošetřené chyby, které se chystáte snížilo procesu. Bez ohledu na to, odkud pochází chybu, dosáhne této obslužné rutiny jako [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objekt, který se předává pomocí argumenty události. Při volání `Propagate` objektu, vytváří a vyvolává `Platform::*Exception` typu, který odpovídá kódu chyby. V blocích catch, můžete uložit stav uživatele v případě potřeby a pak buď umožnit, voláním ukončení procesu `throw`, nebo udělat něco, co je program vrátit do známého stavu. Následující příklad zobrazuje základní vzor:
 
 V app.xaml.h:
 
@@ -107,9 +107,9 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>Poznámky
 
-C + +/ CX nepoužívá `finally` klauzule.
+C + +/ CX se nepoužívá `finally` klauzuli.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka Visual C++](visual-c-language-reference-c-cx.md)  
 [Odkaz na obory názvů](namespaces-reference-c-cx.md)  

@@ -15,99 +15,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ef754c380353716c923f6d5f404106cebc163c9
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5ac6b6401870e29ec10b17ff2c06fb970328af82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011878"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612682"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nový slot v tabulce vtable) (rozšíření komponent C++)
-**Nové** – klíčové slovo určuje, že virtuální člen získá novou patici ve vtable.  
-  
-## <a name="all-runtimes"></a>Všechny moduly runtime  
- (Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)  
-  
-## <a name="windows-runtime"></a>prostředí Windows Runtime  
- V modulu Windows Runtime není podporován.  
-  
-## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
-### <a name="remarks"></a>Poznámky  
-  
- V `/clr` kompilace, **nové** označuje, že virtuální člen získá novou patici ve vtable; že funkci nepřepisuje metodu základní třídy.  
-  
- **nové** způsobí, že modifikátor newslot být přidán do IL pro funkci.  Další informace o newslot naleznete v tématu:  
-  
--   [Metoda MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
-  
--   [Výčet MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
-  
-### <a name="requirements"></a>Požadavky  
- – Možnost kompilátoru: `/clr`  
-  
-### <a name="examples"></a>Příklady  
-  
- Následující příklad ukazuje účinek **nové**.  
-  
-```cpp  
-// newslot.cpp  
-// compile with: /clr  
-ref class C {  
-public:  
-   virtual void f() {  
-      System::Console::WriteLine("C::f() called");  
-   }  
-  
-   virtual void g() {  
-      System::Console::WriteLine("C::g() called");  
-   }  
-};  
-  
-ref class D : public C {  
-public:  
-   virtual void f() new {  
-      System::Console::WriteLine("D::f() called");  
-   }  
-  
-   virtual void g() override {  
-      System::Console::WriteLine("D::g() called");  
-   }  
-};  
-  
-ref class E : public D {  
-public:  
-   virtual void f() override {  
-      System::Console::WriteLine("E::f() called");  
-   }  
-};  
-  
-int main() {  
-   D^ d = gcnew D;  
-   C^ c = gcnew D;  
-  
-   c->f();   // calls C::f  
-   d->f();   // calls D::f  
-  
-   c->g();   // calls D::g  
-   d->g();   // calls D::g  
-  
-   D ^ e = gcnew E;  
-   e->f();   // calls E::f  
-}  
-```  
-  
-```Output  
-C::f() called  
-  
-D::f() called  
-  
-D::g() called  
-  
-D::g() called  
-  
-E::f() called  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)   
- [Override – specifikátory](../windows/override-specifiers-cpp-component-extensions.md)
+
+**Nové** – klíčové slovo určuje, že virtuální člen získá novou patici ve vtable.
+
+## <a name="all-runtimes"></a>Všechny moduly runtime
+
+(Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)
+
+## <a name="windows-runtime"></a>prostředí Windows Runtime
+
+V modulu Windows Runtime není podporován.
+
+## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
+
+### <a name="remarks"></a>Poznámky
+
+V `/clr` kompilace, **nové** označuje, že virtuální člen získá novou patici ve vtable; že funkci nepřepisuje metodu základní třídy.
+
+**nové** způsobí, že modifikátor newslot být přidán do IL pro funkci.  Další informace o newslot naleznete v tématu:
+
+- [Metoda MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)
+
+- [Výčet MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)
+
+### <a name="requirements"></a>Požadavky
+
+– Možnost kompilátoru: `/clr`
+
+### <a name="examples"></a>Příklady
+
+Následující příklad ukazuje účinek **nové**.
+
+```cpp
+// newslot.cpp
+// compile with: /clr
+ref class C {
+public:
+   virtual void f() {
+      System::Console::WriteLine("C::f() called");
+   }
+
+   virtual void g() {
+      System::Console::WriteLine("C::g() called");
+   }
+};
+
+ref class D : public C {
+public:
+   virtual void f() new {
+      System::Console::WriteLine("D::f() called");
+   }
+
+   virtual void g() override {
+      System::Console::WriteLine("D::g() called");
+   }
+};
+
+ref class E : public D {
+public:
+   virtual void f() override {
+      System::Console::WriteLine("E::f() called");
+   }
+};
+
+int main() {
+   D^ d = gcnew D;
+   C^ c = gcnew D;
+
+   c->f();   // calls C::f
+   d->f();   // calls D::f
+
+   c->g();   // calls D::g
+   d->g();   // calls D::g
+
+   D ^ e = gcnew E;
+   e->f();   // calls E::f
+}
+```
+
+```Output
+C::f() called
+
+D::f() called
+
+D::g() called
+
+D::g() called
+
+E::f() called
+```
+
+## <a name="see-also"></a>Viz také
+
+[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
+[Override – specifikátory](../windows/override-specifiers-cpp-component-extensions.md)

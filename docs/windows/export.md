@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5f886c4d475cb51b370ae25549387f191ab4b6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653128"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611197"
 ---
 # <a name="export"></a>export
-Způsobí, že datová struktura budou umístěny v souboru IDL.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[export]  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **Exportovat** C++ atribut způsobí, že datová struktura, budou umístěny v souboru IDL a poté bude k dispozici v knihovně typů ve formátu binárně kompatibilní, který je k dispozici pro použití v libovolném jazyce.  
-  
- Nelze použít **exportovat** atribut třídy i v případě, že třída má pouze veřejné členy (ekvivalent **struktura**).  
-  
- Pokud exportujete nepojmenované **výčtu**s nebo **struktura**s, bude se jednat o křestní jména, které začínají **__unnamed *** x*, kde *x* je sekvenční číslo.  
-  
- Platné pro export definice TypeDef jsou základních typů, struktur, sjednocení, výčty, nebo zadejte identifikátory.  Zobrazit [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující kód ukazuje způsob použití **exportovat** atribut:  
-  
-```cpp  
-// cpp_attr_ref_export.cpp  
-// compile with: /LD  
-[module(name="MyLibrary")];  
-  
-[export]  
-struct MyStruct {  
-   int i;  
-};  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|**sjednocení**, **typedef**, **výčtu**, **struktura**, nebo **rozhraní**|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Atributy kompilátoru](../windows/compiler-attributes.md)   
- [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Způsobí, že datová struktura budou umístěny v souboru IDL.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[export]
+```
+
+## <a name="remarks"></a>Poznámky
+
+**Exportovat** C++ atribut způsobí, že datová struktura, budou umístěny v souboru IDL a poté bude k dispozici v knihovně typů ve formátu binárně kompatibilní, který je k dispozici pro použití v libovolném jazyce.
+
+Nelze použít **exportovat** atribut třídy i v případě, že třída má pouze veřejné členy (ekvivalent **struktura**).
+
+Pokud exportujete nepojmenované **výčtu** nebo **struktura**, se klíči přiřadí název, který začíná **__unnamed**<em>x</em>, kde *x* je pořadové číslo.
+
+Platné pro export definice TypeDef jsou základních typů, struktur, sjednocení, výčty, nebo zadejte identifikátory.  Zobrazit [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující kód ukazuje způsob použití **exportovat** atribut:
+
+```cpp
+// cpp_attr_ref_export.cpp
+// compile with: /LD
+[module(name="MyLibrary")];
+
+[export]
+struct MyStruct {
+   int i;
+};
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|**sjednocení**, **typedef**, **výčtu**, **struktura**, nebo **rozhraní**|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[Atributy kompilátoru](../windows/compiler-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  

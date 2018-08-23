@@ -16,38 +16,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0844ab8a4233e2204c42a8d165309c89026fb01
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ed8e2b630444c28675b4714b65676a049a8b285b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646225"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611094"
 ---
 # <a name="editing-in-an-accelerator-table"></a>Úprava v tabulce akcelerátorů
-### <a name="to-edit-in-an-accelerator-table"></a>Úprava v tabulce akcelerátorů  
-  
-1.  Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Vyberte položku v tabulce a klikněte na tlačítko aktivovat místní úpravy.  
-  
-3.  Vyberte z rozevíracího seznamu nebo zadejte místo, kde můžete provádět změny.  
-  
-    -   Pro [ID](id-property.md), vyberte ze seznamu nebo typu, který chcete upravit.  
-  
-    -   Pro [modifikátor](../windows/accelerator-modifier-property.md), vyberte ze seznamu.  
-  
-    -   Pro [klíč](../windows/accelerator-key-property.md), vyberte ze seznamu nebo typu, který chcete upravit.  
-  
-    -   Pro [typ](../windows/accelerator-type-property.md)vyberte **ASCII** nebo **VIRTKEY** ze seznamu.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)   
- [Editor akcelerátorů](../windows/accelerator-editor.md)
+
+### <a name="to-edit-in-an-accelerator-table"></a>Úprava v tabulce akcelerátorů
+
+1. Otevřete poklepáním na ikonu v tabulce akcelerátorů [zobrazení prostředků](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+2. Vyberte položku v tabulce a klikněte na tlačítko aktivovat místní úpravy.
+
+3. Vyberte z rozevíracího seznamu nebo zadejte místo, kde můžete provádět změny.
+
+   - Pro [ID](id-property.md), vyberte ze seznamu nebo typu, který chcete upravit.
+
+   - Pro [modifikátor](../windows/accelerator-modifier-property.md), vyberte ze seznamu.
+
+   - Pro [klíč](../windows/accelerator-key-property.md), vyberte ze seznamu nebo typu, který chcete upravit.
+
+   - Pro [typ](../windows/accelerator-type-property.md)vyberte **ASCII** nebo **VIRTKEY** ze seznamu.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)  
+[Editor akcelerátorů](../windows/accelerator-editor.md)

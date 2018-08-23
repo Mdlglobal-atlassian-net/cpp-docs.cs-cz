@@ -19,49 +19,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 345171742f979e488c6a4bb48cf1b57e4bb2f164
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5912d4bf38824c562055432f125cdc7e75192cc5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018107"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610804"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Postupy: Otevření souboru skriptu prostředků v textovém formátu
-Může nastat situace, kdy budete chtít zobrazit obsah souboru projektu prostředků skriptů (.rc) bez nutnosti otevřít prostředek, jako je například dialogové okno, v jeho editoru konkrétní prostředek. Můžete například hledání řetězce napříč všechna dialogová okna v souboru prostředků, aniž byste museli otevřít každý z nich samostatně.  
-  
+
+Může nastat situace, kdy budete chtít zobrazit obsah souboru projektu prostředků skriptů (.rc) bez nutnosti otevřít prostředek, jako je například dialogové okno, v jeho editoru konkrétní prostředek. Můžete například hledání řetězce napříč všechna dialogová okna v souboru prostředků, aniž byste museli otevřít každý z nich samostatně.
+
 > [!NOTE]
->  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
- Snadno můžete otevřít soubor prostředků v textovém formátu k zobrazení všech prostředků, které obsahuje a globální operacích podporován [textový editor](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).  
-  
+> Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+Snadno můžete otevřít soubor prostředků v textovém formátu k zobrazení všech prostředků, které obsahuje a globální operacích podporován [textový editor](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
+
 > [!NOTE]
->  Editory prostředků nečtou přímo .rc nebo `resource.h` soubory. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a soubor resource.h). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc. Informace o tom, jak zachovat komentáře, naleznete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).  
-  
-### <a name="to-open-a-resource-script-file-as-text"></a>K otevření souboru skriptu prostředků jako text  
-  
-1.  Z **souboru** nabídku zvolte **otevřít**, klikněte na **souboru.**  
-  
-2.  V **otevřít soubor** dialogové okno, přejděte do souboru skriptu prostředků, které chcete zobrazit v textovém formátu.  
-  
-3.  Zvýrazněte soubor a potom klikněte na šipku rozevíracího seznamu **otevřít** tlačítko (nachází se na pravé straně tlačítka).  
-  
-4.  Zvolte **otevřít v** z rozevírací nabídky.  
-  
-5.  V **otevřít v** dialogové okno, klikněte na tlačítko **Editor zdrojového kódu (textu)**.  
-  
-6.  Z **otevřít jako** rozevíracího seznamu vyberte **Text**.  
-  
-     Prostředek se otevře v **zdrojový kód** editoru.  
-  
- \- nebo –  
-  
-1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor .rc.  
-  
-2.  V místní nabídce zvolte **otevřít v programu...** a pak vyberte **Editor zdrojového kódu (textu)**.  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory prostředků](../windows/resource-files-visual-studio.md)   
- [Editory prostředků](../windows/resource-editors.md)
+> Editory prostředků nečtou přímo .rc nebo `resource.h` soubory. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické. Jako normální zkompilovat procesu, se zahodí informace, které nejsou symbolické (například komentáře) v průběhu kompilace. Pokaždé, když se soubor .aps získá synchronizována se soubor .rc, se znovu vygeneroval soubor .rc (například když uložíte, editor prostředků přepíše soubor .rc a soubor resource.h). Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc. Informace o tom, jak zachovat komentáře, naleznete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).
+
+### <a name="to-open-a-resource-script-file-as-text"></a>K otevření souboru skriptu prostředků jako text
+
+1. Z **souboru** nabídku zvolte **otevřít**, klikněte na **souboru.**
+
+2. V **otevřít soubor** dialogové okno, přejděte do souboru skriptu prostředků, které chcete zobrazit v textovém formátu.
+
+3. Zvýrazněte soubor a potom klikněte na šipku rozevíracího seznamu **otevřít** tlačítko (nachází se na pravé straně tlačítka).
+
+4. Zvolte **otevřít v** z rozevírací nabídky.
+
+5. V **otevřít v** dialogové okno, klikněte na tlačítko **Editor zdrojového kódu (textu)**.
+
+6. Z **otevřít jako** rozevíracího seznamu vyberte **Text**.
+
+   Prostředek se otevře v **zdrojový kód** editoru.
+
+\- nebo –
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor .rc.
+
+2. V místní nabídce zvolte **otevřít v programu...** a pak vyberte **Editor zdrojového kódu (textu)**.
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Soubory prostředků](../windows/resource-files-visual-studio.md)  
+[Editory prostředků](../windows/resource-editors.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30be6015fec0f210f0b1f70502881f2ce2c3b54b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0ba3e4b916556ebe83303228cfa9a056780962e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644314"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612924"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease – metoda
-Provádí operaci vydání COM pro rozhraní přidružené k tomuto **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void InternalRelease();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato metoda je chráněna.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Provádí operaci vydání COM pro rozhraní přidružené k tomuto **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void InternalRelease();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato metoda je chráněna.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

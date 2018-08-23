@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7f89922fb107c1454ec81dfd8a9ac213608da962
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016889"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610840"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate – metoda
-Způsobí, že všechny objekty pro vytváření vytvořit instanci modulu pro vypnutí.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void Terminate();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Uvolní továren v mezipaměti.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [Module – třída](../windows/module-class.md)
+
+Způsobí, že všechny objekty pro vytváření vytvořit instanci modulu pro vypnutí.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void Terminate();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Uvolní továren v mezipaměti.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[Module – třída](../windows/module-class.md)
