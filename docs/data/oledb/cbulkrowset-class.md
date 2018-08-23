@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337719"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465852"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 Načítá a zpracovává řádků pro práci s daty hromadně načtením více popisovačů řádků pomocí jediného volání.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
-Volání [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
+Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Zobrazit [IRowset::GetData](https://msdn.microsoft.com/library/ms716988.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 Načte řádky začínající od desetinné pozice v dané sadě řádků.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) v *OLE DB referenční informace pro programátory*.   
+ Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
-Volání [IRowset::ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
+Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
   

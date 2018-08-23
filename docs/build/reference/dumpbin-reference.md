@@ -1,5 +1,5 @@
 ---
-title: DUMPBIN – odkaz | Microsoft Docs
+title: DUMPBIN – odkaz | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372653"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465486"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN – odkaz
-Vypisovač binárních souborů Microsoft COFF (DUMPBIN. EXE) obsahuje informace o běžných objekt souboru formátu (COFF) binární soubory. DUMPBIN – můžete zkontrolovat soubory COFF objektů, standardní knihoven COFF objektů, spustitelné soubory a dynamické knihovny (DLL).  
+Microsoft COFF – Vypisovač binárních souborů (DUMPBIN. Soubor EXE) zobrazí informace o binárních souborů Common Object File Format (COFF). DUMPBIN – můžete použít k prozkoumání soubory objektů COFF, standardní knihovny objektů COFF, spustitelných souborů a dynamické knihovny (DLL).  
   
 > [!NOTE]
->  Můžete spustit tento nástroj pouze z [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] příkazového řádku. Nelze ji spustit z příkazového řádku systému nebo v Průzkumníku souborů.  
+>  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.  
   
- Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
+ Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
   
 -   [DUMPBIN – příkazový řádek](../../build/reference/dumpbin-command-line.md)  
   
--   [Možnosti DUMPBIN](../../build/reference/dumpbin-options.md)  
+-   [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)

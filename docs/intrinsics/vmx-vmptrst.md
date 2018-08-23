@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Microsoft Docs
+title: __vmx_vmptrst | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328591"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465667"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Ukládá má ukazatel na aktuální struktura řízení virtuálního počítače (VMCS) na zadané adrese.  
+ Ukládá ukazatel na aktuální struktura řízení virtuálních počítačů (VMCS) na zadané adrese.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,23 +38,23 @@ void __vmx_vmptrst(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] *`VmcsPhysicalAddress`  
- Adresa se uloží aktuální VMCS ukazatele.  
+ [in] *`VmcsPhysicalAddress`  
+ Adresa aktuální ukazatel VMCS se mají ukládat.  
   
 ## <a name="remarks"></a>Poznámky  
  Ukazatel VMCS je 64-bit fyzickou adresu.  
   
- `__vmx_vmptrst` Funkce je ekvivalentní volání `VMPTRST` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace vyhledejte dokumentu "Intel technické specifikace pro the IA-32 Intel architektura virtualizace," dokumentu číslo C97063-002, na [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
+ `__vmx_vmptrst` Funkce je ekvivalentní volání `VMPTRST` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

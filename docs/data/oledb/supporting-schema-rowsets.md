@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339702"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465668"
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
-Sady řádků schématu povolení uživatelům získat informace o úložišti dat bez znalosti jeho základní strukturu nebo schéma. Úložiště dat může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, aby se žádný způsob, jak zajistit znalosti o schématu s výjimkou tím, že jeho čtení. (Další příklad, mějte na paměti, že průvodců aplikace Visual C++ pomocí sad řádků schématu generovat přístupové objekty pro spotřebitele.) Objekt relace poskytovatele umožňující příjemci k tomu zveřejňuje metody na [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) rozhraní. V aplikacích Visual C++, použijte [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci `IDBSchemaRowset`.  
+Sady řádků schématu povolení uživatelům získat informace o úložišti dat bez znalosti jeho základní strukturu nebo schéma. Úložiště dat může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, aby se žádný způsob, jak zajistit znalosti o schématu s výjimkou tím, že jeho čtení. (Další příklad, mějte na paměti, že průvodců aplikace Visual C++ pomocí sad řádků schématu generovat přístupové objekty pro spotřebitele.) Objekt relace poskytovatele umožňující příjemci k tomu zveřejňuje metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) rozhraní. V aplikacích Visual C++, použijte [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci `IDBSchemaRowset`.  
   
  `IDBSchemaRowsetImpl` podporuje následující způsoby:  
   
@@ -64,7 +64,7 @@ Sady řádků schématu povolení uživatelům získat informace o úložišti d
 -   V **C***ShortName***SessionColSchemaRowset**, předejte název tabulky jako `DBID`.  
   
 ## <a name="setting-restrictions"></a>Nastavení omezení  
- Důležitý koncept v Podpora sad řádků schématu se nastavování omezení, které provedete pomocí `SetRestrictions`. Omezení povolit uživatelům načítat pouze odpovídající řádky (například vyhledat všechny sloupce v tabulce "MyTable"). Omezení jsou volitelné a v případě, ve které nejsou podporovány (výchozí), vždy vrátí se všechna data. Příklad poskytovatele, který nepodporuje omezení, najdete v článku [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) vzorku.  
+ Důležitý koncept v Podpora sad řádků schématu se nastavování omezení, které provedete pomocí `SetRestrictions`. Omezení povolit uživatelům načítat pouze odpovídající řádky (například vyhledat všechny sloupce v tabulce "MyTable"). Omezení jsou volitelné a v případě, ve které nejsou podporovány (výchozí), vždy vrátí se všechna data. Příklad poskytovatele, který nepodporuje omezení, najdete v článku [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku.  
   
 ## <a name="setting-up-the-schema-map"></a>Nastavení mapování schématu  
  Mapa schématu, jako je například tento v Session.h v UpdatePV nastavení:  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  Všimněte si, že `CUpdateSession` dědí z `IDBSchemaRowsetImpl`, takže má metody zpracování omezení. Pomocí `CSchemaRowsetImpl`, deklarujte tři podřízené třídy (uvedené v mapě schématu výše): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, a `CUpdateSessionPTSchemaRowset`. Každá z těchto podřízených tříd má `Execute` metoda, která zpracovává jeho odpovídající sadu omezení (kritéria vyhledávání). Každý `Execute` metoda srovnává hodnoty `cRestrictions` a `rgRestrictions` parametry. Zobrazit popis těchto parametrů v [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Další informace o tom, které odpovídají omezení řádků konkrétní schématu naleznete v tabulce sada řádků schématu GUID v [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) v *OLE DB referenční informace pro programátory* v Windows SDK.  
+ Další informace o tom, které odpovídají omezení řádků konkrétní schématu naleznete v tabulce sada řádků schématu GUID v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) v *OLE DB referenční informace pro programátory* v Windows SDK.  
   
  Například, pokud je podporována **TABLE_NAME** omezení `DBSCHEMA_TABLES`, provedli byste následující:  
   

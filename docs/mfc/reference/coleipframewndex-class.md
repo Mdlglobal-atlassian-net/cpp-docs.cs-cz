@@ -104,16 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 436c99777f526cfa364241b4dc25e33be672d6ae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850131"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465660"
 ---
 # <a name="coleipframewndex-class"></a>Coleipframewndex – třída
-`COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy. 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
+`COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy. Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.   
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,20 +1,22 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
 ms.topic: landing-page
-title: Vývoj Linux s dokumentaci jazyka C++
-description: Vytváření a ladění aplikací spuštěných v systému Linux.
-ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+title: Vývoj pro Linux v dokumentaci k C++
+description: Vytvářet a ladit aplikace běžící na Linuxu.
+author: mikeblome
+ms.author: mblome
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d93ad1fd32003444c9ddd991e1810fbc5bec79d5
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "29794177"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42465500"
 ---
-# <a name="linux-development-with-c-documentation"></a>Vývoj Linux s dokumentaci jazyka C++
+# <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
 
-Vytváření a ladění aplikací spuštěných v systému Linux.
+Vytvářet a ladit aplikace běžící na Linuxu.
 
 <ul class="panelContent cardsF">
     <li>
@@ -28,8 +30,8 @@ Vytváření a ladění aplikací spuštěných v systému Linux.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalace a konfigurace zatížení Linux</h3>
-                        <p>Zjistěte, jak nastavit Visual Studio pro sestavování Linux aplikace v jazyce C++.</p>
+                        <h3>Instalace a konfigurace úlohy Linux</h3>
+                        <p>Další informace o nastavení sady Visual Studio k vytvoření aplikace pro Linux v C++.</p>
                     </div>
                 </div>
             </div>
@@ -48,7 +50,7 @@ Vytváření a ladění aplikací spuštěných v systému Linux.
                     </div>
                     <div class="cardText">
                         <h3>Visual C++ pro Linux Blog</h3>
-                        <p>Zachovat aktuální pomocí nové funkce přidané do Visual C++ pro Linux zatížení.</p>
+                        <p>Stálý přehled díky novým funkcím, přidá do prostředí Visual C++ pro Linux úlohy.</p>
                     </div>
                 </div>
             </div>

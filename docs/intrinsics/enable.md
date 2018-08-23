@@ -1,5 +1,5 @@
 ---
-title: _zapnout | Microsoft Docs
+title: _povolit | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330942"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465574"
 ---
 # <a name="enable"></a>_enable
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Umožňuje přerušení.  
   
@@ -39,18 +39,18 @@ void _enable(void);
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_enable`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86, ARM, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `_enable` dá pokyn procesoru se nastavit příznak přerušení. Na x86 systémy, tato funkce generuje příznak nastavit přerušení (`sti`) instrukcí.  
+ `_enable` dává pokyn k nastavení příznaku přerušení procesoru. Na x86 systémy, tato funkce generuje nastavit příznak přerušení (`sti`) instrukce.  
   
- Tato funkce je dostupný jenom v režimu jádra. Pokud se používá v uživatelském režimu, je vyvolána výjimka privilegovaných instrukcí.  
+ Tato funkce je pouze k dispozici v režimu jádra. Pokud se použije v uživatelském režimu, je vyvolána výjimka Privilegovaná instrukce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

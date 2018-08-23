@@ -1,5 +1,5 @@
 ---
-title: runtime_checks – | Microsoft Docs
+title: runtime_checks – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 817afaff738b2528bd165e814517c8399cd8a151
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b20ea9dd12bfe4daff8e2e440c96a41c220aa742
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840661"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465649"
 ---
 # <a name="runtimechecks"></a>runtime_checks
 Zakáže nebo obnoví [/RTC](../build/reference/rtc-run-time-error-checks.md) nastavení.  
@@ -31,36 +31,36 @@ Zakáže nebo obnoví [/RTC](../build/reference/rtc-run-time-error-checks.md) na
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #pragma runtime_checks( "[runtime_checks]", {restore | off} )  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Nelze povolit spuštění zkontrolujte, zda nebyl povolen s možností kompilátoru. Například pokud nezadáte /RTCs, zadání `#pragma runtime_checks( "s", restore)` neumožní ověřování rámců zásobníku.  
+ 
+Nelze povolit kontrolu za běhu, který není povolená s možností kompilátoru. Například, pokud nezadáte `/RTCs`, zadání `#pragma runtime_checks( "s", restore)` neumožní ověřování rámců zásobníku.  
   
- **Runtime_checks –** – Direktiva pragma musí být uvedena mimo funkci a na první funkci definovanou po je vidět – Direktiva pragma se projeví. **Obnovení** a **vypnout** argumenty zapnout zadaný v možnosti *runtime_checks –* zapnout nebo vypnout.  
+**Runtime_checks –** – Direktiva pragma musí být uvedena mimo funkci a na první funkci definovanou po viděli direktivy pragma se projeví. *Obnovení* a *vypnout* argumenty zapnutí možnosti zadané v **runtime_checks –** zapnutí nebo vypnutí.  
   
- *Runtime_checks –* může být nula nebo více parametrů uvedené v následující tabulce.  
+**Runtime_checks –** může být nula nebo více parametrů je znázorněno v následující tabulce.  
   
 ### <a name="parameters-of-the-runtimechecks-pragma"></a>Parametry runtime_checks – direktiva Pragma  
   
-|Parametry.|Typ kontroly runtime|  
+|Parametry|Typ kontroly za běhu|  
 |--------------------|-----------------------------|  
-|**s**|Umožňuje zásobníku ověření (snímek).|  
-|**c**|Sestavy, když je hodnota přiřazeny menší datový typ, který vede ke ztrátě dat.|  
-|**u**|Sestavy při použití proměnné dříve, než je definován.|  
+|*s*|Umožňuje seskupit ověření (snímek).|  
+|*c*|Oznámí, že na menší datový typ, který vede ke ztrátě dat je přiřazena hodnota.|  
+|*u*|Oznámí, pokud se nějaká proměnná použije předtím, než se definuje.|  
   
- Jedná se o stejná písmena použít s možností/RTC kompilátoru. Příklad:  
+Toto jsou stejná písmena použít s `/RTC` – možnost kompilátoru. Příklad:  
   
 ```  
 #pragma runtime_checks( "sc", restore )  
 ```  
   
- Pomocí **runtime_checks –** – Direktiva pragma s prázdný řetězec (**""**) je speciální forma direktivu:  
+Použití **runtime_checks –** – Direktiva pragma se prázdný řetězec (**""**) je zvláštní forma direktivy:  
   
--   Při použití **vypnout** parametr, stane se kontrola chyb za běhu, uvedené v tabulce výše, vypnutí.  
+- Při použití *vypnout* parametr, ukazuje kontroly chyb za běhu, uvedené v tabulce výše, vypnuto.  
   
--   Při použití **obnovení** parametr resetuje Kontrola chyb za běhu na ty, které jste zadali s parametrem/RTC kompilátoru.  
+- Při použití *obnovení* parametr resetuje kontroly chyb za běhu na ty, které jste zadali pomocí `/RTC` – možnost kompilátoru.  
   
 ```  
 #pragma runtime_checks( "", off )  
@@ -71,4 +71,5 @@ Zakáže nebo obnoví [/RTC](../build/reference/rtc-run-time-error-checks.md) na
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ 
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   

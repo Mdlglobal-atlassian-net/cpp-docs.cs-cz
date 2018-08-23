@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338707"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465485"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Podpora transakcí v prostředí OLE DB
 A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak seskupit nebo služby batch, řadu aktualizací ke zdroji dat tak, aby všechny úspěšné a usilujeme o to najednou, nebo (Pokud některá z nich selže), žádná není potvrzena a celá transakce bude vrácena zpět. Tento proces zajistí integritu výsledek pro zdroj dat.  
   
  OLE DB podporuje transakce pomocí následujících tří metod:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Vztah mezi relacemi a transakce  
  Objekt jednoho datového zdroje můžete vytvořit jeden nebo více objektů relace, z nichž každá může být uvnitř nebo mimo obor transakce v daném okamžiku.  
@@ -55,7 +55,7 @@ A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak seskup
  Volání `ITransaction::Commit` nebo `ITransaction::Abort` končí transakce. `Commit` způsobí, že všechny změny v rámci oboru transakce u úložiště dat. `Abort` způsobí, že všechny změny v rámci oboru transakce budou zrušeny a úložiště dat se nacházela ve stavu došlo před spuštěním transakce.  
   
 ## <a name="nested-transactions"></a>Vnořené transakce  
- A [vnořená transakce](https://msdn.microsoft.com/library/ms716985.aspx) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.  
+ A [vnořená transakce](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Distribuované transakce  
  Distribuované transakce je transakce, která aktualizuje distribuovaných dat; To znamená, že data ve více než jeden síťový počítač systému. Pokud chcete zajistit podporu transakcí v distribuovaném systému, používejte rozhraní .NET Framework než transakce podporu technologie OLE DB.  

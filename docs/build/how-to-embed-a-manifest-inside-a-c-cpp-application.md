@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vložení manifestu do aplikace C/C++ | Microsoft Docs'
+title: 'Postupy: vložení manifestu do aplikace C/C++ | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369049"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465476"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
-Je doporučeno, že aplikace C/C++ (nebo knihovna) mají jeho manifest vložená do konečné binární, protože zaručí se tím správný modul runtime chování ve většině scénářů. Ve výchozím nastavení [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pokusí k sestavení projektu ze zdrojových souborů pro vložení manifestu; viz [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace vytvořené s použitím nmake, některé změny existujícího souboru pravidel jsou nezbytné. V této části ukazuje, jak změnit stávající soubory pravidel pro automaticky vložení manifestu do konečné binárního souboru.  
+Doporučuje se, že aplikace C/C++ (nebo knihovna) mají manifest vložený v koncovém binárním souboru, protože zaručí se tak správný modul runtime chování ve většině scénářů. Ve výchozím nastavení Visual Studio se pokusí pro vložení manifestu při sestavení projektu ze zdrojových souborů. Zobrazit [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace sestavena pomocí nmake, některé existující soubor pravidel jsou nutné změny. Tato část ukazuje, jak změnit existující soubory pravidel pro automatické vložení manifestu v koncovém binárním souboru.  
   
 ## <a name="two-approaches"></a>Dva přístupy  
- Existují dva způsoby pro vložení manifestu do aplikace nebo knihovny.  
+ Existují dva způsoby, jak vložit manifestu aplikace nebo knihovna.  
   
--   Pokud nejsou provádění přírůstkové sestavení můžete přímo vložení manifestu pomocí příkazového řádku, který je podobný následujícímu jako krok po sestavení:  
+-   Pokud se nejedná přírůstkového sestavení můžete přímo vložit do manifestu jako krok po sestavení pomocí příkazového řádku, který je podobný následujícímu:  
   
      **mt.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
@@ -37,20 +37,20 @@ Je doporučeno, že aplikace C/C++ (nebo knihovna) mají jeho manifest vložená
   
      **mt.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     (1 pro EXE, 2 pro knihovny DLL.)  
+     (1 pro soubor EXE, 2 pro knihovnu DLL).  
   
--   Pokud byste přírůstkové sestavení, přímou úpravou prostředku, jak je vidět tady bude zakažte přírůstkové sestavování a způsobit úplné opětovné sestavení; Proto by měla být provedena jiný přístup:  
+-   Pokud provádíte přírůstkového sestavení, Přímá úprava prostředku, jak je znázorněno zde bude zakázat přírůstkové sestavování a způsobit úplné opětovné sestavení; Proto by měla být přijata jiný přístup:  
   
     -   Propojte binárního souboru ke generování souboru MyApp.exe.manifest.  
   
-    -   Převeďte manifest souboru prostředků.  
+    -   Převeďte manifest do souboru prostředků.  
   
     -   Znovu propojte (přírůstkově) pro vložení manifestu prostředků do binárního souboru.  
   
- Následující příklady ukazují, jak změnit soubory pravidel začlenit obě metody.  
+ Následující příklady ukazují, jak změnit soubory pravidel začlenit obě tyto metody.  
   
 ## <a name="makefiles-before"></a>Soubory pravidel (před)  
- Vezměte v úvahu nmake skript pro MyApp.exe, jednoduchou aplikaci z jednoho souboru:  
+ Vezměte v úvahu nmake skript pro MyApp.exe, jednoduchou aplikaci vytvořené ze souboru:  
   
 ```  
 # build MyApp.exe  
@@ -70,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Pokud tento skript se spustí s Visual C++ beze změny, vytvoří úspěšně MyApp.exe. Vytvoří také externí souboru manifestu MyApp.exe.manifest, pro použití v operačním systému k načtení závislé sestavení za běhu.  
+ Pokud se skript spouští beze změny v jazyce Visual C++, vytvoří úspěšně MyApp.exe. Vytvoří také externí soubor manifestu MyApp.exe.manifest, pro použití v operačním systému pro načtení závislá sestavení za běhu.  
   
- Velmi podobná nmake skript pro MyLibrary.dll:  
+ Nmake skript pro MyLibrary.dll vypadá podobně jako:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>Soubory pravidel (po)  
- K sestavení s vložených manifesty, je nutné provést čtyři malé změny k původní soubory pravidel. Pro soubor pravidel MyApp.exe:  
+ Chcete-li sestavení s vložených manifestů je nutné provést čtyři drobné změny původní soubory pravidel. Pro soubor MyApp.exe pravidel:  
   
 ```  
 # build MyApp.exe  
@@ -126,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Pro soubor pravidel MyLibrary.dll:  
+ Pro soubor MyLibrary.dll pravidel:  
   
 ```  
 # build MyLibrary.dll  
@@ -159,7 +159,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Soubory pravidel teď obsahuje dva soubory, které provádějí skutečné pracovní, makefile.inc a makefile.targ.inc.  
+ Soubory pravidel teď obsahují dva soubory, které se skutečnou práci, makefile.inc a makefile.targ.inc.  
   
  Vytvořte makefile.inc a zkopírujte do něj následující:  
   

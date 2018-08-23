@@ -1,5 +1,5 @@
 ---
-title: raw_interfaces_only – | Microsoft Docs
+title: raw_interfaces_only | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4643181bf70bc92f4ef5e88b8a9add1ba7bdaad7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63097c9ac47f3b791ff7fd5949cece4d85e5ca1f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849298"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465389"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Potlačí generování funkce obálky zpracování chyb a [vlastnost](../cpp/property-cpp.md) deklarace, které používají tyto funkce obálku.  
+Potlačí generování obálky funkce zpracování chyb a [vlastnost](../cpp/property-cpp.md) deklarace, které používají tyto funkce obálky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,12 +35,14 @@ raw_interfaces_only
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `raw_interfaces_only` Atribut také způsobuje výchozí předponu v názvu funkce bez vlastnost odeberou. Za normálních okolností je předpona **raw_**. Pokud tento atribut je zadán, jsou názvy funkcí přímo z knihovny typů.  
+ 
+**Raw_interfaces_only** atribut navíc způsobí, že výchozí předpony v názvu bez vlastností funkcí, které mají být odebrány. Za normálních okolností je předpona **raw_**. Pokud tento atribut není zadán, jsou uvedené názvy přímo z knihovny typů.  
   
- Tento atribut umožňuje vystavit pouze nízké úrovně obsah knihovny typů.  
+Tento atribut umožňuje vystavit pouze nízké úrovně obsah knihovny typů.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

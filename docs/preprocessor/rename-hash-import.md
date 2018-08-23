@@ -1,5 +1,5 @@
 ---
-title: Přejmenovat (#import) | Microsoft Docs
+title: Přejmenovat (#import) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bad195e0885c18748ddd39d2ed6e7a565606398
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2930ab9cbc5b847252e20f185b335a547317fa5b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840430"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465566"
 ---
 # <a name="rename-import"></a>rename (#import)
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Funguje kolem název kolizí problémy.  
+Funguje kolem problémy kolizí název.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,37 +34,39 @@ ms.locfileid: "33840430"
 rename("OldName","NewName")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `OldName`  
- Původní název v knihovně typů.  
+### <a name="parameters"></a>Parametry  
+*OldName*  
+Starý název v knihovně typů.  
   
- `NewName`  
- Název má být použit místo starý název.  
+*NewName*  
+Název se použije namísto starý název.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud tento atribut je zadán, kompilátor nahradí všechny výskyty *OldName* v knihovně typů s uživatelem zadané *NewName* v výsledné soubory hlaviček.  
+ 
+Pokud tento atribut není zadán, kompilátor nahradí všechny výskyty *OldName* v knihovně typů s uživatelem zadané *NewName* ve výsledné soubory hlaviček.  
   
- Tento atribut lze při název typu knihovny se shoduje s definici makra v systémových souborech záhlaví. Pokud tato situace nevyřeší, pak různé chyby syntaxe se budou generovat, jako například [C2059 Chyba kompilátoru](../error-messages/compiler-errors-1/compiler-error-c2059.md) a [C2061 Chyba kompilátoru](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
+Tento atribut lze použít, když název v knihovně typů se shoduje s definici makra v systémových souborech hlaviček. Pokud tato situace není vyřešen, různé chyby syntaxe se vygeneruje, jako například [Chyba kompilátoru C2059](../error-messages/compiler-errors-1/compiler-error-c2059.md) a [Chyba kompilátoru C2061](../error-messages/compiler-errors-1/compiler-error-c2061.md).  
   
 > [!NOTE]
->  Nahrazení je název sloužící v knihovny typů, ne pro název používaný v výsledný soubor hlaviček.  
+> Nahrazení je určen pro název použitý v knihovně typů není pro název použitý ve výsledném souboru záhlaví.  
   
- Předpokládejme například, vlastnost s názvem `MyParent` existuje v knihovny typů a makra `GetMyParent` je definována v záhlaví souboru a použít před `#import`. Vzhledem k tomu `GetMyParent` je výchozí název funkce obálku pro zpracování chyb **získat** vlastnost, dojde k kolize názvů. Pokud chcete tento problém obejít, použijte následující atribut v `#import` příkaz:  
+Předpokládejme například, že vlastnost s názvem `MyParent` existuje v knihovně typů a makra `GetMyParent` je definována v hlavičkovém souboru a nepoužili `#import`. Protože `GetMyParent` je název výchozí funkce obálky pro zpracování chyb `get` vlastnosti, dojde ke kolizi názvů. Pokud chcete tento problém obejít, použijte následující atribut `#import` – příkaz:  
   
 ```  
 rename("MyParent","MyParentX")  
 ```  
   
- které přejmenuje název `MyParent` v knihovně typů. Pokus o přejmenování `GetMyParent` obálku název selžou:  
+které přejmenuje název `MyParent` v knihovně typů. Pokus o přejmenování `GetMyParent` název obálky se nezdaří:  
   
 ```  
 rename("GetMyParent","GetMyParentX")  
 ```  
   
- Důvodem je, že název `GetMyParent` dochází pouze v výsledné hlavičkový soubor knihovny typů.  
+Důvodem je, že název `GetMyParent` dochází pouze v výsledný hlavičkový soubor knihovny typů.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

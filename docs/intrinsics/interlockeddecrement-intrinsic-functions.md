@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedDecrement | Microsoft Docs
+title: Vnitřní funkce _InterlockedDecrement | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338985"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465594"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
+**Specifické pro Microsoft**  
   
- Poskytuje vnitřní podpora kompilátoru pro Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) funkce.  
+Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -108,31 +108,31 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `lpAddend`  
- Ukazatel na proměnnou se odečte.  
+ [out v] `lpAddend`  
+ Ukazatel na proměnnou chcete snížit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrácená hodnota je výsledná odečte hodnota.  
+ Vrácená hodnota je výsledná hodnota odečítají.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Existuje několik variant na `_InterlockedDecrement` se používá verzi sémantiku nebo který lišit v závislosti na datové typy, které zahrnují a zda získat specifické pro procesor.  
+ Existuje několik variant na `_InterlockedDecrement` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.  
   
- Když `_InterlockedDecrement` funkce se používá na 32bitové celočíselné hodnoty, `_InterlockedDecrement16` funguje na hodnoty 16bitové celé číslo a `_InterlockedDecrement64` funguje na 64bitové celočíselné hodnoty.  
+ Zatímco `_InterlockedDecrement` funkce se používá na 32bitové celé číslo hodnoty `_InterlockedDecrement16` pracuje hodnoty 16bitové celé číslo a `_InterlockedDecrement64` pracuje na 64bitové celočíselné hodnoty.  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony, pokud potřebujete získat a vydání sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Proměnná ukazuje `lpAddend` parametr musí být zarovnána na hranici 32-bit; jinak, tato funkce selže na s více procesory x86 a žádné jiné x86 systémy. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
+ Proměnná odkazuje `lpAddend` parametr musí být zarovnány na hranici 32-bit; v opačném případě této funkce nezdaří se s více procesory x86 systémy a systémy x x86. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
 ## <a name="example"></a>Příklad  
   
@@ -204,5 +204,5 @@ void __cdecl SimpleThread(void* pParam) {
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

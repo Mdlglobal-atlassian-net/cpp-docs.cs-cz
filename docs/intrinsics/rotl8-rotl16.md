@@ -1,5 +1,5 @@
 ---
-title: _rotl8 _rotl16 | Microsoft Docs
+title: _rotl8 _rotl16 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48a3cfe51f79f0d6068509a5e42693417524417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c8dc98e679de6255ae5762777fd51cbe3554a32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328809"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465760"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8 _rotl16
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Otočte vstupní hodnoty na levé straně si nejvýznamnější bit Znaménkový o zadaný počet pozic bit.  
+ Otočte doleva nejvýznamnější bit (MSB) zadaný počet pozic bit vstupní hodnoty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,26 +44,26 @@ unsigned short _rotl16(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `value`  
- Hodnota k otočení.  
+ [in] `value`  
+ Hodnota, otočí.  
   
- [v] `shift`  
- Počet bitů otočení.  
+ [in] `shift`  
+ Počet bitů na otočení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Otočený hodnota.  
+ Otočený hodnotu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_rotl8`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotl16`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotl8`|x86, ARM, x64|  
+|`_rotl16`|x86, ARM, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Na rozdíl od operace posunutí doleva, při provádění rotaci levé nejvyšších bitů, které spadají vypnout nejvyšším přesunou do nejméně významný bit pozic.  
+ Na rozdíl od operaci posunutí doleva při provádění levé otočení nejvyšších bitů, které spadají mimo špičkové přesunou do nejméně významnou bitové pozice.  
   
 ## <a name="example"></a>Příklad  
   
@@ -104,7 +104,7 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)   

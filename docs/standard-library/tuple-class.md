@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963923"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465843"
 ---
 # <a name="tuple-class"></a>tuple – třída
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který ukládá objekty N typů `T1`, `T2`,..., `TN`, respektive, kdy kde `0 <= N <= Nmax`. Rozsah řazené kolekce členů instance `tuple<T1, T2, ..., TN>` je číslo `N` šablony argumentů. Index argumentu šablony `Ti` a odpovídající uložené hodnotě tohoto typu je `i - 1`. Proto když jsme počet typů od 1 do N v této dokumentaci, odpovídající index hodnoty v rozsahu od 0 do N - 1.
+Třída šablony popisuje objekt, který ukládá objekty N typů `T1`, `T2`,..., `TN`v uvedeném pořadí, ve kterém `0 <= N <= Nmax`. Rozsah řazené kolekce členů instance `tuple<T1, T2, ..., TN>` je číslo `N` šablony argumentů. Index argumentu šablony `Ti` a odpovídající uložené hodnotě tohoto typu je `i - 1`. Proto když jsme počet typů od 1 do N v této dokumentaci, odpovídající index hodnoty v rozsahu od 0 do N - 1.
 
 ## <a name="example"></a>Příklad
 

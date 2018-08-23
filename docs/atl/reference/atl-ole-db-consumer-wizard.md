@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025981"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465480"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
 Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové vazby potřebné pro přístup k danému zdroji dat pomocí zadaného zprostředkovatele OLE DB.  
@@ -33,7 +33,7 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
 **Zdroj dat**  
-**Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogovém okně naleznete v tématu [Data přehled rozhraní API odkazu](https://msdn.microsoft.com/library/ms718102.aspx) v dokumentaci Windows SDK.  
+**Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogovém okně naleznete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) v dokumentaci Windows SDK.  
   
 > [!NOTE]
 >  V předchozích verzích, kliknutím na posunu **zdroj dat** tlačítko Otevřít dialogové okno otevřít soubor a umožňuje tak vybrat soubor dat propojení (UDL). Tato funkce se už nepodporuje.  
@@ -176,7 +176,7 @@ Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** z
  Tuto možnost vyberte, pokud chcete použít `CCommand` nebo `db_command` vytvořit příkaz a přístupový objekt příkazu deklarace tříd. Toto je výchozí výběr.  
   
  **Podpora**  
- Vyberte zaškrtávací políčka a určete typy aktualizací, aby se podporoval příjemce (výchozí hodnota je none). Každý z těchto nastaví [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) a odpovídající položky pro [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) ve vlastnosti nastavit mapování.  
+ Vyberte zaškrtávací políčka a určete typy aktualizací, aby se podporoval příjemce (výchozí hodnota je none). Každý z těchto nastaví [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) a odpovídající položky pro [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) ve vlastnosti nastavit mapování.  
   
  **Změna**  
  Určuje, že příjemci podporuje aktualizace řádek dat v dané sadě řádků.  
@@ -190,4 +190,4 @@ Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** z
 ## <a name="see-also"></a>Viz také  
  [Příjemce knihovny ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Připojovací řetězce a propojení dat (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Připojovací řetězce a propojení dat (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

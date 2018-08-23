@@ -1,5 +1,5 @@
 ---
-title: Kompilování a propojování programů s více vlákny | Microsoft Docs
+title: Kompilování a propojování programů s více vlákny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,37 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c77cb217fe841e15f4c7470340bd3fbb502f6a9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695730"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465755"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Kompilování a propojování programů s více vlákny
-Bounce.c program byla zavedená v [Ukázkový vícevláknový C Program](../parallel/sample-multithread-c-program.md).  
+Bounce.c program je zavedený [Ukázkový vícevláknový Program v jazyce C](../parallel/sample-multithread-c-program.md).  
   
- Kompilované programy s více vlákny ve výchozím nastavení.  
+Jsou zkompilovány programů s více vlákny ve výchozím nastavení.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Pro zkompilování a spojení s více vlákny programu Bounce.c ve vývojovém prostředí  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Chcete-li zkompilovat a propojit s více vlákny program Bounce.c z vývojového prostředí  
   
-1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu**.  
+1.  Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.  
   
 2.  V **typy projektů** podokně klikněte na tlačítko **Win32**.  
   
-3.  V **šablony** podokně klikněte na tlačítko **Konzolová aplikace Win32**a zadejte název projektu.  
+3.  V **šablony** podokně klikněte na tlačítko **Konzolová aplikace Win32**a potom zadejte název projektu.  
   
-4.  Přidání souboru, který obsahuje zdrojový kód C do projektu.  
+4.  Přidáte soubor obsahující zdrojový kód jazyka C do projektu.  
   
-5.  Na **sestavení** nabídky, sestavení projektu kliknutím **sestavení** příkaz.  
+5.  Na **sestavení** nabídky, sestavte projekt kliknutím **sestavení** příkazu.  
   
-#### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Pro zkompilování a spojení s více vlákny program Bounce.c z příkazového řádku  
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>Chcete-li zkompilovat a propojit s více vlákny program Bounce.c z příkazového řádku  
   
-1.  Kompilace a propojení program:  
+1.  Zkompilujte a propojte program:  
   
     ```  
     CL BOUNCE.C  
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Viz také
+
+[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)

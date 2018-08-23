@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885294"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465778"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 Tato třída poskytuje metody pro práci s položkami v systémovém registru.  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  Pokud metoda uspěje, vrácená hodnota je ERROR_SUCCESS. Jestliže metoda selže, vrácená hodnota je nenulový chybový kód definovaný v nezdařila. H.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda používá [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) pro zápis hodnoty do registru.  
+ Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) pro zápis hodnoty do registru.  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  Volejte tuto metodu za účelem ukládání dat v poli zadanou hodnotu [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.  

@@ -1,5 +1,5 @@
 ---
-title: raw_method_prefix – | Microsoft Docs
+title: raw_method_prefix – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c9042393e4ff3de57bea83ad566c8b74d5d3b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb9178bc315385bab97cea473430745ad66d973
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839917"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465297"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Určuje předponu různých předejdete kolize názvů.  
+Určuje jinou předponu vyhnete kolize názvů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33839917"
 raw_method_prefix("Prefix")  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `Prefix`  
- Předpona, kterou chcete použít.  
+### <a name="parameters"></a>Parametry  
+*Předpona*  
+Předpona, která má být použit.  
   
 ## <a name="remarks"></a>Poznámky  
- Nízké úrovně vlastnosti a metody jsou vystaveny členské funkce s názvem výchozí předponu **raw_** předejdete kolize názvů s vysoké úrovně členské funkce zpracování chyb.  
+ 
+Nízké úrovně vlastnosti a metody vystaveny členským funkcím pojmenovaným s předponou výchozí **raw_** k vyhnete kolize názvů s vysoké úrovně členské funkce zpracování chyb.  
   
 > [!NOTE]
->  Účinky `raw_method_prefix` atribut se nezmění přítomnost [raw_interfaces_only –](#_predir_raw_interfaces_only) atribut. `raw_method_prefix` Vždy má přednost před `raw_interfaces_only` v zadání předpony. Pokud oba atributy se používají ve stejné `#import` příkaz a potom předponu určeného `raw_method_prefix` je použit atribut.  
+> Účinky **raw_method_prefix –** atribut se nezmění přítomností [raw_interfaces_only](#_predir_raw_interfaces_only) atribut. **Raw_method_prefix –** vždy má přednost před `raw_interfaces_only` v určeném předponu. Pokud oba atributy jsou používány ve stejném `#import` příkaz a pak podle Zadaná předpona **raw_method_prefix –** atribut se používá.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

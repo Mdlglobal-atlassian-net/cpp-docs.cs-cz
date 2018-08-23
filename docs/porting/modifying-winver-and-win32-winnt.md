@@ -1,5 +1,5 @@
 ---
-title: Úpravy maker WINVER a _WIN32_WINNT | Microsoft Docs
+title: Úpravy maker WINVER a _WIN32_WINNT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/04/2017
 ms.technology:
@@ -15,27 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3b41404c3f003d8f4d87ca98888f004c08c9721
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912638"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465472"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Úpravy maker WINVER a _WIN32_WINNT
 
-Visual C++ již nepodporuje cílení systému Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, musíte upravit makra. Při upgradu na projekt, který byl vytvořen pomocí dřívější verze aplikace Visual C++, mohou se zobrazit chyby při kompilaci související s **WINVER** nebo **_WIN32_WINNT** makra, pokud jsou přiřazena k verzi Windows, která již není podporována.  
+Jazyk Visual C++ již podporuje cílení na Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, je třeba upravit makra. Když upgradujete projekt, který byl vytvořen pomocí dřívější verze aplikace Visual C++, může se zobrazit související se chyby při kompilaci **WINVER** nebo **_WIN32_WINNT** makra, pokud jsou přiřazeny k verzi Windows, který už není podporovaná.  
   
 ## <a name="remarks"></a>Poznámky  
 
-Pokud chcete upravit makra, v záhlaví souboru (například targetver.h která je součástí při vytváření projektu, jehož cílem Windows), přidejte následující řádky.  
+Pokud chcete upravit makra, v hlavičkovém souboru (například targetver.h která je zahrnuta, když vytvoříte projekt, který cílí na Windows), přidejte následující řádky.  
   
 ```C  
 #define WINVER 0x0A00  
 #define _WIN32_WINNT 0x0A00  
 ```  
   
-To cílí operačním systémem Windows 10. Tyto hodnoty jsou uvedeny v záhlaví souboru Windows SDKDDKVer.h, který definuje také makra pro každou verzi systému Windows. Měli byste přidat #define příkazu před zahrnutím SDKDDKVer.h. Zde jsou řádky z Windows 10 verzi SDKDDKVer.h, které kódování hodnoty pro jednotlivé verze Windows:  
+To cílí na operační systém Windows 10. Tyto hodnoty jsou uvedeny v souboru hlaviček Windows souboru SDKDDKVer.h také definuje makra pro každou verzi Windows. Měli byste přidat #define příkazu před zahrnutím souboru SDKDDKVer.h. Zde jsou řádky z Windows 10 verzi souboru SDKDDKVer.h, které kódování hodnoty pro každou verzi Windows:  
   
 ```C  
 //  
@@ -56,14 +56,14 @@ To cílí operačním systémem Windows 10. Tyto hodnoty jsou uvedeny v záhlav�
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10  
 ```  
   
-Pokud nevidíte, že všechny tyto verze systému Windows uvedené v kopii SDKDDKVer.h, který se díváte na, pravděpodobně používáte starší verze sady Windows SDK. Ve výchozím nastavení používají Win32 projektů Visual Studio 2017 Windows 10 SDK.   
+Pokud nevidíte všechny tyto verze Windows uvedené v kopii souboru SDKDDKVer.h, že se díváte na, pravděpodobně používáte starší verzi sady Windows SDK. Ve výchozím nastavení používají Windows 10 SDK projekty Win32 v sadě Visual Studio 2017.   
   
 > [!NOTE]
->  Hodnoty nemusí fungovat, pokud patří interní hlavičky MFC ve vaší aplikaci.  
+> Hodnoty nemusí fungovat, pokud jste do aplikace zahrnout interní hlaviček knihovny MFC.  
   
-Toto makro můžete také definovat pomocí **/D** – možnost kompilátoru. Další informace najdete v tématu [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md).  
+Toto makro můžete také definovat pomocí `/D` – možnost kompilátoru. Další informace najdete v tématu [/D (Definice preprocesoru)](../build/reference/d-preprocessor-definitions.md).  
   
-Další informace o význam těchto maker najdete v tématu [použití Windows hlaviček](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
+Další informace o význam těchto maker naleznete v tématu [pomocí hlavičky Windows](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
   
 ## <a name="see-also"></a>Viz také  
 

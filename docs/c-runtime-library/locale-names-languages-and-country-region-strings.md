@@ -1,7 +1,7 @@
 ---
 title: Názvy národních prostředí, jazyků a zemí / oblastí řetězce | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606732"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465570"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Řetězce s názvy národních prostředí, jazyků a zemí/oblastí
 
@@ -44,9 +44,9 @@ Upřednostňována forma názvu národního prostředí; například použít `e
 
 Znaková stránka je znaková stránka ANSI/OEM spojená s daným národním prostředím. Znakovou stránku za vás určíme, pokud zadáte národní prostředí pouze pomocí jazyka nebo jazyka a země či oblasti. Zvláštní hodnota `.ACP` Určuje znakovou stránku ANSI pro danou zemi nebo oblast. Zvláštní hodnota `.OCP` Určuje znakovou stránku OEM pro danou zemi nebo oblast. Pokud zadáte například `"Greek_Greece.ACP"` jako národní prostředí, národní prostředí, které se uloží jako `Greek_Greece.1253` (znaková stránka ANSI pro řečtinu), a pokud zadáte `"Greek_Greece.OCP"` jako národní prostředí, je uložena jako `Greek_Greece.737` (znaková stránka OEM pro řečtinu). Další informace o znakových stránkách naleznete v tématu [znakové stránky](../c-runtime-library/code-pages.md). Seznam znakových stránek podporovaných ve Windows najdete v tématu [identifikátory znakových stránek](/windows/desktop/Intl/code-page-identifiers).
 
-Pokud určíte národní prostředí pouze pomocí znakové stránky, použije se výchozí jazyk a země/oblast v systému. Pokud zadáte například `".1254"` (turečtina ANSI) jako národní prostředí systému, který je nakonfigurován pro angličtinu (Spojené státy), je národní prostředí, která je uložena `English_United States.1254`. Tuto formu ukládání nedoporučujeme, protože může způsobit nekonzistentní chování.
+Pokud používáte k určení národního prostředí, výchozí jazyk a zemi/oblast uživatele, jak je hlásí pouze znaková stránka [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) se používají. Pokud zadáte například `".1254"` (turečtina ANSI) jako národní prostředí pro uživatele, který je nakonfigurován pro angličtinu (Spojené státy), je národní prostředí, která je uložena `English_United States.1254`. Tuto formu ukládání nedoporučujeme, protože může způsobit nekonzistentní chování.
 
-A *národní prostředí* hodnotu argumentu `C` Určuje minimální prostředí vyhovující standardu ANSI pro překlad. `C` Národní prostředí předpokládá, že všechny `char` datový typ je 1 bajt a jejich hodnota je vždy menší než 256. Pokud *národní prostředí* odkazuje na prázdný řetězec, národní prostředí, které je definováno implementací nativního prostředí.
+A *národní prostředí* hodnotu argumentu `C` Určuje minimální prostředí vyhovující standardu ANSI pro překlad. `C` Národní prostředí předpokládá, že všechny **char** datový typ je 1 bajt a jejich hodnota je vždy menší než 256. Pokud *národní prostředí* odkazuje na prázdný řetězec, národní prostředí, které je definováno implementací nativního prostředí.
 
 Všechny kategorie národního prostředí lze zadat ve stejnou dobu `setlocale` a `_wsetlocale` funkcí s použitím `LC_ALL` kategorie. Všechny kategorie mohou být nastaveny na stejné národní prostředí nebo můžete nastavit každou kategorii samostatně pomocí argumentu národního prostředí, který má tento tvar:
 

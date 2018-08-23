@@ -1,5 +1,5 @@
 ---
-title: Multithreading s použitím jazyka C a Win32 | Microsoft Docs
+title: Multithreading s použitím jazyka C a Win32 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/02/2018
 ms.technology:
@@ -20,39 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bee92c9dacc831a8bbc8fc000ec982025a399
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8dc9569457b6726aee18359a7ff74e9a45873deb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687540"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465845"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading s použitím jazyka C a prostředí Win32
-Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny. Měli byste zvážit použití více než jedno vlákno, pokud aplikace potřebuje k provedení drahými operacemi, které by způsobily uživatelského rozhraní pro přestat reagovat.  
+Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny. Měli byste zvážit použití více než jedno vlákno, pokud vaše aplikace potřebuje provádět nákladné operace, které by mohly způsobit uživatelského rozhraní přestane reagovat.  
   
- S Visual C++, existují dva způsoby, jak program s více vlákny: pomocí knihovny Microsoft Foundation Class (MFC) nebo běhové knihovny jazyka C a Win32 API. Informace o vytváření aplikací s více vlákny s knihovnou MFC najdete v tématu [Multithreading s C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md) po přečtení v následujících tématech o multithreading v C.  
+V jazyce Visual C++ existují dva způsoby programování s více vlákny: pomocí knihovny Microsoft Foundation Class (MFC) nebo knihovny run-time jazyka C a rozhraní API systému Win32. Informace o vytváření aplikací s více vlákny s knihovnou MFC naleznete v tématu [Multithreading s C++ a knihovnou MFC](../parallel/multithreading-with-cpp-and-mfc.md) po přečtení následujících témat o multithreading v C.  
   
- Tato témata vysvětlují funkce v jazyce Visual C++, které podporují vytvoření programy s více vlákny.  
+Tato témata vysvětlují funkce v jazyce Visual C++ pro podporu vytváření programů s více vlákny.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
--   [Co více vláken je o](../parallel/multithread-programs.md)  
+- [Co multithreading spočívá v](../parallel/multithread-programs.md)  
   
--   [Podpora knihovny pro multithreading](../parallel/library-support-for-multithreading.md)  
+- [Podpora knihovny pro multithreading](../parallel/library-support-for-multithreading.md)  
   
--   [Zahrnout soubory pro multithreading](../parallel/include-files-for-multithreading.md)  
+- [Zahrnuté soubory pro multithreading](../parallel/include-files-for-multithreading.md)  
   
--   [C Run-Time – funkce knihovny pro řízení vláken](../parallel/c-run-time-library-functions-for-thread-control.md)  
+- [Funkce knihovny C Run-Time pro řízení vláken](../parallel/c-run-time-library-functions-for-thread-control.md)  
   
--   [Ukázka s více vlákny programu v jazyce C](../parallel/sample-multithread-c-program.md)  
+- [Ukázka vícevláknového programu v jazyce C](../parallel/sample-multithread-c-program.md)  
   
--   [Psaní programů s více vlákny Win32](../parallel/writing-a-multithreaded-win32-program.md)  
+- [Psaní programů s více vlákny pro Win32](../parallel/writing-a-multithreaded-win32-program.md)  
   
--   [Kompilování a propojování programů s více vlákny](../parallel/compiling-and-linking-multithread-programs.md)  
+- [Kompilování a propojování programů s více vlákny](../parallel/compiling-and-linking-multithread-programs.md)  
   
--   [Obcházení problémových oblastí pomocí programů s více vlákny](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
+- [Obcházení problémových oblastí pomocí programů s více vlákny](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
   
--   [Lokální úložiště vláken (TLS)](../parallel/thread-local-storage-tls.md)  
+- [Úložiště thread local (TLS)](../parallel/thread-local-storage-tls.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+ 
+[Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CTabbedPane | Microsoft Docs
+title: Ctabbedpane – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121835"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465658"
 ---
-# <a name="ctabbedpane-class"></a>CTabbedPane – třída
-Implementuje funkce podokně odpojitelných karty.  
+# <a name="ctabbedpane-class"></a>Ctabbedpane – třída
+Implementuje funkce podokna s odnímatelnými kartami.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,32 +68,32 @@ class CTabbedPane : public CBaseTabbedPane
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CTabbedPane::DetachPane](#detachpane)|(Přepisuje [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
-|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Povolí nebo zakáže automatické barevné zvýrazňování karet.|  
-|[CTabbedPane::FloatTab](#floattab)|Obtéká podokno, ale pouze, pokud se v podokně se aktuálně nachází v odpojitelných kartě. (Přepisuje [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CTabbedPane::GetTabArea](#gettabarea)|Vrátí velikost a umístění oblast karty v okně s kartami.|  
+|[CTabbedPane::DetachPane](#detachpane)|(Přepíše [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
+|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Povolí nebo zakáže automatické barvy karet.|  
+|[CTabbedPane::FloatTab](#floattab)|Podokno, ale pouze čísel s plovoucí čárkou, pokud se v podokně se aktuálně nachází odpojitelných kartě. (Přepíše [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CTabbedPane::GetTabArea](#gettabarea)|Vrátí velikost a umístění od oblasti karet v rámci okna s kartami.|  
 |[CTabbedPane::GetTabWnd](#gettabwnd)||  
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Určuje, zda v záložkách podokně můžete přepnout do režimu autohide –. (Přepisuje [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Určuje, zda podokno s kartami můžete přepnout do režimu automaticky skrývat. (Přepíše [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
 |[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Určuje, zda karty jsou umístěné v dolní části okna.|  
-|[CTabbedPane::ResetTabs](#resettabs)|Všechny záložkách podokna obnoví do výchozího stavu.|  
-|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Nastaví seznam vlastních barev, které lze použít, pokud je povolena funkce automatického barev.|  
+|[CTabbedPane::ResetTabs](#resettabs)|Všechna podokna s kartami obnoví do výchozího stavu.|  
+|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Nastaví seznam vlastních barev, které lze použít, pokud je povolena funkce barva automaticky.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|Výchozí umístění pro karty v aplikaci.|  
-|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozené objektu.|  
+|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozenému objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Rozhraní framework automaticky vytvoří instance této třídy, když uživatel připojí jeden podokně do jiného tak, že odkazuje na titulek druhé části okna. Všechny záložkách podokna, které jsou vytvořené pomocí rozhraní mají ID-1.  
+ Rozhraní framework automaticky vytvoří instanci této třídy, když uživatel připojí jedno podokno do jiného najetím myší na titulek druhé části okna. Všechny podokna s kartami, které jsou vytvořeny v rámci rozhraní mají ID-1.  
   
- Chcete-li zadat regulární karty místo karty stylu Outlook, předat AFX_CBRS_REGULAR_TABS styl, který se [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metoda.  
+ K určení běžné karty namísto tabulátorů stylu Outlook, předejte AFX_CBRS_REGULAR_TABS styl, který má [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metody.  
   
- Pokud vytvoříte záložkách podokně odpojitelných karty, v podokně může být zničený, automaticky podle rozhraní framework, neměli byste ukládat ukazatele. Získání ukazatele do podokna s kartami, volání `CBasePane::GetParentTabbedPane` metoda.  
+ Pokud vytvoříte podokna s kartami s odnímatelnými kartami, v podokně může zničí automaticky rozhraním, proto neměli ukládat ukazatel. Chcete-li získat ukazatel do podokna s kartami, zavolejte `CBasePane::GetParentTabbedPane` metody.  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu vytvoříme `CTabbedPane` objektu. V dalším kroku používáme [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) připojit další karty.  
+ V tomto příkladu vytvoříme `CTabbedPane` objektu. V dalším kroku použijeme [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) připojit další záložky.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -125,9 +125,9 @@ DockPane(pTabbededBar);
 ```  
   
 ## <a name="example"></a>Příklad  
- Jiný způsob, jak vytvořit objekt ovládacího prvku na kartách panelu je použití [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). `AttachToTabWnd` Metoda dynamicky vytvoří objekt podokno s kartami pomocí informace o třídě runtime, která nastavuje [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
+ Dalším způsobem, jak vytvořit objekt ovládacího prvku na kartách panelu je použití [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). `AttachToTabWnd` Metoda dynamicky vytvoří objekt podokna s kartami pomocí informací o třídě modulu runtime nastavil [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
- V tomto příkladu, že jsme záložkách podokně vytvořit dynamicky připojení dvě karty a ujistěte se, druhý karta bez odpojitelných.  
+ V tomto příkladu vytvoříme dynamicky podokna s kartami připojte dvě karty a ujistěte se, druhá karta bez odpojitelných.  
   
 ```  
 DockPane(&m_wndClassView);
@@ -148,7 +148,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ```  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -160,9 +160,9 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
- [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
+ [Cbasetabbedpane –](../../mfc/reference/cbasetabbedpane-class.md)  
   
- [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
+ [Ctabbedpane –](../../mfc/reference/ctabbedpane-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxTabbedPane.h  
@@ -177,30 +177,30 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bHide*  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
- Povolí nebo zakáže automatické barevné zvýrazňování karet.  
+ Povolí nebo zakáže automatické barvy karet.  
   
 ```  
 static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- Hodnota TRUE, mají-li povolit automatické barevné zvýrazňování karet; jinak hodnota FALSE.  
+ [in] *bEnable*  
+ TRUE pro povolení automatického barvy karet; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto statickou metodu použijte k povolení nebo zakázání automatické barevné zvýrazňování karet ve všech záložkách podokna v aplikaci. Pokud je tato funkce povolena, každé kartě vyplní vlastní barvy. Můžete najít seznam barev, které se používají k barva karty voláním [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metoda.  
+ Tato statická metoda použijte k povolení nebo zakázání automatického barvy karet v všechna podokna s kartami v aplikaci. Pokud je tato funkce povolena, každá karta sestavil svou vlastní barvy. Můžete najít seznam barev, které se používají k voláním barev karty [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metody.  
   
  Můžete zadat seznam barev, které se použijí u tabulátorů voláním [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
- Ve výchozím nastavení je tato možnost vypnuta.  
+ Ve výchozím nastavení je tato možnost zakázaná.  
   
 ##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *nTabID*  
- [v] *dockMethod*  
- [v] *bHide*  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -234,15 +234,15 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parametry  
  [out] *rectTabAreaTop*  
- Obsahuje velikost a umístění, v souřadnice obrazovky oblasti nejvyšší karet.  
+ Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, oblasti horní kartě.  
   
  [out] *rectTabAreaBottom*  
- Obsahuje velikost a umístění, v souřadnice obrazovky oblasti dolní karet.  
+ Obsahuje velikost a umístění, v souřadnicovém systému obrazovky, od oblasti karet dole.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu za účelem určit, jak se ukotvení podokno, ve kterém je přetáhnete uživatele. Když uživatel nastavuje tažením podokno přes oblast karty podokna cíl, rozhraní se pokusí ji přidat jako novou kartu cíl podokna. Jinak pokusí se ukotvení v podokně na stranu podokna target, která zahrnuje vytvoření nového kontejneru podokně s podokně oddělovač, který odděluje.  
+ Rozhraní volá tuto metodu za účelem určení, jak podokno, které uživatel přetahuje ukotvení. Když uživatel přetáhne podokno přes oblast karty podokna cíl, se pokusí ho přidat jako na nové kartě v podokně cílové rozhraní framework. V opačném případě se pokusí ukotvit na straně podokna target, která zahrnuje vytvoření nového kontejneru podokno s podokně oddělovač, který odděluje podokna.  
   
- Potlačí tuto metodu v `CTabbedPane`-odvozené třídy toto chování změnit.  
+ Potlačí tuto metodu v `CTabbedPane`-odvozené třídy ke změně tohoto chování.  
   
 ##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud oblast karty se nachází v dolní části okna s kartami; jinak hodnota FALSE.  
+ Hodnota TRUE, pokud oblast karty se nachází v dolní části okna s kartami. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -286,51 +286,51 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavte tento statický člen na hodnotu PRAVDA, aby platnost všechny karty v aplikaci, který se zobrazí v horní části podokna s kartami.  
+ Nastavte tento statický člen na hodnotu PRAVDA, platnost všechny karty v aplikaci, který se má zobrazit v horní části podokna s kartami.  
   
- Předtím, než byl vytvořen s kartami podokně, je nutné nastavit tuto hodnotu.  
+ Tato hodnota je nutné nastavit před podokna s kartami se vytvořil.  
   
  Výchozí hodnota je FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
- Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozené objektu.  
+ Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozenému objektu.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto proměnnou statický člen nastavit na ukazatel na informace třída runtime `CMFCTabCtrl`-odvozené objektu, pokud používáte vlastní okno s kartami v záložkách podokně.  
+ Tuto proměnnou statického člena na ukazatel na informace o modulu runtime třídy z nastavit `CMFCTabCtrl`-odvozenému objektu, pokud používáte vlastní okno s kartami uvnitř podokna s kartami.  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
- Všechny záložkách podokna obnoví do výchozího stavu.  
+ Všechna podokna s kartami obnoví do výchozího stavu.  
   
 ```  
 static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody vrátit zpět všechny záložkách podokna do výchozího stavu. Při volání, tato metoda obnoví ohraničení velikosti a stav barva automatické všech záložkách podoken.  
+ Volání této metody vrátit zpět všechny podokna s kartami do výchozího stavu. Při volání této metody obnoví ohraničení velikosti a barvy stav automaticky všechna podokna s kartami.  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
- Nastaví seznam vlastních barev, které se používají, pokud je povolena funkce barva automaticky.  
+ Nastaví seznam vlastních barev, které se používají, když je povolena funkce barva automaticky.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *arColors*  
- Obsahuje-li nastavit pole.  
+ [in] *arColors*  
+ Obsahuje pole barev k nastavení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte, chcete-li přizpůsobit seznam barev, které se používají, pokud je povolena funkce automatického barev. Toto je statickou funkci a ovlivňuje všechny záložkách podokna ve vaší aplikaci.  
+ Tuto metodu použijte k přizpůsobení seznamu barev, které se používají, když je povolena funkce barva automaticky. Toto je statické funkce a má vliv na všech kartách podokna ve vaší aplikaci.  
   
- Použití [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) chcete povolit nebo zakázat funkci Automatické barev.  
+ Použití [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) povolit nebo zakázat funkci Automatické barvu.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)   
- [CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)   
+ [Cbasetabbedpane – třída](../../mfc/reference/cbasetabbedpane-class.md)   
  [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)

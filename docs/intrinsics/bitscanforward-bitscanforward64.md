@@ -1,5 +1,5 @@
 ---
-title: _BitScanForward _BitScanForward64 | Microsoft Docs
+title: _BitScanForward _BitScanForward64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331894"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465477"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vyhledávání dat maska z nejméně významný bit (LSB) na nejvyšší bit (MSB) pro verzi sady (1).  
+ Hledat maskování dat z nejméně významných bitů (LSB) na nejvýznamnější bit (MSB) nastaveného bitu (1).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,23 +48,23 @@ unsigned char _BitScanForward64(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Index`  
- Načtená bit pozice první nastavit chvíli (1) nalezena.  
+ Načtená verze umístění prvního nastaveného bitu (1) nalezena.  
   
- [v] `Mask`  
- 32bitovou nebo 64bitovou hodnotu k vyhledání.  
+ [in] `Mask`  
+ 32bitové nebo 64bitové hodnotu vyhledávání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- 0, pokud maska je nula. nenulové hodnoty v opačném případě.  
+ 0, pokud maska je nula. nenulový jinak.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je nalezen bit sadu, vrátí se pozice bit první sada bit najít v první parametr. Pokud se nenajde žádný sadu bit, je vrácena 0; jinak vrátí hodnotu 1.  
+ Pokud nastaveného bitu nenajde, vrátí se bit umístění prvního nastaveného bitu nalezen v prvním parametru. Pokud se nenajde žádný nastaveného bitu, je vrácena 0. v opačném případě vrátí hodnotu 1.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_BitScanForward`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86, ARM, x64|  
+|`_BitScanForward64`|ARM, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
@@ -112,7 +112,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

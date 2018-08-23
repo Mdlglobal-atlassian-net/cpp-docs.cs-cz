@@ -1,5 +1,5 @@
 ---
-title: Gramatika preprocesoru | Microsoft Docs
+title: Gramatika preprocesoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843363"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465568"
 ---
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
-**#define***identifikátor* *token řetězec*opt  
+**#define***identifikátor* *řetězci tokenu*optimalizované    
   
- *#* **definování***identifikátor*[**(** *identifikátor*opt **,** *...*  **,** *identifikátor*opt **)**] *token řetězec*opt  
+*#* **definování***identifikátor*[**(** *identifikátor*optimalizované **,** *...*  **,** *identifikátor*optimalizované **)**] *řetězci tokenu*optimalizované    
   
- **definované (***identifikátor* **)**  
+**definovaný (***identifikátor* **)**   
   
- **definované***identifikátor*  
+**definované***identifikátor*   
   
- `#include` **"***cesta specifikace***"**  
+`#include` **"***path-spec***"**  
   
- `#include` **\<***Specifikace cesta***>**  
+`#include` **\<***Path-spec***>**  
   
- **#line***číslice pořadí***"** *filename* **"** opt  
+**#line***sekvence číslic***"** *filename* **"** optimalizované      
   
- *#* **undef***identifikátor*  
+*#* **undef***identifikátor*   
   
- **#error***token řetězec*  
+**#error***řetězci tokenu*   
   
- **#pragma***token řetězec*  
+**#pragma***řetězci tokenu*   
   
- *Podmíněné* :  
- *Pokud část elif částí*vyjádřit výslovný*část else*opt*endif řádku*  
+*Podmíněné* :  
+*část IF části elif*optimalizované*část else*optimalizované*řádek endif*  
   
- *Pokud součást* :  
- *if-linetext*  
+*část IF* :  
+*if-linetext*  
   
- *Pokud line* :  
- **#if***konstantní výraz*  
+*řádek IF* :  
+**#if***konstantního výrazu.*  
   
- **#ifdef***identifikátor*  
+**#ifdef***identifikátor*  
   
- **#ifndef***identifikátor*  
+**#ifndef***identifikátor*  
   
- *elif – částí* :  
- *elif – řádek textu*  
+*části elif* :  
+*text řádku elif*  
   
- *elif – částí elif – řádek textu*  
+*části elif text řádku elif*  
   
- *elif-line* :  
- **#elif***konstantní výraz*  
+*řádek elif* :  
+**#elif***konstantního výrazu.*  
   
- *část else* :  
- *else-linetext*  
+*části else* :  
+*else-linetext*  
   
- *else řádku* :  
- `#else`  
+*řádek else* :  
+`#else`  
   
- *endif-line* :  
- `#endif`  
+*řádek endif* :  
+`#endif`  
   
- *pořadí číslice* :  
- *Číslice*  
+*sekvence číslic* :  
+*číslice*  
   
- *pořadí číslice číslice*  
+*sekvence číslic číslice*  
   
- *číslice* : jeden z  
- **0 1 2 3 4 5 6 7 8 9**  
+*číslice* : jeden z  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *token řetězec* :  
- Řetězec tokenů  
+*řetězcový token* :  
+Řetězec tokenů  
   
- *token* :  
- *– Klíčové slovo*  
+*token* :  
+*Klíčové slovo*  
   
- *Identifikátor*  
+*identifikátor*  
   
- *Konstantní*  
+*Konstanty*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *Název souboru* :  
- Název souboru právní operačního systému  
+*Název souboru* :  
+Název souboru právní operačního systému  
   
- *Cesta specifikace* :  
- Cesta k souboru právní  
+*Path-spec* :  
+Cesta k souboru právní  
   
- *text* :  
- Žádné pořadí textu  
+*text* :  
+Libovolná sekvence textu  
   
 > [!NOTE]
->  Jsou následující terminálově nezávislých rozšířit [lexikální pravidla](../cpp/lexical-conventions.md) části *referenční příručka jazyka C++*: `constant`, `constant` - *výraz* , *identifikátor*, *– klíčové slovo*, `operator`, a `punctuator`.  
+> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++*: `constant`, `constant` - *výraz* , *identifikátor*, *– klíčové slovo*, `operator`, a `punctuator`.  
   
 ## <a name="see-also"></a>Viz také  
- [Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

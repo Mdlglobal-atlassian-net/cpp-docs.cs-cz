@@ -1,5 +1,5 @@
 ---
-title: Pomocí Lambdas, objektů funkcí a omezených funkcí | Microsoft Docs
+title: Použití výrazů lambda, objektů funkcí a omezených funkcí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c228d018402d44186efdda264d1eec83b0332f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687449"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465652"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Používání parametrů Lambda, objektů funkcí a omezených funkcí
-C++ AMP kód, který chcete spustit na akcelerátor je zadaný jako argument při volání [parallel_for_each –](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metoda. Výraz lambda nebo objekt funkce (functor) můžete zadat jako tento argument. Kromě toho můžete objekt funkce nebo výraz lambda volání funkce C++ AMP omezený. Toto téma používá nepodporovaný algoritmus přidání pole k předvedení lambdas, objektů funkcí a omezených funkcí. Následující příklad ukazuje, že algoritmus bez kódu C++ AMP. Jsou vytvořeny dva 1jednorozměrná pole stejné délky. Odpovídající elementy celé číslo se přidat a uložená v třetí dimenzí 1 pole. C++ AMP se nepoužije.  
+Kód jazyka C++ AMP, který chcete provést v akcelerátoru je zadán jako argument ve volání [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Jako tento argument můžete zadat výraz lambda nebo objekt funkce (funktoru). Kromě toho lambda výraz nebo objekt funkce může volat funkci s omezením jazyka C++ AMP. Toto téma používá algoritmus sčítání pole k předvedení výrazy lambda, objektů funkcí a omezených funkcí. Následující příklad ukazuje algoritmus bez kódu jazyka C++ AMP. Jsou vytvořeny dva 1rozměrné pole o stejné délce. Odpovídající celočíselné prvky jsou přidány a uloženy v třetí 1rozměrné pole. C++ AMP není používána.  
   
 ```cpp  
 void CpuMethod() {  
@@ -39,11 +39,11 @@ void CpuMethod() {
     std::cout <<sumCPP[idx] <<"\n";  
  }  
 }  
- 
 ```  
   
 ## <a name="lambda-expression"></a>Výraz lambda  
- Pomocí výrazu lambda je velmi přímočarou způsob, jak používat C++ AMP přepište kód.  
+ 
+Použití lambda výrazu je nejrychlejším způsobem použití jazyka C++ AMP pro přepsání kódu.  
   
 ```cpp  
 void AddArraysWithLambda() {  
@@ -59,7 +59,6 @@ void AddArraysWithLambda() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
@@ -67,18 +66,17 @@ void AddArraysWithLambda() {
     sum[idx] = a[idx] + b[idx];  
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- Výraz lambda musí obsahovat jeden parametr indexování a musí obsahovat `restrict(amp)`. V příkladu [array_view](../../parallel/amp/reference/array-view-class.md) `sum` objekt má pořadí 1. Proto je parametr k příkazu lambda [index](../../parallel/amp/reference/index-class.md) objekt, který má pořadí 1. V době běhu je jednou provést výrazu lambda pro každý prvek v [array_view](../../parallel/amp/reference/array-view-class.md) objektu. Další informace najdete v tématu [syntaxe výrazu Lambda](../../cpp/lambda-expression-syntax.md).  
+Výraz lambda musí obsahovat jeden parametr indexování a musí obsahovat `restrict(amp)`. V tomto příkladu [array_view](../../parallel/amp/reference/array-view-class.md) `sum` objektu má pořadí 1. Parametr příkazu lambda je proto [index](../../parallel/amp/reference/index-class.md) objekt, který se má pořadí 1. Za běhu, výraz lambda je proveden jednou pro každý prvek [array_view](../../parallel/amp/reference/array-view-class.md) objektu. Další informace najdete v tématu [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md).  
   
 ## <a name="function-object"></a>Objekt Function  
- Kód akcelerátoru můžete dvoufaktorového do objektu funkce.  
+ 
+Akcelerátor kódu lze přetvořit na objekt funkce.  
   
 ```cpp  
 class AdditionFunctionObject  
@@ -103,7 +101,6 @@ private:
 };  
  
 void AddArraysWithFunctionObject() {  
- 
     int aCPP[] = {1, 2, 3, 4, 5};  
     int bCPP[] = {6, 7, 8, 9, 10};  
     int sumCPP[5];  
@@ -116,23 +113,21 @@ void AddArraysWithFunctionObject() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
     AdditionFunctionObject(a, b, sum));
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
 
- Objekt funkce musí obsahovat konstruktor a musí obsahovat přetížení operátor volání funkce. Operátor volání funkce musí obsahovat jeden parametr indexování. Instance objektu funkce se předá jako druhý argument [parallel_for_each –](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metoda. V tomto příkladu tři [array_view](../../parallel/amp/reference/array-view-class.md) předávání objektů do konstruktoru objektu funkce. [Array_view](../../parallel/amp/reference/array-view-class.md) objekt `sum` má pořadí 1. Proto parametr operátor volání funkce je [index](../../parallel/amp/reference/index-class.md) objekt, který má pořadí 1. V době běhu funkce je spuštěna jednou pro každý prvek ve [array_view](../../parallel/amp/reference/array-view-class.md) objektu. Další informace najdete v tématu [volání funkce](../../cpp/function-call-cpp.md) a [funkce objekty ve standardní knihovně C++](../../standard-library/function-objects-in-the-stl.md).  
+Objekt funkce musí obsahovat konstruktor a musí zahrnovat přetížení operátoru volání funkce. Operátor volání funkce musí obsahovat jeden parametr indexování. Instance objektu funkce je předána jako druhý argument [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. V tomto příkladu tři [array_view](../../parallel/amp/reference/array-view-class.md) objekty jsou předány do konstruktoru objektů funkce. [Array_view](../../parallel/amp/reference/array-view-class.md) objekt `sum` má pořadí 1. Proto se parametr operátoru volání funkce je [index](../../parallel/amp/reference/index-class.md) objekt, který se má pořadí 1. Za běhu, funkce je spuštěna jednou pro každý prvek [array_view](../../parallel/amp/reference/array-view-class.md) objektu. Další informace najdete v tématu [volání funkce](../../cpp/function-call-cpp.md) a [objekty funkcí ve standardní knihovně C++](../../standard-library/function-objects-in-the-stl.md).  
   
-## <a name="c-amp-restricted-function"></a>C++ AMP omezené funkce  
- Kód akcelerátoru můžete další faktor vytvořením omezené funkce a volání z výrazu lambda nebo objekt funkce. Následující příklad kódu ukazuje, jak volat funkci s omezeným přístupem z výrazu lambda.  
+## <a name="c-amp-restricted-function"></a>Funkci s omezením AMP C++  
+ 
+Můžete přetvořit akcelerátor kódu vytvořením omezené funkce a jejím zavoláním z lambda výrazu nebo objektu funkce. Následující příklad kódu ukazuje, jak zavolat funkci s omezením z lambda výrazu.  
   
 ```cpp  
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)  
@@ -154,29 +149,25 @@ void AddArraysWithFunction() {
 
     sum.discard_data();
 
- 
     parallel_for_each(
  sum.extent, 
  [=](index<1> idx) restrict(amp)  
  {  
     AddElementsWithRestrictedFunction(idx, sum, a, b);
-
  });
 
- 
     for (int i = 0; i <5; i++) {  
     std::cout <<sum[i] <<"\n";  
  }  
 }  
- 
 ```  
   
- Musí obsahovat funkci s omezeným přístupem `restrict(amp)` a souladu s omezeními, které jsou popsány v [omezení (C++ AMP)](../../cpp/restrict-cpp-amp.md).  
+Funkce s omezením musí obsahovat `restrict(amp)` a souladu s omezeními popsanými v [omezení (C++ AMP)](../../cpp/restrict-cpp-amp.md).  
   
 ## <a name="see-also"></a>Viz také  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)   
- [Volání funkce](../../cpp/function-call-cpp.md)   
- [Objekty funkcí ve standardní knihovně C++](../../standard-library/function-objects-in-the-stl.md)   
- [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)
-
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Syntaxe výrazů lambda](../../cpp/lambda-expression-syntax.md)   
+[Volání funkce](../../cpp/function-call-cpp.md)   
+[Objekty funkcí ve standardní knihovně C++](../../standard-library/function-objects-in-the-stl.md)   
+[restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)

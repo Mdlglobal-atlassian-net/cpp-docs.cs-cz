@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884851"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465659"
 ---
 # <a name="cmessagemap-class"></a>Cmessagemap – třída
 Tato třída umožňuje že mapy zpráv objektu bude přístup k jiným objektem.  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>Poznámky  
  `CMessageMap` je abstraktní základní třídu, která umožňuje zpráva objektu se mapuje na přístupná pomocí jiného objektu. Aby objekt vystavit jeho mapy zpráv, její třída musí být odvozen od `CMessageMap`.  
   
- ATL – používá `CMessageMap` obsahovala podporu windows a dynamických zpráv řetězení mapy. Například všechny třídy obsahující [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objekt musí být odvozen od `CMessageMap`. Následující kód je převzatý z [SUBEDIT](../../visual-cpp-samples.md) vzorku. Prostřednictvím [ccomcontrol –](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` třídy je automaticky odvozen z `CMessageMap`.  
+ ATL – používá `CMessageMap` obsahovala podporu windows a dynamických zpráv řetězení mapy. Například všechny třídy obsahující [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objekt musí být odvozen od `CMessageMap`. Následující kód je převzatý z [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) vzorku. Prostřednictvím [ccomcontrol –](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` třídy je automaticky odvozen z `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

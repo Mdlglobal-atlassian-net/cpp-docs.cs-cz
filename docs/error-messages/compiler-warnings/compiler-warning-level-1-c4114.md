@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4114 | Microsoft Docs
+title: Upozornění (úroveň 1) C4114 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283920"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465776"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>C4114 kompilátoru upozornění (úroveň 1)
-stejný typ kvalifikátor použít více než jednou.  
+# <a name="compiler-warning-level-1-c4114"></a>Kompilátor upozornění (úroveň 1) C4114
+stejný typ kvalifikátor použít víc než jednou  
   
- Typ deklarace a definice používá kvalifikátor typu (**const**, `volatile`, **podepsané**, nebo `unsigned`) více než jednou. To způsobí, že upozornění s rozšíření Microsoft (/Ze) a k chybě v části kompatibility ANSI (/Za).  
+ Typ deklarace nebo definice používá kvalifikátor typu (**const**, **volatile**, **podepsané**, nebo **bez znaménka**) více než jednou. To způsobí, že upozornění s rozšířeními společnosti Microsoft (/Ze) a k chybě v části kompatibility ANSI (/Za).  
   
  Následující ukázka generuje C4114:  
   

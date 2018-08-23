@@ -1,5 +1,5 @@
 ---
-title: __invlpg | Microsoft Docs
+title: __invlpg | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327522"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465576"
 ---
 # <a name="invlpg"></a>__invlpg
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje x86 `invlpg` instrukce, která by způsobila neplatnost překlad Page Table Entry vyrovnávací paměti (TLB) pro související s pamětí, na kterou odkazuje stránky `Address`.  
+ Generuje x86 `invlpg` instrukce, což způsobí neplatnost vyrovnávací paměti Page Table Entry překladu (vyrovnávací paměti TLB) pro stránku související s pamětí, na které odkazuje `Address`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ void __invlpg(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]  `Address`  
- 64bitová verze adresa.  
+ [in]  `Address`  
+ 64-bit adresa.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní `__invlpg` vysílá privilegované instrukce a je dostupný jenom v režimu jádra s úrovní oprávnění (PANELU) 0.  
+ Vnitřní objekt `__invlpg` vysílá Privilegovaná instrukce a je dostupná pouze v režimu jádra s úrovní oprávnění (PANELU) 0.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

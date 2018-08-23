@@ -1,5 +1,5 @@
 ---
-title: __svm_vmsave | Microsoft Docs
+title: __svm_vmsave | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b1a76d4dca7a7177a44c56fc7c25832ace89c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329662"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465656"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Ukládá podmnožinu stav procesoru v řídicí blok zadaný virtuální počítač (VMCB).  
+ Uloží podmnožinu stav procesoru řídicí blok zadaný virtuální počítač (VMCB).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +41,20 @@ void __svm_vmsave(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
+|[in] `VmcbPhysicalAddress`|Fyzickou adresu VMCB.|  
   
 ## <a name="remarks"></a>Poznámky  
- `__svm_vmsave` Funkce je ekvivalentní volání `VMSAVE` počítač instrukcí. Tato funkce podporuje interakci monitorování virtuální počítač na hostitele s hostovaného operačního systému a jeho aplikace. Další informace naleznete v dokumentu "programátory architektura AMD64 ruční svazku 2: programování systému" číslem 24593, revize 3.11 nebo novější, na [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
+ `__svm_vmsave` Funkce je ekvivalentní volání `VMSAVE` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování systému" dokument s číslem 24593, revize 3.11 nebo novější, na [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokality.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmsave`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

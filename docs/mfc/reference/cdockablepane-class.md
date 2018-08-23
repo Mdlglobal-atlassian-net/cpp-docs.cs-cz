@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028288"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465490"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane – třída
 Implementuje podokno, které mohou být ukotveno na dokovacím místě nebo součástí podokna s kartami.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Poznámky  
  Rozhraní volá tuto metodu za účelem zpracování ukotvení plovoucího podokna.  
   
- Plovoucí panely nástrojů a dokování podoken, které používají režim dokovací DT_IMMEDIATE, zpoždění rozhraní ukotvení příkaz, který umožní uživateli z nadřazeného rámce v oblasti klienta, přesuňte okno předtím, než dojde k ukotvení. Délka zpoždění se měří v milisekundách a řídí [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) datový člen... Výchozí hodnota [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) je 200. Toto chování emuluje chování dokovací [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Plovoucí panely nástrojů a dokování podoken, které používají režim dokovací DT_IMMEDIATE, zpoždění rozhraní ukotvení příkaz, který umožní uživateli z nadřazeného rámce v oblasti klienta, přesuňte okno předtím, než dojde k ukotvení. Délka zpoždění se měří v milisekundách a řídí [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) datový člen... Výchozí hodnota [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) je 200. Toto chování emuluje chování dokovací aplikace Microsoft Word 2007.  
   
  Zpožděné dokovací stavů (CS_DELAY_DOCK a CS_DELAY_DOCK_TO_TAB) rozhraní neprovádí ukotvení, dokud uživatel uvolní tlačítko myši. Pokud podokno používá režim DT_STANDARD ukotvení, zobrazí rozhraní obdélník na předpokládané umístění ukotvení. Pokud podokno používá režim DT_SMART ukotvení, zobrazí rozhraní značek inteligentního dokování a poloprůhledného obdélníky na předpokládané umístění ukotvení. Chcete-li určit dokovací režim pro podokno, zavolejte [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) metody. Další informace o inteligentního dokování najdete v tématu [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Pro rychlejší animace zmenšete tuto hodnotu. Tuto hodnotu zvýšit pomalejší animace.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss | Microsoft Docs
+title: _mm_cvtsi64x_ss | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340603"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465487"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] rozšířenou verzi převést 64bitovou celočíselnou hodnotu na hodnotu Floating-Point jednoduchou přesností skalárních (`cvtsi2ss`) instrukcí.  
+ Generuje x64 rozšířenou verzi převést 64bitové celé číslo na skalární hodnotu plovoucí desetinné čárky jednoduchou přesnost (`cvtsi2ss`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,25 +39,25 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `a`  
- `__m128` Struktura obsahující čtyři hodnoty s plovoucí desetinnou čárkou jednoduchou přesností.  
+ [in] `a`  
+ `__m128` Struktury obsahující čtyři hodnoty s plovoucí desetinnou čárkou jednoduchou přesností.  
   
- [v] `b`  
- 64bitové celé číslo má být převeden na hodnotu s plovoucí desetinnou čárkou.  
+ [in] `b`  
+ 64bitové celé číslo k převedení na hodnotu s plovoucí desetinnou čárkou.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `__m128` Struktura, jehož první hodnota s plovoucí desetinnou čárkou je výsledek převodu. Ostatní tři hodnoty se zkopírují neliší od `a`.  
+ `__m128` Strukturu, jejíž první hodnota s plovoucí desetinnou čárkou je výsledkem převodu. Tři hodnoty jsou beze změny zkopírují z `a`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
 |`_mm_cvtsi64x_ss`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- `__m128` Struktura představuje registraci XMM, takže tento vnitřní umožňuje hodnotu `b` z systémové paměti se přesune do XMM zaregistrovat.  
+ `__m128` Struktura představuje XMM registru, proto tuto vnitřní umožňuje hodnotu `b` ze systémové paměti přesunout do XMM zaregistrovat.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -93,7 +93,7 @@ int main()
 54.000000 0.000000 0.000000 0.000000  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__m128](../cpp/m128.md)   

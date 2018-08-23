@@ -1,5 +1,5 @@
 ---
-title: Používání akcelerátoru a objektů accelerator_view | Microsoft Docs
+title: Používání akcelerátoru a objektů accelerator_view | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2c53ceb50057e789856aa8e7f67c9f788aa5a0a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690608"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465573"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Používání akcelerátoru a objektů accelerator_view
-Můžete použít [akcelerátoru](../../parallel/amp/reference/accelerator-class.md) a [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) třídy k určení zařízení nebo emulátoru ke spuštění kódu C++ AMP v. Systém může mít několik zařízení nebo emulátorů, které se liší podle velikosti paměti, podpory sdílené paměti, podpora ladění nebo podporu dvojitou přesností. C++ Accelerated Massive Parallelism (C++ AMP) poskytuje rozhraní API, která vám pomůže zkontrolovat dostupné akcelerátorů, nastavit jako výchozí, zadejte více accelerator_views pro několik volání parallel_for_each – a provádět úlohy speciální ladění.  
+Můžete použít [akcelerátoru](../../parallel/amp/reference/accelerator-class.md) a [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) třídy a zadejte zařízení nebo emulátoru spustit kód AMP. Systém může mít několik zařízení nebo emulátorů, které se liší podle množství paměti, podpory sdílené paměti, podpory ladění nebo podpory dvojité přesnosti. C++ Accelerated Massive Parallelism (C++ AMP) poskytuje rozhraní API, která můžete použít pro zkoumat všechny dostupné akcelerátory, nastavení jako výchozí, zadejte více accelerator_views pro více volání na parallel_for_each a provádění zvláštních úkolů ladění.  
   
-## <a name="using-the-default-accelerator"></a>Pomocí výchozí akcelerátoru  
- Modul runtime C++ AMP vybere akcelerátor výchozí, pokud psaní kódu a vyberte některou. Modul runtime rozhodne akcelerátoru výchozí následujícím způsobem:  
+## <a name="using-the-default-accelerator"></a>Použití výchozího akcelerátoru  
+ 
+Modul runtime C++ AMP vybere výchozí akcelerátor, pokud napíšete kód pro výběr konkrétní skupinu. Modul runtime zvolí výchozí akcelerátor takto:  
   
-1.  Pokud aplikace běží v režimu ladění, akcelerátor podporující ladění.  
+1. Pokud aplikace běží v režimu ladění, akcelerátor podporující ladění.  
   
-2.  V opačném akcelerátoru, které je určené proměnnou prostředí CPPAMP_DEFAULT_ACCELERATOR, pokud je nastaveno.  
+2. V opačném případě akcelerátor, který je zadaný proměnnou prostředí CPPAMP_DEFAULT_ACCELERATOR, pokud je nastavena.  
   
-3.  V opačném – emulace zařízení.  
+3. Jinak – neemulované zařízení.  
   
-4.  Jinak zařízení, která má největší množství dostupné paměti.  
+4. V opačném případě zařízení, které má největší velikost dostupné paměti.  
   
-5.  Jinak zařízení, který není připojen k zobrazení.  
+5. V opačném případě zařízení, které není připojeno k zobrazení.  
   
- Kromě toho modul runtime určuje `access_type` z `access_type_auto` pro výchozí akcelerátoru. To znamená, že výchozí akcelerátoru používá sdílené paměti, pokud ji podporuje, a pokud se ví, že jeho výkonové charakteristiky (šířky pásma a latence) být stejný jako vyhrazené paměti (nesdílené).  
+Kromě toho modul runtime určuje `access_type` z `access_type_auto` pro výchozí akcelerátor. To znamená, že výchozí akcelerátor používá sdílenou paměť, pokud je podporována, a pokud se ví, že jeho vlastnostech výkonu (šířka pásma a čekací doba) být stejný jako vyhrazená (nesdílená) paměť.  
   
- Vlastnosti akcelerátoru výchozí můžete určit vytváření výchozím akcelerátoru a Prozkoumáním jeho vlastnosti. Následující příklad kódu vytiskne cesty, množství paměti akcelerátoru, podpory sdílené paměti, podporu dvojitou přesností a omezená podpora Dvojitá přesnost akcelerátoru výchozí.  
+Podle výchozího akcelerátoru sestavením a přezkoumáním vlastnosti můžete určit vlastnosti výchozího akcelerátoru. Následující příklad kódu zobrazí cestu, množství paměti akcelerátoru, podporu sdílené paměti, podporu dvojité přesnosti a omezenou podporu dvojité přesnosti výchozího akcelerátoru.  
   
 ```cpp  
 void default_properties() {  
@@ -51,11 +52,10 @@ void default_properties() {
     std::wcout << (accs[i].supports_limited_double_precision ?   
         "limited double precision: true" : "limited double precision: false") << "\n";  
 }  
- 
 ```  
   
-### <a name="cppampdefaultaccelerator-environment-variable"></a>Proměnné prostředí CPPAMP_DEFAULT_ACCELERATOR  
- Můžete nastavit proměnnou prostředí CPPAMP_DEFAULT_ACCELERATOR a určit, `accelerator::device_path` akcelerátoru výchozí. Cesta je závislé na hardwaru. Následující kód používá `accelerator::get_all` funkce pro načtení seznamu dostupných akcelerátorů a potom zobrazí vlastnosti každého akcelerátoru a cesta.  
+### <a name="cppampdefaultaccelerator-environment-variable"></a>Proměnná prostředí CPPAMP_DEFAULT_ACCELERATOR  
+Můžete nastavit proměnnou prostředí CPPAMP_DEFAULT_ACCELERATOR k určení `accelerator::device_path` výchozího akcelerátoru. Cesta je závislá na hardwaru. Následující kód používá `accelerator::get_all` funkce k načtení seznamu dostupných akcelerátorů a poté zobrazí cestu a charakteristiku každého akcelerátoru.  
   
 ```cpp  
 void list_all_accelerators()  
@@ -76,7 +76,8 @@ void list_all_accelerators()
 ```  
   
 ## <a name="selecting-an-accelerator"></a>Výběr akcelerátoru  
- Pokud chcete vybrat akcelerátor, použijte `accelerator::get_all` metodu pro načtení seznamu dostupných akcelerátorů a pak vyberte jeden podle jeho vlastnosti. Tento příklad ukazuje, jak vybrat akcelerátoru, který má nejvíce paměti:  
+ 
+Chcete-li vybrat akcelerátor, použijte `accelerator::get_all` metodu pro načtení seznamu dostupných akcelerátorů a poté vyberte jednu podle jeho vlastnosti. Tento příklad ukazuje, jak vybrat akcelerátor, který má nejvíce paměti:  
   
 ```cpp  
 void pick_with_most_memory()  
@@ -97,14 +98,15 @@ void pick_with_most_memory()
 ```  
   
 > [!NOTE]
->  Jeden z akcelerátorů, které se vrátí pomocí `accelerator::get_all` je akcelerátor procesoru. Kód nelze spustit na akcelerátoru procesoru. Filtrovat akcelerátoru procesoru, porovnat hodnotu [device_path –](reference/accelerator-class.md#device_path) vlastnost akcelerátoru, který je vrácen `accelerator::get_all` s hodnotou [Accelerator::cpu_accelerator –](reference/accelerator-class.md#cpu_accelerator). Další informace najdete v části "Speciální akcelerátorů" v tomto článku.  
+> Jeden z akcelerátorů jsou vráceny pomocí `accelerator::get_all` je akcelerátor procesoru. Nelze spustit kód na akcelerátoru procesoru. Chcete-li filtrovat akcelerátor procesoru, porovnejte hodnotu [device_path](reference/accelerator-class.md#device_path) vlastnosti akcelerátoru, který je vrácen `accelerator::get_all` s hodnotou [accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator). Další informace najdete v části "Speciální akcelerátory" v tomto článku.  
   
-## <a name="shared-memory"></a>Sdílené paměti  
- Sdílené paměti je paměť, která je přístupná procesoru a akcelerátorem. Použití sdílené paměti eliminuje nebo výrazně snižuje zatížení sady kopírování dat mezi procesoru a akcelerátorem. I když je sdílená paměť, jej nelze získat přístup, souběžně procesoru a akcelerátorem, a to způsobí tak, že nedefinované chování. Vlastnosti akcelerátoru [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) vrátí `true` Pokud akcelerátor podporuje sdílené paměti a [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) vlastnost získá výchozí [access_type](reference/concurrency-namespace-enums-amp.md#access_type) paměti přidělené na `accelerator`– například `array`s přidružené `accelerator`, nebo `array_view` objekty na `accelerator`. 
+## <a name="shared-memory"></a>Sdílená paměť  
+ 
+Sdílená paměť je paměť, která je přístupná pomocí procesoru a akcelerátoru. Využití sdílené paměti eliminuje nebo významně snižuje režijní náklady na kopírování dat mezi CPU a akcelerátorem. I když je paměť sdílená, se nedá přistupovat souběžně CPU a akcelerátorem a tím proto způsobí nedefinované chování. Vlastnost akcelerátoru [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) vrátí **true** Pokud akcelerátor podporuje sdílenou paměť a [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) příkazy property GET Výchozí hodnota [access_type](reference/concurrency-namespace-enums-amp.md#access_type) pro paměť přidělenou na `accelerator`– například **pole**s přidružené s `accelerator`, nebo `array_view` přistupováno z objektů `accelerator`. 
   
- Modul runtime C++ AMP automaticky vybere nejlepší výchozí `access_type` pro každou `accelerator`, ale může být při čtení zhoršení než ty, které paměti vyhrazené akcelerátoru (nesdílené) výkonové charakteristiky (šířky pásma a latence) sdílené paměti z procesoru, zápis z procesoru, nebo obojí. Pokud sdílené paměti provede i vyhrazené paměti pro čtení a zápis z procesoru, modul runtime výchozí `access_type_read_write`, jinak hodnota modulu runtime zvolí více konzervativní výchozí `access_type`a umožňuje aplikaci přepsat, pokud přístup do paměti vzory jeho výpočetní jádra těžit z jiné `access_type`.  
+Modul runtime C++ AMP automaticky zvolí nejvhodnější výchozí `access_type` pro každou `accelerator`, ale charakteristiky výkonu (šířka pásma a čekací doba) sdílené paměti mohou být horší, než ty, které akcelerátoru vyhrazené (nesdílené) paměti při čtení z procesoru, zápisu z procesoru, nebo obojí. Pokud sdílená paměť funguje stejně dobře jako vyhrazená paměť pro čtení a zápis z procesoru, modul runtime použije se výchozí `access_type_read_write`; v opačném případě modul runtime zvolí konzervativnější výchozí `access_type`a umožňuje aplikacím ho přepsat, pokud přístup k paměti výhody vzory jádra jeho výpočtu těží z jiného `access_type`.  
   
- Následující příklad kódu ukazuje, jak určit, zda akcelerátoru výchozí podporuje sdílené paměti a pak přepsání jeho výchozí typ přístupu a vytvoří `accelerator_view` z něj.  
+Následující příklad kódu ukazuje, jak určit, zda výchozí akcelerátor podporuje sdílenou paměť a potom přepíše jeho výchozí typ přístupu a vytvoří `accelerator_view` z něj.  
   
 ```cpp  
 #include <amp.h>  
@@ -133,10 +135,11 @@ int main()
 }  
 ```  
   
- `accelerator_view` Vždy odráží `default_cpu_access_type` z `accelerator` přidružené, a poskytuje žádné rozhraní k přepsání nebo změnit jeho `access_type`.  
+`accelerator_view` Vždy odráží `default_cpu_access_type` z `accelerator` je spojený, a poskytuje rozhraní pro přepsání nebo změnu jeho `access_type`.  
   
-## <a name="changing-the-default-accelerator"></a>Změna výchozí akcelerátoru  
- Můžete změnit výchozí akcelerátoru voláním `accelerator::set_default` metoda. Pouze jednou za aplikace spuštění a musí ho změnit před provedením jakékoli kódu na GPU, můžete změnit výchozí akcelerátoru. Žádné další funkce volání změnit akcelerátor vrací `false`. Pokud chcete použít jiný akcelerátoru v volání `parallel_for_each`, přečtěte si části "Použití více akcelerátorů" v tomto článku. Následující příklad kódu nastaví výchozí akcelerátoru ten, který není emulovaných, není připojen k zobrazení a podporuje dvojitou přesností.  
+## <a name="changing-the-default-accelerator"></a>Změna výchozího akcelerátoru  
+ 
+Můžete změnit výchozí akcelerátor voláním `accelerator::set_default` metody. Výchozí akcelerátor lze změnit pouze jednou za aplikace spuštění a můžete ho musí změnit před spuštěním jakéhokoli kódu na GPU. Jakákoli následná volání funkce změny akcelerátoru vrátí **false**. Pokud chcete použít jiný akcelerátor ve volání `parallel_for_each`, přečtěte si část "Použití více akcelerátorů" v tomto článku. Následující příklad kódu nastaví výchozí akcelerátor, který není emulován, není připojen k zobrazení a podporuje dvojitou přesnost.  
   
 ```cpp  
 bool pick_accelerator()  
@@ -162,25 +165,29 @@ bool pick_accelerator()
 ```  
   
 ## <a name="using-multiple-accelerators"></a>Použití více akcelerátorů  
- Existují dva způsoby, jak používat více akcelerátorů ve vaší aplikaci:  
+ 
+Existují dva způsoby použití více akcelerátorů v aplikaci:  
 
--   Můžete předat `accelerator_view` objekty, které se volání [parallel_for_each –](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metoda.  
+- Můžete předat `accelerator_view` objekty k volání [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody.  
   
--   Můžete vytvořit `array` pomocí konkrétní `accelerator_view` objektu. Modul runtime C + AMP vyzvedne, až bude `accelerator_view` objekt z zaznamenané `array` objekt ve výrazu lambda.  
+- Můžete vytvořit **pole** pomocí zvláštního `accelerator_view` objektu. Modul runtime jazyka C + AMP vybere `accelerator_view` objekt ze zachyceného **pole** objektu ve výrazu lambda.  
   
-## <a name="special-accelerators"></a>Speciální akcelerátorů  
- Je k dispozici jako vlastnosti zařízení cest tři speciální akcelerátorů `accelerator` třídy:  
+## <a name="special-accelerators"></a>Speciální akcelerátory  
+ 
+Umístění zařízení tří speciálních akcelerátorů jsou dostupná jako vlastnosti `accelerator` třídy:  
   
-- [Accelerator::direct3d_ref – datový člen](reference/accelerator-class.md#direct3d_ref): Tento jednovláknové akcelerátoru pomocí softwaru na procesoru emulovat obecné grafické karty. Použije se ve výchozím nastavení pro ladění, ale není užitečné v produkčním prostředí, protože je nižší než akcelerátorů hardwaru. Kromě toho je k dispozici pouze v DirectX SDK a sadu Windows SDK a je pravděpodobně být nainstalovány na počítače zákazníků. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).  
+- [Accelerator::direct3d_ref – datový člen](reference/accelerator-class.md#direct3d_ref): Tento jednovláknový akcelerátor používá software na procesoru pro emulaci obecné grafické karty. Používá se ve výchozím nastavení pro ladění, ale není užitečné ve výrobě, protože je pomalejší než hardwarové akcelerátory. Kromě toho je k dispozici pouze v rozhraní DirectX SDK a sady Windows SDK a je nepravděpodobné, že by být nainstalovaný na počítači zákazníka. Další informace najdete v tématu [ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code).  
   
-- [Accelerator::direct3d_warp – datový člen](reference/accelerator-class.md#direct3d_warp): Tento accelerator poskytuje záložní řešení pro spouštění kódu C++ AMP v vícejádrovými procesory, které používají Streaming SIMD Extensions (SSE).  
+- [Accelerator::direct3d_warp – datový člen](reference/accelerator-class.md#direct3d_warp): tento akcelerátor poskytuje záložní řešení pro provádění kódu jazyka C++ AMP na vícejádrových procesorech pomocí Streaming SIMD Extensions (SSE).  
   
-- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): můžete použít tento akcelerátoru pro nastavení pracovní pole. Kód C++ AMP ji nelze spustit. Další informace najdete v tématu [pracovní pole v C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) můžete zveřejnit na paralelní programování v blogu nativního kódu.  
+- [Accelerator::cpu_accelerator – datový člen](reference/accelerator-class.md#cpu_accelerator): pomocí tohoto akcelerátoru nastavíte pracovní pole. Nedokáže spustit kód jazyka C++ AMP. Další informace najdete v tématu [pracovní pole v jazyce C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) Zveřejněte na paralelní programování v blogu nativního kódu.  
   
 ## <a name="interoperability"></a>Interoperabilita  
- Modul runtime C++ AMP podporuje spolupráci mezi `accelerator_view` třídy a Direct3D – [ID3D11Device rozhraní](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view –](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda trvá `IUnknown` rozhraní a vrátí `accelerator_view` objektu. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) metoda trvá `accelerator_view` objekt a vrátí `IUknown` rozhraní.  
+ 
+Runtime C++ AMP podporuje interoperabilitu mezi `accelerator_view` třídou a rozhraním Direct3D [rozhraní ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view –](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) přijímá metodu `IUnknown` rozhraní a vrátí `accelerator_view` objektu. [Get_device –](http://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) přijímá metodu `accelerator_view` objekt a vrátí `IUknown` rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)   
- [accelerator_view – třída](../../parallel/amp/reference/accelerator-view-class.md)
+ 
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[Ladění kódu GPU](/visualstudio/debugger/debugging-gpu-code)   
+[accelerator_view – třída](../../parallel/amp/reference/accelerator-view-class.md)

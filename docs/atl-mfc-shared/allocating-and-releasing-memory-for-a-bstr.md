@@ -1,5 +1,5 @@
 ---
-title: Přidělování a uvolňování paměti pro BSTR | Microsoft Docs
+title: Přidělování a uvolňování pro BSTR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 355d89a3cb5817cc64512ae885a075bf44ee2a86
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358322"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465775"
 ---
-# <a name="allocating-and-releasing-memory-for-a-bstr"></a>Přidělování a uvolňování paměti pro BSTR
-Při vytváření `BSTR`s a předat je mezi objekty modelu COM, musí postará v považuje paměti používají, aby se zabránilo nevracení paměti. Když `BSTR` zůstane v rámci rozhraní, je nutné uvolnit jeho paměť až skončíte s ním. Ale když `BSTR` předává mimo rozhraní, přebírá objekt přijímající odpovědnost za jeho správa paměti.  
+# <a name="allocating-and-releasing-memory-for-a-bstr"></a>Přidělování a uvolňování pro BSTR
+Při vytváření `BSTR`s a předat je mezi objekty modelu COM, je nutné dejte si pozor při zpracování paměti používají, aby se zabránilo nevracení paměti. Když `BSTR` zůstane v rámci rozhraní, je nutné uvolnit jeho paměti až budete hotovi s ním. Nicméně, když `BSTR` předá mimo rozhraní přijímající objektu přebírá odpovědnost za jeho správu paměti.  
   
- Obecně platí, pravidla pro přidělování a uvolňování paměti přidělené `BSTR`s jsou následující:  
+ Obecně platí, pravidla pro přidělení a uvolnění paměti přidělené `BSTR`s jsou následující:  
   
--   Při volání do funkce, která očekává `BSTR` argument, musíte přidělit paměť pro `BSTR` před voláním a později ji uvolnit. Příklad:  
+-   Při volání do funkce, která očekává, že `BSTR` argument, musíte přidělit paměť pro `BSTR` před voláním a vydání později. Příklad:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
   
      [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
   
--   Při volání do funkce vracející `BSTR`, je nutné uvolnit řetězec, sami. Příklad:  
+-   Při volání do funkce, která vrátí `BSTR`, je nutné uvolnit řetězec, sami. Příklad:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
   
      [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
   
--   Při implementaci funkci, která vrátí `BSTR`, přidělit řetězec, ale není volné. Přijímací funkce uvolní paměť. Příklad:  
+-   Pokud implementujete funkci, která se vrátí `BSTR`, přidělit řetězce, ale neuvolní je. Přijímání funkce uvolní paměť. Příklad:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Řetězce (ATL a MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+ [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+ [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

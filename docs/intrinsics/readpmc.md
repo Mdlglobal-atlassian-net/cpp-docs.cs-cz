@@ -1,5 +1,5 @@
 ---
-title: __readpmc | Microsoft Docs
+title: __readpmc | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333788"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465483"
 ---
 # <a name="readpmc"></a>__readpmc
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `rdpmc` instrukce, který čte určeného čítače sledování výkonu `counter`.  
+ Generuje `rdpmc` instrukce, který čte určené čítače sledování výkonu `counter`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +39,24 @@ unsigned __int64 __readpmc(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `counter`  
+ [in] `counter`  
  Čítač výkonu ke čtení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Hodnota čítače výkonu zadaný.  
+ Hodnotu zadaný čítač výkonu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní je k dispozici v pouze v režimu jádra a rutiny je k dispozici jako vnitřní pouze.  
+ Tomto vnitřní je k dispozici v pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

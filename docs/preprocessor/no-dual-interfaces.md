@@ -1,5 +1,5 @@
 ---
-title: no_dual_interfaces – | Microsoft Docs
+title: no_dual_interfaces – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850779"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42465565"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
-**Konkrétní C++**  
+**Specifické pro C++**  
   
- Změny způsob kompilátor generuje funkce obálku pro metody duální rozhraní.  
+Změny způsobu, jakým kompilátor generuje funkce obálky pro duální rozhraní metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Za normálních okolností obálku bude volat metodu prostřednictvím tabulky virtuální funkce pro rozhraní. S `no_dual_interfaces`, místo toho volá obálku **volání metody IDispatch::Invoke** k vyvolání metody.  
+ 
+Za normálních okolností se obálky volání metody prostřednictvím tabulku virtuálních funkcí pro rozhraní. S **no_dual_interfaces –**, místo volání obálky `IDispatch::Invoke` k vyvolání metody.  
   
- **Konkrétní END C++**  
+**Specifické pro END C++**  
   
 ## <a name="see-also"></a>Viz také  
- [#import – atributy](../preprocessor/hash-import-attributes-cpp.md)   
- [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

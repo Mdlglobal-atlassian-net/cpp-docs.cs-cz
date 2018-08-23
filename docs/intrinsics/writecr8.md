@@ -1,5 +1,5 @@
 ---
-title: __writecr8 | Microsoft Docs
+title: __writecr8 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26c8b474c8b2c37e082c8c49f0d232f3f91d6a2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3fa5bda2af8d6d6d95474743725c399d3ef5269
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324626"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465493"
 ---
 # <a name="writecr8"></a>__writecr8
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Zapíše hodnota `Data` k CR8 registrace.  
+ Zapíše hodnotu `Data` CR8 registrace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,21 +37,21 @@ void writecr8(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Data`  
- Hodnota určená k zápisu do registru CR8.  
+ [in] `Data`  
+ Hodnota k zápisu do registru CR8.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__writecr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr8`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní je k dispozici pouze v režimu jádra a rutiny je k dispozici jako vnitřní pouze.  
+ Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

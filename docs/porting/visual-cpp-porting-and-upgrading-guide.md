@@ -1,5 +1,5 @@
 ---
-title: Visual C++ Průvodce přenosem a upgradováním | Microsoft Docs
+title: Visual C++ Průvodce přenosem a upgradem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,85 +12,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 084c689ad7720e36670130d552522aa2f593218e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846594"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465651"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
-Toto téma obsahuje Průvodce pro upgrade Visual C++ – kód. To zahrnuje získání kód, který zkompilování a spuštění správně na novější verzi nástroje, jakož i využívat výhod nového jazyka a funkcích nástroje Visual Studio. Toto téma obsahuje také informace o migraci starší verze aplikací na více moderní platformy.  
+Toto téma poskytuje návod pro upgrade kódu jazyka Visual C++. To zahrnuje získání kódu zkompilovat a spustit správně na novější verzi nástrojů, jakož i využívat nový jazyk a funkce aplikace Visual Studio. Toto téma obsahuje také informace o migraci starších aplikací na Modernější platformy.  
   
-## <a name="reasons-to-upgrade-visual-c-code"></a>Důvody pro Upgrade Visual C++ – kód  
- Měli byste zvážit, upgrade kódu z následujících důvodů:  
+## <a name="reasons-to-upgrade-visual-c-code"></a>Důvody pro Upgrade kódu Visual C++  
+
+Měli byste zvážit upgrade kódu z následujících důvodů:  
   
--   Rychlejší kód z důvodu optimalizace vylepšené kompilátoru.  
+- Rychlejší kód z důvodu vylepšení kompilátoru optimalizace.  
   
--   Rychlejší sestavení, z důvodu vylepšení výkonu v kompilátoru sám sebe.  
+- Rychlejší sestavování, kvůli zvýšení výkonu kompilátoru samotný.  
   
--   Shoda lepší standardů. Visual C++ teď implementuje mnoho funkcí z nejnovějších standardů C++.  
+- Shoda se standardy lepší. Visual C++ teď implementuje mnoho funkcí z nejnovějších standardů C++.  
   
--   Lepší zabezpečení. Funkce zabezpečení, jako je kontrola ochrana.  
+- Lepší zabezpečení. Funkce zabezpečení, jako je kontroluje.  
   
 ### <a name="porting-your-code"></a>Portování kódu  
- Při upgradu, nejprve zvažte kódu a projekty vaší aplikace. Je vaše aplikace vytvořené s nástroji Visual Studio?  Pokud ano, identifikujte související se situací projekty.  Máte vlastní sestavovací skripty?  Pokud máte skripty vlastního sestavení místo použití systém sestavení sady Visual Studio, budete mít více práce uděláte v upgradu, protože nelze ušetřit čas tím, že Visual Studio aktualizovat soubory projektu a nastavení sestavení.  
+Při upgradu, nejprve zvažte kódu vaší aplikace a projekty. Je vaše aplikace vytvořená pomocí sady Visual Studio? Pokud ano, identifikujte projekty, které jsou zahrnuté.  Máte skripty vlastního sestavení? Pokud máte skripty vlastního sestavení místo sestavení systému Visual Studio, budete mít další práci v rámci upgradu, protože nelze ušetřit čas tím, že Visual Studio, aktualizujte si soubory projektu a nastavení sestavení.  
   
- Formát sestavení systému a projekt souboru v sadě Visual Studio se změnil z vcbuild ve verzích až Visual Studio 2008 na MSBuild verze sady Visual Studio 2010 a vyšší. Pokud se upgrade z verze před 2010 a budete mít systém vysoce přizpůsobenou sestavení, můžete chtít provést další práci pro upgrade.  Pokud jste upgrade z produktu Visual Studio 2010 nebo novější, vašich projektů se už používá MSBuild, tak upgrade projektu a sestavení pro vaše aplikace by měla být snazší.  
+Formát sestavení projekt a systému souborů v sadě Visual Studio se změní z vcbuild ve verzích až Visual Studio 2008 na MSBuild verze sady Visual Studio 2010 a vyšší. Pokud se upgrade z verze před 2010 a máte vysoce přizpůsobenou systém, bude pravděpodobně více práce k upgradu. Pokud jste upgrade z produktu Visual Studio 2010 nebo novější, vaše projekty upgrade projektu a sestavení pro vaši aplikaci, by tak měly být jednodušší už používáte MSBuild.  
   
- Pokud nepoužíváte systém sestavení sady Visual Studio, měli byste zvážit, upgradu a používání nástroje MSBuild. Pokud provádíte upgrade pomocí nástroje MSBuild, může mít jednodušší čas v budoucí aktualizace, a je jednodušší použít službám, jako je Visual Studio Online. MSBuild podporuje všechny cílové platformy, které podporuje Visual Studio.  
+Pokud nepoužíváte systém sestavení sady Visual Studio, měli byste zvážit upgrade na použití nástroje MSBuild. Pokud upgradujete na použití nástroje MSBuild, bude pravděpodobně usnadní v budoucí inovace a bude usnadňuje používání služeb, jako je Visual Studio Online. Nástroj MSBuild podporuje všechny cílové platformy, které podporuje Visual Studio.  
   
 ### <a name="porting-visual-studio-projects"></a>Portování projektů sady Visual Studio  
-  Pokud chcete spustit upgrade projekt nebo řešení, právě otevřete řešení v nové verzi sady Visual Studio a postupujte podle výzev a spusťte upgrade je.  Při upgradu na projekt, dojde upgradu zprávu, která je také uloženy ve složce projektu jako UpgradeLog.htm. Upgrade sestava zobrazuje souhrn jaké problémy se vyskytly během procesu upgradu a některé informace o změnách, které byly provedeny nebo problémy, které nelze vyřešit automaticky.  
+Spustit upgrade projektu nebo řešení, právě otevřete řešení v nové verzi sady Visual Studio a postupujte podle výzev a spusťte upgrade se.  Když upgradujete projekt, získáte upgradu sestava, která se také uloží do složky projektu jako UpgradeLog.htm. Upgrade sestava zobrazuje souhrn jaké problémy se vyskytly během procesu upgradu a některé informace o změny, které byly provedeny nebo problémy, které nelze vyřešit automaticky.  
   
-1.  Vlastnosti projektu  
+1. Vlastnosti projektu  
   
-2.  Vložené soubory  
+2. Soubory k zahrnutí  
   
-3.  Kód, který už zkompilován čistě z důvodu kompilátoru shoda imrovements nebo změny v standard.  
+3. Kód, který už zkompiluje čistě kvůli imrovements shoda kompilátoru nebo standard se změnami  
   
-4.  Kód, který využívá funkce sady Visual Studio nebo systému Windows, které již nejsou k dispozici nebo soubory hlaviček, které nejsou součástí výchozí instalace sady Visual Studio, nebo byly odebrány z produktu  
+4. Kód, který využívá funkce sady Visual Studio nebo Windows, které už nejsou k dispozici nebo hlavičkové soubory, které nejsou zahrnuté ve výchozí instalaci sady Visual Studio, nebo byly odebrány z produktu  
   
-5.  Kód, který už zkompiluje z důvodu změn v rozhraní API, jako přejmenovat rozhraní API, změnit funkce podpisy nebo zastaralé funkce  
+5. Kód, který již nezkompiluje z důvodu změn v rozhraní API, jako přejmenovat rozhraní API, podpisech funkcí změny a zastaralé funkce  
   
-6.  Kód, který už zkompiluje z důvodu změn v diagnostice, jako je například upozornění, aby se aktivovala chybu  
+6. Kód, který již nezkompiluje z důvodu změn v diagnostice, jako je například upozornění stávají chybu  
   
-7.  Chybami linkeru z důvodu knihovny, které byly změněny, zejména v případě, že se používá /NODEFAULTLIB.  
+7. Linker chyby vzniklé v důsledku knihovny, které byly změněny, zejména v případě, že se používá parametr/NODEFAULTLIB.  
   
-8.  Chyby za běhu nebo neočekávané výsledky z důvodu změny chování  
+8. Chyby za běhu nebo neočekávané výsledky díky změnám chování  
   
-9. Chyby z důvodu chyb, které byly zavedeny v nástrojích pro. Pokud narazíte na problém nahlásit týmu Visual C++ pomocí pracovníkům podpory normální, nebo pomocí [Visual Studio zpětnou vazbu Center](http://connect.microsoft.com/VisualStudio/Feedback).  
+9. Chyby vzniklé v důsledku chyby, které byly zavedeny v nástrojích. Pokud narazíte na problém, ohlásit týmu Visual C++ pomocí pracovníkům podpory normální, nebo pomocí [Visual Studio Feedback Center](http://connect.microsoft.com/VisualStudio/Feedback).  
   
- Kromě změn, které se nelze vyhnout z důvodu chyb kompilátoru některé změny jsou volitelné v upgradu, jako například:  
+Kromě změn, které není možné vyhnout se z důvodu chyb kompilátoru některé změny jsou volitelné v upgradu, jako například:  
   
-1.  Nové upozornění může znamenat, že chcete vyčistit vašeho kódu. V závislosti na konkrétní diagnostiky tím lze vylepšit přenositelnost, shoda standardů a zabezpečení vašeho kódu.  
+1. Nová upozornění může znamenat, že chcete vyčistit váš kód. V závislosti na konkrétní diagnostické to zlepšit přenositelnost, shoda se standardy a zabezpečení vašeho kódu.  
   
-2.  Můžete chtít využívat výhod novější kompilátoru funkcí, jako [/guard:cf (Povolit toku řízení Guard)](../build/reference/guard-enable-control-flow-guard.md) – možnost kompilátoru, která přidává kontroluje provádění neoprávněným kódu.  
+2. Můžete chtít využívat novější funkce kompilátoru, jako [(povolení toku řízení ochrany) / Guard: CF](../build/reference/guard-enable-control-flow-guard.md) – možnost kompilátoru, který přidává kontroly pro provádění neoprávněný kód.  
   
-3.  Může chcete aktualizovat některé kódu pro použití nové jazykové funkce, které zjednodušit kód, zlepšit výkon programy nebo aktualizujte kód a používat moderní knihovny odpovídat moderních standardů a osvědčených postupů.  
+3. Může vyžadovat aktualizaci kódu pro použití nových funkcí jazyka, které zjednodušuje kód, zvýšit výkon svých programů nebo aktualizovat kód v souladu s moderních standardů a osvědčených postupů a používat moderní knihovny.  
   
- Jakmile jste upgradovat a testování projektu, můžete také chtít zvažte vylepšení kód další plánování budoucí směr kódu nebo i nebyla architektuře vašeho projektu. Se zobrazí probíhající vývoji? Bude být důležité pro váš kód pro spuštění na jiných platformách?  Pokud ano, jaké platformy?  C++ je standardizovaná jazyka navrhovat s přenositelnosti a vývoj pro různé platformy v paměti a ještě kód pro mnoho aplikací systému Windows je důrazně vázaný na platformě Windows. Opravdu chcete Refaktorovat kódu, jak oddělit ty části, které jsou více svázané s platformou Windows?  
+Po upgradu a testování projektu, může být také vhodné zvažte vylepšení další kód nebo plánovat budoucí směr kódu nebo dokonce zvažte architekturu vašeho projektu. Obdrží jeho aktuálnímu vývoji? Stane se důležité pro váš kód pro spuštění na jiných platformách?  Pokud ano, jaké platformy?  C++ je standardizovaná langauge s přenositelností a vývoj pro různé platformy v úvahu a ještě kód pro spoustu aplikací na Windows silnou vazbu na platformu Windows. Opravdu chcete Refaktorovat kód, k tomu oddělit tyto součásti, které jsou více svázané na platformu Windows?  
   
- Co uživatelské rozhraní?  Pokud používáte MFC, můžete chtít aktualizovat uživatelského rozhraní.  Používáte všechny novější funkce MFC, které byly zavedeny v 2008 jako Feature Pack?  Pokud chcete poskytnout novější vzhled a chování vaší aplikace bez přepisování celá aplikace, můžete zvážit pomocí rozhraní API pásu karet v prostředí MFC nebo pomocí některé z nových funkcí knihovny MFC.  
+A co uživatelského rozhraní? Pokud používáte knihovnu MFC, můžete chtít aktualizovat uživatelské rozhraní. Používáte novější funkce MFC, které byly zavedeny v 2008 jako Feature Pack? Pokud chcete poskytnout novější vzhled a chování vaší aplikace bez přepsání celé aplikace, můžete zvážit použití rozhraní API na pásu karet v prostředí MFC, nebo pomocí některé z nových funkcí knihovny MFC.  
   
- Pokud chcete svůj program poskytnout uživatelské rozhraní jazyka XAML, ale nechcete použít k vytvoření aplikace pro UPW, můžete C# v grafickém subsystému WPF vytvoření vrstvy uživatelského rozhraní a refactor logika standardní C++ do knihovny DLL. Vytvoření vrstvy interoperabilitu v jazyce C + +/ CLI připojit C# s nativním kódem. Další možností je vytvořit pomocí aplikace UWP [C + +/ CX](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh699871.aspx) nebo [C + +/ WinRT](https://github.com/microsoft/cppwinrt). V systému Windows 10, můžete použít [plochy aplikace převaděč](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) do balíčku plochy aplikace jako aplikace pro UPW bez nutnosti upravit žádný kód.   
- Případně třeba Teď máte nové požadavky nebo předvídáte, třeba pro cílení na platformy kromě Windows desktop, například Windows Phone nebo zařízení se systémem Android. Může portu kód uživatelského rozhraní a knihovna uživatelského rozhraní a platformy. Pomocí těchto rozhraní uživatelského rozhraní můžete cíle více zařízení a nadále používat Visual Studio a ladicí program Visual Studio jako vývojové prostředí.  
+Pokud chcete svůj program poskytnout uživatelské rozhraní XAML, ale nechtějí vytvářet aplikace pro UPW, můžete použít C# s WPF vytvořit vrstvě uživatelského rozhraní a Refaktorujte logiky standard C++ do knihoven DLL. Vytvoření vrstvy vzájemná funkční spolupráce v jazyce C + +/ CLI pro připojení k C# pomocí nativního kódu. Další možností je vytvořit aplikaci UPW pomocí [C + +/ CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) nebo [C + +/ WinRT](https://github.com/microsoft/cppwinrt). Ve Windows 10, můžete použít [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) chcete zabalit desktopové aplikace jako aplikace pro UPW bez nutnosti upravit veškerý kód.   
+
+Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu cílení na jiných platformách než Windows desktop, jako jsou Windows Phone nebo zařízení s Androidem. Může přeneste kód uživatelského rozhraní pro multiplatformní knihovna uživatelského rozhraní. Tyto architektury uživatelského rozhraní můžete cílit na více zařízení a dál používat Visual Studio a ladicím programu sady Visual Studio jako vývojové prostředí.  
   
 ## <a name="related-topics"></a>Související témata  
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projektů vytvořených v dřívějších verzích systému Visual C++.|  
-|[Co je nového pro kompilátor C++ v sadě Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástrojů pro Visual Studio 2017 ze sady Visual Studio 2015|  
-|[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Vylepšení shoda standardy z Visual Studia 2015 Visual Studio 2017|  
-|[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn ve Visual C++ knihovny a nástroje pro sestavení ze sady Visual Studio 2003 prostřednictvím 2015, které může vyžadovat změny v kódu.|  
-|[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro Visual C++ ze sady Visual Studio 2003 pomocí sady Visual Studio 2015.|  
-|[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Postup použití **vcpkg** nástroj příkazového řádku port starší knihovny open-source na verze kompilovat s novější modulové Visual C++.|  
-|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl která je součástí a upgraduje několik ukázky a aplikace jsme popsané prostředí a výsledky. Může zjistit, že čtení těchto poskytuje je můžete představu o co účastní přenos a upgrade procesu. V celém procesu, budeme zabývat tipy a triky pro upgrade a zobrazit jak konkrétní chyby jsme vyřešili.|  
-|[Přenos aplikací do univerzální platformy Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o portování kódu na Windows 10|  
-|[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří jsou nové pro aplikaci Visual C++ a chcete se s ním být produktivní.|  
-|[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Popisuje možnosti migrace aplikací systému UNIX do systému Windows.|  
-|[Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Podrobně zobrazuje postup upgradu vaší spravovaných rozšíření pro C++ Syntaxe použití nové syntaxe. Další informace najdete v tématu [rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).|  
+|[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Popisuje, jak používat projekty vytvořené v dřívějších verzích Visual C++.|  
+|[Co je nového pro kompilátor jazyka C++ v sadě Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Změny v prostředí IDE a nástroje z Visual Studia 2015 do sady Visual Studio 2017|  
+|[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Vylepšení ze sady Visual Studio 2015 do sady Visual Studio 2017|  
+|[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Seznam všech změn v Visual C++ knihovny a nástroje sestavení ze sady Visual Studio 2003 do 2015, které mohou vyžadovat změny v kódu.|  
+|[Novinky Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Všechny "Novinky" informace pro jazyk Visual C++ ze sady Visual Studio 2003 do Visual Studio 2015.|  
+|[Přenos knihoven třetích stran](porting-third-party-libraries.md)|Jak používat **vcpkg** nástroj příkazového řádku k portu starší knihovny open-source verze kompilován s novější sady nástrojů Visual C++.|  
+|[Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)|Pro tento oddíl přenáší a upgraduje několik ukázek a aplikací jsme probírali prostředí a výsledky. Můžete zjistit, že čtení těchto poskytuje vás o tom, co se tak zapojí v portování a upgradování procesu. Během tohoto procesu jsme popisují tipy a triky pro upgrade a zobrazit jak se konkrétní chyby byly opraveny.|  
+|[Přenos aplikací do platformy Universal Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|  
+|[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří začínají s Visual C++ a chcete se s ním být produktivní.|  
+|[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|  
+|[Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Podrobně ukazuje, jak upgradovat vaše spravovaných rozšíření syntaxe jazyka C++ použít novou syntaxi. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Viz také  
- [Visual C++](../visual-cpp-in-visual-studio.md)
+
+[Visual C++](../visual-cpp-in-visual-studio.md)

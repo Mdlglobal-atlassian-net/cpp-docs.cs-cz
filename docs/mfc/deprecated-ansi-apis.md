@@ -1,5 +1,5 @@
 ---
-title: Zastaralá rozhraní API standardu ANSI | Microsoft Docs
+title: Zastaralá rozhraní API standardu ANSI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342056"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465672"
 ---
 # <a name="deprecated-ansi-apis"></a>Zastaralá rozhraní API standardu ANSI
-Knihovna Microsoft Foundation Class (MFC) migruje směrem k třídy a metody, které jsou založeny na ve znakové sadě Unicode. V důsledku toho ANSI verzích několik metod MFC jsou zastaralé. V aplikacích budoucí pomocí kódování Unicode verze těchto metod.  
+Knihovny Microsoft Foundation Class (MFC) je migrace třídy a metody, které jsou založeny na znakové sady Unicode. V důsledku toho jsou zastaralé verze ANSI z několika metod knihovny MFC. Použijte Unicode verze těchto metod v budoucí aplikace.  
   
- Počínaje verzí běžné ovládací prvky Windows 6.1, který se dodává v [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], následující metody ANSI jsou zastaralé.  
+ Od verze běžných ovládacích prvků Windows 6.1, která se dodává ve Windows Vista, jsou zastaralé následující metody ANSI.  
   
 ## <a name="cbutton-class"></a>CButton – třída  
   
@@ -49,7 +49,7 @@ AFX_ANSI_DEPRECATED BOOL SetTextMargin(LPRECT pmargin);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
-## <a name="cedit-class"></a>CEdit – třída  
+## <a name="cedit-class"></a>Cedit – třída  
   
 ```  
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
@@ -60,8 +60,8 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
 ```  
   
-## <a name="clinkctrl-class"></a>CLinkCtrl – třída  
- Celý třída je zastaralá.  
+## <a name="clinkctrl-class"></a>Clinkctrl – třída  
+ Celá třída je zastaralá.  
   
 ## <a name="clistctrl-class"></a>CListCtrl – třída  
   

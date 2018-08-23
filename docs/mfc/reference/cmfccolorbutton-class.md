@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1b2c7f078acaa929cbfec0ac85456e6d72ee20
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850105"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465655"
 ---
 # <a name="cmfccolorbutton-class"></a>Cmfccolorbutton – třída
 `CMFCColorButton` a [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md) třídy se používají společně k implementaci ovládacího prvku pro výběr barvy.  
@@ -276,7 +276,7 @@ virtual void OnDrawBorder(
  Odkazuje na zařízení kontext použitý k vykreslení ohraničení.  
   
  [in] *rectClient*  
- Obdélník v kontextu zařízení, která je zadána v *primárního řadiče domény* parametr, který definuje hranice tlačítko, které chcete kreslit.  
+ Obdélník v kontextu zařízení, která je zadána *primárního řadiče domény* parametr, který definuje hranice tlačítko, které chcete kreslit.  
   
  [in] *uiState*  
  Určuje vizuální stav tlačítka.  

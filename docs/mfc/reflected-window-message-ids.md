@@ -1,5 +1,5 @@
 ---
-title: Zobrazit identifikátory zpráv oken | Microsoft Docs
+title: Projeví identifikátory zpráv oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,21 +56,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8746666c4b1eb48e4c54822f76328579b7ce8584
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 968a8560447b0bf8f74e94f8b492e1de7192df76
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928195"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465488"
 ---
 # <a name="reflected-window-message-ids"></a>Identifikátory reflektovaných zpráv oken
-Rychlé vytvoření ovládacího prvku ActiveX nebo jiné speciální ovládací prvek, je podtřídou časového období. Další informace najdete v tématu [MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
+Rychlý způsob, jak vytvořit ovládací prvek ActiveX nebo jiného specializovaného ovládacího prvku, je podtřídou časového období. Další informace najdete v tématu [knihovny MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
- Aby se zabránilo kontejneru ovládacího prvku příjem zprávy okna odeslané rozčleněné ovládací prvek Windows, [COleControl](../mfc/reference/colecontrol-class.md) vytvoří okno "reflector" zachytí některé zprávy okna a přidán do ovládacího prvku. Ovládací prvek v postupu její okno, pak může zpracovat tyto reflektované zprávy provedením akcí, které jsou vhodné pro ovládací prvek ActiveX.  
+ Aby se zabránilo kontejneru ovládacího prvku příjem okno zprávy odesílané rozčleněné ovládací prvek Windows, [COleControl](../mfc/reference/colecontrol-class.md) vytvoří okno "reflector" zachytily určité zprávy okna a odeslat je zpátky do ovládacího prvku. Ovládacího prvku, v jeho proceduru okna můžete následně zpracovat tyto reflektované zprávy provedením akce, které jsou vhodné pro ovládací prvek ActiveX.  
   
- Následující tabulka zobrazuje zprávy, které jsou zachytili a odpovídající zprávy, které odesílá okna reflector.  
+ Následující tabulka uvádí zprávy, které jsou zachyceny a odpovídající zprávy, které odesílá okně reflector.  
   
-|Zpráva byla odeslána pomocí ovládacího prvku|Zpráva projeví do ovládacího prvku|  
+|Zprávy odesílané ovládacího prvku|Zpráva odrazí na ovládacím prvku|  
 |---------------------------------|--------------------------------------|  
 |[WM_COMMAND –](http://msdn.microsoft.com/library/windows/desktop/ms647591)|OCM_COMMAND –|  
 |[WM_CTLCOLORBTN](http://msdn.microsoft.com/library/windows/desktop/bb761849)|OCM_CTLCOLORBTN –|  
@@ -87,13 +87,13 @@ Rychlé vytvoření ovládacího prvku ActiveX nebo jiné speciální ovládací
 |[WM_COMPAREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775921)|OCM_COMPAREITEM –|  
 |[WM_HSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787575)|OCM_HSCROLL –|  
 |[WM_VSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787577)|OCM_VSCROLL –|  
-|[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)|OCM_PARENTNOTIFY –|  
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY –|  
 |[WM_NOTIFY –](http://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY –|  
   
 > [!NOTE]
->  Pokud ovládací prvek běží na systému Win32, existuje několik typů WM_CTLCOLOR –\* může přijímat zprávy. Další informace najdete v tématu WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
+>  Pokud spustí v systému Win32, existuje několik typů WM_CTLCOLOR –\* může přijímat zprávy. Další informace najdete v tématu WM_CTLCOLORBTN WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
+ [MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
  [TN062: Reflexe zprávy pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
 

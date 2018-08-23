@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402493"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465669"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Specifické pro Microsoft**  
   
- Pro funkce deklarované s **naked** atribut, kompilátor generuje kód bez kódu prologu a epilogu. Tuto funkci lze použít pro psaní vlastních sekvencí kódu epilogu nebo prologu pomocí vloženého kódu assembleru. Neviditelné funkce jsou zvláště užitečné při psaní ovladačů virtuálních zařízení.  Všimněte si, že **naked** atribut je platný jenom pro x86 a ARM a není k dispozici na [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Pro funkce deklarované s **naked** atribut, kompilátor generuje kód bez kódu prologu a epilogu. Tuto funkci lze použít pro psaní vlastních sekvencí kódu epilogu nebo prologu pomocí vloženého kódu assembleru. Neviditelné funkce jsou zvláště užitečné při psaní ovladačů virtuálních zařízení.  Všimněte si, že **naked** atribut je platný jenom pro x86 a ARM a není k dispozici na x64.  
   
 ## <a name="syntax"></a>Syntaxe  
   

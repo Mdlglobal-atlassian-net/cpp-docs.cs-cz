@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336592"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465762"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Přímé volání funkcí rozhraní API ODBC
 Databázové třídy poskytují jednodušší rozhraní [zdroj dat](../../data/odbc/data-source-odbc.md) než rozhraní ODBC. V důsledku toho třídy není zapouzdřovat všechny možnosti rozhraní API ODBC. Pro všechny funkce, která spadá mimo vlastnosti třídy je nutné volat funkce rozhraní API ODBC přímo. Například lze zavolat funkce katalogu rozhraní ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`a další) přímo.  
@@ -48,7 +48,7 @@ Databázové třídy poskytují jednodušší rozhraní [zdroj dat](../../data/o
   
 -   Po dokončení zrušit přidělení úložiště.  
   
- Další informace o těchto krocích najdete v článku [připojení ODBC (Open Database)](https://msdn.microsoft.com/library/ms710252.aspx) sady SDK v dokumentaci MSDN.  
+ Další informace o těchto krocích najdete v článku [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) sady SDK v dokumentaci MSDN.  
   
  Kromě těchto kroků budete muset udělat dodatečné kroky, chcete-li zkontrolovat vrácené hodnoty funkce, ujistěte se, že váš program nečeká na asynchronní volání dokončí a tak dále. Poslední takto můžete zjednodušit pomocí AFX_SQL_ASYNC a AFX_SQL_SYNC makra. Další informace najdete v tématu [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *odkaz knihovny MFC*.  
 

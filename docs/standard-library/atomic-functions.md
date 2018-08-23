@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028314"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42465848"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkce
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Poznámky
 
-*Atomická operace porovnání a záměna* porovnává hodnotu uloženou v objektu, který ukazuje *Atom* oproti hodnotě, ukazuje *Exp*. Pokud jsou hodnoty stejné, hodnota, která je uložena v objektu, který ukazuje *atom* nahradí `Val` pomocí `read-modify-write` operace a použití paměti omezení, která jsou určena podle pořadí*Order1*. Pokud nejsou hodnoty stejné, operace nahradí hodnotu, která ukazuje *Exp* s hodnotou, která je uložena v objektu, který ukazuje *Atom* a použije omezení pořadí paměti, které jsou určená *Order2*.
+*Atomická operace porovnání a záměna* porovnává hodnotu uloženou v objektu, který ukazuje *Atom* oproti hodnotě, ukazuje *Exp*. Pokud jsou hodnoty rovny, hodnotu, která je uložena v objektu, který ukazuje *atom* nahradí *hodnotu* pomocí `read-modify-write` operace a použitím omezení pořadí paměti, které jsou určená *Order1*. Pokud nejsou hodnoty stejné, operace nahradí hodnotu, která ukazuje *Exp* s hodnotou, která je uložena v objektu, který ukazuje *Atom* a použije omezení pořadí paměti, které jsou určená *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak –
 

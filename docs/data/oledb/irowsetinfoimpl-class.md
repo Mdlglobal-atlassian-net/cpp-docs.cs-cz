@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337070"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465586"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl – třída
-Poskytuje implementaci pro [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) rozhraní.  
+Poskytuje implementaci pro [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetInfo::GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky. 
+ Zobrazit [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky. 
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) v *referenční informace pro OLE DB programátory*.  
+ Zobrazit [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody [igetdatasourceimpl –](../../data/oledb/igetdatasourceimpl-class.md) k načtení vlastnosti z objektu zdroje dat.  

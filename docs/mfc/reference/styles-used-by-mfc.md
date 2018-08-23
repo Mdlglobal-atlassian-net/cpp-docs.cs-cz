@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886060"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465482"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC  
   
@@ -232,15 +232,15 @@ V následující tabulce jsou uvedeny typy tlačítek. Můžete volitelně zvoli
 |BS_AUTOCHECKBOX|Vytvoří tlačítko zaškrtávacího políčka se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu a změní stav tlačítka. Ve výchozím nastavení se přidružený text zobrazí napravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|  
 |BS_AUTORADIOBUTTON|Vytvoří přepínač se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínače se obvykle používají ve skupinách, kdy má každá skupina maximálně jednu zaškrtnutou možnost najednou. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu, nastaví stav kliknutí na přepínač BST_CHECKED a nastaví stav všech dalších přepínacích tlačítek ve skupině na BST_UNCHECKED. Ve výchozím nastavení se přidružený text zobrazí napravo od přepínače. Chcete-li zobrazit text vlevo od přepínače, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|  
 |BS_CHECKBOX|Vytvoří tlačítko zaškrtávacího políčka se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu, ale nezmění stav tlačítka. Ve výchozím nastavení se přidružený text zobrazí napravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|  
-|BS_COMMANDLINK|Vytvoří tlačítko příkazového odkazu. Tlačítko příkazového odkazu je příkazové tlačítko specifické pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] , které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
-|BS_DEFCOMMANDLINK|Vytvoří tlačítko příkazového odkazu. Tlačítko příkazového odkazu je příkazové tlačítko specifické pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] , které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Je-li tlačítko v dialogovém okně, stisknutí klávesy ENTER odešle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu.|  
+|BS_COMMANDLINK|Vytvoří tlačítko příkazového odkazu. Tlačítko příkazového odkazu je příkazové tlačítko specifické pro Windows Vista, které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|BS_DEFCOMMANDLINK|Vytvoří tlačítko příkazového odkazu. Tlačítko příkazového odkazu je příkazové tlačítko specifické pro Windows Vista, které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Je-li tlačítko v dialogovém okně, stisknutí klávesy ENTER odešle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu.|  
 |BS_DEFPUSHBUTTON|Vytvoří příkazové tlačítko, které má silný černý okraj. Je-li tlačítko v dialogovém okně, stisknutí klávesy ENTER odešle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu.|  
-|BS_DEFSPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] , které je tvořeno tlačítkem vedle na šipku rozevíracího seznamu. Když kliknete na tlačítko, výchozí příkaz je proveden. Když kliknete na šipku rozevíracího seznamu, se zobrazí nabídka dalších příkazů. -Li tlačítko rozdělení v dialogovém okně, stisknutí klávesy ENTER odešle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu|  
+|BS_DEFSPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro Windows Vista, které je tvořeno tlačítkem vedle šipky rozevíracího seznamu. Když kliknete na tlačítko, výchozí příkaz je proveden. Když kliknete na šipku rozevíracího seznamu, se zobrazí nabídka dalších příkazů. -Li tlačítko rozdělení v dialogovém okně, stisknutí klávesy ENTER odešle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu|  
 |BS_GROUPBOX|Vytvoří obdélník, ve kterém mohou být seskupeny další tlačítka. Text spojený s tímto stylem se zobrazí v levém horním rohu obdélníku.|  
 |BS_OWNERDRAW|Vytvoří vlastníkem vykreslované tlačítko. Rámec volá `DrawItem` při úpravě vizuálního aspektu tlačítka změnila. Tento styl musí být nastavena, když použijete `CBitmapButton` třídy.|  
 |BS_PUSHBUTTON|Vytvoří příkazové tlačítko, který odešle oznámení BN_CLICKED nadřazenému oknu, když uživatel klikne na tlačítko.|  
 |BS_RADIOBUTTON|Vytvoří přepínač se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínače se obvykle používají ve skupinách, kdy má každá skupina maximálně jednu zaškrtnutou možnost najednou. Kliknutí na tlačítko odešle oznámení BN_CLICKED nadřazenému oknu, ale nezmění automaticky stav žádného tlačítka ve skupině. Ve výchozím nastavení se přidružený text zobrazí napravo od přepínače. Chcete-li zobrazit text vlevo od přepínače, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|  
-|BS_SPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] , které je tvořeno tlačítkem vedle na šipku rozevíracího seznamu. Když kliknete na tlačítko, výchozí příkaz je proveden. Když kliknete na šipku rozevíracího seznamu, se zobrazí nabídka dalších příkazů.|  
+|BS_SPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro Windows Vista, které je tvořeno tlačítkem vedle šipky rozevíracího seznamu. Když kliknete na tlačítko, výchozí příkaz je proveden. Když kliknete na šipku rozevíracího seznamu, se zobrazí nabídka dalších příkazů.|  
 |BS_USERBUTTON|Zastaralé, ale k dispozici kvůli kompatibilitě s 16bitovou verzí Windows. Aplikace založené na Win32, by měl místo toho použijte BS_OWNERDRAW.|  
   
 ### <a name="radio-button-and-check-box-styles"></a>Styly přepínače tlačítka a zaškrtávací políčko  
@@ -498,7 +498,7 @@ Rozšířené styly oken platí pro [třída CWnd](../../mfc/reference/cwnd-clas
 |WS_EX_CONTEXTHELP|Zahrnuje otazník v záhlaví okna. Pokud uživatel na tento otazník klikne, změní se kurzor na ukazatel s otazníkem. Pokud uživatel pak klikne na podřízené okno, obdrží zprávu WM_HELP.|  
 |WS_EX_CONTROLPARENT|Umožňuje uživateli přecházet mezi okny podřízenými okna pomocí klávesy TAB.|  
 |WS_EX_DLGMODALFRAME|Určí okno s dvojitým ohraničení, která může (volitelně) vytvořeno se záhlavím při zadání příznak stylu WS_CAPTION v *dwStyle* parametru.|  
-|WS_EX_LAYERED|Okno je [vrstveným oknem](http://msdn.microsoft.com/library/ms632599.aspx#layered). Tento styl nelze použít, pokud má okno [třídy stylu](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC nebo CS_CLASSDC. Nicméně [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] podporuje styl WS_EX_LAYERED pro podřízená okna, ve kterém předchozí verze Windows podporují se pouze pro okna nejvyšší úrovně.|  
+|WS_EX_LAYERED|Okno je [vrstveným oknem](http://msdn.microsoft.com/library/ms632599.aspx#layered). Tento styl nelze použít, pokud má okno [třídy stylu](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC nebo CS_CLASSDC. Microsoft Windows 8, ale podporuje styl WS_EX_LAYERED pro podřízená okna, ve kterém předchozí verze Windows podporují se pouze pro okna nejvyšší úrovně.|  
 |WS_EX_LEFT|Poskytuje okno Obecné vlastnosti zarovnání vlevo. Toto nastavení je výchozí.|  
 |WS_EX_LEFTSCROLLBAR|Umístí svislý posuvník nalevo od klientské oblasti.|  
 |WS_EX_LTRREADING|Zobrazí text okna zleva doprava použití vlastností pořadí čtení. Toto nastavení je výchozí.|  
