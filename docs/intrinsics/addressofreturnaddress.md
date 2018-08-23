@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress | Microsoft Docs
+title: _AddressOfReturnAddress | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326908"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464620"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Poskytuje adresu umístění v paměti, která obsahuje návratové adresy aktuální funkce. Tato adresa nesmí být použity pro přístup jiných umístění paměti (například argumenty funkce).  
+ Poskytuje adresu umístění v paměti, která obsahuje zpáteční adresu aktuální funkce. Tato adresa nemusí být pro přístup k jiné umístění v paměti (například argumenty funkce).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,14 +38,14 @@ void * _AddressOfReturnAddress();
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Když `_AddressOfReturnAddress` se používá v programu kompilovat s [/CLR](../build/reference/clr-common-language-runtime-compilation.md), obsahující funkce `_AddressOfReturnAddress` volání kompiluje jako nativní funkce. Když funkce zkompilovat jako spravované volání funkce obsahující `_AddressOfReturnAddress`, `_AddressOfReturnAddress` nemusí chovat podle očekávání.  
+ Když `_AddressOfReturnAddress` se používá v programu kompilovaného s [/CLR](../build/reference/clr-common-language-runtime-compilation.md), funkce obsahující `_AddressOfReturnAddress` volání je zkompilovat jako nativní funkce. Když funkci zkompilovat jako spravovaná volání do funkce obsahující `_AddressOfReturnAddress`, `_AddressOfReturnAddress` nemusí chovat dle očekávání.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -81,7 +81,7 @@ int main() {
 00401058  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
