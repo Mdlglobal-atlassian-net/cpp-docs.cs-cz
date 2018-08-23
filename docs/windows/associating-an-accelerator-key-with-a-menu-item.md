@@ -16,19 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 854a2d7f0dd57c181beae3e88f2de98c0d511e6c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651148"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597099"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Přiřazení klíče akcelerátoru k položce nabídky
-V mnoha případech má položku nabídky a kombinace kláves pro stejný příkaz programu. To provedete tak, že stejný identifikátor prostředku (ID) přiřadíte k položce nabídky a záznam v tabulce akcelerátorů vaší aplikace. Potom upravte položku nabídky titulek, aby se zobrazil název akcelerátoru. Další informace o položky nabídky a přístupové klávesy, naleznete v tématu [přiřazení položky nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Editor akcelerátorů](../windows/accelerator-editor.md)   
- [Editory prostředků](../windows/resource-editors.md)
+
+V mnoha případech má položku nabídky a kombinace kláves pro stejný příkaz programu. To provedete tak, že stejný identifikátor prostředku (ID) přiřadíte k položce nabídky a záznam v tabulce akcelerátorů vaší aplikace. Potom upravte položku nabídky titulek, aby se zobrazil název akcelerátoru. Další informace o položky nabídky a přístupové klávesy, naleznete v tématu [přiřazení položky nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Editor akcelerátorů](../windows/accelerator-editor.md)  
+[Editory prostředků](../windows/resource-editors.md)

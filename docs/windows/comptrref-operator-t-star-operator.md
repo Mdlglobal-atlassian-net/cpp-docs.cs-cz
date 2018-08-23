@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 472cdaeec78c30d49f3160ac4d632eb95ef8e71a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595416"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* – operátor
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-operator T*();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Vrátí hodnotu [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) datový člen aktuálního **comptrref –** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Comptrref – třída](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+operator T*();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Vrátí hodnotu [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) datový člen aktuálního **comptrref –** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ComPtrRef – třída](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

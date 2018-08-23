@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::type | Microsoft Docs
+title: Platform::type – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255535"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596698"
 ---
 # <a name="platformtype-class"></a>Platform::type – třída
-Obsahuje informace o běhu o typu – konkrétně řetězec název a typ objektu typecode. Získá voláním [Object::gettype –](../cppcx/platform-object-class.md#gettype) libovolného objektu nebo nebo pomocí [typeid](../windows/typeid-cpp-component-extensions.md) operátor na třídě nebo struktuře název.  
+Obsahuje běhových informací o typu – konkrétně řetězec názvu a typecode. Získá voláním [Object::gettype –](../cppcx/platform-object-class.md#gettype) libovolného objektu nebo pomocí [typeid](../windows/typeid-cpp-component-extensions.md) operátor na název třídy nebo struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,33 +35,33 @@ public ref class Platform::Type :
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `Type` Třída je užitečná v aplikacích, které musí směrovat zpracování pomocí `if` nebo `switch` příkaz, který větví na základě spuštění typu objektu. Zadejte kód, který popisuje kategorie typu je načíst s použitím [Type::GetTypeCode](#gettypecode) – členská funkce.  
+ `Type` Třída je užitečná v aplikacích, které musí směrovat zpracování s použitím `if` nebo `switch` příkaz, který větví na základě run-time typu objektu. Zadejte kód, který popisuje kategorie typu je načíst s použitím [Type::GetTypeCode](#gettypecode) členskou funkci.  
   
 ## <a name="public-methods"></a>Veřejné metody  
   
 |||  
 |-|-|  
-|[Type::GetTypeCode – metoda](#gettypecode)|Vrátí [Platform::TypeCode výčtu](../cppcx/platform-typecode-enumeration.md) hodnotu objektu.| 
-|[Type::ToString – metoda](#tostring)|Vrátí název typu uvedeného ve svých metadatech.| 
+|[Type::GetTypeCode – metoda](#gettypecode)|Vrátí [Platform::TypeCode – výčet](../cppcx/platform-typecode-enumeration.md) hodnotu objektu.| 
+|[Type::ToString – metoda](#tostring)|Vrátí název typu, jak je uvedeno ve svých metadatech.| 
 
  
 ## <a name="public-properties"></a>Veřejné vlastnosti  
   
 |||  
 |-|-|  
-|[Type::FullName](#fullname)|Vrátí [Platform::String třída](../cppcx/platform-string-class.md)^, představuje plně kvalifikovaný název typu a používá. (tečka) jako oddělovač, není:: (dvě dvojtečky) – například `MyNamespace.MyClass`.|  
+|[Type::FullName](#fullname)|Vrátí [Platform::String – třída](../cppcx/platform-string-class.md)^, který představuje plně kvalifikovaný název typu a používá. (tečka) jako oddělovač, nikoli:: (dvojtečka) – například `MyNamespace.MyClass`.|  
   
-## <a name="conversion-operators"></a>Operátory převodu  
+## <a name="conversion-operators"></a>operátory převodu  
   
 |||  
 |-|-|  
-|[Type – operátor ^](../cppcx/operator-type-hat.md)|Umožňuje převod `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|  
-|[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umožňuje převod `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|  
+|[Type – operátor ^](../cppcx/operator-type-hat.md)|Umožňuje převod z `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|  
+|[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umožňuje převod z `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
@@ -69,7 +69,7 @@ public ref class Platform::Type :
 
  
 ## <a name="fullname"></a> Vlastnost Type::fullname
-Načte plně kvalifikovaný název aktuální typ ve tvaru `Namespace.Type`.  
+Načte plně kvalifikovaný název typu aktuální ve formě `Namespace.Type`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +96,7 @@ MainPage::MainPage()
 
 
 ## <a name="gettypecode"></a> Type::GetTypeCode – metoda
-Načte kategorie vestavěné typy číselného typu.  
+Načte kategorie číselného typu předdefinovaných typů.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -105,10 +105,10 @@ Platform::TypeCode GetTypeCode();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jeden z Platform::TypeCode uvedené hodnoty.  
+ Jeden Platform::TypeCode – hodnot výčtu.  
   
 ### <a name="remarks"></a>Poznámky  
- Je ekvivalentem metodou member GetTypeCode() `typeid` vlastnost.
+ Je ekvivalentem metodu member GetTypeCode() `typeid` vlastnost.
 
 ## <a name="tostring"></a> Type::ToString – metoda
 Načte název typu.  
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název typu uvedeného ve svých metadatech.    
+ Název typu, jak je uvedeno ve svých metadatech.    
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

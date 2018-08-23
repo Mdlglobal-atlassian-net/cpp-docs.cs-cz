@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7334427d6620e5158a418cee454b8cec98198028
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ab5f5a3523a5566b57529a204cfe618e16af17c4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010994"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594438"
 ---
 # <a name="implementsiidcount-constant"></a>Implements::IidCount – konstanta
-Obsahuje počet implementovaných rozhraní ID.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [Implements – struktura](../windows/implements-structure.md)
+
+Obsahuje počet implementovaných rozhraní ID.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[Implements – struktura](../windows/implements-structure.md)

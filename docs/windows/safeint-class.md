@@ -12,220 +12,224 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019329"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609201"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
-Rozšiřuje primitivy celé číslo zabránit přetečení celého čísla a umožňuje vám srovnávat odlišné typy celých čísel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
-class SafeInt;  
-```  
-  
-### <a name="parameters"></a>Parametry  
-  
-|Šablony|Popis|  
-|--------------|-----------------|  
-|T|Typ celého čísla nebo parametr logické hodnoty, které **SafeInt** nahradí.|  
-|E|Výčtový datový typ, který definuje chyba zpracování zásad.|  
-|U|Typ celého čísla nebo parametr logické hodnoty pro sekundární operand.|  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|[in] *zarovnání indirekce rhs*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|  
-|[in] *mi*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|  
-|[in] *bits*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[SafeInt::SafeInt](../windows/safeint-safeint.md)|Výchozí konstruktor.|  
-  
-### <a name="assignment-operators"></a>Operátory přiřazení  
-  
-|Název|Syntaxe|  
-|----------|------------|  
-|=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|  
-|=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|  
-|=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)`|  
-|=|`SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()`|  
-  
-### <a name="casting-operators"></a>Operátory přetypování  
-  
-|Název|Syntaxe|  
-|----------|------------|  
-|bool|`operator bool() throw()`|  
-|char|`operator char() const`|  
-|podepsané char|`operator signed char() const`|  
-|unsigned char|`operator unsigned char() const`|  
-|__int16|`operator __int16() const`|  
-|__int16 bez znaménka|`operator unsigned __int16() const`|  
-|__int32|`operator __int32() const`|  
-|__int32 bez znaménka|`operator unsigned __int32() const`|  
-|long|`operator long() const`|  
-|unsigned long|`operator unsigned long() const`|  
-|__int64|`operator __int64() const`|  
-|unsigned __int64|`operator unsigned __int64() const`|  
-|wchar_t|`operator wchar_t() const`|  
-  
-### <a name="comparison-operators"></a>Operátory porovnání  
-  
-|Název|Syntaxe|  
-|----------|------------|  
-|<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|  
-|<|`bool operator< (SafeInt<T,E> rhs) const throw()`|  
-|>=|`template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()`|  
-|>=|`Bool operator>= (SafeInt<T,E> rhs) const throw()`|  
-|>|`template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()`|  
-|>|`Bool operator> (SafeInt<T,E> rhs) const throw()`|  
-|<=|`template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()`|  
-|<=|`bool operator<= (SafeInt<T,E> rhs) const throw()`|  
-|==|`template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()`|  
-|==|`bool operator== (bool rhs) const throw()`|  
-|==|`bool operator== (SafeInt<T,E> rhs) const throw()`|  
-|!=|`template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()`|  
-|!=|`bool operator!= (bool b) const throw()`|  
-|!=|`bool operator!= (SafeInt<T,E> rhs) const throw()`|  
-  
-### <a name="arithmetic-operators"></a>Aritmetické operátory  
-  
-|Název|Syntaxe|  
-|----------|------------|  
-|+|`const SafeInt<T,E>& operator+ () const throw()`|  
-|-|`SafeInt<T,E> operator- () const`|  
-|++|`SafeInt<T,E>& operator++ ()`|  
-|--|`SafeInt<T,E>& operator-- ()`|  
-|%|`template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const`|  
-|%|`SafeInt<T,E> operator% (SafeInt<T,E> rhs) const`|  
-|%=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)`|  
-|%=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)`|  
-|*|`template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const`|  
-|*|`SafeInt<T,E> operator* (SafeInt<T,E> rhs) const`|  
-|*=|`SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)`|  
-|*=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)`|  
-|*=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)`|  
-|/|`template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const`|  
-|/|`SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const`|  
-|/=|`SafeInt<T,E>& operator/= (SafeInt<T,E> i)`|  
-|/=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)`|  
-|/=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)`|  
-|+|`SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const`|  
-|+|`template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const`|  
-|+=|`SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)`|  
-|+=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)`|  
-|+=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)`|  
-|-|`template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const`|  
-|-|`SafeInt<T,E> operator- (SafeInt<T,E> rhs) const`|  
-|-=|`SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)`|  
-|-=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)`|  
-|-=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)`|  
-  
-### <a name="logical-operators"></a>Logické operátory  
-  
-|Název|Syntaxe|  
-|----------|------------|  
-|!|`bool operator !() const throw()`|  
-|~|`SafeInt<T,E> operator~ () const throw()`|  
-|<<|`template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()`|  
-|<<|`template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()`|  
-|<<=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()`|  
-|<<=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()`|  
-|>>|`template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()`|  
-|>>|`template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()`|  
-|>>=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()`|  
-|>>=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()`|  
-|&|`SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()`|  
-|&|`template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()`|  
-|&=|`SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()`|  
-|&=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()`|  
-|&=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()`|  
-|^|`SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()`|  
-|^|`template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()`|  
-|^=|`SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()`|  
-|^=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()`|  
-|^=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()`|  
-|&#124;|`SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()`|  
-|&#124;|`template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()`|  
-|&#124;=|`SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()`|  
-|&#124;=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()`|  
-|&#124;=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()`|  
-  
-## <a name="remarks"></a>Poznámky  
- **SafeInt** třídy chrání proti přetečení celého čísla v matematické operace. Představte si třeba přidání dvou 8bitových celých čísel: jeden má hodnotu 200 a druhý má hodnotu 100. Správné matematickou operací může být 200 + 100 = 300. Nicméně z důvodu omezení 8bitové celé číslo, horní bit budou ztraceny a kompilátor vrátí 44 (300-2<sup>8</sup>) jako výsledek. Jakékoli operaci, která závisí na tomto matematické rovnice vygeneruje neočekávané chování.  
-  
- **SafeInt** třída zkontroluje, zda dojde k aritmetické přetečení nebo zda kód se pokusí dělení nulou. Třída v obou případech se volá obslužná rutina chyb upozornit program potenciální problém.  
-  
- Tato třída také umožňuje porovnat dva různé typy celých čísel za předpokladu, že jsou **SafeInt** objekty. Obvykle když provádíte porovnání, je nutné nejprve převést čísla bude stejného typu. Kontroluje, ujistěte se, že nedochází ke ztrátě dat přetypování jedno číslo na jiný typ často vyžaduje.  
-  
- V tabulce operátory v tomto tématu jsou uvedeny operátory matematické a porovnání podporovaných **SafeInt** třídy. Vrátí největší matematické operátory **SafeInt** objekt typu `T`.  
-  
- Operace porovnání mezi **SafeInt** a celočíselného typu lze provést v obou směrech. Například obě `SafeInt<int>(x) < y` a `y> SafeInt<int>(x)` jsou platné a vrátí stejné výsledky.  
-  
- Mnoho binárních operátorů nepodporují pomocí dvou různých **SafeInt** typy. Jedním z příkladů je `&` operátor. `SafeInt<T, E> & int` je podporováno, ale `SafeInt<T, E> & SafeInt<U, E>` není. V druhém příkladu kompilátor nezná typ parametru se má vrátit. Jedním řešením tohoto problému je přetypování druhý parametr zpět do základního typu. Pomocí stejné parametry to můžete udělat s `SafeInt<T, E> & (U)SafeInt<U, E>`.  
-  
+
+Rozšiřuje primitivy celé číslo zabránit přetečení celého čísla a umožňuje vám srovnávat odlišné typy celých čísel.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
+class SafeInt;
+```
+
+### <a name="parameters"></a>Parametry
+
+|Šablony|Popis|
+|--------------|-----------------|
+|T|Typ celého čísla nebo parametr logické hodnoty, které **SafeInt** nahradí.|
+|E|Výčtový datový typ, který definuje chyba zpracování zásad.|
+|U|Typ celého čísla nebo parametr logické hodnoty pro sekundární operand.|
+
+|Parametr|Popis|
+|---------------|-----------------|
+|[in] *zarovnání indirekce rhs*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+|[in] *mi*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+|[in] *bits*|Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatné funkce.|
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[SafeInt::SafeInt](../windows/safeint-safeint.md)|Výchozí konstruktor.|
+
+### <a name="assignment-operators"></a>Operátory přiřazení
+
+|Název|Syntaxe|
+|----------|------------|
+|=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|
+|=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|
+|=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)`|
+|=|`SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()`|
+
+### <a name="casting-operators"></a>Operátory přetypování
+
+|Název|Syntaxe|
+|----------|------------|
+|bool|`operator bool() throw()`|
+|char|`operator char() const`|
+|podepsané char|`operator signed char() const`|
+|unsigned char|`operator unsigned char() const`|
+|__int16|`operator __int16() const`|
+|__int16 bez znaménka|`operator unsigned __int16() const`|
+|__int32|`operator __int32() const`|
+|__int32 bez znaménka|`operator unsigned __int32() const`|
+|long|`operator long() const`|
+|unsigned long|`operator unsigned long() const`|
+|__int64|`operator __int64() const`|
+|unsigned __int64|`operator unsigned __int64() const`|
+|wchar_t|`operator wchar_t() const`|
+
+### <a name="comparison-operators"></a>Operátory porovnání
+
+|Název|Syntaxe|
+|----------|------------|
+|<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|
+|<|`bool operator< (SafeInt<T,E> rhs) const throw()`|
+|>=|`template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()`|
+|>=|`Bool operator>= (SafeInt<T,E> rhs) const throw()`|
+|>|`template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()`|
+|>|`Bool operator> (SafeInt<T,E> rhs) const throw()`|
+|<=|`template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()`|
+|<=|`bool operator<= (SafeInt<T,E> rhs) const throw()`|
+|==|`template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()`|
+|==|`bool operator== (bool rhs) const throw()`|
+|==|`bool operator== (SafeInt<T,E> rhs) const throw()`|
+|!=|`template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()`|
+|!=|`bool operator!= (bool b) const throw()`|
+|!=|`bool operator!= (SafeInt<T,E> rhs) const throw()`|
+
+### <a name="arithmetic-operators"></a>Aritmetické operátory
+
+|Název|Syntaxe|
+|----------|------------|
+|+|`const SafeInt<T,E>& operator+ () const throw()`|
+|-|`SafeInt<T,E> operator- () const`|
+|++|`SafeInt<T,E>& operator++ ()`|
+|--|`SafeInt<T,E>& operator-- ()`|
+|%|`template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const`|
+|%|`SafeInt<T,E> operator% (SafeInt<T,E> rhs) const`|
+|%=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)`|
+|%=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)`|
+|*|`template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const`|
+|*|`SafeInt<T,E> operator* (SafeInt<T,E> rhs) const`|
+|*=|`SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)`|
+|*=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)`|
+|*=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)`|
+|/|`template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const`|
+|/|`SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const`|
+|/=|`SafeInt<T,E>& operator/= (SafeInt<T,E> i)`|
+|/=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)`|
+|/=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)`|
+|+|`SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const`|
+|+|`template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const`|
+|+=|`SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)`|
+|+=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)`|
+|+=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)`|
+|-|`template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const`|
+|-|`SafeInt<T,E> operator- (SafeInt<T,E> rhs) const`|
+|-=|`SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)`|
+|-=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)`|
+|-=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)`|
+
+### <a name="logical-operators"></a>Logické operátory
+
+|Název|Syntaxe|
+|----------|------------|
+|!|`bool operator !() const throw()`|
+|~|`SafeInt<T,E> operator~ () const throw()`|
+|<<|`template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()`|
+|<<|`template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()`|
+|<<=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()`|
+|<<=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()`|
+|>>|`template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()`|
+|>>|`template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()`|
+|>>=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()`|
+|>>=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()`|
+|&|`SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()`|
+|&|`template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()`|
+|&=|`SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()`|
+|&=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()`|
+|&=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()`|
+|^|`SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()`|
+|^|`template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()`|
+|^=|`SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()`|
+|^=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()`|
+|^=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()`|
+|&#124;|`SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()`|
+|&#124;|`template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()`|
+|&#124;=|`SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()`|
+|&#124;=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()`|
+|&#124;=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()`|
+
+## <a name="remarks"></a>Poznámky
+
+**SafeInt** třídy chrání proti přetečení celého čísla v matematické operace. Představte si třeba přidání dvou 8bitových celých čísel: jeden má hodnotu 200 a druhý má hodnotu 100. Správné matematickou operací může být 200 + 100 = 300. Nicméně z důvodu omezení 8bitové celé číslo, horní bit budou ztraceny a kompilátor vrátí 44 (300-2<sup>8</sup>) jako výsledek. Jakékoli operaci, která závisí na tomto matematické rovnice vygeneruje neočekávané chování.
+
+**SafeInt** třída zkontroluje, zda dojde k aritmetické přetečení nebo zda kód se pokusí dělení nulou. Třída v obou případech se volá obslužná rutina chyb upozornit program potenciální problém.
+
+Tato třída také umožňuje porovnat dva různé typy celých čísel za předpokladu, že jsou **SafeInt** objekty. Obvykle když provádíte porovnání, je nutné nejprve převést čísla bude stejného typu. Kontroluje, ujistěte se, že nedochází ke ztrátě dat přetypování jedno číslo na jiný typ často vyžaduje.
+
+V tabulce operátory v tomto tématu jsou uvedeny operátory matematické a porovnání podporovaných **SafeInt** třídy. Vrátí největší matematické operátory **SafeInt** objekt typu `T`.
+
+Operace porovnání mezi **SafeInt** a celočíselného typu lze provést v obou směrech. Například obě `SafeInt<int>(x) < y` a `y> SafeInt<int>(x)` jsou platné a vrátí stejné výsledky.
+
+Mnoho binárních operátorů nepodporují pomocí dvou různých **SafeInt** typy. Jedním z příkladů je `&` operátor. `SafeInt<T, E> & int` je podporováno, ale `SafeInt<T, E> & SafeInt<U, E>` není. V druhém příkladu kompilátor nezná typ parametru se má vrátit. Jedním řešením tohoto problému je přetypování druhý parametr zpět do základního typu. Pomocí stejné parametry to můžete udělat s `SafeInt<T, E> & (U)SafeInt<U, E>`.
+
 > [!NOTE]
->  Všechny bitové operace dva různé parametry by měly mít stejnou velikost. Pokud se liší velikosti, vyvolá kompilátor [ASSERT](../mfc/reference/diagnostic-services.md#assert) výjimky. Výsledky této operace nelze zaručit přesné. Chcete-li tento problém vyřešit, přetypovat parametr menší dokud má stejnou velikost jako parametr větší.  
-  
- Pro operátory posunutí posunutí další bitů než neexistuje pro typ šablony vyvolá výjimku kontrolní VÝRAZ. V režimu vydání, to nebude mít žádný vliv. Kombinování dva typy parametrů SafeInt – je možné pro operátory posunutí, protože návratový typ je stejný jako původní typ. Číslo na pravé straně operátoru pouze označuje počet bitů na posunu.  
-  
- Při provádění logické porovnání s objektem SafeInt je výhradně aritmetické porovnání. Představte si třeba tyto výrazy:  
-  
--   `SafeInt<uint>((uint)~0) > -1`  
-  
--   `((uint)~0) > -1`  
-  
- První příkaz se překládá na **true**, ale druhý příkaz přeloží na **false**. Bitová negace 0 je 0xFFFFFFFF. V druhém příkazu výchozí operátor porovnání porovná 0xFFFFFFFF na 0xFFFFFFFF a je rovna považuje za. Operátor porovnání pro **SafeInt** třídy si uvědomuje, že druhý parametr je záporné, že první parametr je bez znaménka. Proto, i když bitové reprezentace je stejné, **SafeInt** logický operátor, který si uvědomuje, že je celé číslo bez znaménka větší než -1.  
-  
- Buďte opatrní při použití **SafeInt** třídy společně s `?:` Ternární operátor. Vezměte v úvahu následující řádek kódu.  
-  
-```cpp  
-Int x = flag ? SafeInt<unsigned int>(y) : -1;  
-```  
-  
- Kompilátor převede na toto:  
-  
-```cpp  
-Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
-```  
-  
- Pokud `flag` je **false**, kompilátor vyvolá výjimku namísto přiřazení hodnoty -1 pro `x`. Chcete-li toto chování vyhnout, je správný kód, který použije proto následující řádek.  
-  
-```cpp  
-Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
-```  
-  
- `T` a `U` je možné přiřadit typu Boolean, typ znaku nebo typ integer. Celočíselné typy mohou být podepsaný nebo nepodepsaný řetězec a libovolné velikosti z 8 bitů na 64 bitů.  
-  
+> Všechny bitové operace dva různé parametry by měly mít stejnou velikost. Pokud se liší velikosti, vyvolá kompilátor [ASSERT](../mfc/reference/diagnostic-services.md#assert) výjimky. Výsledky této operace nelze zaručit přesné. Chcete-li tento problém vyřešit, přetypovat parametr menší dokud má stejnou velikost jako parametr větší.
+
+Pro operátory posunutí posunutí další bitů než neexistuje pro typ šablony vyvolá výjimku kontrolní VÝRAZ. V režimu vydání, to nebude mít žádný vliv. Kombinování dva typy parametrů SafeInt – je možné pro operátory posunutí, protože návratový typ je stejný jako původní typ. Číslo na pravé straně operátoru pouze označuje počet bitů na posunu.
+
+Při provádění logické porovnání s objektem SafeInt je výhradně aritmetické porovnání. Představte si třeba tyto výrazy:
+
+- `SafeInt<uint>((uint)~0) > -1`
+
+- `((uint)~0) > -1`
+
+První příkaz se překládá na **true**, ale druhý příkaz přeloží na **false**. Bitová negace 0 je 0xFFFFFFFF. V druhém příkazu výchozí operátor porovnání porovná 0xFFFFFFFF na 0xFFFFFFFF a je rovna považuje za. Operátor porovnání pro **SafeInt** třídy si uvědomuje, že druhý parametr je záporné, že první parametr je bez znaménka. Proto, i když bitové reprezentace je stejné, **SafeInt** logický operátor, který si uvědomuje, že je celé číslo bez znaménka větší než -1.
+
+Buďte opatrní při použití **SafeInt** třídy společně s `?:` Ternární operátor. Vezměte v úvahu následující řádek kódu.
+
+```cpp
+Int x = flag ? SafeInt<unsigned int>(y) : -1;
+```
+
+Kompilátor převede na toto:
+
+```cpp
+Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
+```
+
+Pokud `flag` je **false**, kompilátor vyvolá výjimku namísto přiřazení hodnoty -1 pro `x`. Chcete-li toto chování vyhnout, je správný kód, který použije proto následující řádek.
+
+```cpp
+Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
+```
+
+`T` a `U` je možné přiřadit typu Boolean, typ znaku nebo typ integer. Celočíselné typy mohou být podepsaný nebo nepodepsaný řetězec a libovolné velikosti z 8 bitů na 64 bitů.
+
 > [!NOTE]
->  I když **SafeInt** třídy přijímá libovolný typ celé číslo, funguje efektivněji pomocí typů bez znaménka.  
-  
- `E` je mechanismus zpracování chyb, které **SafeInt** používá. SafeInt – knihovna jsou součástí dva mechanismy zpracování chyb. Výchozí zásada je `SafeIntErrorPolicy_SafeIntException`, kterou vyvolá [SafeIntException – třída](../windows/safeintexception-class.md) výjimky, když dojde k chybě. Tato zásada je `SafeIntErrorPolicy_InvalidParameter`, které program zastaví, pokud dojde k chybě.  
-  
- Existují dvě možnosti, jak upravit chybové zásady. První možností je nastavit parametr `E` při vytváření **SafeInt**. Tuto možnost použijte, pokud chcete změnit chyba zpracování zásad pro jedno **SafeInt**. Další možností je definování _SAFEINT_DEFAULT_ERROR_POLICY být vaše vlastní třídy zpracování chyb, než je zahrnout **SafeInt** knihovny. Tuto možnost použijte, pokud chcete změnit výchozí chyba zpracování zásad pro všemi instancemi **SafeInt** třídy v kódu.  
-  
+> I když **SafeInt** třídy přijímá libovolný typ celé číslo, funguje efektivněji pomocí typů bez znaménka.
+
+`E` je mechanismus zpracování chyb, které **SafeInt** používá. SafeInt – knihovna jsou součástí dva mechanismy zpracování chyb. Výchozí zásada je `SafeIntErrorPolicy_SafeIntException`, kterou vyvolá [SafeIntException – třída](../windows/safeintexception-class.md) výjimky, když dojde k chybě. Tato zásada je `SafeIntErrorPolicy_InvalidParameter`, které program zastaví, pokud dojde k chybě.
+
+Existují dvě možnosti, jak upravit chybové zásady. První možností je nastavit parametr `E` při vytváření **SafeInt**. Tuto možnost použijte, pokud chcete změnit chyba zpracování zásad pro jedno **SafeInt**. Další možností je definování _SAFEINT_DEFAULT_ERROR_POLICY být vaše vlastní třídy zpracování chyb, než je zahrnout **SafeInt** knihovny. Tuto možnost použijte, pokud chcete změnit výchozí chyba zpracování zásad pro všemi instancemi **SafeInt** třídy v kódu.
+
 > [!NOTE]
->  Vlastní třída, která zpracovává chyby z SafeInt – knihovna by neměly vracet ovládací prvek kódu, který volá obslužná rutina chyb. Po zavolání obslužná rutina chyb, výsledek **SafeInt** operace nemůže být důvěryhodný.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** safeint.h  
-  
- **Namespace:** msl::utilities  
-  
-## <a name="see-also"></a>Viz také  
- [SafeInt – knihovna](../windows/safeint-library.md)   
- [SafeIntException – třída](../windows/safeintexception-class.md)
+> Vlastní třída, která zpracovává chyby z SafeInt – knihovna by neměly vracet ovládací prvek kódu, který volá obslužná rutina chyb. Po zavolání obslužná rutina chyb, výsledek **SafeInt** operace nemůže být důvěryhodný.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** safeint.h
+
+**Namespace:** msl::utilities
+
+## <a name="see-also"></a>Viz také
+
+[SafeInt – knihovna](../windows/safeint-library.md)  
+[SafeIntException – třída](../windows/safeintexception-class.md)

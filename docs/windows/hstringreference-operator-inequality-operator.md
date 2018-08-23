@@ -15,50 +15,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e2fc27d47fa218dd4378538bb193d650727ed22
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 91ad2c531ffefa0ac832e63dffeaa2b292243cf6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606524"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596225"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator!= – operátor
-Určuje, zda dva parametry nerovnají.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-inline bool operator==(  
-               const HStringReference& lhs,   
+
+Určuje, zda dva parametry nerovnají.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+inline bool operator==(
+               const HStringReference& lhs,
+               const HSTRING& rhs) throw()
+
+inline bool operator!=(
+               const HStringReference& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator!=(
+               const HSTRING& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator!=(
+               const HStringReference& lhs,
                const HSTRING& rhs) throw()  
-  
-inline bool operator!=(  
-               const HStringReference& lhs,   
-               const HStringReference& rhs) throw()  
-  
-inline bool operator!=(  
-               const HSTRING& lhs,   
-               const HStringReference& rhs) throw()  
-  
-inline bool operator!=(  
-               const HStringReference& lhs,   
-               const HSTRING& rhs) throw()  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lhs*  
- První parametr k porovnání. *LHS* může být **HStringReference** objektu nebo popisovače HSTRING.  
-  
- *Zarovnání indirekce RHS*  
- Druhý parametr k porovnání.  *Zarovnání indirekce RHS* může být **HStringReference** objektu nebo popisovače HSTRING.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE** Pokud *lhs* a *zarovnání indirekce rhs* parametry nejsou stejné; jinak **false**.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HStringReference – třída](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*lhs*  
+První parametr k porovnání. *LHS* může být **HStringReference** objektu nebo popisovače HSTRING.
+
+*Zarovnání indirekce RHS*  
+Druhý parametr k porovnání.  *Zarovnání indirekce RHS* může být **HStringReference** objektu nebo popisovače HSTRING.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**Hodnota TRUE** Pokud *lhs* a *zarovnání indirekce rhs* parametry nejsou stejné; jinak **false**.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HStringReference – třída](../windows/hstringreference-class.md)

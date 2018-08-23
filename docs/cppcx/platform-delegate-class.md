@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Delegate | Microsoft Docs
+title: Platform::Delegate – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679a868cac536aad541d770433fe1407fc5d08d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdee3e432e3482b7f1a2c6e4be4c50abb1a6bfc8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087230"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609583"
 ---
 # <a name="platformdelegate-class"></a>Platform::Delegate – třída
 Představuje objekt funkce.  
@@ -32,19 +32,19 @@ public delegate void delegate_name();
 ```  
   
 ### <a name="members"></a>Členové  
- Má Equals(), GetHashCode(), delegát třídy a metody ToString() odvozen od [Platform::Object třída](../cppcx/platform-object-class.md).  
+ Třída delegáta má metody Equals() GetHashCode(), a metody ToString() odvozený od [Platform::Object – třída](../cppcx/platform-object-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Použít [delegovat](../windows/delegate-cpp-component-extensions.md) – klíčové slovo vytvořit delegáti; nepoužívejte Platform::Delegate explicitně. Další informace najdete v tématu [delegáti](../cppcx/delegates-c-cx.md). Příklad toho, jak vytvářet a využívat delegáta, naleznete v části [vytváření součásti systému Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).  
+ Použít [delegovat](../windows/delegate-cpp-component-extensions.md) – klíčové slovo k vytváření delegátů; nepoužívejte Platform::Delegate – explicitně. Další informace najdete v tématu [delegáti](../cppcx/delegates-c-cx.md). Příklad toho, jak vytvářet a využívat delegáta, naleznete v tématu [vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Metadata:** platform.winmd  
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

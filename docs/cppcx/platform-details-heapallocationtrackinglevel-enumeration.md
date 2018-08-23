@@ -1,5 +1,5 @@
 ---
-title: Výčet Platform::details::HeapAllocationTrackingLevel | Microsoft Docs
+title: 'Platform::details:: heapallocationtrackinglevel – výčet | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.assetid: dc341bc0-b47b-4eb2-9445-fbaf788e7b1a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1c3dd382604e51f049ac157faba38e0d7d0032
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d80a91c8dcca5b2b66f0225a39c3cb208656b46c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086925"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593845"
 ---
-# <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::details::HeapAllocationTrackingLevel – výčet
-Tento výčet je určen pouze pro interní použití a není určena k použití pro vývoj.  
+# <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::details:: heapallocationtrackinglevel – výčet
+Tento výčet je určena pouze pro interní použití a není určena pro použití pro vývoj.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ enumm class HeapAllocationTrackingLevel;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento výčet je určena výhradně pro úplnost, protože může být prověřovány s prohlížeči.  
+ Tento výčet slouží výhradně pro úplnost, protože ho můžete prozkoumat pomocí prohlížeče.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Platform`  
@@ -41,7 +41,7 @@ enumm class HeapAllocationTrackingLevel;
 ### <a name="requirements"></a>Požadavky  
  **Metadata:** platform.winmd  
   
- **Namespace:** Platform::Details  
+ **Namespace:** Platform::details –  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

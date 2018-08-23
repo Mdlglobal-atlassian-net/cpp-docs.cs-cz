@@ -1,5 +1,5 @@
 ---
-title: Rozhraní Platform::IBoxArray | Microsoft Docs
+title: Platform::iboxarray – rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088339"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597317"
 ---
-# <a name="platformiboxarray-interface"></a>Platform::IBoxArray rozhraní
-`IBoxArray` obálku pro pole typů hodnot, které jsou předán přes rozhraní binární aplikace (ABI) nebo uložený v kolekcích `Platform::Object^` elementů, jako jsou ty, v ovládacích prvcích XAML.  
+# <a name="platformiboxarray-interface"></a>Platform::iboxarray – rozhraní
+`IBoxArray` je obálka pro pole typů hodnot, které jsou předány napříč binárním rozhraním aplikace (ABI) nebo uložena v kolekcích `Platform::Object^` prvky, jako například sítě na ovládací prvky XAML.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,20 +35,20 @@ interface class IBoxArray
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ zabalené hodnoty v každém poli elementu.  
+ Typ zabalené hodnoty v každém elementu pole.  
   
 ### <a name="remarks"></a>Poznámky  
  `IBoxArray` je C + +/ CX název `Windows::Foundation::IReferenceArray`.  
   
 ### <a name="members"></a>Členové  
- `IBoxArray` Rozhraní dědí z `IValueType` rozhraní. `IBoxArray` má také tyto členy:  
+ `IBoxArray` Rozhraní zdědí `IValueType` rozhraní. `IBoxArray` obsahuje také tyto členy:  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Hodnota](#value)|Vrací nezabalený pole, které byly dříve uloženy v tomto `IBoxArray` instance.|  
+|[Hodnota](#value)|Vrátí hodnotu, která byla dřív uložená v tomto poli bez unboxingu `IBoxArray` instance.|  
 
 ## <a name="value"></a> Vlastnost IBoxArray::Value
-Vrátí hodnotu, která byla původně uložena v tomto objektu.  
+Vrátí hodnotu, která byla původně uložená v tomto objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -61,10 +61,10 @@ property T Value {T get();}
  Typ zabalené hodnoty.  
   
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
- Vrátí hodnotu, která byla původně uložena v tomto objektu.  
+ Vrátí hodnotu, která byla původně uložená v tomto objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Příklad, naleznete v části [zabalení](../cppcx/boxing-c-cx.md).  
+ Příklad najdete v tématu [zabalení](../cppcx/boxing-c-cx.md).  
   
   
 ## <a name="see-also"></a>Viz také  

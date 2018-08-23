@@ -20,31 +20,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 23028ee742f05016509da5147c8f6c0ab6b1a532
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598155"
 ---
 # <a name="windows-desktop-applications-c"></a>Desktopové aplikace Windows (C++)
-Tato část popisuje, jak vytvářet aplikace klasické pracovní plochy jazyka C++, na kterých běží v okně.  
 
-> [!TIP]  
+Tato část popisuje, jak vytvářet aplikace klasické pracovní plochy jazyka C++, na kterých běží v okně.
+
+> [!TIP]
 > Pro Windows 10 můžete použít Desktop App Converter Pokud chcete zabalit desktopové aplikace pro nasazení přes Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přeneste svoje aplikace klasické pracovní plochy pro Universal Windows platformy (UPW) s přemostění na Desktop](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
-  
-## <a name="prerequisites"></a>Požadavky  
- Tato témata se předpokládá, že chápete základy jazyka C++.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
--   [Win32 – průvodce aplikací](../windows/win32-application-wizard.md)  
-  
--   [Návod: Vytváření desktopových aplikací Windows (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
-  
--   [Vytvoření prázdné desktopové aplikace Windows](../windows/creating-an-empty-windows-desktop-application.md)  
-  
--   [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Visual C++ v sadě Visual Studio](../visual-cpp-in-visual-studio.md)
+
+## <a name="prerequisites"></a>Požadavky
+
+Tato témata se předpokládá, že chápete základy jazyka C++.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+- [Win32 – průvodce aplikací](../windows/win32-application-wizard.md)
+
+- [Návod: Vytváření desktopových aplikací Windows (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)
+
+- [Vytvoření prázdné desktopové aplikace Windows](../windows/creating-an-empty-windows-desktop-application.md)
+
+- [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)
+
+## <a name="see-also"></a>Viz také
+
+[Visual C++ v sadě Visual Studio](../visual-cpp-in-visual-studio.md)

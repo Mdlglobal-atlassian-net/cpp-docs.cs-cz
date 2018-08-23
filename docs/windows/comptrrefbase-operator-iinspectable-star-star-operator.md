@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4683305b9f7f396168bd9404f6f2501502db3d01
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f711a9d1f5fe92e5f35bf333fc0b3473fc0eebf4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645019"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604403"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable\* \* – operátor
 
@@ -49,5 +49,6 @@ Toto přetypování je k dispozici pouze tehdy, pokud `__WRL_CLASSIC_COM__` je d
 **Namespace:** Microsoft::WRL:: details –
 
 ## <a name="see-also"></a>Viz také
-[Comptrrefbase – třída](../windows/comptrrefbase-class.md)   
+
+[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)  
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

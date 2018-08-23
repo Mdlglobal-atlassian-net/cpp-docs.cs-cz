@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1e3d250fe4365b9701485457393b85f1c55464e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e00580397dade2bb5c44e44f18a51808826d7ef2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649572"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597674"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource – konstruktor
-Inicializuje novou instanci třídy **EventSource** třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-EventSource();  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [EventSource – třída](../windows/eventsource-class.md)
+
+Inicializuje novou instanci třídy **EventSource** třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+EventSource();
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** event.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[EventSource – třída](../windows/eventsource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Atributy příjemce technologie OLE DB | Microsoft Docs
+title: Atributy příjemce technologie OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e9afcf3850d047452b201d9d1d84f1e0cf6cb4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4af8ccddce73e419bec468aefc1b0f63bee89ecf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876017"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604373"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
-Atributy příjemce technologie OLE DB vloží kód, na základě [šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní OLE DB spotřebitele, který provádí úlohy, jako je například otevírání tabulky, provádění příkazů a přístup k datům.  
+Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.
   
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[db_accessor](../windows/db-accessor.md)|Váže sloupců v sadě řádků a sváže jejich odpovídající mapy přistupujícího objektu.|  
-|[db_column](../windows/db-column.md)|Vytvoří vazbu zadaný sloupec sady řádků.|  
-|[db_command](../windows/db-command.md)|Spustí příkaz OLE DB.|  
-|[db_param](../windows/db-param.md)|Přidruží zadané členské proměnné vstupní nebo výstupní parametr.|  
-|[db_source](../windows/db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele, ke zdroji dat.|  
-|[db_table](../windows/db-table.md)|Otevře se tabulce OLE DB.|  
+|Atribut|Popis|
+|---------------|-----------------|
+|[db_accessor](../windows/db-accessor.md)|Vytvoří vazbu sloupců v sadě řádků a sváže s odpovídající přístupového objektu map.|
+|[db_column](../windows/db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|
+|[db_command](../windows/db-command.md)|Provede příkaz OLE DB.|
+|[db_param](../windows/db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr.|
+|[db_source](../windows/db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele ke zdroji dat.|
+|[db_table](../windows/db-table.md)|Otevře se tabulku OLE DB.|
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také
  [Atributy podle skupin](../windows/attributes-by-group.md)

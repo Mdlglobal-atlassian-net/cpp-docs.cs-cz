@@ -17,49 +17,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642900"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593829"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory – funkce
-Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template<typename Factory>  
-   inline HRESULT STDMETHODCALLTYPE CreateActivationFactory(  
-      _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
-      REFIID riid,   
-     _Outptr_ IUnknown **ppFactory) throw();  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *příznaky*  
- Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.  
-  
- *entry*  
- Ukazatel [creatormap –](../windows/creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.  
-  
- *riid*  
- Odkaz na identifikátor rozhraní.  
-  
- *ppFactory*  
- Pokud se tato operace dokončí úspěšně, ukazatel na objekt factory pro aktivaci.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
-  
-## <a name="remarks"></a>Poznámky  
- Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IActivationFactory`.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Wrappers::Details – obor názvů](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename Factory>
+   inline HRESULT STDMETHODCALLTYPE CreateActivationFactory(
+      _In_ unsigned int *flags,        _In_ const CreatorMap* entry,
+      REFIID riid,
+   _Outptr_ IUnknown **ppFactory) throw();
+```
+
+### <a name="parameters"></a>Parametry
+
+*příznaky*  
+Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.
+
+*entry*  
+Ukazatel [creatormap –](../windows/creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.
+
+*riid*  
+Odkaz na identifikátor rozhraní.
+
+*ppFactory*  
+Pokud se tato operace dokončí úspěšně, ukazatel na objekt factory pro aktivaci.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+## <a name="remarks"></a>Poznámky
+
+Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IActivationFactory`.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Wrappers::Details – obor názvů](../windows/microsoft-wrl-wrappers-details-namespace.md)

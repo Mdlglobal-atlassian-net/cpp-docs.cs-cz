@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fda64126709515fcf3e174a6f3cbdea22d5ee9e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0f6b3135171e61e928984c0eeb91aff0717a4727
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011059"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599246"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared – metoda
-Získá **SRWLock** objektu ve sdíleném režimu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-SyncLockShared LockShared();  
-  
-static SyncLockShared LockShared(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lock*  
- Ukazatel **SRWLock** objektu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- **SRWLock** objektu ve sdíleném režimu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [SRWLock – třída](../windows/srwlock-class.md)
+
+Získá **SRWLock** objektu ve sdíleném režimu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+SyncLockShared LockShared();
+
+static SyncLockShared LockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*lock*  
+Ukazatel **SRWLock** objektu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+**SRWLock** objektu ve sdíleném režimu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[SRWLock – třída](../windows/srwlock-class.md)

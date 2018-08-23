@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641327"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600193"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach – metoda
-Přidruží to **ComPtr** s typem rozhraní určeném aktuálním parametru typu šablony.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void Attach(  
-   _In_opt_ InterfaceType* other  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Ostatní*  
- Typ rozhraní.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Přidruží to **ComPtr** s typem rozhraní určeném aktuálním parametru typu šablony.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void Attach(
+   _In_opt_ InterfaceType* other
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Ostatní*  
+Typ rozhraní.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

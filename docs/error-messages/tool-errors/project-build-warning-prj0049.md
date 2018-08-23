@@ -1,5 +1,5 @@
 ---
-title: PRJ0049 upozornění sestavení projektu | Microsoft Docs
+title: Projekt sestavení PRJ0049 upozornění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df6fcb8bc5d6517a46279e0bef5036db1e81241
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 726294f420000ab1d1b98be72d310dfcbfcd04c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319807"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591881"
 ---
 # <a name="project-build-warning-prj0049"></a>Upozornění sestavení projektu PRJ0049
-Odkazovaná cíl '\<odkaz > se vyžaduje rozhraní .NET Framework \<MinFrameworkVersion > a nebude možné spustit na cílový framework projektu na  
+Odkazovaný cíl "\<odkaz > se vyžaduje rozhraní .NET Framework \<MinFrameworkVersion > a nebude schopen provést spuštění na cílovém rozhraní projektu.  
   
- Aplikace vytvořené pomocí sady Visual Studio 2008, můžete určit používanou verzi [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] budou cílem by měl. Pokud přidáte odkaz na sestavení nebo projekt, který závisí na verzi [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)] , je novější než cílová verze, zobrazí se toto upozornění při kompilaci.  
+ Aplikace vytvořené pomocí sady Visual Studio 2008 můžete určit, kterou verzi rozhraní .NET Framework by měl cílí. Pokud chcete přidat odkaz na sestavení nebo projekt, který závisí na verzi rozhraní .NET Framework, která je vyšší než cílová verze, zobrazí se toto upozornění v době kompilace.  
   
-### <a name="to-correct-this-warning"></a>Chcete-li toto upozornění  
+### <a name="to-correct-this-warning"></a>Chcete-li opravit toto upozornění  
   
 1.  Vyberte jednu z následujících možností:  
   
-    -   Změňte cílový framework v projektu **stránky vlastností** dialogu tak, aby se později než nebo rovna minimální framework verze všechny odkazované sestavení a projekty. Další informace najdete v tématu [přidávání odkazů](../../ide/adding-references-in-visual-cpp-projects.md).  
+    -   Změnit cílová rozhraní framework v projektu **stránky vlastností** dialogové okno tak, aby se novější než nebo rovna hodnotě minimální framework verze projektů a všemi odkazovanými sestaveními. Další informace najdete v tématu [přidávání odkazů na](../../ide/adding-references-in-visual-cpp-projects.md).  
   
-    -   Odeberte odkaz na sestavení nebo projekt, který má minimální framework verzi, která je novější než cílové rozhraní. Tyto položky budou označeny ikonou upozornění v projektu **stránky vlastností**.  
+    -   Odeberte odkaz na sestavení nebo projekt, který má minimální framework verzi, která je novější než cíleného rozhraní. Tyto položky budou označeny ikonou upozornění v projektu **stránky vlastností**.  
   
 ## <a name="see-also"></a>Viz také  
  [Chyby a upozornění sestavení projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

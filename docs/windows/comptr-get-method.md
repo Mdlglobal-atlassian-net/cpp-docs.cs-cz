@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1acf443cfa1251649a33e55e81e03fb1b62e17a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ca996b7893fd19076504fd91bbb5e80bbe692883
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648331"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608661"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get – metoda
-Načte ukazatel rozhraní, které souvisí s tímto **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-T* Get() const;  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní, která souvisí s tímto **ComPtr**.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Načte ukazatel rozhraní, které souvisí s tímto **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+T* Get() const;
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel rozhraní, která souvisí s tímto **ComPtr**.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

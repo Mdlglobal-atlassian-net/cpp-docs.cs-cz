@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual C++ plovoucí bodu optimalizace | Microsoft Docs
+title: Microsoft Visual C++ plovoucí desetinnou čárkou optimalizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -9,23 +9,22 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c9263fa6252469124eefb0dfd575ef5bd2ac34
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422746"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595045"
 ---
-# <a name="microsoft-visual-c-floating-point-optimization"></a>Optimalizace Microsoft Visual C++ s plovoucí desetinnou čárkou
+# <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ s plovoucí desetinnou čárkou optimalizace
 
-Získáte popisovač pro optimalizaci s plovoucí desetinnou čárkou kódu pomocí Microsoft C++ compiler způsob správy sémantiku s plovoucí desetinnou čárkou. Vytvořte rychlé programy a zajistit, že pouze bezpečné optimalizace se provádí na kód s plovoucí desetinnou čárkou.
+Získejte popisovač pro optimalizaci plovoucí desetinné čárky kód pomocí kompilátoru Microsoft C++ způsob správy sémantiku plovoucí desetinné čárky. Vytvoření rychlé programy přitom zajistit, aby byly provedeny pouze bezpečné optimalizace plovoucí desetinné čárky kód.
 
-## <a name="optimization-of-floating-point-code-in-c"></a>Optimalizace s plovoucí desetinnou čárkou kódu v jazyce C++
+## <a name="optimization-of-floating-point-code-in-c"></a>Optimalizace plovoucí desetinné čárky kód v jazyce C++
 
-Optimalizace C++ compiler nejen překládá zdrojového kódu do zkompilovaný kód, je uspořádá pokynů počítače tak, aby zlepšení efektivity a snížení velikosti. Mnoho běžných optimalizace bohužel nejsou nezbytně bezpečné při použití s plovoucí desetinnou čárkou výpočty. Dobrým příkladem tohoto můžete zobrazit s následujícím algoritmu sumarizační převzaty z David Goldberg, "Co každých počítače vědecký pracovník by měla vědět o aritmetiku", *Computing průzkumy*, března 1991, pg. 203:
+Optimalizující kompilátor C++ nejen převádí zdrojový kód do strojového kódu, uspořádá strojové instrukce v takovým způsobem zvýšit efektivitu a/nebo zmenšete velikost. Mnoho běžných optimalizace bohužel nejsou nutně bezpečné, při použití u výpočtů s plovoucí desetinnou čárkou. Vhodným Příkladem takových uvidíte následující algoritmus sčítání z David Goldberg, "Co každých počítači mezi odborníky přes by měl vědět o aritmetiku", *computingu zjišťování*, 1991 dne, pg. 203:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -42,17 +41,17 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Tato funkce přidává n **float** hodnoty v poli vektoru `A`. V rámci těla smyčky algoritmus vypočítá hodnotu "oprava", které se pak použije k dalším krokem souhrn. Tato metoda výrazně snižuje kumulativní zaokrouhlovací chyby ve srovnání se jednoduchý souhrn, a přitom zachovat O(n) čas složitost.
+Tato funkce přidává n **float** hodnoty ve vektoru pole `A`. V těle smyčky algoritmus vypočítává "opravy" hodnotu, která se pak použije k dalšímu kroku souhrn. Tato metoda výrazně snižuje kumulativní zaokrouhlovací chyby než jednoduchý souhrn, při zachování O(n) čas složitost.
 
-Kompilátor C++ naïve může předpokládat, že s plovoucí desetinnou čárkou aritmetické následuje stejná algebraických pravidla jako aritmetické reálné číslo. Takové kompilátoru může pak chybnou informací dokončete
+Kompilátor C++ naivní předpokládat, že aritmetické operace s plovoucí desetinnou čárkou následuje algebraických stejná pravidla jako aritmetický reálné číslo. Takový kompilátor může poté chybně uzavřít, který
 
-> C = T - součet - Y == > (sum + Y) – součet - Y == > 0;
+> C = T - součet - Y == > (součet + Y) - součet - Y == > 0;
 
-To znamená dosahovaný hodnota C je vždy konstantní nula. Pokud tato konstantní hodnota je pak se rozšíří do dalších výrazů, těla smyčky sníží jednoduchý souhrn. Přesný,
+To znamená, že zjištěné hodnota c je vždy nulovou konstantou. Tato konstanta je pak šířený do dalších výrazů, tělo smyčky se sníží jednoduchý souhrn. Abychom byli přesní,
 
-> Y = [i] - C == > Y = [i]<br/>T = součet + Y == > T = součet + [i]<br/>Součet = T == > součet = součet + [i]
+> Y = [i] - C == > Y = [i]<br/>T = sum + Y == > T = sum + [i]<br/>Součet = T == > součet = sum + [i]
 
-Proto pro kompilátor naïve, logické transformace `KahanSum` by funkce:
+Proto pro kompilátor naivní logické transformace `KahanSum` by byla funkce:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -64,11 +63,11 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-I když transformovaných algoritmus je rychlejší a *je vůbec přesná reprezentace záměr pro programátory*. Oprava pečlivě vytvořený chyb úplně odebrala a jsme se ponechaná na jednoduchý, přímé sumarizační algoritmus s všechny související chybu.
+I když transformovaný algoritmus je rychlejší, *je vůbec přesnou reprezentací programátora záměr*. Oprava chyb pečlivě vytvořený úplně odebrala a jsme už zbývá algoritmus sčítání jednoduchý, s přímým přístupem s všechny související chyby.
 
-Samozřejmě sofistikované kompilátoru C++ by vědět, že algebraických pravidla z reálného aritmetické se nevztahují obecně aritmetické s plovoucí desetinnou čárkou. Ale interpretovat i sofistikované kompilátoru C++ stále nesprávně pro programátory záměr.
+Samozřejmě sofistikované kompilátor C++ by vědět, že algebraických pravidla z reálného aritmetické operace se nevztahují obecně aritmetické operace s plovoucí desetinnou čárkou. Však interpretace i propracované kompilátor C++ stále nesprávně programátora záměr.
 
-Vezměte v úvahu běžné optimalizace, které se pokouší o uložení jako mnoho hodnot v registrech nejdříve (nazývané "enregistering" hodnotu). V `KahanSum` například optimalizace může pokus o enregister proměnné `C`, `Y` a `T` vzhledem k tomu, že se používají pouze v rámci těla smyčky. Pokud registrace přesnost 52bits (dvojité) namísto 23bits (jeden), tato optimalizace efektivně typ zvýší úroveň `C`, `Y` a `T` na typ **dvojité**. Pokud proměnná součet podobně není zpracovávány vnitřně zaregistrované, zůstane zakódována jednoduchou přesností. To transformuje sémantika `KahanSum` pro následující
+Vezměte v úvahu běžné optimalizace, která se pokusí uchovávat tolik hodnoty v registrech nejvíce (nazývané "enregistering" hodnotu). V `KahanSum` například tato optimalizace se můžou pokusit zaregistrace proměnné `C`, `Y` a `T` vzhledem k tomu slouží jenom v těle smyčky. Pokud registrace přesnost je 52bits (double) namísto 23bits (single), tyto optimalizace efektivně typ podporuje `C`, `Y` a `T` na typ **double**. Pokud součet proměnná není rovněž uloženy v registrech procesoru, bude se dál kódovaný v a jednoduchou přesností. To transformuje sémantika `KahanSum` následující
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -86,9 +85,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-I když `Y`, `T` a `C` se teď vypočítávají na vyšší přesností, toto nové kódování může vytvořit méně přesné výsledky v závislosti na hodnoty v `A[]`. Proto i zdánlivě neškodné optimalizace může mít negativní důsledky.
+I když `Y`, `T` a `C` se nyní zpracovávají na vyšší přesnost toto nové kódování může vytvořit méně přesné výsledky v závislosti na hodnotách v `A[]`. I zdánlivě neškodné optimalizace může mít negativní důsledky.
 
-Tyto druhy problémů optimalizace nejsou omezeny na "složité" kód s plovoucí desetinnou čárkou. Při optimalizaci nesprávně, může selhat i jednoduché algoritmy s plovoucí desetinnou čárkou. Vezměte v úvahu jednoduchý, přímo sumarizační algoritmu:
+Tyto druhy problémů optimalizace nejsou omezené na "složité" kód s plovoucí desetinnou čárkou. Dokonce i jednoduchý algoritmy s plovoucí desetinnou čárkou může selhat při optimalizaci nesprávně. Vezměte v úvahu jednoduché, souhrn přímo algoritmus:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -100,7 +99,7 @@ float Sum( const float A[], int n )
 }
 ```
 
-Protože některé jednotky s plovoucí desetinnou čárkou je schopná provádět více operací současně, můžete kompilátor zaujmout skalární snížení optimalizace. Tato optimalizace efektivně transformuje jednoduché funkce Sum z výše na následující:
+Protože některé jednotek s plovoucí desetinnou čárkou jsou schopny současně provádí více operací, kompilátor zvolit zapojení optimalizace snížení skaláru. Tato optimalizace efektivně transformuje jednoduchou funkci Sum výše na následující:
 
 ```cpp
 float Sum( const float A[], int n )
@@ -122,13 +121,13 @@ float Sum( const float A[], int n )
 }
 ```
 
-Funkce teď udržuje čtyři samostatné panelu, které lze současně zpracovávat při každém kroku. I když optimalizované funkce je nyní mnohem rychlejší, můžou výrazně lišit z výsledků Neaktivní optimalizované optimalizované výsledky. Při provedení této změny, kompilátor předpokládá asociativní s plovoucí desetinnou čárkou přidání; To znamená že tyto dvě výrazy jsou ekvivalentní: `(a + b) + c == a + (b + c)`. Však asociativnost vždy nemá hodnotu true pro čísla s plovoucí desetinnou čárkou. Místo computing sumarizační jako:
+Funkce teď udržuje čtyři samostatné panelu, které lze současně zpracovávat v každém kroku. I když optimalizovaného funkce je teď mnohem rychlejší, může být poměrně liší od výsledků neoptimalizované optimalizované výsledky. Při provádění této změny, kompilátor předpokládá, že asociativní s plovoucí desetinnou čárkou přidání; To znamená že těchto dvou výrazů jsou ekvivalentní: `(a + b) + c == a + (b + c)`. Ale asociativity vždy neobsahuje hodnotu true pro čísla s plovoucí desetinnou čárkou. Místo computingu součtem jako:
 
 ```cpp
 sum = A[0]+A[1]+A[2]+...+A[n-1];
 ```
 
-funkci transformovaných teď vypočítá výsledek v podobě
+transformovaný funkce nyní vypočítá výsledek jako
 
 ```cpp
 sum = (A[0]+A[4]+A[8]+...)
@@ -137,17 +136,17 @@ sum = (A[0]+A[4]+A[8]+...)
     + (A[3]+A[7]+A[11]+...);
 ```
 
-Pro některé hodnoty `A[]`, toto různých uspořádání operací přidání může vést k neočekávaným výsledkům. Pro další zkomplikovat záleží, některé programátory rozhodnout předvídat takové optimalizace a je správně kompenzovat. V takovém případě můžete program vytvořit pole `A` v jiném pořadí tak, aby součet optimalizované vytváří očekávané výsledky. Kromě toho může být v mnoha případech přesnost optimalizované výsledku "Zavřít dostatečně". To platí hlavně při optimalizaci poskytuje poutavé rychlost výhody. Video hry, například vyžadovat jako mnohem rychlost co možná ale často nevyžadují vysokou přesné výpočty s plovoucí desetinnou čárkou. Osoby provádějící kompilátoru musí proto poskytují mechanismus pro programátory v jazyce k řízení často různorodých cílů rychlost a pružnost.
+Pro některé hodnoty `A[]`, tento různé řazení operace sčítání může vést k neočekávaným výsledkům. Další zpracovávaný, někteří programátoři můžete předvídat tyto optimalizace a jako kompenzaci za je odpovídajícím způsobem. V takovém případě program můžete vytvořit pole `A` v jiném pořadí tak, aby součet optimalizované vytváří očekávané výsledky. Kromě toho může být v mnoha případech nemusí být optimalizované výsledek "dostatečně blízko". To platí zejména při optimalizaci výhody poutavé rychlost. Videohry, například vyžadovat jako nejvíce mnohem rychlejší, ale nevyžadují často s velmi přesnými výpočtů s plovoucí desetinnou čárkou. Tvůrci kompilátoru musí proto poskytují mechanismus pro programátory řídit často různorodými cíle rychlost a přesnost.
 
-Některé kompilátory vyřešit tím, že poskytuje samostatné přepínač pro každý typ optimalizace kompromis mezi rychlostí a přesnosti. To umožňuje vývojářům zakázat optimalizace, které jsou příčinou změn s plovoucí desetinnou čárkou přesnost pro jejich konkrétní aplikace. Když toto řešení může nabízí vysoký stupeň kontroly nad kompilátor, zavádí několik dalších potíží:
+Některé kompilátory vyřešit tím, že poskytuje samostatné přepínač pro každý typ optimalizace kompromis mezi rychlostí a přesností. To umožňuje vývojářům zakázat optimalizace, které způsobují změny přesnost s plovoucí desetinnou čárkou pro jejich konkrétní aplikaci. Když toto řešení může nabízí vysoký stupeň kontroly nad kompilátor, zavádí několik dalších problémů:
 
-- Často je jasné který přepne Pokud chcete povolit nebo zakázat.
-- Zakázáním všech jeden optimalizace může nepříznivě ovlivnit výkon kódu bez s plovoucí desetinnou čárkou.
-- Každý další přepínače způsobuje mnoho nové přepínače kombinace; počet kombinací rychle stane nepraktické.
+- Je často nejasné, který přepne k povolení nebo zakázání.
+- Zakázání optimalizace jedné může nepříznivě ovlivnit výkon kódu bez s plovoucí desetinnou čárkou.
+- Každý další přepínače s sebou nese náklady mnoho nový přepínač kombinací; počet kombinací rychle nepraktický.
 
-Proto při poskytování oddělenými přepínači pro každý optimalizace se může zdát přitažlivými, pomocí těchto kompilátory může být pracné a nespolehlivé.
+Proto při poskytování oddělenými přepínači pro každý optimalizace se může zdát přitažlivými, pomocí těchto kompilátory může být náročné a nespolehlivé.
 
-Nabízí mnoho kompilátory C++ *konzistence* s plovoucí desetinnou čárkou modelu (prostřednictvím **/Op** nebo **/fltconsistency** přepínače) což umožňuje vývojáři k vytvoření programy kompatibilní s striktní sémantiku s plovoucí desetinnou čárkou. Po zapojení, tento model zabrání kompilátor pomocí většina optimalizace na výpočty s plovoucí desetinnou čárkou současně tyto optimalizace pro jiný bod plovoucí kód. Model konzistence, ale má světlý straně. Chcete-li předvídatelný výsledky na různé FPU architektury, téměř všechny implementace **/Op** zaokrouhlí zprostředkující výrazy uživateli Zadaná přesnost; například vezměte v úvahu následující výraz:
+Nabízí mnoho kompilátorů jazyka C++ *konzistence* s plovoucí desetinnou čárkou modelu (prostřednictvím **/Op** nebo **/fltconsistency** přepnout) umožňující vývojářům vytváření programů kompatibilní s striktní sémantiku plovoucí desetinné čárky. Když zapojení, tento model zabrání kompilátor pomocí většiny optimalizací na výpočtů s plovoucí desetinnou čárkou zároveň umožní tyto optimalizace kódu bez neplovoucí desetinnou čárkou. Model pro zajištění konzistence, má ale tmavý straně. Aby mohla vrátit předvídatelné výsledky v různých architekturách FPU, téměř všechny implementace **/Op** round přechodných výrazů pro uživatele Zadaná přesnost; Zvažte například následující výraz:
 
 ```cpp
 float a, b, c, d, e;
@@ -155,7 +154,7 @@ float a, b, c, d, e;
 a = b * c + d * e;
 ```
 
-Chcete-li vytvořit opakovatelné a konzistentní výsledky v rámci **/Op**, získá tento výraz vyhodnocen jako by se měla implementovat následujícím způsobem:
+Aby bylo možné vytvořit konzistentní a opakovatelné výsledky v rámci **/Op**, získá tento výraz vyhodnocen jako kdyby byly implementován takto:
 
 ```cpp
 float x = b  *c;
@@ -163,7 +162,7 @@ float y = d * e;
 a = x + y;
 ```
 
-Konečný výsledek teď setká s jednoduchou přesností zaokrouhlovací chyby *na každý krok při vyhodnocování výrazu*. I když tento interpretace není výhradně dojít k porušení pravidel sémantiku C++, je téměř žádné nejlepší způsob, jak vyhodnotit výrazy s plovoucí desetinnou čárkou. Je obecně k výpočtu mezilehlých výsledků v horní přesnost, jako je praktické více žádoucí. Pro instanci, je lepší výpočetní výraz `a = b * c + d * e` v vyšší přesností jako v
+Konečný výsledek nyní vykazuje chyby zaokrouhlení jednoduchou přesností *v každém kroku při vyhodnocování výrazu*. I když se toto vyhodnocení nedojde k narušení výhradně všechna pravidla sémantiku C++, je téměř nikdy nejlepší způsob, jak vyhodnocení výrazů s plovoucí desetinnou čárkou. Je obecně lepší pro výpočet mezilehlých výsledků v vysoká přesnost je praktické. Například by bylo lepší pro výpočet výraz `a = b * c + d * e` vyšší přesnost jako v
 
 ```cpp
 double x = b * c;
@@ -172,7 +171,7 @@ double z = x + y;
 a = (float)z;
 ```
 
-nebo ještě lepší
+nebo ještě lépe
 
 ```cpp
 long double x = b * c;
@@ -181,42 +180,42 @@ long double z = x + y;
 a = (float)z;
 ```
 
-Při výpočtu mezilehlých výsledků v vyšší přesností, je výrazně přesnější konečný výsledek. Přijetím modelu konzistence je ironically, pravděpodobnost chyby vyšší, přesněji, když uživatel se pokouší snížit chyba zakázáním unsafe optimalizace. Proto modelu konzistence může vážně snížit efektivitu a současně poskytují žádná záruka vyšší přesnosti. Závažných číselnou programátorům asi není jako velmi dobré kompromis a je hlavním důvodem modelu není obecně dobře přijímání.
+Při výpočtu mezilehlých výsledků v vyšší přesnost, konečný výsledek je výrazně přesnější. Přijetím modelu konzistence se ironically, pravděpodobnost chyby zvýší, přesně, když uživatel se snaží snížit chyby zakázáním optimalizací unsafe. Proto modelu konzistence může vážně snížit efektivitu při současném poskytování neposkytujeme záruku její vyšší přesnost. Závažné číselné programátorům nebude jevit jako velmi dobré kompromis a je primárním důvodem, proč modelu není obecně dobře přijímání.
 
-Počínaje verzí 8.0 (Visual C++ 2005®), Microsoft C++ kompilátoru poskytuje mnohem lepší alternativou. Umožňuje programátorům vyberte jeden z režimů tři obecné s plovoucí desetinnou čárkou: fp: přesné, fp:fast a fp: strict.
+Od verze 8.0 (Visual C++ 2005®), Microsoft C++ kompilátor poskytuje mnohem lepší alternativou. Umožňuje programátorům vyberte jednu ze tří režimů obecné s plovoucí desetinnou čárkou: fp: precise, FP: Fast a fp: strict.
 
-- V části fp: přesné, pouze bezpečné optimalizace se provádí na kód s plovoucí desetinnou čárkou a na rozdíl od **/Op**, zprostředkující výpočty se provádí konzistentně na nejvyšší praktické přesnost.
-- režim FP:Fast zmírní s plovoucí desetinnou čárkou pravidla, aby vám umožnil agresivnější optimalizace za cenu přesnost.
-- FP: striktní režim poskytuje obecné správnost fp: přesné při povolení sémantiku fp výjimky a zabráněním neplatný transformace případě FPU prostředí změn (např. změny k registraci přesnost, zaokrouhlení směr atd.).
+- V části fp: precise, pouze bezpečné optimalizace se provádí na kód s plovoucí desetinnou čárkou a na rozdíl od **/Op**, zprostředkující výpočty probíhají konzistentně na nejvyšší praktické přesnosti.
+- režim FP: Fast zmírňuje umožňující agresivnější optimalizace ovšem na úkor přesnosti s plovoucí desetinnou čárkou pravidla.
+- FP: strict režim poskytuje obecné správnost fp: precise při povolení sémantiku fp výjimky a brání nedovolenému transformace za přítomnosti FPU prostředí změny (např. změny do registru přesnost, zaokrouhlení směrem atd).
 
-Sémantika výjimek plovoucí desetinné čárky je řízena nezávisle přepínač příkazového řádku nebo kompilátoru pragma; ve výchozím nastavení, jsou zakázané výjimek plovoucí desetinné čárky sémantiku pod fp: přesné a povolení pod fp: strict. Kompilátor také umožňuje řídit FPU prostředí velkých a malých písmen a určité s plovoucí desetinnou čárkou konkrétní optimalizace, jako je například staženiny. Tento model jednoduché poskytuje vývojářům značnou část kontrolu nad kompilace kódu s plovoucí desetinnou čárkou bez zatížení příliš mnoho přepínače kompilátoru nebo potenciálního nežádoucí vedlejší účinky.
+Sémantiku výjimky s plovoucí desetinnou čárkou mohou být řízena nezávisle na sobě přepínač příkazového řádku nebo pragma kompilátoru; ve výchozím nastavení, jsou zakázané sémantiku výjimky s plovoucí desetinnou čárkou v rámci fp: precise a povolený v části fp: strict. Kompilátor poskytuje také řídit FPU prostředí citlivosti a některé konkrétní optimalizace s plovoucí desetinnou čárkou, jako je například staženiny. Tento model přímočaré vývojářům poskytuje značnou míru kontroly nad kompilace kód s plovoucí desetinnou čárkou bez režie příliš mnoho přepínače kompilátoru nebo potenciálního zákazníka nežádoucí vedlejší účinky.
 
-## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp: přesné režim pro sémantiku s plovoucí desetinnou čárkou
+## <a name="the-fpprecise-mode-for-floating-point-semantics"></a>Fp: precise režim pro sémantiku plovoucí desetinné čárky
 
-Je výchozí režim s plovoucí desetinnou čárkou sémantiku fp: přesné. Pokud je vybraný tento režim, kompilátor výhradně dodržuje sada pravidel zabezpečení při optimalizaci operace s plovoucí desetinnou čárkou. Tato pravidla povolte kompilátoru generovat kód pro efektivní počítače při zachování přesnost výpočty s plovoucí desetinnou čárkou. Pro usnadnění provozní fast programy, fp: přesné modelu zakáže sémantiku výjimek plovoucí desetinné čárky (i když se může být explicitně povoleno). Microsoft má vybrané fp: přesné jako výchozí režim s plovoucí desetinnou čárkou, protože se tím vytvoří rychlé a přesné programy.
+Výchozí režim sémantiku plovoucí desetinné čárky je fp: precise. Vyberete tento režim kompilátoru výhradně používá sadu pravidel bezpečnosti při optimalizaci operací s plovoucí desetinnou čárkou. Tato pravidla povolení kompilátoru generovat efektivní strojového kódu při zachování přesnost výpočtů s plovoucí desetinnou čárkou. Pro usnadnění výrobní rychlé programy, fp: precise modelu zakáže sémantiku výjimky s plovoucí desetinnou čárkou (i když se může být explicitně povolené). Microsoft má vybraný fp: precise jako výchozí režim s plovoucí desetinnou čárkou, protože tak vzniká rychlé a přesné programy.
 
-Explicitně požádat o fp: přesné režimu pomocí kompilátoru příkazového řádku, použijte [/fp: přesné](fp-specify-floating-point-behavior.md) přepínače:
+Explicitně požádat o fp: precise režimu pomocí kompilátoru příkazového řádku, použijte [/FP: precise](fp-specify-floating-point-behavior.md) přepnout:
 
-> cl /fp: přesné source.cpp
+> cl/FP: precise source.cpp
 
-To dává pokyn kompilátoru používat fp: přesné sémantiku při generování kódu pro soubor source.cpp. Fp: přesné modelu lze také vyvolat na jednotlivých pomocí funkcí pomocí [float_control – Direktiva pragma kompilátoru](#the-float-control-pragma).
+Toto dá pokyn kompilátoru, aby použil fp: precise sémantiku při generování kódu pro soubor source.cpp. Fp: precise modelu může být vyvoláno také na jednotlivých podle funkcí pomocí [float_control – Direktiva pragma kompilátoru](#the-float-control-pragma).
 
-V části fp: přesné režimu, kompilátor nikdy provede všechny optimalizace, které perturb přesnost výpočty s plovoucí desetinnou čárkou. Kompilátor vždy zaokrouhlí správně v přiřazení, přiřadí typ ukazatel a volání funkce a zprostředkující zaokrouhlení konzistentně proběhne na stejné přesnost jako FPU Registry. Bezpečné optimalizace, jako je například staženiny, jsou povolené ve výchozím nastavení. Ve výchozím nastavení je zakázána sémantiku výjimky a FPU prostředí velkých a malých písmen.
+V části fp: precise režimu, kompilátor nikdy provádí žádné optimalizace, které perturb přesnost výpočtů s plovoucí desetinnou čárkou. Kompilátor bude správně zaokrouhlovat vždy v přiřazení, zaokrouhlovat a volání funkcí a zprostředkujících zaokrouhlení konzistentně proběhne na stejnou přesnost jako FPU Registry. Bezpečné optimalizace, jako je například staženiny, jsou ve výchozím nastavení povolené. Ve výchozím nastavení je zakázána sémantiku výjimky a FPU prostředí citlivosti.
 
-|FP: přesné sémantiku|Vysvětlení|
+|FP: precise sémantiku|Vysvětlení|
 |-|-|
-|Zaokrouhlení sémantiku|Explicitní zaokrouhlení v přiřazení, přiřadí typ ukazatel a volání funkce. Zprostředkující výrazy se vyhodnotí na přesnost registrace.|
-|Algebraických transformace|Stoprocentní asociativní, jiný obchod s plovoucí desetinnou čárkou algebra, pokud transformace záruku, že vždy získáte stejné výsledky.|
-|Staženiny|Povolené ve výchozím nastavení. Další informace najdete v tématu [fp_contract – Direktiva pragma](#the-fp-contract-pragma).|
-|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor může změnit pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou, za předpokladu, že nejsou změněna konečných výsledků.|
-|FPU prostředí přístup|Zakázané ve výchozím nastavení. Další informace najdete v tématu [fenv_access – Direktiva pragma](#the-fenv-access-pragma). Se předpokládá výchozí přesnost a režim zaokrouhlení.|
-|Sémantika výjimek plovoucí desetinné čárky|Zakázané ve výchozím nastavení. Další informace najdete v tématu [/fp: kromě](fp-specify-floating-point-behavior.md).|
+|Zaokrouhlení sémantiku|Zaokrouhlovat explicitní zaokrouhlení na přiřazení a volání funkce. Přechodných výrazů se dá vyhodnotit za registr přesnosti.|
+|Algebraický transformace|Striktní dodržování asociativní, – a distributivních algebraický s plovoucí desetinnou čárkou, pokud transformace je zaručeno, že vždy vytvářejí stejné výsledky.|
+|Staženiny|Povolené ve výchozím nastavení. Další informace najdete v části [fp_contract – Direktiva pragma](#the-fp-contract-pragma).|
+|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor může změnit pořadí vyhodnocování výrazů s plovoucí desetinnou čárkou, za předpokladu, že se nezmění konečných výsledků.|
+|Přístup k prostředí FPU|Ve výchozím nastavení zakázané. Další informace najdete v části [– Direktiva pragma fenv_access](#the-fenv-access-pragma). Předpokládá se výchozí přesnost a režim zaokrouhlení.|
+|Sémantiku výjimky s plovoucí desetinnou čárkou|Ve výchozím nastavení zakázané. Další informace najdete v tématu [/FP: except](fp-specify-floating-point-behavior.md).|
 
-### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Zaokrouhlení sémantiku pro s plovoucí desetinnou čárkou výrazy v části fp: přesné
+### <a name="rounding-semantics-for-floating-point-expressions-under-fpprecise"></a>Zaokrouhlení sémantika výrazů s plovoucí desetinnou čárkou v rámci fp: precise
 
-Fp: přesné model vždycky provádí zprostředkující výpočtů v nejvyšší praktické přesnost explicitně zaokrouhlení pouze v určitých bodech při vyhodnocení výrazu. Zaokrouhlení na přesnost zadán uživatel vždy dojde v čtyři místa: (a) při přiřazení, (b) při přiřazení typu se provádí, (c) při hodnotu s plovoucí desetinnou čárkou je předat jako argument funkce a (d) při vrácená hodnota s plovoucí desetinnou čárkou funkce. Protože zprostředkující výpočty se vždycky provádí na přesnost registrace, přesnost mezilehlých výsledků je platforma závislých (i když přesnost bude vždy přesné jako zadaný uživatel přesnost).
+Fp: precise modelu provádí zprostředkující výpočtů na nejvyšší praktické přesnost, zaokrouhlení explicitně pouze v určitých bodech ve vyhodnocení výrazu. Zaokrouhlení na uživatelem zadaných přesnost vždy vyvolá se v čtyři místa: (a) při přiřazení, (b) Pokud se provádí zadání, (c) při hodnotu s plovoucí desetinnou čárkou je předán jako argument funkce a (d) Pokud je vrácená hodnota s plovoucí desetinnou čárkou funkce. Protože zprostředkující výpočty se vždy provádějí v registru přesnosti, přesnost mezilehlých výsledků je závislý na platformě (i když hodnota precision vždy být přesné jako zadaný uživatel přesnosti).
 
-Vezměte v úvahu výraz přiřazení v následujícím kódu. Výraz na pravé straně přiřazení operátor '=' bude počítaný na přesnost zaregistrovat a explicitně zaokrouhlené na typ na levé straně přiřazení.
+Vezměte v úvahu výraz přiřazení v následujícím kódu. Výraz na pravé straně přiřazení operátoru '=' se vypočítá v registru přesnosti a explicitně zaokrouhlí na typ levá strana příkazu přiřazení.
 
 ```cpp
 float a, b, c, d;
@@ -225,7 +224,7 @@ double x;
 x = a*b + c*d;
 ```
 
-se vypočítá jako
+je vypočítán jako
 
 ```cpp
 float a, b, c, d;
@@ -237,7 +236,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Má být zaokrouhleno explicitně mezilehlých výsledků, zavést typecast. Například pokud je předchozí kód upravit přidáním explicitního přiřazení typu, zprostředkující výrazu (c * d) se zaokrouhlí na typ typecast.
+Explicitně zaokrouhlit přechodný výsledek, zavádí typecast. Například pokud se předchozí kód změní tak, že přidáte explicitně přetypovat, zprostředkujícího výrazu (c * d) se zaokrouhlí na typ typecast.
 
 ```cpp
 float a, b, c, d;
@@ -246,7 +245,7 @@ double x;
 x = a*b + (float)(c*d);
 ```
 
-se vypočítá jako
+je vypočítán jako
 
 ```cpp
 float a, b, c, d;
@@ -258,7 +257,7 @@ register tmp3 = tmp1+tmp2;
 x = (double) tmp3;
 ```
 
-Jeden vyplývá této metody zaokrouhlení je, že některé zdánlivě ekvivalentní transformace nemají ve skutečnosti identické sémantiku. Například následující transformace rozdělí výraz jedné přiřazení do dvou výrazů přiřazení.
+Jeden důsledkem této zaokrouhlení metody je, že některé zdánlivě ekvivalentní transformace ve skutečnosti nemají stejné sémantiky. Například následující transformace rozdělí výraz jedné přiřazení do dvou výrazů přiřazení.
 
 ```cpp
 float a, b, c, d;
@@ -266,7 +265,7 @@ float a, b, c, d;
 a = b*(c+d);
 ```
 
-není ekvivalentní
+je ekvivalentní k
 
 ```cpp
 float a, b, c, d;
@@ -281,15 +280,15 @@ Podobně:
 a = b*(c+d);
 ```
 
-není ekvivalentní
+je ekvivalentní k
 
 ```cpp
 a = b*(a=c+d);
 ```
 
-Tyto kódování nemají ekvivalentní sémantiku, protože každý druhý kódování mít zavedená další přiřazení operace, a proto další zaokrouhlení bodu.
+Těchto kódováních nemají ekvivalentní sémantiku, protože druhý kódování každého zavedli operace další přiřazení, a proto další zaokrouhlení bodu.
 
-Když funkce vrátí hodnotu s plovoucí desetinnou čárkou, hodnota se zaokrouhlí na typ funkce. Pokud hodnotu s plovoucí desetinnou čárkou je jako parametr předaný funkci, hodnota se zaokrouhlí na typ parametru. Příklad:
+Když se funkce vrátí hodnotu s plovoucí desetinnou čárkou, hodnota se zaokrouhlí na typ funkce. Pokud hodnotu s plovoucí desetinnou čárkou je předán jako parametr do funkce, hodnota se zaokrouhlí na typ parametru. Příklad:
 
 ```cpp
 float sumsqr(float a, float b)
@@ -298,7 +297,7 @@ float sumsqr(float a, float b)
 }
 ```
 
-se vypočítá jako
+je vypočítán jako
 
 ```cpp
 float sumsqr(float a, float b)
@@ -319,7 +318,7 @@ double c;
 c = symsqr(w*x+y, z);
 ```
 
-se vypočítá jako
+je vypočítán jako
 
 ```cpp
 float x, y, z;
@@ -331,27 +330,27 @@ float tmp3 = tmp2;
 c = symsqr( tmp3, z);
 ```
 
-### <a name="architecture-specific-rounding-under-fpprecise"></a>Architektura konkrétní zaokrouhlení pod fp: přesné
+### <a name="architecture-specific-rounding-under-fpprecise"></a>Specifické pro architekturu zaokrouhlení pod fp: precise
 
-|Procesor|Zaokrouhlení přesnost pro zprostředkující výrazy|
+|Procesor|Zaokrouhlování přechodných výrazů přesnost|
 |-|-|
-|x86|Zprostředkující výrazy se vypočítávají v výchozí přesnost 53 bitů s rozsahem rozšířené poskytované exponent 16 bitů. Když tyto 53:16 hodnoty jsou "uniknout" do paměti (jak může dojít během volání funkce), bude se rozšířené exponentu rozsahu zúžit 11 bits. To znamená uniknout hodnoty jsou převést na formát standardní dvojitou přesností s pouze exponentem 11 bitů.<br/>Uživatel může přepnout na rozšířené 64-bit přesnost pro zprostředkující zaokrouhlení změnou pomocí aplikace word s plovoucí desetinnou čárkou řízení `_controlfp` a povolením přístupu prostředí FPU (najdete v části [fenv_access – Direktiva pragma](#the-fenv-access-pragma)). Ale bude stále při rozšířené přesnost register hodnoty jsou uniknout do paměti, zaokrouhlen mezilehlých výsledků a dvojitou přesností.<br/>Tato konkrétní sémantického se mohou změnit.|
-|amd64|Sémantika FP na amd64 je poněkud liší od jiných platforem. Z důvodů výkonu zprostředkující operace se vypočítávají v co nejširší přesnost buď operand místo v co nejširší přesnost k dispozici.  Pokud chcete vynutit výpočty počítaný přesností širší než operandy, uživatelé musí zavádět přetypování operace na alespoň jeden operand dílčí výrazu.<br/>Tato konkrétní sémantického se mohou změnit.|
+|x86|Přechodných výrazů se vypočítávají na 53bitovou přesnost s rozsahem rozšířené poskytované exponent 16 bitů. Když tyto 53:16 hodnoty jsou "přesahovat" do paměti (protože může dojít během volání funkce), rozšířených exponentu rozsah se zúžit 11 bits. To znamená přesahovat hodnoty jsou přetypovat na formát standardní dvojité přesnosti s pouze 11bitový exponent.<br/>Uživatel může přepnout na rozšířené 64 bitů přesnosti pro zprostředkující zaokrouhlení změnou slovo s plovoucí desetinnou čárkou ovládacímu prvku pomocí `_controlfp` a tím, že umožňuje přístup k prostředí FPU (viz [– Direktiva pragma fenv_access](#the-fenv-access-pragma)). Ale když rozšířené přesnost register hodnoty jsou přesahovat do paměti, mezilehlých výsledků stále se zaokrouhlí na dvojitou přesností.<br/>Tento konkrétní sémantické se může změnit.|
+|amd64|FP sémantiky amd64 se poněkud liší od jiných platforem. Z důvodů výkonu zprostředkující operací se vypočítávají v nejširší přesnost jeden z operandů místo v nejširší přesnosti, která je k dispozici.  Pokud chcete vynutit výpočty vypočítání větší přesností než operandy, uživatelé potřebují zavést operace přetypování na alespoň jeden operand v dílčí výraz.<br/>Tento konkrétní sémantické se může změnit.|
 
-### <a name="algebraic-transformations-under-fpprecise"></a>Algebraických transformace pod fp: přesné
+### <a name="algebraic-transformations-under-fpprecise"></a>Algebraický transformace v části fp: precise
 
-Když fp: přesné režim zapnutý, kompilátor nikdy Provede algebraických transformace *není-li konečný výsledek prokazatelně identické*. Řadu známých algebraických pravidla pro reálné číslo aritmetické není vždy držitelem pro aritmetické operace s plovoucí desetinnou čárkou. Například následující výrazy jsou ekvivalentní Reals, ale nemusí nutně prokázat u obtékaných objektů.
+Při fp: precise režim zapnutý, kompilátor provede nikdy algebraických transformace *Pokud konečný výsledek je prokazatelně identické*. Řadu známých algebraických pravidla pro aritmetické reálné číslo není vždy držitelem pro aritmetické operace s plovoucí desetinnou čárkou. Například následující výrazy jsou ekvivalentní Reals, ale ne nutně float.
 
 |Formulář|Popis|
 |-|-|
 |`(a+b)+c = a+(b+c)`|Asociativní pravidlo pro přidání|
 |`(a*b)*c = a*(b*c)`|Asociativní pravidlo pro násobení|
-|`a*(b+c) = a*b + b*c`|Distribuce násobení přes přidání|
-|`(a+b)(a-b) = a*a-b*b`|Algebraických řešení|
+|`a*(b+c) = a*b + b*c`|Distribuce násobení přes sčítání|
+|`(a+b)(a-b) = a*a-b*b`|Které budou zohledňovat algebraických|
 |`a/b = a*(1/b)`|Dělení multiplicative inverzní|
 |`a*1.0 = a`|Multiplikativní identity|
 
-Jak je znázorněno v příkladu Úvod pomocí funkce `KahanSum`, kompilátor může zvážit vytvoření výrazně rychlejší programy provedením různé algebraických transformace. I když optimalizace závisí na takových algebraických transformace jsou téměř vždy nesprávné, existují situace, pro které jsou naprosto bezpečné. Například je někdy žádoucí nahradit dělení *konstantní* hodnotu s násobení podle multiplikativní inverzní konstanty:
+Jak je znázorněno v příkladu seznámení s funkcí `KahanSum`, kompilátor může zvážit provést různé algebraických transformací, abyste mohli vytvářet programy výrazně rychlejší. I když optimalizace závisí na těchto algebraických transformace jsou téměř vždy nesprávná, existují situace, které jsou zcela bezpečné. Například někdy je třeba nahradit dělení *konstantní* hodnotu s násobení hodnotou násobení inverzní konstanty:
 
 ```cpp
 const double four = 4.0;
@@ -361,7 +360,7 @@ double a, b;
 a = b/four;
 ```
 
-Může být uvedeny ve
+Může se transformuje na
 
 ```cpp
 const double four = 4.0;
@@ -371,19 +370,19 @@ double a, b;
 a = b*tmp0;
 ```
 
-Je to bezpečné transformace, proto Optimalizátor můžete určit při kompilaci tohoto x / 4.0 == x*(1/4.0) pro všechny s plovoucí desetinnou čárkou hodnoty x, včetně nekonečno a NaN. Nahrazením operace dělení násobení, můžete kompilátor uložit několik cyklů – zejména u FPUs, které neimplementují přímo dělení, ale vyžadují kompilátoru generovat kombinaci vzájemné aproximace a přidat násobení pokyny. Kompilátor může provádět takové optimalizace pod fp: přesné jenom v případě, že násobení nahrazení vytváří přesně stejný výsledek jako rozdělení. Kompilátor také provádět trivial transformace pod fp: přesné, zadaný výsledky jsou identické. Mezi ně patří:
+Důvodem je bezpečné transformace, že Optimalizátor můžete určit v době kompilace, že hodnota x / 4.0 == x*(1/4.0) pro všechny hodnoty s plovoucí desetinnou čárkou z x, včetně nekonečno a NaN. Nahrazením operace dělení násobení, kompilátor může uložit několik cyklů – zejména u FPUs, které nejsou přímo implementace dělení, ale vyžadují kompilátor generovat kombinaci převrácenou hodnotu přiblížení a vynásobit přidat pokyny. Kompilátor může provést takovou optimalizaci pod fp: precise jenom v případě, že nahrazení násobení vytváří přesně stejný výsledek jako rozdělení. Kompilátor mohou také provádět jednoduché transformace v části fp: precise, pokud jsou stejné výsledky. Zde jsou některé z nich:
 
 |Formulář|Popis
 |-|-|
 |`(a+b) == (b+a)`|Komutativní pravidlo pro přidání|
 |`(a*b) == (b*a)`|Komutativní pravidlo pro násobení|
-|`1.0*x*y == x*1.0*y == x*y*1.0 == x*y`|Násobení podle 1.0|
-|`x/1.0*y == x*y/1.0 == x*y`|Dělení 1.0|
-|`2.0*x == x+x`|Násobení podle 2.0|
+|`1.0*x*y == x*1.0*y == x*y*1.0 == x*y`|Násobení hodnotou 1,0|
+|`x/1.0*y == x*y/1.0 == x*y`|Dělení hodnotou 1,0|
+|`2.0*x == x+x`|Násobení hodnotou 2.0|
 
-### <a name="contractions-under-fpprecise"></a>Staženiny pod fp: přesné
+### <a name="contractions-under-fpprecise"></a>Staženiny pod fp: precise
 
-Klíčovou funkcí architektury mnoho moderní jednotky s plovoucí desetinnou čárkou je schopnost provádět násobení, následuje přidání jako najednou k žádné chybě zprostředkující zaokrouhlení. Například, architektura Itanium společnosti Intel poskytuje pokyny pro každou z těchto operací Ternární kombinovat (*b + c), (* b-c) a (c-a * b), do jednoho s plovoucí desetinnou čárkou instrukce (FMA – fms a fnma v uvedeném pořadí). Tyto pokyny jednoho jsou rychleji než provádění samostatné násobení a přidat pokyny a jsou přesnější, protože neexistuje žádný zprostředkující zaokrouhlení produktu. Tato optimalizace můžete výrazně urychlit funkce obsahující několik prokládaný násobkem a přidání operací. Zvažte například následující algoritmus, který vypočítá tečkou součin dvou n dimenzí vektory.
+Klíčovou funkcí architektury mnoho moderní jednotek s plovoucí desetinnou čárkou je schopnost provádět násobení, za nímž následuje doplněk jako jednu operaci s žádná chyba zprostředkující zaokrouhlení. Třeba společnosti Intel Itanium architekturu poskytuje pokyny pro každou z těchto operací Ternární zkombinovat (*b + c), (* b-c) a (c-a * b), do jednoho instrukcí s plovoucí desetinnou čárkou (fma, fms a fnma v uvedeném pořadí). Tyto instrukce s jednoduchou jsou rychlejší než provádění samostatné násobit a přidat pokyny a jsou přesnější, protože neexistuje žádný zprostředkující zaokrouhlení tohoto produktu. Tato optimalizace můžete výrazně zrychlit funkce obsahující několik prokládané násobit a přidat operace. Představte si třeba následující algoritmus, který vypočítá součin dvou vektorů n rozměrný.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -395,9 +394,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Tento výpočet lze provést řadu násobení přidat pokyny ve formátu p = p + x [i] * y [i].
+Tento výpočet lze provést řadu vynásobit přidat pokyny ve formátu p = p + x [i] * y [i].
 
-Optimalizace zmenšení lze určit nezávisle tak, pomocí `fp_contract` – Direktiva pragma kompilátoru. Ve výchozím nastavení fp: přesné modelu umožňuje staženiny vzhledem k tomu, že zlepšit přesnost a rychlost. V části fp: přesné, kompilátor se nikdy smlouvy výraz s explicitní zaokrouhlení.
+Rozpor mezi optimalizace je možné řídit nezávisle na sobě, pomocí `fp_contract` – Direktiva pragma kompilátoru. Ve výchozím nastavení fp: precise model umožňuje staženiny protože pomáhají zvýšit přesnost a rychlost. V části fp: precise, kompilátor nikdy smlouvě výraz s explicitní zaokrouhlení.
 Příklady
 
 ```cpp
@@ -414,9 +413,9 @@ t = a*b;             // (this assignment rounds a*b to float)
 d = t + c;           // won't be contracted because of rounding of a*b
 ```
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Pořadí vyhodnocení výrazu s plovoucí desetinnou čárkou v části fp: přesné
+### <a name="order-of-floating-point-expression-evaluation-under-fpprecise"></a>Pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou v rámci fp: precise
 
-Optimalizace, které zachovat pořadí vyhodnocení výrazu s plovoucí desetinnou čárkou jsou vždy zabezpečené a jsou proto povoleném fp: přesné režimu. Vezměte v úvahu následující funkci, která vypočítá tečkou součin dvou n dimenzí vektorů v jednoduchou přesností. První blok kódu níže původní funkce jako může být zakódován pomocí programátory, následuje stejnou funkci po částečné rozvinutí smyčky optimalizace.
+Optimalizace, které se zachovat pořadí vyhodnocování výrazů s plovoucí desetinnou čárkou jsou vždy bezpečné a jsou proto povoleném fp: precise režimu. Vezměte v úvahu následující funkci, která vypočítá součin dvou vektorů n rozměrný v a jednoduchou přesností. První blok kódu níže původní funkce jako může být zakódován programátor, postupuje podle stejné funkce po částečné rozvinutí smyčky optimalizaci.
 
 ```cpp
 //original function
@@ -451,9 +450,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Hlavní výhodou tato optimalizace je to, že snižuje počet podmíněného větvení smyčky co nejvíce 75 %. Zvýšením počtu operace v rámci těla smyčky také kompilátor může mít teď většího počtu možností k optimalizaci Další. Například může být schopni provést některé FPUs násobení přidat v p += x [i] * y [i] při načítání současně hodnoty x [i + 1.] a y [i + 1] pro použití v dalším kroku. Tento typ optimalizace je perfektně bezpečné pro výpočty s plovoucí desetinnou čárkou, protože uchovává pořadí operací.
+Hlavní výhodou této optimalizace je, že ji snižuje počet podmíněného větvení smyčky co 75 %. Zvýšením počtu operací v těle smyčky, kompilátor může nyní mít také další příležitosti k optimalizaci dále. Například může být některé FPUs může provádět vynásobit přidat v p += x [i] * y [i] při načítání současně hodnoty x [i + 1] a y [i + 1] pro použití v dalším kroku. Tento typ optimalizace je zcela bezpečné pro přístup z výpočtů s plovoucí desetinnou čárkou, vzhledem k tomu zachovává pořadí operací.
 
-Často je výhodné pro kompilátor ke změně pořadí celý operations Chcete-li vytvořit rychlejší kódu. Vezměte v úvahu následující kód:
+Často je výhodné pro kompilátor přeuspořádat celé operace. aby bylo možné vytvářet kód rychleji. Vezměte v úvahu následující kód:
 
 ```cpp
 double a, b, c, d;
@@ -466,7 +465,7 @@ y = a*a + b*b + c*c;
 z = a + b + c;
 ```
 
-Sémantické pravidel C++ znamenat, že program by měl vytvořit výsledky jako, pokud nejprve počítaný x, potom y a nakonec. Předpokládejme, že kompilátor má pouze čtyři registry k dispozici s plovoucí desetinnou čárkou. Pokud kompilátor je nucen se výpočetní x, y a v pořadí, může zvolit pro generování kódu s následující sémantiku:
+Sémantické pravidel C++ označují, že program mohou být vráceny výsledky jako by se nejprve vypočítané x, potom y a nakonec. Předpokládejme, že kompilátor má pouze čtyři registry k dispozici s plovoucí desetinnou čárkou. Pokud kompilátor musí vypočítat x, y a v pořadí, rozhodnout pro generování kódu s tuto sémantiku:
 
 ```cpp
 double a, b, c, d;
@@ -507,7 +506,7 @@ r0 = r0 + r3;
 z = r0;         // z = r1+r2+r3
 ```
 
-Existuje několik jasně redundantní operací se toto kódování. Pokud kompilátor striktně dodržovat sémantického pravidel C++, toto řazení je nutné, protože program může být přístup mezi FPU prostředí každé přiřazení. Však výchozí nastavení pro fp: přesné povolení kompilátoru optimalizovat jakoby program nemá přístup k prostředí, díky kterému jej chcete změnit pořadí těchto výrazů. Pak je můžete odebrat zálohování u výpočetních tří hodnot v obráceném pořadí, a to takto:
+Existuje několik jasně redundantní operací se toto kódování. Pokud kompilátor výhradně dodržuje pravidla sémantického jazyka C++, úpravě tohoto pořadí je nezbytné, protože program může být přístup k FPU prostředí mezi každé přiřazení. Však výchozí nastavení pro fp: precise povolit, aby kompilátor optimalizoval jakoby program nemá přístup k prostředí, což umožňuje změnit pořadí těchto výrazů. Pak je můžete odebrat propouštění výpočtem tří hodnot v obráceném pořadí, následujícím způsobem:
 
 ```cpp
 double a, b, c, d;
@@ -542,9 +541,9 @@ r0 = r0+r3;
 x = r0;
 ```
 
-Toto kódování je jasně nadřízená, má snížit počet fp pokyny téměř 40 %. Výsledky pro x, y a jsou stejné jako předtím, ale s menší nároky na počítaný.
+Toto kódování je jasně vynikající s téměř 40 % snížení počtu fp instrukcí. Výsledky pro x, y a jsou stejné jako předtím, ale vypočítanou méně režie.
 
-V části fp: přesné, kompilátor může také *prokládání* běžné dílčí výrazy, aby bylo dosaženo rychlejší kódu. Kód k výpočtu kořeny Kvadratická rovnice například může zapsat takto:
+V části fp: precise, kompilátor může také *prokládání* běžné dílčí výrazy tak, aby vytvářet kód rychleji. Například kód pro výpočet kořeny kvadratické rovnice může být napsán takto:
 
 ```cpp
 double a, b, c, root0, root1;
@@ -553,7 +552,7 @@ root0 = (-b + sqrt(b*b-4*a*c))/(2*a);
 root1 = (-b - sqrt(b*b-4*a*c))/(2*a);
 ```
 
-I když tyto výrazy liší pouze jednu operaci, programátorů zapsat je tento způsob, jak zajistit, že bude každý kořenový hodnotu vypočítat v nejvyšší praktické přesnost. V části fp: přesné, kompilátor je zdarma prokládání výpočet root0 a root1 odebrat běžné dílčí výrazy bez ztráty přesnost. Například následující odebrala několik redundantní kroky při vytváření přesně stejnou odpovědí.
+I když tyto výrazy se liší pouze v rámci jedné operace, programátor může mít jej tímto způsobem zajistit, že každá hodnota kořenové se vypočítá na nejvyšší praktické přesnost. V části fp: precise, kompilátoru je umožněno prokládání výpočtu root0 a root1 odebrat běžné dílčí výrazy bez ztráty přesnosti. Například následující odebrala několik redundantní kroky při vytváření přesně stejnou odpověď.
 
 ```cpp
 double a, b, c, root0, root1;
@@ -565,7 +564,7 @@ root0 = (tmp0+tmp1)/tmp2;
 root1 = (tmp0-tmp1)/tmp2;
 ```
 
-Další optimalizace může pokus o přesunutí vyhodnocení výrazů určité nezávislé. Vezměte v úvahu následující algoritmus, který obsahuje větve podmíněného v rámci těla smyčky.
+Další optimalizace může pokus o přesunutí hodnocení některých výrazů nezávislé. Vezměte v úvahu následující algoritmus, který obsahuje podmíněnou větev v těle smyčky.
 
 ```cpp
 vector<double> a(n);
@@ -580,7 +579,7 @@ for (int i=0; i<n; i++)
 }
 ```
 
-Kompilátor může zjistit, která hodnota výrazu (abs(d) > 1) je neutrální v rámci těla smyčky. To umožňuje kompilátor "Zdvihadlo" if mimo těla smyčky transformace ve výše uvedeném kódu do následující příkaz:
+Kompilátor může rozpoznat, která hodnota výrazu (abs(d) > 1) je invariantní v těle smyčky. To umožňuje kompilátoru "zahrnul" if příkaz mimo tělo smyčky, transformace ve výše uvedeném kódu na následující:
 
 ```cpp
 vector<double> a(n);
@@ -594,17 +593,17 @@ else
       s = s+a[i]*d;
 ```
 
-Po transformaci již není podmíněného větve v některém z smyček, což značně zvyšuje celkový výkon smyčky. Tento typ optimalizace je perfektně bezpečné protože vyhodnocování výrazu (abs(d) > 1.0) je nezávislý na jiné výrazy.
+Po transformaci již není podmíněná větev v některém z smyček, tedy výrazně zlepšuje celkový výkon smyčky. Tento typ optimalizace je zcela bezpečné protože vyhodnocení výrazu (abs(d) > 1.0) je nezávisle na jiných výrazech.
 
-Případě FPU prostředí přístup nebo s plovoucí desetinnou čárkou výjimky jsou tyto typy optimalizace contraindicated vzhledem k tomu, že se změní sémantického toku. Tyto optimalizace jsou k dispozici v části fp pouze: přesné režimu vzhledem k tomu, že je ve výchozím nastavení zakázána FPU prostředí přístup a sémantiku výjimek plovoucí desetinné čárky. Funkce, které získal přístup k prostředí FPU explicitně zakázat tyto optimalizace pomocí `fenv_access` – Direktiva pragma kompilátoru. Podobně, měli používat funkce použití s plovoucí desetinnou čárkou výjimek `float_control(except ... )` kompilátoru – Direktiva pragma (nebo použijte **/fp: kromě** přepínač příkazového řádku).
+Za přítomnosti přístup k prostředí FPU nebo výjimky s plovoucí desetinnou čárkou jsou tyto typy optimalizace contraindicated, protože mění sémantické toku. Tyto optimalizace jsou pouze k dispozici v rámci fp: precise režimu vzhledem k tomu, že jsou ve výchozím nastavení zakázán přístup k prostředí FPU a sémantiku výjimky s plovoucí desetinnou čárkou. Funkce, které přístup k prostředí FPU explicitně zakázat tyto optimalizace s použitím `fenv_access` – Direktiva pragma kompilátoru. Podobně by měl používat funkce pomocí výjimek s plovoucí desetinnou čárkou `float_control(except ... )` kompilátoru – Direktiva pragma (nebo použijte **/FP: s výjimkou** přepínač příkazového řádku).
 
-V souhrnu fp: přesné režim umožňuje kompilátoru ke změně pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou za předpokladu, že nejsou změněna konečných výsledků a výsledky nejsou závislé na prostředí FPU nebo s plovoucí desetinnou čárkou výjimky.
+Stručně řečeno, fp: precise režim umožňuje kompilátoru můžete změnit pořadí vyhodnocování výrazů s plovoucí desetinnou čárkou, za předpokladu, že konečných výsledků se nezmění a výsledky nejsou závislé na FPU prostředí nebo na výjimky s plovoucí desetinnou čárkou.
 
-### <a name="fpu-environment-access-under-fpprecise"></a>Přístup k prostředí FPU pod fp: přesné
+### <a name="fpu-environment-access-under-fpprecise"></a>Přístup k prostředí FPU pod fp: precise
 
-Když fp: přesné režim zapnutý, kompilátor předpokládá, že program přístup nebo alter FPU prostředí. Jak jsme uvedli dříve, tento předpoklad umožňuje kompilátoru přeskupování nebo přesunout s plovoucí desetinnou čárkou operace ke zlepšení efektivity pod fp: přesné.
+Když fp: precise režim zapnutý, kompilátor předpokládá, že program přístup nebo alter FPU prostředí. Jak bylo uvedeno výše, tento předpoklad umožňuje kompilátoru změnit pořadí nebo přesunutí operací s plovoucí desetinnou čárkou ke zvýšení efektivity za fp: precise.
 
-Některé programy mohou pomocí příkazu alter s plovoucí desetinnou čárkou zaokrouhlení směr `_controlfp` funkce. Například některé programy výpočetní horní a dolní hranice chyba na aritmetické operace provedením výpočet dvakrát, nejprve při zaokrouhlení směrem záporné nekonečno, pak při zaokrouhlení směrem kladné nekonečno. Vzhledem k tomu, že FPU nabízí pohodlný způsob, jak řídit zaokrouhlení, programátorem rozhodnout změnit režim zaokrouhlení změnou FPU prostředí. Následující kód vypočítá, že chybu přesný hranice elementu s plovoucí desetinnou čárkou násobení změnou FPU prostředí.
+Některé programy mohou měnit s plovoucí desetinnou čárkou zaokrouhlení směrem s použitím `_controlfp` funkce. Například některé programy compute horní a dolní hranice chyba na aritmetické operace pomocí provádí výpočet dvakrát, nejprve při zaokrouhlení směrem k záporné nekonečno, pak při zaokrouhlení směrem k kladné nekonečno. Vzhledem k tomu, FPU poskytuje pohodlný způsob, jak ovládací prvek zaokrouhlení, programátor můžete změnit úpravou prostředí FPU režimu zaokrouhlování. Následující kód vypočítá platí, že přesné znění chybové svázán s plovoucí desetinnou čárkou násobení změnou FPU prostředí.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -616,9 +615,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-V části fp: přesné, kompilátor vždy se předpokládá výchozí FPU prostředí, tak, aby Optimalizátor volné ignorovat volání `_controlfp` a snížit výše přiřazení k cUpper = cLower = * b; to by jasně poskytují nesprávné výsledky. Aby takové optimalizace FPU prostředí přístup povolit pomocí `fenv_access` – Direktiva pragma kompilátoru.
+V rámci fp: precise, kompilátor vždy předpokládá FPU výchozího prostředí se tak Optimalizátor je zdarma pro ignorování volání `_controlfp` a snížit výše přiřazení k cUpper = cLower = * b; by to jasně poskytovat nesprávné výsledky. Aby tyto optimalizace povolit přístup k prostředí FPU pomocí `fenv_access` – Direktiva pragma kompilátoru.
 
-Další programy můžou snažit detekce určitých s plovoucí desetinnou čárkou chyby kontrolou FPU stavového slova. Následující kód například vyhledá dělení nulou a nepřesný podmínky
+Další programy můžou snažit detekce určitých s plovoucí desetinnou čárkou chyby kontrolou FPU stavového slova. Následující kód například vyhledá dělení nulou a nepřesné podmínky
 
 ```cpp
 double a, b, c, r;
@@ -635,42 +634,42 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-V části fp: přesné, optimalizace, které změní pořadí vyhodnocení výrazu může změnit body, ve kterých se zobrazují určitým chybám. Přístup k stavového slova programy měli povolit FPU prostředí přístup pomocí `fenv_access` – Direktiva pragma kompilátoru.
+V části fp: precise, optimalizace, které Změna pořadí vyhodnocování výrazů může změnit body, na kterých dojde k určité chybě. Programy přístup k stavového slova by měl povolit FPU přístup k prostředí pomocí `fenv_access` – Direktiva pragma kompilátoru.
 
-Další informace najdete v tématu [fenv_access – Direktiva pragma](#the-fenv-access-pragma).
+Další informace najdete v části [– Direktiva pragma fenv_access](#the-fenv-access-pragma).
 
-### <a name="floating-point-exception-semantics-under-fpprecise"></a>Sémantika výjimek plovoucí desetinné čárky pod fp: přesné
+### <a name="floating-point-exception-semantics-under-fpprecise"></a>Sémantiku výjimky s plovoucí desetinnou čárkou v rámci fp: precise
 
-Ve výchozím nastavení, jsou zakázané výjimek plovoucí desetinné čárky sémantiku pod fp: přesné. Většina programátory v jazyce C++ přednost zpracování výjimečných podmínek s plovoucí desetinnou čárkou bez použití systému nebo výjimky jazyka C++. Kromě toho zakázání výjimek plovoucí desetinné čárky sémantiku umožňuje jak jsme uvedli dříve, kompilátoru větší flexibilitu při optimalizaci operace s plovoucí desetinnou čárkou. Použijte buď **/fp: kromě** přepínač nebo `float_control` – Direktiva pragma povolit sémantiku výjimek plovoucí desetinné čárky, při použití fp: přesné modelu.
+Ve výchozím nastavení, jsou zakázané sémantiku výjimky s plovoucí desetinnou čárkou v rámci fp: precise. Většina programátorů C++ raději zpracování výjimek s plovoucí desetinnou čárkou podmínky bez použití systému nebo výjimky jazyka C++. Kromě toho zakázání sémantiku výjimky s plovoucí desetinnou čárkou umožňuje jak bylo uvedeno dříve, kompilátor větší flexibilitu při optimalizaci operací s plovoucí desetinnou čárkou. Použít buď **/FP: s výjimkou** přepnout nebo `float_control` direktivy pragma povolí sémantiku výjimky s plovoucí desetinnou čárkou, při použití fp: precise modelu.
 
-Další informace najdete v tématu [povolení výjimek plovoucí desetinné čárky sémantiku](#enabling-floating-point-exception-semantics).
+Další informace najdete v části [povoluje sémantiku výjimky s plovoucí desetinnou čárkou](#enabling-floating-point-exception-semantics).
 
-## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Režim fp:fast pro sémantiku s plovoucí desetinnou čárkou
+## <a name="the-fpfast-mode-for-floating-point-semantics"></a>Režim FP: Fast pro sémantiku plovoucí desetinné čárky
 
-Když je povolený režim fp:fast, kompilátor zmírní pravidla této fp: přesné používá při optimalizaci operace s plovoucí desetinnou čárkou. Tento režim je umožňuje kompilátoru optimalizovat s plovoucí desetinnou čárkou kód pro rychlost za cenu s plovoucí desetinnou čárkou přesnost a správnost. Programy, které nespoléhejte na vysoce přesné výpočty s plovoucí desetinnou čárkou může dojít k významné rychlost zlepšování povolením fp:fast režimu.
+Když je povolený režim FP: Fast, kompilátor zmírňuje pravidla tohoto fp: precise používá při optimalizaci operací s plovoucí desetinnou čárkou. Tento režim se umožňuje kompilátoru optimalizovat kód s plovoucí desetinnou čárkou rychlost na úkor přesnosti s plovoucí desetinnou čárkou a správnosti. Programy, které nespoléhejte na s velmi přesnými výpočtů s plovoucí desetinnou čárkou může docházet k vylepšení rychlosti významné povolením FP: Fast režimu.
 
-Je povolený režim s plovoucí desetinnou čárkou fp:fast, pomocí [/fp:fast](fp-specify-floating-point-behavior.md) přepínač příkazového řádku kompilátoru následujícím způsobem:
+Režim s plovoucí desetinnou čárkou FP: Fast se aktivuje pomocí [Fast](fp-specify-floating-point-behavior.md) přepínač příkazového řádku kompilátoru následujícím způsobem:
 
-> cl /fp:fast source.cpp
+> source.cpp Fast cl
 
-Tento příklad instruuje kompilátor, aby používají sémantiku fp:fast při generování kódu pro soubor source.cpp. Fp:fast model vyvolat taky na jednotlivých pomocí funkcí pomocí `float_control` – Direktiva pragma kompilátoru.
+V tomto příkladu instruuje kompilátor, aby používají sémantiku FP: Fast při generování kódu pro soubor source.cpp. FP: Fast modelu může být vyvoláno také na jednotlivých podle funkcí pomocí `float_control` – Direktiva pragma kompilátoru.
 
-Další informace najdete v tématu [float_control – Direktiva pragma](#the-float-control-pragma).
+Další informace najdete v části [float_control – Direktiva pragma](#the-float-control-pragma).
 
-V režimu fp:fast může provádět kompilátor optimalizace, které alter přesnost výpočty s plovoucí desetinnou čárkou. Kompilátor nemusí správně zaokrouhlit na přiřazení, přiřadí typ ukazatel nebo volání funkce a zprostředkující zaokrouhlení nebude vždy provést. S plovoucí desetinnou čárkou konkrétní optimalizace, jako je například staženiny, vždy povolena. Sémantika výjimek plovoucí desetinné čárky a citlivosti FPU prostředí jsou zakázaná a není k dispozici.
+V režimu FP: Fast kompilátor může provádět optimalizace, které změnit přesnost výpočtů s plovoucí desetinnou čárkou. Kompilátor nemůže správně zaokrouhlit na přiřazení, zaokrouhlovat nebo volání funkce a zprostředkující zaokrouhlení vždy se neprovede. S plovoucí desetinnou čárkou konkrétní optimalizace, jako je například staženiny, vždy povolena. Sémantiku výjimky s plovoucí desetinnou čárkou a citlivosti prostředí FPU jsou zakázaná a není k dispozici.
 
-|Sémantika FP:Fast|Vysvětlení
+|Sémantika FP: Fast|Vysvětlení
 |-|-|
-|Zaokrouhlení sémantiku|Explicitní zaokrouhlení v přiřazení, přiřadí typ ukazatel a volání funkce může být ignorovány.<br/>Zprostředkující výrazy může zaokrouhlené na menší než zaregistrovat přesnost podle požadavků na výkon.|
-|Algebraických transformace|Kompilátor může transformace výrazy podle reálné číslo asociativní, rozdělovací algebra; Tyto transformace nemusí být přesné nebo správný.|
-|Staženiny|Vždy povolena; nelze zakázat pomocí – Direktiva pragma `fp_contract`|
-|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor může změnit pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou, i když tyto změny mohou změnit konečných výsledků.|
-|FPU prostředí přístup|Zakázané. Není k dispozici|
-|Sémantika výjimek plovoucí desetinné čárky|Zakázané. Není k dispozici|
+|Zaokrouhlení sémantiku|Zaokrouhlovat explicitní zaokrouhlení na přiřazení a volání funkce mohou být ignorovány.<br/>Přechodných výrazů může se zaokrouhlí na menší než registrace přesnost podle požadavků na výkon.|
+|Algebraický transformace|Kompilátor může transformovat výrazy podle reálné číslo asociativní, distributivních algebraický; Tyto transformace nemusí být přesné nebo správný.|
+|Staženiny|Vždy povolena; nelze zakázat – Direktiva pragma `fp_contract`|
+|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor může změnit pořadí vyhodnocování výrazů s plovoucí desetinnou čárkou i v případě, že tyto změny mohou změnit konečných výsledků.|
+|Přístup k prostředí FPU|Zakázané. Není k dispozici|
+|Sémantiku výjimky s plovoucí desetinnou čárkou|Zakázané. Není k dispozici|
 
-### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Zaokrouhlení sémantiku pro s plovoucí desetinnou čárkou výrazy v části fp:fast
+### <a name="rounding-semantics-for-floating-point-expressions-under-fpfast"></a>Zaokrouhlení sémantika výrazů s plovoucí desetinnou čárkou v rámci FP: Fast
 
-Na rozdíl od fp: přesné model modelu fp:fast provede zprostředkující výpočtů v nejvhodnější přesnost. Zaokrouhlení v přiřazení, přiřadí typ ukazatel a nemusí vždy dojít k volání funkce. Například první funkce níže představuje tři jednoduchou přesností proměnné (`C`, `Y` a `T`). Kompilátor rozhodnout enregister tyto proměnné, platí typu povýšení `C`, `Y` a `T` na dvojitou přesností.
+Na rozdíl od fp: precise modelu, model FP: Fast provádí pomocné výpočty v nejpohodlnější přesnosti. Zaokrouhlení na přiřazení, zaokrouhlovat a nemusí vždy dojít k volání funkce. Například první funkce níže představuje tří proměnných jednoduchou přesnost (`C`, `Y` a `T`). Kompilátor může rozhodnout zaregistrace tyto proměnné, výsledkem bude zvýšení úrovně typ `C`, `Y` a `T` na dvojitou přesností.
 
 Původní funkce:
 
@@ -689,7 +688,7 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-Zpracovávány vnitřně zaregistrované proměnné:
+Proměnné uloženy v registrech procesoru:
 
 ```cpp
 float KahanSum( const float A[], int n )
@@ -707,9 +706,9 @@ float KahanSum( const float A[], int n )
 }
 ```
 
-V tomto příkladu má fp:fast subverted záměr původní funkce. Konečné optimalizované výsledek, uchovávat v proměnné `sum`, může být poměrně perturbed z správný výsledek.
+V tomto příkladu má FP: Fast subverted záměr původní funkce. Poslední optimalizované výsledek, uložené v proměnné `sum`, může být poměrně perturbed z správný výsledek.
 
-V části fp:fast kompilátor pokusí obvykle udržovat alespoň přesnost určeného zdrojového kódu. V některých případech ale kompilátor rozhodnout provést zprostředkující výrazy na *nižší přesnost* než je zadáno ve zdrojovém kódu. Například první blok kódu níže volá Dvojitá přesnost verzi druhou odmocninu funkce. V části fp:fast, v některých případech, například když výsledek a operandy funkce jsou explicitně převést na jednoduchou přesností kompilátor rozhodnout nahradit volání Dvojitá přesnost `sqrt` s jednoduchou přesností volání`sqrtf`funkce. Protože přetypování zajistěte, aby hodnota přejdete do `sqrt` a hodnotu, než dorazí jsou zaokrouhleny na jednom přesnost, tak pouze změní na místě zaokrouhlení. Pokud hodnota přicházející do sqrt byla hodnotu dvojitou přesností a kompilátor provedena tato transformace, až polovinu bits přesnost může být nesprávný.
+V části FP: Fast kompilátor obvykle pokusí udržovat minimální Zadaná přesnost ve zdrojovém kódu. Se ale v některých případech kompilátor může rozhodnout provést přechodných výrazů v *nižší přesnost* než zadané ve zdrojovém kódu. Například první blok kódu níže volá dvojité přesnosti verzi funkce druhou odmocninu. V části FP: Fast, v některých případech, například když výsledek a operandy funkce jsou explicitně přetypovat na jednoduchou přesností, nahraďte volání dvojité přesnosti kompilátor rozhodnout `sqrt` pomocí volání do jedné přesnosti `sqrtf`funkce. Protože přetypování Ujistěte se, že hodnota přicházející do `sqrt` a hodnota už jsou zaokrouhleny na jednoduchou přesnost, pouze změní na místě zaokrouhlení. Pokud byla zadána hodnota přicházející do sqrt hodnotu dvojité přesnosti a kompilátor provést tuto transformaci až polovinu bitů přesnosti mohou být nesprávné.
 
 Původní – funkce
 
@@ -723,7 +722,7 @@ float length = (float)sqrt((float)(a*a + b*b + c*c));
 float sum = (float) ((double)f1 + (double)f2);
 ```
 
-Optimalizované funkce
+Optimalizované – funkce
 
 ```cpp
 float sqrtf(float)...
@@ -737,9 +736,9 @@ float length = sqrtf(tmp1); // rounded sqrt result
 float sum = f1 + f2;
 ```
 
-I když méně přesný optimalizace může být obzvláště užitečné při cílení na procesory, které poskytují jednoduchou přesností, vnitřní verze funkcí, jako například `sqrt`. Právě přesněji při kompilátor použije tyto optimalizace je platformy a kontext závislé.
+I když zapříčinit, tyto optimalizace může být zvláště užitečné při cílení na procesory, které poskytují a jednoduchou přesností, vnitřní verze funkcí, jako například `sqrt`. Právě přesně Když kompilátor použije tyto optimalizace je závislá platforma a kontext.
 
-Kromě toho je žádné zaručenou konzistenci pro přesnost zprostředkující výpočtů, které se dají provést na všechny dostupné pro kompilátor přesnost úrovni. I když kompilátor se pokusí o zachovali alespoň úroveň přesnost podle specifikace kód, umožňuje fp:fast Optimalizátor k přetypování dolů zprostředkující výpočty Chcete-li vytvořit počítač kódu rychlejší nebo menší. Například kompilátor může dál optimalizovat kód z výše má být zaokrouhleno některé z mezilehlých součinů pro jednoduchou přesností.
+Kromě toho neexistuje žádné garantované konzistenci pro přesnost zprostředkující výpočty, které mohou být provedeny na libovolné úrovni přesnosti k dispozici pro kompilátor. Ačkoli kompilátor se pokusí o alespoň udržovat úroveň přesnosti, jak je uvedeno v kódu, umožňuje FP: Fast Optimalizátor, aby jeho přetypování směrem dolů zprostředkující výpočty cílem vytvořit rychlejší a menší strojového kódu. Například kompilátor může dál optimalizovat kód výše má být zaokrouhleno některé zprostředkující součinů na jednoduchou přesnost.
 
 ```cpp
 float sqrtf(float)...
@@ -755,41 +754,41 @@ float length = sqrtf(tmp3);
 float sum = f1 + f2;
 ```
 
-Tento druh další zaokrouhlení může být důsledkem pomocí nižší přesnost s plovoucí desetinnou čárkou jednotky, například SSE2, k provedení některé z mezilehlých výpočty. Přesnost fp:fast zaokrouhlení je proto platformy závislých; kód, který se zkompiluje i pro jeden procesor nemusí nutně fungovat i pro jiné procesoru. Je ponechán na uživatele a zjistí, pokud rychlost výhody převáží nad potíže přesnost.
+Tento druh zaokrouhlování další může způsobit pomocí nižší přesnost s plovoucí desetinnou čárkou jednotka, jako je například SSE2, provádět některé zprostředkující výpočty. Přesnost, zaokrouhlení FP: Fast je proto platforma závislé; kód, který zkompiluje dobře pro jeden procesor nemusí nutně fungovat dobře pro jiný procesor. Je ponecháno na uživatele a zjistí, pokud rychlost výhody převáží nad žádné problémy s přesností.
 
-Pokud je fp:fast optimalizace pro konkrétní funkci obzvláště problematické, s plovoucí desetinnou čárkou režimu lze místně přepnout fp: přesné pomocí `float_control` – Direktiva pragma kompilátoru.
+Pokud FP: Fast optimalizace je zvláště problematický pro konkrétní funkci, s plovoucí desetinnou čárkou režimu můžete místně přešla na fp: precise pomocí `float_control` – Direktiva pragma kompilátoru.
 
 
-### <a name="algebraic-transformations-under-fpfast"></a>V části fp:fast algebraických transformace
+### <a name="algebraic-transformations-under-fpfast"></a>Algebraický transformace v části FP: Fast
 
-Režim fp:fast umožňuje kompilátoru k provedení určité, unsafe algebraických transformace na plovoucí bodu výrazy. Následující unsafe optimalizace může například být použit v rámci fp:fast.
+Režim FP: Fast umožňuje kompilátoru provést některé, nebezpečné algebraických transformace na plovoucí bodu výrazy. Například může být následující unsafe optimalizace pracující na základě FP: Fast.
 
 ||||
 |-|-|-|
 |Původní kód|Krok #1|Krok #2
 |`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = y – a – b;`<br/><br/>`c = x – z;`<br/><br/>`c = x * z;`<br/><br/>`c = x - z;`<br/><br/>`c = x + z;`<br/><br/>`c = z-x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x – 0;`<br/><br/>`c = x * 0;`<br/><br/>`c = x - 0;`<br/><br/>`c = x + 0;`<br/><br/>`c = 0 - x;`|`double a, b, c;`<br/>`double x, y, z;`<br/><br/>`y = (a + b);`<br/>`z = 0;`<br/><br/>`c = x;`<br/><br/>`c = 0;`<br/><br/>`c = x;`<br/><br/>`c = x;`<br/><br/>`c = -x;`|
 
-V kroku 1, který dodržuje kompilátor `z = y – a – b` se vždy rovná nule. I když je technicky neplatný pozorování, je povoleno pod fp:fast. Kompilátor potom rozšíří konstantní hodnotu nula pro všechny následné použití proměnné z. V kroku 2, kompilátor další optimalizuje tím, který sledování `x - 0 == x`, `x * 0 == 0`atd. Znovu i když tyto připomínky nejsou nezbytně platné, je povoleno, fp:fast. Optimalizovaný kód je mnohem rychlejší, ale také může být výrazně méně přesný nebo i není správný.
+V kroku 1, který dodržuje kompilátor `z = y – a – b` se vždy rovná nule. I když je to technicky neplatný pozorování, připouští FP: Fast. Kompilátor poté rozšíří konstantní hodnotu nula každé následné využívání proměnné z. V kroku 2, kompilátor dále optimalizuje pozorováním, který `x - 0 == x`, `x * 0 == 0`atd. Znovu i když tyto poznámky nejsou striktně platný, jsou povolené v rámci FP: Fast. Optimalizovaný kód je teď mnohem rychlejší, ale může také být výrazně méně přesný nebo ještě není správný.
 
-Některé z těchto pravidel algebraických (unsafe) může být použit podle okně Optimalizace když je povolený režim fp:fast:
+Optimalizátorem některý z těchto pravidel algebraických (unsafe) se použijí, když je povolený režim FP: Fast:
 
 |||
 |-|-|
 |Formulář|Popis|
 |`(a + b) + c = a + (b + c)`|Asociativní pravidlo pro přidání|
 |`(a * b) * c = a * (b * c)`|Asociativní pravidlo pro násobení|
-|`a * (b + c) = a * b + b * c`|Distribuce násobení přes přidání|
-|`(a + b)(a - b) = a * a - b * b`|Algebraických řešení|
+|`a * (b + c) = a * b + b * c`|Distribuce násobení přes sčítání|
+|`(a + b)(a - b) = a * a - b * b`|Které budou zohledňovat algebraických|
 |`a / b = a * (1 / b)`|Dělení multiplicative inverzní|
 |`a * 1.0 = a, a / 1.0 = a`|Multiplikativní identity|
-|`a ± 0.0 = a, 0.0 - a = -a`|Doplňkové identity|
+|`a ± 0.0 = a, 0.0 - a = -a`|Additive identity|
 |`a / a = 1.0, a - a = 0.0`|Zrušení|
 
-Pokud je obzvláště problematické pro určité funkce optimalizace fp:fast, s plovoucí desetinnou čárkou režimu lze místně přepnout fp: přesné pomocí `float_control` – Direktiva pragma kompilátoru.
+Pokud FP: Fast optimalizace je zvláště problematický pro určitou funkci, s plovoucí desetinnou čárkou režimu můžete místně přešla na fp: precise pomocí `float_control` – Direktiva pragma kompilátoru.
 
-### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Pořadí vyhodnocení výrazu s plovoucí desetinnou čárkou v části fp:fast
+### <a name="order-of-floating-point-expression-evaluation-under-fpfast"></a>Pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou v rámci FP: Fast
 
-Na rozdíl od fp: přesné, umožňuje fp:fast kompilátoru ke změně pořadí s plovoucí desetinnou čárkou operace, aby bylo dosaženo rychlejší kódu. Proto nemusí některé optimalizace pod fp:fast zachovat zamýšlené order výrazů. Zvažte následující funkce, která vypočítá tečkou součin dvou n dimenzí vektory.
+Na rozdíl od fp: precise, FP: Fast umožňuje kompilátoru změnit pořadí operací s plovoucí desetinnou čárkou tak, aby vytvářet kód rychleji. Díky tomu se nemusí některé optimalizace za FP: Fast zachovat zamýšleném pořadí výrazy. Zvažte například následující funkci, která vypočítá součin dvou vektorů n rozměrný.
 
 ```cpp
 float dotProduct( float x[], float y[],
@@ -802,7 +801,7 @@ float dotProduct( float x[], float y[],
 }
 ```
 
-V části fp:fast, mohou provádět Optimalizátor skalární snížení `dotProduct` funkce efektivně transformace funkce následujícím způsobem:
+V části FP: Fast, optimalizátor může provádět skalární snížení `dotProduct` pracovat efektivně transformace funkce takto:
 
 ```cpp
 float dotProduct( float x[], float y[],int n )
@@ -828,36 +827,36 @@ float dotProduct( float x[], float y[],int n )
 }
 ```
 
-Ve verzi optimalizované funkce jsou čtyři samostatný produkt panelu provést současně a pak přidá společně. Tato optimalizace můžete urychlit výpočet z `dotProduct` pomocí méně než mohou být faktor čtyři v závislosti na cílový procesor, ale konečný výsledek tak nepřesné, vykreslení nepoužitelné. Pokud tyto optimalizace jsou obzvláště problematické jedné funkce nebo překlad jednotky, s plovoucí desetinnou čárkou režimu lze místně přepnout fp: přesné pomocí `float_control` – Direktiva pragma kompilátoru.
+V optimalizovanou verzi funkce jsou čtyři samostatný produkt panelu provést současně a pak navzájem sečteny. Tato optimalizace můžete urychlit výpočet `dotProduct` až může být proto nepřesné jde o vykreslení zbytečné faktor čtyři v závislosti na cílový procesor, ale konečný výsledek. Pokud tyto optimalizace jsou obzvláště problematické pro jednu funkci nebo jednotce překladu, se místně přepnout režim s plovoucí desetinnou čárkou, do fp: precise pomocí `float_control` – Direktiva pragma kompilátoru.
 
-## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Fp: striktní režim pro sémantiku s plovoucí desetinnou čárkou
+## <a name="the-fpstrict-mode-for-floating-point-semantics"></a>Fp: strict režim pro sémantiku plovoucí desetinné čárky
 
-Když fp: striktní režim zapnutý, kompilátor dodržuje stejné pravidla této fp: přesné používá při optimalizaci operace s plovoucí desetinnou čárkou. Tento režim taky umožňuje sémantiku výjimek plovoucí desetinné čárky a citlivost na FPU prostředí a zakáže určité optimalizace například staženiny. Je nejpřísnějším provozní režim.
+Když fp: striktním režimu je povolené, kompilátor používá stejné pravidla tohoto fp: precise používá při optimalizaci operací s plovoucí desetinnou čárkou. Tento režim také povolí sémantiku výjimky s plovoucí desetinnou čárkou a citlivost na FPU prostředí a zakáže některé optimalizace, jako je například staženiny. Je nejpřísnější provozní režim.
 
-Fp: striktní režim s plovoucí desetinnou čárkou je povolit pomocí [/fp: striktní](fp-specify-floating-point-behavior.md) přepínač příkazového řádku kompilátoru následujícím způsobem:
+Fp: přísný režim s plovoucí desetinnou čárkou se aktivuje pomocí [/FP: strict](fp-specify-floating-point-behavior.md) přepínač příkazového řádku kompilátoru následujícím způsobem:
 
-> cl /fp: striktní source.cpp
+> cl/FP: strict source.cpp
 
-Tento příklad dává pokyn kompilátoru používat fp: striktní sémantiku při generování kódu pro soubor source.cpp. Fp: striktní modelu lze také vyvolat na jednotlivých pomocí funkcí pomocí `float_control` – Direktiva pragma kompilátoru.
+V tomto příkladu dává pokyn kompilátoru, aby použil fp: strict sémantiku při generování kódu pro soubor source.cpp. Fp: strict modelu může být vyvoláno také na jednotlivých podle funkcí pomocí `float_control` – Direktiva pragma kompilátoru.
 
-Další informace najdete v tématu [float_control – Direktiva pragma](#the-float-control-pragma).
+Další informace najdete v části [float_control – Direktiva pragma](#the-float-control-pragma).
 
-V části fp: striktní režim kompilátor nikdy provede všechny optimalizace, které perturb přesnost výpočty s plovoucí desetinnou čárkou. Kompilátor vždy zaokrouhlí správně v přiřazení, přiřadí typ ukazatel a volání funkce a zprostředkující zaokrouhlení konzistentně proběhne na stejné přesnost jako FPU Registry. Ve výchozím nastavení jsou povolené sémantiku výjimek plovoucí desetinné čárky a FPU prostředí velkých a malých písmen. Některé optimalizace, jako je například staženiny, jsou zakázané, protože kompilátor nemůže zaručit správnost v každém případě.
+V části fp: striktním režimu, kompilátor nikdy provádí žádné optimalizace, které perturb přesnost výpočtů s plovoucí desetinnou čárkou. Kompilátor bude správně zaokrouhlovat vždy v přiřazení, zaokrouhlovat a volání funkcí a zprostředkujících zaokrouhlení konzistentně proběhne na stejnou přesnost jako FPU Registry. Ve výchozím nastavení jsou povolené sémantiku výjimky s plovoucí desetinnou čárkou a FPU prostředí citlivosti. Některé optimalizace, jako je například staženiny, jsou zakázané, protože kompilátor nemůže zaručit správnosti ve všech případech.
 
-|FP: striktní sémantiku|Vysvětlení|
+|FP: strict sémantiku|Vysvětlení|
 |-|-|
-|Zaokrouhlení sémantiku|Explicitní zaokrouhlení v přiřazení, přiřadí typ ukazatel a volání funkce<br/>Zprostředkující výrazy se vyhodnotí na přesnost registrace.<br/>Stejné jako fp: přesné|
-|Algebraických transformace|Stoprocentní asociativní, jiný obchod s plovoucí desetinnou čárkou algebra, pokud transformace záruku, že vždy získáte stejné výsledky.<br/>Stejné jako fp: přesné|
+|Zaokrouhlení sémantiku|Zaokrouhlovat explicitní zaokrouhlení na přiřazení a volání funkce<br/>Přechodných výrazů se dá vyhodnotit za registr přesnosti.<br/>Stejné jako fp: precise|
+|Algebraický transformace|Striktní dodržování asociativní, – a distributivních algebraický s plovoucí desetinnou čárkou, pokud transformace je zaručeno, že vždy vytvářejí stejné výsledky.<br/>Stejné jako fp: precise|
 |Staženiny|Vždy zakázáno|
-|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor nezmění pořadí vyhodnocení výrazů s plovoucí desetinnou čárkou|
-|FPU prostředí přístup|Vždy povolena.|
-|Sémantika výjimek plovoucí desetinné čárky|Ve výchozím nastavení povoleno.|
+|Pořadí vyhodnocení s plovoucí desetinnou čárkou|Kompilátor nebude změnit pořadí vyhodnocování výrazů s plovoucí desetinnou čárkou|
+|Přístup k prostředí FPU|Vždy povolena.|
+|Sémantiku výjimky s plovoucí desetinnou čárkou|Ve výchozím nastavení povoleno.|
 
-### <a name="floating-point-exception-semantics-under-fpstrict"></a>Sémantika výjimek plovoucí desetinné čárky pod fp: striktní
+### <a name="floating-point-exception-semantics-under-fpstrict"></a>Sémantiku výjimky s plovoucí desetinnou čárkou v rámci fp: strict
 
-Ve výchozím nastavení, jsou povolené výjimek plovoucí desetinné čárky sémantiku pod fp: striktní modelu. Pokud chcete zakázat tyto sémantiku, použijte buď **/fp: kromě-** přepínač nebo zavést `float_control(except, off)` – Direktiva pragma.
+Ve výchozím nastavení, sémantiku výjimky s plovoucí desetinnou čárkou jsou povoleny v rámci fp: strict modelu. Zakázat tyto sémantiku, použijte buď **/FP: except –** přepnout nebo zavést `float_control(except, off)` – Direktiva pragma.
 
-Další informace najdete v části [povolení výjimek plovoucí desetinné čárky sémantiku](#enabling-floating-point-exception-semantics) a [float_control – direktiva Pragma](#the-float-control-pragma).
+Další informace najdete v částech [povoluje sémantiku výjimky s plovoucí desetinnou čárkou](#enabling-floating-point-exception-semantics) a [float_control – direktiva Pragma](#the-float-control-pragma).
 
 ## <a name="the-fenvaccess-pragma"></a>Fenv_access – Direktiva pragma
 
@@ -867,9 +866,9 @@ Použití:
 #pragma fenv_access( [ on  | off ] )
 ```
 
-[Fenv_access –](../../preprocessor/fenv-access.md) – Direktiva pragma umožňuje kompilátor, aby byl určité optimalizace, které může podkopat FPU příznak testy a FPU režim změny. Pokud stav `fenv_access` je zakázaná, můžete předpokládat kompilátor režimů FPU výchozí jsou platná a zda nejsou testovány FPU příznaky. Ve výchozím nastavení, prostředí přístup je zakázán pro fp: přesné režimu, i když může být explicitně povoleno, pomocí této – Direktiva pragma. V části fp: striktní, `fenv_access` je vždy povolena a nedá se zakázat. V části fp:fast `fenv_access` je vždy zakázané a nemůže být povolena.
+[Fenv_access](../../preprocessor/fenv-access.md) – Direktiva pragma umožňuje kompilátoru provést některé optimalizace, které může pokazit FPU příznak testy a změně režimu FPU. Když stav `fenv_access` je zakázaná, můžete předpokládat kompilátor režimy výchozí FPU jsou aktivní a nejsou testovány FPU příznaky. Ve výchozím nastavení, je zakázán přístup prostředí pro fp: precise režimu, i když může být explicitně povoleno, pomocí této direktivy pragma. V části fp: strict, `fenv_access` vždy zapnutá a nejde zakázat. V části FP: Fast `fenv_access` vždy zakázaná a není možné.
 
-Jak je popsáno v fp: přesné části některé programátory může změnit s plovoucí desetinnou čárkou pomocí směr zaokrouhlení `_controlfp` funkce. Třeba k výpočtu chyby horní a dolní hranice v aritmetické operace, některé programy proveďte výpočet dvakrát, nejprve při zaokrouhlení směrem záporné nekonečno, pak při zaokrouhlení směrem kladné nekonečno. Vzhledem k tomu, že FPU nabízí pohodlný způsob, jak řídit zaokrouhlení, programátorem rozhodnout změnit režim zaokrouhlení změnou FPU prostředí. Následující kód vypočítá, že chybu přesný hranice elementu s plovoucí desetinnou čárkou násobení změnou FPU prostředí.
+Jak je popsáno ve formátu: přesné části někteří programátoři mohou změnit s plovoucí desetinnou čárkou pomocí zaokrouhlení směrem `_controlfp` funkce. Můžete třeba k výpočtu chyby horní a dolní hranice na aritmetické operace, některé programy provést výpočet dvakrát, nejprve při zaokrouhlení směrem k záporné nekonečno, pak při zaokrouhlení směrem k kladné nekonečno. Vzhledem k tomu, FPU poskytuje pohodlný způsob, jak ovládací prvek zaokrouhlení, programátor můžete změnit úpravou prostředí FPU režimu zaokrouhlování. Následující kód vypočítá platí, že přesné znění chybové svázán s plovoucí desetinnou čárkou násobení změnou FPU prostředí.
 
 ```cpp
 double a, b, cLower, cUpper;
@@ -881,9 +880,9 @@ cUpper = a*b;
 _controlfp( _RC_NEAR, _MCW_RC );    // restore rounding mode
 ```
 
-Pokud je zakázáno, `fenv_access` – Direktiva pragma umožňuje kompilátoru předpokládat, že prostředí FPU výchozí; proto je bezplatná ignorovat volání Optimalizátor `_controlfp` a snížit výše přiřazení `cUpper = cLower = a*b`. Když je povolené, ale `fenv_access` brání takové optimalizace.
+Pokud je zakázán, `fenv_access` – Direktiva pragma umožňuje kompilátoru předpokládat, že výchozí prostředí FPU; proto je zdarma pro ignorování volání Optimalizátor `_controlfp` a snížit výše přiřazení `cUpper = cLower = a*b`. Když je povoleno, ale `fenv_access` brání tyto optimalizace.
 
-Programy může také zkontrolovat stavového slova FPU ke zjištění určitým chybám s plovoucí desetinnou čárkou. Následující kód například vyhledá dělení nulou a nepřesný podmínky
+Programy mohou také zkontrolujte stavové slovo FPU ke zjištění určité chyby s plovoucí desetinnou čárkou. Následující kód například vyhledá dělení nulou a nepřesné podmínky
 
 ```cpp
 double a, b, c, r;
@@ -900,7 +899,7 @@ if (_statusfp() & _SW_INEXACT)
 etc...
 ```
 
-Když `fenv_access` je zakázaná, může kompilátor změnit pořadí provádění výrazů s plovoucí desetinnou čárkou, proto pravděpodobně subverting FPU stav kontroly. Povolení `fenv_access` brání takové optimalizace.
+Když `fenv_access` je zakázaná, kompilátor může změnit pořadí provádění výrazů s plovoucí desetinnou čárkou, proto pravděpodobně funkci kontroly stavu FPU. Povolení `fenv_access` brání tyto optimalizace.
 
 ## <a name="the-fpcontract-pragma"></a>Fp_contract – Direktiva pragma
 
@@ -910,7 +909,7 @@ Použití:
 #pragma fp_contract( [ on | off ] )
 ```
 
-Jak je popsáno v fp: přesné části zmenšení je základní architektury funkce pro mnoho moderní jednotky s plovoucí desetinnou čárkou. Staženiny umožňují provádět násobení, následuje přidání jako najednou k žádné chybě zprostředkující zaokrouhlení. Tyto pokyny jednoho jsou rychleji než provádění samostatné násobení a přidat pokyny a jsou přesnější, protože neexistuje žádný zprostředkující zaokrouhlení produktu. Smluvní operace můžete vypočítá hodnotu `(a*b+c)` jako by byly obě operace vypočtenou hodnotu nekonečné přesnost a zaokrouhlí nejbližší číslo s plovoucí desetinnou čárkou. Tato optimalizace můžete výrazně urychlit funkce obsahující několik prokládaný násobkem a přidání operací. Zvažte například následující algoritmus, který vypočítá tečkou součin dvou n dimenzí vektory.
+Jak je popsáno v fp: precise části rozpor mezi je základní architektury funkce pro mnoho moderní jednotek s plovoucí desetinnou čárkou. Staženiny umožňují provádět násobení, za nímž následuje doplněk jako jednu operaci s žádná chyba zprostředkující zaokrouhlení. Tyto instrukce s jednoduchou jsou rychlejší než provádění samostatné násobit a přidat pokyny a jsou přesnější, protože neexistuje žádný zprostředkující zaokrouhlení tohoto produktu. Smluvní operace můžete vypočítá hodnotu `(a*b+c)` jakoby byly operace vypočítané s nekonečnou přesností a zaokrouhlí nejbližší číslo s plovoucí desetinnou čárkou. Tato optimalizace můžete výrazně zrychlit funkce obsahující několik prokládané násobit a přidat operace. Představte si třeba následující algoritmus, který vypočítá součin dvou vektorů n rozměrný.
 
 ```cpp
 float dotProduct( float x[], float y[], int n )
@@ -922,9 +921,9 @@ float dotProduct( float x[], float y[], int n )
 }
 ```
 
-Tento výpočet lze provést řadu násobení přidat pokyny formuláře `p = p + x[i]*y[i]`.
+Tento výpočet lze provést řadu vynásobit přidat pokyny ve formátu `p = p + x[i]*y[i]`.
 
-[Fp_contract –](../../preprocessor/fp-contract.md) – Direktiva pragma Určuje, zda může být sjednané výrazy s plovoucí desetinnou čárkou. Ve výchozím nastavení fp: přesné režim umožňuje staženiny vzhledem k tomu, že zlepšit přesnost a rychlost. Pro režim fp:fast jsou povoleny vždy staženiny. Nicméně, protože staženiny můžete podkopat explicitní zjišťování chybové stavy `fp_contract` – Direktiva pragma není k dispozici vždy za fp: striktní režim. Příklady výrazů, které mohou být uzavřeny při `fp_contract` – Direktiva pragma zapnutá:
+[Fp_contract](../../preprocessor/fp-contract.md) – Direktiva pragma Určuje, zda může být zakázku výrazů s plovoucí desetinnou čárkou. Ve výchozím nastavení fp: precise režim umožňuje staženiny protože pomáhají zvýšit přesnost a rychlost. Pro režim FP: Fast jsou vždy povoleny staženiny. Nicméně, protože staženiny může pokazit explicitní zjišťování chybové stavy, `fp_contract` – Direktiva pragma je vždy zakázaná v části fp: striktním režimu. Příklady výrazů, které mohou být při zakázku `fp_contract` – Direktiva pragma je povoleno:
 
 ```cpp
 float a, b, c, d, e, t;
@@ -941,7 +940,7 @@ d = t + c;           // won't be contracted because of rounding of a*b
 
 ## <a name="the-floatcontrol-pragma"></a>Float_control – Direktiva pragma
 
-**/Fp: přesné**, **/fp:fast**, **/fp: striktní** a **/fp: kromě** přepínače řízení s plovoucí desetinnou čárkou sémantiku na soubor po souboru základ. [Float_control –](../../preprocessor/float-control.md) – Direktiva pragma poskytuje takové řízení na základě pomocí funkcí.
+**/FP: precise**, **Fast**, **/FP: strict** a **/FP: s výjimkou** přepínače řídit sémantiku plovoucí desetinné čárky na souboru po souboru základ. [Float_control](../../preprocessor/float-control.md) – Direktiva pragma poskytuje takový ovládací prvek na základě funkce funkce.
 
 Použití:
 
@@ -952,24 +951,24 @@ Použití:
 #pragma float_control( except, on | off [, push] )
 ```
 
-Pragmas `float_control(push)` a `float_control(pop)` v uvedeném pořadí vložit a aktuální stav režimu s plovoucí desetinnou čárkou a možnost výjimka do zásobníku. Všimněte si, že stav `fenv_access` a `fp_contract` – Direktiva pragma neovlivní `pragma float_control(push/pop)`.
+Pragmas `float_control(push)` a `float_control(pop)` v uvedeném pořadí se službami push a vyvolat přes pop aktuální stav s plovoucí desetinnou čárkou režimu a možnost výjimky do zásobníku. Všimněte si, že stav `fenv_access` a `fp_contract` nejsou ovlivněny – Direktiva pragma `pragma float_control(push/pop)`.
 
-Volání – Direktiva pragma `float_control(precise, on)` povolí a `float_control(precise, off)` vypne sémantiku přesné režimu. Podobně Direktiva pragma `float_control(except, on)` povolí a `float_control(except, off)` vypne sémantiku výjimka. Výjimka sémantiku lze povolit pouze pokud sémantiku přesné jsou také povolené. Když nepovinný `push` argument je k dispozici, stavy `float_control` možnosti odesílají před změna sémantiku.
+Volání direktivy pragma `float_control(precise, on)` vám umožní a `float_control(precise, off)` dojde k zakázání sémantiku přesné režimu. Podobně, direktivy pragma `float_control(except, on)` vám umožní a `float_control(except, off)` dojde k zakázání sémantiku výjimky. Sémantiku výjimky. možné povolit jenom v případě přesné sémantiku jsou také povoleny. Pokud volitelný `push` argument je k dispozici, stavy `float_control` možnosti jsou vloženy před změnou sémantiku.
 
-### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Nastavení s plovoucí desetinnou čárkou sémantického režimu na základě podle funkcí
+### <a name="setting-the-floating-point-semantic-mode-on-a-function-by-function-basis"></a>Nastavení s plovoucí desetinnou čárkou sémantické režimu na základě podle funkcí
 
-Přepínače příkazového řádku jsou ve skutečnosti sdružená vlastnost nastavující hodnoty čtyř různých s plovoucí desetinnou čárkou direktivy. Chcete-li explicitně zvolte konkrétní s plovoucí desetinnou čárkou sémantického režim na základě funkce funkce, vyberte všechny čtyři direktivy s plovoucí desetinnou čárkou možnost, jak je popsáno v následující tabulce:
+Přepínače příkazového řádku jsou ve skutečnosti sdružená vlastnost nastavující pragmas s plovoucí desetinnou čárkou čtyři různé hodnoty. Explicitně vybrat konkrétní s plovoucí desetinnou čárkou sémantické režimu na základě funkce funkce, vyberte jednotlivé čtyři pragma s plovoucí desetinnou čárkou možnost, jak je popsáno v následující tabulce:
 
 ||||||
 |-|-|-|-|-|
 ||float_control(Precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/FP: striktní|on|on|Vypnout|on|
-|/FP: striktní /fp: kromě-|on|Vypnout|Vypnout|on|
-|/FP: přesné|on|Vypnout|on|Vypnout|
-|/FP: přesné /fp: kromě|on|on|on|Vypnout|
-|/FP:Fast|Vypnout|Vypnout|on|Vypnout|
+|/ FP: strict|on|on|Vypnout|on|
+|/ FP: strict/FP: except-|on|Vypnout|Vypnout|on|
+|/ FP: precise|on|Vypnout|on|Vypnout|
+|/ FP: precise/FP: except|on|on|on|Vypnout|
+|Fast|Vypnout|Vypnout|on|Vypnout|
 
-Například následující explicitně umožňuje fp:fast sémantiku.
+Například následující explicitně povoluje sémantiku FP: Fast.
 
 ```cpp
 #pragma float_control( except, off )   // disable exception semantics
@@ -979,11 +978,11 @@ Například následující explicitně umožňuje fp:fast sémantiku.
 ```
 
 > [!Note]
-> Výjimka sémantiku musí být vypnutý předtím, než vypnete "přesné" sémantiku.
+> Před vypnutím "přesné" sémantiku musí být vypnutý sémantiku výjimky.
 
-## <a name="enabling-floating-point-exception-semantics"></a>Povolení sémantiku výjimek plovoucí desetinné čárky
+## <a name="enabling-floating-point-exception-semantics"></a>Povolení sémantiku výjimky s plovoucí desetinnou čárkou
 
-Určité výjimečných s plovoucí desetinnou čárkou podmínky, jako je například dělení nulou, může způsobit FPU signál výjimky hardwaru. Ve výchozím nastavení jsou zakázány s plovoucí desetinnou čárkou výjimky. S plovoucí desetinnou čárkou výjimky jsou povolené změnou FPU kontrolní slovo s `_controlfp` funkce. Následující kód například umožňuje výjimek plovoucí desetinné čárky dělení nulou:
+Některé výjimek s plovoucí desetinnou čárkou podmínkách, například při dělení nulou, může způsobit FPU signál hardwarové výjimky. Výjimky s plovoucí desetinnou čárkou jsou ve výchozím nastavení zakázané. Změnou FPU řídicí slovo s jsou povolené výjimky s plovoucí desetinnou čárkou `_controlfp` funkce. Například následující kód umožní výjimky s plovoucí desetinnou čárkou dělení nulou:
 
 ```cpp
 _clearfp(); // always call _clearfp before
@@ -991,13 +990,13 @@ _clearfp(); // always call _clearfp before
 _controlfp( _EM_ZERODIVIDE, _MCW_EM );
 ```
 
-Při dělení nulou výjimka je povoleno, všechny operace dělení s jmenovatel rovná nule, způsobí výjimku FPU signál.
+Když je povolená výjimka dělení nulou, všechny operace dělení s jmenovatel rovnou na nulu, způsobí výjimku FPU má být signalizován.
 
-Chcete-li obnovit FPU kontrolní slovo výchozí režim, volejte `_controlfp(_CW_DEFAULT, ~0)`.
+Chcete-li obnovit řídicí slovo FPU výchozí režim, zavolejte `_controlfp(_CW_DEFAULT, ~0)`.
 
-Povolení výjimek plovoucí desetinné čárky sémantiku s **/fp: kromě** příznak není totéž jako povolení s plovoucí desetinnou čárkou výjimky. Pokud sémantiku výjimek plovoucí desetinné čárky jsou povolené, kompilátor musí odpovídat možnost, všechny operace s plovoucí desetinnou čárkou může vyvolat výjimku. Vzhledem k tomu, že FPU je jednotka samostatné procesoru, pokyny provádění na FPU lze provádět souběžně pokyny na jiné jednotky.
+Povolení sémantiku výjimky s plovoucí desetinnou čárkou s **/FP: except** příznak není totéž jako povolení výjimky s plovoucí desetinnou čárkou. Pokud se povolí sémantiku výjimky s plovoucí desetinnou čárkou, kompilátor musí odpovídat možnost, že všechny operace s plovoucí desetinnou čárkou může vyvolat výjimku. Vzhledem k tomu, FPU je samostatný procesor, pokyny k provádění na FPU lze provést současně pokyny na jiné jednotky.
 
-Pokud je povoleno výjimek plovoucí desetinné čárky, bude FPU zastavení provádění problematické pokyn a pak signál podmínku výjimečných nastavením FPU stavového slova. Pokud procesor dosáhne další s plovoucí desetinnou čárkou pokyn, nejprve zkontroluje pro čekající FPU výjimky. Pokud existuje čekající výjimky, procesor ho traps voláním obslužnou rutinu výjimky, které poskytuje operační systém. To znamená, že při operaci s plovoucí desetinnou čárkou, zaznamená se výjimečně vysoké počty podmínka, odpovídající výjimce nebudou zjištěna, dokud provedením další operace s plovoucí desetinnou čárkou. Například následující kód traps dělení nulou výjimka:
+Obrysů výjimek plovoucí desetinné čárky FPU se zastavit provádění problematický instrukce a pak signálu výjimečné podmínce nastavením FPU stavového slova. Jakmile procesor dosáhne další pokyn s plovoucí desetinnou čárkou, nejprve zkontroluje pro čekající FPU výjimky. Pokud existuje čekající výjimky, procesor ho traps voláním obslužnou rutinu výjimky, které jsou k dispozici v operačním systému. To znamená, že při operaci s plovoucí desetinnou čárkou, zaznamená výjimečné podmínce, odpovídající výjimky nebudou zjištěna, dokud provedením další operace s plovoucí desetinnou čárkou. Například následující kód traps dělení nulou výjimka:
 
 ```cpp
 double a, b, c;
@@ -1016,14 +1015,14 @@ __except( EXCEPTION_EXECUTE_HANDLER )
 // . . .
 ```
 
-Pokud dojde k podmínku dělení nulou ve výrazu b, c = FPU nebude depeše/vyvolat výjimku až další operace s plovoucí desetinnou čárkou ve výrazu 2.0 * b. Výsledkem je následující výstup:
+Pokud dojde k podmínku dělení nulou ve výrazu = b a c, FPU nebude depeše/vyvolat výjimku až do další operace s plovoucí desetinnou čárkou ve výrazu 2.0 * b. Výsledkem je následující výstup:
 
 ```Output
 This line shouldn't be reached when c==0.0
 SEH Exception Detected
 ```
 
-Printf odpovídající první řádek výstupu by neměl bylo dosaženo; bylo dosaženo, protože s plovoucí desetinnou čárkou výjimka způsobené výraz b, c nebyla vyvolána, dokud provádění dosaženo 2.0 * b. Pro vyvolání výjimky jenom po provedení b, c, kompilátor musí zavádět instrukce "Čekání":
+Printf odpovídající na první řádek výstupu by neměl bylo dosaženo. bylo dosaženo, protože nebyla vyvolána s plovoucí desetinnou čárkou výjimka způsobené výraz b a c, až do dosažení spuštění 2.0 * b. Aby se vyvolala výjimka právě po provedení b a c, musí kompilátor zavést instrukce "Čekání":
 
 ```cpp
 // . . .
@@ -1037,15 +1036,15 @@ Printf odpovídající první řádek výstupu by neměl bylo dosaženo; bylo do
 // . . .
 ```
 
-Tento pokyn "Počkejte" vynutí procesor pro synchronizaci se stavem FPU a zpracování všech výjimek, čekající na vyřízení. Kompilátor vygeneruje jenom tyto "Počkejte" pokyny pokud sémantiku s plovoucí desetinnou čárkou jsou povolené. Když tyto sémantiku jsou zakázané, protože jsou ve výchozím nastavení, programy setkat synchronicity chyby podobné výše, při použití s plovoucí desetinnou čárkou výjimky.
+Tento pokyn "Počkejte" vynutí procesoru k synchronizaci se stavem FPU a zpracovávat všechny výjimky, čekající na vyřízení. Kompilátor vygeneruje jenom ty "Počkejte" pokyny obrysů sémantiku plovoucí desetinné čárky. Když tyto sémantiku jsou zakázaná, protože jsou ve výchozím nastavení, programy setkat synchronicity chyby, podobně jako výše, při použití výjimek plovoucí desetinné čárky.
 
-Pokud sémantiku s plovoucí desetinnou čárkou jsou povolené, kompilátor pouze nezavedou "Čekání" pokyny, nebude také možné kompilátor nelegálního optimalizace s plovoucí desetinnou čárkou kódu případě možné výjimky. To zahrnuje všechny transformace, které se příkazu alter body, na kterých jsou výjimky vyvolány. Z důvodu tyto faktory mohou povolení s plovoucí desetinnou čárkou sémantiku výrazně snížit efektivitu generovaný kód počítače proto došlo ke snížení výkonu aplikace.
+Pokud se povolí sémantiku plovoucí desetinné čárky, kompilátor nebude uvozovat jenom "Čekání" pokyny, ji bude také zabránění kompilátoru neoprávněně optimalizace plovoucí desetinné čárky kód za přítomnosti výjimky. To zahrnuje všechny transformace, které mění body, na kterých jsou výjimky vyvolány. Z důvodu tyto faktory povoluje sémantiku plovoucí desetinné čárky může se výrazně snížil efektivitu generované strojového kódu, proto došlo ke snížení výkonu aplikace.
 
-Sémantika výjimek plovoucí desetinné čárky jsou povolené ve výchozím nastavení v části fp: striktní režim. Chcete-li povolit tyto sémantiku ve formátu: přesné režimu, přidat **/fp: kromě** přepínače kompilátoru příkazového řádku. Sémantika výjimek plovoucí desetinné čárky také lze povolit a zakázat v jednotlivých pomocí funkcí pomocí `float_control` – Direktiva pragma.
+Sémantiku výjimky s plovoucí desetinnou čárkou jsou povolené ve výchozím nastavení v části fp: strict režimu. Povolit tyto sémantiku ve formátu: precise režimu, přidejte **/FP: s výjimkou** přepínat do příkazového řádku kompilátoru. Sémantiku výjimky s plovoucí desetinnou čárkou také lze povolit a na jednotlivých podle funkcí pomocí zakázáno `float_control` direktivy pragma.
 
-### <a name="floating-point-exceptions-as-c-exceptions"></a>S plovoucí desetinnou čárkou výjimky jako výjimky jazyka C++
+### <a name="floating-point-exceptions-as-c-exceptions"></a>Výjimky s plovoucí desetinnou čárkou jako výjimek jazyka C++
 
-Jako s všechny výjimky hardwaru, s plovoucí desetinnou čárkou výjimky vnitřně nezpůsobí výjimku C++, ale místo toho aktivovat strukturovaného výjimek. Mapovat s plovoucí desetinnou čárkou strukturovaných výjimky výjimky jazyka C++, uživatelé můžou představovat vlastní překladač výjimka SEH. Nejprve zavést odpovídající každé výjimek plovoucí desetinné čárky C++ výjimka:
+Jako s všechny hardwarové výjimky výjimky s plovoucí desetinnou čárkou vnitřně nevyvolá výjimky jazyka C++, ale místo toho aktivovat strukturovaných výjimek. K mapování strukturované výjimky s plovoucí desetinnou čárkou na výjimky jazyka C++, můžete uživatelům zavést vlastní translator výjimky SEH. Nejprve zavést odpovídající jednotlivé výjimky s plovoucí desetinnou čárkou výjimky jazyka C++:
 
 ```cpp
 class float_exception : public std::exception {};
@@ -1059,7 +1058,7 @@ class fe_stack_check : public float_exception {};
 class fe_underflow : public float_exception {};
 ```
 
-Potom zavést překlad funkci, která bude zjišťovat s plovoucí desetinnou čárkou SEH výjimky a výjimku odpovídající výjimce C++. Chcete-li tuto funkci použít, nastavte překladač obslužná rutina strukturovaná výjimky pro aktuální vlákno proces s [_set_se_translator –](../../c-runtime-library/reference/set-se-translator.md) funkce z knihovny za běhu.
+Zaveďte funkce překladu, který zjistí s plovoucí desetinnou čárkou výjimku SEH a odpovídající výjimku C++. Chcete-li tuto funkci použít, nastavte translator obslužná rutina strukturované výjimky pro aktuální vlákno procesu s [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) funkce v knihovně modulu runtime.
 
 ```cpp
 void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
@@ -1075,7 +1074,7 @@ void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 _set_se_translator(se_fe_trans_func);
 ```
 
-Po inicializaci toto mapování s plovoucí desetinnou čárkou výjimky budou chovat, jako by byly výjimky jazyka C++. Příklad:
+Po inicializaci toto mapování výjimky s plovoucí desetinnou čárkou se bude chovat jako by byly výjimky jazyka C++. Příklad:
 
 ```cpp
 try
@@ -1095,8 +1094,8 @@ catch(float_exception)
 
 ## <a name="references"></a>Odkazy
 
-[Co každý počítač vědecký pracovník byste se měli seznámit s plovoucí desetinnou čárkou aritmetické](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) podle David Goldberg.
+[Co mezi odborníky přes každých počítač by měl vědět o aritmetické operace s plovoucí desetinnou čárkou](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf) podle Davida Goldberg.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace kódu](optimizing-your-code.md)<br/>

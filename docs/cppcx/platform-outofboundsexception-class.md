@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::OutOfBoundsException | Microsoft Docs
+title: Platform::outofboundsexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0eb412cad1ef7f971c6bc3ee9035a47889994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f7f45d76e69f3eaaf94bdb66a0da0e4d3b78069
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088300"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609066"
 ---
-# <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException – třída
-Vygeneruje se, když se operace pokusí o přístup k datům mimo platný rozsah.  
+# <a name="platformoutofboundsexception-class"></a>Platform::outofboundsexception – třída
+Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   

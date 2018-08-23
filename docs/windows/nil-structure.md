@@ -15,34 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b824baae8044912e36dfe56054f4db1af7225fdb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 628443cf967e70b5f05ecebc0975abbcd1d44650
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015644"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596169"
 ---
 # <a name="nil-structure"></a>Nil – struktura
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-struct Nil;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Slouží k označení parametrem šablony nespecifikovaná, volitelné.  
-  
- **Nil** je prázdná struktura.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `Nil`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+struct Nil;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Slouží k označení parametrem šablony nespecifikovaná, volitelné.
+
+**Nil** je prázdná struktura.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`Nil`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

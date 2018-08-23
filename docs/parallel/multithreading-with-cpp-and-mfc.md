@@ -1,5 +1,5 @@
 ---
-title: Multithreading s použitím C++ a MFC | Microsoft Docs
+title: Multithreading s C++ a knihovnou MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,43 +23,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5fd5a60908d52bf0ccdf0c0e76e076cb244e3e31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688567"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596094"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading s použitím jazyka C++ a prostředí MFC
-Knihovna Microsoft Foundation Class (MFC) poskytuje podporu pro vícevláknové aplikace. Toto téma popisuje procesy a vláken a MFC přístup k více vláken.  
+Knihovny Microsoft Foundation Class (MFC) poskytuje podporu pro víceprocesové aplikace. Toto téma popisuje procesy a vlákna a přístup knihovny MFC k multithreadingu.  
   
- Proces je spuštěných instancí aplikace. Například když dvakrát kliknete na ikonu programu Poznámkový blok, můžete spustit proces, který spouští program Poznámkový blok.  
+Proces je vykonávající instance aplikace. Například když dvakrát kliknete na ikonu programu Poznámkový blok, spustí se proces, který spustí Poznámkový blok.  
   
- Vlákno je cesta provádění v rámci procesu. Když spustíte program Poznámkový blok, operační systém vytvoří proces a zahájí provádění primární vlákno tohoto procesu. Po ukončení této vlákna, takže nemá proces. Tato primární vlákno poskytl kód spuštění ve formátu adresy funkce operačního systému. Obvykle je to adresa **hlavní** nebo `WinMain` funkce, která je zadána.  
+Vlákno je cesta provádění v rámci procesu. Když spustíte program Poznámkový blok, operační systém vytvoří proces a začne vykonávat primární vlákno tohoto procesu. Když toto vlákno ukončeno, ukončí se i proces. Tato primární vlákno je dodáno operačnímu systému spouštěcím kódem ve tvaru adresy funkce. Obvykle je to adresa `main` nebo `WinMain` funkce, která je zadána.  
   
- Pokud chcete, můžete vytvořit další vlákna ve vaší aplikaci. Můžete k tomu zpracování úkolů údržby nebo pozadí, pokud nechcete, aby uživatel má počkat na jejich dokončení. Všechna vlákna v aplikacích MFC jsou reprezentované pomocí [CWinThread](../mfc/reference/cwinthread-class.md) objekty. Ve většině případů i nemáte nemusel vytvářet tyto objekty; Místo toho zavolejte pomocnou funkci [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), která vytvoří `CWinThread` objektu za vás.  
+Pokud chcete, můžete vytvořit další vlákna ve vaší aplikaci. Můžete chtít provádět zpracování úkolů údržby nebo na pozadí, když nechcete, aby uživatel musel čekat jejich dokončení. Všechna vlákna v aplikacích MFC jsou představovány [CWinThread](../mfc/reference/cwinthread-class.md) objekty. Ve většině případů můžete dokonce nemusíte explicitně vytvářet tyto objekty; Místo toho zavolejte pomocnou funkci [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), která vytvoří `CWinThread` objekt za vás.  
   
- Knihovna MFC rozlišuje dva typy vláken: vlákna uživatelského rozhraní a pracovních vláken. Vlákna uživatelského rozhraní běžně se používají ke zpracování uživatelského vstupu a reakce na události a zprávy generované uživatelem. Pracovní vlákna běžně se používají k dokončení úkolů, například při každém přepočítání, které nevyžadují vstup uživatele. Rozhraní API Win32 nerozlišuje mezi typy vláken; potřebuje pouze vědět vlákna počáteční adresa, takže můžete začít provést vlákno. Knihovna MFC zpracovává vlákna uživatelského rozhraní speciálně poskytnutím zprávy odeslané pro události v uživatelském rozhraní. `CWinApp` je příkladem objekt vlákna uživatelského rozhraní, protože je odvozen z `CWinThread` a zpracovává události a zprávy generované uživatelem.  
+Knihovna MFC rozlišuje dva typy vláken: vlákna uživatelského rozhraní a pracovních vláken. Vlákna uživatelského rozhraní se běžně používají ke zpracování vstupu uživatele a reagují na události a zprávy generované uživatelem. Pracovní vlákna se běžně používají k dokončení úlohy, jako je například přepočet, které nevyžadují, aby uživatelský vstup. Rozhraní API Win32 nerozlišuje mezi typy vláken; potřebuje pouze znát počáteční adresu vlákna a mohli začít ke spuštění vlákna. Knihovna MFC zpracovává vlákna uživatelského rozhraní speciálně poskytnutím zprávy odeslané pro události v uživatelském rozhraní. `CWinApp` je příkladem objektu vlákna uživatelského rozhraní, protože se odvozuje od `CWinThread` a zpracovává události a zprávy generované uživatelem.  
   
- Zvláštní pozornost má být poskytnut k situacích, kde více než jedno vlákno může vyžadovat přístup ke stejnému objektu. [Multithreading: Tipy pro programování](../parallel/multithreading-programming-tips.md) popisuje techniky, které můžete použít k vyřešení problému, které by mohly nastat v těchto situacích. [Multithreading: Jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md) popisuje způsob použití třídy, které jsou k dispozici pro synchronizaci přístup z více vláken pro jediný objekt.  
+Zvláštní pozornost by měla být věnována situacím, kdy více než jedno vlákno může vyžadovat přístup ke stejnému objektu. [Multithreading: Programovací tipy](../parallel/multithreading-programming-tips.md) popisuje techniky, které můžete použít k vyřešení problémů, které mohou nastat v těchto situacích. [Multithreading: Jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md) popisuje způsob použití třídy, které jsou k dispozici pro synchronizaci přístupu z více vláken na jeden objekt.  
   
- Psaní a ladění vícevláknové programování je ze své podstaty podniku složitý a složité, protože musíte zajistit, že současně objekty přístupné více než jedno vlákno. Více vláken témata není naučit se základy vícevláknové programování pouze to, jak používat MFC v programu s více vlákny. Vícevláknové knihovny MFC vzorků zahrnutých v jazyce Visual C++ ilustrují několik vícevláknové přidávání funkce a rozhraní API Win32 nejsou zahrnuta podle MFC; ale že jsou určeny pouze pro počáteční bod.  
+Psaní a ladění programování s je ve své podstatě složitým a záludným, protože musíte zajistit, že současně objekty přístupné více než jedno vlákno. Témata multithreadingu neučí základy vícevláknové programování, pouze jak použít knihovnu MFC ve vašem vícevláknovém programu. Vícevláknové knihovny MFC vzorků zahrnutých v jazyce Visual C++ ukazují několik vícevláknových funkcí přidání a rozhraní Win32 API, která nejsou zahrnuta knihovnou MFC; ale že jsou určeny pouze pro jako výchozí bod.  
   
- Další informace o tom, jak operační systém zpracovává vláken a procesů najdete v tématu [vláken a procesů](http://msdn.microsoft.com/library/windows/desktop/ms684841) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+Další informace o tom, jak operační systém zpracovává procesy a vlákna, naleznete v tématu [procesy a vlákna](http://msdn.microsoft.com/library/windows/desktop/ms684841) v sadě Windows SDK.  
   
- Další informace o MFC podpora více vláken najdete v následujících tématech:  
+Další informace o podpoře multithreadingu knihovnou MFC naleznete v následujících tématech:  
   
--   [Multithreading: Vytváření vláken uživatelského rozhraní](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Multithreading: Vytváření vláken uživatelského rozhraní](../parallel/multithreading-creating-user-interface-threads.md)  
   
--   [Multithreading: Vytváření pracovních vláken](../parallel/multithreading-creating-worker-threads.md)  
+- [Multithreading: Vytváření pracovních vláken](../parallel/multithreading-creating-worker-threads.md)  
   
--   [Multithreading: Jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
+- [Multithreading: Jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md)  
   
--   [Multithreading: Ukončení vláken](../parallel/multithreading-terminating-threads.md)  
+- [Multithreading: Ukončení vláken](../parallel/multithreading-terminating-threads.md)  
   
--   [Multithreading: Tipy pro programování](../parallel/multithreading-programming-tips.md)  
+- [Multithreading: Tipy pro programování](../parallel/multithreading-programming-tips.md)  
   
--   [Multithreading: Kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
+- [Multithreading: Kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+ 
+[Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

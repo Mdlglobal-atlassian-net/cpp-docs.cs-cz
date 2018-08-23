@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Kdy použít synchronizační třídy | Microsoft Docs'
+title: 'Multithreading: Kdy použít synchronizační třídy | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05922b826de81b5192b183e1c0afdfcda189f03
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688255"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606061"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading: Kdy použít synchronizační třídy
-Vícevláknové třídy dodávané s knihovnou MFC rozdělit do dvou kategorií: synchronizačními objekty ([CSyncObject](../mfc/reference/csyncobject-class.md), [prohlížení](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), a [CEvent](../mfc/reference/cevent-class.md)) a synchronizace přístup k objektům ([CMultiLock](../mfc/reference/cmultilock-class.md) a [CSingleLock](../mfc/reference/csinglelock-class.md)).  
+Třídy s více vlákny s knihovnou MFC k dispozici spadají do dvou kategorií: Synchronizace objektů ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), a [CEvent](../mfc/reference/cevent-class.md)) a přístup k objektům synchronizace ([CMultiLock](../mfc/reference/cmultilock-class.md) a [CSingleLock](../mfc/reference/csinglelock-class.md)).  
   
- Třídy synchronizace se používají k zajištění integrity prostředku je třeba kontrolovat přístup k prostředku. Synchronizační přístupové třídy se používají k získání přístupu k těmto řízené prostředkům. Toto téma popisuje, kdy používat jednotlivé třídy.  
+Třídy synchronizace se používají při přístupu k prostředku musí řídit k zajištění integrity prostředku. Synchronizační přístupové třídy se používají k získání přístupu k těmto prostředkům řízené. Toto téma popisuje, kdy používat jednotlivé třídy.  
   
- Chcete-li zjistit, které třídy byste měli používat, požádejte následující řadu otázek:  
+Pokud chcete zjistit, jakou synchronizační třídu byste měli použít, požádejte následující několik otázek:  
   
-1.  Čekání na určitou akci předtím, než ho má přístup k prostředku má aplikace (například data musí být přijata z komunikační port předtím, než je možné zapsat do souboru)?  
+1. Čekání na něco, co můžete provést před vytvořením měl přístup k prostředku nemá aplikace (například data musí být přijata z komunikačních portů předtím, než může být zapsán do souboru)?  
   
      Pokud ano, použít `CEvent`.  
   
-2.  Můžete více než jedno vlákno ve stejný přístup k aplikaci tento prostředek najednou (například vaše aplikace umožňuje až pět windows se zobrazeními dokumentem)?  
+2. Můžete více než jedno vlákno v rámci stejné aplikaci přístup k tomuto prostředku najednou (například vaše aplikace umožňuje až pět oken s názory na stejném dokumentu)?  
   
      Pokud ano, použít `CSemaphore`.  
   
-3.  Můžete použít tento prostředek více než jednu aplikaci (například prostředku je v knihovně DLL)?  
+3. Můžete použít více než jednu aplikaci tohoto prostředku (například prostředek je v knihovně DLL)?  
   
      Pokud ano, použít `CMutex`.  
   
      Pokud ne, použijte `CCriticalSection`.  
   
- **CSyncObject** se nikdy nepoužívá přímo. Je základní třídou pro jiné třídy čtyři synchronizace.  
+`CSyncObject` nikdy slouží přímo. Je základní třída pro jiné třídy čtyři synchronizace.  
   
-## <a name="example-1-using-three-synchronization-classes"></a>Příklad 1: Použití tří tříd synchronizace  
- Jako příklad trvat aplikaci, která udržuje seznam propojené účty. Tato aplikace umožňuje až tři účtů v samostatném systému windows, ale lze aktualizovat pouze jeden konkrétní kdykoli. Při aktualizaci účtu je aktualizovaná data odešlou přes síť dat archivu.  
+## <a name="example-1-using-three-synchronization-classes"></a>Příklad 1: Použití tří synchronizační třídy  
+ 
+Jako příklad trvat, než aplikace, která udržuje odkazovaného seznamu účtů. Tato aplikace umožňuje až tři účty mají být prověřeny v samostatném systému windows, ale pouze jeden je aktualizovat v určitém čase. Při aktualizaci účtu aktualizovaná data se odesílají přes síť do archivní data.  
   
- Tato ukázková aplikace používá všechny tři typy třídy synchronizace. Protože umožňuje v jednom okamžiku až tři účty, používá `CSemaphore` omezit přístup k tři objekty zobrazení. Při pokusu o zobrazení účet čtvrtý dojde, aplikace buď čeká, dokud jeden z prvních tří windows zavře nebo se nezdaří. Při aktualizaci účtu používá aplikace `CCriticalSection` zajistit, že je najednou aktualizován pouze jeden účet. Po úspěšné aktualizaci signalizuje `CEvent`, což uvolní vlákno čeká na signál události. Tento přístup z více vláken odešle nová data do dat archivu.  
+Tato ukázková aplikace používá všechny tři typy synchronizační třídy. Protože to umožňuje až tři účtů najednou, používá `CSemaphore` omezit přístup k tři objekty zobrazení. Při pokusu o zobrazení čtvrtý účtu dojde, aplikace buď čeká, dokud jeden z prvních tří windows zavře nebo se postup nezdaří. Při aktualizaci účtu aplikace používá `CCriticalSection` zajistit, že se současně aktualizuje jenom jeden účet. Po úspěšné aktualizaci signály `CEvent`, což uvolní vlákno čeká na událost, která má být signalizován. Toto vlákno odešle nová data do dat archivu.  
   
-## <a name="example-2-using-synchronization-access-classes"></a>Příklad 2: Pomocí synchronizační přístupové třídy  
- Výběr, které třídy přístupu používat je ještě jednodušší. Pokud vaše aplikace se týká přístup k jenom jeden řízené prostředku, použijte `CSingleLock`. Pokud potřebuje přístup k libovolnému počtu kontrolovaných prostředky, použít `CMultiLock`. V příkladu 1 `CSingleLock` by byl použit, protože v každém případě je potřeba jenom jeden prostředek v jakémkoli čase.  
+## <a name="example-2-using-synchronization-access-classes"></a>Příklad 2: Použití tříd pro přístup k synchronizaci  
+ 
+Zvolíte, jakou synchronizační třídu přístup k použití je ještě jednodušší. Pokud se týká pouze na jeden prostředek řízený přístup k vaší aplikace, použijte `CSingleLock`. Pokud nepotřebuje přístup k libovolnému počtu kontrolovaných prostředků, použijte `CMultiLock`. V příkladu 1 `CSingleLock` by byla použita, protože v každém případě je potřeba jenom jeden prostředek v určitém čase.  
   
- Informace o tom, jak se používají synchronizační třídy najdete v tématu [Multithreading: jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Informace o synchronizaci najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Informace o podpoře více vláken v prostředí MFC najdete v tématu [Multithreading s C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Informace o tom, jak použít synchronizační třídy naleznete v tématu [Multithreading: jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md). Informace o synchronizaci najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v sadě Windows SDK. Informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)

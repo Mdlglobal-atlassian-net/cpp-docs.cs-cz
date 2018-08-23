@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110018"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609346"
 ---
 # <a name="windows-operations-ccli"></a>Operace systému Windows (C++/CLI)
-Ukazuje různé úlohy specifické pro Windows pomocí [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Ukazuje různé úlohy specifické pro Windows pomocí sady Windows SDK.  
   
- Následující témata ukazují různé Windows operace prováděné s [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] pomocí jazyka Visual C++.  
+ Následující témata ukazují různé Windows operace prováděné s Windows SDK pomocí jazyka Visual C++.  
 
 ## <a name="determine_shutdown"></a> Určení, zda bylo zahájeno vypínání
 Následující příklad kódu ukazuje, jak určit, zda je aktuálně ukončení aplikace nebo rozhraní .NET Framework. To je užitečné pro přístup k statických elementů v rozhraní .NET Framework, protože během vypínání tyto konstrukce jsou dokončeny v systému a není možné spolehlivě použít. Kontrolou <xref:System.Environment.HasShutdownStarted%2A> vlastnost poprvé, můžete se vyhnout potenciálních selhání přístupu k těmto prvkům.  

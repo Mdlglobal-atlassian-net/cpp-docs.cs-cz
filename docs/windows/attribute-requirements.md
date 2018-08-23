@@ -1,5 +1,5 @@
 ---
-title: Atribut požadavky | Microsoft Docs
+title: Atribut požadavky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fdf97120b5f6396e3b18e274ef3626c9dbf919d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea84b46e31d57ec05bf9641674d045f531b04722
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863566"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593749"
 ---
 # <a name="attribute-requirements"></a>Požadavky atributů
-Požadavky uvedené pro atributy C++ popisují typy projektů, nastavení kompilátoru a jiné informace potřebné pro atribut pracovat. Kategorie informací, jsou popsané níže.  
+Požadavky uvedené pro atributy C++ popisují typy projektů, nastavení kompilátoru a jiné informace potřebné pro atribut fungovat. Kategorie informací jsou popsané níže.
   
 > [!NOTE]
->  Použití atributů na třídu, která je odvozena od třídy, který také používá atributů není podporováno.  
+> Použití atributů pro třídu, která je odvozena z třídy, která rovněž používá atributy není podporováno.
   
-## <a name="header"></a>Záhlaví  
- Toto pole jsou uvedené soubory hlaviček, které musí být zahrnut, před použitím atribut.  
+## <a name="header"></a>Záhlaví
+ Toto pole obsahuje soubory hlaviček, které se musí nacházet před použitím atributu.
   
-## <a name="project"></a>Projekt  
- Toto pole popisuje typy projektů, kde můžete použít atribut.  
+## <a name="project"></a>Projekt
+ Toto pole popisuje typy projektů, ve kterých je možné atribut.
   
-## <a name="compiler"></a>Kompilátoru  
- Toto pole nabízí možnosti kompilátoru, které musí být k dispozici pro tento atribut, který se má použít.  
+## <a name="compiler"></a>Kompilátor
+ Toto pole obsahuje možnosti kompilátoru, které musí být k dispozici pro tento atribut, který se má použít.
   
-## <a name="see-also"></a>Viz také  
- [Kontexty atributů](../windows/attribute-contexts.md)   
+## <a name="see-also"></a>Viz také
+ [Kontexty atributů](../windows/attribute-contexts.md)  
  [Atributy podle skupin](../windows/attributes-by-group.md)

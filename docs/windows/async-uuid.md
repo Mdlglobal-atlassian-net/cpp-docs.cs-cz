@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7619868e131476143c144e695e842708d1b54a6b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642409"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606442"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[async_uuid (  
-   uuid  
-)]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *uuid*  
- Identifikátor UUID, který identifikuje verzi rozhraní.  
-  
-## <a name="remarks"></a>Poznámky  
- **Async_uuid –** C++ atribut má stejné funkce jako [async_uuid –](http://msdn.microsoft.com/library/windows/desktop/aa366735) atribut MIDL.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// cpp_attr_ref_async_uuid.cpp  
-// compile with: /LD  
-#include <Windows.h>  
-[module(name="Test")];  
-[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),   
-async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|`interface`|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|**duální**, **dispinterface**|  
-  
- Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [IDL – atributy](../windows/idl-attributes.md)   
- [Atributy rozhraní](../windows/interface-attributes.md)   
+
+Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[async_uuid (
+   uuid
+)]
+```
+
+### <a name="parameters"></a>Parametry
+
+*uuid*  
+Identifikátor UUID, který identifikuje verzi rozhraní.
+
+## <a name="remarks"></a>Poznámky
+
+**Async_uuid –** C++ atribut má stejné funkce jako [async_uuid –](http://msdn.microsoft.com/library/windows/desktop/aa366735) atribut MIDL.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// cpp_attr_ref_async_uuid.cpp
+// compile with: /LD
+#include <Windows.h>
+[module(name="Test")];
+[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),
+async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|`interface`|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|**duální**, **dispinterface**|
+
+Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[IDL – atributy](../windows/idl-attributes.md)  
+[Atributy rozhraní](../windows/interface-attributes.md)  

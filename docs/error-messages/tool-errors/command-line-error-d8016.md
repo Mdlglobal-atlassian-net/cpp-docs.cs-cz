@@ -1,5 +1,5 @@
 ---
-title: Chyba příkazového řádku D8016 | Microsoft Docs
+title: Chyba příkazového řádku D8016 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300615"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607600"
 ---
 # <a name="command-line-error-d8016"></a>Chyba příkazového řádku D8016
-nejsou kompatibilní, 'možnost 1' a 'option2' Možnosti příkazového řádku  
+Možnosti příkazového řádku "možnost1" a 'možnost2' jsou nekompatibilní  
   
  Možnosti příkazového řádku nelze zadat současně.  
   
- Zkontrolujte proměnné prostředí, například CL, pro možnost specifikace.  
+ Proměnné prostředí, jako je například CL, pro specifikace možností lze zkontrolujte.  
   
- **/ CLR** znamená **/EHa**, a nelze zadat libovolný jiný **/EH** – možnost kompilátoru s **/CLR**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ **/ CLR** znamená **/EHa**, a nemůžete zadat jakýkoli jiný **/EH** – možnost kompilátoru s **/CLR**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Můžete obdržet D8016 po aktualizaci [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 projektu: proces projektu aktualizace Průvodce může povolit **/RTC** pro každého souboru zdrojového kódu v projektu, který přepíše **/RTC** nastavení pro projekt.  Chcete-li vyřešit, změňte **/RTC** nastavení pro každou souboru zdrojového kódu v projektu na výchozí nastavení, což znamená, že nastavení projektu pro **/RTC** bude platit pro každý soubor.  
+ Po aktualizaci projektu Visual C++ 6.0 se může zobrazit D8016: proces aktualizace Průvodce projektu může povolit **/RTC** pro každý soubor zdrojového kódu v projektu, který přepíše **/RTC** nastavení projektu.  Chcete-li vyřešit, změňte **/RTC** nastavení pro každý soubor zdrojového kódu v projektu na výchozí nastavení, což znamená, že nastavení projektu pro **/RTC** začnou platit pro každý soubor.  
   
- V tématu [/RTC (kontroluje chyby Run-Time)](../../build/reference/rtc-run-time-error-checks.md) informace o změně **/RTC** nastavení vlastnosti.
+ Zobrazit [/RTC (kontroly chyb za běhu)](../../build/reference/rtc-run-time-error-checks.md) informace o změně **/RTC** nastavení vlastnosti.

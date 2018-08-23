@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d30a467bd929c68c35e06861087ec7f47d1f2d51
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0b3792bc5377d90acb6f5ddf619e888ddd606e1e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011904"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594090"
 ---
 # <a name="lengthis"></a>length_is
-Určuje počet elementů pole předávají.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ length_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Výraz*  
- Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.  
-  
-## <a name="remarks"></a>Poznámky  
- **Length_is –** C++ atribut má stejné funkce jako [length_is –](http://msdn.microsoft.com/library/windows/desktop/aa367068) atribut MIDL.  
-  
-## <a name="example"></a>Příklad  
- Zobrazit [first_is –](../windows/first-is.md) příklad toho, jak zadat část pole.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [IDL – atributy](../windows/idl-attributes.md)   
- [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributy parametru](../windows/parameter-attributes.md)   
- [first_is –](../windows/first-is.md)   
- [max_is –](../windows/max-is.md)   
- [last_is –](../windows/last-is.md)   
- [size_is](../windows/size-is.md)   
+
+Určuje počet elementů pole předávají.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ length_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Výraz*  
+Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
+
+## <a name="remarks"></a>Poznámky
+
+**Length_is –** C++ atribut má stejné funkce jako [length_is –](http://msdn.microsoft.com/library/windows/desktop/aa367068) atribut MIDL.
+
+## <a name="example"></a>Příklad
+
+Zobrazit [first_is –](../windows/first-is.md) příklad toho, jak zadat část pole.
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[IDL – atributy](../windows/idl-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributy parametru](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[max_is](../windows/max-is.md)  
+[last_is](../windows/last-is.md)  
+[size_is](../windows/size-is.md)  

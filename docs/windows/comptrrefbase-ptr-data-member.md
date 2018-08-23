@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c80372070589e1a5c57d2ea08f80fea0467b5dc7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644840"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596716"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ – datový člen
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-T* ptr_;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ukazatel na typ zadaný v parametru aktuální šablony.  
-  
-## <a name="remarks"></a>Poznámky  
- **ptr_ –** je chráněný datový člen.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Comptrrefbase – třída](../windows/comptrrefbase-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+T* ptr_;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ukazatel na typ zadaný v parametru aktuální šablony.
+
+## <a name="remarks"></a>Poznámky
+
+**ptr_ –** je chráněný datový člen.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bdbf1b2615a87b39797f2ff4e6e188c338dd5e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d2972938b28f2a5bef9fdc648591cea3101d5e7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015856"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597907"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock – konstruktor
-Inicializuje novou instanci třídy **SRWLock** třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-SRWLock();  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [SRWLock – třída](../windows/srwlock-class.md)
+
+Inicializuje novou instanci třídy **SRWLock** třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+SRWLock();
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[SRWLock – třída](../windows/srwlock-class.md)

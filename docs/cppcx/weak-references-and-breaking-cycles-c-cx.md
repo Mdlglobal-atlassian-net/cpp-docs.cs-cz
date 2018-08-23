@@ -1,25 +1,25 @@
 ---
-title: Slabé odkazy a ukončování cykly (C + +/ CX) | Microsoft Docs
+title: Slabé odkazy a cykly slov (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92076ac919664fb8ebf6a01513b9382ade52f2a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089075"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598294"
 ---
-# <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a ukončování cykly (C + +/ CX)
-V žádné systém typů, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, jeden objekt odkazuje na druhý objekt, druhý objekt odkazuje na objekt třetí, a tak dále dokud některé konečný objekt odkazuje zpět první objekt. V cyklu nelze odstranit objekty správně při počet odkazů jeden objekt klesne na nulu. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::WeakReference třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` objektu podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metoda, která vrátí hodnotu null, pokud objekt již existuje, nebo vyvolá [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Pokud objekt zachování připojení, ale není typu `T`.  
+# <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a cykly slov (C + +/ CX)
+V systému libovolný typ, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, že jeden objekt odkazuje na druhý objekt, druhý objekt, který odkazuje na třetí objekt a tak dále až do některých konečného objektu odkazuje zpět na první objekt. V cyklu nelze odstranit objekty správně při nulový počet odkazů na jeden objekt. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::weakreference – třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metodu, která vrátí hodnotu null, pokud objekt již existuje nebo vyvolává [Platform::InvalidCastException –](../cppcx/platform-invalidcastexception-class.md) Pokud objekt je aktivní, ale není typu `T`.  
   
- Jeden scénář, ve kterém `WeakReference` použije je při `this` ukazatel zachytí ve výrazu lambda, který se používá k definování obslužné rutiny události. Doporučujeme použít s názvem metody při definování obslužné rutiny událostí, ale pokud budete chtít použít lambda pro vaše obslužná rutina události – nebo pokud máte pro přerušení odkaz počítání cyklu v některé jiné situaci – použijte `WeakReference`. Tady je příklad:  
+ Jeden scénář, ve kterém `WeakReference` musí používat je, když `this` ukazatel je zachycena ve výrazu lambda, který se používá k definování obslužné rutiny události. Doporučujeme použít pojmenované metody při definování obslužné rutiny událostí, ale pokud budete chtít použít výraz lambda pro obslužnou rutinu události, nebo pokud musíte přerušit počítání cyklus v některé situace odkaz – použijte `WeakReference`. Tady je příklad:  
   
 ```  
   
@@ -57,7 +57,7 @@ Class1::Class1()
 }  
 ```  
   
- Když vyvolá obslužnou rutinu události `DisconnectedException`, způsobí, že odebrat ze seznamu odběratele obslužná rutina události.  
+ Když se vyvolá obslužnou rutinu události `DisconnectedException`, dojde k vygenerování události odebrat obslužnou rutinu z seznam předplatitelů.  
   
 ## <a name="see-also"></a>Viz také  
 

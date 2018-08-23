@@ -17,45 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b389e5b137ef3cdb94ffbb1fc381ebe2e5813963
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652796"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603967"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal – výčet
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-enum AsyncStatusInternal;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.  
-  
-## <a name="members"></a>Členové  
- `_Created`  
- Ekvivalent `::Windows::Foundation::AsyncStatus::Created`  
-  
- `_Started`  
- Ekvivalent `::Windows::Foundation::AsyncStatus::Started`  
-  
- `_Completed`  
- Ekvivalent `::Windows::Foundation::AsyncStatus::Completed`  
-  
- `_Cancelled`  
- Ekvivalent `::Windows::Foundation::AsyncStatus::Cancelled`  
-  
- `_Error`  
- Ekvivalent `::Windows::Foundation::AsyncStatus::Error`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** async.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+enum AsyncStatusInternal;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.
+
+## <a name="members"></a>Členové
+
+`_Created`  
+Ekvivalent `::Windows::Foundation::AsyncStatus::Created`
+
+`_Started`  
+Ekvivalent `::Windows::Foundation::AsyncStatus::Started`
+
+`_Completed`  
+Ekvivalent `::Windows::Foundation::AsyncStatus::Completed`
+
+`_Cancelled`  
+Ekvivalent `::Windows::Foundation::AsyncStatus::Cancelled`
+
+`_Error`  
+Ekvivalent `::Windows::Foundation::AsyncStatus::Error`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** async.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

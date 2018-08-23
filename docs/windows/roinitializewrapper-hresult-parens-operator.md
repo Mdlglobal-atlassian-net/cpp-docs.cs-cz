@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b518fc059e77420788be941ccc98035fb68aa0db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605682"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592751"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() – operátor
-Načte hodnotu HRESULT vytvářených poslední **RoInitializeWrapper** konstruktoru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Načte hodnotu HRESULT vytvářených poslední **RoInitializeWrapper** konstruktoru.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 operator HRESULT()  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HandleT – třída](../windows/handlet-class.md)
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HandleT – třída](../windows/handlet-class.md)

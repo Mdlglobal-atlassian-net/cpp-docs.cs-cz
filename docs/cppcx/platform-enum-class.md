@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::enum | Microsoft Docs
+title: Platform::enum – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcb6dddb02f13a2138689672535f01c935383740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3d4f893099c129f82cfa08650c6f1f3fbbb2c46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088287"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608544"
 ---
 # <a name="platformenum-class"></a>Platform::enum – třída
-Třída hodnotu, která představuje sadu s názvem konstanty.  
+Hodnota třídy, která představuje sadou pojmenovaných konstant.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,19 +32,19 @@ public class Enum
 ```  
   
 ### <a name="members"></a>Členové  
- Třída výčtu dědí metody Equals(), GetHashCode() a ToString() z [Platform::Object třída](../cppcx/platform-object-class.md).  
+ Enum class dědí z metody Equals() GetHashCode() a ToString() [Platform::Object – třída](../cppcx/platform-object-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [veřejný výčet tříd](../windows/enum-class-cpp-component-extensions.md) – klíčové slovo vytvořit výčty. Explicitně nepoužívejte Platform::Enum typu. Další informace najdete v tématu [výčty](../cppcx/enums-c-cx.md).  
+ Použití [veřejný výčet tříd](../windows/enum-class-cpp-component-extensions.md) – klíčové slovo k vytvoření výčtů. Explicitně nepoužívejte typ Platform::Enum –. Další informace najdete v tématu [výčty](../cppcx/enums-c-cx.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Metadata:** platform.winmd  
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

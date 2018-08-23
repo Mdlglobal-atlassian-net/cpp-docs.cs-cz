@@ -17,40 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b9fd147f0821e14e825b2a8c0e8d7ad35104fe9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653011"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595691"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId – datový člen
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-union {   
-   const IID* clsid;  
-   const wchar_t* (*getRuntimeName)();  
-} activationId;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *identifikátor CLSID*  
- Identifikátor rozhraní.  
-  
- *getRuntimeName*  
- Funkce, která načte název modulu runtime Windows objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo název modulu runtime Windows.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Creatormap – struktura](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+union {
+   const IID* clsid;
+   const wchar_t* (*getRuntimeName)();
+} activationId;
+```
+
+### <a name="parameters"></a>Parametry
+
+*identifikátor CLSID*  
+Identifikátor rozhraní.
+
+*getRuntimeName*  
+Funkce, která načte název modulu runtime Windows objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo název modulu runtime Windows.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[CreatorMap – struktura](../windows/creatormap-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

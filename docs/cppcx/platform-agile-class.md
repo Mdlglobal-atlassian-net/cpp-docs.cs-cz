@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Agile | Microsoft Docs
+title: Platform::agile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092428"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596599"
 ---
-# <a name="platformagile-class"></a>Platform::Agile – třída
-Představuje objekt, který má MashalingBehavior = Standard jako agile objekt, který výrazně snižuje se možnost runtime dělení na vlákna výjimky. `Agile<T>` Umožňuje-agilní objekt, který má volání nebo volání z stejné nebo jiné vlákno. Další informace najdete v tématu [dělení na vlákna a zařazování](../cppcx/threading-and-marshaling-c-cx.md).  
+# <a name="platformagile-class"></a>Platform::agile – třída
+Představuje objekt, který má MashalingBehavior = standardní jako agilní objekt, což významně snižuje pravděpodobnost pro dělení na vlákna výjimky modulu runtime. `Agile<T>` Umožňuje-agilní objekt volání nebo volat ze stejné nebo jiné vlákno. Další informace najdete v tématu [vláken a zařazování](../cppcx/threading-and-marshaling-c-cx.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +39,12 @@ class Agile;
   
 #### <a name="parameters"></a>Parametry  
  T  
- Typename – agilní třídy.  
+ Název typu pro třídu agile.  
   
 ### <a name="remarks"></a>Poznámky  
- Většina tříd v prostředí Windows Runtime jsou agilní. Agilní objekt můžete volat nebo volat pomocí objektu vnitroprocesovou nebo out-of-proc ve stejné nebo jiné vlákno. Pokud není objekt agilní, zabalení objektu agilní ve `Agile<T>` objekt, který je agile. Pak se `Agile<T>` objekt může být zařazen a základní-agilní objekt lze použít.  
+ Většina tříd v modulu Windows Runtime jsou agile. Agilní objekt lze volat nebo volat v objektu uvnitř procesu nebo v režimu out-of-proc ve stejném nebo jiném vlákně. Pokud objekt není agile, zabalte objekt agile v `Agile<T>` objekt, který je agile. Pak bude `Agile<T>` objekt může být zařazována a lze základní objekt agile.  
   
- `Agile<T>` Třídy je třída nativní, standard C++ a vyžaduje `agile.h`. Reprezentuje objekt agilní a agilní objekt *kontextu*. Kontext určuje model vláken a chování zařazování agilní objektu. Operační systém používá k určení jak přeuspořádat objekt kontextu.  
+ `Agile<T>` Třídy je třída C++ nativní, standard a vyžaduje `agile.h`. Představuje-agilní objekt a agilní objekt *kontextu*. Kontext určuje agilní objekt model vláken a zařazování chování. Operační systém používá k určení způsobu zařazení objektu kontextu.  
   
 ### <a name="members"></a>Členové  
   
@@ -53,23 +53,23 @@ class Agile;
 |Název|Popis|  
 |----------|-----------------|  
 |[Agile::Agile](#ctor)|Inicializuje novou instanci třídy Agile.|  
-|[Agilní:: ~ agilní – destruktor](#dtor)|Zničí aktuální instance třídy Agile.|  
+|[Agilní:: ~ agilní – destruktor](#dtor)|Odstraní aktuální instanci třídy Agile.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Agile::Get](#get)|Vrátí popisovač objektu, která je reprezentována agilní aktuálního objektu.|  
-|[Agile::GetAddressOf](#getaddressof)|Znovu inicializuje aktuální agilní objekt a vrátí adresu popisovač pro objekt typu `T`.|  
-|[Agile::GetAddressOfForInOut](#getaddressofforinout)|Vrátí adresu popisovač pro objekt představovaný agilní aktuálního objektu.|  
-|[Agile::Release](#release)|Zruší aktuální objekt agilní základní objekt a kontext.|  
+|[Agile::Get](#get)|Vrátí popisovač pro objekt, který představuje aktuální objekt Agile.|  
+|[Agile::GetAddressOf](#getaddressof)|Znovu inicializuje aktuální objekt agilní a vrátí adresu popisovač pro objekt typu `T`.|  
+|[Agile::GetAddressOfForInOut](#getaddressofforinout)|Vrátí adresu popisovač pro objekt reprezentovaný objektem aktuální Agile.|  
+|[Agile::Release](#release)|Zahodí aktuální objekt agilní základní objekt a kontext.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[-> Agile::Operator](#operator-arrow)|Načte popisovač pro objekt představovaný agilní aktuálního objektu.|  
-|[Agile::Operator =](#operator-assign)|Zadaná hodnota přiřadí aktuální agilní objekt.|  
+|[Agile::Operator ->](#operator-arrow)|Načte popisovač pro objekt reprezentovaný objektem aktuální Agile.|  
+|[Agile::Operator =](#operator-assign)|Zadaná hodnota přiřadí aktuální objekt Agile.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Object`  
@@ -79,13 +79,13 @@ class Agile;
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Záhlaví:** agile.h  
 
-## <a name="ctor"></a>  Agile::Agile – konstruktor
+## <a name="ctor"></a>  Agile::Agile konstruktor
 Inicializuje novou instanci třídy Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -104,16 +104,16 @@ Agile(Agile<T>&& object);
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ určený parametrem typename šablony.  
+ Typ určený název typu parametru šablony.  
   
  `object`  
- V druhé verze tohoto konstruktoru objekt použitý k inicializaci nové instance Agile. V třetím verze objektu, která se zkopírují do nové instance Agile. V Čtvrtá verze objektu, která je přesunuta do nové instance Agile.  
+ V druhé verze tohoto konstruktoru objekt použitý k inicializaci nové instance Agile. Ve třetí verzi objektu, který se zkopíruje do nového Agilního instance. Ve čtvrtém verze objektu, který se přesune do nové instance Agile.  
   
 ### <a name="remarks"></a>Poznámky  
- První verze součásti tento konstruktor je výchozí konstruktor. Druhá verze inicializuje nové agilní instance třídy z objektu určeného `object` parametr. Třetí verzi je konstruktor copy. Je Čtvrtá verze konstruktor move. Tento konstruktor nemůže vyvolat výjimky.  
+ První verze tento konstruktor je výchozí konstruktor. Druhá verze inicializuje nové agilní instance třídy z objektu určeného parametrem `object` parametru. Třetí verze je kopírovací konstruktor. Čtvrtý verze je konstruktor přesunu. Tento konstruktor nelze vyvolat výjimky.  
 
 ## <a name="dtor"></a>  Agilní:: ~ agilní – destruktor
-Zničí aktuální instance třídy Agile.  
+Odstraní aktuální instanci třídy Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,10 +123,10 @@ Zničí aktuální instance třídy Agile.
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento destruktor také uvolní objekt reprezentovaný rozhraním agilní aktuální objekt.  
+ Tento destruktor uvolní také objekt reprezentovaný objektem aktuální Agile.  
   
 ## <a name="get"></a>   Agile::Get – metoda
-Vrátí popisovač objektu, která je reprezentována agilní aktuálního objektu.  
+Vrátí popisovač pro objekt, který představuje aktuální objekt Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -139,10 +139,10 @@ Vrátí popisovač objektu, která je reprezentována agilní aktuálního objek
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro objekt, který představuje aktuální objekt Agile.  
   
- Typ vrácené hodnoty je ve skutečnosti podmínky vnitřní typ. Pohodlný způsob pro uložení návratová hodnota je přiřadit do proměnné, která je deklarovaný s **automaticky** zadejte odvození – klíčové slovo. Například `auto x = myAgileTvariable->Get();`.  
+ Typ vrácené hodnoty je ve skutečnosti utajované vnitřního typu. Pohodlný způsob pro uchování hodnoty vrácené je k ní přiřadit k proměnné, která je deklarována pomocí **automaticky** klíčovým slovem odvození typu. Například `auto x = myAgileTvariable->Get();`.  
   
 ## <a name="getaddressof"></a>  Agile::GetAddressOf – metoda
-Znovu inicializuje aktuální agilní objekt a vrátí adresu popisovač pro objekt typu `T`.  
+Znovu inicializuje aktuální objekt agilní a vrátí adresu popisovač pro objekt typu `T`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -154,16 +154,16 @@ throw();
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ určený parametrem typename šablony.  
+ Typ určený název typu parametru šablony.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Adresa popisovač pro objekt typu `T`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato operace uvolní aktuální reprezentace objektu typu `T`, pokud existují; znovu inicializuje objekt agilní datové členy; získá aktuální kontext vláken; a potom se vrátí adresu popisovač objektu proměnné, která může představovat agilní objekt. Chcete-li způsobit instance agilní třídy představující objekt, použijte operátor přiřazení ([Agile::operator =](#operator-assign)) přiřadit instance agilní třídy objektu.  
+ Tato operace uvolní aktuální reprezentace objektu typu `T`, pokud existují; znovu inicializuje agilní objekt datové členy; získá aktuální kontext dělení na vlákna; a potom vrátí adresu proměnné popisovač objektu, který může představovat agilní objektu. Chcete-li způsobit, že instance třídy Agile pro reprezentaci objektu, použijte operátor přiřazení ([Agile::operator =](#operator-assign)) přiřazení objektu k instanci třídy Agile.  
 
 ## <a name="getaddressofforinout"></a>  Agile::GetAddressOfForInOut – metoda
-Vrátí adresu popisovač pro objekt představovaný agilní aktuálního objektu.  
+Vrátí adresu popisovač pro objekt reprezentovaný objektem aktuální Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -175,16 +175,16 @@ T^* GetAddressOfForInOut()  throw();
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ určený parametrem typename šablony.  
+ Typ určený název typu parametru šablony.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Adresa popisovač pro objekt představovaný agilní aktuálního objektu.  
+ Adresa popisovač pro objekt reprezentovaný objektem aktuální Agile.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato operace získá aktuální kontext vláken a vrátí adresu popisovač pro základní objekt.  
+ Tato operace získá aktuální kontext dělení na vlákna a vrátí adresu popisovač do základního objektu.  
 
 ## <a name="release"></a>  Agile::Release – metoda
-Zruší aktuální objekt agilní základní objekt a kontext.  
+Zahodí aktuální objekt agilní základní objekt a kontext.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -195,10 +195,10 @@ void Release() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Základní objekt a kontextu aktuálního objektu agilní se zahodí, pokud existují, a pak je nastavena hodnota agilní objektu na hodnotu null.  
+ Základní objekt a kontext aktuálního objektu Agile se zahodí, pokud existují, a nastavte hodnotu agilní objektu na hodnotu null.  
 
 ## <a name="operator-arrow"></a>  Agile::Operator -&gt; – operátor
-Načte popisovač pro objekt představovaný agilní aktuálního objektu.  
+Načte popisovač pro objekt reprezentovaný objektem aktuální Agile.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -209,12 +209,12 @@ const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro objekt představovaný agilní aktuálního objektu.  
+ Popisovač pro objekt reprezentovaný objektem aktuální Agile.  
   
- Tento operátor. ve skutečnosti vrátí interní typ podmínky. Pohodlný způsob pro uložení návratová hodnota je přiřadit do proměnné, která je deklarovaný s **automaticky** zadejte odvození – klíčové slovo.  
+ Tento operátor ve skutečnosti vrátí utajované vnitřního typu. Pohodlný způsob pro uchování hodnoty vrácené je k ní přiřadit k proměnné, která je deklarována pomocí **automaticky** klíčovým slovem odvození typu.  
 
 ## <a name="operator-assign"></a>  Agile::Operator = – operátor
-Přiřadí aktuální agilní objekt zadaného objektu.  
+Aktuální objekt Agile přiřadí zadaný objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -238,21 +238,21 @@ Přiřadí aktuální agilní objekt zadaného objektu.
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- V typu zadaném pomocí šablony typename.  
+ Typ určený název typu šablony.  
   
  `object`  
- Objekt nebo popisovač pro objekt, který je zkopírovat nebo přesunout do agilní aktuálního objektu.  
+ Objekt nebo popisovač pro objekt, který je zkopírovaný ani přesunutý do aktuálního objektu Agile.  
   
  `lp`  
- Ukazatel rozhraní IUnknown objektu.  
+ Ukazatel na rozhraní IUnknown objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro objekt typu `T`  
   
 ### <a name="remarks"></a>Poznámky  
- První verze součásti operátor přiřazení zkopíruje popisovač typu odkaz na aktuální agilní objekt. Druhé kopie verze odkaz na Agile zadejte aktuální agilní objektu. Třetí verzi přejde Agile zadejte aktuální agilní objekt. Čtvrtý verze přesune ukazatel na objekt COM na aktuální agilní objekt.  
+ První verze operátoru přiřazení zkopíruje popisovač na typ odkazu na aktuální objekt Agile. Druhé kopie verze zadejte odkaz na Agile na aktuální objekt Agile. Třetí verze přejde Agile zadejte aktuální objekt Agile. Čtvrtý verze přesune ukazatel myši na objekt modelu COM s aktuálním objektem Agile.  
   
- Operace přiřazení automaticky trvá kontextu aktuálního agilní objektu. 
+ Operace přiřazení automaticky opakuje kontextu aktuálního objektu Agile. 
        
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

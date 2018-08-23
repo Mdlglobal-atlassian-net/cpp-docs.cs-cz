@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649956"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596744"
 ---
 # <a name="deleting-a-version-information-block"></a>Odstranění bloku informací o verzi
-### <a name="to-delete-a-version-information-block"></a>Odstranění bloku informací o verzi  
-  
-1.  Otevřete poklepáním na ikonu v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Klikněte pravým tlačítkem na záhlaví bloku, kterou chcete odstranit a pak zvolte **odstranit blok informací o verzi** z místní nabídky.  
-  
-     Tento příkaz odstraní vybranou hlavičku a ponechá beze změny zbývající informace o verzi. Upozorňujeme, že tato akce nejde vrátit zpět.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-delete-a-version-information-block"></a>Odstranění bloku informací o verzi
+
+1. Otevřete poklepáním na ikonu v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+2. Klikněte pravým tlačítkem na záhlaví bloku, kterou chcete odstranit a pak zvolte **odstranit blok informací o verzi** z místní nabídky.
+
+   Tento příkaz odstraní vybranou hlavičku a ponechá beze změny zbývající informace o verzi. Upozorňujeme, že tato akce nejde vrátit zpět.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Požadavky
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Editor informací o verzi](../windows/version-information-editor.md)   
- [Informace o verzi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Editor informací o verzi](../windows/version-information-editor.md)  
+[Informace o verzi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

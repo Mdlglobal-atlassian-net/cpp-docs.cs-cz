@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020392"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606824"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName – metoda
 
@@ -37,6 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parametry
+
 *runtimeName*  
 Po dokončení této operace, název třídy runtime.
 
@@ -55,4 +56,5 @@ Chyba vyhodnocení je vygenerován, pokud `__WRL_STRICT__` nebo `__WRL_FORCE_INS
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
- [RuntimeClass – třída](../windows/runtimeclass-class.md)
+
+[RuntimeClass – třída](../windows/runtimeclass-class.md)

@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652559"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607295"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID – metoda
-Vrátí **ComPtr** objekt, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW HRESULT AsIID(  
-   REFIID riid,  
-   _Out_ ComPtr<IUnknown>* p  
-) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *riid*  
- Identifikátor rozhraní.  
-  
- *p*  
- Pokud objekt má rozhraní, jejichž ID se rovná *riid*, dvakrát nepřímé ukazatel na rozhraní určené typem *riid* parametr; jinak vrátí hodnotu, ukazatel na `IUnknown`.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Vrátí **ComPtr** objekt, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW HRESULT AsIID(
+   REFIID riid,
+   _Out_ ComPtr<IUnknown>* p
+) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*riid*  
+Identifikátor rozhraní.
+
+*p*  
+Pokud objekt má rozhraní, jejichž ID se rovná *riid*, dvakrát nepřímé ukazatel na rozhraní určené typem *riid* parametr; jinak vrátí hodnotu, ukazatel na `IUnknown`.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

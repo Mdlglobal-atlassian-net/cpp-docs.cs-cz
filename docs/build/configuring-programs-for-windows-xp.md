@@ -1,5 +1,5 @@
 ---
-title: Konfigurace programů pro systém Windows XP | Microsoft Docs
+title: Konfigurace programů pro Windows XP | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/02/2018
 ms.technology:
@@ -12,37 +12,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371483"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598230"
 ---
-# <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro systém Windows XP
+# <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
-Protože Visual Studio podporuje více modulové platformy, můžete určit cílovou operačních systémů a runtime knihovny, které nepodporují výchozí sady nástrojů. Například přepínání sada nástrojů platformy, můžete pomocí C ++ 11 a C ++ 14, vylepšení C ++ 17 jazyk podporuje – kompilátor Visual C++ v sadě Visual Studio k vytvoření aplikace cílených [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Můžete také použít starší platformy modulové zachovat starší verze kódu binární kompatibilní a nadále využívat výhody nejnovějších funkcí Visual Studio IDE.
+Vzhledem k tomu, že Visual Studio podporuje více sad nástrojů platformy, můžete směrovat operačních systémů a knihovny runtime, které nejsou podporované výchozí sady nástrojů. Například přepnutím sada nástrojů platformy můžete C ++ 11, C ++ 14 a C ++ 17 jazyk vylepšení podporována kompilátorem jazyka Visual C++ v sadě Visual Studio k vytváření aplikací určených pro Windows XP a Windows Server 2003. Můžete také použít starší sad nástrojů platformy zachovat starší verze kódu binárně kompatibilní a stále využívat nejnovější funkce integrovaného vývojového prostředí sady Visual Studio.
 
-## <a name="install-the-windows-xp-platform-toolset"></a>Instalace sady nástrojů systému Windows XP
-Sada nástrojů platformy a součásti cíl [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Visual Studio 2017, spusťte instalační program Visual Studio. Po počáteční instalaci sady Visual Studio, nebo když zvolíte **upravit** Pokud chcete upravit existující instalace, ujistěte se, že **vývoj aplikací s jazykem C++** je vybrané úlohy. V seznamu volitelné součásti pro tuto úlohu, vyberte **Windows XP podporu pro jazyk C++** a potom zvolte **nainstalovat** nebo **upravit**.
+## <a name="install-the-windows-xp-platform-toolset"></a>Nainstalovat sadu nástrojů platformy Windows XP
+Pokud chcete získat sadu nástrojů platformy a komponenty na cíl Windows XP a Windows Server 2003 v sadě Visual Studio 2017, spusťte instalační program sady Visual Studio. Při počáteční instalaci sady Visual Studio, nebo když zvolíte **změnit** k úpravě stávající instalace, ujistěte se, že **vývoj desktopových aplikací pomocí C++** vybrané úlohy. V seznamu volitelných součástí pro danou úlohu, vyberte **podpora Windows XP pro C++** a klikněte na tlačítko **nainstalovat** nebo **změnit**.
 
-## <a name="windows-xp-targeting-experience"></a>Cílení na prostředí Windows XP
+## <a name="windows-xp-targeting-experience"></a>Windows XP cílení
 
-Sada nástrojů platformy systému Windows XP, která je zahrnutá v sadě Visual Studio je verze [!INCLUDE[win7](../build/includes/win7_md.md)] SDK, ale používá aktuální kompilátoru C++. Nakonfiguruje taky vlastnosti projektu odpovídající výchozí hodnoty, například specifikace kompatibilní linkeru pro cílení na nižší úrovni. Pouze Windows aplikace klasické pracovní plochy, které jsou vytvořené pomocí sady nástrojů systému Windows XP spustit na [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], ale tyto aplikace můžete spustit také na novější operační systémy Windows.
+Sada nástrojů platformy Windows XP, který je součástí sady Visual Studio je verze sady Windows 7 SDK, ale používá aktuální kompilátoru C++. Také nakonfiguruje vlastnosti projektu vhodné výchozí hodnoty, například specifikace kompatibilní linkeru pro cílení na nižší úrovni. Jenom aplikace klasické pracovní plochy Windows, které jsou vytvořeny pomocí nástrojů pro platformy Windows XP běží na Windows XP a Windows Server 2003, ale tyto aplikace můžete spustit také na novější operační systémy Windows.
 
-#### <a name="to-target-windows-xp"></a>Cíl, Windows XP
+#### <a name="to-target-windows-xp"></a>Na cíl Windows XP
 
-1. V **Průzkumníku řešení**, otevřete místní nabídku pro svůj projekt a potom zvolte **vlastnosti**.
+1. V **Průzkumníka řešení**, otevřete místní nabídku pro váš projekt a klikněte na tlačítko **vlastnosti**.
 
-1. V **stránky vlastností** dialogu pro projekt, v části **vlastnosti konfigurace** > **Obecné**, nastavte **sada nástrojů platformy** vlastnost požadované sady nástrojů systému Windows XP. Například vyberte **2017 Visual Studio – Windows XP (v141_xp)** k vytvoření kódu pro [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] pomocí kompilátoru Microsoft Visual C++ 2017.
+1. V **stránky vlastností** dialogové okno pro projekt, v části **vlastnosti konfigurace** > **Obecné**, nastavte **Sadanástrojůplatformy** vlastnost k požadované sadě nástrojů Windows XP. Například zvolte **Visual Studio 2017 – Windows XP (v141_xp)** vytvořit kód pro Windows XP a Windows Server 2003 pomocí kompilátoru Microsoft Visual C++ 2017.
 
-### <a name="c-runtime-support"></a>Podpora C++ runtime
+### <a name="c-runtime-support"></a>Podpora modulu CLR C++
 
-Sada nástrojů platformy systému Windows XP C Runtime Library (CRT), standardní knihovna C++, Active Template Library (ATL), Concurrency Runtime Library (ConCRT), paralelní vzory knihovna PPL (), Microsoft Foundation Class Library (MFC) a C++ AMP (C++ Accelerated masivní programování) knihovny zahrnují podporu runtime pro [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Pro tyto operační systémy, minimální podporované verze jsou [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) pro x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) pro x64, a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) pro x86 a x64.
+Společně se sada nástrojů platformy Windows XP, knihovny Runtime jazyka C (CRT), standardní knihovna C++, aktivní šablony knihovny (ATL), knihovna prostředí Runtime souběžnosti (ConCRT), knihovna paralelních vzorů (PPL), třída knihovny MFC (Microsoft Foundation) a C++ AMP (C++ Accelerated Massive programování) knihovny zahrnují podporu runtime pro Windows XP a Windows Server 2003. Minimální podporované verze jsou pro tyto operační systémy Windows XP Service Pack 3 (SP3) pro x86, Windows XP Service Pack 2 (SP2) pro x64 a Windows Server 2003 Service Pack 2 (SP2) pro x86 i x64.
 
-Tyto knihovny podporuje modulové platformy nainstalovat Visual Studio, v závislosti na cíl:
+Tyto knihovny jsou podporovány sad nástrojů platformy, které instaluje sada Visual Studio, v závislosti na cíl:
 
-|Knihovna|Výchozí platformy nástrojů cílení plochy aplikací pro Windows|Výchozí zaměřená na úložiště aplikací sada nástrojů platformy|Cílení na sada nástrojů platformy systému Windows XP [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|Knihovna|Výchozí sada nástrojů cílení Windows desktopové aplikace pro platformu|Výchozí aplikace Store cílení sadu nástrojů platformy|Sada nástrojů platformy Windows XP, které cílí na Windows XP, Windows Server 2003|
 |---|---|---|---|
 |CRT|X|X|X|
 |Standardní knihovna C++|X|X|X|
@@ -52,28 +52,28 @@ Tyto knihovny podporuje modulové platformy nainstalovat Visual Studio, v závis
 |C++ AMP|X|X||
 
 > [!NOTE]
-> Aplikace, které jsou napsané v jazyce C + +/ CLI a cílové rozhraní .NET Framework 4 běžet na [!INCLUDE[winxp](../build/includes/winxp_md.md)] a [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].
+> Aplikace, které jsou napsané v jazyce C + +/ CLI a cílové rozhraní .NET Framework 4 běží na Windows XP a Windows Server 2003.
 
-### <a name="differences-between-the-toolsets"></a>Rozdíly mezi modulové
+### <a name="differences-between-the-toolsets"></a>Rozdíly mezi sady nástrojů
 
-Vzhledem k rozdílům v podpora platformy a knihovna není vývojového prostředí pro aplikace, které používají sady nástrojů systému Windows XP jako u aplikací, které používají sady nástrojů Visual Studio výchozí jako dokončené.
+Vývojové prostředí pro aplikace, které používají sadu nástrojů platformy Windows XP není tak úplné jako u aplikací, které používají výchozí sady nástrojů platformy Visual Studio, z důvodu rozdílů v podpora platformy a knihovny.
 
 - **Funkce jazyka C++**
 
-   Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2012 implementována v aplikacích, které používají v110\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2013 implementována v aplikacích, které používají v120\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ v sadě Visual Studio 2015 implementována v aplikacích, které používají v140\_xp sada nástrojů platformy. Visual Studio použije odpovídající kompilátoru k sestavení pomocí starší modulové platformy. Použijte nejnovější sada nástrojů platformy systému Windows XP využívat další funkce jazyka C++ implementovaná v této verzi kompilátoru.
+   Jsou podporovány pouze funkcí jazyka C++ implementovány v aplikaci Visual Studio 2012 v aplikacích, které používají v110\_xp sada nástrojů platformy. Jsou podporovány pouze funkcí jazyka C++ implementovány v sadě Visual Studio 2013 v aplikacích, které používají v120\_xp sada nástrojů platformy. Pouze funkcí jazyka C++ implementovány v sadě Visual Studio 2015 jsou podporovány v aplikacích, které používají v140\_xp sada nástrojů platformy. Visual Studio používá odpovídající kompilátoru k sestavení pomocí starší sad nástrojů platformy. Můžete využít výhod dalších funkcí jazyka C++ implementovány v této verzi kompilátoru nejnovější sada nástrojů platformy Windows XP.
 
 - **Vzdálené ladění**
 
-   Nástroje pro vzdálenou pro Visual Studio nepodporuje vzdáleného ladění na [!INCLUDE[winxp](../build/includes/winxp_md.md)] nebo [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. K ladění aplikace, když je spuštěn na [!INCLUDE[winxp](../build/includes/winxp_md.md)] nebo [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], ladicí program ze starší verze sady Visual Studio můžete použít k ladění ho místně nebo vzdáleně. To se podobá postupu při ladění aplikace v systému Windows Vista, který je cílem runtime sada nástrojů platformy, ale není vzdáleného ladění cíl.
+   Nástroje Remote Tools for Visual Studio nepodporuje vzdálené ladění na Windows XP nebo Windows Server 2003. Chcete-li ladit aplikaci, když je spuštěná na Windows XP nebo Windows Server 2003, vám pomůže ladicího programu ze starší verze sady Visual Studio místně nebo vzdáleně ho ladit. To se podobá prostředí ladění aplikace v systému Windows Vista, což je cílový modul runtime sady nástrojů platformy, ale ne cíl vzdáleného ladění.
 
 - **Statické analýzy**
 
-   Modulové platformy systému Windows XP nepodporují statické analýzy, protože poznámek SAL pro [!INCLUDE[win7](../build/includes/win7_md.md)] SDK a knihovny modulu runtime nejsou kompatibilní. Pokud chcete provádět analýzy statické na aplikaci, která podporuje [!INCLUDE[winxp](../build/includes/winxp_md.md)] nebo [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], můžete dočasně přepnout řešení, jehož cílem je sada nástrojů platformy výchozí k provedení analýzy a pak přejděte zpátky do sady nástrojů systému Windows XP k sestavení aplikace.
+   Sad nástrojů platformy Windows XP nepodporují statickou analýzu, protože poznámky SAL pro Windows 7 SDK a knihoven modulu runtime nejsou kompatibilní. Pokud chcete provést Statická analýza v aplikaci, která podporuje Windows XP nebo Windows Server 2003, můžete dočasně přepněte řešení pro cílení na platformy výchozí sadu nástrojů k provedení analýzy a pak přepněte zpět do sady nástrojů platformy Windows XP k sestavení aplikace.
 
 - **Ladění grafiky DirectX**
 
-     Protože ladicího programu grafiky nepodporuje rozhraní API Direct3D – 9, nelze použít k ladění aplikací, které používají Direct3D – na [!INCLUDE[winxp](../build/includes/winxp_md.md)] nebo [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Pokud aplikace implementuje alternativní zobrazovací jednotky, která používá Direct3D – 10 nebo 11 Direct3D – rozhraní API, ladicího programu grafiky můžete použít k diagnostikování problémů s používáním těchto rozhraní API.
+     Protože ladicí program grafiky nepodporuje rozhraní API Direct3D 9, nelze použít k ladění aplikace, které používají rozhraní Direct3D na Windows XP nebo Windows Server 2003. Pokud aplikace implementuje alternativní renderer, který používá rozhraní Direct3D 10 nebo rozhraní Direct3D 11 API, ladicí program grafiky můžete použít k diagnostice problémů s použitím těchto rozhraní API.
 
 - **Vytváření HLSL**
 
-   Ve výchozím nastavení sady nástrojů systému Windows XP nekompiluje HLSL soubory zdrojového kódu. Ke kompilaci HLSL souborů, stažení a instalaci 2010 června DirectX SDK a potom nastavte projekt je VC adresáře, které chcete zahrnout. Další informace najdete v tématu "DirectX SDK nezaregistruje cesty zahrnutí/knihoven sadou Visual Studio 2010" oddílu [června 2010 stránky pro stažení sady SDK rozhraní DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Ve výchozím nastavení sada nástrojů Windows XP nezkompiluje HLSL souborů se zdrojovým kódem. Pro kompilaci souborů HLSL, stáhněte a nainstalujte červen 2010 je rozhraní DirectX SDK a pak nastavte projekt VC adresáře ho. Další informace najdete v tématu "rozhraní DirectX SDK nezaregistruje cesty zahrnutí nebo knihovnu, sadou Visual Studio 2010" část [červen 2010 stránku pro stažení rozhraní DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642871"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598029"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args – konstanta
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static const int args = Traits::args;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Pomáhá [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) zachovat počet parametrů na `Invoke` metoda rozhraní delegáta.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Argtraitshelper – struktura](../windows/argtraitshelper-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static const int args = Traits::args;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Pomáhá [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) zachovat počet parametrů na `Invoke` metoda rozhraní delegáta.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** event.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ArgTraitsHelper – struktura](../windows/argtraitshelper-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

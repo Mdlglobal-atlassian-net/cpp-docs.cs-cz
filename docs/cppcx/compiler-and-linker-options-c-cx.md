@@ -1,49 +1,49 @@
 ---
-title: Možnosti kompilátoru a Linkeru (C + +/ CX) | Microsoft Docs
+title: Možnosti kompilátoru a Linkeru (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088477"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593789"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
-Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti podporují vytváření aplikací pro prostředí Windows Runtime.  
+Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti podporu vytváření aplikací pro Windows Runtime.  
   
-## <a name="library-path"></a>Cesta ke knihovně  
- Proměnná prostředí % LIBPATH % Určuje výchozí cestu k vyhledání .winmd soubory.  
+## <a name="library-path"></a>Cestu ke knihovně  
+ Proměnné prostředí % % LIBPATH Určuje výchozí cestu pro hledání soubory .winmd.  
   
 ## <a name="compiler-options"></a>Možnosti kompilátoru  
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Umožňuje prostředí Windows Runtime jazyková rozšíření.<br /><br /> `nostdlib` Parametr zabrání kompilátoru pomocí cesty standardní, předdefinované vyhledávání nalézt sestavení a .winmd soubory.<br /><br /> **/ZW** – možnost kompilátoru implicitně určuje následující možnosti kompilátoru:<br /><br /> -   **/Fi** vccorlib.h, který vynutí zahrnutí vccorlib.h soubor hlaviček, který definuje mnoho typů, které vyžaduje kompilátor.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, který vynutí zahrnutí Windows.winmd metadata souboru, který je k dispozici v operačním systému a definuje mnoho typů v prostředí Windows Runtime.<br />-   **/FU** Platform.winmd, který vynutí zahrnutí Platform.winmd metadata souboru, který zajišťuje kompilátor a definuje většinu typů řady platformy oborů názvů.|  
-|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Přidá adresář, který je určený *dir* parametr vyhledávání cestu, která kompilátor používá k nalezení sestavení a .winmd soubory.|  
-|**/FU***souboru*|Vynutí zahrnutí zadaném modulu nebo .winmd souboru. To znamená, nemusíte určit `#using` *souboru* ve zdrojovém kódu. Kompilátor automaticky vynutí zahrnutí vlastního Windows metadata souboru Platform.winmd.|  
-|/D "WINAPI_FAMILY = 2"|Vytvoří definici, která umožňuje použití podmnožinu Win32 SDK, který je kompatibilní s prostředí Windows Runtime.|  
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Povolí jazyková rozšíření prostředí Windows Runtime.<br /><br /> `nostdlib` Parametr zabrání kompilátoru pomocí standardní předdefinované vyhledávací cesty k vyhledání souborů sestavení a .winmd.<br /><br /> **/ZW** – možnost kompilátoru implicitně určuje následující možnosti kompilátoru:<br /><br /> -   **/Fi** vccorlib.h, která vynutí zahrnutí souboru záhlaví vccorlib.h, který definuje mnoho typů, které jsou vyžadované kompilátor.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, která vynutí zahrnutí soubor Windows.winmd metadat, který je k dispozici v operačním systému a definuje mnoho typů v modulu Windows Runtime.<br />-   **/FU** Platform.winmd, která vynutí zahrnutí Platform.winmd metadata souboru, který je poskytován kompilátorem a definuje většinu typů řady platformy oborů názvů.|  
+|[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Přidá adresář, který je určený *dir* parametr do cesty pro hledání, kterou kompilátor používá k vyhledání souborů sestavení a .winmd.|  
+|**/FU***souboru* |Vynutí zahrnutí zadaném modulu nebo souboru .winmd. To znamená, není nutné zadat `#using` *souboru* ve zdrojovém kódu. Kompilátor automaticky vynutí zahrnutí svůj vlastní soubor Windows metadata, Platform.winmd.|  
+|/D "WINAPI_FAMILY = 2"|Vytvoří definici, která umožňuje používat podmnožinu Win32 SDK, která je kompatibilní s modulem Windows Runtime.|  
   
 ## <a name="linker-options"></a>Možnosti linkeru  
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|/ APPCONTAINER [: NE]|Označí tento spustitelný soubor jako spustitelného v kontejneru appcontainer (pouze).|  
-|/WINMD[:{NO&#124;ONLY}]|Vysílá soubor .winmd a přidružený binární soubor. Tuto možnost, musí být předán linkeru pro .winmd pro vypuštění.<br /><br /> **Ne**– není emitování soubor .winmd, ale emitování binární soubor.<br /><br /> **POUZE**– vysílá soubor .winmd, ale není emitování binární soubor.|  
-|/ WINMDFILE:*filename*|Název souboru .winmd pro vydávání místo výchozí název souboru .winmd. Pokud více názvů souborů jsou nastaveny na příkazovém řádku, použije se příjmení.|  
-|/ WINMDDELAYSIGN [: NE]|Částečně podepíše soubor .winmd a umístí veřejný klíč do binárního souboru.<br /><br /> **Ne**—(Default) není podepsání souboru .winmd.<br /><br /> / WINMDDELAYSIGN nemá žádný vliv, pokud /WINMDKEYFILE nebo /WINMDKEYCONTAINER rovněž je zadán.|  
-|/ WINMDKEYCONTAINER:*název*|Určuje kontejner klíčů pro podepsání sestavení. *Název* parametr odpovídá kontejneru klíčů, který se používá k podepsání souboru metadat.|  
-|/ WINMDFILE:*filename*|Určuje klíč nebo pár klíčů k podepsání sestavení. *Filename* parametr odpovídá klíč, který se používá k podepsání souboru metadat.|  
+|/ APPCONTAINER [: NO]|Označí spustitelný soubor jako spustitelný v kontejneru appcontainer (jenom).|  
+|/WINMD[:{NO&#124;ONLY}]|Generuje soubor .winmd a přidružený binární soubor. Tato možnost musí být předán linkeru pro .winmd, aby byly vypuštěny.<br /><br /> **Ne**– nebude generovat soubor winmd, ale generování binárního souboru.<br /><br /> **POUZE**– generuje soubor winmd, ale nebude generovat binárního souboru.|  
+|/ WINMDFILE:*název souboru*|Název souboru .winmd vygenerovat, namísto výchozí název souboru .winmd. Pokud více názvů souborů jsou zadané na příkazovém řádku, použije se poslední název.|  
+|/ WINMDDELAYSIGN SOUBORU [: NO]|Částečně podepíše soubor winmd a umístí veřejný klíč v binárním souboru.<br /><br /> **Ne**—(Default) nebude podepsání souboru winmd.<br /><br /> / Winmddelaysign souboru nemá žádný vliv, pokud je také zadán /WINMDKEYFILE nebo /WINMDKEYCONTAINER.|  
+|/ WINMDKEYCONTAINER:*název*|Určuje klíčový kontejner k podepsání sestavení. *Název* parametr odpovídá kontejneru klíčů, který se používá k podepsání souboru metadat.|  
+|/ WINMDKEYFILE:*název souboru*|Určuje klíč nebo dvojici klíčů k podepsání sestavení. *Filename* parametr odpovídá klíč, který se používá k podepsání souboru metadat.|  
   
 ### <a name="remarks"></a>Poznámky  
- Při použití **/ZW**, kompilátor automaticky odkazuje na knihovnu DLL verze z modulu Runtime jazyka C (CRT). Propojení na verzi statické knihovny není povolen a jakékoli použití funkcí CRT, které nejsou povoleny v aplikaci pro univerzální platformu Windows může způsobit chyby kompilace.  
+ Při použití **/ZW**, kompilátor automaticky propojí verzi knihovny DLL z modulu Runtime jazyka C (CRT). Odkazování na statickou knihovnu verze není povolen, a veškeré jeho používání funkce CRT, které nejsou povoleny v aplikaci pro univerzální platformu Windows způsobí chybu kompilace.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření aplikací a knihovny](../cppcx/building-apps-and-libraries-c-cx.md)
+ [Vytváření aplikací a knihoven](../cppcx/building-apps-and-libraries-c-cx.md)

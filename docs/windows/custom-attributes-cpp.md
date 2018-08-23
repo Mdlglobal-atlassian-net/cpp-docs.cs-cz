@@ -1,5 +1,5 @@
 ---
-title: Vlastní atributy (C++) | Microsoft Docs
+title: Vlastní atributy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5ca62b63cd09f2c5041efbbf36b01cc3b44f77c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887023"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607998"
 ---
 # <a name="custom-attributes-c"></a>Vlastní atributy (C++)
-Vlastní atribut je silného typu technika, který umožňuje uživatelům rozšířit metadata. Toto téma se zabývá pomocí atributů: určení parametrů a cíle.  
-  
- Informace o definování nové vlastní atributy najdete v článku,  
-  
--   [Uživatelsky definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md)  
-  
--   [atribut](../windows/attribute.md) (zastaralé syntaxe).  
-  
-## <a name="see-also"></a>Viz také  
- [Atribut](../windows/attribute.md)   
- [Vlastní atributy (C++)](../windows/custom-attributes-cpp.md)
+
+Vlastní atribut je technika silného typu, který umožňuje uživateli rozšířit metadat. Toto téma se zabývá použitím atributů: určení cíle a parametry.
+
+Informace o definování nových vlastních atributů najdete v článku,
+
+- [Uživatelsky definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md)
+
+- [atribut](../windows/attribute.md) (zastaralé syntaxe).
+
+## <a name="see-also"></a>Viz také
+
+[attribute](../windows/attribute.md)  
+[Vlastní atributy (C++)](../windows/custom-attributes-cpp.md)

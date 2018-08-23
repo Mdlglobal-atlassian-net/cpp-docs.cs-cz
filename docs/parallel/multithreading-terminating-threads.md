@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Ukončení vláken | Microsoft Docs'
+title: 'Multithreading: Ukončení vláken | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,47 +23,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689581"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608841"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Ukončení vláken
-Dvě běžné situace způsobí ukončení vlákna: řídící funkce nebo vlákno není povolené k zahájení dokončení. Pokud textový editor používá vlákno pro tisk na pozadí, řídící funkce by ukončit normálně, pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale tisk vlákně na pozadí musí byla předčasně ukončena. Toto téma vysvětluje, jak implementovat každé situaci a jak získat kód ukončení vlákna po ukončí.  
+Dvě běžné situace způsobí ukončení vlákna: existuje řídící funkce nebo vláknu není povoleno dokončení. Pokud textový procesor používá vlákno pro tisk na pozadí, řídící funkce by jej měla ukončit normálně Pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale vlákno tisku na pozadí musí být předčasně ukončeno. Toto téma vysvětluje, jak implementovat obě situace a jak získat ukončovací kód vlákna poté, co se jeho ukončení.  
   
--   [Normální ukončení vlákna](#_core_normal_thread_termination)  
+- [Normální ukončení vlákna](#_core_normal_thread_termination)  
   
--   [Předčasné ukončení vlákna](#_core_premature_thread_termination)  
+- [Předčasné ukončení vlákna](#_core_premature_thread_termination)  
   
--   [Načítání kód ukončení vlákna](#_core_retrieving_the_exit_code_of_a_thread)  
+- [Získání ukončovacího kódu vlákna](#_core_retrieving_the_exit_code_of_a_thread)  
   
 ##  <a name="_core_normal_thread_termination"></a> Normální ukončení vlákna  
- Pracovní podproces normální ukončení vlákna je jednoduchý: Ukončete řídící funkce a vrátí hodnotu, která označuje, že důvod pro ukončení. Můžete použít buď [AfxEndThread –](../mfc/reference/application-information-and-management.md#afxendthread) funkce nebo `return` příkaz. Obvykle 0 znamená úspěšné dokončení, ale je to na vás.  
+ 
+U pracovního vlákna je normální ukončení vlákna jednoduché: Ukončí řídící funkci a vrátí hodnotu, která označuje důvod ukončení. Můžete použít buď [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkce nebo **vrátit** příkazu. Obvykle 0 znamená úspěšné dokončení, ale to je jenom na vás.  
   
- Vlákna uživatelského rozhraní, tento proces je stejně jako prostý: z vlákna uživatelského rozhraní volejte [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Parametr pouze který **PostQuitMessage** trvá je kód ukončení vlákna. Jako u pracovních vláken obvykle 0 znamená úspěšné dokončení.  
+Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostřednictvím vlákna uživatelského rozhraní volejte [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) v sadě Windows SDK. Jediným parametrem, který `PostQuitMessage` přijímá, je ukončovací kód vlákna. Jako u pracovních vláken 0 obvykle znamená úspěšné dokončení.  
   
 ##  <a name="_core_premature_thread_termination"></a> Předčasné ukončení vlákna  
- Předčasné ukončení vlákna je téměř stejně jednoduché: volání [AfxEndThread –](../mfc/reference/application-information-and-management.md#afxendthread) z vlákna. Předejte požadovaný ukončovací kód jako jediný parametr. To zastaví provádění vlákna, zruší přidělení zásobníku podprocesu, odpojí všechny knihovny DLL, které jsou připojené k vlákno a odstraní objekt vlákna z paměti.  
+ 
+Předčasné ukončení vlákna je téměř stejně jednoduché: volání [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) z vlákna. Předejte požadovaný ukončovací kód jako jediný parametr. To zastaví provádění vlákna, zruší přidělení zásobníku vlákna, odpojí všechny k vláknu připojené DLL a odstraní objekt vlákna z paměti.  
   
- `AfxEndThread` Musí být volat z vlákna ukončena. Pokud chcete ukončit vlákno z jiného vlákna, musíte nastavit metodu komunikace mezi dvěma vlákny.  
+`AfxEndThread` Musí být volána z v rámci vlákno ukončeno. Pokud chcete ukončit vlákno z jiného vlákna, musíte nastavit metodu komunikace mezi těmito dvěma vlákny.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Načítání kód ukončení vlákna  
- Chcete-li získat ukončovací kód nebo vlákna uživatelského rozhraní, zavolejte [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) funkce. Informace o této funkci najdete v tématu [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Tato funkce přebírá popisovač na vlákno (uložené v `m_hThread` data členem `CWinThread` objekty) a adresu `DWORD`.  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Získání ukončovacího kódu vlákna  
+ 
+Chcete-li získat ukončovací kód pracovního procesu nebo vlákna uživatelského rozhraní, zavolejte [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) funkce. Informace o této funkci najdete v tématu Windows SDK. Tato funkce přijímá zpracovávané vlákno (uložené v `m_hThread` datový člen `CWinThread` objekty) a adresu typu DWORD.  
   
- Pokud je stále aktivní, vlákno **GetExitCodeThread** umístí **STILL_ACTIVE** v zadaných `DWORD` adresa; jinak, ukončovací kód je umístěn v tuto adresu.  
+Pokud je vlákno stále aktivní, `GetExitCodeThread` umístí STILL_ACTIVE zadaná adresa DWORD; v opačném případě ukončovací kód je umístěn v této adrese.  
   
- Načítání ukončovací kód [CWinThread](../mfc/reference/cwinthread-class.md) objekty trvá na další krok. Ve výchozím nastavení když `CWinThread` ukončení vlákna, je odstraněn objekt přístup z více vláken. To znamená, že nelze získat přístup `m_hThread` – datový člen protože `CWinThread` objekt již existuje. Abyste předešli této situaci, proveďte jednu z následujících akcí:  
+Získání ukončovacího kódu z [CWinThread](../mfc/reference/cwinthread-class.md) objekty trvá přidat další krok. Ve výchozím nastavení když `CWinThread` vlákno ukončeno, objekt vlákna odstraněn. To znamená, že nemáte přístup `m_hThread` datový člen protože `CWinThread` objekt už existuje. Abyste předešli této situaci, proveďte jednu z následujících akcí:  
   
--   Nastavte `m_bAutoDelete` – datový člen k **FALSE**. To umožňuje `CWinThread` objekt zůstanou zachovány i po ukončení vlákno. Potom můžete přistupovat `m_hThread` – datový člen po ukončení vlákno. Pokud použijete tento postup, ale je zodpovědná za zničení `CWinThread` objekt, protože rozhraní nebude odstraní automaticky. Toto je upřednostňovaná metoda.  
+- Nastavte `m_bAutoDelete` datový člen na hodnotu FALSE. Díky tomu `CWinThread` objekt zachován poté, co je vlákno bylo ukončeno. Potom můžete přistupovat `m_hThread` datový člen po ukončení vlákna. Pokud použijete tento postup, ale budete muset pro zničení `CWinThread` objektu, protože rozhraní jej neodstraní automaticky za vás. Toto je upřednostňovaná metoda.  
   
--   Popisovač vlákna úložiště samostatně. Po vytvoření vlákno zkopírujte jeho `m_hThread` – datový člen (pomocí **:: DuplicateHandle**) do jiné proměnné a k němu přístup pomocí této proměnné. Tímto způsobem objekt je automaticky odstraněn, když dojde k ukončení a můžete stále zjistit, proč bylo vlákno ukončeno. Dávejte pozor, aby vlákno nezavře předtím, než můžete duplikovat popisovač. Nejbezpečnější způsob, jak to udělat, je předat **CREATE_SUSPENDED** k [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), uložte popisovač a poté obnovit vlákno voláním [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
+- Store popisovač vlákna zvlášť. Potom, co je vlákno vytvořeno, zkopírujte jeho `m_hThread` datový člen (pomocí `::DuplicateHandle`) do jiné proměnné a přistupujte k němu prostřednictvím dané proměnné. Tímto způsobem bude objekt automaticky odstraněn, pokud dojde k ukončení a můžete stále zjistit, proč bylo vlákno ukončeno. Dbejte na to, že vlákno neskončilo dříve, než duplikujete popisovač. Nejbezpečnější způsob, jak to provést, je předat CREATE_SUSPENDED k [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), uložit popisovač a poté obnovit vlákno voláním [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
- Buď metoda umožňuje určit, proč `CWinThread` objekt byl ukončen.  
+Některé z metod umožňuje zjistit, proč `CWinThread` byl ukončen objekt.  
   
 ## <a name="see-also"></a>Viz také  
- [Multithreading s použitím C++ a MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
- [_endthread –, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
- [_beginthread –, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+ 
+[Multithreading s C++ a knihovnou MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[_endthread _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+[_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Box | Microsoft Docs
+title: Platform::Box – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,19 +9,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7def63199666a9dba0a1628031129ce584e0fcec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091677"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605956"
 ---
 # <a name="platformbox-class"></a>Platform::Box – třída
-Typ hodnoty jako například umožňuje `Windows::Foundation::DateTime` nebo skalárního typu, jako `int` k uložení do `Platform::Object` typu. Obvykle není nutné používat `Box` explicitně, protože zabalení implicitně dochází, když přetypovat na typ hodnoty `Object^`.  
+Umožňuje typ hodnoty, jako `Windows::Foundation::DateTime` nebo skalární typ. například `int` k uložení do `Platform::Object` typu. Obvykle není nutné používat `Box` explicitně, protože zabalení implicitně dojde, pokud přetypovat na typ hodnoty `Object^`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -36,14 +36,14 @@ ref class Box abstract;
  **Namespace:** platformy
 |Člen|Popis|  
 |------------|-----------------|
-|[Pole](#ctor)|Vytvoří `Box` který může zapouzdřit hodnotu zadaného typu.|
-|[operátor pole&lt;const T&gt;^](#box-const-t)|Umožňuje zabalení převody z `const` třídy hodnoty `T` nebo `enum` třída `T` k `Box<T>`.|
-|[operátor pole&lt;const volatile T&gt;^](#box-const-volatile-t)|Umožňuje zabalení převody z `const volatile` třídy hodnoty `T` nebo `enum` typ `T` k `Box<T>`. |
-|[operátor pole&lt;T&gt;^](#box-t)|Umožňuje zabalení převody z – hodnotová třída `T` k `Box<T>`.|
-|[operátor pole&lt;volatile T&gt;^](#box-volatile-t)|Umožňuje zabalení převody z `volatile` třídy hodnoty `T` nebo `enum` typ `T` k `Box<T>`.|
-|[Box::Operator T](#t)|Umožňuje zabalení převody z – hodnotová třída `T` nebo `enum` třída `T` k `Box<T>`.| 
-## <a name="ctor"></a> Box::Box – konstruktor
-Vytvoří `Box` který může zapouzdřit hodnotu zadaného typu. | |[ Hodnota vlastnosti](#value)| Vrátí hodnotu, která je zapouzdřené v `Box` objektu. |  
+|[Pole](#ctor)|Vytvoří `Box` , který může zapouzdřit hodnotu zadaného typu.|
+|[operátor pole&lt;const T&gt;^](#box-const-t)|Umožňuje převod na uzavřené určení z `const` hodnotu třídy `T` nebo `enum` třídy `T` k `Box<T>`.|
+|[operátor pole&lt;const volatile T&gt;^](#box-const-volatile-t)|Umožňuje převod na uzavřené určení z `const volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`. |
+|[operátor pole&lt;T&gt;^](#box-t)|Umožňuje zabalení převody z hodnotové třídy `T` k `Box<T>`.|
+|[operátor pole&lt;volatile T&gt;^](#box-volatile-t)|Umožňuje převod na uzavřené určení z `volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`.|
+|[Box::Operator T](#t)|Umožňuje zabalení převody z hodnotové třídy `T` nebo `enum` třídy `T` k `Box<T>`.| 
+## <a name="ctor"></a> Box::Box konstruktor
+Vytvoří `Box` , který může zapouzdřit hodnotu zadaného typu. | |[ Hodnota vlastnosti](#value)| Vrátí hodnotu, která jsou zapouzdřena v `Box` objektu. |  
 ### <a name="syntax"></a>Syntaxe  
   
 ```cpp  
@@ -52,11 +52,11 @@ Box(T valueArg);
   
 ### <a name="parameters"></a>Parametry  
  `valueArg`  
- Typ hodnoty zabaleny – například `int`, `bool`, `float64`, `DateTime`.  
+ Hodnota, která má být pevně určený typ – například `int`, `bool`, `float64`, `DateTime`.  
   
 
 ## <a name="box-const-t"></a> Pole Box::Operator&lt;const T&gt;^ – operátor
-Umožňuje zabalení převody z `const` třídy hodnoty `T` nebo `enum` třída `T` k `Box<T>`.  
+Umožňuje převod na uzavřené určení z `const` hodnotu třídy `T` nebo `enum` třídy `T` k `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -66,13 +66,13 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Žádné – hodnotová třída, struktura hodnotu nebo výčtového typu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
+ Žádné hodnotová třída, struktura hodnotu nebo výčtového typu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::Box<T>^` instance, který představuje původní hodnotu do pole v třídě ref.  
+ A `Platform::Box<T>^` instanci, která představuje původní hodnoty v poli v referenční třídě.  
   
 ## <a name="box-const-volatile-t"></a> Pole Box::Operator&lt;const volatile T&gt;^ – operátor
-Umožňuje zabalení převody z `const volatile` třídy hodnoty `T` nebo `enum` typ `T` k `Box<T>`.  
+Umožňuje převod na uzavřené určení z `const volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -82,13 +82,13 @@ operator Box<const volatile T>^(const volatile T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Všechny typ výčtu, hodnota třídě nebo struktuře hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
+ Žádné typ výčtu, hodnotová třída nebo struktura hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::Box<T>^` instance, který představuje původní hodnotu do pole v třídě ref.  
+ A `Platform::Box<T>^` instanci, která představuje původní hodnoty v poli v referenční třídě.  
   
 ## <a name="box-t"></a> Pole Box::Operator&lt;T&gt;^ – operátor
-Umožňuje zabalení převody z – hodnotová třída `T` k `Box<T>`.  
+Umožňuje zabalení převody z hodnotové třídy `T` k `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -98,13 +98,13 @@ operator Box<const T>^(const T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Všechny typ výčtu, hodnota třídě nebo struktuře hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
+ Žádné typ výčtu, hodnotová třída nebo struktura hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::Box<T>^` instance, který představuje původní hodnotu do pole v třídě ref.  
+ A `Platform::Box<T>^` instanci, která představuje původní hodnoty v poli v referenční třídě.  
   
 ## <a name="box-volatile-t"></a> Pole Box::Operator&lt;volatile T&gt;^ – operátor
-Umožňuje zabalení převody z `volatile` třídy hodnoty `T` nebo `enum` typ `T` k `Box<T>`.  
+Umožňuje převod na uzavřené určení z `volatile` hodnotu třídy `T` nebo `enum` typ `T` k `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -114,13 +114,13 @@ operator Box<volatile T>^(volatile T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Všechny typ výčtu, hodnota třídě nebo struktuře hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
+ Žádné typ výčtu, hodnotová třída nebo struktura hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::Box<T>^` instance, který představuje původní hodnotu do pole v třídě ref.  
+ A `Platform::Box<T>^` instanci, která představuje původní hodnoty v poli v referenční třídě.  
   
 ## <a name="t"></a>  Operátor Box::Operator T
-Umožňuje zabalení převody z – hodnotová třída `T` nebo `enum` třída `T` k `Box<T>`.  
+Umožňuje zabalení převody z hodnotové třídy `T` nebo `enum` třídy `T` k `Box<T>`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -130,14 +130,14 @@ operator Box<T>^(T valueType);
   
 ### <a name="parameters"></a>Parametry  
  `T`  
- Všechny typ výčtu, hodnota třídě nebo struktuře hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
+ Žádné typ výčtu, hodnotová třída nebo struktura hodnotu. Obsahuje vestavěné typy v [výchozí obor názvů](../cppcx/default-namespace.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::Box<T>^` instance, který představuje původní hodnotu do pole v třídě ref.  
+ A `Platform::Box<T>^` instanci, která představuje původní hodnoty v poli v referenční třídě.  
   
 
 ## <a name="value"></a> Vlastnost Box::Value
-Vrátí hodnotu, která je zapouzdřené v `Box` objektu.  
+Vrátí hodnotu, která jsou zapouzdřena v `Box` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -148,9 +148,9 @@ virtual property T Value{
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí zabalené hodnoty stejného typu, protože byl původně před byl do pole.  
+ Vrátí zabalené hodnoty stejného typu jako původně předtím, než je zabalená.  
   
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)   
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)   
  [Zabalení](../cppcx/boxing-c-cx.md)

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4609866b25f574f34b620d81de3a21d6b608db6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ca4391539e4f6987431e8b9b036053db02218007
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020316"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593052"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE** Pokud **synclockt –** objekt je uzamčena, jinak **false**.  
-  
-## <a name="remarks"></a>Poznámky  
- Označuje, zda aktuální **synclockt –** vlastní prostředek objektu; to znamená, **synclockt –** objekt je *uzamčen*.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Viz také  
- [SyncLockT – třída](../windows/synclockt-class.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+**Hodnota TRUE** Pokud **synclockt –** objekt je uzamčena, jinak **false**.
+
+## <a name="remarks"></a>Poznámky
+
+Označuje, zda aktuální **synclockt –** vlastní prostředek objektu; to znamená, **synclockt –** objekt je *uzamčen*.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Viz také
+
+[SyncLockT – třída](../windows/synclockt-class.md)

@@ -17,80 +17,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595239"
 ---
 # <a name="aggregatable"></a>aggregatable
-Označuje, že třída podporuje agregaci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ aggregatable(   
-   value  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Hodnota* (volitelné)  
- Parametr označuje, kdy se dají agregovat objektu COM:  
-  
--   `never` Objekt COM nemůže být agregován.  
-  
--   `allowed` Objekt modelu COM lze vytvořit přímo, nebo se dají agregovat. Toto nastavení je výchozí.  
-  
--   `always` Objekt modelu COM nelze vytvořit přímo a pouze se dají agregovat. Při volání `CoCreateInstance` pro tento objekt, je nutné zadat objekt agregovat `IUnknown` rozhraní (řízení `IUnknown`).  
-  
-## <a name="remarks"></a>Poznámky  
- **Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.  
-  
- Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.  
-  
-### <a name="atl-projects"></a>Projekty knihovny ATL  
-  
- Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Kromě výše popsaným chování atribut přidá také jednu z následujících makra do cílové třídy:  
-  
-|Hodnota parametru|Vložené: – makro|  
-|---------------------|--------------------|  
-|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// cpp_attr_ref_aggregatable.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="MyModule")];  
-  
-[ coclass, aggregatable(allowed),  
-  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]  
-class CMyClass {};  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|**Třída**, **– struktura**|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [IDL – atributy](../windows/idl-attributes.md)   
- [Atributy třídy](../windows/class-attributes.md)   
- [– TypeDef, Enum, Union a struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
+
+Označuje, že třída podporuje agregaci.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ aggregatable(
+   value
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Hodnota* (volitelné)  
+Parametr označuje, kdy se dají agregovat objektu COM:
+
+- `never` Objekt COM nemůže být agregován.
+
+- `allowed` Objekt modelu COM lze vytvořit přímo, nebo se dají agregovat. Toto nastavení je výchozí.
+
+- `always` Objekt modelu COM nelze vytvořit přímo a pouze se dají agregovat. Při volání `CoCreateInstance` pro tento objekt, je nutné zadat objekt agregovat `IUnknown` rozhraní (řízení `IUnknown`).
+
+## <a name="remarks"></a>Poznámky
+
+**Agregovatelné** C++ atribut má stejné funkce jako [agregovatelné](http://msdn.microsoft.com/library/windows/desktop/aa366721) atribut MIDL. To znamená, že kompilátor předá **agregovatelné** atribut prostřednictvím souboru generovaného IDL.
+
+Tento atribut vyžaduje, aby [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.
+
+### <a name="atl-projects"></a>Projekty knihovny ATL
+
+Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Kromě výše popsaným chování atribut přidá také jednu z následujících makra do cílové třídy:
+
+|Hodnota parametru|Vložené: – makro|
+|---------------------|--------------------|
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|
+
+## <a name="example"></a>Příklad
+
+```cpp
+// cpp_attr_ref_aggregatable.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="MyModule")];
+
+[ coclass, aggregatable(allowed),
+  uuid("1a8369cc-1c91-42c4-befa-5a5d8c9d2529")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|**Třída**, **– struktura**|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|
+|**Neplatné atributy**|Žádné|
+
+Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[IDL – atributy](../windows/idl-attributes.md)  
+[Atributy třídy](../windows/class-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558)  

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886047"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609496"
 ---
 # <a name="cstringt-class"></a>Cstringt – třída
 Tato třída reprezentuje `CStringT` objektu.  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  V aplikacích MFC [cmemoryexception – třída](../../mfc/reference/cmemoryexception-class.md) je vyvolána, pokud existuje dostatek paměti. V aplikacích knihovny ATL [catlexception –](../../atl/reference/catlexception-class.md) je vyvolána výjimka. Tato funkce se obvykle používá k vrácení řetězce pro automatizaci.  
   
 
- Obecně Pokud se tento řetězec je předán do funkce modelu COM jako [in] vyžaduje parametr, pak by se volajícím uvolnit řetězec. To můžete udělat pomocí [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx), jak je popsáno v sadě Windows SDK. Další informace najdete v tématu [Allocating a uvolňování paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
+ Obecně Pokud se tento řetězec je předán do funkce modelu COM jako [in] vyžaduje parametr, pak by se volajícím uvolnit řetězec. To můžete udělat pomocí [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), jak je popsáno v sadě Windows SDK. Další informace najdete v tématu [Allocating a uvolňování paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
   
- Další informace o funkcích přidělení OLE ve Windows najdete v tématu [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) v sadě Windows SDK.  
+ Další informace o funkcích přidělení OLE ve Windows najdete v tématu [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) v sadě Windows SDK.  
 
   
 ### <a name="example"></a>Příklad  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): Umožňuje vytvářet `CStringT` z ukazatele na **unsigned char**.  
   
 > [!NOTE]
->  Definovat makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION vypnout řetězec implicitní převod mezi [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] a [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] řetězce. Makro se vyloučí z kompilace konstruktory, které podporují převod.  
+>  Definujte makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION vypnout řetězec implicitní převod mezi řetězce ANSI a Unicode. Makro se vyloučí z kompilace konstruktory, které podporují převod.  
   
  Všimněte si, že *strSrc* parametr může být buď `CStringT` nebo `CThisSimpleString` objektu. Pro `CStringT`, použijte jeden z jeho výchozí instancí (`CString`, `CStringA`, nebo `CStringW`); pro `CThisSimpleString`, použití **to** ukazatele. `CThisSimpleString` deklaruje instanci [csimplestringt – třída](../../atl-mfc-shared/reference/csimplestringt-class.md), což je menší třídu řetězec s míň vestavěnou funkci než `CStringT` třídy.  
   

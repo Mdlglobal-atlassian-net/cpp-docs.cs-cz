@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a6bf0635103ffee3dc3a6bf8604eda06c55049d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: eca04d185eaf31bb112741c1564e5fbe551c6b63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014536"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599909"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount – konstanta
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static const unsigned long IidCount = 1;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Obsahuje počet rozhraní přidružené k aktuální ID **interfacetraits –** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Interfacetraits – struktura](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static const unsigned long IidCount = 1;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Obsahuje počet rozhraní přidružené k aktuální ID **interfacetraits –** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[InterfaceTraits – struktura](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

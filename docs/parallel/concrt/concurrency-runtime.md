@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208386"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608264"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Concurrency Runtime pro jazyk C++ umožňuje zápis robustní, škálovatelné a interaktivní paralelních aplikací. Vyvolá úroveň abstrakce, takže není nutné spravovat infrastrukturu podrobnosti, které se týkají souběžnosti. Také ho můžete použít k určení plánování zásad, které splňují kvalitu služby potřebám vašich aplikací. Pomocí těchto prostředků vám pomohou v začátcích práce s modulem Runtime souběžnost.  
@@ -111,7 +111,7 @@ Concurrency Runtime pro jazyk C++ umožňuje zápis robustní, škálovatelné a
 |[Ukázky kódu pro Concurrency Runtime a knihovna paralelních vzorů v sadě Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Poskytuje vzorové aplikace a nástroje, které ukazují modulu Runtime souběžnosti.|  
 |[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blogový další články o paralelním programování v modulu Runtime souběžnosti.|  
 |[V C++ a nativním kódu fórum pro paralelní výpočty](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|  
-|[Paralelní programování](/dotnet/standard/parallel-programming/index)|Se dozvíte, jaké paralelní programovací model, který je k dispozici v [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
+|[Paralelní programování](/dotnet/standard/parallel-programming/index)|Naučíte se o paralelní programovací model, který je k dispozici v rozhraní .NET Framework.|  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční informace](../../parallel/concrt/reference/reference-concurrency-runtime.md)

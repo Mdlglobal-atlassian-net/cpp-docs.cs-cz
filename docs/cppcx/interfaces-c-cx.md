@@ -1,99 +1,99 @@
 ---
-title: Rozhraní (C + +/ CX) | Microsoft Docs
+title: Rozhraní (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592549"
 ---
 # <a name="interfaces-ccx"></a>Rozhraní (C + +/ CX)
-I když třídu ref může dědit vlastnosti z maximálně jednu konkrétní základní třídu, můžete implementovat libovolný počet třídy rozhraní. Třída rozhraní (nebo struktura rozhraní) sám sebe může dědit (nebo vyžadovat) více rozhraní třídy, může přetížit jeho členských funkcí a může mít parametry typu.  
+I když třídy ref class. může dědit z maximálně jeden konkrétní základní třídy, může implementovat libovolný počet tříd rozhraní. Třída rozhraní (nebo interface struct) samotné mohou dědit (nebo vyžadují) více rozhraní třídy, mohou přetížit její členské funkce a může mít parametry typu.  
   
 ## <a name="characteristics"></a>Vlastnosti  
  Rozhraní má tyto vlastnosti:  
   
--   Třída rozhraní (nebo struktura) musí být deklarován v oboru názvů a může mít veřejných nebo privátních usnadnění. Na metadata jsou vydávány pouze veřejné rozhraní.  
+-   Třída rozhraní (nebo struct) musí být deklarovány v oboru názvů a může mít přístup k veřejné nebo soukromé. Jenom veřejné rozhraní jsou emitovány do metadat.  
   
--   Členové rozhraní může obsahovat vlastnosti, metod a události.  
+-   Členy rozhraní může obsahovat vlastnosti, metody a události.  
   
--   Všechny členy rozhraní jsou implicitně veřejné a virtuální.  
+-   Všechny členy rozhraní jsou implicitně veřejné i virtuální.  
   
--   Pole a statické členy nejsou povoleny.  
+-   Pole a statické členy nejsou povolené.  
   
--   Typy, které jsou použity jako parametry metody, vlastnosti nebo návratové hodnoty lze pouze typy prostředí Windows Runtime; To zahrnuje základní typy a typy výčtu tříd.  
+-   Typy, které se používají jako vlastnosti, metody parametry nebo návratové hodnoty mohou být pouze typy modulu Windows Runtime; To zahrnuje základní typy a typy tříd výčtu.  
   
 ## <a name="declaration-and-usage"></a>Deklarace a používání  
- Následující příklad ukazuje, jak rozhraní deklarovat. Všimněte si, že rozhraní může být deklarován jako typ třídě nebo struktuře.  
+ Následující příklad ukazuje, jak deklarovat rozhraní. Všimněte si, že rozhraní mohou být deklarovány jako typ třídy nebo struktury.  
   
  [!code-cpp[cx_interfaces#01](../cppcx/codesnippet/CPP/interfacestest/class1.h#01)]  
   
- Pokud chcete implementovat rozhraní, ref třídě nebo struktuře ref deklaruje a implementuje virtuální metody a vlastnosti. Rozhraní a implementující třídu ref musí používat stejné názvy parametrů metoda, jak je uvedeno v následujícím příkladu:  
+ Implementovat rozhraní, třídy ref class nebo ref struct deklaruje a implementuje virtuální metody a vlastnosti. Rozhraní a implementující třída ref musí používat stejné názvy parametrů metody, jak je znázorněno v tomto příkladu:  
   
  [!code-cpp[cx_interfaces#02](../cppcx/codesnippet/CPP/interfacestest/class1.h#02)]  
   
 ## <a name="interface-inheritance-hierarchies"></a>Hierarchie dědičnosti rozhraní  
- Rozhraní může dědit vlastnosti z jednoho nebo více rozhraní. Ale na rozdíl od ref třídě nebo struktuře, nepodporuje rozhraní deklarovat rozhraní zděděné členy. Pokud rozhraní B zdědí rozhraní A a ref třída C dědí z B, C musí implementovat, jak a B. To je znázorněno v následujícím příkladu.  
+ Rozhraní může dědit z jednoho nebo více rozhraní. Ale na rozdíl od třídy ref class nebo struct rozhraní nelze deklarovat členy zděděné rozhraní. Pokud rozhraní B dědí z rozhraní A a referenční třídy jazyka C je odvozen z B, C musí implementovat i B. To je ukázáno v následujícím příkladu.  
   
  [!code-cpp[cx_interfaces#03](../cppcx/codesnippet/CPP/interfacestest/class1.h#03)]  
   
-## <a name="implementing-interface-properties-and-events"></a>Implementace rozhraní vlastností a událostí  
- Jak ukazuje předchozí příklad, můžete implementovat rozhraní vlastnosti trivial virtuální vlastnosti. Můžete také zadat vlastní mechanismy získání a nastavení v implementující třídu.  Metoda getter a setter metody musí být veřejné ve vlastnosti rozhraní.  
+## <a name="implementing-interface-properties-and-events"></a>Implementace rozhraní vlastnosti a události.  
+ Jak je znázorněno v předchozím příkladu, můžete k implementaci rozhraní vlastnosti triviální vlastnosti virtuální. Můžete taky zadat vlastní gettery a settery v implementující třídu.  Metoda getter a setter musí být veřejné ve vlastnosti rozhraní.  
   
  [!code-cpp[cx_interfaces#04](../cppcx/codesnippet/CPP/interfacestest/class1.h#04)]  
   
- Pokud rozhraní deklaruje jen get, nebo jenom sadu vlastností, implementující třídu musí explicitně zadejte getter a setter.  
+ Pokud rozhraní deklaruje jenom pro získání nebo jenom sadu vlastností, implementující třída by měla explicitně zadejte getter nebo setter.  
   
  [!code-cpp[cx_interfaces#05](../cppcx/codesnippet/CPP/interfacestest/class1.h#05)]  
   
- Můžete implementovat vlastní přidávat a odebírat metody pro události v implementující třídu.  
+ Můžete také implementovat vlastní přidání a odebrání metody pro události v implementující třídu.  
   
 ## <a name="explicit-interface-implementation"></a>Implementace explicitního rozhraní  
- Když ref třída implementuje více rozhraní a těchto rozhraní mají metody, jejichž názvy a podpisy jsou identické pro kompilátor, můžete tuto syntaxi explicitně označíte, metody rozhraní, která implementuje metody třídy.  
+ Když třídy ref class implementuje více rozhraní a tato rozhraní mají metody, jejichž názvy a podpisy jsou stejné jako kompilátor, můžete explicitně určit metodu rozhraní, která implementuje metodu třídy následující syntaxi.  
   
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Obecná rozhraní  
- V jazyce C + +/ CX, `generic` – klíčové slovo se používá k reprezentování typu prostředí Windows Runtime s parametry. Parametrizované typ je vygenerované v metadatech a mohou být spotřebovávána kód, který je napsán v libovolném jazyce, který podporuje parametry typu. Prostředí Windows Runtime definuje některé obecná rozhraní – například [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)– ale nepodporuje vytvoření veřejné uživatelem definované obecná rozhraní v jazyce C + +/ CX. Ale můžete vytvořit privátní obecná rozhraní.  
+ V jazyce C + +/ CX, `generic` – klíčové slovo se používá k reprezentování typ Windows Runtime s parametry. Typ s parametry je vygenerován v metadatech a mohou být spotřebovány kód, který je napsané v libovolném jazyce, který podporuje parametry typu. Modul Windows Runtime definuje některé obecná rozhraní – například [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)– ale nepodporuje vytvoření veřejné uživatelem definované obecných rozhraní v jazyce C + +/ CX. Však můžete vytvořit privátní obecná rozhraní.  
   
- Tady je použití prostředí Windows Runtime typy vytvářet generické rozhraní:  
+ Tady je použití typů Windows Runtime autorovi generické rozhraní:  
   
--   Obecný uživatelem definované `interface class` v součást není povoleno do jeho soubor metadat Windows; proto nemůže mít veřejnou dostupnost a kód klienta v jiné soubory .winmd nelze implementaci. Může být implementována neveřejný ref tříd ve stejné komponenty. Třída veřejné ref může mít obecné rozhraní, zadejte jako soukromý člen.  
+-   Obecný uživatelský `interface class` v součásti nesmí být vložen do jeho soubor metadat Windows; proto nemůže mít přístupnost public a klientský kód v jiných souborech .winmd jeho implementaci. Může být implementována neveřejné referenční třídy pod stejnou komponentou. Třída public ref class může mít obecné rozhraní, zadejte jako privátní člen.  
   
-     Následující fragment kódu ukazuje, jak deklarovat obecný `interface class` a implementovat v privátní ref třídu a použijte třídu ref jako soukromý člen v třídě veřejné ref.  
+     Následující fragment kódu ukazuje, jak deklarovat obecný `interface class` a implementovat v privátní ref class a použití třídy ref jako privátní člen třída public ref class.  
   
      [!code-cpp[cx_interfaces#07](../cppcx/codesnippet/CPP/interfacestest/class1.h#07)]  
   
--   Generické rozhraní třeba postupovat podle standardního rozhraní pravidla, která řídí usnadnění, členy, *vyžaduje* relace, základní třídy a tak dále.  
+-   Obecná rozhraní musí dodržovat standardní rozhraní pravidla, kterými se řídí přístupnost členů, *vyžaduje* relace, základní třídy a tak dále.  
   
--   Generické rozhraní může trvat jeden nebo více parametrů obecného typu, které předchází `typename` nebo `class`. Parametry bez typu nejsou podporovány.  
+-   Obecná rozhraní můžete provést jeden nebo více parametrů obecného typu, které předchází `typename` nebo `class`. Parametry bez typu nejsou podporovány.  
   
--   Parametr typu mohou být jakéhokoli typu prostředí Windows Runtime. To znamená parametr typu může být odkazového typu, typ hodnoty, třídu rozhraní, delegáta, základní typ nebo veřejný výčet tříd.  
+-   Typ parametru může být libovolný typ Windows Runtime. To znamená parametr typu může být typ odkazu, typ hodnoty, třída rozhraní, delegáta, základní typ nebo veřejný výčet tříd.  
   
--   A *uzavřený obecné rozhraní* je rozhraní, která dědí z obecné rozhraní a určuje konkrétní typ argumenty pro všechny parametry typu. Ho lze použít kdekoli lze neobecnou soukromé rozhraní.  
+-   A *uzavřený obecný rozhraní* je rozhraní, které dědí z obecné rozhraní a Určuje argumenty typu implementujícího typ pro všechny parametry typu. To lze použít kdekoli je možné privátní rozhraním neobecná.  
   
--   *Otevřete obecné rozhraní* je rozhraní, které obsahuje jeden nebo více parametrů typu, pro které se ještě poskytuje žádný konkrétní typ. Ho lze použít kdekoli, typu lze použít jako argument typu jiné obecné rozhraní včetně.  
+-   *Otevřít obecné rozhraní* je rozhraní, která má jeden nebo více parametrů typu, pro které žádný konkrétní typ neposkytujeme ještě. To lze použít kdekoli, že typ je možné, včetně jako argument typu jiného obecného rozhraní.  
   
--   Můžete parametrizovat pouze celý rozhraní, ne u jednotlivých metod.  
+-   Můžete parametrizovat pouze celé rozhraní, nikoli jednotlivé metody.  
   
--   Parametry typu nemůže být omezen.  
+-   Parametry typu nemůže být omezený.  
   
--   Uzavřené obecné rozhraní má implicitně generovaného UUID. Uživatele nelze zadat identifikátor UUID.  
+-   Uzavřený obecný rozhraní má implicitně generovaný identifikátor UUID. Uživatele nejde zadat identifikátor UUID.  
   
--   V rozhraní, žádný odkaz na aktuální rozhraní – v parametru metody, vrátí hodnotu, nebo vlastnost – se předpokládá, že k odkazování na aktuální instance. Například *IMyIntf* znamená *IMyIntf\<T >*.  
+-   V rozhraní, všechny odkazy na aktuální rozhraní – v parametru metody, vrátí hodnotu, nebo vlastnost – se předpokládá, že odkazují na aktuální instanci. Například *IMyIntf* znamená, že *IMyIntf\<T >*.  
   
--   Pokud parametr typu je typ parametru metody, deklaraci tento parametr nebo proměnná používá název parametr typu bez jakýchkoli ukazatele, nativní referenční dokumentace nebo deklarátory popisovač. Jinými slovy, nikdy zápisu "T ^".  
+-   Pokud je typ parametru metody parametru typu, deklarace tento parametr nebo proměnná používá název parametru typu bez ukazatele, nativní odkaz nebo popisovač deklarátory. Jinými slovy, nikdy Nepsat "T ^".  
   
--   Třídy šablonované ref musí být privátní. Můžete implementovat obecné rozhraní a můžete předat parametr šablony *T* na obecné argument *T*. Každý vytváření instancí třídy šablonované ref samotné je třída ref.  
+-   Bez vizuálního vzhledu referenční třídy musí být privátní. Můžete implementovat obecné rozhraní a můžete předat parametr šablony *T* obecný argument *T*. Každá instance třídy bez vizuálního vzhledu ref class samotného je třídy ref class.  
   
 ## <a name="see-also"></a>Viz také  
  [Systém typů](../cppcx/type-system-c-cx.md)   

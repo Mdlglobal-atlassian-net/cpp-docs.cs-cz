@@ -1,5 +1,5 @@
 ---
-title: Namespace Platform::Collections::details | Microsoft Docs
+title: 'Platform::Collections:: details – Namespace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,19 +9,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb046b7e609b053d6dcd0b7d10d864b6194fe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d3a6b839b51f9398a2c2ab6b4942e0f728fed6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088125"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594782"
 ---
-# <a name="platformcollectionsdetails-namespace"></a>Namespace Platform::Collections::details
-Tento obor názvů podporuje `Platform` infrastrukturu a není určena pro použití přímo z vašeho kódu.  
+# <a name="platformcollectionsdetails-namespace"></a>Platform::Collections:: details – Namespace
+Tento obor názvů podporuje `Platform` infrastrukturu a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,7 +31,7 @@ namespace Platform {  namespace Collections {    namespace Details {}}}
 ```  
   
 ### <a name="members"></a>Členové  
- Členové tento obor názvů jsou definovány v collection.h a nejsou zobrazeny v prohlížeči objektů.  
+ Členy tohoto oboru názvů jsou definovány v collection.h a nejsou zobrazeny v prohlížeči objektů.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [Platform::Collections – obor názvů](../cppcx/platform-collections-namespace.md)  
@@ -42,4 +42,4 @@ namespace Platform {  namespace Collections {    namespace Details {}}}
  **Namespace:** Platform::Collection::Details  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

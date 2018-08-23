@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Collections::MapView | Microsoft Docs
+title: 'Platform::Collections:: mapview – třída | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091528"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605468"
 ---
-# <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView – třída
-Představuje zobrazení jen pro čtení do *mapy*, což je kolekce párů klíč hodnota.  
+# <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview – třída
+Představuje zobrazení jen pro čtení *mapy*, což je kolekce párů klíč hodnota.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +42,16 @@ ref class MapView sealed;
   
 #### <a name="parameters"></a>Parametry  
  `K`  
- Typ klíče v dvojice klíč hodnota.  
+ Typ klíče v páru klíč hodnota.  
   
  `V`  
- Typ hodnoty v páru klíč / hodnota.  
+ Typ hodnoty v páru klíč hodnota.  
   
  `C`  
- Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v MapView. Ve výchozím nastavení [std::less\<kB >](../standard-library/less-struct.md).  
+ Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků klíče řazení pro určení jejich relativního pořadí v MapView. Ve výchozím nastavení [std::less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Poznámky  
- MapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView \<tisíc, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, které je předán přes rozhraní binární aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ MapView je konkrétní implementaci C++ [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) rozhraní, který je předán napříč binárním rozhraním aplikace (ABI). Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Členové  
   
@@ -65,9 +65,9 @@ ref class MapView sealed;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[MapView::First](#first)|Vrátí první prvek v zobrazení mapy iterátor, který je inicializován.|  
+|[MapView::First](#first)|Vrátí iterátor, který je inicializován na první prvek v zobrazení mapy.|  
 |[MapView::HasKey](#haskey)|Určuje, zda aktuální MapView obsahuje zadaný klíč.|  
-|[MapView::Lookup](#lookup)|Načte element v zadaný klíč v aktuálním objektu MapView.|  
+|[MapView::Lookup](#lookup)|Získá prvek na zadaný klíč v aktuálním objektu MapView.|  
 |[MapView::Size](#size)|Vrátí počet prvků v aktuálním objektu MapView.|  
 |[MapView::Split](#split)|Původní objekt MapView rozdělí na dva objekty MapView.|  
   
@@ -77,7 +77,7 @@ ref class MapView sealed;
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** collection.h  
   
- **Namespace:** Platform::Collections  
+ **Namespace:** Platform::Collections –  
 
 
 ## <a name="first"></a> MapView::First – metoda
@@ -91,10 +91,10 @@ virtual Windows::Foundation::Collections::IIterator<
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Iterator, který určuje první prvek v zobrazení mapy.  
+ Iterátor, který určuje první prvek v zobrazení mapy.  
   
 ### <a name="remarks"></a>Poznámky  
- Pohodlný způsob pro uložení iterator vrácený First() je přiřadit návratovou hodnotu proměnné, která je deklarovaný s **automaticky** zadejte odvození – klíčové slovo. Například `auto x = myMapView->First();`.  
+ Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myMapView->First();`.  
   
 
 
@@ -110,15 +110,15 @@ bool HasKey(K key);
   
 ### <a name="parameters"></a>Parametry  
  `key`  
- Klíč používaná k nalezení MapView elementu. Typ `key` je typename *tisíc*.  
+ Klíč používaná k nalezení MapView elementu. Typ `key` je typename *K*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud je nalezen klíč; v opačném `false`.  
+ `true` Pokud je nalezen klíč; v opačném případě `false`.  
   
 
 
 ##  <a name="lookup"></a> MapView::Lookup – metoda
-Načte hodnotu z typu V, který je přidružen k zadanému klíči typu K.  
+Načte hodnotu typu V, který je přidružený k zadanému klíči typ K.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -128,14 +128,14 @@ V Lookup(K key);
   
 ### <a name="parameters"></a>Parametry  
  `key`  
- Klíč používaná k nalezení element v MapView. Typ `key` je typename *tisíc*.  
+ Klíč používaná k nalezení prvku v MapView. Typ `key` je typename *K*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která je spárován s `key`. Typ vrácené hodnoty je typename *V*.  
+ Hodnota, která se páruje s oblastí `key`. Typ vrácené hodnoty je typename *V*.  
   
 
 
-##  <a name="ctor"></a> MapView::MapView – konstruktor
+##  <a name="ctor"></a> MapView::MapView konstruktor
 Inicializuje novou instanci třídy MapView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -162,19 +162,19 @@ MapView(
  Typename aktuální MapView.  
   
  `comp`  
- Funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v MapView.  
+ Objekt funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v MapView.  
   
  `m`  
- Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` používané k chybě při inicializaci aktuální MapView.  
+ Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k `map Class` , který slouží k inicializaci aktuální MapView.  
   
  `first`  
- Vstupní iteraci prvním elementem v rozsahu prvků použitý k inicializaci aktuální MapView.  
+ Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální MapView.  
   
  `last`  
- Vstupní iterator první elementu po celou řadu prvky používané k chybě při inicializaci aktuální MapView.  
+ Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální MapView.  
   
  IL  
- A [std::initializer_list < std::pair\<tisíc, V >>](../standard-library/initializer-list-class.md) jehož elementy se vloží do MapView.  
+ A [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) jehož prvky se vloží do MapView.  
 
 
 
@@ -189,7 +189,7 @@ virtual property unsigned int Size;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet elementů v aktuální MapView.  
+ Počet prvků v aktuální MapView.  
   
 
 
@@ -208,13 +208,13 @@ void Split(
   
 ### <a name="parameters"></a>Parametry  
  `firstPartition`  
- První část původní objekt MapView.  
+ První část na původní objekt MapView.  
   
  `secondPartition`  
- Druhá část původní objekt MapView.  
+ Druhá část na původní objekt MapView.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda není v provozu; neprovede žádnou akci.  
+ Tato metoda není funkční; To nemá žádný účinek.  
     
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

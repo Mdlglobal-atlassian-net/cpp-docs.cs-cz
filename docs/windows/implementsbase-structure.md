@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5729bfdf46504ab798966bdf8051ab3a3f7cbca0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c65f47e77b7109ab1f6abfdd22b02bc34c31ef48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011530"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600266"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase – struktura
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-struct ImplementsBase;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Používá se k ověření typy parametrů šablony v [Implements – struktura](../windows/implements-structure.md).  
-  
- **Implementsbase –** struktura je prázdná záměrně.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `ImplementsBase`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+struct ImplementsBase;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Používá se k ověření typy parametrů šablony v [Implements – struktura](../windows/implements-structure.md).
+
+**Implementsbase –** struktura je prázdná záměrně.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`ImplementsBase`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f83c98d35ce64ef51a15bccf0f33695fd266d0af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609567"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance – metoda
 
@@ -37,6 +37,7 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>Parametry
+
 *ppvObject*  
 Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem `Base` parametr šablony třídy.
 
@@ -55,4 +56,5 @@ Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, p
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
- [SimpleActivationFactory – třída](../windows/simpleactivationfactory-class.md)
+
+[SimpleActivationFactory – třída](../windows/simpleactivationfactory-class.md)

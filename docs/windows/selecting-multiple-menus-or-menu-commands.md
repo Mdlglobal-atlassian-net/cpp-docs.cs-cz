@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020210"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596938"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Výběr více nabídek nebo příkazů nabídky
-Můžete vybrat více názvy nabídek nebo příkazů nabídky k provedení operace hromadného například odstranění nebo změna vlastností.  
-  
-### <a name="to-select-multiple-menu-commands"></a>Chcete-li vybrat více příkazů nabídky  
-  
-1.  Když podržíte **Ctrl** klíče, klikněte na tlačítko nabídky a podnabídky příkazy, které chcete.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Editor nabídek](../windows/menu-editor.md)
+
+Můžete vybrat více názvy nabídek nebo příkazů nabídky k provedení operace hromadného například odstranění nebo změna vlastností.
+
+### <a name="to-select-multiple-menu-commands"></a>Chcete-li vybrat více příkazů nabídky
+
+1. Když podržíte **Ctrl** klíče, klikněte na tlačítko nabídky a podnabídky příkazy, které chcete.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Editor nabídek](../windows/menu-editor.md)

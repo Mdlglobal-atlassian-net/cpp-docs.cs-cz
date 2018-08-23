@@ -1,40 +1,40 @@
 ---
-title: Integrace knihovny WRL (C + +/ CX) | Microsoft Docs
+title: Integrace WRL (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddefed444c447fbfd300a656c36be45899177b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090257"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598087"
 ---
-# <a name="wrl-integration-ccx"></a>Integrace knihovny WRL (C + +/ CX)
+# <a name="wrl-integration-ccx"></a>Integrace WRL (C + +/ CX)
 
-Můžete volně používat knihovny WRL kódu pomocí [!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) kódu. Ve stejné jednotce překlad, můžete použít objekty deklarovat s WRL popisovač objektu (`^`) zápis a [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] chytré ukazatele (`ComPtr<T>`) zápis. Však musí ručně zpracování vrácených hodnot, a [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] HRESULT kódy chyb a knihovny WRL výjimky.
+Je volně kombinovat kód knihovny WRL kódem Windows Runtime C++ šablony knihovny (WRL). Ve stejné jednotce překladu, můžete použít objekty deklarované pomocí knihovny WRL popisovač objektu (`^`) zápisem a WRL inteligentní ukazatel (`ComPtr<T>`) notaci. Však musí ručně zpracovat vrácené hodnoty a kódy chyb WRL HRESULT a výjimek knihovny WRL.
   
-## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] Vývoj
+## <a name="wrl-development"></a>Vývoj pro knihovny WRL
 
-Další informace o vytváření obsahu a využívání [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] součásti, najdete v části [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Další informace o vytváření a používání komponent knihovny WRL najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ### <a name="example"></a>Příklad
 
-Následující fragment kódu ukazuje, jak pomocí knihovny WRL a [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] využívat [!INCLUDE[wrt](includes/wrt-md.md)] třídy a zkontrolujte soubor metadat.
+Následující fragment kódu ukazuje použití knihovny WRL a platformy WRL spotřeby třídy Windows Runtime a zkontrolujte soubor metadat.
 
-V příkladu je převzat ze fragmentu kódu v na fóru aplikace vytváření Microsoft Store. Autor tento fragment kódu nabízí následující omezení a určení zavedených:
+V příkladu je převzata z fragmentu kódu ve fóru Microsoft Store sestavování aplikací. Autor tento fragment kódu nabízí následující zřeknutí se záruk a podmínek:
 
-1. C++ neposkytuje konkrétní rozhraní API, aby odpovídala v [!INCLUDE[wrt](includes/wrt-md.md)] typy, ale soubory metadat Windows (.winmd) pro typ jsou plně kompatibilní se soubory metadat CLR. Systém Windows nabízí nové zjišťování metadat rozhraní API (RoGetMetaDataFile) Chcete-li získat k souboru .winmd pro daného typu. Však tato rozhraní API jsou omezené použití pro vývojáře C++, protože nelze vytvořit instanci třídy.
+1. C++ neposkytuje konkrétní rozhraní API tak, aby odrážely na typy Windows Runtime, ale soubory metadat Windows (.winmd) pro typ jsou plně kompatibilní se soubory metadat CLR. Windows poskytuje nové zjišťování metadat rozhraní API (RoGetMetaDataFile) Chcete-li získat soubor winmd pro daný typ. Nicméně tato rozhraní API jsou omezené použití pro vývojáře v jazyce C++, protože nelze vytvořit instanci třídy.
 
-1. Po kód je kompilovat, budete také muset Runtimeobject.lib a Rometadata.lib předat Linkeru.
+1. Po kompilaci kódu, musíte taky předat Runtimeobject.lib a Rometadata.lib Linkeru.
 
-1. Zobrazí se tento fragment kódu jako-je. Když se očekává, fungovat správně, případně může obsahovat chyby.
+1. Tento fragment kódu se zobrazí jako-je. Když se očekává fungovat správně, případně může obsahovat chyby.
 
 ```cpp
 #include <hstring.h>
@@ -118,6 +118,6 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Spolupráce s jinými jazyky](interoperating-with-other-languages-c-cx.md)  

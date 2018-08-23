@@ -18,31 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24b2a5eeeaa0d07ebfc1cf1a7fcdb1b2b7274f03
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 96a4370d56e2f5d9758e97010965668bd08306c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651713"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593002"
 ---
 # <a name="editing-binary-data"></a>Úprava binárních dat
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>Úprava prostředků v binárním editoru  
-  
-1.  Vyberte bajtů, které chcete upravit.  
-  
-     **Kartu** klíč přesune fokus mezi šestnáctkové a části ASCII **binární** editoru. Můžete použít **Page Up** a **Page Down** klíče procházení jednu obrazovku prostředků najednou.  
-  
-2.  Zadejte novou hodnotu.  
-  
-     Hodnota se změní okamžitě, v šestnáctkovém a části ASCII a se pozornost zaměří na nejbližší hodnotu v řádku.  
-  
-    > [!NOTE]
-    >  **Binární** editor přijímá změny automaticky při zavření editoru.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky   
- Žádné  
-  
-## <a name="see-also"></a>Viz také  
- [Binární editor](binary-editor.md)
+
+### <a name="to-edit-a-resource-in-the-binary-editor"></a>Úprava prostředků v binárním editoru
+
+1. Vyberte bajtů, které chcete upravit.
+
+   **Kartu** klíč přesune fokus mezi šestnáctkové a části ASCII **binární** editoru. Můžete použít **Page Up** a **Page Down** klíče procházení jednu obrazovku prostředků najednou.
+
+2. Zadejte novou hodnotu.
+
+   Hodnota se změní okamžitě, v šestnáctkovém a části ASCII a se pozornost zaměří na nejbližší hodnotu v řádku.
+
+   > [!NOTE]
+   > **Binární** editor přijímá změny automaticky při zavření editoru.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Žádné
+
+## <a name="see-also"></a>Viz také
+
+[Binární editor](binary-editor.md)

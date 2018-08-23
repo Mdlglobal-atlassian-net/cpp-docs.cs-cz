@@ -1,5 +1,5 @@
 ---
-title: Namespace Platform::metadata | Microsoft Docs
+title: Platform::metadata – Namespace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088021"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607803"
 ---
-# <a name="platformmetadata-namespace"></a>Namespace Platform::metadata
-Tento obor názvů obsahuje atributy, které upravují deklarace typů.  
+# <a name="platformmetadata-namespace"></a>Platform::metadata – Namespace
+Tento obor názvů obsahuje atributy, které úpravy deklarací typů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ namespace Platform {
 ```  
   
 ### <a name="members"></a>Členové  
- I když tento obor názvů je určený pro interní použití, prohlížeče zobrazí následující členy tento obor názvů.  
+ I když se tento obor názvů je určená pro interní použití, prohlížečích může zobrazit následující členy tohoto oboru názvů.  
   
 |Název|Poznámka|  
 |----------|------------|  
 |Atribut|Základní třídu pro atributy.|  
 |[Platform::Metadata::DefaultMemberAttribute – atribut](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Určuje upřednostňovaný funkce k vyvolání mezi několik možných přetížených funkcí.|  
-|[Atribut Platform::metadata::FlagsAttribute](../cppcx/platform-metadata-flagsattribute-attribute.md)příznaky|Deklaruje výčet jako výčet bitových polí.<br /><br /> Následující příklad ukazuje, jak se má použít `Flags` atribut výčet.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
-|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Zajišťuje, že privátní ref třída má název třídy platný runtime.|  
+|[Platform::metadata:: FlagsAttribute – atribut](../cppcx/platform-metadata-flagsattribute-attribute.md)příznaky|Deklaruje výčet jako výčet bitových polí.<br /><br /> Následující příklad ukazuje, jak použít `Flags` atribut výčet.<br /><br /> `[Flags] enum class MyEnumeration { enumA = 1, enumB = 2, enumC = 3}`|  
+|[Platform::Metadata::RuntimeClassNameAttribute](../cppcx/platform-metadata-runtimeclassname.md)|Zajišťuje, že privátní ref class má název třídy platný běhový.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `Platform`  
@@ -50,7 +50,7 @@ namespace Platform {
 ### <a name="requirements"></a>Požadavky  
  **Metadata:** platform.winmd  
   
- **Namespace:** Platform::Metadata  
+ **Namespace:** Platform::metadata –  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

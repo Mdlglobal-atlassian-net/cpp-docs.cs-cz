@@ -14,16 +14,16 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018062"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596195"
 ---
 # <a name="international-enabling"></a>Podpora národních prostředí
 Většina tradičních kód jazyka C a C++ díky předpoklady o znaků a práci s řetězci, které fungují dobře u mezinárodní aplikace. Zatímco knihovny MFC a knihovny run-time podporují kódování Unicode a MBCS, je stále pracovní musíte udělat. A provede vás, tato část vysvětluje význam "podpora národních prostředí" v jazyce Visual C++:  

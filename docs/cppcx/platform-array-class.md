@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Array | Microsoft Docs
+title: Platform::Array – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,19 +13,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605882"
 ---
 # <a name="platformarray-class"></a>Platform::Array – třída
-Představuje jednorozměrné, upravitelnými pole, které mohou být přijata a předán přes rozhraní binární aplikace (ABI).  
+Představuje jednorozměrné, upravitelná pole, která může být přijata a předané napříč binárním rozhraním aplikace (ABI).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,40 +37,40 @@ private ref class Array<TArg, 1> :
 ```  
   
 ### <a name="members"></a>Členové  
- Platform::Array dědí všechny její metody z [Platform::WriteOnlyArray třída](../cppcx/platform-writeonlyarray-class.md) a implementuje `Value` vlastnost [Platform::IBoxArray rozhraní](../cppcx/platform-iboxarray-interface.md).  
+ Platform::Array dědí všechny metody z [Platform::writeonlyarray – třída](../cppcx/platform-writeonlyarray-class.md) a implementuje `Value` vlastnost [Platform::iboxarray – rozhraní](../cppcx/platform-iboxarray-interface.md).  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Pole konstruktory](#ctor)|Inicializuje jednorozměrné, upravitelnými pole typů určeného parametr šablony třídy *T*.|  
+|[Pole konstruktory](#ctor)|Inicializuje jednorozměrné upravitelná pole s typy zadanými parametrem šablony třídy *T*.|  
   
 ### <a name="methods"></a>Metody  
- V tématu [Platform::WriteOnlyArray třída](../cppcx/platform-writeonlyarray-class.md).  
+ Zobrazit [Platform::writeonlyarray – třída](../cppcx/platform-writeonlyarray-class.md).  
   
 ### <a name="properties"></a>Vlastnosti  
   
 |||  
 |-|-|  
-|[Array::Value](#value)|Načte popisovač pro aktuální pole.|  
+|[Array::Value](#value)|Načte popisovač pro daného pole.|  
   
 ### <a name="remarks"></a>Poznámky  
- Array – třída je zapečetěná a nelze ji zdědit.  
+ Třídy pole je zapečetěná a nelze ji zdědit.  
   
- Systém typů prostředí Windows Runtime nepodporuje koncept Vícenásobná pole a proto nemůžete předat IVector < Platform::Array\<T >> jako návratový parametr hodnotu nebo metoda. Chcete-li předat Vícenásobná pole nebo posloupnost pořadí napříč ABI, použijte `IVector<IVector<T>^>`.  
+ Systém typů prostředí Windows Runtime nepodporuje konceptu Vícenásobná pole a proto nelze předat IVector < Platform::Array\<T >> jako návratovou hodnotu nebo metoda parametr. Vícenásobné pole nebo sekvence sekvencí předejte ABI, použijte `IVector<IVector<T>^>`.  
   
  Další informace o kdy a jak používat Platform::Array najdete v tématu [pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
- Systém typů prostředí Windows Runtime nepodporuje koncept Vícenásobná pole a proto nemůžete předat IVector < Platform::Array\<T >> jako návratový parametr hodnotu nebo metoda. Chcete-li předat Vícenásobná pole nebo posloupnost pořadí napříč ABI, použijte `IVector<IVector<T>^>`.  
+ Systém typů prostředí Windows Runtime nepodporuje konceptu Vícenásobná pole a proto nelze předat IVector < Platform::Array\<T >> jako návratovou hodnotu nebo metoda parametr. Vícenásobné pole nebo sekvence sekvencí předejte ABI, použijte `IVector<IVector<T>^>`.  
   
- Tato třída je definována v hlavičce vccorlib.h, která je automaticky součástí kompilátorem. Viditelné v technologii IntelliSense, ale není v prohlížeči objektu je vzhledem k tomu, že se nejedná o veřejné typem definovaným v platform.winmd.  
+ Tato třída je definována v hlavičce vccorlib.h, který je automaticky zahrnut v kompilátoru. Je viditelný v technologii IntelliSense, ale ne v prohlížeči objektů, protože není veřejným typem definovaným v platform.winmd.  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
 
  
 ## <a name="ctor"></a>  Pole konstruktory
-Inicializuje jednorozměrné, upravitelnými pole typů určeného parametr šablony třídy *T*.  
+Inicializuje jednorozměrné upravitelná pole s typy zadanými parametrem šablony třídy *T*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,7 +87,7 @@ Array(T* data, unsigned int size);
  Počet prvků v poli.  
   
  `data`  
- Ukazatel na pole data typu `T` sloužící k inicializaci objektu Toto pole.  
+ Ukazatel na pole datového typu `T` , který slouží k inicializaci objektu tohoto pole.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o tom, jak vytvořit instance Platform::Array najdete v tématu [pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
@@ -103,13 +103,13 @@ T& get(unsigned int index)  const;
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- Index založený na nule identifikuje element v poli. Minimální index je 0 a maximální index je hodnotu zadanou pomocí `size` parametr ve [Array – konstruktor](#ctor).  
+ Index založený na nule, který určuje element v poli. Minimální index 0 a maximální index hodnoty určené `size` parametr [konstruktor pole](#ctor).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Element pole určeného `index` parametr.  
+ Prvek pole, které jsou určené `index` parametru.  
   
 ## <a name="value"></a>  Vlastnost Array::Value
-Načte popisovač pro aktuální pole.  
+Načte popisovač pro daného pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -118,8 +118,8 @@ property Array^ Value;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro aktuální pole.  
+ Popisovač na aktuální pole.  
 
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)   
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)   
  [Pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

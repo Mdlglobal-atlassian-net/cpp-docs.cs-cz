@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ef8c54b2336ebae5e6f9b81aa33d977bd6199e7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8c1e1a8bc076144d80358191cd8eca209057b869
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651931"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599174"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ – datový člen
-Obsahuje ukazatel rozhraní, který je přidružený k a spravovaného touto **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-InterfaceType *ptr_;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **ptr_ –** je členem interní, chráněná data.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Obsahuje ukazatel rozhraní, který je přidružený k a spravovaného touto **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+InterfaceType *ptr_;
+```
+
+## <a name="remarks"></a>Poznámky
+
+**ptr_ –** je členem interní, chráněná data.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

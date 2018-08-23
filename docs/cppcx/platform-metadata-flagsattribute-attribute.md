@@ -1,5 +1,5 @@
 ---
-title: Atribut Platform::metadata::FlagsAttribute | Microsoft Docs
+title: 'Platform::metadata:: FlagsAttribute – atribut | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087575"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609911"
 ---
-# <a name="platformmetadataflagsattribute-attribute"></a>Atribut Platform::metadata::FlagsAttribute
-Určuje, zda výčet lze považovat za pole bit; To znamená, sadu příznaků.  
+# <a name="platformmetadataflagsattribute-attribute"></a>Platform::metadata:: FlagsAttribute – atribut
+Označuje, že výčet lze považovat za bitové pole; To znamená, že sada příznaků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,18 +33,18 @@ public ref class Flags abstract : Attribute
 ```  
   
 ## <a name="inheritance"></a>Dědičnost  
- [Platform::Object](../cppcx/platform-object-class.md)   
+ [Platform::Object –](../cppcx/platform-object-class.md)   
   
- [Platform::metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
+ [Platform::metadata:: Attribute –](../cppcx/platform-metadata-attribute-attribute.md)  
   
 ### <a name="remarks"></a>Poznámky  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
- **Namespace:** Platform::Metadata  
+ **Namespace:** Platform::metadata –  
   
  **Metadata:** platform.winmd  
   

@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8fe604074b843e7c0b76c2e671e0abd9e40770a7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598457"
 ---
 # <a name="include-c"></a>include (C++)
-Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru generovaného IDL.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ include(  
-   header_file  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *HEADER_FILE*  
- Název souboru, který chcete, aby zahrnuté v souboru generovaného IDL.  
-  
-## <a name="remarks"></a>Poznámky  
- **Zahrnují** C++ atribut způsobí, že `#include` příkaz umístit pod `import "docobj.idl"` příkaz v souboru generovaného IDL.  
-  
- **Zahrnují** C++ atribut má stejné funkce jako [zahrnují](http://msdn.microsoft.com/library/windows/desktop/aa367052) atribut MIDL.  
-  
-## <a name="example"></a>Příklad  
- Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze `#include` příkazu.  
-  
-```cpp  
-// cpp_attr_ref_include.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[include(cpp_attr_ref_include.h)];  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|Kdekoli|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [IDL – atributy](../windows/idl-attributes.md)   
- [Samostatné atributy](../windows/stand-alone-attributes.md)   
- [Import](../windows/import.md)   
- [importidl –](../windows/importidl.md)   
- [includelib –](../windows/includelib-cpp.md)   
- [importlib](../windows/importlib.md)   
+
+Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru generovaného IDL.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ include(
+   header_file
+) ];
+```
+
+### <a name="parameters"></a>Parametry
+
+*HEADER_FILE*  
+Název souboru, který chcete, aby zahrnuté v souboru generovaného IDL.
+
+## <a name="remarks"></a>Poznámky
+
+**Zahrnují** C++ atribut způsobí, že `#include` příkaz umístit pod `import "docobj.idl"` příkaz v souboru generovaného IDL.
+
+**Zahrnují** C++ atribut má stejné funkce jako [zahrnují](http://msdn.microsoft.com/library/windows/desktop/aa367052) atribut MIDL.
+
+## <a name="example"></a>Příklad
+
+Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze `#include` příkazu.
+
+```cpp
+// cpp_attr_ref_include.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[include(cpp_attr_ref_include.h)];
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|Kdekoli|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[IDL – atributy](../windows/idl-attributes.md)  
+[Samostatné atributy](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importidl](../windows/importidl.md)  
+[includelib –](../windows/includelib-cpp.md)  
+[importlib](../windows/importlib.md)  

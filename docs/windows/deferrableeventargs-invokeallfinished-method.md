@@ -1,5 +1,5 @@
 ---
-title: Deferrableeventargs::invokeallfinished – metoda | Microsoft Docs
+title: Deferrableeventargs::invokeallfinished – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aaaf8c6849b30e26463810ff353234319960048
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23d521b8373969abdd739b6e4f48eb334284664d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883365"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605170"
 ---
 # <a name="deferrableeventargsinvokeallfinished-method"></a>DeferrableEventArgs::InvokeAllFinished – metoda
-Voláno k označení, že veškeré zpracování zpracování odložené události je kompletní.  
+Volá se, že je veškeré zpracování zpracování odložené události dokončení.
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe
   
-```cpp  
+```cpp
 void InvokeAllFinished()  
-```  
+```
   
-## <a name="remarks"></a>Poznámky  
- Tato metoda by měly volat po volání zdroje událostí [invokeall –](../windows/eventsource-invokeall-method.md). Voláním této metody zabrání se dalšímu rozlišených položek přijetí a vynutí se tak, aby obslužná rutina dokončení spustit, pokud byly provedeny žádné rozlišených položek.  
+## <a name="remarks"></a>Poznámky
+ Byste měli volat tuto metodu po volání zdroje události [invokeall –](../windows/eventsource-invokeall-method.md). Voláním této metody zabrání se dalšímu odložení změněny a vynutí obslužné rutiny dokončení spustit, když se nevytvořily žádné odložení.
   
- Příklad kódu, najdete v části [DeferrableEventArgs – třída](../windows/deferrableeventargs-class.md).  
+ Příklad kódu naleznete v tématu [deferrableeventargs – třída](../windows/deferrableeventargs-class.md).
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
+## <a name="requirements"></a>Požadavky
+ **Záhlaví:** event.h
   
- **Namespace:** Microsoft::WRL  
+ **Namespace:** Microsoft::WRL
   
-## <a name="see-also"></a>Viz také  
- [DeferrableEventArgs – třída](../windows/deferrableeventargs-class.md)   
+## <a name="see-also"></a>Viz také
+ [DeferrableEventArgs – třída](../windows/deferrableeventargs-class.md)  
  [EventSource::InvokeAll – metoda](../windows/eventsource-invokeall-method.md)

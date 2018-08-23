@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bfec8bfa6940fd4a702334f0d3068c6d936ea8c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652266"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607311"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel – metoda
-Získá úroveň důvěryhodnosti objektu, který aktuální **activationfactory –** vytvoří instanci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetTrustLevel  
-)(_Out_ TrustLevel* trustLvl);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *trustLvl*  
- Po dokončení této operace úroveň důvěryhodnosti modulu runtime třídy, která **activationfactory –** vytvoří instanci.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě je vygenerován chybu kontrolní výraz a *trustLvl* je nastavena na `FullTrust`.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ActivationFactory – třída](../windows/activationfactory-class.md)
+
+Získá úroveň důvěryhodnosti objektu, který aktuální **activationfactory –** vytvoří instanci.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+### <a name="parameters"></a>Parametry
+
+*trustLvl*  
+Po dokončení této operace úroveň důvěryhodnosti modulu runtime třídy, která **activationfactory –** vytvoří instanci.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě je vygenerován chybu kontrolní výraz a *trustLvl* je nastavena na `FullTrust`.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ActivationFactory – třída](../windows/activationfactory-class.md)

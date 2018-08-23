@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9cc496f4f1c23508b2ebba2788910ff9c9ca2066
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9294650db7a1b18c2542603988952a80b3f1905d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608596"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598542"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator= – operátor
-Přesune hodnotu jiného **HString** objektů na aktuální **HString** objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Přesune hodnotu jiného **HString** objektů na aktuální **HString** objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 HString& operator=(HString&& other) throw()  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Ostatní*  
- Existující **HString** objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Hodnota existující *Další* objekt zkopírován do aktuální **HString** objektu a pak *Další* objekt zničen.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HString – třída](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*Ostatní*  
+Existující **HString** objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Hodnota existující *Další* objekt zkopírován do aktuální **HString** objektu a pak *Další* objekt zničen.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HString – třída](../windows/hstring-class.md)

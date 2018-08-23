@@ -1,5 +1,5 @@
 ---
-title: -clr (kompilace Common Language Runtime) | Microsoft Docs
+title: -clr (kompilace Common Language Runtime) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379611"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606860"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
-Umožňuje aplikací a součástí, které chcete používat funkce z common language runtime (CLR).  
+Umožňuje aplikací a komponent, pokud chcete používat funkce z common language runtime (CLR).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,10 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
   
 ## <a name="arguments"></a>Arguments  
  `options`  
- Jeden nebo více z následujících parametrů, oddělených čárkami.  
+ Jeden nebo více z následujících parametrů oddělených čárkou.  
   
  **/ CLR**  
- Vytvoří metadata pro aplikaci. Metadata mohou být spotřebovávána jiné aplikace CLR a umožňuje aplikaci používat typy a data v metadatech součásti CLR.  
+ Vytvoří metadata pro aplikaci. Metadata mohou využívat jiné aplikace modulu CLR a umožňuje aplikaci využívala typy a data v metadatech jiných součástí modulu CLR.  
   
  Další informace naleznete v tématu  
   
@@ -53,57 +53,57 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
  [Postupy: přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/ CLR: pure**  
- / CLR: pure je zastaralý. V budoucích verzích kompilátor nemusí podporovat tuto možnost. Doporučujeme vám, že je port kód, který musí být čistá MSIL jazyka C#.  
+ / CLR: pure je zastaralý. Tuto možnost nemusí podporovat budoucí verze kompilátoru. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.  
   
  **/ CLR: safe**  
- / CLR: safe je zastaralý. V budoucích verzích kompilátor nemusí podporovat tuto možnost. Doporučujeme vám, že je port kód, který musí být bezpečné MSIL jazyka C#. 
+ / CLR: safe je zastaralý. Tuto možnost nemusí podporovat budoucí verze kompilátoru. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#. 
   
  **/CLR:noAssembly**  
- Určuje, že manifest sestavení by neměly být vložen do výstupního souboru. Ve výchozím nastavení **noAssembly** možnost není platný.  
+ Určuje, že manifest sestavení by neměly být vložen do výstupního souboru. Ve výchozím nastavení **noAssembly** možnost není platná.  
   
- **NoAssembly** parametr se již nepoužívá. Použití [/LN (vytvořit modul MSIL)](../../build/reference/ln-create-msil-module.md) místo.  
+ **NoAssembly** možnost je zastaralý. Použití [/LN (vytvoření modulu MSIL)](../../build/reference/ln-create-msil-module.md) místo.  
   
- Spravovaný program, který nemá metadata sestavení v manifestu se označuje jako *modulu*. **NoAssembly** možnost lze použít pouze k vytvoření modulu. Pokud zkompilujete pomocí [/c](../../build/reference/c-compile-without-linking.md) a **/clr:noAssembly**, zadejte [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) možnost ve fázi linkeru Vytvořte modul.  
+ Spravované program, který nemá v manifestu sestavení metadata se označuje jako *modulu*. **NoAssembly** možnost jde použít jenom k vytvoření modulu. Pokud kompilujete pomocí [/c](../../build/reference/c-compile-without-linking.md) a **/clr:noAssembly**, zadejte [parametr/noassembly](../../build/reference/noassembly-create-a-msil-module.md) možnost ve fázi linker vytvořit modul.  
   
- Před Visual C++ 2005 **/clr:noAssembly** požadované **/LD**. **/LD** je nyní zahrnuta, když zadáte **/clr:noAssembly**.  
+ Před Visual C++ 2005 **/clr:noAssembly** požadované **/LD**. **/LD** je teď implicitní při zadání **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Umožňuje [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] spuštění aplikace v 1 verzi modulu CLR. Pokud používáte **initialAppDomain**, pak může v některé z problémů, které jsou popsané v tématu [chyb: AppDomainUnloaded výjimka při použití spravovaná rozšíření pro Visual C++ součásti](http://go.microsoft.com/fwlink/p/?linkid=169465) na Microsoft Web podpory.  
+ Umožňuje aplikaci Visual C++ pro spuštění v modulu CLR verze 1. Pokud používáte **initialAppDomain**, pak může se zobrazit některé z problémů, které jsou popsány v [chyb: AppDomainUnloaded výjimka při použití spravovaná rozšíření pro Visual C++ součásti](http://go.microsoft.com/fwlink/p/?linkid=169465) na webu společnosti Microsoft Web podpory.  
   
- Aplikace, který se zkompiluje pomocí **initialAppDomain** by se nemělo používat aplikaci, která používá technologii ASP.NET, protože není podporována v 1 verzi modulu CLR.  
+ Aplikace, která je zkompilován s použitím **initialAppDomain** by se nemělo používat aplikaci, která používá ASP.NET, protože není podporovaná ve verzi 1 modulu CLR.  
   
- **/CLR:nostdlib**  
- Dá pokyn kompilátoru ignorovat \clr výchozí adresář. Kompilátor vytváří chyby, pokud jsou včetně několik verzí knihovny DLL, jako je například System.dll. Pomocí této možnosti můžete zadat konkrétní framework pro použití během kompilace.  
+ **nostdlib**  
+ Dává pokyn kompilátoru ignorovat výchozí adresář \clr. Kompilátor generuje chyby, pokud jsou včetně více verzí knihovny DLL jako například System.dll. Tato možnost umožňuje zadat konkrétní verzi rozhraní framework pro použití během kompilace.  
   
 ## <a name="remarks"></a>Poznámky  
- Spravovaný kód je kód, který může být prověřovány a spravuje modulu CLR. Spravovaný kód k přístup spravovaných objektů. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).  
+ Spravovaný kód je kód, který je možné ho zkontrolovat a spravovat pomocí modulu CLR. Spravovaný kód může přistupovat k spravovaných objektů. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).  
   
- Informace o tom, jak vyvíjet aplikace, které definice a používání spravované typy najdete v tématu [rozšíření komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).  
+ Informace o tom, jak vyvíjet aplikace, které definice a používání spravovaných typů najdete v tématu [přípony komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Aplikace, kompilovat s použitím **/CLR** může nebo nemusí obsahovat spravovaná data.  
+ Aplikace kompilované pomocí **/CLR** může nebo nemusí obsahovat spravovaná data.  
   
- Pokud chcete povolit ladění na spravované aplikace, najdete v části [/ASSEMBLYDEBUG (přidat atribut DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
+ Chcete-li povolit ladění na spravované aplikace, přečtěte si téma [/assemblydebug (přidání atributu DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
- Bude vytvořena instance pouze typy v haldě uvolňování paměti. Další informace najdete v tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md). Kompilace funkce, která se nativního kódu, použijte `unmanaged` – Direktiva pragma. Další informace najdete v tématu [spravované, nespravované](../../preprocessor/managed-unmanaged.md).  
+ Pouze typy CLR bude vytvořena na haldě uvolňování. Další informace najdete v tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md). Chcete-li zkompilovat funkci do nativního kódu, použijte `unmanaged` direktivy pragma. Další informace najdete v tématu [spravované, nespravované](../../preprocessor/managed-unmanaged.md).  
   
- Ve výchozím nastavení **/CLR** není funkční. Když **/CLR** je v platnosti **/MD** platí také. Další informace najdete v tématu [/MD, / MT, /LD (použít běhovou knihovnu)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** zajistí, že jsou vybrány dynamicky propojené s více vlákny verzích rutiny modulu runtime ze souborů standardní hlavičky (). Multithreading je vyžadována spravované programování vzhledem k tomu má systém uvolňování CLR běží finalizační metody v pomocného podprocesu.  
+ Ve výchozím nastavení **/CLR** není platná. Když **/CLR** je ve skutečnosti **/MD** platí také. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md). **/ MD** zajistí, že jsou vybrány dynamicky propojené s více vlákny verze rutin modulu runtime ze souborů standardní záhlaví (.h). Multithreading je požadovaná u spravovaného programování, protože CLR systému uvolňování paměti spustí finalizační metody v pomocné vlákno.  
   
- Pokud zkompilujete pomocí **/c**, můžete zadat typ CLR výsledný výstupní soubor s [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Pokud kompilujete pomocí **/c**, můžete zadat typ CLR výsledného výstupního souboru s [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
- **/ CLR** znamená **/EHa**a ne dalších **/EH** možnosti jsou podporovány pro **/CLR**. Další informace najdete v tématu [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md).  
+ **/ CLR** znamená **/EHa**a žádné jiné **/EH** možnosti jsou podporovány pro **/CLR**. Další informace najdete v tématu [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md).  
   
- Informace o tom, jak určit typ obrázku CLR souboru najdete v tématu [/CLRHEADER](../../build/reference/clrheader.md).  
+ Informace o tom, jak určit typ bitové kopie CLR souboru najdete v tématu [/CLRHEADER](../../build/reference/clrheader.md).  
   
- Předaný dané vyvolání linkeru všechny moduly musí být zkompilovány pomocí stejné knihovna RTL – možnost kompilátoru (**/MD** nebo **/LD**).  
+ Všechny moduly předané danému vyvolání linkeru musí být zkompilován pomocí stejného kompilátoru možnost knihovny run-time (**/MD** nebo **/LD**).  
   
- Použití [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) – možnost linkeru pro vložení do sestavení prostředku. [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/keycontainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), a [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) možnosti linkeru vám také umožní přizpůsobit vytváření sestavení.  
+ Použití [narozdíl od](../../build/reference/assemblyresource-embed-a-managed-resource.md) – možnost linkeru na prostředek pro vložení do sestavení. [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/keycontainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md), a [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) možnosti linkeru také umožňují přizpůsobit, jak se vytvoří sestavení.  
   
- Když **/CLR** se používá, `_MANAGED` symbol je definována musí být 1. Další informace najdete v tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md).  
+ Když **/CLR** se používá, `_MANAGED` je definován symbol, musí být 1. Další informace najdete v tématu [předdefinovaná makra](../../preprocessor/predefined-macros.md).  
   
- Globální proměnné v souboru nativní objekt se inicializují první (během zpracování funkce DllMain Pokud spustitelný soubor knihovny DLL) a globální proměnné v části spravované se inicializují (před spouští spravovaný kód). `#pragma`[init_seg –](../../preprocessor/init-seg.md) ovlivňuje pouze pořadí inicializace spravovanými a nespravovanými kategorií.  
+ Globální proměnné v souboru nativní objekt je inicializován první (během zpracování funkce DllMain, pokud je spustitelný soubor knihovny DLL) a globálních proměnných v části spravované jsou inicializovány (dříve, než se spouštět spravovaný kód). `#pragma`[init_seg –](../../preprocessor/init-seg.md) ovlivní pouze pořadí inicializace kategorií spravovaných a nespravovaných.  
   
 ## <a name="metadata-and-unnamed-classes"></a>Metadata a nepojmenované třídy  
- Nepojmenované třídy se zobrazí v metadatech s názvem následujícím způsobem: `$UnnamedClass$` *crc z – aktuální názvu souboru*`$`*index*`$`, kde *index*je sekvenční počet nepojmenované třídy v kompilace. Například následující ukázka kódu vygeneruje třídu nepojmenované v metadatech.  
+ Nepojmenované třídy se zobrazí v metadat s názvem následujícím způsobem: `$UnnamedClass$` *crc z aktuální název souboru-*`$`*index*`$`, kde *index*je sekvenční počet nepojmenované třídy v sestavení. Například následující ukázka kódu generuje Nepojmenovaná třída v metadatech.  
   
 ```  
 // clr_unnamed_class.cpp  
@@ -111,31 +111,31 @@ Umožňuje aplikací a součástí, které chcete používat funkce z common lan
 class {} x;  
 ```  
   
- Použijte ildasm.exe pro metadata.  
+ Umožňuje zobrazit metadata ildasm.exe.  
   
 ## <a name="managed-extensions-for-c"></a>spravovaná rozšíření pro C++  
- Visual C++ již nepodporuje **/clr:oldsyntax** možnost. Tato možnost se považovat za zastaralou v sadě Visual Studio 2005. Je podporované syntaxe pro vytvoření spravovaného kódu v jazyce C++ C + +/ CLI. Další informace najdete v tématu [rozšíření komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).  
+ Visual C++ již nepodporuje zprostředkovatele **oldSyntax** možnost. Tato možnost se přestala nabízet v sadě Visual Studio 2005. Podporované syntaxe pro psaní spravovaného kódu v jazyce C++ je C + +/ CLI. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).  
   
- Pokud máte kód, který používá spravovaných rozšíření jazyka C++, doporučujeme portu ho na použití C + +/ CLI syntaxe. Informace o tom, jak portu kódu najdete v tématu [C + +/ CLI migrace Úvod do](../../dotnet/cpp-cli-migration-primer.md).  
+ Pokud máte kód, který používá spravovaného rozšíření jazyka C++, doporučujeme port používal C + +/ CLI syntaxe. Informace o tom, jak váš kód, naleznete v tématu [C + +/ CLI Základy migrace](../../dotnet/cpp-cli-migration-primer.md).  
   
 #### <a name="to-set-this-compiler-option-in-visual-studio"></a>Nastavení této možnosti kompilátoru v sadě Visual Studio  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti** otevřete projekt **stránky vlastností** dialogové okno.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti** pro otevření projektu **stránky vlastností** dialogové okno.  
   
 2.  Vyberte **vlastnosti konfigurace** složky.  
   
-3.  Na **Obecné** vlastností stránky, upravte **podpory Common Language Runtime** vlastnost.  
+3.  Na **Obecné** vlastnosti stránky, upravte **Common Language Runtime support** vlastnost.  
   
     > [!NOTE]
-    >  Když **/CLR** je povolena v **stránky vlastností** dialogové okno, vlastnosti – možnost kompilátoru, která nejsou kompatibilní s **/CLR** jsou rovněž upraveny, podle potřeby. Například pokud **/RTC** nastavena a poté **/CLR** je povoleno, **/RTC** se vypne.  
+    >  Když **/CLR** je povolený v **stránky vlastností** dialogovém okně Vlastnosti – možnost kompilátoru, které nejsou kompatibilní s **/CLR** také upravit podle potřeby. Například pokud **/RTC** nastavena a poté **/CLR** je povoleno, **/RTC** se vypne.  
     >   
-    >  Také při ladění **/CLR** aplikace, nastavte **ladicí program typu** vlastnost **Mixed** nebo **spravovat pouze**. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
+    >  Navíc při ladění **/CLR** aplikace, nastavte **typ ladicího programu** vlastnost **smíšený** nebo **režim pouze spravovaný**. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
   
-     Informace, jak vytvořit modul, najdete v části [/NOASSEMBLY (vytvořit modul MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
+     Informace, jak vytvořit modul, naleznete v tématu [parametr/noassembly (vytvoření modulu MSIL)](../../build/reference/noassembly-create-a-msil-module.md).  
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   

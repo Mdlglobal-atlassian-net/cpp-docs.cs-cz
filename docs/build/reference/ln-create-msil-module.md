@@ -1,5 +1,5 @@
 ---
-title: -LN (vytvořit modul MSIL) | Microsoft Docs
+title: -LN (vytvoření modulu MSIL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918b3857c2e6f26a7f2e11614a00049e9b615ea8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ca6d1933b684cc574bc4e0107b9f3f30364c908
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375308"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609459"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Vytvořit modul MSIL)
 Určuje, že manifest sestavení by neměly být vložen do výstupního souboru.  
@@ -34,23 +34,23 @@ Určuje, že manifest sestavení by neměly být vložen do výstupního souboru
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení **/LN** není platný (manifest sestavení se vloží do výstupního souboru).  
+ Ve výchozím nastavení **/LN** není platná (manifest sestavení je vložen do výstupního souboru).  
   
- Když **/LN** se používá, mezi [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnosti musí být rovněž použit.  
+ Když **/LN** se používá jednu z [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnosti musí být rovněž použita.  
   
- Spravovaný program, který nemá metadata sestavení v manifestu je volána modul. Pokud je kompilovat s [/c (Kompilovat bez propojení)](../../build/reference/c-compile-without-linking.md) a **/LN**, zadejte [/NOASSEMBLY (vytvořit modul MSIL)](../../build/reference/noassembly-create-a-msil-module.md) ve fázi linkeru pro vytvoření výstupního souboru.  
+ Modul se nazývá spravovaný program, který nemá metadat sestavení v manifestu. Pokud kompilujete s [/c (Kompilovat bez propojení)](../../build/reference/c-compile-without-linking.md) a **/LN**, zadejte [parametr/noassembly (vytvoření modulu MSIL)](../../build/reference/noassembly-create-a-msil-module.md) ve fázi linkeru se vytvořit výstupní soubor.  
   
- Můžete vytvořit moduly, pokud budete chtít využít přístup podle součásti pro vytváření sestavení.  To znamená můžete vytvářet typy a kompilována moduly.  Potom můžete vygenerovat sestavení z jednoho nebo více modulů.  Další informace o vytváření sestavení z modulů najdete v tématu [.netmodule soubory jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md) nebo [Al.exe (Linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker).  
+ Můžete vytvářet moduly, pokud budete chtít využít k vytváření sestavení s přístupem založených na komponentách.  Můžete tedy vytvářet typy a je zkompilovat do modulů.  Potom můžete generovat sestavení z jednoho nebo více modulů.  Další informace o vytvoření sestavení z modulů, naleznete v tématu [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md) nebo [Al.exe (Linker sestavení)](/dotnet/framework/tools/al-exe-assembly-linker).  
   
  Výchozí přípona souboru pro modul je .netmodule.  
   
- V [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] verze před Visual C++ 2005 modul byl vytvořen s **/clr:noAssembly**.  
+ Ve verzích Visual C++ před Visual C++ 2005, modul byl vytvořen s **/clr:noAssembly**.  
   
- Visual C++ linkeru .netmodule soubory akceptuje jako vstupní a výstupní soubor vyprodukované linkeru bude sestavení nebo .netmodule s už závislost běhu na žádném z .netmodules, že se vstupní linkeru.  Další informace najdete v tématu [.netmodule soubory jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).  
+ Linkeru jazyka Visual C++ přijímá soubory .netmodule jako vstup a výstup souboru vytvořený pomocí linkeru bude sestavení nebo modul .NET s za běhu závislost na některý z modulů .NET, které byly vstup do linkeru.  Další informace najdete v tématu [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
--   Zadejte [/NOASSEMBLY (vytvořit modul MSIL)](../../build/reference/noassembly-create-a-msil-module.md) ve fázi linkeru pro vytvoření výstupního souboru.  
+-   Zadejte [parametr/noassembly (vytvoření modulu MSIL)](../../build/reference/noassembly-create-a-msil-module.md) ve fázi linkeru se vytvořit výstupní soubor.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   

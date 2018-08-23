@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce391e95aa9e08ae7d99e3cbdf064721ce21dbe
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 732eb6f8668f7742e23e1ea410dcc659bc3d36c7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643534"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605343"
 ---
 # <a name="asyncbaseclose-method"></a>AsyncBase::Close – metoda
-Ukončí asynchronní operaci.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   Close  
-)(void) override;  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK Pokud operace ukončí nebo je již uzavřeno; v opačném případě E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Poznámky  
- **Close()** je výchozí implementace `IAsyncInfo::Close`, a nemá žádné samotnou práci. Ve skutečnosti zavřete asynchronní operace, přepsat `OnClose()` čistě virtuální metody.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [AsyncBase – třída](../windows/asyncbase-class.md)
+
+Ukončí asynchronní operaci.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   Close
+)(void) override;
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK Pokud operace ukončí nebo je již uzavřeno; v opačném případě E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Poznámky
+
+**Close()** je výchozí implementace `IAsyncInfo::Close`, a nemá žádné samotnou práci. Ve skutečnosti zavřete asynchronní operace, přepsat `OnClose()` čistě virtuální metody.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[AsyncBase – třída](../windows/asyncbase-class.md)

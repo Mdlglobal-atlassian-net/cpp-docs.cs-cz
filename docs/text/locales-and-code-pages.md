@@ -1,5 +1,5 @@
 ---
-title: Národní prostředí a kódové stránky | Microsoft Docs
+title: Národní prostředí a kódové stránky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,35 +21,35 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9952f0bf27202c468e38ff3fb6aa701a0d6f9163
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858143"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594836"
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
-ID národního prostředí odráží místní konvence a jazyk pro určitou zeměpisnou oblast. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.  
+ID národního prostředí odráží místní konvence a jazyk pro konkrétní zeměpisné oblasti. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.  
   
- Jazyk určuje konvence formátování textu a data, zatímco země nebo oblast určuje místní konvence. Každý jazyk má jedinečný mapování reprezentována znakové stránky, který obsahuje jiné znaky než ty v abecedě (například číslic a interpunkčních znamének). Znaková stránka je znaková sada a souvisí s jazyk. Jako takový [národního prostředí](../c-runtime-library/locale.md) jedinečnou kombinaci jazyka, země nebo oblast a znaková stránka. Stránka nastavení národního prostředí a kód lze změnit v době běhu voláním [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkce.  
+ Jazyk určuje konvence formátování textu a data, zatímco země nebo oblast určuje místní konvence. Každý jazyk má jedinečný mapování reprezentována znakových stránek, který obsahuje jiné znaky než ty v abecedě (například čísla a interpunkční znaménka). Znaková stránka je znaková sada a má vztah k jazyku. V důsledku toho [národní prostředí](../c-runtime-library/locale.md) je jedinečná kombinace jazyka, země/oblast a znakovou stránku. Stránka nastavení národního prostředí a kód může změnit za běhu pomocí volání [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) funkce.  
   
- Různé jazyky mohou používat různé znakové stránky. Například ANSI znaková stránka 1252 se používá pro angličtinu a většina evropských jazyků a ANSI znaková stránka 932 se používá pro japonské Kanji. Prakticky všechny znakové stránky sdílet sadu pro nejnižší 128 znaků (0x00 do 0x7F) znaků ASCII.  
+ Různé jazyky mohou používat různé znakové stránky. Například ANSI znakovou stránkou 1252 se používá pro angličtinu a většinu evropských jazyků a ANSI znakovou stránku 932 se používá pro japonské Kanji. Téměř všechny znakové stránky sdílet znaku standardu ASCII, nastavte pro nejnižší 128 znaků (0x00 do 0x7F).  
   
- Jakákoli jednobajtová znaková stránka může být reprezentován v tabulce (s 256 položky) jako mapování bajt hodnot znaků (včetně číslic a interpunkčních znamének), nebo glyfů. Všechny vícebajtové znakové stránky může také reprezentována jako velmi velké tabulky (s položkami 64 tisíc) hodnot dvoubajtových znaků. V praxi ale jsou obvykle reprezentovány jako tabulku pro první 256 znaků (jednobajtové) a jako rozsahy pro dvoubajtové hodnoty.  
+ Jakékoli jednobajtové znakové stránky můžou vyjádřeny v tabulce (s 256 položky) jako mapování bajtových hodnot znaků (včetně čísla a interpunkční znaménka), nebo glyfů. Žádné vícebajtové znakové stránky můžou být vyjádřeny i jako velmi velké tabulky (s položkami 64 kB) hodnot dvoubajtové znaky. V praxi ale jsou obvykle reprezentovány jako tabulku pro prvních 256 znaků (single bajty) a rozsahy adres pro hodnoty dvoubajtové.  
   
- Další informace o znakové stránky najdete v tématu [znakové stránky](../c-runtime-library/code-pages.md).  
+ Další informace o znakových stránkách naleznete v tématu [znakové stránky](../c-runtime-library/code-pages.md).  
   
- Knihovny runtime jazyka C obsahují dva typy vnitřních znakových stránek: národní prostředí a vícebajtové. Při spuštění programu můžete změnit aktuální znaková stránka (naleznete v dokumentaci k [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md) funkce). Běhové knihovny může také získat a použít hodnotu znaková stránka operačního systému, což je konstantní po dobu trvání provádění tohoto programu.  
+ Knihovny runtime jazyka C obsahují dva typy vnitřních znakových stránek: národní prostředí a vícebajtové. Při provádění programu můžete změnit aktuální znakové stránce (naleznete v dokumentaci k [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_setmbcp](../c-runtime-library/reference/setmbcp.md) funkce). Knihovny run-time může také získat a používat hodnotu znakovou stránku operačního systému, což je konstantní po dobu trvání provádění programu.  
   
- Když znaková stránka národního prostředí změní, chování závislých na národním prostředí sadu funkcí se změní podle zvolené znakové stránky. Ve výchozím nastavení začínají všech funkcí závislých na národním prostředí se znaková stránka národního prostředí jedinečné pro národní prostředí "C". Znaková stránka interní národního prostředí (stejně jako ostatní vlastnosti specifické pro národní prostředí) můžete změnit pomocí volání `setlocale` funkce. Volání `setlocale`(LC_ALL, "") nastaví národní prostředí podle národního prostředí uživatele operačního systému.  
+ Znaková stránka národního prostředí změny, chování závislé na národním prostředí sadu funkcí změny, které závisí na zvoleném znakovou stránku. Ve výchozím nastavení všechny závislé na národním prostředí funkce zahájit provádění s znaková stránka národního prostředí jedinečná pro národní prostředí "C". Znaková stránka národního prostředí vnitřní (stejně jako ostatní vlastnosti specifické pro národní prostředí) můžete změnit pomocí volání `setlocale` funkce. Volání `setlocale`(LC_ALL, "") nastaví národní prostředí, které udávají národní prostředí operačního systému uživatele.  
   
- Podobně když vícebajtové znakové stránky změní, chování vícebajtových funkcí se změní podle zvolené znakové stránky. Ve výchozím nastavení všechny vícebajtové funkce zahájit provádění vícebajtové znakové stránky, odpovídající operační systém výchozí znaková stránka. Interní vícebajtové znakové stránky lze změnit pomocí volání `_setmbcp` funkce.  
+ Podobně, když je vícebajtová znaková stránka změní, chování vícebajtové funkce změny, které závisí na zvoleném znakovou stránku. Ve výchozím nastavení všechny funkce vícebajtové začínat vícebajtové znakové stránky odpovídající operační systém výchozí znaková stránka provádění. Interní vícebajtové znakové stránce lze změnit pomocí volání `_setmbcp` funkce.  
   
- Běhové funkce C `setlocale` nastaví, změní nebo dotazuje některých nebo všech informací o národním prostředí aktuálním programem. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) rutiny je verze široká charakterová `setlocale`; argumenty a návratové hodnoty `_wsetlocale` jsou široká charakterová řetězce.  
+ Funkci run-time C `setlocale` nastaví, změní nebo dotazuje některých nebo všech informací o národním prostředí aktuálního programu. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) rutina je verze širokého znaku `setlocale`; argumenty a vrácené hodnoty `_wsetlocale` jsou širokoznaké řetězce.  
   
 ## <a name="see-also"></a>Viz také  
  [Kódování Unicode a MBCS](../text/unicode-and-mbcs.md)   

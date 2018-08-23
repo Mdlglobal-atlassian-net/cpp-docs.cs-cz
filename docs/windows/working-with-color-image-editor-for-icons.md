@@ -23,47 +23,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37e469b18af727bea29681b284fd123bcce64c93
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 97e334e3fa2ea2dc099665876d7df95a367c3b57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647417"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609872"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Práce s barvou (editor obrázků pro ikony)
-**Editor obrázků** obsahuje řadu funkcí, které konkrétně zpracování a přizpůsobení barev. Můžete nastavit barvu popředí nebo pozadí, vyplnění ohraničené oblasti barvou nebo vybrat barvu na obrázku, který má použít jako aktuální barvu popředí nebo pozadí. Pomocí nástrojů v [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) spolu s palety barev v [okno barvy](../windows/colors-window-image-editor-for-icons.md) k vytvoření bitové kopie.  
-  
- Všechny barvy pro monochromatický a 16 barev obrázků jsou uvedeny v **barvy** paletu **barvy** okna. Kromě standardních 16 barev můžete vytvořit své vlastní barvy. Změna barev v paletě okamžitě změnit odpovídající barvu v obrázku.  
-  
- Při práci s 256 barvami ikonu a obrázky kurzor **barvy** vlastnost v [okno vlastností](/visualstudio/ide/reference/properties-window) se používá. Další informace najdete v tématu [vytváření 256barevných ikony nebo kurzoru s](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
-  
+
+**Editor obrázků** obsahuje řadu funkcí, které konkrétně zpracování a přizpůsobení barev. Můžete nastavit barvu popředí nebo pozadí, vyplnění ohraničené oblasti barvou nebo vybrat barvu na obrázku, který má použít jako aktuální barvu popředí nebo pozadí. Pomocí nástrojů v [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) spolu s palety barev v [okno barvy](../windows/colors-window-image-editor-for-icons.md) k vytvoření bitové kopie.
+
+Všechny barvy pro monochromatický a 16 barev obrázků jsou uvedeny v **barvy** paletu **barvy** okna. Kromě standardních 16 barev můžete vytvořit své vlastní barvy. Změna barev v paletě okamžitě změnit odpovídající barvu v obrázku.
+
+Při práci s 256 barvami ikonu a obrázky kurzor **barvy** vlastnost v [okno vlastností](/visualstudio/ide/reference/properties-window) se používá. Další informace najdete v tématu [vytváření 256barevných ikony nebo kurzoru s](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).
+
 > [!NOTE]
->  Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.  
-  
- Můžete také vytvořit Image true color. Však true color ukázky nezobrazí úplný paletě v **barvy** okno; zobrazí se pouze v oblasti indikátor barvy popředí nebo pozadí. True barvy se vytvoří s použitím [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
-  
- Můžete uložit vlastní barvy palety na disku a načítat je znovu podle potřeby. Palety barev, které jste naposledy použili je uložen v registru a automaticky načte při dalším spuštění sady Visual Studio.  
-  
--   [Výběr barev popředí nebo pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)  
-  
--   [Vyplnění ohraničené oblasti obrázku barvou](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
-  
--   [Výběr barvy z obrázku, která se použije jinde](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
-  
--   [Výběr průhledného nebo neprůhledného pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)  
-  
--   [Převrácení barev ve výběru](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md)  
-  
--   [Přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
-  
--   [Ukládání a načítání různých barevných palet](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)  
-  
--   [Okno barvy](../windows/colors-window-image-editor-for-icons.md)  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Žádné  
-  
-## <a name="see-also"></a>Viz také  
- [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
+> Použití **Editor obrázků**, můžete zobrazit obrázky 32-bit, ale nemůžete je upravovat.
+
+Můžete také vytvořit Image true color. Však true color ukázky nezobrazí úplný paletě v **barvy** okno; zobrazí se pouze v oblasti indikátor barvy popředí nebo pozadí. True barvy se vytvoří s použitím [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+
+Můžete uložit vlastní barvy palety na disku a načítat je znovu podle potřeby. Palety barev, které jste naposledy použili je uložen v registru a automaticky načte při dalším spuštění sady Visual Studio.
+
+- [Výběr barev popředí nebo pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)
+
+- [Vyplnění ohraničené oblasti obrázku barvou](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)
+
+- [Výběr barvy z obrázku, která se použije jinde](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)
+
+- [Výběr průhledného nebo neprůhledného pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)
+
+- [Převrácení barev ve výběru](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md)
+
+- [Přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md)
+
+- [Ukládání a načítání různých barevných palet](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)
+
+- [Okno barvy](../windows/colors-window-image-editor-for-icons.md)
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Žádné
+
+## <a name="see-also"></a>Viz také
+
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  

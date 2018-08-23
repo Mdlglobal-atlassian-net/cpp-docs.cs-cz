@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 313492990113ad1a1d6037c4c08e1baa464676d8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e1af266d769b950324a1a4a9b8023b6b8e164038
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651035"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606032"
 ---
 # <a name="classfactoryrelease-method"></a>ClassFactory::Release – metoda
-Sníží počet odkaz pro aktuální **ClassFactory –** objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ClassFactory – třída](../windows/classfactory-class.md)
+
+Sníží počet odkaz pro aktuální **ClassFactory –** objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ClassFactory – třída](../windows/classfactory-class.md)

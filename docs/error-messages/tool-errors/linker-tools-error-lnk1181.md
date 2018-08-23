@@ -1,7 +1,7 @@
 ---
-title: Chyba linkerů Lnk1181 | Microsoft Docs
+title: Chyba Linkerů LNK1181 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/22/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301356"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597659"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Chyba linkerů LNK1181
-Nelze otevřít vstupní soubor 'název souboru.  
+vstupní soubor 'filename' nelze otevřít.  
   
- Nelze najít linkeru `filename` protože neexistuje nebo nebyla nalezena cesta.  
+ Nelze najít linker `filename` protože neexistuje nebo cesta nebyla nalezena.  
   
- Některé běžné příčiny chyby LNK1181 zahrnují:  
+ Některé běžné příčiny chyby LNK1181 patří:  
   
 -   `filename` je odkazováno jako další závislost na řádku linkeru, ale soubor neexistuje.  
   
--   A **/Libpath** příkaz, který určuje adresář obsahující `filename` chybí.  
+-   A **/Libpath** příkaz, který určuje adresáře, který obsahuje `filename` chybí.  
   
- Chcete-li vyřešit uvedené problémy, zajistěte, aby všechny soubory, které odkazuje na řádek linkeru k dispozici v systému.  Také zajistěte **/Libpath** příkaz pro každý adresář se souborem linkeru závislé.  
+ Chcete-li vyřešit uvedené problémy, zajistěte, aby všechny soubory, které odkazuje na řádku linkeru jsou k dispozici v systému.  Také zajistěte **/Libpath** příkaz pro každý adresář obsahující soubor závislé na linkeru. 
+
+ Další informace najdete v tématu [soubory .lib jako vstup Linkeru](../../build/reference/dot-lib-files-as-linker-input.md).
   
- Pro LNK1181 další možnou příčinou je, že dlouhé názvy souborů s vložených mezer nebyla uzavřena v uvozovkách.  V takovém případě bude linkeru pouze rozpoznat název souboru po první mezeru a pak předpokládají příponu souboru. objektu vývoz.  Tuto situaci lze vyřešit je uzavřete dlouhý název souboru (název cesty a souboru) v uvozovkách.  
+ LNK1181 další možnou příčinou je, že dlouhý název souboru s vloženými mezerami nebyla uzavřena v uvozovkách.  V takovém případě bude linker pouze rozpoznat název souboru až po první místo a potom předpokládají příponu souboru. Knihovna  Řešení tuto situaci lze vyřešit, je uzavřete dlouhý název souboru (název cesty a soubor) do uvozovek.  
+
+ Kompilace s [/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md) možnost může vést LNK1181, protože tato možnost potlačí vytváření soubory .obj.
   
- Další informace najdete v tématu [soubory .lib jako vstup Linkeru](../../build/reference/dot-lib-files-as-linker-input.md).  
+  
   
 ## <a name="see-also"></a>Viz také  
  [/LIBPATH (další proměnná Libpath)](../../build/reference/libpath-additional-libpath.md)

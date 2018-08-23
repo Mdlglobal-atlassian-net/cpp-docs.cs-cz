@@ -17,34 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b9d448ae9b73c5a47cc93da41dbcba186fdce0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e5f87a0daa13d26775f105b36a1fc076270af705
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010707"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608251"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock – metoda
-Uvolní výhradní kontrolu nad sdíleného prostředku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Popisovač objektu mutex.  
-  
-## <a name="return-value"></a>Návratová hodnota  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Viz také  
- [MutexTraits – struktura](../windows/mutextraits-structure.md)
+
+Uvolní výhradní kontrolu nad sdíleného prostředku.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Popisovač objektu mutex.
+
+## <a name="return-value"></a>Návratová hodnota
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Viz také
+
+[MutexTraits – struktura](../windows/mutextraits-structure.md)

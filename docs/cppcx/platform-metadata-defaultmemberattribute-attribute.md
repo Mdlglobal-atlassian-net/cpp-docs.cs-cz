@@ -1,5 +1,5 @@
 ---
-title: Atribut Platform::metadata::DefaultMemberAttribute | Microsoft Docs
+title: 'Platform::metadata:: DefaultMemberAttribute – atribut | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,18 +11,18 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::DefaultMemberAttribute Attribute
 ms.assetid: d8abda01-c257-4371-aec4-541d4825e0af
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2233dd96f483df632c7ff8cd5b1a7a051232c94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62d531418e4729c34907cb65d446f89bfa60fb63
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087933"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608911"
 ---
-# <a name="platformmetadatadefaultmemberattribute-attribute"></a>Atribut Platform::metadata::DefaultMemberAttribute
+# <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::metadata:: DefaultMemberAttribute – atribut
 Určuje upřednostňovaný funkce k vyvolání mezi několik možných přetížených funkcí.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -33,19 +33,19 @@ public ref class DefaultMember abstract : Attribute
 ```  
   
 ## <a name="inheritance"></a>Dědičnost  
- [Platform::Object](../cppcx/platform-object-class.md)   
+ [Platform::Object –](../cppcx/platform-object-class.md)   
   
- [Platform::metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
+ [Platform::metadata:: Attribute –](../cppcx/platform-metadata-attribute-attribute.md)  
   
 ### <a name="remarks"></a>Poznámky  
- Použíjte Atribut DefaultMember na metodu, která se budou aplikace JavaScript.  
+ Použijte atribut DefaultMember pro metodu, která budou využívat aplikace v jazyce JavaScript.  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
- **Namespace:** Platform::Metadata  
+ **Namespace:** Platform::metadata –  
   
  **Metadata:** platform.winmd  
   

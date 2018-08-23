@@ -1,5 +1,5 @@
 ---
-title: Začněte funkce | Microsoft Docs
+title: begin – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086509"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606529"
 ---
 # <a name="begin-function"></a>begin – funkce
-Vrátí iterátor, který odkazuje na začátek kolekce, které je přístupné parametrem specifikované rozhraní.  
+Vrátí iterátor odkazující na začátek kolekce, která se využívají v parametru zadané rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,20 +55,20 @@ template <typename T>
  Kolekce vektoru\<T > nebo VectorView\<T > objekty, které přistupují IVector\<T > nebo IVectorView\<T > rozhraní.  
   
  `i`  
- Kolekce objektů libovolný prostředí Windows Runtime, které přistupují IIterable\<T > rozhraní.  
+ Kolekce objektů libovolného modulu Windows Runtime, které přistupují IIterable\<T > rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Iterator, která odkazuje na začátek kolekce.  
+ Iterátor, který odkazuje na začátku kolekce.  
   
 ### <a name="remarks"></a>Poznámky  
- První dvě šablony funkce vrátí iterátory a vrátí vstupní iterator třetí funkce šablony.  
+ První dvě funkce šablony vrátí iterátory a třetí funkce šablony vrátí vstupní iterátor.  
   
- VectorIterator začít objekt, který je vrácen je iterator proxy, která ukládá elementy typu VectorProxy\<T >. Objekt proxy serveru je však téměř žádné viditelné pro uživatelského kódu. Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ VectorIterator objekt, který je vrácený začít je proxy iterátor, který ukládá prvky typu VectorProxy\<T >. Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace najdete v tématu [kolekce (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** collection.h  
   
- **Namespace:** Windows::Foundation::Collections  
+ **Namespace:** Windows::Foundation:: Collections –  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+ [Windows::Foundation:: Collections – Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

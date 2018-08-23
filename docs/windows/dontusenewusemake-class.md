@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6ce3e391ac0da93ed7571a95ce328a5260a8dd44
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593604"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake – třída
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-class DontUseNewUseMake;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Brání použití operátoru **nové** v `RuntimeClass`. V důsledku toho je nutné použít [Make – funkce](../windows/make-function.md) místo.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[DontUseNewUseMake::operator new – operátor](../windows/dontusenewusemake-operator-new-operator.md)|Přetížení operátoru **nové** a brání použití v `RuntimeClass`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `DontUseNewUseMake`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL:: details – Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [Make – funkce](../windows/make-function.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+class DontUseNewUseMake;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Brání použití operátoru **nové** v `RuntimeClass`. V důsledku toho je nutné použít [Make – funkce](../windows/make-function.md) místo.
+
+## <a name="members"></a>Členové
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[DontUseNewUseMake::operator new – operátor](../windows/dontusenewusemake-operator-new-operator.md)|Přetížení operátoru **nové** a brání použití v `RuntimeClass`.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`DontUseNewUseMake`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)  
+[Make – funkce](../windows/make-function.md)

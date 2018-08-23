@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653102"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604033"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-size_t Length();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Aktuální počet prvků v poli interní obslužných rutin událostí.  
-  
-## <a name="remarks"></a>Poznámky  
- Získá aktuální počet prvků v poli interní obslužných rutin událostí.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Eventtargetarray – třída](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+size_t Length();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Aktuální počet prvků v poli interní obslužných rutin událostí.
+
+## <a name="remarks"></a>Poznámky
+
+Získá aktuální počet prvků v poli interní obslužných rutin událostí.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** event.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[EventTargetArray – třída](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

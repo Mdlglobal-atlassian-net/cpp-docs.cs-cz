@@ -1,62 +1,62 @@
 ---
-title: Události (C + +/ CX) | Microsoft Docs
+title: Události (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089635"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606373"
 ---
 # <a name="events-ccx"></a>Události (C + +/ CX)
-Windows Runtime můžou deklarovat typ (která se publikovat) události a kódem klientské ve stejné komponenty nebo v ostatních součástí mohou přihlásit k odběru události, tím, že přidružíte volat metody *obslužné rutiny událostí* k události. Více obslužných rutin událostí lze přidružit jednu událost. Pokud objekt publikování vyvolá událost, budou všechny obslužné rutiny událostí má být volána. Tímto způsobem můžete provádět třídu odběru ať vlastní akce je vhodné, když vydavatele vyvolává událost. Událost má typem delegáta, který určuje podpisu, který všechny obslužné rutiny události musí mít, aby přihlášení k odběru události.  
+Windows Runtime lze deklarovat typ (který je, publikování) události a kódem klientské pod stejnou komponentou nebo v jiných součástech mohou přihlásit k odběru těchto událostí tím, že přidružíte volání metody *obslužné rutiny událostí* s událostí. Více obslužných rutin událostí lze přidružit jednu událost. Při publikování objektu vyvolá událost, dojde k vyvolání všech obslužných rutin událostí. Tímto způsobem můžete provádět odběratelská třídy jakýkoli vlastní akce je vhodné, když vydavatele vyvolává událost. Událost má typ delegáta, který určuje signatura, kterou musí mít všechny obslužné rutiny událostí k události registrovat.  
   
-## <a name="consuming-events-in-windows-components"></a>Využívání události v součásti systému Windows  
- Mnoho součásti v prostředí Windows Runtime zpřístupnit události. Například objekt LightSensor aktivuje ReadingChanged událost, když senzoru hlásí novou hodnotu gradientu. Použijete-li objekt LightSensor v programu, můžete definovat metodu, která se má volat při ReadingChanged událost je aktivována. Metodu můžete dělat všechno na práci; Jediným požadavkem je, že jeho podpis musí odpovídat podpis delegáta, který je pro další informace o tom, jak vytvořit obslužnou rutinu události delegáta a přihlášení k odběru na událost, najdete v části [delegáti](../cppcx/delegates-c-cx.md).  
+## <a name="consuming-events-in-windows-components"></a>Spotřebovávajících událostí ve Windows komponenty  
+ Mnoho komponent v prostředí Windows Runtime vystavit události. Například objekt LightSensor aktivuje událost ReadingChanged při senzor sestavy novou hodnotu gradientu. Při použití objektu LightSensor ve svém programu, můžete definovat metodu, která bude volána po ReadingChanged událost se aktivuje. Metodu můžete dělat cokoliv, co chcete udělat; Jediným požadavkem je, že jeho podpis musí odpovídat signatuře delegáta, který je pro další informace o tom, jak vytvořit obslužnou rutinu události delegáta a přihlásit odběr události, přečtěte si [delegáti](../cppcx/delegates-c-cx.md).  
   
 ## <a name="creating-custom-events"></a>Vytváření vlastních událostí  
   
 ### <a name="declaration"></a>Deklarace  
- Je možné deklarovat událost v ref třídy nebo rozhraní a může mít veřejné, interní (veřejného a privátního), veřejné chráněný, chráněné, privátní chráněný, nebo privátní usnadnění. Po deklarování událost interně kompilátor vytvoří objekt, který zveřejňuje dvě metody přístupových objektů: Přidání a odebrání. Pokud odběru objekty registraci obslužné rutiny událostí, uloží je objekt události v kolekci. Při vyvolání události, vyvolá objekt událostí zase obslužné rutiny ve svém seznamu. Trivial událostí – jako v následujícím příkladu – má implicitní zálohování úložiště, která je také implicitní `add` a `remove` přístupových metod. Můžete také určit vlastní přistupující objekty stejným způsobem, že je možné zadat vlastní `get` a `set` přístupové objekty u vlastnosti.  Implementující třídu nelze ručně procházet seznam odběratele událostí v trivial události.  
+ Je možné deklarovat událost třídy ref class nebo rozhraní a může mít interní public (veřejné nebo soukromé), chráněné veřejné, privátní, chráněné přístupnost protected nebo private. Při deklaraci události interně kompilátor vytvoří objekt, který poskytuje dva přístupové metody: Přidání a odebrání. Když odběratelská objekty zaregistrujte obslužné rutiny událostí, uloží je objekt události v kolekci. Když se aktivuje událost, vyvolá objekt události zase všechny obslužné rutiny ve svém seznamu. Triviální události – například v následujícím příkladu – má implicitní záložní úložiště, který je také implicitní `add` a `remove` přístupové metody. Můžete také určit vlastní přístupové objekty stejným způsobem, že můžete zadat vlastní `get` a `set` přistupující objekty na vlastnost.  Implementující třída nelze ručně cyklicky procházet události seznam předplatitelů v jednoduché události.  
   
- Následující příklad ukazuje, jak deklarace a aktivovat událost. Všimněte si, že událost má typem delegáta a je deklarovaná pomocí "^" symbol.  
+ Následující příklad ukazuje, jak deklarovat a vyvolat událost. Všimněte si, že událost má typ delegáta a je deklarovaná příkazem using "^" symbol.  
   
  [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]  
   
 ### <a name="usage"></a>Použití  
- Následující příklad ukazuje, jak používá třídu odběru `+=` operátor přihlášení k odběru události a poskytuje obslužné rutiny události má být volána, když je aktivována událost. Všimněte si, že funkce, která je k dispozici odpovídající podpisu delegáta, který je definován na straně vydavatele v `EventTest` oboru názvů.  
+ Následující příklad ukazuje, jak používá třídu odběratelská `+=` operátor k události registrovat a poskytuje obslužné rutiny události má být volána, když se aktivuje událost. Všimněte si, že funkce, která je k dispozici odpovídá signatuře delegáta, který je definován na straně vydavatele v `EventTest` oboru názvů.  
   
  [!code-cpp[cx_events#02](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#02)]  
   
 > [!WARNING]
->  Obecně platí je lepší pro používání s názvem funkce, nikoli lambda, pro obslužnou rutinu události, pokud dávejte pozor, aby se zabránilo. cyklické odkazy. Funkci s názvem "Tento" ukazatel zaznamená slabé odkazu, zatímco lambda zaznamená silné odkazem a vytvoří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a ukončování cykly (C + +/ CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
+>  Obecně je vhodnější použít pojmenované funkce namísto výrazu lambda pro obslužnou rutinu události nezvolíte velmi pečlivě, aby se zabránilo cyklické odkazy. Pojmenované funkce zachycuje ukazatel "Tento" podle nestálý odkaz, že výraz lambda zachytí silné odkazem a vytváří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a cykly slov (C + +/ CX)](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
   
-### <a name="custom-add-and-remove-methods"></a>Vlastní přidávat a odebírat metody  
- Interně událost má metodu přidat, odebrat metoda a vyvolat metodu. Pokud kód klienta se přihlásí k události, volání metody přidat a delegáta, který se předává v se přidá do seznamu vyvolání události. Publikování třída vyvolá událost, způsobí, že má být volána metoda raise() a naopak je vyvolán každý delegát v seznamu. Odběratel samotné můžete odebrat ze seznamu delegáta, což způsobí, že události odebrat metoda k volání. Kompilátor poskytuje výchozí verze těchto metod, pokud je nedefinujete ve vašem kódu; Toto jsou známé jako trivial události. V mnoha případech je trivial událostí všechny, které je nutné.  
+### <a name="custom-add-and-remove-methods"></a>Vlastní přidání a odebrání metody  
+ Interně událost nemá metodu přidat, odebrat metodu a vyvolat metodu. Pokud klientský kód přihlásí k události, volá metodu add a delegáta, který je předán se přidá do seznamu vyvolání události. Publikování třída vyvolá událost, způsobí, že metoda raise() volat a zase vyvolání všem delegátům v seznamu. Odběratel samotné odebrat ze seznamu delegáta, což způsobí, že události odebírací metoda k volání. Kompilátor poskytuje výchozí verze těchto metod, pokud nejsou jejich definování v kódu; Toto jsou známé jako jednoduché události. V mnoha případech je jednoduché události vše, co vyžaduje.  
   
- Můžete zadat vlastní přidání, odebrání a vyvolat metody pro událost, pokud máte k provedení vlastní logiky v reakci na přidání nebo odebrání odběratelů. Například, pokud máte nákladné objekt, který je pouze požadované pro generování sestav událostí, můžete líné odložené vytváření objektu, dokud se klient přihlásí k událost odběru ve skutečnosti.  
+ Můžete zadat vlastní přidání, odebrání a vyvolat metody pro událost, pokud je nutné provést vlastní logiku v reakci na přidávání nebo odebírání předplatitelů. Například, pokud máte nákladný objekt, který je jen požadované události vytváření sestav, můžete laxně odložit vytvoření objektu, dokud klient ve skutečnosti se přihlásí k odběru události.  
   
- Další příklad ukazuje, jak přidat vlastní přidání, odebrání a vyvolání metody na událost:  
+ Následující příklad ukazuje, jak přidat vlastní přidání, odebrání a vyvolání metody na událost:  
   
  [!code-cpp[cx_events#03](../cppcx/codesnippet/CPP/cx_events/class1.h#03)]  
   
-## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Odebrání obslužné rutiny události ze strany odběratele  
- Ve výjimečných případech můžete odebrat obslužné rutiny události pro událost, která dříve přihlášení k odběru. Například můžete chtít nahradit jinou obslužnou rutinu události nebo můžete chtít odstranit některé prostředky, které jsou uložené ve ho. Odebrat obslužnou rutinu, musíte uložit EventRegistrationToken vrácená `+=` operaci. Pak můžete použít `-=` operátor na tokenu k odebrání obslužné rutiny události.  Však může být původní obslužná rutina volána stále i po jejím odebrání. Proto pokud máte v úmyslu odebrat obslužnou rutinu události, vytvořte příznak člen a nastavte ji, pokud je událost odebere a pak události obslužnou rutinu, zkontrolujte příznak a vrátit okamžitě, pokud je nastaven. Další příklad ukazuje základní vzor.  
+## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Odebírá obslužnou rutinu události ze strany odběratele  
+ V některých výjimečných případech můžete chtít odebrat obslužnou rutinu události pro událost, která jste dříve nepřihlásili k odběru. Například můžete chtít nahradit jinou obslužnou rutinu události nebo můžete chtít odstranit některé prostředky, které jsou uloženy tímto plánem. Chcete-li odebrat obslužnou rutinu, musí ukládat EventRegistrationToken, která je vrácena z `+=` operace. Pak můžete použít `-=` operátor na token, který se má odebrat obslužnou rutinu události.  Původní obslužná rutina však mohou být volány stále, i když se odebere. Proto pokud máte v úmyslu odebrat obslužnou rutinu události, vytvořte příznak, který člen a nastavte ji Pokud událost odebere a pak v případě obslužnou rutinu, zkontrolujte příznak a výsledky okamžitě, pokud je nastavena. Následující příklad zobrazuje základní vzor.  
   
  [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]  
   
 ### <a name="remarks"></a>Poznámky  
- Více obslužných rutin, může být přidružen stejnou událost. Zdroj události postupně volání všechny obslužné rutiny událostí ze stejného podprocesu. Pokud příjemce událostí blokuje v rámci obslužná rutina události, zablokuje zdroj události z vyvolání ostatních obslužných rutin událostí pro tuto událost.  
+ Více obslužných rutin, může být spojen s stejné události. Zdroj události postupně volá všechny obslužné rutiny událostí ze stejného podprocesu. Pokud přijímače událostí blokuje v rámci metody obslužné rutiny událostí, blokuje zdroj události z volání jiné obslužné rutiny událostí pro tuto událost.  
   
- Pořadí, ve kterém zdroj události vyvolá obslužné rutiny událostí v přijímače událostí není zaručena a volání z volání se můžou lišit.  
+ Pořadí, ve kterém zdroj události vyvolá obslužných rutin událostí v příjemci událostí není zaručeno a volání z volání se může lišit.  
   
 ## <a name="see-also"></a>Viz také  
  [Systém typů](../cppcx/type-system-c-cx.md)   

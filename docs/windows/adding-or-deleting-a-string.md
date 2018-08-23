@@ -20,54 +20,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c33745eca92a421049fb0169ad1b70921b38bf3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650280"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600080"
 ---
 # <a name="adding-or-deleting-a-string"></a>Přidání nebo odstranění řetězce
-Můžete rychle vkládat nové položky do řetězce pomocí tabulky **řetězec** editoru. Nové řetězce jsou umístěny na konci v tabulce a jsou uvedeny další k dispozici identifikátor. Potom můžete upravit **ID**, **hodnotu**, nebo **titulek** vlastnosti v [okno vlastností](/visualstudio/ide/reference/properties-window) podle potřeby.  
-  
- **Řetězec** editor zajišťuje, je velmi riskantní používat ID, které se už používá. Pokud vyberete ID už používá, **řetězec** oznámíme vám to a zařaďte obecné jedinečné ID, například editor `IDS_STRING58113`.  
-  
-### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců  
-  
-1.  Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Klikněte pravým tlačítkem v rámci tabulky řetězců a zvolte **nový řetězec** z místní nabídky.  
-  
-3.  V **řetězec** editoru, vyberte možnost **ID** z rozevíracího seznamu ID nebo typ ID přímo v místě.  
-  
-4.  Upravit **hodnota**, v případě potřeby.  
-  
-5.  Zadejte položku pro **titulek**.  
-  
-    > [!NOTE]
-    >  Řetězce s hodnotou Null nejsou povoleny v tabulkách řetězců Windows. Pokud vytvoříte položku v tabulce řetězec, který je prázdný řetězec, zobrazí se zpráva s výzvou k "Prosím zadejte řetězec pro tuto položku tabulky."  
-  
-### <a name="to-delete-a-string-table-entry"></a>Chcete-li odstranit položky tabulky řetězců  
-  
-1.  Vyberte položku, kterou chcete odstranit.  
-  
-2.  Na **upravit** nabídky, klikněte na tlačítko **odstranit**.  
-  
- \- nebo –  
-  
--   Klikněte pravým tlačítkem na řetězec, který chcete odstranit a zvolit **odstranit** z místní nabídky.  
-  
- \- nebo –  
-  
--   Stisknutím klávesy **odstranit** klíč.  
-  
- Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Editor řetězce](../windows/string-editor.md)   
+
+Můžete rychle vkládat nové položky do řetězce pomocí tabulky **řetězec** editoru. Nové řetězce jsou umístěny na konci v tabulce a jsou uvedeny další k dispozici identifikátor. Potom můžete upravit **ID**, **hodnotu**, nebo **titulek** vlastnosti v [okno vlastností](/visualstudio/ide/reference/properties-window) podle potřeby.
+
+**Řetězec** editor zajišťuje, je velmi riskantní používat ID, které se už používá. Pokud vyberete ID už používá, **řetězec** oznámíme vám to a zařaďte obecné jedinečné ID, například editor `IDS_STRING58113`.
+
+### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců
+
+1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+2. Klikněte pravým tlačítkem v rámci tabulky řetězců a zvolte **nový řetězec** z místní nabídky.
+
+3. V **řetězec** editoru, vyberte možnost **ID** z rozevíracího seznamu ID nebo typ ID přímo v místě.
+
+4. Upravit **hodnota**, v případě potřeby.
+
+5. Zadejte položku pro **titulek**.
+
+   > [!NOTE]
+   > Řetězce s hodnotou Null nejsou povoleny v tabulkách řetězců Windows. Pokud vytvoříte položku v tabulce řetězec, který je prázdný řetězec, zobrazí se zpráva s výzvou k "Prosím zadejte řetězec pro tuto položku tabulky."
+
+### <a name="to-delete-a-string-table-entry"></a>Chcete-li odstranit položky tabulky řetězců
+
+1. Vyberte položku, kterou chcete odstranit.
+
+2. Na **upravit** nabídky, klikněte na tlačítko **odstranit**.
+
+\- nebo –
+
+- Klikněte pravým tlačítkem na řetězec, který chcete odstranit a zvolit **odstranit** z místní nabídky.
+
+\- nebo –
+
+- Stisknutím klávesy **odstranit** klíč.
+
+Informace o přidávání prostředků do spravovaných projektů (těch, které se zaměřují na modul common language runtime), najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [návod: lokalizace Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) a [Návod: použití prostředků for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Editor řetězce](../windows/string-editor.md)  

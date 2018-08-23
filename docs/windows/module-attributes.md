@@ -1,5 +1,5 @@
 ---
-title: Atributy modulu | Microsoft Docs
+title: Atributy modulu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875263"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609634"
 ---
 # <a name="module-attributes"></a>Atributy modulu
-Následující atribut lze použít pouze k [modulu](../windows/module-cpp.md) atribut.  
+Tento atribut může být jedině pro [modulu](../windows/module-cpp.md) atribut.
   
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL používat k provádění vyhledávací řetězec dokumentu (lokalizace).|  
+|Atribut|Popis|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také
  [Atributy podle použití](../windows/attributes-by-usage.md)

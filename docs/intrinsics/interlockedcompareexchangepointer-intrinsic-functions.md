@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedCompareExchangePointer | Microsoft Docs
+title: Vnitřní funkce _InterlockedCompareExchangePointer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596533"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchangePointer
+**Specifické pro Microsoft**  
   
- Provede atomické operace, která ukládá `Exchange` adres v `Destination` adres, pokud `Comparand` a `Destination` adresy jsou stejné.  
+ Provádí atomické operace, která ukládá `Exchange` adresa v `Destination` řešit, pokud `Comparand` a `Destination` adresa jsou stejné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,42 +87,42 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Destination`  
- Ukazatel na ukazatel na cílové hodnoty. Přihlášení se ignoruje.  
+ [out v] `Destination`  
+ Ukazatel na ukazatel na cílové hodnoty. Znaménko se ignoruje.  
   
- [v] `Exchange`  
- Ukazatel Exchange. Přihlášení se ignoruje.  
+ [in] `Exchange`  
+ Ukazatel na Exchange. Znaménko se ignoruje.  
   
- [v] `Comparand`  
- Ukazatel k porovnání do cílového umístění. Přihlášení se ignoruje.  
+ [in] `Comparand`  
+ Ukazatel na porovnání do cíle. Znaménko se ignoruje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Návratová hodnota je počáteční hodnota cíle.  
+ Vrácená hodnota je počáteční hodnota cíle.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h >|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- `_InterlockedCompareExchangePointer` provede atomic porovnání `Destination` adres se `Comparand` adresu. Pokud `Destination` adresa je rovno `Comparand` adresu, `Exchange` adresa je uložen v adrese `Destination`. Jinak je provedena žádná operace.  
+ `_InterlockedCompareExchangePointer` provádí atomické porovnání `Destination` se zabývat `Comparand` adresu. Pokud `Destination` adresa je rovna `Comparand` adresu, `Exchange` adresa je uložen v adrese `Destination`. V opačném případě je provedena žádná operace.  
   
- `_InterlockedCompareExchangePointer` poskytuje vnitřní podpora kompilátoru pro Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkce.  
+ `_InterlockedCompareExchangePointer` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) funkce.  
   
- Příklad, jak používat `_InterlockedCompareExchangePointer`, najdete v části [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Příklad použití `_InterlockedCompareExchangePointer`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony, pokud potřebujete získat a vydání sémantikou, například na začátku a konci kritické části. ARM – vnitřní prvky s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Vnitřní funkce s `_np` operaci možné předběžné načtení z vkládání kompilátorem zabránit přípony ("žádné předběžné načtení").  
+ Vnitřní objekty s `_np` příponu ("žádná předběžné načtení") zabránit možný předběžné načtení operace nebude vložen kompilátorem.  
   
- Na platformách Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako na platformách, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

@@ -13,29 +13,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74f26f520be276de863c612718de8520bffc1219
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 86e7716ff4e9a0b4f5132abfd431a2649f22f80f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649702"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593090"
 ---
 # <a name="comptrreset"></a>ComPtr::Reset
-Uvolní všechny odkazy pro ukazatele na rozhraní, které souvisí s tímto **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-unsigned long Reset();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Počet odkazů vydání, pokud existuje.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Uvolní všechny odkazy pro ukazatele na rozhraní, které souvisí s tímto **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+unsigned long Reset();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Počet odkazů vydání, pokud existuje.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

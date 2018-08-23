@@ -17,40 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d76e2e7041948021cb36e563acef7ca712e73842
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f3c50857a683c806d57b5e754bc98ba5a5340fd8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015192"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597805"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface – metoda
-Načte ukazatel na ID zadané rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
+
+Načte ukazatel na ID zadané rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   QueryInterface
 )  
-   (REFIID riid,   
-   _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *riid*  
- Identifikátor rozhraní.  
-  
- *ppvObject*  
- Když tento opereation se dokončí, ukazatel na rozhraní určené typem *riid* parametru.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [RuntimeClass – třída](../windows/runtimeclass-class.md)
+   (REFIID riid,
+   _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parametry
+
+*riid*  
+Identifikátor rozhraní.
+
+*ppvObject*  
+Když tento opereation se dokončí, ukazatel na rozhraní určené typem *riid* parametru.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[RuntimeClass – třída](../windows/runtimeclass-class.md)

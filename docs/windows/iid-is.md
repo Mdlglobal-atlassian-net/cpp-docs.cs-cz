@@ -17,62 +17,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c0743a34b39a29843bf4a99c8d6f234c1c67a05b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014985"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605142"
 ---
 # <a name="iidis"></a>iid_is
-Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ iid_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Výraz*  
- Výraz jazyka C, který určuje IID rozhraní modelu COM na které odkazuje ukazatel rozhraní.  
-  
-## <a name="remarks"></a>Poznámky  
- **Iid_is –** C++ atribut má stejné funkce jako [iid_is –](http://msdn.microsoft.com/library/windows/desktop/aa367044) atribut MIDL.  
-  
-## <a name="example"></a>Příklad  
- Následující kód ukazuje použití **iid_is –**:  
-  
-```cpp  
-// cpp_attr_ref_iid_is.cpp  
-// compile with: /LD  
-#include "wtypes.h"  
-#include "unknwn.h"  
-[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl : IDispatch  
-{  
-   [id(1)] HRESULT CreateInstance([in] REFIID riid,[out, iid_is("riid")]   
-   IUnknown ** ppvObject);  
-};  
-  
-[module(name="ATLFIRELib")];  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|Rozhraní parametr, datový člen|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [IDL – atributy](../windows/idl-attributes.md)   
- [Atributy parametru](../windows/parameter-attributes.md)   
+
+Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ iid_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Výraz*  
+Výraz jazyka C, který určuje IID rozhraní modelu COM na které odkazuje ukazatel rozhraní.
+
+## <a name="remarks"></a>Poznámky
+
+**Iid_is –** C++ atribut má stejné funkce jako [iid_is –](http://msdn.microsoft.com/library/windows/desktop/aa367044) atribut MIDL.
+
+## <a name="example"></a>Příklad
+
+Následující kód ukazuje použití **iid_is –**:
+
+```cpp
+// cpp_attr_ref_iid_is.cpp
+// compile with: /LD
+#include "wtypes.h"
+#include "unknwn.h"
+[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl : IDispatch
+{
+   [id(1)] HRESULT CreateInstance([in] REFIID riid,[out, iid_is("riid")]
+   IUnknown ** ppvObject);
+};
+
+[module(name="ATLFIRELib")];
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|Rozhraní parametr, datový člen|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[IDL – atributy](../windows/idl-attributes.md)  
+[Atributy parametru](../windows/parameter-attributes.md)  

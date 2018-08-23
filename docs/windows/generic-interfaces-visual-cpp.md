@@ -16,308 +16,313 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650050"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607696"
 ---
 # <a name="generic-interfaces-visual-c"></a>Obecná rozhraní (Visual C++)
-Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  
-  
- Pravidla, která řídí funkce přetížení jsou stejné pro funkce v rámci obecných tříd nebo obecná rozhraní.  
-  
- Implementace explicitního rozhraní členských typů vybudované rozhraní pracovat stejným způsobem jako u typů jednoduché rozhraní (viz následující příklady).  
-  
- Další informace o rozhraní najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[attributes] generic <class-key type-parameter-identifier[, ...]>  
-[type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- *atributy* (volitelné)  
- Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.  
-  
- *klíč třídy*  
- **Třída** nebo **typename**  
-  
- *Typ – parametr-identifikátory*  
- Seznam identifikátorů oddělených čárkou.  
-  
- *Typ parametru omezení klauzule*  
- Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
-  
- *Modifikátory dostupnosti* (volitelné)  
- Modifikátory (třeba **veřejné, privátní**).  
-  
- *identifikátor*  
- Název rozhraní.  
-  
- *Přehled základních* (volitelné)  
- Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.  
-  
- *tělo rozhraní*  
- Deklarace členů rozhraní.  
-  
- *deklarátory* (volitelné)  
- Deklarace proměnných na základě tohoto typu.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak deklarovat a vytvoření instancí obecného rozhraní. V příkladu, její obecná rozhraní `IList<ItemType>` je deklarována. Je následně implementované dva obecné třídy `List1<ItemType>` a `List2<ItemType>`, se jedná o rozdílné implementace.  
-  
-```cpp  
-// generic_interface.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// An exception to be thrown by the List when  
-// attempting to access elements beyond the  
-// end of the list.  
-ref class ElementNotFoundException : Exception {};  
-  
-// A generic List interface  
-generic <typename ItemType>  
-public interface class IList {  
-   ItemType MoveFirst();  
-   bool Add(ItemType item);  
-   bool AtEnd();  
-   ItemType Current();  
-   void MoveNext();  
-};  
-  
-// A linked list implementation of IList  
-generic <typename ItemType>  
-public ref class List1 : public IList<ItemType> {  
-   ref class Node {  
-      ItemType m_item;  
-  
-   public:  
-      ItemType get_Item() { return m_item; };  
-      void set_Item(ItemType value) { m_item = value; };  
-  
-      Node^ next;  
-  
-      Node(ItemType item) {  
-         m_item = item;  
-         next = nullptr;  
-      }  
-   };  
-  
-   Node^ first;  
-   Node^ last;  
-   Node^ current;  
-  
-   public:  
-   List1() {  
-      first = nullptr;  
-      last = first;  
-      current = first;  
-   }  
-  
-   virtual ItemType MoveFirst() {  
-      current = first;  
+
+Omezení, které se vztahují na třídy zadejte parametry jsou stejné jako ty, které se vztahují na parametry typu rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).
+
+Pravidla, která řídí funkce přetížení jsou stejné pro funkce v rámci obecných tříd nebo obecná rozhraní.
+
+Implementace explicitního rozhraní členských typů vybudované rozhraní pracovat stejným způsobem jako u typů jednoduché rozhraní (viz následující příklady).
+
+Další informace o rozhraní najdete v tématu [třída rozhraní](../windows/interface-class-cpp-component-extensions.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[attributes] generic <class-key type-parameter-identifier[, ...]>
+[type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
+```
+
+## <a name="remarks"></a>Poznámky
+
+*atributy* (volitelné)  
+Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.
+
+*klíč třídy*  
+**Třída** nebo **typename**
+
+*Typ – parametr-identifikátory*  
+Seznam identifikátorů oddělených čárkou.
+
+*Typ parametru omezení klauzule*  
+Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
+
+*Modifikátory dostupnosti* (volitelné)  
+Modifikátory (třeba **veřejné, privátní**).
+
+*identifikátor*  
+Název rozhraní.
+
+*Přehled základních* (volitelné)  
+Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.
+
+*tělo rozhraní*  
+Deklarace členů rozhraní.
+
+*deklarátory* (volitelné)  
+Deklarace proměnných na základě tohoto typu.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak deklarovat a vytvoření instancí obecného rozhraní. V příkladu, její obecná rozhraní `IList<ItemType>` je deklarována. Je následně implementované dva obecné třídy `List1<ItemType>` a `List2<ItemType>`, se jedná o rozdílné implementace.
+
+```cpp
+// generic_interface.cpp
+// compile with: /clr
+using namespace System;
+
+// An exception to be thrown by the List when
+// attempting to access elements beyond the
+// end of the list.
+ref class ElementNotFoundException : Exception {};
+
+// A generic List interface
+generic <typename ItemType>
+public interface class IList {
+   ItemType MoveFirst();
+   bool Add(ItemType item);
+   bool AtEnd();
+   ItemType Current();
+   void MoveNext();
+};
+
+// A linked list implementation of IList
+generic <typename ItemType>
+public ref class List1 : public IList<ItemType> {
+   ref class Node {
+      ItemType m_item;
+
+   public:
+      ItemType get_Item() { return m_item; };
+      void set_Item(ItemType value) { m_item = value; };
+
+      Node^ next;
+
+      Node(ItemType item) {
+         m_item = item;
+         next = nullptr;
+      }
+   };
+
+   Node^ first;
+   Node^ last;
+   Node^ current;
+
+   public:
+   List1() {
+      first = nullptr;
+      last = first;
+      current = first;
+   }
+
+   virtual ItemType MoveFirst() {
+      current = first;
       if (first != nullptr)  
-        return first->get_Item();  
-      else  
-         return ItemType();  
-   }  
-  
-   virtual bool Add(ItemType item) {  
-      if (last != nullptr) {   
-         last->next = gcnew Node(item);  
-         last = last->next;  
-      }  
-      else {  
-         first = gcnew Node(item);  
-         last = first;  
-         current = first;  
-      }  
-      return true;  
-   }  
-  
-   virtual bool AtEnd() {  
+        return first->get_Item();
+      else
+         return ItemType();
+   }
+
+   virtual bool Add(ItemType item) {
+      if (last != nullptr) {
+         last->next = gcnew Node(item);
+         last = last->next;
+      }
+      else {
+         first = gcnew Node(item);
+         last = first;
+         current = first;
+      }
+      return true;
+   }
+
+   virtual bool AtEnd() {
       if (current == nullptr )  
-        return true;  
-      else   
-        return false;  
-   }  
-  
-   virtual ItemType Current() {  
+        return true;
+      else
+        return false;
+   }
+
+   virtual ItemType Current() {
        if (current != nullptr)  
-         return current->get_Item();  
-       else  
-         throw gcnew ElementNotFoundException();  
-   }  
-  
-   virtual void MoveNext() {  
+         return current->get_Item();
+       else
+         throw gcnew ElementNotFoundException();
+   }
+
+   virtual void MoveNext() {
       if (current != nullptr)  
-       current = current->next;  
-      else  
-        throw gcnew ElementNotFoundException();  
-   }  
-};  
-  
-// An array implementation of IList  
-generic <typename ItemType>  
-ref class List2 : public IList<ItemType> {  
-   array<ItemType>^ item_array;  
-   int count;  
-   int current;  
-  
-   public:  
-  
-   List2() {  
-      // not yet possible to declare an  
-      // array of a generic type parameter  
-      item_array = gcnew array<ItemType>(256);  
-      count = current = 0;  
-   }  
-  
-   virtual ItemType MoveFirst() {  
-      current = 0;  
-      return item_array[0];  
-   }  
-  
-   virtual bool Add(ItemType item) {  
+       current = current->next;
+      else
+        throw gcnew ElementNotFoundException();
+   }
+};
+
+// An array implementation of IList
+generic <typename ItemType>
+ref class List2 : public IList<ItemType> {
+   array<ItemType>^ item_array;
+   int count;
+   int current;
+
+   public:
+
+   List2() {
+      // not yet possible to declare an
+      // array of a generic type parameter
+      item_array = gcnew array<ItemType>(256);
+      count = current = 0;
+   }
+
+   virtual ItemType MoveFirst() {
+      current = 0;
+      return item_array[0];
+   }
+
+   virtual bool Add(ItemType item) {
       if (count < 256)  
-         item_array[count++] = item;  
-      else  
-        return false;  
-      return true;  
-   }  
-  
-   virtual bool AtEnd() {  
+         item_array[count++] = item;
+      else
+        return false;
+      return true;
+   }
+
+   virtual bool AtEnd() {
       if (current >= count)  
-        return true;  
-      else  
-        return false;  
-   }  
-  
-   virtual ItemType Current() {  
+        return true;
+      else
+        return false;
+   }
+
+   virtual ItemType Current() {
       if (current < count)  
-        return item_array[current];  
-      else  
-        throw gcnew ElementNotFoundException();  
-   }  
-  
-   virtual void MoveNext() {  
-      if (current < count)   
-         ++current;  
-      else  
-         throw gcnew ElementNotFoundException();  
-   }  
-};  
-  
-// Add elements to the list and display them.  
-generic <typename ItemType>  
-void AddStringsAndDisplay(IList<ItemType>^ list, ItemType item1, ItemType item2) {  
-   list->Add(item1);  
-   list->Add(item2);  
+        return item_array[current];
+      else
+        throw gcnew ElementNotFoundException();
+   }
+
+   virtual void MoveNext() {
+      if (current < count)  
+         ++current;
+      else
+         throw gcnew ElementNotFoundException();
+   }
+};
+
+// Add elements to the list and display them.
+generic <typename ItemType>
+void AddStringsAndDisplay(IList<ItemType>^ list, ItemType item1, ItemType item2) {
+   list->Add(item1);
+   list->Add(item2);
    for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())  
-     Console::WriteLine(list->Current());  
-}  
-  
-int main() {  
-   // Instantiate both types of list.  
-  
-   List1<String^>^ list1 = gcnew List1<String^>();  
-   List2<String^>^ list2 = gcnew List2<String^>();  
-  
-   // Use the linked list implementation of IList.  
-   AddStringsAndDisplay<String^>(list1, "Linked List", "List1");  
-  
-   // Use the array implementation of the IList.  
-   AddStringsAndDisplay<String^>(list2, "Array List", "List2");  
-}  
-```  
-  
-```Output  
-Linked List  
-List1  
-Array List  
-List2  
-```  
-  
-## <a name="example"></a>Příklad  
- V tomto příkladu deklaruje obecné rozhraní `IMyGenIface`a dvě obecné rozhraní `IMySpecializedInt` a `ImySpecializedString`, který specialize `IMyGenIface`. Dvě specializované rozhraní následně implementované dvě třídy `MyIntClass` a `MyStringClass`. Tento příklad ukazuje, jak specialize obecných rozhraní, vytváření instancí obecné a neobecné rozhraní a volat explicitně implementovaných členy rozhraní.  
-  
-```cpp  
-// generic_interface2.cpp  
-// compile with: /clr  
-// Specializing and implementing generic interfaces.  
-using namespace System;  
-  
-generic <class ItemType>  
-public interface class IMyGenIface {  
-   void Initialize(ItemType f);  
-};  
-  
-public interface class IMySpecializedInt: public IMyGenIface<int> {  
-   void Display();  
-};  
-  
-public interface class IMySpecializedString: public IMyGenIface<String^> {  
-   void Display();  
-};  
-  
-public ref class MyIntClass: public IMySpecializedInt {  
-   int myField;  
-  
-public:   
-   virtual void Initialize(int f) {  
-      myField = f;  
-   }  
-  
-   virtual void Display() {  
-      Console::WriteLine("The integer field contains: {0}", myField);  
-   }      
-};  
-  
-public ref struct MyStringClass: IMySpecializedString {      
-   String^ myField;  
-  
-public:  
-   virtual void Initialize(String^ f) {  
-      myField = f;  
-    }  
-  
-   virtual void Display() {  
-      Console::WriteLine("The String field contains: {0}", myField);  
-   }  
-};  
-  
-int main() {  
-   // Instantiate the generic interface.  
-   IMyGenIface<int>^ myIntObj = gcnew MyIntClass();  
-  
-   // Instantiate the specialized interface "IMySpecializedInt."  
-   IMySpecializedInt^ mySpIntObj = (IMySpecializedInt^) myIntObj;  
-  
-   // Instantiate the generic interface.  
-   IMyGenIface<String^>^ myStringObj = gcnew MyStringClass();  
-  
-   // Instantiate the specialized interface "IMySpecializedString."  
-   IMySpecializedString^ mySpStringObj =   
-            (IMySpecializedString^) myStringObj;  
-  
-   // Call the explicitly implemented interface members.  
-   myIntObj->Initialize(1234);  
-   mySpIntObj->Display();  
-  
-   myStringObj->Initialize("My string");  
-   mySpStringObj->Display();  
-}  
-```  
-  
-```Output  
-The integer field contains: 1234  
-The String field contains: My string  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Obecné typy](../windows/generics-cpp-component-extensions.md)
+   Console::WriteLine(list->Current());
+}
+
+int main() {
+   // Instantiate both types of list.
+
+   List1<String^>^ list1 = gcnew List1<String^>();
+   List2<String^>^ list2 = gcnew List2<String^>();
+
+   // Use the linked list implementation of IList.
+   AddStringsAndDisplay<String^>(list1, "Linked List", "List1");
+
+   // Use the array implementation of the IList.
+   AddStringsAndDisplay<String^>(list2, "Array List", "List2");
+}
+```
+
+```Output
+Linked List
+List1
+Array List
+List2
+```
+
+## <a name="example"></a>Příklad
+
+V tomto příkladu deklaruje obecné rozhraní `IMyGenIface`a dvě obecné rozhraní `IMySpecializedInt` a `ImySpecializedString`, který specialize `IMyGenIface`. Dvě specializované rozhraní následně implementované dvě třídy `MyIntClass` a `MyStringClass`. Tento příklad ukazuje, jak specialize obecných rozhraní, vytváření instancí obecné a neobecné rozhraní a volat explicitně implementovaných členy rozhraní.
+
+```cpp
+// generic_interface2.cpp
+// compile with: /clr
+// Specializing and implementing generic interfaces.
+using namespace System;
+
+generic <class ItemType>
+public interface class IMyGenIface {
+   void Initialize(ItemType f);
+};
+
+public interface class IMySpecializedInt: public IMyGenIface<int> {
+   void Display();
+};
+
+public interface class IMySpecializedString: public IMyGenIface<String^> {
+   void Display();
+};
+
+public ref class MyIntClass: public IMySpecializedInt {
+   int myField;
+
+public:
+   virtual void Initialize(int f) {
+      myField = f;
+   }
+
+   virtual void Display() {
+      Console::WriteLine("The integer field contains: {0}", myField);
+   } 
+};
+
+public ref struct MyStringClass: IMySpecializedString { 
+   String^ myField;
+
+public:
+   virtual void Initialize(String^ f) {
+      myField = f;
+    }
+
+   virtual void Display() {
+      Console::WriteLine("The String field contains: {0}", myField);
+   }
+};
+
+int main() {
+   // Instantiate the generic interface.
+   IMyGenIface<int>^ myIntObj = gcnew MyIntClass();
+
+   // Instantiate the specialized interface "IMySpecializedInt."
+   IMySpecializedInt^ mySpIntObj = (IMySpecializedInt^) myIntObj;
+
+   // Instantiate the generic interface.
+   IMyGenIface<String^>^ myStringObj = gcnew MyStringClass();
+
+   // Instantiate the specialized interface "IMySpecializedString."
+   IMySpecializedString^ mySpStringObj =
+            (IMySpecializedString^) myStringObj;
+
+   // Call the explicitly implemented interface members.
+   myIntObj->Initialize(1234);
+   mySpIntObj->Display();
+
+   myStringObj->Initialize("My string");
+   mySpStringObj->Display();
+}
+```
+
+```Output
+The integer field contains: 1234
+The String field contains: My string
+```
+
+## <a name="see-also"></a>Viz také
+
+[Obecné typy](../windows/generics-cpp-component-extensions.md)

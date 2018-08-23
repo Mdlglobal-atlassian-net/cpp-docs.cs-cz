@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::NotImplementedException | Microsoft Docs
+title: Platform::NotImplementedException – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ad78bb1eebd9bf5b1bc268fc64bb7c7c3c0818
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6e30b4f55b5d87ee5b1f67d39d3cc96932f065
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088500"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597739"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException – třída
-Vyvolá, když člena rozhraní není implementována v odvozeném typu.  
+Vyvolána, když člen rozhraní není implementovaná v odvozeném typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ public ref class NotImplementedException : COMException,    IException,    IPrin
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   

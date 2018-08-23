@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: používání operátoru safe_cast v jazyce C + +/ CLI | Microsoft Docs'
+title: 'Postupy: používání operátoru safe_cast v jazyce C + +/ CLI | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f695c45d5202f376a4ce4daf14c37a7fd9a1904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1582179a64327afda6a4dc16cde9588b19397f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136672"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607911"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>Postupy: Používání operátoru safe_cast v jazyce C++/CLI
-Tento článek ukazuje, jak pomocí operátoru safe_cast v jazyce C + +/ CLI aplikace. Informace o safe_cast v [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], najdete v části [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+Tento článek popisuje, jak pomocí operátoru safe_cast v jazyce C + +/ CLI aplikací. Informace o operátoru safe_cast v jazyce C + +/ CX, viz [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
-## <a name="upcasting"></a>Přetypování nahoru  
- Povýšení je přetypování z typu odvozené do jednoho z jeho základních tříd. Toto přetypování je bezpečné a nevyžaduje zápisu explicitního přetypování. Následující příklad ukazuje, jak provést povýšení, s `safe_cast` a bez něj.  
+## <a name="upcasting"></a>Upcasting  
+ Povýšení je přetypování z odvozeného typu do jedné z jejích základních tříd. Toto přetypování je bezpečné a nevyžaduje zápisu explicitní přetypování. Následující příklad ukazuje, jak provést povýšení, `safe_cast` a bez něj.  
   
 ```cpp  
 // safe_upcast.cpp  
@@ -75,8 +75,8 @@ in C::Test
 in B::Test2  
 ```  
   
-## <a name="downcasting"></a>Přetypování dolů  
- Přetypování dolů je přetypování ze základní třídy na třídu, která je odvozena ze základní třídy.  Přetypování dolů je bezpečné, pouze v případě, že objekt, který je určeno v době běhu ve skutečnosti řeší objekt odvozené třídy.  Na rozdíl od `static_cast`, `safe_cast` provede kontrolu dynamické a vyvolá <xref:System.InvalidCastException> Pokud převod selže.  
+## <a name="downcasting"></a>Přetypování na nižší  
+ Přetypování dolů je přetypování ze základní třídy na třídu, která je odvozena ze základní třídy.  Přetypování dolů je bezpečné, pouze v případě, že objekt, který je určena v době běhu ve skutečnosti řeší objektu odvozené třídy.  Na rozdíl od `static_cast`, `safe_cast` provede kontrolu dynamické a vyvolá <xref:System.InvalidCastException> Pokud převod selže.  
   
 ```cpp  
 // safe_downcast.cpp  
@@ -128,7 +128,7 @@ in B::Test2()
 ```  
   
 ## <a name="safecast-with-user-defined-conversions"></a>safe_cast s uživatelem definované převody  
- Další příklad ukazuje, jak můžete použít `safe_cast` k vyvolání uživatelem definované převody.  
+ Další příklad ukazuje, jak můžete `safe_cast` k vyvolání uživatelem definovaných převodů.  
   
 ```cpp  
 // safe_cast_udc.cpp  
@@ -185,9 +185,9 @@ in operator V^(R^ r)
   
 ### <a name="boxing"></a>Zabalení  
   
- Zabalení je definován jako převodu z kompilátoru vložili, uživatelsky definované.  Proto můžete použít `safe_cast` do pole hodnota v haldě CLR.  
+ Zabalení je definován jako vložený kompilátoru, uživatelem definovaný převod.  Proto můžete použít `safe_cast` do pole hodnota haldu CLR.  
   
- Následující příklad ukazuje zabalení s hodnotu jednoduché a uživatelem definované typy.  A `safe_cast` oknech proměnné typu hodnotu, která je v nativní zásobníku, takže jej lze přiřadit k proměnné v haldě uvolňování paměti.  
+ Následující příklad ukazuje zabalení se hodnota jednoduchého a uživatelem definované typy.  A `safe_cast` proměnné typu hodnoty, který je nativní zásobníku, takže je možné přiřadit k proměnné na haldě uvolňování pole.  
   
 ```cpp  
 // safe_cast_boxing.cpp  
@@ -213,7 +213,7 @@ int main() {
 }  
 ```  
   
- Další příklad ukazuje, že zabalení má přednost před uživatelem definovaný převod v `safe_cast` operaci.  
+ Další příklad ukazuje, že zabalení má přednost před uživatelem definovaný převod v `safe_cast` operace.  
   
 ```cpp  
 // safe_cast_boxing_2.cpp  
@@ -248,9 +248,9 @@ int main() {
   
 ### <a name="unboxing"></a>Rozbalení  
   
- Rozbalení je definován jako převodu z kompilátoru vložili, uživatelsky definované.  Proto můžete použít `safe_cast` k unbox hodnotu v haldě CLR.  
+ Rozbalení je definován jako vložený kompilátoru, uživatelem definovaný převod.  Proto můžete použít `safe_cast` k rozbalení hodnotu na haldě modulu CLR.  
   
- Rozbalení je převod definovaný uživatelem, ale na rozdíl od zabalení, rozbalení musí být explicitní – to znamená, musí být provedeny prostřednictvím `static_cast`, stylu jazyka C cast nebo `safe_cast`; rozbalení nelze provést implicitně.  
+ Rozbalení je uživatelem definovaný převod, ale na rozdíl od zabalení, rozbalení musí být explicitní – to znamená, ho musíte provést `static_cast`, C-style přetypování, nebo `safe_cast`; rozbalení nemůže být proveden implicitně.  
   
 ```cpp  
 // safe_cast_unboxing.cpp  
@@ -307,8 +307,8 @@ int main() {
 }  
 ```  
   
-## <a name="safecast-and-generic-types"></a>operátoru safe_cast a obecných typů  
- Další příklad ukazuje, jak můžete použít `safe_cast` provést přetypování dolů pomocí obecného typu.  
+## <a name="safecast-and-generic-types"></a>safe_cast a obecných typů  
+ Další příklad ukazuje, jak můžete `safe_cast` provést přetypování dolů pomocí obecného typu.  
   
 ```cpp  
 // safe_cast_generic_types.cpp  

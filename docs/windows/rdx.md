@@ -17,76 +17,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32dd702dd7d429c4437875a6aead86ae687dfb2b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011046"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605924"
 ---
 # <a name="rdx"></a>rdx
-Vytvoří klíč registru nebo upraví stávající klíč registru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ rdx(   
-   key,   
-   valuename=NULL,   
-   regtype   
-) ]  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Klíč*  
- Název klíče, který má být vytvořen nebo otevřen.  
-  
- *VALUENAME* (volitelné)  
- Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.  
-  
- *regtype*  
- Typ přidávaný klíč registru. Může být jedna z následujících akcí: `text`, `dword`, `binary`, nebo `CString`.  
-  
-## <a name="remarks"></a>Poznámky  
- **Rdx** C++ atribut vytvoří nebo upraví stávající klíč registru pro komponenty modelu COM. Atribut přidá makro BEGIN_RDX_MAP na objekt, který implementuje cílový člen. `RegistryDataExchange`, funkce vloženy jako výsledek BEGIN_RDX_MAP makra lze použít k přenosu dat mezi registru a datové členy  
-  
- Tento atribut lze použít ve spojení s [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atributy nebo jiné atributy, které zahrnuje jeden z nich.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|**Třída** nebo **struktura** člena|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="example"></a>Příklad  
- Následující kód přidá klíč registru s názvem MyValue popisující komponenty modelu COM CMyClass systému.  
-  
-```cpp  
-// cpp_attr_ref_rdx.cpp  
-// compile with: /LD /link /OPT:NOREF  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-  
-[module (name="MyLib")];  
-  
-class CMyClass {  
-public:  
-   CMyClass() {  
-      strcpy_s(m_sz, "SomeValue");  
-   }  
-  
-   [ rdx(key = "HKCR\\MyApp.MyApp.1", valuename = "MyValue", regtype = "text")]   
-   char m_sz[256];  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Com – atributy](../windows/com-attributes.md)   
- [registration_script](../windows/registration-script.md)   
+
+Vytvoří klíč registru nebo upraví stávající klíč registru.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ rdx(
+   key,
+   valuename=NULL,
+   regtype
+) ]
+```
+
+### <a name="parameters"></a>Parametry
+
+*Klíč*  
+Název klíče, který má být vytvořen nebo otevřen.
+
+*VALUENAME* (volitelné)  
+Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.
+
+*regtype*  
+Typ přidávaný klíč registru. Může být jedna z následujících akcí: `text`, `dword`, `binary`, nebo `CString`.
+
+## <a name="remarks"></a>Poznámky
+
+**Rdx** C++ atribut vytvoří nebo upraví stávající klíč registru pro komponenty modelu COM. Atribut přidá makro BEGIN_RDX_MAP na objekt, který implementuje cílový člen. `RegistryDataExchange`, funkce vloženy jako výsledek BEGIN_RDX_MAP makra lze použít k přenosu dat mezi registru a datové členy
+
+Tento atribut lze použít ve spojení s [coclass](../windows/coclass.md), [progid](../windows/progid.md), nebo [vi_progid –](../windows/vi-progid.md) atributy nebo jiné atributy, které zahrnuje jeden z nich.
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|**Třída** nebo **struktura** člena|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace o kontexty atributů najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="example"></a>Příklad
+
+Následující kód přidá klíč registru s názvem MyValue popisující komponenty modelu COM CMyClass systému.
+
+```cpp
+// cpp_attr_ref_rdx.cpp
+// compile with: /LD /link /OPT:NOREF
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+
+[module (name="MyLib")];
+
+class CMyClass {
+public:
+   CMyClass() {
+      strcpy_s(m_sz, "SomeValue");
+   }
+
+   [ rdx(key = "HKCR\\MyApp.MyApp.1", valuename = "MyValue", regtype = "text")]
+   char m_sz[256];
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[COM – atributy](../windows/com-attributes.md)  
+[registration_script](../windows/registration-script.md)  

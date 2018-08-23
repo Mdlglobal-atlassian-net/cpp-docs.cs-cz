@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedExchange | Microsoft Docs
+title: Vnitřní funkce _InterlockedExchange | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8637772d81031b9f9b30ef8cbee63b55c5b5b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338237"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599396"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchange
+**Specifické pro Microsoft**  
   
- Generuje atomic instrukce nastavit zadanou hodnotou.  
+ Generuje instrukce atomic nastavit zadanou hodnotu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -152,42 +152,42 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Target`  
- Ukazatel na hodnotu, která se vyměňují. Funkce nastavuje tuto proměnnou na `Value` a vrátí jeho předchozí hodnotu.  
+ [out v] `Target`  
+ Ukazatel na hodnotu, která bude vyměněn. Funkce nastaví tuto proměnnou na `Value` a vrátí jeho předchozí hodnotu.  
   
- [v] `Value`  
- Hodnota, která má být vyměňují s hodnotou na kterou odkazuje `Target`.  
+ [in] `Value`  
+ Hodnota mají vyměnit s hodnotou odkazované `Target`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí počáteční hodnotu, na kterou odkazuje `Target`.  
+ Vrátí počáteční hodnotu, na které odkazuje `Target`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h >|  
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- `_InterlockedExchange` poskytuje vnitřní podpora kompilátoru pro Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedExchange](http://msdn.microsoft.com/library/ms683590.aspx) funkce.  
+ `_InterlockedExchange` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) funkce.  
   
- Existuje několik variant na `_InterlockedExchange` se používá verzi sémantiku nebo který lišit v závislosti na datové typy, které zahrnují a zda získat specifické pro procesor.  
+ Existuje několik variant na `_InterlockedExchange` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.  
   
- Při `_InterlockedExchange` funkce se používá na 32bitové celočíselné hodnoty, `_InterlockedExchange8` funguje na hodnoty 8bitové celé číslo, `_InterlockedExchange16` funguje na hodnoty 16bitové celé číslo a `_InterlockedExchange64` funguje na 64bitové celočíselné hodnoty.  
+ Při `_InterlockedExchange` funkce se používá na 32bitové celé číslo hodnoty `_InterlockedExchange8` pracuje hodnoty 8bitové celé číslo, `_InterlockedExchange16` pracuje hodnoty 16bitové celé číslo a `_InterlockedExchange64` pracuje na 64bitové celočíselné hodnoty.  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony pro získání a verze sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Na platformách Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako na platformách, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
 ## <a name="example"></a>Příklad  
- Příklad, jak pomocí `_InterlockedExchange`, najdete v části [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Pro ukázku toho, jak používat `_InterlockedExchange`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

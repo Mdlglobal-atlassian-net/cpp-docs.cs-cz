@@ -1,5 +1,5 @@
 ---
-title: Atributy rozhraní | Microsoft Docs
+title: Atributy rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c61aeb0dcf3a9e0e001f89b9872b43b0af092b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880202"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593320"
 ---
 # <a name="interface-attributes"></a>Atributy rozhraní
-Následující atributy se používají na [rozhraní (nebo __interface)](../cpp/interface.md) C++ – klíčové slovo.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[async_uuid](../windows/async-uuid.md)|Určuje identifikátor UUID, který přesměruje MIDL kompilátoru k definování synchronní a asynchronní verzích rozhraní modelu COM.|  
-|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|  
-|[dispinterface](../windows/dispinterface.md)|Umístí rozhraní v souboru IDL jako rozhraní odesílání.|  
-|[dual](../windows/dual.md)|Umístí rozhraní v souboru IDL jako duální rozhraní.|  
-|[export](../windows/export.md)|Způsobí, že datová struktura umístit do souboru.|  
-|[helpcontext](../windows/helpcontext.md)|Určuje Identifikátor kontext, který umožňuje uživateli zobrazit informace o tomto prvku v souboru nápovědy.|  
-|[helpfile](../windows/helpfile.md)|Nastaví název souboru nápovědy knihovny typů.|  
-|[helpstring](../windows/helpstring.md)|Určuje řetězec znaků, který se používá k popisu elementu, na který se vztahuje.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Určuje ID tématu nápovědy v souboru HLP nebo CHM.|  
-|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL používat k provádění vyhledávací řetězec dokumentu (lokalizace).|  
-|[hidden](../windows/hidden.md)|Určuje, že položka existuje, ale by se neměly zobrazovat v prohlížeči uživatele.|  
-|[library_block](../windows/library-block.md)|Umístí konstrukce uvnitř bloku souboru IDL knihovny.|  
-|[místní](../windows/local-cpp.md)|Umožňuje použít MIDL kompilátoru jako generátor záhlaví při použití v hlavičce rozhraní. Při použití v jednotlivé funkce, označí místní postupu, pro které jsou generovány žádné zástupných procedur.|  
-|[nonextensible](../windows/nonextensible.md)|Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nelze ji rozšířit s další členy v době běhu. Tento atribut je platné jenom pro [duální](../windows/dual.md) rozhraní.|  
-|[odl](../windows/odl.md)|Identifikuje rozhraní jako objekt popis jazyk (ODL) rozhraní.|  
-|[object](../windows/object-cpp.md)|Určuje vlastní rozhraní.|  
-|[oleautomation](../windows/oleautomation.md)|Označuje, že rozhraní je kompatibilní s automatizace.|  
-|[pointer_default](../windows/pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny ukazatele s výjimkou ukazatele nejvyšší úrovně, které se zobrazují v seznamy parametrů.|  
-|[ptr](../windows/ptr.md)|Ukazatel se označí jako úplné ukazatel.|  
-|[restricted](../windows/restricted.md)|Označí, kteří členové knihovny nelze volat libovolně.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Poskytuje jedinečné ID pro knihovnu|  
-  
- Musí odpovídat těchto pravidel pro definování rozhraní:  
-  
--   Konvence volání výchozí hodnota je [__stdcall](../cpp/stdcall.md).  
-  
--   Pokud nezadáte jeden identifikátor GUID poskytuje pro vás.  
-  
--   Žádné přetížené metody jsou povoleny.  
-  
- Při zadávání není [uuid](../windows/uuid-cpp-attributes.md) atribut a použití stejného názvu rozhraní v projektech jiný atribut, nevygeneruje se stejným identifikátorem GUID.  
-  
-## <a name="see-also"></a>Viz také  
- [Atributy podle použití](../windows/attributes-by-usage.md)
+
+Následující atributy se vztahují na [rozhraní (nebo __interface)](../cpp/interface.md) – klíčové slovo C++.
+
+|Atribut|Popis|
+|---------------|-----------------|
+|[async_uuid](../windows/async-uuid.md)|Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.|
+|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|
+|[dispinterface](../windows/dispinterface.md)|Umístí rozhraní v souboru IDL jako rozhraní odbavení.|
+|[dual](../windows/dual.md)|Umístí rozhraní v souboru IDL jako duální rozhraní.|
+|[export](../windows/export.md)|Způsobí, že datová struktura budou umístěny v souboru IDL.|
+|[helpcontext](../windows/helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto prvku v souboru nápovědy.|
+|[helpfile](../windows/helpfile.md)|Nastaví název souboru nápovědy pro knihovnu typů.|
+|[helpstring](../windows/helpstring.md)|Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.|
+|[helpstringcontext](../windows/helpstringcontext.md)|Určuje ID tématu nápovědy HLP nebo CHM souboru.|
+|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|
+|[hidden](../windows/hidden.md)|Označuje, že položka existuje, ale nebude se zobrazovat v prohlížeči uživatele.|
+|[library_block](../windows/library-block.md)|Umístí konstrukci uvnitř bloku knihovny souboru IDL.|
+|[místní](../windows/local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[nonextensible](../windows/nonextensible.md)|Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu. Tento atribut je platný jenom pro [duální](../windows/dual.md) rozhraní.|
+|[odl](../windows/odl.md)|Označí rozhraní jako objekt popis jazyka (ODL) rozhraní.|
+|[object](../windows/object-cpp.md)|Určuje vlastní rozhraní.|
+|[oleautomation](../windows/oleautomation.md)|Označuje, že je kompatibilní s automatizací rozhraní.|
+|[pointer_default](../windows/pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny odkazy s výjimkou ukazatelů nejvyšší úrovně, které se zobrazí v seznamech parametrů.|
+|[ptr](../windows/ptr.md)|Ukazatel se označí jako úplné ukazatel.|
+|[restricted](../windows/restricted.md)|Určuje, kteří členové knihovny nejde volat libovolně.|
+|[uuid](../windows/uuid-cpp-attributes.md)|Poskytuje jedinečné ID pro knihovnu|
+
+Musí dodržovat tato pravidla pro definování rozhraní:
+
+- Je výchozí konvencí volání [__stdcall](../cpp/stdcall.md).
+
+- Pokud nezadáte jeden identifikátor GUID poskytuje za vás.
+
+- Žádné přetížení metody jsou povoleny.
+
+Pokud nezadáte [uuid](../windows/uuid-cpp-attributes.md) atribut a pomocí stejného názvu rozhraní v různých atributů projekty, vygeneruje se stejným GUID.
+
+## <a name="see-also"></a>Viz také
+
+[Atributy podle použití](../windows/attributes-by-usage.md)

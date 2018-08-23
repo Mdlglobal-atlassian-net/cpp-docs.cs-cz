@@ -1,5 +1,5 @@
 ---
-title: Podpora standardu ANSI | Microsoft Docs
+title: Podpora standardu ANSI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e902cb00210ba3a6d566a5725b65dfdce3e43d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dde8693009cda20b59262034679aea1a73543401
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854227"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595659"
 ---
 # <a name="support-for-ansi"></a>Podpora standardu ANSI
-Většina MFC – třídy a metody podporuje znakovou sadu ANSI, přestože rozhraní MFC framework jako celek postupně vyvíjí směrem k podpoře pouze Unicode znaková sada. Z důvodu probíhajícího vylepšení v [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a běžné ovládací prvky Windows verze 6.1, podporu pro několik ANSI třídy a metody je zastaralý.  Další informace najdete v tématu [zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md) a [podpora pro Unicode](../text/support-for-unicode.md).  
+Většina tříd knihovny MFC a metody podporují znakovou sadu ANSI, i když rozhraní MFC jako celek, postupně se vyvíjejí směrem k podpoře pouze Unicode znakové sady. Z důvodu probíhající vylepšení ve Windows Vista a Windows běžné ovládací prvky verze 6.1 podpora pro několik ANSI třídy a metody je zastaralá.  Další informace najdete v tématu [zastaralé rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md) a [podpora pro Unicode](../text/support-for-unicode.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Podpora kódování Unicode](../text/support-for-unicode.md)   
- [Rozhraní API standardu ANSI nepoužívané](../mfc/deprecated-ansi-apis.md)   
- [Prostředí a verzí běžné ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb776779)
+ [Podpora pro Unicode](../text/support-for-unicode.md)   
+ [Rozhraní API nepoužívané standardu ANSI](../mfc/deprecated-ansi-apis.md)   
+ [Prostředí a verze běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb776779)

@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604393"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604643"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper – konstruktor
-Inicializuje novou instanci třídy **RoInitializeWrapper** třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
+
+Inicializuje novou instanci třídy **RoInitializeWrapper** třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *příznaky*  
- Jeden z výčtů RO_INIT_TYPE, které určuje podporu poskytovaný modulem Windows Runtime.  
-  
-## <a name="remarks"></a>Poznámky  
- **RoInitializeWrapper** třída vyvolá `Windows::Foundation::Initialize(flags)`.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HandleT – třída](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*příznaky*  
+Jeden z výčtů RO_INIT_TYPE, které určuje podporu poskytovaný modulem Windows Runtime.
+
+## <a name="remarks"></a>Poznámky
+
+**RoInitializeWrapper** třída vyvolá `Windows::Foundation::Initialize(flags)`.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HandleT – třída](../windows/handlet-class.md)

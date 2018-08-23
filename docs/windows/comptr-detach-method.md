@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abc30204969464323d4995310cee0866139734fc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 84db0a82dfe6f9333f6a533aa9bc2bb529854fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648006"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593409"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach – metoda
-Zruší přidružení to **ComPtr** objekt z rozhraní, které představuje.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-T* Detach();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní, která je reprezentována to **ComPtr** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Zruší přidružení to **ComPtr** objekt z rozhraní, které představuje.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+T* Detach();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Ukazatel rozhraní, která je reprezentována to **ComPtr** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

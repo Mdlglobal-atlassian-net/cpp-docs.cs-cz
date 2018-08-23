@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608677"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Podpora znakové sady MBCS v jazyku Visual C++
 Při spuštění na znakovou sadou MBCS verzi Windows, vývojový systém Visual C++ (včetně nástroje integrovaného zdrojového kódu editoru, ladicího programu a příkazového řádku) se znakovou sadou MBCS, s výjimkou okna paměť.  
@@ -53,7 +53,7 @@ Při spuštění na znakovou sadou MBCS verzi Windows, vývojový systém Visual
   
  Editor IME aktivoval ALT +\` kombinace kláves, se zobrazí jako sadu tlačítek (indikátor) a okno převodu. Aplikace se umístí v kurzor textového okna. Aplikace musí zpracovat `WM_MOVE` a `WM_SIZE` zprávy podle přemístění okna převodu tak, aby odpovídal na nové umístění nebo velikost cílového okna.  
   
- Pokud chcete uživatelům umožnit zadávání znaků Kanji vaší aplikace, aplikace musí zpracovat zprávy Windows editoru IME. Další informace o programování v editoru IME, naleznete v tématu [editoru IME](https://msdn.microsoft.com/library/ms776145.aspx).  
+ Pokud chcete uživatelům umožnit zadávání znaků Kanji vaší aplikace, aplikace musí zpracovat zprávy Windows editoru IME. Další informace o programování v editoru IME, naleznete v tématu [editoru IME](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
   
 ## <a name="visual-c-debugger"></a>Ladicí program Visual C++  
  Ladicí program Visual C++ poskytuje možnost nastavit zarážky u zpráv s IME. Okno paměti můžete navíc zobrazit dvoubajtové znaky.  

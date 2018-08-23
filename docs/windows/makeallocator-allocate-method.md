@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3252096216757c34e93933bcdd91f9da2c5bb14f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015966"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609859"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-__forceinline void* Allocate();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud je úspěšná, ukazatel do přidělené paměti. v opačném případě **nullptr**.  
-  
-## <a name="remarks"></a>Poznámky  
- Přidělí paměť a přidruží ji k aktuální **MakeAllocator** objektu.  
-  
- Velikost přidělené paměti je velikost typu určeného aktuálním **MakeAllocator** parametr šablony.  
-  
- Vývojář potřebuje pouze přepsat **Allocate()** metody k implementaci modelu přidělování různých paměti.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Makeallocator – třída](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+__forceinline void* Allocate();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud je úspěšná, ukazatel do přidělené paměti. v opačném případě **nullptr**.
+
+## <a name="remarks"></a>Poznámky
+
+Přidělí paměť a přidruží ji k aktuální **MakeAllocator** objektu.
+
+Velikost přidělené paměti je velikost typu určeného aktuálním **MakeAllocator** parametr šablony.
+
+Vývojář potřebuje pouze přepsat **Allocate()** metody k implementaci modelu přidělování různých paměti.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[MakeAllocator – třída](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

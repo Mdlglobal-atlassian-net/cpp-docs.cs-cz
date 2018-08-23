@@ -1,5 +1,5 @@
 ---
-title: Globální funkce identifikátor zabezpečení | Microsoft Docs
+title: Globální funkce identifikátoru zabezpečení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365152"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610230"
 ---
-# <a name="security-identifier-global-functions"></a>Globální funkce identifikátor zabezpečení
-Tyto funkce vrátí běžné známého identifikátoru SID objekty.  
+# <a name="security-identifier-global-functions"></a>Globální funkce identifikátoru zabezpečení
+Tyto funkce vrátí objekty společné známého identifikátoru SID.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Povolit uživateli NT AUTHORITY\NetworkService čtení CPerfMon objektu zabezpečení pomocí NetworkService. NetworkService přidá třídy SecurityAttribute ATLServer kód, který povolí knihovnu DLL, přihlaste se pod účtem NetworkService na [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] a větší operačního systému.  
+ Použití NetworkService umožňující uživateli NT AUTHORITY\NetworkService čtení CPerfMon objektu zabezpečení. NetworkService přidá třídy SecurityAttribute ATLServer kód, který vám umožní knihovny DLL se přihlaste pod účtem NetworkService na Windows XP Home Edition, Windows XP Professional, Windows Server 2003 a vyšší operačního systému.  
   
- Při vytvoření vlastního protokolu čítače s třídou ATLServer CPerfMon v konzole MMC Perfmon, čítače se při prohlížení souboru protokolu, i když se zobrazí správně v zobrazení v reálném čase. Čítače výkonu vlastní CPerfMon nemáte potřebná oprávnění ke spuštění v rámci služby "A výstrahy a protokolování výkonu" (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (nebo vyšší) operační systémy. Tato služba je spuštěna pod účtem "NT AUTHORITY\NetworkService".  
+ Při vytváření vlastního protokolu čítače s třídou ATLServer CPerfMon v konzole MMC pro nástroj Perfmon, se nemusí zobrazit čítače při prohlížení souboru protokolu, i když se zobrazí správně v zobrazení v reálném čase. CPerfMon vlastní čítače výkonu nemají potřebná oprávnění ke spuštění v rámci služby "A výstrahy a protokolování výkonu" (smlogsvc.exe) v systému Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (nebo vyšší) operační systémy. Tato služba je spuštěna pod účtem "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>  SIDs::Null  
  Vrátí identifikátor SID SECURITY_NULL_RID.  

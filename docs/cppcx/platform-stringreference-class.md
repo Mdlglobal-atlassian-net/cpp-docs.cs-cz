@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::StringReference | Microsoft Docs
+title: Platform::stringreference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,19 +13,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097507"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609660"
 ---
-# <a name="platformstringreference-class"></a>Platform::StringReference – třída
-Typ optimalizace, které můžete použít k předávání dat řetězec z `Platform::String^` vstupní parametry pro jiné metody s minimální operace kopírování.  
+# <a name="platformstringreference-class"></a>Platform::stringreference – třída
+Typ optimalizace, které můžete použít k předávání řetězcovými daty z `Platform::String^` vstupní parametry jiným metodám, přičemž minimum je operace kopírování.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,35 +41,35 @@ class StringReference
   
 |Název|Popis|  
 |----------|-----------------|  
-|[StringReference::StringReference](#ctor)|Dva konstruktory pro vytvoření instancí `StringReference`.|  
+|[StringReference::StringReference](#ctor)|Dva konstruktory pro vytváření instancí `StringReference`.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[StringReference::Data](#data)|Vrátí řetězec dat jako pole hodnot char16.|  
+|[StringReference::Data](#data)|Vrátí řetězec data jako pole hodnot char16 typu.|  
 |[StringReference::Length](#length)|Vrátí počet znaků v řetězci.|  
-|[StringReference::GetHSTRING](#gethstring)|Vrátí řetězec dat jako HSTRING.|  
-|[StringReference::GetString](#getstring)|Vrátí řetězec dat jako `Platform::String^`.|  
+|[StringReference::GetHSTRING](#gethstring)|Vrátí řetězec data jako HSTRING.|  
+|[StringReference::GetString](#getstring)|Vrátí řetězec data jako `Platform::String^`.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[StringReference::operator =](#operator-assign)|Přiřadí `StringReference` na nový `StringReference` instance.|  
+|[StringReference::operator =](#operator-assign)|Přiřadí `StringReference` do nového `StringReference` instance.|  
 |[StringReference::operator()](#operator-call)|Převede `StringReference` k `Platform::String^`.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Záhlaví:** vccorlib.h  
 
 ## <a name="data"></a>  StringReference::Data – metoda
-Vrátí obsah tohoto `StringReference` jako pole hodnot char16.  
+Vrátí obsah tohoto `StringReference` jako pole hodnot char16 typu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -78,12 +78,12 @@ const ::default::char16 * Data() const
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pole char16 UNICODE textových znaků.  
+ Pole znaků textu char16 kódování UNICODE.  
   
 
 
 ## <a name="gethstring"></a>  StringReference::GetHSTRING – metoda
-Vrátí obsah jako řetězec `__abi_HSTRING`.  
+Vrátí obsah řetězce jako `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -93,14 +93,14 @@ __abi_HSTRING GetHSTRING() const
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `__abi_HSTRING` Obsahující dat řetězce.  
+ `__abi_HSTRING` , Který obsahuje data řetězce.  
   
 ### <a name="remarks"></a>Poznámky  
   
 
 
 ## <a name="getstring"></a>  StringReference::GetString – metoda
-Vrátí obsah jako řetězec `Platform::String^`.  
+Vrátí obsah řetězce jako `Platform::String^`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -110,7 +110,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `Platform::String^` obsahující dat řetězce.  
+ A `Platform::String^` , který obsahuje data řetězce.  
 
 ## <a name="length"></a>  StringReference::Length – metoda
 Vrátí počet znaků v řetězci.  
@@ -129,7 +129,7 @@ unsigned int Length() const
 
 
 ## <a name="operator-assign"></a>  StringReference::operator = – operátor
-Zadaný objekt přiřadí aktuální `StringReference` objektu.  
+Přiřadí zadaný objekt do aktuální `StringReference` objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -140,7 +140,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 ### <a name="parameters"></a>Parametry  
  `__fstrArg`  
- Adresa `StringReference` objekt, který se používá k chybě při inicializaci aktuální `StringReference` objektu.  
+ Adresa `StringReference` objekt, který slouží k inicializaci aktuální `StringReference` objektu.  
   
  `__strArg`  
  Ukazatel na pole char16 hodnoty, které slouží k inicializaci aktuální `StringReference` objektu.  
@@ -149,7 +149,7 @@ StringReference& operator=(const ::default::char16* __strArg);
  Odkaz na objekt typu `StringReference`.  
   
 ### <a name="remarks"></a>Poznámky  
- Protože `StringReference` je standardní C++ třídy a ne třídu ref, nezobrazí se v **Prohlížeč objektů**.  
+ Protože `StringReference` je standardní třídu C++ a ne ref class, nezobrazí se v **prohlížeče objektů**.  
   
 
 
@@ -168,7 +168,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro objekt typu `Platform::String`.  
 
-## <a name="ctor"></a>  StringReference::StringReference – konstruktor
+## <a name="ctor"></a>  StringReference::StringReference konstruktor
 Inicializuje novou instanci třídy `StringReference` třídy.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -186,16 +186,16 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
   
 ### <a name="parameters"></a>Parametry  
  `__fstrArg`  
- `StringReference` Jejichž data se používají k inicializaci nové instance.  
+ `StringReference` Jehož data slouží k inicializaci nové instance.  
   
  `__strArg`  
  Ukazatel na pole char16 hodnoty, které slouží k inicializaci nové instance.  
   
  `__lenArg`  
- Počet elementů v `__strArg`.  
+ Počet prvků v `__strArg`.  
   
 ### <a name="remarks"></a>Poznámky  
- První verze součásti tento konstruktor je výchozí konstruktor. Druhá verze inicializuje novou `StringReference` instance třídy z objektu, která je zadána `__fstrArg` parametr. Přetížení třetí a čtvrtý inicializovat novou `StringReference` instanci char16 hodnoty z pole. char16 představuje 16bitové znak UNICODE text.  
+ První verze tento konstruktor je výchozí konstruktor. Druhá verze inicializuje novou `StringReference` instance třídy z objektu, která je zadána `__fstrArg` parametru. Třetí a čtvrtá přetížení inicializovat nový `StringReference` instanci char16 hodnoty z pole. char16 hodnota představuje znak UNICODE text 16 bitů.  
   
 
 

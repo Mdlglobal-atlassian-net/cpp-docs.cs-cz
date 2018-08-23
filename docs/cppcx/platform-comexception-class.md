@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::COMException | Microsoft Docs
+title: Platform::COMException – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,19 +13,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090521"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596997"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException – třída
-Reprezentuje chyby COM, ke kterým došlo během provádění aplikací. COMException je základní třída pro sadu předdefinovaných, standard výjimky.  
+Reprezentuje chyby modelu COM., ke kterým dochází při spuštění aplikace. COMException je základní třídou pro sadu předdefinovaných, standardní výjimky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ```  
   
 ### <a name="members"></a>Členové  
- COMException – třída dědí z třídy objektu a IException, IPrintable a IEquatable rozhraní.  
+ COMException – třída dědí z třídy objektu a IException IPrintable a IEquatable rozhraní.  
   
  COMException má také následující typy členů.  
   
@@ -46,7 +46,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Metody**  
   
- Třída COMException dědí z metody Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() a ToString() [Platform::Object třída](../cppcx/platform-object-class.md).  
+ COMException – třída dědí metody Equals() Finalize(), GetHashCode(), GetType(), MemberwiseClose() a ToString() z [Platform::Object – třída](../cppcx/platform-object-class.md).  
   
  **Vlastnosti**  
   
@@ -54,39 +54,39 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|HRESULT, která odpovídá výjimku.|  
-|[Exception::Message](#message)|Zpráva, která popisuje výjimku.|  
+|[Exception::HResult](#hresult)|Hodnota HRESULT, která odpovídá na výjimku.|  
+|[Exception::Message](#message)|Zpráva popisující výjimku.|  
   
 ## <a name="derived-exceptions"></a>Odvozené výjimky  
- Následující předdefinované výjimky jsou odvozeny od COMException. Se liší od COMException pouze v jména, názvu jejich konstruktor a jejich základní hodnota HRESULT.  
+ Následující předdefinované výjimky jsou odvozeny z COMException. Se liší od COMException pouze v jejich název, název jejich konstruktoru a jejich základní hodnotu HRESULT.  
   
-|Název|Základní HRESULT|Popis|  
+|Název|Základní hodnota HRESULT|Popis|  
 |----------|------------------------|-----------------|  
-|COMException|*uživatelem definované hresult*|Vyvolá, když je nerozpoznané HRESULT vrácená z volání metody COM.|  
-|AccessDeniedException|E_ACCESSDENIED|Vyvolá, když byl odepřen přístup k prostředku nebo funkce.|  
-|ChangedStateException|E_CHANGED_STATE|Vyvolá, když jsou volány metody iterator kolekce nebo kolekce zobrazení po změně její nadřazená kolekce, zneplatnění výsledky metody.|  
-|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Vyvolá, když třídy COM není zaregistrován.|  
-|DisconnectedException|RPC_E_DISCONNECTED|Vyvolá, když je objekt odpojen od jeho klienty.|  
-|FailureException|E_FAIL|Vygeneruje se, když se operace nezdaří.|  
-|InvalidArgumentException|E_INVALIDARG|Vyvolá, když jeden z argumentů poskytnutý metodě je neplatný.|  
-|InvalidCastException|E_NOINTERFACE|Vyvolá, když typ nelze převést na jiný typ.|  
-|NotImplementedException –|E_NOTIMPL|Vygeneruje se, pokud není implementovaný pro třídu metodu rozhraní.|  
-|NullReferenceException|E_POINTER|Vygeneruje se při pokusu o dereference odkaz objektu null.|  
-|OperationCanceledException|E_ABORT|Vyvolá, když operace byla přerušena.|  
-|OutOfBoundsException|E_BOUNDS|Vygeneruje se, když se operace pokusí o přístup k datům mimo platný rozsah.|  
-|OutOfMemoryException|E_OUTOFMEMORY|Vyvolá, když není dostatek paměti pro dokončení operace.|  
+|COMException|*uživatelem definované hresult*|Vyvolána, když je nerozpoznaný HRESULT vrácená z volání metody COM.|  
+|AccessDeniedException|E_ACCESSDENIED|Vyvolána, když byl odepřen přístup k prostředku nebo funkce.|  
+|ChangedStateException|E_CHANGED_STATE|Vyvolána výjimka při volání metody iterátoru shromažďování nebo zobrazení kolekce po změně kolekce nadřazených, proto už není platná výsledky metody.|  
+|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Vyvolána, když třída modelu COM není zaregistrovaný.|  
+|DisconnectedException|RPC_E_DISCONNECTED|Vyvolána, když je objekt odpojen od svých klientů.|  
+|FailureException|E_FAIL|Vyvolána, pokud se operace nezdaří.|  
+|InvalidArgumentException|E_INVALIDARG|Vyvolána, když jeden z argumentů, poskytnutý metodě není platný.|  
+|InvalidCastException|E_NOINTERFACE|Vyvolána, když typ nelze převést na jiného typu.|  
+|NotImplementedException|E_NOTIMPL|Vyvolána, pokud se neimplementoval metodu rozhraní na třídě.|  
+|NullReferenceException|E_POINTER|Vyvolána, když je pokus přistoupit přes ukazatel odkaz na objekt s hodnotou null.|  
+|OperationCanceledException –|E_ABORT|Vyvolána, pokud je operace přerušena.|  
+|OutOfBoundsException|E_BOUNDS|Vyvolána, když se pokusí získat přístup k datům mimo platný rozsah operace.|  
+|OutOfMemoryException|E_OUTOFMEMORY|Vyvolána, když není dostatek paměti k dokončení operace.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Metadata:** platform.winmd  
 
-## <a name="ctor"></a> COMException::COMException – konstruktor
-Intializes novou instanci třídy COMException.  
+## <a name="ctor"></a> COMException::COMException konstruktor
+Inicializuje novou instanci třídy COMException.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -95,13 +95,13 @@ COMException( int hresult )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- HRESULT  
+ Hodnota HRESULT  
  Chyba HRESULT, která je reprezentována výjimku.  
   
 
 
 ## <a name="hresult"></a> Vlastnost COMException::HResult
-HRESULT, která odpovídá výjimku.  
+Hodnota HRESULT, která odpovídá na výjimku.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -110,13 +110,13 @@ public:property int HResult {    int get();}
 ```  
   
 ## <a name="property-value"></a>Hodnota vlastnosti  
- Hodnota HRESULT, která určuje chyba.  
+ Hodnota HRESULT, která určuje chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o tom, jak interpretovat hodnota HRESULT najdete v tématu [struktura kódy chyb COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
 
 ## <a name="message"></a> Vlastnost COMException::Message
-Zpráva, která popisuje výjimku.  
+Zpráva popisující výjimku.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -129,4 +129,4 @@ public:property String^ Message {    String^ get();}
     
 
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012190"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604276"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -26,14 +26,14 @@ Visual C++ můžete použít k zápisu mnoha typů programů, které běží na 
 - efektivní v požadavky na paměť
 - ekonomické ve spotřebě energie 
 - možnost využívat všech výhod Vícejádrová a mnohojádrová zařízení
-- možné obecné výpočetní na grafický procesor (úloh GPGPU)   
+- možné obecné výpočetní na grafický procesor (úloh GPGPU)  
 - moct využít výhod dalších mnohojádrových hardwaru.
 
 Existuje několik kategorií aplikací Windows, které vyvíjíte v jazyce Visual C++. Tyto kategorie mají různé programovací modely nebo modely aplikace, které byly zavedeny v průběhu let. Každý model používá různé knihovny a rozhraní API poskytnout přístup na platformu a vytváření uživatelských rozhraní, jako je například windows a dialogových oknech. Standardní knihovny C++, stejně jako knihovny třetích stran je možné v některém z těchto kategorií s několika omezeními pro UPW.
 
 - [Univerzální aplikace pro Windows](#BK_WindowsUniversal). Třetí kategorie aplikací pro Windows byla zavedena v systému Windows 8 a podpora pro tuto kategorii aplikace pokračuje ve Windows 10. Tyto aplikace jsou často označovány jako "Windows apps" a zahrnují desktopových a mobilních aplikací, které se zaměřují různých zařízeních. Tyto aplikace můžete psát v jazyce C + +/ CX, dialekt jazyka C++, která zahrnuje podporu pro vývoj pro Windows Runtime nebo ve standardním jazyce C++ s modelu COM s využitím knihovna Windows Runtime (WRL). Tyto aplikace byly původně navržen pro spouštění na celé obrazovce a i když ve Windows 10 mají uživatelé možnost spuštění v okně klasické pracovní plochy. Tyto aplikace jsou dotykových, ale je snadno použitelné myši provoz, pokud uživatelé dávají přednost určování nebo pokud není k dispozici dotykovou obrazovku. Tyto aplikace jsou distribuované z Microsoft Store, což vedlo k je volána "Store" aplikace.
 
-U aplikací pro UPW je možné spouštět na všech zařízeních Windows 10, jako jsou tablety a mobilní telefony, stejně jako v klientských počítačích. Na ploše, je možné spouštět jako okno klasické pracovní plochy, ne vždy spuštěný celou obrazovku. Tyto aplikace můžete spustit také na Xboxu a v budoucích zařízení.  Aplikace UWP běží na Windows Runtime, která poskytuje prvky uživatelského rozhraní, služby a rozhraní pro různé hardwarová zařízení, které jsou podporované ve Windows.  
+U aplikací pro UPW je možné spouštět na všech zařízeních Windows 10, jako jsou tablety a mobilní telefony, stejně jako v klientských počítačích. Na ploše, je možné spouštět jako okno klasické pracovní plochy, ne vždy spuštěný celou obrazovku. Tyto aplikace můžete spustit také na Xboxu a v budoucích zařízení.  Aplikace UWP běží na Windows Runtime, která poskytuje prvky uživatelského rozhraní, služby a rozhraní pro různé hardwarová zařízení, které jsou podporované ve Windows.
 
 Aplikace UWP můžete psát v jazyce C + +/ CX, dialekt jazyka C++, můžete použít [C + +/ knihoven WinRT](https://moderncpp.com/)pro několik scénářů. U aplikací pro UPW kompilovány do nativního kódu a mají XAML uživatelské rozhraní nebo pomocí rozhraní DirectX. Součásti prostředí Windows Runtime, které jsou napsány v nativním kódu, můžete využívat aplikace UPW napsané v jiných jazycích. Další informace najdete v tématu [vytvoření aplikace pro univerzální platformu Windows v jazyce C++](http://go.microsoft.com/fwlink/?LinkID=534976), [vytvořit svoji první hru UPW pomocí DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), a [součástí vytváření prostředí Windows Runtime v jazyce C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ Hry rozhraní DirectX můžete spustit na PC nebo konzolách Xbox. Další infor
 
 ## <a name="sdks-libraries-and-header-files"></a>Sady SDK, knihovny a soubory hlaviček
 
-Visual C++ obsahuje knihovny Runtime jazyka C (CRT), standardní knihovny C++ a další knihovny specifické pro společnost Microsoft. Zahrnout složky obsahující soubory hlaviček těchto knihoven jsou umístěny v adresáři instalace sady Visual Studio ve složce \VC\ nebo v případě CRT v instalační složce Nástroje sady Windows SDK.   
+Visual C++ obsahuje knihovny Runtime jazyka C (CRT), standardní knihovny C++ a další knihovny specifické pro společnost Microsoft. Zahrnout složky obsahující soubory hlaviček těchto knihoven jsou umístěny v adresáři instalace sady Visual Studio ve složce \VC\ nebo v případě CRT v instalační složce Nástroje sady Windows SDK.
 
 Můžete použít [Správce balíčků Vcpkg](../vcpkg.md) stovky open source knihoven třetích stran jednoduše instalace pro Windows.
 
@@ -100,7 +100,7 @@ Knihovny Microsoft patří:
 
 Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio jako součást sady funkcí C++ Desktop, umožňující vývoj aplikací pro Windows Universal Windows SDK. K vývoji aplikací pro UWP, musíte verzi sady Windows SDK pro Windows 10. Informace najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK u starších verzí systému Windows, najdete v článku [sady Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
 
-**Program soubory (x86) \Windows Kits** je výchozí umístění pro všechny verze sady Windows SDK, kterou jste nainstalovali.
+**Program soubory (x86) \Windows Kits** je výchozím umístěním pro všechny verze sady Windows SDK, kterou jste nainstalovali.
 
 Jiné platformy, jako je například konzola Xbox a Azure mají své vlastní sady SDK, které budete pravděpodobně muset nainstalovat. Další informace naleznete ve středisku pro vývojáře DirectX a ve středisku pro vývojáře Azure.
 
