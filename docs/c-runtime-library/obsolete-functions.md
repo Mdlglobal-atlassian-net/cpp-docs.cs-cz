@@ -1,5 +1,5 @@
 ---
-title: Zastaralé funkce | Microsoft Docs
+title: Zastaralé funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,31 +36,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6fcb14a91aadb01d3962758b19ce636fddfbe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d04265e27cd569b8b390bb19377a3111fbb9c8c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391532"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464720"
 ---
 # <a name="obsolete-functions"></a>Zastaralé funkce
-Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujeme, že aby aktualizované verze změníte. Další zastaralé funkce byly odebrány z CRT. Toto téma obsahuje zastaralý jako zastaralé funkce a funkce v konkrétní verzi sady Visual Studio odebrána.  
+Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujeme že vám tyto hodnoty změnit na aktualizované verze. Jiné zastaralé funkce byly odebrány z CRT. Toto téma uvádí zastaralé jako zastaralé funkce a funkce odebrat konkrétní verze sady Visual Studio.  
   
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Zastaralé jako zastaralé v sadě Visual Studio 2015  
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Zastaralé jako zastaralé ve Visual Studiu 2015  
   
 |Zastaralé funkce|Alternativní|  
 |-----------------------|-----------------|  
-|`is_wctype`|[iswctype –](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
-|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [funkce LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091), nebo [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159\(v=vs.85\).aspx)|  
+|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
+|`_loaddll`|[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187), [LoadLibraryEx](http://go.microsoft.com/fwlink/p/?LinkID=236091), nebo [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|  
 |`_unloaddll`|[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)|  
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|  
 |`_seterrormode`|[SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242)|  
 |`_beep`|[Zvukový signál](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|  
-|`_sleep`|[Přejít do režimu spánku](https://msdn.microsoft.com/library/windows/desktop/ms686298\(v=vs.85\).aspx)|  
+|`_sleep`|[Přejít do režimu spánku](/windows/desktop/api/synchapi/nf-synchapi-sleep)|  
 |`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|  
 |`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|  
   
-## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Odebrat z CRT ve Visual Studiu 2015  
+## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Odebrat z CRT v sadě Visual Studio 2015  
   
 |Zastaralé funkce|Alternativní|  
 |-----------------------|-----------------|  

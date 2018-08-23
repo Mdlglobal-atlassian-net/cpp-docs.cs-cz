@@ -1,5 +1,5 @@
 ---
-title: _BitScanReverse _BitScanReverse64 | Microsoft Docs
+title: _BitScanReverse _BitScanReverse64 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323648"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466214"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vyhledávání dat maska z nejvýznamnějších bit Znaménkový do nejméně významný bit (LSB) pro verzi sady (1).  
+ Hledat maskování dat od nejvýznamnější bit (MSB) na nejméně významných bitů (LSB) u nastaveného bitu (1).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,20 +48,20 @@ unsigned char _BitScanReverse64(
   
 #### <a name="parameters"></a>Parametry  
  [out] `Index`  
- Načtená bit pozice první nastavit chvíli (1) nalezena.  
+ Načtená verze umístění prvního nastaveného bitu (1) nalezena.  
   
- [v] `Mask`  
- 32bitovou nebo 64bitovou hodnotu k vyhledání.  
+ [in] `Mask`  
+ 32bitové nebo 64bitové hodnotu vyhledávání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `Index` byla sada nebo 0, pokud nebyly nalezeny žádné sady bits.  
+ Nenulovou hodnotu, pokud `Index` byl sady, nebo 0, pokud nebyly nalezeny žádné sady bitů.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_BitScanReverse64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|x86, ARM, x64|\<intrin.h >|  
+|`_BitScanReverse64`|ARM, x64||  
   
 ## <a name="example"></a>Příklad  
   
@@ -107,7 +107,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

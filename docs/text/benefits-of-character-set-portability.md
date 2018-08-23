@@ -1,5 +1,5 @@
 ---
-title: Výhody znaku nastavit přenositelnost | Microsoft Docs
+title: Výhody znakové sady přenositelnost | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1b78048baebfd89aed0ccc898c2bb9e3612525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b812b0712e6df24422ebe4a3b73376619051b484
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853814"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586802"
 ---
 # <a name="benefits-of-character-set-portability"></a>Výhody přenositelnosti znakové sady
-Můžete využít i v případě, že jste neměli v úmyslu aktuálně internationalizi vaší aplikace pomocí přenositelnost běhové funkce MFC a C:  
+Můžete využívat výhody funkce MFC a C za běhu přenositelnost i v případě, že jste nemáte v úmyslu aktuálně internationalizi vaší aplikace:  
   
--   Kódování přenositelnosti dělá kódu základní flexibilní. Můžete později přesunout ho snadno Unicode nebo MBCS.  
+-   Kódování přenositelnosti dělá váš kód základní flexibilní. Můžete později přesunout ho snadno kódování Unicode a MBCS.  
   
--   Pomocí kódování Unicode mohou vaše aplikace pro Windows efektivnější. Protože Windows používá kódování Unicode, řetězců kódování Unicode předán do a z operačního systému, je nutné přeložit, což zahrnuje režii.  
+-   Použití kódování Unicode je vaše aplikace pro Windows efektivnější. Vzhledem k tomu Windows používá kódování Unicode, kódování Unicode řetězce předané do a z operačního systému musí být převedeny, což zahrnuje režii.  
 
   
 ## <a name="see-also"></a>Viz také  

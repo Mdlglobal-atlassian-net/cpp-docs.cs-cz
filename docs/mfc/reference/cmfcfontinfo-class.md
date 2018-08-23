@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466044"
 ---
 # <a name="cmfcfontinfo-class"></a>Cmfcfontinfo – třída
 `CMFCFontInfo` Třída popisuje název a další atributy písma.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Tato dokumentace používá podmínky *znaková sada* a *skript* Zaměnitelně. A *skript*, což je také označovaný jako systém zápisu, je kolekce znaků a pravidla pro zápis tyto znaky v jedné nebo více jazyků. Kolekce znaků obsahuje abecedy a interpunkci v tomto skriptu. Například latince slouží pro angličtinu, jako je slyšet ve Spojených státech amerických a zahrnuje jeho abecední znaky a až Z. `lfCharSet` Člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura Určuje znakovou sadu. Například hodnota ANSI_CHARSET Určuje, [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] znaková sada, která zahrnuje abecedy latince.  
+ Tato dokumentace používá podmínky *znaková sada* a *skript* Zaměnitelně. A *skript*, což je také označovaný jako systém zápisu, je kolekce znaků a pravidla pro zápis tyto znaky v jedné nebo více jazyků. Kolekce znaků obsahuje abecedy a interpunkci v tomto skriptu. Například latince slouží pro angličtinu, jako je slyšet ve Spojených státech amerických a zahrnuje jeho abecední znaky a až Z. `lfCharSet` Člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura Určuje znakovou sadu. Například hodnota ANSI_CHARSET Určuje znakovou sadu ANSI, který obsahuje abecední latince.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Načte nastavení zřetězených názvy písmo a jeho znak (skript).  

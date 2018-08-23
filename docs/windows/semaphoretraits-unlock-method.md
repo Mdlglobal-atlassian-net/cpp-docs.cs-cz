@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015687"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583968"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock – metoda
-Ovládací prvek verze sdíleného prostředku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Popisovač **semafor** objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud neúspěšná, operace odemknutí **Unlock()** generuje chybu, která určuje příčinu selhání.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Viz také  
- [SemaphoreTraits – struktura](../windows/semaphoretraits-structure.md)
+
+Ovládací prvek verze sdíleného prostředku.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Popisovač **semafor** objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud neúspěšná, operace odemknutí **Unlock()** generuje chybu, která určuje příčinu selhání.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Viz také
+
+[SemaphoreTraits – struktura](../windows/semaphoretraits-structure.md)

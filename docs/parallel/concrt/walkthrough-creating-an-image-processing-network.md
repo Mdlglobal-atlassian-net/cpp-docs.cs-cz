@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření sítě pro zpracování obrázků | Microsoft Docs'
+title: 'Návod: Vytvoření sítě pro zpracování obrazu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2586a8fb15d21375ff056164d54f1f5f98891f98
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693650"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588139"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
-Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv provádějící zpracování obrázků.  
+Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv, které provádějí zpracování obrázků.  
   
- Síť určení operací, které k plnění bitovou kopii na základě jeho vlastnosti. Tento příklad používá *toku dat* modelu na trasy Image přes síť. V modelu toku dat nezávislé komponenty programu vzájemnou komunikaci odesláním zprávy. Když součást obdrží zprávu, může provedení několika akcí a poté předat další komponentou výsledek této akce. Výsledky porovnejte s *řízení toku* modelu, ve kterém aplikace využívá řídicí struktury, například, podmíněné příkazy, smyčky a tak dále, řídit pořadí operací v programu.  
+ Sítě určuje, které operace mají provést na image na základě jeho vlastnosti. V tomto příkladu *toku dat* vzor trasy Image přes síť. V toku dat modelu nezávislé komponenty aplikace mezi sebou komunikovat odesíláním zpráv. Když komponenta obdrží zprávu, může provést některé akce a výsledku akce předat jiné součásti. Porovnat s *řízení toku* model, ve které aplikace používá řídicí struktury, například, podmíněné příkazy, smyčky a tak dále, k řízení pořadí operací v programu.  
   
- Vytvoří síť, která je založena na toku dat *kanálu* úloh. Každá fáze v kanálu souběžně provede součástí celkového úlohy. Analogie k tomuto je sestavení pro automobilů výrobní. Při každém vehicle průchodu řádku sestavení, jedné stanici sestaví rámečku, jiné nainstaluje modul a tak dále. Povolením více vozidel pro sestavení současně řádku sestavení poskytuje lepší propustnost než ty dokončení vozidel jeden najednou.  
+ Vytvoří síť, která je založená na toku dat *kanálu* úloh. Každá fáze kanálu provádí souběžně části jedné úlohy. Obdobně to je montážní linky u automobilů výroby. Každý vozidla prochází montážní linky, jedné stanice sestaví rámce, jiné nainstaluje modul a tak dále. Povolením více vozidel pro sestavení současně montážní linky poskytuje lepší propustnost než sestavení kompletní vozidel jeden po druhém.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Přečtěte si následující dokumenty, než začnete Tento názorný postup:  
+ Před zahájením tohoto návodu, přečtěte si následující dokumenty:  
   
 -   [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
   
@@ -38,66 +38,66 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
 -   [Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)  
   
- Doporučujeme taky, že chápete základní informace o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] před spuštěním tohoto průvodce.  
+ Doporučujeme také, že chápete základy rozhraní GDI + před zahájením tohoto návodu.  
   
 ##  <a name="top"></a> Oddíly  
- Tento názorný postup obsahuje následující části:  
+ Tento návod obsahuje následující části:  
   
--   [Definování zpracování funkce obrázku](#functionality)  
+-   [Definice funkce pro zpracování obrázků](#functionality)  
   
--   [Vytvoření sítě pro zpracování bitové kopie](#network)  
+-   [Vytvoření sítě pro zpracování obrázků](#network)  
   
--   [Úplný příklad](#complete)  
+-   [Kompletní příklad](#complete)  
   
-##  <a name="functionality"></a> Definování zpracování funkce obrázku  
- Tato část uvádí podpory funkce, které používá síť zpracování bitové kopie pro práci s obrázky, které se načítají z disku.  
+##  <a name="functionality"></a> Definice funkce pro zpracování obrázků  
+ Tato část popisuje podporu funkce, které používá sítě pro zpracování obrazu pro práci s imagí, které jsou přečtený z disku.  
   
- Následující funkce `GetRGB` a `MakeColor`, extrahovat a kombinace jednotlivých součástí dané barvy, v uvedeném pořadí.  
+ Následující funkce `GetRGB` a `MakeColor`, extrahování a kombinovat jednotlivých součástí dané barvy v uvedeném pořadí.  
   
  [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]  
   
 
- Následující funkce `ProcessImage`, volání danou [std::function](../../standard-library/function-class.md) objektu k transformaci hodnoty barvy každý pixelů v [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [rastrový obrázek](https://msdn.microsoft.com/library/ms534420.aspx) objektu. `ProcessImage` Využívá [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus pro každý řádek rastrový obrázek paralelní zpracování.  
+ Následující funkce `ProcessImage`, volání daný [std::function](../../standard-library/function-class.md) objektu k transformaci hodnota barvy jednotlivých obrazových bodů v GDI + [rastrový obrázek](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) objektu. `ProcessImage` Funkce používá [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus pro každý řádek rastrový obrázek paralelní zpracování.  
 
   
  [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]  
   
- Následující funkce `Grayscale`, `Sepiatone`, `ColorMask`, a `Darken`, volání `ProcessImage` funkce k transformaci hodnoty barvy každý pixelů v `Bitmap` objektu. Každá z těchto funkcí výrazu lambda používá k definování barva transformace jeden pixel.  
+ Následující funkce `Grayscale`, `Sepiatone`, `ColorMask`, a `Darken`, volání `ProcessImage` funkci pro transformaci hodnota barvy jednotlivých obrazových bodů v `Bitmap` objektu. Každá z těchto funkcí používá výraz lambda definovat barvu transformace jeden pixel.  
   
  [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_3.cpp)]  
   
- Následující funkce `GetColorDominance`, také voláním `ProcessImage` funkce. Však místo změně hodnoty nebo jednotlivé barvy, tato funkce využívá [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) objekty k výpočtu, zda součást red, zelenou nebo modrou barvu dominuje bitovou kopii.  
+ Následující funkce `GetColorDominance`, také voláním `ProcessImage` funkce. Ale namísto změna hodnoty jednotlivých barev, tato funkce využívá [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) objekty k výpočtu, zda dominuje komponenty červené, zelené nebo modrou barvu na obrázku.  
   
  [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_4.cpp)]  
   
- Následující funkce `GetEncoderClsid`, načte identifikátor třídy pro daný typ MIME pro kodér. Aplikace používá tuto funkci pro načtení modulu encoder rastrového obrázku.  
+ Následující funkce `GetEncoderClsid`, načte identifikátor třídy pro daný typ MIME pro kodér. Aplikace používá tuto funkci k načtení kodéru pro rastrový obrázek.  
   
  [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]  
   
  [[Horní](#top)]  
   
-##  <a name="network"></a> Vytvoření sítě pro zpracování bitové kopie  
- Tato část popisuje, jak vytvořit síť asynchronní bloky zpráv provádějící zpracování obrázků na každý [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] bitové kopie (.jpg) v daném adresáři. Síť provede následující operace zpracování obrázků:  
+##  <a name="network"></a> Vytvoření sítě pro zpracování obrázků  
+ Tato část popisuje, jak vytvořit síť asynchronní bloky zpráv, které provádějí zpracování obrázků na každý obrázek JPEG (JPG) v daném adresáři. Síť provádí následující operace zpracování obrazu:  
   
-1.  Pro všechny image, která je vytvořená tní převeďte na ve stupních šedi.  
+1.  Libovolným obrázkem, který je vytvořen v Tom převeďte na stupně šedé.  
   
-2.  Pro žádný obrázek, který má red jako dominantní barvu odebrat zelené a modré součásti a poté ji ztmavení.  
+2.  Pro všechny image, která má jako převládající barvy odeberte zelené a modré složky a potom ztmavení.  
   
-3.  Pro další bitovou kopii použijte sépiový tónování.  
+3.  Další image použijte sépiový tónování.  
   
- Síť se vztahuje pouze první zpracování obrázků operaci, která odpovídá jednomu z těchto podmínek. Například pokud bitovou kopii je vytvořená tní a má red jako její dominantní barvy, bitovou kopii je pouze převedeno na ve stupních šedi.  
+ Síť se vztahuje pouze první zpracování obrázků operace, která odpovídá jednomu z těchto podmínek. Například pokud bitovou kopii je autorem vlastní a má red jako po převládající barvu, image je pouze převést na stupně šedé.  
   
- Po síti provede každou operaci zpracování obrázků, uloží jako soubor rastrový obrázek (BMP) bitovou kopii disku.  
+ Po síti provádí každé operace zpracování obrázků, uloží image na disk jako soubor rastrového obrázku (BMP).  
   
- Následující kroky ukazují, jak vytvořit funkci, která implementuje sítě pro zpracování této bitové kopie a použije tuto síť ke každému [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] bitové kopie v daném adresáři.  
+ Následující kroky ukazují, jak vytvořit funkci, která implementuje této sítě pro zpracování obrázků a tato síť se vztahuje na každý obrázek JPEG v daném adresáři.  
   
-#### <a name="to-create-the-image-processing-network"></a>Vytvoření sítě zpracování obrázků  
+#### <a name="to-create-the-image-processing-network"></a>K vytvoření sítě pro zpracování obrázků  
   
-1.  Vytvoří funkci, `ProcessImages`, který přebírá název adresáře na disku.  
+1.  Vytvoření funkce, `ProcessImages`, který přebírá název adresáře na disku.  
   
      [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]  
   
-2.  V `ProcessImages` fungovat, vytvořte `countdown_event` proměnné. `countdown_event` Je například znázorněn dále v tomto návodu.  
+2.  V `ProcessImages` funkce, vytváření `countdown_event` proměnné. `countdown_event` Třídy je uveden dále v tomto názorném postupu.  
   
      [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]  
   
@@ -105,7 +105,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
      [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]  
   
-4.  Přidejte následující kód k definování členů sítě pro zpracování obrázků.  
+4.  Přidejte následující kód, který definuje členy zpracování obrazu sítě.  
   
      [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]  
   
@@ -113,37 +113,37 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
      [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]  
   
-6.  Přidejte následující kód k odeslání do head sítě úplnou cestu jednotlivých [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] soubor v adresáři.  
+6.  Přidejte následující kód k odesílání do hlavní sítě úplná cesta každého souboru JPEG v adresáři.  
   
      [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]  
   
-7.  Počkejte `countdown_event` proměnnou na nulu.  
+7.  Počkejte `countdown_event` proměnné k dosažení nuly.  
   
      [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]  
   
- Následující tabulka popisuje členy sítě.  
+ Následující tabulka popisuje členy v síti.  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|`load_bitmap`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) objekt, který načítá `Bitmap` objektu z disku a přidá položku do `map` objekt, který chcete přidružit k jeho původní název souboru obrázku.|  
-|`loaded_bitmaps`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objekt, který odesílá načíst Image pro filtry zpracování obrázků.|  
-|`grayscale`|A `transformer` objekt, který převádí bitové kopie, které jsou vytvořeny pomocí tní k ve stupních šedi. Metadata bitové kopie se používá k určení jeho autora.|  
-|`colormask`|A `transformer` objekt, který odebere komponenty zelenou a modrou barvu z bitové kopie, které mají red jako dominantní barvu.|  
-|`darken`|A `transformer` objekt, který ztmaví bitové kopie, které mají red jako dominantní barvu.|  
-|`sepiatone`|A `transformer` objekt, který se vztahuje sépiový tónování bitové kopie, které nejsou autorem tní a nejsou převážně red.|  
-|`save_bitmap`|A `transformer` objekt, který uloží zpracování `image` na disk jako rastrový obrázek. `save_bitmap` načte původní název souboru z `map` objektu a jeho příponu názvu souboru se změní na .bmp.|  
-|`delete_bitmap`|A `transformer` objekt, který uvolní paměť pro bitové kopie.|  
-|`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který funguje jako terminálu uzlu v síti. Se snižuje `countdown_event` objektu k hlavní aplikaci signál, že byla zpracována bitovou kopii.|  
+|`load_bitmap`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) objekt, který načte `Bitmap` objektu z disku a přidá záznam, tím `map` objektu, který chcete přidružit k jeho původní název souboru obrázku.|  
+|`loaded_bitmaps`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objekt, který odesílá načtených imagí filtry zpracování obrázků.|  
+|`grayscale`|A `transformer` objekt, který převede imagí, které jsou vytvořeny v Tom na stupně šedé. Metadata obrázku používá k určení jeho autor.|  
+|`colormask`|A `transformer` objekt, který odebere zeleným a modrým barevným z imagí, které mají jako převládající barvy.|  
+|`darken`|A `transformer` objekt, který ztmaví bitové kopie, které mají jako převládající barvy.|  
+|`sepiatone`|A `transformer` objekt, který se týká sépiový tónování bitové kopie, které nejsou autorem vlastní a nejsou převážně červené.|  
+|`save_bitmap`|A `transformer` objekt, který uloží zpracované `image` na disk jako rastrový obrázek. `save_bitmap` Obnoví původní název souboru z `map` objektu a jeho příponu názvu souboru se změní na BMP.|  
+|`delete_bitmap`|A `transformer` objekt, který uvolní paměť pro Image.|  
+|`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který funguje jako uzel terminálu v síti. To sníží `countdown_event` objektu na signál pro hlavní aplikaci, že image byla zpracována.|  
   
- `loaded_bitmaps` Zpráva vyrovnávací paměť je důležité, protože jako `unbounded_buffer` objektu, nabízí `Bitmap` objekty do několika příjemců. Pokud cílový blok přijme `Bitmap` objekt, `unbounded_buffer` objektu, která nenabízí `Bitmap` objekt, který má jiné cíle. Proto pořadí, ve kterém můžete propojit objekty ke `unbounded_buffer` objektu je důležité. `grayscale`, `colormask`, A `sepiatone` zpráva bloky každý pomocí filtru tak, aby přijímal pouze určité `Bitmap` objekty. `decrement` Zpráva vyrovnávací paměť je důležité cíl `loaded_bitmaps` zprávy vyrovnávací paměti, protože všechny přijímá `Bitmap` objekty, které jsou odmítnut další zprávy vyrovnávací paměti. `unbounded_buffer` Objektu je potřeba rozšířit zprávy v pořadí. Proto `unbounded_buffer` objekt zablokuje, dokud se nový cílový blok se odkazuje a přijímá zprávy, pokud žádný aktuální cílový blok přijímá zprávy.  
+ `loaded_bitmaps` Vyrovnávací paměť zpráv je důležité, protože jako `unbounded_buffer` objektu, nabízí `Bitmap` objekty více příjemcům. Když cílový blok přijme `Bitmap` objektu, `unbounded_buffer` objektu, která nenabízí `Bitmap` objekt do jiné cíle. Proto objektů pořadí, ve kterém můžete propojit `unbounded_buffer` objekt je důležitý. `grayscale`, `colormask`, A `sepiatone` zpráva jednotlivých bloků pomocí filtru tak, aby přijímal pouze určité `Bitmap` objekty. `decrement` Vyrovnávací paměť zpráv je důležité, cíl `loaded_bitmaps` zprávy vyrovnávací paměti, protože všechny přijímá `Bitmap` objekty, které se odmítnul jiné vyrovnávací paměti zpráv. `unbounded_buffer` Šíření zprávy v pořadí je vyžadován objekt. Proto `unbounded_buffer` objekt blokuje, dokud nový cílový blok je propojen a přijímá zprávy, pokud žádná aktuální cílový blok přijímá zprávy.  
   
- Pokud vaše aplikace vyžaduje více zprávy blokuje proces zprávu, ale právě jednu zprávu blok, který nejprve přijímá zprávy, můžete použít jiný typ bloku zpráv, jako například `overwrite_buffer`. `overwrite_buffer` Třída obsahuje jednu zprávu najednou, ale jeho rozšíří tuto zprávu pro každý z jeho cíle.  
+ Pokud vaše aplikace vyžaduje víc zprávy blokuje procesu zprávy, ne jen jedna zpráva blok, který nejprve přijímá zprávy, můžete použít jiný typ bloku zprávy, jako například `overwrite_buffer`. `overwrite_buffer` Třída obsahuje jednu zprávu v čase, ale šíří zprávy pro každý svůj cíl.  
   
- Následující ilustrace znázorňuje sítě pro zpracování bitové kopie:  
+ Následující ilustrace znázorňuje sítě pro zpracování obrazu:  
   
- ![Sítě pro zpracování image](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")  
+ ![Sítě pro zpracování obrazu](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")  
   
- `countdown_event` Objekt v tomto příkladu umožňuje sítě pro zpracování bitovou kopii k informování hlavní aplikace, pokud byly zpracovány všechny bitové kopie. `countdown_event` Třídy používá [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který má být signalizován hodnota čítače hodnota nula. Hlavní aplikace zvýší čítače pokaždé, když to odešle název souboru k síti. V terminálu uzlu sítě snižuje čítač po zpracování každé bitové kopie. Po hlavní aplikace prochází zadaný adresář, čeká `countdown_event` objekt signál, že jeho čítač dosáhl nula.  
+ `countdown_event` Objekt v tomto příkladu povolí obrazu sítě pro zpracování informovat hlavní aplikace, když byly zpracovány všechny bitové kopie. `countdown_event` Třídy používá [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který signalizuje, že když hodnota čítače dosáhne nuly. Hlavní aplikace zvýší čítač pokaždé, když se odešle název souboru k síti. Terminálu uzlu sítě dekrementuje čítače po zpracování každého obrázku. Po hlavní aplikace prochází přes zadaného adresáře, počká na `countdown_event` objektu na signál, že jeho čítač bylo dosaženo nula.  
   
  Následující příklad ukazuje `countdown_event` třídy:  
   
@@ -151,23 +151,23 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
  [[Horní](#top)]  
   
-##  <a name="complete"></a> Úplný příklad  
- Následující kód ukazuje kompletní příklad. `wmain` Spravuje funkce [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] knihovny a volání `ProcessImages` funkci, aby se proces [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] soubory `Sample Pictures` directory.  
+##  <a name="complete"></a> Kompletní příklad  
+ Následující kód ukazuje kompletní příklad. `wmain` Spravuje – funkce rozhraní GDI + knihovny a volání `ProcessImages` funkci ke zpracování JPEG soubory `Sample Pictures` adresáře.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
   
- Následující obrázek znázorňuje příklad výstupu. Každé zdrojové bitové kopie je větší než jeho odpovídající upravené bitové kopie.  
+ Ukázkový výstup ukazuje následující obrázek. Každá zdrojová image je vyšší než jeho odpovídající upravenou image.  
   
- ![Ukázkový výstup pro tento příklad](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
+ ![Ukázkový výstup například](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse` je vytvořená tní Alphin a je proto převedena na ve stupních šedi. `Chrysanthemum`, `Desert`, `Koala`, a `Tulips` mít red jako barvu dominantní a proto mít komponenty modré a zelenou barvu odebrat a jsou ztmaví. `Hydrangeas`, `Jellyfish`, a `Penguins` kritériím výchozí a proto je sépie toned.  
+ `Lighthouse` je autorem vlastní Alphin a je proto převedena na ve stupních šedi. `Chrysanthemum`, `Desert`, `Koala`, a `Tulips` mít červenou jako převládající barvy a proto máte odebrat modrá a zelená barevným a jsou ztmaví. `Hydrangeas`, `Jellyfish`, a `Penguins` odpovídat výchozím kritériím a proto je sépiový tón toned.  
   
  [[Horní](#top)]  
   
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `image-processing-network.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
+ Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `image-processing-network.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.  
   
- **cl.exe /DUNICODE /EHsc/Link bitové kopie. zpracování network.cpp gdiplus.lib**  
+ **cl.exe /DUNICODE/EHsc/Link bitové kopie. zpracování network.cpp gdiplus.lib**  
   
 ## <a name="see-also"></a>Viz také  
  [Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

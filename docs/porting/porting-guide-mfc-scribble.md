@@ -1,5 +1,5 @@
 ---
-title: 'Průvodce přenosem: MFC Scribble | Microsoft Docs'
+title: 'Průvodce přenosem: MFC Scribble | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,83 +12,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a73a822e3cf6daa9d9d7c3ebdabbcd4671fc5c7e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845905"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465028"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
-Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny starší verze sady Visual Studio pro Visual Studio 2017. Tato část představuje příklad, počínaje velmi jednoduché projektu a přesunutí chcete trochu složitější proces upgradu. V tomto tématu jsme fungovat prostřednictvím procesu upgradu pro konkrétní projekt, Klikyháky MFC. Je vhodné jako základní informace o procesu upgradu pro projekty C++.  
+Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny ve starších verzích sady Visual Studio do sady Visual Studio 2017. Tato témata zavést procesu upgradu podle příkladu, počínaje velmi jednoduchý projekt a přechod na ty o něco složitější. V tomto tématu se budeme pracovat prostřednictvím procesu upgradu ke konkrétnímu projektu knihovny MFC Scribble. Je vhodné jako základní informace o procesu upgradu pro projekty C++.  
   
- Každá verze nástroje Visual Studio zavádí možné nekompatibility, které může zkomplikovat přesunutí kódu ze starší verze sady Visual Studio na novější. Někdy jsou požadované změny v kódu, proto musíte znovu zkompiluje a aktualizujte kód a někdy jsou požadované změny do souborů projektu. Když otevřete projekt, který byl vytvořen s předchozí verzí sady Visual Studio, Visual Studio automaticky zeptá, jestli se má aktualizovat na nejnovější verzi projekt nebo řešení. Tyto nástroje obvykle upgradovat pouze soubory projektu; Neměňte vašeho zdrojového kódu.  
+Jednotlivými verzemi sady Visual Studio zavádí možné nekompatibility, které může zkomplikovat přesunutí kódu ze starší verze sady Visual Studio na novější. Někdy jsou požadované změny v kódu, takže je nutné znovu zkompilovat a aktualizujte svůj kód a někdy jsou požadované změny v souborech projektu. Když otevřete projekt, který byl vytvořen pomocí předchozí verze sady Visual Studio, Visual Studio automaticky vás zeptá, zda aktualizovat projekt nebo řešení na nejnovější verzi. Tyto nástroje obvykle upgradovat jenom soubory projektu; Neprovádějte žádné změny zdrojového kódu.  
   
 ## <a name="mfc-scribble"></a>MFC Scribble  
- MFC Klikyháky je dobře známé vzorku, který byl zahrnut v různých verzích Visual C++. Je jednoduchou kreslení aplikaci, která ukazuje některé základní funkce MFC. Existují různé verze je k dispozici, včetně i spravované a nativní kód verze. V tomto příkladu jsme nalezených starší verzi Scribble v nativním kódu v sadě Visual Studio 2005 a otevřít v aplikaci Visual Studio 2017.  
-  
- Před pokusem o upgrade, ujistěte se, že máte nainstalovaný Windows Desktop zatížení. Spusťte instalační program sady Visual Studio (vs_installer.exe). Jedním ze způsobů spusťte instalační program je chcete vybrat soubor | Nový projekt a přejděte do dolní části seznamu nainstalovaných šablon, dokud nebude najdete v části "Otevřete instalační program Visual Studio". Po otevření instalační program se zobrazí všechny dostupné úlohy. Pokud není políčko pro pracovní vytížení Windows Desktop, vyberte ho a klikněte na tlačítko Upravit v dolní části okna. 
-
-
- Dále vytvořte zálohu celé řešení a veškerý jeho obsah. 
  
- Nakonec jsme potřebné při rozhodování o konkrétní metody upgradu. Pro složitější řešení a projekty, které nebyly upgradovány po dlouhou dobu měli byste zvážit upgrade jedné verze sady Visual Studio v čase. Tímto způsobem můžete zúžit kterou verzi sady Visual Studio zdrojem potíží. Pro jednoduché projekt je vhodné pokusu o otevření v nejnovější verzi sady Visual Studio a povolení v Průvodci převést projekt. Pokud to nefunguje, zkuste upgrade jedné verze současně, pokud máte přístup k příslušné verze sady Visual Studio.  
+MFC Scribble je dobře známé ukázky, která byla zahrnuta v různých verzích Visual C++. Je jednoduchou aplikaci výkresu, který ukazuje některé základní funkce knihovny MFC. Existují různé verze je k dispozici, včetně spravovaný a nativní kód. V tomto příkladu jsme nalezena stará verze Scribble v nativním kódu ze sady Visual Studio 2005 a otevřít v sadě Visual Studio 2017.  
   
- Všimněte si, že můžete také spustit devenv na příkazovém řádku, pomocí `/Upgrade` možnost, místo použití Průvodce aktualizovat projekty. V tématu [spínače/upgradu (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Který může být užitečná při automatizaci procesu upgradu pro velký počet projekty.  
+Před pokusem o upgrade, ujistěte se, že máte úlohu Windows Desktop nainstalovat. Spusťte instalační program sady Visual Studio (vs_installer.exe). Jedním ze způsobů otevřete instalační program je zvolit **souboru** > **nový projekt** a přejděte do dolní části seznamu nainstalovaných šablon, dokud se nezobrazí **otevřít instalační program Visual Studio**. Po otevření instalačního programu se zobrazí všechny dostupné úlohy. Pokud políčko u **Windows Desktop** úlohy není vybraná, vyberte ho a klikněte **změnit** tlačítko v dolní části okna. 
+
+Dále proveďte zálohu celé řešení a veškerý jeho obsah. 
+ 
+Nakonec jsme museli rozhodovat na konkrétní metody upgradu. Pro složitější řešení a projekty, které nebyly upgradované po dlouhou dobu měli byste zvážit upgrade jedné verze sady Visual Studio v čase. Tímto způsobem můžete zúžit problém zavedená verze sady Visual Studio. Pro Jednoduchý projekt je vhodné otevřením v nejnovější verzi sady Visual Studio a umožňuje Průvodce převést projekt. Pokud to nefunguje, zkuste upgrade jedné verze najednou, pokud máte přístup k odpovídající verze sady Visual Studio.  
   
-### <a name="step-1-converting-the-project-file"></a>Krok 1. Převádění souboru projektu  
- Když otevřete starý soubor projektu ve Visual Studio 2017, Visual Studio nabízí převést soubor projektu na nejnovější verzi, která jsme přijata. Zobrazilo se dialogové okno následující:  
+Všimněte si, že můžete také spustit devenv do příkazového řádku pomocí `/Upgrade` možnost, namísto použití Průvodce pro upgrade projektů. Zobrazit [/upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Který může být užitečná při automatizaci procesu upgradu pro velký počet projektů.  
   
- ![Posuďte projektu a řešení změny](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
+### <a name="step-1-converting-the-project-file"></a>Krok 1. Převádí se projektový soubor  
+Když otevřete starý soubor projektu v sadě Visual Studio 2017, Visual Studio nabízí převést soubor projektu na nejnovější verzi, která můžeme přijmout. Objevily se následující dialogové okno:  
   
- Nám upozornění, že cíl Itanium není k dispozici a nebudou převedeny došlo k chybě.  
+![Zkontrolovat změny projektu a řešení](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
+  
+To, že nám, že cíl Itanium není k dispozici a nebudou převedeny došlo k chybě.  
   
 ```Output  
 Platform 'Itanium' is missing from this project. All the configurations and their file configuration settings specific to this platform will be ignored. If you want this platform converted, please make sure you have the corresponding platform installed under '%vctargetpath%\platforms\Itanium'.Continue to convert this project without this platform?  
 ```  
   
- V době, kdy byla vytvořena předchozí Scribble projektu se Itanium důležité cílové platformy. Platforma Windows nepodporuje Itanium, proto jsme zvolili pro pokračování bez podpora platformy Itanium.  
+V době, kdy byla vytvořena předchozí Scribble projekt byla Itanium důležité cílovou platformu. Platforma Windows už nepodporuje Itanium, takže jsme se rozhodli pokračovat bez podpora na platformu Itanium se.  
   
- Visual Studio se následně zobrazí migrace sestavu se seznamem všechny problémy s původní soubor projektu.  
+Visual Studio pak zobrazí sestavu migrace výpis všechny problémy s původní soubor projektu.  
   
- ![Upgrade sestavy](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")  
+![Zpráva o inovaci](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")  
   
- V takovém případě problémy byly všech upozornění a Visual Studio potřebné změny provedené v souboru projektu. Velký rozdíl jde projektu je, že nástroj pro sestavení změněn z vcbuild k msbuild. Tato změna byla poprvé použita v sadě Visual Studio 2010. Další změny zahrnují některé změny uspořádání pořadí prvků v samotném souboru projektu. Žádné problémy vyžaduje další pozornost pro tento projekt jednoduché.  
+V tomto případě problémy se všechna upozornění a sady Visual Studio provedli odpovídající změny v souboru projektu. Rozdíl jde projektu je, že nástroj pro sestavení se změnil z vcbuild nástroji MSBuild. Tato změna byla poprvé zavedena v sadě Visual Studio 2010. Další změny patří některé změny uspořádání pořadí prvků v samotném souboru projektu. Žádné problémy nutná další pozornost pro tento jednoduchý projekt.  
   
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Načítání sestavení  
- Před vytvořením, jsme zkontrolujte sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se na **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a číslo verze platformy nástroj, který v tomto případě je v141 pro Visual Studio 2017 verzi nástroje. Při převodu projekt, který byl původně kompilovat s Visual C++ 2010 2012, 2013 nebo 2015, sady nástrojů není automaticky aktualizován do sady nástrojů Visual Studio 2017.   
+Před sestavením, zkontrolujeme sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v rámci **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a čísla verze nástrojů platformy, které v tomto případě je v141 pro Visual Studio 2017 verze nástrojů. Pokud převedete projekt, který byl původně kompilován s Visual C++ 2010, 2012, 2013 nebo 2015, sada nástrojů se neaktualizuje automaticky do sady nástrojů Visual Studio 2017.   
   
-  Chcete-li přepínač na kódování Unicode, otevřete vlastnosti projektu v části **vlastnosti konfigurace**, vyberte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změňte z **vícebajtové znakové sady** k **použít sadu znak Unicode**. Účinek této změny je to teď _UNICODE a jsou definovány makra kódování UNICODE a _MBCS není, které můžete ověřit v dialogovém okně Vlastnosti v části **C/C++** kategorie v **příkazového řádku** vlastnost.  
+Přechod usnadní do kódování Unicode, otevřete vlastnosti projektu, v části **vlastnosti konfigurace**, zvolte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změnit z **použít vícebajtovou znakovou sadu** k **použít znakovou sadu Unicode**. Účinkem této změny je to teď _UNICODE a UNICODE makra jsou definována a _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v části **C/C++** kategorií **příkazového řádku** vlastnost.  
   
 ```Output  
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic 
 ```  
   
- I když Scribble projekt nebyl nastaven na kompilovat s znaky znakové sady Unicode, byl již napsán s Tchar – místo char, takže nic ve skutečnosti je potřeba změnit. Sestavení projektu úspěšně pomocí znakové sady Unicode.  
+I když Scribble projekt nebyl nastaven pro kompilaci pomocí znaků Unicode, je již byla zapsána s Tchar – místo char, takže ve skutečnosti není třeba nic změnit. Projekt vytvoří úspěšně pomocí znakové sady Unicode.  
   
- Nyní sestavte řešení. V okně výstupu kompilátoru víme, že tento _WINNT32_WINNT není definován:  
+Nyní sestavte řešení. V okně Výstup kompilátoru víme, že _WINNT32_WINNT není definován:  
   
 ```Output  
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)  
 ```  
   
- Toto je upozornění, není k chybě a je velmi běžné při upgradu projektu Visual C++. Toto je makro, která definuje co nejnižší verze systému Windows, které aplikace poběží na. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnota, _WIN32_WINNT_MAXVER, což znamená, aktuální verze systému Windows. Pro tabulku možných hodnot, viz [použití Windows hlaviček](https://msdn.microsoft.com/en-us/library/aa383745.aspx). Například můžeme můžete nastavit jeho spuštění na libovolnou verzi z Vista a vyšší.  
+ Toto je upozornění, ne o chybu a je velmi běžná v případě upgrade projektu Visual C++. Toto je makro, které definuje co nejnižší verze Windows, na kterém bude naši aplikaci spustili. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnotu _WIN32_WINNT_MAXVER, což znamená, že aktuální verzi Windows. Tabulka obsahující možné hodnoty, najdete v článku [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers). Například můžeme nastavit jeho spuštění na libovolnou verzi systému Vista a vyšší.  
   
 ```  
 #define _WIN32_WINNT _WIN32_WINNT_VISTA  
 ```  
   
- Pokud kód používá částí rozhraní API systému Windows, které nejsou k dispozici na verzi systému Windows, které zadáte pomocí této makro, byste měli vidět, jako chyba kompilátoru. V případě kód Scribble se nezobrazí žádná chyba.  
+Pokud tento kód použije části rozhraní Windows API, které nejsou k dispozici na na verzi Windows, kterou zadáte pomocí tohoto makra, měli byste vidět, který jako chybu kompilátoru. V případě Scribble kódu se nezobrazí žádná chyba.  
   
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testování a ladění  
- Neexistuje žádné testovací sady, který jsme právě spuštění aplikace a otestovat jeho funkce ručně přes uživatelské rozhraní. Byly dodrženy žádné problémy.  
+Neexistuje žádné sady testů, který jsme právě spuštění aplikace a testovat jeho funkcí ručně přes uživatelské rozhraní. Nezjistily se žádné problémy.  
   
-### <a name="step-4-improve-the-code"></a>Krok 4. Zlepšení kód  
- Teď, když jste migrovali na Visual Studio 2017, můžete chtít provést některé změny využívat výhod nových funkcí jazyka C++. Aktuální verze kompilátoru C++ je mnohem víc vyhovující na C++ standardní pak předchozí verze, takže pokud budete mít paměti, aby nějaký kód změní aby váš kód bezpečnější a víc přenosného k jiné kompilátory a operační systémy, měli byste zvážit některé vylepšení.  
+### <a name="step-4-improve-the-code"></a>Krok 4. K lepšímu kódu  
+Teď, když jste migrovali do sady Visual Studio 2017, můžete chtít provést nějaké změny, abyste mohli využívat nové funkce jazyka C++. Aktuální verze kompilátoru jazyka C++ je mnohem více splňující podmínky na standardní a předchozí verze C++, takže pokud budete mít paměti, aby nějaký kód změn kódu bezpečnější a větší přenositelnost na jiné kompilátory a operační systémy, měli byste zvážit některé vylepšení.  
   
 ## <a name="next-steps"></a>Další kroky  
- Scribble bylo malé a jednoduché desktopová aplikace systému Windows a nebyl těžko převést. Mnoho aplikací malé, jednoduché stejným způsobem převést na novou verzi.  U složitějších aplikací, s mnoha další řádky kódu, starší starší kód, který nemusí být až moderních standardů, více projektů a knihovny, vlastní kroky sestavení nebo pro komplexní skriptované automatizovaných sestaveních, bude trvat déle k upgradu. Před pokračováním [další příklad](../porting/porting-guide-com-spy.md), ATL nebo COM aplikaci s názvem COM Spy.  
+ 
+Scribble byla aplikace pracovní plochy Windows malý a jednoduchý a se těžko převést. Velký počet malých, jednoduché aplikací stejně snadno převést na novou verzi.  U složitějších aplikací, s mnoha více řádků kódu, starší starší kód, který nemusí být až moderních standardů, více projektů a knihovny, vlastní kroky sestavení nebo pro komplexní skriptované automatizované buildy, bude trvat déle k upgradu. Pokračujte [další příklad](../porting/porting-guide-com-spy.md), ATL/COM aplikaci COM Spy.  
   
 ## <a name="see-also"></a>Viz také  
- [Portování a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
- [Další příklad: COM Spy](../porting/porting-guide-com-spy.md)
+ 
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Následující příklad: COM Spy](../porting/porting-guide-com-spy.md)

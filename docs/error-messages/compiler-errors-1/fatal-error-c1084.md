@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1084 | Microsoft Docs
+title: Závažná chyba C1084 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7266a2158c3e6ccd02ea82de22c6f90a8b6363d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df584fd95921594562cf4c1fb912986343b30c4c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229386"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465355"
 ---
 # <a name="fatal-error-c1084"></a>Závažná chyba C1084
-Nelze načíst soubor typ souboru: 'file': zpráva  
+Nejde přečíst soubor filetype: 'file': zpráva  
   
- Tato chyba je obecně výsledek volání se nezdařilo interní systémové rozhraní API provedené kompilátoru. Buď je často vygenerována zpráva zobrazí, když došlo k této chybě [_wcserror_s –](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351.aspx).  
+ Tato chyba je obecně výsledek volání se nezdařilo interní systémové rozhraní API provedené kompilátorem. Zpráva zobrazená, když k této chybě dochází často generuje buď [_wcserror_s –](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).  
   
- Následujícím postupem mohou napomoci vyřešení C1084:  
+ Provedením následujících kroků může vyřešit C1084:  
   
--   Zkontrolujte, zda že zadaný soubor existuje.  
+-   Ujistěte se, že zadaný soubor existuje.  
   
--   Zkontrolujte, zda že jsou nastaveny příslušná oprávnění pro přístup zadaný soubor.  
+-   Ujistěte se, že jsou nastavené příslušná oprávnění pro přístup k souboru.  
   
--   Zkontrolujte syntaxi příkazového řádku dodržuje pravidla uvedených v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).  
+-   Zkontrolujte syntaxi příkazového řádku dodržuje pravidel popsaných v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).  
   
--   Ujistěte se, že proměnné prostředí **TMP** a **TEMP** jsou správně sady, jakož i příslušná oprávnění pro přístup k adresáři těchto proměnných prostředí naleznete. Také zajistěte, aby jednotky odkazuje **TMP** a **TEMP** proměnné prostředí obsahovat dostatečné množství volného místa.  
+-   Zkontrolujte, že proměnné prostředí **TMP** a **TEMP** jsou správně set, stejně jako příslušná oprávnění pro přístup k adresáři, tyto proměnné prostředí odkazovat. Také zajistěte, aby disky odkazuje **TMP** a **TEMP** proměnné prostředí obsahují odpovídající množství volného místa.  
   
--   Pokud zpráva říká "chybného souboru číslo", zadaný soubor může mít byla zavření v popředí při kompilování na pozadí.  
+-   Pokud zpráva "Chybné číslo souboru" zadaný soubor může mít byla zavření v popředí při kompilaci na pozadí.  
   
- Po provedení výše diagnostiky, vytvořit nové čisté sestavení.
+ Po provedení výše uvedených diagnostiky, proveďte čisté sestavení.

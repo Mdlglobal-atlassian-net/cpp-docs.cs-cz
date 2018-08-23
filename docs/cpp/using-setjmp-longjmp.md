@@ -1,7 +1,7 @@
 ---
-title: Použití funkcí setjmp/longjmp | Dokumentace Microsoftu
+title: Použití funkcí setjmp a longjmp | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -22,22 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073729fc5445fc36e3d8a6f52c4f69b079c8b47
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a83253fb98506bb586af2b52ef3321bada7ca01f
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462128"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464632"
 ---
-# <a name="using-setjmplongjmp"></a>Používání setjmp/longjmp
-Když [setjmp](../c-runtime-library/reference/setjmp.md) a [longjmp](../c-runtime-library/reference/longjmp.md) se použijí společně, poskytují způsob provedení nemístního **goto**. Jsou obvykle slouží k předání ovládacího prvku spuštění pro zpracování chyb nebo kódu obnovení v dříve volané rutině bez použití standardní volání nebo vrácení konvence.  
-  
+# <a name="using-setjmp-and-longjmp"></a>Použití funkcí setjmp a longjmp
+
+Když [setjmp](../c-runtime-library/reference/setjmp.md) a [longjmp](../c-runtime-library/reference/longjmp.md) se použijí společně, poskytují způsob provedení nemístního **goto**. Jsou se obvykle používají v kódu jazyka C k předání ovládacího prvku spuštění pro zpracování chyb nebo kódu obnovení v dříve volané rutině bez použití standardní volání nebo vrácení konvence.
+
 > [!CAUTION]
->  Ale protože **setjmp** a **longjmp** nepodporují sémantiku objektu C++ a vzhledem k tomu, že se může snížit výkon tím, že zabrání optimalizaci na lokálních proměnných, doporučujeme je velmi riskantní používat je v programech jazyka C++. Doporučujeme, abyste použili **zkuste**/**catch** místo toho vytvoří.  
-  
- Pokud se rozhodnete použít **setjmp**/**longjmp** v programu v jazyce C++, také zahrnovat \<setjmp.h > nebo \<setjmpex.h > pro zajištění správné interakci mezi Funkce a zpracování výjimek jazyka C++. Pokud používáte [/EH](../build/reference/eh-exception-handling-model.md) ke kompilaci, destruktory pro místní objekty jsou volány během zásobníku unwind. Pokud používáte **/EHS** pro kompilaci a jedna z funkcí volá funkci, která používá [nothrow](../cpp/nothrow-cpp.md) a funkci, která používá **nothrow** volání **longjmp**, pak destruktor unwind nemusí vzniknout v závislosti optimalizaci.  
-  
- V přenositelném kódu, když jiné než místní **goto** , která volá **longjmp** provádí, správná destrukce objektů založených na snímcích, může nespolehlivá.  
-  
-## <a name="see-also"></a>Viz také:  
- [Kombinace výjimek v jazycích C (strukturované) a C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+> Protože `setjmp` a `longjmp` nepodporují správná destrukce objektů rámce zásobníku přenositelnosti mezi kompilátory jazyka C++ a vzhledem k tomu, že se může snížit výkon tím, že zabrání optimalizaci na lokálních proměnných, nedoporučujeme jejich použití v jazyce C++ programy. Doporučujeme použít **zkuste** a **catch** místo toho vytvoří.
+
+Pokud se rozhodnete použít `setjmp` a `longjmp` v programu v jazyce C++, také zahrnovat \<setjmp.h > nebo \<setjmpex.h > pro zajištění správné interakci mezi funkcemi a výjimky strukturovaného zpracování výjimek (SEH) nebo C++ zpracování.
+
+**Specifické pro Microsoft**
+
+Pokud používáte [/EH](../build/reference/eh-exception-handling-model.md) umožňuje kompilaci kódu jazyka C++, destruktory pro místní objekty jsou volány během zásobníku unwind. Nicméně pokud používáte **/EHS** nebo **/EHsc** pro kompilaci a jedna z funkcí, která používá [noexcept](../cpp/noexcept-cpp.md) volání `longjmp`, pak destruktor unwind pro tuto funkci nemusí vzniknout v závislosti na stavu optimalizace.
+
+V přenositelném kódu když `longjmp` zpracovává volání, správná destrukce objektů založených na snímcích je explicitně není zaručeno, Standard a nemusí být podporované jinými kompilátory. S oznámením na úroveň upozornění 4, volání `setjmp` způsobí upozornění C4611: interakce mezi "_setjmp" a destrukcí objektu C++ není typu portable.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[Kombinace výjimek v jazycích C (strukturované) a C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  

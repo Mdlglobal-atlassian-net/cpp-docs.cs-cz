@@ -1,5 +1,5 @@
 ---
-title: Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs
+title: Postup ohlášení problému se sadou nástrojů pro Visual C++ | Dokumentace Microsoftu
 ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
@@ -10,50 +10,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322365"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464756"
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak vytvářet sestavu o problém s Visual C++ nástrojů nebo dokumentace
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
-Pokud narazíte na potíže s Microsoft Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich. Pokud se potíže v naší dokumentaci, chceme, příliš seznámit.
+Pokud narazíte na potíže s kompilátorem Microsoft Visual C++, linkeru, nebo jiné nástroje a knihovny, chceme informovat o. Pokud se problém nachází v naší dokumentaci, chcete vědět, že příliš.
 
-## <a name="how-to-report-a-c-toolset-issue"></a>Jak vytvářet sestavu problémem nástrojů C++
+## <a name="how-to-report-a-c-toolset-issue"></a>Postup ohlášení problému sadu nástrojů s C++
 
-Nejlepší způsob a dejte nám vědět o problému, je pošlete nám sestavu, která obsahuje popis problému byla zjištěna, podrobnosti o jak sestavujete vašeho programu a *zkopírujte*, můžeme použít pro reprodukci dokončení testovacího případu problém na vlastní počítače. Tyto informace umožňují nám rychle ověřte, zda problém existuje v našem kódu a není místní pro vaše prostředí a zjistit, zda ovlivňuje jiných verzích kompilátor a diagnostikovat jeho příčinu.
+Nejlepší způsob, jak nám dejte vědět o problému se nám pošlete zprávu, která obsahuje popis problému, kterým jste se setkali, podrobnosti o jak už vytváříte aplikace a *reprodukci*, můžeme použít pro reprodukci dokončení testovacího případu problém na našich počítačích. Tyto informace umožňují rychle ověřte, že problém v kódu existuje a není místní pro vaše prostředí k určení, jestli to má vliv na jiných verzí kompilátoru a Diagnostikujte příčinu.
 
-V následujících částech vám přečíst si o díky užitečnou sestavu, jak vygenerovat zkopírujte pro druh problém, který jste si našli a odesílat sestavy produktový tým. Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
+V následujících částech nemusíte se věnovat čtení o kvůli tomu užitečnou sestavu, jak vygenerovat reprodukci pro typ problému, který jste našli a jak odesílat sestavy týmu. Sestavy jsou důležité pro nás a s ostatními vývojáři, jako jste vy. Děkujeme vám za pomoc při vylepšení Visual C++.
 
-## <a name="how-to-prepare-your-report"></a>Postup přípravy sestavy
+## <a name="how-to-prepare-your-report"></a>Jak připravit vaše sestava
 
-Vytváření vysoce kvalitní sestavy je důležité, protože je velmi obtížné reprodukci problému, který jste se setkali na vlastní počítače bez úplné informace. Tím lepší je sestavy, čím efektivně jsme se může znovu vytvořte a diagnostikovat problém.
+Vytváření vysoce kvalitních sestavy je důležité, protože je velmi obtížné reprodukovat problém, který jste narazili na na našich počítačích bez úplné informace. Tím lepší vaše sestava je, tím více efektivně jsme se mohli znovu vytvořit a Diagnostikujte problém.
 
-Minimálně musí obsahovat sestavy
+Minimálně musí obsahovat vaše sestavy
 
-- Úplné informací o verzi sady nástrojů, které používáte.
+- Informace o úplnou verzi sady nástrojů, které používáte.
 
-- Úplné cl.exe příkazovým řádkem použitým k vytvoření vašeho kódu.
+- Úplné cl.exe příkazovým řádkem použitým k sestavení vašeho kódu.
 
-- Podrobný popis problému, který jste se setkali.
+- Podrobný popis, které jste narazili na problém.
 
-- Zkopírujte: Příklad dokončení, zjednodušené, úplný a samostatný zdrojového kódu, který ukazuje problém.
+- Reprodukci: Příklad kompletní, zjednodušená a samostatná zdrojového kódu, který demonstruje daný problém.
 
-Přečtěte si další informace o konkrétní informace potřebujeme a kde můžete najít a postup vytvoření dobrý zkopírujte.
+Přečtěte si další informace o konkrétní informace potřebujeme a místo, kde najdete a jak vytvořit dobré reprodukci.
 
-### <a name="the-toolset-version"></a>Sada nástrojů verze
+### <a name="the-toolset-version"></a>Verzi sady nástrojů
 
-Potřebujeme informace plnou verzi a architekturu cílové sady nástrojů, který způsobuje, že problém, jsme mohli otestovat vaši zkopírujte proti stejné sady nástrojů na našem počítače. Pokud jsme lze problém reprodukovat, tyto informace nám také poskytuje výchozí bod pro zkoumání jaké další verze sady nástrojů vykazuje stejný problém.
+Budeme potřebovat informace o úplnou verzi a Cílová architektura sady nástrojů, které způsobí, že problém, jsme mohli otestovat vaši reprodukovat na stejnou sadu nástrojů na našich počítačích. Pokud jsme dokážete problém reprodukovat, tyto informace nám také poskytuje výchozí bod k prozkoumání dalších verzích nástrojů vykazuje stejný problém.
 
-#### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>K sestavě na plnou verzi, kterou používáte kompilátoru
+#### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Do sestavy plnou verzi kompilátoru, které používáte
 
-1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu. Například pokud vytvoříte pomocí Visual Studio 2017 na x64 pro x64 cíle, zvolte **x64 nativní nástroje příkazového řádku pro VS 2017**. Další informace najdete v tématu [zástupce příkazového řádku vývojáře](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu. Například, pokud vytvoříte pomocí sady Visual Studio 2017 na x64 x64 cíle, zvolte **x64 Native Tools Command Prompt pro VS 2017**. Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /Bv**.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /Bv**.
 
-Výstup by měl vypadat podobně jako tento:
+Výstup by měl vypadat nějak takto:
 
 ```Output
 C:\Users\username\Source>cl /Bv
@@ -72,66 +72,66 @@ Compiler Passes:
 cl : Command line error D8003 : missing source filename
 ```
 
-Zkopírujte a vložte na celou výstupu do sestavy.
+Zkopírujte a vložte celý výstup do sestavy.
 
 ### <a name="the-command-line"></a>Příkazový řádek
 
-Potřebujeme přesný příkazového řádku (cl.exe a všechny její argumenty) sloužící k vytvoření kódu, takže jsme můžete vytvořit úplně stejně, jako na našem počítače. To je důležité, protože problému, který byla zjištěna může existovat pouze při sestavení s argumentem nebo kombinace argumentů.
+Potřebujeme přesné příkazového řádku (cl.exe a všechny její argumenty) použít k sestavení vašeho kódu tak, že jsme ho vytvořili stejným způsobem na našich počítačích. To je důležité, protože problém, který jste se setkali může existovat pouze při sestavování s konkrétní argument nebo kombinace argumentů.
 
-Nejlepší místo k najít tyto informace se v protokolu sestavení ihned po se problém. Tím se zajistí, že příkazový řádek obsahuje přesně stejné argumenty, které mohou způsobovat tento problém.
+Nejlepší místo, kde najdete tyto informace je do protokolu sestavení ihned po dochází k problému. Tím se zajistí, že příkazový řádek obsahuje přesně stejné argumenty, které mohou způsobovat potíže.
 
-#### <a name="to-report-the-contents-of-the-command-line"></a>Tak, aby odesílaly obsah příkazového řádku
+#### <a name="to-report-the-contents-of-the-command-line"></a>K hlášení obsah příkazového řádku
 
-1. Vyhledejte **CL.command.1.tlog** souborů a otevřete ji. By default, this file is located in your Documents folder in \\Visual Studio *version*\\Projects\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog, or in your User folder under \\Source\\Repos\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog. Pokud používáte jiné systém sestavení, nebo pokud jste změnili výchozí umístění pro svůj projekt může být v jiném umístění.
+1. Vyhledejte **CL.command.1.tlog** souboru a otevřete ho. Ve výchozím nastavení, je tento soubor umístěn ve složce Dokumenty v \\sady Visual Studio *verze*\\projekty\\*SolutionName* \\ *ProjectName*\\*konfigurace*\\*ProjectName*.tlog\\CL.command.1.tlog, nebo ve složce uživatele v části \\Zdroj\\úložišť\\*SolutionName*\\*ProjectName*\\*konfigurace* \\ *ProjectName*.tlog\\CL.command.1.tlog. Pokud používáte jiný sestavovací systém, nebo pokud jste změnili výchozí umístění pro váš projekt může být v jiném umístění.
 
-   Uvnitř tohoto souboru najdete v ní názvy soubory zdrojového kódu, za nímž následuje argumenty příkazového řádku používá ke kompilaci je každý na samostatné řádky.
+   V tomto souboru najdete názvy souborů zdrojového kódu, za nímž následuje argumenty příkazového řádku umožňuje zkompilovat, každou na samostatných řádcích.
 
-1. Vyhledejte řádek, který obsahuje název souboru zdrojového kódu, kde k problému dochází; na řádku pod ním obsahuje odpovídající cl.exe argumenty příkazu.
+1. Vyhledejte řádek, který obsahuje název souboru zdrojového kódu, kde k problému dochází; řádek pod ním obsahuje odpovídající argumenty příkazu cl.exe.
 
-Zkopírujte a vložte celý příkazového řádku do sestavy.
+Zkopírujte a vložte do sestavy celý příkazový řádek.
 
 ### <a name="a-description-of-the-problem"></a>Popis problému
 
-Potřebujeme podrobný popis problému, který jste došlo tak, aby bylo možné ověřit, že vidíte stejného efektu na našem počítačích; jeho také někdy užitečné pro nám vědět, co jste se pokoušeli provést a co jste očekávali.
+Potřebujeme podrobný popis problému, který jste se setkali tak, aby bylo možné ověřit, že vidíme stejný účinek na našich počítačích; jeho také někdy užitečné nám vědět, co se snažíte dosáhnout a co jste očekávali.
 
-Zadejte prosím **přesnou chybové zprávy** poskytují sadu nástrojů nebo přesnou modul runtime chování zobrazí. Potřebujeme tyto informace k ověření, že jsme jste správně reprodukovat problém. Uveďte **všechny** kompilátoru výstup, nikoli pouze poslední chybová zpráva. Musíme vidět všechny objekty, které vedly k problému, které ohlásíte. Pokud tento problém můžete duplikovat pomocí příkazového řádku kompilátoru, je tento výstup kompilátoru upřednostňované; prostředí IDE a dalšími systémy sestavení může filtrovat chybové zprávy, které najdete v článku, nebo jenom zaznamenat první řádek chybovou zprávu.
+Zadejte prosím **přesná chybové zprávy** dána na sadu nástrojů nebo chování přesné runtime se zobrazí. Potřebujeme tyto informace k ověření, že jsme jste správně reprodukovat problém. Uveďte **všechny** kompilátoru výstup, ne jenom poslední chybová zpráva. Potřebujeme na veškerý obsah, které vedly k problému, který budete sestavy. Pokud tento problém můžete duplikovat pomocí kompilátoru příkazového řádku, preferuje; se tento výstup kompilátoru integrované vývojové prostředí a jiných systémů buildů filtrovat chybové zprávy naleznete v tématu nebo zachytit pouze první řádek chybovou zprávu.
 
-Pokud tento problém je, že kompilátor přijme neplatný kód a negeneruje Diagnostika, je potřeba počítat to v sestavě.
+Pokud tento problém je, že kompilátor přijme neplatný kód a negeneruje diagnostiku, mějte prosím na paměti Toto v sestavě.
 
-Chcete-li nahlásit problém chování za běhu, zahrňte **přesnou kopie** program vytiskne a co byste měli vidět. V ideálním případě by tato vložené v výstup příkazu samostatně, například `printf("This should be 5: %d\n", actual_result);`. Pokud dojde k chybě programu, nebo přestane reagovat, zmínili, také.
+Pokud chcete nahlásit problém chování modulu runtime, zahrňte **přesná kopie** program vytiskne navýšení kapacity a co byste měli vidět. V ideálním případě by toto je vložený ve výstupu příkazu, například `printf("This should be 5: %d\n", actual_result);`. Pokud dojde k chybě programu, nebo přestane reagovat, zmiňovat, který také.
 
-Přidáte další podrobnosti, které nám mohou pomoci diagnostikovat problém, který se vyskytl, například všechny postupy, které může našli. Vyhněte se opakují. informace o nacházejí jinde v sestavě.
+Přidáte další podrobnosti, které by nám mohly pomoct diagnostikovat problém, který zaznamenal/zaznamenala jste, jako je například všechny pracovní postupy, možná jste nalezené. Vyhněte se opakující se informace jinde v sestavě.
 
-### <a name="the-repro"></a>Postup
+### <a name="the-repro"></a>Reprodukci
 
-Zkopírujte je příklad dokončení, úplný a samostatný zdrojového kódu, který reprodukovaně ukazuje jste zaznamenaném problému (proto název). Potřebujeme zkopírujte tak, aby jsme chybu reprodukovat na našem počítače. Kód by mělo být dostatečné samostatně k vytvoření jednoduché spustitelný soubor, který se zkompiluje a spouští nebo které by zkompilování a spuštění v opačném případě pro problém, který jste si našli. Zkopírujte není fragmentu kódu; měl by mít dokončení funkce a třídy a obsahují všechny nezbytné # direktivy i pro hlavičky standardních include.
+Reprodukci je příklad kompletní a samostatné zdrojového kódu, který reprodukovatelná demonstruje daný problém jste narazili (tedy název). Potřebujeme zkopírujte tak, že jsme chybu reprodukovat na našich počítačích. Kód by měl být dostatečně samostatně k vytvoření jednoduché spustitelný soubor, který zkompiluje a spustí nebo, který by zkompilovat a spustit, když pro problém, který jste našli. Reprodukci není fragment kódu; měl by mít kompletní funkce a třídy a obsahují všechny nezbytné #include i pro standardní záhlaví.
 
-#### <a name="what-makes-a-good-repro"></a>Čím je dobré zkopírujte
+#### <a name="what-makes-a-good-repro"></a>Díky tomu dobrý reprodukci
 
-Je dobré postup:
+Je dobré reprodukci:
 
-- **Minimální.** Repros by měl být co nejmenší ještě stále ukazují přesně problému, který jste se setkali. Repros nemusí být komplexní nebo realistické; Stačí, když se zobrazí kód, který vyhovuje standardní nebo implementace zdokumentovaných kompilátoru nebo v případě chybějící diagnostiky, kód, který není vyhovující. Je jednoduché, k bodu repros, které obsahují přesně akorát kód k předvedení problém. Pokud můžete eliminovat nebo zjednodušit kód a zůstanou vyhovující a také ponechat beze změny problém, proveďte tuto operaci, tak. Nemusíte zahrnovat kontrolní příklady kódu, který funguje.
+- **Minimální.** Reprodukce by měl být co nejmenší ještě stále demonstrují, přesně, které jste narazili na problém. Reprodukce nemusí být komplexní nebo realistické; potřebují jenom zobrazit kód, který odpovídá standardní nebo implementace zdokumentovaných kompilátoru, nebo v případě chybějící diagnostické, kód, který není vyhovující. Jednoduché, na bod reprodukce, které obsahují pouze dostatek kód pro demonstraci problém jsou nejvhodnější. Pokud můžete eliminovat nebo zjednodušit kód a nadále splňovala podmínky shody a ponechat beze změny problém, proveďte to. Nemusíte zahrnovat čítače příklady kódu, který funguje.
 
-- **Úplný a samostatný.** Repros byste neměli nepotřebné závislosti. Pokud můžete reprodukujte problém bez knihovny třetích stran, prosím učiňte. Pokud jste reprodukování problému bez jakékoli kódu knihovna kromě jednoduché výstupní příkazy (například `puts("this shouldn't compile");`, `std::cout << value;`, a `printf("%d\n", value);` jsou v pořádku), proveďte tuto akci. Je ideální v příkladu můžete vyjádřit do souboru kódu jednoho zdroje, bez ohledu na všechny uživatele hlavičky. Snižuje množství kód, který se musí vzít v úvahu jako Přispěvatel možné tento problém je pro nás enormously užitečné.
+- **Samostatná.** Reprodukce byste se vyhnout zbytečným závislosti. Pokud dokážete problém bez knihovny třetích stran reprodukovat, proveďte to. Pokud dokážete problém bez jakéhokoli kódu knihovny kromě jednoduché výstup příkazů reprodukovat (například `puts("this shouldn't compile");`, `std::cout << value;`, a `printf("%d\n", value);` jsou v pořádku), udělejte to prosím. To je ideální, pokud v příkladu můžete vyjádřit na jeden zdrojový soubor kódu, bez ohledu na záhlaví uživatele. Snižuje množství kódu, který máme považovat za možné přispěvatele, jak tento problém je enormously užitečné USA.
 
-- **Na nejnovější verzi kompilátoru.** Repros měli použít nejnovější aktualizace na nejnovější verzi sady nástrojů nebo nejnovější předprodejní verzi na další aktualizaci nebo další hlavní verzí, kdykoli je to možné. Velmi často bylo opraveno problémy, ke kterým může dojít v starší verze sady nástrojů v novější verzi. Opravy jsou přeneseny zpět ke starším verzím pouze ve výjimečných případech.
+- **S nejnovější verzí kompilátoru.** Reprodukce používejte nejnovější aktualizace na nejnovější verzi sady nástrojů nebo nejnovější Předběžná verze další aktualizaci nebo další hlavní verze, kdykoli je to možné. Velmi často jsme opravili problémy, na které můžete narazit ve starších verzích sady nástrojů v novější verzi. Opravy jsou přeneseny zpět ke starším verzím pouze ve výjimečných případech.
 
-- **Kontrolovat další kompilátory** podle potřeby. Repros, které zahrnují přenosné C++ – kód by měl ověřit chování pro jiné kompilátory Pokud je to možné. Standardní konečném důsledku určuje správnost program a žádné kompilátoru je ideální, ale když Clang a RSZ přijmout kódu bez Diagnostika a MSVC neexistuje, je pravděpodobné, že zvažujete chybou v našem kompilátoru. (Další možnosti zahrnují rozdíly v chování systému Unix a Windows nebo různé úrovně implementace standardy C++ a tak dále.) Na druhé straně Pokud všechny kompilátory odmítnout kódu, je pravděpodobné, že váš kód je nesprávný. Zobrazuje různé chybové zprávy mohou pomoci problém diagnostikovat sami.
+- **Porovnávána s jinými kompilátory** podle potřeby. Reprodukce, které se týkají přenositelný kód C++ ověřte chování před jinými kompilátory, pokud je to možné. Standardní Určuje program správnosti a žádný kompilátor je ideálním řešením, ale při Clang a GCC přijmout kódu bez diagnostiku a MSVC tak není, bude pravděpodobně že se díváte na chybu v našich kompilátoru. (Další možnosti zahrnují rozdíly v chování systému Unix a Windows nebo různé úrovně implementaci standardů C++ atd.) Na druhé straně Pokud všechny kompilátory odmítnout kódu, pak je pravděpodobné, že váš kód je nesprávný. Zobrazuje různé chybové zprávy vám mohou pomoci diagnostikovat problém.
 
-   Můžete najít seznam online kompilátory k testování kódu proti v [Online C++ kompilátory](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++, nebo se kurátorované [seznamu z Online C++ kompilátory](https://arnemertz.github.io/online-compilers/) na Githubu. Mezi některé konkrétní příklady patří [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](http://coliru.stacked-crooked.com/).
+   Můžete najít seznam online kompilátory k testování kódu proti v [kompilátory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++ nebo to připravili [seznamu z Online kompilátory C++](https://arnemertz.github.io/online-compilers/) na Githubu. Některé konkrétní příklady [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
-   > Online kompilátoru weby nejsou ve skupině se společností Microsoft. Mnohé weby online kompilátoru jsou spouštěny jako osobní projekty a některé z těchto lokalit nemusí být k dispozici, když si přečíst toto, ale hledání by měl zjistit ostatní, které můžete použít.
+   > Websites online kompilátoru nejsou spojit s Microsoftem. Počet webů online kompilátoru jsou spouštěny jako osobní projekty a některé z těchto webů nemusí být k dispozici, když jste najdete v tomto, ale vyhledávání by měl najít jiné, která vám pomůže.
 
-Problémy v kompilátoru, linkeru a v knihovnách, zpravidla sami zobrazit zejména způsoby. Druh problému, které zaznamenáte určí, jaký druh zkopírujte by měla obsahovat v sestavě. Bez odpovídající postup máme nic k prozkoumání. Tady jsou některé druhy problémů, které se může zobrazit a pokyny pro generování druhy repros, že měli byste použít k hlášení jednotlivé typy problémů.
+Problémy v kompilátoru, linkeru a v knihovnách, mají tendenci zobrazíte samotné zejména způsoby. Typ problému, se kterými určí, jaký druh reprodukci, měli byste zahrnout do sestavy. Bez odpovídající reprodukci nemáme nic o prověření. Tady jsou některé druhy problémů, které se mohou objevit a pokyny pro generování druhy reprodukce, že používejte k hlášení jednotlivé typy problémů.
 
-#### <a name="frontend-parser-crash"></a>Havárie front-endu (Analyzátor)
+#### <a name="frontend-parser-crash"></a>Při selhání front-endu (Analyzátor)
 
-Front-endu havárií dojde během analýzy fáze kompilátoru. Obvykle bude emitování kompilátor [závažná chyba C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) a odkazovat na zdrojový kód souborové služby a řádku číslo na kterém se stala chyba; ho bude často zmínili msc1.cpp souboru, ale můžete ignorovat této jsou podrobně popsané.
+Ve fázi analýzy kompilátoru dochází ke zhroucení front-endu. Obvykle bude kompilátor generovat [závažná chyba C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) a odkazují zdrojový kód souboru a číslo řádku na kterém došlo k chybě; to se často zmiňovat msc1.cpp souboru, ale můžete ignorovat těchto podrobných informací.
 
-Pro tento typ havárie, zadejte [zpracované zkopírujte](#preprocessed-repros).
+Pro tento typ selhání, zadejte [Předzpracovaná reprodukci](#preprocessed-repros).
 
-Tady je příklad výstupu kompilátoru pro tento typ havárie:
+Tady je příklad výstupu kompilátoru pro tento typ selhání:
 
 ```Output
 SandBoxHost.cpp
@@ -152,13 +152,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend-code-generation-crash"></a>Havárie back-end (vytváření kódu)
+#### <a name="backend-code-generation-crash"></a>Selhání back-endu (generování kódu)
 
-Back-end havárií, ke kterým došlo během kód generování fáze kompilátoru. Obvykle bude emitování kompilátor [závažná chyba C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)a nemusí odkazovat souboru se zdrojovým kódem a související s problémem, číslo řádku, ho bude často zmínili souboru kompilátoru\\utc\\src\\p2\\main.c, ale můžete ignorovat tuto podrobností.
+Při fázi generování kompilátoru kódu dochází ke zhroucení back-endu. Obvykle bude kompilátor generovat [závažná chyba C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)a často je budou upozorňovat kompilátoru soubor nemusí odkazovat na soubor zdrojového kódu a související s problémem, který číslo řádku;\\utc\\src\\p2\\main.c, ale můžete ignorovat těchto podrobných informací.
 
-Pro tento typ havárie, zadejte [zkopírujte odkaz](#link-repros) ve povolené Pokud používáte generování kódu v době propojování (LTCG), **/GL** argument příkazového řádku k cl.exe. Pokud ne, zadejte [zpracované zkopírujte](#preprocessed-repros) místo.
+Pro tento typ selhání, zadejte [spojení reprodukce](#link-repros) používáte kódu generování při propojování (LTCG) zajišťuje **/GL** argument příkazového řádku do cl.exe. Pokud ne, zadejte [Předzpracovaná reprodukci](#preprocessed-repros) místo.
 
-Tady je příklad výstupu kompilátoru pro back-end havárií, ve kterém LTCG nepoužívá. Pokud bude mít tento tvar výstupu kompilátoru by měl poskytovat [zpracované zkopírujte](#preprocessed-repros).
+Tady je příklad výstupu kompilátoru selhání back-endu, ve kterém se nepoužívá LTCG. Pokud to vypadá výstup kompilátoru by měla poskytnout [Předzpracovaná reprodukci](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -175,18 +175,18 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Pokud na řádku, který začíná řetězcem **vnitřní chyba KOMPILÁTORU** uvádí link.exe, nikoli cl.exe, LTCG byl povolen a měl by poskytnout [zkopírujte odkaz](#link-repros). Pokud jeho není jasné, zda LTCG byla povolena z kompilátoru chybovou zprávu, budete muset prozkoumat argumenty příkazového řádku, které jste zkopírovali z buildu protokolu v předchozím kroku pro **/GL** argument příkazového řádku.
+Pokud řádek, který začíná **vnitřní chyba KOMPILÁTORU** uvádí link.exe, spíše než cl.exe, LTCG byl povolen a měli byste zadat [spojení reprodukce](#link-repros). Pokud není jasné, jestli má LTCG byl z chybových zpráv kompilátoru, budete muset Zkontrolujte argumenty příkazového řádku, které jste zkopírovali ze sestavení protokolu v předchozím kroku pro **/GL** argument příkazového řádku.
 
-#### <a name="linker-crash"></a>Havárie linkeru
+#### <a name="linker-crash"></a>Selhání linkeru
 
-Linkeru havárií, ke kterým došlo během fází propojení, po spuštění kompilátoru. Obvykle bude emitování linkeru [chyba Linkerů LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
+Během fáze propojení, po spuštění kompilátoru dojde k selhání propojovacího programu. Obvykle bude generovat linker [chyba Linkerů LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Pokud výstup uvádí C1001 nebo zahrnuje vytvoření kódu v době odkaz, podívejte se na [back-end (vytváření kódu) havárií](#backend-code-generation-crash) místo pro další informace.
+> Pokud výstup uvádí C1001 nebo zahrnuje generování kódu při propojování odkaz, podívejte se na [back-endu (generování kódu) selhání](#backend-code-generation-crash) místo pro další informace.
 
-Pro tento typ havárie, zadejte [zkopírujte odkaz](#link-repros).
+Pro tento typ selhání, zadejte [spojení reprodukce](#link-repros).
 
-Tady je příklad výstupu kompilátoru pro tento typ havárie.
+Tady je příklad výstupu kompilátoru pro tento typ selhání.
 
 ```Output
 z:\foo.obj : error LNK1000: Internal error during IMAGE::Pass2
@@ -220,190 +220,190 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Pokud je povolená přírůstkové propojování a až po úspěšném počáteční odkaz, došlo k havárii (tedy až po první úplné propojení na kterých je založena následné přírůstkové propojování) zadejte také kopie objektu (.obj) a soubory knihovny (LIB), které odpovídají zdrojové soubory, které byly upraveny po dokončení počáteční odkaz.
+Pokud je povoleno přírůstkové propojení a až po úspěšném počáteční odkaz, došlo k selhání (tedy až po první úplné propojení na kterých je založena následné přírůstkové propojení) zadejte také kopii objekt (.obj) a soubory knihoven (.lib), který odpovídají zdrojové soubory, které byly změněny po dokončení počáteční odkaz.
 
 #### <a name="bad-code-generation"></a>Generování chybného kódu
 
-Generování chybného kódu je taková situace vzácná, ale nastane, když kompilátor omylem generuje nesprávný kód, který způsobí, že vaše aplikace a havárií na modulu runtime, nikoli zjišťování potíže při kompilaci. Pokud si myslíte, problém se setkáváte s výsledky v generování chybného kódu, považovat za sestavy stejné [back-end (vytváření kódu) havárií](#backend-code-generation-crash).
+Generování chybného kódu není obvyklé, ale nastane, pokud kompilátor omylem generuje nesprávný kód, který způsobí, že vaše aplikace k chybě v modulu runtime spíše než zjišťování tento problém v době kompilace. Pokud si myslíte, že problém výsledky dochází v generování chybného kódu, považovat za sestavy stejné [back-endu (generování kódu) selhání](#backend-code-generation-crash).
 
-Pro tento typ havárie zadejte [zkopírujte odkaz](#link-repros) ve povolené Pokud používáte generování kódu v době propojování (LTCG), **/GL** argument příkazového řádku k cl.exe. Zadejte prosím [zpracované zkopírujte](#preprocessed-repros) není-li.
+Pro tento typ selhání zadejte [spojení reprodukce](#link-repros) používáte kódu generování při propojování (LTCG) zajišťuje **/GL** argument příkazového řádku do cl.exe. Zadejte prosím [Předzpracovaná reprodukci](#preprocessed-repros) Pokud tomu tak není.
 
-## <a name="how-to-generate-a-repro"></a>Jak vygenerovat zkopírujte
+## <a name="how-to-generate-a-repro"></a>Postup generování reprodukci
 
-Abychom sledovat zdroj problému, [dobrý zkopírujte](#what-makes-a-good-repro) je životně důležité. Před provedením kroků uvedených níže pro specifické druhy repros, zkuste zmenšit velikost mezi kód, který ukazuje, co nejvíce problém. Pokuste se vyloučit nebo minimalizovat závislosti, požadované hlavičky a knihovny a omezit – možnosti kompilátoru a definice preprocesoru použít, pokud je to možné.
+Nás sledovat příčiny problému, abychom [dobré reprodukci](#what-makes-a-good-repro) je důležité. Než uděláte některý z kroků uvedených níže pro konkrétní druhy reprodukce, zkuste zmenšit kód, který ukazuje, co nejvíce problémů. Zkuste vyloučit nebo minimalizovat závislosti, požadované hlavičky a knihovny a omezit možnosti kompilátoru a definice preprocesoru, pokud je to možné použít.
 
-Níže jsou uvedeny pokyny pro generování různé druhy repros, který budete používat pro sestavy různé druhy problémů.
+Níže jsou uvedeny pokyny pro generování různé druhy reprodukce, který použijete k sestavě různé druhy problémů.
 
-### <a name="preprocessed-repros"></a>Předběžně zpracované repros
+### <a name="preprocessed-repros"></a>Předzpracovaná reprodukce
 
-A *zpracované zkopírujte* je jeden zdrojový soubor, který ukazuje na problém, vytvořen z výstupu preprocesoru jazyka C pomocí **/P** – možnost kompilátoru na původní zdrojový soubor zkopírujte. Tato inlines zahrnuté hlavičky odebrání závislostí na další zdroje a soubory hlaviček a také řeší makra, #ifdefs a jinými preprocesoru příkazy, které může závisí na vašem místním prostředí.
+A *předzpracovaná reprodukci* je jeden zdrojový soubor, který ukazuje problém, generuje z výstupu preprocesoru jazyka C pomocí **/P** – možnost kompilátoru na původní zdrojový soubor reprodukovat. Tento inlines zahrnutých hlaviček odebrání závislostí na další zdroje a soubory hlaviček a také řeší makra, #ifdefs a dalších příkazů preprocesoru, které by mohly závisí vaše místní prostředí.
 
 > [!NOTE]
-> Předběžně zpracované repros nejsou jako vhodný pro problémy, které může být výsledkem chyby v našich implementace standardní knihovny, protože jsme se často mají být nahrazeny naše nejnovější, probíhá implementace zobrazíte, zda již vyřešili jsme problém. V takovém případě nebudete předzpracování postup, a pokud nelze zmenšit tyto potíže k jeden zdrojový soubor, balíček kódu do souboru .zip nebo podobné, nebo zvažte použití projektu zkopírujte IDE. Další informace najdete v tématu [jiných repros](#other-repros).
+> Předzpracovaná reprodukce tak užitečné nejsou pro problémy, které mohou být způsobeny chyby v naší implementaci standardní knihovny, protože jsme se často mají být nahrazeny naše nejnovější, v průběhu provádění chcete zobrazit, zda již Opravili jsme problém. V takovém případě není předzpracování reprodukci a v případě nemůžete zmenšit balíček kódu do souboru .zip nebo podobné problém, který chcete jeden zdrojový soubor, nebo zvažte použití reprodukci projektu integrovaného vývojového prostředí. Další informace najdete v tématu [další reprodukce](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>Chcete-li předběžné zpracování souboru zdrojového kódu
 
-1. Zaznamenat argumenty příkazového řádku, který je použit k vytvoření postup, jak je popsáno v [tak, aby odesílaly obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
+1. Argumenty příkazového řádku použít k sestavení reprodukci, jak je popsáno v zachycení [hlášení obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
 
-1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu.
+1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu.
 
-1. Přejděte do adresáře, který obsahuje postup projektu.
+1. Přejděte do adresáře, který obsahuje projekt reprodukovat.
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů zachytit výše, a *filename.cpp* je název souboru zkopírujte zdroje. Tento příkaz replikuje příkazovým řádkem použitým pro postup, ale zastaví kompilace po průchodu preprocesoru a výstupy předběžně zpracované zdrojový kód a *filename*. i.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů, které jsou zachyceny výše, a *filename.cpp* je název zdrojového souboru reprodukovat. Tento příkaz replikuje příkazovým řádkem použitým pro reprodukci, ale přeruší kompilaci po průchodu preprocesoru a vypíše předzpracovaná zdrojový kód a *filename*. jsem.
 
-Pokud se předběžné zpracování C + +/ CX souboru se zdrojovým kódem, nebo můžete používáte funkci moduly C++, nejsou potřeba některé další kroky. Další informace najdete v tématu v níže uvedených částech.
+Pokud jsou předzpracování jazyka C + +/ CX souboru se zdrojovým kódem, nebo použití funkce moduly C++, jsou nutné některé další kroky. Další informace najdete v níže uvedených částech.
 
-Po vygenerování můžete předběžně zpracované souboru, je vhodné Ujistěte se, že stále repros problém pomocí předběžně zpracované souboru.
+Po vygenerování předzpracovaného souboru, je vhodné Ujistěte se, že stále reprodukce problémů pomocí předzpracovaného souboru.
 
-#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že chyba stále repros předběžně zpracované souborem
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že je chyba stále reprodukce s Předzpracovaný soubor
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl** *argumenty* **/TP** *filename*.i říct cl.exe zkompilovat předběžně zpracované souboru jako C++ zdrojového souboru, kde *argumenty* je seznam argumentů zachytit výše, ale s žádným **/D** a **/I** argumenty odebrat, (protože budou již byly zahrnuty v předběžně zpracované souboru); a kde *filename*.i je název souboru předběžně zpracované.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl** *argumenty* **/TP** *filename*.i říct cl.exe ke kompilaci předzpracovaného souboru jako zdrojový soubor jazyka C++, kde *argumenty* je seznam argumentů, které jsou zachyceny výše, ale s žádným **/D** a **/I** argumenty odstranit, (protože jsou již byly zahrnuty v souboru předzpracovaná); a pokud *filename*.i je název předzpracovaného souboru.
 
-1. Zkontrolujte, zda je problém reprodukovat.
+1. Potvrďte, že je problém reprodukovat.
 
-Nakonec připojit předběžně zpracované zkopírujte *filename*.i do sestavy.
+Nakonec připojit předzpracovaná reprodukci *filename*.i do sestavy.
 
-### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Zpracované C + +/ CX WinRT/UWP repros kódu
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Předzpracovaná C + +/ CX WinRT/UPW reprodukce kódu
 
-Pokud používáte C + +/ CX Sestavit vaše spustitelný soubor, nejsou některé další kroky potřebné k vytvoření a ověření předběžně zpracované zkopírujte.
+Pokud používáte C + +/ CX sestavit spustitelný soubor, existují některé další kroky potřebné k vytvoření a ověření předzpracovaná reprodukovat.
 
-#### <a name="to-preprocess-ccx-source-code"></a>Chcete-li předběžné zpracování C + +/ CX zdrojového kódu
+#### <a name="to-preprocess-ccx-source-code"></a>Chcete-li předzpracování jazyka C + +/ CX zdrojového kódu
 
-1. Vytvoření předběžně zpracované zdrojového souboru, jak je popsáno v [pro předběžné zpracování souboru zdrojového kódu](#to-preprocess-a-source-code-file).
+1. Vytvoření předzpracovaného zdrojového souboru, jak je popsáno v [se předběžně zpracovat soubor zdrojového kódu](#to-preprocess-a-source-code-file).
 
-1. Hledání vygenerovaného _filename_.i souboru **#using** direktivy.
+1. Hledat generované _filename_.i souboru **#using** direktivy.
 
-1. Zkontrolujte seznam všechny odkazované soubory. Vynechte oknech\*.winmd soubory, soubory platform.winmd a mscorlib.dll.
+1. Zkontrolujte seznam všech odkazovaných souborů. Vynechat všechny Windows\*soubory .winmd, platform.winmd soubory a knihovny mscorlib.dll.
 
-Abyste mohli ověřit, že soubor předběžně zpracované se stále shoduje s problém,
+Abyste mohli ověřit, že Předzpracovaný soubor stále reprodukuje problém
 
-1. Vytvořte nový adresář pro předběžně zpracované soubor a zkopírujte jej do nového adresáře.
+1. Vytvořte nový adresář pro Předzpracovaný soubor a zkopírujte ho do nového adresáře.
 
 1. Zkopírujte soubory .winmd z vaší **#using** seznamu do nového adresáře.
 
-1. Vytvořte soubor prázdný vccorlib.h v adresáři nové.
+1. V novém adresáři vytvořte soubor prázdný vccorlib.h.
 
-1. Upravte předběžně zpracované soubor odstraňte přitom všechny **#using** direktivy pro mscorlib.dll.
+1. Upravte Předzpracovaný soubor odstraňte přitom všechny **#using** direktivy pro knihovnu mscorlib.dll.
 
-1. Upravte soubor předběžně zpracované změnit jakékoli absolutní cesty na právě úplné názvy souborů pro soubory zkopírovaný .winmd.
+1. Upravte soubor předzpracovaná změnit libovolné absolutní cesty na jenom úplné názvy souborů pro soubory zkopírovaný .winmd.
 
-Potvrďte, že soubor předběžně zpracované se stále shoduje s problému, jak je uvedeno výše.
+Potvrďte, že Předzpracovaný soubor stále reprodukuje problém, jak je uvedeno výše.
 
-### <a name="preprocessed-c-modules-repros"></a>Předběžně zpracované repros moduly C++
+### <a name="preprocessed-c-modules-repros"></a>Předzpracovaná reprodukce moduly C++
 
-Pokud používáte funkci moduly C++ compiler, nejsou některé jiné kroky potřebné k vytvoření a ověření předběžně zpracované zkopírujte.
+Pokud používáte moduly funkce kompilátoru jazyka C++, existují některé jiné kroky potřebné k vytvoření a ověření předzpracovaná reprodukovat.
 
-#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Předběžné zpracování souboru se zdrojovým kódem, který používá modul
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Předběžné zpracování souboru zdrojového kódu, který používá modul
 
-1. Zaznamenat argumenty příkazového řádku, který je použit k vytvoření postup, jak je popsáno v [tak, aby odesílaly obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
+1. Argumenty příkazového řádku použít k sestavení reprodukci, jak je popsáno v zachycení [hlášení obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
 
-1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu.
+1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu.
 
-1. Přejděte do adresáře, který obsahuje postup projektu.
+1. Přejděte do adresáře, který obsahuje projekt reprodukovat.
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů zachytit výše, a *filename.cpp* je název zdrojového souboru, který využívá modul.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů, které jsou zachyceny výše, a *filename.cpp* je název zdrojového souboru, která využívá modul.
 
-1. Přejděte do adresáře, který obsahuje postup projekt, který vytvořené rozhraní modulu (.ifc výstup).
+1. Přejděte do adresáře, který obsahuje reprodukci projekt, který je sestaven rozhraní modulu (.ifc výstup).
 
-1. Zaznamenejte argumenty příkazového řádku, který je použit k vytvoření vaše rozhraní modulu.
+1. Zachycení argumenty příkazového řádku použít k sestavení rozhraní modulu.
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *modulename.ixx*, kde *argumenty* je Seznam argumentů zachytit výše, a *modulename.ixx* je název souboru, který vytvoří rozhraní modulu.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **cl /P** *argumenty* *modulename.ixx*, kde *argumenty* je Seznam argumentů, které jsou zachyceny výše, a *modulename.ixx* je název souboru, který vytvoří rozhraní modulu.
 
-Po vygenerování můžete předběžně zpracované soubory, je vhodné zajistit stále repros problém pomocí předběžně zpracované souboru.
+Po vygenerování předzpracovaných souborů, je vhodné zajistit stále reprodukce problémů pomocí předzpracovaného souboru.
 
-#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že chyba stále repros předběžně zpracované souborem
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že je chyba stále reprodukce s Předzpracovaný soubor
 
-1. V okně konzoly vývojáře změňte zpět na adresář, který obsahuje postup projektu.
+1. V okně konzoly pro vývojáře změňte zpět do adresáře, který obsahuje projekt reprodukovat.
 
-1. Zadejte příkaz **cl** *argumenty* **/TP** *filename*.i, jak je uvedeno výše pro kompilaci předběžně zpracované souboru, jako by šlo C++ zdrojového souboru.
+1. Zadejte příkaz **cl** *argumenty* **/TP** *filename*.i jak je uvedeno výše, chcete-li zkompilovat předzpracovaného souboru, jako by šlo zdrojový soubor jazyka C++.
 
-1. Potvrďte, že problém je stále opakuje předběžně zpracované souborem.
+1. Potvrďte, že problém bude reprodukován stále Předzpracovaný soubor.
 
-Nakonec připojit předběžně zpracované zkopírujte soubory (*filename*.i a *modulename*.i) společně s výstupem .ifc do sestavy.
+Nakonec připojit soubory předzpracovaná reprodukci (*filename*.i a *modulename*.i) společně s výstupem .ifc do sestavy.
 
-### <a name="link-repros"></a>Odkaz repros
+### <a name="link-repros"></a>Spojení reprodukce
 
-A *odkaz zkopírujte* je obsah generované linkeru adresář zadaný **odkaz\_zkopírujte** proměnné prostředí. Obsahuje artefaktů sestavení, která souhrnně ukazují problém, který nastane během odkaz, například back-end havárie zahrnující generování kódu v době propojování (LTCG) nebo linkeru havárií. Toto sestavení artefaktů jsou ty, které jsou potřebné jako vstup, aby lze problém reprodukovat linkeru. Zkopírujte odkaz můžete snadno vytvořit pomocí této proměnné prostředí, chcete-li povolit funkci generování předdefinované zkopírujte aplikace linkeru.
+A *propojit reprodukci* je obsah adresáře určeného vytvořeného v propojovacím programu **odkaz\_reprodukci** proměnné prostředí. Obsahuje artefaktů sestavení, které společně ukazují problém, ke které dochází v době spojení, jako je například selhání back-endu zahrnující kódu generování při propojování (LTCG) nebo selhání propojovacího programu. Tyto artefakty sestavení jsou ty, které jsou potřeba jako linkeru vstupní, tak, aby problém možné reprodukovat. Spojení reprodukce můžete snadno vytvořit pomocí této proměnné prostředí povolit funkci generování integrované reprodukci linkeru.
 
-#### <a name="to-generate-a-link-repro"></a>Ke generování odkazu zkopírujte
+#### <a name="to-generate-a-link-repro"></a>Ke generování odkazu reprodukci
 
-1. Zaznamenat argumenty příkazového řádku, který je použit k vytvoření postup, jak je popsáno v [tak, aby odesílaly obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
+1. Argumenty příkazového řádku použít k sestavení reprodukci, jak je popsáno v zachycení [hlášení obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
 
-1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu.
+1. Otevřít **Developer Command Prompt** , která odpovídá verzi a konfigurace architektury sady Visual Studio používá k sestavení projektu.
 
-1. V okně konzoly příkazového řádku vývojáře změňte adresář, který obsahuje postup projektu.
+1. V okně konzoly příkazového řádku pro vývojáře přejděte do adresáře, který obsahuje projekt reprodukovat.
 
-1. Zadejte **mkdir linkrepro** vytvořit adresář pro zkopírujte odkaz.
+1. Zadejte **mkdir linkrepro** vytvořit adresář pro reprodukci odkaz.
 
-1. Zadejte příkaz **sadu odkaz\_zkopírujte = linkrepro** nastavit **odkaz\_zkopírujte** proměnnou prostředí k adresáři, který jste právě vytvořili.
+1. Zadejte příkaz **nastavit odkaz\_reprodukci = linkrepro** nastavit **odkaz\_reprodukci** proměnnou prostředí k adresáři, který jste právě vytvořili. Pokud vaše sestavení běží z jiného adresáře, jak se často stává třeba u složitějších projektů, nastavte **odkaz\_reprodukci** úplnou cestu k adresáři linkrepro místo.
 
-1. Pro sestavení projektu postup v sadě Visual Studio, v okně konzoly příkazového řádku vývojáře, zadejte příkaz **devenv**. To zajistí, že hodnota **odkaz\_zkopírujte** proměnná prostředí je viditelná pro Visual Studio. Pro sestavení projektu na příkazovém řádku, použijte argumenty příkazového řádku zachytit výše duplicitní zkopírujte sestavení.
+1. Sestavit projekt reprodukovat v sadě Visual Studio, v okně konzoly příkazového řádku pro vývojáře zadejte příkaz **devenv**. To zajistí, že hodnota **odkaz\_reprodukci** proměnnou prostředí je viditelná pro Visual Studio. K vytvoření projektu na příkazovém řádku použijte argumenty příkazového řádku zachycené nad duplikovat reprodukci sestavení.
 
-1. Sestavení projektu zkopírujte a potvrďte, že došlo k očekávané problému.
+1. Sestavení projektu reprodukci a potvrďte, že očekávané problému došlo.
 
-1. Pokud jste použili k provedení sestavení, zavřete Visual Studio.
+1. Pokud jste použili k provedení sestavení, zavřete sadu Visual Studio.
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **sadu odkaz\_zkopírujte =** zrušte **odkaz\_zkopírujte** proměnné prostředí.
+1. V okně konzoly příkazového řádku pro vývojáře zadejte příkaz **nastavit odkaz\_reprodukci =** zrušte **odkaz\_reprodukci** proměnné prostředí.
 
-Nakonec balíček nepodařilo komprimací celý linkrepro adresáře do souboru .zip nebo podobné a jeho připojení k sestavě.
+Nakonec balíček reprodukci kompresí celý linkrepro adresáře do souboru .zip nebo podobné a připojte ji do sestavy.
 
-### <a name="other-repros"></a>Další repros
+### <a name="other-repros"></a>Další reprodukce
 
-Pokud problém nelze zmenšit na jeden zdrojový soubor nebo předběžně zpracované zkopírujte a zkopírujte odkaz nevyžaduje žádný problém, jsme prozkoumat projektu IDE. Všechny pokyny o tom, jak vytvořit dobrý zkopírujte stále platí; Kód by měl být minimální a samostatná, problém by měl nastat v našem nejnovější nástroje a pokud je to relevantní, problém by neměl vidět v jiných kompilátory.
+Pokud tento problém nemůžete zmenšit jeden zdrojový soubor nebo předzpracovaná reprodukci a problém nevyžaduje spojení reprodukce, prozkoumáme projekt integrované vývojové prostředí. Všechny pokyny o tom, jak vytvořit dobré reprodukci stále platí; Kód by měl být minimální a samostatná, problém se budou objevovat v naší nejnovější nástroje, a pokud je to potřeba, problém by neměl vidět v jiné kompilátory.
 
-Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprimací celou strukturu adresáře do souboru .zip nebo podobné a jeho připojení k sestavě.
+Vytvoření vašeho reprodukci jako minimální projekt integrované vývojové prostředí, pak balíček kompresí celý adresářovou strukturu do souboru .zip nebo podobné a připojte ji do sestavy.
 
-## <a name="ways-to-send-your-report"></a>Způsoby odeslání sestavy
+## <a name="ways-to-send-your-report"></a>Způsoby, jak odeslat sestavy
 
-Existuje několik dobrý způsoby, jak získat sestavy do us. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Výběr závisí na, zda chcete pomocí nástrojů integrovaných v prostředí IDE pro snímání obrazovky a uspořádání sestavy pro příspěvků na stránkách komunity vývojářů, nebo pokud chcete používat přímo na webu.
+Existuje několik dobré způsobů, jak získat sestavy na nás. Můžete použít předdefinované sady Visual Studio [nástrojem ohlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [komunity vývojářů v aplikaci Visual Studio](https://developercommunity.visualstudio.com/) stránky. Získáte taky přímo na našich stránkách komunity vývojářů výběrem **názor na produkt** tlačítko v dolní části této stránky. Výběr závisí na, jestli chcete použít nástrojů integrovaných v prostředí IDE pro zachytávání snímků obrazovky a uspořádání sestavy pro příspěvky na stránkách komunity vývojářů, nebo pokud si přejete použít přímo na webu.
 
 > [!NOTE]
-> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://privacy.microsoft.com/privacystatement).
+> Bez ohledu na to, jak odeslat sestavu Microsoft respektuje vaše soukromí. Microsoft usiluje o dodržování předpisů se všemi zákony na ochranu dat a nařízení. Informace o tom, jak jsme zpracovávat data, která nám pošlete, najdete v článku [prohlášení o ochraně osobních údajů Microsoft](https://privacy.microsoft.com/privacystatement).
 
-### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
+### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroje problému
 
-**Nahlásit problém** nástroj v sadě Visual Studio je způsob, jak uživatelům v sadě Visual Studio sestavy celou řadu problémů s několika kliknutí. Poskytuje jednoduché formulář, který můžete použít k určení podrobné informace o problému byla zjištěna a pak odeslat sestavy, aniž byste opustili prostředí IDE.
+**Nahlásit problém** nástroje v sadě Visual Studio je způsob, jak uživatelům aplikace Visual Studio nahlásit celou řadu problémů pomocí několika kliknutí. Poskytuje jednoduchý formulář, který můžete zadat podrobné informace o tomto problému jste se setkali a pak odeslat sestavu bez opuštění integrovaného vývojového prostředí.
 
-Vytváření sestav váš problém prostřednictvím **nahlásit problém** nástroj je snadný a pohodlný z prostředí IDE. Můžete k němu přístup ze záhlaví výběrem **odeslat zpětnou vazbu** ikonu vedle **Snadné spuštění** vyhledávací pole, nebo můžete najít v řádku nabídek v **pomoci**  >  **Odeslat názor** > **nahlásit problém**.
+Generování sestav prostřednictvím vašeho problému **nahlásit problém** nástroj je snadný a pohodlný z integrovaného vývojového prostředí. Můžete k němu přístup ze záhlaví výběrem **odeslat zpětnou vazbu** ikonu vedle **Snadné spuštění** vyhledávacího pole, nebo můžete najít na panelu nabídek v **pomáhají**  >  **Poslat svůj názor** > **nahlásit problém**.
 
-Když zvolíte-li nahlásit problém, nejprve vyhledejte komunity vývojářů pro podobné problémy. Pokud váš problém byla nahlášena před, upvote tématu a přidejte komentář s další podrobnosti. Pokud nevidíte podobný problém, vyberte **problém nové sestavy** tlačítko v dolní části zpětnou vazbu Visual Studio dialogové okno a postupujte podle kroků zprávu o problému.
+Pokud budete chtít nahlásit problém, nejprve hledat komunity vývojářů s podobnými problémy. Pokud váš problém byl ohlášen dřív, a podpořit svým hlasem tématu a přidání komentářů se další podrobnosti. Pokud nevidíte podobný problém, zvolte **ohlásit nový problém** tlačítko v dolní části dialogového okna zpětná vazba na Visual Studio a postupujte podle kroků zprávu o problému.
 
-### <a name="use-the-visual-studio-developer-community-pages"></a>Pomocí stránky komunity vývojářů Visual Studio
+### <a name="use-the-visual-studio-developer-community-pages"></a>Použít na stránkách komunity vývojářů v aplikaci Visual Studio
 
-Visual Studio Community vývojáře stránky jsou jiné pohodlný způsob, jak odesílat zprávy o problémech a najděte řešení pro Visual Studio, C++ kompilátoru, nástroje a knihovny. [Visual Studio otázky](https://developercommunity.visualstudio.com/spaces/8/index.html) stránky je tam, kde k hlášení problémů s IDE nebo instalace. Pro problémy s používáním C++ kompilátoru, linkeru a další nástroje a knihovny, [C++ otázky](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky.
+Na stránkách komunity vývojářů v aplikaci Visual Studio jsou jiné pohodlný způsob, jak zprávy o problémech a vyhledání řešení pro Visual Studio, C++ kompilátor, nástroje a knihovny. [Visual Studio dotazy](https://developercommunity.visualstudio.com/spaces/8/index.html) stránky je tam, kde chcete nahlásit problémy s prostředím IDE nebo instalace. Pro problémy s použitím C++ kompilátoru, linkeru a další nástroje a knihovny, [C++ dotazy](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky.
 
-Do komunity vývojářů je informační zpráva v horní části každé stránce vyhledávací pole, které můžete použít k vyhledání příspěvcích nebo témata, která odesílat zprávy o problémech, které vám podobnou. Můžete zjistit, že řešení a další užitečné informace týkající se váš problém již k dispozici v existující téma. Pokud někdo ohlásil ke stejnému problému před, upvote a komentáře v tomto tématu místo vytvoření nové sestavy problém.
+V komunitě vývojářů banner v horní části každé stránky je vyhledávací pole, která vám pomůže najít příspěvky nebo témata, která zprávy o problémech, které jsou podobné. Možná zjistíte, že řešení a další užitečné informace týkající se vašeho problému je již dostupný v existující téma. Pokud někdo ohlásil stejný problém před, podpořit svým hlasem a komentářů k tomuto tématu ne vytvořit nové hlášení o problému.
 
-Pokud váš problém nebyla hlášena před, vyberte **nahlásit problém** tlačítko vedle do vyhledávacího pole na stránce komunity vývojářů. Můžete být vyzváni k přihlášení k účtu sady Visual Studio a vyjádřete umožnit přístup k aplikaci komunity vývojářů k profilu. Pokud jste přihlášeni, přejdete přímo na stránku kde můžete nahlásit problém. Můžete zahrnout kódu zkopírujte a příkazového řádku, snímky obrazovky, odkazy na související diskusí a další informace, které si myslíte, že je relevantní a užitečné.
+Pokud váš problém neohlásil před, zvolte **nahlásit problém** tlačítko vedle vyhledávacího pole na stránce komunity vývojářů. Můžete být vyzváni k přihlášení k účtu Visual Studio a vyjádření souhlasu komunity vývojářů v aplikaci dáte přístup k vašemu profilu. Když se přihlásíte, můžete přejít přímo na stránku ohlásit problém. Může obsahovat kód reprodukci a příkazového řádku, snímky obrazovky, odkazy na související diskuse a další informace, které si myslíte, že je důležité a užitečné.
 
 > [!TIP]
-> Pro jiné druhy problémů může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě), **nahlásit problém nástroj** může být obzvláště dobrý choice datu splatnosti k jeho snímek obrazovky jste možnosti a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému došlo. Tyto druhy chyby mohou být zaznamenány také na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality.
+> Pro jiné druhy problémů můžete narazit v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémů, chybnou funkčnost IDE nebo obecné selhání), **nástrojem ohlásit problém** může být obzvláště Dobrá volba termínu splnění k jeho snímek obrazovky s možností a schopnost záznamu akce uživatelského rozhraní, které vedly k problému jste se setkali. Tyto druhy chyb může být rovněž uvedeny na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality.
 
 ### <a name="reports-and-privacy"></a>Sestavy a ochrana osobních údajů
 
-Ve výchozím nastavení **všechny informace v sestavách a všechny komentáře a odpovědi jsou veřejně viditelný**. Za normálních okolností jde výhody, protože umožňuje celé komunitě zobrazíte problémy, řešení a řešení, které jiní uživatelé našli. Pokud máte obavy o tom, jak veřejné, ochrany osobních údajů nebo duševní vlastnictví důvodů data nebo identity, ale máte možnosti.
+Ve výchozím nastavení **všechny informace v sestavách a všechny komentáře a odpovědi jsou veřejně viditelné**. Za normálních okolností jde výhody, protože umožňuje celé komunitě zobrazíte problémů, řešení a řešení, které našli ostatním uživatelům. Pokud máte obavy o tom, že vaše data nebo identity veřejného z důvodů duševní vlastnictví nebo osobních údajů, ale máte možnosti.
 
-Pokud máte obavy o odhalil svoji identitu, [vytvořit nový účet Microsoft](https://signup.live.com/) nezveřejňuje všechny podrobnosti o vás. Tento účet použijte pro vytvoření sestavy. 
+Pokud máte obavy o odhalení svoji identitu [vytvořit nový účet Microsoft](https://signup.live.com/) , který nesmí vyzradit žádné podrobnosti o vás. Vytvoření sestavy pomocí tohoto účtu. 
 
-**Nevkládejte nic, co chcete v názvu nebo obsah počáteční sestavy, který je veřejný soukromé.** Místo toho Všimněte si, že chcete odeslat podrobnosti soukromě v samostatných komentář. Pokud chcete mít jistotu, že sestavy se přesměruje příslušní lidé, obsahovat **cppcompiler** v seznamu témat sestavy problém. Po vytvoření sestavy problém je nyní možné určit, kdo může zobrazit odpovědi a přílohy.
+**Neumisťujte všechno, co chcete zachovat privátní v nadpisu nebo obsahu objektu původní sestavy, což je veřejná.** Místo toho Všimněte si, že chcete odeslat podrobnosti soukromě v samostatných komentář. Pokud chcete mít jistotu, že se vaše sestava směřuje těm správným lidem, zahrňte **cppcompiler** v seznamu témat hlášení o problému. Po vytvoření hlášení o problému, je teď možné určit, kdo uvidí vaše odpovědi a přílohy.
 
-#### <a name="to-create-a-problem-report-for-private-information"></a>Vytvoření sestavy problém pro soukromé informace
+#### <a name="to-create-a-problem-report-for-private-information"></a>Vytvoření hlášení o problému pro soukromé informace
 
-1. V sestavě, které jste vytvořili, zvolte **, přidejte komentář** k vytvoření vaší privátní popis problému.
+1. V sestavě můžete vytvořit zvolte **přidat komentář** k vytvoření soukromého popisu problému.
 
-1. V editoru odpovědět, použijte níže ovládací prvek rozevírací seznam **odeslání** a **zrušit** tlačítka k určení cílové skupiny v odpovědi. Tyto privátní odpovědi a všechny bitové kopie, odkazů nebo kód, který je v nich zahrnuta, můžete zobrazit pouze uživatelé, které zadáte. Zvolte **Viewable moderátorů a původní plakáty** omezit viditelnost zaměstnancům společnosti Microsoft a sami.
+1. V editoru odpovědi pomocí ovládacího prvku rozevíracího seznamu níže **odeslat** a **zrušit** tlačítka zadejte cílovou skupinu pro odpovědi. Pouze lidé, se kterými můžete zadat můžete zobrazit tyto soukromé odpovědi a všechny Image, odkazy nebo kódu, které jsou v nich. Zvolte **Viewable moderátoři a původní plakát** omezit viditelnost zaměstnancům společnosti Microsoft a sami.
 
-1. Přidejte popis a žádné jiné informace, Image a potřebné pro vaše zkopírujte přiložených souborů. Vyberte **odeslání** tlačítko soukromě odesílat výše uvedené informace.
+1. Přidáte popis a jakékoli jiné informace, obrázky a přiložené soubory potřebné pro vaše reprodukci. Zvolte **odeslat** tlačítko soukromě odesílat tyto informace.
 
-   Všimněte si, že je 2GB omezení na připojené soubory a maximálně 10 souborů. Pro všechny větší nahrávání požádejte o adresu URL pro odeslání v privátní komentáře.
+   Všimněte si, že je 2GB limit připojených souborů a maximálně 10 soubory. Žádné větší nahrávání požádejte o adresu URL odeslání do privátní komentáře.
 
-Všechny odpovědi v rámci tohoto komentáře mít stejné viditelnost s omezeným přístupem, které jste zadali. To platí i v případě, že ovládací prvek rozevírací seznam v odpovědi nezobrazuje stav zobrazení s omezeným přístupem správně.
+Veškeré odpovědi pod tento komentář mají stejnou viditelnost s omezeným přístupem, které jste zadali. To platí i v případě, že ovládací prvek rozevírací seznam v odpovědi není uveden stav zobrazení s omezeným přístupem správně.
 
-Chcete-li udržovat vaše osobní údaje a zachovat vaše citlivé informace z veřejné zobrazení, Postarejte se prosím na odpovědi v rámci této omezené komentář zachovat veškerou interakci s Microsoft. Odpovědi na jiné připomínky může vést k omylem prozrazeny citlivé informace.
+Chcete-li udržovat vaše osobní údaje a udržovat vaše citlivé informace z veřejné zobrazení, Postarejte se prosím k odpovědím v rámci této omezené komentář zachovat všechny interakce s Microsoftem. Odpovědi na další komentáře může vést k neúmyslně zveřejnit citlivé informace.
 
-## <a name="how-to-report-a-c-documentation-issue"></a>Jak vytvářet sestavu problémem dokumentaci jazyka C++
+## <a name="how-to-report-a-c-documentation-issue"></a>Postup ohlášení problému dokumentaci jazyka C++
 
-Problémy GitHub používáme sledovat problémy hlášené v dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, která vám umožní komunikovat způsobem mnohem širší s zapisovače a týmy pro produkt. Pokud se problém s dokumentem, ukázku chybného kódu, matoucí vysvětlení, kritické vynechání nebo i právě překlepem, které můžete snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **Přihlaste se k dokumentaci váš názor**. Budete potřebovat pro vytvoření účtu GitHub, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a získat oznámení při změně pro problém, se kterým jste ohlásil. Další informace najdete v tématu [A nové zpětné vazby systému pochází k docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+Problémy s úložištěm GitHub používáme ke sledování problémů, které jsou uvedeny v naší dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, který vám umožní pracovat způsobem mnohem bohatší zapisovače a produktových týmů. Pokud narazíte na problém s dokumentem, ukázka chybného kódu, matoucí vysvětlení, kritické vynechání nebo jenom překlep, které lze snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **přihlásit se a poskytnout názor na dokumentaci**. Budete muset vytvořit účet Githubu, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a odeslání oznámení, když dojde ke změně pro problém, který jste nahlásili. Další informace najdete v tématu [A novou zpětnou vazbu systém přichází na web docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
-Když vytvoříte problém dokumentaci na Githubu pomocí tlačítka dokumentace zpětnou vazbu, problém automaticky vyplněno některé informace o stránku, kterou jste vytvořili problém, abychom věděli, kde se nachází problém. Nemáte upravte prosím tyto informace. Podrobnosti o tom, co je pokazilo a podle potřeby navrhované opravu právě připojte. [Dokumentaci je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete ve skutečnosti proveďte opravu a navrhnout sami, můžete to udělat. Další informace o tom, jak můžete přispívat do naší dokumentaci najdete v tématu naše [Contributing průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
+Při vytváření dokumentace problém na Githubu pomocí tlačítka dokumentace ke službě, problém se automaticky vyplní některé informace o stránku, kterou jste vytvořili problému, abychom věděli, kde se nachází problém. Neupravujte prosím tyto informace. Stačí připojte podrobnosti o tom, co je špatně a pokud chcete, navrhované opravy. [Naše dokumentace je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete skutečně proveďte opravu a navrhovat sami, můžete to udělat. Další informace o jak přispívat k naší dokumentaci najdete v tématu naše [využité průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
 

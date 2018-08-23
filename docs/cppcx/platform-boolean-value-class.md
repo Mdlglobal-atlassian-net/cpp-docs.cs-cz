@@ -1,5 +1,5 @@
 ---
-title: Platform::Boolean – hodnotová třída | Microsoft Docs
+title: Platform::Boolean hodnotová třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ccfa6b6dd6a8cde68dfd1c3bbecc1325189110f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b368794aa9137144213e3ad485068ea5a9e6b10f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086522"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575648"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean – hodnotová třída
 Představuje logickou hodnotu. Ekvivalent `bool`.  
@@ -32,16 +32,16 @@ public value struct Boolean
 ```  
   
 ### <a name="members"></a>Členové  
- Logická hodnota má Equals(), GetHashCode(), a metody ToString() odvozené z [Platform::Object – třída](../cppcx/platform-object-class.md), a metodu GetTypeCode() odvozené z [Platform::Type třída](../cppcx/platform-type-class.md).  
+ Datový typ Boolean má metody Equals() GetHashCode(), a metody ToString() odvozený od [Platform::Object – třída](../cppcx/platform-object-class.md), a metodu GetTypeCode() odvozený od [Platform::type – třída](../cppcx/platform-type-class.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
  **Metadata:** platform.winmd  
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

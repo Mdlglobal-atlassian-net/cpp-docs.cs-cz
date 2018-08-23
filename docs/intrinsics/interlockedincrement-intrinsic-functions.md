@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedIncrement | Microsoft Docs
+title: Vnitřní funkce _InterlockedIncrement | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337977"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575785"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedincrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedIncrement
+**Specifické pro Microsoft**  
   
- Vnitřní podporují kompilátoru Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx) funkce.  
+ Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -108,7 +108,7 @@ __int64 _InterlockedIncrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `lpAddend`  
+ [out v] `lpAddend`  
  Ukazatel na proměnnou se zvýší.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -116,30 +116,30 @@ __int64 _InterlockedIncrement64_nf(
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- Existuje několik variant na `_InterlockedIncrement` se používá verzi sémantiku nebo který lišit v závislosti na datové typy, které zahrnují a zda získat specifické pro procesor.  
+ Existuje několik variant na `_InterlockedIncrement` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.  
   
- Když `_InterlockedIncrement` funkce se používá na 32bitové celočíselné hodnoty, `_InterlockedIncrement16` funguje na hodnoty 16bitové celé číslo a `_InterlockedIncrement64` funguje na 64bitové celočíselné hodnoty.  
+ Zatímco `_InterlockedIncrement` funkce se používá na 32bitové celé číslo hodnoty `_InterlockedIncrement16` pracuje hodnoty 16bitové celé číslo a `_InterlockedIncrement64` pracuje na 64bitové celočíselné hodnoty.  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony, pokud potřebujete získat a vydání sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") není fungovat jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní s `_nf` jako překážku paměti nepostupuje příponu ("žádná ohrazení").  
   
- Proměnná ukazuje `lpAddend` parametr musí být zarovnána na hranici 32-bit; jinak, tato funkce selže na s více procesory x86 a žádné jiné x86 systémy. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
+ Proměnná odkazuje `lpAddend` parametr musí být zarovnány na hranici 32-bit; v opačném případě této funkce nezdaří se s více procesory x86 systémy a systémy x x86. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
   
- Funkce Win32 je deklarován v `Wdm.h` nebo `Ntddk.h`.  
+ Funkce Win32 je deklarována v `Wdm.h` nebo `Ntddk.h`.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
 ## <a name="example"></a>Příklad  
- Příklad, jak pomocí `_InterlockedIncrement`, najdete v části [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Pro ukázku toho, jak používat `_InterlockedIncrement`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

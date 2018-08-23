@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (zabránit vazbě knihoven DLL) | Microsoft Docs
+title: -ALLOWBIND (zabránění vazbě knihoven DLL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369637"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466222"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zabránit vazbě knihoven DLL)
 ```  
@@ -35,24 +35,24 @@ ms.locfileid: "32369637"
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- /ALLOWBIND:No nastaví trochu v záhlaví knihovny DLL, která určuje Bind.exe, že bitovou kopii nesmí být vázána. Je možné, knihovny DLL vázat, pokud byly digitálně podepsané (vazba zruší platnost podpisu).  
+ /ALLOWBIND:No nastaví bit v hlavičce knihovny DLL, které označuje Bind.exe, že image se nemůže vázat. Možná nebudete chtít knihovnu DLL, pokud je digitálně podepsané (vazba zneplatní podpis).  
   
- Můžete upravit existující knihovny DLL pro funkci /ALLOWBIND s [/ALLOWBIND](../../build/reference/allowbind.md) – možnost nástroje EDITBIN nástroje.  
+ Můžete upravit existující knihovny DLL pro funkce /ALLOWBIND s [/ALLOWBIND](../../build/reference/allowbind.md) – možnost nástroje EDITBIN.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
   
-2.  Rozbalte položku **vlastnosti konfigurace**, **Linkeru**a vyberte **příkazového řádku**.  
+2.  Rozbalte **vlastnosti konfigurace**, **Linkeru**a vyberte **příkazového řádku**.  
   
 3.  Zadejte `/ALLOWBIND:NO` do **další možnosti**.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
  [Možnosti linkeru](../../build/reference/linker-options.md)   
- [BindImage – funkce](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx – funkce](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [BindImage – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [BindImageEx – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

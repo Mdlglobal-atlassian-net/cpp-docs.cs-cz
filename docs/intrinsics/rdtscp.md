@@ -1,5 +1,5 @@
 ---
-title: __rdtscp | Microsoft Docs
+title: __rdtscp | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466321"
 ---
 # <a name="rdtscp"></a>__rdtscp
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `rdtscp` instrukce, zapíše `TSC_AUX[31:0`] paměti a vrátí čítač 64-bit časové razítko (`TSC)` výsledek.  
+ Generuje `rdtscp` instrukce, zapíše `TSC_AUX[31:0`] do paměti a vrátí čítač razítko času 64-bit (`TSC)` výsledek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,25 +43,25 @@ unsigned __int64 __rdtscp(
  Ukazatel na umístění, která bude obsahovat obsah registru specifické pro počítač `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Počet značek 64bitové celé číslo bez znaménka.  
+ Počet cyklů 64bitové celé číslo bez znaménka.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__rdtscp`|0Fh rodiny NPT AMD nebo novější verze|  
+|`__rdtscp`|0Fh řady NPT AMD nebo novější verze|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tento vnitřní vygeneruje `rdtscp` instrukcí. Chcete-li určit podporu hardwaru pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 27 `CPUInfo[3] (EDX)`. Tato verze je 1, pokud je podporovaná pokyn a 0 jinak.  Pokud jste spustili kód, který používá tento vnitřní hardware, který nepodporuje `rdtscp` instrukce, nepředvídatelné výsledky.  
+ Tomto vnitřní vygeneruje `rdtscp` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 27 `CPUInfo[3] (EDX)`. Tato verze je 1, pokud podporované instrukce a 0 jinak.  Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `rdtscp` instrukce, výsledky nepředvídatelné.  
   
 > [!CAUTION]
->  Na rozdíl od `rdtsc`, `rdtscp` serializaci instrukce; je nicméně kompilátor můžete přesunout kódu kolem to vnitřní.  
+>  Na rozdíl od `rdtsc`, `rdtscp` je serializaci instrukce; nicméně, kompilátor může přesunout kód tomuto vnitřní.  
   
- Výklad TSC hodnota v generování hardwaru se liší od ve starších verzích [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  V tématu příručky hardwaru pro další informace.  
+ Výklad TSC hodnotu této generace hardwaru se liší od v dřívějších verzích x64.  Najdete v článku hardware příruček pro další informace.  
   
- Význam hodnoty v `TSC_AUX[31:0]` závisí na operačním systému.  
+ Hodnoty ve smyslu `TSC_AUX[31:0]` závisí na operačním systému.  
   
 ## <a name="example"></a>Příklad  
   
@@ -83,8 +83,8 @@ int main()
 TSC_AUX was 0  
 ```  
   
-**Konkrétní Microsoft END**  
- Copyright 2007 pokročilé Micro zařízení, Inc. Všechna práva vyhrazena. Opakuje se svolením Advanced Micro zařízení, Inc.  
+**Specifické pro END Microsoft**  
+ Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.  
   
 ## <a name="see-also"></a>Viz také  
  [__rdtsc](../intrinsics/rdtsc.md)   

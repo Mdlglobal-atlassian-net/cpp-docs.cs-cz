@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ac1c73bee38257396a98a7f7ce1487d0c134d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026942"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465410"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 implementuje na straně klienta automatizaci OLE.  
@@ -106,7 +106,7 @@ class COleDispatchDriver
  **Záhlaví:** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
- Volání `AttachDispatch` členská funkce se připojit `IDispatch` ukazatel `COleDispatchDriver` objektu. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Volání `AttachDispatch` členská funkce se připojit `IDispatch` ukazatel `COleDispatchDriver` objektu. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ```  
 void AttachDispatch(
@@ -147,17 +147,17 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  Odkaz na existující `COleDispatchDriver` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Formulář `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se připojí [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) rozhraní.  
+ Formulář `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se připojí [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) rozhraní.  
   
  Formulář `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) zkopíruje existující `COleDispatchDriver` objektu a zvýší počet odkazů.  
   
- Formulář `COleDispatchDriver`() vytvoří `COleDispatchDriver` objektu, ale nepřipojí `IDispatch` rozhraní. Před použitím `COleDispatchDriver`() bez argumentů, je vhodné připojit se `IDispatch` buď pomocí [COleDispatchDriver::CreateDispatch](#createdispatch) nebo [COleDispatchDriver::AttachDispatch](#attachdispatch). Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Formulář `COleDispatchDriver`() vytvoří `COleDispatchDriver` objektu, ale nepřipojí `IDispatch` rozhraní. Před použitím `COleDispatchDriver`() bez argumentů, je vhodné připojit se `IDispatch` buď pomocí [COleDispatchDriver::CreateDispatch](#createdispatch) nebo [COleDispatchDriver::AttachDispatch](#attachdispatch). Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](#createdispatch).  
   
 ##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch  
- Vytvoří [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) objektu rozhraní a připojí ho k `COleDispatchDriver` objektu.  
+ Vytvoří [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) objektu rozhraní a připojí ho k `COleDispatchDriver` objektu.  
   
 ```  
 BOOL CreateDispatch(
@@ -199,7 +199,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="remarks"></a>Poznámky  
  `IDispatch` Neuvolní.  
   
- Další informace o typu LPDISPATCH najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) v sadě Windows SDK.  
+ Další informace o typu LPDISPATCH najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
@@ -244,7 +244,7 @@ void AFX_CDECL InvokeHelper(
  Určuje metodu nebo vlastnost má být volána.  
   
  *wFlags*  
- Příznaky popisující kontext volání `IDispatch::Invoke`. . Seznam možných hodnot, najdete v článku *wFlags* parametr [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) v sadě Windows SDK.  
+ Příznaky popisující kontext volání `IDispatch::Invoke`. . Seznam možných hodnot, najdete v článku *wFlags* parametr [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) v sadě Windows SDK.  
   
  *vtRet*  
  Určuje typ vrácené hodnoty. Možné hodnoty najdete v části poznámky.  
@@ -281,9 +281,9 @@ void AFX_CDECL InvokeHelper(
   
  *PbParamInfo* argument je místo oddělený seznam **VTS_** konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne středníky), určuje seznam parametrů funkce. Možné hodnoty jsou seřazeny [EVENT_CUSTOM](event-maps.md#event_custom) – makro.  
   
- Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).  
+ Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).  
   
- Další informace najdete v tématu [VARIANTARG](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [implementace rozhraní IDispatch](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), a [struktury z modelu COM chybové kódy](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
+ Další informace najdete v tématu [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](#createdispatch).  
@@ -313,7 +313,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="remarks"></a>Poznámky  
  `m_lpDispatch` Datový člen je veřejná proměnná typu LPDISPATCH.  
   
- Další informace najdete v tématu [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) v sadě Windows SDK.  
+ Další informace najdete v tématu [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::AttachDispatch](#attachdispatch).  
@@ -340,7 +340,7 @@ operator LPDISPATCH();
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
- Verze `IDispatch` připojení. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)  
+ Verze `IDispatch` připojení. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)  
   
 ```  
 void ReleaseDispatch();

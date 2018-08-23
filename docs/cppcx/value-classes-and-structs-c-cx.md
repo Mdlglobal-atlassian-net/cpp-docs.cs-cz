@@ -1,5 +1,5 @@
 ---
-title: Hodnota třídy a struktury (C + +/ CX) | Microsoft Docs
+title: Hodnotové třídy a struktury (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090710"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589053"
 ---
-# <a name="value-classes-and-structs-ccx"></a>Hodnota třídy a struktury (C + +/ CX)
-A *hodnotu struktura* nebo *třídy hodnoty* je Windows Runtime kompatibilní POD ("prostý původní struktura dat"). To má pevnou velikost a se skládá z pole pouze; na rozdíl od ref třídu má žádné vlastnosti.  
+# <a name="value-classes-and-structs-ccx"></a>Hodnotové třídy a struktury (C + +/ CX)
+A *hodnotu struktury* nebo *hodnotu třídy* je Windows Runtime kompatibilní POD ("prostý stará datová struktura"). Má pevnou velikost a skládá se z pole. na rozdíl od ref class nemá žádné vlastnosti.  
   
- Následující příklady ukazují, jak deklarace a inicializace struktury hodnotu.  
+ Následující příklady ukazují, jak deklarovat a inicializovat struktuře hodnot.  
   
 ```  
   
@@ -55,49 +55,49 @@ A *hodnotu struktura* nebo *třídy hodnoty* je Windows Runtime kompatibilní PO
   
 ```  
   
- Pokud proměnná typ hodnoty je přiřazen jiné proměnné, hodnota je kopírovat, tak, aby každý dvě proměnné, které má svou vlastní kopii dat. A *hodnotu struktura* je struktura pevné velikosti, která obsahuje pouze veřejný datová pole a je deklarovaný s použitím `value struct` – klíčové slovo.  
+ Když proměnné hodnotového typu je přiřazena do jiné proměnné, hodnota je zkopírována, tak, aby každý dvě proměnné, které má svou vlastní kopii dat. A *hodnotu struktury* je struktura pevné velikosti, která obsahuje pouze veřejné polí a je deklarována pomocí `value struct` – klíčové slovo.  
   
- A *třídy hodnoty* je podobně jako `value struct` s tím rozdílem, že jeho pole musí být explicitně poskytnut veřejnou dostupnost. Je deklarovaný s použitím `value class` – klíčové slovo.  
+ A *hodnotu třídy* je stejně jako `value struct` s tím rozdílem, že jeho musí být explicitně polím přístupnost public. Je deklarovaná příkazem using `value class` – klíčové slovo.  
   
- Třídy hodnotu nebo hodnotu struktury může obsahovat jenom základní číselnými typy, výčet tříd polí `Platform::String^`, nebo [Platform::IBox \<T > ^](../cppcx/platform-ibox-interface.md) kde T představuje číselného typu nebo výčtu ve třídě nebo hodnota třídě nebo struktuře. `IBox<T>^` Pole může mít hodnotu `nullptr`– jedná se jak C++ implementuje koncept *typy s možnou hodnotou Null hodnot*.  
+ Hodnota třídy nebo struktury hodnota může obsahovat pouze základní číselné typy, výčet tříd, polí `Platform::String^`, nebo [Platform::ibox – \<T > ^](../cppcx/platform-ibox-interface.md) kde T je číselný typ nebo výčet. třída nebo hodnota třídy nebo struktury. `IBox<T>^` Pole může mít hodnotu `nullptr`– Toto je způsob implementace C++ konceptu *typy s možnou hodnotou*.  
   
- Hodnota třídě nebo struktuře hodnotu, která obsahuje `Platform::String^` nebo `IBox<T>^` zadejte jako člena není `memcpy`-možné.  
+ Hodnota třídy nebo struktury hodnota obsahuje `Platform::String^` nebo `IBox<T>^` typu jako člen není `memcpy`– možnost.  
   
- Protože všichni členové `value class` nebo `value struct` jsou veřejné a je vložen do metadat, Standardní typy C++ nejsou povoleny jako členy. To se liší od ref třídy, které mohou obsahovat `private` nebo `internal` standardní typy C++...  
+ Protože všechny členy `value class` nebo `value struct` jsou veřejné a vyhoví se emitovat do metadat, standardní C++ typy nejsou povolené jako členy. Tím se liší od referenční třídy, které mohou obsahovat `private` nebo `internal` standardní typy C++...  
   
- Následující fragment kódu deklaruje `Coordinates` a `City` typy jako hodnota struktury. Všimněte si, že jedna z `City` je datových členů `GeoCoordinates` typu. A `value struct` může obsahovat jiné struktury hodnotu jako členy.  
+ Následující fragment kódu deklaruje `Coordinates` a `City` typy jako hodnota struktury. Všimněte si, že jeden z `City` je datové členy `GeoCoordinates` typu. A `value struct` může obsahovat jiné hodnoty struktury jako členy.  
   
  [!code-cpp[cx_classes#07](../cppcx/codesnippet/CPP/classesstructs/class1.h#07)]  
   
-## <a name="parameter-passing-for-value-types"></a>Předávání u typů hodnot parametrů  
- Pokud máte hodnotu zadejte jako parametr funkce nebo metody, je obvykle předán podle hodnoty. Pro větší objekty to může způsobit problémy s výkonem. Ve Visual Studio2013 a starší, hodnota typy v jazyce C + +/ CX byly vždy předaná hodnota. V sadě Visual Studio 2015 a novější můžete předat hodnotu typy odkazem nebo hodnota.  
+## <a name="parameter-passing-for-value-types"></a>Předávání pro typy hodnot parametrů  
+ Pokud máte jako parametr funkce nebo metoda typ hodnoty, je obvykle předávána podle hodnoty. Pro větší objekty to může způsobit problémy s výkonem. Vizuální Studio2013 a dříve, hodnota typy v jazyce C + +/ CX se vždycky předá podle hodnoty. V sadě Visual Studio 2015 a novější můžete předat typy hodnot, podle odkazu nebo podle hodnoty.  
   
- Deklarovat parametr, který předá typ hodnoty podle hodnoty, použijte kód takto:  
+ Chcete-li deklarovat parametr, který předává typ hodnoty podle hodnoty, použijte kód podobný tomuto:  
   
 ```  
 void Method1(MyValueType obj);  
 ```  
   
- Parametr, který předá typ hodnoty odkazem deklarovat, použít odkaz na znak (&), jako v následujícím příkladu:  
+ Chcete-li deklarovat parametr, který předává hodnotový typ podle odkazu, použijte odkaz symbol (&), viz následující příklad:  
   
 ```  
 void Method2(MyValueType& obj);  
 ```  
   
- Typ uvnitř Method2 je odkaz na MyValueType a funguje stejným způsobem jako odkaz na typ v jazyce C++ standardní.  
+ Typ uvnitř Method2 je odkaz na MyValueType a funguje stejně jako s typem odkazu ve standardním jazyce C++.  
   
- Při volání Method1 z jiném jazyce, jako je C#, není potřeba použít `ref` nebo `out` – klíčové slovo. Při volání Method2 použít `ref` – klíčové slovo.  
+ Při volání z jiného jazyka, jako je C# – metoda1 nemusíte používat `ref` nebo `out` – klíčové slovo. Při volání Method2 použít `ref` – klíčové slovo.  
   
 ```  
 Method2(ref obj);  
 ```  
   
- Ukazatel symbol (*) můžete použít také k předání odkazem typ hodnoty. Chování s ohledem na volající v jiných jazycích je stejné (volající v C# pomocí `ref` – klíčové slovo), ale v metodě, typ je ukazatel na typ hodnoty.  
+ Ukazatel symbol (*) můžete použít také k předání typu hodnoty podle odkazu. Chování s ohledem na volajícím v jiných jazycích je stejný (volající C# používá `ref` – klíčové slovo), ale v metodě, typ je ukazatel na typ hodnoty.  
   
-## <a name="nullable-value-types"></a>typy hodnot s povolenou hodnotou Null  
- Jak už bylo zmíněno dříve, může mít hodnotu třídě nebo struktuře hodnotu pole typu [Platform::IBox\<T > ^](../cppcx/platform-ibox-interface.md)– například `IBox<int>^`. Toto pole může mít libovolnou číselnou hodnotu, která platí pro `int` typ, nebo může mít hodnotu `nullptr`. Může předat pole s možnou hodnotou null jako argument jehož parametr je deklarován jako volitelnou metodu nebo kdekoliv jinde, který typ hodnoty není potřeba mít hodnotu.  
+## <a name="nullable-value-types"></a>Typy s možnou hodnotou Null  
+ Jak už bylo zmíněno dříve, hodnotová třída nebo struktura hodnota může mít pole typu [Platform::ibox –\<T > ^](../cppcx/platform-ibox-interface.md)– například `IBox<int>^`. Toto pole může mít číselnou hodnotu, která platí pro `int` typ, nebo může mít hodnotu `nullptr`. Pole s možnou hodnotou Null lze předat jako argument na metodu, jejíž parametr je deklarovaný jako nepovinný nebo kdekoli jinde, který není hodnotový typ musí mít hodnotu.  
   
- Následující příklad ukazuje, jak se inicializovat struktura, která obsahuje pole, s možnou hodnotou Null.  
+ Následující příklad ukazuje, jak inicializovat struktura, která obsahuje pole, s možnou hodnotou Null.  
   
 ```  
 public value struct Student  
@@ -135,7 +135,7 @@ bool MainPage::IsCurrentlyEnrolled(Student s)
   
 ```  
   
- Hodnota struktury samotné se dají vytvořit s možnou hodnotou Null stejným způsobem, jak je vidět tady:  
+ Hodnota struktury samotné se dají vytvořit s možnou hodnotou Null stejným způsobem, jak je znázorněno zde:  
   
 ```  
   

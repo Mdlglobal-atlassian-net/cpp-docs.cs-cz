@@ -24,40 +24,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c8a809e7cd7ed7a461149707cc9e0b2a4a62158
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cd5ec3ca119b23e62fa87f1cd216d1131ae179e5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649517"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591412"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Výběr průhledného nebo neprůhledného pozadí (editor obrázků pro ikony)
-Když přesouváte nebo kopírujete z bitové kopie s výběrem, žádné pixelech ve výběru, které odpovídají barvě pozadí jsou ve výchozím nastavení transparentní; Ne, zakrýt pixelů v cílovém umístění.  
-  
- Můžete přepnout z průhledné pozadí (výchozí) do neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** možnosti se zobrazí **možnost** selektor na **Editor obrázků** nástrojů (jak je vidět níže).  
-  
- ![Možnosti pozadí &#45; neprůhledné nebo průhledné](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-**Možnosti transparentní a neprůhledné** na **panelu nástrojů editoru obrázků**  
-  
-### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Chcete-li přepnout mezi transparentní a neprůhledné pozadí  
-  
-1.  V **Editor obrázků** nástrojů, klikněte na tlačítko **možnost** selektor a potom klikněte na tlačítko na pozadí odpovídající:  
-  
-    -   `Opaque Background (O)`: Existující image je po všech součástí výběr skryt.  
-  
-    -   `Transparent Background (T)`: Existujícího obrázku prostřednictvím částí výběru, které odpovídají barvě pozadí.  
-  
- \- nebo –  
-  
--   Na **Image** nabídky, zaškrtněte nebo zrušte **kreslení neprůhledných**.  
-  
- Při výběru je již platná, chcete-li změnit, které části obrázku je transparentní, můžete změnit barvu pozadí.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Žádné  
-  
-## <a name="see-also"></a>Viz také  
- [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)
+
+Když přesouváte nebo kopírujete z bitové kopie s výběrem, žádné pixelech ve výběru, které odpovídají barvě pozadí jsou ve výchozím nastavení transparentní; Ne, zakrýt pixelů v cílovém umístění.
+
+Můžete přepnout z průhledné pozadí (výchozí) do neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** možnosti se zobrazí **možnost** selektor na **Editor obrázků** nástrojů (jak je vidět níže).
+
+![Možnosti pozadí &#45; neprůhledné nebo průhledné](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+**Možnosti transparentní a neprůhledné** na **panelu nástrojů editoru obrázků**
+
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Chcete-li přepnout mezi transparentní a neprůhledné pozadí
+
+1. V **Editor obrázků** nástrojů, klikněte na tlačítko **možnost** selektor a potom klikněte na tlačítko na pozadí odpovídající:
+
+   - `Opaque Background (O)`: Existující image je po všech součástí výběr skryt.
+
+   - `Transparent Background (T)`: Existujícího obrázku prostřednictvím částí výběru, které odpovídají barvě pozadí.
+
+\- nebo –
+
+- Na **Image** nabídky, zaškrtněte nebo zrušte **kreslení neprůhledných**.
+
+Při výběru je již platná, chcete-li změnit, které části obrázku je transparentní, můžete změnit barvu pozadí.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Žádné
+
+## <a name="see-also"></a>Viz také
+
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)

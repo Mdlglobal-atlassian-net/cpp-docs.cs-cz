@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339706"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464539"
 ---
 # <a name="cdc-class"></a>CDC – třída
 Definuje třídu objektů kontextu zařízení.  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  Ukazatel na řetězec znaků ke zpracování.  
   
  *nCount*  
- Určuje délku řetězce. Pro verzi ANSI je to počet BAJTŮ a pro funkci Unicode je to počet SLOV. Další informace najdete v tématu [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
+ Určuje délku řetězce. Pro verzi ANSI je to počet BAJTŮ a pro funkci Unicode je to počet SLOV. Další informace najdete v tématu [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).  
   
  *nMaxExtent*  
  Určuje maximální rozsah (v logických jednotkách), což je řetězec zpracován. Znaky, které by při zpracování způsobily překročení tohoto rozsahu se ignorují. Výpočty pro všechna požadovaná pole řazení nebo glyfů se vztahují pouze na zahrnuté znaky. Tento parametr se používá jenom v případě, že je zadána hodnota GCP_MAXEXTENT v *dwFlags* parametru. Jako funkce zpracovává vstupní řetězec, každý znak a jeho rozsah je přidán do výstupu, rozsahu a jiných polí pouze v případě, že celková rozloha ještě nepřekročila maximální. Po dosažení limitu se zpracování zastaví.  
   
  lpResults  
- Ukazatel [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) struktura, která přijímá výsledky funkce.  
+ Ukazatel [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) struktura, která přijímá výsledky funkce.  
   
  *dwFlags*  
- Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jeden nebo více hodnot uvedených v *dwFlags* část [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) tématu.  
+ Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jeden nebo více hodnot uvedených v *dwFlags* část [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) tématu.  
   
  *str*  
  Ukazatel [CString](../../atl-mfc-shared/reference/cstringt-class.md) ke zpracování.  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  Pokud funkce selže, vrácená hodnota je nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce emuluje funkčnost funkce [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost funkce [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), jak je popsáno v sadě Windows SDK.  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  Načte šířky po sobě jdoucích znaků v zadaném rozsahu, z aktuální písmo TrueType.  

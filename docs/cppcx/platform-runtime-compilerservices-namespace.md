@@ -1,5 +1,5 @@
 ---
-title: Namespace Platform::Runtime::CompilerServices | Microsoft Docs
+title: 'Platform::Runtime:: CompilerServices – Namespace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb3729b98726665a002cc141a7fc01e2494b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39d708d2464ba74ecd78421599c8c039bb02c214
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088099"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602509"
 ---
-# <a name="platformruntimecompilerservices-namespace"></a>Namespace Platform::Runtime::CompilerServices
-Tento obor názvů je určen pouze pro interní použití a není určena k použití pro vývoj.  
+# <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime:: CompilerServices – Namespace
+Tento obor názvů je určena pouze pro interní použití a není určena pro použití pro vývoj.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,7 @@ namespace Platform {
 ```  
   
 ### <a name="members"></a>Členové  
- I když tento obor názvů je určený pro interní použití, prohlížeče zobrazí následující členy tento obor názvů.  
+ I když se tento obor názvů je určená pro interní použití, prohlížečích může zobrazit následující členy tohoto oboru názvů.  
   
 |Název|Poznámka|  
 |----------|------------|  
@@ -66,4 +66,4 @@ namespace Platform {
  **Namespace:** Platform::CompilerServices  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)
+ [Platforma Namespace](platform-namespace-c-cx.md)

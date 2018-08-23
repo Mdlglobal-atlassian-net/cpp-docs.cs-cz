@@ -17,45 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c998f7e0814c5acae55dd3e9b747faed0242e1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e6f720d0a918a22aee4a4cade6af1cb02a90e8d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016220"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588866"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier – třída
-Vyvolá obslužnou rutinu události po vydání poslední objekt v modulu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-class ReleaseNotifier;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier – destruktor](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Zruší inicializaci aktuální instance **Module::ReleaseNotifier** třídy.|  
-|[Module::ReleaseNotifier::ReleaseNotifier – konstruktor](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::ReleaseNotifier** třídy.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Module::ReleaseNotifier::Invoke – metoda](../windows/module-releasenotifier-invoke-method.md)|Při implementaci, volá obslužná rutina události po vydání poslední objekt v modulu.|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Odstraní aktuální **Module::ReleaseNotifier** objektu, pokud byl objekt zkonstruován s parametrem **true**.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `ReleaseNotifier`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [Module – třída](../windows/module-class.md)
+
+Vyvolá obslužnou rutinu události po vydání poslední objekt v modulu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+class ReleaseNotifier;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[Module::ReleaseNotifier::~ReleaseNotifier – destruktor](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Zruší inicializaci aktuální instance **Module::ReleaseNotifier** třídy.|
+|[Module::ReleaseNotifier::ReleaseNotifier – konstruktor](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::ReleaseNotifier** třídy.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[Module::ReleaseNotifier::Invoke – metoda](../windows/module-releasenotifier-invoke-method.md)|Při implementaci, volá obslužná rutina události po vydání poslední objekt v modulu.|
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Odstraní aktuální **Module::ReleaseNotifier** objektu, pokud byl objekt zkonstruován s parametrem **true**.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`ReleaseNotifier`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[Module – třída](../windows/module-class.md)

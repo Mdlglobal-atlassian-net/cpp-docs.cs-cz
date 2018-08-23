@@ -1,7 +1,7 @@
 ---
 title: Modifikátory specifické pro společnost Microsoft | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/16/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -12,20 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba43df09773f15c44875335bdb63234502d94587
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406360"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42465266"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
 Tato část popisuje rozšíření specifické pro společnost Microsoft pro jazyk C++ v následujících oblastech:  
   
--   [Základní adresování](../cpp/based-addressing.md), praxe používání ukazatele jako základ, ze kterého mohou být posouvány jiné ukazatele  
+-   [Základní adresování](based-addressing.md), praxe používání ukazatele jako základ, ze kterého mohou být posouvány jiné ukazatele  
   
--   [Konvence volání funkce](../cpp/calling-conventions.md)  
+-   [Konvence volání funkce](calling-conventions.md)  
   
--   Rozšířené atributy tříd úložiště deklarované s [__declspec](../cpp/declspec.md) – klíčové slovo  
+-   Rozšířené atributy tříd úložiště deklarované s [__declspec](declspec.md) – klíčové slovo  
   
--   [__W64](../cpp/w64.md) – klíčové slovo  
+-   [__W64](w64.md) – klíčové slovo  
+
+### <a name="microsoft-specific-keywords"></a>Klíčová slova specifická pro společnost Microsoft  
+
+Mnoho klíčových slov specifických pro společnost Microsoft umožňuje změnit deklarace odvozených typů formulářů. Další informace o deklarátorech naleznete v tématu [Deklarátory](overview-of-declarators.md).  
+
+|Klíčové slovo|Význam|Použít k vytvoření odvozených typů?|   
+|-------------|-------------|---------------------------------|
+|[__based](based-grammar.md)|Název, který následuje, deklaruje 32bitový posun na 32bitovém základě obsaženém v prohlášení.|Ano|   
+|[__cdecl](cdecl.md)|Název, který následuje, používá pojmenování a konvence volání jazyka C.|Ano|      
+|[__declspec](declspec.md)|Název, který následuje, určuje atribut třídy úložiště specifické pro společnost Microsoft.|Ne|    
+|[__fastcall](fastcall.md)|Název, který následuje, deklaruje funkci, která používá registry, pokud je k dispozici, namísto zásobníku pro předání argumentu.|Ano|   
+|[__restrict](extension-restrict.md)|Podobně jako __declspec ([omezit](restrict.md)), ale pro použití u proměnné.|Ne|      
+|[__stdcall](stdcall.md)|Název, který následuje, určuje funkci, která dodržuje standardní konvence volání.|Ano|     
+|[__w64](w64.md)|Označuje typ dat jako větší u 64bitového kompilátoru.|Ne|    
+|[__unaligned](unaligned.md)|Určuje, že ukazatel na typ nebo jiná data nejsou zarovnána...|Ne|      
+|[__vectorcall](vectorcall.md)|Název, který následuje, deklaruje funkci, která používá registry, včetně registrů SSE, pokud je k dispozici, namísto zásobníku pro předání argumentu.|Ano|      
+    
+## <a name="see-also"></a>Viz také     
+ [Referenční dokumentace jazyka C++](cpp-language-reference.md)

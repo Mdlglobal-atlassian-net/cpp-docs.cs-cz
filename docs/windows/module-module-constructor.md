@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d63b90bb3622129589fca41c029f548a07ec21b8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017653"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591859"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module – konstruktor
-Inicializuje novou instanci třídy **modulu** třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-Module();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tento konstruktor je chráněn a nelze volat pomocí **nové** – klíčové slovo. Namísto toho zavolejte metodu buď [Module::getmodule – metoda](../windows/module-getmodule-method.md) nebo [Module::Create – metoda](../windows/module-create-method.md).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [Module – třída](../windows/module-class.md)
+
+Inicializuje novou instanci třídy **modulu** třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+Module();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tento konstruktor je chráněn a nelze volat pomocí **nové** – klíčové slovo. Namísto toho zavolejte metodu buď [Module::getmodule – metoda](../windows/module-getmodule-method.md) nebo [Module::Create – metoda](../windows/module-create-method.md).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[Module – třída](../windows/module-class.md)

@@ -321,17 +321,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec349041ff51441d49b5de39968417bdd071cad6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465327"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 `CMFCToolBar` Vypadá podobně jako třída [ctoolbar – třída](../../mfc/reference/ctoolbar-class.md), ale poskytuje další podporu pro funkce uživatelského rozhraní. Tyto zahrnují ploché panely nástrojů s horkými obrázky, velké ikony, tlačítka stránkování, zamčené panely nástrojů, prvky matrice, text pod obrázky, obrázky na pozadí a panely nástrojů s kartami. `CMFCToolBar` Třída také obsahuje integrovanou podporu pro vlastní nastavení panelů nástrojů a nabídek, přetahování myší mezi panely nástrojů a nabídkami, tlačítka pole se seznamem, upravte pole, barev a rolovací tlačítka.
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.    
   
 ## <a name="syntax"></a>Syntaxe  
   

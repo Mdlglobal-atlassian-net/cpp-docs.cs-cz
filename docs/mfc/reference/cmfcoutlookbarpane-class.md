@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81087eb5f611edd5ad41725177226c2c2b7a9c2d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851339"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465863"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Cmfcoutlookbarpane – třída
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
  Ovládací prvek odvozený z [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md) lze vložit do panel aplikace Outlook ( [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)). Podokno panelu aplikace Outlook obsahuje sloupec velkých tlačítek. Uživatel může posunout nahoru nebo dolů seznam tlačítek, pokud je větší než podokno. Když uživatel odpojí podokno panelu Outlook z panelu aplikace Outlook, může uvolnit nebo ukotvit v hlavním okně rámce.  
   
@@ -222,7 +222,7 @@ BOOL AddButton(
  Pokud index zadaný *iInsertAt* se -1, na tlačítko se přidá na konec stránky.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual BOOL CanBeAttached() const;  

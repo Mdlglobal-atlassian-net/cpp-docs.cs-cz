@@ -1,5 +1,5 @@
 ---
-title: __umulh | Microsoft Docs
+title: __umulh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327252"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466117"
 ---
 # <a name="umulh"></a>__umulh
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vrátí vysoké 64bitová verze produktu dvě nepodepsané celých čísel 64-bit.  
+ Vrátí 64 bitů součin dvou 64-bit celých čísel bez znaménka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,25 +38,25 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `a`  
- První číslo, které má násobení.  
+ [in] `a`  
+ První číslo pro vynásobení.  
   
- [v] `b`  
- Druhé číslo, které má násobení.  
+ [in] `b`  
+ Druhé číslo pro vynásobení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vysoká 64bitová verze 128-bit výsledkem násobení.  
+ Vysoká 64 bitů 128bitové výsledek násobení.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__umulh`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
 ## <a name="example"></a>Příklad  
   
@@ -84,7 +84,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: Sestavení programu s atributy | Microsoft Docs
+title: Sestavení programu s atributy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,27 +25,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7909884a355ccad5e1bf9d18a38dd3e4690296ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862274"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587504"
 ---
 # <a name="building-an-attributed-program"></a>Sestavení programu s atributy
-Po přepnutí atributy Visual C++ do zdrojového kódu, můžete kompilátor Visual C++ k vytvoření typu knihovny a .idl souboru pro vás. Následující linkeru možnosti nápovědy sestavení .tlb a .idl souborů:  
-  
--   [/ IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
-  
--   [/ IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
-  
--   [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
-  
--   [/ TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
-  
- Některé projekty obsahují několik nezávislých .idl souborů. Ty se používají vytvořit dva soubory .tlb a volitelně svázat ho do bloku prostředků. Tento scénář není podporován v jazyce Visual C++.  
-  
- Kromě toho výstup linkeru jazyka Visual C++ všechny informace o atributu souvisejícím s IDL do jednoho souboru MIDL. Budou existovat žádný způsob, jak vygenerovat dvě knihovny typů z jednoho projektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../windows/attributed-programming-concepts.md)
+
+Poté, co vložíte do zdrojového kódu jazyka Visual C++ atributy, můžete kompilátor Visual C++ k vytvoření souboru typu knihovna a .idl za vás. Následující linkeru možnosti tvorbu souborů .tlb a IDL:
+
+- [/ IDLOUT](../build/reference/idlout-name-midl-output-files.md)
+
+- [/ IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+
+- [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)
+
+- [/ TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)
+
+Některé projekty obsahují více souborů .idl nezávislé. Slouží k vytvoření dvou nebo více souborů .tlb a svázat ho Volitelně můžete do bloku prostředků. Tento scénář není aktuálně podporován v jazyce Visual C++.
+
+Kromě toho výstup linkeru jazyka Visual C++ všechny informace o atributu souvisejícím s IDL do jednoho souboru MIDL. Nebude žádný způsob, jak generovat dvě knihovny typů z jednoho projektu.
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../windows/attributed-programming-concepts.md)

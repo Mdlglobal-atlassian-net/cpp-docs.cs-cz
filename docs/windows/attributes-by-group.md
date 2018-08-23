@@ -1,5 +1,5 @@
 ---
-title: Atributy podle skupin | Microsoft Docs
+title: Atributy podle skupin | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9f883bbedff75446659e53da98751f77401a38f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddcb6fc7da45eb5e90c8ffdfde80748d015323df
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864557"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601419"
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
-Atributy C++ jsou uspořádány do následujících skupin funkčnosti.  
+Atributy C++ jsou uspořádány do následujících skupin funkční.
   
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[COM – atributy](../windows/com-attributes.md)|Vložení kódu pro podporu mnoha oblastech vývoj COM a rozhraní .NET Framework common language runtime vývoj.|  
-|[IDL – atributy](../windows/idl-attributes.md)|Povolte úpravy souboru .idl ze souboru zdrojového kódu a bez použití průvodce a bez znalosti struktury a syntaxe tohoto souboru.|  
-|[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)|Vložení kódu – na základě [šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)– Chcete-li vytvořit pracovní OLE DB spotřebitele, který provádí úlohy, jako je například otevírání tabulky, provádění příkazů a přístup k datům.|  
-|[Atributy kompilátoru](../windows/compiler-attributes.md)|Poskytuje – kompilátor Visual C++.|  
+|Atribut|Popis|
+|---------------|-----------------|
+|[COM – atributy](../windows/com-attributes.md)|Vložení kódu pro podporu mnoha oblastech COM vývoj a rozhraní .NET Framework common language runtime.|
+|[IDL – atributy](../windows/idl-attributes.md)|Povolte úpravy souboru IDL z soubor zdrojového kódu bez použití průvodce a bez znalosti struktury a syntaxe tohoto souboru.|
+|[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)|Vložení kódu – na základě [OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md)– Chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.|
+|[Atributy kompilátoru](../windows/compiler-attributes.md)|Zadaný v kompilátoru jazyka Visual C++.|
   
- Informace o tom, jak definovat vlastní atributy pro rozhraní .NET Framework aplikace najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).
   
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)   
- [Koncepty](../windows/attributed-programming-concepts.md)   
- [Atributy podle použití](../windows/attributes-by-usage.md)   
+## <a name="see-also"></a>Viz také
+ [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)  
+ [Koncepty](../windows/attributed-programming-concepts.md)  
+ [Atributy podle použití](../windows/attributes-by-usage.md)  
  [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)

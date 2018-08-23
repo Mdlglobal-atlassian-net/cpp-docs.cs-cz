@@ -17,56 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 014099ce3e9152d2402263baaa6d6b30607756ed
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0e71c43ca9222b350c07dae5f299f4a6f469bf84
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644970"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578554"
 ---
 # <a name="enableif-structure"></a>EnableIf – struktura
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   bool b,  
-   typename T = void  
->  
-  
-struct EnableIf;  
-template <  
-   typename T  
->  
-struct EnableIf<true, T>;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *T*  
- Typ.  
-  
- *b*  
- Logický výraz.  
-  
-## <a name="remarks"></a>Poznámky  
- Datový člen typu určené druhý parametr šablony, pokud je vyhodnocen jako první parametr šablony definuje **true**.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`type`|Pokud parametr šablony *b* vyhodnotí jako **true**, částečná specializace definuje datový člen `type` typu `T`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `EnableIf`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** internal.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   bool b,
+   typename T = void
+>
+
+struct EnableIf;
+template <
+   typename T
+>
+struct EnableIf<true, T>;
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*  
+Typ.
+
+*b*  
+Logický výraz.
+
+## <a name="remarks"></a>Poznámky
+
+Datový člen typu určené druhý parametr šablony, pokud je vyhodnocen jako první parametr šablony definuje **true**.
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`type`|Pokud parametr šablony *b* vyhodnotí jako **true**, částečná specializace definuje datový člen `type` typu `T`.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`EnableIf`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** internal.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

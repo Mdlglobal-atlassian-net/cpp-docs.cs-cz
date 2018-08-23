@@ -1,5 +1,5 @@
 ---
-title: Konzolová aplikace v jazyce Visual C++ | Microsoft Docs
+title: Konzolová aplikace v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f2ec6db3d169558856df72b1edfbaaa1fbcc63b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4899ed59e3d47fd8cc9ff05af411be476a57a3fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870299"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589069"
 ---
-# <a name="console-applications-in-visual-c"></a>Konzolové aplikace v jazyce Visual C++
-Konzolové aplikace přijímá vstup a odesílá výstup na konzolu, která je také označována jako příkazovém řádku. Můžete vytvořit aplikace konzoly základní práci nebo velmi sofistikované úkoly. Konzolové aplikace můžete použít také jako testování konceptu předvedení funkcí, které chcete později začlenit do aplikace pracovní plochy Windows nebo aplikaci pro univerzální platformu Windows. Aplikace konzoly může komunikovat s jinými aplikacemi plochy prostřednictvím kanály nebo jiných mechanismů RPC.  
+# <a name="console-applications-in-visual-c"></a>Aplikace konzoly v jazyce Visual C++
+Konzolová aplikace přijímá vstup a odesílá výstup na konzolu, která je také označována jako příkazového řádku. Lze vytvořit konzolové aplikace provádět základní práci nebo velmi složité úkoly. Můžete také konzolovou aplikaci jako ukázku testování konceptu funkcí, které budete později chtít začlenit do aplikace klasické pracovní plochy Windows nebo univerzální aplikace pro platformu Windows. Aplikace konzoly může komunikovat s ostatními aplikacemi klasické pracovní plochy pomocí kanálu nebo jiných mechanismů protokolu RPC.
   
-## <a name="related-articles"></a>Související články  
+## <a name="related-articles"></a>Související články
   
-|Název|Popis|  
-|-----------|-----------------|  
-|[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)|Popisuje, jak k vytvoření konzolové aplikace, které můžou uživatelé spouštět z příkazového řádku.|  
-|[Vytvoření konzolové aplikace](../windows/creating-a-console-application.md)|Poskytuje informace o konzolové aplikace.|
+|Název|Popis|
+|-----------|-----------------|
+|[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)|Popisuje, jak vytvořit konzolovou aplikaci, která můžou uživatelé spouštět z příkazového řádku.|
+|[Vytvoření konzolové aplikace](../windows/creating-a-console-application.md)|Poskytuje informace o konzolových aplikací.|

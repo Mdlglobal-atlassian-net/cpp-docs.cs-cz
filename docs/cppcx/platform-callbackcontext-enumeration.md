@@ -1,5 +1,5 @@
 ---
-title: Výčet Platform::CallbackContext | Microsoft Docs
+title: Platform::callbackcontext – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757de5f686bb809a5d2fb159a3ee547a20edc982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086942"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603035"
 ---
-# <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext – výčet
-Určuje přístup z více vláken kontext, ve kterém se provádí funkce zpětného volání (obslužné rutiny události).  
+# <a name="platformcallbackcontext-enumeration"></a>Platform::callbackcontext – výčet
+Určuje kontext vlákna, ve kterém se spustí funkce zpětného volání (Obslužná rutina události).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,13 +35,13 @@ enum class CallbackContext {};
   
 |Typ kódu|Popis|  
 |---------------|-----------------|  
-|všechny|Funkce zpětného volání můžete spustit na jakýkoli kontext přístup z více vláken.|  
-|stejné|Funkce zpětného volání můžete provést pouze vlákno kontext, který spuštění asynchronní operaci.|  
+|Všechny|Funkce zpětného volání lze spustit v libovolném kontextu vlákna.|  
+|Stejné|Funkce zpětného volání lze spustit na pouze kontext vlákna, který spustil asynchronní operace.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   

@@ -1,5 +1,5 @@
 ---
-title: Třída CDockingPanesRow | Microsoft Docs
+title: Cdockingpanesrow – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955264"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464851"
 ---
-# <a name="cdockingpanesrow-class"></a>CDockingPanesRow – třída
-Spravuje seznam podokna, které se nacházejí ve stejném vodorovné nebo svislé řádku (sloupec) lokality ukotvení.  
+# <a name="cdockingpanesrow-class"></a>Cdockingpanesrow – třída
+Spravuje seznam podoken, které se nacházejí ve stejném vodorovném nebo svislém řádku (sloupec) dokovacího webu.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -132,7 +132,7 @@ class CDockingPanesRow : public CObject
 |----------|-----------------|  
 |[CDockingPanesRow::AddPane](#addpane)||  
 |[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
-|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Uspořádá podokna v řádku podle zadaný okraj a parametry mezery.|  
+|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Uspořádá podokny řádků podle zadaného okraj a parametry mezery.|  
 |[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||  
 |[CDockingPanesRow::Create](#create)||  
 |[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||  
@@ -174,7 +174,7 @@ class CDockingPanesRow : public CObject
 |[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||  
   
 ## <a name="remarks"></a>Poznámky  
- `CDockingPanesRow` objekty jsou vytvořené interně pomocí ukotvení objekty lokality.  
+ `CDockingPanesRow` objekty jsou interně vytvořené objekty lokality ukotvení.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak získat `CDockingPanesRow` objektu z `CMFCAutoHideBar` objektu.  
@@ -182,9 +182,9 @@ class CDockingPanesRow : public CObject
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)  
+ [Cdockingpanesrow –](../../mfc/reference/cdockingpanesrow-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDockingPanesRow.h  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- [v] *dockMethod*  
- [v] *lprect –*  
- [v] *bAddLast*  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
+ [in] *lprect –*  
+ [in] *bAddLast*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -218,13 +218,13 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- [v] *dockMethod*  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Uspořádá ukotvení podokna v řádku podle zadaný okraj a mezer parametry.  
+ Uspořádá ukotvitelné podokny řádků podle zadaného okraj a mezery mezi parametry.  
   
 ```  
 virtual void ArrangePanes(
@@ -233,14 +233,14 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nMargin*  
- Určuje posun v pixelech podokně první z levého horního rohu řádku.  
+ [in] *nMargin*  
+ Určuje posun v pixelech, podokna první z levého horního rohu řádku.  
   
- [v] *nSpacing*  
- Určuje mezery, v pixelech, mezi podokna.  
+ [in] *nSpacing*  
+ Určuje mezery, v pixelech mezi podokny.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem uspořádání podoken v řádku, kde bude ukotvení. Po volání metody tuto metodu, musí volat `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
+ Volejte tuto metodu za účelem uspořádání podoken v řádku, kde bude ukotvení. Po volání této metody, je nutné volat `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bStretch*  
- [v] *bHorz*  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -270,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentDockBar*  
- [v] *nOffset*  
- [v] *nHeight*  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nHeight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bMoveBackToVirtualRect*  
- [v] *pBarToExclude*  
+ [in] *bMoveBackToVirtualRect*  
+ [in] *pBarToExclude*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -328,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bUseVirtualRect*  
+ [in] *bUseVirtualRect*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -342,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -354,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *obrázků*  
+ [in] *pBar*  
+ [in] *obrázků*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -414,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bSkipHiddenBars*  
+ [in] *bSkipHiddenBars*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -494,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -506,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -564,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nOffset*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- [v] *ptOffset*  
- [v] *bSwapControlBars*  
- [v] *hdwp*  
- [v] *rectTarget*  
- [v] *nOffset*  
- [v] *bForward*  
- [v] *nAbsolutOffset*  
+ [in] *pControlBar*  
+ [in] *ptOffset*  
+ [in] *bSwapControlBars*  
+ [in] *hdwp*  
+ [in] *rectTarget*  
+ [in] *nOffset*  
+ [in] *bForward*  
+ [in] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -618,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -639,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBarOld*  
- [v] *pBarNew*  
+ [in] *pBarOld*  
+ [in] *pBarNew*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *rectNewParentBarArea*  
- [v] *nSide*  
- [v] *bExpand*  
- [v] *nOffset*  
+ [in] *rectNewParentBarArea*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -687,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nOffset*  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -701,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *int*  
+ [in] *int*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -715,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nExtraSpace*  
- [v] *rowExtraAlign*  
+ [in] *nExtraSpace*  
+ [in] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bShow*  
- [v] *bDelay*  
+ [in] *bShow*  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -760,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- [v] *bShow*  
- [v] *bDelay*  
+ [in] *pControlBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -776,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bDelay*  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -784,5 +784,5 @@ virtual void UpdateVisibleState(BOOL bDelay);
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CObject – třída](../../mfc/reference/cobject-class.md)   
- [CDockSite – třída](../../mfc/reference/cdocksite-class.md)   
+ [Cdocksite – třída](../../mfc/reference/cdocksite-class.md)   
  [CPane – třída](../../mfc/reference/cpane-class.md)

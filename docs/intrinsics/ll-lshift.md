@@ -1,5 +1,5 @@
 ---
-title: __ll_lshift | Microsoft Docs
+title: __ll_lshift | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327369"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465354"
 ---
 # <a name="lllshift"></a>__ll_lshift
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Posune poskytnutá hodnota 64-bit doleva o zadaný počet bitů.  
+ Přesouvá se zadanou hodnotou 64-bit na levé straně zadaný počet bitů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +40,27 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Mask`  
- 64bitové celočíselné hodnoty posunutí doleva.  
+ [in] `Mask`  
+ 64bitové celočíselné hodnoty posun doleva.  
   
- [v] `nBit`  
- Počet bitů se posunou.  
+ [in] `nBit`  
+ Počet bitů na posunu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Maska zapuštěno vlevo podle `nBit` bits.  
+ Maska posunuty vlevo o `nBit` bits.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud při kompilaci váš program pomocí architektury 64bitová verze a `nBit` je větší než 63, je počet bitů se posunou `nBit` modulo 64. Pokud při kompilaci váš program pomocí 32bitové architektury a `nBit` je větší než 31, je počet bitů se posunou `nBit` modulo 32.  
+ Pokud kompilujete program pomocí 64bitovou architekturu a `nBit` je větší než 63, je počet bitů, chcete-li posunout `nBit` modulo 64. Pokud při kompilaci programu pomocí 32bitové architektury a `nBit` je větší než 31, je počet bitů, chcete-li posunout `nBit` modulo 32.  
   
- `ll` v názvu označuje, že to je operace na `long long` (`__int64`).  
+ `ll` v názvu označuje, že se jedná operaci na `long long` (`__int64`).  
   
 ## <a name="example"></a>Příklad  
   
@@ -89,9 +89,9 @@ int main()
 10000  
 ```  
   
- **Poznámka:** není nepodepsané verze operace posunutí doleva. Důvodem je, že `__ll_lshift` už používá nepodepsané vstupní parametr. Na rozdíl od posunutí doprava není už přihlašovací závislost pro posunutí doleva, protože nejméně významný bit ve výsledku je vždy nastaven na hodnotu nula bez ohledu na přihlášení zapuštěno hodnoty.  
+ **Poznámka:** není bez znaménka verze operaci posunutí doleva. Důvodem je, že `__ll_lshift` již používá nepodepsané vstupního parametru. Na rozdíl od posunutí doprava není žádný znak závislost pro posunutí doleva, protože nejméně významných bitů ve výsledku je vždycky nastavený na hodnotu nula, bez ohledu na znaménko hodnoty posunutí.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__ll_rshift](../intrinsics/ll-rshift.md)   

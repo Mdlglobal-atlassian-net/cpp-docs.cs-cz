@@ -17,90 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56f7f77284d855a2d9a737c8694efdd357d0a6fb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011497"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584318"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   Invoke  
-)();  
-STDMETHOD(  
-   Invoke  
-)(typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *arg1*  
- Argument 1.  
-  
- *arg2*  
- Argument 2.  
-  
- *arg3*  
- Argument 3.  
-  
- *arg4*  
- Argument 4.  
-  
- *arg5*  
- Argument 5.  
-  
- *arg6*  
- Argument 6.  
-  
- *arg7*  
- Argument 7.  
-  
- *arg8*  
- Argument 8.  
-  
- *arg9*  
- Argument 9.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.  
-  
-## <a name="remarks"></a>Poznámky  
- Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** event.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Invokehelper – struktura](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parametry
+
+*arg1*  
+Argument 1.
+
+*arg2*  
+Argument 2.
+
+*arg3*  
+Argument 3.
+
+*arg4*  
+Argument 4.
+
+*arg5*  
+Argument 5.
+
+*arg6*  
+Argument 6.
+
+*arg7*  
+Argument 7.
+
+*arg8*  
+Argument 8.
+
+*arg9*  
+Argument 9.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.
+
+## <a name="remarks"></a>Poznámky
+
+Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** event.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[InvokeHelper – struktura](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

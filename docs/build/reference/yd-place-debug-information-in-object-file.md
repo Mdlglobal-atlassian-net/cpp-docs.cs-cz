@@ -1,5 +1,5 @@
 ---
-title: -Yd (umístit informace o ladění do souboru objektu) | Microsoft Docs
+title: -Yd (umístění informací o ladění do souboru objektu) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86cb8a42b77cd0a932530455f1125125a9f546d9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378230"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42585964"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umístit informace o ladění do souboru objektu)
-Mezerami dokončení ladicí informace ve všech souborů objektu vytvořeny ze souboru předkompilovaných hlaviček (.pch) při použití s [/Yc](../../build/reference/yc-create-precompiled-header-file.md) a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti. Zastaralé  
+Úplné ladicí informace do všech objektových souborů mezery vytvořené ze souboru předkompilované hlavičky (pch) při použití s [/Yc](../../build/reference/yc-create-precompiled-header-file.md) a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti. Zastaralé  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +36,15 @@ Mezerami dokončení ladicí informace ve všech souborů objektu vytvořeny ze 
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **/Yd** je zastaralý; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] nyní podporuje použití více objektů zápisu do souboru PDB jeden **/Zi** místo. Seznam – možnosti kompilátoru zastaralé, najdete v části **zastaralé a odebrat – možnosti kompilátoru** v [kompilátoru možnosti uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
+ **/Yd** je zastaralá; Jazyk Visual C++ teď podporuje více objektů zápisu do souboru PDB jeden, použijte **/zi** místo. Seznam zastaralých kompilátoru možnosti najdete v tématu **zastaralé a odebrat možnosti kompilátoru** v [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).  
   
- Pokud je nutné distribuovat knihovny obsahující informace o ladění, používat [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost místo **/Z7** a **/Yd**.  
+ Pokud budete muset distribuovat knihovny obsahuje ladicí informace, použijte [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost spíše než **/Z7** a **/Yd**.  
   
- Ukládání informací o dokončení ladění do každého souboru .obj je nezbytné pouze k distribuci knihovny, které obsahují informace o ladění. Ho zpomalí kompilace a vyžaduje značné místo na disku. Když **/Yc** a **/Z7** použijí bez **/Yd**, kompilátor ukládá běžných informací o ladění do první souboru .obj vytvořen ze souboru .pch. Kompilátor nevkládá tyto informace do soubory .obj následně vytvořené ze souboru .pch; Vloží křížové odkazy na informace. Bez ohledu na to, kolik soubory .obj použít soubor .pch obsahuje pouze jeden soubor .obj běžných informací o ladění.  
+ Ukládání kompletní informaci o ladění do každého souboru .obj je nezbytné pouze k distribuci knihoven, které obsahují informace o ladění. Zpomaluje kompilace a vyžaduje značné místo na disku. Když **/Yc** a **/Z7** použijí bez **/Yd**, kompilátor uloží v prvním souboru .obj vytvořeného ze souboru .pch běžných informací o ladění. Kompilátor nevkládá tyto informace do souborů obj následně vytvořené ze souboru .pch; Vloží křížové odkazy na informace. Bez ohledu na to, kolik souborů .obj používat soubor .pch obsahuje pouze jeden soubor .obj běžných informací o ladění.  
   
- I když toto výchozí chování za následek rychlejší sestavení časy a snižuje nároky na místo na disku, není žádoucí, pokud vyžaduje malou změnu znovu sestavit .obj souboru, který obsahuje informace o běžných ladění. V takovém případě kompilátor nutné znovu vytvořit všechny soubory .obj obsahující křížové odkazy na původní soubor .obj. Navíc pokud běžné souboru .pch používají různé projekty, spoléhat na křížové odkazy na soubor jednoho .obj je obtížné.  
+ I když toto výchozí chování výsledky v rychlejší doby sestavení a snižuje požadavky na místo na disku, nežádoucí, pokud vyžaduje malou změnu znovu sestavit soubor .obj obsahující běžných informací o ladění. V tomto případě kompilátor nutné znovu sestavit všechny soubory .obj, který obsahuje křížové odkazy na původní soubor .obj. Navíc pokud běžné souboru .pch používají různé projekty, závislost na křížové odkazy na soubor .obj jeden je obtížné.  
   
- Další informace o předkompilovaných hlaviček najdete v tématu:  
+ Další informace o předkompilovaných hlaviček naleznete v tématu:  
   
 -   [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md)  
   
@@ -52,41 +52,41 @@ Mezerami dokončení ladicí informace ve všech souborů objektu vytvořeny ze 
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **C/C++** složky.  
+2.  Klikněte na tlačítko **C/C++** složky.  
   
-3.  Klikněte **příkazového řádku** stránku vlastností.  
+3.  Klikněte na tlačítko **příkazového řádku** stránku vlastností.  
   
-4.  Možnosti kompilátoru v typu **další možnosti** pole.  
+4.  Zadejte možnost do kompilátoru **další možnosti** pole.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
 ## <a name="examples"></a>Příklady  
- Předpokládejme, že máte dva základní soubory, F.cpp a G.cpp, každý obsahující tyto **#include** příkazy:  
+ Předpokládejme, že máte dva základní soubory F.cpp a G.cpp každé prostředí bude obsahovat tyto **#include** příkazy:  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- Následující příkaz vytvoří předkompilovaný hlavičkový soubor ETC.pch a soubor objektu F.obj:  
+ Následující příkaz vytvoří předkompilované hlavičky souboru ETC.pch a soubor objektu F.obj:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- Soubor objektu F.obj zahrnuje typ a informací o symbolu odkazující na Windows a ETC.h (a další hlavičkové soubory, které obsahují). Teď můžete použít předkompilovaný hlavičkový ETC.pch ke kompilaci zdrojového souboru G.cpp:  
+ Soubor objektu F.obj obsahuje typ a informace o symbolech pro WINDOWS.h a ETC.h (a další hlavičkové soubory, které patří mezi ně). Teď můžete použít předkompilovanou hlavičku ETC.pch pro kompilaci zdrojového G.cpp:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- Soubor objektu G.obj nezahrnuje informace o ladění pro předkompilované hlavičky ale jednoduše odkazuje na tyto informace v souboru F.obj. Všimněte si, že je nutné propojit s F.obj souboru.  
+ Soubor objektu G.obj jednoduše odkazuje tyto informace v souboru F.obj však neobsahuje ladicí informace pro předkompilované hlavičky. Všimněte si, že je třeba propojit s F.obj souboru.  
   
- Pokud nebyl předkompilovaných hlaviček kompilovat s **/Z7**, když můžete nadále používat v novější kompilace pomocí **/Z7**. Ale informace o ladění je umístěn v aktuální objekt souboru, a lokální symboly pro typy definované v předkompilovaných hlaviček a funkce nejsou k dispozici pro ladicí program.  
+ Pokud předkompilované hlavičky se nezkompilovalo s **/Z7**, ji mohou dál používat v pozdější kompilace pomocí **/Z7**. Ale informace o ladění je umístěn v aktuálním objektu souboru a místní symboly pro funkce a typy definované v předkompilované hlavičce nejsou k dispozici v ladicím programu.  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   

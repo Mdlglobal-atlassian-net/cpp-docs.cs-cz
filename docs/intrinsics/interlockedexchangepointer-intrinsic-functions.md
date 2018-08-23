@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedExchangePointer | Microsoft Docs
+title: Vnitřní funkce _InterlockedExchangePointer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,17 +30,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334935"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464463"
 ---
-# <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchangePointer
+**Specifické pro Microsoft**  
   
- Proveďte operaci atomic exchange, který zkopíruje adresu předané jako druhý argument do první a vrátí původní adresu prvního.  
+ Proveďte operaci atomické exchange, který zkopíruje adresu předanou jako druhý argument první a vrátí původní adresu první.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,35 +72,35 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Target`  
- Ukazatel na ukazatel na hodnotu na exchange. Funkce nastaví na hodnotu `Value` a vrátí původní hodnotu.  
+ [out v] `Target`  
+ Ukazatel na ukazatel na hodnotu k exchangi. Funkce nastaví hodnotu `Value` a vrátí původní hodnotu.  
   
- [v] `Value`  
- Hodnota, která má být vyměňují s hodnotou na kterou odkazuje `Target`.  
+ [in] `Value`  
+ Hodnota mají vyměnit s hodnotou odkazované `Target`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí počáteční hodnotu, na kterou odkazuje `Target`.  
+ Funkce vrátí počáteční hodnotu, na které odkazuje `Target`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h >|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] s podporou HLE|\<immintrin.h >|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h >|  
   
- Na x86 architekturu, `_InterlockedExchangePointer` je makro, který volá `_InterlockedExchange`.  
+ Na x86 architektury, `_InterlockedExchangePointer` je makro, které volá `_InterlockedExchange`.  
   
 ## <a name="remarks"></a>Poznámky  
- Na 64bitovém systému parametry jsou 64bitová verze a musí být zarovnána na hranicích 64-bit; Funkce, jinak selže. Na 32bitové verzi systému parametry jsou 32bitová verze a musí být zarovnána na hranicích 32-bit. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
+ 64bitová verze systému parametry jsou 64 bitů a musí být zarovnány na hranice 64-bit; v opačném případě funkce selže. Parametry v 32bitové verzi systému, 32 bitů a musí být zarovnány na hranice 32-bit. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony, pokud potřebujete získat a vydání sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") není fungovat jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní s `_nf` jako překážku paměti nepostupuje příponu ("žádná ohrazení").  
   
- Na platformách Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako na platformách, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019953"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578685"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= – operátor
-Přiřadí (přesun) zadaný **Mutex** objektů na aktuální **Mutex** objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *h*  
- Odkaz rvalue na **Mutex** objektu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Odkaz na aktuální **Mutex** objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –
- 
- ## <a name="see-also"></a>Viz také
- [Mutex – třída](../windows/mutex-class1.md)
+
+Přiřadí (přesun) zadaný **Mutex** objektů na aktuální **Mutex** objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*  
+Odkaz rvalue na **Mutex** objektu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Odkaz na aktuální **Mutex** objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+[Mutex – třída](../windows/mutex-class1.md)

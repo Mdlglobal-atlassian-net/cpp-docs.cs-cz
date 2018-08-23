@@ -1,38 +1,38 @@
 ---
-title: Atributy (C + +/ CX) | Microsoft Docs
+title: Atributy (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e89c844b97637897c9b5eb6c1cc7e32081fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086841"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601135"
 ---
 # <a name="attributes-ccx"></a>Atributy (C + +/ CX)
-Atribut je zvláštní druh ref třídu, která před lze v hranatých závorkách na prostředí Windows Runtime typy a metody k určení určitého chování při vytváření metadat. Několik předdefinovaných atributy – například [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)– běžně se používají v jazyce C + +/ CX kódu. Tento příklad ukazuje, jak je atribut použito pro třídu:  
+Atribut je zvláštním druhem třídy ref class, která můžou před do hranatých závorek pro typy Windows Runtime a metody k určení určitého chování, k vytvoření metadat. Několik předdefinovaných atributů, například [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)– se běžně používají v jazyce C + +/ CX kódu. Tento příklad ukazuje, jak je atribut aplikován na třídu:  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
 ## <a name="custom-attributes"></a>Vlastní atributy  
- Můžete také definovat vlastní atributy. Vlastní atributy musí splňovat tato pravidla prostředí Windows Runtime:  
+ Můžete také definovat vlastní atributy. Vlastní atributy musí splňovat tato pravidla modulu Windows Runtime:  
   
--   Vlastní atributy může obsahovat pouze veřejná pole.  
+-   Vlastní atributy může obsahovat jenom veřejné položky.  
   
--   Pole vlastních atributů může být inicializována při použití atributu na třídu.  
+-   Pole vlastních atributů může být inicializována, když je atribut aplikován na třídu.  
   
--   Pole může být jedním z těchto typů:  
+-   Pole může být jeden z těchto typů:  
   
-    -   Int32 (int)  
+    -   datový typ Int32 (int).  
   
-    -   UInt32 (bez znaménka int)  
+    -   UInt32 (unsigned int).  
   
     -   bool  
   
@@ -40,11 +40,11 @@ Atribut je zvláštní druh ref třídu, která před lze v hranatých závorká
   
     -   Windows::Foundation::HResult  
   
-    -   Platform::type ^  
+    -   Platform::type – ^  
   
-    -   Veřejný výčet tříd (zahrnuje výčty definovaný uživatelem)  
+    -   Veřejný výčet tříd (včetně výčtů definovaný uživatelem)  
   
- Další příklad ukazuje, jak definovat vlastní atribut a inicializujte ho, pokud ji používáte.  
+ Následující příklad ukazuje, jak definovat vlastní atribut, kterou následně inicializujete při jeho použití.  
   
  [!code-cpp[cx_attributes#02](../cppcx/codesnippet/CPP/cx_attributes/class1.h#02)]  
   

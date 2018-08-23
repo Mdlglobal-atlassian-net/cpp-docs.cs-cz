@@ -1,5 +1,5 @@
 ---
-title: Namespace Windows::Foundation::Collections (C + +/ CX) | Microsoft Docs
+title: 'Windows::Foundation:: Collections – Namespace (C + +/ CX) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d889f68db2c631921f8c34f63d21ee1f5859bd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090819"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586708"
 ---
-# <a name="windowsfoundationcollections-namespace-ccx"></a>Namespace Windows::Foundation::Collections (C + +/ CX)
-C + +/ CX doplňují Windows::Foundation::Collections oboru názvů s funkcemi, které zjednodušují použití třídy vektoru, VectorView, mapy a MapView kolekce.  
+# <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation:: Collections – Namespace (C + +/ CX)
+C + +/ CX doplňuje Windows::Foundation:: Collections – obor názvů s funkcí, které zjednodušují pomocí vektoru, VectorView, mapy a MapView kolekce tříd.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +40,13 @@ namespace Windows {
   
 |Název|Popis|  
 |----------|-----------------|  
-|[back_inserter – funkce](../cppcx/back-inserter-function.md)|Vrátí iterátor, který slouží k vložení hodnotu na konec kolekce.|  
-|[begin – funkce](../cppcx/begin-function.md)|Vrátí iterovat odkazující na začátek kolekce.|  
-|[end – funkce](../cppcx/end-function.md)|Vrátí iterovat této body přesahuje za konec kolekce.|  
+|[back_inserter – funkce](../cppcx/back-inserter-function.md)|Vrátí iterátor, který je možné vložit hodnotu na konec kolekce.|  
+|[begin – funkce](../cppcx/begin-function.md)|Vrátí iterátor odkazující na začátku kolekce.|  
+|[end – funkce](../cppcx/end-function.md)|Vrátí iterátor odkazující za koncem kolekce.|  
 |[to_vector – funkce](../cppcx/to-vector-function.md)|Vrátí kolekci jako std::vector.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** collection.h  
   
- **Namespace:** Windows::Foundation::Collections  
+ **Namespace:** Windows::Foundation:: Collections –  
   

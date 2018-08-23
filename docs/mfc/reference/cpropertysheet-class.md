@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853201"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464850"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 Představuje seznam vlastností, označovaný také jako dialogová okna Karta.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Poznámky  
  Seznam vlastností se skládá z `CPropertySheet` objekt a jeden nebo více [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objekty. Seznam vlastností zobrazí rozhraní jako okno se sadou kartu indexy a oblasti, která obsahuje aktuálně vybrané stránky. Uživatel přejde na určitou stránku pomocí příslušné karty.  
   
- `CPropertySheet` poskytuje podporu pro rozbalených [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktura zavedený [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] a 2000 Windows NT. Struktura obsahuje další příznaky a členy, které podporují použití rastrový obrázek pozadí "vodoznak".  
+ `CPropertySheet` poskytuje podporu pro rozbalených [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) struktura zavedená ve Windows 98 a Windows NT 2000. Struktura obsahuje další příznaky a členy, které podporují použití rastrový obrázek pozadí "vodoznak".  
   
  K těmto novým obrázkům zobrazení automaticky v váš objekt seznamu vlastností, předejte platné hodnoty pro Image rastrového obrázku a palety volání [CPropertySheet::Construct](#construct) nebo [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

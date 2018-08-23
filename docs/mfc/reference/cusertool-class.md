@@ -1,5 +1,5 @@
 ---
-title: Třída CUserTool | Microsoft Docs
+title: Cusertool – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121313"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466405"
 ---
-# <a name="cusertool-class"></a>CUserTool – třída
-Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. **Nástroje** kartě **přizpůsobit** dialogové okno ( [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatele nástroje a zadejte název, argumenty, a Počáteční adresář pro každého uživatele nástroje.  
+# <a name="cusertool-class"></a>Cusertool – třída
+Uživatelský nástroj je položka nabídky, která spustí externí aplikaci. **Nástroje** karty **vlastní** dialogové okno ( [cmfctoolbarscustomizedialog – třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatelské nástroje a zadejte název, příkaz, argumenty, a Počáteční adresář pro každý nástroj uživatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,19 +63,19 @@ class CUserTool : public CObject
 |Název|Popis|  
 |----------|-----------------|  
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||  
-|[CUserTool::DrawToolIcon](#drawtoolicon)|V zadané obdélníku nevykresluje ikonu nástroj uživatele.|  
-|[CUserTool::GetCommand](#getcommand)|Vrátí řetězec, který obsahuje text příkazu přidružené nástroj pro uživatele.|  
-|[CUserTool::GetCommandId](#getcommandid)|Vrátí ID příkazu, který položky nabídky Nástroje pro uživatele.|  
-|[CUserTool::Invoke](#invoke)|Spustí příkaz přidružený nástroj pro uživatele.|  
-|[CUserTool::Serialize](#serialize)|Čtení nebo zápisu tento objekt z nebo do archivu. (Přepisuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CUserTool::SetCommand](#setcommand)|Nastaví příkaz přidružený nástroj pro uživatele.|  
+|[CUserTool::DrawToolIcon](#drawtoolicon)|Kreslení v obdélníku zadaného ikonu uživatele nástroje.|  
+|[CUserTool::GetCommand](#getcommand)|Vrátí řetězec, který obsahuje text příkazu přidružený uživatelský nástroj.|  
+|[CUserTool::GetCommandId](#getcommandid)|Vrátí Identifikátor příkazu položky nabídky uživatelský nástroj.|  
+|[CUserTool::Invoke](#invoke)|Provede příkaz přidružený uživatelský nástroj.|  
+|[CUserTool::Serialize](#serialize)|Čtení nebo zápis tento objekt z nebo do archivu. (Přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CUserTool::SetCommand](#setcommand)|Nastaví příkaz přidružený uživatelský nástroj.|  
 |[CUserTool::SetToolIcon](#settoolicon)|Načte ikonu pro nástroj pro uživatele z aplikace spojené s nástrojem.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Načte výchozí ikonu pro nástroj pro uživatele.|  
+|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Načte výchozí ikonu pro uživatelský nástroj.|  
   
 ### <a name="data-members"></a>Datové členy  
   
@@ -83,26 +83,26 @@ class CUserTool : public CObject
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|Argumenty příkazového řádku pro nástroj pro uživatele.|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Počáteční adresář pro nástroj pro uživatele.|  
-|[CUserTool::m_strLabel](#m_strlabel)|Název nástroj, který se zobrazí v položce nabídky Nástroje.|  
+|[CUserTool::m_strLabel](#m_strlabel)|Název nástroje, který se zobrazí v položce nabídky Nástroje.|  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace o tom, jak povolit nástroje pro uživatele ve vaší aplikaci najdete v tématu [CUserToolsManager třída](../../mfc/reference/cusertoolsmanager-class.md).  
+ Další informace o tom, jak povolit uživatelské nástroje ve své aplikaci najdete v tématu [cusertoolsmanager – třída](../../mfc/reference/cusertoolsmanager-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` objektu, nastavte `m_strLabel` členské proměnné a nastavte aplikaci, která spouští nástroj pro uživatele. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak vytvořit nástroj z `CUserToolsManager` objektu, nastaven `m_strLabel` členské proměnné a sadu aplikací, na kterém běží nástroj uživatele. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CUserTool](../../mfc/reference/cusertool-class.md)  
+ [Cusertool –](../../mfc/reference/cusertool-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxusertool.h  
   
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 BOOL CopyIconToClipboard();
@@ -113,7 +113,7 @@ BOOL CopyIconToClipboard();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
- Nevykresluje ikonu nástroj uživatele do středu obdélníku zadaný.  
+ Kreslení ikonu uživatele nástroj v centru zadané obdélník.  
   
 ```  
 void DrawToolIcon(
@@ -122,59 +122,59 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
- [v] *rectImage*  
- Určuje souřadnice oblasti zobrazíte ikonu.  
+ [in] *rectImage*  
+ Určuje souřadnice oblasti zobrazit ikonu.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
- Vrátí řetězec, který obsahuje text příkazu přidružené nástroj pro uživatele.  
+ Vrátí řetězec, který obsahuje text příkazu přidružený uživatelský nástroj.  
   
 ```  
 const CString& GetCommand() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na `CString` objekt, který obsahuje text příkazu přidružené nástroj pro uživatele.  
+ Odkaz na `CString` objekt, který obsahuje text příkazu přidružený uživatelský nástroj.  
   
 ##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
- Vrátí ID příkazu, který nástroje pro uživatele.  
+ Vrátí Identifikátor příkazu uživatelský nástroj.  
   
 ```  
 UINT GetCommandId() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID příkazu tohoto uživatele nástroje.  
+ ID příkazu tento nástroj uživatele.  
   
 ##  <a name="invoke"></a>  CUserTool::Invoke  
- Spustí příkaz přidružený nástroj pro uživatele.  
+ Provede příkaz přidružený uživatelský nástroj.  
   
 ```  
 virtual BOOL Invoke();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud byl úspěšně; provedení příkazu. jinak 0.  
+ Nenulové, pokud se příkaz provedl úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ke spuštění příkazu přidružené nástroj pro uživatele. Funkce selže, pokud příkaz je prázdný nebo pokud [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) selže.  
+ Volání [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ke spuštění příkazu přidružený uživatelský nástroj. Pokud příkaz je prázdný nebo pokud selže funkce [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) selže.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
- Načte výchozí ikonu pro nástroj pro uživatele.  
+ Načte výchozí ikonu pro uživatelský nástroj.  
   
 ```  
 virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro načíst ikony (HICON), nebo hodnota NULL, pokud výchozí ikonu nelze načíst.  
+ Popisovač načíst ikonu (HICON), nebo hodnota NULL, pokud nelze načíst výchozí ikona.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu, když se nepodařilo načíst ikonu pro nástroj uživatelem definované ze spustitelného souboru nástroje.  
+ Rozhraní volá tuto metodu, když není schopen načíst ikonu pro uživatelsky definovaného nástroje ze spustitelného souboru nástroje.  
   
- Potlačí tuto metodu za účelem zadejte vlastní výchozí ikonu nástroj.  
+ Přepsáním této metody můžete zadat vlastní výchozí nástroj ikonu.  
   
 ##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
  Argumenty příkazového řádku pro nástroj pro uživatele.  
@@ -184,7 +184,7 @@ CString m_strArguments;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento řetězec je předán do nástroje při volání [CUserTool::Invoke](#invoke) nebo když uživatel klikne příkaz přidružený tento nástroj.  
+ Tento řetězec je předán do nástroje voláte [CUserTool::Invoke](#invoke) nebo když uživatel klepne na příkaz spojený s tímto nástrojem.  
   
 ##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  Určuje počáteční adresář pro nástroj pro uživatele.  
@@ -194,40 +194,40 @@ CString m_strInitialDirectory;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato proměnná Určuje počáteční adresář, který nástroj spouští v při volání [CUserTool::Invoke](#invoke) nebo když uživatel klikne příkaz přidružený tento nástroj.  
+ Tato proměnná Určuje počáteční adresář, který nástroj spouští v při volání [CUserTool::Invoke](#invoke) nebo když uživatel klepne na příkaz spojený s tímto nástrojem.  
   
 ##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
- Popisek, který se zobrazí v položce nabídky pro nástroj.  
+ Popisek, který se zobrazí v položce nabídky Nástroje.  
   
 ```  
 CString m_strLabel;  
 ```  
   
 ##  <a name="serialize"></a>  CUserTool::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *ar*  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setcommand"></a>  CUserTool::SetCommand  
- Nastaví aplikaci, která spouští nástroj pro uživatele.  
+ Nastaví aplikaci, na kterém běží nástroj uživatele.  
   
 ```  
 void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszCmd*  
- Určuje novou aplikaci, která bude přidružen nástroj pro uživatele.  
+ [in] *lpszCmd*  
+ Určuje novou aplikaci, který se má přidružit uživatelský nástroj.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu a nastavit novou aplikaci, která spouští nástroj pro uživatele. Metoda zničí ikonu starý a načte nová ikona z dané aplikaci. Pokud ikonu ho nelze načíst z aplikace, načte výchozí ikonu pro nástroj uživatele voláním [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
+ Voláním této metody lze nastavit novou aplikaci, na kterém běží nástroj uživatele. Metoda odstraní staré ikonu a načte nová ikona z dané aplikace. Pokud ho nejde načíst ikonu z aplikace, načte výchozí ikonu pro uživatelský nástroj voláním [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
 ##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  Načte ikonu pro nástroj pro uživatele z aplikace, která používá nástroj.  
@@ -237,10 +237,10 @@ virtual HICON SetToolIcon();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu načíst.  
+ Popisovač načíst ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem načtení ikonu zobrazený na položku nabídky. Tato metoda vyhledá na ikonu v spustitelný soubor, který používá nástroj. Pokud nemá výchozí ikonu, ikonu poskytované [CUserTool::LoadDefaultIcon](#loaddefaulticon) bude místo něj použita.  
+ Voláním této metody lze načíst ikonu zobrazený na položku nabídky. Tato metoda vyhledává ikona ve spustitelném souboru, který používá nástroj. Pokud nemá žádné výchozí ikona, na ikonu poskytované [CUserTool::LoadDefaultIcon](#loaddefaulticon) místo ní se použije.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

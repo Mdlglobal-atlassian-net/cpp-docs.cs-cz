@@ -19,32 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6f41967298169fcdf9637cafa1d9cfc8a3cf128
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644983"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575772"
 ---
 # <a name="changing-unassigned-symbols"></a>Změna nepřiřazených symbolů
-Během činnosti v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které nejsou přiřazeny k prostředku nebo objekt.  
-  
-### <a name="to-change-an-unassigned-symbol"></a>Změna nepřiřazených symbolů  
-  
-1.  V **název** pole, vyberte nepřiřazených symbolů a klikněte na tlačítko **změnu**.  
-  
-2.  Upravit vlastnosti name nebo value v polí zobrazených v symbolu **změnit Symbol** dialogové okno.  
-  
-    > [!NOTE]
-    >  Chcete-li změnit symbol, který *je* přiřazené k prostředku nebo k objektu, je nutné použít editor prostředků nebo **vlastnosti** okna. Další informace najdete v tématu [změna symbolu nebo názvu symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Zobrazení symbolů prostředků](../windows/viewing-resource-symbols.md)   
- [Omezení názvu symbolu](../windows/symbol-name-restrictions.md)   
- [Omezení hodnoty symbolu](../windows/symbol-value-restrictions.md)   
- [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)
+
+Během činnosti v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které nejsou přiřazeny k prostředku nebo objekt.
+
+### <a name="to-change-an-unassigned-symbol"></a>Změna nepřiřazených symbolů
+
+1. V **název** pole, vyberte nepřiřazených symbolů a klikněte na tlačítko **změnu**.
+
+2. Upravit vlastnosti name nebo value v polí zobrazených v symbolu **změnit Symbol** dialogové okno.
+
+   > [!NOTE]
+   > Chcete-li změnit symbol, který *je* přiřazené k prostředku nebo k objektu, je nutné použít editor prostředků nebo **vlastnosti** okna. Další informace najdete v tématu [změna symbolu nebo názvu symbolu](../windows/changing-a-symbol-or-symbol-name-id.md).
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Zobrazení symbolů prostředků](../windows/viewing-resource-symbols.md)  
+[Omezení názvu symbolu](../windows/symbol-name-restrictions.md)  
+[Omezení hodnoty symbolu](../windows/symbol-value-restrictions.md)  
+[ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)

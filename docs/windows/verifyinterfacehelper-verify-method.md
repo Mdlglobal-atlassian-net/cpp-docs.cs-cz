@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4626e6cfa17b4cc050d10bb74fad0d791a8ceef
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013649"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580935"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>VerifyInterfaceHelper::Verify – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static void Verify();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ověřuje, že rozhraní určené typem parametru aktuální šablony splňuje určité požadavky.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Verifyinterfacehelper – struktura](../windows/verifyinterfacehelper-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static void Verify();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ověřuje, že rozhraní určené typem parametru aktuální šablony splňuje určité požadavky.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[VerifyInterfaceHelper – struktura](../windows/verifyinterfacehelper-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

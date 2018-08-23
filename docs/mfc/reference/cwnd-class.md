@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028418"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465864"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 Poskytuje základní funkce pro všechny třídy okna v knihovny Microsoft Foundation Class.  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  `DestroyWindow` Členská funkce odstraní také nemodálních dialogových oken vytvořil [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Pokud `CWnd` rušení je podřízené okno a nemá [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stylu set, pak bude [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) je zpráva odeslána na nadřazený prvek.  
+ Pokud `CWnd` rušení je podřízené okno a nemá [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) stylu set, pak bude [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) je zpráva odeslána na nadřazený prvek.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- Tato členská funkce volá framework při při klávesy se šipkou doprava nebo doleva slouží k přepínání mezi řádkem nabídek a systémovou nabídkou.  
+ Rozhraní volá tuto funkci člena při použití klávesy se šipkou doprava nebo doleva přepínat mezi řádkem nabídek a systémovou nabídkou.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) oznámení, která je popsána v sadě Windows SDK.  
   
- *NSessionState* parametr určuje, že relace nebo odpojení z konzole nebo vzdáleného terminálu, přihlášený uživatel zapnutí nebo vypnutí, relace je zamčený nebo odemčený, nebo relaci se změnil na stav dálkově ovládaný. Další informace najdete v tématu *wParam* parametru [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) zprávy.  
+ *NSessionState* parametr určuje, že relace nebo odpojení z konzole nebo vzdáleného terminálu, přihlášený uživatel zapnutí nebo vypnutí, relace je zamčený nebo odemčený, nebo relaci se změnil na stav dálkově ovládaný. Další informace najdete v tématu *wParam* parametr [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) zprávy.  
   
 > [!NOTE]
 >  Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.  
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Volá se, aby změny stavu uživatelského rozhraní (UI) pro určené okno a všech jeho podřízených oken.  
+ Volá se, aby ke změně stavu uživatelského rozhraní (UI) pro určené okno a všech jeho podřízených oken.  
   
 ```  
 afx_msg void OnUpdateUIState(

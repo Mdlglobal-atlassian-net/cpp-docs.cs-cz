@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853547"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466326"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl – třída
 Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *cxyBorder*|Šířka ohraničení v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda bude úspěšná, šířka ohraničení nastaven *cxyBorder* parametru. V opačném případě šířka ohraničení se resetují na výchozí hodnotu, která je určená aktuální [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud nejsou použity motivů.  
+ Pokud tato metoda bude úspěšná, šířka ohraničení nastaven *cxyBorder* parametru. V opačném případě šířka ohraničení se resetují na výchozí hodnotu, která je určená aktuální [motiv](/windows/desktop/Controls/visual-styles-overview), nebo nula, pokud nejsou použity motivů.  
   
  Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávu, která je popsána v sadě Windows SDK.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Šířka ohraničení nastavena na výchozí hodnotu zadanou pomocí aktuálního [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud nejsou použity motivů.  
+ Šířka ohraničení nastavena na výchozí hodnotu zadanou pomocí aktuálního [motiv](/windows/desktop/Controls/visual-styles-overview), nebo nula, pokud nejsou použity motivů.  
   
  Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávu, která je popsána v sadě Windows SDK.  
   

@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 539f16c1de7569818a1d460730f9c48fbca82ed8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017136"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590822"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Nastavení kurzoru&#39;s aktivní bod (Editor obrázků pro ikony)
-Aktivní bod z [kurzor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) je bod do Windows odkazuje ve sledování pozice kurzoru. Ve výchozím nastavení je nastavení aktivního bodu do levého horního rohu kurzor (souřadnice 0; 0). **Aktivního bodu** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window) ukazuje souřadnice aktivního bodu.  
-  
-### <a name="to-set-a-cursors-hot-spot"></a>Nastavení aktivního bodu kurzoru  
-  
-1.  Na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), klikněte na tlačítko **nastavte aktivní bod** nástroj.  
-  
-2.  Klikněte na tlačítko pixel, kterou chcete určit jako aktivního bodu kurzoru.  
-  
-     **Hotspot** vlastnost **vlastnosti** v okně se zobrazí nové souřadnice.  
-  
-    > [!TIP]
-    >  Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Žádné  
-  
-## <a name="see-also"></a>Viz také  
- [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+
+Aktivní bod z [kurzor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) je bod do Windows odkazuje ve sledování pozice kurzoru. Ve výchozím nastavení je nastavení aktivního bodu do levého horního rohu kurzor (souřadnice 0; 0). **Aktivního bodu** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window) ukazuje souřadnice aktivního bodu.
+
+### <a name="to-set-a-cursors-hot-spot"></a>Nastavení aktivního bodu kurzoru
+
+1. Na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), klikněte na tlačítko **nastavte aktivní bod** nástroj.
+
+2. Klikněte na tlačítko pixel, kterou chcete určit jako aktivního bodu kurzoru.
+
+   **Hotspot** vlastnost **vlastnosti** v okně se zobrazí nové souřadnice.
+
+   > [!TIP]
+   > Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Žádné
+
+## <a name="see-also"></a>Viz také
+
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

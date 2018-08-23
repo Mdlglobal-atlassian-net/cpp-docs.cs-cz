@@ -354,17 +354,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853560"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466221"
 ---
 # <a name="cmfcvisualmanager-class"></a>Cmfcvisualmanager – třída
 Poskytuje podporu pro změnu vzhledu aplikace na globální úrovni. `CMFCVisualManager` Třídy spolupracuje se třídou, která poskytuje pokyny pro vykreslení ovládacích prvků GUI ve vaší aplikaci v jednotném stylu. Tyto třídy jsou označovány jako vizuální vedoucí a dědí z `CMFCBaseVisualManager`.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

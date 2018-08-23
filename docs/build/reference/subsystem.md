@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM | Microsoft Docs
+title: -SUBSYSTEM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377620"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465871"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
-Určuje prostředí pro spuštění, který je požadován spustitelné bitové kopie.  
+Určuje prostředí spuštění, který se vyžaduje spustitelná bitová kopie.  
   
 ```  
 /SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|  
@@ -35,42 +35,42 @@ Určuje prostředí pro spuštění, který je požadován spustitelné bitové 
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Tato možnost slouží k úpravě bitovou kopii k označení které subsystém, operační systém musí vyvolat pro spuštění.  
+ Tato možnost upraví obrázek k označení, který podsystém musí vyvolat operační systém pro spuštění.  
   
- Můžete zadat jakýkoli subsystémů následující:  
+ Můžete určit kterékoli z následujících subsystémů:  
   
  BOOT_APPLICATION  
- Aplikace, která běží v prostředí spouštění systému Windows. Další informace o spouštění aplikací najdete v tématu [o BCD WMI poskytovatel](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Aplikace, která běží v prostředí spouštění Windows. Další informace o spouštěcích aplikacích najdete v tématu [o poskytovateli WMI BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
- KONZOLA  
- Aplikace systému Windows režim znaků. Operační systém poskytuje konzoli pro konzolové aplikace.  
+ KONZOLY  
+ Aplikace znakového režimu Windows. Operační systém poskytuje konzolu pro konzolové aplikace.  
   
- Obrázek Extensible Firmware rozhraní EFI)  
- Možnosti subsystému EFI popisují spustitelné bitové kopie, které běží v prostředí Extensible Firmware Interface. Toto prostředí se většinou poskytuje s hardwarem a provede předtím, než je načtený operační systém. Hlavní rozdíly mezi typy obrázků EFI jsou umístění v paměti, který bitovou kopii je načten do a akce, která je provedená při volání do bitové kopie. Bitová kopie EFI_APPLICATION je odpojen, když se vrátí ovládací prvek. EFI_BOOT_SERVICE_DRIVER nebo EFI_RUNTIME_DRIVER je odpojen pouze v případě, že je ovládací prvek vrátí s kódem chyby. Obrázek EFI_ROM se spustí z ROM. Další informace najdete v tématu specifikace na [Unified EFI Forum](http://www.uefi.org/) webu.  
+ Obrázek Extensible Firmware Interface (EFI)  
+ Možnosti subsystému EFI popisují spustitelné bitové kopie, které běží v prostředí Extensible Firmware Interface. Toto prostředí je obvykle součástí hardware a spustí se před načtením operačního systému. Hlavní rozdíly mezi typy obrázků EFI jsou umístění v paměti, která obrázek nahrán a akce, která se provede, když vrátí volání image. Bitová kopie EFI_APPLICATION je uvolněna při vrácení ovládacího prvku. Je bitová kopie EFI_BOOT_SERVICE_DRIVER nebo EFI_RUNTIME_DRIVER je uvolněna pouze v případě, že ovládací prvek vrácen chybový kód. Bitová kopie EFI_ROM je spouštěna z paměti ROM. Další informace najdete v tématu specifikace na [Unified EFI Forum](http://www.uefi.org/) webu.  
   
  NATIVNÍ  
- Kód, který spouští bez subsystém prostředí – například ovladačů zařízení v režimu jádra a nativní systémových procesů. Tato možnost je obvykle vyhrazený pro funkce systému Windows.  
+ Kód, který běží bez prostředí podsystému – například ovladače zařízení režimu jádra a nativní systémové procesy. Tato možnost je obvykle vyhrazena pro funkce systému Windows.  
   
  POSIX  
- Aplikaci, která běží v subsystému POSIX v systému Windows.  
+ Aplikace, která běží v subsystému POSIX spouštět ve Windows.  
   
- WINDOWS  
- Aplikaci, která běží v grafickém prostředí systému Windows. To zahrnuje aplikace klasické pracovní plochy a aplikace pro univerzální platformu Windows (UWP).  
+ SYSTÉM WINDOWS  
+ Aplikace, která běží v grafickém prostředí Windows. To zahrnuje aplikací klasické pracovní plochy a aplikace pro univerzální platformu Windows (UPW).  
   
  WINDOWSCE  
- Subsystém WINDOWSCE označuje, že aplikace je určený pro spouštění v zařízení, které má verzi jádra Windows CE. Verze jádra obsahují počítače PocketPC, Windows Mobile, Windows Phone 7, Windows CE verze 1.0 6.0R3 a systém Windows Embedded Compact 7.  
+ Podsystém WINDOWSCE označuje, že aplikace je určena pro spuštění na zařízení, které má verzi jádra Windows CE. Verze jádra obsahují počítače PocketPC, Windows Mobile, Windows Phone 7, Windows CE verze 1.0 6.0R3 a Windows Embedded Compact 7.  
   
- Volitelné `major` a `minor` hodnoty určují minimální požadovaná verze zadané subsystému:  
+ Volitelný `major` a `minor` hodnoty určují minimální požadovanou verzi zadaného subsystému:  
   
--   Celé číslo součástí číslo verze – část směrem doleva od desetinné čárky – je reprezentována `major`.  
+-   Část celého čísla, čísla verze – část vlevo od desetinné čárky, je reprezentována `major`.  
   
--   Zlomkové části čísla verze – část vpravo od desetinné čárky – je reprezentována `minor`.  
+-   Desetinnou část čísla verze – část vpravo od desetinné čárky, je reprezentována `minor`.  
   
--   Hodnoty `major` a `minor` musí být od 0 do 65 535.  
+-   Hodnoty `major` a `minor` musí být v rozsahu 0 až 65535.  
   
- Volba subsystému ovlivní výchozí počáteční adresa programu. Další informace najdete v tématu [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), linkeru/Entry:*funkce* možnost.  
+ Volba subsystému ovlivňuje výchozí počáteční adresu programu. Další informace najdete v tématu [/Entry (Symbol vstupního bodu)](../../build/reference/entry-entry-point-symbol.md), linker/Entry:*funkce* možnost.  
   
- Další informace, včetně minimální a výchozí hodnoty pro hlavní verze a podverze čísla pro každý subsystém, najdete v článku [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru.  
+ Další informace, včetně minimální a výchozí hodnoty pro číslo hlavní verze a podverze pro každý subsystém naleznete v tématu [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) – možnost linkeru.  
   
 ## <a name="see-also"></a>Viz také  
  [EDITBIN – možnosti](../../build/reference/editbin-options.md)

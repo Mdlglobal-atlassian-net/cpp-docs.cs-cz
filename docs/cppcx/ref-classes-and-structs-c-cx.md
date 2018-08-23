@@ -1,128 +1,128 @@
 ---
-title: REF třídy a struktury (C + +/ CX) | Microsoft Docs
+title: Referenční třídy a struktury (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092441"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584117"
 ---
-# <a name="ref-classes-and-structs-ccx"></a>REF třídy a struktury (C + +/ CX)
-C + +/ CX podporuje uživatelem definované *ref třídy* a *ref struktury*a uživatelem definovanými *hodnota třídy* a *hodnota struktury*. Tyto datové struktury jsou primární kontejnery, které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité konkrétní pravidla jsou vygenerované jejich obsah, a díky tomu mohou být předán mezi součástmi prostředí Windows Runtime a univerzální platformu Windows aplikace, které jsou zapsány v C++ nebo jiných jazyků.  
+# <a name="ref-classes-and-structs-ccx"></a>Referenční třídy a struktury (C + +/ CX)
+C + +/ CX podporuje uživatelem definované *referenční třídy* a *struktury ref*a uživatelem definovanými *hodnota třídy* a *hodnotu struktury*. Tyto datové struktury jsou primární kontejnery, ve které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité zvláštní pravidla jsou emitovány jejich obsah a díky tomu mají být předány mezi komponentami prostředí Windows Runtime a aplikací pro univerzální platformu Windows, které jsou napsány v C++ nebo jiných jazycích.  
   
- Ref třídě nebo struktuře ref má tyto základní funkce:  
+ Třída ref class nebo ref struct má tyto základní funkce:  
   
--   Musí být deklarován v oboru názvů, v oboru názvů, a v daném oboru názvů pravděpodobně veřejných nebo privátních usnadnění. Pouze veřejné typy jsou vydávány na metadata. Definice veřejné vnořené třídy nejsou povoleny, včetně vnořené veřejné [výčtu](../cppcx/enums-c-cx.md) třídy. Další informace najdete v tématu [obory názvů a viditelnost typů](../cppcx/namespaces-and-type-visibility-c-cx.md).  
+-   Musí být deklarována v rámci oboru názvů v oboru názvů, a v tomto oboru názvů může mít přístupnost veřejné nebo soukromé. Pouze veřejné typy jsou emitovány do metadat. Není povoleno definovat vnořené veřejnou třídu, včetně vnořený veřejný [výčtu](../cppcx/enums-c-cx.md) třídy. Další informace najdete v tématu [obory názvů a viditelnost typů](../cppcx/namespaces-and-type-visibility-c-cx.md).  
   
--   Může obsahovat jako členy C + +/ CX včetně ref třídy, hodnota třídy, struktury ref, hodnota struktury nebo struktury hodnot hodnotu Null. Může také obsahovat Skalární typy, jako je například float64, bool a tak dále. Standardní typy C++ může obsahovat také jako `std::vector` nebo vlastní třídy, pokud nejsou veřejné. C + +/ CX konstrukce může mít `public`, `protected`, `internal`, `private`, nebo `protected private` usnadnění. Všechny `public` nebo `protected` členové jsou vygenerované na metadata. Standardní typy C++ musí mít `private`, `internal`, nebo `protected private` usnadnění, což zabrání se vygenerované na metadata.  
+-   Může obsahovat jako členy C + +/ CX včetně referenční třídy, hodnota třídy, struktury ref, struktuře hodnot nebo struktury s možnou hodnotou Null. Může také obsahovat Skalární typy, jako jsou float64, bool a tak dále. Standardní typy jazyka C++ může také obsahovat například `std::vector` nebo vlastní třídu, dokud nejsou veřejné. C + +/ CX konstrukce pravděpodobně `public`, `protected`, `internal`, `private`, nebo `protected private` usnadnění přístupu. Všechny `public` nebo `protected` členy jsou emitovány do metadat. Standardní C++ typy musí mít `private`, `internal`, nebo `protected private` usnadnění, které brání právě emituje do metadat.  
   
--   Může implementovat, jeden nebo více *rozhraní třídy* nebo *rozhraní struktury*.  
+-   Může implementovat jednu nebo více *rozhraní třídy* nebo *rozhraní struktury*.  
   
--   Mohou dědit z jedné základní třídy a třídy base sami mají další omezení. Dědičnost v hierarchie tříd veřejné ref má další omezení než dědičnosti v privátní ref třídy.  
+-   Může dědit z jedné základní třídy a samotné základní třídy mají další omezení. Dědičnost v hierarchiích třída public ref má více omezení než dědičnosti v privátní referenční třídy.  
   
--   Nemusí deklarována jako obecný. Pokud má privátní usnadnění, může být šablonu.  
+-   Nemůže deklarovat jako obecný. Pokud má přístupnost private, může být šablonou.  
   
--   Celé jeho životnosti spravuje počítání automatické odkazů.  
+-   Jeho životnost se spravuje přes Automatické počítání odkazů.  
   
 ## <a name="declaration"></a>Deklarace  
- Následující fragment kódu deklaruje `Person` ref třídy. Všimněte si, že standardní C++ `std::map` typ se používá v soukromé členy a prostředí Windows Runtime`IMapView` rozhraní se používá v veřejné rozhraní. Všimněte si také, že "^" se připojuje k deklarace odkazové typy.  
+ Následující fragment kódu deklaruje `Person` třídy ref class. Všimněte si, že standardní C++ `std::map` typ se používá v soukromé členy a prostředí Windows Runtime`IMapView` rozhraní se používá ve veřejném rozhraní. Všimněte si také, že "^" se připojí k deklarace odkazů.  
   
  [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]  
   
 ## <a name="implementation"></a>Implementace  
- Tento příklad kódu ukazuje implementaci `Person` ref třídy:  
+ Tento příklad kódu ukazuje implementaci `Person` referenční třídy:  
   
  [!code-cpp[cx_classes#04](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#04)]  
   
 ## <a name="usage"></a>Použití  
- Další příklad kódu ukazuje, jak kód klienta používá `Person` ref třídy.  
+ Následující příklad kódu ukazuje, jak kód klienta používá `Person` třídy ref class.  
   
  [!code-cpp[cx_classes#05](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#05)]  
   
- Můžete taky sémantika zásobníku deklarovat proměnné třídy místní ref. Přestože paměť je pořád ještě přidělená dynamicky, se chová jako proměnné založené na zásobníku takového objektu. Jeden důležitý rozdíl je, že sledovací odkaz (%) nelze přiřadit do proměnné, která je deklarovaný s použitím sémantika zásobníku; to zaručuje, že počet odkazů se odečte nule při ukončení funkce. Tento příklad ukazuje třídu základní ref `Uri`a funkce, která používá s sémantika zásobníku:  
+ Můžete také sémantika zásobníku pro deklarování proměnné třídy lokálního odkazu. Takový objekt se chová jako proměnnou založenou na zásobníku, i v případě, že stále přidělení dynamické paměti. Jeden důležitý rozdíl je, že nemůžete přiřadit sledovacího odkazu (%) proměnné, která je deklarována pomocí – sémantika zásobníku; zaručí se tak, že je počet odkazů sníží na nulu, když funkce skončí. Tento příklad ukazuje základní referenční třídy `Uri`a funkce, která se používá s – sémantika zásobníku:  
   
  [!code-cpp[cx_classes#06](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#06)]  
   
 ## <a name="memory-management"></a>Správa paměti  
- Přidělit ref třídu v dynamické paměti pomocí `ref new` – klíčové slovo.  
+ Přidělit referenční třídy v dynamické paměti pomocí `ref new` – klíčové slovo.  
   
  [!code-cpp[cx_classes#01](../cppcx/codesnippet/CPP/classesstructs/class1.h#01)]  
   
- Operátor popisovače objektu ^ je známý jako "hat" a je zásadně inteligentní ukazatel C++. Při poslední hat ocitne mimo rozsah, nebo je explicitně nastaven na automaticky zničena paměti odkazuje `nullptr`.  
+ Operátor popisovače objektu ^ se označuje jako "hat" a je v podstatě C++ inteligentního ukazatele. Odkazuje na paměť je automaticky zničen při poslední hat dostane mimo rozsah nebo je explicitně nastaveno na `nullptr`.  
   
- Podle definice třídy ref má sémantiku odkaz. Přiřadíte-li třídu ref proměnné, je popisovač, který byl zkopírován, není objekt. V následujícím příkladu, po přiřazení obě `myClass` a `myClass2` bodu do stejného umístění paměti.  
+ Podle definice třídy ref class má sémantiku odkazu. Když přiřadíte referenční třídy proměnné, je popisovač, který se má zkopírovat, nikoli samotného objektu. V následujícím příkladu, po přiřazení oba `myClass` a `myClass2` odkazovat na stejné místo v paměti.  
   
  [!code-cpp[cx_classes#02](../cppcx/codesnippet/CPP/classesstructs/class1.h#02)]  
   
- Když C + +/ CX ref třída je vytvořena instance, jeho paměti je nula inicializovat před jeho konstruktoru nazývá; proto není potřeba nula inicializovat jednotlivé členy, včetně vlastnosti. Pokud jazyce C + +/ CX třída odvozena od třídy Windows knihovny pro C++ Runtime (WRL), pouze jazyce C + +/ CX odvozené třídy část je inicializován nula.  
+ Když C + +/ CX referenční třídy je vytvořena instance, jeho paměti je inicializována nulou před voláním konstruktoru; proto není nutné pro jednotlivé členy, včetně vlastnosti inicializace nula. Pokud C + +/ CX třída odvozena z třídy Windows Runtime C++ knihovny (WRL), pouze jazyce C + +/ CX odvozená třída je inicializována nulou.  
   
 ### <a name="members"></a>Členové  
- Ref třída obsahovat `public`, `protected`, a `private` funkce členy; pouze `public` a `protected` členové jsou vložen do metadat. Vnořené třídy a třídy ref jsou povolené, ale nemůže být `public`. Veřejná pole nejsou povoleny; veřejná data členů musí být deklarován jako vlastnosti. Pole může být privátní nebo chráněného interních datových členů. Ve výchozím nastavení v třídě ref, usnadnění všech členů je `private`.  
+ Třídy ref class. může obsahovat `public`, `protected`, a `private` funkce členy; pouze `public` a `protected` členy se emitovat do metadat. Vnořené třídy a třídy ref nejsou povoleny, ale není možné `public`. Veřejná pole nejsou povolené; veřejné datové členy musí být deklarována jako vlastnosti. Pole může být soukromé nebo chráněné vnitřní datové členy. Ve výchozím nastavení v referenční třídě přístupnost všech členů je `private`.  
   
- Ref struct je stejná jako třída ref, s tím rozdílem, že ve výchozím nastavení mají její členy `public` usnadnění.  
+ Ref struct je stejná jako třída ref, s tím rozdílem, že ve výchozím nastavení mají jeho členové `public` usnadnění přístupu.  
   
- A `public` ref třídě nebo struktuře ref jsou vydávány v metadatech, ale chcete-li možné použít z jiných aplikací pro univerzální platformu Windows a prostředí Windows Runtime součásti musí mít alespoň jeden veřejný nebo chráněný konstruktor. Veřejné ref třídy, která má konstruktor public, který musí být také deklarována jako `sealed` aby se zabránilo dalším odvození přes rozhraní binární aplikace (ABI).  
+ A `public` ref class nebo ref struct je vygenerován v metadatech, ale chcete-li možné použít z jiných aplikací pro univerzální platformu Windows a součásti prostředí Windows Runtime musí mít aspoň jeden veřejný nebo chráněný konstruktor. Třída public ref class, která má veřejný konstruktor musí být také deklarovány jako `sealed` aby se zabránilo dalším odvození prostřednictvím binárním rozhraním aplikace (ABI).  
   
- Veřejné členy nemusí být deklarován jako const protože systém typů prostředí Windows Runtime nepodporuje const. Můžete pomocí statické vlastnosti deklarovat veřejná data člena s konstantní hodnotou.  
+ Veřejné členy se nedá deklarovat jako const protože systém typů prostředí Windows Runtime nepodporuje const. Statická vlastnost můžete použít k deklarování člena veřejná data s konstantní hodnotou.  
   
- Když definujete veřejné ref třídě nebo struktuře, kompilátor povinné atributy se vztahuje na třídu a ukládá tyto informace v souboru .winmd aplikace. Ale když můžete definovat třídu veřejné nezapečetěných ref, ručně použít `Windows::Foundation::Metadata::WebHostHidden` atribut zajistit, že třída není viditelná pro univerzální platformu Windows aplikace, které jsou napsané v jazyce JavaScript.  
+ Při definování třída public ref class nebo struct, kompilátor platí povinné atributy pro třídu a ukládá tyto informace v souboru .winmd aplikace. Nicméně, když definujete veřejné nezapečetěná třída ref class, aplikovat ručně `Windows::Foundation::Metadata::WebHostHidden` atribut Ujistěte se, že třída není viditelné pro aplikace univerzální platformy Windows, které jsou napsány v jazyce JavaScript.  
   
- Třída ref může mít standardní typy C++, včetně `const` typy v žádném `private`, `internal`, nebo `protected private` členy.  
+ Referenční třída může mít standardní typy jazyka C++, včetně `const` typy v libovolném `private`, `internal`, nebo `protected private` členy.  
   
- Veřejné ref tříd, které mají parametry typu nejsou povoleny. Uživatelem definované obecné ref třídy nejsou povoleny. Soukromé, interní nebo chráněné privátním ref třída může být šablonu.  
+ Veřejné referenční třídy, které má parametry typu nejsou povolené. Uživatelem definované Obecné referenční třídy nejsou povoleny. Soukromé, interní nebo chráněné privátním referenční třídy mohou být šablonou.  
   
 ## <a name="destructors"></a>Destruktory  
- V jazyce C + +/ CX, volání `delete` na veřejné destruktor vyvolá destruktor bez ohledu na počet odkazů objektu. Toto chování umožňuje definovat destruktor, která provádí vlastní vyčištění prostředků jiný RAII deterministickou způsobem. I v tomto případě se ale samotného objektu neodstraní z paměti. Pokud počet odkazů hodnota nula, je pouze uvolnit paměť pro objekt.  
+ V jazyce C + +/ CX, volání `delete` na veřejným destruktorem vyvolá destruktor bez ohledu na počet odkazů na objekt. Toto chování umožňuje definovat destruktor, který provede vlastní vyčištění prostředků – vzoru RAII deterministické způsobem. I v tomto případě není však samotný objekt odstraněn z paměti. Paměť pro objekt je uvolněna pouze při počet odkazů dosáhne nuly.  
   
- Pokud není veřejný destruktor třídy a, pak jej je volána, pouze když počet odkazů hodnota nula. Když zavoláte `delete` na objekt, který má privátní destruktor, kompilátor vyvolá upozornění C4493, s informacemi o tom "odstranit výraz nemá žádný účinek jako destruktoru objektu \<název typu > nemá usnadnění 'veřejné'."  
+ Pokud destruktor třídy nejsou veřejné, pak je pouze vyvoláno, když počet odkazů dosáhne nuly. Při volání `delete` na objekt, který má privátní destruktor, kompilátor vyvolá upozornění C4493, který říká "odstranit výraz nemá žádný účinek, jako je destruktor \<název typu > nemá přístupnost public.."  
   
- Destruktory třídy REF lze deklarovat pouze následujícím způsobem:  
+ Destruktory třídy REF se dají deklarovat jenom následujícím způsobem:  
   
--   veřejné a virtuální (povolena na zapečetěné nebo nezapečetěné typy)  
+-   veřejné a virtuální (povolená v zapečetěné nebo nezapečetěné typy)  
   
--   chráněné privátní a bez virtuální (pouze povolené na nezapečetěných typy)  
+-   chránit soukromý i nevirtuální (pouze povolené pro nezapečetěné typy)  
   
--   privátní a nevirtuálních (povolena pouze v zapečetěných typech)  
+-   privátní a nevirtuální (povolena pouze v zapečetěných typech)  
   
- Žádné jiné kombinace usnadnění, virtualness a sealedness je povolena.  Pokud destruktor není explicitně deklarovat, kompilátor vygeneruje veřejné virtuální destruktor, pokud základní třídy typ nebo libovolný člen má veřejné – destruktor. Kompilátor, jinak hodnota generuje chráněné privátní nevirtuálních destruktor pro nezapečetěných typy nebo privátní nevirtuálních destruktor pro zapečetěných typech.  
+ Žádné jiné kombinace přístupnost, virtualness a sealedness se nepovoluje.  Pokud můžete explicitně destruktor nedeklaruje, kompilátor vygeneruje veřejný virtuální destruktor, pokud veřejným destruktorem základní třídy typ nebo člena. V opačném případě kompilátor generuje chráněné privátním nevirtuální destruktor pro nezapečetěné typy nebo privátní nevirtuální destruktor pro zapečetěné typy.  
   
- Toto chování je definován, pokud se pokusíte přístup ke členům třídy, která má jeho destruktor spustit; může to způsobit s největší pravděpodobností program, který má havárie. Volání metody `delete t` na typ, který nemá žádný veřejný destruktor nemá žádný vliv. Volání metody `delete this` na typ nebo základní třída, která má známá `private` nebo `protected private` – destruktor v rámci jeho typ hierarchie taky nemá žádný vliv.  
+ Chování není definováno, pokud se pokusíte pro přístup ke členům třídy, která již byla jeho destruktor spuštění. pravděpodobně způsobí pád programu. Volání `delete t` na typ, který nemá žádný destruktor public nemá žádný vliv. Volání `delete this` na typ nebo základní třídu, která obsahuje známou `private` nebo `protected private` destruktor z v rámci své hierarchie typů také nemá žádný vliv.  
   
- Po deklarování veřejné destruktor kompilátor generuje kód tak, aby ref třída implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metoda. `Platform::IDisposable` je C + +/ CX projekci `Windows::Foundation::IClosable`. Implementovat nikdy explicitně tato rozhraní.  
+ Když deklarujete veřejným destruktorem, kompilátor generuje kód tak, aby třída ref implementuje `Platform::IDisposable` a implementuje destruktor `Dispose` metody. `Platform::IDisposable` je C + +/ CX projekci `Windows::Foundation::IClosable`. Tato rozhraní implementují nikdy explicitně.  
   
 ## <a name="inheritance"></a>Dědičnost  
- Platform::Object je univerzální základní třídu pro všechny třídy ref. Všechny třídy ref jsou implicitně převést na Platform::Object a můžete přepsat [Object::ToString](../cppcx/platform-object-class.md#tostring). Však model dědičnosti prostředí Windows Runtime nejsou určené jako obecné model dědičnosti; v jazyce C + +/ CX, to znamená, že třídu uživatelem definované veřejné ref nemůže sloužit jako základní třídu.  
+ Platform::Object – je univerzální základní třída pro všechny třídy ref. Všechny referenční třídy jsou implicitně převést na Platform::Object – a můžete přepsat [Object::ToString](../cppcx/platform-object-class.md#tostring). Ale model dědičnosti modulu Windows Runtime nejsou určeny jako obecné model dědičnosti; v jazyce C + +/ CX, to znamená, že uživatelský public ref class nemůže sloužit jako základní třídu.  
   
- Pokud vytváříte uživatelského ovládacího prvku XAML a účastní v systému vlastnost závislosti, pak můžete použít `Windows::UI::Xaml::DependencyObject` jako základní třída.  
+ Pokud se vytvoření uživatelského ovládacího prvku XAML a účastní v systému vlastností závislosti, pak můžete použít `Windows::UI::Xaml::DependencyObject` jako základní třídu.  
   
- Po definování třídu nezapečetěné `MyBase` který dědí z `DependencyObject`, jiné veřejné nebo soukromé ref třídy v příslušné součásti nebo aplikace mohou dědit z `MyBase`. Dědičnost v třídách veřejné ref lze provádět pouze pro podporu přepsání virtuální metody, polymorfní identity a zapouzdření.  
+ Po definování nezapečetěné třídy `MyBase` , která dědí z `DependencyObject`, v komponentě třídy ref jiných veřejných nebo privátních nebo aplikace může dědit z `MyBase`. Dědičnost v veřejné referenční třídy lze provádět pouze pro podporu přepsání virtuální metody, polymorfní identity a zapouzdření.  
   
- Privátní ref základní třída není nutné odvozovat z existující nezapečetěné třídy. Pokud budete potřebovat k hierarchii objektu modelu struktury programu nebo povolit opakované použití kódu, používat privátní nebo interní ref třídy nebo ještě lepší standardní třídy jazyka C++. Můžete vystavit funkci hierarchie soukromý objekt prostřednictvím veřejné ref zapečetěné třídy obálku.  
+ Privátní base ref class není nutné odvozovat od existující nezapečetěné třídy. Pokud potřebujete hierarchii objektů modelu strukturu programu nebo povolit opakované využívání kódu, použijte privátní nebo interní referenční třídy nebo ještě lépe, standardní třídy jazyka C++. Můžete zveřejnit funkčnost privátní objekt hierarchie prostřednictvím obálky třída public ref zapečetěné.  
   
- Ref třídy, která má konstruktor veřejných nebo chráněné v jazyce C + +/ CX musí být deklarován jako zapečetěné. Toto omezení znamená, že neexistuje žádný způsob pro třídy, které jsou zapsány v jiných jazycích, jako je například C# nebo Visual Basic pro dědění z typů, které je deklarovat v prostředí Windows Runtime komponenty, která je napsán v jazyce C + +/ CX.  
+ Ref class, která má veřejný nebo chráněný konstruktor v jazyce C + +/ CX musí být deklarované jako sealed. Toto omezení znamená, že neexistuje žádný způsob, jak třídy, které jsou napsané v jiných jazycích, jako je C# nebo Visual Basic pro dědění z typů, které deklarujete v součásti prostředí Windows Runtime, která je napsána v jazyce C + +/ CX.  
   
- Zde jsou základní pravidla pro dědičnosti v jazyce C + +/ CX:  
+ Tady jsou základní pravidla dědičnosti v C + +/ CX:  
   
--   REF třídy přímo z maximálně jeden ref základní třídy lze dědit, ale můžete implementovat libovolný počet rozhraní.  
+-   Referenční třídy lze dědit přímo z nejvýše jedna základní třída ref class, ale může implementovat libovolný počet rozhraní.  
   
--   Pokud třída má veřejný konstruktor, musí být deklarován jako zapečetěné, aby se zabránilo dalším odvození.  
+-   Pokud třída nemá veřejný konstruktor, musí být deklarován jako zapečetěný, aby se zabránilo dalším odvození.  
   
--   Můžete vytvořit veřejné nezapečetěných základní třídy, které mají interní nebo chráněného soukromé konstruktory, za předpokladu, že základní třída odvozena přímo nebo nepřímo z existující nezapečetěné základní třídy, jako `Windows::UI::Xaml::DependencyObject`. Dědičnost třídy ref uživatelem definované v souborech .winmd nepodporuje; však ref třídy lze dědit z rozhraní, která je definována v jiném souboru .winmd. Můžete vytvořit odvozené od třídy, uživatelem definované základní ref pouze v rámci stejné komponenty prostředí Windows Runtime nebo aplikaci pro univerzální platformu Windows.  
+-   Můžete vytvořit veřejnou nezapečetěné základních tříd, které mají interní nebo chráněné soukromé konstruktory, za předpokladu, že základní třídy je odvozen přímo nebo nepřímo z existující nezapečetěný základní třídy, jako `Windows::UI::Xaml::DependencyObject`. Dědičnost tříd ref uživatelem definované napříč soubory .winmd není podporována. třídy ref class však může dědit z rozhraní, která je definována v jiném souboru .winmd. Odvozené třídy můžete vytvořit z uživatelem definované základní referenční třídy pouze v rámci stejné komponenty prostředí Windows Runtime nebo aplikace pro univerzální platformu Windows.  
   
--   Ref třídy je podporováno pouze veřejné dědičnosti.  
+-   Pro referenční třídy je podporována pouze veřejné dědičnost.  
   
      [!code-cpp[cx_classes#08](../cppcx/codesnippet/CPP/classesstructs/class1.h#08)]  
   
- Následující příklad ukazuje, jak vystavit veřejné ref třídu, která pochází z jiné třídy ref v hierarchii dědičnosti.  
+ Následující příklad ukazuje, jak vystavit třída public ref class, která je odvozena od jiné referenční třídy v hierarchii dědičnosti.  
   
  [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]  
   

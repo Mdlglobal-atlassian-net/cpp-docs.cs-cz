@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 764a47fe03a2ad9f4e4d3d64a5627acc9c72d1b5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0c8e9ba093c6be4b1e0d5747c16a8dc8887cd2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018868"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591085"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference – metoda
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-ULONG IncrementStrongReference();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Počet zvýšena silného odkazu.  
-  
-## <a name="remarks"></a>Poznámky  
- Zvýší počet odkazů silné aktuálního **WeakReference** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Weakreference – třída](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Počet zvýšena silného odkazu.
+
+## <a name="remarks"></a>Poznámky
+
+Zvýší počet odkazů silné aktuálního **WeakReference** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[Weakreference – třída](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

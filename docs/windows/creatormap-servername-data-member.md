@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c23d35a1b6447d6d775c16dfcd12aaf009df9f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642173"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602191"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName – datový člen
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-const wchar_t* serverName;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Ukládá creatormap – název serveru.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Creatormap – struktura](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+const wchar_t* serverName;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Ukládá creatormap – název serveru.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[CreatorMap – struktura](../windows/creatormap-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015004"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591750"
 ---
 # <a name="universal-windows-apps-c"></a>Univerzální aplikace pro Windows (C++)
 
 Univerzální aplikace pro platformu Windows (UPW) začleněné sadu principů návrhu, které zdůrazňují jednoduché uživatelské rozhraní, které se zaměřením na obsah, který automaticky přizpůsobí velikosti různých obrazovek na různých zařízeních. Vytvoření uživatelského rozhraní ve značce XAML a kódu v nativním kódu C++. Můžete také vytvořit komponenty (knihovny DLL), které mohou být spotřebovány aplikací pro UWP, které jsou napsány v jiných jazycích. Plochy rozhraní API pro aplikace pro UPW je Windows Runtime, což je skvěle vytvořená knihovna, která poskytuje širokou škálu služeb operačního systému.
 
-> [!TIP]  
+> [!TIP]
 > Pro Windows 10 můžete použít převaděč aplikace přemostění na Desktop Pokud chcete zabalit desktopové aplikace pro nasazení přes Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) a [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>Aplikace UWP, které používají C + +/ WinRT
@@ -46,4 +46,5 @@ C + +/ WinRT je nový, pouze záhlaví založený na knihovně C++ language proj
 Knihovna šablon C++ Windows Runtime nabízí nízkoúrovňová rozhraní modelu COM, podle kterých může kód ISO C++ přístup k prostředí Windows Runtime v prostředí bez výjimek. Ve většině případů doporučujeme použít C + +/ WinRT nebo C + +/ CX místo Windows Runtime knihovny šablon jazyka C++ pro vývoj aplikací pro UPW. Informace o knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Viz také:
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

@@ -88,16 +88,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851519"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465116"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
 Implementuje Galerie pásu karet Office 2007-style.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   

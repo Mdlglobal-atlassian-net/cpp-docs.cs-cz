@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedExchangeAdd | Microsoft Docs
+title: Vnitřní funkce _InterlockedExchangeAdd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340551"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600889"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchangeAdd
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vnitřní podporují kompilátoru Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkce.  
+ Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [vnitřní funkce _InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -164,40 +164,40 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `Addend`  
- Hodnota, která má být přidán. výsledkem přidání nahrazena.  
+ [out v] `Addend`  
+ Hodnota, která má být přidán do; výsledek součtu nahrazena.  
   
- [v] `Value`  
+ [in] `Value`  
  Hodnota k přidání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Návratová hodnota je počáteční hodnota proměnné, na kterou odkazuje `Addend` parametr.  
+ Vrácená hodnota je počáteční hodnota proměnné, na které odkazují `Addend` parametru.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h >|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- Existuje několik variant na `_InterlockedExchangeAdd` se používá verzi sémantiku nebo který lišit v závislosti na datové typy, které zahrnují a zda získat specifické pro procesor.  
+ Existuje několik variant na `_InterlockedExchangeAdd` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.  
   
- Při `_InterlockedExchangeAdd` funkce se používá na 32bitové celočíselné hodnoty, `_InterlockedExchangeAdd8` funguje na hodnoty 8bitové celé číslo, `_InterlockedExchangeAdd16` funguje na hodnoty 16bitové celé číslo a `_InterlockedExchangeAdd64` funguje na 64bitové celočíselné hodnoty.  
+ Při `_InterlockedExchangeAdd` funkce se používá na 32bitové celé číslo hodnoty `_InterlockedExchangeAdd8` pracuje hodnoty 8bitové celé číslo, `_InterlockedExchangeAdd16` pracuje hodnoty 16bitové celé číslo a `_InterlockedExchangeAdd64` pracuje na 64bitové celočíselné hodnoty.  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony, pokud potřebujete získat a vydání sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Na platformách Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako na platformách, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
   
- Tyto rutiny jsou dostupné jen jako vnitřní funkce. Proto jsou vnitřní jestli nebo není [/Oi](../build/reference/oi-generate-intrinsic-functions.md) nebo [#pragma vnitřní](../preprocessor/intrinsic.md) se používá. Není možné použít [funkce #pragma](../preprocessor/function-c-cpp.md) na vnitřní tyto funkce.  
+ Tyto rutiny jsou dostupné jenom jako vnitřní funkce. Proto jsou vnitřní Určuje, zda nebo Ne [/Oi](../build/reference/oi-generate-intrinsic-functions.md) nebo [#pragma intrinsic](../preprocessor/intrinsic.md) se používá. Není možné použít [#pragma funkce](../preprocessor/function-c-cpp.md) na těchto vnitřních objektů.  
   
 ## <a name="example"></a>Příklad  
- Příklad, jak pomocí `_InterlockedExchangeAdd`, najdete v části [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Pro ukázku toho, jak používat `_InterlockedExchangeAdd`, naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

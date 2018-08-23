@@ -1,5 +1,5 @@
 ---
-title: Použití ověřitelných sestavení se serverem SQL Server (C + +/ CLI) | Microsoft Docs
+title: Použití ověřitelných sestavení s SQL serverem (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168643"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583816"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
-Rozšířené uložené procedury jsou reprezentovány jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL Server pomocí funkcí vytvořených s Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definovat rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (například SUMA nebo průměr).  
+Rozšířené uložené procedury lze zabalit jako dynamické knihovny (DLL), poskytují způsob, jak rozšířit funkce SQL serveru pomocí funkce byly vyvinuty v sadě Visual C++. Rozšířené uložené procedury jsou implementovány jako funkce uvnitř knihovny DLL. Kromě funkcí, můžete také definujte rozšířené uložené procedury [uživatelem definované typy](../cpp/classes-and-structs-cpp.md) a [agregační funkce](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (jako je součet a průměr).  
   
- Když klient provede rozšířenou uloženou proceduru, vyhledávání systému SQL Server pro knihovnu DLL přidružené rozšířené uložené procedury a knihovnu DLL načte. SQL Server volá požadovaný rozšířené uložené procedury a spustí ji v rámci zadaného kontextu zabezpečení. Rozšířená uložená procedura pak předá sady výsledků a vrátí parametry zpět na server.  
+ Když klient provede rozšířené uložené procedury, vyhledávání systému SQL Server pro knihovnu DLL přidružené k rozšířené uložené procedury a načte knihovnu DLL. SQL Server volá požadovaný rozšířené uložené procedury a spustí ji v rámci zadaného kontextu zabezpečení. Rozšířená uložená procedura, pak předá sady výsledků a vrátí parametry zpět na server.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] Poskytuje rozšíření Transact-SQL (T-SQL) aby bylo možné instalovat ověřitelná sestavení do systému SQL Server. Sada oprávnění serveru SQL určuje kontext zabezpečení, s následujícími úrovněmi zabezpečení:  
+ SQL Server poskytuje rozšíření příkazů jazyka Transact-SQL (T-SQL) k tomu, abyste k instalaci ověřitelných sestavení do systému SQL Server. Sada oprávnění systému SQL Server určuje kontext zabezpečení, s následující úrovní zabezpečení:  
   
--   Neomezený režim: spuštění kódu na vlastní nebezpečí; jako typ ověřitelný kód nemá.  
+-   Neomezené režimu: spuštění kódu na vaše vlastní nebezpečí; kód nemusí být prokazatelně typově bezpečný.  
   
--   Nouzový režim: spustit zajišťující bezpečnost ověřitelný kód; Kompilovat s/clr: safe.  
+-   Nouzový režim: spuštění prokazatelně typově bezpečné kódu; Zkompilovaná/CLR: safe.  
   
- Nouzový režim vyžaduje spuštění sestavení, které chcete být ověřitelný zajišťující bezpečnost.  
+ Nouzový režim vyžaduje spuštěné sestavení bude prokazatelně typově bezpečné.  
   
- Vytvoření a načtení ověřitelná sestavení do systému SQL Server, použijte příkazy jazyka Transact-SQL vytvořit sestavení a DROP ASSEMBLY takto:  
+ K vytváření a načítání ověřitelných sestavení do systému SQL Server, použijte příkazy jazyka Transact-SQL příkaz CREATE ASSEMBLY a příkaz DROP ASSEMBLY následujícím způsobem:  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +43,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- Příkaz PERMISSION_SET určuje kontext zabezpečení a může mít hodnoty bez omezení, BEZPEČNÉ nebo rozšířené.  
+ Příkaz PERMISSION_SET určuje kontext zabezpečení a může mít hodnoty bez omezení, SAFE nebo EXTENDED.  
   
- Kromě toho můžete příkaz CREATE FUNCTION se vytvořit vazbu na názvy metod ve třídě:  
+ Kromě toho příkaz CREATE FUNCTION můžete vytvořit vazbu na názvy metod ve třídě:  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -54,7 +54,7 @@ RETURNS returnType
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující skript SQL (například s názvem "MyScript.sql") načte sestavení do systému SQL Server a zpřístupní metodu třídy:  
+ Následující skript SQL (například s názvem "MyScript.sql") načte sestavení do systému SQL Server a zpřístupňuje metodu pro třídu:  
   
 ```  
 -- Create assembly without external access  
@@ -78,7 +78,7 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- Skripty SQL můžete provedeny interaktivně v analyzátoru dotazů SQL nebo na příkazovém řádku pomocí nástroje sqlcmd.exe. Následující příkazový řádek se připojuje k MyServer, používá výchozí databáze, důvěryhodné připojení, vstup MyScript.sql a výstup MyResult.txt.  
+ Skripty SQL lze spustit interaktivně v analyzátoru dotazů SQL nebo na příkazovém řádku pomocí nástroje sqlcmd.exe. Následující příkazový řádek se připojí k MyServer, používá výchozí databázi, používá důvěryhodné připojení, vstupů MyScript.sql a výstup MyResult.txt.  
   
 ```  
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  

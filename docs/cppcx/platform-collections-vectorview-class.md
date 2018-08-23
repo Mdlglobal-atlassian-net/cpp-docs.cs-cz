@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::Collections::VectorView | Microsoft Docs
+title: 'Platform::Collections:: vectorview – třída | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092907"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584103"
 ---
-# <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView – třída
-Představuje zobrazení sekvenční kolekcí objektů, které může být index individuálně získávat přístup jen pro čtení. Typ každý objekt v kolekci je určený parametrem šablony.  
+# <a name="platformcollectionsvectorview-class"></a>Platform::Collections:: vectorview – třída
+Představuje sekvenční kolekce objektů, které mohou být přístupné samostatně podle indexu zobrazení jen pro čtení. Typ jednotlivých objektů v kolekci je určen parametrem šablony.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ template <typename T, typename E>
   
 #### <a name="parameters"></a>Parametry  
  `T`  
- Typ elementů obsažených v `VectorView` objektu.  
+ Typ elementů obsažených ve `VectorView` objektu.  
   
  `E`  
  Určuje binární predikát pro testování rovnosti s hodnotami typu `T`. Výchozí hodnota je `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Poznámky  
- `VectorView` Třída implementuje [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) rozhraní a podpora pro standardní knihovny šablon iterátory.  
+ `VectorView` Implementuje třída [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) rozhraní a podpora pro iterátorů standardní knihovny šablon.  
   
 ### <a name="members"></a>Členové  
   
@@ -60,8 +60,8 @@ template <typename T, typename E>
 |Název|Popis|  
 |----------|-----------------|  
 |[VectorView::First](#first)|Vrátí iterátor, který určuje první prvek v VectorView.|  
-|[VectorView::GetAt](#getat)|Načte element aktuální VectorView, označené v zadaném indexu.|  
-|[VectorView::GetMany](#getmany)|Načte posloupnost položek z aktuální VectorView, počínaje zadaným indexem.|  
+|[VectorView::GetAt](#getat)|Načte prvek aktuální VectorView uvedený v zadaném indexu.|  
+|[VectorView::GetMany](#getmany)|Načte posloupnost položek z aktuální VectorView počínaje zadaným indexem.|  
 |[VectorView::IndexOf](#indexof)|Vyhledá zadanou položku v aktuální VectorView a pokud najde, vrátí index položky.|  
 |[VectorView::Size](#size)|Vrátí počet prvků v aktuálním objektu VectorView.|  
   
@@ -71,7 +71,7 @@ template <typename T, typename E>
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** collection.h  
   
- **Namespace:** Platform::Collections  
+ **Namespace:** Platform::Collections –  
 
 ## <a name="first"></a>  VectorView::First – metoda
 Vrátí iterátor, který určuje první prvek v VectorView.  
@@ -85,15 +85,15 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Iterator, který určuje první prvek v VectorView.  
+ Iterátor, který určuje první prvek v VectorView.  
   
 ### <a name="remarks"></a>Poznámky  
- Pohodlný způsob pro uložení iterator vrácený First() je přiřadit návratovou hodnotu proměnné, která je deklarovaný s **automaticky** zadejte odvození – klíčové slovo. Například `auto x = myVectorView->First();`.  
+ Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například `auto x = myVectorView->First();`.  
   
 
 
 ## <a name="getat"></a>  VectorView::GetAt – metoda
-Načte element aktuální VectorView, označené v zadaném indexu.  
+Načte prvek aktuální VectorView uvedený v zadaném indexu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -106,15 +106,15 @@ T GetAt(
   
 ### <a name="parameters"></a>Parametry  
  `index`  
- Nulovým základem celé číslo bez znaménka určující určitý element v objektu VectorView.  
+ Nulovým základem celé číslo bez znaménka, která určuje konkrétní prvek v objektu VectorView.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Element určeného `index` parametr. Element typu je zadaný parametr šablony VectorView *T*.  
+ Element určené `index` parametru. Typ prvku je určeno parametrem šablony VectorView, *T*.  
   
 
 
 ## <a name="getmany"></a>  VectorView::GetMany – metoda
-Načte posloupnost položek z aktuální VectorView, počínaje zadaným indexem.  
+Načte posloupnost položek z aktuální VectorView počínaje zadaným indexem.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -128,13 +128,13 @@ virtual unsigned int GetMany(
   
 ### <a name="parameters"></a>Parametry  
  `startIndex`  
- Index založený na nule spouštění položky, které chcete načíst.  
+ Index založený na nule začátek položky, které chcete načíst.  
   
  `dest`  
- Když tato operace dokončí, pole položek, které začínají na element určeného `startIndex` a konec na posledním prvkem v VectorView.  
+ Když tato operace dokončí, pole položek, které začíná v elementu určené `startIndex` a Konec po posledním prvku v VectorView.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet položek, které načíst.  
+ Počet položek načtených.  
   
 
 
@@ -156,12 +156,12 @@ virtual bool IndexOf(
  Položka k vyhledání.  
   
  `index`  
- Index založený na nule položky Pokud parametr `value` , jinak hodnota je 0.  
+ Z nuly vycházející index položky-li parametr `value` je nalezen, jinak 0.  
   
- `index` Parametru je 0, pokud položka je první prvek VectorView nebo položka nebyla nalezena. Pokud je vrácenou hodnotou `true`, položka byla nalezena a je první prvek; jinak, položka nebyla nalezena.  
+ `index` Parametru je 0, pokud je první prvek VectorView položka nebo položka nebyla nalezena. Pokud je návratová hodnota `true`, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true` Pokud zadaná položka není nalezena; v opačném `false`.  
+ `true` Pokud zadaná položka není nalezen; v opačném případě `false`.  
   
 
 
@@ -176,11 +176,11 @@ virtual property unsigned int Size;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet elementů v aktuální VectorView.  
+ Počet prvků v aktuální VectorView.  
   
 
 
-## <a name="ctor"></a>  VectorView::VectorView – konstruktor
+## <a name="ctor"></a>  VectorView::VectorView konstruktor
 Inicializuje novou instanci třídy VectorView.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -239,41 +239,41 @@ VectorView(
   
 ### <a name="parameters"></a>Parametry  
  `InIt`  
- Typ na kolekci objektů, který se používá k chybě při inicializaci aktuální VectorView.  
+ Typ kolekce objektů, které slouží k inicializaci aktuální VectorView.  
   
  IL  
- A [std::initializer_list](../standard-library/initializer-list-class.md) jehož elementy se použije k chybě při inicializaci VectorView.  
+ A [std::initializer_list](../standard-library/initializer-list-class.md) jehož prvky se použije k inicializaci VectorView.  
   
  `N`  
- Počet elementů v kolekci objektů, které slouží k inicializaci aktuální VectorView.  
+ Počet prvků v kolekci objektů, které slouží k inicializaci aktuální VectorView.  
   
  `size`  
- Počet elementů v VectorView.  
+ Počet prvků v VectorView.  
   
  `value`  
- Hodnota, která se používá k chybě při inicializaci každý prvek v aktuální VectorView.  
+ Hodnota, která slouží k inicializaci každý prvek v aktuální VectorView.  
   
  `v`  
- [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k [std::vector](../standard-library/vector-class.md) používané k chybě při inicializaci aktuální VectorView.  
+ [Hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k [std::vector](../standard-library/vector-class.md) , který slouží k inicializaci aktuální VectorView.  
   
  `ptr`  
- Ukazatel na `std::vector` používané k chybě při inicializaci aktuální VectorView.  
+ Ukazatel `std::vector` , který slouží k inicializaci aktuální VectorView.  
   
  `arr`  
- A [Platform::Array](../cppcx/platform-array-class.md) objekt, který se používá k chybě při inicializaci aktuální VectorView.  
+ A [Platform::Array](../cppcx/platform-array-class.md) objekt, který slouží k inicializaci aktuální VectorView.  
   
  `a`  
- A [std::array](../standard-library/array-class-stl.md) objekt, který se používá k chybě při inicializaci aktuální VectorView.  
+ A [std::array](../standard-library/array-class-stl.md) objekt, který slouží k inicializaci aktuální VectorView.  
   
  `first`  
- První prvek v pořadí objektů, které se používají k inicializaci aktuální VectorView. Typ `first` předávána prostřednictvím *ideální předávání*. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ První prvek v sekvenci objektů, které se používají k inicializaci aktuální VectorView. Typ `first` je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- Posledním prvkem v pořadí objektů, které se používají k inicializaci aktuální VectorView. Typ `last` předávána prostřednictvím *ideální předávání*. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Po posledním prvku v sekvenci objektů, které se používají k inicializaci aktuální VectorView. Typ `last` je předáno *perfektní přesměrování*. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 
 
   
 ## <a name="see-also"></a>Viz také  
- [Namespace platformy](platform-namespace-c-cx.md)   
- [Vytváření Windows Runtime komponent v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+ [Platforma Namespace](platform-namespace-c-cx.md)   
+ [Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

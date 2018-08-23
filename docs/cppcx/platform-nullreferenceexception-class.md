@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::NullReferenceException | Microsoft Docs
+title: Platform::NullReferenceException – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e74ea7753ddb66a7daa8403874e803dca91f10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78d0cf9ec994d21845e1910b5affc9e3b5d74a8d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088073"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590324"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException – třída
-Vygeneruje se při pokusu o dereference odkaz objektu null.  
+Vyvolána, když je pokus přistoupit přes ukazatel odkaz na objekt s hodnotou null.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   

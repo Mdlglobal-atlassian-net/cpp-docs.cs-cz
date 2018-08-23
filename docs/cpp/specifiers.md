@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463486"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42464637"
 ---
 # <a name="specifiers"></a>Specifikátory
 Toto téma popisuje *specifikátory decl* součást (specifikátory deklarace) [deklarace](declarations-and-definitions-cpp.md).  
@@ -34,9 +34,11 @@ Toto téma popisuje *specifikátory decl* součást (specifikátory deklarace) [
   
  *Specifikátor funkce*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef] ( [typedef](http://msdn.microsod) `(` *extended-decl-modifier-seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [Definice TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`  
+
+ [__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Poznámky  
  *Specifikátory decl* část deklarace je nejdelší sekvence *specifikátory decl* , dá se přenést do název typu bez zahrnutí ukazatel nebo odkaz na modifikátory. Zbývající část deklarace je *deklarátor*, který zahrnuje uvedený název.  

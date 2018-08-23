@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea871f2c3b75ac8f4e316b3dc680e8821ac789f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b96165b045c44f4b15b09d6a5c48da14b7e96be
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575851"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount – konstanta
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-static const unsigned long IidCount;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Obsahuje počet implementovaných rozhraní ID v aktuálním `Implements` objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Implementshelper – struktura](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+static const unsigned long IidCount;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Obsahuje počet implementovaných rozhraní ID v aktuálním `Implements` objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ImplementsHelper – struktura](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

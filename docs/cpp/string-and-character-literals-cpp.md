@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466940"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464540"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězců a znaků a nabízí způsobů, jak vyjádřit jednu hodnotu literálu každý z těchto typů. Ve zdrojovém kódu express obsah vaší znakové a řetězcové literály pomocí znakové sady. Univerzální názvy znaků a řídicích znaků umožňují express libovolný řetězec za použití pouze základní zdrojové znakové sady. Nezpracovaný Textový literál vám umožní předcházet pomocí řídicí znaky a je možné vyjádřit všech typů řetězcových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět další konstrukci nebo převod kroky.  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Univerzální názvy znaků nelze dekódovat hodnoty v náhradní rozsah bodového kódu D800 DFFF. Páry nahrazení Unicode, zadat název univerzálních znaků pomocí `\UNNNNNNNN`, kde je NNNNNNNN bodu osm 6místným číselným kódem znaku. Kompilátor generuje náhradní pár v případě potřeby.  
   
- V C ++ 03 jazyk pouze povolené podmnožinu znaků a nelze je reprezentovat podle jejich univerzální názvy znaků a povoleny některé univerzální názvy znaků, které skutečně nepředstavovala platnou znaky Unicode. Tato chyba byla opravena v C ++ 11 standard. V C ++ 11 můžete použít univerzální názvy znaků znakové a řetězcové literály a identifikátory.  Další informace o univerzální názvy znaků, naleznete v tématu [znakových sad](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Další informace o náhradních párech naleznete v tématu [náhradní páry a doplňující znaky](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ V C ++ 03 jazyk pouze povolené podmnožinu znaků a nelze je reprezentovat podle jejich univerzální názvy znaků a povoleny některé univerzální názvy znaků, které skutečně nepředstavovala platnou znaky Unicode. Tato chyba byla opravena v C ++ 11 standard. V C ++ 11 můžete použít univerzální názvy znaků znakové a řetězcové literály a identifikátory.  Další informace o univerzální názvy znaků, naleznete v tématu [znakových sad](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Další informace o náhradních párech naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
   
 ## <a name="string-literals"></a>Řetězcové literály  
  Textový literál představuje posloupnost znaků, které společně tvoří řetězec zakončený hodnotou null. Znaky musí být uzavřeny mezi dvojité uvozovky. Existují následující typy řetězcových literálů:  

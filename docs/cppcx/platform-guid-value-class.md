@@ -1,5 +1,5 @@
 ---
-title: Platform::GUID – hodnotová třída | Microsoft Docs
+title: Platform::GUID – hodnotová třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089448"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601251"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
-Představuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu v prostředí Windows Runtime typ systému.  
+Představuje [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu v systému typů modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,22 +32,22 @@ public value struct Guid
 ```  
   
 ### <a name="members"></a>Členové  
- GUID má Equals(), GetHashCode(), a metody ToString() odvozené z [Platform::Object třída](../cppcx/platform-object-class.md), a metodu GetTypeCode() odvozené z [Platform::Type – třída](../cppcx/platform-type-class.md). Identifikátor GUID má také následující členy.  
+ Identifikátor GUID má metody Equals() GetHashCode(), a metody ToString() odvozený od [Platform::Object – třída](../cppcx/platform-object-class.md), a metodu GetTypeCode() odvozený od [Platform::type – třída](../cppcx/platform-type-class.md). Identifikátor GUID má také následující členy.  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[Identifikátor GUID](#ctor)|Inicializuje novou instanci třídy struktura identifikátor Guid.|  
-|[operator==](#operator-equality)|Operátor je rovno.|  
-|[operator!=](#operator-not-equal)|Operátor není rovno.|  
-|[Operator() –](#operator-call)|Identifikátor Guid převede na identifikátor GUID.|  
+|[identifikátor GUID](#ctor)|Inicializuje novou instanci struktury identifikátor Guid.|  
+|[operator==](#operator-equality)|Operátor Equals.|  
+|[operator!=](#operator-not-equal)|Operátor nerovná.|  
+|[Operator()](#operator-call)|Identifikátor Guid se převede na identifikátor GUID.|  
   
 ### <a name="remarks"></a>Poznámky  
- Příklad toho, jak vygenerovat nový Platform::Guid pomocí funkce systému Windows [funkci CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), najdete v části [součást WinRT: jak vygenerovat identifikátor GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Příklad toho, jak generovat nové Platform::GUID – použití funkce Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), naleznete v tématu [komponenty WinRT: jak vygenerovat identifikátor GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   
@@ -85,7 +85,7 @@ Inicializuje novou instanci struktury identifikátor Guid.
   
 ### <a name="parameters"></a>Parametry  
  `a`  
- První 4 bajty identifikátor GUID.  
+ První 4 bajty identifikátoru GUID.  
   
  `b`  
  Další 2 bajty identifikátoru GUID.  
@@ -121,7 +121,7 @@ Inicializuje novou instanci struktury identifikátor Guid.
  Identifikátor GUID, jak jsou definovány.  
   
  `n`  
- Zbývající 8 bajtů identifikátor GUID.  
+ 8 zbývající bajty identifikátoru GUID.  
   
 
 ## <a name="operator-equality"></a> GUID::Operator == – operátor
@@ -134,7 +134,7 @@ Platform::Guid::operator==
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud jsou dva identifikátory GUID stejné.
+ Hodnota TRUE, pokud jsou si rovny dva identifikátory GUID.
 
 ## <a name="operator-inequality"></a> GUID::Operator! = – operátor
 Porovná dva identifikátory GUID.  
@@ -151,7 +151,7 @@ Platform::Guid::operator!=
 
 
 ## <a name="operator-call"></a> GUID::Operator() – operátor
-Implicitně převede [GUID struktura](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID do Platform::Guid.  
+Implicitně převede [GUID struktury](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)Platform::GUID – identifikátor GUID.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -160,8 +160,8 @@ Platform::Guid operator()
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Struktura identifikátor Guid.  
+ Identifikátor Guid struktury.  
   
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

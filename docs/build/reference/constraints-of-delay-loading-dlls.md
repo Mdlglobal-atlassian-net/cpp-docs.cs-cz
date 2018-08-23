@@ -1,5 +1,5 @@
 ---
-title: Omezení odloženého načítání knihoven DLL | Microsoft Docs
+title: Omezení odloženého načítání knihoven DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375913"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465027"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Omezení odloženého načítání knihoven DLL
-Existují omezení týkající se načítání zpoždění importy.  
+Existují omezení týkající se načítání zpoždění importu.  
   
--   Importy dat nemůže být podporováno. Alternativní řešení je explicitně zpracovávat data importovat sami pomocí `LoadLibrary` (nebo `GetModuleHandle` po víte, že pomocná načtení zpoždění načetl knihovnu DLL) a `GetProcAddress`.  
+-   Importy dat nejde podporovat. Alternativní řešení, je explicitně zpracovávat data importovat sami pomocí `LoadLibrary` (nebo `GetModuleHandle` až budete vědět, načtení knihovny DLL odloženě zaváděné pomocné rutiny) a `GetProcAddress`.  
   
--   S odloženým načtením Kernel32.dll není podporována. Je nezbytné pro pomocné rutiny načtení zpoždění provést odloženým načtením této knihovny DLL.  
+-   S odloženým načtením Kernel32.dll se nepodporuje. Tato knihovna DLL je nezbytné pro rutiny odloženě zaváděné pomocné rutiny k provádění odloženého načítání.  
   
--   [Vazba](../../build/reference/binding-imports.md) položky body, které jsou předávány nepodporuje.  
+-   [Vytvoření vazby](../../build/reference/binding-imports.md) vstupu body, které se předávají nepodporuje.  
   
--   Zpoždění načítání knihovny DLL nemusí vést k stejné chování procesu, pokud jsou na proces inicializacích, které se vyskytují ve vstupní bod DLL se zpožděným načtením. Další případy patří deklarováno s použitím statické TLS (lokální úložiště vláken), [__declspec(thread)](../../cpp/thread.md), které nejsou zpracovávány při načtení knihovny DLL pomocí `LoadLibrary`. Dynamické TLS, pomocí `TlsAlloc`, `TlsFree`, `TlsGetValue`, a `TlsSetValue`, je stále k dispozici pro použití v statickou nebo odloženým načtením knihovny DLL.  
+-   Zpoždění načítání knihovny DLL nemusí vést stejné chování proces, pokud existují na úrovni jednotlivého procesu inicializace, které se vyskytují ve vstupní bod knihovny DLL načtené se zpožděním. Ostatní případy zahrnují deklarované pomocí statických TLS (úložiště thread local), [__declspec(thread)](../../cpp/thread.md), která není zpracována při načtení knihovny DLL pomocí `LoadLibrary`. Dynamické TLS, pomocí `TlsAlloc`, `TlsFree`, `TlsGetValue`, a `TlsSetValue`, je stále k dispozici pro použití ve statické nebo odloženě zaváděné knihovny DLL.  
   
--   Ukazatele na funkce statický (globální) by měl znovu inicializován, na importované funkce po první volání funkce. Je to proto, že první použití funkce ukazatele bude odkazovat jinou bitovou šířku.  
+-   Ukazatele na statické (globální) funkce by měla opakování inicializace odběrů pro importované funkce po prvním volání funkce. Je to proto, že první použití ukazatele funkce budou odkazovat na jiné bitové šířce.  
   
--   Neexistuje žádný způsob aktuálně zpoždění načítání pouze konkrétní postupy z knihovny DLL při použití mechanismu normální importu.  
+-   Neexistuje žádný způsob aktuálně pro odložené načítání z knihovny DLL pouze konkrétní postupy při používání mechanismu normální importu.  
   
--   Vlastní konvence volání (například pomocí podmínku kódy na x86 architektury) nejsou podporovány. Navíc s plovoucí desetinnou čárkou registry nejsou uloženy na jakékoli platformě. Pokud vaše vlastní pomocná rutina nebo rutiny háku používat typy s plovoucí desetinnou čárkou, potřebují k úplně uložení a obnovení stavu s plovoucí desetinnou čárkou v počítačích s volání konvence s s plovoucí desetinnou čárkou parametry registru. Buďte opatrní s odloženým načtením DLL Knihovny CRT při volání funkcí CRT, které přijímají s plovoucí desetinnou čárkou parametry v zásobníku koprocesor (NRP) ve funkci nápovědy.  
+-   Vlastní konvence volání (například pomocí podmínku kódy na x86 architektury) nejsou podporovány. Navíc s plovoucí desetinnou čárkou registrech nejsou uloženy na libovolné platformě. Používáte-li vlastní pomocná rutina nebo rutiny hook typy s plovoucí desetinnou čárkou, potřebují zcela uložit a obnovit stav s plovoucí desetinnou čárkou na počítačích s registrem konvence s plovoucí desetinnou čárkou parametry volání. Buďte opatrní odloženého načítání knihoven DLL CRT při volání funkce CRT, které přijímají parametry s plovoucí desetinnou čárkou v zásobníku koprocesor (NDP) ve funkci nápovědy.  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
  [LoadLibrary – funkce](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
- [GetModuleHandle – funkce](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
+ [Funkce GetModuleHandle](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
  [GetProcAddress – funkce](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [TlsAlloc – funkce](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [TlsFree – funkce](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [TlsGetValue – funkce](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [TlsSetValue – funkce](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [TlsAlloc – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [TlsFree – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [TlsGetValue – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [TlsSetValue – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

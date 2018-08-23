@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336414"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464953"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 K aktualizaci nebo zapisovat data do úložiště dat je operace velmi základní databáze. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty vázaných dat členů a pak zapíše hodnoty do sady řádků; Příjemce potom, aktualizujte poskytovatele úložiště dat požadavky.  
   
- Příjemci můžete provádět následující typy aktualizace řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K provedení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) rozhraní a přepíše metody následující rozhraní:  
+ Příjemci můžete provádět následující typy aktualizace řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K provedení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) rozhraní a přepíše metody následující rozhraní:  
   
 -   [Operaci SetData](../../data/oledb/crowset-setdata.md) hodnoty pro sloupce změny za sebou sady řádků; je ekvivalentní příkazu SQL UPDATE.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>Viz také  
  [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [CRowset – třída](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

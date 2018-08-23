@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1874eb12f7a11482cb679a743d081a8bb78bc94e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5125ff259847162d75d3e2c7553f0887e177b0ee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650037"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601298"
 ---
 # <a name="comptrcomptr-destructor"></a>ComPtr::~ComPtr – destruktor
-Uvolní instanci **ComPtr**.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-WRL_NOTHROW ~ComPtr();  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ComPtr – třída](../windows/comptr-class.md)
+
+Uvolní instanci **ComPtr**.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+WRL_NOTHROW ~ComPtr();
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ComPtr – třída](../windows/comptr-class.md)

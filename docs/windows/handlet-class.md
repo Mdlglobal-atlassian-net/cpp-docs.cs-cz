@@ -17,79 +17,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a34b66a6e2c901ddbfb3005a0bdb8fd686317af0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641502"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590527"
 ---
 # <a name="handlet-class"></a>HandleT – třída
-Reprezentuje popisovač objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   typename HandleTraits  
->  
-class HandleT;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Handletraits –*  
- Instance [handletraits –](../windows/handletraits-structure.md) stucture, který definuje běžné vlastnosti popisovač.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`Traits`|Synonymum pro `HandleTraits`.|  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[HandleT::HandleT – konstruktor](../windows/handlet-handlet-constructor.md)|Inicializuje novou instanci třídy **HandleT** třídy.|  
-|[HandleT::~HandleT – destruktor](../windows/handlet-tilde-handlet-destructor.md)|Uvolní instanci **HandleT** třídy.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[HandleT::Attach – metoda](../windows/handlet-attach-method.md)|Přidruží Zadaný popisovač s aktuálním **HandleT** objektu.|  
-|[HandleT::Close – metoda](../windows/handlet-close-method.md)|Zavře aktuální **HandleT** objektu.|  
-|[HandleT::Detach – metoda](../windows/handlet-detach-method.md)|Zruší přidružení aktuální **HandleT** objekt z jeho základní popisovač.|  
-|[HandleT::Get – metoda](../windows/handlet-get-method.md)|Načte hodnotu podkladového popisovače.|  
-|[HandleT::IsValid – metoda](../windows/handlet-isvalid-method.md)|Určuje, zda aktuální **HandleT** objekt představuje popisovač.|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[HandleT::InternalClose – metoda](../windows/handlet-internalclose-method.md)|Zavře aktuální **HandleT** objektu.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[HandleT::operator= – operátor](../windows/handlet-operator-assign-operator.md)|Přesune hodnotu zadaného **handlet –** objektů na aktuální **HandleT** objektu.|  
-  
-### <a name="protected-data-members"></a>Chránění členové dat  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[HandleT::handle_ – datový člen](../windows/handlet-handle-data-member.md)|Obsahuje popisovač, která je reprezentována **HandleT** objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `HandleT`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Reprezentuje popisovač objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   typename HandleTraits
+>
+class HandleT;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Handletraits –*  
+Instance [handletraits –](../windows/handletraits-structure.md) stucture, který definuje běžné vlastnosti popisovač.
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`Traits`|Synonymum pro `HandleTraits`.|
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[HandleT::HandleT – konstruktor](../windows/handlet-handlet-constructor.md)|Inicializuje novou instanci třídy **HandleT** třídy.|
+|[HandleT::~HandleT – destruktor](../windows/handlet-tilde-handlet-destructor.md)|Uvolní instanci **HandleT** třídy.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[HandleT::Attach – metoda](../windows/handlet-attach-method.md)|Přidruží Zadaný popisovač s aktuálním **HandleT** objektu.|
+|[HandleT::Close – metoda](../windows/handlet-close-method.md)|Zavře aktuální **HandleT** objektu.|
+|[HandleT::Detach – metoda](../windows/handlet-detach-method.md)|Zruší přidružení aktuální **HandleT** objekt z jeho základní popisovač.|
+|[HandleT::Get – metoda](../windows/handlet-get-method.md)|Načte hodnotu podkladového popisovače.|
+|[HandleT::IsValid – metoda](../windows/handlet-isvalid-method.md)|Určuje, zda aktuální **HandleT** objekt představuje popisovač.|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[HandleT::InternalClose – metoda](../windows/handlet-internalclose-method.md)|Zavře aktuální **HandleT** objektu.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[HandleT::operator= – operátor](../windows/handlet-operator-assign-operator.md)|Přesune hodnotu zadaného **handlet –** objektů na aktuální **HandleT** objektu.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[HandleT::handle_ – datový člen](../windows/handlet-handle-data-member.md)|Obsahuje popisovač, která je reprezentována **HandleT** objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`HandleT`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57444d41efffcb36e023c7055335159b69737a8a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a8721bd4754ff64fb6e7068da25775e165cae066
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018800"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584193"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue – metoda
-Načte **srwlocksharedtraits –** objekt, který je pořád platný.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Popisovač **srwlocksharedtraits –** objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Viz také  
- [SRWLockSharedTraits – struktura](../windows/srwlocksharedtraits-structure.md)
+
+Načte **srwlocksharedtraits –** objekt, který je pořád platný.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Popisovač **srwlocksharedtraits –** objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Viz také
+
+[SRWLockSharedTraits – struktura](../windows/srwlocksharedtraits-structure.md)

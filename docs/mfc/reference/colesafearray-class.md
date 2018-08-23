@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027635"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464723"
 ---
 # <a name="colesafearray-class"></a>Colesafearray – třída
 Třída pro práci s poli libovolného typu a rozměru.  
@@ -379,7 +379,7 @@ VARIANT Detach();
  Základní `VARIANT` hodnotu `COleSafeArray` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce odpojí data v bezpečné pole tak, že nastavíte [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) objektu VT_EMPTY. Je odpovědností volajícího uvolnit voláním funkce Windows pole [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
+ Funkce odpojí data v bezpečné pole tak, že nastavíte [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) objektu VT_EMPTY. Je odpovědností volajícího uvolnit voláním funkce Windows pole [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).  
   
  Při chybě, funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md).  
   
@@ -607,7 +607,7 @@ void PutElement(
  Ukazatel na data, která mají přiřadit k poli. VT_DISPATCH VT_UNKNOWN a VT_BSTR variant typy jsou ukazatele a nevyžadují další úroveň dereference.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce automaticky volá funkce Windows [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) a [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) před a po přiřazení elementu. Pokud datový element je řetězec, objekt nebo typ variant, funkce zkopíruje ho správně, a pokud existující prvek je řetězec, objekt nebo typ variant, není správně zaškrtnuté.  
+ Tato funkce automaticky volá funkce Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) a [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) před a po přiřazení elementu. Pokud datový element je řetězec, objekt nebo typ variant, funkce zkopíruje ho správně, a pokud existující prvek je řetězec, objekt nebo typ variant, není správně zaškrtnuté.  
   
  Všimněte si, že máte několika zámky na pole, tak prvky můžete umístit do pole uzamčeném pole pomocí dalších operací.  
   

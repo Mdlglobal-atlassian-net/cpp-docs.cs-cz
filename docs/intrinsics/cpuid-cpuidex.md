@@ -1,5 +1,5 @@
 ---
-title: __cpuid __cpuidex | Microsoft Docs
+title: __cpuid __cpuidex | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336066"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464627"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid __cpuidex
 
-**Konkrétní Microsoft**
+**Specifické pro Microsoft**
 
-Generuje `cpuid` instrukce, která je dostupná na x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Tento pokyn dotazuje procesor pro informace o podporovaných funkcích a typ procesoru.
+Generuje `cpuid` instrukce, která je k dispozici na x86 a x64. Tento pokyn dotazuje procesoru pro informace o podporovaných funkcích a typ procesoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,42 +50,42 @@ void __cpuidex(
 ### <a name="parameters"></a>Parametry
 
 [out] *cpuInfo*<br/>
-Pole čtyři celá čísla, který obsahuje informace o podporované funkce procesoru, vrátí se v EAX, EBX, ECX a EDX.
+Pole čtyř celých čísel, která obsahuje informace o podporovaných funkcích procesoru vrácené v EAX, EBX, ECX a EDX.
 
-[v] *function_id*<br/>
-Kód, který určuje informace načíst, je předaná EAX.
+[in] *function_id*<br/>
+Kód, který určuje informace, které se mají načíst, předaný EAX.
 
-[v] *subfunction_id*<br/>
-Další kód, který určuje informace načíst, je předaná ECX.
+[in] *subfunction_id*<br/>
+Další kód, který určuje informace se mají načíst, je předáván v ECX.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní funkce|Architektura|
+|Vnitřní|Architektura|
 |---------------|------------------|
-|`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86, x64|
+|`__cpuidex`|x86, x64|
 
 **Soubor hlaviček** \<intrin.h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tento vnitřní ukládá podporované funkce a informace o procesoru vrácené `cpuid` instrukce v *cpuInfo*, pole čtyři 32bitová celá čísla, která je zadána hodnotami EAX, EBX, ECX a EDX zaregistruje (v tom, že pořadí). Vrácené informace má jiný význam v závislosti na hodnotě předány jako *function_id* parametr. Vrátí informace s různými hodnotami *function_id* je závislá na procesor.
+Tomto vnitřní ukládá podporované funkce a vrátí informace o procesoru `cpuid` instrukce v *cpuInfo*, pole čtyř celých čísel 32-bit, který je vyplněný s hodnotami EAX, EBX, ECX a EDX Registry (v tomto pořadí). Vrácené informace má jiný význam v závislosti na hodnotě předané jako *function_id* parametru. Vrácené informace s různými hodnotami *function_id* závisí na procesoru.
 
-`__cpuid` Vnitřní vymaže registrace ECX před voláním `cpuid` instrukcí. `__cpuidex` Vnitřní nastaví hodnotu ECX registrovat *subfunction_id* před vygeneruje `cpuid` instrukcí. Můžete získat další informace o procesoru.
+`__cpuid` Vnitřní vymaže register ECX před voláním `cpuid` instrukce. `__cpuidex` Nastaví vnitřní hodnotu ECX zaregistrujte se a *subfunction_id* předtím, než ji vygeneruje `cpuid` instrukce. To umožňuje získat další informace o procesoru.
 
-Další informace o konkrétní parametry, které chcete použít a hodnot vrácených vnitřní tyto funkce na procesory Intel, najdete v dokumentaci pro `cpuid` instrukce v [Intel 64 a ruční vývojáři softwaru architektury IA-32 Svazek 2: Referenční dokumentace sady instrukcí](http://go.microsoft.com/fwlink/p/?LinkID=510021) a [rozšíření programování odkaz na sadu Intel architektura instrukcí](http://go.microsoft.com/fwlink/p/?LinkID=506627). Dokumentace Intel používá podmínky "listu" a "subleaf" pro *function_id* a *subfunction_id* parametry předané EAX a ECX.
+Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní objekty na procesorech Intel, naleznete v dokumentaci pro `cpuid` instrukce v [Intel 64 a IA-32 architektury softwaru vývojáři ručně Svazek 2: Referenční dokumentace sady instrukcí](http://go.microsoft.com/fwlink/p/?LinkID=510021) a [rozšíření programování odkaz na sadu instrukcí architektury Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Intel dokumentace používá pro podmínky typu "list" a "subleaf" *function_id* a *subfunction_id* parametry předané v EAX a ECX.
 
-Další informace o konkrétní parametry, které chcete použít a hodnot vrácených vnitřní tyto funkce na od společnosti AMD, najdete v dokumentaci pro `cpuid` instrukce v programátory architektura AMD64 ruční svazku 3: pro obecné účely a systému Pokyny a v příručkách revize rodin specifické procesory. Odkazy na tyto dokumenty a další informace naleznete v tématu AMD [vývojáře vodítka, příruček a dokumenty ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023) stránky. Dokumentace AMD používá podmínky "funkce číslo" a "podfunkce je číslo" pro *function_id* a *subfunction_id* parametry předané EAX a ECX.
+Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní u procesorů AMD, naleznete v dokumentaci pro `cpuid` instrukce v programátor architektury AMD64 ruční svazku 3: pro obecné účely a systému Pokyny a v příručkách revize pro konkrétní procesor řady. Odkazy na tyto dokumenty a další informace najdete v článku AMD [příručky pro vývojáře, příručky & ISA dokumenty](http://go.microsoft.com/fwlink/p/?LinkId=510023) stránky. Dokumentace ke službě AMD používá číslo podmínky"funkce" a "cislo podfunkce je" pro *function_id* a *subfunction_id* parametry předané v EAX a ECX.
 
-Když *function_id* argument je 0, *cpuInfo*[0] vrátí nejvyšší dostupné rozšířených *function_id* hodnotu podporovaných procesorem. Výrobce procesoru je zakódován do *cpuInfo*[1], *cpuInfo*[2], a *cpuInfo*[3].
+Při *function_id* argument je 0, *cpuInfo*[0] vrátí nejvyšší dostupná s rozšířeným *function_id* hodnotu podporovanou procesoru. Výrobce procesoru je zakódován do *cpuInfo*[1]; *cpuInfo*[2], a *cpuInfo*[3].
 
-Podpora pro konkrétní instrukce nastavit rozšíření a funkce procesoru je zakódován do *cpuInfo* výsledky vrácené pro vyšší *function_id* hodnoty. Další informace najdete v tématu příručky uvedený výše a následující příklad kódu.
+Podpora pro sadu konkrétní instrukce procesoru funkcí a rozšíření je zakódován do *cpuInfo* výsledky pro vyšší *function_id* hodnoty. Další informace najdete v tématu příručky propojené výše a následující příklad kódu.
 
-Některé procesory podporovat rozšířené funkce CPUID informace. Pokud je tato volba podporovaná, *function_id* hodnoty z 0x80000000 může použít k vrácení informací. Chcete-li zjistit, je maximální povolená hodnota smysluplný, nastavte *function_id* k 0x80000000. Maximální hodnota, která *function_id* podporované pro rozšířené funkce budou zapisovat do *cpuInfo*[0].
+Některé procesory podporovat informace CPUID rozšířené funkce. Pokud se to podporuje, *function_id* hodnoty z 0x80000000 může použít k vrácení informací. Chcete-li určit maximální povolená hodnota smysl, nastavte *function_id* k 0x80000000. Maximální hodnota *function_id* podporovaná pro rozšířené funkce se zapíšou do *cpuInfo*[0].
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje některé z informací, které jsou k dispozici prostřednictvím `__cpuid` a `__cpuidex` vnitřní funkce. Aplikace zobrazí seznam přípon sadu instrukce podporován aktuální procesorem. Výstup zobrazuje možné výsledek pro konkrétní procesoru.
+Tento příklad ukazuje některé z informací dostupných prostřednictvím `__cpuid` a `__cpuidex` vnitřních objektů. Aplikace obsahuje rozšíření sady instrukcí podporuje aktuální procesoru. Výstup zobrazuje výsledek možné pro konkrétní procesor.
 
 ```cpp
 // InstructionSet.cpp
@@ -407,8 +407,8 @@ XSAVE supported
 
 ```
 
-**Konkrétní Microsoft END**
+**Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

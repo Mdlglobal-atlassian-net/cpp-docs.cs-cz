@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 832f044cf644bd3dac30c745e13dad7d5a6fc4d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647472"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591243"
 ---
 # <a name="creating-a-submenu"></a>Vytvoření podnabídky
-### <a name="to-create-a-submenu"></a>Vytvoření podnabídky  
-  
-1.  Klikněte na příkaz nabídky, u kterého chcete vytvořit podnabídky.  
-  
-2.  V **nová položka** pole, které se zobrazí napravo, zadejte název nového příkazu nabídky. Tento nový příkaz zobrazí první v nabídce podnabídka.  
-  
-3.  Přidejte další příkazy nabídky podnabídka.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Editor nabídek](../windows/menu-editor.md)
+
+### <a name="to-create-a-submenu"></a>Vytvoření podnabídky
+
+1. Klikněte na příkaz nabídky, u kterého chcete vytvořit podnabídky.
+
+2. V **nová položka** pole, které se zobrazí napravo, zadejte název nového příkazu nabídky. Tento nový příkaz zobrazí první v nabídce podnabídka.
+
+3. Přidejte další příkazy nabídky podnabídka.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Editor nabídek](../windows/menu-editor.md)

@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333626"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464848"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vysílá x64 rozšířené verzi Convert s jednoduchou přesností zkrácení Floating-Point číslo 64bitové celé číslo (`cvttss2si`) instrukcí.  
+ Vysílá x64 rozšířenou verzi Convert s číslem plovoucí desetinné čárky jednoduchou přesnost zkrácení na 64bitové celé číslo (`cvttss2si`) instrukce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,22 +38,22 @@ __int64 _mm_cvttss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `value`  
- `__m128` Struktura obsahující s plovoucí desetinnou čárkou s jednoduchou přesností.  
+ [in] `value`  
+ `__m128` Struktury obsahující hodnoty s plovoucí desetinnou čárkou jednoduchou přesností.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Výsledek převodu první hodnota s plovoucí desetinnou čárkou na 64bitové celé číslo.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní se liší od `_mm_cvtss_si64x` pouze v tomto nepřesný převody se zkrátí směrem k nule. Protože `__m128` struktura představuje registraci XMM, pokyn generované přesouvá data z registru XMM do systémové paměti.  
+ Vnitřní typy se liší od `_mm_cvtss_si64x` pouze v tom, že se zkrátí nepřesné převody směrem k nule. Vzhledem k tomu, `__m128` struktura představuje registru XMM, vygeneruje instrukce přesouvá data z registru XMM do systémové paměti.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__m128](../cpp/m128.md)   

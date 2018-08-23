@@ -18,34 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ce7a8d53c56e6a17d5ef57222bab725a4addf8fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641259"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581154"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Připojení místní nabídky k aplikaci
-### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pro připojení místní nabídky k aplikaci  
-  
-1.  Přidání obslužné rutiny zpráv pro WM_CONTEXTMENU (například). Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).  
-  
-2.  Přidejte následující kód do obslužné rutiny zpráv:  
-  
-    ```cpp  
-    CMenu menu;  
-    VERIFY(menu.LoadMenu(IDR_MENU1));  
-    CMenu* pPopup = menu.GetSubMenu(0);  
-    ASSERT(pPopup != NULL);  
-    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());  
-    ```  
-  
-    > [!NOTE]
-    >  [CPoint](../atl-mfc-shared/reference/cpoint-class.md) předané ve zprávě je obslužná rutina v souřadnicovém systému obrazovky.  
-  
-## <a name="requirements"></a>Požadavky  
- MFC  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření místních nabídek](../windows/creating-pop-up-menus.md)   
- [Editor nabídek](../windows/menu-editor.md)   
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pro připojení místní nabídky k aplikaci
+
+1. Přidání obslužné rutiny zpráv pro WM_CONTEXTMENU (například). Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
+
+2. Přidejte následující kód do obslužné rutiny zpráv:
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) předané ve zprávě je obslužná rutina v souřadnicovém systému obrazovky.
+
+## <a name="requirements"></a>Požadavky
+
+MFC
+
+## <a name="see-also"></a>Viz také
+
+[Vytváření místních nabídek](../windows/creating-pop-up-menus.md)  
+[Editor nabídek](../windows/menu-editor.md)  

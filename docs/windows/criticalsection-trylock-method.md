@@ -17,40 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12d823cdefa90cad1e454996be274135d9e68fa9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 382dbdd2d0816d6ab0846acd0f8c164cd542114f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647625"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575838"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock – metoda
-Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-SyncLock TryLock();  
-  
-static SyncLock TryLock(  
-   _In_ CRITICAL_SECTION* cs  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *cs*  
- Kritický oddíl uživatelem zadaného objektu.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Nenulovou hodnotu, pokud byly úspěšně uloženy kritický oddíl nebo aktuální vlákno již vlastní kritický oddíl. Nula v případě jiné vlákno již vlastní kritický oddíl.  
-  
-## <a name="remarks"></a>Poznámky  
- První **trylock –** aktuální objekt kritický oddíl má vliv na funkce. Druhá **trylock –** funkce ovlivňuje kritickou sekci zadané uživatelem.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [CriticalSection – třída](../windows/criticalsection-class.md)
+
+Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+SyncLock TryLock();
+
+static SyncLock TryLock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*cs*  
+Kritický oddíl uživatelem zadaného objektu.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Nenulovou hodnotu, pokud byly úspěšně uloženy kritický oddíl nebo aktuální vlákno již vlastní kritický oddíl. Nula v případě jiné vlákno již vlastní kritický oddíl.
+
+## <a name="remarks"></a>Poznámky
+
+První **trylock –** aktuální objekt kritický oddíl má vliv na funkce. Druhá **trylock –** funkce ovlivňuje kritickou sekci zadané uživatelem.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[CriticalSection – třída](../windows/criticalsection-class.md)

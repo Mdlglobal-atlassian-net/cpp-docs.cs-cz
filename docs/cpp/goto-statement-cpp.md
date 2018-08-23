@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402569"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42464757"
 ---
 # <a name="goto-statement-c"></a>goto – příkaz (C++)
 **Goto** příkaz bezpodmínečně přenese ovládací prvek na příkaz s popiskem podle zadaného identifikátoru.  
@@ -36,6 +36,25 @@ goto identifier;
  Příkaz s popiskem určeným `identifier` musí být v aktuální funkci. Všechny `identifier` názvy jsou členy vnitřní obor názvů a proto nejsou v konfliktu s další identifikátory.  
   
  Má smysl jenom na popisek příkazu **goto** příkazu; v opačném případě se ignorují popisků příkazů. Popisky nelze deklarovat znovu.  
+
+A **goto** nejsou povoleny pro řízení je převedeno na umístění, ke kterému přeskočí inicializace jakákoli proměnná, která je v oboru v dané oblasti. V následujícím příkladu vyvolává C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  Styl programování je dobrým **přerušení**, **pokračovat**, a **vrátit** příkazy místo **goto** příkaz pokaždé, když je to možné. Ale protože **přerušení** příkaz ukončí pouze jednu úroveň smyčky, možná budete muset použít **goto** příkaz Ukončit hluboce vnořený smyčku.  
   

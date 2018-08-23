@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDesktopAlertDialog | Microsoft Docs
+title: Cmfcdesktopalertdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464629"
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog – třída
-`CMFCDesktopAlertDialog` Třída se používá spolu s [CMFCDesktopAlertWnd třída](../../mfc/reference/cmfcdesktopalertwnd-class.md) zobrazíte dialogové okno Vlastní v automaticky otevíraném okně.  
+# <a name="cmfcdesktopalertdialog-class"></a>Cmfcdesktopalertdialog – třída
+`CMFCDesktopAlertDialog` Třída se používá spolu s [cmfcdesktopalertwnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md) k zobrazení vlastního dialogu v místním okně.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,21 +51,21 @@ class CMFCDesktopAlertDialog : public CDialogEx
 |[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||  
 |[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||  
 |[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||  
-|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Přepisuje `CDialogEx::PreTranslateMessage`.)|  
+|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Přepíše `CDialogEx::PreTranslateMessage`.)|  
   
 ### <a name="remarks"></a>Poznámky  
- Proveďte následující kroky a zobrazit dialogové okno Vlastní v automaticky otevíraném okně:  
+ Proveďte následující kroky k zobrazení vlastního dialogu v automaticky otevíraném okně:  
   
-1.  Odvození třídy z `CMFCDesktopAlertDialog`.  
+1.  Odvodit třídu z `CMFCDesktopAlertDialog`.  
   
-2.  Vytvoření šablony dialogového okna podřízené v prostředky projektu.  
+2.  Vytvoření šablony dialogového okna podřízené prostředky projektu.  
   
-3.  Volání [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) s ID prostředku šablony dialogového okna a ukazatel na informace o třídě runtime odvozené třídy jako parametry.  
+3.  Volání [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) s ID prostředku šablony dialogového okna a ukazatel na informace o třídě modulu runtime odvozené třídy jako parametry.  
   
-4.  Program dialogu vlastní zpracování všech oznámení, které pocházejí z hostované ovládací prvky nebo programu hostované ovládací prvky pro zpracování tato oznámení přímo.  
+4.  Program vlastní dialogové okno pro zpracování všech oznámení, které pocházejí z hostované ovládací prvky nebo programu hostované ovládací prvky pro zpracování těchto oznámení přímo.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -73,9 +73,9 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CDialogEx](../../mfc/reference/cdialogex-class.md)  
+ [Cdialogex –](../../mfc/reference/cdialogex-class.md)  
   
- [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
+ [Cmfcdesktopalertdialog –](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDesktopAlertDialog.h  
@@ -90,8 +90,8 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *parametry*  
- [v] *pParent*  
+ [in] *parametry*  
+ [in] *pParent*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -127,7 +127,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pMsg*  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -136,6 +136,6 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [CMFCDesktopAlertWndInfo – třída](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [Cmfcdesktopalertwnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+ [Cmfcdesktopalertwndinfo – třída](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
  [CDialogEx – třída](../../mfc/reference/cdialogex-class.md)

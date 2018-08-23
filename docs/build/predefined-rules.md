@@ -1,5 +1,5 @@
 ---
-title: Předem definovaná pravidla | Microsoft Docs
+title: Předem definovaná pravidla | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369757"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465323"
 ---
 # <a name="predefined-rules"></a>Předdefinovaná pravidla
-Předdefinované odvozená pravidla použít makra NMAKE zadaný příkaz a možnosti.  
+Předdefinované odvozená pravidla použít makra NMAKE zadaný příkazu a možnosti.  
   
-|Pravidlo|Příkaz|Výchozí<br /><br /> Akce|Batch<br /><br /> Pravidlo|Platforma nmake běží na|  
+|Pravidlo|Příkaz|Výchozí<br /><br /> Akce|Služby batch<br /><br /> Pravidlo|Nmake platformy běží na|  
 |----------|-------------|------------------------|--------------------|----------------------------|  
 |. asm.exe|$(AS) $(AFLAGS) $&LT;|ml $<|Ne|x86|  
 |. asm.obj|$(AS) $(AFLAGS) /c $<|ml /c $<|Ano|x86|  
-|. asm.exe|$(AS) $(AFLAGS) $&LT;|ml64 v příkazovém $<|Ne|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|. asm.obj|$(AS) $(AFLAGS) /c $<|ml64 v příkazovém /c $<|Ano|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|. asm.exe|$(AS) $(AFLAGS) $&LT;|ml64 v příkazovém $<|Ne|x64|  
+|. asm.obj|$(AS) $(AFLAGS) /c $<|ml64 v příkazovém /c $<|Ano|x64|  
 |. c.exe|$(CC) $(CFLAGS) $&LT;|cl $<|Ne|všechny|  
 |. c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|Ano|všechny|  
 |. cc.exe|$(CC) $(CFLAGS) $&LT;|cl $<|Ne|všechny|  

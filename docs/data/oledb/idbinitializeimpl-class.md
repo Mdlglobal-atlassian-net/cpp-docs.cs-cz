@@ -50,15 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336485"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465770"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl – třída
-Poskytuje implementaci pro [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) rozhraní.  
+Poskytuje implementaci pro [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -121,7 +121,7 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IDBInitialize::Initialize](https://msdn.microsoft.com/library/ms718026.aspx) v *referenční informace pro OLE DB programátory*. 
+ Zobrazit [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 Místa data objektu v neinicializovaném stavu zdroje uvolněním interním prostředkům, jako je například podpora vlastností.  
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IDBInitialize::Uninitialize](https://msdn.microsoft.com/library/ms719648.aspx) v *referenční informace pro OLE DB programátory*.
+ Zobrazit [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 Zdroje dat příznaky.  

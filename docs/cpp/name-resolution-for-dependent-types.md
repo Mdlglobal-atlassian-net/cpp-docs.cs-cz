@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402683"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588214"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozlišení názvů u závislých typů
 Použití **typename** pro kvalifikované názvy v definicích šablon pro oznámení kompilátoru, že daný kvalifikovaný název identifikuje typ. Další informace najdete v tématu [typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Odstraňování mnohoznačnosti šablon  
- Aplikace [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] vynucuje pro odstraňování mnohoznačnosti s klíčovým slovem „template“ pravidla standardu C++98/03/11. V následujícím příkladu bude přijímat Visual C++ 2010 neodpovídající řádky a odpovídající řádky.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] přijímá pouze odpovídající řádky.  
+ Visual Studio 2012 vynutí pravidla C ++ 98/03/11 standard pro odstraňování mnohoznačnosti s klíčovým slovem "template". V následujícím příkladu bude přijímat Visual C++ 2010 neodpovídající řádky a odpovídající řádky.  Visual Studio 2012 přijímá pouze odpovídající řádky.  
   
 ```cpp  
 #include <iostream>  

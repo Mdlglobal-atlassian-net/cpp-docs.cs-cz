@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028002"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466120"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
 Zapouzdřuje běžných dialogových oken, která slouží k otevření souboru nebo souboru operace ukládání.  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  *LpszFilter* parametr se používá k určení typu název souboru musí soubor mít, který se má zobrazit v seznamu souborů. První řetězec v páru řetězec popisuje filtr; druhý řetězec Určuje příponu názvu souboru použít. Několik rozšíření může být určeno pomocí středníku (znaku ";") jako oddělovač. Řetězec končí dvěma "&#124;" znaků, za nímž následuje znak NULL. Můžete také použít [CString](../../atl-mfc-shared/using-cstring.md) objekt pro tento parametr.  
   
- Například [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] umožňuje uživatelům otevírat soubory, které mají rozšíření XLC (graf) nebo .xls (list), mimo jiné. Filtr pro aplikace Excel může být napsaná jako:  
+ Například aplikace Microsoft Excel umožňuje uživatelům otevírat soubory, které mají rozšíření XLC (graf) nebo .xls (list), mimo jiné. Filtr pro aplikace Excel může být napsaná jako:  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  Ukazatel na řetězec, který obsahuje text, který má nastavit pro ovládací prvek.  
   
 ### <a name="remarks"></a>Poznámky  
- Obě verze této funkce jsou platné pro aplikace, které používají kódování Unicode. Nicméně je platný pro aplikace, které používají pouze verze s typem LPCSTR [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
+ Obě verze této funkce jsou platné pro aplikace, které používají kódování Unicode. Pouze verze s typem LPCSTR však platí pro aplikace, které používají ANSI.  
   
  Pokud chcete použít tuto metodu, musíte vytvořit dialogové okno stylem OFN_EXPLORER. V opačném případě funkce se nezdaří s kontrolní výraz.  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  Obsahuje identifikační číslo prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
   
  [in] *nWin4ID*  
- Obsahuje identifikační číslo prostředku šablony pro Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] a novějším, Windows 95 a novější verze, nebo pokud je přítomna OFN_EXPLORER style.  
+ Obsahuje identifikační číslo prostředku šablony pro Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
   
  [in] *lpWin3ID*  
  Obsahuje název prostředku šablony pro jiné Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v systému Windows NT 3.51, aktualizace nebo styl OFN_EXPLORER není k dispozici.  
   
  [in] *lpWin4ID*  
- Obsahuje název prostředku šablony Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom v [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] a novějším, Windows 95 a novější verze, nebo pokud je přítomna OFN_EXPLORER style.  
+ Obsahuje název prostředku šablony Průzkumníka `CFileDialog` objektu. Tato šablona se používá jenom ve Windows NT 4.0 a novější, Windows 95 a novějších verzích nebo styl OFN_EXPLORER je k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
- Systém bude používat jenom jeden z určené šablony. Systém zjistí, která šablona se má použít na základě přítomnosti OFN_EXPLORER stylu a operační systém, na kterém aplikace běží na. Zadáním jiné Explorer i stylem podobným Průzkumníku šablony, je snadné podpory systému Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] a novějších verzích a Windows 95 a novějších verzích.  
+ Systém bude používat jenom jeden z určené šablony. Systém zjistí, která šablona se má použít na základě přítomnosti OFN_EXPLORER stylu a operační systém, na kterém aplikace běží na. Zadáním jiné Explorer i stylem podobným Průzkumníku šablony je jednoduché podporovat Windows NT 3.51, aktualizace, Windows NT 4.0 a novější verze a Windows 95 a novějších verzích.  
   
 > [!NOTE]
 > Windows Vista nebo novější styl soubor dialogová okna nepodporují tuto funkci. Pokus o použití této funkce ve Windows Vista nebo novější soubor dialogové okno Styl vyvolá [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md). Další možností je používat přizpůsobené dialogové okno. Další informace o používání vlastní `CFileDialog`, naleznete v tématu [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849337"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465992"
 ---
 # <a name="coletemplateserver-class"></a>Coletemplateserver – třída
 Používá se pro OLE vizuálních úprav servery, automatizační servery a propojení kontejnerů (aplikace, které podporují odkazy na vložené části).  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  Informace v argumentech *rglpszRegister* a *rglpszOverwrite* jsou zapsána do registru pomocí volání [afxoleregisterserverclass –](application-control.md#afxoleregisterserverclass). Informace o výchozím nastavení, které se zaregistruje, když dva argumenty jsou NULL, je vhodný pro většinu aplikací. Informace o struktuře informace v těchto argumentech najdete v tématu `AfxOleRegisterServerClass`.  
   
- Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   

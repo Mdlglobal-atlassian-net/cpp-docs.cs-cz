@@ -1,5 +1,5 @@
 ---
-title: -ZW (kompilace Windows Runtime) | Microsoft Docs
+title: -ZW (kompilace Windows Runtime) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97a97158dda886a09fb6ccb00898a8c518d8e250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380063"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602259"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (kompilace Windows Runtime)
-Zkompiluje zdrojový kód pro podporu [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) pro vytváření aplikací pro univerzální platformu Windows (UWP).  
+Zkompiluje zdrojového kódu, který podporuje rozšíření součásti Visual C++ C + +/ CX pro vytváření aplikací pro univerzální platformu Windows (UPW).  
   
- Při použití **/ZW** zkompilovat, vždycky zadat **/EHsc** také.  
+ Při použití **/ZW** ke kompilaci, vždy zadejte **/EHsc** také.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +42,18 @@ Zkompiluje zdrojový kód pro podporu [!INCLUDE[cppwrt](../../build/reference/in
   
 ## <a name="arguments"></a>Arguments  
  nostdlib  
- Označuje, že Platform.winmd, Windows.Foundation.winmd a ostatní výchozí soubory metadat (.winmd) systému Windows nejsou automaticky součástí kompilace. Místo toho musíte použít [/FU (vynuceným názvem #using souboru)](../../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru k explicitnímu zadání soubory metadat Windows.  
+ Označuje, že Platform.winmd, Windows.Foundation.winmd a jiné výchozí soubory metadat (.winmd) Windows nejsou automaticky součástí kompilace. Místo toho je nutné použít [/FU (vynuceným názvem #using souboru)](../../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru k explicitnímu zadání souborů metadat Windows.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud zadáte **/ZW** možnost kompilátor podporuje tyto funkce:  
+ Pokud zadáte **/ZW** možnost, kompilátor podporuje tyto funkce:  
   
--   Požadovaná metadata souborů, obory názvů, datové typy a funkce, které vaše aplikace vyžaduje provést v prostředí Windows Runtime.  
+-   Požadovaná metadata soubory, obory názvů, datové typy a funkce, které vaše aplikace vyžaduje ke spuštění v modulu Windows Runtime.  
   
--   Automatické počítání odkazů objektů prostředí Windows Runtime a jsou automatické zahození objektu při jeho počet odkazů přejde na hodnotu nula.  
+-   Automatické počítání odkazů objektů prostředí Windows Runtime a automatické zrušení objektu při jeho počet odkazů dosáhne nuly.  
   
- Protože přírůstkové linkeru nepodporuje metadat Windows součástí soubory .obj pomocí **/ZW** možnost, [/Gm (povolit minimální sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) možnost není kompatibilní s **/ZW** .  
+ Protože přírůstkový linker nepodporuje metadat Windows zahrnuty v souborech .obj pomocí **/ZW** možnost, [/Gm (povolení minimálního opětovného sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) možnost není kompatibilní s **/ZW** .  
   
- Další informace najdete v tématu [referenční příručka jazyka Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
+ Další informace najdete v tématu [referenční dokumentace jazyka Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   
 ## <a name="requirements"></a>Požadavky  
   

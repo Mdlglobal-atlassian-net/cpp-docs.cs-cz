@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208793"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466440"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 Zapouzdřuje `CURRENCY` datovým typem automatizace OLE.  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) sestaví `COleCurrency` objekt z existující `COleCurrency` objektu. Nový objekt je stejného stavu jako zdrojový objekt.  
   
-- COleCurrency (`varSrc`) sestaví `COleCurrency` objektu. Se pokusí převést [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) struktury nebo `COleVariant` objektu na hodnotu měny (VT_CY). Pokud tento převod je úspěšný, převedená hodnota zkopírován do nové `COleCurrency` objektu. Pokud ne, je hodnota `COleCurrency` objektu je nastavena na nulu (0) a její stav na neplatný.  
+- COleCurrency (`varSrc`) sestaví `COleCurrency` objektu. Se pokusí převést [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury nebo `COleVariant` objektu na hodnotu měny (VT_CY). Pokud tento převod je úspěšný, převedená hodnota zkopírován do nové `COleCurrency` objektu. Pokud ne, je hodnota `COleCurrency` objektu je nastavena na nulu (0) a její stav na neplatný.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "objekt ze zadané číselné součásti. Pokud absolutní hodnota zlomkové části je větší než 10 000 operací, je vhodné úpravy provedené s jednotkami. Všimněte si, že jsou určeny jednotky a desetinná část dlouhé hodnoty se znaménkem.  
   
- Další informace najdete v tématu [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklady ukazují účinky konstruktory parametr nula a dvěma parametr:  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **operátor = (** *varSrc* **)** Pokud převod `VARIANT` hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) do měny ( `VT_CY`) je úspěšné, převedená hodnota se zkopíruje do tohoto `COleCurrency` objektu a jeho stav je nastaven na platný. Pokud neproběhne úspěšně, převod hodnoty `COleCurrency` objektu je nastavena na 0 a její stav na neplatný.  
   
- Další informace najdete v tématu [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Poznámky  
  Specifikace místní jazyka (ID národních prostředí) používá pro význam číselného typu znaků ve zdrojovém řetězci.  
   
- Diskuzi o hodnoty ID národního prostředí, najdete v článku [podpora více jazyků](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Diskuzi o hodnoty ID národního prostředí, najdete v článku [podpora více jazyků](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Pokud řetězec byl úspěšně převeden do měny hodnotu, hodnota tohoto `COleCurrency` objekt je nastaven na tuto hodnotu a její stav na platný.  
   

@@ -1,5 +1,5 @@
 ---
-title: NMAKE – odkaz | Microsoft Docs
+title: NMake – odkaz | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372676"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465224"
 ---
 # <a name="nmake-reference"></a>NMAKE – odkaz
-Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazového řádku součástí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] který sestavení projektů založených na příkazy, které jsou obsaženy v souboru popis.  
+Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazového řádku je součástí sady Visual Studio, který sestavuje projekty založené na příkazy, které jsou obsaženy v souboru popisu.  
   
- Chcete-li použít NMAKE, musíte ji provést v okně příkazového řádku vývojáře. Okno příkazového řádku vývojáře má proměnné prostředí, nastavte pro nástroje, knihovny a zahrnout požadované k vytvoření na příkazovém řádku cesty k souborům. Podrobnosti o tom, otevřete okno příkazového řádku vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md).  
+ Pokud chcete použít NMAKE, musíte ho spustit v okně příkazového řádku pro vývojáře. Okno příkazového řádku pro vývojáře má proměnné prostředí pro nástroje, knihovny a zahrnout cesty k souborům potřebné k sestavení na příkazovém řádku. Podrobnosti o tom, jak otevřít okno příkazového řádku pro vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
  [Spuštění příkazu NMAKE](../build/running-nmake.md)  
   
  [Obsah souboru pravidel](../build/contents-of-a-makefile.md)  
@@ -47,8 +47,8 @@ Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazov�
  [Předběžné zpracování souboru pravidel](../build/makefile-preprocessing.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření kódu C/C++ v příkazovém řádku](../build/building-on-the-command-line.md)   
+ [Sestavení kódu C/C++ v příkazovém řádku](../build/building-on-the-command-line.md)   
  [Nástroje sestavení C/C++](../build/reference/c-cpp-build-tools.md)   
- [Vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Vytváření a spravování projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
  [Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)

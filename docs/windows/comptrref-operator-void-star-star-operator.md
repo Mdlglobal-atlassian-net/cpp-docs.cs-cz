@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16fa7964af8f56ec54f6870b8866e69266bdc414
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648786"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590686"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* – operátor
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-operator void**() const;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhraní, která je reprezentována **comptrref –** objektu jako ukazatel na ukazatel- **void**a pak vrátí ukazatel přetypování.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** client.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Comptrref – třída](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+operator void**() const;
+```
+
+## <a name="remarks"></a>Poznámky
+
+Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhraní, která je reprezentována **comptrref –** objektu jako ukazatel na ukazatel- **void**a pak vrátí ukazatel přetypování.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** client.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ComPtrRef – třída](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

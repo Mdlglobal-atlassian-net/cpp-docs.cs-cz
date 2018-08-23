@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010286"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601845"
 ---
 # <a name="modifying-the-layout-grid"></a>Změna mřížky rozložení
-Pokud jsou uvedení nebo uspořádání ovládacích prvků v dialogovém okně, můžete pro přesnější umístění mřížky rozložení. Po zapnutí mřížky "se přichytil k" tečkované čáry mřížky jakoby zmagnetizovat zobrazí ovládací prvky. Můžete zapnout a vypnout tuto funkci "přichycení k mřížce" a změnit velikost buňky mřížky rozložení.  
-  
-### <a name="to-turn-the-layout-grid-on-or-off"></a>K zapnutí nebo vypnutí mřížky rozložení  
-  
-1.  Z **formátu** nabídce zvolte **nastavení vodítek**.  
-  
-2.  V [dialogové okno nastavení průvodce](../windows/guide-settings-dialog-box.md)zaškrtněte nebo zrušte **mřížky** tlačítko.  
-  
-     Můžete řídit mřížky v jednotlivých **dialogové okno** oken editoru pomocí **Přepnout mřížku** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
-  
-### <a name="to-change-the-size-of-the-layout-grid"></a>Chcete-li změnit velikost rozložení mřížky  
-  
-1.  Z **formátu** nabídce zvolte **nastavení vodítek**.  
-  
-2.  V [dialogové okno nastavení průvodce](../windows/guide-settings-dialog-box.md), zadejte výšku a šířku dlu buňky v mřížce. Minimální výšku nebo šířku je 4 dlu. Další informace o dlu najdete v tématu [The uspořádání sady ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md).  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Stavy editoru dialogových oken (vodítka a mřížky)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)
+
+Pokud jsou uvedení nebo uspořádání ovládacích prvků v dialogovém okně, můžete pro přesnější umístění mřížky rozložení. Po zapnutí mřížky "se přichytil k" tečkované čáry mřížky jakoby zmagnetizovat zobrazí ovládací prvky. Můžete zapnout a vypnout tuto funkci "přichycení k mřížce" a změnit velikost buňky mřížky rozložení.
+
+### <a name="to-turn-the-layout-grid-on-or-off"></a>K zapnutí nebo vypnutí mřížky rozložení
+
+1. Z **formátu** nabídce zvolte **nastavení vodítek**.
+
+2. V [dialogové okno nastavení průvodce](../windows/guide-settings-dialog-box.md)zaškrtněte nebo zrušte **mřížky** tlačítko.
+
+   Můžete řídit mřížky v jednotlivých **dialogové okno** oken editoru pomocí **Přepnout mřížku** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+### <a name="to-change-the-size-of-the-layout-grid"></a>Chcete-li změnit velikost rozložení mřížky
+
+1. Z **formátu** nabídce zvolte **nastavení vodítek**.
+
+2. V [dialogové okno nastavení průvodce](../windows/guide-settings-dialog-box.md), zadejte výšku a šířku dlu buňky v mřížce. Minimální výšku nebo šířku je 4 dlu. Další informace o dlu najdete v tématu [The uspořádání sady ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md).
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Stavy editoru dialogových oken (vodítka a mřížky)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)

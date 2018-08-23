@@ -1,5 +1,5 @@
 ---
-title: Spuštění jako člen skupiny Users | Microsoft Docs
+title: Spuštění jako člen skupiny Users | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,42 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841657"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586319"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Spuštění jako člen skupiny Users
-Toto téma vysvětluje, jak konfigurace uživatelské účty systému Windows jako člen skupiny Users (na rozdíl od skupiny Administrators) zvyšuje úroveň zabezpečení snižuje pravděpodobnost infekce škodlivým kódem.  
+Toto téma vysvětluje, jak konfigurace Windows uživatelské účty jako člen skupiny Users (na rozdíl od skupiny Administrators) zvyšuje úroveň zabezpečení omezuje se tak pravděpodobnost infekce škodlivým kódem.  
   
-## <a name="security-risks"></a>Rizika zabezpečení  
- Jako správce je zranitelný systému několik druhů útokům na zabezpečení, jako je například "Trojský kůň" a "přetečení vyrovnávací paměti." Pouze navštívení web na Internetu jako správce může poškodit systému, jako škodlivý kód, který byl stažen z web na Internetu může zaútočit na váš počítač. Pokud bylo úspěšné, dědí oprávnění správce a potom může provést akce, například odstraní všechny soubory, přeformátování vašeho pevného disku a vytvoření nového uživatele účty s přístupem pro správu.  
+## <a name="security-risks"></a>Bezpečnostní rizika  
+ Přihlášení jako správce je zranitelný systému několik druhů útokům na zabezpečení, jako je například "Trojský kůň" a "přetečení vyrovnávací paměti." Pouze navštívení webem na Internetu jako správce můžete poškození systému, jako škodlivý kód, který se stáhne z webem na Internetu může napadení počítače. V případě úspěchu se dědí oprávnění správce a pak můžete provádět akce, například odstraní všechny soubory, přeformátování vašeho pevného disku a vytvoření nové uživatelské účty s přístupem pro správu.  
   
 ## <a name="non-administrator-user-groups"></a>Skupiny uživatelů bez oprávnění správce  
- Uživatelské účty systému Windows, které obvykle používají vývojáři musí být přidaní do uživatelé nebo skupiny Power Users. Vývojáři musí být také přidaní do skupiny ladění. Členství ve skupině uživatelů umožňuje provádět běžné úlohy, včetně spouštění programů a hostujících internetovými weby bez vystavení vašeho počítače zbytečnému riziku. Jako člena skupiny Power Users můžete také provést úlohy, jako je instalace aplikace, instalace tiskárny a většinu operací ovládací panely. Pokud potřebujete k provádění úloh správy, jako je například upgrade operačního systému nebo konfigurace systémových parametrů, je zapotřebí přihlásit k účtu správce na tak dlouho potřeba provádět správu úloh. Alternativně Windows **runas** příkaz lze použít ke spuštění určitých aplikací s přístupem pro správu.  
+ Uživatelské účty Windows, které obvykle používají vývojáři měli byste přidat uživatele nebo skupiny Power Users. Vývojáři by také přidat do skupiny ladění. Člen skupiny Users umožňuje provádět běžné úlohy, včetně spouštění programů a hostujících internetovými weby bez vystavení počítače zbytečné riziko. Jako člen skupiny Power Users můžete také provádět úkoly jako instalace aplikací, instalace tiskárny a většina operací Ovládacích panelů. Pokud potřebujete k provádění úloh správy, jako je upgrade operačního systému nebo konfigurace parametrů systému, by měl přihlásíte s oprávněními správce na tak dlouho dostačující k provedení úloh pro správu. Alternativně Windows **runas** příkaz můžete použít ke spuštění konkrétní aplikací s přístupem pro správu.  
   
-## <a name="exposing-customers-to-security-risks"></a>Vystavení zákazníkům rizika zabezpečení  
- Nebude součástí skupiny Administrators je zvláště důležité pro vývojáře, protože, kromě ochrany počítače vývoj, brání vývojáři nechtěně psaní kódu, který vyžaduje zákazníků k zapojení do skupiny Administrators pořadí spuštění aplikace, že budete vyvíjet. Pokud kód, který vyžaduje přístup správce byla zavedená během vývoje, se nezdaří za běhu, výstrahy upozorňující na skutečnost, že teď vaše aplikace vyžaduje zákazníkům spustit jako správce.  
+## <a name="exposing-customers-to-security-risks"></a>Zákazníci na bezpečnostní rizika vystavení  
+ Není součástí skupiny Administrators je obzvláště důležité pro vývojáře, protože kromě ochrany počítačích vývojářů, brání vývojářům od nedopatřením psaní kódu, který vyžaduje, aby zákazníci připojit do skupiny Administrators pořadí aplikace spustí, že při vývoji. Pokud kód, který vyžaduje přístup správce se používá při vývoji, dojde k selhání za běhu, upozorní vás na to, že teď vaše aplikace vyžaduje, aby zákazníci spustit jako správce.  
   
 ## <a name="code-that-requires-administrator-privileges"></a>Kód, který vyžaduje oprávnění správce  
- Kód spuštění vyžaduje přístup správce. Pokud je to možné mají být naplněny alternativy tento kód. Příklady kódu činnosti, které vyžadují přístup správce:  
+ Nějaký kód vyžaduje přístup správce k provedení. Pokud je to možné by měl být sledované alternativy na tento kód. Příklady kódu operace, které vyžadují přístup správce:  
   
--   Zápis do chráněných oblastech systému souborů, jako je například adresáře systému Windows nebo Program Files  
+-   Zápis do chráněné oblasti systému souborů, jako je například Windows nebo Program Files adresáře  
   
--   Zápis do chráněných oblastech registru, jako je například HKEY_LOCAL_MACHINE  
+-   Zápis do registru, jako je například HKEY_LOCAL_MACHINE chráněné oblasti  
   
 -   Instalace sestavení v globální mezipaměti sestavení (GAC)  
   
- Obecně platí tyto akce musí být omezeno na instalační programy aplikace. To umožňuje uživatelům používat pouze dočasně správce stavu.  
+ Obecně tyto akce by měly být omezené na instalační programy aplikací. To umožňuje uživatelům používat Správce stavu jenom dočasně.  
   
 ## <a name="debugging"></a>Ladění  
- Můžete ladit aplikace, které spustíte v sadě Visual Studio (nativní a nespravované) jako bez oprávnění správce ve stane součástí skupiny ladění. To zahrnuje možnost připojení k spuštěné aplikaci pomocí připojení k procesu příkazu. Nicméně je nutné být součástí skupiny správce, pokud chcete ladit nativní nebo spravované aplikace, které nebyly spuštěny jiným uživatelem.  
+ Můžete ladit všechny aplikace, které spustíte v sadě Visual Studio (nativní a nespravovaných) jako bez oprávnění správce, že se stanete součástí skupiny ladění. To zahrnuje možnost se připojit k běžící aplikaci příkazu připojit k procesu. Nicméně je nutné být členem skupiny Administrator, aby bylo možné ladit spravované nebo nativní aplikace, které byly spouštěny jiným uživatelem.  
   
 ## <a name="see-also"></a>Viz také  
  [Osvědčené postupy zabezpečení](security-best-practices-for-cpp.md)

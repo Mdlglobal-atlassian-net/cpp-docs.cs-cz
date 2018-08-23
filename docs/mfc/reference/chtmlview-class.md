@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027856"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465993"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 Poskytuje funkce ovládání prvku WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Načte adresu URL prostředku, který se aktuálně zobrazuje WebBrowser.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|Načte hodnotu, která určuje, zda je zobrazen panel nabídky.|  
 |[CHtmlView::GetOffline](#getoffline)|Načte hodnotu, která určuje, zda je ovládací prvek v režimu offline.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Načte ukazatel `IDispatch` rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Načte ukazatel `IDispatch` rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|  
 |[CHtmlView::GetProperty](#getproperty)|Načte aktuální hodnotu vlastnosti přidružené k daný objekt.|  
 |[CHtmlView::GetReadyState](#getreadystate)|Načte připravena objekt webového prohlížeče.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Označuje, zda je ovládací prvek WebBrowser registrován jako prohlížeč nejvyšší úrovně pro překlad názvů cíl.|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `IDispatch` rozhraní objektu aktivní dokument. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Ukazatel `IDispatch` rozhraní objektu aktivní dokument. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="remarks"></a>Poznámky  
  Platí pro aplikaci Internet Explorer a WebBrowser.  

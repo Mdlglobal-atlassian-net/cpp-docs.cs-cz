@@ -17,31 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41a54713c562e522c3161b2f3def3afdc210e927
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645669"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583413"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Oříznutí nebo rozšíření celého obrázku (editor obrázků pro ikony)
-Následující postup ukazuje, jak oříznutí nebo rozšíření celého obrázku.  
-  
-### <a name="to-crop-or-extend-an-entire-image"></a>Oříznutí nebo rozšíření celého obrázku  
-  
-1.  Vyberte celého obrázku.  
-  
-     Pokud aktuálně vybrané části obrázku, a chcete vybrat celého obrázku, klikněte na libovolné místo v imagi mimo aktuální ohraničení výběru.  
-  
-2.  Přetáhněte úchyt pro změnu velikosti obrázku je požadovaná velikost.  
-  
- Za normálních okolností editoru obrázků ořízne nebo (zvětšit) zvětší bitovou kopii, když změníte velikost přesunutím úchyt pro změnu velikosti. Při podržení **Shift** klíče při přesunu úchyt pro změnu velikosti, editoru obrázků [zmenšuje nebo roztáhne](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) bitovou kopii.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Žádné  
-  
-## <a name="see-also"></a>Viz také  
- [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Změna velikosti obrázku](../windows/resizing-an-image-image-editor-for-icons.md)
+
+Následující postup ukazuje, jak oříznutí nebo rozšíření celého obrázku.
+
+### <a name="to-crop-or-extend-an-entire-image"></a>Oříznutí nebo rozšíření celého obrázku
+
+1. Vyberte celého obrázku.
+
+   Pokud aktuálně vybrané části obrázku, a chcete vybrat celého obrázku, klikněte na libovolné místo v imagi mimo aktuální ohraničení výběru.
+
+2. Přetáhněte úchyt pro změnu velikosti obrázku je požadovaná velikost.
+
+Za normálních okolností editoru obrázků ořízne nebo (zvětšit) zvětší bitovou kopii, když změníte velikost přesunutím úchyt pro změnu velikosti. Při podržení **Shift** klíče při přesunu úchyt pro změnu velikosti, editoru obrázků [zmenšuje nebo roztáhne](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md) bitovou kopii.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Žádné
+
+## <a name="see-also"></a>Viz také
+
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Změna velikosti obrázku](../windows/resizing-an-image-image-editor-for-icons.md)

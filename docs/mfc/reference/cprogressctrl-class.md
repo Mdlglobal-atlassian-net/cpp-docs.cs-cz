@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850154"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466048"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 Poskytuje funkce pro ovládací prvek panelu průběhu běžné Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje novou barvu indikátoru průběhu. Zadejte CLR_DEFAULT způsobit indikátor průběhu používat výchozí barvy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Na předchozí barvu indikátoru průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu nebo CLR_DEFAULT, pokud je Barva Indikátor průběhu výchozí barvy.  
+
+Na předchozí barvu indikátoru průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu nebo CLR_DEFAULT, pokud je Barva Indikátor průběhu výchozí barvy.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetBarColor` Metoda nastaví průběhu barva pouze tehdy, pokud [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) není platná.  
+
+`SetBarColor` Metoda nastaví průběhu barva pouze tehdy, pokud Windows Vista [motiv](/windows/desktop/Controls/visual-styles-overview) není platná.  
   
  Tato metoda odesílá [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) zprávu, která je popsána v sadě Windows SDK.  
   

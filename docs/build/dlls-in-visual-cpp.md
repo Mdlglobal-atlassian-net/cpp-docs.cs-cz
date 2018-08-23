@@ -1,5 +1,5 @@
 ---
-title: Knihovny DLL v jazyce Visual C++ | Microsoft Docs
+title: Knihovny DLL v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,58 +18,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facb085ae134c3ecea635ab68dd73f98e55488a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4554ae6aab9a6d8d488607ab22c26460116c751d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464956"
 ---
 # <a name="dlls-in-visual-c"></a>Knihovny DLL v jazyce Visual C++  
   
-V systému Windows je dynamická knihovna (DLL) druh spustitelný soubor, který funguje jako sdílené knihovny funkce a prostředků. Dynamické propojování je funkci operačního systému, která umožňuje spustitelný soubor k volání funkce nebo použití prostředkům uloženým v samostatném souboru. Tyto funkce a prostředky můžete zkompilovat a nasazuje samostatně z spustitelné soubory, které je používat. Knihovny DLL není samostatný spustitelný soubor; Spustí se v kontextu aplikace, která se volá. Operační systém můžete načíst knihovnu DLL do aplikace paměťový prostor při načtení aplikace (*implicitní propojení*), nebo na vyžádání v době běhu (*explicitní propojení*). Knihovny DLL také usnadňují sdílení funkce a prostředky v spustitelné soubory. Více aplikací můžete přístup k obsahu z jedné kopie knihovny DLL v paměti ve stejnou dobu.  
+Dynamická knihovna (DLL) ve Windows, je druh spustitelný soubor, který funguje jako sdílená knihovna funkcí a prostředků. Dynamické propojení je operační systém schopností, který umožňuje spustitelného souboru k volání funkce nebo prostředkům uloženým v samostatném souboru. Může být sestaven a nasazují samostatně z spustitelné soubory, které používají tyto funkce a prostředky. Knihovny DLL není samostatně spustitelná; spuštění v rámci aplikace, která je volá. Operační systém můžete načíst knihovnu DLL do aplikace paměťového prostoru při načtení aplikace (*implicitní propojení*), nebo na vyžádání za běhu (*explicitní propojení*). Knihovny DLL také usnadňují sdílení funkce a prostředky v spustitelné soubory. Více aplikací můžete přístup k obsahu jedné kopie knihovny DLL v paměti ve stejnou dobu.  
   
-## <a name="differences-between-dynamic-linking-and-static-linking"></a>Rozdíly mezi dynamického propojení a statické propojení  
+## <a name="differences-between-dynamic-linking-and-static-linking"></a>Rozdíly mezi dynamické propojení a statické propojení  
   
-Statické propojení zkopíruje všechny kód objektu v statické knihovny do spustitelné soubory, které ho používat, pokud tyto šablony jsou sestaveny. Dynamické propojování obsahuje pouze informace potřebné pro Windows v době běhu k vyhledání a načtení knihovny DLL obsahující datové položky nebo funkce. Při vytváření knihovny DLL, můžete také vytvořit knihovnu importu, který obsahuje tyto informace. Když vytvoříte spustitelné soubory, které volá knihovnu DLL, linkeru používá exportovaný symboly v knihovně import k ukládání tyto informace pro zavaděč systému Windows. Při zavaděč načtení knihovny DLL, knihovny DLL je mapována do paměťového prostoru svojí aplikace. Pokud je k dispozici, speciální funkce v knihovně DLL `DllMain`, je volána k provedení všechny inicializace vyžaduje knihovnu DLL.  
+Statické propojení zkopíruje celého objektového kódu ve statické knihovně do spustitelných souborů, který se použije při sestavení. Dynamické propojení obsahuje pouze informace potřebné pro Windows v době běhu k vyhledání a načtení knihovny DLL obsahující datové položky nebo funkce. Při vytváření knihovny DLL, můžete také vytvořit knihovnu importu, který obsahuje tyto informace. Při vytváření spustitelného souboru, který volá knihovnu DLL linkeru používá exportovaný symbolů v knihovně importu k ukládání příslušných informací pro Windows zavaděče. Když se načte knihovna DLL, knihovnu DLL je namapována na místo v paměti aplikace. Pokud jsou k dispozici, speciální funkce v knihovně DLL `DllMain`, volá se, že můžete udělat všechny inicializace, pak vyžaduje knihovna DLL.  
   
 <a name="differences-between-applications-and-dlls"></a>  
   
 ## <a name="differences-between-applications-and-dlls"></a>Rozdíly mezi aplikacemi a knihovnami DLL  
   
-I když knihovny DLL a aplikace jsou obě spustitelné moduly, se liší v několika způsoby. Pro koncového uživatele nejobvyklejší rozdílem je, že knihovny DLL nejsou aplikace, které mohou být spuštěny přímo. V systému hlediska existují dva základní rozdíly mezi aplikacemi a knihovnami DLL:  
+I když knihovny DLL a aplikace jsou obě spustitelných modulů, se liší v několika způsoby. Koncovému uživateli Nejobvyklejšími rozdílem je, knihovny DLL nejsou aplikací, které mohou být provedeny přímo. V systému pohledu existují dva základní rozdíly mezi aplikacemi a knihovnami DLL:  
   
--   Aplikace může mít více instancí běhu v systému současně, zatímco knihovny DLL může mít pouze jednu instanci.  
+-   Aplikace může mít více instancí současně, spuštěná v systému, že knihovna DLL může mít pouze jednu instanci.  
   
--   Aplikace mohou být načteny jako proces, který může vlastnit například zásobník, vláken provádění, globální paměť, obslužné rutiny souborů a fronta zpráv, ale nemůže knihovny DLL.  
+-   Aplikace mohou být zavedena jako proces, který může vlastnit například zásobníku, vlákna provádění, globální paměť, popisovače souborů a fronty zpráv, ale nikoli knihovnu DLL.  
   
 <a name="advantages-of-using-dlls"></a>  
   
 ## <a name="advantages-of-using-dlls"></a>Výhody použití knihoven DLL  
   
-Dynamické propojování místo statické propojení kódu a prostředků nabízí několik výhod. Při použití knihovny DLL, můžete ušetřit místo paměti a snižují prohození. Když se více aplikací můžete použít jenom jedna kopie knihovny DLL, můžete ušetřit místo na disku a stáhnout šířky pásma. Knihovny DLL mohou být nasazeny a aktualizovat samostatně, které lze zadáte podporu a aktualizací softwaru pro následnou trhu bez nutnosti znovu sestavte a odeslání vašeho kódu. Knihovny DLL jsou pohodlný způsob, jak zadat místního zdroje, které může podporovat vícejazyčné programy a usnadňují vytváření mezinárodní verze aplikací. Explicitní propojení můžete povolit aplikace zjistit a načtení knihovny DLL za běhu, jako je například rozšíření, které poskytují nové funkce.  
+Dynamického propojení namísto statického kódu a prostředky nabízí několik výhod. Při použití knihovny DLL, můžete ušetřit místo v paměti a snižují možnost záměny. Při jedné kopie knihovny DLL mohlo používat více aplikací, můžete ušetřit místo na disku a stáhnout šířky pásma. Knihovny DLL se dají nasadit a aktualizovat samostatně, který umožní poskytujete podporu a aktualizací softwaru pro následné trhu bez nutnosti znovu sestavit a dodávat váš kód. Knihovny DLL jsou pohodlný způsob, jak zadat prostředků specifických pro národní prostředí, které podporují vícejazyčné programy a usnadňují vytváření mezinárodních verzí vašich aplikací. Explicitní propojení umožňuje vaší aplikaci zjišťovat a načíst knihovny DLL v době běhu, jako je například rozšíření, které poskytují nové možnosti.  
   
-Dynamické propojování má následující výhody:  
+Dynamické propojení má následující výhody:  
   
--   Dynamické propojování, že šetří paměť a snižuje prohození. Velký počet procesů pomocí knihovny DLL současně, sdílení jedné kopie jen pro čtení části knihovny DLL v paměti. Naproti tomu každou aplikaci, která je vytvořená pomocí staticky propojené knihovny obsahuje úplnou kopii knihovny kód, který systém Windows musí načíst do paměti.  
+-   Dynamické propojování šetří paměť a snižuje prohození. Velký počet procesů můžete použít knihovnu DLL současně, sdílení jedné kopie jen pro čtení částí knihovny DLL v paměti. Naproti tomu každou aplikaci, která je vytvořená pomocí staticky propojené knihovny obsahuje úplnou kopii kód knihovny, který Windows musí načíst do paměti.  
   
--   Dynamické propojování šetří místo na disku a šířku pásma. Mnoho aplikací můžete sdílet jenom jedna kopie knihovny DLL na disku. Každá aplikace vytvořené pomocí staticky propojené knihovny naopak má knihovnu propojenou se jeho spustitelné bitové kopie, který používá více místa na disku a trvá větší šířku pásma pro přenos.  
+-   Dynamické propojování šetří místo na disku a šířku pásma. Mnoho aplikací můžete sdílet jedinou kopii knihovny DLL na disku. Naproti tomu každou aplikaci vytvořenou pomocí knihovny statických odkazů obsahuje kód knihovny propojené s jeho spustitelné bitové kopie, které používá více místa na disku a má větší šířku pásma pro přenos.  
   
--   Údržba, opravy zabezpečení a upgradu může být snazší. Pokud vaše aplikace používat běžné funkce v knihovně DLL, pak tak dlouho, dokud argumenty funkce a návratové hodnoty se nemění, můžete implementovat oprav chyb a nasazení aktualizací na knihovnu DLL. Když jsou aktualizovány knihovny DLL, aplikace, které je používají nemusíte překompilovat, nebo znovu připojit a budou využívat nové knihovny DLL ihned po jeho nasazení. Opravy, které provedete v kódu staticky propojený objekt naopak vyžadují, abyste znovu připojit a znovu nasaďte každou aplikaci, která jej používá.  
+-   Údržbu, opravy zabezpečení a inovace může být jednodušší. Když se aplikace používají běžné funkce v knihovně DLL, pak jako argumenty funkce a návratové hodnoty nezmění, můžete implementovat opravy chyb a nasazení aktualizací do knihovny DLL. Při aktualizaci knihovny DLL aplikace, které je používají není nutné znovu zkompilovat, nebo se znovu připojit, a jejich použití nová knihovna DLL ihned poté, co je nasazená. Opravy, které provedete v staticky propojených objektový kód naproti tomu vyžadují, abyste znovu připojit a znovu nasadit každou aplikaci, která ji používá.  
   
--   Knihovny DLL můžete použít k podpoře následnou trhu. Například ovladač zobrazení knihovny DLL můžete upravit tak, aby podporují zobrazení, které nebyly při prodeji aplikace k dispozici. Můžete použít explicitní propojení se načíst rozšíření aplikací jako knihovny DLL a přidání nových funkcí do aplikace bez znovu sestavit nebo jejího opakovaného nasazení.  
+-   Knihovny DLL můžete použít k zajištění podpory následné na trhu. Například lze upravit ovladač zobrazení knihovny DLL pro podporu zobrazení, která nebyla k dispozici v aplikaci byl dodán. Můžete pomocí explicitní propojení můžete načíst rozšíření aplikací jako knihovny DLL a přidat nové funkce do vaší aplikace bez znovu sestavit nebo jejího opětovného nasazení.  
   
--   Dynamické propojování usnadňuje podporu aplikace napsané v různých programovacích jazyků. Programy, které jsou napsané v různých programovacích jazyků můžete volat stejnou funkci knihovny DLL, tak dlouho, dokud dodržují konvence volání funkce. Programy a funkce DLL musí být kompatibilní následujícími způsoby: pořadí, v nichž funkce očekává uložení argumentů na zásobník, rozhodnutí, zda je za vyčištění zásobníku odpovědná funkce nebo aplikace, a informace, zda jsou kterékoli argumenty předávány v registrech.  
+-   Dynamické propojení usnadňuje podporu aplikace napsané v různých programovacích jazycích. Programy napsané v různých programovacích jazycích mohou volat stejné funkce knihovny DLL, tak dlouho, dokud dodržují konvence volání funkce. Programy a funkce DLL musí být kompatibilní následujícími způsoby: pořadí, v nichž funkce očekává uložení argumentů na zásobník, rozhodnutí, zda je za vyčištění zásobníku odpovědná funkce nebo aplikace, a informace, zda jsou kterékoli argumenty předávány v registrech.  
   
--   Dynamické propojování poskytuje mechanismus pro rozšíření třídy knihovny MFC. Můžete odvozovat z existujících tříd MFC a umístit je rozšíření MFC DLL pro použití aplikací MFC.  
+-   Dynamické propojování poskytuje mechanismus pro rozšíření tříd knihovny MFC. Můžete odvozovat z existujících tříd knihovny MFC a umístit je do MFC – rozšiřující knihovny DLL pro použití v aplikacích MFC.  
   
--   Dynamické propojování usnadňuje vytváření mezinárodní verze vaší aplikace. Umístíte do knihovny DLL prostředků specifických pro národní prostředí, je mnohem snazší vytvářet mezinárodní verze aplikace. Místo přesouvání mnoho lokalizované verze aplikace, můžete umístit řetězce a bitových kopií pro každý jazyk v samostatných prostředků knihovny DLL a načtěte odpovídající prostředky pro toto národní prostředí za běhu aplikace.   
+-   Dynamické propojení usnadňuje vytváření mezinárodních verzí vaší aplikace. Tak, že prostředky specifické pro národní prostředí v knihovně DLL, je snazší vytvářet mezinárodní verze aplikace. Namísto přesouvání mnoho lokalizovaných verzí aplikace, řetězce a bitových kopií pro každý jazyk můžete umístit do samostatného prostředku knihovny DLL a načtěte odpovídající prostředky pro toto národní prostředí za běhu aplikace.   
   
- Potenciální nevýhodou použití knihoven DLL je, že aplikace není úplný a samostatný; To závisí na existenci samostatný modul knihovny DLL, musí nasazení nebo ověřte sami jako součást instalace.  
+ Potenciální nevýhodou použití knihoven DLL je, že aplikace není samostatný; To závisí na existenci samostatný modul knihovny DLL, který musíte nasadit nebo sami ověření jako součást instalace sady.  
   
   
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>Další informace o tom, jak vytvořit a používat knihovny DLL  
   
-Následující témata obsahují podrobné informace o tom, do knihovny DLL programu v jazyce Visual C++.  
+Následující témata obsahují podrobné informace o tom, na program knihovny DLL v jazyce Visual C++.  
   
  [Návod: Vytvoření a použití dynamické knihovny DLL (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
  Popisuje, jak vytvořit a použít knihovnu DLL v sadě Visual Studio.  
@@ -77,32 +78,32 @@ Následující témata obsahují podrobné informace o tom, do knihovny DLL prog
  [Typy knihoven DLL](../build/kinds-of-dlls.md)  
  Poskytuje informace o různých typech knihoven DLL, které lze vytvořit.  
   
- [DLL – nejčastější dotazy](../build/dll-frequently-asked-questions.md)  
+ [Nejčastější dotazy ke knihovnám DLL](../build/dll-frequently-asked-questions.md)  
  Poskytuje odpovědi na nejčastější dotazy týkající se knihoven DLL.  
   
  [Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)  
  Popisuje explicitní a implicitní propojení s knihovnou DLL.  
   
  [Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
- Popisuje kód inicializace knihovny DLL, které musí být spuštěn při načtení knihovny DLL.  
+ Tento článek popisuje inicializační kód knihovny DLL, která musí být spuštěn při načtení knihovny DLL.  
   
  [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)  
  Popisuje, jakým způsobem provádí knihovna runtime spouštěcí sekvenci knihovny DLL.  
   
  [LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
- Popisuje použití **LoadLibrary** a `AfxLoadLibrary` explicitně propojit s knihovnou DLL za běhu.  
+ Popisuje použití **LoadLibrary** a `AfxLoadLibrary` pro explicitní propojení ke knihovně DLL za běhu.  
   
  [GetProcAddress](../build/getprocaddress.md)  
- Popisuje použití **GetProcAddress** získat adresu exportované funkce v knihovně DLL.  
+ Popisuje použití **GetProcAddress** pro získání adresy exportované funkce v knihovně DLL.  
   
  [FreeLibrary a AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)  
- Popisuje použití **FreeLibrary** a `AfxFreeLibrary` Pokud již nepotřebujete modul knihovny DLL.  
+ Popisuje použití **FreeLibrary** a `AfxFreeLibrary` při modul knihovny DLL je už je nepotřebujete.  
   
- [Cesta hledání používaná Windows k nalezení knihovny DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
- Popisuje cesta hledání, který operační systém Windows používá k nalezení knihovny DLL v systému.  
+ [Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)  
+ Popisuje vyhledávací cestu, operační systém Windows používá k nalezení knihovny DLL v systému.  
   
  [Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
- Stavy modulů, které MFC DLL dynamicky propojené s MFC běžný popisuje.  
+ Popisuje stavy modulů běžné, které knihovny MFC DLL staticky propojené do MFC.  
   
  [MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md)  
  Popisuje knihovny DLL, které obvykle implementují opakovaně použitelné třídy odvozené z existujících tříd knihovny Microsoft Foundation Class.  
@@ -117,7 +118,7 @@ Následující témata obsahují podrobné informace o tom, do knihovny DLL prog
  Popisuje import veřejných symbolů do aplikace nebo export funkcí z knihovny DLL.  
   
  [Aktivní technologie a knihovny DLL](../build/active-technology-and-dlls.md)  
- Umožňuje serverům objektu k implementaci uvnitř knihovny DLL.  
+ Umožňuje objektových serverů uvnitř knihovny DLL implementovat.  
   
  [Automatizace v knihovně DLL](../build/automation-in-a-dll.md)  
  Popisuje, co nabízí možnost automatizace v průvodci knihovny MFC DLL.  
@@ -125,13 +126,13 @@ Následující témata obsahují podrobné informace o tom, do knihovny DLL prog
  [Zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)  
  Popisuje, jak se knihovny DLL a knihovny zahrnuté v MFC drží zásady strukturovaného vytváření názvů.  
   
- [Volání funkcí knihovny DLL z aplikací jazyka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)  
+ [Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)  
  Popisuje způsob, jak volat funkce knihovny DLL z aplikací Visual Basic.  
   
 ## <a name="related-sections"></a>Související oddíly  
   
  [Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
- Popisuje regulární MFC DLL, které vám umožňují používat knihovny MFC jako součást knihovny DLL systému Windows.  
+ Popisuje běžných knihovnách MFC DLL, které umožňují použít knihovnu MFC jako součást Windows dynamickou knihovnu.  
   
  [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md)  
- Popisuje, jak můžete použít MFCxx.dll a MFCxxD.dll (kde x je číslo verze knihovny MFC) sdílené knihovny DLL s aplikací MFC a MFC – rozšiřující knihovny DLL.  
+ Popisuje, jak můžete použít knihovny MFCxx.dll a MFCxxD.dll (kde x je číslo verze knihovny MFC) sdílené knihovny DLL s aplikací knihovny MFC a MFC – rozšiřující knihovny DLL.  

@@ -1,7 +1,7 @@
 ---
 title: Vylepšení shody C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 08/15/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209089"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465150"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
 Podporu pro generalizovaný specifikátor constexpr a NSDMI pro agregace je kompilátor jazyka Microsoft Visual C++ teď kompletní pro funkce přidané ve 14 standardu C ++. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
@@ -333,11 +333,11 @@ void bar(A<0> *p)
 
 ### <a name="c17-repairing-elementary-string-conversions"></a>C ++ 17 oprava základní řetězec převody
 
-[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) přesunutí nové funkce pro převod základní řetězec z P0067R5 do nového záhlaví \<charconv > a provádění dalších vylepšení, včetně změny zpracování chyb, které pomocí `std::errc` místo `std::error_code`.
+[P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) přesunutí nové funkce pro převod základní řetězec z P0067R5 do nového záhlaví \<charconv > a dalších vylepšení, včetně změny zpracování chyb, které použijte `std::errc` místo `std::error_code`.
 
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C ++ 17 constexpr pro char_traits (částečná podpora)
 
-[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) změny `std::traits_type` členské funkce `length`, `compare`, a `find` aby bylo možné provést `std::string_view` použít v konstantních výrazech. (V sadě Visual Studio 2017 verze 15.6 podporovaná Clang/LLVM jenom pro. Ve verzi 15.7 Preview 2, podpora je téměř dokončení pro ClXX stejně.)
+[P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) změny `std::traits_type` členské funkce `length`, `compare`, a `find` aby `std::string_view` použít v konstantních výrazech. (V sadě Visual Studio 2017 verze 15.6 podporovaná Clang/LLVM jenom pro. Ve verzi 15.7 Preview 2, podpora je téměř dokončení pro ClXX stejně.)
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Opravy chyb v sadě Visual Studio verze 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), a [15.8](#update_158)
 
@@ -1624,6 +1624,8 @@ int main() {
 ```
 
 ## <a name="update_158"></a> Opravy chyb a změny chování v sadě Visual Studio 2017 verze 15.8
+
+Změny kompilátoru v sadě Visual Studio 2017 verze 15.8 všechny spadají pod kategorii opravy chyb a změny chování a jsou uvedeny níže:
 
 ### <a name="typename-on-unqualified-identifiers"></a>TypeName na neúplný identifikátory
 

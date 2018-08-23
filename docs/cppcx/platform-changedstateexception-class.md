@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::ChangedStateException | Microsoft Docs
+title: Platform::changedstateexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04daf6229ffa3f5ce41087a34ab53d92e3a1361c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 029242a466b7fbac0d967596c114eb0ad45aa569
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087946"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603209"
 ---
-# <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException – třída
-Vyvolá, když vnitřní stav objektu se změnil, a tím zneplatnění výsledky metody.  
+# <a name="platformchangedstateexception-class"></a>Platform::changedstateexception – třída
+Vyvolána, když vnitřní stav objektu došlo ke změně, a proto už není platná výsledky metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,14 +33,14 @@ public ref class ChangedStateException : COMException,    IException,    IPrinta
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Příkladem, kde je vyvolána výjimka je, pokud jsou volány metody iterator kolekce nebo kolekce zobrazení po změně její nadřazená kolekce, zneplatnění výsledky metody.  
+ Jedním z příkladů kde vyvolání této výjimky je při volání metody iterátoru shromažďování nebo zobrazení kolekce po změně kolekce nadřazených, proto už není platná výsledky metody.  
   
  Další informace najdete v tématu [COMException](../cppcx/platform-comexception-class.md) třídy.  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  
   
- **Minimální podporovaná serveru:** systému Windows Server 2012  
+ **Minimální podporovaná serverem:** systému Windows Server 2012  
   
  **Namespace:** platformy  
   

@@ -17,38 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c46fad71a42f9f947f020709cdf7851d079edd81
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014023"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603378"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects – metoda
-Zruší registraci objekty v zadaném modulu tak, aby k nim nelze připojit další aplikace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-HRESULT UnregisterObjects(  
-   ModuleBase* module,  
-   const wchar_t* serverName);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Modul*  
- Ukazatel na modul.  
-  
- *název_serveru*  
- Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod tato operace se nezdařila.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Viz také
- [Module – třída](../windows/module-class.md)
+
+Zruší registraci objekty v zadaném modulu tak, aby k nim nelze připojit další aplikace.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT UnregisterObjects(
+   ModuleBase* module,
+   const wchar_t* serverName);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Modul*  
+Ukazatel na modul.
+
+*název_serveru*  
+Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod tato operace se nezdařila.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+[Module – třída](../windows/module-class.md)

@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaaa8d5bb0a88b9078c60fa61608e52fafd5baac
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643508"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42576706"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids – metoda
-Načte pole ID implementovaného rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-STDMETHOD(  
-   GetIids  
-)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *iidCount*  
- Když tato operace dokončí, počet ID uživatelského rozhraní v *IID* pole.  
-  
- *IID*  
- Po dokončení této operace implementované pole ID rozhraní.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. E_OUTOFMEMORY je možné selhání hodnoty HRESULT.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [ActivationFactory – třída](../windows/activationfactory-class.md)
+
+Načte pole ID implementovaného rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Parametry
+
+*iidCount*  
+Když tato operace dokončí, počet ID uživatelského rozhraní v *IID* pole.
+
+*IID*  
+Po dokončení této operace implementované pole ID rozhraní.
+
+## <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. E_OUTOFMEMORY je možné selhání hodnoty HRESULT.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[ActivationFactory – třída](../windows/activationfactory-class.md)

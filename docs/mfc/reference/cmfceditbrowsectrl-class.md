@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ec3bfc550843675673782ea92ff7fad6eae2967b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854005"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466410"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
 `CMFCEditBrowseCtrl` Třída podporuje textové pole procházení, což je upravitelné textové pole, který volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.  
@@ -174,7 +174,7 @@ void EnableFileBrowseButton(
 ### <a name="remarks"></a>Poznámky  
  Když je textové pole procházení v režimu procházení souboru a uživatel klikne na tlačítko Procházet, ovládací prvek zobrazí dialogové okno Výběr standardní soubor.  
   
- Úplný seznam dostupných příznaků najdete v tématu [LPSTRFILE struktury](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Úplný seznam dostupných příznaků najdete v tématu [LPSTRFILE struktury](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Zobrazí tlačítko procházení v aktuální textové pole procházení a umístí ovládací prvek *procházení složek* režimu.  

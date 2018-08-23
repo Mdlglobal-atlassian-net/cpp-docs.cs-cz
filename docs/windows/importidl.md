@@ -17,59 +17,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de680b2598a9439338986c283a4041482642fa0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9bb6c1bd23eaf705f6ceb57e5fc4ea3354c0ddfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015755"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42571355"
 ---
 # <a name="importidl"></a>importidl
-Vloží zadaný souboru do generovaného souboru.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-[ importidl(  
-   idl_file  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *idl_file*  
- Určuje název souboru, který chcete sloučit s souboru IDL se vygeneruje pro vaši aplikaci.  
-  
-## <a name="remarks"></a>Poznámky  
- **Importidl –** C++ atribut umístí části mimo blok knihovny (v *idl_file*) do generovaného souboru váš program a v části library (v *idl_file*) do knihovny část váš program vygeneruje soubor IDL.  
-  
- Můžete chtít použít **importidl –**, například, pokud chcete použít soubor .idl. ruční pevně zakódované souborem generované IDL.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// cpp_attr_ref_importidl.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[importidl("import.idl")];  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-### <a name="attribute-context"></a>Atribut kontextu  
-  
-|||  
-|-|-|  
-|**Platí pro**|Kdekoli|  
-|**Opakovatelné**|Ne|  
-|**Vyžadované atributy**|Žádné|  
-|**Neplatné atributy**|Žádné|  
-  
- Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Atributy kompilátoru](../windows/compiler-attributes.md)   
- [Samostatné atributy](../windows/stand-alone-attributes.md)   
- [Import](../windows/import.md)   
- [importlib](../windows/importlib.md)   
- [Zahrnout](../windows/include-cpp.md)   
- [includelib –](../windows/includelib-cpp.md)   
+
+Vloží zadaný souboru do generovaného souboru.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+[ importidl(
+   idl_file
+) ];
+```
+
+### <a name="parameters"></a>Parametry
+
+*idl_file*  
+Určuje název souboru, který chcete sloučit s souboru IDL se vygeneruje pro vaši aplikaci.
+
+## <a name="remarks"></a>Poznámky
+
+**Importidl –** C++ atribut umístí části mimo blok knihovny (v *idl_file*) do generovaného souboru váš program a v části library (v *idl_file*) do knihovny část váš program vygeneruje soubor IDL.
+
+Můžete chtít použít **importidl –**, například, pokud chcete použít soubor .idl. ruční pevně zakódované souborem generované IDL.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// cpp_attr_ref_importidl.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[importidl("import.idl")];
+```
+
+## <a name="requirements"></a>Požadavky
+
+### <a name="attribute-context"></a>Atribut kontextu
+
+|||
+|-|-|
+|**Platí pro**|Kdekoli|
+|**Opakovatelné**|Ne|
+|**Vyžadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
+
+Další informace najdete v tématu [kontexty atributů](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Viz také
+
+[Atributy kompilátoru](../windows/compiler-attributes.md)  
+[Samostatné atributy](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importlib](../windows/importlib.md)  
+[Zahrnout](../windows/include-cpp.md)  
+[includelib –](../windows/includelib-cpp.md)  

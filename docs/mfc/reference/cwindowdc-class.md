@@ -1,5 +1,5 @@
 ---
-title: Třída CWindowDC | Microsoft Docs
+title: Cwindowdc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121539"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464719"
 ---
-# <a name="cwindowdc-class"></a>CWindowDC – třída
-Odvozené z `CDC`.  
+# <a name="cwindowdc-class"></a>Cwindowdc – třída
+Odvozené od `CDC`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,29 +44,29 @@ class CWindowDC : public CDC
 |----------|-----------------|  
 |[CWindowDC::CWindowDC](#cwindowdc)|Vytvoří `CWindowDC` objektu.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|HWND, ke kterému tato `CWindowDC` je připojen.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|HWND, ke kterému je tento `CWindowDC` je připojen.|  
   
 ## <a name="remarks"></a>Poznámky  
- Volání funkce systému Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)během vytváření a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) během odstraňování. To znamená, že `CWindowDC` objekt přistupuje k oblasti celou obrazovku [CWnd](../../mfc/reference/cwnd-class.md) (klient a nonclient oblasti).  
+ Volá funkci Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)v době konstrukce a [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) v době zničení. To znamená, že `CWindowDC` objektů přistupuje k oblasti celé obrazovky [CWnd](../../mfc/reference/cwnd-class.md) (klientská a neklientská oblast).  
   
- Další informace o používání `CWindowDC`, najdete v části [kontexty zařízení](../../mfc/device-contexts.md).  
+ Další informace o používání `CWindowDC`, naleznete v tématu [kontexty zařízení](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CWindowDC`  
   
 ## <a name="requirements"></a>Požadavky  
- Záhlaví: afxwin.h  
+ Hlavička: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Vytvoří `CWindowDC` objekt, který má přístup k celé oblasti obrazovky (klient a nonclient) `CWnd` objektu na kterou odkazuje *pWnd*.  
+ Vytvoří `CWindowDC` objekt, který přistupuje k oblasti celé obrazovky (klientská a neklientská) z `CWnd` objekt, který odkazuje *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
@@ -74,30 +74,30 @@ explicit CWindowDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Okno jejichž klientské oblasti objekt kontextu zařízení bude mít přístup.  
+ Okno, jehož klientské oblasti bude mít přístup k objektu kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- V konstruktoru volání funkce systému Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ Konstruktor zavolá funkci Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- K výjimce (typu `CResourceException`) je vyvolána, pokud Windows `GetWindowDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud systém Windows všechny jeho kontexty zařízení k dispozici již přiděleno. Vaše aplikace bojuje pro pět běžné zobrazení kontexty dostupné v každém okamžiku v systému Windows.  
+ Výjimky (typu `CResourceException`) je vyvolána, pokud Windows `GetWindowDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- HWND z `CWnd` ukazatele se používá pro konstrukci `CWindowDC` objektu.  
+ HWND o HODNOTĚ `CWnd` ukazatele je použit pro vytvoření `CWindowDC` objektu.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_hWnd` je chráněný proměnná typu HWND.  
+ `m_hWnd` je chráněný proměnné typu HWND.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWindowDC::CWindowDC](#cwindowdc).  
   
 ## <a name="see-also"></a>Viz také  
- [Třída CDC](../../mfc/reference/cdc-class.md)   
+ [CDC – třída](../../mfc/reference/cdc-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CDC – třída](../../mfc/reference/cdc-class.md)

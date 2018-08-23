@@ -1,5 +1,5 @@
 ---
-title: __ll_rshift | Microsoft Docs
+title: __ll_rshift | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324925"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465023"
 ---
 # <a name="llrshift"></a>__ll_rshift
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Posune 64 bitů hodnotu zadanou pomocí prvního parametru vpravo podle počtu bitů určeného druhý parametr.  
+ Posune 64 bitů hodnotu zadanou pomocí prvního parametru vpravo o počet bitů určený druhý parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,25 +40,25 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Mask`  
+ [in] `Mask`  
  64bitové celočíselné hodnoty posunutí doprava.  
   
- [v] `nBit`  
- Počet bitů se posunou modulo 64 na x64 a modulo 32 na x86.  
+ [in] `nBit`  
+ Počet bitů, chcete-li posunout modulo 64 na x64 a modulo 32 na x86.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Maska posunuty o `nBit` bits.  
+ Maska o `nBit` bits.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Je-li druhý parametr je větší než 64 na x64 (32 na x86), který číslo je obsazené modulo 64 (32 na x86) k určení počtu bitů se posunou. `ll` Předponu označuje, že to je operace na `long long`, jiný název pro `__int64`, 64bitové celočíselné typ se znaménkem.  
+ Není-li druhý parametr je větší než 64 na x64 (32 na x86), toto číslo provedena modulo 64 (32 na x86) k určení počtu bitů a posunutí. `ll` Předponu označuje, že se jedná operaci na `long long`, další název `__int64`, 64-bit celočíselný typ se znaménkem.  
   
 ## <a name="example"></a>Příklad  
   
@@ -93,9 +93,9 @@ fffffffffffffff0
  - 10  
 ```  
   
- **Poznámka:** Pokud `_ull_rshift` byl používá, znaků zapuštěno pravé hodnoty by byl nula, takže požadovaný výsledek by byly získány v případě zápornou hodnotu.  
+ **Poznámka:** Pokud `_ull_rshift` byl použit, MSB hodnotu posunuta doprava by byl nula, tak v případě záporné hodnoty by byly získány požadovaný výsledek.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

@@ -1,5 +1,5 @@
 ---
-title: __writeeflags | Microsoft Docs
+title: __writeeflags | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340525"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466116"
 ---
 # <a name="writeeflags"></a>__writeeflags
-Zapíše zadaná hodnota programu stav a řízení (EFLAGS) zaregistrovat.  
+Zapíše zadané hodnoty do programu zaregistrovat stavu a ovládací prvek (EFLAGS).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,20 +37,20 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `Value`|Hodnota určená k zápisu do registru EFLAGS. `Value` Parametr je 32 bity dlouho pro 32bitovou platformu a 64bitová verze dlouho pro 64bitovou platformu.|  
+|[in] `Value`|Hodnota k zápisu do registru EFLAGS. `Value` Parametr je 32 bitů dlouhý pro 32bitové platformě a 64 bitů dlouhý pro 64bitovou platformu.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

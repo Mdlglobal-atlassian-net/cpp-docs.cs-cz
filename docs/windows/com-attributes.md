@@ -1,5 +1,5 @@
 ---
-title: COM – atributy | Microsoft Docs
+title: Com – atributy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d37ba5c690b61840ad261e6ab966d0cc74c07c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 857e032f02102a79747b79140207d07905f5b3d2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591588"
 ---
 # <a name="com-attributes"></a>COM – atributy
-Atributy COM vloží kód pro podporu mnoha oblastech vývoj COM a rozhraní .NET Framework common language runtime vývoj. Tyto oblasti v rozsahu od implementace vlastní rozhraní a podporu existující rozhraní podpory uložených vlastností, metod a události. Kromě toho podporu naleznete složené a implementaci ovládacího prvku ActiveX.  
+Com – atributy vložení kódu pro podporu mnoha oblastech COM vývoj a rozhraní .NET Framework common language runtime. Tyto oblasti sahají od implementace vlastního rozhraní a podporu existující rozhraní podporující uložené vlastnosti, metody a události. Kromě toho podpory najdete složeného a implementaci ovládacího prvku ActiveX.
   
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[aggregatable](../windows/aggregatable.md)|Označuje, že ovládacího prvku se dají agregovat v další ovládací prvek.|  
-|[aggregates](../windows/aggregates.md)|Označuje, že ovládacího prvku agreguje cílové třídy.|  
-|[coclass](../windows/coclass.md)|Vytvoří objekt COM, které můžete implementovat rozhraní modelu COM.|  
-|[COM_INTERFACE_ENTRY –](../windows/com-interface-entry-cpp.md)|Přidá položku rozhraní COM mapu.|  
-|[implements_category](../windows/implements-category.md)|Určuje implementovaná součást kategorie pro třídu.|  
-|[progid](../windows/progid.md)|Definuje ProgID pro ovládací prvek.|  
-|[rdx](../windows/rdx.md)|Vytvoří nebo upraví klíč registru.|  
-|[registration_script](../windows/registration-script.md)|Spustí skript zadanou registraci.|  
-|[requires_category](../windows/requires-category.md)|Určuje požadovanou součást kategorie pro třídu.|  
-|[support_error_info](../windows/support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|  
-|[synchronize](../windows/synchronize.md)|Synchronizuje přístup k metodě.|  
-|[Dělení na vlákna](../windows/threading-cpp.md)|Určuje model vláken pro objekt COM.|  
-|[vi_progid](../windows/vi-progid.md)|Definuje ProgID nezávislé na verzi pro ovládací prvek.|  
+|Atribut|Popis|
+|---------------|-----------------|
+|[aggregatable](../windows/aggregatable.md)|Označuje, že ovládací prvek se dají agregovat jiný ovládací prvek.|
+|[aggregates](../windows/aggregates.md)|Označuje, že ovládací prvek agreguje cílové třídy.|
+|[coclass](../windows/coclass.md)|Vytvoří objekt modelu COM, které můžete implementovat rozhraní modelu COM.|
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Přidá položku do rozhraní COM mapy.|
+|[implements_category](../windows/implements-category.md)|Určuje kategorie implementované součásti pro třídu.|
+|[progid](../windows/progid.md)|Definuje identifikátor ProgID ovládacího prvku.|
+|[rdx](../windows/rdx.md)|Vytvoří nebo změní klíče registru.|
+|[registration_script](../windows/registration-script.md)|Provede zadanou registraci skript.|
+|[requires_category](../windows/requires-category.md)|Určuje požadovanou součást kategorie pro třídu.|
+|[support_error_info](../windows/support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|
+|[synchronize](../windows/synchronize.md)|Synchronizuje přístup k metodě.|
+|[Dělení na vlákna](../windows/threading-cpp.md)|Určuje model vláken pro objekt modelu COM.|
+|[vi_progid](../windows/vi-progid.md)|Definuje identifikátor ProgID nezávislé na verzi pro ovládací prvek.|
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také
  [Atributy podle skupin](../windows/attributes-by-group.md)

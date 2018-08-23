@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce _InterlockedAnd | Microsoft Docs
+title: Vnitřní funkce _InterlockedAnd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -66,17 +66,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 009c3dd2fd7e7ce123f760ae832c2c4e25fedd92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334922"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465591"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd vnitřní funkce
-**Konkrétní Microsoft**  
+# <a name="interlockedand-intrinsic-functions"></a>Vnitřní funkce _InterlockedAnd
+**Specifické pro Microsoft**  
   
- Použít k provedení atomická bitové operace AND na proměnnou sdíleny více vlákny.  
+ Umožňuje provádět atomická operace bitový AND u proměnné sdíleny více vlákny.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -180,32 +180,32 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [ve out] `value`  
- Ukazatel na první operand nahradit za výsledek.  
+ [out v] `value`  
+ Ukazatel na první operand, bude nahrazen výsledek.  
   
- [v] `mask`  
+ [in] `mask`  
  Druhý operand.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- První operand původní hodnota  
+ Původní hodnotu prvního operandu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|Záhlaví|  
+|Vnitřní|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h >|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h >|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h >|  
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
- Číslo názvu jednotlivé funkce určuje velikost bit argumenty.  
+ Číslo názvu každá funkce určuje velikost bit argumentů.  
   
- Na platformách ARM použít vnitřní funkce s `_acq` a `_rel` přípony pro získání a verze sémantikou, například na začátku a konci kritické části. Vnitřní funkce s `_nf` přípony ("žádné ochranná") nefungují jako bariéry paměti.  
+ Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
   
- Vnitřní funkce s `_np` operaci možné předběžné načtení z vkládání kompilátorem zabránit přípony ("žádné předběžné načtení").  
+ Vnitřní objekty s `_np` příponu ("žádná předběžné načtení") zabránit možný předběžné načtení operace nebude vložen kompilátorem.  
   
- Na platformách Intel, které podporují pokyny hardwaru zámku Elision (HLE), vnitřní funkce s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, které můžou urychlit výkonu odstraněním krok zápisu zámku v hardwaru. Pokud tyto – vnitřní prvky se označují jako na platformách, které nepodporují HLE, pomocný parametr bude ignorován.  
+ Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
   
 ## <a name="example"></a>Příklad  
   
@@ -231,7 +231,7 @@ int main()
 0xff00 0xffff00 0xff00ff00  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   

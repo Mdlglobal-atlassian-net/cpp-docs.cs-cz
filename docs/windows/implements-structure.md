@@ -17,125 +17,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31b95901f2c0b7ff210cc8542dce49991a9eef87
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014815"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603285"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
-Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-template <  
-   typename I0,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil,  
-   typename I3 = Details::Nil,  
-   typename I4 = Details::Nil,  
-   typename I5 = Details::Nil,  
-   typename I6 = Details::Nil,  
-   typename I7 = Details::Nil,  
-   typename I8 = Details::Nil,  
-   typename I9 = Details::Nil  
->  
-struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;  
-template <  
-   int flags,  
-   typename I0,  
-   typename I1,  
-   typename I2,  
-   typename I3,  
-   typename I4,  
-   typename I5,  
-   typename I6,  
-   typename I7,  
-   typename I8  
->  
-struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *I0*  
- ID nultého rozhraní. (Povinné)  
-  
- *I1*  
- ID prvního rozhraní. (Volitelné)  
-  
- *I2*  
- Druhé ID rozhraní. (Volitelné)  
-  
- *I3*  
- ID třetího rozhraní. (Volitelné)  
-  
- *TYP I4*  
- ID čtvrtého rozhraní. (Volitelné)  
-  
- *I5*  
- ID pátého rozhraní. (Volitelné)  
-  
- *I6*  
- ID šestého rozhraní. (Volitelné)  
-  
- *I7*  
- ID sedmého rozhraní. (Volitelné)  
-  
- *I8*  
- ID osmého rozhraní. (Volitelné)  
-  
- *I9*  
- ID devátého rozhraní. (Volitelné)  
-  
- *příznaky*  
- Konfigurace příznaky pro třídu. Jeden nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) výčty, které jsou určené v [runtimeclassflags –](../windows/runtimeclassflags-structure.md) struktury.  
-  
-## <a name="remarks"></a>Poznámky  
- Je odvozen ze seznamu zadaných rozhraní a implementuje šablony pomocné rutiny pro `QueryInterface` a `GetIid`.  
-  
- Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozhraní `IUnknown`, `IInspectable`, nebo [chaininterfaces –](../windows/chaininterfaces-structure.md) šablony. *Příznaky* parametr určuje, zda podpory je vygenerován pro `IUnknown` nebo `IInspectable`.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`ClassFlags`|Synonymum pro `RuntimeClassFlags<WinRt>`.|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Implements::CanCastTo – metoda](../windows/implements-cancastto-method.md)|Získá ukazatel na rozhraní zadané.|  
-|[Implements::CastToUnknown – metoda](../windows/implements-casttounknown-method.md)|Získá ukazatel na základní `IUnknown` rozhraní.|  
-|[Implements::FillArrayWithIid – metoda](../windows/implements-fillarraywithiid-method.md)|Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.|  
-  
-### <a name="protected-constants"></a>Chráněné konstanty  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Implements::IidCount – konstanta](../windows/implements-iidcount-constant.md)|Obsahuje počet implementovaných rozhraní ID.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `ImplementsBase`  
-  
- `ImplementsHelper`  
-  
- `Implements`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)
+
+Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <
+   typename I0,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil,
+   typename I3 = Details::Nil,
+   typename I4 = Details::Nil,
+   typename I5 = Details::Nil,
+   typename I6 = Details::Nil,
+   typename I7 = Details::Nil,
+   typename I8 = Details::Nil,
+   typename I9 = Details::Nil
+>
+struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;
+template <
+   int flags,
+   typename I0,
+   typename I1,
+   typename I2,
+   typename I3,
+   typename I4,
+   typename I5,
+   typename I6,
+   typename I7,
+   typename I8
+>
+struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;
+```
+
+### <a name="parameters"></a>Parametry
+
+*I0*  
+ID nultého rozhraní. (Povinné)
+
+*I1*  
+ID prvního rozhraní. (Volitelné)
+
+*I2*  
+Druhé ID rozhraní. (Volitelné)
+
+*I3*  
+ID třetího rozhraní. (Volitelné)
+
+*TYP I4*  
+ID čtvrtého rozhraní. (Volitelné)
+
+*I5*  
+ID pátého rozhraní. (Volitelné)
+
+*I6*  
+ID šestého rozhraní. (Volitelné)
+
+*I7*  
+ID sedmého rozhraní. (Volitelné)
+
+*I8*  
+ID osmého rozhraní. (Volitelné)
+
+*I9*  
+ID devátého rozhraní. (Volitelné)
+
+*příznaky*  
+Konfigurace příznaky pro třídu. Jeden nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) výčty, které jsou určené v [runtimeclassflags –](../windows/runtimeclassflags-structure.md) struktury.
+
+## <a name="remarks"></a>Poznámky
+
+Je odvozen ze seznamu zadaných rozhraní a implementuje šablony pomocné rutiny pro `QueryInterface` a `GetIid`.
+
+Každý *I0* prostřednictvím *I9* rozhraní parametr musí být odvozen z rozhraní `IUnknown`, `IInspectable`, nebo [chaininterfaces –](../windows/chaininterfaces-structure.md) šablony. *Příznaky* parametr určuje, zda podpory je vygenerován pro `IUnknown` nebo `IInspectable`.
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`ClassFlags`|Synonymum pro `RuntimeClassFlags<WinRt>`.|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[Implements::CanCastTo – metoda](../windows/implements-cancastto-method.md)|Získá ukazatel na rozhraní zadané.|
+|[Implements::CastToUnknown – metoda](../windows/implements-casttounknown-method.md)|Získá ukazatel na základní `IUnknown` rozhraní.|
+|[Implements::FillArrayWithIid – metoda](../windows/implements-fillarraywithiid-method.md)|Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.|
+
+### <a name="protected-constants"></a>Chráněné konstanty
+
+|Název|Popis|
+|----------|-----------------|
+|[Implements::IidCount – konstanta](../windows/implements-iidcount-constant.md)|Obsahuje počet implementovaných rozhraní ID.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`ImplementsBase`
+
+`ImplementsHelper`
+
+`Implements`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

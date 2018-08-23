@@ -1,5 +1,5 @@
 ---
-title: Chování běhové knihovny jazyka Visual C++ a knihovny DLL | Microsoft Docs
+title: Knihovny DLL a chování běhové knihovny jazyka Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,33 +25,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392059"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465230"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Knihovny DLL a chování běhové knihovny jazyka Visual C++  
   
-Při sestavování dynamická knihovna (DLL) pomocí aplikace Visual C++, ve výchozím nastavení, zahrnuje linkeru běhové knihovny jazyka Visual C++ (VCRuntime). VCRuntime obsahuje kód potřebný k inicializaci a ukončit spustitelný soubor C/C++. Při propojení do knihovny DLL, kód VCRuntime poskytuje interní funkce vstupního bodu DLL názvem `_DllMainCRTStartup` , která zpracovává zprávy operačního systému Windows na knihovnu DLL přiřadit nebo odpojení od procesu nebo přístup z více vláken. `_DllMainCRTStartup` Funkce provádí základní úlohy, jako je nastaveno, C běhové knihovny (CRT) inicializace a ukončování zásobníku vyrovnávací paměti zabezpečení a volá konstruktory a destruktory pro statické a globální objekty. `_DllMainCRTStartup` funkce pro jiné knihovny, například WinRT, MFC a knihovny ATL k provedení vlastní inicializace a ukončování háku také volání. Bez této inicializace, CRT a další knihovny, a také statické proměnné zůstane v neinicializovaném stavu. Zda vaše knihovna DLL používá staticky propojené CRT nebo dynamicky propojené knihovny DLL CRT, se nazývají stejné VCRuntime interní inicializace a ukončování rutin.  
+Při vytváření dynamické knihovny (DLL) pomocí aplikace Visual C++ ve výchozím nastavení linkeru zahrnuje knihovny run-time jazyka Visual C++ (VCRuntime). VCRuntime obsahuje kód potřebný k inicializaci a ukončit spustitelný soubor jazyka C/C++. V případě propojení do knihovny DLL, kód VCRuntime poskytuje vnitřní funkci vstupního bodu DLL volána `_DllMainCRTStartup` , která zpracovává zprávy operačního systému Windows do knihovny DLL pro připojení nebo odpojení od procesu nebo vlákna. `_DllMainCRTStartup` Funkce provádí základní úlohy, jako je například nastavení jazyka C knihovny run-time (CRT) inicializace a ukončování zabezpečení vyrovnávací paměti zásobníku a volání konstruktorů a destruktorů pro statické a globální objekty. `_DllMainCRTStartup` volání také integrovat funkce pro další knihovny, jako je například WinRT, MFC a ATL provádění vlastní inicializace a ukončování. Bez této inicializace, CRT a dalších knihoven, jakož i statické proměnné zůstane v neinicializovaném stavu. Stejné VCRuntime interní inicializace a ukončování rutin označují, jestli se používají vaše knihovna DLL staticky propojené CRT nebo knihovny DLL dynamicky propojené CRT.  
   
-## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Výchozí knihovny DLL vstupní bod _DllMainCRTStartup  
+## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Výchozí knihovna DLL vstupní bod _DllMainCRTStartup  
   
-V systému Windows, může obsahovat všechny knihovny DLL funkci vstupního bodu, obvykle s názvem `DllMain`, která je volána pro inicializaci a ukončení. To vám dává příležitost k přidělení nebo uvolnění další prostředky podle potřeby. Windows zavolá funkci vstupní bod v situacích, čtyři: proces připojení, odpojení procesu, vlákno připojení a odpojení přístup z více vláken. Při načítání knihovny DLL do adresního prostoru procesu, při načtení aplikace, která se používá nebo když aplikace požaduje DLL za běhu, operační systém vytvoří samostatnou kopii dat knihovny DLL. To se označuje jako *připojení procesu*. *Vlákno připojit* nastane, když proces knihovnu DLL je načten do vytvoří nové vlákno. *Odebrání vlákna* nastane, když vlákno ukončí, a *odpojení procesu* je, pokud se už nevyžaduje knihovnu DLL a je publikována v rámci aplikace. Operační systém zavolá samostatné vstupní bod knihovny DLL pro každou z těchto událostí, předávání *důvod* argument pro každý typ události. Například operačního systému odešle `DLL_PROCESS_ATTACH` jako *důvod* argument signál proces připojení.  
+Ve Windows, můžete všechny knihovny DLL obsahovat funkci vstupního bodu, obvykle nazývaných `DllMain`, která je volána pro inicializaci a ukončení. To vám dává možnost přidělit nebo uvolnit další prostředky podle potřeby. Windows volá funkci vstupního bodu ve čtyřech situacích: připojení procesu, odpojení procesu, vlákna, připojení a odpojení vlákna. Při načtení knihovny DLL do adresového prostoru procesu, při načtení aplikace, která ji používá nebo pokud aplikace vyžaduje knihovnu DLL za běhu, operační systém vytvoří samostatnou kopii dat knihovny DLL. Tento postup se nazývá *připojení procesu*. *Vlákno připojit* nastane, pokud knihovna DLL je načten do procesu vytvoří nové vlákno. *Odpojení vlákna* nastane, pokud vlákno ukončeno, a *odpojení procesu* je, když se už nevyžaduje knihovny DLL a vydání aplikace. Operační systém zavolá samostatné vstupní bod knihovny DLL pro každou z těchto událostí, předávání *důvod* argument pro každý typ události. Příklad: operační systém pošle `DLL_PROCESS_ATTACH` jako *důvod* argument, který signalizuje, že proces připojení.  
   
-Knihovna VCRuntime představuje vstupní bod funkce volá `_DllMainCRTStartup` zpracovávat výchozí inicializace a ukončování operací. U procesu připojit, `_DllMainCRTStartup` funkce nastaví kontrola zabezpečení vyrovnávací paměti, inicializuje CRT a další knihovny, inicializuje informace běhového typu, inicializuje a volá konstruktory pro statické a jiné než místní data, inicializuje místní úložiště vláken , zvýší interní statické čítač pro každý připojit a potom zavolá uživatelem nebo knihovna zadané `DllMain`. U procesu odpojit, funkce prochází tyto kroky v zpětného. Zavolá `DllMain`, snižuje čítač interní volá destruktory, volání CRT ukončení funkce a zaregistrován `atexit` funkce a upozorní jakékoli jiné knihovny ukončení. Pokud čítač přílohy přejde na hodnotu nula, funkce vrátí hodnotu `FALSE` udávajících Windows, že nelze uvolnit knihovnu DLL. `_DllMainCRTStartup` Funkce je také volána v průběhu vlákno připojení a odpojení přístup z více vláken. V těchto případech kód VCRuntime nemá žádné další inicializace nebo ukončení sama o sobě a právě volá `DllMain` k předání zprávy společně. Pokud `DllMain` vrátí `FALSE` z procesu připojit, signalizaci selhání, `_DllMainCRTStartup` volání `DllMain` znovu a předá `DLL_PROCESS_DETACH` jako *důvod* argument, pak prochází zbytek ukončení procesu.  
+Knihovna VCRuntime poskytuje funkci vstupního bodu `_DllMainCRTStartup` pro zpracování výchozí inicializace a ukončování operací. V procesu připojení, `_DllMainCRTStartup` funkce nastaví kontroly zabezpečení vyrovnávací paměti, inicializuje CRT a dalších knihoven, inicializuje informace běhového typu, inicializuje a volání konstruktorů pro statické a jiné než místní data, inicializuje místní úložiště vláken , zvýší interní statické čítače pro každé připojení a pak zavolá uživatelem nebo knihovna zadané `DllMain`. V procesu odpojit, funkce prochází tyto kroky v opačném pořadí. Volá `DllMain`, sníží čítač vnitřní volání destruktorů, ukončení volání CRT funkce a zaregistrován `atexit` funkce a upozorní knihovny ukončení. Pokud čítač přílohy sníží na nulu, vrátí funkce `FALSE` udávajících Windows, že knihovna DLL může být uvolněna. `_DllMainCRTStartup` Funkce se také nazývá během vlákno připojení a odpojení vlákna. V těchto případech VCRuntime kód nepodporuje žádné další inicializace nebo ukončení sama o sobě a jen volá `DllMain` k předání zprávy společně. Pokud `DllMain` vrátí `FALSE` z procesu připojení, signalizaci selhání `_DllMainCRTStartup` volání `DllMain` znovu a předává `DLL_PROCESS_DETACH` jako *důvod* argument, pak prochází zbytek ukončení procesu.  
   
-Při vytváření knihovny DLL v jazyce Visual C++, výchozí vstupní bod `_DllMainCRTStartup` poskytl VCRuntime je automaticky propojena. Není potřeba specifikovat funkci vstupní bod pro knihovny DLL pomocí [/Entry (symbol vstupního bodu)](../build/reference/entry-entry-point-symbol.md) – možnost linkeru.  
+Při sestavování knihovny DLL v jazyce Visual C++, výchozí vstupní bod `_DllMainCRTStartup` poskytnutých VCRuntime je automaticky propojena. Není potřeba specifikovat funkci vstupního bodu pro vaši knihovnu DLL pomocí [/Entry (symbol vstupního bodu)](../build/reference/entry-entry-point-symbol.md) – možnost linkeru.  
   
 > [!NOTE]
-> Když je možné zadat jinou funkci vstupní bod pro knihovny DLL pomocí/Entry: – možnost linkeru, nedoporučujeme, protože by bylo duplikovat vše, co funkce vstupního bodu, `_DllMainCRTStartup` nemá ve stejném pořadí. VCRuntime poskytuje funkce, které vám umožní duplicitní své chování. Například můžete volat [__security_init_cookie –](../c-runtime-library/reference/security-init-cookie.md) okamžitě proces připojení pro podporu [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md) kontrola možnost vyrovnávací paměti. Můžete volat `_CRT_INIT` funkce, předáte stejné argumenty jako funkce vstupního bodu, provádět zbytek funkcí knihovny DLL inicializace nebo ukončení.  
+> I když je možné zadat jinou funkci vstupního bodu pro knihovnu DLL pomocí / Entry: – možnost linkeru, nedoporučujeme, protože by duplikovat všechno, co vaši funkci vstupního bodu, který `_DllMainCRTStartup` nemá ve stejném pořadí. VCRuntime poskytuje funkce, které umožňují duplicitní své chování. Například můžete volat [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) okamžitě proces připojení k podpoře [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md) možnost kontroly vyrovnávací paměti. Můžete volat `_CRT_INIT` funkci a předává stejné parametry jako funkci vstupního bodu, provádět zbývající inicializace nebo ukončení funkce knihovny DLL.  
   
 <a name="initializing-a-dll"></a>  
   
 ## <a name="initialize-a-dll"></a>Inicializace knihovny DLL  
   
-Vaše knihovna DLL může mít inicializace kód, který musí být spuštěn při načtení knihovny DLL. V pořadí, které můžete provádět funkce inicializace a ukončování vlastní knihovny DLL `_DllMainCRTStartup` volá funkci s názvem `DllMain` , můžete zadat. Vaše `DllMain` musí mít podpisu, který požaduje pro vstupní bod knihovny DLL. Výchozí vstupní bod funkce `_DllMainCRTStartup` volání `DllMain` pomocí stejné parametry předané v systému Windows. Ve výchozím nastavení, pokud nezadáte `DllMain` funkce, Visual C++ poskytuje za vás a propojuje ho tak, aby `_DllMainCRTStartup` má vždy co volat. To znamená, že pokud nepotřebujete k chybě při inicializaci knihovny DLL, není co speciální, že je nutné provést při vytváření knihovny DLL.  
+Vaše knihovna DLL může mít inicializační kód, který musí být spuštěn při načtení knihovny DLL. Můžete provádět vlastní funkcí knihovny DLL inicializace a ukončování, aby `_DllMainCRTStartup` volá funkci s názvem `DllMain` , který zadáte. Vaše `DllMain` musí mít podpis, vyžaduje se pro vstupní bod knihovny DLL. Funkci vstupního bodu výchozí `_DllMainCRTStartup` volání `DllMain` pomocí stejné parametry předané ve Windows. Ve výchozím nastavení, pokud nezadáte `DllMain` funkce, Visual C++ poskytuje za vás a propojuje ho tak, aby `_DllMainCRTStartup` vždy nabízí něco pro volání. To znamená, že pokud není potřeba vaši knihovnu DLL inicializovat, není nic zvláštního že budete muset udělat při vytváření knihovny DLL.  
   
 Toto je podpis použitý pro `DllMain`:  
   
@@ -64,16 +64,16 @@ extern "C" BOOL WINAPI DllMain (
     LPVOID    const reserved); // reserved
 ```  
   
-Některé knihovny zabalení `DllMain` funkce pro vás. Například v běžné knihovny MFC DLL, implementovat `CWinApp` objektu `InitInstance` a `ExitInstance` členské funkce k provedení inicializace a ukončování vyžadují knihovny DLL. Další podrobnosti najdete v tématu [inicializace běžných knihoven MFC DLL](#initializing-regular-dlls) části.  
+Zabalení některé knihovny `DllMain` funkce za vás. Například v běžné knihovny MFC DLL, implementovat `CWinApp` objektu `InitInstance` a `ExitInstance` členské funkce k provedení inicializace a ukončování vyžadované vaší knihovny DLL. Další podrobnosti najdete v tématu [inicializace knihovny DLL MFC regular](#initializing-regular-dlls) oddílu.  
   
 > [!WARNING]
-> Na co můžete dělat bezpečně ve vstupním bodě knihovny DLL je důležité omezení. V tématu [obecné osvědčené postupy](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) pro konkrétní rozhraní API systému Windows, které jsou unsafe volat v `DllMain`. Pokud budete potřebovat cokoli ale pak nejjednodušší inicializace udělat na inicializační funkce pro knihovnu DLL. Můžete to vyžadovat aplikace pro volání funkce inicializace po `DllMain` má spuštění a před jejich volat jakékoli jiné funkce v knihovně DLL.  
+> Co můžete dělat bezpečně ve vstupní bod knihovny DLL jsou významné omezení. Zobrazit [obecné osvědčené postupy](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) pro konkrétní rozhraní API Windows, které nejsou bezpečné volat v `DllMain`. Pokud potřebujete jakoukoli jinou nejjednodušší inicializace potom udělat inicializační funkce pro knihovnu DLL. Můžete vyžadovat, aby aplikace volat funkci inicializace po `DllMain` má spuštění a před jejich volání dalších funkcí v knihovně DLL.  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
-### <a name="initialize-ordinary-non-mfc-dlls"></a>Inicializace knihoven DLL běžném provozu (mimo MFC)  
+### <a name="initialize-ordinary-non-mfc-dlls"></a>Inicializace knihovny DLL běžných (non-MFC)  
   
-K provedení vlastní inicializaci v běžném provozu (mimo MFC) knihovny DLL, které pomocí zadané VCRuntime `_DllMainCRTStartup` vstupní bod vašeho zdrojového kódu knihovny DLL musí obsahovat funkci s názvem `DllMain`. Následující kód představuje základní kostru zobrazující jaké definice `DllMain` může vypadat například:  
+K provádění vlastní inicializace v knihovnách DLL běžných (non-MFC), které používají zadané VCRuntime `_DllMainCRTStartup` vstupní bod, může zdrojový kód knihovny DLL obsahovat funkci s názvem `DllMain`. Následující kód představuje základní kostra zobrazující jaké definici `DllMain` může vypadat například takto:  
   
 ```cpp  
 #include <windows.h>
@@ -108,29 +108,29 @@ extern "C" BOOL WINAPI DllMain (
 ```  
   
 > [!NOTE]
-> Starší dokumentace sady Windows SDK říká, že skutečný název funkce vstupního bodu knihovny DLL musí být zadán v linkeru příkazového řádku s parametrem/Entry. S Visual C++, není nutné použít možnost/Entry, pokud je název vstupního bodu funkce `DllMain`. Ve skutečnosti, pokud použijete možnost/ENTRY a název vstupní bod funkce něco jiné než `DllMain`, CRT není správně inicializována Pokud vstupní bod funkce provádí stejné inicializace volání, které `_DllMainCRTStartup` umožňuje.  
+> Starší dokumentaci k sadě Windows SDK říká, že skutečný název knihovny DLL funkci vstupního bodu musí být zadán v linkeru možnost/Entry příkazového řádku. V jazyce Visual C++ není potřeba použít parametr/Entry, pokud je název vaší funkce vstupního bodu `DllMain`. Ve skutečnosti, pokud používáte parametr/Entry a název vstupního bodu funkce něco jiného než `DllMain`, CRT nelze získat správně inicializován Pokud funkce vstupního bodu provede stejné volání inicializace, která `_DllMainCRTStartup` provede.  
   
 <a name="initializing-regular-dlls"></a>  
   
-### <a name="initialize-regular-mfc-dlls"></a>Inicializovat běžné knihovny MFC DLL  
+### <a name="initialize-regular-mfc-dlls"></a>Inicializovat obvyklé knihovny DLL MFC  
   
-Protože regulární knihovny MFC DLL `CWinApp` objektu, se musí vykonávat úkoly inicializace a ukončování ve stejném umístění jako aplikace knihovny MFC: v `InitInstance` a `ExitInstance` členské funkce knihovnu DLL `CWinApp`-odvozené Třída. Vzhledem k tomu, že poskytuje MFC `DllMain` funkce, která je volána metodou `_DllMainCRTStartup` pro `DLL_PROCESS_ATTACH` a `DLL_PROCESS_DETACH`, neměli psát vlastní `DllMain` funkce. Zadaný MFC `DllMain` volání funkce `InitInstance` při načtení knihovny DLL a volá `ExitInstance` před uvolněním knihovnu DLL.  
+Protože regulární knihovny DLL MFC mají `CWinApp` objektu by měla provádějí své úkoly inicializace a ukončování ve stejném umístění jako aplikace knihovny MFC: ve `InitInstance` a `ExitInstance` členské funkce knihovny DLL `CWinApp`-odvozené Třída. Vzhledem k tomu, že knihovna MFC poskytuje `DllMain` funkce, která je volána metodou `_DllMainCRTStartup` pro `DLL_PROCESS_ATTACH` a `DLL_PROCESS_DETACH`, neměli psát vlastní `DllMain` funkce. Pokud MFC `DllMain` volání funkce `InitInstance` při načtení knihovny DLL a volá `ExitInstance` před uvolněním knihovny DLL.  
   
-Běžné knihovny MFC DLL můžete sledovat určité více vláken voláním [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) a [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) v jeho `InitInstance` funkce. Tyto funkce povolit knihovnu DLL sledování dat specifické pro vlákno.  
+Běžné knihovny MFC DLL může udržovat přehled o více vláken voláním [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) a [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) v jeho `InitInstance` funkce. Tyto funkce umožňují knihovny DLL ke sledování dat specifické pro vlákno.  
   
-Ve vaší regulární MFC DLL, která propojuje ke knihovně MFC, pokud používáte žádné MFC OLE, MFC databáze (nebo DAO) nebo MFC sokety, respektive ladění MFC – rozšiřující knihovny DLL MFCO*verze*D.dll, MFCD*verze*D.dll a MFCN*verze*D.dll (kde *verze* číslo verze) jsou automaticky propojení v. Pro každou z těchto knihoven DLL, které používáte ve vaší regulární MFC DLL musí volání jednoho z následujících funkcí předdefinované inicializace `CWinApp::InitInstance`.  
+Ve vaší běžné knihovny MFC DLL, která dynamicky propojuje ke knihovně MFC, pokud používáte žádné MFC OLE, knihovny MFC databáze (nebo rozhraní DAO), nebo soketů knihovny MFC, podporují ladění MFC – rozšiřující knihovny DLL MFCO*verze*D.dll, MFCD*verze*D.dll a MFCN*verze*D.dll (kde *verze* je číslo verze) jsou automaticky propojeny v. Jeden z následujících předdefinovaných inicializační funkce musí zavolat pro každou z těchto knihoven DLL, které používáte ve vaší běžné knihovny MFC DLL `CWinApp::InitInstance`.  
   
-|Typ Podpora MFC|Funkce inicializace pro volání|  
+|Typ podpory knihovny MFC|Inicializační funkce pro volání|  
 |-------------------------|-------------------------------------|  
 |MFC OLE (MFCO*verze*D.dll)|`AfxOleInitModule`|  
-|MFC databáze (MFCD*verze*D.dll)|`AfxDbInitModule`|  
-|Sokety MFC (MFCN*verze*D.dll)|`AfxNetInitModule`|  
+|Databáze knihovny MFC (MFCD*verze*D.dll)|`AfxDbInitModule`|  
+|Soketů knihovny MFC (MFCN*verze*D.dll)|`AfxNetInitModule`|  
   
 <a name="initializing-extension-dlls"></a>  
   
 ### <a name="initialize-mfc-extension-dlls"></a>Inicializace MFC – rozšiřující knihovny DLL  
   
-Protože MFC – rozšiřující knihovny DLL nemají `CWinApp`-odvozené objektu (jak provádět běžné knihovny MFC DLL), měli byste přidat inicializace a ukončování kód a `DllMain` funkce, která vytváří Průvodce MFC DLL.  
+MFC – rozšiřující knihovny DLL nemají `CWinApp`-odvozené objektu (stejně jako běžné knihovny MFC DLL), měli byste přidat kód inicializace a ukončování do `DllMain` funkce, která generuje Průvodce MFC DLL.  
   
  Průvodce poskytuje následující kód pro MFC – rozšiřující knihovny DLL. V kódu `PROJNAME` je zástupný symbol pro název projektu.  
   
@@ -167,29 +167,29 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }  
 ```  
   
-Vytvoření nové `CDynLinkLibrary` objekt během inicializace umožňuje rozšíření MFC DLL export `CRuntimeClass` objekty nebo prostředky do klientské aplikace.  
+Vytvoření nového `CDynLinkLibrary` objekt během inicializace umožňuje MFC – rozšiřující knihovny DLL pro export `CRuntimeClass` objekty nebo prostředky do klientské aplikace.  
   
-Pokud chcete používat vaše MFC – rozšiřující knihovny DLL z jednoho nebo více regulární knihovny DLL MFC, je nutné exportovat inicializační funkci, která vytvoří `CDynLinkLibrary` objektu. Této funkce musí být volána z každé regulární knihovny MFC DLL použít rozšíření MFC DLL. Příslušné místo pro volání této funkce inicializace je v `InitInstance` – členská funkce regulární MFC DLL `CWinApp`-odvozené objekt před použitím některého z exportovaný třídy nebo funkce MFC DLL rozšíření.  
+Pokud se chystáte používat vaše MFC – rozšiřující knihovny DLL z jednoho nebo více běžných knihovnách MFC DLL, je nutné exportovat inicializační funkce, která vytvoří `CDynLinkLibrary` objektu. Tato funkce musí být volána ze všech běžných knihovnách MFC DLL použít MFC – rozšiřující knihovny DLL. Je vhodné místo pro volání této funkce inicializace v `InitInstance` členskou funkci běžné knihovny MFC DLL `CWinApp`-odvozenému objektu před použitím některého z exportované třídy nebo funkce MFC DLL rozšíření.  
   
-V `DllMain` , Průvodce MFC DLL generuje, volání `AfxInitExtensionModule` zaznamená třídy modulu runtime (`CRuntimeClass` struktury) i jeho objekt Factory (`COleObjectFactory` objekty) pro použijte, když `CDynLinkLibrary` je vytvořen objekt. Vrátí hodnotu, která byste měli zkontrolovat `AfxInitExtensionModule`; Pokud je nulová hodnota vrácená z `AfxInitExtensionModule`, vrátí nula z vaší `DllMain` funkce.  
+V `DllMain` , Průvodce MFC DLL generuje, volání `AfxInitExtensionModule` zachycuje třídy modulu runtime (`CRuntimeClass` struktury) i jeho objekty pro vytváření objektů (`COleObjectFactory` objektů) pro použití při `CDynLinkLibrary` je vytvořen objekt. Měli byste zkontrolovat návratovou hodnotu `AfxInitExtensionModule`; Pokud není vrácena nulová hodnota z `AfxInitExtensionModule`, vrací nulu z vašich `DllMain` funkce.  
   
-Pokud vaše MFC – rozšiřující knihovny DLL explicitně propojí spustitelný soubor (znamená spustitelné volání `AfxLoadLibrary` na odkaz na knihovnu DLL), měli byste přidat volání `AfxTermExtensionModule` na `DLL_PROCESS_DETACH`. Tato funkce umožňuje knihovně MFC odstranit rozšíření MFC DLL při každém odpojení procesu od rozšíření MFC DLL (který se stane, když proces bude ukončen nebo když je na základě těchto uvolněna z knihovny DLL `AfxFreeLibrary` volání). Pokud vaše MFC – rozšiřující knihovny DLL se implicitně propojena aplikace, volání `AfxTermExtensionModule` není nutné.  
+Pokud vaše MFC – rozšiřující knihovny DLL se explicitně propojí s spustitelný soubor (to znamená spustitelný soubor volá `AfxLoadLibrary` propojení ke knihovně DLL), měli byste přidat volání `AfxTermExtensionModule` na `DLL_PROCESS_DETACH`. Tato funkce umožňuje vyčistit MFC – rozšiřující knihovny DLL při každém odpojení procesu z MFC – rozšiřující knihovny DLL MFC (který se stane při ukončení procesu nebo pokud kvůli uvolnění knihovny DLL `AfxFreeLibrary` volání). Pokud vaše MFC – rozšiřující knihovny DLL bude implicitně propojené aplikace, volání `AfxTermExtensionModule` není nutné.  
   
-Aplikace, které explicitně musí volat odkaz na rozšíření MFC – knihovny DLL `AfxTermExtensionModule` při uvolnění knihovny DLL. Měli by také použít `AfxLoadLibrary` a `AfxFreeLibrary` (místo funkce Win32 `LoadLibrary` a `FreeLibrary`) Pokud aplikace používá více vláken. Pomocí `AfxLoadLibrary` a `AfxFreeLibrary` zajistí, že spuštění a vypnutí kód, který provede, když MFC – rozšiřující knihovny DLL je načítání a uvolňování nejsou poškozeny globální stav MFC.  
+Aplikace, které explicitně musí volat odkaz na rozšiřující knihovny DLL MFC `AfxTermExtensionModule` při uvolnění knihovny DLL. Musí taky používat `AfxLoadLibrary` a `AfxFreeLibrary` (namísto funkce Win32 `LoadLibrary` a `FreeLibrary`) Pokud aplikace používá více vláken. Pomocí `AfxLoadLibrary` a `AfxFreeLibrary` zajistí, že spuštění a vypnutí kód, který se spustí po MFC – rozšiřující knihovny DLL je načteny nebo uvolněny nejsou poškozeny globální stav knihovny MFC.  
   
-Vzhledem k tomu, že je knihovna MFCx0.dll plně inicializována čas `DllMain` je volána, můžete přidělit paměť a volání funkce MFC v rámci `DllMain` (na rozdíl od 16bitové verze knihovny MFC).  
+Protože knihovny MFCx0.dll je plně inicializován době `DllMain` je volána, můžete přidělit paměť a volání funkcí knihovny MFC v rámci `DllMain` (na rozdíl od 16bitové verze knihovny MFC).  
   
-Rozšiřující knihovny DLL zabýváme více vláken ve zpracování `DLL_THREAD_ATTACH` a `DLL_THREAD_DETACH` případů v `DllMain` funkce. Tyto případy jsou předány `DllMain` při vláken připojení a odpojení z knihovny DLL. Volání metody [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) při připojování knihovny DLL umožňuje umožňuje udržovat přístup z více vláken (TLS) pro místní úložiště indexy pro každé vlákno připojené ke knihovně DLL.  
+Rozšiřující knihovny DLL zařídit multithreading pomocí manipulace `DLL_THREAD_ATTACH` a `DLL_THREAD_DETACH` případech v `DllMain` funkce. Tyto případy jsou předány `DllMain` při vlákna, připojení a odpojení z knihovny DLL. Volání [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) při připojování knihovny DLL umožňuje udržovat vlákno indexuje místní úložiště (TLS) pro každé vlákno připojené ke knihovně DLL knihovny DLL.  
   
-Všimněte si, že soubor hlaviček Afxdllx.h obsahuje zvláštní definice pro struktury používané v MFC rozšiřující knihovny DLL, jako je například definici `AFX_EXTENSION_MODULE` a `CDynLinkLibrary`. Tento soubor hlavičky by měla obsahovat vaše MFC – rozšiřující knihovny DLL.  
+Všimněte si, že soubor hlaviček Afxdllx.h obsahuje speciální definice pro strukturám používaným v rozšiřující knihovny DLL MFC, jako je například definice `AFX_EXTENSION_MODULE` a `CDynLinkLibrary`. V rozšíření MFC DLL, měli byste zahrnout tento soubor hlavičky.  
   
 > [!NOTE]
->  Je důležité, můžete definovat ani žádný z nedefinované `_AFX_NO_XXX` makra v Stdafx.h. Tyto makra existovat jenom pro účely kontroly, jestli konkrétní Cílová platforma podporuje tuto funkci, nebo ne. Můžete napsat váš program Zkontrolujte tyto makra (například `#ifndef _AFX_NO_OLE_SUPPORT`), ale váš program by měl nikdy definovat nebo nedefinované tyto makra.  
+>  Je důležité, že můžete definovat ani nedefinovat některý `_AFX_NO_XXX` makra v souboru Stdafx.h. Tato makra existuje pouze pro účely kontroly, jestli konkrétní Cílová platforma podporuje tuto funkci, nebo ne. Můžete napsat program Zkontrolujte tato makra (například `#ifndef _AFX_NO_OLE_SUPPORT`), ale váš program by nikdy definovat nebo zrušit tato makra.  
   
-Ukázka inicializace funkci, která zpracovává více vláken je součástí [pomocí vláken místní úložiště v dynamické knihovně](http://msdn.microsoft.com/library/windows/desktop/ms686997) ve Windows SDK. Všimněte si, že vzorek obsahuje vstupní bod funkce volá `LibMain`, ale tato funkce má název `DllMain` , který bude fungovat s běhové knihovny MFC a C.  
+Funkce inicializace vzorku, který je součástí zpracovává multithreading [pomocí místního úložného prostoru vlákna v knihovně DLL](http://msdn.microsoft.com/library/windows/desktop/ms686997) v sadě Windows SDK. Všimněte si, že ukázky obsahuje funkci vstupního bodu volá `LibMain`, ale tato funkce by měla název `DllMain` tak, že pracuje s knihovny MFC a C za běhu.  
   
 ## <a name="see-also"></a>Viz také  
   
 [Knihovny DLL v jazyce Visual C++](../build/dlls-in-visual-cpp.md)  
-[DllMain vstupního bodu](https://msdn.microsoft.com/library/windows/desktop/ms682583.aspx)  
-[Dynamickou knihovnu osvědčené postupy](https://msdn.microsoft.com/library/windows/desktop/dn633971.aspx)  
+[Zpracování funkce DllMain vstupní bod](/windows/desktop/Dlls/dllmain)  
+[Osvědčené postupy dynamická knihovna](/windows/desktop/Dlls/dynamic-link-library-best-practices)  

@@ -16,51 +16,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 67db478fbca64d56769ca9b57e7e72c41325925b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016853"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603563"
 ---
 # <a name="method-attributes"></a>Atributy metody
-Následující atributy se vztahují na metody ve třídě, coclass nebo rozhraní.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|[bindable](../windows/bindable.md)|Označuje, že vlastnost podporuje datové vazby.|  
-|[call_as](../windows/call-as.md)|Povolí funkci nonremotable namapovat na vzdálenou funkci.|  
-|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atribut.|  
-|[db_column](../windows/db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|  
-|[db_command](../windows/db-command.md)|Vytvoří příkaz OLE DB.|  
-|[db_param](../windows/db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.|  
-|[db_source](../windows/db-source.md)|Vytvoří připojení ke zdroji dat.|  
-|[db_table](../windows/db-table.md)|Otevře se tabulku OLE DB.|  
-|[defaultbind](../windows/defaultbind.md)|Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.|  
-|[defaultcollelem](../windows/defaultcollelem.md)|Používá pro optimalizaci kódu jazyka Visual Basic.|  
-|[displaybind](../windows/displaybind.md)|Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.|  
-|[helpcontext](../windows/helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto elementu v **pomáhají** souboru.|  
-|[helpfile](../windows/helpfile.md)|Nastaví název **pomáhají** soubor pro knihovnu typů.|  
-|[helpstring](../windows/helpstring.md)|Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Určuje ID tématu nápovědy HLP nebo CHM souboru.|  
-|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|  
-|[hidden](../windows/hidden.md)|Označuje, že položka existuje, ale nebude se zobrazovat v prohlížeči uživatele.|  
-|[id](../windows/id.md)|Určuje identifikátor DISPID pro členské funkce (vlastnost nebo metoda v rozhraní nebo dispinterface).|  
-|[immediatebind](../windows/immediatebind.md)|Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.|  
-|[in](../windows/in-cpp.md)|Označuje, že je parametr předat z volající procedury do volané procedury.|  
-|[místní](../windows/local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|  
-|[nonbrowsable](../windows/nonbrowsable.md)|Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.|  
-|[propget](../windows/propget.md)|Určuje funkci, která přistupujícího objektu vlastnosti.|  
-|[propput](../windows/propput.md)|Určuje funkci, která nastavení vlastnosti.|  
-|[propputref](../windows/propputref.md)|Určuje nastavení vlastnosti funkce, která používá odkaz místo hodnoty.|  
-|[ptr](../windows/ptr.md)|Ukazatel se označí jako úplné ukazatel.|  
-|[rozsah](../windows/range-cpp.md)|Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastavené v době běhu.|  
-|[requestedit](../windows/requestedit.md)|Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.|  
-|[restricted](../windows/restricted.md)|Určuje, že modul, rozhraní nebo dispinterface nejde volat libovolně.|  
-|[satype](../windows/satype.md)|Určuje datový typ `SAFEARRAY` struktury.|  
-|[Zdroj](../windows/source-cpp.md)|Určuje třídu rozhraní ovládacího prvku zdroje pro spojovací body. Na vlastnosti nebo metody `source` atribut označuje, že člen vrací objekt nebo VARIANTU, která je zdrojem událostí.|  
-|[synchronize](../windows/synchronize.md)|Synchronizuje přístup k cílové metody.|  
-|[vararg](../windows/vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|  
-  
-## <a name="see-also"></a>Viz také  
- [Atributy podle použití](../windows/attributes-by-usage.md)
+
+Následující atributy se vztahují na metody ve třídě, coclass nebo rozhraní.
+
+|Atribut|Popis|
+|---------------|-----------------|
+|[bindable](../windows/bindable.md)|Označuje, že vlastnost podporuje datové vazby.|
+|[call_as](../windows/call-as.md)|Povolí funkci nonremotable namapovat na vzdálenou funkci.|
+|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atribut.|
+|[db_column](../windows/db-column.md)|Zadaný sloupec se váže k dané sadě řádků.|
+|[db_command](../windows/db-command.md)|Vytvoří příkaz OLE DB.|
+|[db_param](../windows/db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odděluje citaci proměnné.|
+|[db_source](../windows/db-source.md)|Vytvoří připojení ke zdroji dat.|
+|[db_table](../windows/db-table.md)|Otevře se tabulku OLE DB.|
+|[defaultbind](../windows/defaultbind.md)|Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.|
+|[defaultcollelem](../windows/defaultcollelem.md)|Používá pro optimalizaci kódu jazyka Visual Basic.|
+|[displaybind](../windows/displaybind.md)|Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.|
+|[helpcontext](../windows/helpcontext.md)|Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto elementu v **pomáhají** souboru.|
+|[helpfile](../windows/helpfile.md)|Nastaví název **pomáhají** soubor pro knihovnu typů.|
+|[helpstring](../windows/helpstring.md)|Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.|
+|[helpstringcontext](../windows/helpstringcontext.md)|Určuje ID tématu nápovědy HLP nebo CHM souboru.|
+|[helpstringdll](../windows/helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|
+|[hidden](../windows/hidden.md)|Označuje, že položka existuje, ale nebude se zobrazovat v prohlížeči uživatele.|
+|[id](../windows/id.md)|Určuje identifikátor DISPID pro členské funkce (vlastnost nebo metoda v rozhraní nebo dispinterface).|
+|[immediatebind](../windows/immediatebind.md)|Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.|
+|[in](../windows/in-cpp.md)|Označuje, že je parametr předat z volající procedury do volané procedury.|
+|[místní](../windows/local-cpp.md)|Umožňuje používat v kompilátoru MIDL jako generátor záhlaví při použití v záhlaví rozhraní. Při použití jednotlivých funkcí, určuje místní postupu, pro které jsou generovány žádné zástupné procedury.|
+|[nonbrowsable](../windows/nonbrowsable.md)|Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.|
+|[propget](../windows/propget.md)|Určuje funkci, která přistupujícího objektu vlastnosti.|
+|[propput](../windows/propput.md)|Určuje funkci, která nastavení vlastnosti.|
+|[propputref](../windows/propputref.md)|Určuje nastavení vlastnosti funkce, která používá odkaz místo hodnoty.|
+|[ptr](../windows/ptr.md)|Ukazatel se označí jako úplné ukazatel.|
+|[rozsah](../windows/range-cpp.md)|Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastavené v době běhu.|
+|[requestedit](../windows/requestedit.md)|Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.|
+|[restricted](../windows/restricted.md)|Určuje, že modul, rozhraní nebo dispinterface nejde volat libovolně.|
+|[satype](../windows/satype.md)|Určuje datový typ `SAFEARRAY` struktury.|
+|[Zdroj](../windows/source-cpp.md)|Určuje třídu rozhraní ovládacího prvku zdroje pro spojovací body. Na vlastnosti nebo metody `source` atribut označuje, že člen vrací objekt nebo VARIANTU, která je zdrojem událostí.|
+|[synchronize](../windows/synchronize.md)|Synchronizuje přístup k cílové metody.|
+|[vararg](../windows/vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|
+
+## <a name="see-also"></a>Viz také
+
+[Atributy podle použití](../windows/attributes-by-usage.md)

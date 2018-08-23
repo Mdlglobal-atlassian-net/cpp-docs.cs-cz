@@ -1,5 +1,5 @@
 ---
-title: Co je nového pro Visual C++ v sadě Visual Studio | Microsoft Docs
+title: Co je nového v aplikaci Visual C++ v sadě Visual Studio | Dokumentace Microsoftu
 ms.date: 11/15/2017
 ms.technology:
 - cpp-ide
@@ -9,178 +9,178 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f9e432cb098c17a3ac03e5b394f304578bbe06f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569947"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590403"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Co je nového pro Visual C++ v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] poskytuje mnoho aktualizací a opravy pro prostředí Visual C++. Jsme vyřešili více než 250 chyb a hlášené problémy v kompilátoru a nástroje, mnoho odeslané zákazníky pomocí [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poskytují zlepšení](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o co je nového ve všech sady Visual Studio, navštivte [co je nového v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
+Visual Studio 2017 přináší řadu vylepšení a oprav prostředí Visual C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte [co je nového v sadě Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>kompilátor C++
 
-### <a name="c-conformance-improvements"></a>Vylepšení shoda C++
+### <a name="c-conformance-improvements"></a>Vylepšení shody C++
 
-V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozšířenou podporou pro funkce C++11 a C++14, a také předběžnou podporou pro některé funkce očekávané ve standardu C++17. Podrobné informace najdete v tématu [C++ shoda vylepšení v nástroji Visual Studio 2017](cpp-conformance-improvements-2017.md).
-**Visual Studio 2017 verze 15,5**:  
+V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozšířenou podporou pro funkce C++11 a C++14, a také předběžnou podporou pro některé funkce očekávané ve standardu C++17. Podrobné informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md).
+**Visual Studio 2017 verze 15.5**:  
 
-   Kompilátor podporuje přibližně 75 % funkce, které jsou nové v C ++ 17, včetně strukturovaných vazby `constexpr` lambdas, `if constexpr`, vložené proměnné přeložte výrazy a přidání `noexcept` typ systému. Tyto jsou k dispozici v části **/std: c ++ 17** možnost. Další informace najdete v tématu [C++ shoda vylepšení v nástroji Visual Studio 2017](cpp-conformance-improvements-2017.md)
+   Kompilátor podporuje přibližně 75 % funkcí, které jsou nové v C ++ 17, včetně strukturovaných vazeb `constexpr` výrazy lambda, `if constexpr`, vložených proměnných, přeložte výrazy a přidání `noexcept` do systému typů. Tyto jsou dostupné v rámci **/std: c ++ 17** možnost. Další informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md)
 
 **Visual Studio 2017 verze 15.7**:  
 
-Sada nástrojů kompilátoru MSVC v sadě Visual Studio verze 15.7 nyní splňuje normu C++ Standard. Další informace najdete v tématu [Announcing: MSVC vyhovuje C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) a [přizpůsobení jazyka Visual C++](visual-cpp-language-conformance.md).
+Sada nástrojů kompilátoru MSVC v sadě Visual Studio verze 15.7 nyní odpovídá standardu jazyka C++. Další informace najdete v tématu [Announcing: MSVC splňuje C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) a [shoda jazyka Visual C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nové možnosti kompilátoru
 
-- [/ projektovou-](build/reference/permissive-standards-conformance.md): všechny shoda striktní standardy – možnosti kompilátoru povolení a zakázání rozšíření kompilátoru většina specifické pro společnost Microsoft (ale ne `__declspec(dllimport)`, například). Tato možnost je ve výchozím nastavení v aplikaci Visual Studio 2017 verze 15,5 na.  **/ Projektovou-** shoda režimu zahrnuje podporu pro vyhledání dvoufázového názvu. Další informace najdete v tématu [C++ shoda vylepšení v nástroji Visual Studio 2017](cpp-conformance-improvements-2017.md).
+- [/ permissive-](build/reference/permissive-standards-conformance.md): Povolit všechny možnosti kompilátoru shoda přísné standardy a zakázat většina kompilátoru rozšíření specifické pro společnost Microsoft (ale ne `__declspec(dllimport)`, například). Tato možnost zapnutá ve výchozím nastavení v sadě Visual Studio 2017 verze 15.5.  **/ Permissive-** režim přizpůsobení zahrnuje podporu pro dvoufázové vyhledávání názvů. Další informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-- [/Diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): povolení zobrazení číslo řádku, číslo řádku a sloupce, nebo číslo řádku a sloupce a šipka nahoru v rámci řádku kódu, kde byl nalezen diagnostiky chyby nebo upozornění.
+- [/ Diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): povolení zobrazení číslo řádku, číslo řádku a sloupce, nebo číslo řádku a sloupce a blikající kurzor pod řádkem kódu, kde byla nalezena diagnostických chyb nebo upozornění.
 
-- [/Debug:fastlink](build/reference/debug-generate-debug-info.md): povolit až 30 % rychlejší přírůstkové odkaz krát (vs. Visual Studio 2015) není zkopírováním všechny informace o ladění do souboru PDB. Soubor PDB místo odkazuje na informace o ladění pro objekt a knihovna soubory použít k vytvoření spustitelného souboru. V tématu [rychlejší C++ sestavení cyklu v sadě VS "15" s /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) a [doporučení, která rychlost sestavení C++ v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/).
+- [/ Debug: fastlink](build/reference/debug-generate-debug-info.md): povolit až 30 % rychlejší přírůstkové propojení vyprší (vs. Visual Studio 2015) není zkopírováním všechny informace o ladění do souboru PDB. Soubor PDB se místo toho odkazuje na informace o ladění pro soubory objektů a knihovny použité k vytvoření spustitelného souboru. Zobrazit [cyklus v sadě Visual Studio "15" s/Debug: fastlink sestavení C++ rychleji](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) a [doporučení k urychlení sestavení C++ v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/).
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] umožňuje používat [SDL](build/reference/sdl-enable-additional-security-checks.md) s [/ await](build/reference/await-enable-coroutine-support.md). Jsme odebrali [/RTC](build/reference/rtc-run-time-error-checks.md) omezení coroutines.
+- Visual Studio 2017 umožňuje používat [/SDL](build/reference/sdl-enable-additional-security-checks.md) s [/ await](build/reference/await-enable-coroutine-support.md). Odebrali jsme [/RTC](build/reference/rtc-run-time-error-checks.md) omezení u Korutin.
 
    **Visual Studio 2017 verze 15.3**:  
-- [/ std: c ++ 14 a/std: c ++ nejnovější](build/reference/std-specify-language-standard-version.md): tyto možnosti kompilátoru umožňují vyslovení souhlasu s konkrétní verze ISO C++ programovací jazyk v projektu. Většina nového konceptu standardní funkce se budou dát **/std: c ++ nejnovější** možnost.
+- [/ std: c ++ 14 a/std: c ++ nejnovější](build/reference/std-specify-language-standard-version.md): tyto možnosti kompilátoru umožňují vyjádřit výslovný souhlas pro konkrétní verze ISO C++ programovací jazyk v projektu. Většina konceptu nové funkce na úrovni standard jsou strážený **/std: c ++ nejnovější** možnost.
 
-- [/ std: c ++ 17](build/reference/std-specify-language-standard-version.md) umožňuje sadu funkce C ++ 17 implementované kompilátoru. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se změnily nebo nové verze aktualizací práce koncept a vadou standardní C++ po C ++ 17. Chcete-li tyto funkce povolit, použijte **/std: c ++ nejnovější**.
+- [/ std: c ++ 17](build/reference/std-specify-language-standard-version.md) umožňuje sadu funkcí C ++ 17 implementované kompilátorem. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se mění nebo nového ve verzích konceptu práce a defect aktualizace standardu jazyka C++ za C ++ 17. Chcete-li povolit tyto funkce, použijte **/std: c ++ nejnovější**.
 
 
-### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, zabezpečení, diagnostiky a správy verzí
+### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, zabezpečení, Diagnostika a správa verzí
 
-Tato verze přináší několik vylepšení v optimalizace, generování kódu, Správa verzí nástrojů a diagnostiky. Mezi důležitá vylepšení patří:
+Tato verze přináší několik vylepšení optimalizace, generování kódu, nástrojů pro správu verzí a Diagnostika. Mezi důležitá vylepšení patří:
 
 - Vylepšené generování kódu smyček: Podpora automatické vektorizace dělení konstantních celých čísel, lepší identifikace vzorů memset
-- Vylepšené zabezpečení kódu: vylepšené emisí diagnostics kompilátoru přetečení vyrovnávací paměti, a [/guard:cf](build/reference/guard-enable-control-flow-guard.md) nyní chrání přepínač příkazy, které generují přechod tabulky.
-- Správa verzí: Hodnota předdefinované makro preprocesoru  **\_MSC\_VER** je nyní monotónně aktualizované při každé aktualizaci nástrojů Visual C++. Další informace najdete v tématu [verze kompilátoru Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/).
-- Nové rozložení nástrojů: kompilátoru a související sestavovací nástroje mají nové umístění a strukturu adresáře na vývojovém počítači. Nové rozložení umožňuje vedle sebe instalace více verzí kompilátoru. Další informace najdete v tématu [kompilátoru nástroje rozložení v sadě Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/).
-- Vylepšené diagnostiky: ve výstupním okně teď zobrazuje sloupec, kde dojde k chybě. Další informace najdete v tématu [diagnostiky vylepšení kompilátoru C++ v sadě VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/).
-- Při použití rutiny společné, experimentální – klíčové slovo **yield** (k dispozici v části **/ await** možnost) byl odebrán. Váš kód by měl aktualizovat, a použít `co_yield` místo. Další informace najdete v [Blogu týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
+- Vylepšené zabezpečení kódu: Vylepšená emise diagnostiky kompilátoru přetečení vyrovnávací paměti, a [/Guard: CF](build/reference/guard-enable-control-flow-guard.md) teď chrání příkazy switch, které generují tabulku skoků.
+- Správa verzí: Hodnota předdefinované makro preprocesoru  **\_MSC\_VER** je nyní monotónně aktualizují při každé aktualizaci nástrojů Visual C++. Další informace najdete v tématu [verze kompilátoru Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/).
+- Nové rozložení sady nástrojů: kompilátor a nástroje pro související sestavení mají novou strukturu umístění a adresáře na vývojovém počítači. Nové rozložení umožňuje-souběžnými instalacemi více verzí kompilátoru. Další informace najdete v tématu [kompilátoru rozložení nástroje v sadě Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/).
+- Vylepšená Diagnostika: V okně výstupu teď zobrazuje sloupec, kde dojde k chybě. Další informace najdete v tématu [vylepšení diagnostiky kompilátoru C++ v sadě Visual Studio "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/).
+- Při používání společných rutin, experimentální klíčové slovo **yield** (k dispozici v rámci **/ await** možnost) byla odebrána. Váš kód by měl být aktualizován na použití `co_yield` místo. Další informace najdete v [Blogu týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
 **Visual Studio 2017 verze 15.3**:
 
-Další vylepšení diagnostiky v kompilátoru. Další informace najdete v tématu [diagnostiky vylepšení v nástroji Visual Studio 2017 15.3.0](https://blogs.msdn.microsoft.com/vcblog/2017/07/21/diagnostic-improvements-in-vs2017-15-3-0/).
+Další vylepšení diagnostiky v kompilátoru. Další informace najdete v tématu [vylepšení diagnostiky v sadě Visual Studio 2017 15.3.0](https://blogs.msdn.microsoft.com/vcblog/2017/07/21/diagnostic-improvements-in-vs2017-15-3-0/).
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-Výkon modulu runtime Visual C++ dál vylepšit kvůli lepší kvalitu generovaného kódu. To znamená, že jednoduše znovu zkompiluje kódu a vaše aplikace běží rychleji. Některé z optimalizace kompilátoru se nikdy nepracovali, jako je například vectorization podmíněného skalární úložišť, kombinování volání `sin(x)` a `cos(x)` do nového `sincos(x)`a odstranění redundantní pokyny z Optimalizátor SSA. Další optimalizace kompilátoru jsou vylepšení stávajících funkcí jako je například nástrojů pro vektorizaci heuristiky pro podmíněné výrazy, lepší optimalizace smyčky a codegen minimální nebo maximální float. Linkeru má nový a rychlejší **/OPT:ICF** implementace, což může vést k až 9 % propojit speedups čas, a v přírůstkové propojování jsou ostatní opravy výkonu. Další informace najdete v tématu [/OPT (optimalizace)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) a [/incremental (přírůstkově odkaz)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
+Výkon sady Visual C++ runtime neustále zlepšuje kvůli lepší kvalitu generovaného kódu. To znamená, že můžete jednoduše znovu zkompilovat kód a vaše aplikace běží rychleji. Některé optimalizace kompilátoru jsou úplně nové, jako je například vektorizaci podmíněných skalárních úložišť, kombinování volání `sin(x)` a `cos(x)` do nového `sincos(x)`a odstranění redundantní pokyny od Optimalizátor SSA. Další optimalizace kompilátoru jsou vylepšení stávajících funkcí, jako je například heuristiku vektorizéru pro podmíněné výrazy, lepší optimalizace smyčky a plovoucí codegen min/max. Propojovací program má nový a rychlejší **/OPT:ICF** implementaci, což může mít za následek až 9 % urychlení propojení a existují další opravy výkonu v přírůstkové propojení. Další informace najdete v tématu [/OPT (optimalizace)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) a [Parametr/incremental (Inkrementální odkaz)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
 
-Visual C++ podporuje AVX společnosti Intel-512, včetně vektoru délka pokynů, které přinášejí nové funkce v AVX-512 do široké registry 128 a 256 bitů.
+Jazyk Visual C++ podporuje společnosti Intel AVX-512, včetně instrukcí pro délku vektoru, které přinášejí nové funkce v AVX-512 do 128 - a 256bitových širokých registrů.
 
-[/Zc:noexceptTypes-](build/reference/zc-noexcepttypes.md) možnost je možné vrátit k C ++ 14 verzi `noexcept` při použití C ++ 17 režim obecně. To vám umožní aktualizovat vašeho zdrojového kódu tak, aby odpovídala C ++ 17 bez přepsání všechny vaše `throw()` kódu ve stejnou dobu. Další informace najdete v tématu [odebrání specifikace dynamické výjimky a noexcept](cpp-conformance-improvements-2017.md#noexcept_removal).
+[/Zc:noexceptTypes-](build/reference/zc-noexcepttypes.md) možnosti je možné vrátit zpět do C ++ 14 verze `noexcept` přitom C ++ 17 režim obecně. To vám umožní aktualizovat váš zdrojový kód tak, aby odpovídal C ++ 17, aniž byste museli přepsat všechny vaše `throw()` kódu ve stejnou dobu. Další informace najdete v tématu [odebrání specifikace dynamických výjimek a noexcept](cpp-conformance-improvements-2017.md#noexcept_removal).
 
 **Visual Studio 2017 verze 15.7**:
 
-- Nový přepínač kompilátoru [/Qspectre ](build/reference/qspectre.md) pro zmírnění proti útokům na straně kanál spekulativní provádění. V tématu [jejich zmírnění spektrum v MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/) Další informace.
-- Nové diagnostické upozornění pro spektrum migitation. V tématu [spektrum diagnostiky ve Visual Studio 2017 verze 15.7 Preview 4](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) Další informace.
-- Nové hodnoty pro /Zc, **/Zc:__cplusplus**, umožňuje opravte reporting podpory standardní C++. Například když je nastaven na přepínač a kompilátor probíhá/std: c ++ 17 režimu hodnota zasahuje do **201703 L**. V tématu [MSVC nyní správně hlásí __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Další informace.
+- Nový přepínač kompilátoru [/qspectre ](build/reference/qspectre.md) zmírnit před útoky na straně kanálu spekulativního spouštění. Zobrazit [zmírnění hrozby Spectre v MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/) Další informace.
+- Nové diagnostické upozornění pro chyby zabezpečení Spectre migitation. Zobrazit [chyby zabezpečení Spectre diagnostiky v sadě Visual Studio 2017 verze 15.7 Preview 4](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) Další informace.
+- Nová hodnota pro /Zc, **přepínače/Zc:**, opravte umožňuje vykazování podpory standard C++. Například pokud přepínač nastavený a kompilátor probíhá/std: c ++ 17 režimu rozšíří hodnotu **201703 L**. Zobrazit [MSVC nyní správně hlásí __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) Další informace.
 
-## <a name="c-standard-library-improvements"></a>Vylepšení standardní knihovna C++
+## <a name="c-standard-library-improvements"></a>Vylepšení standardní knihovny C++
 
-- Méně závažné `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` vylepšení diagnostiky. Přeskočení kontroly IDL v sadě řetězců teď oznámí konkrétní chování, které toto přeskočení způsobilo. Například místo zprávy oznamující, že iterátor řetězce nejde přesměrovat, se teď zobrazí zpráva s oznámením, že iterátor řetězce nejde přesměrovat, protože je mimo rozsah (např. je to koncový iterátor).
+- Vedlejší `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` vylepšení diagnostiky. Přeskočení kontroly IDL v sadě řetězců teď oznámí konkrétní chování, které toto přeskočení způsobilo. Například místo zprávy oznamující, že iterátor řetězce nejde přesměrovat, se teď zobrazí zpráva s oznámením, že iterátor řetězce nejde přesměrovat, protože je mimo rozsah (např. je to koncový iterátor).
 - Zlepšení výkonu: provedené `basic_string::find(char)` přetížení pouze volání `traits::find` po. Toto jsme dříve implementovali jako hledání obecného řetězce s délkou 1.
-- Zlepšení výkonu: `basic_string::operator==` nyní kontroluje velikost řetězec před porovnáním obsah na řetězce.
-- Zlepšení výkonu: odebrat řízení spojovacích v `basic_string`, který se těžko optimalizace kompilátoru k analýze. Všimněte si, že se pro všechny krátké řetězce volání `reserve` má stále nenulové hodnoty náklady se nic nestane.
-- Jsme přidali \<žádné\>, \<string_view\>, `apply()`, `make_from_tuple()`.
-- `std::vector` má byla přepracována správnost a výkon: aliasy během vkládání a. uložení je nyní správně spravovány jako vyžadovanou standardní, záruku silné výjimky se teď poskytují pokud to vyžaduje standardní prostřednictvím `move_if_noexcept()` a jiné logiky a vkládání nebo. uložení provádět méně operace s elementy.
-- Standardní knihovna C++ nyní zabraňuje vyhodnocení zvláštní ukazatelé s hodnotou null.
-- Přidat \<volitelné\>, \<variant\>, `shared_ptr::weak_type`, a \<cstdalign\>.
-- Povolit C ++ 14 `constexpr` v `min(initializer_list)`, `max(initializer_list)`, a `minmax(initializer_list)`, a `min_element()`, `max_element()`, a `minmax_element()`.
+- Zlepšení výkonu: `basic_string::operator==` teď kontroluje velikost řetězce před porovnáním obsahů řetězců.
+- Zlepšení výkonu: odebrali jsme párování v ovládacích `basic_string`, což bylo obtížné optimalizátoru k analýze. Všimněte si, že u všech krátkých řetězců volání `reserve` má stále nenulové náklady na neprovedení.
+- Přidali jsme \<jakékoli\>, \<string_view\>, `apply()`, `make_from_tuple()`.
+- `std::vector` přepracována pro vyšší výkon a správnost: aliasy při vkládání a uložení je nyní správně zpracovává jako vyžaduje Standard, záruka silné výjimky je nyní k dispozici pokud to vyžaduje Standard prostřednictvím `move_if_noexcept()` a další logiky a vložení nebo uložení provádí méně operací s prvky.
+- Standardní knihovny C++ teď předchází přesměrování ukazatelů null.
+- Přidání \<volitelné\>, \<variant\>, `shared_ptr::weak_type`, a \<cstdalign\>.
+- Povolené C ++ 14 `constexpr` v `min(initializer_list)`, `max(initializer_list)`, a `minmax(initializer_list)`, a `min_element()`, `max_element()`, a `minmax_element()`.
 - Vylepšené `weak_ptr::lock()` výkonu.
-- Pevné `std::promise` přesunutí přiřazení operátor, který dříve by mohlo způsobit kód blokování navždy.
-- Chyby kompilátoru s pevnou `atomic<T*>` implicitní převod na `T*`.
+- Oprava `std::promise` operátor přiřazení přesunu, který dříve mohl způsobit zablokování kódu napořád.
+- Oprava chyb kompilátoru s `atomic<T*>` implicitní převod na `T*`.
 - `pointer_traits<Ptr>` nyní správně rozpozná `Ptr::rebind<U>`.
-- Pevné chybějící `const` kvalifikátor v `move_iterator` operátor odčítání.
-- Pevné bezobslužná nesprávná funkce codegen pro stavových vlastní alokátorů požaduje `propagate_on_container_copy_assignment` a `propagate_on_container_move_assignment`.
+- Oprava chybějící `const` kvalifikátoru v `move_iterator` operátor odčítání.
+- Oprava bezobslužné nesprávné funkce codegen pro stavové uživatelem definované alokátory vyžadující `propagate_on_container_copy_assignment` a `propagate_on_container_move_assignment`.
 - `atomic<T>` Nyní toleruje přetížený `operator&()`.
-- Ke zvýšení propustnosti kompilátoru, hlavičky standardní knihovna C++ nyní vyhnout, včetně deklarace pro vnitřní funkce kompilátoru zbytečné.
-- Mírně vylepšení kompilátoru diagnostiku pro nesprávné `bind()` volání.
-- Vylepšený výkon `std::string` a `std::wstring` přesunout konstruktory tak, že více než třikrát.
+- Pro zvýšení propustnosti kompilátoru hlavičky standardní knihovny C++ nyní Vyhněte se deklarace pro nepotřebné vnitřní funkce kompilátoru.
+- Mírně Vylepšená Diagnostika kompilátoru pro nesprávná `bind()` volání.
+- Vyšší výkon `std::string` a `std::wstring` konstruktorů přesunutí více než třikrát.
 
-Úplný seznam standardní knihovny najdete v části improvments [standardní knihovny opravy v VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/).
+Úplný seznam standardní knihovny improvments najdete v článku [standardní knihovny řeší ve VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/).
 
 ### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 verze 15.3
 
-#### <a name="c17-features"></a>C ++ 17 funkce
+#### <a name="c17-features"></a>Funkce c ++ 17
 
-Je implementovaná několik dalších funkce C ++ 17. Další informace najdete v tématu [přizpůsobení jazyka Visual C++](cpp-conformance-improvements-2017.md#improvements_153).
+Několik dalších funkcí C ++ 17 byly implementovány. Další informace najdete v tématu [shoda jazyka Visual C++](cpp-conformance-improvements-2017.md#improvements_153).
 
 #### <a name="other-new-features"></a>Další nové funkce
 
-- Implementována P0602R0 "variant a volitelné by měl rozšířit kopírování nebo přesunutí triviality".
-- Standardní knihovna teď oficiálně toleruje dynamické RTTI zakazuje prostřednictvím [/GR-](build/reference/gr-enable-run-time-type-information.md) možnost. Obě `dynamic_pointer_cast()` a `rethrow_if_nested()` ze své podstaty vyžadují `dynamic_cast`, takže standardní knihovna nyní označí je jako `=delete` pod **/GR-**.
-- I když dynamické RTTI byla zakázána prostřednictvím **/GR-**, "statické RTTI" (ve formě `typeid(SomeType)`) je stále k dispozici a zajišťuje několik součástí standardní knihovny. Standardní knihovna teď podporuje to příliš, zakázání prostřednictvím **/D\_HAS\_statické\_RTTI = 0**. Všimněte si, že tato akce zakáže `std::any`, `target()` a `target_type()` členské funkce `std::function`a `get_deleter()` členské funkce friend `std::shared_ptr` a `std::weak_ptr`.
+- Implementovat P0602R0 "variant a volitelné by měl rozšířit copy/move triviality".
+- Standardní knihovna teď oficiálně toleruje dynamické RTTI, protože se zakázalo prostřednictvím [/GR-](build/reference/gr-enable-run-time-type-information.md) možnost. Obě `dynamic_pointer_cast()` a `rethrow_if_nested()` ze své podstaty vyžadují `dynamic_cast`, takže se označuje jako standardní knihovna teď `=delete` pod **/GR-**.
+- I když dynamické RTTI byl zakázán prostřednictvím **/GR-**, "statické RTTI" (ve formě `typeid(SomeType)`) je stále k dispozici a využívá několik součástí standardní knihovny. Standardní knihovna teď podporuje zakázání to také prostřednictvím **/D\_HAS\_statické\_RTTI = 0**. Všimněte si, že tato akce zakáže `std::any`, `target()` a `target_type()` členské funkce `std::function`a `get_deleter()` členskou funkci friend `std::shared_ptr` a `std::weak_ptr`.
 
-#### <a name="correctness-fixes-in-visual-studio-2017-version-153"></a>Správnost opravy v aplikaci Visual Studio 2017 verze 15.3
+#### <a name="correctness-fixes-in-visual-studio-2017-version-153"></a>Řeší správnost v sadě Visual Studio 2017 verze 15.3
 
-- Standardní knihovna kontejnery nyní svorka jejich `max_size()` k `numeric_limits<difference_type>::max()` místo `max()` z `size_type`. To zajistí, že výsledek `distance()` na iterátory kontejneru, v němž je reprezentovat návratový typ `distance()`.
-- Pevné nalezen specializace `auto_ptr<void>`.
-- `for_each_n()`, `generate_n()`, A `search_n()` algoritmy se dříve nepodařilo kompilovat argument délka nebyla integrální typu; se nyní pokusí převést délky celé číslo iterátory `difference_type`.
-- `normal_distribution<float>` už vydá upozornění ve standardní knihovně o zužující z dvojitou na float.
-- Některé pevné `basic_string` operací, které byly porovnávání s `npos` místo `max_size()` při kontrole přetečení maximální velikost.
-- `condition_variable::wait_for(lock, relative_time, predicate)` by počkejte po celou dobu relativní v případě nesprávné probuzení. Nyní bude čekat pouze jeden interval relativní času.
-- `future::get()` teď by způsobila neplatnost `future`, protože vyžaduje standardní.
-- `iterator_traits<void *>` použít za chybu hardwaru, protože se pokusil formuláře `void&`; nyní řádně informovat prázdná struktura k povolení použití `iterator_traits` v "je iterator" podmínky sfinae u výrazů.
-- Některá upozornění hlášené Clang **wsystem –--headers** jsme vyřešili.
-- Také vyřešili "specifikace výjimek v deklaraci neodpovídá předchozí deklarace" hlášené Clang **- Wmicrosoft. výjimka specifikace**.
-- Také vyřešili mem. inicializátoru seznamu hlášené Clang a C1XX řazení upozornění.
-- Neseřazený kontejnery není Prohodit jejich hashers nebo predikáty při kontejnery sami byly vzájemně zaměněny. Nyní dělají.
-- Mnoho operací swap kontejneru, jsou nyní označeny `noexcept` (protože naše standardní knihovna nikdy chtít vyvolat výjimku při zjišťování jinou hodnotu než`propagate_on_container_swap` bez rovná allocator undefined chování podmínku).
+- Standardní knihovny kontejnery nyní stažení jejich `max_size()` k `numeric_limits<difference_type>::max()` místo `max()` z `size_type`. To zajistí, že výsledek `distance()` na iterátorech z tohoto kontejneru je reprezentovatelné v návratovém typu `distance()`.
+- Oprava chybějící specializace `auto_ptr<void>`.
+- `for_each_n()`, `generate_n()`, A `search_n()` algoritmy dříve kompilace se nezdařila. Pokud délka argument nebyl uveden celočíselného typu; nyní pokusu o převod – neintegrální délky iterátory `difference_type`.
+- `normal_distribution<float>` už vydá upozornění ve standardní knihovně o zúžení double uvolnění.
+- Oprava některých `basic_string` operace, které byly výsledkem porovnání s `npos` místo `max_size()` při kontrole přetečení maximální velikosti.
+- `condition_variable::wait_for(lock, relative_time, predicate)` by počkejte po celou dobu relativní v případě nesprávné probuzení. Nyní bude čekat pouze jeden interval relativní časové.
+- `future::get()` Nyní zruší platnost `future`, jak vyžaduje standard.
+- `iterator_traits<void *>` umožňuje být závažná chyba, protože se pokusil formuláře `void&`; nyní čistě stane prázdnou strukturu k povolení použití `iterator_traits` v "je iterátor" sfinae u podmínek.
+- Upozornění hlášených Clang **wsystem –--headers** jsme vyřešili.
+- Také vyřešili "specifikace výjimky v deklaraci neodpovídá předchozí deklaraci" hlášených Clang **- Wmicrosoft-výjimky spec**.
+- Seznam inicializátorů paměť pořadí upozornění hlášených Clang a C1XX také vyřešili.
+- Neseřazené kontejnery není možné Prohodit jejich hashers nebo predikáty když byli vyměněni kontejnery sami. Nyní dělají.
+- Operace prohození mnoho kontejnerů jsou nyní označeny `noexcept` (jak naši standardní knihovnu nikdy si klade za cíl vyvolání výjimky, při zjištění non -`propagate_on_container_swap` bez rovná allocator nedefinované chování podmínky).
 - Mnoho `vector<bool>` operace jsou nyní označeny `noexcept`.
-- Standardní knihovna teď vynutí odpovídající allocator `value_type` (v C ++ 17 režim) s vyjádření výslovného nesouhlasu s řídicí šrafování.
-- Pevné některé podmínky, kde samoobslužných-range-vložení do `basic_string` by promíchání obsahu řetězce. (Poznámka: standardní stále zakazuje samoobslužných-range-vložení do vektory.)
-- `basic_string::shrink_to_fit()` už je ovlivňován přidělujícího modulu `propagate_on_container_swap`.
-- `std::decay` Teď zpracovává typy abominable funkce (tj. typů funkce, které jsou kvalifikovaný odchylka nákladů nebo kvalifikovaný ref).
-- Změnit zahrnují direktivy používat správné rozlišování velkých a malých písmen a lomítka, vylepšení přenositelnost.
-- Pevné upozornění C4061 "enumerátor '*enumerátor*'v přepínači výčtu'*– výčet*' není explicitně zpracovávaných případu popisek". Toto upozornění je vypnuto výchozím a byla opravena jako výjimku do zásad obecné standardní knihovna pro upozornění. (Standardní knihovna je **/W4** vyčistit, ale nebude pokoušet o být **/horní** vyčistit. Mnoho vypnout výchozím upozornění jsou velmi aktivní a není určena pro použití v pravidelných intervalech.)
-- Vylepšené `std::list` ladění kontroly. Seznam iterátory nyní kontrola `operator->()`, a `list::unique()` nyní označí iterátory jako zrušena.
-- Pevné používá allocator metaprogramování v `tuple`.
+- Standardní knihovna teď bude vynucovat odpovídající allocator `value_type` (v C ++ 17 režimu) s výslovného nesouhlasu s únikový poklop.
+- Oprava některé podmínky, kde samoobslužné-range-insert into `basic_string` by promíchání obsahu řetězce. (Poznámka: standardní stále zakazuje automatické-range-insert into vektory.)
+- `basic_string::shrink_to_fit()` je již nejsou ovlivněny přidělujícího modulu `propagate_on_container_swap`.
+- `std::decay` nyní zpracovává typy abominable – funkce (například typy funkce, které jsou kvalifikovaný cv a/nebo kvalifikaci ref).
+- Změnit direktiv použití správné rozlišování velikosti písmen a lomítka, zlepšit přenositelnost.
+- Oprava upozornění C4061 "výčet"*enumerátor*"v přepnutí výčtu'*výčet*" není explicitně zpracován popisek případu ". Toto upozornění je mimo výchozí a byla stanovena jako výjimku do standardní knihovny obecné zásady pro upozornění. (Standardní knihovna je **/W4** vyčištění, ale nebude pokoušet o být **/Wall** vyčistit. Mnoho vypnout výchozím upozornění jsou extrémně hlučného a nejsou určeny k použití v pravidelných intervalech.)
+- Vylepšené `std::list` ladění kontroly. Iterátory nyní zkontrolujte seznam `operator->()`, a `list::unique()` nyní označí iterátory jako zneplatněny.
+- Oprava používá allocator metaprogramování v `tuple`.
 
-#### <a name="performancethroughput-fixes"></a>Výkon nebo propustnost opravy
+#### <a name="performancethroughput-fixes"></a>Výkon/propustnost opravy
 
-- Práce na incidentu kolem interakce s `noexcept` která zabránila vložené `std::atomic` implementace do funkcí, které používají strukturované zpracování výjimek (SEH).
-- Změněné standardní knihovna je interní `_Deallocate()` funkce optimalizace do menší kódu, díky kterému jej jako vložená do více místech.
-- Změnit `std::try_lock()` používat rozšíření pack namísto rekurze.
-- Vylepšené `std::lock()` zablokování předcházení algoritmu použití `lock()` operations místo roztočený na `try_lock()` na všech zámků.
-- Povolené pojmenované návratovou hodnotu optimalizace v nástroji `system_category::message()`.
-- `conjunction` a `disjunction` nyní doložit N + 1 typy místo 2 n + 2 typy.
-- `std::function` už vytvoří strojů podporu přidělování pro každý typ vymazat volatelná aplikacemi, vylepšení propustnost a snížení velikosti .obj v programech, které předat mnoho různých lambdas k `std::function`.
-- `allocator_traits<std::allocator>` obsahuje ručně vložená `std::allocator` operace, zmenšení velikosti kódu v kódu, který komunikuje s `std::allocator` prostřednictvím `allocator_traits` pouze (to znamená, ve většině kód).
-- Rozhraní C ++ 11 minimální allocator teď používá standardní knihovna volání `allocator_traits` přímo, namísto zabalení přidělujícího modulu v interní třída `_Wrap_alloc`. To snižuje velikost kódu vygenerované allocator podpory, zlepšuje schopnost okně Optimalizace důvod o standardní knihovna kontejnery v některých případech a nabízí lepší ladění prostředí (jak je vidět typ vašeho allocator místo `_Wrap_alloc<your_allocator_type>` v ladicí program).
-- Odebrat metaprogramování upravené `allocator::reference`, které alokátorů nejsou povoleny ve skutečnosti k přizpůsobení. (Alokátorů provádět kontejnery použít zvláštní ukazatele, ale není zvláštní odkazy.)
-- Front-endu kompilátoru byl výukové rozbalení ladění iterátory v založený na rozsahu pro smyčky, zvýšení výkonu sestavení pro ladění.
-- `basic_string` Interní zmenšení cestu pro `shrink_to_fit()` a `reserve()` již není v cestě k nové přidělení operace, zmenšení velikosti kódu pro všechny mutating členy.
-- `basic_string` Interní růst cesta již není v cestě `shrink_to_fit()`.
-- `basic_string` Mutace operace se teď promítnou do-přidělování Rychlá cesta a vyhrazování funkce pomalou cestou, což pravděpodobnější častých případech ne opětovné být vložená do volající.
-- `basic_string` Mutace operations teď konstrukce opětovnému přidělení vyrovnávací paměti s požadovaným stavem než změna velikosti na místě. Například vložení na začátku řetězec teď přesune obsah po vložení právě jednou (dolů nebo do nově přidělených vyrovnávací paměti), místo dvakrát v případě, že reallocating (do nově přidělených vyrovnávací paměti a potom dolů).
-- Operace volání standardní knihovny jazyka C v \<řetězec\> teď do mezipaměti `errno` adresu odebrat opakovaných interakci s TLS.
+- Pracoval kolem interakce s `noexcept` která zabránila vkládání `std::atomic` implementace do funkce, které používají strukturované zpracování výjimek (SEH).
+- Změněné standardní knihovně poškodilo vnitřní `_Deallocate()` funkce optimalizace na menší kód, což umožňuje být vloženy do více míst.
+- Změnit `std::try_lock()` nahrazujícím rekurze rozšíření balíčku.
+- Vylepšené `std::lock()` použití algoritmu předcházení zablokování `lock()` operace namísto pokryjte na `try_lock()` na všech zámků.
+- Povolené optimalizace pojmenované vrácená hodnota v `system_category::message()`.
+- `conjunction` a `disjunction` nyní vytvořit instanci N + 1 typů, aniž 2 n + 2 typy.
+- `std::function` už vytvoří instanci stroje podporu alokátoru pro každý typu volatelná aplikacemi, zlepšení propustnosti a snížení velikosti .obj v aplikacích, které předávají mnoho různých výrazy lambda na `std::function`.
+- `allocator_traits<std::allocator>` obsahuje ručně vložit `std::allocator` operace, snížení velikosti kódu v kódu, který komunikuje s `std::allocator` prostřednictvím `allocator_traits` pouze (to znamená, že v většinu kódu).
+- Standardní knihovna teď zpracovává rozhraní C ++ 11 minimálních alokátorů volání `allocator_traits` přímo, namísto obtékání přidělujícího modulu do interní třídy `_Wrap_alloc`. To snižuje velikost kód generovaný pro podpory pro allocator, zvyšuje optimalizátoru schopnost argumentovat o kontejnery standardní knihovny v některých případech a poskytuje lepší možnosti ladění (jak je vidět typ alokátoru, spíše než `_Wrap_alloc<your_allocator_type>` v ladicí program).
+- Odebrat metaprogramování upravené `allocator::reference`, které alokátorů nejsou povoleny ve skutečnosti k přizpůsobení. (Alokátory: můžete vytvářet kontejnery pomocí ukazatelů, ale ne nápadité odkazy.)
+- Front-end kompilátoru se museli k rozbalení ladění iterátorů v rozsahu smyčky, zvýšení výkonu sestavení pro ladění.
+- `basic_string` Interní zmenšení cestu pro `shrink_to_fit()` a `reserve()` již není v cestě přerozdělení operace, snížení velikosti kódu pro všechny členy mutující.
+- `basic_string` Interní růst cestu již není v cestě `shrink_to_fit()`.
+- `basic_string` Mutující operace jsou nyní promítnout do Rychlá cesta přidělení a přidělení pomalou cestou funkce, díky tomu je vyšší pravděpodobnost pro běžné bez opětovné se nedá vložit do volající.
+- `basic_string` Mutace operace nyní konstrukce nevyčerpané vyrovnávací paměti v požadovaném stavu, spíše než změnu velikosti na místě. Například vkládání na začátku řetězce teď přesune obsah po vložení právě jednou (mimo provoz nebo na nově přidělenou vyrovnávací paměť), namísto dvakrát v případě reallocating (nově přidělené vyrovnávací paměti a potom dolů).
+- Operace volání standardní knihovny jazyka C v \<řetězec\> nyní do mezipaměti `errno` adresu odebrat opakované interakce s TLS.
 - Zjednodušená `is_pointer` implementace.
-- Změna na základě funkce výraz sfinae u výrazů k dokončení `struct` a `void_t`– na základě.
-- Standardní knihovny algoritmů teď Vyhněte se postincrementing iterátory.
-- Opravené zkrácení upozornění při použití 32-bit alokátorů na 64bitových systémech.
-- `std::vector` Přesuňte přiřazení je nyní efektivnější v případě jiných POCMA rovná allocator opětovným použitím vyrovnávací paměti, pokud je to možné.
+- Dokončení změn na základě funkce sfinae u výrazů k `struct` a `void_t`– na základě.
+- Algoritmy standardní knihovny se postincrementing iterátory.
+- Oprava zkrácení upozornění při použití 32-bit alokátorů v 64bitových systémech.
+- `std::vector` Přesunutí přiřazení je teď mnohem efektivnější v případě jiných POCMA rovná allocator opětovným použitím vyrovnávací paměti, pokud je to možné.
 
-#### <a name="readability-and-other-improvements"></a>Přehlednosti a další vylepšení
+#### <a name="readability-and-other-improvements"></a>Lepší čitelnost a další vylepšení
 
-- Standardní knihovna teď používá C ++ 14 `constexpr` bezpodmínečně, místo podmíněně definovány makra.
-- Standardní knihovna teď používá šablony alias interně.
-- Standardní knihovna teď používá `nullptr` interně, místo provedení `nullptr_t{}`. (Interní použití Null byla odstraněna. Interní použití 0 jako null je ještě čistí postupně.)
-- Standardní knihovna teď používá `std::move()` interně místo stylistically zneužití `std::forward()`.
-- Změnit `static_assert(false, "message")` k `#error message`. To zvyšuje kompilátoru diagnostics, protože `#error` okamžitě zastaví kompilace.
-- Standardní knihovna již označí funkce jako `__declspec(dllimport)`. Moderní linkeru technologie už vyžaduje to.
-- Extrahované sfinae u výrazů pro výchozí šablony argumenty, což snižuje zbytečné soubory ve srovnání s vrátí typy a typy argumentů funkce.
-- Ladění kontroluje \<náhodných\> místo interní funkce teď používat standardní knihovně obvyklé stroje, `_Rng_abort()` který volá `fputs()` k **stderr**. Implementace této funkce je uchovávané pro binární kompatibilitu, ale byla odebrána v příští verzi binární kompatibilní standardní knihovny.
+- Standardní knihovna teď používá C ++ 14 `constexpr` bezpodmínečně, namísto podmíněně definovaná makra.
+- Standardní knihovna teď používá šablony aliasů interně.
+- Standardní knihovna teď používá `nullptr` interně, nikoli z `nullptr_t{}`. (Interní využití NULL byla odstraněna. Interní využití 0 jako null právě prochází čištěním postupně.)
+- Standardní knihovna teď používá `std::move()` interně, namísto stylistically zneužití `std::forward()`.
+- Změnit `static_assert(false, "message")` k `#error message`. To zlepšuje diagnostiky kompilátoru, protože `#error` okamžitě přeruší kompilaci.
+- Standardní knihovna již označí funkce jako `__declspec(dllimport)`. Moderní linkeru technologií už nevyžaduje to.
+- Extrahované sfinae u pro výchozí argumenty šablony, což snižuje nepořádku v porovnání s návratové typy a typy argumentů funkce.
+- Ladění se změnami \<náhodné\> teď použít obvyklé výbavu standardní knihovny, místo vnitřní funkce `_Rng_abort()` kterou volat `fputs()` k **stderr**. Implementace této funkce je se uchovávají po dobu binární kompatibilitu, ale byla odebrána v příští verzi binární nekompatibilní standardní knihovny.
 
-### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 verze 15,5
+### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 verze 15.5
 
-Několik funkce standardní knihovny byly přidány, zastaralé nebo odebrat v souladu s C ++ 17 standard. Další informace najdete v části [vylepšení shoda C++ v sadě Visual Studio](cpp-conformance-improvements-2017.md#improvements_155).
+Některé funkce standardní knihovny byly přidány, zastaralé nebo odebrání v souladu s standard C ++ 17. Další informace najdete v části [vylepšení shody C++ v sadě Visual Studio](cpp-conformance-improvements-2017.md#improvements_155).
 
-#### <a name="new-experimental-features"></a>Nové povolenými experimentálními funkcemi
+#### <a name="new-experimental-features"></a>Nové seznámit s experimentálními funkcemi
 
 - Experimentální podporu pro následující paralelní algoritmy:
   - `all_of`
@@ -192,7 +192,7 @@ Několik funkce standardní knihovny byly přidány, zastaralé nebo odebrat v s
   - `replace`
   - `replace_if`
   - `sort`
-- Podpisy pro následující paralelní algoritmy jsou přidány, ale není paralelizovaná málo v tuto chvíli; profilace ukázalo žádné výhody v paralelním prováděním algoritmy, které pouze přesunout nebo permute prvky:
+- Podpisy pro následující paralelní algoritmy jsou přidána ale neparalelizovaných v tuto chvíli; profilace jsme si ukázali, žádné výhody v paralelním zpracováním algoritmy, které jsou pouze přesunutí nebo permute – elementy:
   - `copy`
   - `copy_n`
   - `fill`
@@ -204,72 +204,72 @@ Několik funkce standardní knihovny byly přidány, zastaralé nebo odebrat v s
   - `rotate_copy`
   - `swap_ranges`
 
-#### <a name="performance-fixes-and-improvements"></a>Vylepšení a opravy výkonu
+#### <a name="performance-fixes-and-improvements"></a>Výkon opravy a vylepšení
 
-- `basic_string<char16_t>` Nyní zapojí stejné `memcmp`, `memcpy`a podobné optimalizace, které `basic_string<wchar_t>` zapojí.
-- Omezení optimalizace, které brání ukazatelů na funkce nebudou vloženou obslužnou vystavené naše "vyhnout kopírování funkcí" v sadě Visual Studio 2015 Update 3 byla fungovala kolem, obnovení výkon `lower_bound(iter, iter, function pointer)`.
-- Režii iterator ladění je pořadí ověření vstupy `includes`, `set_difference`, `set_symmetric_difference`, a `set_union` se snížila o rozbalení iterátory před zaškrtnutím pořadí.
-- `std::inplace_merge` Nyní přeskočí přes prvky, které jsou již v pozici.
-- Vytváření `std::random_device` už vytvoří a pak zničí `std::string`.
-- `std::equal` a `std::partition` měli přechod threading průchodu optimalizace, které ukládá porovnávání iterator.
-- Když `std::reverse` předaný ukazatele trivially kopírovatelná `T`, bude nyní dispatch psané vectorized implementaci.
-- `std::fill`, `std::equal`, a `std::lexicographical_compare` byly výukové postupy, do kterého se má `memset` a `memcmp` pro `std::byte` a `gsl::byte` (a další výčty jako char a výčet tříd). Všimněte si, že `std::copy` odešle zprávu pomocí `is_trivially_copyable` a proto nebylo nutné žádné změny.
-- Standardní knihovna již obsahuje prázdný závorky destruktory jejichž pouze chování byla aby jiný trivially zničitelné typy.
+- `basic_string<char16_t>` Teď provede stejné `memcmp`, `memcpy`a podobné optimalizace, které `basic_string<wchar_t>` zaujme.
+- Optimalizace omezení, která mu ukazatelů na funkce nebudou vloženy vystavené naše "vyhnout kopírování funkce" pracovat v sadě Visual Studio 2015 Update 3 byla pracoval, obnovení výkon `lower_bound(iter, iter, function pointer)`.
+- Režie pro iterační ladění vaší objednávky ověření vstupy `includes`, `set_difference`, `set_symmetric_difference`, a `set_union` byla snížena rozbalení iterátory před vrácením se změnami pořadí.
+- `std::inplace_merge` Nyní přeskočí elementy, které jsou už v umístění.
+- Vytváření `std::random_device` už sestaví a potom zničí `std::string`.
+- `std::equal` a `std::partition` měl dělení na vlákna jump optimalizace průchodu, což jim porovnávání iterátoru.
+- Když `std::reverse` ukazatele je předaný pro triviálně kopírovatelné `T`, odešle teď do rukou psaný vektorizovaných implementace.
+- `std::fill`, `std::equal`, a `std::lexicographical_compare` byly museli jak provést odeslání `memset` a `memcmp` pro `std::byte` a `gsl::byte` (a ostatní char jako výčty a výčet tříd). Všimněte si, že `std::copy` odešle zprávu pomocí `is_trivially_copyable` a proto nebylo potřeba žádné změny.
+- Standardní knihovna již nebude obsahovat žádné prázdné závorky destruktory, jehož jediným chování bylo zajistit typy bez triviálně zničitelné.
 
-#### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Správnost opravy v aplikaci Visual Studio 2017 verze 15,5
+#### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Řeší správnost v sadě Visual Studio 2017 verze 15.5
 
-- `std::partition` nyní volání predikát N časy místo N + 1 dobu, jako standardní vyžaduje.
-- Pokusí se vyhnout statické objekty magic ve verzi 15.3 opravili ve verzi 15,5.
-- `std::atomic<T>` nevyžaduje již `T` jako výchozí zkonstruovatelný.
-- Halda algoritmy, které už logaritmické časově udělat lineární čas assertion, že vstup je ve skutečnosti haldy Pokud je povoleno ladění iterátorů.
-- `__declspec(allocator)` Nyní je chráněn pro C1XX pouze, aby se zabránilo upozornění Clang, který nerozumí tento declspec.
-- `basic_string::npos` je k dispozici jako konstanta doba kompilace.
-- `std::allocator` v C ++ 17 režimu je větší než teď správně obslužné rutiny přidělení přepsání zarovnaný typy, typy to znamená, jejichž zarovnání `max_align_t`, pokud zakázal **/Zc:alignedNew-**.  Například vektory objektů s 16 nebo 32 bajtů zarovnání bude nyní správně zarovnán SSE a AVX pokyny.
+- `std::partition` nyní volání časy predikátu N místo N + 1 časy jako standardní vyžaduje.
+- Pokusy o statické objekty magic ve verzi 15.3, aby byl opraven ve verzi 15.5.
+- `std::atomic<T>` už nevyžaduje `T` jako výchozí constructible.
+- Haldy algoritmy, které už logaritmické nespěchejte provést kontrolní výraz lineárním čase, že vstup je ve skutečnosti haldu Pokud je povolená pro iterační ladění.
+- `__declspec(allocator)` je teď pro C1XX pouze, aby se zabránilo upozornění Clang, který nerozumí tento declspec chráněné.
+- `basic_string::npos` je teď dostupná jako časovou konstantou kompilace.
+- `std::allocator` v C ++ 17 režimu je větší než nyní správně zpracovává přidělení nadbytečně zarovnané typy, typy to znamená, jejichž zarovnání `max_align_t`, pokud zakázal **/Zc:alignedNew-**.  Například vektory objektů s 16 nebo 32bajtové zarovnání budou nyní správně zarovnané SSE a AVX pokyny.
 
-### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 verze 15,6 operací
+### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 verze 15.6
 
 - \<memory_resource >
 - Knihovna základy V1
-- Odstranění polymorphic_allocator přiřazení
-- Odvození argumentu šablony vylepšení – třída
+- Odstraňuje se přiřazení polymorphic_allocator
+- Zlepšení odvození argumentu šablony třídy
 
 ### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 verze 15.7
 
-- Podpora pro paralelní algoritmy již není experiemental
-- na nové implementace \<filesystem >
-- základní řetězec převody (částečné)
+- podporu pro paralelní algoritmy, už nejsou experiemental
+- novou implementaci \<filesystem >
+- základní řetězec převody (částečná podpora)
 - std::launder()
 - std::Byte
 - hypot(x,y,z)
-- vyloučení nepotřebných decay
+- jak se vyhnout zbytečným decay
 - speciální matematické funkce
-- char_traits – constexpr
-- odvození příručky pro STL
+- char_traits constexpr.
+- Průvodce dedukcí pro STL
 
-V tématu [přizpůsobení jazyka Visual C++](visual-cpp-language-conformance.md) Další informace.
+Zobrazit [shoda jazyka Visual C++](visual-cpp-language-conformance.md) Další informace.
 
 ## <a name="other-libraries"></a>Další knihovny
 
-### <a name="open-source-library-support"></a>Podpora knihovny s otevřeným zdrojem
+### <a name="open-source-library-support"></a>Podpora pro Open source knihovny
 
-**Vcpkg** je nástroj příkazového řádku open source, který výrazně se zjednodušuje proces získávání a vytváření statické knihovny C++ s otevřeným zdrojem a knihovny DLL v sadě Visual Studio. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++](vcpkg.md).
+**Vcpkg** je nástroj příkazového řádku open source, který výrazně zjednodušuje proces získání a vytvoření statické knihovny opensourcového jazyka C++ a knihovny DLL v sadě Visual Studio. Další informace najdete v tématu [vcpkg: Správce balíčků pro C++](vcpkg.md).
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0
+### <a name="cpprest-sdk-290"></a>Sada SDK CPPRest 2.9.0
 
-CPPRestSDK, a platformy webového rozhraní API jazyka C++, je aktualizovaná verze 2.9.0. Další informace najdete v tématu [CppRestSDK 2.9.0 je dostupná na Githubu](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/).
+CPPRestSDK multiplatformní webového rozhraní API jazyka C++, byla aktualizována na verzi 2.9.0. Další informace najdete v tématu [CppRestSDK 2.9.0 je k dispozici na Githubu](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/).
 
 ### <a name="atl"></a>ATL
 
-- Ještě další sadu opravy vyhledání názvu shoda
-- Existující přesunutí konstruktory a operátory přiřazení jsou nyní správně označené jako jiný vyvolávání přesunout
-- Zrušení potlačit platný upozornění C4640 týkající se bezpečného init vlákno z místní statické objekty v atlstr.h
-- Vlákno bezpečné inicializace místní statické objekty se automaticky vypnulo v sadě nástrojů XP při [pomocí knihovny ATL a vytváření knihovny DLL]. To již neplatí. Můžete přidat **/Zc:threadSafeInit-** v nastavení projektu, pokud má přístup z více vláken se požaduje bezpečné inicializace vypnout.
+- Ještě další sada oprav neshod vyhledávání názvů
+- Existující konstruktory přesunutí a operátory přiřazení jsou teď správně označené jako non-throwing. přesunutí a operátory
+- Zrušení potlačení platný upozornění c4640 týkajícího vláknově bezpečné inicializace místních statik v atlstr.h
+- Vláknově bezpečnou inicializaci místních statik byla v sadě nástrojů XP automaticky vypnutá při [použití ATL a vytváření knihovny DLL]. To již neplatí. Můžete přidat **/Zc: threadsafeinit** v nastavení projektu, pokud vlákno je žádoucí bezpečnou inicializaci vypnout.
 
-### <a name="visual-c-runtime"></a>Modulu runtime Visual C++
+### <a name="visual-c-runtime"></a>Modul runtime Visual C++
 
-- Nové záhlaví "cfguard.h" pro řízení toku ochrana symboly.
+- Nové záhlaví "cfguard.h" pro symboly ochrany toku provádění.
 
 ## <a name="c-ide"></a>C++ IDE
 
@@ -278,28 +278,28 @@ CPPRestSDK, a platformy webového rozhraní API jazyka C++, je aktualizovaná ve
 **Visual Studio 2017 verze 15.3**:
 
 - Několik průvodců projektu a kódu je přepsaných ve stylu dialogu podpisu.
-- **Přidání třídy** nyní přímo spustí průvodce Přidat třídu. Všechny položky, které byly dříve tady jsou nyní k dispozici v části **Přidat > Nová položka**.
-- Win32 projekty jsou nyní v části **Windows Desktop** kategorie v **nový projekt** dialogové okno.
-- **Konzoly Windows** a **plochy aplikace** šablony nyní vytvoří projektů bez zobrazení průvodce. Nová **Windows Desktop průvodce** v rámci stejné kategorii, která zobrazí stejné možnosti jako starý **Konzolová aplikace Win32** průvodce.
+- **Přidejte třídu** teď přímo spustí průvodce Přidat třídu. Všechny ostatní položky, které byly dříve tady, jsou teď k dispozici v rámci **Přidat > Nová položka**.
+- Projekty Win32 jsou teď v **Windows Desktop** kategorii **nový projekt** dialogového okna.
+- **Konzoly Windows** a **aplikace klasické pracovní plochy** šablony teď vytvoří projekty bez zobrazení průvodce. Je tu nový **desktopový Průvodce pro Windows** v rámci stejné kategorie, která zobrazí stejné možnosti jako původní **Konzolová aplikace Win32** průvodce.
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-Několik operací v jazyce C++ využívající modul IntelliSense pro refaktoring a kód navigační spustit mnohem rychlejší. Následující čísla je založena na řešení Visual Studio chromu s 3500 projekty:
+Několik operací v jazyce C++, které používají modul IntelliSense pro refaktoring a navigace v kódu spusťte mnohem rychleji. Tato čísla jsou založeny na Visual Studio chromu řešení s projekty 3500:
 
 |||
 |-|-|
 |Funkce|Zlepšení výkonu|
 |přejmenování|5.3 x|
-|Změna podpisu |4.5 x|
+|Změnit signaturu |4.5 x|
 |Najít všechny odkazy|4.7 x|
 
-C++ teď podporuje Ctrl + kliknutí **přejít k definici**, usnadňuje navigace myši do definice. Struktura vizualizér ze sady kancelářským nástrojům Power pack je nyní také součástí produktu ve výchozím nastavení.
+Jazyk C++ nyní podporuje Ctrl + kliknutí **přejít k definici**, usnadňuje navigace myši do definic. Vizualizér struktur z této sady nástrojů Productivity Power Tools je nyní také součástí produktu ve výchozím nastavení.
 
 ## <a name="intellisense"></a>IntelliSense
 
-- Ve výchozím nastavení je nyní používán nový databázový stroj využívající SQLite. Tím se urychlí databázové operace jako **přejít k definici** a **najít všechny odkazy**a budou výrazně zvýšit doba analýza prvotního řešení. Nastavení se přesunula do **nástroje > Možnosti > textový Editor > C/C++ > Upřesnit** (dříve bylo pod... C/C++ | Experimentální).
+- Ve výchozím nastavení je nyní používán nový databázový stroj využívající SQLite. Tím se urychlí databázové operace jako **přejít k definici** a **najít všechny odkazy**a výrazně se zkrátí doba analýzy počátečního řešení. Nastavení se přesunulo do **nástroje > Možnosti > textový Editor > C/C++ > Upřesnit** (dříve bylo pod... C/C++ | Experimentální).
 
-- Vylepšili jsme výkon IntelliSense v projektech a soubory bez použití předkompilovaných hlaviček – pro hlavičky v aktuální soubor bude vytvořeno automatické předkompilovaných hlaviček.
+- Vylepšili jsme výkon technologie IntelliSense v projektech a souborech, které nepoužívají předkompilované hlavičky – pro hlavičky aktuálního souboru se vytvoří Automatická Předkompilovaná hlavička.
 
 - Přidali jsme do seznamu chyb filtrování a nápovědu k chybám technologie IntelliSense. Kliknutí na sloupec s chybami teď umožní je filtrovat. Kromě toho kliknutím na konkrétní chyby nebo stisknutím klávesy F1 spustíte online vyhledávání chybové zprávy.
 
@@ -311,82 +311,82 @@ C++ teď podporuje Ctrl + kliknutí **přejít k definici**, usnadňuje navigace
 
   ![Filtrování seznamu členů](media/mlfiltering.png "Filtrování seznamu členů")
 
-- Přidali jsme novou experimentální funkci prediktivní IntelliSense, která poskytuje kontextově závislé filtrování toho, co se zobrazuje v seznamu členů. V tématu [C++ IntelliSense vylepšení - prediktivní IntelliSense & filtrování](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)
-- **Najít všechny odkazy** (Shift + F12) teď základy pomáhá získáte snadno, i v komplexní kódu. Poskytuje pokročilé seskupení, filtrování, řazení, vyhledávání v rámci výsledky a (pro některé jazyky) zabarvení, abyste získali jasné vaše odkazy. Nové uživatelské rozhraní pro jazyk C++, obsahuje informace o tom, jestli jsou jsme čtení nebo zápisu do proměnné.
-- Funkce změny tečky na šipku technologie IntelliSense se změnila z experimentální na pokročilou a teď je ve výchozím nastavení povolená. Funkce editor **rozbalte obory** a **rozbalte přednost** také byly přesunuté z experimentální na Upřesnit.
-- Povolenými experimentálními funkcemi refaktoringu **změnu podpis** a **extrahovat funkce** jsou nyní k dispozici ve výchozím nastavení.
-- Experimentální 'Rychlejší projektu zatížení' funkci pro projekty C++. Při příštím otevření se projekt jazyka C++ zavede se rychleji a potom se bude zavádět skutečně rychle.
-- Některé z těchto funkcí jsou společné pro jiné jazyky a některé jsou specifické pro C++. Další informace o těchto nových funkcích najdete v tématu [uvedení Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/).
+- Přidali jsme novou experimentální funkci prediktivní IntelliSense, která poskytuje kontextově závislé filtrování toho, co se zobrazuje v seznamu členů. Zobrazit [vylepšení IntelliSense pro C++ – prediktivní IntelliSense a filtrování](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)
+- **Najít všechny odkazy** (Shift + F12) teď pomáhá vám snadno dostanete, i v komplexních základů kódu. Poskytuje pokročilé seskupování, filtrování, řazení, hledání v rámci výsledků a (pro některé jazyky) zabarvení, abyste se mohli pochopili, že vaše odkazy. Nové uživatelské rozhraní jazyka C++, obsahuje informace o tom, jestli jsme se čtení z nebo zápis do proměnné.
+- Funkce změny tečky na šipku technologie IntelliSense se změnila z experimentální na pokročilou a teď je ve výchozím nastavení povolená. Funkce editoru **rozbalení oborů** a **rozbalení priorit** také byly přesunuté z experimentálních na Pokročilé.
+- Funkce experimentálního refaktoringu **změnit signaturu** a **extrahovat funkci** jsou teď dostupné ve výchozím nastavení.
+- Experimentální funkce, které je "Rychleji projektu zatížení" pro projekty C++. Při příštím otevření se projekt jazyka C++ zavede se rychleji a potom se bude zavádět skutečně rychle.
+- Některé z těchto funkcí jsou společné pro ostatní jazyky a některé jsou specifické pro C++. Další informace o těchto nových funkcích najdete v tématu [oznamujeme vydání sady Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/).
 
-**Visual Studio 1027 verze 15.7**: přidána podpora pro ClangFormat. Další informace najdete v tématu [ClangFormat podporu Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/).
+**1027 Visual Studio verze 15.7**: přidána podpora pro ClangFormat. Další informace najdete v tématu [podporu pro ClangFormat v sadě Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/).
 
-## <a name="non-msbuild-projects-with-open-folder"></a>Bez MSBuild projekty s otevřít složku
+## <a name="non-msbuild-projects-with-open-folder"></a>Projekty MSBuild bez pomocí otevřít složku
 
-Visual Studio 2017 zavádí **otevřít složku** funkci, která umožňuje kód, vytvářet a ladit ve složce obsahující zdrojový kód, aniž by bylo nutné vytvořit všechny projekty nebo řešení. Díky tomu je mnohem jednodušší začít pracovat s Visual Studio, i když projektu není projektu na základě MSBuild. S **otevřít složku** získat přístup k efektivní kód pochopení, úpravy, sestavování a ladění možnosti, které Visual Studio poskytuje již pro projektů MSBuild. Další informace najdete v tématu [otevřít složku projektů v jazyce Visual C++](ide/non-msbuild-projects.md).
+Visual Studio 2017 zavádí **otevřít složku** funkci, která umožňuje kód, vytvářet a ladit ve složce obsahující zdrojový kód bez nutnosti vytvářet jakékoli řešení nebo projektů. Díky tomu je mnohem jednodušší, abyste mohli začít se sadou Visual Studio i v případě, že váš projekt není projektem založené na MSBuild. S **otevřít složku** získáte přístup k výkonné kódu principy, úpravy, sestavování a ladění funkcí, které již poskytuje Visual Studio pro projekty MSBuild. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](ide/non-msbuild-projects.md).
 
-- Vylepšení prostředí Otevřít složku V těchto souborech .json můžete přizpůsobit prostředí:
+- Vylepšení prostředí Otevřít složku Přizpůsobte si prostředí pomocí tyto soubory .json:
   - CppProperties.json použijte k přizpůsobení technologie IntelliSense a prostředí procházení.
   - Tasks.json použijte k přizpůsobení kroků sestavení.
   - Launch.json použijte k přizpůsobení prostředí ladění.
 
 **Visual Studio 2017 verze 15.3**:
 
-- Vylepšená podpora pro alternativní kompilátory a prostředí sestavení, jako je například MinGW a emulaci. Další informace najdete v tématu [pomocí MinGW a emulaci s Visual C++ a otevřít složku](https://blogs.msdn.microsoft.com/vcblog/2017/07/19/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/).
-- Byla přidána podpora specifické konfigurace a globální proměnné prostředí lze definovat v CppProperties.json a CMakeSettings.json. Konfigurace ladění definované v launch.vs.json a úkoly v tasks.vs.json mohou být spotřebovávána těchto proměnných prostředí. Další informace najdete v tématu [přizpůsobení prostředí s Visual C++ a otevřít složku](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/customizing-your-environment-with-visual-c-and-open-folder/).
-- Vylepšená podpora pro generátor expertem CMake společnosti, včetně možnosti snadno cílí na 64bitových platformách.
+- Vylepšená podpora pro alternativní kompilátory a prostředí sestavení, jako je například MinGW a Cygwin. Další informace najdete v tématu [pomocí MinGW a Cygwin pomocí jazyka Visual C++ a otevřít složku](https://blogs.msdn.microsoft.com/vcblog/2017/07/19/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/).
+- Byla přidána podpora pro definování proměnných prostředí určených pro konfigurace a globální CppProperties.json a CMakeSettings.json. Tyto proměnné prostředí můžete využívat v konfiguracích ladění definovaných v souboru launch.vs.json a úkolech v tasks.vs.json. Další informace najdete v tématu [přizpůsobení prostředí pomocí Visual C++ a otevřít složku](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/customizing-your-environment-with-visual-c-and-open-folder/).
+- Vylepšená podpora pro generátor Ninja CMake, včetně možnosti snadno cílit na 64bitové platformy.
 
-## <a name="cmake-support-via-open-folder"></a>CMake na podporu přes otevřít složku
+## <a name="cmake-support-via-open-folder"></a>Podpora CMake prostřednictvím funkce Otevřít složku
 
-Visual Studio 2017 zavádí podporu pro použití CMake projektů bez převodu do souborů projektu nástroje MSBuild (VCXPROJ). Další informace najdete v tématu [CMake projektů v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md). Otevírání projektů CMake s **otevřít složku** automaticky nakonfiguruje prostředí pro jazyk C++ úpravy, sestavování a ladění.
+Visual Studio 2017 zavádí podporu pro práci s projekty CMake bez nutnosti dalších souborech projektu MSBuild (.vcxproj). Další informace najdete v tématu [projekty CMake v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md). Otevírání projektů CMake s **otevřít složku** automaticky nakonfiguruje prostředí pro úpravy, sestavování a ladění C++.
 
-- C++ IntelliSense funguje bez nutnosti vytvoření souboru CppProperties.json v kořenové složce. Navíc jsme přidali novou rozevírací nabídku, která uživatelům umožňuje snadno přepínat mezi konfiguracemi poskytovanými soubory CMake a CppProperties.json.
+- Technologie IntelliSense jazyka C++ funguje bez nutnosti vytvoření souboru CppProperties.json v kořenové složce. Navíc jsme přidali novou rozevírací nabídku, která uživatelům umožňuje snadno přepínat mezi konfiguracemi poskytovanými soubory CMake a CppProperties.json.
 
 - Prostřednictvím souboru CMakeSettings.json, který je umístěný ve stejné složce jako soubor CMakeLists.txt, se podporuje další konfigurace.
 
   ![Otevřít složku – CMake](media/cmake_cpp.png "Otevřít složku – CMake")
 
-**Visual Studio 2017 verze 15.3**: přidána podpora pro generátor CMake expertem. 
+**Visual Studio 2017 verze 15.3**: přidána podpora pro generátor CMake Ninja. 
 
-**Visual Studio 2017 verze 15,5**: Import existující CMake přidala se podpora ukládá do mezipaměti. 
+**Visual Studio 2017 verze 15.5**: přidané pro import existujících CMake ukládá do mezipaměti. 
 
-**Visual Studio 2017 verze 15.7**: CMake 3.11, analýza kódu v projektech CMake, přidala se podpora cílem zobrazit v Průzkumníku řešení, možnosti mezipaměti generování a kompilace jeden soubor. Další informace najdete v tématu [CMake podpory v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) a [CMake projektů v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 verze 15.7**: přidané for CMake 3.11, analýza kódu v projektech CMake, zaměřuje na zobrazení v Průzkumníku řešení, možnosti pro mezipaměť, kompilaci a generování jednoho souboru. Další informace najdete v tématu [podpora CMake v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) a [projekty CMake v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
-## <a name="windows-desktop-development-with-c"></a>Vývoj aplikací systému Windows s C++
+## <a name="windows-desktop-development-with-c"></a>Vývoj pro plochu Windows v C++
 
 Při instalaci původní úlohy pro C++ teď poskytujeme podrobnější prostředí instalace. Přidali jsme volitelné součásti, které vám umožní vybrat a nainstalovat jen ty nástroje, které potřebujete.  Všimněte si, že uvedené velikosti instalace součástí uvedené v uživatelském rozhraní instalačního programu nejsou přesné a podceňují skutečnou celkovou velikost.
 
-Když chcete úspěšně vytvářet projekty Win32 v úloze vývoje desktopových aplikací v C++, musíte nainstalovat sadu nástrojů i sadu Windows SDK. Instalace komponenty doporučené (vybrané) **VC ++ 2017 v141 nástrojů (x86, x64)** a **Windows 10 SDK (10.0.nnnnn)** zajišťuje to bude fungovat. Pokud nebudou potřebné nástroje nainstalované, projekty se nevytvoří úspěšně a průvodce přestane reagovat.
+Když chcete úspěšně vytvářet projekty Win32 v úloze vývoje desktopových aplikací v C++, musíte nainstalovat sadu nástrojů i sadu Windows SDK. Instalace doporučených (vybraných) komponent **nástrojů pro VC ++ 2017 v141 (x86, x64)** a **Windows 10 SDK (10.0.nnnnn)** zajišťuje, bude to fungovat. Pokud nebudou potřebné nástroje nainstalované, projekty se nevytvoří úspěšně a průvodce přestane reagovat.
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-Nástroje sestavení Visual C++ (dříve k dispozici jako samostatný produkt) jsou nyní zahrnuty jako zatížení v instalačním programu Visual Studio. Tato zatížení nainstaluje jenom nástroje potřebné k sestavení projektů C++ bez instalace Visual Studio IDE. Modulové v140 i v141 jsou zahrnuty. Sada nástrojů v141 obsahuje nejnovější vylepšení v aplikaci Visual Studio 2017 verze 15,5. Další informace najdete v tématu [sestavení nástroje sady Visual Studio nyní zahrnují VS2017 a VS2015 MSVC modulové](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/).
+(Dříve dostupné jako samostatný produkt) Visual C++ Build tools jsou nyní zahrnuty jako úloha v instalačním programu sady Visual Studio. Tato úloha se nainstaluje jenom nástroje potřebné k sestavení projektů C++ bez nutnosti instalace integrovaném vývojovém prostředí sady Visual Studio. Sady nástrojů verze 141 i v140 jsou zahrnuty. Sadu nástrojů verze 141 obsahuje nejnovější vylepšení v sadě Visual Studio 2017 verze 15.5. Další informace najdete v tématu [Visual Studio Build Tools nyní zahrnují VS2017 a sady nástrojů MSVC VS2015](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/).
 
-## <a name="linux-development-with-c"></a>Vývoj pro Linux s C++
+## <a name="linux-development-with-c"></a>Vývoj pro Linux v C++
 
 Oblíbené rozšíření [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) je teď součástí sady Visual Studio. Tato instalace nabízí všechno, co potřebujete k vývoji a ladění aplikací v jazyce C++, které se spouštějí v prostředí systému Linux.
 
 **Visual Studio 2017 verze 15.2**:
 
-Byla vylepšena ve sdílení a typ vizualizace kódu napříč platformami. Další informace najdete v tématu [vylepšení Linux C++ pro různé platformy kód sdílení a zadejte vizualizace](https://blogs.msdn.microsoft.com/vcblog/2017/05/10/linux-cross-platform-and-type-visualization/).
+Vylepšení byly provedeny v kódu pro různé platformy pro sdílení obsahu a typu vizualizace. Další informace najdete v tématu [vylepšení Linux C++ pro různé platformy sdílení kódu a typ vizualizace](https://blogs.msdn.microsoft.com/vcblog/2017/05/10/linux-cross-platform-and-type-visualization/).
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-- Linux zatížení přidala podporu pro **rsync** jako alternativu k **sftp** pro synchronizaci souborů do vzdáleného počítače se systémem Linux.
-- Byla přidána podpora křížové kompilace cílení ARM microcontrollers. Chcete-li povolit v instalaci, zvolte **Linux development s jazykem C++** zatížení a vyberte možnost pro **vložených a vývoj IoT**. Tento postup přidá RSZ ARM pro různé nástroje pro kompilaci a ujistěte se do instalace. Další informace najdete v tématu [ARM RSZ křížové kompilace v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/).
-- Byla přidána podpora pro CMake. Teď můžete pracovat na váš stávající kód CMake základní bez nutnosti ho převést na projekt sady Visual Studio. Další informace najdete v tématu [konfigurace projektu CMake Linux](linux/cmake-linux-project.md).
-- Byla přidána podpora pro spuštění vzdálené úlohy. Díky této funkci můžete spustit libovolný příkaz na vzdáleném systému, který je definován v sadě Visual Studio Správce připojení. Vzdálené úlohy také poskytují možnost Kopírovat soubory do vzdáleného systému.
-Další informace najdete v tématu [konfigurace projektu CMake Linux](linux/cmake-linux-project.md).
+- Přidána podpora pro Linux úloha **rsync** jako alternativu k **sftp** pro synchronizaci souborů do vzdáleného počítače s Linuxem.
+- Byla přidána podpora pro různé cílení na ARM mikrokontrolerů po kompilaci. Chcete-li povolit v instalaci, zvolte **vývoj pro Linux v C++** úlohy a vyberte možnost pro **vložené a IoT vývoj**. To přidá kolekce gcc technologie ARM cross tools kompilace a zkontrolujte instalaci. Další informace najdete v tématu [ARM GCC křížové kompilace v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/).
+- Byla přidána podpora pro CMake. Teď můžete pracovat na svém stávajícím základu CMake kódu bez nutnosti převádět na projekt sady Visual Studio. Další informace najdete v tématu [konfigurace projektu Linux CMake](linux/cmake-linux-project.md).
+- Byla přidána podpora pro spouštění vzdálené úlohy. Díky této funkci můžete spouštět jakékoli příkazy ve vzdáleném systému, který je definován v sadě Visual Studio Connection Manager. Vzdálené úlohy také poskytují možnost kopírování souborů do vzdáleného systému.
+Další informace najdete v tématu [konfigurace projektu Linux CMake](linux/cmake-linux-project.md).
 
 **Visual Studio 2017 verze 15.7**:
 
-- Vylepšení různé scénáře zatížení systému Linux. Další informace najdete v tématu [Linux C++ zatížení vylepšení systému projektu okna konzoly Linux, rsync a připojit k procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
-- IntelliSense pro hlavičky na vzdálená připojení Linux. Další informace najdete v tématu [IntelliSense pro vzdálené hlavičky Linux](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/intellisense-for-remote-linux-headers/) a [konfigurace projektu CMake Linux](linux/cmake-linux-project.md).
+- Různá vylepšení scénáře úloh Linux. Další informace najdete v tématu [úlohy pro C++ Linux vylepšení systém projektu, okna konzoly systému Linux, rsync a připojit k procesu](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
+- IntelliSense pro záhlaví na vzdálená připojení Linuxu. Další informace najdete v tématu [technologie IntelliSense pro vzdálených hlaviček Linux](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/intellisense-for-remote-linux-headers/) a [konfigurace projektu Linux CMake](linux/cmake-linux-project.md).
 
-## <a name="game-development-with-c"></a>Vývoj her s C++
+## <a name="game-development-with-c"></a>Vývoj her v C++
 
 Využijte naplno potenciál C++ k vytváření profesionálních her využívajících technologii DirectX nebo Cocos2d.
 
-## <a name="mobile-development-with-c-android-and-ios"></a>Mobilní vývoj s jazykem C++ (Android a iOS)
+## <a name="mobile-development-with-c-android-and-ios"></a>Vývoj mobilních aplikací pomocí C++ (Android a iOS)
 
 Mobilní aplikace teď můžete vytvářet a ladit pomocí sady Visual Studio, která se umí zaměřit i na Android a iOS.
 
@@ -394,99 +394,99 @@ Mobilní aplikace teď můžete vytvářet a ladit pomocí sady Visual Studio, k
 
 C++ je volitelnou součástí úlohy Universal Windows App.  Upgrade projektů C++ se v tuto chvíli musí provést ručně. Pokud v sadě Visual Studio 2017 otevřete projekt UPW cílený na verzi 140 a nemáte nainstalovanou sadu Visual Studio 2015, musíte na stránkách vlastností projektu vybrat sadu nástrojů verze 141.
 
-## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nové možnosti pro C++ na univerzální platformu Windows (UWP)
-Nyní máte nové možnosti pro zápis a balení aplikací C++ pro univerzální platformu Windows a Windows Store: plochy most infrastruktury můžete balíček existující aplikace pracovní plochy nebo objektu COM pro nasazení prostřednictvím systému Windows Úložiště nebo prostřednictvím vaší existující kanálů prostřednictvím zkušební načtení. Nové funkce v systému Windows 10 umožňují přidání funkce UPW do aplikace plochy různými způsoby. Další informace najdete v tématu [plochy most](/windows/uwp/porting/desktop-to-uwp-root).
+## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nové možnosti jazyka C++ na univerzální platformu Windows (UPW)
+Teď máte nové možnosti pro zápis a balení aplikací pro univerzální platformu Windows a Windows Store v jazyce C++: přemostění na Desktop infrastruktury můžete zabalit existující aplikace klasické pracovní plochy nebo objekt modelu COM pro nasazení prostřednictvím Windows Store nebo prostřednictvím stávajících prodejních kanálů prostřednictvím zkušební načtení. Nové funkce ve Windows 10 vám umožňují přidat funkce UPW do aplikace klasické pracovní plochy různými způsoby. Další informace najdete v tématu [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
 **Visual Studio 2017 verze 15.5**  
-A **balení projekt aplikace Windows** projektu šablona se přidá, což výrazně zjednodušuje práci balení aplikací klasické pracovní plochy s použitím most plochy. Je k dispozici v části **souboru | Nové | Projekt | Nainstalovat | Visual C++ | Univerzální platformu Windows**. Další informace najdete v tématu [balíčku aplikace pomocí sady Visual Studio (Desktop mostu)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+A **projekt Windows Application Packaging** šablona projektu se přidá, což výrazně zjednodušuje práci při vytváření balíčků aplikací klasické pracovní plochy s využitím přemostění na Desktop. Je k dispozici v **soubor | Nové | Projekt | Instalaci | Visual C++ | Universal Windows Platform**. Další informace najdete v tématu [balíček aplikace pomocí sady Visual Studio (přemostění na Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Při zápisu nový kód, teď můžete použít C + +/ WinRT, standardní projekce jazyka C++ pro prostředí Windows Runtime implementována pouze v záhlaví soubory. Ho můžete obě autorovi a využívat žádné kompatibilní se standardy kompilátoru C++ pomocí rozhraní API systému Windows Runtime. C + +/ WinRT určená k poskytování C++ vývojáři prvotřídní přístup k moderní rozhraní API systému Windows. Další informace najdete v tématu [C + +/ WinRT dostupná na Githubu](https://moderncpp.com/).
+Pokud zapisujete nový kód, můžete nyní použít C + +/ WinRT, standardní projekce jazyka C++ prostředí Windows runtime implementována pouze v souborech hlaviček. Umožňuje oba Autor a používání rozhraní API Windows Runtime pomocí jakýkoli standardům kompilátor jazyka C++. C + +/ WinRT je navržené pro poskytování vývojáře v jazyce C++ s přístupem k prvotřídní moderní rozhraní Windows API. Další informace najdete v tématu [C + +/ WinRT dostupný na Githubu](https://moderncpp.com/).
 
-Od [sestavení 17025 ve Windows SDK zevnitř Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C + +/ WinRT je součástí sady Windows SDK. Další informace najdete v tématu [C + +/ WinRT je nyní zahrnutá Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Od verze [sestavení 17025 Windows SDK Insider Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C + +/ WinRT je součástí sady Windows SDK. Další informace najdete v tématu [C + +/ WinRT je nyní zahrnutá sady Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Sada nástrojů platformy clang/C2
 
-Sada nástrojů Clang/C2, který se dodává s [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] teď podporuje **/bigobj** přepínač, který je zásadní pro sestavování rozsáhlých projektů. Zahrnuje také několik důležitých oprav chyb, jak ve front-endu, tak v back-endu kompilátoru.
+Sada nástrojů Clang/C2, která se dodává s Visual Studio 2017 teď podporuje **/bigobj** přepnout, což je zásadní pro sestavování rozsáhlých projektů. Zahrnuje také několik důležitých oprav chyb, jak ve front-endu, tak v back-endu kompilátoru.
 
 ## <a name="c-code-analysis"></a>Analýza kódu C++
 
-Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, které vynucují [pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines). Jednoduše povolit programy v **rozšíření analýzy kódu** stránku v stránky vlastností projektu a rozšíření budou zahrnuty při spuštění analýzy kódu. Další informace najdete v tématu [pomocí kameny C++ základní pokyny](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, které vynucují [pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines). Stačí tyto moduly pro kontrolu v povolit **rozšířeními pro analýzu kódu** stránky v stránky vlastností projektu a rozšíření se zahrnou spouštění analýz kódu. Další informace najdete v tématu [pomocí tyto moduly pro kontrolu podle dokumentu C++ Core Guidelines](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Stránka vlastností CppCoreCheck")
 
-**Visual Studio 2017 verze 15.3**: přidána podpora pro pravidla související se správou prostředků.
+**Visual Studio 2017 verze 15.3**: Přidaná podpora pro pravidla týkající se správy prostředků.
 
-**Visual Studio 2017 verze 15,5**: kontroluje nové C++ základní pokyny zahrnují správnost chytré ukazatele, správné použití globální inicializátory a označování příznaky použití konstrukce jako `goto` a chybný přetypování.
+**Visual Studio 2017 verze 15.5**: nové C++ Core Guidelines kontroly se týkají správnosti chytrých ukazatelů, správného použití globálních inicializátorů a označování použití konstruktorů, jako je `goto` a chybný přetypování.
 
 Některá čísla upozornění, která najdete v 15.3, už nejsou k dispozici v 15.5. Tato upozornění byla nahrazena specifičtějšími kontrolami.
 
-**Visual Studio 2017 verze 15,6 operací**:  
-Byla přidána podpora pro jeden soubor analýzy a vylepšení výkonu spuštění analýzy. Další informace najdete v tématu [statické vylepšení Analysis C++ pro Visual Studio 2017 15,6 operací Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+**Visual Studio 2017 verze 15.6**:  
+Byla přidána podpora pro jeden soubor analýzy a vylepšení analýzy výkonu za běhu. Další informace najdete v tématu [vylepšení statické analýzy C++ pro Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
 
 **Visual Studio 2017 verze 15.7**:  
 
-- Přidala se podpora [/ analyze: ruleset](build/reference/analyze-code-analysis.md) který můžete určit, které pravidel analýzy kódu pro spuštění.
-- Byla přidána podpora pro další pravidla C++ základní pokynů.  Další informace najdete v tématu [pomocí kameny C++ základní pokyny](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Podpora pro přidání [/ analyze: ruleset](build/reference/analyze-code-analysis.md) což vám umožní určit, která pravidla analýzy kódu pro spuštění.
+- Byla přidána podpora pro další pravidla podle dokumentu C++ Core Guidelines.  Další informace najdete v tématu [pomocí tyto moduly pro kontrolu podle dokumentu C++ Core Guidelines](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing"></a>Testování jednotek
 
-**Visual Studio 2017 verze 15,5**:
+**Visual Studio 2017 verze 15.5**:
 
-Test adaptéru Google a Boost.Test jsou nyní k dispozici jako součásti **vývoj plochy s jazykem C++** pracovního vytížení a jsou integrovány s **Průzkumníka testů**. Cmake projektů (pomocí otevřít složku) je přidána podpora CTest, i když Úplná integrace s **Průzkumníka testů** dosud nejsou k dispozici. Další informace najdete v tématu [zápis testů částí pro C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Adaptér Google Test a Boost.Test adaptér jsou teď k dispozici jako součásti **Desktop Development with C++** pracovního vytížení a jsou integrované s **Průzkumník testů**. Přidá se CTest podporu pro projekty Cmake (pomocí otevřít složku), i když plnou integraci s **Průzkumník testů** ještě není k dispozici. Další informace najdete v tématu [zápis testů jednotek pro C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-**Visual Studio 2017 verze 15,6 operací**:
+**Visual Studio 2017 verze 15.6**:
 
-- Podpora dynamických knihoven Boost.Test přidala se podpora.
-- Šablony položek Boost.Test je teď dostupná v prostředí IDE.
+- Byla přidána podpora pro Boost.Test podpora dynamických knihoven.
+- Šablony položek Boost.Test je teď k dispozici v integrovaném vývojovém prostředí.
 
-Další informace najdete v tématu [Boost.Test jednotkové testování: Podpora dynamických knihoven a nové šablony položky](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/). 
+Další informace najdete v tématu [Boost.Test Unit Testing: Podpora dynamických knihoven a nové šablony položky](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/). 
 
 **Visual Studio 2017 verze 15.7**:
 
-[Codelensu](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) podporované přidat pro C++ projektů testování částí. Další informace najdete v tématu [uvedení Codelensu pro testování jednotky C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
+[Funkce CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) podporována pro projekty testů jednotek C++ přidat. Další informace najdete v tématu [uvedení funkce CodeLens pro testování částí C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
 
-## <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky Visual Studio
+## <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
 
-Diagnostika grafiky Visual Studio je sada nástrojů pro zaznamenávání a analýzu vykreslování a výkonu problémům v Direct3D – aplikace. Funkce diagnostiky grafiky lze použít s aplikacemi, které běží místně na počítači s Windows v emulátoru Windows zařízení nebo na vzdálený počítač nebo zařízení.
+Diagnostika grafiky sady Visual Studio je sada nástrojů pro zaznamenávání a analýzu problémů vykreslování a výkon v aplikacích rozhraní Direct3D. Funkce diagnostiky grafiky můžete použít s aplikacemi, které běží místně v počítači Windows v emulátoru zařízení Windows nebo na vzdálený počítač nebo zařízení.
 
-- **Vstup a výstup pro vrchol a Geometry shadery:** možnost vstup a výstup vrchol shadery a shadery geometry, musí být jednou z nejžádanějších funkcí a je teď podporuje v nástrojích pro. Jednoduše vyberte fázi VS nebo GS v zobrazení fázemi kanálu spuštění kontroly vstupní a výstupní v následující tabulce.
+- **Vstup a výstup pro Vertex a Geometry Shader:** jedna z nejžádanějších funkcí byla možnost zobrazit vstup a výstup vertex shader a shader geometrie a je nyní podporována v nástrojích. Jednoduše vyberte fázi sady Visual Studio nebo GS v okně fáze zřetězení spustit kontrola vstup a výstup v následující tabulce.
 
-  ![Vstupní a výstupní pro shadery](media/io-shaders.png)
+  ![Vstup/výstup pro shadery](media/io-shaders.png)
 
-- **Hledat a filtr v tabulce objektů:** poskytuje rychlý a snadný způsob, jak najít prostředky, které hledáte.
+- **Vyhledávání a filtrování v tabulce objektů:** poskytuje rychlý a snadný způsob, jak najít prostředky hledáte.
 
   ![Hledat](media/search.png)
 
-- **Historie prostředků:** toto nové zobrazení nabízí efektivní způsob, jak zobrazit historii celý úpravy prostředku, jak byla použita při vykreslování zaznamenané rámce. K vyvolání historie pro jakýkoli prostředek, jednoduše klikněte na ikonu hodiny vedle jakéhokoli hypertextového odkazu prostředku.
+- **Historie prostředku:** toto nové zobrazení poskytuje efektivní způsob, jak zobrazuje historii celý úpravy prostředku, jako jste použili při vykreslování zachyceného snímku. Abyste mohli vyvolat historie pro libovolné prostředky, stačí klikněte na ikonu hodin vedle libovolný prostředek hypertextový odkaz.
 
-  ![Historie prostředků](media/resource-history.png)
+  ![Historie prostředku](media/resource-history.png)
 
-  Bude se zobrazovat nové **historie prostředků** okno nástroje naplněný historii změn prostředku.
+  Zobrazí se nové **rie prostředku** oknem nástrojů, vyplní historii změn prostředku.
 
-  ![Změna zdroje historie](media/resource-history-change.png)
+  ![Historie změn prostředků](media/resource-history-change.png)
 
-  Všimněte si, že pokud vaše rámce zaznamenaná s úplnou volání zásobníku zaznamenávání povoleno (**Visual Studio > Nástroje > Možnosti** pod **diagnostiky grafiky**), pak kontextu jednotlivých událostí změn lze rychle odvodit a prověřovány v rámci projektu sady Visual Studio.
+  Všimněte si, že pokud byla zaznamenána rámce s úplnou volání zásobníku zachytávání povolené (**sady Visual Studio > Nástroje > Možnosti** pod **diagnostiky grafiky**), kontext každou událost změny může být rychle odvodit a kontrole v rámci projektu sady Visual Studio.
 
-- **Rozhraní API statistiky:** zobrazit podrobný souhrn využití rozhraní API vašeho rámce. To může být užitečný v zjišťování nemusí Uvědomte si, že na všech děláte volání nebo volání, které provádíte příliš mnoho. Toto okno je k dispozici prostřednictvím **zobrazení > statistiky rozhraní API** ve Visual Studio Graphics Analyzer.
+- **Statistika API:** zobrazit podrobný souhrn využití rozhraní API v rámce. To může být užitečný v zjišťování volání že nemusí dobré si uvědomit, že provádíte vůbec nebo volání, které vytvoříte příliš mnoho. Toto okno je k dispozici prostřednictvím **zobrazení > Statistika API** v analyzátoru grafiky sady Visual Studio.
 
-  ![Rozhraní API statistiky](media/api-stats.png)
+  ![Statistika API](media/api-stats.png)
 
-- **Statistiky paměti:** zobrazit, kolik paměti je ovladač přidělování pro prostředky vytvoříte v rámečku. Toto okno je k dispozici prostřednictvím **zobrazení > paměti statistiky** v **Visual Studio Graphics Analyzer**. Data je možné zkopírovat do souboru CSV pro zobrazení v tabulce tak, že kliknete pravým tlačítkem a vyberete **všechny kopie**.
+- **Statistika paměti:** zobrazit, kolik paměti je ovladač přidělování prostředků vytvoříte v rámci. Toto okno je k dispozici prostřednictvím **zobrazení > Statistika paměti** v **analyzátoru grafiky sady Visual Studio**. Data je možné zkopírovat do souboru CSV pro zobrazení v tabulce tak, že kliknete pravým tlačítkem a zvolíte **Kopírovat vše**.
 
-  ![Statistiky paměti](media/memory-stats.png)
+  ![Statistika paměti](media/memory-stats.png)
 
-- **Rámce ověření:** nového seznamu chyb a varování poskytuje snadný způsob, jak přejděte seznamu událostí podle potenciálních problémů zjištěných vrstvě Direct3D – ladění. Klikněte na tlačítko **zobrazení > rámce ověření** ve Visual Studio Graphics Analyzer otevřete okno. Pak klikněte na tlačítko **spusťte ověření** zahájíte analýzu. To může trvat několik minut v závislosti na složitosti rámečku.
+- **Ověření snímku:** nový seznam chyb a upozornění poskytuje snadný způsob, jak přejít seznamu událostí podle potenciálních problémů zjištěných vrstvu debug Direct3D. Klikněte na tlačítko **zobrazení > ověření snímku** ve Visual Studio Graphics Analyzer otevření okna. Pak klikněte na tlačítko **spustit ověření** spustit analýzu. Může trvat několik minut v závislosti na složitosti rámce.
 
-  ![Rámce ověření](media/frame-validation.png)
+  ![Ověření snímku](media/frame-validation.png)
 
-- **Rámce analýzy pro D3D12:** analýza snímků použít k analýze výkonu volání kreslení směrované experimenty "co kdyby". Přepněte na kartu analýza snímků a spustit analýzu na Zobrazit sestavu. Další informace, podívejte se [GoingNative 25: Analýza grafických snímků Visual Studio](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) videa.
+- **Analýza snímků pro D3D12:** analýzu snímků použít k analýze výkonu volání draw se přesměruje pokusy "co kdyby". Přepněte na kartu analýza snímků a spuštění analýzy zobrazíte sestavu. Další informace, podívejte se [GoingNative 25: Visual Studio analýza grafických snímků](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) videa.
 
   ![Analýza snímků](media/frame-analysis.png)
 
-- **Vylepšení využití GPU:** otevřít trasování prováděné prostřednictvím profileru využití GPU Visual Studio s grafickým Procesorem zobrazení nebo nástroj Analyzátor výkonu systému Windows (WPA) podrobné analýzy. Pokud máte bude sady nástrojů výkonu systému Windows existuje nainstalované dva hypertextové odkazy, jednu pro WPA a druhou pro zobrazení GPU, v pravém dolním rohu Přehled relace.
+- **Vylepšení využití GPU:** otevřít trasování prostřednictvím využití GPU Visual Studio profiler GPU zobrazení nebo nástroji Windows Performance Analyzer (WPA) provést podrobnější analýzu. Pokud máte není nainstalovaná sada Windows Performance Toolkit budou dva hypertextové odkazy, jeden pro WPA a druhou pro zobrazení GPU v pravém dolním rohu přehledu relace.
 
   ![Využití GPU](media/gpu-usage.png)
 
-  Trasování otevřít v zobrazení GPU přes tato podpora odkaz synchronizovány přibližování a posouvání v časové ose mezi VS a GPU zobrazení. Zaškrtávací políčko v sadě VS je slouží ke kontrole, zda je povolena synchronizace, nebo ne.
+  Otevřít v zobrazení GPU prostřednictvím tohoto odkazu podpory trasování synchronizované přibližování a posouvání na časové ose mezi VS a zobrazení GPU. Zaškrtávací políčko v sadě Visual Studio je slouží ke kontrole, jestli je povolená synchronizace, nebo ne.
 
   ![Zobrazení GPU](media/gpu-view.png)

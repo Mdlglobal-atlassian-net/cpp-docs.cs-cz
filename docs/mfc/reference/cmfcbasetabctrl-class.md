@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337477"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466406"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Cmfcbasetabctrl – třída
 Implementuje základní funkce pro okna s kartami.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Poznámky  
  `CMFCBaseTabCtrl` Třída je abstraktní třída. Proto jej nelze vytvořit instanci. Vytvoření okna s kartami, musí být odvozen ze třídy `CMFCBaseTabCtrl`. Knihovna MFC obsahuje několik příkladů odvozené třídy, dvě z nich jsou [cmfctabctrl – třída](../../mfc/reference/cmfctabctrl-class.md) a [cmfcoutlookbartabctrl – třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- Počínaje [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], tato třída podporuje Microsoft Active Accessibility.  
+ Od verze Visual Studio 2015, tato třída podporuje Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Tipy k přizpůsobení  
  Následující tipy, na které se týkají `CMFCBaseTabCtrl Class` a všechny třídy, které dědí z něj:  

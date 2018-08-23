@@ -16,28 +16,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d387b136777155d7c99d9b4068fd07abdf2996e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: dfca22badbe0836598eba1d67aed81d368e918ed
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645058"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589462"
 ---
 # <a name="adding-multiple-controls"></a>Přidání více ovládacích prvků
-### <a name="to-add-multiple-controls"></a>Chcete-li přidat více ovládacích prvků  
-  
-1.  Když podržíte **Ctrl** klíče, vyberte ovládací prvek v [okno nástrojů](/visualstudio/ide/reference/toolbox).  
-  
-2.  Verze **Ctrl** klíče a kliknutím dialogové okno tolikrát, kolikrát chcete přidat konkrétní ovládací prvek.  
-  
-3.  Stisknutím klávesy **Esc** zastavit umístit ovládací prvky.  
-  
- Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)   
- [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)
+
+### <a name="to-add-multiple-controls"></a>Chcete-li přidat více ovládacích prvků
+
+1. Když podržíte **Ctrl** klíče, vyberte ovládací prvek v [okno nástrojů](/visualstudio/ide/reference/toolbox).
+
+2. Verze **Ctrl** klíče a kliknutím dialogové okno tolikrát, kolikrát chcete přidat konkrétní ovládací prvek.
+
+3. Stisknutím klávesy **Esc** zastavit umístit ovládací prvky.
+
+Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)  
+[Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)

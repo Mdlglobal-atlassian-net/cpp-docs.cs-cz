@@ -1,5 +1,5 @@
 ---
-title: Soubory projektu | Microsoft Docs
+title: Soubory projektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327226"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578613"
 ---
 # <a name="project-files"></a>Soubory projektu
-Soubor projektu Visual C++ je soubor formátu XML, který má příponu názvu souboru a obsahuje informace, které je potřeba pro vytvoření projektu Visual C++.  
+Soubor projektu Visual C++ je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení projektu Visual C++.  
   
 ## <a name="example"></a>Příklad  
- Následující ukázkový soubor VCXPROJ bylo vytvořeno zadáním **Konzolová aplikace Win32** v **nový projekt** dialogové okno. Ke zpracování projektu soubor, použijte nástroj msbuild.exe na příkazovém řádku nebo **sestavení** v příkazu [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Tato ukázka nelze zpracovat, protože požadovaný zdroj a soubory hlaviček nejsou zadány.) Další informace o elementů XML v souboru projektu najdete v tématu [referenční dokumentace schématu souboru projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Následující ukázkový soubor .vcxproj byl vytvořen tak, že zadáte **Konzolová aplikace Win32** v **nový projekt** dialogové okno. Ke zpracování do projektu soubor použít nástroj msbuild.exe na příkazovém řádku nebo **sestavení** příkazu v integrovaném vývojovém prostředí. (Tento příklad nelze zpracovat, protože požadovaný zdroj a soubory hlaviček nejsou k dispozici.) Další informace o elementech XML v souboru projektu naleznete v tématu [referenční dokumentace schématu souboru projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

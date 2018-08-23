@@ -1,5 +1,5 @@
 ---
-title: Třída Platform::WeakReference | Microsoft Docs
+title: Platform::weakreference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,19 +7,19 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088375"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601558"
 ---
-# <a name="platformweakreference-class"></a>Platform::WeakReference – třída
-Představuje slabé odkaz na instanci třídy ref.  
+# <a name="platformweakreference-class"></a>Platform::weakreference – třída
+Představuje Slabý odkaz na instanci třídy ref class.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,17 +41,17 @@ class WeakReference
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[Weakreference::Resolve –](#resolve)|Vrátí popisovač základní třídu ref nebo nullptr, pokud objekt již existuje.|  
+|[Weakreference::Resolve –](#resolve)|Vrátí popisovač do základní třídy ref class nebo nullptr, pokud objekt již existuje.|  
   
 ### <a name="operators"></a>Operátory  
   
 |Člen|Popis|  
 |------------|-----------------|  
-|[WeakReference::operator =](#operator-assign)|Objekt WeakReference přiřadí novou hodnotu.|  
+|[WeakReference::operator =](#operator-assign)|WeakReference objektu přiřadí novou hodnotu.|  
 |[WeakReference::operator BoolType](#booltype)|Implementuje vzor bezpečné bool.|  
   
 ### <a name="remarks"></a>Poznámky  
- Vlastní třídy WeakReference není třída ref a proto nedědí z Platform::Object ^ a nelze jej použít v podpis veřejná metoda.  
+ Vlastní třídy WeakReference není třídy ref class a proto není odvozena od Platform::Object ^ a nelze jej použít v podpisu veřejné metody.  
 
 ## <a name="operator-assign"></a> WeakReference::operator =
 Přiřadí hodnotu WeakReference.  
@@ -66,10 +66,10 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Poslední přetížení v seznamu výš umožňuje přiřadit třídu ref WeakReference proměnné. V takovém případě je přetypování dolů k třídě ref [Platform::Object](../cppcx/platform-object-class.md)^. Později obnovit původní typ zadáním jako argument pro parametr typu ve [weakreference::Resolve –\<T >](#resolve) – členská funkce.  
+ Poslední přetížení v seznamu výše umožňuje přiřadit proměnné WeakReference třídy ref class. V tomto případě je třída ref class přetypovat dolů na [Platform::Object](../cppcx/platform-object-class.md)^. Později obnovit původní typ tak, že zadáte jako argument pro parametr typu v [weakreference::Resolve –\<T >](#resolve) členskou funkci.  
   
 ## <a name="booltype"></a> WeakReference::operator BoolType
-Implementuje vzor bezpečné bool pro WeakReference – třída. Nechcete být explicitně volána z vašeho kódu.  
+Implementuje vzor bezpečné bool třídy WeakReference. Nesmí být explicitně volat z vašeho kódu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ BoolType BoolType()
 ```  
 
 ## <a name="resolve"></a> Weakreference::Resolve – metoda (obor názvů Platform)
-Vrátí popisovač k třídě původní ref nebo `nullptr` Pokud objekt již existuje.  
+Vrátí popisovač do původní třídy ref nebo `nullptr` Pokud objekt již existuje.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ T^ Resolve() const
 ### <a name="parameters"></a>Parametry  
   
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
- Popisovač pro třídu ref, který byl dříve přidružený objekt WeakReference nebo nullptr.  
+ Popisovač třídy ref class, která byla dříve přidružená weakreference – objekt nebo nullptr.  
   
 ### <a name="example"></a>Příklad  
  Toto je volitelný popis příkladu kódu.  
@@ -108,7 +108,7 @@ if (bar != nullptr)
 }  
 ```  
   
- Upozorňujeme, že parametr typu je T, není T ^.  
+ Všimněte si, že je parametr typu T, T není ^.  
   
  
 ## <a name="ctor"></a> Weakreference::weakreference – konstruktor
@@ -132,4 +132,4 @@ MyClass^ copy2 = wr.Resolve<MyClass>();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Obor názvů Platform](../cppcx/platform-namespace-c-cx.md)
+ [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

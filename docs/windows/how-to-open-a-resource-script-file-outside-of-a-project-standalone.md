@@ -20,56 +20,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2711c34d55c4f4a7f1acfba4f315e06768623014
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013411"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600907"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)
-Prostředky můžete zobrazit v souboru .rc bez nutnosti otevřít projekt. Otevře se v okně dokumentu na rozdíl od otevřít v souboru .rc [zobrazení prostředků](../windows/resource-view-window.md) okno (stejně jako když je soubor otevřen, uvnitř projektu).  
-  
+
+Prostředky můžete zobrazit v souboru .rc bez nutnosti otevřít projekt. Otevře se v okně dokumentu na rozdíl od otevřít v souboru .rc [zobrazení prostředků](../windows/resource-view-window.md) okno (stejně jako když je soubor otevřen, uvnitř projektu).
+
 > [!NOTE]
->  Jde o důležité odlišení, protože některé příkazy nejsou k dispozici, pouze když je soubor otevřen samostatné (mimo projekt). Například můžete pouze uložení souboru do jiného formátu nebo jako jiný název souboru při otevření souboru mimo projekt ( **uložit jako** příkazu není dostupná, když je soubor otevřen v projektu).  
-  
-### <a name="to-open-an-rc-file-outside-a-project"></a>Otevřete soubor .rc mimo projekt  
-  
-1.  Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.  
-  
-2.  V **otevřít soubor** dialogové okno, přejděte do souboru skriptu prostředků, kterou chcete zobrazit, zvýrazněte ho a klikněte na **otevřít**.  
-  
-    > [!NOTE]
-    >  Pokud nejprve otevřete projekt (**souboru**, **otevřete**, **projektu**), nebudou mít k dispozici některé příkazy. Otevřít soubor "standalone" znamená otevření bez první načtení projektu.  
-  
- Otevřete a zobrazte soubor prostředků v textovém formátu, naleznete v tématu [úpravy skriptu prostředků (.rc) soubor](../windows/how-to-open-a-resource-script-file-in-text-format.md).  
-  
-### <a name="to-open-multiple-rc-files-outside-a-project"></a>K otevření více souborů .rc mimo projekt  
-  
-1.  Otevřete oba samostatné soubory prostředků. Například otevřete `Source1.rc` a `Source2.rc`.  
-  
-    1.  Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.  
-  
-    2.  V **otevřít soubor** dialogové okno, přejděte do první souboru skriptu prostředků, kterou chcete otevřít (`Source1.rc`), zvýrazněte ho a klikněte na tlačítko **otevřete**.  
-  
-    3.  Opakujte předchozí krok pro druhý .rc soubor otevřít (`Source2.rc`).  
-  
-         Soubory .rc jsou teď otevřít v systému windows v samostatných dokumentech.  
-  
-2.  Když jsou otevřené oba soubory .rc, dlaždici windows, takže je možné současně zobrazit:  
-  
-    -   Z **okno** nabídce zvolte **Nová vodorovná skupina karet** nebo **Nová svislá skupina karet**.  
-  
-         \- nebo –  
-  
-    -   Klikněte pravým tlačítkem na jeden ze souborů .rc a zvolte **Nová vodorovná skupina karet** nebo **Nová svislá skupina karet** z místní nabídky.  
-  
+> Jde o důležité odlišení, protože některé příkazy nejsou k dispozici, pouze když je soubor otevřen samostatné (mimo projekt). Například můžete pouze uložení souboru do jiného formátu nebo jako jiný název souboru při otevření souboru mimo projekt ( **uložit jako** příkazu není dostupná, když je soubor otevřen v projektu).
+
+### <a name="to-open-an-rc-file-outside-a-project"></a>Otevřete soubor .rc mimo projekt
+
+1. Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.
+
+2. V **otevřít soubor** dialogové okno, přejděte do souboru skriptu prostředků, kterou chcete zobrazit, zvýrazněte ho a klikněte na **otevřít**.
+
+   > [!NOTE]
+   > Pokud nejprve otevřete projekt (**souboru**, **otevřete**, **projektu**), nebudou mít k dispozici některé příkazy. Otevřít soubor "standalone" znamená otevření bez první načtení projektu.
+
+Otevřete a zobrazte soubor prostředků v textovém formátu, naleznete v tématu [úpravy skriptu prostředků (.rc) soubor](../windows/how-to-open-a-resource-script-file-in-text-format.md).
+
+### <a name="to-open-multiple-rc-files-outside-a-project"></a>K otevření více souborů .rc mimo projekt
+
+1. Otevřete oba samostatné soubory prostředků. Například otevřete `Source1.rc` a `Source2.rc`.
+
+   1. Z **souboru** nabídce zvolte **otevřít**, klikněte na **souboru**.
+
+   2. V **otevřít soubor** dialogové okno, přejděte do první souboru skriptu prostředků, kterou chcete otevřít (`Source1.rc`), zvýrazněte ho a klikněte na tlačítko **otevřete**.
+
+   3. Opakujte předchozí krok pro druhý .rc soubor otevřít (`Source2.rc`).
+
+       Soubory .rc jsou teď otevřít v systému windows v samostatných dokumentech.
+
+2. Když jsou otevřené oba soubory .rc, dlaždici windows, takže je možné současně zobrazit:
+
+   - Z **okno** nabídce zvolte **Nová vodorovná skupina karet** nebo **Nová svislá skupina karet**.
+
+       \- nebo –
+
+   - Klikněte pravým tlačítkem na jeden ze souborů .rc a zvolte **Nová vodorovná skupina karet** nebo **Nová svislá skupina karet** z místní nabídky.
+
 > [!NOTE]
->  Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).  
-  
-## <a name="requirements"></a>Požadavky  
- Win32  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory prostředků](../windows/resource-files-visual-studio.md)   
- [Editory prostředků](../windows/resource-editors.md)
+> Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+## <a name="requirements"></a>Požadavky
+
+Win32
+
+## <a name="see-also"></a>Viz také
+
+[Soubory prostředků](../windows/resource-files-visual-studio.md)  
+[Editory prostředků](../windows/resource-editors.md)

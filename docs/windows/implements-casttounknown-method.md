@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efaf7b51da1e4a4e744133884b92ac78db3b3f66
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 988580a34c030c84c50adfff2741408be4b249cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017764"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586355"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown – metoda
-Získá ukazatel na základní `IUnknown` rozhraní.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Tato operace je vždy úspěšné a vrátí `IUnknown` ukazatele.  
-  
-## <a name="remarks"></a>Poznámky  
- Interní pomocné funkce.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Viz také  
- [Implements – struktura](../windows/implements-structure.md)
+
+Získá ukazatel na základní `IUnknown` rozhraní.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Tato operace je vždy úspěšné a vrátí `IUnknown` ukazatele.
+
+## <a name="remarks"></a>Poznámky
+
+Interní pomocné funkce.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Viz také
+
+[Implements – struktura](../windows/implements-structure.md)

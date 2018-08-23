@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a93a89ed0ace158a0864d7987cafd838eed304
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 8b7501adf2f424f2232df05e26f5d0ac4a35158c
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853738"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464955"
 ---
 # <a name="colevariant-class"></a>COleVariant – třída
-Zapouzdřuje [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) datového typu.  
+Zapouzdřuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Výstupy `COleVariant` hodnota, která se `CArchive` nebo `CDumpContext` a vstupy `COleVariant` objektu z `CArchive`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tento datový typ se používá v automatizace OLE. Konkrétně [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b) struktura obsahuje ukazatel na pole typu VARIANT struktur. A `DISPPARAMS` struktura se používá k předání parametrů [IDispatch::Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Tento datový typ se používá v automatizace OLE. Konkrétně [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) struktura obsahuje ukazatel na pole typu VARIANT struktur. A `DISPPARAMS` struktura se používá k předání parametrů [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).  
   
 > [!NOTE]
 >  Tato třída je odvozena z `VARIANT` struktury. To znamená, že můžete předat `COleVariant` parametrem, který volá `VARIANT` a datové členy `VARIANT` struktury jsou dostupné datové členy `COleVariant`.  
   
  Dvě třídy MFC související [COleCurrency](../../mfc/reference/colecurrency-class.md) a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zapouzdření variant – datové typy měny ( `VT_CY`) data a času ( `VT_DATE`). `COleVariant` Třídy je často používána ve třídách rozhraní DAO, viz tyto třídy pro typická využití této třídy, například [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md) a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b), a [IDispatch::Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [měny](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams), a [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) položky v sadě Windows SDK.  
   
  Další informace o `COleVariant` třídy a jeho použití v automatizace OLE, naleznete v tématu "Předání parametrů v OLE Automation" v článku [automatizace](../../mfc/automation.md).  
   
@@ -96,7 +96,7 @@ class COleVariant : public tagVARIANT
  **Záhlaví:** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- Voláním této funkce se připojit daný [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objektů na aktuální `COleVariant` objektu.  
+ Voláním této funkce se připojit daný [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektů na aktuální `COleVariant` objektu.  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -109,7 +109,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nastaví [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) z *varSrc* VT_EMPTY.  
   
- Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Vytvoří `COleVariant` objektu.  
@@ -221,10 +221,10 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
  [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) to `COleVariant` objektu.  
   
  *pSrc*  
- Ukazatel [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objekt k převodu. Pokud je tato hodnota NULL, to `COleVariant` objekt se používá jako zdroj pro převod.  
+ Ukazatel [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objekt k převodu. Pokud je tato hodnota NULL, to `COleVariant` objekt se používá jako zdroj pro převod.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantChangeType](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) položky v sadě Windows SDK.  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  Vymaže `VARIANT`.  
@@ -239,7 +239,7 @@ void Clear();
  Další informace najdete v tématu `VARIANT`, VARTYPE, a `VariantClear` položky v sadě Windows SDK.  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- Odpojí základní [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) objektu z tohoto `COleVariant` objektu.  
+ Odpojí základní [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektu z tohoto `COleVariant` objektu.  
   
 ```  
 VARIANT Detach();
@@ -251,7 +251,7 @@ VARIANT Detach();
 > [!NOTE]
 >  Po volání `Detach`, je odpovědností volajícího k volání `VariantClear` na výslednou `VARIANT` struktury.  
   
- Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) položky v sadě Windows SDK.  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Načte pole bajtů z existujícího pole typu variant  
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **operátor = (** `lbSrc` **)** kopie [CLongBinary](../../mfc/reference/clongbinary-class.md) objektu do tohoto `COleVariant` objektu.  
   
- Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
+ Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Tento operátor porovná dvě varianty hodnoty a vrátí nenulovou hodnotu, pokud jsou totožné; jinak 0.  

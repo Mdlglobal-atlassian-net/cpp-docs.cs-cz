@@ -1,5 +1,5 @@
 ---
-title: __outwordstring | Microsoft Docs
+title: __outwordstring | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333691"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464718"
 ---
 # <a name="outwordstring"></a>__outwordstring
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `rep outsw` instrukce, který odesílá `Count` slova začínající `Buffer` z portu vstupně-výstupních operací určeného `Port`.  
+ Generuje `rep outsw` instrukce, která odesílá `Count` slova začínající na `Buffer` portu vstupně-výstupní operace určené `Port`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,27 +41,27 @@ void __outwordstring(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
+ [in] `Port`  
  Port pro odesílání dat na.  
   
- [v] `Buffer`  
+ [in] `Buffer`  
  Ukazatel na data, která mají být odeslány zadaný port.  
   
- [v] `Count`  
+ [in] `Count`  
  Počet slov k odeslání.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

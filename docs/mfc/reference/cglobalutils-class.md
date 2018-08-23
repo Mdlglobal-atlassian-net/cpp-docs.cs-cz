@@ -1,5 +1,5 @@
 ---
-title: Třída CGlobalUtils | Microsoft Docs
+title: Cglobalutils – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952082"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465228"
 ---
-# <a name="cglobalutils-class"></a>CGlobalUtils – třída
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cglobalutils-class"></a>Cglobalutils – třída
+Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +90,7 @@ class CGlobalUtils
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CGlobalUtils](../../mfc/reference/cglobalutils-class.md)  
+ [Cglobalutils –](../../mfc/reference/cglobalutils-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxglobalutils.h  
@@ -104,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] *Rect –*  
- [v] *pRectDelta*  
+ [out v] *rect*  
+ [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -123,9 +123,9 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *barContainerManager*  
- [v] *pWndTodock*  
- [v] *ptMouse*  
+ [in] *barContainerManager*  
+ [in] *pWndTodock*  
+ [in] *ptMouse*  
  [out] *rectResult*  
  [out] *bDrawTab*  
  [out] *ppTargetBar*  
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -176,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
- [v] *pBar*  
- [v] *nSensitivity*  
- [v] *pDockManager*  
- [v] *bOuterEdge*  
+ [in] *bodu*  
+ [in] *pBar*  
+ [in] *nSensitivity*  
+ [in] *pDockManager*  
+ [in] *bOuterEdge*  
  [out] *dwAlignment*  
- [v] *dwEnabledDockBars*  
- [v] *lpRectBounds*  
+ [in] *dwEnabledDockBars*  
+ [in] *lpRectBounds*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -200,7 +200,7 @@ BOOL CyFromString(
   
 ### <a name="parameters"></a>Parametry  
  [out] *cy*  
- [v] *psz*  
+ [in] *psz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -217,7 +217,7 @@ BOOL DecimalFromString(
   
 ### <a name="parameters"></a>Parametry  
  [out] *decimal*  
- [v] *psz*  
+ [in] *psz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -233,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] *Rect –*  
- [v] *nDegrees*  
+ [out v] *rect*  
+ [in] *nDegrees*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -249,9 +249,9 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] *pDockManager*  
- [v] *bForce*  
- [v] *bForceInvisible*  
+ [out v] *pDockManager*  
+ [in] *bForce*  
+ [in] *bForceInvisible*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -277,7 +277,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *dwAlign*  
+ [in] *dwAlign*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -297,8 +297,8 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *barContainerManager*  
- [v] *pt*  
+ [in] *barContainerManager*  
+ [in] *pt*  
  [out] *ppTargetControlBar*  
  [out] *dwAlignment*  
  [out] *bTabArea*  
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -333,9 +333,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lstControlBars*  
- [v] *pNewParent*  
- [v] *bCheckVisibility*  
+ [in] *lstControlBars*  
+ [in] *pNewParent*  
+ [in] *bCheckVisibility*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -350,7 +350,7 @@ BOOL StringFromCy(
   
 ### <a name="parameters"></a>Parametry  
  [out] *str*  
- [v] *cy*  
+ [in] *cy*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -367,7 +367,7 @@ BOOL StringFromDecimal(
   
 ### <a name="parameters"></a>Parametry  
  [out] *str*  
- [v] *decimal*  
+ [in] *decimal*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   

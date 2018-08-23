@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339780"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465226"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 Poskytuje výchozí implementaci pro popisovač řádku, který je používán [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md) třídy.  
@@ -109,7 +109,7 @@ HRESULT Compare(CSimpleRow* pRow);
  Ukazatel `CSimpleRow` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot. 
+ Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot. 
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 Konstruktor  

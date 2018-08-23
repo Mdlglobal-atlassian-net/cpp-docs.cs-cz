@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337379"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465322"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 Poskytuje funkce pro Windows rozhraní jednoho dokumentu (SDI) překrytého nebo místního okna rámce, spolu se členy pro správu okna.  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Poznámky  
  Pokud hodnota *nStyle* parametr není platný, vyhodnotí tuto metodu v režimu ladění a vyvolá [cinvalidargexception –](../../mfc/reference/cinvalidargexception-class.md) v režimu vydání. V případě jiných chyby za běhu, tato metoda nepodmíněné výrazy v režimu ladění a vyvolá výjimku odvozenou z [cexception –](../../mfc/reference/cexception-class.md) třídy.  
   
- Tato metoda má vliv na stav nabídky v aplikace napsané pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] a novější.  
+ Tato metoda má vliv na stav nabídky v aplikace napsané pro Windows Vista nebo novější.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Voláním této funkce, které mají být umístěny panelu stavového řádku, který má ID 0 řetězce.  

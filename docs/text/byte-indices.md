@@ -1,5 +1,5 @@
 ---
-title: Bajtové indexy | Microsoft Docs
+title: Bajtové indexy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509e66c7ea458519eaa9dc4f52c8a6b65c789d0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5beb69ef7d9d3356eddef40c6bce6483079d934a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590797"
 ---
 # <a name="byte-indices"></a>Bajtové indexy
 Použijte následující tipy:  
   
--   Práce s indexem byjtově orientovaným na řetězec uvede problémy, které jsou podobné těm, které jsou manipulaci s ukazatelem. Tento příklad, který prohledá řetězec pro zpětné lomítko vezměte v úvahu:  
+-   Práce s byjtově orientovaným index do řetězce přináší problémy, které jsou podobné těm, manipulaci s ukazatelem. Vezměte v úvahu tento příklad, který vyhledá v řetězci zpětné lomítko:  
   
     ```  
     while ( rgch[ i ] != '\\' )  
         i++;  
     ```  
   
-     To může být index druhého bajtu, nikoli úvodního bajtu, a nemusí tedy ukazovat `character`.  
+     To může být index bajt, není vedoucí bajt, a proto nemusí přejděte `character`.  
   
 -   Použití [_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) funkce předchozí problém vyřešit:  
   
@@ -41,7 +41,7 @@ Použijte následující tipy:
         i += _mbclen ( rgch + i );  
     ```  
   
-     Ta správně indexuje úvodní bajt, tedy na `character`. `_mbclen` Funkce určuje velikost znaku (v bajtech 1 nebo 2).  
+     To správně indexuje vedoucí bajt, proto k `character`. `_mbclen` Funkce určuje velikost znaku (1 nebo 2 bajtů).  
   
 ## <a name="see-also"></a>Viz také  
  [MBCS – tipy pro programování](../text/mbcs-programming-tips.md)   

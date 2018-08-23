@@ -1,7 +1,7 @@
 ---
 title: EXPORTY | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322186"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42464542"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Pokud se název, který můžete exportovat z jiných modulu, zadejte název pro export v knihovně DLL pomocí *other_module.exported_name*. Například, pokud vaše knihovna DLL exportuje funkce `other_module.func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
+Pokud se název, který můžete exportovat z některých modulu, zadejte název pro export v knihovně DLL pomocí *other_module.exported_name*. Například, pokud vaše knihovna DLL exportuje funkce `other_module.func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Pokud se název, který můžete exportovat z jiného modulu, který exportuje podle pořadových čísel, určení export uživatele pořadovém místě v knihovně DLL pomocí *other_module. #ordinal_number*. Například, pokud vaše knihovna DLL exportuje funkce z modulu, a to je 42 pořadovém místě, kde chcete, aby volající použít ho jako `func2`, zadali byste:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Protože kompilátor Visual C++ používá dekorování názvů pro funkce jazyka C++, musíte použít upravený název internal_name nebo definovat exportované funkce tak, že používání příkazu extern "C" ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) konvence s předponou podtržítka (_) a příponu skládá z volání zavináč (@) následovaným počtem bajtů (v desítkové soustavě) v seznamu argumentů.  

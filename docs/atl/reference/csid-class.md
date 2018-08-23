@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208855"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465030"
 ---
 # <a name="csid-class"></a>CSID – třída
 Tato třída představuje obálku pro `SID` strukturu (security identifier).  
@@ -332,13 +332,13 @@ bool LoadAccount(
  Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.  
   
  *psid má*  
- Ukazatel [SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx) struktury.  
+ Ukazatel [SID](/windows/desktop/api/winnt/ns-winnt-_sid) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.  
   
 ### <a name="remarks"></a>Poznámky  
- `LoadAccount` pokusí se najít identifikátor zabezpečení pro zadaný název. Zobrazit [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) další podrobnosti.  
+ `LoadAccount` pokusí se najít identifikátor zabezpečení pro zadaný název. Zobrazit [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) další podrobnosti.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Operátor přiřazení.  

@@ -160,15 +160,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb9ed3e141a6728c298102d94ab48ad0a7fa312
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2e1bf852b10ace3dca8014e54f2b0070328da64e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852065"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466122"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Cmfcpropertygridctrl – třída
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
   
  Podporuje ovládací prvek upravovat vlastnost mřížky, která můžete zobrazit vlastnosti v abecedním nebo hierarchickém pořadí.  
   

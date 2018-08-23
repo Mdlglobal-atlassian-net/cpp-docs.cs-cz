@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d4ff3393e30e72bc3378837ff11c41927249d1f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014187"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601964"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT – konstruktor
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-SyncLockT(  
-   _Inout_ SyncLockT&& other  
-);  
-  
-explicit SyncLockT(  
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+SyncLockT(
+   _Inout_ SyncLockT&& other
+);
+
+explicit SyncLockT(
    typename SyncTraits::Type sync = SyncTraits::GetInvalidValue()  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Ostatní*  
- Odkaz rvalue na jiný **SyncLockT** objektu.  
-  
- *sync*  
- Odkaz na jiný `SyncLockWithStatusT` objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Inicializuje novou instanci třídy **SyncLockT** třídy.  
-  
- První konstruktor inicializuje aktuální **synclockt –** objektu z jiného **synclockt –** objekt zadaný parametrem *jiných*a pak zruší platnost Další  **Synclockt –** objektu. Druhý konstruktor není **chráněné**a inicializuje aktuální **SyncLockT** objekt má neplatný stav.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Viz také  
- [SyncLockT – třída](../windows/synclockt-class.md)
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Ostatní*  
+Odkaz rvalue na jiný **SyncLockT** objektu.
+
+*sync*  
+Odkaz na jiný `SyncLockWithStatusT` objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Inicializuje novou instanci třídy **SyncLockT** třídy.
+
+První konstruktor inicializuje aktuální **synclockt –** objektu z jiného **synclockt –** objekt zadaný parametrem *jiných*a pak zruší platnost Další  **Synclockt –** objektu. Druhý konstruktor není **chráněné**a inicializuje aktuální **SyncLockT** objekt má neplatný stav.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Viz také
+
+[SyncLockT – třída](../windows/synclockt-class.md)

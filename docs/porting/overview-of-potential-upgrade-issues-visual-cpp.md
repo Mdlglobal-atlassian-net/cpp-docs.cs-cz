@@ -1,5 +1,5 @@
 ---
-title: Přehled upgradu potenciální problémy (Visual C++) | Microsoft Docs
+title: Přehled potenciálních problémů s upgradem (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,79 +8,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2411c5deb3a14ee3eaebb76fc69b6f36fa3bed42
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848512"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42464633"
 ---
-# <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled upgradu potenciální problémy (Visual C++)
+# <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
-V průběhu let Microsoft Visual C++ compiler podstoupila mnoho změn, společně s změny v samotné jazyk C++, standardní knihovna C++, C runtime (CRT) a další knihovny například MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze sady Visual Studio můžete setkat kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompiluje ještě jednou. Starší původní kód základní, tím větší potenciální takové chyby. Tento přehled obsahuje souhrn nejčastějších třídy problémy se můžete setkat, a poskytuje odkazy na podrobnější informace.
+V průběhu let kompilátor jazyka Microsoft Visual C++ prošla řadou změn, spolu se změnami samotný jazyk C++, standardní knihovny C++, C runtime (CRT) a dalších knihoven, jako je například knihovny MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze sady Visual Studio můžete setkat, kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompilován čistě. Starší základní původního kódu, tím větší potenciál pro takové chyby. Tento přehled obsahuje souhrn třídy většiny běžných problémů, budete pravděpodobně dojde, a nabízí odkazy k podrobnějším informacím.
 
-Poznámka: V minulosti jste je doporučeno, upgrady, které jsou rozmístěny v několika verzích sady Visual Studio by měl být provádí postupně jednu verzi současně. Doporučujeme, abyste už tento přístup. Zjistili jsme, že je téměř vždy jednodušší upgradujte na nejnovější verzi sady Visual Studio, bez ohledu na to, kolik základu kódu.
+> [!NOTE] 
+> V minulosti doporučujeme mít, upgrady, které jsou rozmístěny v několika verzích sady Visual Studio měli provádět přírůstkové jedné verze najednou. Doporučujeme, abyste už tento přístup. Zjistili jsme, že je téměř vždy jednodušší pro upgrade na nejnovější verzi sady Visual Studio bez ohledu na to, kolik základu kódu.
 
-Dotazy nebo připomínky týkající se procesu upgradu lze odeslat buď do vcupgrade@microsoft.com.
+Je možné odeslat dotazy nebo připomínky k upgradu vcupgrade@microsoft.com.
 
-## <a name="library-and-toolset-dependencies"></a>Sada nástrojů pro knihovny a závislosti
+## <a name="library-and-toolset-dependencies"></a>Závislosti knihoven a nástrojů
 
-Při upgradu aplikace na novou verzi sady Visual Studio, se důrazně doporučuje a v mnoha případech nutné také upgradovat všechny knihovny a knihovny DLL, které obsahuje odkazy na aplikace. To vyžaduje, abyste měli přístup ke zdrojovému kódu, nebo že dodavatele knihovny může poskytovat nové binární soubory kompilovat s stejnou hlavní verzi kompilátoru. Pokud platí jedna z těchto podmínek, můžete tuto část, která se zabývá podrobnosti o binární kompatibilitu přeskočit. Pokud žádná z těchto se tak, pak nebudete moci používat knihovny v aplikaci upgradovaný. Informace v této části vám pomůže pochopit, zda budete moci pokračovat v upgradu.
+Při upgradu aplikace na novou verzi sady Visual Studio, se důrazně doporučuje a v mnoha případech nutné také upgradovat všechny knihovny a knihovny DLL, které aplikace se odkazuje na. To vyžaduje, abyste měli přístup ke zdrojovému kódu, nebo, dodavatele knihovny můžete zadat nové binární soubory zkompilovány se stejnou hlavní verzí kompilátoru. Pokud je splněna jedna z těchto podmínek, můžete přeskočit tuto část, která se zabývá podrobnosti binární kompatibilitu. Pokud ani jeden z jsou případu, pak nebudete moci používat knihovny v aplikaci upgradovaný. Informace v této části vám pomůže pochopit, jestli vám pokračujte v upgradu.
 
 ### <a name="toolset"></a>Sada nástrojů
 
-Formáty souboru .obj a .lib jsou dobře definovaný a zřídka změnu. V některých případech jsou vytvářeny dodatky do těchto formátů souboru, ale tyto dodatky obecně neovlivní možnost modulové novější využívají objekt soubory a knihovny vyprodukované starší modulové. Zde jeden velký výjimkou je, pokud zkompilujete pomocí [/GL (optimalizace celého programu)](../build/reference/gl-whole-program-optimization.md). Pokud zkompilujete pomocí **/GL**, bude výsledný soubor objekt lze propojit jen pomocí stejné sady nástrojů, která byla použita k vytvoření ho. Takže pokud se vytvoří soubor objektu s **/GL** a pomocí kompilátoru Visual Studio 2017 (v141), je nutné ji propojit pomocí linkeru Visual Studio 2017 (v141). Je to proto, že interní datové struktury v rámci soubory objektů nejsou v hlavních verzích sady nástrojů stabilní a novější modulové není srozumitelný starší data formátů.
+Formáty souborů .obj a. lib jsou dobře definovaný a jen zřídka mění. Někdy jsou dodatky provedené do těchto formátů souborů, ale tyto doplňky obecně vliv na schopnost novější sady nástrojů využívat objektových souborů a knihoven vytvářených starší sady nástrojů. Zde jeden velký výjimkou je, pokud kompilujete pomocí [/GL (optimalizace celého programu)](../build/reference/gl-whole-program-optimization.md). Pokud kompilujete pomocí `/GL`, výsledný soubor objektu lze propojit pouze pomocí stejné sady nástrojů, který byl použit k jeho vytvoření. Pokud vytvoříte soubor objektu se tedy `/GL` a pomocí kompilátoru Visual Studio 2017 (verze 141), je třeba propojit pomocí sady Visual Studio 2017 (verze 141) linkeru. Je to proto, že interní datové struktury v rámci objektu soubory nejsou stabilní mezi hlavními verzemi sady nástrojů a novější sady nástrojů není srozumitelný starší formáty data.
 
-C++ nemá binární stabilní aplikační rozhraní (ABI). Visual Studio udržuje stabilní ABI C++ pro všechny podverze verze. Například Visual Studio 2017 a všechny její aktualizace jsou binární kompatibilní. Ale ABI není nutně kompatibilní mezi hlavní verze sady Visual Studio (s výjimkou 2015 a 2017, který _jsou_ binární kompatibilní). To znamená můžeme provést zásadní změny typu rozložení C++, dekorování názvů, výjimek a dalšími částmi C++ ABI. Proto pokud budete mít soubor objekt, který má externí symboly C++ propojení, tento objekt soubor nemusí propojení správně objekt soubory vytvořené na jiný hlavní verzi sady nástrojů. Všimněte si, že zde "nemusí fungovat" má mnoho možných výsledků: odkaz může selhat zcela (například změnu dekorování názvů), odkaz může být úspěšné, a věcí, nemusí fungovat v době běhu (například změnu typu rozložení), nebo pro práci v mnoha případech může dojít věcí a nic přejde wro NG. Také Upozorňujeme, že při C++ ABI není ustájení C ABI a C++ ABI do něj podmnožinu vyžadované pro COM jsou stabilní.
+C++ nemá binární rozhraní stabilní aplikace (ABI). Visual Studio udržuje stabilní C++ ABI pro všechny dílčí verze na verzi. Visual Studio 2017 a všechny její aktualizace jsou například binární kompatibilní. Ale ABI není nutně kompatibilní mezi hlavními verzemi sady Visual Studio (s výjimkou 2015 a 2017, která _jsou_ binární kompatibilní). To znamená může uděláme změny způsobující chyby rozložení typu, dekorování názvů, zpracování výjimek a dalších součástí C++ ABI C++. Proto pokud máte soubor objektu, který má externí symboly s propojením jazyka C++, tento soubor objektu nesmí odkazovat správně s objekt soubory vytvořenými pomocí různých hlavní verzi sady nástrojů. Všimněte si, že tady "nemusí fungovat" má mnoho možných výsledků: odkaz nemusí zcela (třeba ke změně dekorování názvů), odkaz může být úspěšné, a za běhu nemusí fungovat věci (třeba-li změnit typ rozložení), nebo pracovat v mnoha případech se může stát věci a nic půjdou wro NG. Všimněte si také, že C++ ABI není stabilní, C ABI a dílčí sadu C++ ABI požadované pro COM jsou stabilní.
 
-Pokud jste odkaz na knihovnu importu, může být použit novější verze sady Visual Studio redistributable knihoven, které zachování kompatibility ABI za běhu. Například pokud vaše aplikace kompiluje a propojené pomocí nástrojů Visual Studio 2015 Update 3, můžete použít všechny Visual Studio 2017 redistributable, protože knihovny 2015 a 2017 mít zachovají zpětné kompatibility binární. Naopak není true; nelze použít redistributable pro dřívější verzi sady nástrojů než jste použili k vytvoření kódu, i v případě, že mají kompatibilní ABI.
+Pokud odkaz na knihovnu importu, všechny novější verze sady Visual Studio distribuovatelných knihoven, které zachování kompatibility ABI lze za běhu. Například pokud vaše aplikace je kompilována a propojené pomocí sady nástrojů Visual Studio 2015 Update 3, můžete použít jakékoli redistributable, Visual Studio 2017 protože knihovny 2015 a 2017 mají zachovají zpětně binární kompatibilitu. Opak není pravdou; nelze použít distribuovatelné součásti pro starší verzi sady nástrojů než použijete k sestavení vašeho kódu i v případě, že mají kompatibilní ABI.
 
 ### <a name="libraries"></a>Knihovny
 
-Pokud při kompilaci zdrojového souboru pomocí konkrétní verzi soubory hlaviček knihoven Visual Studio C++ (podle #including hlavičky), bude výsledný soubor objekt musí být propojena se stejnou verzí knihoven. Ano, například pokud je váš zdrojový soubor kompilovat s Visual Studio 2015 Update 3 \<immintrin.h >, je nutné propojit s knihovnou vcruntime Visual Studio 2015 Update 3. Podobně pokud je váš zdrojový soubor kompilovat s Visual Studio 2017 verze 15,5 \<iostream >, je nutné propojit s knihovnou standardní C++ Visual Studio 2017 verze 15,5, msvcprt. Kombinování a odpovídající není podporována.
+Pokud kompilujete zdrojový soubor pomocí konkrétní verzi soubory hlaviček knihoven Visual Studio C++ (podle #including záhlaví), výsledný soubor objektu musí být spojen se stejnou verzí knihoven. Tak například, pokud zdrojový soubor je zkompilován s Visual Studio 2015 Update 3 \<immintrin.h >, je třeba propojit s knihovnou vcruntime Visual Studio 2015 Update 3. Podobně pokud zdrojový soubor je zkompilován pomocí sady Visual Studio 2017 verze 15.5 \<iostream – >, je třeba propojit s Visual Studio 2017 verze 15.5 standardní knihovně C++, msvcprt. Kombinování a odpovídající se nepodporuje.
 
-Standardní knihovny C++, kombinování a odpovídající byla explicitně zakázal prostřednictvím použití `#pragma detect_mismatch` v hlavičkách standardní od sady Visual Studio 2010. Pokud se pokusíte propojit soubory nekompatibilní objektů nebo pokud se pokusíte propojit s knihovnou nesprávný standardní, propojení se nezdaří.
+Pro standardní knihovny C++, kombinování a odpovídající byl explicitně zakázán prostřednictvím použití `#pragma detect_mismatch` v záhlaví standardní od verze Visual Studio 2010. Pokud se pokusíte propojit nekompatibilní objekt soubory nebo pokud se pokusíte připojit pomocí nesprávného standardní knihovny, propojení se nezdaří.
 
-Pro CRT kombinování a odpovídající byl nikdy podporován, ale to často právě šlo, alespoň dokud Visual Studio 2015 a Universal CRT, protože plochy rozhraní API mnohem časem nezměnila. Universal CRT překročila zpětné kompatibility tak, aby v budoucnu jsme můžete zachování zpětné kompatibility. Jinými slovy máme žádný plán zavedení nových verzí na Universal CRT binárních souborů v budoucnu. Místo toho existující Universal CRT je nyní aktualizovat na místě.
+Pro CRT kombinování a odpovídající se nikdy podporované, ale často právě pracoval, alespoň až do sady Visual Studio 2015 a Universal CRT, protože většinu časem nezměnil plochy rozhraní API. Universal CRT tak, aby v budoucnu může udržujeme zpětné kompatibility se podařilo přerušit zpětné kompatibility. Jinými slovy nemáme žádné plány zavést nové, verze binárních souborů Universal CRT v budoucnu. Místo toho stávající Universal CRT je teď aktualizace na místě.
 
-Pokud chcete zadat částečné odkaz kompatibilitu s objekt soubory (a knihovny) kompilovat s starší verze Microsoft C Runtime hlavičky, poskytujeme knihovnu legacy_stdio_definitions.lib s Visual Studiem 2015 a novější. Tato knihovna nabízí kompatibility symboly pro většinu funkcí a data exportuje, které byly odebrány z Universal CRT. Sada symbolů kompatibility poskytované legacy_stdio_definitions.lib není dostatečná pro uspokojení většina závislosti, včetně všech závislostí v knihovny, které jsou součástí sady Windows SDK. Existují však některé znaky, které byly odebrány z Universal CRT, pro kterou není možné zajistit kompatibilitu symboly takto. Některé funkce zahrnují tyto symboly (například \_ \_iob\_func) a exportuje data (například \_ \_Import sady Management Pack\_\_\_iob, \_ \_Import sady Management Pack\_\_\_pctype –, \_ \_Import sady Management Pack\_\_\_mb\_Měna\_max).
+Pro zajištění kompatibility částečný odkaz s objektem soubory (a knihoven) kompilaci se staršími verzemi Microsoft C Runtime záhlaví, poskytujeme knihovnu legacy_stdio_definitions.lib pomocí sady Visual Studio 2015 a novější. Tato knihovna poskytuje kompatibilitu symboly pro většinu exporty funkce a data, kteří byli odebráni z Universal CRT. Sada kompatibility symbolů poskytovaných legacy_stdio_definitions.lib není dostatečná pro uspokojení většina závislosti, včetně všech závislostí knihoven, které jsou součástí sady Windows SDK. Existují však některé symboly, které byly odebrány ze Universal CRT, pro kterou není možné zajistit kompatibilitu symboly následujícím způsobem. Některé funkce zahrnují tyto symboly (například \_ \_iob –\_func) a export dat (například \_ \_imp\_\_\_iob –, \_ \_imp\_\_\_pctype –, \_ \_imp\_\_\_mb\_Měna\_maximální).
 
-Pokud máte statickou knihovnu, která byla vytvořena ve starší verzi hlaviček C Runtime, doporučujeme následující akce (v tomto pořadí):
+Pokud budete mít statickou knihovnu, která byla vytvořena pomocí starší verze záhlaví modulu C Runtime, doporučujeme následující akce (v uvedeném pořadí):
 
-1. Znovu sestavte se statickou knihovnou pomocí Visual Studio 2017 a Universal CRT hlavičky, které podporují propojování s Universal CRT. Toto je možnost plně podporované (a tedy doporučené).
+1. Znovu sestavte pomocí sady Visual Studio 2017 a Universal CRT záhlaví pro podporu propojení s Universal CRT statické knihovny. Toto je možnost plně podporované (a tedy nejlepší).
 
-1. Pokud jste nelze (nebo nechcete) znovu sestavit statickou knihovnu, můžete se pokusit propojení s starší\_stdio\_definitions.lib. Splňuje propojování závislostí statickou knihovnu, budete chtít důkladně otestovat se statickou knihovnou, protože se používá v binárním, abyste měli jistotu, že ji nebude nepříznivě podle těchto sloupců [chování změny, které byly provedeny Universal CRT](visual-cpp-change-history-2003-2015.md#BK_CRT).
+1. Pokud je nemůžete (nebo nechcete) znovu vytvořit statické knihovny, můžete zkusit propojení s starší verze\_stdio\_definitions.lib. Pokud splňuje závislosti propojování statické knihovny, budete chtít důkladně otestovat statické knihovny, protože se používá v binárním souboru, abyste měli jistotu, že není nepříznivě ovlivněny podle těchto sloupců [nějaké změny, které byly provedeny Universal CRT](visual-cpp-change-history-2003-2015.md#BK_CRT).
 
-1. Pokud nejsou splněny závislosti statické knihovny pomocí starší verze\_stdio\_definitions.lib nebo pokud knihovny nefunguje s Universal CRT z důvodu zmíněnými chování změn, bychom doporučili zapouzdřením vaší statické knihovny do knihovny DLL, která propojení se správnou verzí Microsoft C Runtime. Pokud se statickou knihovnou byl vytvořený pomocí sady Visual Studio 2013, by například chcete vytvořit tuto knihovnu DLL pomocí sady Visual Studio 2013 a na Visual Studio 2013 C++ knihovny. Podle budovy knihovny do knihovny DLL, zapouzdření podrobností implementace, která je závislá na konkrétní verzi Microsoft C Runtime. (Všimněte si, že budete chtít dávejte pozor na to, že rozhraní DLL není úniku podrobnosti, které C runtime použije, například vrácením souboru * přes hranice knihovny DLL nebo vrácení přidělené malloc – ukazatel a byla očekávána volajícího, aby ho volné.)
+1. Pokud nejsou splněné statickou knihovnu závislosti pomocí starší verze\_stdio\_definitions.lib nebo pokud knihovny nefunguje s Universal CRT kvůli výše uvedené nějaké změny, doporučujeme zapouzdření vaší Statická knihovna na knihovnu DLL, propojení se správnou verzí modulu Runtime jazyka C společnosti Microsoft. Pokud se statickou knihovnou byl vytvořen pomocí sady Visual Studio 2013, by například chcete sestavit tuto knihovnu DLL pomocí sady Visual Studio 2013 a na Visual Studio 2013 C++ knihovny. Vytvořením knihovny do knihovny DLL zapouzdřit podrobnosti implementace, která je závislá na konkrétní verzi modulu Runtime jazyka C společnosti Microsoft. (Všimněte si, že můžete mít na paměti, že rozhraní DLL není úniku podrobností, které C runtime používá, třeba tak, že vrací soubor * přes hranice knihovny DLL nebo vrací se ukazatel přidělené malloc a očekává volajícím uvolnit ji.)
 
-Použití více CRTs v jediném procesu není v a sám sebe problematické (skutečně, většina procesy dojdete k načítání knihoven DLL více CRT; například Windows, které jsou součástí operačního systému bude záviset na msvcrt.dll a modul CLR bude záviset na jeho vlastní privátní CRT). Když jumble stav z různých CRTs vzniknou problémy. Například by nemělo přidělit paměť pomocí msvcr110.dll!malloc a pokusí se zrušit přidělení paměti, že pomocí msvcr120.dll!free a byste neměli otevřete soubor pomocí msvcr110! fopen – a pokus o čtení z tohoto souboru pomocí msvcr120! fread –. Tak dlouho, dokud není jumble stav z různých CRTs, můžete mít bezpečně více CRTs načíst v jediném procesu.
+Použití více CRTs v jediném procesu není v a sám sebe problematické (ve skutečnosti většina procesů skončí načítání knihoven DLL více CRT, například Windows součásti operačního systému bude záviset na msvcrt.dll a modul CLR bude záviset na vlastní privátní CRT). Když jumble stav z různých CRTs vzniknou problémy. Například by neměla přidělení paměti pomocí msvcr110.dll!malloc a pokus o navrátit tuto paměť msvcr120.dll!free a by se neměly pokoušet otevřete soubor pomocí msvcr110! fopen – a pokus o čtení od souboru pomocí msvcr120! fread –. Tak dlouho, dokud není jumble stav z různých CRTs, budete moci bezpečně více CRTs načten v jediném procesu.
 
-Další informace najdete v tématu [upgradu kódu na Universal CRT](upgrade-your-code-to-the-universal-crt.md).
+Další informace najdete v tématu [Upgrade kódu na Universal CRT](upgrade-your-code-to-the-universal-crt.md).
 
-## <a name="errors-due-to-project-settings"></a>Chyby z důvodu nastavení projektu
+## <a name="errors-due-to-project-settings"></a>Chyby vzniklé v důsledku nastavení projektu
 
-Chcete-li zahájit proces upgradu, jednoduše starší projekt nebo řešení nebo pracovní prostor služby otevřete v nejnovější verzi sady Visual Studio. Visual Studio vytvoří nový projekt na základě původní nastavení projektu. Pokud starší projekt má knihovny nebo zahrnout cesty, které jsou pevně zakódovaná do nestandardních umístění, je možné, že soubory v těchto cestách nebude viditelný pro kompilátor projektu používá výchozí nastavení. Další informace najdete v tématu [nastavení výstupní soubor Linkeru](porting-guide-spy-increment.md#linker_output_settings).
+Chcete-li zahájit proces upgradu, jednoduše otevřete starší projekt/řešení/pracovní prostor služby v nejnovější verzi sady Visual Studio. Visual Studio vytvoří nový projekt založený na staré nastavení projektu. Pokud starší projekt má knihovna nebo zahrnout cesty, které jsou pevně zakódovaný do nestandardních umístění, je možné, že soubory v těchto cestách se nezobrazí kompilátor při projekt používá výchozí nastavení. Další informace najdete v tématu [nastavení Linkeru OutputFile](porting-guide-spy-increment.md#linker_output_settings).
 
-Obecně platí teď je nejvhodnější doba pro uspořádání projektu kódu správně za účelem zjednodušení projektu údržby a pomůžou upgradovaný kódu kompilování co nejdříve. Pokud váš zdrojový kód je již dobře uspořádány a kompiluje starší projekt s Visual Studio 2010 nebo novější, můžete upravit ručně nový soubor projektu pro podporu kompilace na staré a nové kompilátoru. Následující příklad ukazuje, jak zkompilovat pro Visual Studio 2015 a Visual Studio 2017:
+Obecně platí teď je vhodná doba k uspořádání kódu projektu správně pro zjednodušení údržby projektu a pomůžou upgradovaný kódu kompilaci co nejrychleji. Pokud už je dobře organizovaný zdrojový kód a starší projekt je zkompilován s Visual Studio 2010 nebo novější, můžete ručně upravit nový soubor projektu pro podporu kompilace na starý a nový kompilátor. Následující příklad ukazuje, jak kompilovat pro Visual Studio 2015 i Visual Studio 2017:
 
 ```xml
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='14.0'">v140</PlatformToolset>
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019: Nerozpoznané externí
+### <a name="lnk2019-unresolved-external"></a>LNK2019: Nevyřešené externí
 
-Nerozpoznané symbolů možná budete muset oprava nastavení projektu.
+Pro nevyřešené symboly může být nutné se opravit nastavení projektu.
 
-- Pokud zdrojový soubor je v jiné než výchozí umístění, se můžete přidat cestu do projektu zahrnout adresáře?
+- Pokud zdrojový soubor v jiné než výchozí umístění, nebyl je přidat cestu k projektu zahrnout adresáře?
 
-- Pokud externí je definována v souboru LIB, jste zadali cestu lib ve vlastnostech projektu a je správnou verzi souboru LIB skutečně existuje umístěné?
+- Pokud externí je definována v souboru LIB, mají zadané cesta ke knihovně ve vlastnostech projektu a správnou verzi .lib soubor skutečně existuje umístěné?
 
-- Se pokoušíte vytvořit odkaz na soubor .lib, který byl kompilován s jinou verzí sady Visual Studio? Pokud ano, najdete v předchozí části na knihovny a sady nástrojů závislosti.
+- Se snažíte propojit .lib soubor, který byl zkompilován s jinou verzí sady Visual Studio? Pokud ano, viz předchozí oddíl na závislosti knihoven a nástrojů.
 
-- Typy argumentů v lokalitě volání ve skutečnosti neodpovídají existující přetížení funkce? Ověřte, zda očekávat mají být základní typy pro všechny – definice TypeDef v podpis funkce a kód, který volá funkci.
+- Typy argumentů v lokalitě volání skutečně neshodují s existující přetížení funkce? Ověřte, zda jsou tyto základní typy pro jakékoli definice TypeDef v signatuře funkce a v kódu, který volá funkci co očekáváte, že je jako.
 
-Chcete-li vyřešit chyby nerozpoznané symbol, můžete zkusit pomocí dumpbin.exe prozkoumat symboly definované v binární. Zkuste následující příkazový řádek pro zobrazení symbolů definovaných v knihovně:
+Řešení potíží s chybami nevyřešeného symbolu, můžete zkusit použít dumpbin.exe prozkoumat symboly definované v binární soubor. Vyzkoušejte následující příkazový řádek pro zobrazení symbolů definovaných v knihovně:
 
 ```cmd
 dumpbin.exe /LINKERMEMBER somelibrary.lib
@@ -88,103 +89,103 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t je nativní typ)
 
-(V aplikaci Microsoft Visual C++ 6.0 a starší, `wchar_t` nebyla implementována jako předdefinovaný typ, ale byla deklarována v wchar.h jako definice typu pro prostě nepodepsané.) Standardní C++ vyžaduje, aby `wchar_t` být předdefinovaný typ. Pomocí verze typedef může způsobit problémy přenositelnost. Pokud jste upgrade z předchozích verzí sady Visual Studio a stane Chyba kompilátoru C2664, protože se pokouší kód implicitně převést `wchar_t` k `unsigned short`, doporučujeme vám, že změníte kód, který řešení chyby, místo nastavení **/ Zc:wchar_t-**. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(V aplikaci Microsoft Visual C++ 6.0 a starší, **wchar_t** nebyl implementován jako předdefinovaný typ, ale byl deklarován v souboru wchar.h jako definice typu pro unsigned short.) Standard jazyka C++ vyžaduje, aby **wchar_t** předdefinovaným typem. Pomocí typedef verze může způsobit problémy s přenositelností. Pokud upgradujete ze starší verze sady Visual Studio a dojde k chybě kompilátoru C2664 protože kód se snaží implicitně převést **wchar_t** k **unsigned short**, doporučujeme vám, že změníte Kód opravit chybu, nikoli nastavením parametru `/Zc:wchar_t-`. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrade pomocí možnosti linkeru /NODEFAULTLIB/Entry a /NOENTRY
+### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrade pomocí možnosti linkeru: / NODEFAULTLIB/Entry a NOENTRY
 
-**/NODEFAULTLIB** – možnost linkeru (nebo vlastnost linkeru ignorovat všechny výchozí knihovny) informuje linkeru nechcete automaticky na odkaz v výchozí knihovny, například CRT. To znamená, že jednotlivých knihoven musí být uvedeny jednotlivě jako vstup. Tento seznam knihovny je uveden v **Další závislosti** vlastnost **Linkeru** části **vlastnosti projektu** dialogové okno.
+`/NODEFAULTLIB` – Možnost linkeru (nebo vlastnost linkeru ignorovat všechny výchozí knihovny) dá linkeru pokyn, aby automaticky propojení v výchozích knihoven, jako je například CRT. To znamená, že každou knihovnu musí být uvedena jako vstup jednotlivě. Tento seznam knihoven je uveden v **Další závislosti** vlastnost **Linkeru** část **vlastnosti projektu** dialogového okna.
 
-Projekty, které používají tuto možnost k dispozici k potížím při upgradu, protože se změnily názvy některé výchozí knihovny. Protože každý knihovny musí být uvedené v **Další závislosti** vlastnost nebo na příkazovém řádku linkeru, budete muset aktualizovat seznam knihoven použít aktuální názvy.
+Projekty, které používají tuto možnost představovat problém při upgradu, protože názvy některých výchozích knihoven změnily. Protože každou knihovnu musí být uvedené v **Další závislosti** vlastnost nebo na příkazovém řádku linkeru, je potřeba aktualizovat seznam knihovny, které chcete použít aktuální názvy.
 
-V následující tabulce jsou uvedeny v knihovnách, jejichž názvy změnit od verze sady Visual Studio 2015. Pokud chcete upgradovat, je třeba nahradit názvy v první sloupec s názvy v druhém sloupci. Některé tyto knihovny jsou knihoven importovat, ale který by neměl vás.
+V následující tabulce jsou uvedeny knihoven, jejichž názvy změněn od verze Visual Studio 2015. Pokud chcete upgradovat, je třeba nahradit názvy v prvním sloupci s názvy ve druhém sloupci. Některé z těchto knihoven jsou knihovny importu, ale nemělo záležet, který.
 
 |||
 |-|-|
-|Pokud používáte:|Budete muset nahraďte ho:|
+|Pokud jste používali:|Budete muset nahraďte ji:|
 |libcmt.lib|libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|ucrt.lib, vcruntime.lib|
 |msvcrtd.lib|ucrtd.lib, vcruntimed.lib|
 
-Stejný problém platí také v případě, že používáte **/Entry** možnost nebo **/NOENTRY** možnost, která také mít za následek obcházení výchozí knihovny.
+Stejný problém platí také v případě, že používáte `/ENTRY` možnost nebo `/NOENTRY` možnost, která mají také vliv na obcházení výchozích knihoven.
 
-## <a name="errors-due-to-improved-language-conformance"></a>Chyby z důvodu shoda lepší jazyk
+## <a name="errors-due-to-improved-language-conformance"></a>Chyby vzniklé v důsledku shoda lepší jazyka
 
-Microsoft Visual C++ compiler má průběžně vylepšuje její shoda pro standardní C++ průběhu let. Kód, který kompilovat v dřívějších verzích se nemusí podařit kompilovat v Visual Studio 2017, protože kompilátor správně flags chybu, která je dříve ignorovat nebo výslovně povolené.
+Kompilátor jazyka Microsoft Visual C++ se průběžně vylepšuje jeho shody C++ standard v průběhu let. Kód, který zkompiluje v dřívějších verzích se nemusí podařit kompilace v sadě Visual Studio 2017, protože kompilátor správně označí chybu, která dříve ignorovat nebo explicitně povolená.
 
-Například **/Zc:forScope** přepínače byla zavedena v historii MSVC rané fázi. Umožňuje nonkonformní chování pro proměnné smyčky. Tento přepínač je nyní zastaralý a v budoucích verzích může být odstraněna. Důrazně doporučujeme nechcete použít tento přepínač při upgradu vašeho kódu. Další informace najdete v tématu [/Zc:forScope-je zastaralý](porting-guide-spy-increment.md#deprecated_forscope).
+Například `/Zc:forScope` přepínače byla zavedena v rané fázi historie MSVC. IT specialistovi nonkonformní chování proměnné smyčky. Tento přepínač je nyní zastaralá a v budoucích verzích může být odstraněna. Důrazně doporučujeme používat tento přepínač při upgradu vašeho kódu. Další informace najdete v tématu [zastaralé /Zc:forScope-](porting-guide-spy-increment.md#deprecated_forscope).
 
-Jedním z příkladů běžné chyby kompilátoru, mohou být zobrazeny při upgradu je při bez const argument předaný parametr const. Starší verze kompilátoru není vždy příznak to za chybu. Další informace najdete v tématu [více striktní převody kompilátoru](porting-guide-spy-increment.md#stricter_conversions).
+Jedním z příkladů běžné chyby kompilátoru, které se můžete setkat při upgradu je při nekonstantní argument je předán parametr const. Starší verze kompilátoru není vždy příznakem to za chybu. Další informace najdete v tématu [přísnější převody kompilátoru](porting-guide-spy-increment.md#stricter_conversions).
 
-Další informace o vylepšeních konkrétní shoda, najdete v části [historie 2003 2015 změn Visual C++](visual-cpp-change-history-2003-2015.md) a [C++ shoda vylepšení v nástroji Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Další informace o konkrétní vylepšení naleznete v tématu [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) a [vylepšení shody C++ v sadě Visual Studio 2017](../cpp-conformance-improvements-2017.md).
 
-## <a name="errors-involving-stdinth-integral-types"></a>Chyby zahrnující \<stdint.h > celočíselné typy
+## <a name="errors-involving-stdinth-integral-types"></a>Chyby zahrnující \<stdint.h > celočíselných typů
 
-\<Stdint.h > záhlaví definuje – definice TypeDef a makra, která na rozdíl od vestavěné integrální typy zaručeně mají zadané délky na všech platformách. Mezi příklady patří `uint32_t` a `int64_t`. \<Stdint.h > záhlaví byl přidán v sadě Visual Studio 2010. Kód, který byla zapsána před 2010 může mít k dispozici privátní definice pro tyto typy a tyto definice nemusí být vždy konzistentní s \<stdint.h > definice.
+\<Stdint.h > záhlaví definuje – definice TypeDef a makra, která na rozdíl od integrovaných celočíselných typů, je zaručená mít zadané délky na všech platformách. Tady je několik příkladů `uint32_t` a `int64_t`. \<Stdint.h > bylo přidáno záhlaví v sadě Visual Studio 2010. Kód, který byl zapsán před 2010 může poskytnout privátní definice pro tyto typy a tyto definice nemusí být vždy konzistentní s \<stdint.h > definice.
 
-Pokud je chyba C2371 a typu stdint je zahrnuta, pravděpodobně to znamená, že typ je definována v hlavičce buď v kódu nebo soubor lib třetích stran. Při upgradu, můžete je vyloučit všechny vlastní definice \<stdint.h > typy, ale první porovnat vlastní definice pro aktuální standardní definice zajistit nejsou Představujeme nové problémy.
+Pokud je chyba C2371 a `stdint` typ je zahrnuta, pravděpodobně znamená, že typ je definován v záhlaví v kódu nebo soubor lib třetích stran. Při upgradu, by měl odstranit všechny vlastní definice \<stdint.h > typy, ale první porovnání vlastní definice a aktuální standardní definice zajistit nejsou Představujeme nové problémy.
 
-Stisknutím klávesy F12 **přechod na definici** zobrazíte, kde je definován typ nejistá.
+Stisknutím klávesy **F12** (**přejít k definici**) zobrazíte, kde je definován typ nejistá.
 
-[/Showincludes vložených](../build/reference/showincludes-list-include-files.md) – možnost kompilátoru může být užitečná v tomto poli. V **stránky vlastností** dialogové okno pro svůj projekt, otevřete **C/C++** > **Upřesnit** stránky a nastavte **zobrazit zahrnuje** na **Ano**. Poté znovu sestavte projekt a zobrazit seznam #includes v okně výstupu. Každá hlavička odsadí pod záhlaví, který ji obsahuje.
+[/Showincludes](../build/reference/showincludes-list-include-files.md) – možnost kompilátoru může být užitečné tady. V **stránky vlastností** dialogové okno pro váš projekt, otevřete **C/C++** > **Upřesnit** stránku a nastavit **zobrazit zahrnuje** do **Ano**. Potom znovu sestavit projekt a zobrazit seznam `#include`s ve výstupním okně. Každá hlavička je odsazený pod záhlaví, který ji obsahuje.
 
-## <a name="errors-involving-crt-functions"></a>Chyby zahrnující CRT – funkce
+## <a name="errors-involving-crt-functions"></a>Chyby zahrnující funkce CRT
 
-Mnoho změn byly provedeny do C runtime průběhu let. Byly přidány mnoho bezpečné verze funkcí a některé byly odebrány. Taky jak je popsáno výše v tomto článku, implementace společnosti Microsoft CRT byl rozdělili ve Visual Studiu 2015 do nové binární soubory a soubory .lib přidružené.
+Mnoho změny byly provedeny na modul runtime jazyka C v průběhu let. Byly přidány bezpečné verze funkcí a některé byly odebrány. Také jak je popsáno výše v tomto článku, výlučně implementace Microsoftu CRT se teď vyčleněný v sadě Visual Studio 2015 do nové binární soubory a soubory .lib přidružené.
 
-Pokud k chybě zahrnuje funkce CRT, hledání [historie 2003 2015 změn Visual C++](visual-cpp-change-history-2003-2015.md) nebo [C++ shoda vylepšení v nástroji Visual Studio 2017](../cpp-conformance-improvements-2017.md) chcete zobrazit, pokud tato témata obsahují jakýchkoli dalších informací. Pokud je chyba LNK2019, nerozpoznané externí, zkontrolujte, zda že funkce nebyl odstraněn. Jinak, pokud jste si jistí, že funkce stále existuje a je správný kód volání, zkontrolujte, zda projektu používá **/NODEFAULTLIB**. V takovém případě musíte aktualizovat seznam knihoven tak, aby projektu používá nový univerzální knihovny (UCRT). Na knihovny a závislosti pro další informace najdete v části výše.
+Pokud k chybě zahrnuje funkce CRT, Hledat [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) nebo [vylepšení shody C++ v sadě Visual Studio 2017](../cpp-conformance-improvements-2017.md) zobrazíte, pokud tato témata obsahují jakékoli další informace. Pokud je chyba LNK2019 nevyřešené externí, zkontrolujte, zda že funkce nebyla odebrána. Jinak, pokud jste si jistí, že stále existuje funkce a volající kód je správný, zkontrolujte, zda váš projekt používá `/NODEFAULTLIB`. V takovém případě musíte aktualizovat seznam knihoven tak, aby projekt využívá nový univerzální knihovny (UCRT). Knihovny a závislosti pro další informace najdete v části výše.
 
-Pokud chyba zahrnuje `printf` nebo `scanf`, ujistěte se, že jste nejsou definování soukromě buď funkce bez zahrnutí stdio.h. Pokud ano, buď odeberte privátní definice nebo odkaz na starší verze\_stdio\_definitions.lib. Můžete nastavit v **stránky vlastností** dialogové okno pod **vlastnosti konfigurace** > **Linkeru** > **vstup**v **Další závislosti** vlastnost. Pokud jste propojení se systémem Windows 8.1 SDK nebo starší, přidejte starší\_stdio\_definitions.lib.
+Pokud chyba zahrnuje `printf` nebo `scanf`, ujistěte se, že jste nejsou definování soukromě buď funkce bez zahrnutí stdio.h. Pokud ano, buď odeberte privátní definice, nebo odkaz na starší verzi\_stdio\_definitions.lib. Tento parametr můžete nastavit **stránky vlastností** dialogového okna v části **vlastnosti konfigurace** > **Linkeru** > **vstup**v **Další závislosti** vlastnost. Pokud se propojení s Windows SDK 8.1 nebo starší, přidejte starší verze\_stdio\_definitions.lib.
 
-Pokud chyba zahrnuje argumenty řetězce formátu, je to pravděpodobně proto kompilátor je přísnější o vynucování standardní. Zobrazit historii změn pro další informace. Prosím zaměřte na případné chyby zde protože potenciálně může představovat bezpečnostní riziko.
+Pokud chyba zahrnuje formátování argumentů řetězců, to je pravděpodobně vzhledem k tomu, že kompilátor je přísnější o vynucování standardní. Zobrazit historii změn pro další informace. Prosím pozornosti tady nějaké chyby protože potenciálně může představovat bezpečnostní riziko.
 
-## <a name="errors-due-to-changes-in-the-c-standard"></a>Chyby z důvodu změn ve verzi C++ standard
+## <a name="errors-due-to-changes-in-the-c-standard"></a>Chyby z důvodu změn ve standardu jazyka C++
 
-Standardní C++ samotné má vyvinuly způsoby, které nejsou vždy zpětně kompatibilní. Zavedení v C ++ 11 sémantiku přesunutí, nová klíčová slova a další jazyka a funkce standardní knihovny může potenciálně způsobit chyby kompilátoru a dokonce i jiný modul runtime chování.
+Způsoby, které nejsou vždycky zpětně kompatibilní se vyvinula v samotném standardu C++. Úvod do jazyka C ++ 11 sémantiku přesunutí, nových klíčových slov a další jazyka a funkce standardní knihovny může potenciálně způsobit chyby kompilátoru a dokonce i jiný modul runtime chování.
 
-Například původní programu C++ mohou zahrnovat iostream.h záhlaví. Tuto hlavičku byla zrušena již v rané fázi v historii C++ a byla úplně odstraněny ze sady Visual Studio. V takovém případě budete muset použít \<iostream > a přepište kód. Další informace najdete v tématu [aktualizace starý kód iostreams](porting-guide-spy-increment.md#updating_iostreams_code).
+Například původnímu programu C++ může obsahovat hlavičku iostream.h. Tato hlavička se přestala nabízet v rané fázi historie jazyka C++ a byla nakonec k úplnému odebrání ze sady Visual Studio. V takovém případě budete muset použít \<iostream – > a revize kódu. Další informace najdete v tématu [aktualizuje původní kód iostreams](porting-guide-spy-increment.md#updating_iostreams_code).
 
 ### <a name="c4838-narrowing-conversion-warning"></a>C4838: zužující převod upozornění
 
-Standardní C++ nyní určuje, že jsou považovány za převody z nepodepsaných podepsaný celočíselné hodnoty jako zužující převody. Kompilátor nevydala toto upozornění před Visual Studio 2015. Měli byste zkontrolovat každý výskyt zajistit narrowing nemá vliv na správnost vašeho kódu.
+C++ standard nyní určuje, že převody z nepodepsaných na podepsané integrální hodnoty se považují za zužujících převodů. Kompilátor nevydala toto upozornění před Visual Studio 2015. Měli byste zkontrolovat všechny výskyty k Ujistěte se, že zužující nemá negativní vliv na správnost vašeho kódu.
 
-## <a name="warnings-to-use-secure-crt-functions"></a>Upozornění k použití zabezpečeného CRT – funkce
+## <a name="warnings-to-use-secure-crt-functions"></a>Upozornění na zabezpečené funkce CRT
 
-V průběhu let byly zavedeny bezpečné verze funkcí jazyka C runtime. I když původní, nezabezpečené verze jsou stále k dispozici, se doporučuje Změna kódu pro použití zabezpečeného verzí. Kompilátor vydá upozornění pro využití nezabezpečené verzí. Můžete zakázat nebo tato upozornění ignorovat. Chcete-li zakázat upozornění pro všechny projekty v řešení, otevřete **zobrazení** > **Správce vlastností**, vybrat všechny projekty, pro které chcete zakázat upozornění a potom klikněte pravým tlačítkem na vybrané položky a zvolte **vlastnosti**. V **stránky vlastností** dialogové okno pod **vlastnosti konfigurace** > **C/C++** > **Upřesnit**, Vyberte **zakázat konkrétní varování**. Klikněte na šipku rozevíracího seznamu a potom klikněte na **upravit**. Do textového pole zadejte 4996. (Není obsahovat předponu "C".) Další informace najdete v tématu [přenosy používat zabezpečení CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
+Během let byly zavedeny bezpečné verze funkcí jazyka C runtime. Ačkoli staré, nezabezpečené verze jsou stále k dispozici, se doporučuje změnit kód Refaktorovat pro použití bezpečné verze. Kompilátor vygeneruje upozornění pro využití nebezpečných verzí. Můžete zakázat nebo ignorovat těchto upozornění. Chcete-li zakázat upozornění pro všechny projekty v řešení, otevřete **zobrazení** > **Správce vlastností**, vyberte všechny projekty, u kterých chcete toto upozornění zakážete a potom klikněte pravým tlačítkem na vybrané položky a zvolte **vlastnosti**. V **stránky vlastností** dialogového okna v části **vlastnosti konfigurace** > **C/C++** > **Upřesnit**, Vyberte **zakázat specifická upozornění**. Klikněte na šipku rozevíracího seznamu a potom klikněte na **upravit**. Do textového pole zadejte 4996. (Není obsahovat předponu "C".) Další informace najdete v tématu [přenosy použít zabezpečení CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
 
-## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Chyby z důvodu změn v rozhraní API systému Windows nebo zastaralé sady SDK
+## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Chyby z důvodu změn v rozhraní Windows API nebo zastaralý sady SDK
 
-V průběhu let rozhraní API systému Windows a datové typy byly přidány a někdy změnit nebo odebrat. Také jiné sady SDK, které nepatřily do základní operační systém mít pocházet a zmizel. Starší programy proto může obsahovat volání rozhraní API, které už existují. Mohou také obsahovat volání rozhraní API v jiné společnosti Microsoft SDKs které již nejsou podporovány. Pokud uvidíte chybu zahrnující rozhraní API systému Windows nebo rozhraní API z starší Microsoft SDK, je možné, že rozhraní API byla odebrat nebo nahrazena novější, bezpečnější funkce.
+V průběhu let rozhraní API pro Windows a datové typy byly přidány a někdy změnit nebo odebrat. Také dalších sad SDK, které nepatří do jádra operačního systému mají pocházet a pryč. Starší programy mohou obsahovat proto volání rozhraní API, která už neexistuje. Mohou také obsahovat volání rozhraní API v jiné společnosti Microsoft SDKs, která již nejsou podporovány. Pokud se zobrazí chyba týkající se rozhraní API Windows nebo rozhraní API z starší Microsoft SDK, je možné, že rozhraní API byla odebrána nebo nahrazena novějšími, bezpečnějšími funkce.
 
-Další informace o rozhraní API pro aktuální nastavení a minimální podporované operační systémy pro konkrétní rozhraní API systému Windows, najdete v části [Microsoft API a referenční informace katalogu](https://msdn.microsoft.com/library) a přejděte na dotyčném rozhraní API.
+Další informace o aktuálním rozhraní API a minimální podporované operační systémy pro konkrétní rozhraní API Windows, naleznete v tématu [Microsoft API a referenční katalog](https://msdn.microsoft.com/library) a přejděte na dotyčném rozhraní API.
 
-### <a name="windows-version"></a>Verze systému Windows
+### <a name="windows-version"></a>Verze Windows
 
-Při upgradu program, který používá rozhraní API systému Windows, buď přímo nebo nepřímo, musíte se rozhodnout, minimální verze Windows na podporu. Ve většině případů Windows 7 je dobrá volba. Další informace najdete v části [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). Makro WINVER definuje nejstarší verze systému Windows, který váš program slouží ke spuštění. Pokud váš program MFC nastaví WINVER 0x0501 (Windows XP) zobrazí se upozornění protože MFC již nepodporuje XP, i když kompilátoru samotné má XP režim.  
+Při upgradu program, který používá rozhraní Windows API přímo nebo nepřímo, je potřeba rozhodnout, minimální verze Windows na podporu. Windows 7 ve většině případů je dobrou volbou. Další informace najdete v části [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). `WINVER` Makra definuje nejstarší verzi Windows, který program je navržený pro spouštění. Pokud váš program knihovny MFC nastaví WINVER 0x0501 (Windows XP) se zobrazí upozornění protože MFC už nepodporuje XP, přestože kompilátor sám má režim XP.  
 
-Další informace najdete v tématu [aktualizace systému Windows verze cíle](porting-guide-spy-increment.md#updating_winver) a [více zastaralých soubory hlaviček](porting-guide-spy-increment.md#outdated_header_files).
+Další informace najdete v tématu [aktualizuje cílovou verzi Windows](porting-guide-spy-increment.md#updating_winver) a [více zastaralé soubory hlaviček](porting-guide-spy-increment.md#outdated_header_files).
 
 ## <a name="atl--mfc"></a>ATL / MFC
 
-ATL a MFC jsou relativně stabilní rozhraní API, ale někdy změn. Najdete v článku [historie 2003 2015 změn Visual C++](visual-cpp-change-history-2003-2015.md) Další informace a [co je nového pro Visual C++ v aplikaci Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) a [C++ shoda vylepšení v nástroji Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+ATL a MFC jsou poměrně stabilní rozhraní API, ale v některých změn. Najdete v článku [změn Visual C++ 2003 – 2015 historie](visual-cpp-change-history-2003-2015.md) Další informace a [co je nového v jazyce Visual c++ v sadě Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) a [vylepšení shody C++ v sadě Visual Studio 2017](../cpp-conformance-improvements-2017.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 již definována v MSVCRTD.lib
 
-Této chybě může dojít v aplikacích MFC. Označuje, řazení problém mezi knihovna MFC a Knihovna CRT. MFC musí být propojená nejprve tak, aby poskytuje nové a odstranit operátory. Chcete-li opravit chyby, použijte přepínač /NODEFAULTLIB ignorovat tyto výchozí knihovny: MSVCRTD.lib a mfcs140d.lib. Pak přidejte tyto stejné knihovny jako další závislosti.
+Této chybě může dojít v aplikacích MFC. Označuje chybu pořadí mezi knihovny CRT a knihovnu MFC. Knihovny MFC je potřeba nejprve propojené, takže poskytuje nové a odstranit operátory. Chcete-li chybu opravit, použijte `/NODEFAULTLIB` přepnout na hodnotu ignorovat tyto výchozí knihovny: MSVCRTD.lib a mfcs140d.lib. Pak přidejte tyto stejné knihovny jako další závislosti.
 
-## <a name="32-vs-64-bit"></a>64bitová verze 32 vs
+## <a name="32-vs-64-bit"></a>32 a 64 bitů
 
-Pokud je původní kód zkompilován pro 32bitové systémy, máte možnost vytvořit 64bitovou verzi místo nebo kromě nového 32bitovou aplikaci. Obecně platí by měl získat váš program kompilace v režimu 32-bit první a pokusíte se 64-bit. Kompilování pro 64bitové prostředí je jednoduchá, ale v některých případech může odhalit chyby, které byly skryt. 32bitová verze sestavení.
+Pokud váš původním kód je zkompilován pro 32bitové systémy, máte možnost vytvořit 64bitovou verzi místo nebo kromě nového 32bitovou aplikaci. Obecně platí by měl získat první program v 32bitovém režimu kompilace a pokusíte se 64-bit. Kompilování pro 64bitovou verzi je jednoduchý, ale v některých případech může odhalit chyb, které byly skryté pomocí 32bitová verze sestavení.
 
-Také byste měli znát možné problémy kompilaci a runtime týkající se velikost ukazatele, čas a hodnoty velikosti a specifikátory formátu v funkce printf a scanf. Další informace najdete v tématu [konfigurace Visual C++ pro 64bitové, x64 cíle](../build/configuring-programs-for-64-bit-visual-cpp.md) a [problémy s migrací běžné Visual C++ 64-bit](../build/common-visual-cpp-64-bit-migration-issues.md). Tipy pro další migraci najdete v tématu [Průvodce programováním pro 64bitový systém Windows](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx).
+Také byste měli vědět o možných problémech kompilace a modulu runtime týkající se velikost ukazatele, čas a hodnoty velikosti a specifikátory formátu v funkce printf a scanf. Další informace najdete v tématu [konfigurovat Visual C++ pro 64bitové, x64 cíle](../build/configuring-programs-for-64-bit-visual-cpp.md) a [problémy s migrací běžné Visual C++ 64-bit](../build/common-visual-cpp-64-bit-migration-issues.md). Tipy pro další migrace najdete v tématu [Průvodce programováním pro Windows 64-bit](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows).
 
-## <a name="unicode-vs-mbcsascii"></a>Unicode vs MBCS/ASCII
+## <a name="unicode-vs-mbcsascii"></a>Kódování Unicode a MBCS/ASCII
 
-Předtím, než byla standardizované znakové sady Unicode, mnoho programů vícebajtových znakovou sadu (MBCS) používá k reprezentování znaky, které nebyly zahrnuty ve znakové sadě ASCII. V starší projekty MFC MBCS bylo výchozí nastavení a při upgradu takového programu, zobrazí se upozornění, která poradit místo toho použít kódování Unicode. Můžete se rozhodnout zakázat nebo ignorovat upozornění, pokud se rozhodnete, že převod na kódování Unicode není vhodné vývoj náklady. Chcete-li zakázat pro všechny projekty v řešení, otevřete **zobrazení** > **Správce vlastností**, vybrat všechny projekty, pro které chcete zakázat upozornění a potom klikněte pravým tlačítkem na vybrané položky a Zvolte **vlastnosti**. V **stránky vlastností** dialogovém okně, vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit**. V **zakázat konkrétní varování** vlastnost, otevřete na šipku rozevíracího seznamu a potom zvolte **upravit**. Do textového pole zadejte 4996. (Není obsahovat předponu "C".) Zvolte **OK** uložit vlastnost, zvolte **OK** uložte provedené změny.
+Předtím, než byla standardizované Unicode, mnoho aplikací používá k reprezentování znaky, které nejsou zahrnuty ve znakové sadě ASCII vícebajtové znakové sady (MBCS). Ve starších projektech knihovny MFC znakové sady MBCS je výchozí nastavení a při upgradu takového programu, zobrazí se upozornění, které dokáží místo toho použít kódování Unicode. Můžete zakázat nebo upozornění ignorovat, pokud se rozhodnete, že převod do kódu Unicode není vhodné vývoj nákladů. Chcete-li zakázat pro všechny projekty v řešení, otevřete **zobrazení** > **Správce vlastností**, vyberte všechny projekty, u kterých chcete toto upozornění zakážete a potom klikněte pravým tlačítkem na vybrané položky a Zvolte **vlastnosti**. V **stránky vlastností** dialogového okna, vyberte **vlastnosti konfigurace** > **C/C++** > **Upřesnit**. V **zakázat specifická upozornění** vlastnost, otevřete na šipku rozevíracího seznamu a klikněte na tlačítko **upravit**. Do textového pole zadejte 4996. (Není obsahovat předponu "C".) Zvolte **OK** k uložení vlastnosti, klikněte na tlačítko **OK** uložte provedené změny.
 
-Další informace najdete v tématu [Portování ze MBCS do kódu Unicode](porting-guide-spy-increment.md#porting_to_unicode). Obecné informace o rozhraní MBCS vs. Znakové sady Unicode, najdete v části [Text a řetězce v jazyce Visual C++](../text/text-and-strings-in-visual-cpp.md) a [internacionalizace](../c-runtime-library/internationalization.md) .
+Další informace najdete v tématu [Portování ze znakové sady MBCS do kódu Unicode](porting-guide-spy-increment.md#porting_to_unicode). Obecné informace o znakové sady MBCS vs. Kódování Unicode naleznete v tématu [Text a řetězce v jazyce Visual C++](../text/text-and-strings-in-visual-cpp.md) a [internacionalizace](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

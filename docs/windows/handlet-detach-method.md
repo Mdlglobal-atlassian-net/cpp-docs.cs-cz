@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bf4a6fab735708295a0ae229e7b47101ecc115b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7b66d5c65dd084da564067cd62242b315f6da182
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648389"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591371"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach – metoda
-Zruší přidružení aktuální **HandleT** objekt z jeho základní popisovač.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-typename HandleTraits::Type Detach();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Základní popisovač.  
-  
-## <a name="remarks"></a>Poznámky  
- Když tato operace dokončí, aktuální **HandleT** je nastavena na neplatný stav.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HandleT – třída](../windows/handlet-class.md)
+
+Zruší přidružení aktuální **HandleT** objekt z jeho základní popisovač.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+typename HandleTraits::Type Detach();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Základní popisovač.
+
+## <a name="remarks"></a>Poznámky
+
+Když tato operace dokončí, aktuální **HandleT** je nastavena na neplatný stav.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HandleT – třída](../windows/handlet-class.md)

@@ -1,5 +1,5 @@
 ---
-title: __outbyte | Microsoft Docs
+title: __outbyte | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330620"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466323"
 ---
 # <a name="outbyte"></a>__outbyte
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje `out` instrukce, který odesílá 1 bajtů určeného `Data` z portu vstupně-výstupních operací určeného `Port`.  
+ Generuje `out` instrukce, která odesílá 1 bajtu určeného pomocí `Data` portu vstupně-výstupní operace určené `Port`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,24 +39,24 @@ void __outbyte(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Port`  
+ [in] `Port`  
  Port pro odesílání dat na.  
   
- [v] `Data`  
- Bajtů, které mají být odeslány zadaný port.  
+ [in] `Data`  
+ Bajt rozeslání zadaný port.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

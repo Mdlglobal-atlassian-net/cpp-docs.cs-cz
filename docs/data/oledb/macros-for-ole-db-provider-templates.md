@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338041"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464630"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra pro šablony zprostředkovatele OLE DB
 Makra poskytovatele šablony technologie OLE DB nabízejí funkce v následujících kategoriích:  
@@ -159,11 +159,11 @@ BEGIN_PROPSET_MAP(Class)
  *Třída*  
  [in] Je zadána třída, ve kterém tuto vlastnost nastavit. V následující objekty OLE DB lze zadat sadu vlastností:  
   
--   [Objekty zdroje dat](https://msdn.microsoft.com/library/ms721278.aspx)  
+-   [Objekty zdroje dat](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Objekty relace](https://msdn.microsoft.com/library/ms711572.aspx)  
+-   [Objekty relace](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Příkazy](https://msdn.microsoft.com/library/ms724608.aspx)  
+-   [Příkazy](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Příklad  
  Tady je mapy sady vlastností vzorku:  
@@ -228,10 +228,10 @@ PROPERTY_INFO_ENTRY(dwPropID)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
   
 #### <a name="remarks"></a>Poznámky  
- Toto makro nastaví hodnotu vlastnosti typu `DWORD` na výchozí hodnotu definovanou v ATLDB. H. Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li nastavit [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) a [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) pro vlastnost ve stejnou dobu, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Toto makro nastaví hodnotu vlastnosti typu `DWORD` na výchozí hodnotu definovanou v ATLDB. H. Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li nastavit [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) a [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) pro vlastnost ve stejnou dobu, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Příklad  
  Zobrazit [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -247,13 +247,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
   
  *vt*  
  [in] [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) této vlastnosti položky.  
   
  *dwFlags*  
- [in] A [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) hodnotu popisující tuto položku Vlastnosti.  
+ [in] A [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) hodnotu popisující tuto položku Vlastnosti.  
   
  *value*  
  [in] Hodnota vlastnosti typu `DWORD`.  
@@ -278,7 +278,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
   
 #### <a name="parameters"></a>Parametry  
  *dwPropID*  
- [in] A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
+ [in] A [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) identifikátor GUID k identifikaci vlastnost nastavit hodnotu, kterou můžete použít ve spojení s vlastností.  
   
  *value*  
  [in] Hodnota vlastnosti typu `DWORD`.  
@@ -355,7 +355,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
  [in] Číslo sloupce. Pokud sloupec není sloupec záložky, číslo sloupce nesmí být 0.  
   
  *Hodnota DbType*  
- [in] Datový typ v [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Datový typ v [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Člen*  
  [in] Členské proměnné v `dataClass` , který ukládá data.  
@@ -383,22 +383,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
  [in] Číslo sloupce. Pokud sloupec není sloupec záložky, číslo sloupce nesmí být 0.  
   
  *příznaky*  
- [in] Určuje, jak se data vrací. Zobrazit `dwFlags` popis v [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Určuje, jak se data vrací. Zobrazit `dwFlags` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *colSize*  
  [in] Velikost sloupce.  
   
  *Hodnota DbType*  
- [in] Určuje datový typ hodnoty. Zobrazit `wType` popis v [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Určuje datový typ hodnoty. Zobrazit `wType` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Přesnost*  
- [in] Určuje přesnost pro použití při získávání dat, pokud *dbType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Zobrazit `bPrecision` popis v [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Určuje přesnost pro použití při získávání dat, pokud *dbType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Zobrazit `bPrecision` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Škálování*  
- [in] Označuje chcete použít při získávání dat, pokud je hodnota dbType DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Zobrazit `bScale` popis v [DBBINDING struktury](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Označuje chcete použít při získávání dat, pokud je hodnota dbType DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Zobrazit `bScale` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *identifikátor GUID*  
- Sadu řádků schématu identifikátoru GUID. Zobrazit [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) v *OLE DB referenční informace pro programátory* seznam sad řádků schématu a jejich identifikátory GUID.  
+ Sadu řádků schématu identifikátoru GUID. Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) v *OLE DB referenční informace pro programátory* seznam sad řádků schématu a jejich identifikátory GUID.  
   
 #### <a name="remarks"></a>Poznámky  
  Umožňuje zadat velikost sloupce, datový typ, přesnost, měřítko a identifikátor GUID sady řádků schématu.  
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
  [in] Členské proměnné v datové třídě, která ukládá data.  
   
 #### <a name="remarks"></a>Poznámky  
- Použijte toto makro, když sloupec data je považován za [typem DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Použijte toto makro, když sloupec data je považován za [typem DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Příklad  
  Zobrazit [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
@@ -473,7 +473,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
  [in] Číslo sloupce. Pokud sloupec není sloupec záložky, číslo sloupce nesmí být 0.  
   
  *Hodnota DbType*  
- [in] Datový typ v [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] Datový typ v [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Velikost*  
  [in] Velikost sloupce v bajtech.  
@@ -504,7 +504,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
  [in] Členské proměnné v datové třídě, která ukládá data.  
   
 #### <a name="remarks"></a>Poznámky  
- Když sloupec data s hodnotou null byl ukončen řetězec znaků Unicode, použijte toto makro [DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Když sloupec data s hodnotou null byl ukončen řetězec znaků Unicode, použijte toto makro [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 Označuje začátek mapování schématu.  
@@ -520,7 +520,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
  Třída, která obsahuje MAPU. Obvykle bude třídu relace.  
   
 #### <a name="remarks"></a>Poznámky  
- Zobrazit [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) v sadě Windows SDK pro další informace o sad řádků schématu.  
+ Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) v sadě Windows SDK pro další informace o sad řádků schématu.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 Označuje konec mapování schématu.  
@@ -546,7 +546,7 @@ SCHEMA_ENTRY(guid,
   
 #### <a name="parameters"></a>Parametry  
  *identifikátor GUID*  
- Sadu řádků schématu identifikátoru GUID. Zobrazit [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) v *OLE DB referenční informace pro programátory* seznam sad řádků schématu a jejich identifikátory GUID.  
+ Sadu řádků schématu identifikátoru GUID. Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) v *OLE DB referenční informace pro programátory* seznam sad řádků schématu a jejich identifikátory GUID.  
   
  *RowsetClass*  
  Třída, která bude vytvořena a představují sadu řádků schématu.  
@@ -560,7 +560,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- To `Execute` funkce provede naplnění dat v sadě řádků. Průvodce projektem ATL vytvoří, jak je popsáno v [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) v *OLE DB referenční informace pro programátory*, tři počáteční sad řádků schématu v projektu pro všechny tři povinné schémat OLE DB:  
+ To `Execute` funkce provede naplnění dat v sadě řádků. Průvodce projektem ATL vytvoří, jak je popsáno v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) v *OLE DB referenční informace pro programátory*, tři počáteční sad řádků schématu v projektu pro všechny tři povinné schémat OLE DB:  
   
 -   DBSCHEMA_TABLES  
   

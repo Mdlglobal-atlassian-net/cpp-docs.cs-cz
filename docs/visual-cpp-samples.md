@@ -1,5 +1,5 @@
 ---
-title: Visual C++ – ukázky | Microsoft Docs
+title: Visual C++ – ukázky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/30/2017
 ms.technology:
@@ -8,35 +8,36 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ebe431e6fa8cfa69bffcf4709b42c22e0bec9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee8e06636a7d02ac0f34940031d9f0cac3fbef6c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613904"
 ---
 # <a name="visual-c-samples"></a>Visual C++ – ukázky
 
 Ukázky kódu jazyka Visual C++ uvedené níže ukazují různé funkce napříč různými technologiemi.
 
-[Visual Studio – ukázky](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
+[Visual C++ – ukázky](https://github.com/Microsoft/vcsamples)
 
-[Windows na Githubu](http://microsoft.github.io/windows/)
+[Ukázky sady Visual Studio](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
 
-[Ukázky pro univerzální aplikace Windows](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
+[Windows na Githubu](https://microsoft.github.io/windows/)
 
-[Rozhraní framework vše v jednom kódu](http://1code.codeplex.com/)
+[Ukázky univerzálních aplikací pro Windows](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
 
-[Ukázky kódu Windows Desktop](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
+[All-in-One code framework](https://1code.codeplex.com/)
 
-[MFC – ukázky](http://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
+[Ukázky kódu pro Windows Desktop](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
 
-[Ukázky na webu CodePlex](http://www.codeplex.com/site/search?query=C%2B%2B&ac=4)
+[Ukázky knihovny MFC](https://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
 
-[MFC – ukázky na webu CodePlex](http://www.codeplex.com/site/search?query=mfc&ac=4)
+[Ukázky na webu CodePlex](https://archive.codeplex.com/)
 
 [Ukázky kódu ADO](https://msdn.microsoft.com/library/jj249212.aspx)
 

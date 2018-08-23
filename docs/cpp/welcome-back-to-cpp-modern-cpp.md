@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462359"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464631"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jedním z nejpoužívanějších programovacích jazyků na světě. Kvalitně napsané C++ programy jsou rychlé a efektivní. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření široké škály aplikací, od zábavných a vzrušujících her, přes vysoce výkonný vědecký software, ovladače zařízení, vložené programy a klientské aplikace Windows. Více než 20 let bylo C++ využíváno k řešení problémů, jako je tento a mnoho dalších. Co možná nevíte je, že rostoucí počet programátorů C++ mají složit staromódní programování ve stylu jazyka C včerejška a místo toho používají moderní jazyk C++.  
@@ -107,7 +107,7 @@ void f()
   
  C++ dochází k návratu protože výkon má znovu. Jazyky jako Java a C# jsou vhodné, pokud je důležitá produktivita programátora, ale zobrazit svá omezení při napájení výkon se projeví. Vysoké účinnosti a výkonu, zejména v zařízeních, která mají omezený hardware Nic nepřekoná moderního C++.  
   
- Nejen jazyk je moderní, nástroje pro vývoj jsou moc. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] činí všechny části cyklu vývoje je robustní a efektivní. Zahrnuje nástroje Application Lifecycle Management (ALM), vylepšení IDE, jako například IntelliSense, mechanismů vhodných nástrojů, jako jsou XAML a sestavení, ladění a mnoho dalších nástrojů.  
+ Nejen jazyk je moderní, nástroje pro vývoj jsou moc. Visual Studio činí všechny části cyklu vývoje je robustní a efektivní. Zahrnuje nástroje Application Lifecycle Management (ALM), vylepšení IDE, jako například IntelliSense, mechanismů vhodných nástrojů, jako jsou XAML a sestavení, ladění a mnoho dalších nástrojů.  
   
  Články v této části dokumentace poskytují podrobné pokyny a osvědčené postupy pro nejdůležitější funkce a postupy při vytváření moderních programy v jazyce C++.  
   

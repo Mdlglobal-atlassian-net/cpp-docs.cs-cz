@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 223358d33fb7eab0663237e8eb8deb487b84109a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 071686e7ea4bf8a88beb340019b33d838e3aa806
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010435"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603510"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase – destruktor
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-virtual ~ModuleBase();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Zruší inicializaci aktuální instance **ModuleBase** třídy.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** implements.h  
-  
- **Namespace:** Microsoft::WRL:: details –  
-  
-## <a name="see-also"></a>Viz také  
- [Modulebase – třída](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+virtual ~ModuleBase();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Zruší inicializaci aktuální instance **ModuleBase** třídy.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** implements.h
+
+**Namespace:** Microsoft::WRL:: details –
+
+## <a name="see-also"></a>Viz také
+
+[ModuleBase – třída](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

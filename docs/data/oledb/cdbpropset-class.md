@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465225"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
 Dědí z `DBPROPSET` struktury a přidá konstruktor, který inicializuje pole klíče i na `AddProperty` přístup k metodě.  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **Hodnota TRUE** vlastnost úspěšně přidal. V opačném případě **false**. 
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
-Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury.  
+Konstruktor Inicializuje `rgProperties`, `cProperties`, a `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parametry  
  *identifikátor GUID*  
- [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) struktury.  
+ [in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropset-cdbpropset.md) také.  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Reference šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [Cdbpropidset – třída](../../data/oledb/cdbpropidset-class.md)   
- [Struktura DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
- [Struktura DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)
+ [Struktura DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [Struktura DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

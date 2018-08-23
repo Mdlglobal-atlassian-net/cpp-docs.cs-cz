@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407858"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42465870"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 Koncept *typ* je v jazyce C++ velmi důležitý. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Mezi typy patří **int** pro ukládání integrálních hodnot, **double** k ukládání hodnot s plovoucí desetinnou čárkou (označované také jako *skalární* datové typy), nebo standardní knihovna tříd [std::basic_string](../standard-library/basic-string-class.md) pro ukládání textu. Můžete vytvořit vlastní typ definováním **třídy** nebo **struktura**. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  
@@ -157,7 +157,7 @@ void someFunction() {
  Další informace o ukazatelích obecně naleznete v tématu [ukazatele](../cpp/pointers-cpp.md).  
   
 ## <a name="windows-data-types"></a>Datové typy ve Windows  
- V klasickém programování Win32 pro C a C++ většina funkcí používá specifické pro Windows – definice TypeDef a #define makra (definované v `windef.h`) k určení typů parametrů a návratové hodnoty. Tyto datové typy Windows jsou většinou pouze zvláštní názvy (aliasy) na předdefinované typy jazyka C/C++. Úplný seznam těchto – definice TypeDef a definičních souborů preprocesoru naleznete v tématu [datové typy Windows](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46). Některé tyto funkce typedef, jako např. HRESULT a LCID, jsou užitečné a mají popisný charakter. Jiné, například INT, nemají zvláštní význam a představují pouze aliasy základních typů jazyka C++. Další datové typy systému Windows si zachovaly názvy pocházející z dob programování v jazyce C a 16bitových procesorů a ve světě moderního hardwaru a operačních systémů již nemají místo ani smysl. Existují také speciální datové typy přidružené ke knihovně Runtime Windows uvedené jako [základní datové typy Windows Runtime](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6). V moderním jazyce C++ platí obecná rada preferovat základní typy C++, pokud typ Windows nesděluje některý další význam o tom, jak má být daná hodnota interpretována.  
+ V klasickém programování Win32 pro C a C++ většina funkcí používá specifické pro Windows – definice TypeDef a #define makra (definované v `windef.h`) k určení typů parametrů a návratové hodnoty. Tyto datové typy Windows jsou většinou pouze zvláštní názvy (aliasy) na předdefinované typy jazyka C/C++. Úplný seznam těchto – definice TypeDef a definičních souborů preprocesoru naleznete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types). Některé tyto funkce typedef, jako např. HRESULT a LCID, jsou užitečné a mají popisný charakter. Jiné, například INT, nemají zvláštní význam a představují pouze aliasy základních typů jazyka C++. Další datové typy systému Windows si zachovaly názvy pocházející z dob programování v jazyce C a 16bitových procesorů a ve světě moderního hardwaru a operačních systémů již nemají místo ani smysl. Existují také speciální datové typy přidružené ke knihovně Runtime Windows uvedené jako [základní datové typy Windows Runtime](/windows/desktop/WinRT/base-data-types). V moderním jazyce C++ platí obecná rada preferovat základní typy C++, pokud typ Windows nesděluje některý další význam o tom, jak má být daná hodnota interpretována.  
   
 ## <a name="more-information"></a>Další informace  
  Další informace o systému typů v jazyce C++ naleznete v následujících tématech.  

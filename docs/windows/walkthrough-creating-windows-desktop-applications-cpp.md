@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653291"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590291"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
 
 Tento návod ukazuje, jak vytvořit tradiční desktopové aplikace Windows v sadě Visual Studio. Ukázková aplikace, které vytvoříte pomocí rozhraní API Windows zobrazí "Hello, plochu Windows!" v okně. Můžete použít kód vyvinutý v tomto názorném postupu jako vzor pro vytvoření jiných aplikací klasické pracovní plochy Windows.
 
-Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní API Windows Desktop a Windows klasického rozhraní API) je rozhraní na základě jazyka C pro vytváření aplikací pro Windows. V existence od 1980s a byla použita k vytvoření aplikací Windows desítky let. Pokročilé a jednodušší program rozhraní jsou zabudovány nad rámec tohoto rozhraní API, jako je například knihovny MFC, ATL a rozhraní .NET Framework. Dokonce i většině moderních kód pro UPW a Store aplikace napsané v jazyce C + +/ WinRT používá toto rozhraní API pod. Další informace o rozhraní API Windows najdete v tématu [Index rozhraní API Windows](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx). Existuje mnoho způsobů, jak vytvářet aplikace pro Windows, ale to byl první.
+Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní API Windows Desktop a Windows klasického rozhraní API) je rozhraní na základě jazyka C pro vytváření aplikací pro Windows. V existence od 1980s a byla použita k vytvoření aplikací Windows desítky let. Pokročilé a jednodušší program rozhraní jsou zabudovány nad rámec tohoto rozhraní API, jako je například knihovny MFC, ATL a rozhraní .NET Framework. Dokonce i většině moderních kód pro UPW a Store aplikace napsané v jazyce C + +/ WinRT používá toto rozhraní API pod. Další informace o rozhraní API Windows najdete v tématu [Index rozhraní API Windows](/windows/desktop/apiindex/windows-api-list). Existuje mnoho způsobů, jak vytvářet aplikace pro Windows, ale to byl první.
 
 > [!IMPORTANT]
 > Pro účely zkrácení jsou vynechány některé příkazy v textu. [Sestavení kódu](#build-the-code) oddílu na konci tohoto dokumentu obsahuje kompletní kód.
@@ -570,4 +570,5 @@ Jak jsme slíbili, tady je kompletní kód pro funkční aplikaci.
 Blahopřejeme! Dokončení tohoto návodu a integrované tradiční desktopové aplikace Windows.
 
 ## <a name="see-also"></a>Viz také
- [Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)
+
+[Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881097"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42464826"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject – třída
 Tato třída implementuje `IUnknown` agregované nebo neagregovaná objektu.  
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |Název|Popis|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Zvýší počet odkazů na objekt.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statické) Umožňuje vytvořit novou **CComPolyObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statické) Umožňuje vytvořit novou **CComPolyObject <** `contained` **>** objektu bez režie [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Provede konečnou inicializaci `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Provádí konečné zničení `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované rozhraní.|  
@@ -137,7 +137,7 @@ CComPolyObject(void* pv);
  Uvolní všechny přidělené prostředky, volání [FinalRelease](#finalrelease), a sníží počet modul zámku.  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- Umožňuje vytvořit novou **CComPolyObject <** `contained` **>** objektu bez režie [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Umožňuje vytvořit novou **CComPolyObject <** `contained` **>** objektu bez režie [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(  

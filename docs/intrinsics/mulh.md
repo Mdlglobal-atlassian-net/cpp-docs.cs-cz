@@ -1,5 +1,5 @@
 ---
-title: __mulh | Microsoft Docs
+title: __mulh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae312de1311bfe068ac48838f2720bd8a2a83e53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339537"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465964"
 ---
 # <a name="mulh"></a>__mulh
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vrátí vysoké 64bitová verze produktu dvě podepsaná celá čísla 64-bit.  
+ Vrátí hodnotu 64 bitů součin dvou 64-bit celá čísla se znaménkem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +38,20 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `a`  
- První číslo, které má násobení.  
+ [in] `a`  
+ První číslo pro vynásobení.  
   
- [v] `b`  
- Druhé číslo, které má násobení.  
+ [in] `b`  
+ Druhé číslo pro vynásobení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vysoká 64bitová verze 128-bit výsledkem násobení.  
+ Vysoká 64 bitů 128bitové výsledek násobení.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__mulh`|x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
@@ -85,7 +85,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

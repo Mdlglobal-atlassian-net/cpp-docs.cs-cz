@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ab919b3aeba45462a15900429493225f00909d5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651064"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602451"
 ---
 # <a name="handletclose-method"></a>HandleT::Close – metoda
-Zavře aktuální **HandleT** objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void Close();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Popisovač, které je základem aktuální **handlet –** je zavřená a **HandleT** je nastavena na neplatný stav.  
-  
- Pokud je popisovač nezavírá správně, je vyvolána výjimka ve volajícím vlákně.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL:: wrappers –  
-  
-## <a name="see-also"></a>Viz také  
- [HandleT – třída](../windows/handlet-class.md)
+
+Zavře aktuální **HandleT** objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void Close();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Popisovač, které je základem aktuální **handlet –** je zavřená a **HandleT** je nastavena na neplatný stav.
+
+Pokud je popisovač nezavírá správně, je vyvolána výjimka ve volajícím vlákně.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** corewrappers.h
+
+**Namespace:** Microsoft::WRL:: wrappers –
+
+## <a name="see-also"></a>Viz také
+
+[HandleT – třída](../windows/handlet-class.md)

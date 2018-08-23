@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs
+title: __incgsbyte __incgsword, __incgsdword __incgsqword | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329459"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466118"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
-**Konkrétní Microsoft**  
+# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte __incgsword, __incgsdword, __incgsqword
+**Specifické pro Microsoft**  
   
- Přidat na hodnotu v umístění paměti určeného posun vzhledem k začátku `GS` segmentu.  
+ Přidejte jej na hodnotu v paměti umístění určené posun vzhledem k začátku `GS` segmentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,22 +56,22 @@ void __incgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `Offset`  
+ [in] `Offset`  
  Posun od začátku `GS`.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|x64|  
+|`__incgsword`|x64|  
+|`__incgsdword`|x64|  
+|`__incgsqword`|x64|  
   
 ## <a name="remarks"></a>Poznámky  
- Vnitřní tyto funkce jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jen jako vnitřní funkce.  
+ Tyto vnitřní objekty jsou dostupné jenom v režimu jádra a rutiny jsou dostupné jenom jako vnitřní funkce.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   

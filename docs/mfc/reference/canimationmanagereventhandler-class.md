@@ -1,5 +1,5 @@
 ---
-title: Třída CAnimationManagerEventHandler | Microsoft Docs
+title: Canimationmanagereventhandler – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955645"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42465117"
 ---
-# <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler – třída
-Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav správce animace.  
+# <a name="canimationmanagereventhandler-class"></a>Canimationmanagereventhandler – třída
+Implementuje zpětné volání, které je voláno rozhraním API animace při změně stavu Správce animace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,11 +53,11 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |Název|Popis|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationManagerEventHandler` objektu.|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Voláno, pokud došlo ke změně stavu animace správce. (Přepisuje `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Ukládá ukazatel animace řadiče události trasy.|  
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Volá se při změně stavu Správce animace. (Přepíše `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Uchovává ukazatel na řadič animace směrování událostí.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto obslužnou rutinu události je vytvořen a předaný metodě IUIAnimationManager::SetManagerEventHandler, při volání CAnimationController::EnableAnimationManagerEvent.  
+ Tato obslužná rutina události je vytvořen a předaný metodě IUIAnimationManager::SetManagerEventHandler, při volání CAnimationController::EnableAnimationManagerEvent.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CUIAnimationCallbackBase`  
@@ -70,18 +70,18 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **Záhlaví:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Je požadována sada Visual Studio 2010 SP1.  
   
- Vytvoří objekt CAnimationManagerEventHandler.  
+ Vytvoří objekt canimationmanagereventhandler –.  
   
 ```  
 CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Je požadována sada Visual Studio 2010 SP1.  
   
- Vytvoří instanci objektu CAnimationManagerEventHandler.  
+ Vytvoří instanci objektu canimationmanagereventhandler –.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -91,18 +91,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="parameters"></a>Parametry  
  *pAnimationController*  
- Ukazatel na animace řadiči, který bude přijímat události.  
+ Ukazatel na řadič animace, který se zobrazí události.  
   
  *ppManagerEventHandler*  
- Výstup. Pokud metoda uspěje ji obsahuje ukazatel na objekt COM, který bude zpracovávat aktualizací stavu pro správce animace.  
+ Výstup. Pokud metoda uspěje, obsahuje ukazatel na objekt modelu COM, který bude zpracovávat aktualizace stavu Správce animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
+ Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Je požadována sada Visual Studio 2010 SP1.  
   
- Voláno, pokud došlo ke změně stavu animace správce.  
+ Volá se při změně stavu Správce animace.  
   
 ```  
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -118,12 +118,12 @@ IFACEMETHOD(OnManagerStatusChanged)(
  Předchozí stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy aktuální implementace vrátí S_OK;  
+ Aktuální implementace vždy vrátí hodnotu S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ Je požadována sada Visual Studio 2010 SP1.  
   
- Ukládá ukazatel animace řadiče události trasy.  
+ Uchovává ukazatel na řadič animace směrování událostí.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ### <a name="parameters"></a>Parametry  
  *pAnimationController*  
- Ukazatel na animace řadiči, který bude přijímat události.  
+ Ukazatel na řadič animace, který se zobrazí události.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy](../../mfc/reference/mfc-classes.md)

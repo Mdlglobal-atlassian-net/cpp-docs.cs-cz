@@ -1,5 +1,5 @@
 ---
-title: __stosb | Microsoft Docs
+title: __stosb | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42466217"
 ---
 # <a name="stosb"></a>__stosb
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Generuje řetězcovou instrukci úložiště (`rep stosb`).  
+ Generuje instrukce řetězec úložiště (`rep stosb`).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,22 +44,22 @@ void __stosb(
  [out] `Dest`  
  Cíl operace.  
   
- [v] `Data`  
- Data, která k ukládání.  
+ [in] `Data`  
+ Data k uložení.  
   
- [v] `Count`  
+ [in] `Count`  
  Délka bloku bajty k zápisu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-|Vnitřní funkce|Architektura|  
+|Vnitřní|Architektura|  
 |---------------|------------------|  
-|`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86, x64|  
   
  **Soubor hlaviček** \<intrin.h >  
   
 ## <a name="remarks"></a>Poznámky  
- Výsledkem je, že znak `Data` jsou zapsána do bloku `Count` bajtů `Dest` řetězec.  
+ Výsledkem je, že znak `Data` je zapsán do bloku `Count` bajtů v `Dest` řetězec.  
   
  Tato rutina je k dispozici pouze jako vnitřní objekt.  
   
@@ -90,7 +90,7 @@ int main()
 *@@@@@@**************************  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

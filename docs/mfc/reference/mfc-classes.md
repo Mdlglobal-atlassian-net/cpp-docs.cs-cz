@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027810"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466154"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation Class (MFC).  
@@ -852,7 +852,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Napodobuje vzhled systému Microsoft Windows XP nebo Microsoft Vista, když uživatel vybere na Windows XP nebo Vista motiv.  
   
  [CMFCVisualManagerWindows7 – třída](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Poskytuje vzhled aplikace [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace.  
+ Poskytuje vzhled aplikace Windows 7 aplikace.  
   
  [CMFCWindowsManagerDialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Umožňuje uživateli spravovat podřízená okna MDI v aplikaci MDI.  
@@ -1020,7 +1020,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
  Používá pro zvláštní případ dialogového okna upravení odkazů OLE, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
   
  [COleVariant – třída](../../mfc/reference/colevariant-class.md)  
- Zapouzdřuje [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) datového typu.  
+ Zapouzdřuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.  
   
  [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.  

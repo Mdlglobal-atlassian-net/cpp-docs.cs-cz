@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: strictstrings (zakázání převodů typů řetězcových literálů) | Microsoft Docs'
+title: '/ Zc: strictstrings (zakázání převodů typů řetězcových literálů) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5055d7d1e7804512fa8f1a72bbdb27c483d6fdd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379936"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581136"
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Zakázání převodů typů řetězcových literálů)
 
--Li zadána, vyžaduje kompilátor striktní `const`-kvalifikace shoda pro ukazatele inicializovat pomocí textové literály.
+-Li zadána, kompilátor, vyžaduje přísné `const`-kvalifikace pro ukazatele inicializované s použitím řetězcové literály.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,11 +38,11 @@ ms.locfileid: "32379936"
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **/Zc: strictstrings** není zadaný, kompilátor vynucuje standardní C++ `const` kvalifikaci pro textové literály jako typ se pole `const char`' nebo ' pole `const wchar_t`', v závislosti na deklaraci. Textové literály jsou neměnné a pokus o změnit obsah jedné výsledkem chyba narušení přístupu za běhu. Je potřeba deklarovat ukazatel řetězec jako `const` inicializovat pomocí řetězcový literál nebo použijte explicitní `const_cast` k chybě při inicializaci jinou hodnotu než`const` ukazatel. Ve výchozím nastavení nebo pokud **/Zc:strictStrings-** není zadaný, kompilátor nevynucuje standardní C++ `const` kvalifikaci pro řetězec ukazatele inicializovat pomocí textové literály.
+Pokud **/Zc: strictstrings** není zadána, vynucuje kompilátor standard C++ `const` kvalifikace pro řetězcové literály, například typ "pole `const char`" nebo "pole `const wchar_t`" v závislosti na deklaraci. Řetězcové literály jsou neměnné a pokus upravit obsah jednoho způsobí chybu narušení přístupu za běhu. Je třeba deklarovat ukazatel řetězce jako `const` k inicializaci pomocí řetězcového literálu nebo použít explicitní `const_cast` inicializovat non -`const` ukazatele. Ve výchozím nastavení nebo pokud **/Zc:strictStrings-** není zadán, kompilátor nevynucuje standard C++ `const` kvalifikaci pro řetězec ukazatele inicializovaný s použitím řetězcových literálů.
 
-**/Zc: strictstrings** možnost je ve výchozím nastavení vypnuta. [/ Projektovou-](permissive-standards-conformance.md) – možnost kompilátoru implicitně nastaví tato možnost, ale můžete přepsat pomocí **/Zc:strictStrings-**.
+**/Zc: strictstrings** možnost je vypnuto ve výchozím nastavení. [/ Permissive-](permissive-standards-conformance.md) – možnost kompilátoru implicitně nastaví tuto možnost, ale lze přepsat pomocí **/Zc:strictStrings-**.
 
-Použití **/Zc: strictstrings** možnost, aby se zabránilo kompilace nesprávný kód. Tento příklad ukazuje, jak chybu jednoduchý deklarace vede k chybě v době běhu:
+Použití **/Zc: strictstrings** možnost, chcete-li zabránit kompilaci nesprávného kódu. Tento příklad ukazuje, jak jednoduchá chyba deklarace vede k chybě za běhu:
 
 ```cpp
 // strictStrings_off.cpp
@@ -65,21 +65,21 @@ int main() {
 }
 ```
 
-Pokud používáte `auto` deklarovat ukazatel řetězec, kompilátor vytvoří správný `const` ukazatel deklarace typu pro vás. Pokus o upravovat obsah `const` ukazatel je hlášen kompilátoru za chybu.
+Pokud používáte `auto` deklarovat ukazatel na řetězec, kompilátor vytvoří správný `const` deklarace typu ukazatele za vás. Pokus upravit obsah `const` ukazatel je vykázán kompilátorem jako chyba.
 
 > [!NOTE]
-> Standardní knihovna C++ v [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] nepodporuje **/Zc: strictstrings** – možnost kompilátoru ladění sestavení. Pokud se zobrazí několik [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) výstupní chyby v buildu, příčinou může být.
+> Standardní knihovny C++ v sadě Visual Studio 2013 se nepodporuje **/Zc: strictstrings** sestavení – možnost kompilátoru v ladění. Pokud se zobrazí několik [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) chyby ve vašem buildu output, to může být příčinou.
 
-Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc: strictstrings** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc: strictstrings** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>

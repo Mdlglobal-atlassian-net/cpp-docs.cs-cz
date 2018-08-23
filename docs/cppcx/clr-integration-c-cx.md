@@ -1,38 +1,38 @@
 ---
-title: Integrace modulu CLR (C + +/ CX) | Microsoft Docs
+title: Integrace modulu CLR (C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50b455bd3b6fd4a96c3181b60904cb7a3250e866
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 527ce8beaf5fb08d0642026336be193e3b39d73b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086893"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581121"
 ---
 # <a name="clr-integration-ccx"></a>Integrace modulu CLR (C + +/ CX)
-Některé typy prostředí Windows Runtime přijímat zvláštní zpracování v jazyce C + +/ CX a jazyky, které jsou založeny na modul CLR (CLR). Tento článek popisuje, jak několik typů v jednom jazyce mapování na jiném jazyce. Například modulu CLR mapuje Windows.Foundation.IVector System.Collections.IList, Windows.Foundation.IMap System.Collections.IDictionary a tak dále. Podobně platí, jazyka C + +/ CX speciálně mapuje typy například Platform::Delegate a Platform::String.  
+Některé typy Windows Runtime přijímat zvláštní zpracování v jazyce C + +/ CX a jazyky, které jsou založené na common language runtime (CLR). Tento článek popisuje, jak několika typy v jednom jazyce mapují na jiný jazyk. Například modul CLR mapuje Windows.Foundation.IVector rozhraní System.Collections.IList, Windows.Foundation.IMap rozhraní System.Collections.IDictionary a tak dále. Obdobně C + +/ CX speciálně mapuje typy, jako jsou Platform::Delegate – a Platform::String.  
   
-## <a name="mapping-the-windows-runtime-to-ccx"></a>Mapování prostředí Windows Runtime pro C + +/ CX  
- Když C + +/ CX čtení souboru metadat (.winmd) systému Windows, kompilátor automaticky mapuje běžné prostředí Windows Runtime obory názvů a typy pro C + +/ CX obory názvů a typy. Například číselného typu prostředí Windows Runtime `UInt32` se automaticky mapují na `default::uint32`.  
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Mapování modulu Windows Runtime pro C + +/ CX  
+ Když C + +/ CX přečte soubor metadat (.winmd) pro Windows, kompilátor automaticky mapují běžné obory názvů Windows Runtime a typy pro C + +/ CX obory názvů a typů. Například číselný typ Windows Runtime `UInt32` automaticky se namapuje na `default::uint32`.  
   
- C + +/ CX mapuje několik dalších typů prostředí Windows Runtime k **platformy** oboru názvů. Například **Windows::Foundation –** HSTRING popisovač, který představuje jen pro čtení textového řetězce Unicode, je namapovaný na C + +/ CX `Platform::String` třídy. Při operaci prostředí Windows Runtime vrátí chybu HRESULT, je mapován na C + +/ CX `Platform::Exception`. Další informace najdete v tématu [vestavěné typy](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + +/ CX mapuje několik dalších typů modulu Windows Runtime na **platformy** oboru názvů. Například **Windows::Foundation –** popisovače HSTRING, který reprezentuje textový řetězec Unicode jen pro čtení, je namapována na C + +/ CX `Platform::String` třídy. Při operaci Windows Runtime vrátí chybu HRESULT, je namapována na C + +/ CX `Platform::Exception`. Další informace najdete v tématu [předdefinovaných typů](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
   
- C + +/ CX také mapuje určité typy v oborech názvů prostředí Windows Runtime k rozšíření funkcí typu. U těchto typů, C + +/ CX poskytuje pomocníka konstruktorů a metod, které jsou specifické pro C++ a nejsou k dispozici v souboru standardní .winmd tohoto typu.  
+ C + +/ CX také mapuje určité typy v oborech názvů Windows Runtime k vylepšení typu funkce. Pro tyto typy, C + +/ CX poskytuje pomocné rutiny konstruktorů a metod, které jsou specifické pro C++ a nejsou k dispozici v souboru .winmd standardní tohoto typu.  
   
- Následující seznamy shrnují struktury hodnotu, která podporuje nové konstruktory a pomocné metody. Pokud jste napsali dříve kód, který používá struktura inicializace seznamy, změňte ho na použití nově přidané konstruktory.  
+ Následující seznamy shrnují struktuře hodnot, které podporují nové konstruktory a metody helper. Pokud jste dřív napsali kód, který používá struktury inicializační seznamy, změňte ji na použití nově přidané konstruktory.  
   
  **Windows::Foundation –**  
   
--   bod  
+-   Bod  
   
--   Rect –  
+-   Rect  
   
 -   Velikost  
   
@@ -56,7 +56,7 @@ Některé typy prostředí Windows Runtime přijímat zvláštní zpracování v
   
  **Windows::UI::Xaml::Media**  
   
--   Matice  
+-   matice  
   
  **Windows::UI::XAML::Media::Animation**  
   
@@ -69,9 +69,9 @@ Některé typy prostředí Windows Runtime přijímat zvláštní zpracování v
 -   Matrix3D  
   
 ## <a name="mapping-the-clr-to-ccx"></a>Mapování modulu CLR pro C + +/ CX  
- Soubor .winmd přečtení kompilátory jazyka Visual C++ nebo C# mapují automaticky určitých typů v souboru metadat pro příslušné C + +/ CX nebo CLR typů. Například v modulu CLR, IVector\<T > rozhraní je namapována na IList\<T >. Ale v jazyce C + +/ CX, IVector\<T > rozhraní není namapován na jiný typ.  
+ Při čtení souboru .winmd kompilátory jazyka Visual C++ nebo C# mapují automaticky určitých typů v souboru metadat pro příslušné C + +/ CX nebo CLR typy. Například v prostředí CLR IVector\<T > rozhraní je namapována na IList\<T >. Ale v jazyce C + +/ CX, IVector\<T > rozhraní není namapována na jiného typu.  
   
- IReference\<T > v prostředí Windows Runtime mapuje Nullable\<T > v rozhraní .NET.  
+ IReference\<T > v modulu Windows Runtime mapuje na Nullable\<T > v rozhraní .NET.  
   
 ## <a name="see-also"></a>Viz také  
  [Spolupráce s jinými jazyky](../cppcx/interoperating-with-other-languages-c-cx.md)

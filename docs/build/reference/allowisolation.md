@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION | Microsoft Docs
+title: -ALLOWISOLATION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368971"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42466408"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
-Určuje chování pro vyhledání manifestu.  
+Určuje chování při vyhledávání manifestu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +36,15 @@ Určuje chování pro vyhledání manifestu.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- **/ ALLOWISOLATION** způsobí, že operační systém manifest vyhledávání a zatížení.  
+ **/ ALLOWISOLATION** způsobí, že operační systém k vyhledání a načtení manifestu.  
   
- **/ ALLOWISOLATION** je výchozí.  
+ **/ ALLOWISOLATION** je výchozí nastavení.  
   
- **/ALLOWISOLATION:No** označuje, zda jsou načteny spustitelné soubory, jako kdyby nebyla žádná manifest a způsobí [Editbin – odkaz](../../build/reference/editbin-reference.md) nastavit `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bitů v hlavičce volitelné `DllCharacteristics` pole.  
+ **/ALLOWISOLATION:No** označuje, zda jsou načteny spustitelné soubory, jako by nebyly žádné manifestu a způsobí, že [Editbin – referenční dokumentace](../../build/reference/editbin-reference.md) nastavit `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit ve volitelné hlavičce `DllCharacteristics` pole.  
   
- Při izolaci je zakázán pro spustitelný soubor, zavaděč systému Windows není zkuste najít manifest aplikace pro nově vytvořený proces. Nový proces nemá výchozí aktivační kontext, i když je manifestu v samotné spustitelný soubor nebo pokud je manifestu, který má název *název spustitelného souboru*. exe.manifest.  
+ Izolace zakázán pro spustitelný soubor, nebude Windows zavaděče pokuste se najít manifest aplikace pro nově vytvořený procesu. Nový proces nemá výchozí aktivační kontext, i když je manifest ve spustitelném souboru, samotné nebo pokud je manifest, který má název *název spustitelného souboru*. exe.manifest.  
   
 ## <a name="see-also"></a>Viz také  
  [– Možnosti nástroje EDITBIN](../../build/reference/editbin-options.md)   
  [/ ALLOWISOLATION (vyhledání manifestu)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Manifest soubory – referenční dokumentace](http://msdn.microsoft.com/library/aa375632.aspx)
+ [Referenční příručka souborů manifestu](/windows/desktop/SbsCs/manifest-files-reference)

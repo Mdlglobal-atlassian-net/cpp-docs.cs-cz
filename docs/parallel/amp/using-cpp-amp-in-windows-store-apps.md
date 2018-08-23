@@ -1,5 +1,5 @@
 ---
-title: Používání modelu C++ AMP v aplikacích pro UPW | Microsoft Docs
+title: Používání modelu C++ AMP v aplikacích pro UWP | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3676bc8f2c4ecbd89f01fb9257c7306a66827548
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696147"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584013"
 ---
-# <a name="using-c-amp-in-uwp-apps"></a>Používání modelu C++ AMP v aplikacích pro UPW
-C++ AMP (C++ Accelerated Massive Parallelism) ve vaší aplikaci pro univerzální platformu Windows (UWP) slouží k provádění výpočtů na grafický procesor (grafiky zpracování Unit) nebo jiné výpočetní akcelerátorů. Ale C++ AMP neposkytuje rozhraní API pro práci přímo s typy prostředí Windows Runtime a prostředí Windows Runtime neposkytuje obálku pro C++ AMP. Při použití prostředí Windows Runtime typy ve vašem kódu – včetně těch, které jste sami vytvořili, je nutné je převést na typy, které jsou kompatibilní s C++ AMP.  
+# <a name="using-c-amp-in-uwp-apps"></a>Používání modelu C++ AMP v aplikacích pro UWP
+C++ AMP (C++ Accelerated Massive Parallelism) můžete použít v aplikaci pro univerzální platformu Windows (UPW) provádět výpočty na GPU (Graphic Processing Unit) nebo jiných počítačových akcelerátorech. Nicméně C++ AMP neposkytuje rozhraní API pro práci přímo s typy prostředí Windows Runtime a modulu Windows Runtime nenabízí obal pro C++ AMP. Při použití typů Windows Runtime ve vašem kódu – včetně těch, které jste sami vytvořili, je nutné je převést na typy, které jsou kompatibilní s C++ AMP.  
   
 ## <a name="performance-considerations"></a>Důležité informace o výkonu  
- Pokud používáte [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) k vytvoření aplikace pro univerzální platformu Windows (UWP), doporučujeme použít typy prostý starý dat (POD) společně s souvislý úložiště – například `std::vector` nebo pole stylu jazyka C – pro data, která bude použita s C++ AMP. Můžete dosáhnout vyšší výkon než pomocí jiných POD typy nebo Windows RT kontejnerů, protože žádné zařazování má proběhnout.  
+ 
+Pokud používáte rozšíření součásti Visual C++ C + +/ CX k vytvoření aplikace pro univerzální platformu Windows (UPW), doporučujeme používat typy prostý staré dat (POD) spolu se souvislým úložištěm – například `std::vector` nebo pole stylu C – pro data, která bude použít s C++ AMP. To může pomoci dosáhnout vyššího výkonu než pomocí typů bez POD nebo kontejnerů RT systému Windows, protože k dojít k žádnému zařazování.  
   
- V C++ AMP jádra, pro přístup k datům, uložená tímto způsobem právě zabalení `std::vector` nebo pole úložiště v `concurrency::array_view` a potom pomocí zobrazení pole v `concurrency::parallel_for_each` smyčka:  
+V jádře C++ AMP pro přístup k datům, která je uložena tímto způsobem pouze zabalte `std::vector` nebo pole úložiště `concurrency::array_view` a potom použijte zobrazení pole ve `concurrency::parallel_for_each` smyčka:  
   
 ```cpp  
 // simple vector addition example  
@@ -46,22 +47,23 @@ concurrency::parallel_for_each(av0.extent, [=](concurrency::index<1> idx) restri
 ```  
   
 ## <a name="marshaling-windows-runtime-types"></a>Zařazování typů modulu Windows Runtime  
- Při práci s rozhraními API Windows Runtime, můžete chtít použít C++ AMP na data, která je uložená v prostředí Windows Runtime kontejneru, jako `Platform::Array<T>^` nebo komplexními datovými typy, jako jsou třídy nebo struktury, které jsou deklarovány s použitím `ref` – klíčové slovo nebo `value`</C4>–klíčovéslovo. V těchto situacích máte nějakou práci navíc ke zpřístupnění dat C++ AMP.  
+ 
+Při práci s rozhraními API Windows Runtime můžete chtít použít C++ AMP na data, která je uložená v kontejneru Windows Runtime, jako `Platform::Array<T>^` nebo v komplexních datových typech, jako jsou třídy nebo struktury, které jsou deklarovány s použitím **ref** klíčové slovo nebo **hodnotu** – klíčové slovo. V takových situacích je nutné provést další úkony a zpřístupnit data C++ AMP.  
   
-### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::Array\<T > ^, kde T představuje typ POD  
- Když narazíte `Platform::Array<T>^` a T představuje typ POD, máte přístup k jeho základní úložiště jenom pomocí `get` – členská funkce:  
+### <a name="platformarrayt-where-t-is-a-pod-type"></a>Platform::Array\<T > ^, kde T je typ POD  
+Pokud se setkáte `Platform::Array<T>^` a T je typ POD, můžete přístup k jeho základnímu úložišti stačí použít `get` členské funkce:  
   
 ```cpp  
 Platform::Array<float>^ arr; // Assume that this was returned by a Windows Runtime API  
 concurrency::array_view<float, 1> av(arr->Length, &arr->get(0));
 ```  
   
- Pokud T není POD typem, použijte pro používání data C++ AMP technika, který je popsán v následující části.  
+Pokud T není POD typ, použijte techniku, která je popsaná v následující části dat s C++ AMP.  
   
 ### <a name="windows-runtime-types-ref-classes-and-value-classes"></a>Typy modulu Windows Runtime: třídy deklarované s použitím klíčových slov ref a value  
- C++ AMP nepodporuje komplexními datovými typy. To zahrnuje bez POD typy a všechny typy, které jsou deklarovány s použitím `ref` – klíčové slovo nebo `value` – klíčové slovo. Pokud se používá nepodporovaný typ `restrict(amp)` se vygeneruje kontext chyby kompilace.  
+C++ AMP nepodporuje komplexní datové typy. Jedná se o typy bez POD a všechny typy, které jsou deklarovány pomocí **ref** – klíčové slovo nebo **hodnotu** – klíčové slovo. Pokud je použit nepodporovaný typ v `restrict(amp)` kontextu, Chyba kompilace je vygenerována.  
   
- Pokud narazíte na nepodporovaný typ, můžete zkopírovat zajímavé části svých dat do `concurrency::array` objektu. Kromě vytváření data k dispozici pro C++ AMP využívat, můžete tento postup ručního kopírování také zvýšit výkon, tím se maximalizuje polohu dat a zajistíte, že data, která se nepoužijí není zkopírovány do akcelerátor. Další výkon lze zvýšit pomocí *pracovní pole*, což je speciální formu `concurrency::array` poskytuje nápovědu pro modul runtime AMP, který pole by mělo být optimalizované pro časté přenos mezi nimi a ostatní pole na Zadaný akcelerátoru.  
+Pokud narazíte na nepodporovaný typ, můžete kopírovat zajímavé části data do `concurrency::array` objektu. Kromě zpřístupnění dat pro použití C++ AMP využívat, můžete tento postup ručního kopírování také zvýšit výkon, maximalizací lokality dat a zajištěním, že se data, která se nepoužije zkopírována na akcelerátor. Další výkon lze zvýšit pomocí *pracovního pole*, což je zvláštní forma `concurrency::array` poskytující nápovědu k modulu runtime AMP, která pole by měla být optimalizováno pro častý přenos mezi ním a jinými poli na určený akcelerátor.  
   
 ```cpp  
 // pixel_color.h  
@@ -119,6 +121,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Vytvoření první aplikace UWP s použitím jazyka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
- [Vytváření Windows Runtime komponent v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
-
+ 
+[Vytvoření první aplikace pro UPW pomocí jazyka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
+[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
