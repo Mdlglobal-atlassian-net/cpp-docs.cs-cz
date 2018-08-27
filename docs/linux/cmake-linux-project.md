@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8e9f5527917dcab663670d59f7a4ce0f51948bfb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464616"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900509"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -87,10 +87,16 @@ Chcete-li změnit výchozí nastavení CMake, zvolte **CMake | Změnit nastaven�
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ Chcete-li změnit výchozí nastavení CMake, zvolte **CMake | Změnit nastaven�
 }
 ```
 
-`name` Hodnota může být cokoli, co chcete. `remoteMachineName` Hodnota určuje, které vzdáleného systému do cíle, v případě, že máte více než jedno. Technologie IntelliSense je povolený pro toto pole můžete vybrat správné systému. Pole `remoteCMakeListsRoot` Určuje, které vaše zdroje projektu budou zkopírovány do vzdáleného systému. Pole `remoteBuildRoot` je, kde se vygeneruje výstup sestavení na vzdáleném systému. Zda je také zkopírován výstup místně do umístění určeného proměnnou `buildRoot`.
+`name` Hodnota může být cokoli, co chcete. `remoteMachineName` Hodnota určuje, které vzdáleného systému do cíle, v případě, že máte více než jedno. Technologie IntelliSense je povolený pro toto pole můžete vybrat správné systému. Pole `remoteCMakeListsRoot` Určuje, které vaše zdroje projektu budou zkopírovány do vzdáleného systému. Pole `remoteBuildRoot` je, kde se vygeneruje výstup sestavení na vzdáleném systému. Zda je také zkopírován výstup místně do umístění určeného proměnnou `buildRoot`. `remoteInstallRoot` a `installRoot` pole se podobají `remoteBuildRoot` a `buildRoot`s výjimkou případů, použijí se při provádění instalace cmake. `remoteCopySources` Položka řídí, jestli vaše místní zdroje se zkopírují do vzdáleného počítače. Může být nastavíte na hodnotu false Pokud máte velké množství souborů a již synchronizujete zdroje sami. `remoteCopyOutputVerbosity` Hodnota určuje úroveň podrobností na krok kopírování v případě, že potřebujete diagnostikovat chyby. `remoteCopySourcesConcurrentCopies` Položka řídí, jak velký počet procesů se vytvoří podřízený proces udělat kopie. `remoteCopySourcesMethod` Hodnota může být jedna z rsync nebo sftp. `remoteCopySourcesExclusionList` Pole umožňuje řídit, co se zkopíruje do vzdáleného počítače. `rsyncCommandArgs` Hodnota umožňuje řídit rsync metodu kopírování. `remoteCopyBuildOutput` Pole určuje, zda je zkopírován výstup vzdáleného buildu do složky místního sestavení.
+
+Existují také některé volitelné nastavení, která vám pomůže k větší kontrolu:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Tyto možnosti umožňují spuštění příkazů v okně vzdáleného před a po sestavení a před generování CMake. Může být libovolný platný příkaz na vzdáleného pole. Výstup je přesměrovaná zpět do sady Visual Studio.
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>Podporované verze CMake ze zdroje sestavení
 

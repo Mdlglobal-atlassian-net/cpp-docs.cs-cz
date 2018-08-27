@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb06a4ef2229b2b9e98bf7acabbe757744fc73
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465150"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900697"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -1680,6 +1680,8 @@ struct S : Base<T> {
 ```
 
 Chcete-li chybu opravit, změňte `return` příkazu `return this->base_value;`.
+
+**Poznámka:** v knihovně python Boost došlo po dlouhou dobu konkrétní MSVC alternativní řešení pro dopředné deklarace šablony v [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). V části [/ permissive-](build/reference/permissive-standards-conformance.md) režimu od verze Visual Studio 2017 verze 15.8 (_MSC_VER = 1915), a kompilátorem MSVC správně provede vyhledávání názvu závislého na argumentu (ADL) a je konzistentní s jinými kompilátory, vytváření tohoto řešení guard zbytečné. Aby bylo možné vyhnout se této chybě *C3861: 'unwind_type': identifikátor se nenašel*, naleznete v tématu [žádosti o přijetí změn 229](https://github.com/boostorg/python/pull/229) v úložišti Boostorg k aktualizaci souboru hlaviček. Máte už opravy [vcpkg](vcpkg.md) Boost balíčku, tak pokud získat nebo upgrade zdroje Boost z vcpkg pak nepotřebujete použít opravu samostatně.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>dál deklarace a definice v oboru názvů std
 
