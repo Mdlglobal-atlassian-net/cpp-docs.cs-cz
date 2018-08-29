@@ -1,5 +1,5 @@
 ---
-title: Dynamické rozložení | Microsoft Docs
+title: Dynamické rozložení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -12,80 +12,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07430c4b58948c326410c57a1ea4cfa63f48c932
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121027"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132059"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 
-MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velikost můžete vytvořit a můžete řídit způsob, jakým upraví rozložení pro změnu velikosti. Tlačítka v dolní části dialogového okna můžete například připojit k dolnímu okraji tak, aby zůstaly vždy v dolní části. Můžete také nastavit určité ovládací prvky, jako je například textová pole, rozevírací seznamy a editboxes rozbalte jako uživatel rozšíří dialogové okno.
+S knihovnou MFC v sadě Visual Studio 2015 můžete vytvořit dialogová okna, která uživatel může změnit velikost a můžete řídit způsob, jakým upraví rozložení pro změnu velikosti. Například můžete připojit tlačítek v dolní části dialogového okna na dolní okraj tak, aby zůstaly vždy v dolní části. Některé ovládací prvky, jako je například textová pole, rozevírací seznamy a editboxes můžete také nastavit na rostoucí je uživatel rozbalí dialogového okna.
 
-## <a name="specifying-dynamic-layout-settings-for-an-mfc-dialog-box"></a>Zadání nastavení dynamické rozložení pro dialogového okna knihovny MFC
+## <a name="specifying-dynamic-layout-settings-for-an-mfc-dialog-box"></a>Zadání nastavení dynamické rozložení dialogového okna knihovny MFC
 
-Když uživatel změní velikost dialogové okno, ovládací prvky v dialogovém okně můžete změnit velikost nebo v směrech X a Y. Dynamické rozložení se označuje změnu v hodnotě velikosti nebo umístění ovládacího prvku, když uživatel změní velikost dialogové okno. Například následující je dialogové okno před změnu velikosti:
+Když uživatel změní dialogové okno, ovládacích prvků v dialogovém okně můžete změnit velikost nebo ve směru X a Y. Změna velikosti nebo pozice ovládacího prvku, když uživatel změní dialogové okno se nazývá dynamické rozložení. Například následující je dialogové okno před během změny velikosti:
 
-![Dialogové okno před změnu velikosti. ] (../mfc/media/mfcdynamiclayout4.png "mfcdynamiclayout4")
+![Dialogové okno před během změny velikosti. ](../mfc/media/mfcdynamiclayout4.png "mfcdynamiclayout4")
 
-Po změnou velikosti, oblasti listbox je zvýšena na Zobrazit více položek a tlačítka se přesouvají společně s pravém dolním rohu:
+Po změně šířky, oblasti listbox je zvýšena na Zobrazit další položky a tlačítka se přesouvají společně s pravém dolním rohu:
 
-![Dialogové okno po změnu velikosti. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")
+![Dialogové okno po změně šířky. ](../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")
 
-Dynamické rozložení můžete řídit zadáním podrobnosti pro každý ovládací prvek v editoru prostředků v prostředí IDE, nebo to můžete provést sestavují programově pomocí přístupu k `CMFCDynamicLayout` objektu pro konkrétní ovládací prvek a nastavení vlastností.
+Dynamické rozložení můžete řídit tak, že zadáte podrobnosti pro každý ovládací prvek v editoru prostředků v prostředí IDE, nebo to můžete provést sestavují programově díky přístupu `CMFCDynamicLayout` objekt pro konkrétní ovládací prvek a nastavení vlastností.
 
-### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Dynamické rozložení vlastnosti nastavení v editoru prostředků
+### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Nastavení vlastností dynamických rozložení v editoru prostředků
 
-Dynamické rozložení chování pro dialogové okno můžete nastavit bez nutnosti psaní jakéhokoli kódu pomocí editoru prostředků.
+Dynamické rozložení chování pro dialogové okno můžete nastavit bez nutnosti psát jakýkoli kód, pomocí editoru prostředků.
 
-#### <a name="to-set-dynamic-layout-properties-in-the-resource-editor"></a>Chcete-li nastavit vlastnosti dynamické rozložení v editoru prostředků
+#### <a name="to-set-dynamic-layout-properties-in-the-resource-editor"></a>Chcete-li nastavit vlastnosti dynamického rozložení v editoru prostředků
 
-1. Pomocí projektu MFC otevřený otevřete dialogové okno, které chcete pracovat v editoru dialogového okna.
+1. Pomocí projektu knihovny MFC otevřený otevřete dialogové okno, které chcete pracovat v editoru dialogového okna.
 
-     ![Otevřete dialogové okno v editoru prostředků. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")
+     ![V editoru prostředků, otevřete dialogové okno. ](../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")
 
-2. Vyberte ovládací prvek a v okně vlastností nastavte její vlastnosti dynamické rozložení. **Dynamické rozložení** oddíl v okně Vlastnosti obsahuje vlastnosti **přesun typ**, **typ nastavení velikosti**a v závislosti na vybrané pro tyto vlastnosti hodnoty konkrétní vlastnosti, které definují kolik ovládací prvky přesunout nebo změňte velikost. **Přesunutí typ** Určuje, jak přesunout ovládacího prvku jako se změní velikost dialogového okna; **Typ nastavení velikosti** Určuje, jak je nastavena velikost ovládacího prvku jako se změní velikost dialogového okna. **Přesunutí typ** a **typ nastavení velikosti** může být **vodorovné**, **svislé**, **i**, nebo **žádné**v závislosti na dimenzí, které chcete změnit dynamicky. Vodorovný je dimenze X; Svislý je směru osy Y.
+2. Vyberte ovládací prvek a v okně Vlastnosti nastavte jeho vlastnosti dynamické rozložení. **Dynamické rozložení** oddíl v okně Vlastnosti obsahuje vlastnosti **přesunutí typu**, **typ velikosti**a v závislosti na vybraných pro tyto vlastnosti hodnot specifické vlastnosti, které definují, kolik ovládacích prvků, přesunout nebo změnit velikost. **Typ posunutí** Určuje, jak se přesune ovládací prvek při změně velikost dialogového okna; **Typ velikosti** Určuje, jak ovládací prvek svou velikost podle velikosti dialogového okna se změní. **Typ posunutí** a **typ velikosti** může být **vodorovné**, **svislé**, **obě**, nebo **žádný**v závislosti na rozměrech, které chcete změnit dynamicky. Dimenze X; je vodorovně Je směru osy Y.
 
-3. Pokud chcete ovládací prvek tlačítko na pevnou velikost a umístění v pravé dolní zůstane, jako je běžné, že **OK** nebo **zrušit** tlačítka, nastavte **typ nastavení velikosti** k  **Žádné**a nastavte **přesun typ** k **i**. Pro **přesun X** a **přesun Y** hodnoty v části **přesun typ**, nastavte 100 % pro ovládací prvek, aby zůstat pevné vzdálenost od dolní pravém rohu.
+3. Pokud chcete ovládací prvek, jako je například tlačítko bude na pevné velikosti a zůstat na místě v pravém dolním rohu, jako je běžné, že **OK** nebo **zrušit** tlačítka, nastavte **velikosti typu** k  **Žádný**a nastavte **přesunutí typu** k **obě**. Pro **přesun X** a **přesun Y** hodnoty v rámci **přesunutí typu**, nastavit 100 % na ovládací prvek, aby zůstanou pevné vzdálenost od nejnižší pravém rohu.
 
      ![Dynamické rozložení](../mfc/media/mfcdynamiclayout1.png "mfcdynamiclayout1")
 
-4. Předpokládejme, že máte také ovládací prvek, který chcete rozšířit jako rozšíří dialogové okno. Obvykle uživatel může rozšířit dialogové okno Chcete-li rozbalit Víceřádkový textové pole pro zvětšení velikosti oblasti textového nebo se může rozšířit ovládací prvek seznamu zobrazíte další data. Pro tento případ, nastavte **typ nastavení velikosti** do obou a nastavte **přesun typ** na hodnotu none. Potom nastavte **nastavení velikosti X** a **nastavení velikosti Y** hodnoty do 100.
+4. Předpokládejme, že máte také ovládací prvek, který chcete rozšířit jako rozbalí dialogového okna. Obvykle uživatel může rozbalit dialogové okno aby bylo možné rozšířit víceřádkové textové pole zvýšit velikost textového pole, nebo se může rozšířit ovládací prvek seznamu zobrazíte další data. V takovém případě nastavte **typ velikosti** na obě a nastavte **přesunutí typu** na hodnotu none. Potom nastavte **velikosti X** a **velikosti Y** hodnoty 100.
 
      ![Dynamické rozložení nastavení](../mfc/media/mfcdynamiclayout2.png "mfcdynamiclayout2")
 
-5. Experimentujte s jiné hodnoty, které může mít smysl pro vaše ovládací prvky. Dialogové okno s jednořádkové textové pole můžou mít **typ nastavení velikosti** nastavena na **vodorovné** pouze, například.
+5. Můžete experimentovat s jiné hodnoty, které může mít smysl pro vaše ovládací prvky. Dialogové okno s jednořádkové textové pole může mít **typ velikosti** nastavena na **vodorovné** jenom pro příklad.
 
-### <a name="setting-dynamic-layout-properties-programmatically"></a>Nastavení vlastností dynamické rozložení prostřednictvím kódu programu
+### <a name="setting-dynamic-layout-properties-programmatically"></a>Nastavení vlastností dynamických rozložení prostřednictvím kódu programu
 
-Předchozí postup je užitečný pro zadání vlastnosti dynamické rozložení pro dialogové okno v době návrhu, ale pokud chcete řídit dynamické rozložení za běhu, můžete nastavit vlastnosti dynamické rozložení prostřednictvím kódu programu.
+Z předchozího postupu je užitečné pro určení dynamické rozložení vlastností pro dialogové okno v době návrhu, ale pokud chcete řídit dynamické rozložení za běhu, můžete nastavit vlastnosti dynamické rozložení prostřednictvím kódu programu.
 
-#### <a name="to-set-dynamic-layout-properties-programmatically"></a>Chcete-li nastavit vlastnosti dynamické rozložení prostřednictvím kódu programu
+#### <a name="to-set-dynamic-layout-properties-programmatically"></a>Chcete-li nastavit vlastnosti dynamického rozložení prostřednictvím kódu programu
 
-1. Najít nebo vytvořit místo v kódu implementace třídy dialogového okna, ve které chcete zadat dynamické rozložení pro dialogové okno. Například můžete chtít například přidání metody `AdjustLayout` v dialogovém okně a volání z umístí kde je potřeba změnit rozložení. Může nejprve zavolat to z konstruktoru, nebo po provedení změn do dialogového okna.
+1. Vyhledat nebo vytvořit místo v kódu implementace vlastní třídy dialogového okna, ve které chcete zadat dynamické rozložení pro dialogové okno. Například můžete chtít například přidat metodu `AdjustLayout` v dialogových oken a volání z umístí where potřeba změnit rozložení. Můžete nejprve zavolat to z konstruktoru, nebo po provedení změn do dialogového okna.
 
-2. Pro dialogové okno, volání [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metoda `CWnd` třídy. `GetDynamicLayout` vrátí ukazatel na `CMFCDynamicLayout` objektu.
+2. V dialogovém okně volání [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metoda `CWnd` třídy. `GetDynamicLayout` vrací ukazatel `CMFCDynamicLayout` objektu.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-3. Pro první prvek, ke které chcete přidat dynamické chování, použít statické metody pro třídu dynamické rozložení pro vytvoření [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struktura, která kóduje způsob, jakým je třeba upravit ovládacího prvku. To uděláte tak, že první zvolíte odpovídající statickou metodu: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), nebo [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte vodorovné nebo svislé aspektů přesunutí v procentech. Tato statické metody všechny vrátí nově vytvořený objekt MoveSettings, který můžete použít k určení chování přesunutí ovládacího prvku.
+3. První ovládací prvek do kterého chcete přidat dynamické chování pomocí statické metody ve třídě dynamické rozložení vytvářet [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struktura, která kóduje tak, jak ovládací prvek by měl být upraven. To provedete první volbou vhodnou statickou metodu: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), nebo [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Předáte vodorovné nebo svislé aspektů přesunutí v procentech. Tyto statické metody vrátí nově vytvořený objekt MoveSettings, můžete použít k určení chování přesunutí ovládacího prvku.
 
-   Mějte na paměti, že 100 znamená přesunout přesně tolik, kolik dialogové okno změní velikost, což způsobí, že okraj ovládacího prvku zůstane pevné vzdálenost od nové ohraničení.
+   Mějte na paměti, že 100 znamená přesun přesně tak, jak dialogové okno změní velikost, která způsobí, že ovládací prvek edge zůstat pevné vzdálenost od nové ohraničení.
 
     ```cpp
     MoveSettings moveSettings = CMFCDynamicLayout::MoveHorizontal(100);
     ```
 
-4. Chování velikost, která používá stejnou věc udělat [SizeSettings](../mfc/reference/cmfcdynamiclayout-class.md#sizesettings_structure) typu. Například zadejte ovládacího prvku při dialogové okno změní nemění velikost, použijte následující kód:
+4. Pro chování velikost, která používá stejnou věc udělat [SizeSettings](../mfc/reference/cmfcdynamiclayout-class.md#sizesettings_structure) typu. Chcete-li určit, že ovládací prvek nemění velikost přizpůsobí svou velikost dialogového okna, například pomocí následujícího kódu:
 
     ```cpp
     SizeSettings sizeSettings = CMFCDynamicLayout::SizeNone();
     ```
 
-5. Přidání ovládacího prvku do správce dynamické rozložení pomocí [CMFCDynamicLayout::AddItem](../mfc/reference/cmfcdynamiclayout-class.md#additem) metoda. Existují dvě přetížení pro různé způsoby zadávání požadovaný ovládací prvek. Má popisovač okna ovládacího prvku (HWND) a dalších trvá ID ovládacího prvku.
+5. Přidejte ovládací prvek správce dynamických rozložení pomocí [CMFCDynamicLayout::AddItem](../mfc/reference/cmfcdynamiclayout-class.md#additem) metody. Existují dvě přetížení pro různé způsoby určení požadované ovládacího prvku. Jeden má popisovač okna ovládacího prvku (HWND) a druhé používá ID ovládacího prvku.
 
     ```cpp
     dynamicLayout->AddItem(hWndControl,
@@ -93,33 +93,33 @@ Předchozí postup je užitečný pro zadání vlastnosti dynamické rozložení
     sizeSettings);
     ```
 
-6. Opakujte pro každý ovládací prvek, který chcete přesunout nebo změně velikosti.
+6. Opakujte pro každý ovládací prvek, který potřebuje k přesunutí nebo změně velikosti.
 
-7. Pokud potřebujete, můžete použít [CMFCDynamicLayout::HasItem](../mfc/reference/cmfcdynamiclayout-class.md#hasitem) metoda k určení, pokud ovládací prvek již je na seznamu ovládacích prvků podrobí dyamic rozložení změny, nebo [CMFCDynamicLayout::IsEmpty](../mfc/reference/cmfcdynamiclayout-class.md#isempty) Metoda, která určí, jestli jsou všechny ovládací prvky, které se vztahují změny.
+7. Pokud je nutné, můžete použít [CMFCDynamicLayout::HasItem](../mfc/reference/cmfcdynamiclayout-class.md#hasitem) metodou ke zjištění, pokud ovládací prvek je již v seznamu ovládacích prvků podroben dyamic rozložení změny, nebo [CMFCDynamicLayout::IsEmpty](../mfc/reference/cmfcdynamiclayout-class.md#isempty) Metoda, která určí, jestli jsou všechny ovládací prvky, které se vztahují změny.
 
-8. Chcete-li povolit rozložení dialogové okno, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) metoda.
+8. Chcete-li povolit rozložení dialogového okna, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) metody.
 
     ```cpp
     pDialog->EnableDynamicLayout(TRUE);
     ```
 
-9. Při příštím uživatel změní velikost dialogového okna, [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) metoda je volána, která ve skutečnosti aplikuje nastavení.
+9. Při příštím uživatel změní velikost dialogového okna, [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) je volána metoda, která ve skutečnosti použije nastavení.
 
-10. Pokud chcete zakázat dynamické rozložení, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) s **FALSE** jako u *bEnabled* parametr.
+10. Pokud chcete zakázat dynamického rozložení, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) s **FALSE** jako u *bEnabled* parametru.
 
     ```cpp
     pDialog->EnableDynamicLayout(FALSE);
     ```
 
-#### <a name="to-set-the-dynamic-layout-programmatically-from-a-resource-file"></a>Chcete-li nastavit dynamické rozložení prostřednictvím kódu programu ze zdrojového souboru
+#### <a name="to-set-the-dynamic-layout-programmatically-from-a-resource-file"></a>Programové nastavení dynamické rozložení ze souboru prostředků
 
-1. Použití [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) metodu zadejte název prostředku v souboru skriptu relevantní prostředků (.rc soubor), který určuje dynamické rozložení informace, jako v následujícím příkladu:
+1. Použití [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) metody zadejte název prostředku v souboru skriptu příslušných prostředků (soubor .rc), která určuje informace o dynamické rozložení, jako v následujícím příkladu:
 
     ```cpp
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     S názvem prostředku, musí odkazovat dialog, který obsahuje informace o rozvržení ve formě **AFX_DIALOG_LAYOUT** položku v souboru prostředků, jako v následujícím příkladu:
+     Pojmenovaný prostředek musí odkazovat na dialogu, který obsahuje informace o rozložení ve formě **AFX_DIALOG_LAYOUT** položku v souboru prostředků, jako v následujícím příkladu:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////
@@ -157,3 +157,4 @@ Předchozí postup je užitečný pro zadání vlastnosti dynamické rozložení
 [Třídy ovládacích prvků](../mfc/control-classes.md)  
 [Třídy dialogových oken](../mfc/dialog-box-classes.md)  
 [Editor dialogových oken](../windows/dialog-editor.md)  
+[Rozložení dynamické dialogové okno pro knihovnu MFC ve Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

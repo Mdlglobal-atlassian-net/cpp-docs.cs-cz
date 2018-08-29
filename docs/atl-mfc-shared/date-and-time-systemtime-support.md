@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0698dbcb27e471218c39517676654156634aa022
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883564"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131383"
 ---
 # <a name="date-and-time-systemtime-support"></a>Datum a čas: podpora SYSTEMTIME
 [CTime](../atl-mfc-shared/reference/ctime-class.md) třída má konstruktory, které přijímají systému a soubor dobu od Win32. Pokud používáte `CTime` objekty pro tyto účely, je nutné upravit jejich inicializace odpovídajícím způsobem, jak je popsáno v tomto článku.  
@@ -52,8 +52,6 @@ ms.locfileid: "37883564"
 -   [Obecné datum a čas programování v prostředí MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Podpora automatizace data a času programování](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [Obecné třídy pro datum a čas programování](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Datum a čas](../atl-mfc-shared/date-and-time.md)

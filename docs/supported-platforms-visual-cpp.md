@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58dc932981a0518acf3e48d085417ed49a3fa34
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608038"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130781"
 ---
 # <a name="supported-platforms-visual-c"></a>Podporované platformy (Visual C++)
 
@@ -43,9 +43,9 @@ Aplikace vytvořené pomocí sady Visual Studio můžete zacílit na různé pla
 
 \* Můžete použít sadu nástrojů platformy Windows XP zahrnuty v sadě Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012 Update 1 nebo novějším k sestavení projektů Windows XP a Windows Server 2003. Informace o tom, jak použít tuto sadu nástrojů platformy najdete v tématu [konfigurace aplikací pro Windows XP](build/configuring-programs-for-windows-xp.md). Další informace o změně sada nástrojů platformy najdete v tématu [postupy: Změna cílové architektury a sady nástrojů](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-\*\* Můžete nainstalovat **vývoj mobilních aplikací pomocí C++** úlohy v instalačním programu sady Visual Studio (nebo volitelné **Visual C++ pro vývoj pro různé platformy mobilních aplikací** součásti v instalačním programu sady Visual Studio 2015) do cíl platformu iOS nebo Android. Pokyny najdete v tématu [instalaci Visual C++ pro vývoj mobilních řešení napříč platformami](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). K vytváření kódu s Iosem, musíte mít počítači Mac a splňovat další požadavky. Seznam požadavků a pokyny k instalaci najdete v tématu [instalace a konfigurace nástrojů pro vytváření pomocí iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Můžete vytvořit x86 nebo ARM kód tak, aby odpovídaly cílové hardwaru. Použití x86 konfigurací pro sestavení pro některá zařízení s Androidem, simulátoru iOS a Microsoft Visual Studio Emulator for Android. Konfigurace ARM použijte k sestavování pro zařízení s Iosem a většiny zařízení s Androidem.
+\*\* Můžete nainstalovat **vývoj mobilních aplikací pomocí C++** úloh v instalačním programu sady Visual Studio 2017 (nebo volitelné **Visual C++ pro vývoj pro různé platformy mobilních aplikací** součásti v instalačním programu sady Visual Studio 2015) do cíl platformu iOS nebo Android. Pokyny najdete v tématu [instalaci Visual C++ pro vývoj mobilních řešení napříč platformami](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). K vytváření kódu s Iosem, musíte mít počítači Mac a splňovat další požadavky. Seznam požadavků a pokyny k instalaci najdete v tématu [instalace a konfigurace nástrojů pro vytváření pomocí iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Můžete vytvořit x86 nebo ARM kód tak, aby odpovídaly cílové hardwaru. Použití x86 konfigurací pro sestavení pro některá zařízení s Androidem, simulátoru iOS a Microsoft Visual Studio Emulator for Android. Konfigurace ARM použijte k sestavování pro zařízení s Iosem a většiny zařízení s Androidem.
 
-\*\*\* Můžete nainstalovat **vývoj pro Linux v C++** úloh v instalačním programu sady Visual Studio na cílové platformy Linux. Pokyny najdete v tématu [stažení, instalace a nastavení úloh Linux](linux/download-install-and-setup-the-linux-development-workload.md). Tato sada nástrojů zkompiluje spustitelný soubor na cílovém počítači, abyste mohli sestavit pro jakékoliv podporované architektuře.
+\*\*\* Můžete nainstalovat **vývoj pro Linux v C++** úloh v instalačním programu sady Visual Studio 2017 na cílové platformy Linux. Pokyny najdete v tématu [stažení, instalace a nastavení úloh Linux](linux/download-install-and-setup-the-linux-development-workload.md). Tato sada nástrojů zkompiluje spustitelný soubor na cílovém počítači, abyste mohli sestavit pro jakékoliv podporované architektuře.
 
 Informace o tom, jak nastavit konfiguraci cílové platformy naleznete v tématu [postupy: Konfigurace projekty Visual C++ pro cíl 64-Bit, x64 platformy](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

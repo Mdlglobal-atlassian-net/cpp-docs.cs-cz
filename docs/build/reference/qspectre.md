@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375874"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130986"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,7 +32,7 @@ Určuje kompilátoru generování pokynů ke zmírnění chyby zabezpečení ur�
 
 ## <a name="remarks"></a>Poznámky
 
-**/Qspectre** možnost způsobí, že kompilátoru k vložení pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
+**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.7 nebo novější. To způsobí, že kompilátor vložit pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
 
 **/Qspectre** možnost je vypnuto ve výchozím nastavení.
 

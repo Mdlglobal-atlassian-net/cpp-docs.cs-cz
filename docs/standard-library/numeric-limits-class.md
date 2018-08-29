@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954874"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131435"
 ---
 # <a name="numericlimits-class"></a>numeric_limits – třída
 
@@ -156,7 +156,7 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 Vrátí nejmenší nenulovou denormalizovaný hodnotu.
 
 ```cpp
-static Type denorm_min() throw();
+static constexpr Type denorm_min() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,7 +215,7 @@ The smallest nonzero denormalized value
 Vrátí počet číslic základ číselné soustavy, představující typ bez ztráty přesnosti.
 
 ```cpp
-static const int digits = 0;
+static constexpr int digits = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -259,7 +259,7 @@ int main( )
 Vrátí počet desetinných míst, představující typ bez ztráty přesnosti.
 
 ```cpp
-static const int digits10 = 0;
+static constexpr int digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -303,7 +303,7 @@ The float is; 100000000
 Funkce vrátí rozdíl mezi 1 a nejmenší hodnotu větší než 1, který je reprezentovat podle datového typu.
 
 ```cpp
-static Type epsilon() throw();
+static constexpr Type epsilon() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -355,7 +355,7 @@ The difference between 1 and the smallest value greater than 1
 Testuje, zda typ umožňuje denormalizovaný hodnoty.
 
 ```cpp
-static const float_denorm_style has_denorm = denorm_absent;
+static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -401,7 +401,7 @@ Whether long int objects allow denormalized values: 0
 Ověřuje, zda ztrátou přesnosti se detekuje jako denormalizace ztrátu, nikoli jako nepřesné výsledky.
 
 ```cpp
-static const bool has_denorm_loss = false;
+static constexpr bool has_denorm_loss = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -447,7 +447,7 @@ Whether long int objects can detect denormalized loss: 0
 Ověřuje, zda typ má reprezentaci pro kladné nekonečno.
 
 ```cpp
-static const bool has_infinity = false;
+static constexpr bool has_infinity = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -493,7 +493,7 @@ Whether long int objects have infinity: 0
 Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.
 
 ```cpp
-static const bool has_quiet_NaN = false;
+static constexpr bool has_quiet_NaN = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -539,7 +539,7 @@ Whether long int objects have quiet_NaN: 0
 Ověřuje, zda typ má reprezentaci pro signalizaci nečíselné (NAN).
 
 ```cpp
-static const bool has_signaling_NaN = false;
+static constexpr bool has_signaling_NaN = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -585,7 +585,7 @@ Whether long int objects have a signaling_NaN: 0
 Reprezentuje kladné nekonečno pro typ, pokud je k dispozici.
 
 ```cpp
-static Type infinity() throw();
+static constexpr Type infinity() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -639,7 +639,7 @@ The representation of infinity for type long double is: inf
 Testuje, zda je sada hodnot, které mohou představovat typ je omezené.
 
 ```cpp
-static const bool is_bounded = false;
+static constexpr bool is_bounded = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -693,7 +693,7 @@ Whether unsigned char objects have bounded set of representable values: 1
 Testuje, zda jsou zdarma předešlo chybám při zaokrouhlování výpočty provést u typu.
 
 ```cpp
-static const bool is_exact = false;
+static constexpr bool is_exact = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -747,7 +747,7 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 Testuje, zda je typ odpovídá IEC 559 standardy.
 
 ```cpp
-static const bool is_iec559 = false;
+static constexpr bool is_iec559 = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -797,7 +797,7 @@ Whether unsigned char objects conform to iec559 standards: 0
 Testuje, zda je typ má reprezentaci celého čísla.
 
 ```cpp
-static const bool is_integer = false;
+static constexpr bool is_integer = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -847,7 +847,7 @@ Whether unsigned char objects have an integral representation: 1
 Testuje, zda **typ** má modulo reprezentace.
 
 ```cpp
-static const bool is_modulo = false;
+static constexpr bool is_modulo = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -897,7 +897,7 @@ Whether unsigned char objects have a modulo representation: 1
 Testuje, zda je typ má reprezentaci podepsaný držitelem.
 
 ```cpp
-static const bool is_signed = false;
+static constexpr bool is_signed = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -947,7 +947,7 @@ Whether unsigned char objects have a signed representation: 0
 Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.
 
 ```cpp
-static const bool is_specialized = false;
+static constexpr bool is_specialized = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1001,7 +1001,7 @@ Whether int* objects have an explicit specialization in the class: 0
 Vrátí největší omezenou zápornou hodnotu.
 
 ```cpp
-static Type lowest() throw();
+static constexpr Type lowest() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1017,7 +1017,7 @@ Vrátí největší omezenou zápornou hodnotu pro typ (což je obvykle `min()` 
 Vrátí maximální konečná hodnota typu.
 
 ```cpp
-static Type max() throw();
+static constexpr Type max() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1059,7 +1059,7 @@ int main() {
 Vrátí počet desetinných míst vyžaduje, abyste měli jistotu, že dvě odlišné hodnoty typu mají odlišné reprezentace decimal.
 
 ```cpp
-static int max_digits10 = 0;
+static constexpr int max_digits10 = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1075,7 +1075,7 @@ Vrátí počet desetinných míst, které jsou potřeba, abyste měli jistotu, �
 Vrátí maximální kladný celočíselný exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu po její základní základ číselné soustavy je vyvolávána s cílem, které stojí za.
 
 ```cpp
-static const int max_exponent = 0;
+static constexpr int max_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1121,7 +1121,7 @@ The maximum radix-based exponent for type long double is:  1024
 Vrátí maximální kladné celočíselné exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu při vyvolání třídou base deset na výkon.
 
 ```cpp
-static const int max_exponent10 = 0;
+static constexpr int max_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1167,7 +1167,7 @@ The maximum base 10 exponent for type long double is:  308
 Vrátí minimální Normalizovaná hodnota typu.
 
 ```cpp
-static Type min() throw();
+static constexpr Type min() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1217,7 +1217,7 @@ The minimum value for type short int is:  -32768
 Vrátí maximální negativní integrální exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu po její základní základ číselné soustavy je vyvolávána s cílem, které stojí za.
 
 ```cpp
-static const int min_exponent = 0;
+static constexpr int min_exponent = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1263,7 +1263,7 @@ The minimum radix-based exponent for type long double is:  -1021
 Vrátí maximální negativní integrální exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu při vyvolání třídou base deset na výkon.
 
 ```cpp
-static const int min_exponent10 = 0;
+static constexpr int min_exponent10 = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1309,7 +1309,7 @@ The minimum base 10 exponent for type long double is:  -307
 Vrátí reprezentaci tichý pro typ není číslo (NAN).
 
 ```cpp
-static Type quiet_NaN() throw();
+static constexpr Type quiet_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1355,7 +1355,7 @@ The quiet NaN for type long double is:  1.#QNAN
 Vrátí integrální base označovány jako základ, použitý pro reprezentaci typu.
 
 ```cpp
-static const int radix = 0;
+static constexpr int radix = 0;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1401,7 +1401,7 @@ The base for type long double is:  2
 Vrátí maximální zaokrouhlení typ v podrobnostech o chybě.
 
 ```cpp
-static Type round_error() throw();
+static constexpr Type round_error() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1443,7 +1443,7 @@ The maximum rounding error for type long double is:  0.5
 Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.
 
 ```cpp
-static const float_round_style round_style = round_toward_zero;
+static constexpr float_round_style round_style = round_toward_zero;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1490,7 +1490,7 @@ The rounding style for an int type is: 0
 Pro typ, vrátí reprezentaci signalizace nečíselné (NAN).
 
 ```cpp
-static Type signaling_NaN() throw();
+static constexpr Type signaling_NaN() throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1530,7 +1530,7 @@ int main( )
 Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezentovala normalizovanou hodnotu před jeho zaokrouhlení.
 
 ```cpp
-static const bool tinyness_before = false;
+static constexpr bool tinyness_before = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1580,7 +1580,7 @@ Whether unsigned char types can detect tinyness before rounding: 0
 Testuje, zda soutisku, která informuje o aritmetické výjimky je implementován pro typ.
 
 ```cpp
-static const bool traps = false;
+static constexpr bool traps = false;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota

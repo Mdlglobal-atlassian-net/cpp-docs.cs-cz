@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464515"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131851"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkce běhové knihovny jazyka C pro řízení vláken
 Všechny programy Win32 mají alespoň jedno vlákno. Jakékoli vlákno můžete vytvořit další vlákna. Vlákno může rychle dokončí svou práci a pak ukončete, nebo může zůstat aktivní po dobu životnosti programu.  
@@ -54,4 +54,4 @@ Knihovny runtime LIBCMT a MSVCRT jazyka C poskytují následující funkce pro v
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Vytváření vláken uživatelského rozhraní | Dokumentace Microsoftu'
+title: 'Multithreading: Vytváření vláken uživatelského rozhraní MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607392"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131557"
 ---
-# <a name="multithreading-creating-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní MFC
 Vlákna uživatelského rozhraní se běžně používá pro zpracování vstupu uživatele a reagovat na události uživatele bez ohledu na jejich vláken v jiné části aplikace. Hlavního vlákna aplikace (podle vašeho `CWinApp`-odvozené třídy) je již vytvořena a spuštěna za vás. Toto téma popisuje kroky potřebné k vytvoření vlákna další uživatelského rozhraní.  
   
 První věc, kterou je třeba provést při vytváření vlákna uživatelského rozhraní je odvodit třídu z [CWinThread](../mfc/reference/cwinthread-class.md). Musíte deklarovat a implementovat tyto třídy pomocí [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) a [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) makra. Tato třída musí přepsat některé funkce a můžete přepsat ostatní. Tyto funkce a co by měl provádět jsou uvedené v následující tabulce.  
@@ -37,13 +37,12 @@ První věc, kterou je třeba provést při vytváření vlákna uživatelského
   
 |Funkce|Účel|  
 |--------------|-------------|  
-
-|[ExitInstance –](../mfc/reference/cwinthread-class.md#exitinstance)| Proveďte vyčištění při ukončení vlákna. Obvykle přepsána. |  
-|[InitInstance –](../mfc/reference/cwinthread-class.md#initinstance)| Provede inicializaci instance vlákna. Musí být přepsána. |  
-|[ONIDLE –](../mfc/reference/cwinthread-class.md#onidle)| Proveďte zpracování specifické pro vlákno doby nečinnosti. Obvykle není přepsána. |  
-|[PreTranslateMessage –](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtrovat zprávy před odesláním do `TranslateMessage` a `DispatchMessage`. Obvykle není přepsána. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Zachytily neošetřené výjimky vyvolané obslužnými rutinami vlákna zpráv a příkazů. Obvykle není přepsána. |  
-|[Spustit](../mfc/reference/cwinthread-class.md#run)| Řídící funkce pro vlákno. Obsahuje pumpu zpráv. Přepsat jen zřídka. |  
+|[ExitInstance –](../mfc/reference/cwinthread-class.md#exitinstance)|Proveďte vyčištění při ukončení vlákna. Obvykle přepsána.|  
+|[InitInstance –](../mfc/reference/cwinthread-class.md#initinstance)|Provede inicializaci instance vlákna. Musí být přepsána.|  
+|[ONIDLE –](../mfc/reference/cwinthread-class.md#onidle)|Proveďte zpracování specifické pro vlákno doby nečinnosti. Obvykle není přepsána.|  
+|[PreTranslateMessage –](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrovat zprávy před odesláním do `TranslateMessage` a `DispatchMessage`. Obvykle není přepsána.|  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Zachytily neošetřené výjimky vyvolané obslužnými rutinami vlákna zpráv a příkazů. Obvykle není přepsána.|  
+|[Spuštění](../mfc/reference/cwinthread-class.md#run)|Řídící funkce pro vlákno. Obsahuje pumpu zpráv. Přepsat jen zřídka.|  
 
   
 Knihovna MFC poskytuje dvě verze funkce `AfxBeginThread` prostřednictvím přetížení parametru: jednu, která může pouze vytvořit pracovní vlákna, a jednu, která může vytvářet vlákna uživatelského rozhraní nebo pracovní vlákna. Chcete-li spustit vlákno uživatelského rozhraní, zavolejte druhé přetížení metody [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), zadejte následující informace:  
@@ -62,12 +61,12 @@ Knihovna MFC poskytuje dvě verze funkce `AfxBeginThread` prostřednictvím pře
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
-- [Multithreading: Ukončení vláken](../parallel/multithreading-terminating-threads.md)  
+- [Multithreading: Ukončení vláken](multithreading-terminating-threads.md)  
   
-- [Multithreading: Vytváření pracovních vláken](../parallel/multithreading-creating-worker-threads.md)  
+- [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md)  
   
-- [Procesy a vlákna](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Procesy a vlákna](/windows/desktop/ProcThread/processes-and-threads)  
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

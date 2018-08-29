@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Ukončení vláken | Dokumentace Microsoftu'
+title: 'Multithreading: Ukončení vláken v prostředí MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608841"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131942"
 ---
-# <a name="multithreading-terminating-threads"></a>Multithreading: Ukončení vláken
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Ukončení vláken v prostředí MFC
 Dvě běžné situace způsobí ukončení vlákna: existuje řídící funkce nebo vláknu není povoleno dokončení. Pokud textový procesor používá vlákno pro tisk na pozadí, řídící funkce by jej měla ukončit normálně Pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale vlákno tisku na pozadí musí být předčasně ukončeno. Toto téma vysvětluje, jak implementovat obě situace a jak získat ukončovací kód vlákna poté, co se jeho ukončení.  
   
 - [Normální ukončení vlákna](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ Některé z metod umožňuje zjistit, proč `CWinThread` byl ukončen objekt.
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s C++ a knihovnou MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
