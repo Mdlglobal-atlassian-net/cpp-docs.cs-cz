@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465006"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132178"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading a národní prostředí
 Běhové knihovny jazyka C a standardní knihovny C++ poskytují podporu pro změnu národního prostředí programu. Toto téma popisuje problémy, které vznikají při použití funkce národního prostředí obě knihovny ve vícevláknových aplikacích.  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>Viz také  
 
-[Podpora multithreadingu ve starším kódu (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[Podpora multithreadingu ve starším kódu (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   

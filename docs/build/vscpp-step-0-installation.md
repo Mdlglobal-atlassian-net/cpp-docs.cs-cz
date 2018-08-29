@@ -1,5 +1,5 @@
 ---
-title: Instalace podpory jazyka C++ v sadě Visual Studio | Dokumentace Microsoftu
+title: Instalace podpory jazyka C++ v sadě Visual Studio 2017 | Dokumentace Microsoftu
 description: Nainstalovat Visual Studio – podpora pro Visual C++
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465392"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130888"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
-Pokud jste ještě stáhli a nainstalovali aplikaci Visual Studio a nástrojů Visual C++ ještě, tady je postup, abyste mohli začít.
+Pokud nebyly stáhnout a nainstalovat nástroje Visual C++ a Visual Studio 2017 zatím, tady je postup, abyste mohli začít.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -35,7 +35,13 @@ Pokud jste ještě stáhli a nainstalovali aplikaci Visual Studio a nástrojů V
 
 Podrobnosti o místo na disku a požadavky na operační systém, najdete v části [Visual Studio produktová řada požadavky na systém](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalační program hlásí, kolik místa na disku požadované pro možnosti, které vyberete.
 
-## <a name="installation"></a>Instalace
+## <a name="visual-studio-2015-installation"></a>Instalace sady Visual Studio 2015
+
+ Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++. 
+
+ Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
+
+## <a name="visual-studio-2017-installation"></a>Instalace sady Visual Studio 2017
 
 1. Stáhněte si nejnovější instalační program sady Visual Studio 2017 pro Windows.
 

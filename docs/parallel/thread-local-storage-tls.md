@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465869"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132073"
 ---
 # <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
 Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a kompilátor Visual C++ teď podporují staticky vazbou (během načítání) dat pro vlákno kromě stávající implementaci rozhraní API.  
@@ -117,4 +117,4 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)   
+[Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)   

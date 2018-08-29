@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465572"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131839"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -598,7 +598,7 @@ Objekt vytvořený pomocí konstruktorů je plně inicializován ihned po dokon�
 
 ## <a name="inheriting_constructors"></a> Dědění konstruktorů (C ++ 11)
 
-Odvozená třída může dědit konstruktory z přímou základní třídu pomocí using prohlášení, jak je znázorněno v následujícím příkladu:
+Odvozená třída může dědit konstruktory z přímé základní třídy pomocí **pomocí** prohlášení, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-Příkaz using přináší do oboru všechny konstruktory ze základní třídy s výjimkou těch, které mají stejnou signaturu jako konstruktorů v odvozené třídě. Obecně je nejvhodnější použít dědičné konstruktorů nebo konstruktorů při odvozená třída nedeklaruje žádné nové datové členy.
+**Visual Studio 2017 verze 15.7 nebo novější**: **pomocí** výroky **/std: c ++ 17** režimu přináší do oboru všechny konstruktory ze základní třídy s výjimkou těch, které mají stejnou signaturu jako konstruktorů v odvozené třídě. Obecně je nejvhodnější použít dědičné konstruktorů nebo konstruktorů při odvozená třída nedeklaruje žádné nové datové členy. Viz také [vylepšení v sadě Visual Studio 2017 verze 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Šablony třídy lze dědit všechny konstruktory z argumentu typu, pokud tento typ určuje základní třídu:
 

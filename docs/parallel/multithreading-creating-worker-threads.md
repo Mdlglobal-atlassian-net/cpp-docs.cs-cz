@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Vytváření pracovních vláken | Dokumentace Microsoftu'
+title: 'Multithreading: Vytváření pracovních vláken v prostředí MFC | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590597"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131186"
 ---
-# <a name="multithreading-creating-worker-threads"></a>Multithreading: Vytváření pracovních vláken
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Vytváření pracovních vláken v prostředí MFC
 Pracovní vlákno se běžně používá pro zpracování úloh na pozadí, které by neměl muset uživatel čekat pro pokračování v používání aplikace. Úlohy jako přepočet a tisk na pozadí jsou dobrým příkladem pracovních vláken. Toto téma podrobně popisuje kroky potřebné k vytvoření pracovního vlákna. Mezi témata patří:  
   
 - [Spuštění vlákna](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ Existují dvě přetížené verze `AfxBeginThread`: ten, který lze vytvořit p
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-Parametr je jednoduchá hodnota. Hodnota, kterou funkce přijímá v tomto parametru je hodnota, která byla předána konstruktoru při vytvoření objektu vlákna. Řídicí funkce může interpretovat tuto hodnotu, jakýmkoli způsobem si vybere. Lze považovat za skalární hodnotu nebo ukazatel na strukturu obsahující více parametrů, nebo se to dá ignorovat. Pokud parametr odkazuje na strukturu, struktura slouží pouze k předání dat od volajícího vláknu, ale také k předání dat z vlákna zpět volajícímu. Používáte-li takovouto strukturu k předání dat zpět volajícímu, musí vlákno oznámit volajícímu, že jsou výsledky připraveny. Informace o komunikaci z pracovního vlákna k volajícímu naleznete v tématu [Multithreading: Programovací tipy](../parallel/multithreading-programming-tips.md).  
+Parametr je jednoduchá hodnota. Hodnota, kterou funkce přijímá v tomto parametru je hodnota, která byla předána konstruktoru při vytvoření objektu vlákna. Řídicí funkce může interpretovat tuto hodnotu, jakýmkoli způsobem si vybere. Lze považovat za skalární hodnotu nebo ukazatel na strukturu obsahující více parametrů, nebo se to dá ignorovat. Pokud parametr odkazuje na strukturu, struktura slouží pouze k předání dat od volajícího vláknu, ale také k předání dat z vlákna zpět volajícímu. Používáte-li takovouto strukturu k předání dat zpět volajícímu, musí vlákno oznámit volajícímu, že jsou výsledky připraveny. Informace o komunikaci z pracovního vlákna k volajícímu naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md).  
   
-Když funkce skončí, měla by vrátit hodnotu UINT označující důvod ukončení. Obvykle je tento kód ukončení 0 označující úspěšné provedení s jinými hodnotami označení různých typů chyb. To se čistě závisí na konkrétní implementaci. Některá vlákna mohou udržovat počty využití objektů a vracet aktuální počet využití daného objektu. Jak můžou aplikace načíst tuto hodnotu najdete v tématu [Multithreading: ukončení vláken](../parallel/multithreading-terminating-threads.md).  
+Když funkce skončí, měla by vrátit hodnotu UINT označující důvod ukončení. Obvykle je tento kód ukončení 0 označující úspěšné provedení s jinými hodnotami označení různých typů chyb. To se čistě závisí na konkrétní implementaci. Některá vlákna mohou udržovat počty využití objektů a vracet aktuální počet využití daného objektu. Jak můžou aplikace načíst tuto hodnotu najdete v tématu [Multithreading: ukončení vláken](multithreading-terminating-threads.md).  
   
-Existují některá omezení, co můžete dělat ve vícevláknovém programu, vytvořeném pomocí knihovny MFC. Popisy těchto omezení a další tipy pro používání vláken naleznete v tématu [Multithreading: Programovací tipy](../parallel/multithreading-programming-tips.md).  
+Existují některá omezení, co můžete dělat ve vícevláknovém programu, vytvořeném pomocí knihovny MFC. Popisy těchto omezení a další tipy pro používání vláken naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md).  
   
 ##  <a name="_core_controlling_function_example"></a> Příklad řídicí funkce  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?  
   
-- [Multithreading: Vytváření vláken uživatelského rozhraní](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Multithreading: Vytváření vláken uživatelského rozhraní](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

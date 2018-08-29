@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405107"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131888"
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
 Ovládá podmíněné větvení. Příkazy v *blok if* jsou spouštěny pouze v případě *výraz if* vyhodnotí jako nenulové hodnoty (nebo TRUE). Pokud hodnota *výraz* nenulové, *statement1* další příkazy v bloku jsou vykonány a else bloku, pokud jsou k dispozici, se přeskočí. Pokud hodnota *výraz* je nula, pak se přeskočila blok if a else bloku, pokud jsou k dispozici, je proveden. Jsou výrazy, které vedou na nenulovou
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Pokud příkaz pomocí inicializátoru
+## <a name="if_with_init"></a> Pokud příkaz pomocí inicializátoru
+
 **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Pokud** příkaz může také obsahovat výraz, který deklaruje a inicializuje proměnnou s názvem. Používejte tento formulář příkaz if proměnné je potřeba pouze v rámci oboru bloku if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  **Else** klauzuli `if...else` je přidružena k nejbližšímu příkazu předchozí **Pokud** příkaz ve stejném oboru, který nemá odpovídající **else** příkaz.   
 
-## <a name="constexpr-if-statements"></a>constexpr Pokud příkazy
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci šablony funkce, můžete použít `constexpr if` příkaz rozhodnutí kompilace větvení bez nutnosti uchýlit se k více přetížení funkce. Můžete například napsat jedinou funkci tohoto popisovače parametru při rozbalování (je vyžadována žádná přetížená metoda parametr nula): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Pokud se příkazy constexpr.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci šablony funkce, můžete použít **Pokud constexpr** příkaz, větvení rozhodování kompilaci bez nutnosti uchýlit se k více přetížení funkce. Můžete například napsat jedinou funkci tohoto popisovače parametru při rozbalování (je vyžadována žádná přetížená metoda parametr nula): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

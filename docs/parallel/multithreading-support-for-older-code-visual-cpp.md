@@ -1,7 +1,7 @@
 ---
 title: Podpora multithreadingu ve starším kódu (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464806"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132099"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Podpora více vláken ve starším kódu (Visual C++)
 Visual C++ umožňuje mít více souběžných vláken, která provádí současně. Pomocí multithreadingu můžete rozdělit úlohy na pozadí, spravovat několik současných vstupů, spravovat uživatelské rozhraní a spoustu dalších věcí.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  
-[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)  
 Poskytuje podporu pro vytváření aplikací s více vlákny s Microsoft Windows  
   
-[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)  
 Popisuje, co jsou procesy a vlákna a co je přístup knihovny MFC k multithreadingu je.  
   
-[Multithreading a národní prostředí](../parallel/multithreading-and-locales.md)  
+[Multithreading a národní prostředí](multithreading-and-locales.md)  
 Popisuje problémy, které vznikají při použití funkce národního prostředí běhové knihovny jazyka C a standardní knihovny C++ ve vícevláknových aplikacích.  
   
 ## <a name="related-sections"></a>Související oddíly  

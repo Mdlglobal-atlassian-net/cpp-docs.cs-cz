@@ -1,5 +1,5 @@
 ---
-title: constexpr – výrazy Lambda v jazyce C++ | Dokumentace Microsoftu
+title: constexpr výrazy lambda v jazyce C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408200"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131396"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr – výrazy Lambda v jazyce C++
+# <a name="constexpr-lambda-expressions-in-c"></a>constexpr výrazy lambda v jazyce C++
 **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): výraz lambda může být deklarována jako **constexpr** nebo použít ve výrazu dosažení konstantních při inicializaci jednotlivých datový člen, který zachycuje nebo zavádí je povolený v konstantním výrazu.  
 
 ```cpp

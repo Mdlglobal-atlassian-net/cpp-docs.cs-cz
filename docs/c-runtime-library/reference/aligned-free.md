@@ -60,7 +60,7 @@ void _aligned_free (
 
 **_aligned_free –** je označen `__declspec(noalias)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
 
-Tuto funkci nelze ověřit svůj parametr, na rozdíl od jiných funkcí CRT _aligned. Pokud *memblock* je ukazatel s hodnotou NULL, tato funkce provede jednoduše žádná akce. Nezmění `errno` a vyvolá obslužnou rutinu neplatného parametru. Pokud dojde k chybě ve funkci kvůli pomocí dříve _aligned funkce přidělení bloku paměti nebo chybné zarovnání paměti dochází kvůli některé nepředvídaných calamity, funkce vygeneruje sestavu ladění z [_RPT, _RPTF, _RPTW, _ Rptfw – makra](rpt-rptf-rptw-rptfw-macros.md).
+Tuto funkci nelze ověřit svůj parametr, na rozdíl od jiných funkcí CRT _aligned. Pokud *memblock* je ukazatel s hodnotou NULL, tato funkce provede jednoduše žádná akce. Nezmění `errno` a vyvolá obslužnou rutinu neplatného parametru. Pokud dojde k chybě ve funkci kvůli pomocí dříve _aligned funkce přidělení bloku paměti nebo chybné zarovnání paměti dochází kvůli některé nepředvídaných calamity, funkce vygeneruje sestavu ladění z [_RPT, _RPTF, _RPTW, _Rptfw makra](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Požadavky
 

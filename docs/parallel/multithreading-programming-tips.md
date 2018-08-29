@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Programovací tipy | Dokumentace Microsoftu'
+title: 'Multithreading: Tipy pro programování MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad830117323aef807fcebc1ef61b4dfb1900bd9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28446576fefe52dfaa99b69ae410a87424e28e3b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591308"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132035"
 ---
-# <a name="multithreading-programming-tips"></a>Multithreading: Tipy pro programování
-Vícevláknové aplikace vyžaduje větší péči než aplikace s jedním vláknem při přístupu k datům. Vzhledem k tomu, že existuje více nezávislých cest spouštění v používat současně ve vícevláknových aplikacích algoritmy, data nebo obojí musí mějte na paměti tato data by mohly používat současně více než jedno vlákno. Toto téma popisuje postupy pro předcházení potenciálních problémů při programování aplikací s více vlákny pomocí knihovny Microsoft Foundation Class (MFC).  
+# <a name="multithreading-mfc-programming-tips"></a>Multithreading: Tipy pro programování MFC
+Vícevláknové aplikace vyžaduje větší péči než aplikace s jedním vláknem zajistíte, že operace prováděny v zamýšleném pořadí a všechna data, která je přístup prostřednictvím více vláken není poškozen. Toto téma popisuje postupy pro předcházení potenciálních problémů při programování aplikací s více vlákny pomocí knihovny Microsoft Foundation Class (MFC).  
   
 - [Přístup k objektům z více vláken](#_core_accessing_objects_from_multiple_threads)  
   
@@ -46,13 +46,13 @@ Vícevláknové aplikace vyžaduje větší péči než aplikace s jedním vlák
   
 ##  <a name="_core_accessing_objects_from_multiple_threads"></a> Přístup k objektům z více vláken  
  
-Z důvodů výkonu a velikosti MFC objekty nejsou bezpečné pro vlákna na úrovni objektu, pouze na úrovni třídy. To znamená, že můžete mít dvou samostatných vláknech manipulace s dva různé `CString` objekty, ale ne dvě vlákna, manipulace se stejné `CString` objektu. Pokud vůbec musí mít stejný objekt manipulace s více vláken, Chraňte takový přístup pomocí příslušné mechanismy Win32 synchronizace, jako je například kritické oddíly. Další informace o kritických oddílů a další související objekty, najdete v článku [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v sadě Windows SDK.  
+Objekty knihovny MFC nejsou bezpečné pro vlákna samy o sobě. Dvou samostatných vláknech nelze pracovat na stejný objekt, pokud nechcete použít synchronizační třídy knihovny MFC a/nebo synchronizaci objektů Win32, jako je například kritické oddíly. Další informace o kritických oddílů a další související objekty, najdete v článku [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK.  
   
 Knihovna tříd kritické oddíly interně používá k ochraně globální datové struktury, jako jsou ty používané ladit přidělování paměti.  
   
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Přístup k objektům MFC z vlákna mimo MFC  
  
-Pokud máte aplikace s více vlákny, která vytvoří vlákno způsobem než pomocí [CWinThread](../mfc/reference/cwinthread-class.md) objektu nelze přistupovat k ostatním objektům MFC z tohoto vlákna. Jinými slovy, pokud chcete pro přístup k libovolného objektu knihovny MFC z jiného vlákna, musíte vytvořit toto vlákno s některou z metod popsaných v [Multithreading: vytváření vláken uživatelského rozhraní](../parallel/multithreading-creating-user-interface-threads.md) nebo [Multithreading: Vytváření pracovních vláken](../parallel/multithreading-creating-worker-threads.md). Tyto metody jsou pouze ty, které umožňují knihovny tříd inicializovat interní proměnné, které jsou potřeba ke zpracování aplikací s více vlákny.  
+Pokud máte aplikace s více vlákny, která vytvoří vlákno způsobem než pomocí [CWinThread](../mfc/reference/cwinthread-class.md) objektu nelze přistupovat k ostatním objektům MFC z tohoto vlákna. Jinými slovy, pokud chcete pro přístup k libovolného objektu knihovny MFC z jiného vlákna, musíte vytvořit toto vlákno s některou z metod popsaných v [Multithreading: vytváření vláken uživatelského rozhraní](multithreading-creating-user-interface-threads.md) nebo [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md). Tyto metody jsou pouze ty, které umožňují knihovny tříd inicializovat interní proměnné, které jsou potřeba ke zpracování aplikací s více vlákny.  
   
 ##  <a name="_core_windows_handle_maps"></a> Mapování zpracování Windows  
  
@@ -62,12 +62,12 @@ Existuje několik způsobů, jak vyřešit tento problém. První je předat jed
   
 Jinou metodou je vytvoření nové zprávy uživatelem definované odpovídající pro různé úkoly pracovních vláken provádění se publikovat do hlavního okna aplikace tyto zprávy pomocí `::PostMessage`. Tato metoda komunikace je podobná rozhovory s tím rozdílem, že oba vlákna jsou spuštěny ve stejném adresním prostoru dva různé aplikace.  
   
-Další informace o mapování najdete v tématu [Technická poznámka 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Další informace o místním úložišti vláken naleznete v tématu [úložiště Thread Local](http://msdn.microsoft.com/library/windows/desktop/ms686749) a [pomocí úložiště Thread Local](http://msdn.microsoft.com/library/windows/desktop/ms686991) v sadě Windows SDK.  
+Další informace o mapování najdete v tématu [Technická poznámka 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Další informace o místním úložišti vláken naleznete v tématu [úložiště Thread Local](/windows/desktop/ProcThread/thread-local-storage) a [pomocí úložiště Thread Local](/windows/desktop/ProcThread/using-thread-local-storage) v sadě Windows SDK.  
   
 ##  <a name="_core_communicating_between_threads"></a> Komunikace mezi vlákny  
  
-Knihovna MFC poskytuje několik tříd, které umožňují vláken k synchronizaci přístupu k objektům zajistit bezpečný přístup z více vláken. Použití těchto tříd je popsána v [Multithreading: jak používat synchronizační třídy](../parallel/multithreading-how-to-use-the-synchronization-classes.md) a [Multithreading: kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Další informace o těchto objektů najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v sadě Windows SDK.  
+Knihovna MFC poskytuje několik tříd, které umožňují vláken k synchronizaci přístupu k objektům zajistit bezpečný přístup z více vláken. Použití těchto tříd je popsána v [Multithreading: jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md) a [Multithreading: kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o těchto objektů najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
 
-[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

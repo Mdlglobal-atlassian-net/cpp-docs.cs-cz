@@ -1,5 +1,5 @@
 ---
-title: 'TN064: Apartment Model práce s vlákny v ovládacích prvcích ActiveX | Microsoft Docs'
+title: 'TN064: Apartment Model práce s vlákny v ovládacích prvcích ActiveX | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 262760ecc835d9b82dde81bf9d8602f775ad7f50
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950432"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131529"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.  
+>  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.  
   
- Tato technická Poznámka vysvětluje, jak povolit apartment model práce s vlákny v ovládacím prvku ActiveX. Všimněte si, že dělení modelu objektu apartment je podporována pouze v jazyce Visual C++ verze 4.2 nebo novější.  
+ Tato technická Poznámka vysvětluje, jak povolit apartment model práce s vlákny v ovládacím prvku ActiveX. Všimněte si, že apartment model práce s vlákny je podporováno pouze ve verzi Visual C++ 4.2 nebo novější.  
   
-## <a name="what-is-apartment-model-threading"></a>Co je dělení modelu objektu Apartment  
- Modelu objektu apartment je přístup k podpora vložené objekty, jako je například ovládací prvky ActiveX, v rámci aplikace s více vlákny kontejneru. I když aplikace může mít více vláken, každá instance vložený objekt bude přiřazen k jedné "typu apartment,", který se spustí na pouze jedno vlákno. Jinými slovy všechna volání do instance ovládacího prvku proběhne ve stejném vlákně.  
+## <a name="what-is-apartment-model-threading"></a>Jaký je Apartment Model práce s vlákny  
+ Model objektu apartment je přístup k podpoře vložené objekty, jako je například ovládací prvky ActiveX, v rámci aplikace s více vlákny kontejneru. I když se aplikace může mít více vláken, každá instance vloženého objektu přiřadí k jedné "apartment,", který se spustí na pouze jedno vlákno. Jinými slovy všechna volání do instance ovládacího prvku se stane ve stejném vlákně.  
   
- Různé instance stejného typu ovládacího prvku však může být přiřazen jiné Apartment. Ano Pokud více instancí ovládacího prvku sdílet všechna data v běžné (například statickou nebo globální data), pak přístup k těmto datům sdílené muset být chráněn na synchronizační objekt, jako je například důležitý oddíl.  
+ Různé instance stejného typu ovládacího prvku však může být přiřazen jiné objekty apartment. Ano Pokud více instancí ovládacího prvku sdílet všechna data v běžných (například statické nebo globální data), pak přístup k těmto datům sdílené se mají být chráněny objektem synchronizace, jako je kritický oddíl.  
   
- Kompletní informace o model vláken typu apartment, najdete v tématu [vláken a procesů](http://msdn.microsoft.com/library/windows/desktop/ms684841) v *OLE referenční informace pro programátory*.  
+ Kompletní informace o podprocesový model apartment, najdete v tématu [procesy a vlákna](/windows/desktop/ProcThread/processes-and-threads) v *OLE referenční informace pro programátory*.  
   
-## <a name="why-support-apartment-model-threading"></a>Proč podporují dělení modelu objektu Apartment  
- Ovládací prvky, které podporují dělení modelu objektu apartment lze použít v kontejneru vícevláknové aplikace, které také podporují modelu objektu apartment. Pokud nepovolíte dělení modelu objektu apartment, omezí potenciální sadu kontejnery, ve kterých by bylo použít vlastní ovládací prvek.  
+## <a name="why-support-apartment-model-threading"></a>Proč podporovat Apartment Model práce s vlákny  
+ Ovládací prvky, které podporují apartment model práce s vlákny lze použít v aplikacích s více vlákny kontejneru, které také podporu modelu objektu apartment. Pokud nepovolíte apartment model práce s vlákny, omezí potenciální sadu kontejnerů, ve kterých může váš ovládací prvek použít.  
   
- Povolení dělení modelu objektu apartment je snadné pro většinu ovládací prvky, zejména v případě, že mají žádné nebo téměř žádné sdílená data.  
+ Povolení apartment model práce s vlákny je snadné pro většinu ovládací prvky, zejména v případě, že mají žádné nebo téměř žádné sdíleným datům.  
   
-## <a name="protecting-shared-data"></a>Ochrana sdílená Data  
- Pokud vaše řízení používá sdílená data, například statické členské proměnné, přístup k že data by měly být chráněné s kritická sekce zabránit úprava dat ve stejnou dobu více než jedno vlákno. Pro nastavení důležitý oddíl pro tento účel, deklarovat proměnnou statický člen třídy `CCriticalSection` ve třídě ovládacího prvku. Použití `Lock` a `Unlock` členské funkce této kritické části objektu bez ohledu na váš kód přistupuje k sdíleným datům.  
+## <a name="protecting-shared-data"></a>Ochrana sdílených dat  
+ Pokud váš ovládací prvek používá sdílených dat, jako je například statické členské proměnné, přístup k, že data by měly být chráněné pomocí kritický oddíl, chcete-li zabránit ve změně data ve stejnou dobu více než jedno vlákno. Chcete-li nastavit kritický oddíl pro tento účel, deklarujte statické členské proměnné třídy `CCriticalSection` ve třídě ovládacího prvku. Použití `Lock` a `Unlock` členské funkce tento kritický oddíl objektu bez ohledu na to váš kód přistupuje ke sdíleným datům.  
   
- Zvažte například řízení třídu, která je potřeba udržovat řetězec, který je sdílen všechny instance. Tento řetězec můžete udržovat statický člen proměnné a chráněn kritická sekce. Deklarace třídy ovládacího prvku by obsahovat následující:  
+ Zvažte například, kterou je potřeba udržovat řetězec, který je sdílena všemi instancemi třídy ovládacího prvku. Tento řetězec můžete být zachována ve statické členské proměnné a je chráněn kritický oddíl. Deklarace třídy ovládacího prvku by obsahovat následující:  
   
 ```  
 class CSampleCtrl : public COleControl  
@@ -59,14 +59,14 @@ class CSampleCtrl : public COleControl
 };  
 ```  
   
- Implementace pro třídu by obsahovat definice pro tyto proměnné:  
+ Implementace třídy by obsahovat definice pro tyto proměnné:  
   
 ```  
 int CString CSampleCtrl::_strShared;  
 CCriticalSection CSampleCtrl::_critSect;  
 ```  
   
- Přístup k `_strShared` statický člen pak může být chráněn kritické části:  
+ Přístup k `_strShared` statický člen pak může být chráněn kritický oddíl:  
   
 ```  
 void CSampleCtrl::SomeMethod()  
@@ -80,8 +80,8 @@ if (_strShared.Empty())
 }  
 ```  
   
-## <a name="registering-an-apartment-model-aware-control"></a>Registrace ovládacího prvku typu Apartment modelu s deklaracemi  
- Ovládací prvky, které podporují dělení modelu objektu apartment by měl být uveden tato funkce v registru přidáním pojmenované hodnotě "ThreadingModel" s hodnotou "Apartment" v jejich třída ID položky registru *id třídy* \\ **InprocServer32** klíč. Aby tento klíč automaticky zaregistrovat pro vaše ovládací prvek, předat *afxregapartmentthreading –* příznak ve šestého parametru `AfxOleRegisterControlClass`:  
+## <a name="registering-an-apartment-model-aware-control"></a>Registrace objektu Apartment modelu – s ohledem na ovládací prvek  
+ Ovládací prvky, které podporují apartment model práce s vlákny by měla zobrazovat tato funkce v registru tak, že přidáte hodnotu s názvem "ThreadingModel" s hodnotou "Apartment" ve své třídě ID položky registru *id třídy* \\ **InprocServer32** klíč. Chcete-li způsobit, že tento klíč k registraci pro ovládací prvek automaticky, předejte *afxRegApartmentThreading* příznak šestého parametru za účelem `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -106,11 +106,11 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
 }  
 ```  
   
- Pokud váš projekt správy vygenerovalo ControlWizard v jazyce Visual C++ verze 4.1 nebo novější, tento příznak už bude přítomná v kódu. Žádné změny jsou nezbytné pro registraci model vláken.  
+ Pokud váš projekt ovládací prvek byl vytvořen ControlWizard v jazyce Visual C++ verze 4.1 nebo novější, tento příznak již budou k dispozici ve vašem kódu. Žádné změny nejsou potřebné k registraci modelu vláken.  
   
- Pokud projekt byla vytvořena ve starší verzi ControlWizard, váš stávající kód bude mít logickou hodnotu jako šestého parametru. Pokud parametr existující hodnotu PRAVDA, změňte jej na *afxreginsertable – | afxregapartmentthreading –*. Pokud parametr existující hodnotu FALSE, změňte jej na *afxregapartmentthreading –*.  
+ Pokud váš projekt byl vytvořen starší verzi ControlWizard, svůj existující kód bude mít hodnotu typu Boolean jako šestého parametru. Pokud má parametr existující hodnotu TRUE, změňte ho na *afxRegInsertable | afxRegApartmentThreading*. Pokud má parametr existující hodnotu FALSE, změňte ho na *afxRegApartmentThreading*.  
   
- Pokud vaše řízení nedodrží pravidla pro dělení modelu objektu apartment, nesmí předat *afxregapartmentthreading –* v tomto parametru.  
+ Pokud váš ovládací prvek není postupujte z pravidel pro apartment model práce s vlákny, nesmí předat *afxRegApartmentThreading* v tomto parametru.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465305"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131059"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Obcházení problémových oblastí pomocí programů s více vlákny
-Existuje několik problémů, které můžete narazit při vytváření, propojení nebo spuštění vícevláknový C programu. Některé běžné problémy jsou popsány v následující tabulce. (Podobné informace z hlediska knihovny MFC naleznete v tématu [Multithreading: Programovací tipy](../parallel/multithreading-programming-tips.md).)  
+Existuje několik problémů, které můžete narazit při vytváření, propojení nebo spuštění vícevláknový C programu. Některé běžné problémy jsou popsány v následující tabulce. (Podobné informace z hlediska knihovny MFC naleznete v tématu [Multithreading: Programovací tipy](multithreading-programming-tips.md).)  
   
 |Problém|Pravděpodobná příčina|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ Existuje několik problémů, které můžete narazit při vytváření, propoje
   
 ## <a name="see-also"></a>Viz také  
 
-[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

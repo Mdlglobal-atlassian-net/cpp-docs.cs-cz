@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900697"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132240"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -55,19 +55,19 @@ Založený na rozsahu pro smyčky už nevyžadují, aby begin() a end() vrací o
 
 ### <a name="constexpr-lambdas"></a>výrazy lambda constexpr.
 
-Může se teď dá výrazy lambda v konstantních výrazech. Další informace najdete v tématu [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+Může se teď dá výrazy lambda v konstantních výrazech. Další informace najdete v tématu [constexpr výrazy lambda v jazyce C++](cpp/lambda-expressions-constexpr.md).
 
 ### <a name="if-constexpr-in-function-templates"></a>Pokud v rámci šablony funkce constexpr.
 
-Šablona funkce může obsahovat `if constexpr` příkazy Povolit větvení v době kompilace. Další informace najdete v tématu [Pokud constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+Šablona funkce může obsahovat `if constexpr` příkazy Povolit větvení v době kompilace. Další informace najdete v tématu [Pokud constexpr příkazy](cpp/if-else-statement-cpp.md#if_constexpr).
 
 ### <a name="selection-statements-with-initializers"></a>Příkazy výběru s inicializátory
 
-`if` Příkaz může zahrnovat inicializátoru, který představuje proměnnou v oboru bloku v rámci příkazu samotný. Další informace najdete v tématu [příkazy výběru s inicializátorem](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
+`if` Příkaz může zahrnovat inicializátoru, který představuje proměnnou v oboru bloku v rámci příkazu samotný. Další informace najdete v tématu [Pokud příkazy s inicializátorem](cpp/if-else-statement-cpp.md#if_with_init).
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] a atributy [[nodiscard]]
 
-Nové atributy nečinnosti upozornění, když se nepoužívá entity, nebo vytvořit upozornění, pokud se zruší vrácenou hodnotu volání funkce. Další informace najdete v tématu [formulaci atributu maybe_unused](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) a [návrh nevyužité, atributy nodiscard a fallthrough](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
+Nové atributy nečinnosti upozornění, když se nepoužívá entity, nebo vytvořit upozornění, pokud se zruší vrácenou hodnotu volání funkce. Další informace najdete v tématu [atributy v jazyce C++](cpp/attributes.md).
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Použití atributu oboru názvů bez opakování
 
@@ -75,11 +75,11 @@ Novou syntaxi povolit pouze identifikátor jednoho oboru názvů v seznamu atrib
 
 ### <a name="structured-bindings"></a>Strukturované vazby
 
-Nyní je možné v jedné deklaraci k uložení hodnoty se jednotlivé názvy pro součásti, když je pole, std::tuple nebo std::pair, nebo hodnotu má všechny veřejné nestatické datové členy. Další informace najdete v tématu [strukturovaných vazeb](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
+Nyní je možné v jedné deklaraci k uložení hodnoty se jednotlivé názvy pro součásti, když je pole, std::tuple nebo std::pair, nebo hodnotu má všechny veřejné nestatické datové členy. Další informace najdete v tématu [strukturovaných vazeb](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) a [vrácení více hodnot z funkce](cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Pravidla vytváření pro třídy hodnot výčtu
 
-Nyní převod implicitní/bez zúžení z podkladový typ výčet s oborem pro výčet, pokud se žádný čítač zavádí jeho definici a zdroji pomocí syntaxe Inicializace seznamu. Další informace najdete v tématu [konstrukce pravidla pro výčet tříd hodnoty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+Nyní převod implicitní/bez zúžení z podkladový typ výčet s oborem pro výčet, pokud se žádný čítač zavádí jeho definici a zdroji pomocí syntaxe Inicializace seznamu. Další informace najdete v tématu [konstrukce pravidla pro výčet tříd hodnoty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) a [výčty](cpp/enumerations-cpp.md#no_enumerators).
 
 ### <a name="capturing-this-by-value"></a>Zachytávání \*tím, že hodnota
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+Další informace najdete v tématu [konstruktory](cpp/constructors-cpp.md#inheriting_constructors).
 
 ### <a name="c17-extended-aggregate-initialization"></a>C ++ 17 Extended inicializace agregace
 

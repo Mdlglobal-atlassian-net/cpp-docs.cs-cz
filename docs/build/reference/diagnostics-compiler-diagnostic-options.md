@@ -1,5 +1,5 @@
 ---
-title: -diagnostiky (možnosti kompilátoru diagnostiky) | Microsoft Docs
+title: -diagnostics (Možnosti diagnostiky kompilátoru) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/11/2016
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f1dce7c7c48e7c7c94da95ca187e0388b3f5d4d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371769"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131638"
 ---
-# <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (možnosti kompilátoru diagnostiky)  
+# <a name="diagnostics-compiler-diagnostic-options"></a>/ Diagnostics (Možnosti diagnostiky kompilátoru)  
   
-Použití **/diagnostics** – možnost kompilátoru k určení zobrazení chyb a upozornění informace o umístění.  
+Použití **/Diagnostics** – možnost kompilátoru k určení zobrazovat informace o umístění chyby a upozornění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,25 +37,28 @@ Použití **/diagnostics** – možnost kompilátoru k určení zobrazení chyb 
 ```  
 
 ## <a name="remarks"></a>Poznámky  
-**/Diagnostics** – možnost kompilátoru ovládací prvky zobrazení informace o upozornění a chyby.  
+
+Tato možnost je podporována v sadě Visual Studio 2017 nebo novější.
+
+**/Diagnostics** – možnost kompilátoru ovládací prvky zobrazení chyby a upozornění.  
   
-**/Diagnostics:classic** je výchozí nastavení, která hlásí jenom číslo řádku kde byl nalezen problém.  
+**/Diagnostics:classic** je výchozí nastavení, která hlásí pouze číslo řádku ve kterém byl nalezen problém.  
   
-**/Diagnostics:column** možnost také obsahuje sloupec, kde byl nalezen problém. To vám může pomoct identifikovat konkrétní jazyk konstrukce nebo znak, který je příčinou problému.  
+**/Diagnostics:column** možnost také obsahuje sloupec, ve kterém byl nalezen problém. To může pomoct identifikovat konkrétní jazykové konstrukce nebo znak, který je příčinou problému.  
   
-**/Diagnostics:caret** možnost obsahuje sloupec, kde problém byl nalezen a umístí šipka nahoru (^) v umístění v řádku kódu, kde byl zjištěn problém.  
+**/Diagnostics:caret** možnost obsahuje sloupce, kde byl nalezen problém a umístí stříšky (^) v části umístění v řádku kódu, kde byl zjištěn problém.  
   
-Všimněte si, že v některých případech, kompilátor nezjistí kde došlo k problému. Chybí středník například nemusí zjistit, dokud symboly, které neočekávané byly zjištěny. Sloupec se použije v hlášení a vsuvka je umístěn, kde kompilátor zjistil, že něco byla chybná, což není vždy potřebujete-li provést vaší opravu.  
+Všimněte si, že v některých případech, kompilátor nezjistí kde došlo k problému. Chybí středník například nemusí zjistit, dokud byly zjištěny symboly, které neočekávané. Sloupec se použije v hlášení a blikající kurzor je umístěn, kde kompilátor zjistil, že něco pokazilo, což není vždy potřebujete-li provést opravu.  
   
-**/Diagnostics** možnost je k dispozici od Visual Studio 2017.  
+**/Diagnostics** možnost je k dispozici od verze Visual Studio 2017.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio  
   
-1. Otevřete váš projekt **stránky vlastností** dialogové okno.   
+1. Otevřete svůj projekt **stránky vlastností** dialogové okno.   
   
 2. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **Obecné** stránku vlastností.  
   
-3. Použijte ovládací prvek rozevírací seznam v **diagnostiky formátu** možnost zobrazit pole a vyberte diagnostiky. Zvolte **OK** nebo **použít** uložte provedené změny.  
+3. Použijte rozevírací seznam ovládacího prvku **formát diagnostiky** možnost zobrazení pole k výběru Diagnostika. Zvolte **OK** nebo **použít** uložte provedené změny.  
   
 ## <a name="see-also"></a>Viz také  
  [Možnosti kompilátoru](../../build/reference/compiler-options.md)   

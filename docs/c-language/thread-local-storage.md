@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f651e7f6f35ceca02003ef24ccda98ada6f6c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596981"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131736"
 ---
 # <a name="thread-local-storage"></a>Úložiště Thread Local
 **Specifické pro Microsoft**  
   
- Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna daného procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplný popis vláken naleznete v tématu [procesy a vlákna](http://msdn.microsoft.com/library/windows/desktop/ms684841) v sadě Windows SDK.  
+ Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna daného procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplný popis vláken naleznete v tématu [procesy a vlákna](/windows/desktop/ProcThread/processes-and-threads) v sadě Windows SDK.  
   
  Jazyk Microsoft C obsahuje atribut Rozšířené paměťové třídy, vlákna, která se používá s __declspec – klíčové slovo pro deklarování místní proměnné vlákna. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:  
   

@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Jak používat synchronizační třídy | Dokumentace Microsoftu'
+title: 'Multithreading: Jak používat synchronizační třídy knihovny MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597886"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131259"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy knihovny MFC
 Synchronizace přístup k prostředkům mezi vlákny je běžný problém při psaní aplikací s více vlákny. Má dvě nebo více vláken současně přístupu, kterou stejných dat může vést k nežádoucím a nepředvídatelným výsledkům. Například jedno vlákno může aktualizovat obsah struktury zatímco jiné vlákno čte obsah stejnou strukturu. Není známo, jaká data vlákno pro čtení obdrží: stará data, nově zapsaná data či kombinaci obou. Knihovna MFC poskytuje řadu synchronizace a synchronizační přístupové třídy, které vám pomůže při řešení tohoto problému. Toto téma popisuje třídy, které jsou k dispozici a jak se dají použít k vytvoření třídy bezpečné pro vlákna v typické aplikaci s více vlákny.  
   
 Typická aplikace s více vlákny obsahuje třídu, která představuje zdroj soupisu materiálu sdílet mezi vlákny. Plně bezpečným pro vlákno, správně navržená třída nevyžaduje volat jakékoli funkce synchronizace. Všechno, co je do třídy, což vám umožní soustředit se na tom, jak co nejlíp využít třídy, ne o tom, jak může poškodit interně zpracována. Efektivní technikou pro vytvoření třídy plně bezpečným pro vlákno je sloučit třídy synchronizace do třídy prostředků. Slučování synchronizační třídy do sdílené třídy je jednoduchý proces.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 Nevýhody tohoto přístupu je, že třídy se o něco pomalejší než stejné třídy bez přidání objektů synchronizace. Také pokud je pravděpodobné, že více než jedno vlákno může odstranit objekt, sloučené přístup nemusí vždy fungovat. V takovém případě je lepší zachovat objekty samostatní synchronizace.  
   
-Informace o určení, jakou synchronizační třídu použít v různých situacích, naleznete v tématu [Multithreading: kdy použít synchronizační třídy](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Další informace o synchronizaci najdete v tématu [synchronizace](http://msdn.microsoft.com/library/windows/desktop/ms686353) v sadě Windows SDK. Další informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Informace o určení, jakou synchronizační třídu použít v různých situacích, naleznete v tématu [Multithreading: kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o synchronizaci najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK. Další informace o podpoře multithreadingu v knihovně MFC, naleznete v tématu [Multithreading s C++ a knihovnou MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Viz také  
  
-[Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading s použitím jazyka C++ a prostředí MFC](multithreading-with-cpp-and-mfc.md)

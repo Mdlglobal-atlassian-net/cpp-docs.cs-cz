@@ -1,5 +1,5 @@
 ---
-title: -DEBUG (generování ladicích informací) | Microsoft Docs
+title: -DEBUG (generování ladicích informací) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b3799447e160a56d73441b60215f1dfcb3e227
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375724"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132132"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generovat ladicí informace)
 ```  
@@ -42,41 +42,41 @@ ms.locfileid: "32375724"
 
 **/DEBUG** možnost vytvoří ladicí informace pro spustitelný soubor.    
   
-Linkeru umístí informace o ladění do souboru databáze (PDB) programu. Aktualizuje PDB během následných sestavení programu.  
+Linker vloží informace o ladění do souboru databáze (PDB) programu. Během následujících sestaveních programu aktualizuje soubor PDB.  
   
-Spustitelný soubor (soubor .exe nebo knihovny DLL) vytvořen pro ladění obsahuje název a cesta odpovídající PDB. Ladicí program přečte embedded název a používá PDB při ladění programu. Linkeru používá základní název programu a rozšíření PDB název databáze programu a vloží cestu, kde se vytvořila. Chcete-li přepsat toto výchozí nastavení, nastavte [/PDB](../../build/reference/pdb-use-program-database.md) a zadejte jiný název souboru.  
+Spustitelný soubor (soubor .exe nebo knihovny DLL) vytvořené pro ladění obsahuje název a cesta odpovídající souboru PDB. Ladicí program načte vložený název a použije soubor PDB při ladění programu. Propojovací program používá základní název programu a příponou PDB pro název databáze programu a vloží cestu, kde byl vytvořen. Chcete-li přepsat toto výchozí nastavení, nastavte [/PDB](../../build/reference/pdb-use-program-database.md) a zadejte jiný název souboru.  
 
-**/DEBUG:FASTLINK** možnost opustí informací o privátní symbolu v produktech jednotlivých kompilace sloužící k vytvoření spustitelného souboru. Vygeneruje omezené PDB, která indexuje do informace o ladění do objektu soubory a knihovny sloužící k vytvoření spustitelného souboru místo provedení úplné kopie. Tato možnost může propojit ze dvou k čtyřikrát tak rychlý jako úplné PDB generování a se doporučuje, když jsou místně ladění a máte k dispozici sestavení produkty. Tato omezená PDB nelze použít pro ladění, pokud tyto produkty požadované sestavení nejsou k dispozici, například při nasazení spustitelný soubor na jiném počítači. V příkazovém řádku vývojáře můžete nástroj mspdbcmf.exe generovat úplné PDB z této omezené PDB. V sadě Visual Studio použijte pro generování celého souboru PDB k vytvoření úplné PDB pro projekt nebo řešení položky nabídky projektu nebo sestavení.  
+**/Debug: fastlink** možnost je k dispozici v sadě Visual Studio 2017 a novější. Tato možnost ponechá informace o privátních symbolů v jednotlivých kompilace produkty sloužící k sestavení spustitelného souboru. Generuje omezené, která indexuje do informací o ladění do souborů objektů a knihoven sloužící k sestavení spustitelného souboru místo vytvoření úplné kopie souboru PDB. Tuto možnost můžete propojit dvě pro čtyřikrát nejrychleji Úplné generování souborů PDB a doporučuje se při místním ladění a máte k dispozici sestavení produkty. Tato omezená PDB nelze použít pro ladění, když produkty požadované sestavení nejsou k dispozici, například když nasazená spustitelného souboru v jiném počítači. V příkazovém řádku pro vývojáře můžete použít nástroj mspdbcmf.exe Generovat úplný soubor PDB z této omezené PDB. V sadě Visual Studio použijte ke generování úplný soubor PDB vytvořit úplný soubor PDB pro projekt nebo řešení položky nabídky projekt nebo sestavení.  
   
-**/DEBUG:FULL** možnost přesune všechny privátní symbol informace z produktů jednotlivých kompilace (objekt soubory a knihovny) do jedné PDB a může být nejvíce zdlouhavý součástí odkaz. Ale úplné PDB slouží k ladění spustitelného souboru, když žádné jiné produkty sestavení jsou k dispozici, například při nasazení spustitelný soubor.  
+**/Debug: Full** možnost přesune všechny informace o privátních symbolů z kompilace jednotlivých produktů (souborů objektů a knihoven) do jednoho souboru PDB a může být nejvíce časově náročná část odkazu. Úplný soubor PDB však lze použít k ladění spustitelného souboru, když žádné jiné produkty sestavení jsou k dispozici, například při nasazení spustitelný soubor.  
   
-**/DEBUG: žádné** možnost negeneruje PDB.  
+**/DEBUG: žádný** možnost negeneruje souboru PDB.  
   
-Pokud zadáte **/DEBUG** s žádné další možnosti linkeru výchozí **/DEBUG:FULL** pro příkazový řádek a sestavení souboru pravidel pro verzi sestavení v prostředí Visual Studio IDE a pro ladění a vydání sestavení v sadě Visual Studio 2015 a starší verze. Od verze Visual Studio 2017, systém sestavení v prostředí IDE výchozí **/DEBUG:FASTLINK** Pokud zadáte **/DEBUG** možnost pro ladění. Ostatní výchozí hodnoty jsou beze změny pro zachování zpětné kompatibility.  
+Pokud zadáte **/DEBUG** bez jakýchkoli dalších možností linkeru výchozí hodnota je **/Debug: Full** příkazového řádku a soubor pravidel sestavení pro vydání verze sestavení v integrovaném vývojovém prostředí sady Visual Studio a pro ladění a vydání sestavení v sadě Visual Studio 2015 a starší verze. Od v sadě Visual Studio 2017, systém sestavení v integrovaném vývojovém prostředí standardně **/Debug: fastlink** při zadání **/DEBUG** možnost pro sestavení pro ladění. Pro zachování zpětné kompatibility jsou beze změny jiných výchozích hodnot.  
   
-Kompilátoru [kompatibilní s C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) způsobí, že kompilátor opustit ladicí informace v souborech obj. Můžete také [databázi programu](../../build/reference/z7-zi-zi-debug-information-format.md) – možnost kompilátoru (/Zi) Chcete-li uložit informace o ladění do souboru PDB souboru .obj. Linkeru hledá objektu PDB nejprve absolutní cesta napsané v souboru .obj, a pak v adresáři, který obsahuje souboru .obj. Nelze zadat název souboru PDB nebo umístění pro linkeru objektu.  
+Kompilátoru [kompatibilní s C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) možnost způsobí, že kompilátor v souborech .obj opustit ladicí informace. Můžete také použít [databázi programu](../../build/reference/z7-zi-zi-debug-information-format.md) (/Zi) – možnost kompilátoru ukládat informace o ladění v souboru .obj souboru PDB. Propojovací program hledá PDB objektu nejprve absolutní cesta napsané v souboru .obj, a pak v adresáři, který obsahuje soubor .obj. Nelze zadat název souboru PDB nebo umístění do propojovacího programu objektu.  
   
 [/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) je zahrnuta, když je zadán/Debug.  
   
-/ DEBUG změní výchozí hodnoty [/OPT](../../build/reference/opt-optimizations.md) možnost z REF z bránou Firewall a NOREF NOICF, takže pokud chcete původní výchozí hodnoty, je nutné explicitně zadat /OPT:REF nebo /OPT:ICF.  
+/ DEBUG změní výchozí hodnoty [/OPT](../../build/reference/opt-optimizations.md) možnost z REF NOREF a ze brána NOICF, takže pokud chcete původní výchozí hodnoty, je nutné explicitně zadat OPT nebo /OPT:ICF.  
   
-Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o ladění. Ladění informace vždy umístěny v souboru .obj nebo pdb.  
+Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o ladění. Ladit informace vždy umístěny v souboru .obj nebo .pdb.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **Linkeru** složky.  
+2.  Klikněte na tlačítko **Linkeru** složky.  
   
-3.  Klikněte **ladění** stránku vlastností.  
+3.  Klikněte na tlačítko **ladění** stránku vlastností.  
   
-4.  Změnit **Generovat ladicí informace** vlastnost Povolit generování PDB. To umožňuje /DEBUG:FASTLINK ve výchozím nastavení v Visual Studio 2017.  
+4.  Upravit **Generovat ladicí informace** vlastností pro povolení generování PDB. To umožňuje/Debug: fastlink ve výchozím nastavení v sadě Visual Studio 2017.  
   
-4.  Změnit **generovat celého souboru databáze programu** vlastnost umožňující /DEBUG:FULL úplné PDB vygenerovat pro každý přírůstkové sestavení.  
+4.  Upravit **Generovat úplný soubor databáze programu** vlastností pro povolení/Debug: full pro úplné generování souborů PDB pro každé přírůstkové sestavení.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
   
-1.  V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.  
+1.  Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   

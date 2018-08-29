@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9e432cb098c17a3ac03e5b394f304578bbe06f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590403"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131717"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -27,13 +27,10 @@ Visual Studio 2017 přináší řadu vylepšení a oprav prostředí Visual C++.
 ### <a name="c-conformance-improvements"></a>Vylepšení shody C++
 
 V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozšířenou podporou pro funkce C++11 a C++14, a také předběžnou podporou pro některé funkce očekávané ve standardu C++17. Podrobné informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md).
-**Visual Studio 2017 verze 15.5**:  
 
-   Kompilátor podporuje přibližně 75 % funkcí, které jsou nové v C ++ 17, včetně strukturovaných vazeb `constexpr` výrazy lambda, `if constexpr`, vložených proměnných, přeložte výrazy a přidání `noexcept` do systému typů. Tyto jsou dostupné v rámci **/std: c ++ 17** možnost. Další informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md)
+**Visual Studio 2017 verze 15.5**: kompilátor podporuje přibližně 75 % funkcí, které jsou nové v C ++ 17, včetně strukturovaných vazeb `constexpr` výrazy lambda, `if constexpr`, přeložte vložených proměnných, výrazů a přidání `noexcept` k systém typů. Tyto jsou dostupné v rámci **/std: c ++ 17** možnost. Další informace najdete v tématu [vylepšení shody C++ v sadě Visual Studio 2017](cpp-conformance-improvements-2017.md)
 
-**Visual Studio 2017 verze 15.7**:  
-
-Sada nástrojů kompilátoru MSVC v sadě Visual Studio verze 15.7 nyní odpovídá standardu jazyka C++. Další informace najdete v tématu [Announcing: MSVC splňuje C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) a [shoda jazyka Visual C++](visual-cpp-language-conformance.md).
+**Visual Studio 2017 verze 15.7**: Sada nástrojů kompilátoru MSVC v sadě Visual Studio verze 15.7 nyní odpovídá standardu C++. Další informace najdete v tématu [Announcing: MSVC splňuje C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) a [shoda jazyka Visual C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nové možnosti kompilátoru
 

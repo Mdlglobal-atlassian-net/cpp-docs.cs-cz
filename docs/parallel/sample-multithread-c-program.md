@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466389"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131333"
 ---
 # <a name="sample-multithread-c-program"></a>Ukázkový vícevláknový program v jazyce C
-Bounce.c je ukázka vícevláknového programu, který vytvoří nové vlákno při každém písmeno `a` nebo `A` je zadán. Každé vlákno nedoručitelných zpráv šťastný obličej různé barvy po obrazovce. Je možné vytvořit až 32 vláken. K normálnímu ukončení programu dochází při `q` nebo `Q` je zadán. Informace o kompilaci a propojování Bounce.c naleznete v tématu [kompilace a propojování vícevláknových programů](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c je ukázka vícevláknového programu, který vytvoří nové vlákno při každém písmeno `a` nebo `A` je zadán. Každé vlákno nedoručitelných zpráv šťastný obličej různé barvy po obrazovce. Je možné vytvořit až 32 vláken. K normálnímu ukončení programu dochází při `q` nebo `Q` je zadán. Informace o kompilaci a propojování Bounce.c naleznete v tématu [kompilace a propojování vícevláknových programů](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Příklad  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>Viz také  
 
-[Multithreading s použitím jazyka C a prostředí Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

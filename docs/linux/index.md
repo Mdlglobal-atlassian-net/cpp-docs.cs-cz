@@ -7,16 +7,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d93ad1fd32003444c9ddd991e1810fbc5bec79d5
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: adedfd2a6589d7d7d0fad453428d409932007e15
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465500"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131902"
 ---
 # <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
 
-Vytvářet a ladit aplikace běžící na Linuxu.
+Visual Studio 2017 umožňuje vytvářet a ladit aplikace běžící na Linuxu.
 
 <ul class="panelContent cardsF">
     <li>
@@ -31,7 +31,7 @@ Vytvářet a ladit aplikace běžící na Linuxu.
                     </div>
                     <div class="cardText">
                         <h3>Instalace a konfigurace úlohy Linux</h3>
-                        <p>Další informace o nastavení sady Visual Studio k vytvoření aplikace pro Linux v C++.</p>
+                        <p>Zjistěte, jak nastavit Visual Studio 2017 a novější k sestavení aplikace pro Linux v C++.</p>
                     </div>
                 </div>
             </div>
