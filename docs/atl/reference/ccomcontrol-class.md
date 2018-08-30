@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883447"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198452"
 ---
 # <a name="ccomcontrol-class"></a>Ccomcontrol – třída
 Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný ovládací prvek Vlastnost se změnila. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK. 
+ Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), tato metoda volá [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný ovládací prvek Vlastnost se změnila. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK. 
   
  Tato metoda je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný vlastnosti ovládacího prvku je změnit. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK.  
+ Pokud je odvozena z třídy vašeho ovládacího prvku [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), tato metoda volá [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) upozornit všechny připojené `IPropertyNotifySink` rozhraní, které zadaný vlastnosti ovládacího prvku je změnit. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, tato metoda vrátí hodnotu S_OK.  
 
   
  Tato metoda je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.  
@@ -205,10 +205,10 @@ int MessageBox(
  Pole Název dialogového okna. Pokud hodnotu NULL (výchozí), název se používá "Chyba".  
   
  *nTyp*  
- Určuje obsah a chování dialogového okna. Zobrazit [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) položku v dokumentaci Windows SDK pro seznam k dispozici různé zprávami. Výchozí hodnota poskytuje jednoduchý **OK** tlačítko.  
+ Určuje obsah a chování dialogového okna. Zobrazit [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) položku v dokumentaci Windows SDK pro seznam k dispozici různé zprávami. Výchozí hodnota poskytuje jednoduchý **OK** tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí celočíselnou hodnotu určující jednu z hodnot položky nabídky v části [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) v dokumentaci Windows SDK.  
+ Vrátí celočíselnou hodnotu určující jednu z hodnot položky nabídky v části [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) v dokumentaci Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  `MessageBox` je užitečné při vývoji i snadný způsob, jak zobrazit chybu nebo upozornění pro uživatele.  

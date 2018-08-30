@@ -1,5 +1,5 @@
 ---
-title: Převody přetypování | Microsoft Docs
+title: Převody přetypování | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,50 +19,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d040f3ce29f78b614c60d815cac16362374bddb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391025"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205607"
 ---
 # <a name="type-cast-conversions"></a>Převody přetypování
-Přetypování typu můžete explicitně převést typy.  
+Přetypování typu můžete použít k explicitnímu převodu typů.  
   
  **Syntaxe**  
   
  *výraz CAST*:  
  *Unární výraz*  
   
- **(***název typu***)***výraz cast*  
+ **(***název typu***)***výrazem přetypování.*   
   
  *Název typu*:  
- *specifikátor. kvalifikátor seznamu abstraktní – deklarátor* opt  
+ *specifikátor seznam kvalifikátorů abstraktní declarator* optimalizované  
   
- *Název typu* typu a *výraz cast* je hodnota má být převeden na typu. Výraz s přetypování není l hodnota. *Výraz cast* je převést, jako by měl přiřazený k proměnné typu *název typu*. Převod pravidel pro přiřazení (uvedených v [převody přiřazení](../c-language/assignment-conversions.md)) použít na typ přetypování také. Následující tabulka uvádí typy, které lze převést do daného typu.  
+ *Název typu* je typ a *výrazem přetypování* je hodnota má být převeden na typu. Výraz s přetypování není l hodnotou. *Výrazem přetypování* je převedena, jako by měl přiřazený k proměnné typu *název typu*. Pravidla převodu pro přiřazení (uvedených v [převody přiřazení](../c-language/assignment-conversions.md)) platí u typu přetypování také. V následující tabulce jsou uvedeny typy, které může být převeden do daného typu.  
   
-### <a name="legal-type-casts"></a>Přetypování právní typu  
+### <a name="legal-type-casts"></a>Právní přetypování  
   
 |Určení typů|Potenciální zdroje|  
 |-----------------------|-----------------------|  
-|Celočíselné typy|Všechny typ celé číslo nebo s plovoucí desetinnou čárkou nebo ukazatel na objekt|  
-|S plovoucí desetinnou čárkou|Žádný typ, aritmetické|  
-|Ukazatel na objekt, nebo (**void \*** )|Libovolného typu integer, (**void \*** ), ukazatel na objekt nebo ukazatel na funkci|  
-|Ukazatel na funkci|Žádný typ, integrální, ukazatel na objekt nebo ukazatel na funkci|  
+|Celočíselné typy|Libovolný celočíselný typ nebo typ s plovoucí desetinnou čárkou nebo ukazatel na objekt|  
+|S plovoucí desetinnou čárkou|Žádné aritmetický typ|  
+|Ukazatel na objekt, nebo (**void** <strong>\*</strong>)|Jakýkoli typ celé číslo (**void** <strong>\*</strong>), ukazatel na objekt nebo ukazatel na funkci|  
+|Ukazatel na funkci|Libovolný integrální typ, ukazatel na objekt nebo ukazatel na funkci|  
 |Struktury, sjednocení nebo pole|Žádné|  
-|Typ void|Jakýkoli typ|  
+|Typ void.|Jakýkoli typ|  
   
- Všechny identifikátor lze převést na `void` typu. Ale pokud typ zadaný v výraz přetypování není `void`, potom se identifikátor přetypovat na že nemůže být typu `void` výraz. Jakýkoli výraz lze převést na `void`, ale výraz typu `void` nelze převést na jiný typ. Například funkce s `void` vrátí typ nemůže mít jeho vraťte se k jinému typu přetypování.  
+ Žádný identifikátor lze převést na `void` typu. Nicméně, pokud typ zadaný v výraz přetypování není `void`, potom se identifikátor přetypovat na, že typ nemůže být `void` výrazu. Libovolný výraz může být převeden na `void`, ale výraz typu `void` nelze přetypovat na libovolného typu. Například funkce s `void` vrátit typ nemůže mít jeho návratový přetypován na jiný typ.  
   
- Všimněte si, že **void \***  výraz má ukazatel typu `void`, ne typ `void`. Pokud je objekt přetypovat `void` typu, výsledný výraz nelze přiřadit k žádné položky. Podobně objekt přetypování není přijatelná l hodnota, proto nelze realizovat žádná přiřazení na objekt přetypování.  
+ Všimněte si, že **void** <strong>\*</strong> má výraz typu ukazatele do `void`, nikoli na typ `void`. Pokud objekt je přetypován na `void` typ, výsledný výraz nelze přiřadit k libovolné položky. Podobně přetypování objektu není přijatelné l hodnotou, proto nelze realizovat žádná přiřazení k objektu přetypování.  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
- Přetypování může být výraz l-value tak dlouho, dokud velikost identifikátor se nemění. Informace na výrazy hodnot l najdete v tématu [L-Value a R-Value výrazy](../c-language/l-value-and-r-value-expressions.md).  
+ Přetypování typu může být výraz l hodnotou, tak dlouho, dokud velikost identifikátor nezmění. Informace o výrazech l hodnotou, naleznete v tématu [výrazy L-Value a R-Value](../c-language/l-value-and-r-value-expressions.md).  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
- Můžete převést na typ výrazu `void` s přetypování, ale výsledný výraz lze použít pouze kde hodnotu se nevyžaduje. Ukazatele na objekt převést na **void \***  a vrátí zpět na původní typ na původní hodnotu.  
+ Můžete převést na typ výrazu `void` pomocí přetypování, ale výsledný výraz lze použít pouze pokud hodnota není povinné. Ukazatelem na objekt převést na **void** <strong>\*</strong> a vrátí zpět na původní typ na původní hodnotu.  
   
 ## <a name="see-also"></a>Viz také  
  [Převody typu](../c-language/type-conversions-c.md)

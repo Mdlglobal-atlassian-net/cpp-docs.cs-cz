@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197917"
 ---
 # <a name="ccomgitptr-class"></a>Ccomgitptr – třída
 Tato třída poskytuje metody pro práci s ukazatele rozhraní a tabulky globálního rozhraní (GIT).  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>Viz také  
  [Volné zařazování vláken](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [Přístup k rozhraní napříč objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [Kdy použít tabulky globálního rozhraní](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [Přístup k rozhraní napříč objekty apartment](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [Kdy použít tabulky globálního rozhraní](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [Přehled tříd](../../atl/atl-class-overview.md)

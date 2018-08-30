@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196329"
 ---
 # <a name="casyncmonikerfile-class"></a>Casyncmonikerfile – třída
 Poskytuje funkce pro používání asynchronních zástupných názvů v ovládacích prvcích ActiveX (dříve ovládací prvky OLE).  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Volá se, když se zastaví asynchronní přenos.|  
   
 ## <a name="remarks"></a>Poznámky  
- Odvozený od [cmonikerfile –](../../mfc/reference/cmonikerfile-class.md), který je zase odvozen z [colestreamfile –](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` používá [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705) rozhraní pro přístup k jakékoli datový proud asynchronně včetně asynchronní načítání souborů z adresy URL. Soubory mohou být datapath vlastností ovládacích prvků ActiveX.  
+ Odvozený od [cmonikerfile –](../../mfc/reference/cmonikerfile-class.md), který je zase odvozen z [colestreamfile –](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` používá [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro přístup k jakékoli datový proud asynchronně včetně asynchronní načítání souborů z adresy URL. Soubory mohou být datapath vlastností ovládacích prvků ActiveX.  
   
  Asynchronní monikery se používají především v internetových aplikací a ovládací prvky ActiveX k zajištění responzivní uživatelské rozhraní během přenosu souborů. Typickým příkladem tohoto je použití [cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md) k poskytování asynchronní vlastností pro ovládací prvky ActiveX. `CDataPathProperty` Objektu se zobrazí opakovaně zpětného volání k označení dostupnost nových dat systému exchange během dlouhých vlastnost.  
   
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open) volání `CreateBindStatusCallback`.  
   
- Další informace o asynchronní monikery a asynchronní vazby, najdete v článku [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) rozhraní a [pracovní úložiště a jak asynchronní vazby](http://msdn.microsoft.com/library/windows/desktop/aa379152). Informace o agregaci naleznete v tématu [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558). Všechny tři témata jsou v sadě Windows SDK.  
+ Další informace o asynchronní monikery a asynchronní vazby, najdete v článku [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) rozhraní a [pracovní úložiště a jak asynchronní vazby](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Informace o agregaci naleznete v tématu [agregace](/windows/desktop/com/aggregation). Všechny tři témata jsou v sadě Windows SDK.  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Volá se z klienta asynchronní moniker asynchronní moniker zjistit, jak chce vytvořit vazbu.  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na strukturu Windows [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) pro aktuálně otevřený datového proudu. Vrátí hodnotu NULL, pokud nebyla byla svázána monikeru, pokud není asynchronní, nebo pokud ještě nebylo spuštěno asynchronní operace.  
+ Ukazatel na strukturu Windows [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) pro aktuálně otevřený datového proudu. Vrátí hodnotu NULL, pokud nebyla byla svázána monikeru, pokud není asynchronní, nebo pokud ještě nebylo spuštěno asynchronní operace.  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Volané z klienta asynchronní moniker proces vytváření vazby začne přijímat přednostně vlákno pro operace vazby.  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Priorita, ve kterém se asynchronní přenos proběhnout. Příznaky priority standardní vlákno: THREAD_PRIORITY_ABOVE_NORMAL THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Podívat se na funkci Windows [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) popis z těchto hodnot.  
+ Priorita, ve kterém se asynchronní přenos proběhnout. Příznaky priority standardní vlákno: THREAD_PRIORITY_ABOVE_NORMAL THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Podívat se na funkci Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) popis z těchto hodnot.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetPriority` nemůže se volat přímo. THREAD_PRIORITY_NORMAL vrátí výchozí implementaci.  

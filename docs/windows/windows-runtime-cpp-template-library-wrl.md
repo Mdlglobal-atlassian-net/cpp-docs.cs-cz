@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211701"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
@@ -63,7 +63,7 @@ Ukazuje způsob použití knihovny šablon jazyka C++ Runtime Windows ke spušt�
 Ukazuje způsob použití knihovny šablon jazyka C++ Runtime Windows přihlásit k odběru a zpracování událostí objekt prostředí Windows Runtime.
 
 [Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
-Naučíte se vytvářet aplikace pro UPW, která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Naučíte se vytvářet aplikace pro UPW, která používá [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 [Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
 Ukazuje, jak pomocí šablony knihovna Windows Runtime C++ k vytvoření základní komponenty modelu COM a základní způsob, jak zaregistrovat a využívat komponenty modelu COM z desktopové aplikace.

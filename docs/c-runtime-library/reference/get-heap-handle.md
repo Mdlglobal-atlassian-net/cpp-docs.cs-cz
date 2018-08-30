@@ -1,5 +1,5 @@
 ---
-title: _get_heap_handle – | Microsoft Docs
+title: _get_heap_handle – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a472a100a03f8a03947eedb3aa8dc04edadb588
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202231"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
-Vrátí popisovač haldě, který je používán běhu systému C.
+Vrátí popisovač haldy používaný systémem runtime c.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,11 +54,11 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač Win32 haldě, používá systém C Runtime.
+Vrátí popisovač haldy Win32 používaný systémem runtime c.
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto funkci použít, pokud chcete volat [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) a povolte haldě nízká fragmentace v haldě CRT.
+Tuto funkci použít, pokud chcete volat [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) a povolit haldu s nízkou fragmentací haldu CRT.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -66,7 +66,7 @@ Tuto funkci použít, pokud chcete volat [HeapSetInformation](http://msdn.micros
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Ukázka
 
@@ -91,6 +91,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>

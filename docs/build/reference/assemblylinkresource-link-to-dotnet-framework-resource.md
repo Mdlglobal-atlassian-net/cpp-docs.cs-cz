@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (vytvořit odkaz na prostředek rozhraní .NET Framework) | Microsoft Docs
+title: -ASSEMBLYLINKRESOURCE (odkaz na prostředek rozhraní .NET Framework) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374047"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206485"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vytvořit odkaz na prostředek rozhraní .NET Framework)
 ```  
@@ -35,20 +35,20 @@ ms.locfileid: "32374047"
  kde:  
   
  *Název souboru*  
- Soubor prostředků rozhraní .NET Framework, do kterého chcete propojit ze sestavení.  
+ Soubor prostředků rozhraní .NET Framework, na který chcete propojit ze sestavení.  
   
 ## <a name="remarks"></a>Poznámky  
- Možnost /ASSEMBLYLINKRESOURCE vytvoří odkaz na prostředek rozhraní .NET Framework ve výstupním souboru; soubor prostředků není umístěn ve výstupním souboru. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) vloží soubor prostředků ve výstupním souboru.  
+ / ASSEMBLYLINKRESOURCE vytvoří odkaz na prostředek rozhraní .NET Framework do výstupního souboru; soubor prostředků není umístěn do výstupního souboru. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) do výstupního souboru vloží soubor prostředku.  
   
- Jsou propojené prostředky veřejné v sestavení při vytvoření s linkeru.  
+ Propojené prostředky byly veřejné sestavení při vytvořené pomocí linkeru.  
   
- / ASSEMBLYLINKRESOURCE vyžaduje, aby kompilace [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) nebo [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) není povolen u /ASSEMBLYLINKRESOURCE.  
+ / ASSEMBLYLINKRESOURCE vyžaduje, aby kompilace [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) nebo [parametr/noassembly](../../build/reference/noassembly-create-a-msil-module.md) není povolen u /ASSEMBLYLINKRESOURCE.  
   
- Pokud *filename* je soubor prostředků rozhraní .NET Framework, který je vytvořen, například pomocí [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí k němu se členy v **System.Resources** oboru názvů. Další informace najdete v tématu [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** třídy pro přístup k prostředku v době běhu.  
+ Pokud *filename* je soubor prostředků rozhraní .NET Framework vytvořený, například podle [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) nebo ve vývojovém prostředí, můžete přistupovat pomocí členů z **System.Resources** oboru názvů. Další informace najdete v tématu [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). U všech ostatních prostředků, použijte **GetManifestResource** \* metody v **System.Reflection.Assembly** pro přístup k prostředku v době běhu.  
   
- *Název souboru* může být jakékoli formát souboru. Například můžete chtít nativní knihovny DLL součástí sestavení, ujistěte se, může být nainstalován do globální mezipaměti sestavení a získat přístup ze spravovaného kódu v sestavení.  
+ *Název souboru* může být libovolný formát souboru. Můžete například vytvořit nativní knihovna DLL stane součástí sestavení, abyste mohli nainstalovat do globální mezipaměti sestavení a získat přístup ze spravovaného kódu v sestavení.  
   
- Další možnosti linkeru, které mají vliv vytváření sestavení jsou:  
+ Další možnosti linkeru, které ovlivňují generování sestavení jsou:  
   
 -   [/ ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -66,17 +66,17 @@ ms.locfileid: "32374047"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
   
-1.  Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
+1.  Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Klikněte **Linkeru** složky.  
+2.  Klikněte na tlačítko **Linkeru** složky.  
   
-3.  Klikněte **příkazového řádku** stránku vlastností.  
+3.  Klikněte na tlačítko **příkazového řádku** stránku vlastností.  
   
 4.  Zadejte možnost do **další možnosti** pole.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
   
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
+-   Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
 ## <a name="see-also"></a>Viz také  
  [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   

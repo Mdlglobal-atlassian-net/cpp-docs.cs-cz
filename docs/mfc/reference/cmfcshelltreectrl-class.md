@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222773"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl – třída
 `CMFCShellTreeCtrl` Třída rozšiřuje [ctreectrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Název|Popis|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Povoluje nebo zakazuje místní nabídku.|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Vrátí kombinace příznaků, které jsou předány [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Vrátí kombinace příznaků, které jsou předány [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Načte cestu k položce.|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Vrátí ukazatel [CMFCShellListCtrl – třída](../../mfc/reference/cmfcshelllistctrl-class.md) objekt, který se používá spolu s tím `CMFCShellTreeCtrl` objekt k vytvoření okna Průzkumníka jako.|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Tato členská funkce je volána toto okno nadřazené okno při přijetí oznámení, která se vztahuje na toto okno. (Přepíše [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  Nastavte hodnotu DWORD s aktuálně Určuje kombinaci příznaků.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavení příznaků v `CMFCShellTreeCtrl` jsou odesílány do metody [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) vždy, když se aktualizuje objekt. Příznaky s můžete změnit [CMFCShellTreeCtrl::SetFlags](#setflags) metody.  
+ Nastavení příznaků v `CMFCShellTreeCtrl` jsou odesílány do metody [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) vždy, když se aktualizuje objekt. Příznaky s můžete změnit [CMFCShellTreeCtrl::SetFlags](#setflags) metody.  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Načte cestu položky v [CMFCShellTreeCtrl – třída](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
@@ -254,7 +254,7 @@ void SetFlags(
  Logická hodnota určující, zda `CMFCShellTreeCtrl` by měl být aktualizace okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
- `CMFCShellTreeCtrl` Předá všechny nastaveny příznaky na [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Další informace o hodnotách jiné příznaky, naleznete v tématu [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
+ `CMFCShellTreeCtrl` Předá všechny nastaveny příznaky na [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Další informace o hodnotách jiné příznaky, naleznete v tématu [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Přidruží [CMFCShellListCtrl –](../../mfc/reference/cmfcshelllistctrl-class.md) objektu [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  

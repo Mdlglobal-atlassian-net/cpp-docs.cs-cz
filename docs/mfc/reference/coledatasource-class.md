@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d67165d3869ffdd60eff86fa8c33abf275e070b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209774"
 ---
 # <a name="coledatasource-class"></a>Coledatasource – třída
 Slouží jako mezipaměť, do které aplikace umístí data, která bude nabízet během data transfer operace, jako je například schránky nebo operace přetažení myší.  
@@ -92,7 +92,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="remarks"></a>Poznámky  
  Zdroje dat OLE můžete vytvořit přímo. Alternativně [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [odvozenou třídu COleServerItem](../../mfc/reference/coleserveritem-class.md) třídy vytvořit zdroje dat OLE v reakci na jejich `CopyToClipboard` a `DoDragDrop` členské funkce. Zobrazit [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) stručný popis. Přepsat `OnGetClipboardData` členské funkce třídy vašeho klienta položky nebo server položky pro přidání dalších formátů schránky do dat ve zdroji dat OLE vytvořené pro `CopyToClipboard` nebo `DoDragDrop` členskou funkci.  
   
- Pokaždé, když chcete připravit data pro přenos, by měl vytvořit objekt této třídy a naplňte ji s daty pomocí metody nejvhodnější pro vaše data. Způsob, jakým je vložen do zdroje dat je přímo ovlivňován řadou okamžitě zadaná data (okamžité vykreslování) nebo na vyžádání (odložené vykreslování). Pro každou formát schránky, ve kterém jsou poskytování dat tím, že předáte formát schránky, který se má použít (a případně [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury), volání [DelayRenderData](#delayrenderdata).  
+ Pokaždé, když chcete připravit data pro přenos, by měl vytvořit objekt této třídy a naplňte ji s daty pomocí metody nejvhodnější pro vaše data. Způsob, jakým je vložen do zdroje dat je přímo ovlivňován řadou okamžitě zadaná data (okamžité vykreslování) nebo na vyžádání (odložené vykreslování). Pro každou formát schránky, ve kterém jsou poskytování dat tím, že předáte formát schránky, který se má použít (a případně [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury), volání [DelayRenderData](#delayrenderdata).  
   
  Další informace o zdrojích dat a přenos dat, najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Kromě toho článku [schránky témata](../../mfc/clipboard.md) popisuje mechanismu schránky OLE.  
   
@@ -118,26 +118,26 @@ void CacheData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpStgMedium*  
- Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura obsahující data ve formátu určeném.  
+ Odkazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktura obsahující data ve formátu určeném.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Je nutné zadat data, protože tato funkce poskytuje okamžitou vykreslování pomocí. Data se do mezipaměti, dokud není potřeba.  
   
- Zadat data s využitím [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury. Můžete také použít `CacheGlobalData` členskou funkci, pokud dodání množství dat je dostatečně malá, aby přenést efektivně pomocí HGLOBAL.  
+ Zadat data s využitím [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury. Můžete také použít `CacheGlobalData` členskou funkci, pokud dodání množství dat je dostatečně malá, aby přenést efektivně pomocí HGLOBAL.  
   
  Po volání `CacheData` `ptd` členem `lpFormatEtc` a obsah *lpStgMedium* jsou vlastněny datový objekt volajícím.  
   
  Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
@@ -151,22 +151,22 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *hGlobal*  
  Zpracování bloku globální paměti obsahující data ve formátu určeném.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce poskytuje data s využitím okamžité vykreslování, takže při volání funkce; je nutné zadat data data se do mezipaměti, dokud není potřeba. Použití `CacheData` členskou funkci, pokud zadáváte velká množství dat nebo pokud požadujete střední strukturované úložiště.  
   
  Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Vytvoří `COleDataSource` objektu.  
@@ -186,10 +186,10 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderData](#onrenderdata) nebo [OnRenderGlobalData](#onrenderglobaldata) členská funkce je volána k požadavku data.  
@@ -198,9 +198,9 @@ void DelayRenderData(
   
  Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
@@ -213,10 +213,10 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderFileData](#onrenderfiledata) členská funkce je volána k požadavku data.  
@@ -225,9 +225,9 @@ void DelayRenderFileData(
   
  Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Voláním této funkce pro podporu změnit obsah datového zdroje.  
@@ -240,17 +240,17 @@ void DelaySetData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém se data budou umístěny. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém se data budou umístěny. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkce.  
   
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém se nahradit data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura popisující formát, ve kterém se nahradit data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
  [OnSetData](#onsetdata) se volá se rozhraním, když k tomu dojde. Používá se jenom návratu zdroj dat v rámci [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Pokud `DelaySetData` není volána, vaše `OnSetData` funkce nebude nikdy volána. `DelaySetData` by měla být volána pro každý schránky nebo `FORMATETC` formátu, které podporujete.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) v sadě Windows SDK.  
   
 ##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
  Volání `DoDragDrop` členská funkce k provedení operace přetažení myší pro tento zdroj dat, obvykle v [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) obslužné rutiny.  
@@ -294,7 +294,7 @@ Body do zdroje přemístění. Pokud se hodnota NULL, pak výchozí implementaci
   
 -   Přetáhněte Windows 95/98 zpoždění je uložen v mezipaměti verzi Windows. INI.  
   
- Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) v sadě Windows SDK.  
+ Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) v sadě Windows SDK.  
   
  Další informace najdete v článku [přetažení: implementace zdroje vyřadit](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
@@ -308,7 +308,7 @@ void Empty();
 ### <a name="remarks"></a>Poznámky  
  Obě do mezipaměti a formáty vykreslení zpoždění jsou vyprázdněny, takže se můžete znovu použít.  
   
- Další informace najdete v tématu [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) v sadě Windows SDK.  
+ Další informace najdete v tématu [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) v sadě Windows SDK.  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Vykreslí data, která je do schránky a pak umožňuje vložení dat ze schránky po ukončení vaší aplikace.  
@@ -341,10 +341,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *lpStgMedium*  
- Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém má být vrácena data.  
+ Odkazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury, ve kterém má být vrácena data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je úspěšná. jinak 0.  
@@ -356,7 +356,7 @@ virtual BOOL OnRenderData(
   
  To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud vaše data je malý a pevnou velikost, má přednost před `OnRenderGlobalData`. Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) typ výčtu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury, [objekt TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ výčtu a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) ve Windows SDK.  
   
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  Volá se rozhraním, k načtení dat v zadaném formátu souboru po zadanou paměťovému médiu.  
@@ -369,7 +369,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *pFile*  
  Odkazuje [cfile –](../../mfc/reference/cfile-class.md) objektu, ve kterém se data mají být vykresleny.  
@@ -382,7 +382,7 @@ virtual BOOL OnRenderFileData(
   
  To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strukturu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strukturu a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) v sadě Windows SDK.  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Volá se rozhraním, k načtení dat v zadaném formátu po globální paměti zadaná paměťovému médiu.  
@@ -395,7 +395,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve které je požadované informace.  
   
  *phGlobal*  
  Odkazuje na popisovač do globální paměti, ve kterém má být vrácena data. Pokud nebyla ještě jeden byly přiděleny, tento parametr může mít hodnotu NULL.  
@@ -410,7 +410,7 @@ virtual BOOL OnRenderGlobalData(
   
  To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata). Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strukturu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v sadě Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) strukturu a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) v sadě Windows SDK.  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Volá se rozhraním, aby nastavila nebo nahradila data v `COleDataSource` objektu v zadaném formátu.  
@@ -424,10 +424,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve kterém se nahrazuje data.  
+ Odkazuje [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura určující formát, ve kterém se nahrazuje data.  
   
  *lpStgMedium*  
- Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury obsahující data, která nahradí aktuální obsah `COleDataSource` objektu.  
+ Odkazuje [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struktury obsahující data, která nahradí aktuální obsah `COleDataSource` objektu.  
   
  *bRelease*  
  Označuje, kdo je vlastníkem úložiště média po dokončení volání funkce. Volající rozhodne, kdo je zodpovědná za uvolnění prostředků přidělených jménem paměťovému médiu. Volající toho dosahuje tím, že nastavíte *bRelease*. Pokud *bRelease* je nenulová, zdroj dat převezme vlastnictví, uvolnění médium po dokončení jeho použití. Když *bRelease* je 0, že volajícímu zůstane vlastnictví a zdroj dat můžete využít paměťovému médiu pouze po dobu trvání volání.  
@@ -436,11 +436,11 @@ virtual BOOL OnSetData(
  Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Zdroj dat není převzít vlastnictví dat, dokud ji má byly úspěšně načteny. To znamená, nebere v vlastnictví Pokud `OnSetData` vrátí hodnotu 0. Pokud zdroj dat trvá vlastnictví, takže paměťovému médiu voláním [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) funkce.  
+ Zdroj dat není převzít vlastnictví dat, dokud ji má byly úspěšně načteny. To znamená, nebere v vlastnictví Pokud `OnSetData` vrátí hodnotu 0. Pokud zdroj dat trvá vlastnictví, takže paměťovému médiu voláním [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) funkce.  
   
  Výchozí implementace nemá žádný účinek. Přepsání této funkce můžete nahradit data v zadaném formátu. To je moderní overridable.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury a [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funkce v sadě Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktury a [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) a [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) funkce v sadě Windows SDK.  
   
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  Vloží data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), nebo [DelayRenderFileData](#delayrenderfiledata).  

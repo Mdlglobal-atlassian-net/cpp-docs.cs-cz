@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881237"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202459"
 ---
 # <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
 Tato třída implementuje `IBindStatusCallback` rozhraní.  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet bajtů ke čtení.|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|Ukazatel na funkci volá, když data jsou k dispozici.|  
 |[CBindStatusCallback::m_pT](#m_pt)|Ukazatel na objekt žádosti o přenos dat asynchronní.|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Ukazatel [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) rozhraní pro aktuální operaci bind.|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Ukazatel [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) rozhraní pro aktuální operaci bind.|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|Ukazatel `IBinding` rozhraní pro aktuální operaci bind.|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Ukazatel [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705) rozhraní pro adresu URL k použití.|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|Ukazatel [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) rozhraní pro přenos dat.|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Ukazatel [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro adresu URL k použití.|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní pro přenos dat.|  
   
 ## <a name="remarks"></a>Poznámky  
  `CBindStatusCallback` Implementuje třída `IBindStatusCallback` rozhraní. `IBindStatusCallback` musí být implementované v aplikaci, aby ho mohli dostávat oznámení od asynchronní datové přenosy. Používá asynchronní moniker poskytované systémem `IBindStatusCallback` metody odesílat a přijímat informace o datech asynchronní přenos do a z objektu.  
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback` Objektu je založena na tento objekt třídy.  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- Ukazatel [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) rozhraní, které poskytuje přístup ke kontextu vazby (objekt, který obsahuje informace o operaci vazby konkrétní moniker).  
+ Ukazatel [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) rozhraní, které poskytuje přístup ke kontextu vazby (objekt, který obsahuje informace o operaci vazby konkrétní moniker).  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  Inicializováno v `OnStartBinding` a vydanou v `OnStopBinding`.  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- Ukazatel [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705) rozhraní pro adresu URL k použití.  
+ Ukazatel [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro adresu URL k použití.  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  Inicializováno v `StartAsyncDownload`.  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- Ukazatel [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) rozhraní aktuální operace připojení.  
+ Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní aktuální operace připojení.  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in] Souhrnně za (v bajtech) k dispozici od začátku vazby data. Může být nula, která znamená, že objem dat se nevztahuje nebo, že bez ohledu na konkrétní začal být k dispozici.  
   
  *pformatetc*  
- [in] Ukazatel [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242) strukturu, která obsahuje formát dat k dispozici. Pokud neexistuje žádný format, může být CF_NULL.  
+ [in] Ukazatel [FORMATETC](/windows/desktop/com/the-formatetc-structure) strukturu, která obsahuje formát dat k dispozici. Pokud neexistuje žádný format, může být CF_NULL.  
   
  *pstgmed*  
- [in] Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269) struktura, která uchovává skutečná data, která je teď k dispozici.  
+ [in] Ukazatel [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) struktura, která uchovává skutečná data, která je teď k dispozici.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  

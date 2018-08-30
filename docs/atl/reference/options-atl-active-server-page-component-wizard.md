@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd3e62915b81311450cf4d798b04f8df30492ff
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 29a5209eb05958861a5c021f48bff1bf36654115
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884597"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205441"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Možnosti Průvodce stránky komponentami ATL Active Server
 Pomocí této stránce průvodce komponenty ATL Active Server stránky můžete navrhnout poskytují zvýšenou efektivitu a chyba podpory pro objekt.  
@@ -35,14 +35,14 @@ Pomocí této stránce průvodce komponenty ATL Active Server stránky můžete 
   
 |Možnost|Popis|  
 |------------|-----------------|  
-|**Jeden**|Určuje, že objekt používá jeden model vláken. V jedné modelu vláken objekt vždy běží v primárním vláknu COM. Zobrazit [jedno vláknové objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112) a [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) Další informace.|  
-|**Objektu Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112) Další informace.|  
+|**Jeden**|Určuje, že objekt používá jeden model vláken. V jedné modelu vláken objekt vždy běží v primárním vláknu COM. Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) a [InprocServer32](/windows/desktop/com/inprocserver32) Další informace.|  
+|**Objektu Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|  
 |**Obojí**|Určuje, zda objekt můžete používat objektu apartment nebo volných vláken, ze které druh vlákno je vytvořen v závislosti.|  
-|**Zdarma**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](http://msdn.microsoft.com/library/windows/desktop/ms693421) Další informace.|  
+|**Zdarma**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|  
 |**Neutrální**|Určuje, že objekt pokyny pro vícevláknové izolované prostory se však můžete spustit na jakékoliv vlákno.|  
   
  **Agregace**  
- Označuje, zda objekt používá [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558). Agregovaný objekt zvolí, které rozhraní k tomu, aby klienti a jsou rozhraní vystavena jako by implementoval agregovaný objekt. Klienti agregovaný objekt komunikovat jen s agregovaný objekt.  
+ Označuje, zda objekt používá [agregace](/windows/desktop/com/aggregation). Agregovaný objekt zvolí, které rozhraní k tomu, aby klienti a jsou rozhraní vystavena jako by implementoval agregovaný objekt. Klienti agregovaný objekt komunikovat jen s agregovaný objekt.  
   
 |Možnost|Popis|  
 |------------|-----------------|  

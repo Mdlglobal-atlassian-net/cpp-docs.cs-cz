@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217974"
 ---
 # <a name="cmfcrebar-class"></a>Cmfcrebar – třída
 A `CMFCReBar` objekt je ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Poskytuje přímý přístup k podkladovým [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) běžný ovládací prvek.|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Přepíše [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Přepíše [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Přepíše [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -120,7 +120,7 @@ BOOL AddBar(
  Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.  
   
  [in] *dwStyle*  
- Obsahuje styl pásma použít. Úplný seznam styly obsluhy vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktura v dokumentaci Windows SDK.  
+ Obsahuje styl pásma použít. Úplný seznam styly obsluhy vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktura v dokumentaci Windows SDK.  
   
  [in] *clrFore*  
  Představuje barvu popředí matrice.  
@@ -147,7 +147,7 @@ BOOL Create(
  Ukazatel na nadřazené okno tohoto ovládacího prvku rebar.  
   
  [in] *dwCtrlStyle*  
- Určuje styl ovládacího prvku rebar. Výchozí hodnota stylu je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení sousední pruhy v ovládacím prvku matrice. Seznam platný stylů, najdete v části [– styly ovládacího prvku Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) v dokumentaci Windows SDK.  
+ Určuje styl ovládacího prvku rebar. Výchozí hodnota stylu je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení sousední pruhy v ovládacím prvku matrice. Seznam platný stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v dokumentaci Windows SDK.  
   
  [in] *dwStyle*  
  Stylu okna ovládacího prvku rebar. Seznam platný stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880090"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208758"
 ---
 # <a name="options-atl-control-wizard"></a>Možnosti, Průvodce ovládacím prvkem ATL
 Sem vložte "Výsledky hledání" souhrnu.  
@@ -78,7 +78,7 @@ Sem vložte "Výsledky hledání" souhrnu.
   
 -   **Vlastní**: vytvoří rozhraní, které zveřejňuje metody přímo prostřednictvím VTBL.  
   
-     Pokud vyberete **vlastní**, můžete zadat, že je ovládací prvek **automatizace kompatibilní**. Pokud vyberete **automatizace kompatibilní**, přidá průvodce [oleautomation](../../windows/oleautomation.md) atribut rozhraní IDL, a rozhraní může být zařazována univerzální zařazováním v oleaut32.dll. Zobrazit [Podrobnosti zařazování](http://msdn.microsoft.com/library/windows/desktop/ms692621) v sadě Windows SDK pro další informace.  
+     Pokud vyberete **vlastní**, můžete zadat, že je ovládací prvek **automatizace kompatibilní**. Pokud vyberete **automatizace kompatibilní**, přidá průvodce [oleautomation](../../windows/oleautomation.md) atribut rozhraní IDL, a rozhraní může být zařazována univerzální zařazováním v oleaut32.dll. Zobrazit [Podrobnosti zařazování](/windows/desktop/com/marshaling-details) v sadě Windows SDK pro další informace.  
   
      Kromě toho pokud vyberete **automatizace kompatibilní**, pak všechny parametry pro všechny metody v ovládacím prvku musí být typu VARIANT kompatibilní.  
   
@@ -87,7 +87,7 @@ Sem vložte "Výsledky hledání" souhrnu.
   
 -   **Body připojení**: umožňuje spojovací body pro svůj objekt tím, že jsou odvozeny z třídy objektu [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) a díky kterému jej k vystavení zdrojové rozhraní.  
   
--   **Licenci**: Přidá do ovládacího prvku pro podporu [licencování](http://msdn.microsoft.com/library/windows/desktop/ms690543). Licencované ovládací prvky je možné hostovat, pouze pokud klientský počítač nemá správnou licenci.  
+-   **Licenci**: Přidá do ovládacího prvku pro podporu [licencování](/windows/desktop/com/licensing). Licencované ovládací prvky je možné hostovat, pouze pokud klientský počítač nemá správnou licenci.  
   
 ## <a name="see-also"></a>Viz také  
  [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)
