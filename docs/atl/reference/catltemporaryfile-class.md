@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883141"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222869"
 ---
 # <a name="catltemporaryfile-class"></a>Catltemporaryfile – třída
 Tato třída poskytuje metody pro vytváření a používání dočasný soubor.  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>Parametry  
  *pszDir*  
- Cesta pro dočasný soubor. Pokud je hodnota NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) bude volána k přiřazení cesty.  
+ Cesta pro dočasný soubor. Pokud je hodnota NULL, [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) bude volána k přiřazení cesty.  
   
  *dwDesiredAccess*  
- Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) v sadě Windows SDK.  
+ Požadovaný přístup. Zobrazit *dwDesiredAccess* v [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  Vrátí LPCTSTR odkazující na název souboru.  
   
 ### <a name="remarks"></a>Poznámky  
- Název souboru generuje v [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) voláním [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)funkce sady Windows SDK. Přípona souboru bude vždy "TFR" pro dočasný soubor.  
+ Název souboru generuje v [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) voláním [GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)funkce sady Windows SDK. Přípona souboru bude vždy "TFR" pro dočasný soubor.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  Volání této metody k odemknutí oblast dočasný soubor.  

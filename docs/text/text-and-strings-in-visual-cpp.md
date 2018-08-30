@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610711"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223292"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 Důležitou součástí vývoje aplikací pro mezinárodní trhy je odpovídající reprezentace místní znakové sady. Znaková sada ASCII definuje znaky v rozsahu 0x00 do 0x7F. Existují jiné znakové sady, především Evropské, které definují znaky v rozsahu 0x00 do 0x7F stejně jako znaková sada ASCII a také definovat rozšířené znakové od 0x80 do 0xFF. Proto 8 bitů, jedním jednobajtového znaku sady (SBCS) je dostačující k reprezentaci znakové sady ASCII, jakož i znakových sad mnoha evropských jazyků. Ale některé neevropské znakových sad, jako je například japonská Kanji obsahovat mnoho více znaků, než schéma kódování jednobajtové představují a proto vyžadují vícebajtové znakové sady (MBCS s) kódováním.  
@@ -64,7 +64,7 @@ Důležitou součástí vývoje aplikací pro mezinárodní trhy je odpovídají
  [Internacionalizace](../c-runtime-library/internationalization.md)  
  Tento článek popisuje Mezinárodní podpora v knihovně C Runtime.  
   
- [Mezinárodní ukázky](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Mezinárodní ukázky](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Obsahuje odkazy na ukázky internacionalizaci v jazyce Visual C++.  
   
  [Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

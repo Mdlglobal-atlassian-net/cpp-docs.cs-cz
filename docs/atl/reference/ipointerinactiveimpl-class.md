@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d916d2e2f8f42a4162966a1d0ddc7de55eb6bd4b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5d7c4ed7634cc1818250d8945a057f97c53edffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223196"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Ipointerinactiveimpl – třída
-Tato třída implementuje `IUnknown` a [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) metody rozhraní.  
+Tato třída implementuje `IUnknown` a [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) metody rozhraní.  
   
 > [!IMPORTANT]
 >  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
@@ -59,7 +59,7 @@ class IPointerInactiveImpl
 ## <a name="remarks"></a>Poznámky  
  Neaktivním objektem je takový, který je jednoduše načíst nebo spuštěné. Na rozdíl od aktivního objektu neaktivním objektem nemůže přijímat zprávy myši a klávesnice Windows. Díky tomu se neaktivní objekty používají méně prostředků a jsou obvykle mnohem efektivnější.  
   
- [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) rozhraní umožňuje podporu minimální úroveň interakce s myší zbývající neaktivní. Tato funkce je zvláště užitečná pro ovládací prvky.  
+ [IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive) rozhraní umožňuje podporu minimální úroveň interakce s myší zbývající neaktivní. Tato funkce je zvláště užitečná pro ovládací prvky.  
   
  Třída `IPointerInactiveImpl` implementuje `IPointerInactive` metody jednoduše vrácením E_NOTIMPL. Nicméně, implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.  
   
@@ -84,7 +84,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) ve Windows SDK.  
+ Zobrazit [IPointerInactive::GetActivationPolicy](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-getactivationpolicy) ve Windows SDK.  
   
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
  Upozorní, že objekt, který se přesunul ukazatel myši nad ním, označující objekt může vyvolat události myši.  
@@ -101,7 +101,7 @@ HRESULT OnInactiveMouseMove(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) ve Windows SDK.  
+ Zobrazit [IPointerInactive::OnInactiveMouseMove](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivemousemove) ve Windows SDK.  
   
 ##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
  Nastaví ukazatel myši pro aktivní objekt.  
@@ -119,7 +119,7 @@ HRESULT OnInactiveSetCursor(
  Vrátí E_NOTIMPL.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) ve Windows SDK.  
+ Zobrazit [IPointerInactive::OnInactiveSetCursor](/windows/desktop/api/ocidl/nf-ocidl-ipointerinactive-oninactivesetcursor) ve Windows SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled tříd](../../atl/atl-class-overview.md)

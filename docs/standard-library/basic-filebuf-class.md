@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954965"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222718"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf – třída
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* základního prvku vyrovnávací paměti souboru.
+*Elem*<br/>
+ Základní prvek vyrovnávací paměti souboru.
 
-*Tr* osobnostní rysy základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
+*tr*<br/>
+ Vlastnosti základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametry
 
-*Náze_v souboru* název souboru, který se otevře.
+*Náze_v souboru*<br/>
+ Název souboru, který se otevře.
 
-*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m*<br/>
+ Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* výchozí soubor otevřít ochranu, odpovídá *shflag* parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+ Výchozí soubor otevřít ochranu, odpovídá *shflag* parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* odkaz rvalue na [basic_filebuf –](../standard-library/basic-filebuf-class.md) objektu.
+*doprava*<br/>
+ Odkaz rvalue na [basic_filebuf –](../standard-library/basic-filebuf-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti nebo `traits_type::eof`.
+*_Meta*<br/>
+ Znak k vložení do vyrovnávací paměti nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -484,7 +491,7 @@ Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném 
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chcete-li vložit element endeavors chráněná virtuální členská funkce **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
+Pokud *_Meta* **! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chcete-li vložit element endeavors chráněná virtuální členská funkce **ch = traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
 
 - Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
+*_Meta*<br/>
+ Znak k vložení do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* pozice hledání pro relativně *_Way*.
+*_Off*<br/>
+ Pozice hledání pro relativně *_Way*.
 
-*_Way* výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*<br/>
+ Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+ Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* pozici k vyhledání pro.
+*_Sp*<br/>
+ Pozice k vyhledání pro.
 
-*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*<br/>
+ Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Buffer* ukazatel do vyrovnávací paměti.
+*_Buffer*<br/>
+ Ukazatel do vyrovnávací paměti.
 
-*počet* velikost vyrovnávací paměti.
+*Počet*<br/>
+ Velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -616,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*správné* `lvalue` odkaz na jiný `basic_filebuf`.
+*doprava*<br/>
+ `lvalue` Odkaz na jiný `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::Sync
 

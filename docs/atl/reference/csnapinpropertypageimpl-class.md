@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880557"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223048"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Csnapinpropertypageimpl – třída
 Tato třída poskytuje metody pro implementaci objektu page vlastnost modul snap-in.  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Poznámky  
  Tuto strukturu použijte pro inicializaci vzhled stránky vlastností po jejím vytváření.  
   
- Další informace o této struktuře, včetně seznamu členů, naleznete v tématu [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) v sadě Windows SDK.  
+ Další informace o této struktuře, včetně seznamu členů, naleznete v tématu [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) v sadě Windows SDK.  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Tato členská funkce je volána, když uživatel klikne **OK** nebo **použít** tlačítko.  
